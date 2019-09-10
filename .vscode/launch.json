@@ -15,7 +15,7 @@
       "name": "Launch via Babel",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+      "runtimeExecutable": "/Users/pajeter/.npm-packages/lib/node_modules/@babel/node/bin/babel-node.js",
       "runtimeArgs": ["--presets", "@babel/preset-env"],
       "program": "${file}"
     }
