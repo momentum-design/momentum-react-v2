@@ -47,6 +47,16 @@ export default function ButtonSize() {
         </Button>
       </div>
       <br />
+      <div>
+        <Button
+          ariaLabel='size 84'
+          circle
+          size={84}
+        >
+          size 84
+        </Button>
+      </div>
+      <br />
     </div>
   );
 }

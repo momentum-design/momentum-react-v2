@@ -7,7 +7,7 @@ export default class ListItemDefault extends React.PureComponent {
       <div className="medium-4 columns">
         <div>
           <List>
-            <ListItem label="Default List Item 1" />
+            <ListItem label="Default List Item 1" ref="navLink" focus focusOnLoad/>
             <ListItem label="Default List Item 2" />
           </List>
         </div>

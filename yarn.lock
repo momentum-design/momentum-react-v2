@@ -719,6 +719,14 @@
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-syntax-optional-chaining" "^7.8.0"
 
+"@babel/plugin-proposal-optional-chaining@^7.2.0":
+  version "7.9.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.9.0.tgz#31db16b154c39d6b8a645292472b98394c292a58"
+  integrity sha512-NDn5tu3tcv4W30jNhmc2hyD5c56G6cXx4TesJubhxrJeCvuuMpttxr0OnNCqbZGhFjLrg+NIhxxC+BK5F6yS3w==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.8.3"
+    "@babel/plugin-syntax-optional-chaining" "^7.8.0"
+
 "@babel/plugin-proposal-pipeline-operator@^7.0.0":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-pipeline-operator/-/plugin-proposal-pipeline-operator-7.8.3.tgz#c3569228e7466f91bfff7f1c1ae18fb5d36b3097"
@@ -11792,10 +11800,10 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-"google-libphonenumber@^2.0.15 < 3":
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/google-libphonenumber/-/google-libphonenumber-2.0.19.tgz#a6d5ff60412aa33b161bb830d70aa39682583054"
-  integrity sha512-kwtbruT+eyiof081cxT1tltMTxgTOq3CQhUoEYBROC+vNf+COPqzfKJtVnDvgXQe4SzfbnAYkP8KoSpbJBIlSg==
+google-libphonenumber@^3.2.9:
+  version "3.2.9"
+  resolved "https://registry.yarnpkg.com/google-libphonenumber/-/google-libphonenumber-3.2.9.tgz#d65c2467eec22c35e3dcddfc91d26e2b135024c4"
+  integrity sha512-PCU6Z5drRaFHNICJcurXsf6DN//ZNl0PXmPIpbHi+E1pp54GwyrhxBn57rr1nx+3mNUOMr4zeWirIKPc4ziJgw==
 
 got@^6.7.1:
   version "6.7.1"

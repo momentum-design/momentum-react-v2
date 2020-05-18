@@ -5,7 +5,7 @@ export default class RadioKitchenSink extends React.PureComponent {
   render() {
     const radios = value => (
       <>
-        <RadioGroup name={`radioGroup${value}`} values={['one']}>
+        <RadioGroup name={`radioGroup${value}`} values={['zero', 'one', 'two']}>
           <Radio
             name={`radioGroup${value}`}
             value="zero"
