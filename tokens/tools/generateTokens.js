@@ -1,11 +1,8 @@
-const fs = require("fs");
-const util = require("util");
-const path = require("path");
+const fs = require('fs');
+const util = require('util');
+const path = require('path');
 
-const generateTokenJSON = async (
-  tokenName,
-  tokenFile
-) => {
+const generateTokenJSON = async (tokenName, tokenFile, subFolder) => {
   try {
     const aJSON = JSON.stringify(tokenFile);
 
@@ -16,10 +13,21 @@ const generateTokenJSON = async (
     }
 
     const writeFile = util.promisify(fs.writeFile);
-    await writeFile(path.join("dist", `${tokenName}.json`), aJSON);
-    console.log(`${tokenName}.json written!`);
+
+    if (subFolder) {
+      if (!fs.existsSync(`dist/${subFolder}`)) {
+        fs.mkdirSync(`dist/${subFolder}`);
+      }
+
+      await writeFile(path.join(`dist/${subFolder}`, `${tokenName}.json`), aJSON);
+      console.log(`dist/${subFolder}/${tokenName}.json written!`);
+
+    } else {
+      await writeFile(path.join('dist', `${tokenName}.json`), aJSON);
+      console.log(`dist/${tokenName}.json written!`);
+    }
   } catch (e) {
-    throw new Error(console.error("Failed to generate tokens\n", e));
+    throw new Error(console.error('Failed to generate tokens\n', e));
   }
 };
 
