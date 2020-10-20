@@ -1,6 +1,10 @@
 @font-face {
   font-family: "momentum-ui-icons";
+<<<<<<< HEAD
   src: url("../fonts/momentum-ui-icons.woff2?87637a725d7f5ce8847368e057a16a3d") format("woff2"), url("../fonts/momentum-ui-icons.woff?e610fd6dd82fc8b58fa91932e978ef26") format("woff");
+=======
+  src: url("../fonts/momentum-ui-icons.woff2?dcb6c3eae03f5c42b51214f91b373ebf") format("woff2"), url("../fonts/momentum-ui-icons.woff?cfb053ec4d40d2e1e10b123292cb6175") format("woff");
+>>>>>>> f32b7ea17c1eaa1e25d30355104d5ecf46da0cc1
   font-weight: normal;
   font-style: normal;
 }
