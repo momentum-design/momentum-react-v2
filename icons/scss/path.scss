@@ -5,13 +5,8 @@
 
   @font-face {
     font-family: $icon-font-name;
-<<<<<<< HEAD
-    src: url("#{$icon-font-path}/momentum-ui-icons.woff2?5bc76cf0743fa2ba5069206af6233f89") format("woff2"),
-      url("#{$icon-font-path}/momentum-ui-icons.woff?c03c183d44b05ed480639ca4f9b2e422") format("woff");
-=======
-    src: url("#{$icon-font-path}/momentum-ui-icons.woff2?8ebf020f8e86e205c4d404ba1c4dbb1b") format("woff2"),
-      url("#{$icon-font-path}/momentum-ui-icons.woff?7dd01527106016e84fb29bb4764aa951") format("woff");
->>>>>>> c40584c1a04e4a0b23c32bcaf2a6e6b9ba4ff5ad
+    src: url("#{$icon-font-path}/momentum-ui-icons.woff2?87637a725d7f5ce8847368e057a16a3d") format("woff2"),
+      url("#{$icon-font-path}/momentum-ui-icons.woff?e610fd6dd82fc8b58fa91932e978ef26") format("woff");
     font-weight: normal;
     font-style: normal;
   }
