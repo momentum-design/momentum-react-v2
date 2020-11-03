@@ -6,12 +6,17 @@
   @font-face {
     font-family: $icon-font-name;
 <<<<<<< HEAD
+<<<<<<< HEAD
     src: url("#{$icon-font-path}/momentum-ui-icons.woff2?d5de0f766cb3fb602746b7dfe91fc9a7") format("woff2"),
       url("#{$icon-font-path}/momentum-ui-icons.woff?da6b612eb737f10091d384283dd26eb7") format("woff");
 =======
     src: url("#{$icon-font-path}/momentum-ui-icons.woff2?92f2d93fc9fd941152ed51fc7b442532") format("woff2"),
       url("#{$icon-font-path}/momentum-ui-icons.woff?92cfb33076a95c3e23c958961fdd405e") format("woff");
 >>>>>>> 1783d7e4280d123566a1231b5ddd5b5ab7ab6ac8
+=======
+    src: url("#{$icon-font-path}/momentum-ui-icons.woff2?54a81635785ae79fcdd41ce2e43a4616") format("woff2"),
+      url("#{$icon-font-path}/momentum-ui-icons.woff?27c7fec555077849ed7ad0d9022e3ab4") format("woff");
+>>>>>>> 2763efd429f69935b81cfdfcec939938d286da6c
     font-weight: normal;
     font-style: normal;
   }
