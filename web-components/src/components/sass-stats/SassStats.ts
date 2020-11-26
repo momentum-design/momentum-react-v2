@@ -9,6 +9,7 @@
 import reset from "@/wc_scss/reset.scss";
 import { customElement, html, LitElement, property, PropertyValues } from "lit-element";
 import { score } from "wcag-color";
+import "./TokenAudit";
 @customElement("sass-stats")
 export class SassStats extends LitElement {
   @property({ type: String }) component = "";
@@ -96,6 +97,10 @@ export class SassStats extends LitElement {
       <p>Total # of Declarations: <span class="stat-output">${this.declarations}</span></p>
       <p>Repeated Selectors: <span class="stat-output">${this.repeatedSelectors}</span></p>
       <p>Inspect custom elements for contrast ratio score <i>(experimental)</i></p>
+      <details>
+        <summary>Color Theme Tokens</summary>
+        <token-audit component=${this.component}></token-audit>
+      </details>
       <slot title="Component Sandbox"></slot>
     `;
   }
