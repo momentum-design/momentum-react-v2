@@ -8,6 +8,7 @@
 /storybook-static
 /stats/css
 /stats/json
+/stats/tokens
 
 # auto generated token style variables
 /src/wc_scss/colors/vars

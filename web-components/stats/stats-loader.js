@@ -16,7 +16,7 @@ module.exports = async function(source) {
     const name = location.substring(location.indexOf(components_base) + 15, location.indexOf(scss_sub_path));
     analyzeCSS(name, source);
 
-    writeFileSyncRecursive(`stats/css/${name}.css`, source, "utf-8");
+    // writeFileSyncRecursive(`stats/css/${name}.css`, source, "utf-8");
   }
 
   return source;
