@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 /**
  * Copyright (c) Cisco Systems, Inc. and its affiliates.
  *
@@ -6,10 +7,12 @@
  *
  */
 
+import { lumosDark, lumosLight, momentumDark, momentumLight } from "@/components/theme/index.ts";
 import { default as reset } from "@/wc_scss/reset.scss";
 import { customElement, html, internalProperty, LitElement, property, PropertyValues, query } from "lit-element";
 import "../button/Button";
 import "../theme/Theme";
+import { colors } from "./scss/color-vars";
 @customElement("token-audit")
 export class TokenAudit extends LitElement {
   @property({ type: String }) component = "";
@@ -17,13 +20,17 @@ export class TokenAudit extends LitElement {
   @internalProperty() tokens: string[] | undefined;
   @internalProperty() lumos = false;
   @internalProperty() darkTheme = false;
+  @internalProperty() activeTheme = momentumLight;
+  @internalProperty() allThemes = [lumosDark, lumosLight, momentumDark, momentumLight];
 
   @query("md-theme") theme!: HTMLElement;
 
   closestElement(selector: string, base = this) {
     function __closestFrom(el: unknown): HTMLElement | null {
       if (!el || el === document || el === window) return null;
+      // @ts-ignore
       const found = el.closest(selector);
+      // @ts-ignore
       return found ? found : __closestFrom(el.getRootNode().host);
     }
 
@@ -41,8 +48,10 @@ export class TokenAudit extends LitElement {
 
   refreshTokenData = () => {
     const themeWrapper: unknown = this.closestElement("md-theme");
+    // @ts-ignore
     this.lumos = themeWrapper.lumos;
-    this.darkTheme = themeWrapper?.darkTheme;
+    // @ts-ignore
+    this.darkTheme = themeWrapper.darkTheme;
   };
 
   private async fetchComponentStats() {
@@ -73,31 +82,84 @@ export class TokenAudit extends LitElement {
           });
         }
         this.tokens = tokens;
-        console.log(this.tokens);
       })
       .catch(error => error);
   }
 
-  queryGlobalTokens = (token: string, lumos: boolean): Record<string, any> => {
-    // use token to find the values provided by the compiled CSS
-    // find the SASS variables from global
-    // cross reference their definitions
-    // access compiled component variables, if available, and error if not present
+  private setTheme() {
+    if (this.lumos) {
+      if (this.darkTheme) {
+        return lumosDark;
+      } else {
+        return lumosLight;
+      }
+    } else {
+      if (this.darkTheme) {
+        return momentumDark;
+      } else {
+        return momentumLight;
+      }
+    }
+  }
+
+  queryGlobalTokens = (token: string): Record<string, any> => {
+    this.activeTheme = this.setTheme();
+    let rawLight = lumosLight.cssText;
+    let rawDark = lumosDark.cssText;
+    if (this.lumos) {
+      rawLight = lumosLight.cssText;
+      rawDark = lumosDark.cssText;
+    } else {
+      rawLight = momentumLight.cssText;
+      rawDark = momentumDark.cssText;
+    }
+    const getHex = (searchToken: string, theme: string) => {
+      const re = new RegExp(`${searchToken}: #`);
+      const sixHex = new RegExp(/^#?([0-9a-f]{6}){1,2}$/);
+      const threeHex = new RegExp(/^#?([0-9a-f]{3}){1,2}$/);
+      const result = theme.match(re);
+      const clip = theme
+        // @ts-ignore
+        .slice(result?.index + searchToken.length + 2, result?.index + searchToken.length + 9)
+        .toLowerCase();
+      if (sixHex.test(clip)) {
+        return clip;
+      } else if (clip.search(threeHex) !== null && clip.length > 0) {
+        const hexcolor = clip
+          .slice(0, 4)
+          .split("")
+          .map(function(hex) {
+            if (hex !== "#") {
+              return hex + hex;
+            }
+          })
+          .join("");
+        return `#${hexcolor}`;
+      } else return `not a color: ${clip}`;
+    };
+    const lightHex = getHex(token, rawLight);
+    const darkHex = getHex(token, rawDark);
+    const lightVar = colors[lightHex];
+    const darkVar = colors[lightHex];
     return {
-      lightVar: "fart",
-      darkVar: "fart",
-      lightHex: "fart",
-      darkHex: "fart"
+      lightHex: lightHex,
+      darkHex: darkHex,
+      lightVar: lightVar,
+      darkVar: darkVar
     };
   };
 
+  swatchStyle = (value: string) => {
+    return `width: 2rem; height: 1rem; display: inline-block; background: ${value}`;
+  };
+
   renderRow = (token: string) => {
-    const { lightVar, darkVar, lightHex, darkHex } = this.queryGlobalTokens(token, this.lumos);
+    const { lightVar, darkVar, lightHex, darkHex } = this.queryGlobalTokens(token);
     return html`
       <tr>
         <td>${token}</td>
-        <td>${lightVar}, ${lightHex}, <span style=${this.swatch(lightHex)}></span></td>
-        <td>${darkVar}, ${darkHex}, <span title=${"blue"} style=${this.swatch(darkHex)}></span></td>
+        <td>${lightVar}, ${lightHex}, <span title=${lightHex} style=${this.swatchStyle(lightHex)}></span></td>
+        <td>${darkVar}, ${darkHex}, <span title=${darkHex} style=${this.swatchStyle(darkHex)}></span></td>
       </tr>
     `;
   };
@@ -126,11 +188,6 @@ export class TokenAudit extends LitElement {
           padding: 8px;
         }
 
-        #tokens td:nth-child(2) {
-          background-color: #ededed;
-          color: #121212;
-        }
-
         #tokens tr:hover {
           background-color: #ddd;
         }
@@ -154,8 +211,8 @@ export class TokenAudit extends LitElement {
           </tr>
           <tr>
             <th colspan="1">CSS Var Name</th>
-            <th colspan="1">Light Theme</th>
-            <th colspan="1">Dark Theme</th>
+            <th colspan="1">Light Hue</th>
+            <th colspan="1">Dark Hue</th>
           </tr>
         </thead>
         <tbody>
