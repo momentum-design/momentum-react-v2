@@ -140,7 +140,7 @@ export class TokenAudit extends LitElement {
     const lightHex = getHex(token, rawLight);
     const darkHex = getHex(token, rawDark);
     const lightVar = colors[lightHex];
-    const darkVar = colors[lightHex];
+    const darkVar = colors[darkHex];
     return {
       lightHex: lightHex,
       darkHex: darkHex,
