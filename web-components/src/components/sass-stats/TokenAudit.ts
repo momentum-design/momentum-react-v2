@@ -150,7 +150,7 @@ export class TokenAudit extends LitElement {
   };
 
   swatchStyle = (value: string) => {
-    return `width: 2rem; height: 1rem; display: inline-block; background: ${value}`;
+    return `border: 1px solid black; width: 2rem; height: 1rem; display: inline-block; background-color: ${value}`;
   };
 
   renderRow = (token: string) => {
@@ -198,6 +198,7 @@ export class TokenAudit extends LitElement {
           text-align: left;
           background-color: #4caf50;
           color: white;
+          font-weight: bold;
         }
       </style>
       <h4 class="token-output">Token Audit</h4>
@@ -206,7 +207,7 @@ export class TokenAudit extends LitElement {
           <tr>
             <th colspan="2">${this.lumos ? "Lumos" : "Momentum"} - ${this.darkTheme ? "Dark Theme" : "Light Theme"}</th>
             <th colspan="1">
-              <md-button @click=${this.refreshTokenData}>Refresh Token Report </md-button>
+              <md-button color="red" @click=${this.refreshTokenData}>! Refresh Token Report !</md-button>
             </th>
           </tr>
           <tr>

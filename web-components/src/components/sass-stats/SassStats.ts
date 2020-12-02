@@ -96,7 +96,6 @@ export class SassStats extends LitElement {
       <p>Total # of Selectors: <span class="stat-output">${this.selectors}</span></p>
       <p>Total # of Declarations: <span class="stat-output">${this.declarations}</span></p>
       <p>Repeated Selectors: <span class="stat-output">${this.repeatedSelectors}</span></p>
-      <p>Inspect custom elements for contrast ratio score <i>(experimental)</i></p>
       <details>
         <summary>Color Theme Tokens</summary>
         <token-audit component=${this.component}></token-audit>
