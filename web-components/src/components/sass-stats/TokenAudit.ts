@@ -15,7 +15,7 @@ import "../theme/Theme";
 import { colors } from "./scss/color-vars";
 @customElement("token-audit")
 export class TokenAudit extends LitElement {
-  @property({ type: String }) component = "";
+  @property({ type: String }) component: string | undefined = undefined;
 
   @internalProperty() tokens: string[] | undefined;
   @internalProperty() lumos = false;
@@ -67,6 +67,9 @@ export class TokenAudit extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+    if (this.component === undefined) {
+      console.log("FART");
+    }
     this.fetchComponentStats()
       .then(data => {
         const { declarations } = data;
