@@ -16,7 +16,6 @@ import { nothing } from "lit-html";
 import { classMap } from "lit-html/directives/class-map";
 import styles from "./scss/module.scss";
 
-export type modalType = "default" | "full" | "large" | "small" | "dialog";
 export const modalType = ["default", "full", "large", "small", "dialog"];
 
 const fadeDuration = 150;
@@ -28,6 +27,10 @@ const minisculeLatency = 13;
  * approaching 75 to 100 ms.
  * MIT: http://news.mit.edu/2014/in-the-blink-of-an-eye-0116
  */
+
+ export namespace Modal {
+   export type Type = typeof modalType[number];
+ }
 
 @customElement("md-modal")
 export class Modal extends FocusTrapMixin(LitElement) {
@@ -43,7 +46,7 @@ export class Modal extends FocusTrapMixin(LitElement) {
   @property({ type: Boolean }) showCloseButton = false;
   @property({ type: Boolean }) backdropClickExit = false;
   @property({ type: Boolean }) noExitOnEsc = false;
-  @property({ type: String }) size: modalType = "default";
+  @property({ type: String }) size: Modal.Type = "default";
   @property({ type: String }) closeBtnName = "";
   @property({ type: Boolean }) hideFooter = false;
   @property({ type: Boolean }) hideHeader = false;

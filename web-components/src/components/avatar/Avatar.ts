@@ -17,21 +17,10 @@ import { styleMap } from "lit-html/directives/style-map";
 import { until } from "lit-html/directives/until.js";
 import styles from "./scss/module.scss";
 
-export type AvatarType =
-  | "active"
-  | "bot"
-  | "call"
-  | "dnd"
-  | "group"
-  | "inactive"
-  | "meeting"
-  | "ooo"
-  | "presenting"
-  | "self"
-  | "typing"
-  | "";
-
-export type AvatarSize = 18 | 24 | 28 | 32 | 36 | 40 | 44 | 52 | 56 | 72 | 80 | 84;
+export namespace Avatar {
+  export type Size = 18 | 24 | 28 | 32 | 36 | 40 | 44 | 52 | 56 | 72 | 80 | 84;
+  export type Type = "active" | "bot" | "call" | "dnd" | "group" | "inactive" | "meeting" | "ooo" | "presenting" | "self" | "typing" | "";
+}
 
 @customElement("md-avatar")
 export class Avatar extends LitElement {
@@ -42,8 +31,8 @@ export class Avatar extends LitElement {
   @property({ type: String }) color = "";
   @property({ type: Boolean }) decrypting = false;
   @property({ type: String, attribute: "icon-name" }) iconName = "";
-  @property({ type: String }) type: AvatarType = "";
-  @property({ type: Number }) size: AvatarSize = 40;
+  @property({ type: String }) type: Avatar.Type = "";
+  @property({ type: Number }) size: Avatar.Size = 40;
   @property({ type: Boolean, attribute: "has-notification" }) hasNotification = false;
 
   @internalProperty() private imageLoaded = false;

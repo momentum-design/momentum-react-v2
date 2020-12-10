@@ -11,18 +11,22 @@ import { customElement, html, LitElement, property } from "lit-element";
 import { classMap } from "lit-html/directives/class-map";
 import styles from "./scss/module.scss";
 
-export type LinkTag = "a" | "div" | "span";
+
 export const linkTag = ["a", "div", "span"];
-export type LinkColor = "" | "blue" | "red" | "green" | "yellow" | "orange";
 export const LinkColor = ["", "blue", "red", "green", "yellow", "orange"];
+
+export namespace Link {
+  export type Tag = typeof linkTag[number];
+  export type Color = typeof LinkColor[number];
+}
 
 @customElement("md-link")
 export class Link extends LitElement {
-  @property({ type: String, attribute: false }) color: LinkColor = "";
+  @property({ type: String, attribute: false }) color: Link.Color = "";
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) inline = false;
   @property({ type: String }) href = "";
-  @property({ type: String }) tag: LinkTag = "a";
+  @property({ type: String }) tag: Link.Tag = "a";
   @property({ type: String }) target = "_self";
   private _tabIndex = 0;
   @property({ type: Number, attribute: "tab-index", reflect: true })

@@ -14,6 +14,8 @@ import "@/components/button/Button";
 import "@/components/icon/Icon";
 import styles from "./scss/module.scss";
 
+export namespace AlertBanner {}
+
 @customElement("md-alert-banner")
 export class AlertBanner extends LitElement {
   @property({ type: String }) type = "";

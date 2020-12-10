@@ -12,6 +12,7 @@ import { nothing } from "lit-html";
 import { classMap } from "lit-html/directives/class-map";
 import "@/components/icon/Icon";
 import styles from "./scss/module.scss";
+
 @customElement("md-badge")
 export class Badge extends LitElement {
   @property({ type: String, attribute: "aria-label" }) ariaLabel = "";

@@ -14,6 +14,10 @@ import "@/components/button/Button";
 import "@/components/icon/Icon";
 import styles from "./scss/module.scss";
 
+export namespace Alert {
+  export type Type = "default" | "error" | "info" | "success" | "warn" | "warning";
+}
+
 @customElement("md-alert")
 export class Alert extends LitElement {
   @property({ type: Boolean }) closable = false;
@@ -21,7 +25,7 @@ export class Alert extends LitElement {
   @property({ type: Boolean }) show = false;
   @property({ type: Boolean }) internalClose = true;
   @property({ type: String }) title = "";
-  @property({ type: String }) type = "default";
+  @property({ type: String }) type: Alert.Type = "default";
   @property({ type: Boolean }) inline = false;
 
   close() {

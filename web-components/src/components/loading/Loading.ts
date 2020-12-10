@@ -11,11 +11,15 @@ import { customElement, html, LitElement, property } from "lit-element";
 import { classMap } from "lit-html/directives/class-map.js";
 import styles from "./scss/module.scss";
 
-export type LoadingSize = "small" | "middle" | "large" | "";
+
+
+export namespace Loading {
+  export type Size = "small" | "middle" | "large" | "";
+}
 
 @customElement("md-loading")
 export class Loading extends LitElement {
-  @property({ type: String }) size: LoadingSize = "";
+  @property({ type: String }) size: Loading.Size = "";
 
   static get styles() {
     return [reset, styles];
