@@ -1,15 +1,33 @@
 import "@/components/button/Button";
 import "@/components/icon/Icon.ts";
 import "@/components/tooltip/Tooltip.ts";
-import { html } from "lit-element";
+import { customElement, html, LitElement, property } from "lit-element";
 
-export const tooltipTemplate = html`
-  <div class="container">
-    <div class="column ">
-      <div class="row md-margin__bottom"><h3>md-tooltip</h3></div>
+@customElement("tooltip-template-sandbox")
+export class TooltipTemplateSandbox extends LitElement { 
+  @property({ type: String }) message = "Copy";
+  @property({ type: Boolean }) isCopied = false;
+
+  private clickBtn() {
+    this.isCopied = true;
+    if (this.isCopied) {
+      this.message = "Copied";
+      console.log("change");
+      this.requestUpdate("message");
+    } else {
+      this.message = "Copy";
+    }
+
+    setTimeout(() => {
+        this.isCopied = false;
+      }, 500);
+  }
+
+  render() {
+    return html`
       <div class="row md-padding__vertical">
-        <md-tooltip message="Tooltip Tooltip Tooltip v Tooltip v Tooltip">
-          <md-button>Tooltip Default</md-button>
+        <md-tooltip message=${this.message}>
+          <md-button @button-click=${() => this.clickBtn()}>Tooltip Default</md-button>
         </md-tooltip>
       </div>
       <div class="row md-padding__vertical">
@@ -46,6 +64,16 @@ export const tooltipTemplate = html`
           <md-button>Tooltip Slot Content</md-button>
         </md-tooltip>
       </div>
+    `
+  }
+
+}
+
+export const tooltipTemplate = html`
+  <div class="container">
+    <div class="column ">
+      <div class="row md-margin__bottom"><h3>md-tooltip</h3></div>
+        <tooltip-template-sandbox></tooltip-template-sandbox>
     </div>
   </div>
 `;
