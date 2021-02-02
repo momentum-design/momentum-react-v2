@@ -54,6 +54,7 @@ export { RadioGroup } from "./components/radio/RadioGroup";
 export { Slider } from "./components/slider/Slider";
 export { Spinner } from "./components/spinner/Spinner";
 export { SortableItem } from "./components/sortable/SortableItem";
+export { SortableList } from "./components/sortable/SortableList";
 export { Table } from "./components/table/Table";
 export { Tab } from "./components/tabs/Tab";
 export { TabPanel } from "./components/tabs/TabPanel";

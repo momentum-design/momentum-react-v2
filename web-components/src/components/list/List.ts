@@ -7,7 +7,6 @@
  */
 
 import { ListItem } from "@/components/list/ListItem";
-import Sortable from "sortablejs";
 import { Key } from "@/constants";
 import { RovingTabIndexMixin } from "@/mixins";
 import reset from "@/wc_scss/reset.scss";
@@ -88,20 +87,6 @@ export class List extends RovingTabIndexMixin(LitElement) {
     }
   }
 
-  private setSortable() {
-    requestAnimationFrame(() => {
-      if (this.list) {
-        new Sortable(this.slotted as any, {
-          animation: 150,
-          sort: true,
-          ghostClass: 'blue-background-class',
-          draggable: "slot[name='list-item']"
-        });
-      }
-    });
-    console.log(this.list)
-  }
-
   protected updated(changedProperties: PropertyValues) {
     super.updated(changedProperties);
     if (changedProperties.has("slotted")) {
@@ -109,9 +94,6 @@ export class List extends RovingTabIndexMixin(LitElement) {
     }
     if (changedProperties.has("activated")) {
       this.setActivated(this.activated);
-    }
-    if (changedProperties.has("sortable")) {
-      this.setSortable();
     }
   }
   private isListItemDisabled(index: number) {

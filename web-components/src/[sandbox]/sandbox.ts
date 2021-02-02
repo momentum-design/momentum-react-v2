@@ -4,6 +4,7 @@ import reset from "@/wc_scss/reset.scss";
 import styles from "@/[sandbox]/sandbox.scss";
 import "elix/define/ListExplorer.js";
 import { customElement, html, LitElement, property, PropertyValues } from "lit-element";
+import "@/components/sortable/SortableList";
 import "@/components/sortable/SortableItem";
 import {
   alertBannerTemplate,
@@ -117,10 +118,18 @@ export class Sandbox extends LitElement {
         ${this.themeToggle()}
         <elix-list-explorer class="explorer">
 
-          <div class="container" aria-label="md-sortable-item">
-            <h2>md-sortable-item</h2>
-            <sass-stats component="sortable-item">
-              <md-sortable-item></md-sortable-item>
+          <div class="container" aria-label="md-sortable-list">
+            <h2>md-sortable-list</h2>
+            <sass-stats component="sortable-list">
+              <md-sortable-list>
+                <md-sortable-item><div class="list-group-item" >Item 1</div></md-sortable-item>
+                <md-sortable-item><div class="list-group-item" >Item 2</div></md-sortable-item>
+                <md-sortable-item><div class="list-group-item" >Item 3</div></md-sortable-item>
+                <md-sortable-item><div class="list-group-item" >Item 4</div></md-sortable-item>
+                <md-sortable-item><div class="list-group-item" >Item 5</div></md-sortable-item>
+                <md-sortable-item><div class="list-group-item" >Item 6</div></md-sortable-item>
+                <md-sortable-item><div class="list-group-item" >Item 7</div></md-sortable-item>
+              </md-sortable-list>
             </sass-stats>
           </div>
 
