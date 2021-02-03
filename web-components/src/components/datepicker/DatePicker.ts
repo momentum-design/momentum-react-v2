@@ -41,13 +41,14 @@ export class DatePicker extends LitElement {
     }
   }
 
-  async firstUpdated(changedProperties: PropertyValues) {
+  firstUpdated(changedProperties: PropertyValues) {
     super.firstUpdated(changedProperties);
 
     if (!this.value) {
       this.value = this.includesTime
-        ? this.selectedDate?.toISO({ suppressMilliseconds: true })
+        ? this.selectedDate?.startOf('second').toISO({ suppressMilliseconds: true })
         : this.selectedDate?.toISODate();
+      console.log('[log][datePicker] this.value', this.value);
     }
   }
 
@@ -55,7 +56,7 @@ export class DatePicker extends LitElement {
     if (event?.detail?.value) {
       this.value = event?.detail?.value;
     }
-
+    console.log('[log][DatePicker] handleDateInputChange', this.value);
     this.dispatchEvent(
       new CustomEvent("date-input-change", {
         bubbles: true,
@@ -100,7 +101,7 @@ export class DatePicker extends LitElement {
   setSelected = (date: DateTime, event: Event) => {
     const filters: DayFilters = { maxDate: this.maxDateData, minDate: this.minDateData, filterDate: this.filterDate };
     if (!isDayDisabled(date, filters)) {
-      const dateString = this.includesTime ? date.toISO({ suppressMilliseconds: true }) : date.toISODate();
+      const dateString = this.includesTime ? date.startOf('second').toISO({ suppressMilliseconds: true }) : date.toISODate();
       this.selectedDate = date;
       this.value = dateString;
     }

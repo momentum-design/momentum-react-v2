@@ -15,7 +15,7 @@ export const dateTimePickerTemplate = html`
   <h2 class="sandbox-header">md-date-time-picker</h2>
   <h3>date-time-picker</h3>
   <md-date-time-picker></md-date-time-picker>
-  <h3>date-time-picker with ru locale</h3>
+  <!-- <h3>date-time-picker with ru locale</h3>
   <md-date-time-picker locale="ru"></md-date-time-picker>
   <h3>date-time-picker with minDate & maxDate</h3>
   <md-date-time-picker minDate=${minDate} maxDate=${maxDate}></md-date-time-picker>
@@ -24,5 +24,5 @@ export const dateTimePickerTemplate = html`
   <h3>date-time-picker with value</h3>
   <md-date-time-picker value="2021-02-14T12:00:00-08:00"></md-date-time-picker>
   <h3>disabled date-time-picker</h3>
-  <md-date-time-picker value="2021-02-14T12:00:00-08:00" disabled></md-date-time-picker>
+  <md-date-time-picker value="2021-02-14T12:00:00-08:00" disabled></md-date-time-picker> -->
 `;
