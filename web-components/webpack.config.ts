@@ -201,7 +201,15 @@ const commonDist = merge(common, {
     "comp/md-timepicker-entry": "./src/components/timepicker/TimePicker",
     "comp/md-toggle-switch-entry": "./src/components/toggle-switch/ToggleSwitch",
     "comp/md-tooltip-entry": "./src/components/tooltip/Tooltip",
-    "comp/md-form-entry": "./src/components/form/Form"
+    "comp/md-form-entry": "./src/components/form/Form",
+    "mixins-entry": "./src/mixins/index.ts",
+    "mixins/customElementWithCheck-entry": "./src/mixins/CustomElementCheck.ts",
+    "mixins/dedupeMixin-entry": "./src/mixins/DedupeMixin.ts",
+    "mixins/focusMixin-entry": "./src/mixins/FocusMixin.ts",
+    "mixins/focusTrapMixin-entry": "./src/mixins/FocusTrapMixin.ts",
+    "mixins/resizeMixin-entry": "./src/mixins/ResizeMixin.ts",
+    "mixins/rovingTabIndexMixin-entry": "./src/mixins/RovingTabIndexMixin.ts",
+    "mixins/slottedMixin-entry": "./src/mixins/SlottedMixin.ts"
   },
   output: {
     path: pDist,
