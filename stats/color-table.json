@@ -1,0 +1,2275 @@
+{
+  "size": 10118,
+  "gzipSize": 1490,
+  "humanizedSize": "10KB",
+  "humanizedGzipSize": "1KB",
+  "rules": {
+    "total": 184,
+    "size": {
+      "graph": [
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max": 5,
+      "average": 1.0217391304347827
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".color-table::part(color-box)",
+        "declarations": 5
+      },
+      {
+        "selector": ".color-table::part(mdtheme05)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme95)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdtheme10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpink10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdpurple10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdviolet10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdslate10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcobalt10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdcyan10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdmint10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdlime10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdolive10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgold10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdorange10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblack)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblack100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdwhite)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdwhite100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdwhite60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray05)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray100)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray95)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgray10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen05)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen95)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdgreen10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow05)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow95)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdyellow10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred05)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred95)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdred10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue05)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue95)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue90)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue80)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue70)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue60)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue50)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue40)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue30)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue20)",
+        "declarations": 1
+      },
+      {
+        "selector": ".color-table::part(mdblue10)",
+        "declarations": 1
+      },
+      {
+        "selector": ".code-block",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 184,
+    "type": 183,
+    "class": 184,
+    "id": 0,
+    "pseudoClass": 0,
+    "pseudoElement": 0,
+    "values": [
+      ".color-table::part(color-box)",
+      ".code-block",
+      ".color-table::part(mdblue10)",
+      ".color-table::part(mdblue20)",
+      ".color-table::part(mdblue30)",
+      ".color-table::part(mdblue40)",
+      ".color-table::part(mdblue50)",
+      ".color-table::part(mdblue60)",
+      ".color-table::part(mdblue70)",
+      ".color-table::part(mdblue80)",
+      ".color-table::part(mdblue90)",
+      ".color-table::part(mdblue95)",
+      ".color-table::part(mdblue05)",
+      ".color-table::part(mdred10)",
+      ".color-table::part(mdred20)",
+      ".color-table::part(mdred30)",
+      ".color-table::part(mdred40)",
+      ".color-table::part(mdred50)",
+      ".color-table::part(mdred60)",
+      ".color-table::part(mdred70)",
+      ".color-table::part(mdred80)",
+      ".color-table::part(mdred90)",
+      ".color-table::part(mdred95)",
+      ".color-table::part(mdred05)",
+      ".color-table::part(mdyellow10)",
+      ".color-table::part(mdyellow20)",
+      ".color-table::part(mdyellow30)",
+      ".color-table::part(mdyellow40)",
+      ".color-table::part(mdyellow50)",
+      ".color-table::part(mdyellow60)",
+      ".color-table::part(mdyellow70)",
+      ".color-table::part(mdyellow80)",
+      ".color-table::part(mdyellow90)",
+      ".color-table::part(mdyellow95)",
+      ".color-table::part(mdyellow05)",
+      ".color-table::part(mdgreen10)",
+      ".color-table::part(mdgreen20)",
+      ".color-table::part(mdgreen30)",
+      ".color-table::part(mdgreen40)",
+      ".color-table::part(mdgreen50)",
+      ".color-table::part(mdgreen60)",
+      ".color-table::part(mdgreen70)",
+      ".color-table::part(mdgreen80)",
+      ".color-table::part(mdgreen90)",
+      ".color-table::part(mdgreen95)",
+      ".color-table::part(mdgreen05)",
+      ".color-table::part(mdgray10)",
+      ".color-table::part(mdgray20)",
+      ".color-table::part(mdgray30)",
+      ".color-table::part(mdgray40)",
+      ".color-table::part(mdgray50)",
+      ".color-table::part(mdgray60)",
+      ".color-table::part(mdgray70)",
+      ".color-table::part(mdgray80)",
+      ".color-table::part(mdgray90)",
+      ".color-table::part(mdgray95)",
+      ".color-table::part(mdgray100)",
+      ".color-table::part(mdgray05)",
+      ".color-table::part(mdwhite60)",
+      ".color-table::part(mdwhite100)",
+      ".color-table::part(mdwhite)",
+      ".color-table::part(mdblack100)",
+      ".color-table::part(mdblack)",
+      ".color-table::part(mdorange10)",
+      ".color-table::part(mdorange20)",
+      ".color-table::part(mdorange30)",
+      ".color-table::part(mdorange40)",
+      ".color-table::part(mdorange50)",
+      ".color-table::part(mdorange60)",
+      ".color-table::part(mdorange70)",
+      ".color-table::part(mdorange80)",
+      ".color-table::part(mdorange90)",
+      ".color-table::part(mdorange100)",
+      ".color-table::part(mdgold10)",
+      ".color-table::part(mdgold20)",
+      ".color-table::part(mdgold30)",
+      ".color-table::part(mdgold40)",
+      ".color-table::part(mdgold50)",
+      ".color-table::part(mdgold60)",
+      ".color-table::part(mdgold70)",
+      ".color-table::part(mdgold80)",
+      ".color-table::part(mdgold90)",
+      ".color-table::part(mdgold100)",
+      ".color-table::part(mdolive10)",
+      ".color-table::part(mdolive20)",
+      ".color-table::part(mdolive30)",
+      ".color-table::part(mdolive40)",
+      ".color-table::part(mdolive50)",
+      ".color-table::part(mdolive60)",
+      ".color-table::part(mdolive70)",
+      ".color-table::part(mdolive80)",
+      ".color-table::part(mdolive90)",
+      ".color-table::part(mdolive100)",
+      ".color-table::part(mdlime10)",
+      ".color-table::part(mdlime20)",
+      ".color-table::part(mdlime30)",
+      ".color-table::part(mdlime40)",
+      ".color-table::part(mdlime50)",
+      ".color-table::part(mdlime60)",
+      ".color-table::part(mdlime70)",
+      ".color-table::part(mdlime80)",
+      ".color-table::part(mdlime90)",
+      ".color-table::part(mdlime100)",
+      ".color-table::part(mdmint10)",
+      ".color-table::part(mdmint20)",
+      ".color-table::part(mdmint30)",
+      ".color-table::part(mdmint40)",
+      ".color-table::part(mdmint50)",
+      ".color-table::part(mdmint60)",
+      ".color-table::part(mdmint70)",
+      ".color-table::part(mdmint80)",
+      ".color-table::part(mdmint90)",
+      ".color-table::part(mdmint100)",
+      ".color-table::part(mdcyan10)",
+      ".color-table::part(mdcyan20)",
+      ".color-table::part(mdcyan30)",
+      ".color-table::part(mdcyan40)",
+      ".color-table::part(mdcyan50)",
+      ".color-table::part(mdcyan60)",
+      ".color-table::part(mdcyan70)",
+      ".color-table::part(mdcyan80)",
+      ".color-table::part(mdcyan90)",
+      ".color-table::part(mdcyan100)",
+      ".color-table::part(mdcobalt10)",
+      ".color-table::part(mdcobalt20)",
+      ".color-table::part(mdcobalt30)",
+      ".color-table::part(mdcobalt40)",
+      ".color-table::part(mdcobalt50)",
+      ".color-table::part(mdcobalt60)",
+      ".color-table::part(mdcobalt70)",
+      ".color-table::part(mdcobalt80)",
+      ".color-table::part(mdcobalt90)",
+      ".color-table::part(mdcobalt100)",
+      ".color-table::part(mdslate10)",
+      ".color-table::part(mdslate20)",
+      ".color-table::part(mdslate30)",
+      ".color-table::part(mdslate40)",
+      ".color-table::part(mdslate50)",
+      ".color-table::part(mdslate60)",
+      ".color-table::part(mdslate70)",
+      ".color-table::part(mdslate80)",
+      ".color-table::part(mdslate90)",
+      ".color-table::part(mdslate100)",
+      ".color-table::part(mdviolet10)",
+      ".color-table::part(mdviolet20)",
+      ".color-table::part(mdviolet30)",
+      ".color-table::part(mdviolet40)",
+      ".color-table::part(mdviolet50)",
+      ".color-table::part(mdviolet60)",
+      ".color-table::part(mdviolet70)",
+      ".color-table::part(mdviolet80)",
+      ".color-table::part(mdviolet90)",
+      ".color-table::part(mdviolet100)",
+      ".color-table::part(mdpurple10)",
+      ".color-table::part(mdpurple20)",
+      ".color-table::part(mdpurple30)",
+      ".color-table::part(mdpurple40)",
+      ".color-table::part(mdpurple50)",
+      ".color-table::part(mdpurple60)",
+      ".color-table::part(mdpurple70)",
+      ".color-table::part(mdpurple80)",
+      ".color-table::part(mdpurple90)",
+      ".color-table::part(mdpurple100)",
+      ".color-table::part(mdpink10)",
+      ".color-table::part(mdpink20)",
+      ".color-table::part(mdpink30)",
+      ".color-table::part(mdpink40)",
+      ".color-table::part(mdpink50)",
+      ".color-table::part(mdpink60)",
+      ".color-table::part(mdpink70)",
+      ".color-table::part(mdpink80)",
+      ".color-table::part(mdpink90)",
+      ".color-table::part(mdpink100)",
+      ".color-table::part(mdtheme10)",
+      ".color-table::part(mdtheme20)",
+      ".color-table::part(mdtheme30)",
+      ".color-table::part(mdtheme40)",
+      ".color-table::part(mdtheme50)",
+      ".color-table::part(mdtheme60)",
+      ".color-table::part(mdtheme70)",
+      ".color-table::part(mdtheme80)",
+      ".color-table::part(mdtheme90)",
+      ".color-table::part(mdtheme95)",
+      ".color-table::part(mdtheme05)"
+    ],
+    "specificity": {
+      "max": 11,
+      "average": 10.994565217391305,
+      "graph": [
+        11,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "sortedGraph": [
+        {
+          "selector": ".color-table::part(color-box)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue95)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblue05)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred95)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdred05)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow95)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdyellow05)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen95)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgreen05)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray95)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgray05)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdwhite60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdwhite100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdwhite)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblack100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdblack)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdorange100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdgold100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdolive100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdlime100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdmint100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcyan100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdcobalt100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdslate100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdviolet100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpurple100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdpink100)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme10)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme20)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme30)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme40)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme50)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme60)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme70)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme80)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme90)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme95)",
+          "specificity": 11
+        },
+        {
+          "selector": ".color-table::part(mdtheme05)",
+          "specificity": 11
+        },
+        {
+          "selector": ".code-block",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 188,
+    "unique": 174,
+    "properties": {
+      "border": [
+        "1px solid #1C1C1C"
+      ],
+      "display": [
+        "block"
+      ],
+      "float": [
+        "right"
+      ],
+      "height": [
+        "20px"
+      ],
+      "width": [
+        "20px"
+      ],
+      "color": [
+        "var(--md-secondary-text-color, #1C1C1C)"
+      ],
+      "background-color": [
+        "#C9F4FF",
+        "#91EBFF",
+        "#52DCFF",
+        "#07C1F5",
+        "#00A0D1",
+        "#007AA3",
+        "#005E7D",
+        "#064157",
+        "#092D3B",
+        "#091E26",
+        "#EBFCFF",
+        "#FFE8E3",
+        "#FFD5CC",
+        "#FFBBAD",
+        "#FF9580",
+        "#F7644A",
+        "#D4371C",
+        "#A12512",
+        "#6E1D13",
+        "#4A1812",
+        "#301210",
+        "#FFF5F2",
+        "#FFECC2",
+        "#FFD98C",
+        "#FFC14F",
+        "#FC9D03",
+        "#D97F00",
+        "#A85F00",
+        "#7D4705",
+        "#54330D",
+        "#38240E",
+        "#261A0D",
+        "#FFF7E3",
+        "#BEFADE",
+        "#78F5B8",
+        "#31E88C",
+        "#00CF64",
+        "#00AB50",
+        "#00853C",
+        "#03612C",
+        "#08421F",
+        "#092E16",
+        "#081F10",
+        "#EDFAF4",
+        "#EDEDED",
+        "#DEDEDE",
+        "#ccc",
+        "#B2B2B2",
+        "#949494",
+        "#707070",
+        "#545454",
+        "#3B3B3B",
+        "#292929",
+        "#1C1C1C",
+        "#121212",
+        "#F7F7F7",
+        "#fff",
+        "#fff",
+        "#fff",
+        "#000",
+        "#000",
+        "#FAF4EB",
+        "#FCE4C7",
+        "#FFCA99",
+        "#FF9D52",
+        "#F26B1D",
+        "#C74F0E",
+        "#914017",
+        "#59311E",
+        "#33221B",
+        "#211916",
+        "#F7F6DC",
+        "#F5EAA2",
+        "#EBD460",
+        "#D6B220",
+        "#BA8C00",
+        "#996E00",
+        "#735107",
+        "#4D370C",
+        "#30240D",
+        "#21190B",
+        "#F3F5E4",
+        "#E7EDB7",
+        "#D3DB7B",
+        "#B4BA43",
+        "#999923",
+        "#7D7A18",
+        "#5C5813",
+        "#403D11",
+        "#29260D",
+        "#1C1A0A",
+        "#F3F7E9",
+        "#DDF2AE",
+        "#BCE36F",
+        "#93C437",
+        "#73A321",
+        "#588219",
+        "#416116",
+        "#2D4214",
+        "#1E2B10",
+        "#141C0C",
+        "#E9F7F3",
+        "#BAF5E7",
+        "#74E8D1",
+        "#30C9B0",
+        "#16A693",
+        "#148579",
+        "#12615A",
+        "#12423F",
+        "#102B2A",
+        "#0C1C1B",
+        "#E6F9FA",
+        "#B2F4F7",
+        "#67E7F0",
+        "#22C7D6",
+        "#00A3B5",
+        "#008094",
+        "#066070",
+        "#0A414D",
+        "#0B2A30",
+        "#091C21",
+        "#E6F8FF",
+        "#C7EEFF",
+        "#9df",
+        "#5EBFF6",
+        "#279BE7",
+        "#0A78CC",
+        "#08599C",
+        "#103C62",
+        "#12283D",
+        "#0F1A25",
+        "#F2F4FF",
+        "#E3E7FA",
+        "#CED2ED",
+        "#B0B4D9",
+        "#8C91BD",
+        "#6F739E",
+        "#535573",
+        "#393A47",
+        "#26262B",
+        "#1A1A1C",
+        "#F8F2FC",
+        "#F0E3FC",
+        "#E2CAFC",
+        "#C7A5FA",
+        "#A87FF1",
+        "#875AE1",
+        "#643ABD",
+        "#432C77",
+        "#29223D",
+        "#1B1823",
+        "#FCF2FC",
+        "#FCE1FC",
+        "#FAC3F8",
+        "#F294F1",
+        "#E060DE",
+        "#C233C4",
+        "#932099",
+        "#601E66",
+        "#3B1840",
+        "#251329",
+        "#FFF2F5",
+        "#FFE0E7",
+        "#FFC7D2",
+        "#FC97AA",
+        "#F0677E",
+        "#D43B52",
+        "#A12A3A",
+        "#66262D",
+        "#3B1E21",
+        "#241617",
+        "#C9F4FF",
+        "#91EBFF",
+        "#52DCFF",
+        "#07C1F5",
+        "#00A0D1",
+        "#007AA3",
+        "#005E7D",
+        "#064157",
+        "#092D3B",
+        "#091E26",
+        "#EBFCFF"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

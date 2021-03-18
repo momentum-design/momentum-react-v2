@@ -1,0 +1,247 @@
+{
+  "size": 964,
+  "gzipSize": 390,
+  "humanizedSize": "964B",
+  "humanizedGzipSize": "390B",
+  "rules": {
+    "total": 13,
+    "size": {
+      "graph": [
+        5,
+        3,
+        1,
+        7,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "max": 7,
+      "average": 2.076923076923077
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".md-loading .md-loading__icon::before",
+        "declarations": 7
+      },
+      {
+        "selector": ".md-loading",
+        "declarations": 5
+      },
+      {
+        "selector": "button .md-loading,.md-loading .md-button",
+        "declarations": 3
+      },
+      {
+        "selector": "20%",
+        "declarations": 2
+      },
+      {
+        "selector": "0%,100%",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-loading.md-loading--large",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-loading.md-loading--middle",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-loading.md-loading--small .icon",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-loading.md-loading--small",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-loading .md-loading__icon:not(:last-child)",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-loading .md-loading__icon:nth-of-type(3)::before",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-loading .md-loading__icon:nth-of-type(2)::before",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-loading .md-loading__icon",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 12,
+    "type": 1,
+    "class": 12,
+    "id": 0,
+    "pseudoClass": 3,
+    "pseudoElement": 3,
+    "values": [
+      ".md-loading",
+      "button .md-loading",
+      ".md-loading .md-button",
+      ".md-loading .md-loading__icon",
+      ".md-loading .md-loading__icon::before",
+      ".md-loading .md-loading__icon:nth-of-type(2)::before",
+      ".md-loading .md-loading__icon:nth-of-type(3)::before",
+      ".md-loading .md-loading__icon:not(:last-child)",
+      ".md-loading.md-loading--small",
+      ".md-loading.md-loading--small .icon",
+      ".md-loading.md-loading--middle",
+      ".md-loading.md-loading--large"
+    ],
+    "specificity": {
+      "max": 31,
+      "average": 22,
+      "graph": [
+        10,
+        11,
+        20,
+        20,
+        21,
+        31,
+        31,
+        30,
+        20,
+        30,
+        20,
+        20
+      ],
+      "sortedGraph": [
+        {
+          "selector": ".md-loading .md-loading__icon:nth-of-type(2)::before",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-loading .md-loading__icon:nth-of-type(3)::before",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-loading .md-loading__icon:not(:last-child)",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-loading.md-loading--small .icon",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-loading .md-loading__icon::before",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-loading .md-button",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-loading .md-loading__icon",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-loading.md-loading--small",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-loading.md-loading--middle",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-loading.md-loading--large",
+          "specificity": 20
+        },
+        {
+          "selector": "button .md-loading",
+          "specificity": 11
+        },
+        {
+          "selector": ".md-loading",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 27,
+    "unique": 24,
+    "properties": {
+      "align-content": [
+        "center"
+      ],
+      "align-items": [
+        "center",
+        "center"
+      ],
+      "display": [
+        "flex",
+        "flex"
+      ],
+      "flex-flow": [
+        "row nowrap"
+      ],
+      "justify-content": [
+        "center",
+        "center"
+      ],
+      "font-size": [
+        "50%",
+        "1rem",
+        "25%",
+        "2rem",
+        "3rem"
+      ],
+      "content": [
+        "\"\\fbd7\""
+      ],
+      "animation-duration": [
+        "1.4s"
+      ],
+      "animation-fill-mode": [
+        "both"
+      ],
+      "animation-iteration-count": [
+        "infinite"
+      ],
+      "animation-name": [
+        "loading"
+      ],
+      "font-family": [
+        "\"momentum-ui-icons\""
+      ],
+      "vertical-align": [
+        "middle"
+      ],
+      "animation-delay": [
+        "0.2s",
+        "0.4s"
+      ],
+      "margin-right": [
+        "0.5em"
+      ],
+      "opacity": [
+        "0.1",
+        "1"
+      ],
+      "transform": [
+        "scale(0, 0)",
+        "scale(1, 1)"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

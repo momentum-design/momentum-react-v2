@@ -1,0 +1,206 @@
+{
+  "size": 1092,
+  "gzipSize": 322,
+  "humanizedSize": "1KB",
+  "humanizedGzipSize": "322B",
+  "rules": {
+    "total": 10,
+    "size": {
+      "graph": [
+        3,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        2,
+        6
+      ],
+      "max": 6,
+      "average": 2.3
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".md-alert-banner__close",
+        "declarations": 6
+      },
+      {
+        "selector": ".md-alert-banner__text",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-alert-banner",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-alert-banner__text a",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-alert-banner.md-alert-banner--error",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-alert-banner.md-alert-banner--warning",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-alert-banner.md-alert-banner--default",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-alert-banner.md-alert-banner--error md-icon",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-alert-banner.md-alert-banner--warning md-icon",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-alert-banner.md-alert-banner--default md-icon",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 10,
+    "type": 4,
+    "class": 10,
+    "id": 0,
+    "pseudoClass": 0,
+    "pseudoElement": 0,
+    "values": [
+      ".md-alert-banner",
+      ".md-alert-banner.md-alert-banner--default",
+      ".md-alert-banner.md-alert-banner--default md-icon",
+      ".md-alert-banner.md-alert-banner--warning",
+      ".md-alert-banner.md-alert-banner--warning md-icon",
+      ".md-alert-banner.md-alert-banner--error",
+      ".md-alert-banner.md-alert-banner--error md-icon",
+      ".md-alert-banner__text",
+      ".md-alert-banner__text a",
+      ".md-alert-banner__close"
+    ],
+    "specificity": {
+      "max": 21,
+      "average": 16.4,
+      "graph": [
+        10,
+        20,
+        21,
+        20,
+        21,
+        20,
+        21,
+        10,
+        11,
+        10
+      ],
+      "sortedGraph": [
+        {
+          "selector": ".md-alert-banner.md-alert-banner--default md-icon",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-alert-banner.md-alert-banner--warning md-icon",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-alert-banner.md-alert-banner--error md-icon",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-alert-banner.md-alert-banner--default",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-alert-banner.md-alert-banner--warning",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-alert-banner.md-alert-banner--error",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-alert-banner__text a",
+          "specificity": 11
+        },
+        {
+          "selector": ".md-alert-banner",
+          "specificity": 10
+        },
+        {
+          "selector": ".md-alert-banner__text",
+          "specificity": 10
+        },
+        {
+          "selector": ".md-alert-banner__close",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 23,
+    "unique": 19,
+    "properties": {
+      "padding": [
+        ".75rem",
+        "0 1.75rem"
+      ],
+      "position": [
+        "relative",
+        "absolute"
+      ],
+      "text-align": [
+        "center",
+        "center"
+      ],
+      "background-color": [
+        "var(--alert-banner-default-bg-color, #c9f4ff)",
+        "var(--alert-banner-warning-bg-color, #ffecc2)",
+        "var(--alert-banner-error-bg-color, #ffe8e3)"
+      ],
+      "color": [
+        "var(--alert-banner-default-text-color, #005e7d)",
+        "var(--alert-banner-default-text-color, #005e7d)",
+        "var(--alert-banner-warning-text-color, #7d4705)",
+        "var(--alert-banner-warning-text-color, #7d4705)",
+        "var(--alert-banner-error-text-color, #a12512)",
+        "var(--alert-banner-error-text-color, #a12512)",
+        "inherit"
+      ],
+      "font-size": [
+        ".875rem"
+      ],
+      "text-decoration": [
+        "underline"
+      ],
+      "cursor": [
+        "pointer"
+      ],
+      "height": [
+        "1rem"
+      ],
+      "right": [
+        "1rem"
+      ],
+      "top": [
+        ".75rem"
+      ],
+      "width": [
+        "1rem"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

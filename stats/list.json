@@ -1,0 +1,290 @@
+{
+  "size": 1599,
+  "gzipSize": 520,
+  "humanizedSize": "2KB",
+  "humanizedGzipSize": "520B",
+  "rules": {
+    "total": 12,
+    "size": {
+      "graph": [
+        2,
+        2,
+        13,
+        1,
+        1,
+        1,
+        1,
+        2,
+        10,
+        5,
+        6,
+        5
+      ],
+      "max": 13,
+      "average": 4.083333333333333
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-list-item) .md-list-item",
+        "declarations": 13
+      },
+      {
+        "selector": ":host(md-list) .md-list",
+        "declarations": 10
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) ::slotted(md-list-item)",
+        "declarations": 6
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"])",
+        "declarations": 5
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) ul",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(:active[disabled]) .md-list-item,:host([disabled]) .md-list-item",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-list-item)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([focus-visible]:not([disabled])) .md-list-item",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(:active:not([disabled])) .md-list-item,:host([selected]:not([disabled])) .md-list-item",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(:hover:not([disabled])) .md-list-item",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-list-item) .md-list-item .md-input-container",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 14,
+    "type": 2,
+    "class": 9,
+    "id": 0,
+    "pseudoClass": 6,
+    "pseudoElement": 0,
+    "values": [
+      ":host(:focus)",
+      ":host(md-list-item)",
+      ":host(md-list-item) .md-list-item",
+      ":host(md-list-item) .md-list-item .md-input-container",
+      ":host(:hover:not([disabled])) .md-list-item",
+      ":host(:active:not([disabled])) .md-list-item",
+      ":host([selected]:not([disabled])) .md-list-item",
+      ":host([focus-visible]:not([disabled])) .md-list-item",
+      ":host(:active[disabled]) .md-list-item",
+      ":host([disabled]) .md-list-item",
+      ":host(md-list) .md-list",
+      ":host([alignment=\"horizontal\"]) ul",
+      ":host([alignment=\"horizontal\"]) ::slotted(md-list-item)",
+      ":host([alignment=\"vertical\"])"
+    ],
+    "specificity": {
+      "max": 40,
+      "average": 25.142857142857142,
+      "graph": [
+        10,
+        10,
+        20,
+        30,
+        30,
+        30,
+        40,
+        40,
+        30,
+        30,
+        20,
+        21,
+        21,
+        20
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host([selected]:not([disabled])) .md-list-item",
+          "specificity": 40
+        },
+        {
+          "selector": ":host([focus-visible]:not([disabled])) .md-list-item",
+          "specificity": 40
+        },
+        {
+          "selector": ":host(md-list-item) .md-list-item .md-input-container",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(:hover:not([disabled])) .md-list-item",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(:active:not([disabled])) .md-list-item",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(:active[disabled]) .md-list-item",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([disabled]) .md-list-item",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) ul",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) ::slotted(md-list-item)",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-list-item) .md-list-item",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-list) .md-list",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-list-item)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 49,
+    "unique": 30,
+    "properties": {
+      "box-shadow": [
+        "none",
+        "0 0 0 .125rem var(--list-focus-border-color, #007aa3)"
+      ],
+      "outline": [
+        "none"
+      ],
+      "box-sizing": [
+        "border-box",
+        "border-box"
+      ],
+      "cursor": [
+        "pointer"
+      ],
+      "align-content": [
+        "center",
+        "center",
+        "center",
+        "center",
+        "center"
+      ],
+      "align-items": [
+        "center",
+        "stretch",
+        "center",
+        "center",
+        "stretch"
+      ],
+      "display": [
+        "flex",
+        "flex",
+        "flex",
+        "flex",
+        "flex"
+      ],
+      "flex-flow": [
+        "row nowrap",
+        "column nowrap",
+        "row nowrap",
+        "row nowrap",
+        "column nowrap"
+      ],
+      "justify-content": [
+        "flex-start",
+        "center",
+        "stretch",
+        "center",
+        "center"
+      ],
+      "color": [
+        "var(--list-text-color, #121212)",
+        "var(--list-disabled-text-color, #b2b2b2)"
+      ],
+      "flex": [
+        "1 1 auto",
+        "1 1 auto"
+      ],
+      "font-size": [
+        ".875rem"
+      ],
+      "line-height": [
+        "1.125rem"
+      ],
+      "min-height": [
+        "2.25rem"
+      ],
+      "padding": [
+        ".5rem 1rem",
+        "0"
+      ],
+      "position": [
+        "relative",
+        "relative"
+      ],
+      "margin-bottom": [
+        "0"
+      ],
+      "background-color": [
+        "var(--list-hover-background, #c9f4ff)",
+        "var(--list-active-background, #91ebff)"
+      ],
+      "pointer-events": [
+        "none"
+      ],
+      "list-style": [
+        "none"
+      ],
+      "margin": [
+        "0"
+      ],
+      "width": [
+        "100%"
+      ]
+    },
+    "resets": {
+      "padding": 1,
+      "margin-bottom": 1,
+      "margin": 1
+    }
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

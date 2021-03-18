@@ -1,0 +1,197 @@
+{
+  "size": 960,
+  "gzipSize": 387,
+  "humanizedSize": "960B",
+  "humanizedGzipSize": "387B",
+  "rules": {
+    "total": 9,
+    "size": {
+      "graph": [
+        1,
+        6,
+        2,
+        1,
+        3,
+        5,
+        3,
+        1,
+        3
+      ],
+      "max": 6,
+      "average": 2.7777777777777777
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".md-draggable-item.extended",
+        "declarations": 6
+      },
+      {
+        "selector": ".md-draggable-item.default",
+        "declarations": 5
+      },
+      {
+        "selector": ".md-draggable-item.disabled:hover",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-draggable-item.default:hover",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-draggable-item.extended ::slotted(*)",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-draggable-item.extended md-icon",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-draggable-item.disabled",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-draggable-item.extended:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ":host",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 9,
+    "type": 1,
+    "class": 8,
+    "id": 0,
+    "pseudoClass": 3,
+    "pseudoElement": 0,
+    "values": [
+      ":host",
+      ".md-draggable-item.extended",
+      ".md-draggable-item.extended md-icon",
+      ".md-draggable-item.extended:hover",
+      ".md-draggable-item.extended ::slotted(*)",
+      ".md-draggable-item.default",
+      ".md-draggable-item.default:hover",
+      ".md-draggable-item.disabled",
+      ".md-draggable-item.disabled:hover"
+    ],
+    "specificity": {
+      "max": 30,
+      "average": 22.444444444444443,
+      "graph": [
+        10,
+        20,
+        21,
+        30,
+        21,
+        20,
+        30,
+        20,
+        30
+      ],
+      "sortedGraph": [
+        {
+          "selector": ".md-draggable-item.extended:hover",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-draggable-item.default:hover",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-draggable-item.disabled:hover",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-draggable-item.extended md-icon",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-draggable-item.extended ::slotted(*)",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-draggable-item.extended",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-draggable-item.default",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-draggable-item.disabled",
+          "specificity": 20
+        },
+        {
+          "selector": ":host",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 25,
+    "unique": 22,
+    "properties": {
+      "display": [
+        "block",
+        "flex",
+        "flex"
+      ],
+      "align-items": [
+        "center"
+      ],
+      "background-color": [
+        "var(--md-secondary-white-bg-color)",
+        "var(--md-secondary-bg-color)",
+        "var(--md-tertiary-white-bg-color)",
+        "transparent"
+      ],
+      "border": [
+        "1px solid var(--md-menu-overlay-border-color)",
+        "2px solid transparent",
+        "2px solid var(--md-default-focus-outline-color)",
+        "2px solid transparent"
+      ],
+      "flex-direction": [
+        "row"
+      ],
+      "padding": [
+        ".375rem",
+        "calc(.375rem / 2) .375rem"
+      ],
+      "cursor": [
+        "grab",
+        "grab",
+        "default"
+      ],
+      "margin-right": [
+        ".375rem",
+        "calc(.375rem * 2)"
+      ],
+      "flex": [
+        "1 1 auto"
+      ],
+      "text-align": [
+        "left"
+      ],
+      "border-radius": [
+        ".25rem"
+      ],
+      "box-shadow": [
+        "0 2px 4px rgba(0,0,0,0.1),0 0 1px rgba(0,0,0,0.18)",
+        "none"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

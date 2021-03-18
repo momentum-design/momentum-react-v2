@@ -1,0 +1,471 @@
+{
+  "size": 2625,
+  "gzipSize": 776,
+  "humanizedSize": "3KB",
+  "humanizedGzipSize": "776B",
+  "rules": {
+    "total": 20,
+    "size": {
+      "graph": [
+        2,
+        3,
+        7,
+        10,
+        9,
+        9,
+        7,
+        1,
+        13,
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max": 13,
+      "average": 3.85
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-slider) .md-slider__hashlabel",
+        "declarations": 13
+      },
+      {
+        "selector": ":host(md-slider) .md-slider__bar",
+        "declarations": 10
+      },
+      {
+        "selector": ":host(md-slider) .md-slider__pointer",
+        "declarations": 9
+      },
+      {
+        "selector": ":host(md-slider) .md-slider__selection",
+        "declarations": 9
+      },
+      {
+        "selector": ":host(md-slider) .md-slider__pointer::after",
+        "declarations": 7
+      },
+      {
+        "selector": ":host(md-slider) .md-slider",
+        "declarations": 7
+      },
+      {
+        "selector": ":host(md-slider) .md-slider__value",
+        "declarations": 6
+      },
+      {
+        "selector": ":host(md-slider)",
+        "declarations": 3
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([no-pointer]) .md-slider__pointer",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([no-pointer]) .md-slider__bar,:host([no-pointer]) .md-slider__value",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([no-pointer]) .md-slider",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(:hover:not([disabled])) .md-slider__pointer::after",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([no-pointer][focus-visible]:not([disabled])) .md-slider",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([focus-visible]:not([disabled])) .md-slider__pointer::after",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled]) .md-slider__selection",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled]) .md-slider__pointer::after",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled]) .md-slider__pointer",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled]) .md-slider__bar",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-slider) .md-slider__pointer::after",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 21,
+    "type": 0,
+    "class": 19,
+    "id": 0,
+    "pseudoClass": 4,
+    "pseudoElement": 5,
+    "values": [
+      ":host(:focus)",
+      ":host(md-slider)",
+      ":host(md-slider) .md-slider",
+      ":host(md-slider) .md-slider__bar",
+      ":host(md-slider) .md-slider__selection",
+      ":host(md-slider) .md-slider__pointer",
+      ":host(md-slider) .md-slider__pointer::after",
+      ":host(md-slider) .md-slider__pointer::after",
+      ":host(md-slider) .md-slider__hashlabel",
+      ":host(md-slider) .md-slider__value",
+      ":host([disabled]) .md-slider__bar",
+      ":host([disabled]) .md-slider__pointer",
+      ":host([disabled]) .md-slider__pointer::after",
+      ":host([disabled]) .md-slider__selection",
+      ":host([focus-visible]:not([disabled])) .md-slider__pointer::after",
+      ":host([no-pointer][focus-visible]:not([disabled])) .md-slider",
+      ":host(:hover:not([disabled])) .md-slider__pointer::after",
+      ":host([no-pointer]) .md-slider",
+      ":host([no-pointer]) .md-slider__bar",
+      ":host([no-pointer]) .md-slider__value",
+      ":host([no-pointer]) .md-slider__pointer"
+    ],
+    "specificity": {
+      "max": 50,
+      "average": 25.952380952380953,
+      "graph": [
+        10,
+        10,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        20,
+        20,
+        30,
+        30,
+        31,
+        30,
+        41,
+        50,
+        31,
+        30,
+        30,
+        30,
+        30
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host([no-pointer][focus-visible]:not([disabled])) .md-slider",
+          "specificity": 50
+        },
+        {
+          "selector": ":host([focus-visible]:not([disabled])) .md-slider__pointer::after",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([disabled]) .md-slider__pointer::after",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(:hover:not([disabled])) .md-slider__pointer::after",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([disabled]) .md-slider__bar",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([disabled]) .md-slider__pointer",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([disabled]) .md-slider__selection",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([no-pointer]) .md-slider",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([no-pointer]) .md-slider__bar",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([no-pointer]) .md-slider__value",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([no-pointer]) .md-slider__pointer",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-slider) .md-slider__pointer::after",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-slider) .md-slider__pointer::after",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-slider) .md-slider",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-slider) .md-slider__bar",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-slider) .md-slider__selection",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-slider) .md-slider__pointer",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-slider) .md-slider__hashlabel",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-slider) .md-slider__value",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-slider)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": [
+      ":host(md-slider) .md-slider__pointer::after"
+    ]
+  },
+  "declarations": {
+    "total": 77,
+    "unique": 52,
+    "properties": {
+      "box-shadow": [
+        "none",
+        "0 2px 6px rgba(0,0,0,0.16)",
+        "0 0 0 8px rgba(0,160,209,0.4)",
+        "0 0 0 2px var(--slider-background-focus-selection, #007AA3),0 2px 6px rgba(0,0,0,0.16)"
+      ],
+      "outline": [
+        "none"
+      ],
+      "display": [
+        "flex",
+        "flex",
+        "flex",
+        "none"
+      ],
+      "flex": [
+        "1 1 auto",
+        "1 1 auto"
+      ],
+      "padding": [
+        "1.25rem 0"
+      ],
+      "border-radius": [
+        ".25rem",
+        ".125rem",
+        ".125rem",
+        ".25rem",
+        "50%"
+      ],
+      "height": [
+        "1.25rem",
+        ".125rem",
+        ".125rem",
+        "1.25rem",
+        "100%"
+      ],
+      "margin-right": [
+        "1.25rem",
+        "0"
+      ],
+      "position": [
+        "relative",
+        "absolute",
+        "absolute",
+        "absolute",
+        "absolute",
+        "absolute",
+        "absolute"
+      ],
+      "width": [
+        "calc(100% - 1.25rem)",
+        "1.25rem",
+        "100%"
+      ],
+      "top": [
+        "50%",
+        "50%",
+        "50%",
+        "-1.25rem"
+      ],
+      "transform": [
+        "translateY(-50%)",
+        "translateY(-50%)",
+        "translateY(-50%)"
+      ],
+      "background-color": [
+        "var(--slider-background-bar, #ccc)",
+        "var(--slider-background-selection, #00A0D1)",
+        "var(--slider-background-pointer, #fff)",
+        "var(--slider-background-disabled-pointer, #ccc)",
+        "var(--slider-background-disabled-selection, #949494)",
+        "var(--slider-background-hover-pointer, #C9F4FF)"
+      ],
+      "cursor": [
+        "pointer",
+        "grabbing",
+        "not-allowed",
+        "not-allowed"
+      ],
+      "left": [
+        "0",
+        "0",
+        "0"
+      ],
+      "right": [
+        "-1.25rem",
+        "-1.25rem",
+        "-1.25rem",
+        "0"
+      ],
+      "z-index": [
+        "0",
+        "1",
+        "2"
+      ],
+      "transition": [
+        "left 50ms, right 50ms",
+        "left 50ms, right 50ms"
+      ],
+      "content": [
+        "\"\""
+      ],
+      "filter": [
+        "brightness(1) contrast(1) saturate(1.5)"
+      ],
+      "align-content": [
+        "center"
+      ],
+      "align-items": [
+        "center"
+      ],
+      "flex-flow": [
+        "row nowrap"
+      ],
+      "justify-content": [
+        "space-between"
+      ],
+      "bottom": [
+        "-1.25rem"
+      ],
+      "color": [
+        "var(--slider-label, #545454)",
+        "var(--slider-label, #545454)"
+      ],
+      "font-size": [
+        "14px",
+        "14px"
+      ],
+      "line-height": [
+        "14px",
+        "14px"
+      ],
+      "white-space": [
+        "nowrap"
+      ]
+    },
+    "resets": {
+      "margin-right": 1
+    }
+  },
+  "mediaQueries": {
+    "total": 1,
+    "unique": 1,
+    "values": [
+      "screen and (-ms-high-contrast: active)"
+    ],
+    "contents": [
+      {
+        "value": "screen and (-ms-high-contrast: active)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ":host(md-slider) .md-slider__pointer::after",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 0,
+          "class": 1,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 1,
+          "values": [
+            ":host(md-slider) .md-slider__pointer::after"
+          ],
+          "specificity": {
+            "max": 21,
+            "average": 21,
+            "graph": [
+              21
+            ],
+            "sortedGraph": [
+              {
+                "selector": ":host(md-slider) .md-slider__pointer::after",
+                "specificity": 21
+              }
+            ]
+          },
+          "repeated": []
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "filter": [
+              "brightness(1) contrast(1) saturate(1.5)"
+            ]
+          },
+          "resets": {}
+        }
+      }
+    ]
+  }
+}

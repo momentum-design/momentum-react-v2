@@ -1,0 +1,303 @@
+{
+  "size": 1672,
+  "gzipSize": 547,
+  "humanizedSize": "2KB",
+  "humanizedGzipSize": "547B",
+  "rules": {
+    "total": 15,
+    "size": {
+      "graph": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        5,
+        14,
+        2,
+        8,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "max": 14,
+      "average": 3.066666666666667
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-accordion-item) .md-accordion-expander",
+        "declarations": 14
+      },
+      {
+        "selector": ":host(md-accordion-item) .md-accordion-expander-label",
+        "declarations": 8
+      },
+      {
+        "selector": ":host(md-accordion-item) .md-accordion-header",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-accordion-item[disabled]) .md-accordion-expander",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-accordion-item) .md-accordion-item:hover .md-accordion-header",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-accordion-item[focus-visible]) .md-accordion-expander",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-accordion-item) .md-accordion-panel",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-accordion-item) .md-accordion-expander md-icon",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-accordion) .md-accordion",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-accordion-item[expanded]) .md-accordion-panel",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-accordion-item)",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-accordion[focusable]) .md-accordion-header",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-accordion[focusable]) .md-accordion",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-accordion)",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 15,
+    "type": 1,
+    "class": 12,
+    "id": 0,
+    "pseudoClass": 2,
+    "pseudoElement": 0,
+    "values": [
+      ":host(:focus)",
+      ":host(md-accordion)",
+      ":host(md-accordion) .md-accordion",
+      ":host(md-accordion[focusable]) .md-accordion",
+      ":host(md-accordion[focusable]) .md-accordion-header",
+      ":host(md-accordion-item)",
+      ":host(md-accordion-item) .md-accordion-header",
+      ":host(md-accordion-item) .md-accordion-expander",
+      ":host(md-accordion-item) .md-accordion-expander md-icon",
+      ":host(md-accordion-item) .md-accordion-expander-label",
+      ":host(md-accordion-item) .md-accordion-panel",
+      ":host(md-accordion-item[expanded]) .md-accordion-panel",
+      ":host(md-accordion-item[focus-visible]) .md-accordion-expander",
+      ":host(md-accordion-item) .md-accordion-item:hover .md-accordion-header",
+      ":host(md-accordion-item[disabled]) .md-accordion-expander"
+    ],
+    "specificity": {
+      "max": 40,
+      "average": 22.733333333333334,
+      "graph": [
+        10,
+        10,
+        20,
+        30,
+        30,
+        10,
+        20,
+        20,
+        21,
+        20,
+        20,
+        30,
+        30,
+        40,
+        30
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host(md-accordion-item) .md-accordion-item:hover .md-accordion-header",
+          "specificity": 40
+        },
+        {
+          "selector": ":host(md-accordion[focusable]) .md-accordion",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-accordion[focusable]) .md-accordion-header",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-accordion-item[expanded]) .md-accordion-panel",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-accordion-item[focus-visible]) .md-accordion-expander",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-accordion-item[disabled]) .md-accordion-expander",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-accordion-item) .md-accordion-expander md-icon",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-accordion) .md-accordion",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-accordion-item) .md-accordion-header",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-accordion-item) .md-accordion-expander",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-accordion-item) .md-accordion-expander-label",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-accordion-item) .md-accordion-panel",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-accordion)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-accordion-item)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 46,
+    "unique": 34,
+    "properties": {
+      "box-shadow": [
+        "none",
+        "0 0 0 .125rem var(--md-default-focus-outline-color)",
+        "0 0 0 .125rem var(--md-default-focus-outline-color)"
+      ],
+      "outline": [
+        "none",
+        "none"
+      ],
+      "font-size": [
+        "14px"
+      ],
+      "width": [
+        "100%",
+        "calc(100%)"
+      ],
+      "border-radius": [
+        ".25rem",
+        ".1875rem",
+        ".1875rem"
+      ],
+      "background": [
+        "var(--accordion-bg-focus, #fff)",
+        "none",
+        "var(--accordion-hover, #C9F4FF)"
+      ],
+      "display": [
+        "block",
+        "flex",
+        "flex",
+        "flex",
+        "block",
+        "flex",
+        "none",
+        "block"
+      ],
+      "align-content": [
+        "center",
+        "center"
+      ],
+      "align-items": [
+        "stretch",
+        "stretch"
+      ],
+      "flex-flow": [
+        "row nowrap",
+        "row nowrap"
+      ],
+      "justify-content": [
+        "space-between",
+        "flex-start"
+      ],
+      "border": [
+        "0"
+      ],
+      "cursor": [
+        "pointer",
+        "not-allowed"
+      ],
+      "margin": [
+        "0",
+        "0 0 0 auto"
+      ],
+      "padding": [
+        "0",
+        ".5rem",
+        ".5rem"
+      ],
+      "flex": [
+        "0 1 100%",
+        "0 1 auto"
+      ],
+      "overflow": [
+        "hidden"
+      ],
+      "text-overflow": [
+        "ellipsis"
+      ],
+      "white-space": [
+        "nowrap"
+      ],
+      "color": [
+        "var(--md-secondary-text-color)",
+        "var(--accordion-active, #00A0D1)",
+        "var(--md-disabled-text-color)"
+      ]
+    },
+    "resets": {
+      "margin": 1,
+      "padding": 1
+    }
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

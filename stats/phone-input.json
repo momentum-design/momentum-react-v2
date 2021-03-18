@@ -1,0 +1,256 @@
+{
+  "size": 1344,
+  "gzipSize": 433,
+  "humanizedSize": "1KB",
+  "humanizedGzipSize": "433B",
+  "rules": {
+    "total": 13,
+    "size": {
+      "graph": [
+        3,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1,
+        3,
+        2,
+        2,
+        3,
+        1
+      ],
+      "max": 3,
+      "average": 1.9230769230769231
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".md-phone-input__container md-input[disabled]::part(input)",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-phone-input__container md-input::part(input)",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-phone-input__container md-combobox::part(multiwrap-input)",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-phone-input__container md-combobox::part(group)",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-phone-input__container",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-phone-input__container .md-phone-input__option",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-phone-input__container md-input::part(message)",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-phone-input__container md-input[disabled]::part(input)::placeholder",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-phone-input__container md-combobox::part(label)",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-phone-input__container md-combobox::part(combobox-options)",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-phone-input__container md-combobox::part(multiwrap)",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-phone-input__container md-combobox::part(combobox)",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-phone-input__container md-combobox",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 13,
+    "type": 11,
+    "class": 13,
+    "id": 0,
+    "pseudoClass": 0,
+    "pseudoElement": 1,
+    "values": [
+      ".md-phone-input__container",
+      ".md-phone-input__container md-combobox",
+      ".md-phone-input__container md-combobox::part(combobox)",
+      ".md-phone-input__container md-combobox::part(group)",
+      ".md-phone-input__container md-combobox::part(multiwrap)",
+      ".md-phone-input__container md-combobox::part(multiwrap-input)",
+      ".md-phone-input__container md-combobox::part(combobox-options)",
+      ".md-phone-input__container md-combobox::part(label)",
+      ".md-phone-input__container md-input::part(input)",
+      ".md-phone-input__container md-input::part(message)",
+      ".md-phone-input__container .md-phone-input__option",
+      ".md-phone-input__container md-input[disabled]::part(input)",
+      ".md-phone-input__container md-input[disabled]::part(input)::placeholder"
+    ],
+    "specificity": {
+      "max": 23,
+      "average": 14,
+      "graph": [
+        10,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        20,
+        22,
+        23
+      ],
+      "sortedGraph": [
+        {
+          "selector": ".md-phone-input__container md-input[disabled]::part(input)::placeholder",
+          "specificity": 23
+        },
+        {
+          "selector": ".md-phone-input__container md-input[disabled]::part(input)",
+          "specificity": 22
+        },
+        {
+          "selector": ".md-phone-input__container .md-phone-input__option",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-phone-input__container md-combobox::part(combobox)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-combobox::part(group)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-combobox::part(multiwrap)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-combobox::part(multiwrap-input)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-combobox::part(combobox-options)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-combobox::part(label)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-input::part(input)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-input::part(message)",
+          "specificity": 12
+        },
+        {
+          "selector": ".md-phone-input__container md-combobox",
+          "specificity": 11
+        },
+        {
+          "selector": ".md-phone-input__container",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 25,
+    "unique": 23,
+    "properties": {
+      "--combo-box-contaier-width": [
+        "100px"
+      ],
+      "display": [
+        "flex",
+        "flex"
+      ],
+      "position": [
+        "relative",
+        "initial"
+      ],
+      "width": [
+        "var(--combo-box-contaier-width)",
+        "100%",
+        "100%",
+        "calc(100% + var(--combo-box-contaier-width))"
+      ],
+      "border-bottom-right-radius": [
+        "0"
+      ],
+      "border-right-width": [
+        "0"
+      ],
+      "border-top-right-radius": [
+        "0"
+      ],
+      "overflow-x": [
+        "hidden"
+      ],
+      "padding-left": [
+        "0"
+      ],
+      "padding-right": [
+        "0",
+        "2.75rem"
+      ],
+      "top": [
+        "2.5rem"
+      ],
+      "border-bottom-left-radius": [
+        "0"
+      ],
+      "border-top-left-radius": [
+        "0"
+      ],
+      "margin-left": [
+        "calc(var(--combo-box-contaier-width) * -1)"
+      ],
+      "justify-content": [
+        "space-between"
+      ],
+      "background": [
+        "var(--phone-input-disabled-bg-color)"
+      ],
+      "border": [
+        "1px solid var(--phone-input-default-border-color)",
+        "none"
+      ],
+      "color": [
+        "var(--md-disabled-text-color)"
+      ]
+    },
+    "resets": {
+      "padding-left": 1,
+      "padding-right": 1
+    }
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

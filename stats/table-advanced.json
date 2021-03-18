@@ -1,0 +1,1048 @@
+{
+  "size": 6552,
+  "gzipSize": 1474,
+  "humanizedSize": "6KB",
+  "humanizedGzipSize": "1KB",
+  "rules": {
+    "total": 60,
+    "size": {
+      "graph": [
+        1,
+        1,
+        5,
+        3,
+        1,
+        4,
+        6,
+        6,
+        1,
+        1,
+        1,
+        1,
+        11,
+        3,
+        8,
+        3,
+        4,
+        7,
+        3,
+        1,
+        1,
+        6,
+        10,
+        2,
+        2,
+        8,
+        2,
+        3,
+        3,
+        9,
+        2,
+        2,
+        1,
+        1,
+        1,
+        5,
+        1,
+        4,
+        5,
+        5,
+        1,
+        7,
+        8,
+        1,
+        2,
+        6,
+        1,
+        7,
+        4,
+        5,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        1
+      ],
+      "max": 11,
+      "average": 3.35
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": "thead th",
+        "declarations": 11
+      },
+      {
+        "selector": "thead .head-inner-cell .sortable",
+        "declarations": 10
+      },
+      {
+        "selector": "thead .sortable::before,thead .sortable::after",
+        "declarations": 9
+      },
+      {
+        "selector": "tbody tr th",
+        "declarations": 8
+      },
+      {
+        "selector": "thead .drag-area-col",
+        "declarations": 8
+      },
+      {
+        "selector": "thead th .resize",
+        "declarations": 8
+      },
+      {
+        "selector": "tbody tr .inner-cell span",
+        "declarations": 7
+      },
+      {
+        "selector": "tbody tr td",
+        "declarations": 7
+      },
+      {
+        "selector": "thead .head-inner-cell .filter-icon",
+        "declarations": 7
+      },
+      {
+        "selector": "tbody tr .inner-cell .warn-icon",
+        "declarations": 6
+      },
+      {
+        "selector": "thead .head-inner-cell span",
+        "declarations": 6
+      },
+      {
+        "selector": "table.sticky-header thead th::after",
+        "declarations": 6
+      },
+      {
+        "selector": "table.sticky-header thead th::before",
+        "declarations": 6
+      },
+      {
+        "selector": "tbody tr .drag-area",
+        "declarations": 5
+      },
+      {
+        "selector": ".filter-menu input",
+        "declarations": 5
+      },
+      {
+        "selector": ".filter-menu select",
+        "declarations": 5
+      },
+      {
+        "selector": ".filter-active",
+        "declarations": 5
+      },
+      {
+        "selector": "table",
+        "declarations": 5
+      },
+      {
+        "selector": "md-button.row-collapsible",
+        "declarations": 4
+      },
+      {
+        "selector": "tbody tr .drag-handle",
+        "declarations": 4
+      },
+      {
+        "selector": ".filter-menu",
+        "declarations": 4
+      },
+      {
+        "selector": "thead .head-inner-cell .filter-wrap",
+        "declarations": 4
+      },
+      {
+        "selector": "table.sticky-header thead th",
+        "declarations": 4
+      },
+      {
+        "selector": "thead .sortable",
+        "declarations": 3
+      },
+      {
+        "selector": "thead .drag-area-col.over",
+        "declarations": 3
+      },
+      {
+        "selector": "thead .head-inner-cell .filter-icon::part(button)",
+        "declarations": 3
+      },
+      {
+        "selector": "thead .head-inner-cell",
+        "declarations": 3
+      },
+      {
+        "selector": "thead th .filter",
+        "declarations": 3
+      },
+      {
+        "selector": "table.sticky-header",
+        "declarations": 3
+      },
+      {
+        "selector": "md-button.row-collapsible::part(button)",
+        "declarations": 2
+      },
+      {
+        "selector": "tbody tr .drag-area.bottom",
+        "declarations": 2
+      },
+      {
+        "selector": "tbody tr .inner-cell",
+        "declarations": 2
+      },
+      {
+        "selector": "thead .sortable::after",
+        "declarations": 2
+      },
+      {
+        "selector": "thead .sortable::before",
+        "declarations": 2
+      },
+      {
+        "selector": "thead .drag-area-col.drag",
+        "declarations": 2
+      },
+      {
+        "selector": "thead md-menu-overlay::part(overlay)",
+        "declarations": 2
+      },
+      {
+        "selector": "thead md-menu-overlay::part(overlay)",
+        "declarations": 2
+      },
+      {
+        "selector": "md-button.row-collapsible md-icon::part(icon)",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr:active td,tbody tr:active th,tbody tr.selected td,tbody tr.selected th",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr:active,tbody tr.selected",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr:hover td,tbody tr:hover th",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr:hover",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr.ghost",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr .drag-area.top",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr .inner-cell md-icon::part(icon)",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr td:first-child,tbody tr th:first-child",
+        "declarations": 1
+      },
+      {
+        "selector": "tbody tr",
+        "declarations": 1
+      },
+      {
+        "selector": ".filter-active::part(icon)",
+        "declarations": 1
+      },
+      {
+        "selector": "thead th:first-child",
+        "declarations": 1
+      },
+      {
+        "selector": "thead .sortable.descending::before",
+        "declarations": 1
+      },
+      {
+        "selector": "thead .sortable.ascending::after",
+        "declarations": 1
+      },
+      {
+        "selector": "thead .head-inner-cell .filter-icon:active",
+        "declarations": 1
+      },
+      {
+        "selector": "thead .head-inner-cell .filter-icon:hover",
+        "declarations": 1
+      },
+      {
+        "selector": "table.sticky-header thead tr:first-child th::before",
+        "declarations": 1
+      },
+      {
+        "selector": "table.sticky-header thead tr:first-child th",
+        "declarations": 1
+      },
+      {
+        "selector": "table.sticky-header thead tr:last-child th::before",
+        "declarations": 1
+      },
+      {
+        "selector": "table.sticky-header thead tr:last-child th",
+        "declarations": 1
+      },
+      {
+        "selector": "table.sticky-header thead",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-table-advanced",
+        "declarations": 1
+      },
+      {
+        "selector": ":host",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 67,
+    "type": 63,
+    "class": 50,
+    "id": 0,
+    "pseudoClass": 15,
+    "pseudoElement": 10,
+    "values": [
+      ":host",
+      ".md-table-advanced",
+      "table",
+      "table.sticky-header",
+      "table.sticky-header thead",
+      "table.sticky-header thead th",
+      "table.sticky-header thead th::before",
+      "table.sticky-header thead th::after",
+      "table.sticky-header thead tr:last-child th",
+      "table.sticky-header thead tr:last-child th::before",
+      "table.sticky-header thead tr:first-child th",
+      "table.sticky-header thead tr:first-child th::before",
+      "thead th",
+      "thead th .filter",
+      "thead th .resize",
+      "thead .head-inner-cell",
+      "thead .head-inner-cell .filter-wrap",
+      "thead .head-inner-cell .filter-icon",
+      "thead .head-inner-cell .filter-icon::part(button)",
+      "thead .head-inner-cell .filter-icon:hover",
+      "thead .head-inner-cell .filter-icon:active",
+      "thead .head-inner-cell span",
+      "thead .head-inner-cell .sortable",
+      "thead md-menu-overlay::part(overlay)",
+      "thead md-menu-overlay::part(overlay)",
+      "thead .drag-area-col",
+      "thead .drag-area-col.drag",
+      "thead .drag-area-col.over",
+      "thead .sortable",
+      "thead .sortable::before",
+      "thead .sortable::after",
+      "thead .sortable::before",
+      "thead .sortable::after",
+      "thead .sortable.ascending::after",
+      "thead .sortable.descending::before",
+      "thead th:first-child",
+      ".filter-active",
+      ".filter-active::part(icon)",
+      ".filter-menu",
+      ".filter-menu select",
+      ".filter-menu input",
+      "tbody tr",
+      "tbody tr td",
+      "tbody tr th",
+      "tbody tr td:first-child",
+      "tbody tr th:first-child",
+      "tbody tr .inner-cell",
+      "tbody tr .inner-cell .warn-icon",
+      "tbody tr .inner-cell md-icon::part(icon)",
+      "tbody tr .inner-cell span",
+      "tbody tr .drag-handle",
+      "tbody tr .drag-area",
+      "tbody tr .drag-area.top",
+      "tbody tr .drag-area.bottom",
+      "tbody tr.ghost",
+      "tbody tr:hover",
+      "tbody tr:hover td",
+      "tbody tr:hover th",
+      "tbody tr:active",
+      "tbody tr.selected",
+      "tbody tr:active td",
+      "tbody tr:active th",
+      "tbody tr.selected td",
+      "tbody tr.selected th",
+      "md-button.row-collapsible",
+      "md-button.row-collapsible::part(button)",
+      "md-button.row-collapsible md-icon::part(icon)"
+    ],
+    "specificity": {
+      "max": 31,
+      "average": 13.895522388059701,
+      "graph": [
+        10,
+        10,
+        1,
+        11,
+        12,
+        13,
+        14,
+        14,
+        24,
+        25,
+        24,
+        25,
+        2,
+        12,
+        12,
+        11,
+        21,
+        21,
+        22,
+        31,
+        31,
+        12,
+        21,
+        3,
+        3,
+        11,
+        21,
+        21,
+        11,
+        12,
+        12,
+        12,
+        12,
+        22,
+        22,
+        12,
+        10,
+        11,
+        10,
+        11,
+        11,
+        2,
+        3,
+        3,
+        13,
+        13,
+        12,
+        22,
+        14,
+        13,
+        12,
+        12,
+        22,
+        22,
+        12,
+        12,
+        13,
+        13,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        11,
+        12,
+        13
+      ],
+      "sortedGraph": [
+        {
+          "selector": "thead .head-inner-cell .filter-icon:hover",
+          "specificity": 31
+        },
+        {
+          "selector": "thead .head-inner-cell .filter-icon:active",
+          "specificity": 31
+        },
+        {
+          "selector": "table.sticky-header thead tr:last-child th::before",
+          "specificity": 25
+        },
+        {
+          "selector": "table.sticky-header thead tr:first-child th::before",
+          "specificity": 25
+        },
+        {
+          "selector": "table.sticky-header thead tr:last-child th",
+          "specificity": 24
+        },
+        {
+          "selector": "table.sticky-header thead tr:first-child th",
+          "specificity": 24
+        },
+        {
+          "selector": "thead .head-inner-cell .filter-icon::part(button)",
+          "specificity": 22
+        },
+        {
+          "selector": "thead .sortable.ascending::after",
+          "specificity": 22
+        },
+        {
+          "selector": "thead .sortable.descending::before",
+          "specificity": 22
+        },
+        {
+          "selector": "tbody tr .inner-cell .warn-icon",
+          "specificity": 22
+        },
+        {
+          "selector": "tbody tr .drag-area.top",
+          "specificity": 22
+        },
+        {
+          "selector": "tbody tr .drag-area.bottom",
+          "specificity": 22
+        },
+        {
+          "selector": "thead .head-inner-cell .filter-wrap",
+          "specificity": 21
+        },
+        {
+          "selector": "thead .head-inner-cell .filter-icon",
+          "specificity": 21
+        },
+        {
+          "selector": "thead .head-inner-cell .sortable",
+          "specificity": 21
+        },
+        {
+          "selector": "thead .drag-area-col.drag",
+          "specificity": 21
+        },
+        {
+          "selector": "thead .drag-area-col.over",
+          "specificity": 21
+        },
+        {
+          "selector": "table.sticky-header thead th::before",
+          "specificity": 14
+        },
+        {
+          "selector": "table.sticky-header thead th::after",
+          "specificity": 14
+        },
+        {
+          "selector": "tbody tr .inner-cell md-icon::part(icon)",
+          "specificity": 14
+        },
+        {
+          "selector": "table.sticky-header thead th",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr td:first-child",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr th:first-child",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr .inner-cell span",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr:hover td",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr:hover th",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr:active td",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr:active th",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr.selected td",
+          "specificity": 13
+        },
+        {
+          "selector": "tbody tr.selected th",
+          "specificity": 13
+        },
+        {
+          "selector": "md-button.row-collapsible md-icon::part(icon)",
+          "specificity": 13
+        },
+        {
+          "selector": "table.sticky-header thead",
+          "specificity": 12
+        },
+        {
+          "selector": "thead th .filter",
+          "specificity": 12
+        },
+        {
+          "selector": "thead th .resize",
+          "specificity": 12
+        },
+        {
+          "selector": "thead .head-inner-cell span",
+          "specificity": 12
+        },
+        {
+          "selector": "thead .sortable::before",
+          "specificity": 12
+        },
+        {
+          "selector": "thead .sortable::after",
+          "specificity": 12
+        },
+        {
+          "selector": "thead .sortable::before",
+          "specificity": 12
+        },
+        {
+          "selector": "thead .sortable::after",
+          "specificity": 12
+        },
+        {
+          "selector": "thead th:first-child",
+          "specificity": 12
+        },
+        {
+          "selector": "tbody tr .inner-cell",
+          "specificity": 12
+        },
+        {
+          "selector": "tbody tr .drag-handle",
+          "specificity": 12
+        },
+        {
+          "selector": "tbody tr .drag-area",
+          "specificity": 12
+        },
+        {
+          "selector": "tbody tr.ghost",
+          "specificity": 12
+        },
+        {
+          "selector": "tbody tr:hover",
+          "specificity": 12
+        },
+        {
+          "selector": "tbody tr:active",
+          "specificity": 12
+        },
+        {
+          "selector": "tbody tr.selected",
+          "specificity": 12
+        },
+        {
+          "selector": "md-button.row-collapsible::part(button)",
+          "specificity": 12
+        },
+        {
+          "selector": "table.sticky-header",
+          "specificity": 11
+        },
+        {
+          "selector": "thead .head-inner-cell",
+          "specificity": 11
+        },
+        {
+          "selector": "thead .drag-area-col",
+          "specificity": 11
+        },
+        {
+          "selector": "thead .sortable",
+          "specificity": 11
+        },
+        {
+          "selector": ".filter-active::part(icon)",
+          "specificity": 11
+        },
+        {
+          "selector": ".filter-menu select",
+          "specificity": 11
+        },
+        {
+          "selector": ".filter-menu input",
+          "specificity": 11
+        },
+        {
+          "selector": "md-button.row-collapsible",
+          "specificity": 11
+        },
+        {
+          "selector": ":host",
+          "specificity": 10
+        },
+        {
+          "selector": ".md-table-advanced",
+          "specificity": 10
+        },
+        {
+          "selector": ".filter-active",
+          "specificity": 10
+        },
+        {
+          "selector": ".filter-menu",
+          "specificity": 10
+        },
+        {
+          "selector": "thead md-menu-overlay::part(overlay)",
+          "specificity": 3
+        },
+        {
+          "selector": "thead md-menu-overlay::part(overlay)",
+          "specificity": 3
+        },
+        {
+          "selector": "tbody tr td",
+          "specificity": 3
+        },
+        {
+          "selector": "tbody tr th",
+          "specificity": 3
+        },
+        {
+          "selector": "thead th",
+          "specificity": 2
+        },
+        {
+          "selector": "tbody tr",
+          "specificity": 2
+        },
+        {
+          "selector": "table",
+          "specificity": 1
+        }
+      ]
+    },
+    "repeated": [
+      "thead .sortable::after",
+      "thead .sortable::before",
+      "thead md-menu-overlay::part(overlay)"
+    ]
+  },
+  "declarations": {
+    "total": 201,
+    "unique": 108,
+    "properties": {
+      "display": [
+        "block",
+        "inline-block",
+        "flex",
+        "inline-flex",
+        "inline-block",
+        "inline-block",
+        "inline-block",
+        "block",
+        "block",
+        "inline-block",
+        "flex",
+        "inline-block",
+        "inline-block",
+        "block"
+      ],
+      "width": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        ".25rem",
+        "1.5rem",
+        "100%",
+        "auto",
+        "0",
+        "1.25rem",
+        "100%",
+        "100%"
+      ],
+      "border-collapse": [
+        "collapse",
+        "separate"
+      ],
+      "border-spacing": [
+        "0"
+      ],
+      "max-width": [
+        "100%",
+        "0",
+        "0",
+        "0",
+        "1.25rem"
+      ],
+      "position": [
+        "relative",
+        "sticky",
+        "absolute",
+        "absolute",
+        "relative",
+        "absolute",
+        "relative",
+        "absolute",
+        "relative",
+        "absolute",
+        "relative",
+        "relative",
+        "relative",
+        "relative",
+        "relative",
+        "absolute"
+      ],
+      "height": [
+        "100%",
+        "2.5rem",
+        "auto",
+        "100%",
+        "1.5rem",
+        "calc(.25rem * 10)",
+        "100%",
+        "0",
+        "1.25rem",
+        "2.5rem",
+        "50%",
+        "1.25rem"
+      ],
+      "overflow": [
+        "auto",
+        "hidden",
+        "hidden",
+        "hidden"
+      ],
+      "background-color": [
+        "var(--table-advanced-header-bg-color, #F7F7F7)",
+        "var(--table-advanced-header-bg-color, #F7F7F7)",
+        "transparent",
+        "var(--table-advanced-filter-hover-bg-color, #EDEDED)",
+        "var(--table-advanced-filter-pressed-bg-color, #DEDEDE)",
+        "#A87FF1",
+        "var(--table-advanced-filter-bg-color, #fff)",
+        "var(--table-advanced-filter-bg-color, #fff)",
+        "var(--table-advanced-filter-bg-color, #fff)",
+        "var(--table-advanced-header-bg-color, #F7F7F7)",
+        "transparent",
+        "var(--table-advanced-hover-bg-color, #F7F7F7)",
+        "var(--table-advanced-hover-bg-color, #F7F7F7)",
+        "var(--table-advanced-selected-bg-color, #EDEDED)",
+        "var(--table-advanced-selected-bg-color, #EDEDED)"
+      ],
+      "border-bottom": [
+        "0",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)"
+      ],
+      "top": [
+        "-.0625rem",
+        ".0625rem",
+        "calc(2.5rem - .0625rem * 2)",
+        "-.0625rem",
+        "-.0625rem",
+        ".0625rem",
+        "0",
+        "-.375rem",
+        "-.25rem",
+        "0",
+        "50%",
+        "0"
+      ],
+      "z-index": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "content": [
+        "\" \"",
+        "\" \"",
+        "\"\""
+      ],
+      "left": [
+        "0",
+        "0",
+        "calc(-.25rem / 2)",
+        ".25rem",
+        "0"
+      ],
+      "bottom": [
+        "0",
+        "0"
+      ],
+      "border-right": [
+        "1px solid var(--table-advanced-border-color, #DEDEDE)",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)"
+      ],
+      "color": [
+        "var(--md-secondary-text-color)",
+        "var(--md-secondary-text-color)",
+        "var(--md-secondary-text-color)",
+        "var(--md-secondary-text-color)",
+        "var(--md-secondary-text-color)"
+      ],
+      "font-family": [
+        "\"CiscoSansTT Regular\",\"Helvetica Neue\",Helvetica,Arial,sans-serif"
+      ],
+      "font-size": [
+        "14px",
+        "14px",
+        "14px"
+      ],
+      "padding": [
+        "0 calc(.25rem * 4)",
+        ".25rem",
+        "calc(.25rem * 3)",
+        "calc(.25rem * 1.5)",
+        "0 calc(.25rem * 4)",
+        "0 .25rem",
+        "0 .25rem"
+      ],
+      "text-align": [
+        "left",
+        "center",
+        "center",
+        "left"
+      ],
+      "margin-top": [
+        "calc(.25rem / 2)",
+        "-9px",
+        "1px",
+        "calc(.25rem * 2)"
+      ],
+      "cursor": [
+        "col-resize",
+        "pointer",
+        "grab",
+        "pointer",
+        "grab"
+      ],
+      "align-items": [
+        "center",
+        "center"
+      ],
+      "min-width": [
+        ".875rem",
+        "1.25rem",
+        "calc(1rem * 2.5)",
+        "1.25rem"
+      ],
+      "flex": [
+        "1",
+        "1"
+      ],
+      "justify-content": [
+        "flex-end"
+      ],
+      "padding-right": [
+        "calc(.25rem * 1.25)",
+        "calc(.25rem * 4)"
+      ],
+      "text-overflow": [
+        "ellipsis",
+        "ellipsis",
+        "ellipsis"
+      ],
+      "white-space": [
+        "nowrap",
+        "nowrap",
+        "normal",
+        "normal",
+        "nowrap"
+      ],
+      "background": [
+        "transparent"
+      ],
+      "border": [
+        "0",
+        "2px dashed var(--table-advanced-filter-border-color, #ccc)",
+        ".25rem solid transparent",
+        "1px solid var(--table-advanced-filter-border-color, #ccc)",
+        "1px solid var(--table-advanced-filter-border-color, #ccc)"
+      ],
+      "right": [
+        ".25rem",
+        ".25rem",
+        "0"
+      ],
+      "opacity": [
+        "1",
+        "0.1",
+        "0.3",
+        "1",
+        "1",
+        "0.3",
+        "0.3"
+      ],
+      "border-bottom-color": [
+        "var(--md-secondary-text-color)"
+      ],
+      "border-top-color": [
+        "var(--md-secondary-text-color)"
+      ],
+      "border-left": [
+        "1px solid var(--table-advanced-border-color, #DEDEDE)",
+        "1px solid var(--table-advanced-border-color, #DEDEDE)"
+      ],
+      "vertical-align": [
+        "bottom",
+        "middle",
+        "middle"
+      ],
+      "line-height": [
+        ".875rem",
+        "1.25rem",
+        "calc(.25rem * 4)"
+      ],
+      "min-height": [
+        "calc(.875rem * 1.8)"
+      ],
+      "margin-left": [
+        ".25rem"
+      ],
+      "max-height": [
+        "1.25rem"
+      ],
+      "align-self": [
+        "center"
+      ],
+      "float": [
+        "left"
+      ],
+      "margin-right": [
+        "calc(.25rem * 1.5)",
+        "calc(.25rem * 1.5)"
+      ],
+      "border-radius": [
+        "calc(.25rem / 2)"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

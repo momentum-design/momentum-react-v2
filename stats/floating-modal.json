@@ -1,0 +1,181 @@
+{
+  "size": 1016,
+  "gzipSize": 486,
+  "humanizedSize": "1016B",
+  "humanizedGzipSize": "486B",
+  "rules": {
+    "total": 5,
+    "size": {
+      "graph": [
+        12,
+        1,
+        9,
+        5,
+        2
+      ],
+      "max": 12,
+      "average": 5.8
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".md-floating",
+        "declarations": 12
+      },
+      {
+        "selector": ".md-floating .md-floating__header",
+        "declarations": 9
+      },
+      {
+        "selector": ".md-floating .md-floating__header-text",
+        "declarations": 5
+      },
+      {
+        "selector": ".md-floating .md-floating__body",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-floating.fixed",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 5,
+    "type": 0,
+    "class": 5,
+    "id": 0,
+    "pseudoClass": 0,
+    "pseudoElement": 0,
+    "values": [
+      ".md-floating",
+      ".md-floating.fixed",
+      ".md-floating .md-floating__header",
+      ".md-floating .md-floating__header-text",
+      ".md-floating .md-floating__body"
+    ],
+    "specificity": {
+      "max": 20,
+      "average": 18,
+      "graph": [
+        10,
+        20,
+        20,
+        20,
+        20
+      ],
+      "sortedGraph": [
+        {
+          "selector": ".md-floating.fixed",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-floating .md-floating__header",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-floating .md-floating__header-text",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-floating .md-floating__body",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-floating",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 29,
+    "unique": 28,
+    "properties": {
+      "background-color": [
+        "var(--floating-modal-main-bg-color, #fff)"
+      ],
+      "border": [
+        "1px solid var(--floating-modal-outer-border-color, #EDEDED)"
+      ],
+      "border-radius": [
+        "var(--floating-modal-main-radius, .25rem)"
+      ],
+      "box-shadow": [
+        "var(--floating-modal-main-box-shadow, 0 4px 8px rgba(0,0,0,0.16),0 0 1px rgba(0,0,0,0.16))"
+      ],
+      "display": [
+        "flex",
+        "flex"
+      ],
+      "flex-direction": [
+        "column",
+        "row"
+      ],
+      "max-height": [
+        "100%",
+        "3rem"
+      ],
+      "max-width": [
+        "100%"
+      ],
+      "position": [
+        "absolute",
+        "fixed"
+      ],
+      "touch-action": [
+        "none"
+      ],
+      "user-select": [
+        "none"
+      ],
+      "z-index": [
+        "1040"
+      ],
+      "align-items": [
+        "center"
+      ],
+      "border-bottom": [
+        "1px solid var(--floating-modal-main-border-color, #DEDEDE)"
+      ],
+      "color": [
+        "var(--floating-modal-main-text-color, #545454)"
+      ],
+      "flex-wrap": [
+        "nowrap"
+      ],
+      "justify-content": [
+        "space-between"
+      ],
+      "padding": [
+        ".5rem .5rem .5rem .75rem",
+        ".75rem 1.25rem"
+      ],
+      "flex": [
+        "2 1 auto"
+      ],
+      "font-family": [
+        "\"CiscoSansTT Bold\",\"Helvetica Neue\",Helvetica,Arial,sans-serif"
+      ],
+      "font-size": [
+        "16px"
+      ],
+      "line-height": [
+        "16px"
+      ],
+      "text-align": [
+        "left"
+      ],
+      "overflow": [
+        "auto"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

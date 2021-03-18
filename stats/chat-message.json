@@ -1,0 +1,194 @@
+{
+  "size": 873,
+  "gzipSize": 369,
+  "humanizedSize": "873B",
+  "humanizedGzipSize": "369B",
+  "rules": {
+    "total": 7,
+    "size": {
+      "graph": [
+        2,
+        5,
+        3,
+        6,
+        6,
+        5,
+        1
+      ],
+      "max": 6,
+      "average": 4
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-chat-message) .md-chat-message_title",
+        "declarations": 6
+      },
+      {
+        "selector": ":host(md-chat-message) .md-chat-message_heading",
+        "declarations": 6
+      },
+      {
+        "selector": ":host(md-chat-message) .md-chat-message_title span",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-chat-message) .md-chat-message",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-chat-message) .md-chat-message_content",
+        "declarations": 3
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-chat-message) .md-chat-message_time",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 7,
+    "type": 1,
+    "class": 6,
+    "id": 0,
+    "pseudoClass": 1,
+    "pseudoElement": 0,
+    "values": [
+      ":host(:focus)",
+      ":host(md-chat-message) .md-chat-message",
+      ":host(md-chat-message) .md-chat-message_content",
+      ":host(md-chat-message) .md-chat-message_heading",
+      ":host(md-chat-message) .md-chat-message_title",
+      ":host(md-chat-message) .md-chat-message_title span",
+      ":host(md-chat-message) .md-chat-message_time"
+    ],
+    "specificity": {
+      "max": 21,
+      "average": 18.714285714285715,
+      "graph": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        21,
+        20
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host(md-chat-message) .md-chat-message_title span",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-chat-message) .md-chat-message",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-chat-message) .md-chat-message_content",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-chat-message) .md-chat-message_heading",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-chat-message) .md-chat-message_title",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-chat-message) .md-chat-message_time",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 28,
+    "unique": 24,
+    "properties": {
+      "box-shadow": [
+        "none"
+      ],
+      "outline": [
+        "none"
+      ],
+      "color": [
+        "var(--chat-message-color, #1C1C1C)",
+        "var(--chat-message-color-heading, #3B3B3B)"
+      ],
+      "display": [
+        "flex",
+        "flex",
+        "flex",
+        "flex",
+        "block"
+      ],
+      "font-size": [
+        ".875rem",
+        ".75rem"
+      ],
+      "line-height": [
+        "1.375rem",
+        ".75rem"
+      ],
+      "margin": [
+        ".75rem 0"
+      ],
+      "flex-direction": [
+        "column"
+      ],
+      "padding-left": [
+        ".75rem"
+      ],
+      "flex": [
+        "0 1 auto",
+        "0 1 auto"
+      ],
+      "margin-bottom": [
+        "calc(.75rem * 0.5)"
+      ],
+      "align-content": [
+        "center"
+      ],
+      "align-items": [
+        "center"
+      ],
+      "flex-flow": [
+        "row nowrap"
+      ],
+      "justify-content": [
+        "center"
+      ],
+      "overflow": [
+        "hidden"
+      ],
+      "text-overflow": [
+        "ellipsis"
+      ],
+      "white-space": [
+        "nowrap"
+      ],
+      "width": [
+        "calc(100%)"
+      ],
+      "margin-left": [
+        "calc(.75rem * 1.5)"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

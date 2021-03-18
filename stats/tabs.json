@@ -1,0 +1,849 @@
+{
+  "size": 4907,
+  "gzipSize": 1264,
+  "humanizedSize": "5KB",
+  "humanizedGzipSize": "1KB",
+  "rules": {
+    "total": 46,
+    "size": {
+      "graph": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        9,
+        1,
+        13,
+        4,
+        1,
+        1,
+        3,
+        4,
+        1,
+        2,
+        1,
+        6,
+        8,
+        3,
+        3,
+        5,
+        2,
+        3,
+        2,
+        8,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        2,
+        3,
+        3,
+        2,
+        1,
+        6,
+        4,
+        1,
+        1
+      ],
+      "max": 13,
+      "average": 2.8043478260869565
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": "button",
+        "declarations": 13
+      },
+      {
+        "selector": ":host([viewporthidden])",
+        "declarations": 9
+      },
+      {
+        "selector": ".md-tab__list .md-menu-overlay__more_list",
+        "declarations": 8
+      },
+      {
+        "selector": ".md-tab__list",
+        "declarations": 8
+      },
+      {
+        "selector": ":host-context([direction=\"vertical\"]) .md-tab__list",
+        "declarations": 6
+      },
+      {
+        "selector": ":host",
+        "declarations": 6
+      },
+      {
+        "selector": ".md-tab__list .md-menu-overlay__more.md-menu-overlay__more--hidden",
+        "declarations": 5
+      },
+      {
+        "selector": ":host-context([direction=\"vertical\"]) .md-tab__list ::slotted([slot=\"tab\"])",
+        "declarations": 4
+      },
+      {
+        "selector": "button span",
+        "declarations": 4
+      },
+      {
+        "selector": "button:disabled",
+        "declarations": 4
+      },
+      {
+        "selector": ".md-tab__content ::slotted([slot=\"panel\"][selected][focus-visible]:not(:focus-visible))",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-tab__content ::slotted([slot=\"panel\"][selected][focus-visible]:focus-visible)",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-tab__content ::slotted([slot=\"panel\"])",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-tab__content",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-tab__list .md-menu-overlay__more_tab.md-menu-overlay__more_tab--hidden",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-tab__list .md-menu-overlay__more",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-tab__list.md-tab__justified",
+        "declarations": 3
+      },
+      {
+        "selector": "button ::slotted(span)",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-tab__content",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-tab__content ::slotted([slot=\"panel\"][selected])",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-tab__list.md-tab__justified ::slotted([slot=\"tab\"])",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-tab__list .md-menu-overlay__more_tab.md-menu-overlay__more_tab--hidden::part(tab)",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-tab__list .md-menu-overlay__more_tab",
+        "declarations": 2
+      },
+      {
+        "selector": "button:active",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([focus-visible]) button",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([selected][vertical]) button",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([selected]) button",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host-context([direction=\"vertical\"]) .md-tab__content ::slotted([slot=\"panel\"])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host-context([direction=\"vertical\"]) .md-tab__list ::slotted([slot=\"tab\"][selected])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host-context([direction=\"vertical\"])",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-tab__list ::slotted([slot=\"tab\"]:focus),.md-tab__list md-tab:focus",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-tab__list ::slotted([slot=\"tab\"][disabled]),.md-tab__list md-tab[disabled]",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-tab__list ::slotted([slot=\"tab\"][selected]),.md-tab__list md-tab[selected]",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-tab__list ::slotted([slot=\"tab\"])",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-tab__list md-menu-overlay::part(overlay)",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-tab__list .md-menu-overlay__more_list md-tab::part(tab)",
+        "declarations": 1
+      },
+      {
+        "selector": "button:focus",
+        "declarations": 1
+      },
+      {
+        "selector": "button:hover",
+        "declarations": 1
+      },
+      {
+        "selector": "button:disabled:hover",
+        "declarations": 1
+      },
+      {
+        "selector": "button:disabled",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([measuringrealwidth])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([focus-visible][selected])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([focus-visible])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([vertical]) button",
+        "declarations": 1
+      },
+      {
+        "selector": ":host",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 49,
+    "type": 19,
+    "class": 28,
+    "id": 0,
+    "pseudoClass": 11,
+    "pseudoElement": 0,
+    "values": [
+      ":host",
+      ":host(:focus)",
+      ":host([selected]) button",
+      ":host([vertical]) button",
+      ":host([selected][vertical]) button",
+      ":host([focus-visible])",
+      ":host([focus-visible]) button",
+      ":host([focus-visible][selected])",
+      ":host([viewporthidden])",
+      ":host([measuringrealwidth])",
+      "button",
+      "button:disabled",
+      "button:disabled",
+      "button:disabled:hover",
+      "button ::slotted(span)",
+      "button span",
+      "button:hover",
+      "button:active",
+      "button:focus",
+      ":host",
+      ".md-tab__list",
+      ".md-tab__list.md-tab__justified",
+      ".md-tab__list .md-menu-overlay__more",
+      ".md-tab__list .md-menu-overlay__more.md-menu-overlay__more--hidden",
+      ".md-tab__list .md-menu-overlay__more_tab",
+      ".md-tab__list .md-menu-overlay__more_tab.md-menu-overlay__more_tab--hidden",
+      ".md-tab__list .md-menu-overlay__more_tab.md-menu-overlay__more_tab--hidden::part(tab)",
+      ".md-tab__list .md-menu-overlay__more_list",
+      ".md-tab__list .md-menu-overlay__more_list md-tab::part(tab)",
+      ".md-tab__list md-menu-overlay::part(overlay)",
+      ".md-tab__content",
+      ".md-tab__list ::slotted([slot=\"tab\"])",
+      ".md-tab__list.md-tab__justified ::slotted([slot=\"tab\"])",
+      ".md-tab__list ::slotted([slot=\"tab\"][selected])",
+      ".md-tab__list md-tab[selected]",
+      ".md-tab__list ::slotted([slot=\"tab\"][disabled])",
+      ".md-tab__list md-tab[disabled]",
+      ".md-tab__list ::slotted([slot=\"tab\"]:focus)",
+      ".md-tab__list md-tab:focus",
+      ".md-tab__content ::slotted([slot=\"panel\"])",
+      ".md-tab__content ::slotted([slot=\"panel\"][selected])",
+      ".md-tab__content ::slotted([slot=\"panel\"][selected][focus-visible]:focus-visible)",
+      ".md-tab__content ::slotted([slot=\"panel\"][selected][focus-visible]:not(:focus-visible))",
+      ".md-tab__content",
+      ":host-context([direction=\"vertical\"])",
+      ":host-context([direction=\"vertical\"]) .md-tab__list",
+      ":host-context([direction=\"vertical\"]) .md-tab__list ::slotted([slot=\"tab\"])",
+      ":host-context([direction=\"vertical\"]) .md-tab__list ::slotted([slot=\"tab\"][selected])",
+      ":host-context([direction=\"vertical\"]) .md-tab__content ::slotted([slot=\"panel\"])"
+    ],
+    "specificity": {
+      "max": 51,
+      "average": 21.93877551020408,
+      "graph": [
+        10,
+        10,
+        21,
+        21,
+        31,
+        20,
+        21,
+        30,
+        20,
+        20,
+        1,
+        11,
+        11,
+        21,
+        2,
+        2,
+        11,
+        11,
+        11,
+        10,
+        10,
+        20,
+        20,
+        30,
+        20,
+        30,
+        31,
+        20,
+        22,
+        12,
+        10,
+        21,
+        31,
+        31,
+        21,
+        31,
+        21,
+        31,
+        21,
+        21,
+        31,
+        51,
+        51,
+        10,
+        20,
+        30,
+        41,
+        51,
+        41
+      ],
+      "sortedGraph": [
+        {
+          "selector": ".md-tab__content ::slotted([slot=\"panel\"][selected][focus-visible]:focus-visible)",
+          "specificity": 51
+        },
+        {
+          "selector": ".md-tab__content ::slotted([slot=\"panel\"][selected][focus-visible]:not(:focus-visible))",
+          "specificity": 51
+        },
+        {
+          "selector": ":host-context([direction=\"vertical\"]) .md-tab__list ::slotted([slot=\"tab\"][selected])",
+          "specificity": 51
+        },
+        {
+          "selector": ":host-context([direction=\"vertical\"]) .md-tab__list ::slotted([slot=\"tab\"])",
+          "specificity": 41
+        },
+        {
+          "selector": ":host-context([direction=\"vertical\"]) .md-tab__content ::slotted([slot=\"panel\"])",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([selected][vertical]) button",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-tab__list .md-menu-overlay__more_tab.md-menu-overlay__more_tab--hidden::part(tab)",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-tab__list.md-tab__justified ::slotted([slot=\"tab\"])",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-tab__list ::slotted([slot=\"tab\"][selected])",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-tab__list ::slotted([slot=\"tab\"][disabled])",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-tab__list ::slotted([slot=\"tab\"]:focus)",
+          "specificity": 31
+        },
+        {
+          "selector": ".md-tab__content ::slotted([slot=\"panel\"][selected])",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([focus-visible][selected])",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-tab__list .md-menu-overlay__more.md-menu-overlay__more--hidden",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-tab__list .md-menu-overlay__more_tab.md-menu-overlay__more_tab--hidden",
+          "specificity": 30
+        },
+        {
+          "selector": ":host-context([direction=\"vertical\"]) .md-tab__list",
+          "specificity": 30
+        },
+        {
+          "selector": ".md-tab__list .md-menu-overlay__more_list md-tab::part(tab)",
+          "specificity": 22
+        },
+        {
+          "selector": ":host([selected]) button",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([vertical]) button",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([focus-visible]) button",
+          "specificity": 21
+        },
+        {
+          "selector": "button:disabled:hover",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-tab__list ::slotted([slot=\"tab\"])",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-tab__list md-tab[selected]",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-tab__list md-tab[disabled]",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-tab__list md-tab:focus",
+          "specificity": 21
+        },
+        {
+          "selector": ".md-tab__content ::slotted([slot=\"panel\"])",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([focus-visible])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([viewporthidden])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([measuringrealwidth])",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-tab__list.md-tab__justified",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-tab__list .md-menu-overlay__more",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-tab__list .md-menu-overlay__more_tab",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-tab__list .md-menu-overlay__more_list",
+          "specificity": 20
+        },
+        {
+          "selector": ":host-context([direction=\"vertical\"])",
+          "specificity": 20
+        },
+        {
+          "selector": ".md-tab__list md-menu-overlay::part(overlay)",
+          "specificity": 12
+        },
+        {
+          "selector": "button:disabled",
+          "specificity": 11
+        },
+        {
+          "selector": "button:disabled",
+          "specificity": 11
+        },
+        {
+          "selector": "button:hover",
+          "specificity": 11
+        },
+        {
+          "selector": "button:active",
+          "specificity": 11
+        },
+        {
+          "selector": "button:focus",
+          "specificity": 11
+        },
+        {
+          "selector": ":host",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host",
+          "specificity": 10
+        },
+        {
+          "selector": ".md-tab__list",
+          "specificity": 10
+        },
+        {
+          "selector": ".md-tab__content",
+          "specificity": 10
+        },
+        {
+          "selector": ".md-tab__content",
+          "specificity": 10
+        },
+        {
+          "selector": "button ::slotted(span)",
+          "specificity": 2
+        },
+        {
+          "selector": "button span",
+          "specificity": 2
+        },
+        {
+          "selector": "button",
+          "specificity": 1
+        }
+      ]
+    },
+    "repeated": [
+      ".md-tab__content",
+      ":host",
+      "button:disabled"
+    ]
+  },
+  "declarations": {
+    "total": 129,
+    "unique": 79,
+    "properties": {
+      "box-sizing": [
+        "border-box"
+      ],
+      "box-shadow": [
+        "none",
+        "var(--tabs-default-focus-shadow, 0 0 4px 2px transparent)",
+        "none"
+      ],
+      "outline": [
+        "none",
+        "none",
+        "none",
+        "2px solid var(--tabs-default-focus-border, #007AA3)",
+        "none"
+      ],
+      "border-bottom": [
+        "2px solid var(--tabs-default-active-border, #007AA3)",
+        ".125rem solid transparent",
+        "1px solid var(--tabs-default-border-color, #EDEDED)"
+      ],
+      "color": [
+        "var(--tabs-default-active, #007AA3)",
+        "var(--tabs-default-text-color, #545454)",
+        "var(--tabs-default-disabled, #B2B2B2)",
+        "var(--tabs-default-active, #007AA3)",
+        "var(--tabs-default-disabled, #B2B2B2)",
+        "var(--tabs-default-active, #007AA3)"
+      ],
+      "text-align": [
+        "left",
+        "center",
+        "center",
+        "left",
+        "left"
+      ],
+      "border-left": [
+        "2px solid var(--tabs-default-active-border, #007AA3)",
+        ".125rem solid transparent"
+      ],
+      "background-color": [
+        "var(--tabs-default-focus-bg, #fff)",
+        "var(--tabs-default-hover, #EDEDED)",
+        "var(--tabs-default-pressed, #DEDEDE)"
+      ],
+      "border": [
+        "2px solid var(--tabs-default-focus-border, #007AA3)",
+        ".125rem solid transparent",
+        "none"
+      ],
+      "background": [
+        "transparent",
+        "rgba(0,0,0,0)",
+        "rgba(0,0,0,0)",
+        "none"
+      ],
+      "display": [
+        "inline-block",
+        "block",
+        "inline-block",
+        "inline-block",
+        "flex",
+        "inline-flex",
+        "flex",
+        "none",
+        "flex",
+        "inline-block",
+        "inline-block",
+        "none",
+        "block",
+        "block",
+        "inline-flex",
+        "block"
+      ],
+      "height": [
+        "auto",
+        "100%",
+        "100%",
+        "3rem",
+        "100%",
+        "100%",
+        "auto",
+        "100%",
+        "100%",
+        "auto"
+      ],
+      "pointer-events": [
+        "none",
+        "none",
+        "none"
+      ],
+      "position": [
+        "absolute",
+        "relative",
+        "relative"
+      ],
+      "right": [
+        "0"
+      ],
+      "top": [
+        "0",
+        "-.8125rem"
+      ],
+      "visibility": [
+        "hidden",
+        "hidden",
+        "hidden",
+        "hidden",
+        "visible"
+      ],
+      "width": [
+        "auto",
+        "auto",
+        "100%",
+        "100%",
+        "auto",
+        "0",
+        "100%",
+        "100%",
+        "auto"
+      ],
+      "z-index": [
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "border-radius": [
+        ".25rem"
+      ],
+      "min-height": [
+        "2.8125rem",
+        "3rem",
+        "2.8125rem"
+      ],
+      "padding": [
+        "0.3rem 1.2rem",
+        "0 .25rem",
+        "0",
+        "0",
+        "0",
+        ".125rem"
+      ],
+      "text-decoration": [
+        "none"
+      ],
+      "white-space": [
+        "nowrap"
+      ],
+      "cursor": [
+        "not-allowed"
+      ],
+      "filter": [
+        "invert(100%)",
+        "brightness(1) contrast(1) saturate(1.5)"
+      ],
+      "line-height": [
+        "1.6875rem",
+        "1.6875rem"
+      ],
+      "vertical-align": [
+        "top",
+        "top"
+      ],
+      "flex-direction": [
+        "column",
+        "column",
+        "row",
+        "column"
+      ],
+      "font-size": [
+        "14px"
+      ],
+      "padding-left": [
+        ".125rem",
+        "calc($tab-base-indent * 5)"
+      ],
+      "padding-top": [
+        ".125rem",
+        "calc(.125rem / 2)",
+        "calc($tab-base-indent * 5)"
+      ],
+      "justify-content": [
+        "space-between",
+        "flex-start"
+      ],
+      "padding-right": [
+        ".125rem"
+      ],
+      "margin-left": [
+        "auto"
+      ],
+      "max-width": [
+        "100%"
+      ],
+      "padding-bottom": [
+        "calc(.125rem / 2)"
+      ],
+      "overflow": [
+        "hidden auto"
+      ],
+      "outline-offset": [
+        "calc(.125rem solid transparent * -2)",
+        "none"
+      ],
+      "outline-style": [
+        "solid",
+        "none"
+      ],
+      "flex": [
+        "1 1 auto"
+      ],
+      "border-right": [
+        "1px solid var(--tabs-default-border-color, #EDEDED)"
+      ]
+    },
+    "resets": {
+      "padding": 3
+    }
+  },
+  "mediaQueries": {
+    "total": 1,
+    "unique": 1,
+    "values": [
+      "screen and (-ms-high-contrast: active)"
+    ],
+    "contents": [
+      {
+        "value": "screen and (-ms-high-contrast: active)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": "button:disabled",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 1,
+          "class": 0,
+          "id": 0,
+          "pseudoClass": 1,
+          "pseudoElement": 0,
+          "values": [
+            "button:disabled"
+          ],
+          "specificity": {
+            "max": 11,
+            "average": 11,
+            "graph": [
+              11
+            ],
+            "sortedGraph": [
+              {
+                "selector": "button:disabled",
+                "specificity": 11
+              }
+            ]
+          },
+          "repeated": []
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "filter": [
+              "brightness(1) contrast(1) saturate(1.5)"
+            ]
+          },
+          "resets": {}
+        }
+      }
+    ]
+  }
+}

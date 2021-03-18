@@ -1,0 +1,420 @@
+{
+  "size": 3093,
+  "gzipSize": 805,
+  "humanizedSize": "3KB",
+  "humanizedGzipSize": "805B",
+  "rules": {
+    "total": 22,
+    "size": {
+      "graph": [
+        2,
+        3,
+        4,
+        7,
+        5,
+        5,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        6,
+        2,
+        6,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "max": 7,
+      "average": 2.772727272727273
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-checkbox) .checkbox-label",
+        "declarations": 7
+      },
+      {
+        "selector": ":host([indeterminate]) .checkbox-label::after",
+        "declarations": 6
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]) .checkbox-label::after",
+        "declarations": 6
+      },
+      {
+        "selector": ":host(md-checkbox) .checkbox-label::before,:host(md-checkbox) .checkbox-label::after",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-checkbox) .checkbox-label::before",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-checkbox) .checkbox-input",
+        "declarations": 4
+      },
+      {
+        "selector": ":host(md-checkbox)",
+        "declarations": 3
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .checkbox-label::before,:host([indeterminate]:active:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .checkbox-label::before,:host([indeterminate]:hover:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([indeterminate]) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([disabled]) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:active:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:hover:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-checkbox:not(:last-child))",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-checkbox:not(:last-child))",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled]) .checkbox-label",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([focus-visible]:not([disabled]))",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 25,
+    "type": 4,
+    "class": 17,
+    "id": 0,
+    "pseudoClass": 10,
+    "pseudoElement": 14,
+    "values": [
+      ":host(:focus)",
+      ":host(md-checkbox)",
+      ":host(md-checkbox) .checkbox-input",
+      ":host(md-checkbox) .checkbox-label",
+      ":host(md-checkbox) .checkbox-label::before",
+      ":host(md-checkbox) .checkbox-label::before",
+      ":host(md-checkbox) .checkbox-label::after",
+      ":host([focus-visible]:not([disabled]))",
+      ":host(:hover:not([disabled])) .checkbox-label::before",
+      ":host(:active:not([disabled])) .checkbox-label::before",
+      ":host([disabled])",
+      ":host([disabled]) .checkbox-label",
+      ":host([disabled]) .checkbox-label::before",
+      ":host([aria-checked=\"true\"]) .checkbox-label::after",
+      ":host([aria-checked=\"true\"]) .checkbox-label::before",
+      ":host([indeterminate]) .checkbox-label::after",
+      ":host([indeterminate]) .checkbox-label::before",
+      ":host([aria-checked=\"true\"]:hover:not([disabled])) .checkbox-label::before",
+      ":host([indeterminate]:hover:not([disabled])) .checkbox-label::before",
+      ":host([aria-checked=\"true\"]:active:not([disabled])) .checkbox-label::before",
+      ":host([indeterminate]:active:not([disabled])) .checkbox-label::before",
+      ":host([alignment=\"vertical\"]) div",
+      ":host([alignment=\"vertical\"]) div ::slotted(md-checkbox:not(:last-child))",
+      ":host([alignment=\"horizontal\"]) div",
+      ":host([alignment=\"horizontal\"]) div ::slotted(md-checkbox:not(:last-child))"
+    ],
+    "specificity": {
+      "max": 41,
+      "average": 27.6,
+      "graph": [
+        10,
+        10,
+        20,
+        20,
+        21,
+        21,
+        21,
+        30,
+        31,
+        31,
+        20,
+        30,
+        31,
+        31,
+        31,
+        31,
+        31,
+        41,
+        41,
+        41,
+        41,
+        21,
+        32,
+        21,
+        32
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([indeterminate]:hover:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([indeterminate]:active:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-checkbox:not(:last-child))",
+          "specificity": 32
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-checkbox:not(:last-child))",
+          "specificity": 32
+        },
+        {
+          "selector": ":host(:hover:not([disabled])) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(:active:not([disabled])) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([disabled]) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]) .checkbox-label::after",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([indeterminate]) .checkbox-label::after",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([indeterminate]) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([focus-visible]:not([disabled]))",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([disabled]) .checkbox-label",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label::before",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label::before",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label::after",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-input",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([disabled])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-checkbox)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": [
+      ":host(md-checkbox) .checkbox-label::before"
+    ]
+  },
+  "declarations": {
+    "total": 61,
+    "unique": 50,
+    "properties": {
+      "box-shadow": [
+        "none",
+        "0 0 0 .125rem var(--md-default-focus-outline-color, #005E7D)"
+      ],
+      "outline": [
+        "none"
+      ],
+      "border-radius": [
+        ".25rem",
+        ".25rem"
+      ],
+      "cursor": [
+        "pointer",
+        "pointer",
+        "not-allowed"
+      ],
+      "display": [
+        "inline-flex",
+        "inline-block",
+        "block",
+        "block",
+        "inline-flex",
+        "flex"
+      ],
+      "height": [
+        "calc(1.25rem + .25rem)",
+        "1.25rem",
+        "0.6em",
+        "0.2em"
+      ],
+      "position": [
+        "absolute",
+        "relative",
+        "absolute"
+      ],
+      "visibility": [
+        "hidden"
+      ],
+      "width": [
+        "100%",
+        "100%",
+        "1.25rem",
+        "0.35em",
+        "0.75em"
+      ],
+      "padding-left": [
+        "2.25rem"
+      ],
+      "padding-right": [
+        "calc(.25rem / 2)"
+      ],
+      "z-index": [
+        "1"
+      ],
+      "background": [
+        "var(--checkbox-bg-color, #fff)",
+        "var(--checkbox-hover-bg-color, #EDEDED)",
+        "var(--checkbox-pressed-bg-color, #DEDEDE)",
+        "var(--checkbox-hover-bg-color, #EDEDED)",
+        "var(--checkbox-selected-bg-color, #00A0D1)",
+        "var(--checkbox-selected-bg-color, #00A0D1)",
+        "var(--checkbox-selected-hover-bg-color, #007AA3)",
+        "var(--checkbox-selected-pressed-bg-color, #005E7D)"
+      ],
+      "border": [
+        ".0625rem solid var(--checkbox-border-color, #DEDEDE)",
+        ".0625rem solid var(--checkbox-hover-border-color, #DEDEDE)",
+        ".0625rem solid var(--checkbox-pressed-border-color, #ccc)",
+        ".0625rem solid var(--checkbox-hover-border-color, #DEDEDE)",
+        "solid #fff",
+        ".0625rem solid var(--checkbox-selected-border-color, #00A0D1)",
+        "solid #fff",
+        ".0625rem solid var(--checkbox-selected-border-color, #00A0D1)"
+      ],
+      "content": [
+        "\"\""
+      ],
+      "left": [
+        "calc(.75rem * 1.25)"
+      ],
+      "top": [
+        "50%"
+      ],
+      "transform": [
+        "translate(-50%, -50%)",
+        "translateY(-65%) translateX(-50%) rotate(45deg)",
+        "translateY(-85%) translateX(-50%) rotate(0)"
+      ],
+      "opacity": [
+        "0.4"
+      ],
+      "border-width": [
+        "0 0.12em 0.12em 0",
+        "0 0 0.12em"
+      ],
+      "border-color": [
+        "var(--checkbox-selected-hover-border-color, #007AA3)",
+        "var(--checkbox-selected-pressed-border-color, #005E7D)"
+      ],
+      "flex-direction": [
+        "column",
+        "row"
+      ],
+      "margin-bottom": [
+        "calc(.25rem * 6)"
+      ],
+      "margin-right": [
+        "calc(.25rem * 10)"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

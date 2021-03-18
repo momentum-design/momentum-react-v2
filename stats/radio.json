@@ -1,0 +1,393 @@
+{
+  "size": 3111,
+  "gzipSize": 818,
+  "humanizedSize": "3KB",
+  "humanizedGzipSize": "818B",
+  "rules": {
+    "total": 20,
+    "size": {
+      "graph": [
+        1,
+        2,
+        4,
+        12,
+        13,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "max": 13,
+      "average": 2.9
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-radio) .md-radio-label::before",
+        "declarations": 13
+      },
+      {
+        "selector": ":host(md-radio) .md-radio-label",
+        "declarations": 12
+      },
+      {
+        "selector": ":host(md-radio) .md-radio-input",
+        "declarations": 4
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-radio)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([disabled]) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([disabled])",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:active:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:hover:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-radio) .md-radio-wrapper",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-radio)",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-radio)",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-radiogroup)",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([focus-visible]:not([disabled]))",
+        "declarations": 1
+      },
+      {
+        "selector": ":host",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 20,
+    "type": 4,
+    "class": 10,
+    "id": 0,
+    "pseudoClass": 6,
+    "pseudoElement": 7,
+    "values": [
+      ":host",
+      ":host(md-radio) .md-radio-wrapper",
+      ":host(md-radio) .md-radio-input",
+      ":host(md-radio) .md-radio-label",
+      ":host(md-radio) .md-radio-label::before",
+      ":host(:focus)",
+      ":host([focus-visible]:not([disabled]))",
+      ":host(:hover:not([disabled])) .md-radio-label:before",
+      ":host(:active:not([disabled])) .md-radio-label:before",
+      ":host([disabled])",
+      ":host([disabled]) .md-radio-label:before",
+      ":host([aria-checked=\"true\"]) .md-radio-label:before",
+      ":host([aria-checked=\"true\"]:hover:not([disabled])) .md-radio-label:before",
+      ":host([aria-checked=\"true\"]:active:not([disabled])) .md-radio-label:before",
+      ":host(md-radiogroup)",
+      ":host(md-radio)",
+      ":host([alignment=\"vertical\"]) div",
+      ":host([alignment=\"vertical\"]) div ::slotted(md-radio)",
+      ":host([alignment=\"horizontal\"]) div",
+      ":host([alignment=\"horizontal\"]) div ::slotted(md-radio)"
+    ],
+    "specificity": {
+      "max": 41,
+      "average": 23.15,
+      "graph": [
+        10,
+        20,
+        20,
+        20,
+        21,
+        10,
+        30,
+        31,
+        31,
+        20,
+        31,
+        31,
+        41,
+        41,
+        10,
+        10,
+        21,
+        22,
+        21,
+        22
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .md-radio-label:before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .md-radio-label:before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host(:hover:not([disabled])) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(:active:not([disabled])) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([disabled]) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([focus-visible]:not([disabled]))",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-radio)",
+          "specificity": 22
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-radio)",
+          "specificity": 22
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-label::before",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-wrapper",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-input",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-label",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([disabled])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-radiogroup)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-radio)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 58,
+    "unique": 53,
+    "properties": {
+      "--radio-label-text-color": [
+        "var(--radio-input-text-color, $lm-radio-input-text-color-light)"
+      ],
+      "max-height": [
+        "1.4375rem"
+      ],
+      "display": [
+        "inline-flex",
+        "inline-block",
+        "flex",
+        "inline",
+        "inline-flex",
+        "inline-flex"
+      ],
+      "height": [
+        "1.4375rem",
+        "1.25rem"
+      ],
+      "position": [
+        "absolute",
+        "relative",
+        "absolute"
+      ],
+      "visibility": [
+        "hidden"
+      ],
+      "width": [
+        "100%",
+        "calc(100%)",
+        "1.25rem"
+      ],
+      "color": [
+        "var(--md-primary-text-color, #121212)"
+      ],
+      "cursor": [
+        "pointer",
+        "not-allowed"
+      ],
+      "font-size": [
+        "14px"
+      ],
+      "line-height": [
+        "1.4375rem"
+      ],
+      "padding-left": [
+        "calc(1.25rem * 1.8)"
+      ],
+      "padding-right": [
+        "calc(.25rem / 2)"
+      ],
+      "overflow": [
+        "hidden"
+      ],
+      "text-overflow": [
+        "ellipsis"
+      ],
+      "white-space": [
+        "nowrap"
+      ],
+      "content": [
+        "\"\""
+      ],
+      "border": [
+        ".0625rem solid var(--radio-input-border-color, #ccc)",
+        ".0625rem solid var(--radio-input-hover-border-color, #DEDEDE)",
+        ".0625rem solid var(--radio-input-pressed-border-color, #ccc)",
+        ".0625rem solid var(--radio-input-hover-border-color, #DEDEDE)"
+      ],
+      "border-top-left-radius": [
+        "50%"
+      ],
+      "border-top-right-radius": [
+        "50%"
+      ],
+      "border-bottom-left-radius": [
+        "50%"
+      ],
+      "border-bottom-right-radius": [
+        "50%"
+      ],
+      "box-shadow": [
+        "inset 0 0 0 .36rem var(--radio-input-bg-color, #fff),inset 0 0 0 1.25rem var(--radio-input-bg-color, #fff)",
+        "none",
+        "0 0 0 .125rem var(--md-default-focus-outline-color, #005E7D)",
+        "inset 0 0 0 .36rem var(--radio-input-hover-bg-color, #ccc),inset 0 0 0 1.25rem var(--radio-input-hover-bg-color, #ccc)",
+        "inset 0 0 0 .36rem var(--radio-input-pressed-bg-color, #DEDEDE),inset 0 0 0 1.25rem var(--radio-input-pressed-bg-color, #DEDEDE)",
+        "inset 0 0 0 .36rem var(--radio-input-hover-bg-color, #ccc),inset 0 0 0 1.25rem var(--radio-input-hover-bg-color, #ccc)",
+        "inset 0 0 0 .36rem var(--radio-input-selected-bg-color, #00A0D1),inset 0 0 0 1.25rem #fff",
+        "inset 0 0 0 .36rem var(--radio-input-selected-hover-bg-color, #007AA3),inset 0 0 0 1.25rem #fff",
+        "inset 0 0 0 .36rem var(--radio-input-selected-pressed-bg-color, #005E7D),inset 0 0 0 1.25rem #fff"
+      ],
+      "box-sizing": [
+        "border-box"
+      ],
+      "left": [
+        ".125rem"
+      ],
+      "top": [
+        ".0625rem"
+      ],
+      "outline": [
+        "none"
+      ],
+      "opacity": [
+        "0.4"
+      ],
+      "border-color": [
+        "var(--radio-input-selected-border-color, #00A0D1)",
+        "var(--radio-input-selected-hover-border-color, #007AA3)",
+        "var(--radio-input-selected-pressed-border-color, #005E7D)"
+      ],
+      "border-radius": [
+        ".25rem"
+      ],
+      "flex-direction": [
+        "column",
+        "row"
+      ],
+      "margin-bottom": [
+        "calc(.25rem * 3)"
+      ],
+      "margin-right": [
+        "calc(.25rem * 8)"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

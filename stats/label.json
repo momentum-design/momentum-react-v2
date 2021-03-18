@@ -1,0 +1,844 @@
+{
+  "size": 6905,
+  "gzipSize": 1448,
+  "humanizedSize": "7KB",
+  "humanizedGzipSize": "1KB",
+  "rules": {
+    "total": 49,
+    "size": {
+      "graph": [
+        2,
+        3,
+        4,
+        7,
+        5,
+        5,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        6,
+        2,
+        6,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        4,
+        12,
+        13,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        5,
+        2,
+        2,
+        1,
+        1,
+        6,
+        1
+      ],
+      "max": 13,
+      "average": 2.795918367346939
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-radio) .md-radio-label::before",
+        "declarations": 13
+      },
+      {
+        "selector": ":host(md-radio) .md-radio-label",
+        "declarations": 12
+      },
+      {
+        "selector": ":host(md-checkbox) .checkbox-label",
+        "declarations": 7
+      },
+      {
+        "selector": ":host(md-label) .md-secondary-label",
+        "declarations": 6
+      },
+      {
+        "selector": ":host([indeterminate]) .checkbox-label::after",
+        "declarations": 6
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]) .checkbox-label::after",
+        "declarations": 6
+      },
+      {
+        "selector": ":host(md-label) .md-label",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-checkbox) .checkbox-label::before,:host(md-checkbox) .checkbox-label::after",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-checkbox) .checkbox-label::before",
+        "declarations": 5
+      },
+      {
+        "selector": ":host(md-radio) .md-radio-input",
+        "declarations": 4
+      },
+      {
+        "selector": ":host(md-checkbox) .checkbox-input",
+        "declarations": 4
+      },
+      {
+        "selector": ":host(md-checkbox)",
+        "declarations": 3
+      },
+      {
+        "selector": ":host(md-label) .md-label.inline",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-label) .md-label.right",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-radio)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([disabled]) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([disabled])",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:active:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:hover:not([disabled])) .md-radio-label:before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-radio) .md-radio-wrapper",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .checkbox-label::before,:host([indeterminate]:active:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .checkbox-label::before,:host([indeterminate]:hover:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([indeterminate]) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([aria-checked=\"true\"]) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([disabled]) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:active:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:hover:not([disabled])) .checkbox-label::before",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(.md-input__label.disabled) label,:host(.md-input__secondary-label.disabled) label",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-label) .md-label span",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-label) .md-label small",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-radio)",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-radio)",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-radiogroup)",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([focus-visible]:not([disabled]))",
+        "declarations": 1
+      },
+      {
+        "selector": ":host",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-checkbox:not(:last-child))",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-checkbox:not(:last-child))",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled]) .checkbox-label",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([disabled])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host([focus-visible]:not([disabled]))",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 53,
+    "type": 12,
+    "class": 35,
+    "id": 0,
+    "pseudoClass": 16,
+    "pseudoElement": 21,
+    "values": [
+      ":host(:focus)",
+      ":host(md-checkbox)",
+      ":host(md-checkbox) .checkbox-input",
+      ":host(md-checkbox) .checkbox-label",
+      ":host(md-checkbox) .checkbox-label::before",
+      ":host(md-checkbox) .checkbox-label::before",
+      ":host(md-checkbox) .checkbox-label::after",
+      ":host([focus-visible]:not([disabled]))",
+      ":host(:hover:not([disabled])) .checkbox-label::before",
+      ":host(:active:not([disabled])) .checkbox-label::before",
+      ":host([disabled])",
+      ":host([disabled]) .checkbox-label",
+      ":host([disabled]) .checkbox-label::before",
+      ":host([aria-checked=\"true\"]) .checkbox-label::after",
+      ":host([aria-checked=\"true\"]) .checkbox-label::before",
+      ":host([indeterminate]) .checkbox-label::after",
+      ":host([indeterminate]) .checkbox-label::before",
+      ":host([aria-checked=\"true\"]:hover:not([disabled])) .checkbox-label::before",
+      ":host([indeterminate]:hover:not([disabled])) .checkbox-label::before",
+      ":host([aria-checked=\"true\"]:active:not([disabled])) .checkbox-label::before",
+      ":host([indeterminate]:active:not([disabled])) .checkbox-label::before",
+      ":host([alignment=\"vertical\"]) div",
+      ":host([alignment=\"vertical\"]) div ::slotted(md-checkbox:not(:last-child))",
+      ":host([alignment=\"horizontal\"]) div",
+      ":host([alignment=\"horizontal\"]) div ::slotted(md-checkbox:not(:last-child))",
+      ":host",
+      ":host(md-radio) .md-radio-wrapper",
+      ":host(md-radio) .md-radio-input",
+      ":host(md-radio) .md-radio-label",
+      ":host(md-radio) .md-radio-label::before",
+      ":host(:focus)",
+      ":host([focus-visible]:not([disabled]))",
+      ":host(:hover:not([disabled])) .md-radio-label:before",
+      ":host(:active:not([disabled])) .md-radio-label:before",
+      ":host([disabled])",
+      ":host([disabled]) .md-radio-label:before",
+      ":host([aria-checked=\"true\"]) .md-radio-label:before",
+      ":host([aria-checked=\"true\"]:hover:not([disabled])) .md-radio-label:before",
+      ":host([aria-checked=\"true\"]:active:not([disabled])) .md-radio-label:before",
+      ":host(md-radiogroup)",
+      ":host(md-radio)",
+      ":host([alignment=\"vertical\"]) div",
+      ":host([alignment=\"vertical\"]) div ::slotted(md-radio)",
+      ":host([alignment=\"horizontal\"]) div",
+      ":host([alignment=\"horizontal\"]) div ::slotted(md-radio)",
+      ":host(md-label) .md-label",
+      ":host(md-label) .md-label.right",
+      ":host(md-label) .md-label.inline",
+      ":host(md-label) .md-label small",
+      ":host(md-label) .md-label span",
+      ":host(md-label) .md-secondary-label",
+      ":host(.md-input__label.disabled) label",
+      ":host(.md-input__secondary-label.disabled) label"
+    ],
+    "specificity": {
+      "max": 41,
+      "average": 25.60377358490566,
+      "graph": [
+        10,
+        10,
+        20,
+        20,
+        21,
+        21,
+        21,
+        30,
+        31,
+        31,
+        20,
+        30,
+        31,
+        31,
+        31,
+        31,
+        31,
+        41,
+        41,
+        41,
+        41,
+        21,
+        32,
+        21,
+        32,
+        10,
+        20,
+        20,
+        20,
+        21,
+        10,
+        30,
+        31,
+        31,
+        20,
+        31,
+        31,
+        41,
+        41,
+        10,
+        10,
+        21,
+        22,
+        21,
+        22,
+        20,
+        30,
+        30,
+        21,
+        21,
+        20,
+        31,
+        31
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([indeterminate]:hover:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([indeterminate]:active:not([disabled])) .checkbox-label::before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]:hover:not([disabled])) .md-radio-label:before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]:active:not([disabled])) .md-radio-label:before",
+          "specificity": 41
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-checkbox:not(:last-child))",
+          "specificity": 32
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-checkbox:not(:last-child))",
+          "specificity": 32
+        },
+        {
+          "selector": ":host(:hover:not([disabled])) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(:active:not([disabled])) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([disabled]) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]) .checkbox-label::after",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([indeterminate]) .checkbox-label::after",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([indeterminate]) .checkbox-label::before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(:hover:not([disabled])) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(:active:not([disabled])) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([disabled]) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([aria-checked=\"true\"]) .md-radio-label:before",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(.md-input__label.disabled) label",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(.md-input__secondary-label.disabled) label",
+          "specificity": 31
+        },
+        {
+          "selector": ":host([focus-visible]:not([disabled]))",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([disabled]) .checkbox-label",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([focus-visible]:not([disabled]))",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-label) .md-label.right",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-label) .md-label.inline",
+          "specificity": 30
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div ::slotted(md-radio)",
+          "specificity": 22
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div ::slotted(md-radio)",
+          "specificity": 22
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label::before",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label::before",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label::after",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-label::before",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"vertical\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host([alignment=\"horizontal\"]) div",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-label) .md-label small",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-label) .md-label span",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-input",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-checkbox) .checkbox-label",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([disabled])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-wrapper",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-input",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-radio) .md-radio-label",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([disabled])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-label) .md-label",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-label) .md-secondary-label",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-checkbox)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-radiogroup)",
+          "specificity": 10
+        },
+        {
+          "selector": ":host(md-radio)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": [
+      ":host(:focus)",
+      ":host([alignment=\"horizontal\"]) div",
+      ":host([alignment=\"vertical\"]) div",
+      ":host([disabled])",
+      ":host([focus-visible]:not([disabled]))",
+      ":host(md-checkbox) .checkbox-label::before"
+    ]
+  },
+  "declarations": {
+    "total": 137,
+    "unique": 97,
+    "properties": {
+      "box-shadow": [
+        "none",
+        "0 0 0 .125rem var(--md-default-focus-outline-color, #005E7D)",
+        "inset 0 0 0 .36rem var(--radio-input-bg-color, #fff),inset 0 0 0 1.25rem var(--radio-input-bg-color, #fff)",
+        "none",
+        "0 0 0 .125rem var(--md-default-focus-outline-color, #005E7D)",
+        "inset 0 0 0 .36rem var(--radio-input-hover-bg-color, #ccc),inset 0 0 0 1.25rem var(--radio-input-hover-bg-color, #ccc)",
+        "inset 0 0 0 .36rem var(--radio-input-pressed-bg-color, #DEDEDE),inset 0 0 0 1.25rem var(--radio-input-pressed-bg-color, #DEDEDE)",
+        "inset 0 0 0 .36rem var(--radio-input-hover-bg-color, #ccc),inset 0 0 0 1.25rem var(--radio-input-hover-bg-color, #ccc)",
+        "inset 0 0 0 .36rem var(--radio-input-selected-bg-color, #00A0D1),inset 0 0 0 1.25rem #fff",
+        "inset 0 0 0 .36rem var(--radio-input-selected-hover-bg-color, #007AA3),inset 0 0 0 1.25rem #fff",
+        "inset 0 0 0 .36rem var(--radio-input-selected-pressed-bg-color, #005E7D),inset 0 0 0 1.25rem #fff"
+      ],
+      "outline": [
+        "none",
+        "none"
+      ],
+      "border-radius": [
+        ".25rem",
+        ".25rem",
+        ".25rem"
+      ],
+      "cursor": [
+        "pointer",
+        "pointer",
+        "not-allowed",
+        "pointer",
+        "not-allowed",
+        "not-allowed"
+      ],
+      "display": [
+        "inline-flex",
+        "inline-block",
+        "block",
+        "block",
+        "inline-flex",
+        "flex",
+        "inline-flex",
+        "inline-block",
+        "flex",
+        "inline",
+        "inline-flex",
+        "inline-flex",
+        "flex",
+        "flex"
+      ],
+      "height": [
+        "calc(1.25rem + .25rem)",
+        "1.25rem",
+        "0.6em",
+        "0.2em",
+        "1.4375rem",
+        "1.25rem"
+      ],
+      "position": [
+        "absolute",
+        "relative",
+        "absolute",
+        "absolute",
+        "relative",
+        "absolute"
+      ],
+      "visibility": [
+        "hidden",
+        "hidden"
+      ],
+      "width": [
+        "100%",
+        "100%",
+        "1.25rem",
+        "0.35em",
+        "0.75em",
+        "100%",
+        "calc(100%)",
+        "1.25rem"
+      ],
+      "padding-left": [
+        "2.25rem",
+        "calc(1.25rem * 1.8)"
+      ],
+      "padding-right": [
+        "calc(.25rem / 2)",
+        "calc(.25rem / 2)"
+      ],
+      "z-index": [
+        "1"
+      ],
+      "background": [
+        "var(--checkbox-bg-color, #fff)",
+        "var(--checkbox-hover-bg-color, #EDEDED)",
+        "var(--checkbox-pressed-bg-color, #DEDEDE)",
+        "var(--checkbox-hover-bg-color, #EDEDED)",
+        "var(--checkbox-selected-bg-color, #00A0D1)",
+        "var(--checkbox-selected-bg-color, #00A0D1)",
+        "var(--checkbox-selected-hover-bg-color, #007AA3)",
+        "var(--checkbox-selected-pressed-bg-color, #005E7D)"
+      ],
+      "border": [
+        ".0625rem solid var(--checkbox-border-color, #DEDEDE)",
+        ".0625rem solid var(--checkbox-hover-border-color, #DEDEDE)",
+        ".0625rem solid var(--checkbox-pressed-border-color, #ccc)",
+        ".0625rem solid var(--checkbox-hover-border-color, #DEDEDE)",
+        "solid #fff",
+        ".0625rem solid var(--checkbox-selected-border-color, #00A0D1)",
+        "solid #fff",
+        ".0625rem solid var(--checkbox-selected-border-color, #00A0D1)",
+        ".0625rem solid var(--radio-input-border-color, #ccc)",
+        ".0625rem solid var(--radio-input-hover-border-color, #DEDEDE)",
+        ".0625rem solid var(--radio-input-pressed-border-color, #ccc)",
+        ".0625rem solid var(--radio-input-hover-border-color, #DEDEDE)"
+      ],
+      "content": [
+        "\"\"",
+        "\"\""
+      ],
+      "left": [
+        "calc(.75rem * 1.25)",
+        ".125rem"
+      ],
+      "top": [
+        "50%",
+        ".0625rem"
+      ],
+      "transform": [
+        "translate(-50%, -50%)",
+        "translateY(-65%) translateX(-50%) rotate(45deg)",
+        "translateY(-85%) translateX(-50%) rotate(0)"
+      ],
+      "opacity": [
+        "0.4",
+        "0.4"
+      ],
+      "border-width": [
+        "0 0.12em 0.12em 0",
+        "0 0 0.12em"
+      ],
+      "border-color": [
+        "var(--checkbox-selected-hover-border-color, #007AA3)",
+        "var(--checkbox-selected-pressed-border-color, #005E7D)",
+        "var(--radio-input-selected-border-color, #00A0D1)",
+        "var(--radio-input-selected-hover-border-color, #007AA3)",
+        "var(--radio-input-selected-pressed-border-color, #005E7D)"
+      ],
+      "flex-direction": [
+        "column",
+        "row",
+        "column",
+        "row"
+      ],
+      "margin-bottom": [
+        "calc(.25rem * 6)",
+        "calc(.25rem * 3)"
+      ],
+      "margin-right": [
+        "calc(.25rem * 10)",
+        "calc(.25rem * 8)"
+      ],
+      "--radio-label-text-color": [
+        "var(--radio-input-text-color, $lm-radio-input-text-color-light)"
+      ],
+      "max-height": [
+        "1.4375rem"
+      ],
+      "color": [
+        "var(--md-primary-text-color, #121212)",
+        "var(--label-color, #000)",
+        "var(--label-secondary, #545454)"
+      ],
+      "font-size": [
+        "14px",
+        ".875rem",
+        "inherit",
+        ".875rem"
+      ],
+      "line-height": [
+        "1.4375rem",
+        "1.25rem",
+        "1.125rem"
+      ],
+      "overflow": [
+        "hidden"
+      ],
+      "text-overflow": [
+        "ellipsis"
+      ],
+      "white-space": [
+        "nowrap"
+      ],
+      "border-top-left-radius": [
+        "50%"
+      ],
+      "border-top-right-radius": [
+        "50%"
+      ],
+      "border-bottom-left-radius": [
+        "50%"
+      ],
+      "border-bottom-right-radius": [
+        "50%"
+      ],
+      "box-sizing": [
+        "border-box"
+      ],
+      "font-family": [
+        "\"CiscoSansTT Regular\",\"Helvetica Neue\",Helvetica,Arial,sans-serif"
+      ],
+      "float": [
+        "none"
+      ],
+      "text-align": [
+        "right"
+      ],
+      "margin": [
+        "0 0 1rem 0"
+      ],
+      "padding": [
+        ".50391rem 0",
+        ".25rem 1rem 0"
+      ],
+      "text-transform": [
+        "capitalize"
+      ],
+      "flex-grow": [
+        "1"
+      ]
+    },
+    "resets": {}
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

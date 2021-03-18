@@ -1,0 +1,361 @@
+{
+  "size": 2605,
+  "gzipSize": 634,
+  "humanizedSize": "3KB",
+  "humanizedGzipSize": "634B",
+  "rules": {
+    "total": 16,
+    "size": {
+      "graph": [
+        2,
+        4,
+        6,
+        11,
+        11,
+        2,
+        1,
+        4,
+        13,
+        1,
+        2,
+        1,
+        8,
+        9,
+        1,
+        1
+      ],
+      "max": 13,
+      "average": 4.8125
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ":host(md-pagination) .md-pagination-nav",
+        "declarations": 13
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis)",
+        "declarations": 11
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-list",
+        "declarations": 11
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-dots li",
+        "declarations": 9
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-dots",
+        "declarations": 8
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-container",
+        "declarations": 6
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis)[aria-current=\"true\"]",
+        "declarations": 4
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination",
+        "declarations": 4
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-nav:disabled",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis):hover",
+        "declarations": 2
+      },
+      {
+        "selector": ":host(:focus)",
+        "declarations": 2
+      },
+      {
+        "selector": ":host([focus-visible])",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-dots li[aria-current=\"true\"],:host(md-pagination) .md-pagination-dots li:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-nav:focus",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-nav:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis):focus",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 17,
+    "type": 7,
+    "class": 15,
+    "id": 0,
+    "pseudoClass": 9,
+    "pseudoElement": 0,
+    "values": [
+      ":host(:focus)",
+      ":host(md-pagination) .md-pagination",
+      ":host(md-pagination) .md-pagination-container",
+      ":host(md-pagination) .md-pagination-list",
+      ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis)",
+      ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis):hover",
+      ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis):focus",
+      ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis)[aria-current=\"true\"]",
+      ":host(md-pagination) .md-pagination-nav",
+      ":host(md-pagination) .md-pagination-nav:hover",
+      ":host(md-pagination) .md-pagination-nav:disabled",
+      ":host(md-pagination) .md-pagination-nav:focus",
+      ":host(md-pagination) .md-pagination-dots",
+      ":host(md-pagination) .md-pagination-dots li",
+      ":host(md-pagination) .md-pagination-dots li[aria-current=\"true\"]",
+      ":host(md-pagination) .md-pagination-dots li:hover",
+      ":host([focus-visible])"
+    ],
+    "specificity": {
+      "max": 41,
+      "average": 26.88235294117647,
+      "graph": [
+        10,
+        20,
+        20,
+        20,
+        31,
+        41,
+        41,
+        41,
+        20,
+        30,
+        30,
+        30,
+        20,
+        21,
+        31,
+        31,
+        20
+      ],
+      "sortedGraph": [
+        {
+          "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis):hover",
+          "specificity": 41
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis):focus",
+          "specificity": 41
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis)[aria-current=\"true\"]",
+          "specificity": 41
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-list li:not(.page-ellipsis)",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-dots li[aria-current=\"true\"]",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-dots li:hover",
+          "specificity": 31
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-nav:hover",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-nav:disabled",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-nav:focus",
+          "specificity": 30
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-dots li",
+          "specificity": 21
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-container",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-list",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-nav",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(md-pagination) .md-pagination-dots",
+          "specificity": 20
+        },
+        {
+          "selector": ":host([focus-visible])",
+          "specificity": 20
+        },
+        {
+          "selector": ":host(:focus)",
+          "specificity": 10
+        }
+      ]
+    },
+    "repeated": []
+  },
+  "declarations": {
+    "total": 77,
+    "unique": 44,
+    "properties": {
+      "box-shadow": [
+        "none",
+        "0 0 0 .125rem var(--md-default-focus-outline-color, #005E7D)",
+        "0 0 0 .125rem var(--md-default-focus-outline-color, #005E7D)",
+        "0 0 0 .125rem var(--md-default-focus-outline-color, #005E7D)"
+      ],
+      "outline": [
+        "none",
+        "none"
+      ],
+      "color": [
+        "var(--pagination-nav-color, #545454)",
+        "var(--pagination-color, #949494)",
+        "var(--pagination-color-current, #fff)",
+        "var(--pagination-color-current, #fff)",
+        "var(--pagination-nav-color, #545454)",
+        "var(--pagination-nav-hover, #007AA3)",
+        "var(--pagination-nav-disabled, #ccc)"
+      ],
+      "display": [
+        "flex",
+        "flex",
+        "flex",
+        "flex",
+        "flex",
+        "flex",
+        "block"
+      ],
+      "padding": [
+        "0",
+        "0",
+        ".25rem",
+        "0",
+        "0"
+      ],
+      "position": [
+        "relative"
+      ],
+      "align-content": [
+        "center",
+        "center",
+        "center",
+        "center",
+        "center"
+      ],
+      "align-items": [
+        "center",
+        "center",
+        "center",
+        "center",
+        "center"
+      ],
+      "flex-flow": [
+        "column nowrap",
+        "row nowrap",
+        "row nowrap",
+        "row nowrap",
+        "row nowrap"
+      ],
+      "justify-content": [
+        "center",
+        "center",
+        "center",
+        "center",
+        "center"
+      ],
+      "flex": [
+        "0 1 100%",
+        "0 0 1.25rem"
+      ],
+      "margin": [
+        "0",
+        "0 .125rem",
+        "0",
+        ".25rem"
+      ],
+      "list-style": [
+        "none",
+        "none"
+      ],
+      "font-size": [
+        ".875rem"
+      ],
+      "line-height": [
+        "1"
+      ],
+      "border-radius": [
+        ".875rem",
+        ".25rem",
+        "50%"
+      ],
+      "cursor": [
+        "pointer",
+        "default",
+        "pointer",
+        "default",
+        "pointer"
+      ],
+      "height": [
+        "1.25rem",
+        ".5rem"
+      ],
+      "min-width": [
+        "1.25rem"
+      ],
+      "background": [
+        "var(--pagination-bg-hover, #007AA3)",
+        "var(--pagination-bg-current, #00A0D1)",
+        "none",
+        "var(--pagination-dots-color, #ccc)",
+        "var(--pagination-dots-color-current, #00A0D1)"
+      ],
+      "pointer-events": [
+        "none"
+      ],
+      "border": [
+        "0"
+      ],
+      "overflow": [
+        "hidden"
+      ],
+      "text-indent": [
+        "-9999px"
+      ],
+      "width": [
+        ".5rem"
+      ]
+    },
+    "resets": {
+      "padding": 4,
+      "margin": 2
+    }
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}
