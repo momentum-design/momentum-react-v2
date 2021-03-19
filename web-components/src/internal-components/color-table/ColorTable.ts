@@ -46,7 +46,7 @@ export class ColorTableSandbox extends LitElement {
       },
 
       data: {
-        list2d: colorTable2DArray
+        list2d: colorTable2DArray.slice(1, colorTable2DArray.length)
       }
     };
   }
