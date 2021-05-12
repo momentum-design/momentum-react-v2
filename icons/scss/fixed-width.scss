@@ -1,8 +1,0 @@
-@import 'mixins';
-
-@include exports('spark-icons-fixed-width') {
-  .icon-fw {
-    width: 1.28571429em;
-    text-align: center;
-  }
-}
