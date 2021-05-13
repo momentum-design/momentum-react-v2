@@ -40,6 +40,7 @@
     "build:lib": "node ./tools/lib/build.js",
     "css:build": "node-sass -i scss/templates/momentum-ui.scss -o css/ --importer=./node_modules/node-sass-tilde-importer",
     "build:settings": "node ./tools/generateSettingsScss.js",
+    "build:tokens": "node ./tools/generateScssFromTokens.js",
     "ci:postpublish": "node ../tools/postpublish.js",
     "clean-dist": "yarn remove-dist && mkdir dist bundles lib",
     "copy:CI": "cp ./src/app/_redirects ./dist/",
