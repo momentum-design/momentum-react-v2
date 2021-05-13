@@ -250,7 +250,7 @@ workflows:
             - checkout_install
       - test_react:
           requires:
-            - build_tokens
+            - checkout_install
       - percy_finalize_all:
           requires:
             - test_react
