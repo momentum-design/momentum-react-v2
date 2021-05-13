@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { snakeCase } from '../../../lib/utils';
-import AsyncComponent from '../AsyncComponent';
 import KitchenSinkComponents from '../../ComponentList';
 
 export default class KitchenSink extends React.PureComponent {
@@ -12,18 +11,22 @@ export default class KitchenSink extends React.PureComponent {
         <div className='row'>
           <Switch>
             {
-              KitchenSinkComponents.map(ele=> (
-                <Route
-                  key={ele}
-                  exact
-                  path={`/${snakeCase(ele)}`}
-                  render={()=> (
-                    <AsyncComponent
-                      loader={() => import(`../../../lib/${ele}/examples/KitchenSink.js`)}
-                    />
-                  )}
-                />
-              ))
+              Object.entries(KitchenSinkComponents).map(ele =>
+                {
+                  const Component = ele[1];
+                  return (
+                      <Route
+                        key={ele[0]}
+                        exact
+                        path={`/${snakeCase(ele[0])}`}
+                        render={()=> (
+                          <Component
+                          />
+                        )}
+                      />
+                    )
+                  }
+              )
             }
           </Switch>
         </div>

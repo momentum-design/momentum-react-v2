@@ -26,7 +26,7 @@ export default class KitchenSink extends React.PureComponent {
             />
             <SidebarNavItem keyboardKey='k' title='Kitchen Sink'>
               {
-                KitchenSinkComponents.map(ele=> (
+                Object.keys(KitchenSinkComponents).map(ele=> (
                   <SidebarNavItem
                     key={ele}
                     customAnchorNode={
