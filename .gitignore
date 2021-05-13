@@ -127,7 +127,6 @@ react/data/
 react/es/
 react/examples/
 react/lib/
-react/yarn.lock
 utils/yarn.lock
 utils/lib
 www/yarn.lock

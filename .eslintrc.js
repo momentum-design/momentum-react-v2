@@ -34,7 +34,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended"
   ],
   "plugins": ["react", "jsx-a11y", "cypress"],
-  "parser": "babel-eslint",
+  "parser": path.resolve(__dirname, 'react', 'node_modules', 'babel-eslint'),
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",

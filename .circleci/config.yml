@@ -30,7 +30,7 @@ jobs:
           at: ~/
       - run:
           name: Lint all Libraries
-          command: yarn lint:all
+          command: yarn lint:react
 
   build_tokens:
     <<: *image_defaults
@@ -248,27 +248,9 @@ workflows:
       - lint:
           requires:
             - checkout_install
-      - build_tokens:
-          requires:
-            - lint
       - test_react:
           requires:
-            - build_tokens
-      - test_web_components:
-          requires:
-            - build_tokens
-      - test_core_percy:
-          requires:
-            - build_tokens
-      - test_www:
-          requires:
-            - build_tokens
-      - test_icons:
-          requires:
-            - lint
-      - static_analysis:
-          requires:
-            - build_tokens
+            - checkout_install
       - percy_finalize_all:
           requires:
             - test_react
