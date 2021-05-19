@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import iconNames from '@momentum-ui/icons/data/iconNames.json';
 import { Button } from '@momentum-ui/react';
-import getColorValue from '@momentum-ui/utils/lib/getColorValue';
+import getColorValue from '../../../tools/getColorValue';
 
 class Icon extends React.PureComponent {
   render() {

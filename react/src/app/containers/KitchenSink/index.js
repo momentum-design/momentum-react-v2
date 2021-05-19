@@ -24,7 +24,7 @@ export default class KitchenSink extends React.PureComponent {
                           />
                         )}
                       />
-                    )
+                    );
                   }
               )
             }

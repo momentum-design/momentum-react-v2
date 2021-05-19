@@ -5,7 +5,7 @@ import KitchenSink from './containers/KitchenSink';
 import Sidebar from './containers/Sidebar';
 import { Topbar } from '@momentum-ui/react';
 
-import logo from '@momentum-ui/core/images/momentum/momentum-horiz-color.svg';
+import logo from '../../images/momentum-horiz-color.svg';
 
 const App = () => {
   const wordMark = <img src={logo} alt="Momentum Design" />;

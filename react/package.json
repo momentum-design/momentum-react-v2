@@ -81,9 +81,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-ui/core": "^19.11.0",
     "@momentum-ui/icons": "^8.10.0",
-    "@momentum-ui/utils": "^6.2.13",
     "@restart/context": "^2.1.4",
     "concat": "^1.0.3",
     "dom-helpers": "^3.4.0",
@@ -188,6 +186,6 @@
     "setupTestFrameworkScriptFile": "<rootDir>/src/helpers/enzyme_setup"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://engci-maven-master.cisco.com/artifactory/api/npm/webex-web-app-npm/"
   }
 }

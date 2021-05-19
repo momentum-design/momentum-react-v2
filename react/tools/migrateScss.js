@@ -19,8 +19,3 @@ fs.copy(momentumScssLocation, reactScssLocation)
 const templatesLocation = path.resolve(momentumUiBaseLocation, 'core/templates')
 
 fs.copy(templatesLocation, path.resolve(__dirname, '../templates'));
-
-const iconsLocation = path.resolve(momentumUiBaseLocation, 'icons');
-const newIconsLocation = path.resolve(__dirname, '../../icons');
-
-fs.copy(iconsLocation, newIconsLocation)
