@@ -1,0 +1,109 @@
+/** @component link */
+
+@include exports('md-link') {
+  .#{$prefix}-link {
+    width: fit-content;
+    font-size: rem-calc(16);
+    line-height: rem-calc(24);
+    cursor: pointer;
+
+    &:focus,
+    &.focus-state {
+      @include focus-styles;
+    }
+
+    &.disabled,
+    &[disabled],
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.2;
+    }
+
+    &--blue {
+      @include link-color(
+        $color: $md-theme-50,
+        $color-css-var: --md-textColor-hyperlink-color,
+        $color-hover: $md-theme-60,
+        $color-hover-css-var: --md-textColor-hyperlink-hover,
+        $color-active: $md-theme-70,
+        $color-active-css-var: --md-textColor-hyperlink-focus
+      );
+    }
+
+    &--red {
+      @include link-color(
+        $color: $md-red-50,
+        $color-hover: $md-red-60,
+        $color-active: $md-red-70
+      );
+    }
+
+    &--green {
+      @include link-color(
+        $color: $md-green-50,
+        $color-hover: $md-green-60,
+        $color-active: $md-green-70
+      );
+    }
+
+    &--yellow {
+      @include link-color(
+        $color: $md-yellow-50,
+        $color-hover: $md-yellow-60,
+        $color-active: $md-yellow-70
+      );
+    }
+
+    &--orange {
+      @include link-color(
+        $color: $md-orange-50,
+        $color-hover: $md-orange-60,
+        $color-active: $md-orange-70
+      );
+    }
+
+    &--dark {
+      &.#{$prefix}-link {
+        &--blue {
+          @include link-color(
+            $color: $md-theme-50,
+            $color-hover: $md-theme-40,
+            $color-active: $md-theme-30
+          );
+        }
+
+        &--red {
+          @include link-color(
+            $color: $md-red-50,
+            $color-hover: $md-red-40,
+            $color-active: $md-red-30
+          );
+        }
+
+        &--green {
+          @include link-color(
+            $color: $md-green-50,
+            $color-hover: $md-green-40,
+            $color-active: $md-green-30
+          );
+        }
+
+        &--yellow {
+          @include link-color(
+            $color: $md-yellow-50,
+            $color-hover: $md-yellow-40,
+            $color-active: $md-yellow-30
+          );
+        }
+
+        &--orange {
+          @include link-color(
+            $color: $md-orange-50,
+            $color-hover: $md-orange-40,
+            $color-active: $md-orange-30
+          );
+        }
+      }
+    }
+  }
+}

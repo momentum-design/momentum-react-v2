@@ -1,0 +1,497 @@
+/** @component input */
+
+@include exports('md-input') {
+  @include brand-font-face-regular;
+  // normalize
+  [class*='md'] {
+    button,
+    input,
+    textarea,
+    select,
+    *,
+    *:before,
+    *:after {
+      @include box-sizing(inherit);
+    }
+
+    button,
+    input {
+      overflow: visible;
+    }
+    textarea {
+      overflow: auto;
+      max-width: 100%;
+      padding-top: rem-calc(2px);
+      padding-bottom: rem-calc(2px);
+    }
+    textarea[rows] {
+      height: auto;
+    }
+    [type='submit'] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    input[type='file'] {
+      margin: 0 0 $form-spacing 0;
+      width: 100%;
+    }
+    [type='number'] {
+      -moz-appearance: textfield;
+    }
+
+    [type='number']::-webkit-inner-spin-button,
+    [type='number']::-webkit-outer-spin-button {
+      height: auto;
+    }
+    [type='search']::-webkit-search-cancel-button,
+    [type='search']::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    ::-webkit-input-placeholder {
+      color: inherit;
+      opacity: 0.6;
+    }
+    ::-webkit-file-upload-button {
+      font: inherit; /* 2 */
+      -webkit-appearance: button; /* 1 */
+    }
+  }
+
+  .#{$input__class}-container {
+    @include flex($fw: wrap, $jc: normal, $ac: normal, $ai: normal);
+    box-sizing: border-box;
+    margin-bottom: rem-calc(16);
+    position: relative;
+    line-height: $input__line-height;
+
+    &.column,
+    &.columns {
+      padding: 0;
+    }
+
+    &.#{$prefix}-disabled {
+      .#{$input__class}__label,
+      .#{$input__class}__secondary-label {
+        cursor: not-allowed;
+      }
+    }
+
+    &.#{$input__class} {
+      &--nested {
+        &-1 {
+          padding-left: 2rem;
+        }
+
+        &-2 {
+          padding-left: 4rem;
+        }
+
+        &-3 {
+          padding-left: 6rem;
+        }
+      }
+    }
+  }
+
+  .#{$input__class} {
+    border: $input__border-width solid;
+    border-radius: $input__border-radius;
+    font-family: $input__font-family;
+    font-size: $input__font-size;
+    height: $input__height;
+    width: 100%;
+    padding: $input__padding;
+    transition: box-shadow ease-out 0.15s;
+
+    // fix to remove the very annoying "X" added to all input fields in IE > 9.
+    // http://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx
+    &::-ms-clear,
+    &::-ms-reveal {
+      width: 0px;
+      height: 0px;
+    }
+
+    &:focus,
+    &.#{$prefix}-focus {
+      @include focus-styles;
+
+      transition: box-shadow ease-in 0.15s;
+    }
+
+    &[readonly],
+    &.#{$prefix}-readonly {
+      cursor: default;
+    }
+
+    &:disabled,
+    &.#{$prefix}-disabled {
+      cursor: not-allowed;
+    }
+
+    // Elements
+    &__after {
+      right: 0;
+      left: auto;
+    }
+
+    &__before {
+      right: auto;
+      left: 0;
+    }
+
+    &__after,
+    &__before {
+      @include flex;
+      position: absolute;
+      height: 100%;
+      width: $input__padding-side--icon;
+      top: 0;
+    }
+
+    &__help-text {
+      display: inline-flex;
+      padding-left: rem-calc(16);
+      padding-top: rem-calc(8);
+    }
+
+    &__help-text,
+    &__label,
+    &__messages {
+      width: 100%;
+      font-family: $brand-font-regular;
+    }
+
+    &__label {
+      margin-bottom: rem-calc(8);
+    }
+
+    &__messages {
+      display: none;
+      font-size: $input__message__font-size;
+      line-height: $input__message__line-height;
+      padding-left: rem-calc(16);
+      padding-top: rem-calc(8);
+    }
+
+    &__message {
+      display: inline-flex;
+      line-height: $input__message__line-height;
+      width: 100%;
+
+      &--error{
+        padding-left: 1rem;
+        color: $md-red-50;
+        line-height: $input__message__line-height;
+        position: relative;
+        top: -.5rem;
+        font-size: $input__message__font-size;
+
+        &:before {
+          @include icon-clear_16;
+        }
+      }
+
+      &:before {
+        margin-right: rem-calc(8);
+        float: left;
+        font-family: $icon-font-name;
+        font-size: $input__message__icon__font-size;
+      }
+    }
+
+    &__secondary-label {
+      font-family: $brand-font-regular;
+      align-self: center;
+      padding-left: 0.5rem;
+      flex-grow: 1;
+      width: auto;
+
+      cursor: pointer;
+    }
+
+    &__help-text,
+    &__secondary-label.#{$label__class} {
+      font-size: $input__message__font-size;
+      line-height: $input__message__line-height;
+    }
+
+    &__wrapper {
+      box-sizing: border-box;
+      display: block;
+      flex-grow: 1;
+      position: relative;
+      padding: 0;
+    }
+
+    // Modifiers
+    &--after {
+      padding-right: $input__padding-side--icon;
+    }
+
+    &--before {
+      padding-left: $input__padding-side--icon;
+    }
+
+    &--pill {
+      border-radius: $input--pill__border-radius;
+    }
+
+    // MUST REMAIN BELOW --PILL TO OVERWRITE RADIUS
+    &--multiline {
+      resize: vertical;
+      border-radius: $input__border-radius;
+    }
+
+    &__icon-clear {
+      border: none;
+    }
+  }
+  textarea.#{$input__class} {
+    height: auto;
+  }
+
+  /* Color */
+  .#{$input__class}-container {
+    // Outline
+    @include input-color(
+      $background-color: $input__background,
+      $background-color-css-var: --md-input-background-color,
+      $background-color-disabled: $input__background--disabled,
+      $background-color-disabled-css-var: --md-input-disabled,
+      $background-color-hover: $input__background--hover,
+      $background-color-hover-css-var: --md-input-background-hover,
+      $border-color: $input__border-color,
+      $border-color-css-var: --md-input-outline-color,
+      $color: $input__font-color,
+      $color-css-var: --md-input-text-primary,
+      $color-clear: $input__clear-icon__color,
+      $color-clear-css-var: --md-input-text-secondary,
+      $color-clear-hover: $input__clear-icon__color--hover,
+      $color-clear-hover-css-var: --md-input-text-secondary,
+      $color-disabled: $input__font-color--disabled,
+      $color-disabled-css-var: --md-input-text-disabled,
+      $color-help: $input__font-color--help,
+      $color-help-css-var: --md-textColor-secondary,
+      $color-placeholder: $input__font-color--placeholder,
+      $color-placeholder-css-var: --md-input-text-secondary,
+      $color-read-only: $input__font-color--read-only,
+      $color-read-only-css-var: --md-input-text-primary
+    );
+
+    // Contrast
+    .#{$contrast-class} & {
+      @include input-color(
+        $background-color-disabled: $input__background--disabled--contrast,
+        $background-color-hover: $input__background--hover--contrast,
+        $border-color: $input__border-color--contrast,
+        $color-disabled: $input__font-color--disabled--contrast,
+        $color-help: $input__font-color--help--contrast,
+        $color-read-only: $input__font-color
+      )
+    }
+
+    // Dark
+    .#{$dark-class} & {
+      @include input-color(
+        $background-color: $input__background--dark,
+        $background-color-disabled: $input__background--disabled--dark,
+        $background-color-hover: $input__background--hover--dark,
+        $border-color: $input__border-color--dark,
+        $color: $input__font-color--dark,
+        $color-clear: $input__clear-icon__color--dark,
+        $color-clear-hover: $input__clear-icon__color--hover--dark,
+        $color-disabled: $input__font-color--disabled--dark,
+        $color-help: $input__font-color--help--dark,
+        $color-placeholder: $input__font-color--placeholder--dark,
+        $color-read-only: $input__font-color--read-only--dark
+      );
+
+      // Dark Contrast
+      .#{$contrast-class} & {
+        @include input-color(
+          $background-color-hover: $input__background--hover--dark--contrast,
+          $border-color: $input__border-color--dark--contrast,
+          $color-help: $input__font-color--help--dark--contrast
+        );
+      }
+    }
+
+    // Filled
+    &.#{$input__class}--filled {
+      @include input-color(
+        $background-color: $input__background--filled,
+        $background-color-css-var: --md-background-tertiary,
+        $background-color-disabled: $input__background--filled,
+        $background-color-hover: $input__background--filled--hover,
+        $background-color-hover-css-var: --md-background-quaternary,
+      );
+    }
+
+    //Filled Contrast
+    .#{$contrast-class} & {
+      &.#{$input__class}--filled {
+        @include input-color(
+          $background-color: $input__background--dark,
+          $background-color-disabled: $input__background--dark,
+          $background-color-hover: $input__background--hover--dark,
+          $color: $input__font-color--dark,
+          $color-clear: $input__clear-icon__color--dark,
+          $color-clear-hover: $input__clear-icon__color--hover--dark,
+          $color-disabled: $input__font-color--disabled--dark,
+          $color-placeholder: $input__font-color--placeholder--dark,
+          $color-read-only: $input__font-color--read-only--dark
+        );
+      }
+    }
+
+    // Filled Dark
+    .#{$dark-class} & {
+      &.#{$input__class}--filled {
+        @include input-color(
+          $background-color: $input__background--filled--dark,
+          $background-color-disabled: $input__background--filled--dark,
+          $background-color-hover: $input__background--filled--hover--dark,
+          $color-read-only: $input__font-color--read-only--filled--dark
+        );
+      }
+
+      // Filled Dark Contrast
+      .#{$contrast-class} &.#{$input__class}--filled {
+        @include input-color(
+          $background-color: $input__background,
+          $background-color-disabled: $input__background--disabled,
+          $background-color-hover: $input__background--hover,
+          $color: $input__font-color,
+          $color-clear: $input__clear-icon__color,
+          $color-clear-hover: $input__clear-icon__color--hover,
+          $color-disabled: $input__font-color--disabled,
+          $color-placeholder: $input__font-color--placeholder,
+          $color-read-only: $input__font-color--read-only
+        );
+      }
+    }
+
+    // Error
+    &.#{$prefix}-error {
+      @include input-color(
+        $background-color: $input__background--error,
+        $background-color-css-var: --md-alert-background-error,
+        $background-color-hover: $input__background--error--hover,
+        $background-color-hover-css-var: --md-alert-background-error,
+        $border-color: $input__border-color--error,
+        $color-message: $input__message__font-color--error,
+        $color-message-css-var: --md-input-text-error
+      );
+
+      .#{$contrast-class} & {
+        @include input-color(
+          $border-color: $input__border-color--error--contrast,
+          $color-message: $input__message__font-color--error--contrast
+        );
+      }
+
+      .#{$dark-class} & {
+        @include input-color(
+          $background-color: $input__background--error--dark,
+          $background-color-hover: $input__background--error--hover--dark,
+          $border-color: $input__border-color--error--dark,
+          $color-message: $input__message__font-color--error--dark
+        );
+      }
+
+      .#{$input__class} {
+        &__messages {
+          display: block;
+        }
+        &__message {
+          &:before {
+            @include icon-clear_16;
+          }
+        }
+      }
+    }
+
+    // Warning
+    &.#{$prefix}-warning {
+      @include input-color(
+        $background-color: $input__background--warning,
+        $background-color-css-var: --md-alert-background-warning,
+        $background-color-hover: $input__background--warning--hover,
+        $background-color-hover-css-var: --md-alert-background-warning,
+        $border-color: $input__border-color--warning,
+        $color-message: $input__message__font-color--warning,
+        $color-message-css-var: --md-input-text-error
+      );
+
+      .#{$contrast-class} & {
+        @include input-color(
+          $border-color: $input__border-color--warning--contrast,
+          $color-message: $input__message__font-color--warning--contrast
+        );
+      }
+
+      .#{$dark-class} & {
+        @include input-color(
+          $background-color: $input__background--warning--dark,
+          $background-color-hover: $input__background--warning--hover--dark,
+          $border-color: $input__border-color--warning--dark,
+          $color-message: $input__message__font-color--warning--dark
+        );
+      }
+
+      .#{$input__class} {
+        &__messages {
+          display: block;
+        }
+        &__message {
+          &:before {
+            @include icon-warning_16;
+          }
+        }
+      }
+    }
+
+    // Success
+    &.#{$prefix}-success {
+      @include input-color(
+        $background-color: $input__background--success,
+        $background-color-css-var: --md-alert-background-success,
+        $background-color-hover: $input__background--success--hover,
+        $background-color-hover-css-var: --md-alert-background-success,
+        $border-color: $input__border-color--success,
+        $color-message: $input__message__font-color--success,
+        $color-message-css-var: --md-input-text-error
+      );
+
+      .#{$contrast-class} & {
+        @include input-color(
+          $background-color: $input__background--success,
+          $background-color-hover: $input__background--success--hover,
+          $border-color: $input__border-color--success--contrast,
+          $color-message: $input__message__font-color--success--contrast
+        );
+      }
+
+      .#{$dark-class} & {
+        @include input-color(
+          $background-color: $input__background--success--dark,
+          $background-color-hover: $input__background--success--hover--dark,
+          $border-color: $input__border-color--success--dark,
+          $color-message: $input__message__font-color--success--dark
+        );
+      }
+
+      .#{$input__class} {
+        &__messages {
+          display: block;
+        }
+        &__message {
+          &:before {
+            @include icon-check-circle_16;
+          }
+        }
+      }
+    }
+  }
+}

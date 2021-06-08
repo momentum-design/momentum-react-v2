@@ -1,0 +1,58 @@
+@import '../../tools/functions/core';
+@import '../../tools/mixins/core';
+
+// Icons
+@import '~@momentum-ui/icons/scss/variables';
+
+// Settings
+@import '../../colors/settings-base.scss';
+@import '../../colors/settings-transparencies.scss';
+@import '../../settings/core.scss';
+@import '../../settings/focus.scss';
+@import '../../settings/list-group.scss';
+@import '../../settings/media.scss';
+@import '../../settings/z-index.scss';
+@import '../../typography/settings.scss';
+@import '../avatar/settings.scss';
+@import '../icon/settings.scss';
+@import '../list-item/settings.scss';
+@import '../top-bar/settings.scss';
+
+// Tools
+@import '../../tools/mixins/flex';
+@import '../../tools/mixins/focus';
+@import '../../typography/mixins';
+@import '../../components/avatar/mixins';
+@import '../../components/list-item/mixins';
+
+// Generic
+@import '../../generic/normalize';
+@import '../../generic/global';
+
+// Typography
+a {
+  line-height: inherit;
+  color: $anchor-font-color;
+  text-decoration: $anchor-text-decoration;
+
+  &:hover,
+  &:focus {
+    color: $anchor-font-color-hover;
+
+    @if $anchor-text-decoration-hover !=$anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+
+  &:focus {
+    @include focus-styles;
+  }
+
+  img {
+    border: none;
+  }
+}
+@include brand-font-face-regular;
+
+// Component Specific
+@import 'top-bar';

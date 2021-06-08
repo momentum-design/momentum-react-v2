@@ -1,0 +1,15 @@
+.copy-spacing {
+  section {
+    padding-bottom: 36px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid $md-gray-30;
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+}
+
+*:focus {
+  @include focus-styles;
+}

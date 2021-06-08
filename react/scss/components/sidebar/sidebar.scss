@@ -1,0 +1,576 @@
+/** @ @component sidebar */
+
+@include exports('md-sidebar') {
+  $sidebar-class: '#{$prefix}-sidebar';
+
+  .#{$sidebar-class} {
+    $parent: &;
+    z-index: $zindex-sidebar;
+    height: 100%;
+    width: 100%;
+    background-color: $md-white-100;
+    position: relative;
+    @include flex($fd: column, $ai: flex-start);
+
+    @media #{$large-up} {
+      max-width: rem-calc(240);
+      min-width: rem-calc(200);
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      &--fixed {
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--collapsed {
+      display: none;
+    }
+
+    &--topbar {
+      padding-top: $top-bar__height--desktop;
+    }
+
+    &__footer {
+      width: inherit;
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 1rem 0;
+    }
+
+    &__header {
+      width: 100%;
+      margin-bottom: rem-calc(40);
+
+      @include flex($fd: column, $ai: flex-start);
+    }
+
+    &--fixed {
+      min-height: 100vh;
+    }
+
+    &--minimized {
+      width: rem-calc(68);
+      min-width: 0;
+
+      .md-sidebar__header {
+        visibility: hidden;
+      }
+
+      .md-sidebar-nav__group {
+        position:relative;
+        right: .2rem;
+      }
+    }
+
+    &__toggle {
+      display: flex;
+      z-index: $zindex-sidebar;
+      width: 16px;
+      margin-right: -16px;
+      padding: 0;
+      text-decoration: none;
+      box-shadow: none;
+      flex-direction: column;
+      justify-content: center;
+      top: 0;
+
+      & .md-collapse-button {
+        opacity: 0.0;
+
+        &:hover{
+          opacity: 1.0;
+        }
+      }
+    }
+
+    &:hover + .md-sidebar__toggle .md-collapse-button,
+    &__toggle--collapsed .md-collapse-button {
+      opacity: 1.0;
+    }
+
+    &--global {
+      background-color: $md-gray-10;
+
+      #{$parent} {
+        &-nav {
+          &__group {
+            &--primary {
+              .#{$list-item__class} {
+                height: rem-calc(40);
+                font-size: rem-calc(14);
+
+                &__left {
+                  font-size: rem-calc(16);
+                }
+
+                @include list-item-color(
+                  $active-bgrd-color: $md-gray-30,
+                  $active-bgrd-color-css-var: --md-button-secondary-hover-bg-color,
+                  $active-color: $md-black-100,
+                  $active-color-css-var: --md-textColor-primary,
+                  $background-color: transparent,
+                  $background-color-css-var: --null,
+                  $color: $md-black-100,
+                  $color-css-var: --md-textColor-primary,
+                  $focus-color: $md-black-100,
+                  $focus-color-css-var: --md-textColor-primary,
+                  $header-color: $md-black-100,
+                  $header-color-css-var: --md-textColor-primary,
+                  $hover-bgrd-color: $md-gray-20,
+                  $hover-bgrd-color-css-var: --md-background-quaternary,
+                  $includeFocus: false,
+                  $subheader-color: $md-black-100,
+                  $subheader-color-css-var: --md-textColor-primary,
+                );
+              }
+
+              #{$parent}-nav__group--secondary {
+                .#{$list-item__class} {
+                  @include list-item-color(
+                    $active-bgrd-color: $md-gray-30,
+                    $active-bgrd-color-css-var: --md-button-secondary-hover-bg-color,
+                    $active-color: $md-black-100,
+                    $active-color-css-var: --md-textColor-primary,
+                    $background-color: transparent,
+                    $background-color-css-var: --null,
+                    $color: $md-gray-70,
+                    $color-css-var: --md-textColor-secondary,
+                    $focus-color: $md-gray-70,
+                    $focus-color-css-var: --md-textColor-secondary,
+                    $hover-bgrd-color: $md-gray-20,
+                    $hover-bgrd-color-css-var: --md-background-quaternary,
+                    $includeFocus: false,
+                    $section-left-color: $md-gray-70,
+                    $section-left-color-css-var: --md-textColor-secondary,
+                    $section-right-color: $md-gray-70,
+                    $section-right-color-css-var: --md-textColor-secondary,
+                  );
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &#{$parent}--nested {
+        #{$parent} {
+          &-nav {
+            &__group {
+              &--primary {
+                .#{$list-item__class} {
+                  height: rem-calc(44);
+                  padding: 0 rem-calc(20);
+                  font-size: rem-calc(16);
+
+                  &__left {
+                    font-size: rem-calc(20);
+                  }
+
+                  @include list-item-color(
+                    $active-bgrd-color: $md-gray-30,
+                    $active-bgrd-color-css-var: --md-button-secondary-hover-bg-color,
+                    $active-color: $md-black-100,
+                    $active-color-css-var: --md-textColor-primary,
+                    $background-color: transparent,
+                    $background-color-css-var: --null,
+                    $color: $md-black-100,
+                    $color-css-var: --md-textColor-primary,
+                    $focus-color: $md-black-100,
+                    $focus-color-css-var: --md-textColor-primary,
+                    $hover-bgrd-color: $md-gray-20,
+                    $hover-bgrd-color-css-var: --md-background-quaternary,
+                    $includeFocus: false,
+                    $section-left-color: $md-gray-90,
+                    $section-left-color-css-var: --md-textColor-primary,
+                    $section-right-color: $md-gray-90,
+                    $section-right-color-css-var: --md-textColor-primary,
+                  );
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &#{$parent}--indented {
+        #{$parent} {
+          &-nav {
+            &__group {
+              &--primary {
+                #{$parent}-nav__group--secondary {
+                  .#{$list-item__class} {
+                    padding-left: rem-calc(56);
+                  }
+
+                  #{$parent}-nav__group--tertiary {
+                    .#{$list-item__class} {
+                      padding-left: rem-calc(68);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--nested:not(&--minimized) {
+      width: 100%;
+
+      .#{$sidebar-class}__header {
+        margin-top: rem-calc(16);
+        margin-left: rem-calc(20);
+      }
+
+      @media #{$large-up} {
+        width: rem-calc(240);
+      }
+    }
+
+    &--topbar {
+      padding-top: $top-bar__height--desktop;
+    }
+
+    &__body {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      flex-basis: auto;
+      flex-grow: 1;
+      // padding-top: rem-calc(20);
+    }
+
+    .#{$list-item__class} {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &-nav {
+
+      &--header {
+        padding-top: rem-calc(24);
+      }
+
+      &__header {
+        height: rem-calc(36);
+        padding: 0 rem-calc(24);
+        margin-bottom: rem-calc(8);
+        font-size: rem-calc(12);
+        line-height: rem-calc(16);
+        color: $md-gray-70;
+        text-transform: uppercase;
+        border-bottom: 1px solid $black-08;
+
+        @include flex($jc: flex-start);
+      }
+
+      &__group {
+        &--expanded {
+          display: block;
+        }
+
+        &--collapsed {
+          display: none;
+        }
+
+        width: 100%;
+
+        &--primary {
+          .#{$list-item__class} {
+            padding: 0 rem-calc(24);
+
+            @include list-item-color(
+              $active-bgrd-color: transparent,
+              $active-bgrd-color-css-var: --null,
+              $active-color: $md-theme-80,
+              $active-section-right-color: $black-60,
+              $active-section-right-color-css-var: --md-textColor-secondary,
+              $background-color: transparent,
+              $background-color-css-var: --null,
+              $color: $md-black-100,
+              $color-css-var: --md-textColor-primary,
+              $header-color: $md-black-100,
+              $header-color-css-var: --md-textColor-primary,
+              $hover-color: $md-theme-70,
+              $hover-bgrd-color: transparent,
+              $hover-bgrd-color-css-var: --null,
+              $includeFocus: false,
+              $section-right-color: $black-60,
+              $section-right-color-css-var: --md-textColor-secondary,
+              $subheader-color: $md-black-100,
+              $subheader-color-css-var: --md-textColor-primary,
+            );
+          }
+
+          #{$parent}-nav__group--secondary {
+            padding-bottom: rem-calc(8);
+
+            .#{$list-item__class} {
+              height: rem-calc(36);
+              font-size: rem-calc(14);
+
+              @include list-item-color(
+                $active-bgrd-color: transparent,
+                $active-bgrd-color-css-var: --null,
+                $active-color: $md-theme-80,
+                $active-section-right-color: $black-60,
+                $active-section-right-color-css-var: --md-textColor-secondary,
+                $background-color: transparent,
+                $background-color-css-var: --null,
+                $color: $md-gray-70,
+                $color-css-var: --md-textColor-secondary,
+                $header-color: $md-gray-70,
+                $header-color-css-var: --md-textColor-secondary,
+                $hover-color: $md-theme-70,
+                $hover-bgrd-color: transparent,
+                $hover-bgrd-color-css-var: --null,
+                $includeFocus: false,
+                $section-right-color: $black-60,
+                $section-right-color-css-var: --md-textColor-secondary,
+                $subheader-color: $md-gray-70,
+                $subheader-color-css-var: --md-textColor-secondary,
+              );
+            }
+
+            #{$parent}-nav__group--tertiary {
+              padding-top: rem-calc(4);
+
+              .#{$list-item__class} {
+                height: rem-calc(32);
+                padding-left: rem-calc(36);
+                font-size: rem-calc(12);
+
+                @include list-item-color(
+                  $active-bgrd-color: transparent,
+                  $active-bgrd-color-css-var: --null,
+                  $active-color: $md-theme-80,
+                  $active-section-right-color: $black-60,
+                  $active-section-right-color-css-var: --md-textColor-secondary,
+                  $background-color: transparent,
+                  $background-color-css-var: --null,
+                  $color: $md-gray-90,
+                  $color-css-var: --md-textColor-primary,
+                  $header-color: $md-gray-90,
+                  $header-color-css-var: --md-textColor-primary,
+                  $hover-color: $md-theme-70,
+                  $hover-bgrd-color: transparent,
+                  $hover-bgrd-color-css-var: --null,
+                  $includeFocus: false,
+                  $section-right-color: $black-60,
+                  $section-right-color-css-var: --md-textColor-secondary,
+                  $subheader-color: $md-gray-90,
+                  $subheader-color-css-var: --md-textColor-primary,
+                );
+
+                &:before {
+                  position: absolute;
+                  width: 2px;
+                  height: rem-calc(32);
+                  content: '';
+                  box-shadow: -12px 0 0 0 $black-12;
+                }
+
+                &:only-child {
+                  &:before {
+                    height: 100%;
+                  }
+                }
+
+                &:first-of-type:not(:only-child) {
+                  &:before {
+                    bottom: 0;
+                    height: calc(100% - 16%);
+                  }
+                }
+
+                &:last-of-type:not(:only-child) {
+                  &:before {
+                    top: 0;
+                    height: calc(100% - 16%);
+                  }
+                }
+
+                &:focus {
+                  &:after {
+                    position: absolute;
+                    width: 2px;
+                    height: calc(100% - 33%);
+                    content: '';
+                    box-shadow: -12px 0 0 0 $md-theme-70;
+                  }
+                }
+
+                &:hover {
+                  &:after {
+                    position: absolute;
+                    width: 2px;
+                    height: calc(100% - 33%);
+                    content: '';
+                    box-shadow: -12px 0 0 0 $md-theme-70;
+                  }
+                }
+
+                &:active,
+                &.active {
+                  &:after {
+                    position: absolute;
+                    width: 2px;
+                    height: calc(100% - 33%);
+                    content: '';
+                    box-shadow: -12px 0 0 0 $md-theme-80;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--dark#{$parent} {
+      background-color: $md-gray-90;
+
+      #{$parent} {
+        &-nav {
+          &__group {
+            &--primary {
+              .#{$list-item__class} {
+                @include list-item-color(
+                  $active-bgrd-color: rgba(0, 115, 149, 0.56),
+                  $active-color: $md-white-100,
+                  $active-section-left-color: $md-white-100,
+                  $active-section-right-color: $md-white-100,
+                  $background-color: transparent,
+                  $color: $md-white-100,
+                  $focus-color: $md-white-100,
+                  $header-color: $md-white-100,
+                  $hover-color: $md-white-100,
+                  $hover-bgrd-color: rgba(0, 115, 149, 0.4),
+                  $includeFocus: false,
+                  $section-left-color: $white,
+                  $section-right-color: $white,
+                  $subheader-color: $white
+                );
+              }
+
+              & #{$parent}-nav__group--secondary {
+                .#{$list-item__class} {
+                  @include list-item-color(
+                    $active-bgrd-color: rgba(0, 115, 149, 0.56),
+                    $active-color: $md-white-100,
+                    $active-section-left-color: $md-white-100,
+                    $active-section-right-color: $md-white-100,
+                    $background-color: transparent,
+                    $color: $white-80,
+                    $focus-color: $white-80,
+                    $header-color: $white-80,
+                    $hover-color: $white-80,
+                    $hover-bgrd-color: rgba(0, 115, 149, 0.4),
+                    $includeFocus: false,
+                    $section-left-color: $white,
+                    $section-right-color: $white,
+                    $subheader-color: $white-80
+                  );
+                }
+
+                & #{$parent}-nav__group--tertiary {
+                  .#{$list-item__class} {
+                    @include list-item-color(
+                      $active-bgrd-color: transparent,
+                      $active-color: $md-theme-70,
+                      $background-color: transparent,
+                      $color: $white-80,
+                      $focus-color: $md-theme-70,
+                      $hover-color: $md-theme-70,
+                      $hover-bgrd-color: transparent,
+                      $includeFocus: false
+                    );
+
+                    &:before {
+                      box-shadow: -12px 0 0 0 $white-12;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &--white#{$parent} {
+      background-color: $white;
+      #{$parent} {
+        &-nav {
+          &__group {
+            &--primary {
+              .#{$list-item__class} {
+                @include list-item-color(
+                  $active-bgrd-color: transparent,
+                  $active-color: $md-blue-50,
+                  $active-section-left-color: $md-blue-50,
+                  $active-section-right-color: $md-blue-50,
+                  $background-color: transparent,
+                  $color: $md-gray-70,
+                  $focus-color: $md-blue-50,
+                  $hover-color: $md-blue-50,
+                  $hover-bgrd-color: $md-gray-10,
+                  $includeFocus: false,
+                  $section-left-color:  $md-gray-70,
+                  $section-right-color:  $md-gray-70,
+                );
+              }
+
+              & #{$parent}-nav__group--secondary {
+                .#{$list-item__class} {
+                  @include list-item-color(
+                    $active-bgrd-color: transparent,
+                    $active-color: $md-blue-50,
+                    $active-section-left-color: $md-blue-50,
+                    $active-section-right-color:$md-blue-50,
+                    $background-color: transparent,
+                    $color: $md-gray-70,
+                    $focus-color: $md-blue-50,
+                    $hover-color: $md-blue-50,
+                    $hover-bgrd-color:$md-gray-10,
+                    $includeFocus: false,
+                    $section-left-color:  $md-gray-70,
+                    $section-right-color:  $md-gray-70,
+                  );
+                }
+
+                & #{$parent}-nav__group--tertiary {
+                  .#{$list-item__class} {
+                    @include list-item-color(
+                      $active-bgrd-color: transparent,
+                      $active-color: $md-blue-50,
+                      $background-color: transparent,
+                      $color: $md-gray-70,
+                      $focus-color: $md-blue-50,
+                      $hover-color:$md-blue-50,
+                      $hover-bgrd-color: transparent,
+                      $includeFocus: false
+                    );
+
+                    &:before {
+                      box-shadow: -12px 0 0 0 $md-gray-10;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../tools/functions/core';
+
+@import '~@momentum-ui/icons/scss/variables';
+@import "../../colors/settings-base.scss";
+
+@import '../../settings/core';
+
+@import '../../tools/mixins/flex';
+
+@import 'settings';
+@import 'mixins';
+@import 'placeholders';
+@import 'loader';

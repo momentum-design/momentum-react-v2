@@ -1,0 +1,45 @@
+/** @component chip */
+
+@include exports('md-chip') {
+  .#{$prefix}-chip {
+    max-width: 400px;
+    background-color: $md-gray-20;
+    background-color: var(--md-background-tertiary, $md-gray-20);
+    border-radius: 4px;
+
+    @include flex;
+
+    &-left {
+      width: 20%;
+      padding: 10px;
+      text-align: center;
+
+      @include flex;
+
+      &.recording {
+        background-color: $md-orange-50;
+      }
+
+      &.file {
+        background-color: $md-gray-30;
+        background-color: var(--md-background-tertiary, $md-gray-20);
+      }
+    }
+
+    &-center {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    &-right {
+      width: 20%;
+      padding: 10px;
+
+      @include flex;
+    }
+
+    &__title {
+      font-weight: bold;
+    }
+  }
+}

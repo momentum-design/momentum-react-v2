@@ -1,0 +1,41 @@
+@include exports('md-breadcrumbs') {
+  .#{$prefix}-breadcrumbs {
+    @include crumb-container;
+    @include radius($breadcrumbs-radius);
+
+    > * {
+      @include crumbs;
+    }
+
+    border: none;
+
+    li {
+      font-family: $brand-font-regular;
+      cursor: pointer;
+      &:before {
+        @include icon-arrow-right_12;
+      }
+    }
+
+    & > *:before {
+      font-family: $icon-font-name;
+    }
+
+    & > * span {
+      font-size: rem-calc(12);
+    }
+
+    .side-panel & a {
+      color: $md-theme-50;
+    }
+
+    & > *.current,
+    & > *.current a {
+      color: $md-gray-70;
+    }
+  }
+
+  [aria-label='breadcrumbs'] [aria-hidden='true']:after {
+    content: '/';
+  }
+}

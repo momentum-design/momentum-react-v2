@@ -1,0 +1,55 @@
+/** @component close */
+
+@include exports('md-close') {
+  .#{$close__class} {
+    float: right;
+    font-size: ($font-size-base * 1.5);
+    font-weight: bold;
+    line-height: 1;
+    color: $close__font-color;
+    color: var(--md-textColor-primary, $close__font-color);
+    text-shadow: 0 1px 0 $md-white-100;
+    text-shadow: 0 1px 0 var(--md-background-primary, $md-white-100);
+
+    &:hover,
+    &:focus {
+      color: $close__font-color--focus;
+      color: var(--md-input-background-theme-color, $close__font-color--focus);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+button.#{$close__class} {
+  min-width: initial;
+  padding: 0;
+  font-weight: normal;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 0;
+
+  @include easing-transition(all, 150ms, ease);
+
+  &:before {
+    @include icon-cancel_28;
+
+    font-family: $icon-font-name;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    color: $close__font-color--hover;
+    color: var(--md-input-background-theme-color, $close__font-color--hover);
+  }
+
+  &:focus {
+    color: $close__font-color--hover;
+    color: var(--md-input-background-theme-hover, $close__font-color--hover);
+  }
+
+  &:active {
+    color: $close__font-color--active;
+    color: var(--md-input-background-theme-active, $close__font-color--active);
+  }
+}

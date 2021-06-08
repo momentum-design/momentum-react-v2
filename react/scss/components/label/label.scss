@@ -1,0 +1,17 @@
+@include exports('md-label') {
+  .#{$label__class} {
+    @include form-label;
+
+    &.right {
+      @include form-label(right, false);
+    }
+
+    &.inline {
+      @include form-label(inline, false);
+    }
+
+    small {
+      text-transform: $form-label-small-transform;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+// Core
+@import 'settings/core';
+@import 'tools/functions/core';
+@import 'tools/mixins/core';
+
+// Settings
+@import 'settings/settings';
+
+// Tools
+@import 'tools/mixins/mixins';
+@import 'tools/functions/functions';
+@import 'tools/placeholders/placeholders';
+
+// Generic
+@import 'generic/normalize';
+@import 'generic/global';
+
+// Colors
+@import 'colors/utilities';
+
+// Elements
+@import 'elements/elements';
+
+// Typography
+@import 'typography/typography';
+
+// Layouts
+@import 'layouts/layouts';

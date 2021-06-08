@@ -1,0 +1,976 @@
+@import 'topbar';
+
+// TODO: (pajeter) Needs to be re-written after re-design
+@include exports('top-bar-admin') {
+  // Used to provide media query values for javascript components.
+  // to ensure width calculations work correctly.
+  meta.foundation-mq-topbar {
+    width: $topbar-breakpoint;
+    font-family: '/' + unquote($topbar-media-query) + '/';
+  }
+
+  .top-bar {
+    height: $topbar-height + rem-calc(2);
+
+    // Topbar Global list Styles
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    button {
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    button.btn--header {
+      position: relative;
+      display: flex;
+      height: $topbar-height + rem-calc(2);
+      min-width: initial;
+      padding: 0 1rem;
+      font-size: 13px;
+      background: 0 0;
+      border: none;
+      border-radius: 0;
+      transition: all 350ms ease-in-out;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &:hover,
+      &:focus {
+        color: $md-theme-50;
+        background-color: $md-gray-10;
+
+        .icon {
+          color: $md-theme-50;
+        }
+      }
+
+      .icon {
+        font-size: 20px;
+        vertical-align: middle;
+
+        @media (min-width: 1070px) {
+          padding-right: 0.5rem;
+          color: $md-gray-30;
+        }
+      }
+    }
+
+    .left {
+      display: inline-flex;
+      flex: 1;
+      margin-left: rem-calc(6);
+
+      .top-bar__transclude {
+        display: flex;
+        align-items: center;
+        height: $topbar-height;
+      }
+    }
+
+    .right {
+      display: inline-flex;
+
+      ng-include:first-child button {
+        border-left: 1px solid $top-bar-admin-border;
+
+        .inverse & {
+          border-left: 1px solid $top-bar-inverse-border;
+        }
+      }
+
+      ng-include > div {
+        vertical-align: top;
+      }
+
+      & button {
+        vertical-align: top;
+        border-left: 1px solid $top-bar-admin-border;
+
+        .inverse & {
+          border-color: $top-bar-inverse-border;
+        }
+
+        &:first-child {
+          border-left: 1px solid $top-bar-admin-border;
+
+          .inverse & {
+            border-color: $top-bar-inverse-border;
+          }
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    .app-icon {
+      margin: 0 22px 0 6px;
+      font-size: 1.7rem;
+      color: $md-theme-50;
+
+      .inverse & {
+        color: $md-gray-20;
+      }
+    }
+
+    .user-info {
+      height: $top-bar-height;
+
+      .btn--user {
+        height: rem-calc(52);
+        padding: 7px 17px;
+        cursor: pointer;
+        background: 0 0;
+        border: none;
+        border-radius: 0;
+
+        &:hover,
+        &:focus {
+          background: #eee;
+
+          .user-name {
+            color: $md-theme-70;
+
+            .inverse & {
+              color: $md-theme-70;
+            }
+          }
+
+          .org-name {
+            color: $md-theme-60;
+          }
+        }
+
+        li {
+          width: 128px;
+          padding: 0;
+          overflow: hidden;
+          line-height: 1;
+          text-align: left;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          list-style: none;
+        }
+
+        .user-name {
+          font-size: 13px;
+          color: #383a41;
+
+          .inverse & {
+            color: $md-gray-30;
+          }
+        }
+
+        .org-name {
+          margin-top: 3px;
+          font-size: 12px;
+          color: $md-gray-40;
+        }
+      }
+
+      .user-img {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        overflow: hidden;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #d9d9d9;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+
+        .icon {
+          bottom: -5px;
+          font-size: 30px;
+          line-height: 35px;
+          color: #fff;
+        }
+      }
+
+      .user-info-text {
+        display: none;
+
+        @media (min-width: 960px) {
+          display: inline-block;
+          padding: 4px 0 4px 10px;
+          margin: 0;
+          text-align: left;
+          vertical-align: middle;
+        }
+      }
+
+      .dropdown-menu {
+        top: calc(100% + 2px);
+        right: -1px;
+        left: auto;
+
+        @media (min-width: 960px) {
+          .org-name,
+          .user-name,
+          .divider {
+            display: none;
+          }
+        }
+
+        li {
+          &.user-name,
+          &.org-name {
+            padding: 0 10px;
+            line-height: 1;
+            white-space: nowrap;
+          }
+
+          &.user-name {
+            padding-top: 10px;
+          }
+
+          &.org-name {
+            padding-bottom: 10px;
+          }
+
+          &.divider {
+            margin: 0;
+          }
+
+          &.clickable {
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              color: $md-white-100;
+              text-decoration: none;
+              background-color: $md-gray-20;
+            }
+          }
+        }
+      }
+    }
+
+    .settings-menu {
+      .dropdown-menu {
+        top: 100%;
+        right: -1px;
+        left: auto;
+
+        &:after,
+        &:before {
+          right: 24px;
+          left: auto;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      margin-top: 0;
+      overflow: visible;
+      font-size: 13px;
+      border: none;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+
+      li {
+        padding: 0;
+      }
+
+      & > li:first-child > a,
+      & > li:last-child > a,
+      & > li:first-child > span,
+      & > li:last-child > span {
+        border-radius: 0;
+      }
+    }
+
+    .row {
+      max-width: none;
+    }
+
+    form,
+    input,
+    select {
+      margin-bottom: 0;
+    }
+
+    input,
+    select {
+      height: $topbar-input-height;
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+      font-size: $topbar-button-font-size;
+    }
+
+    .button,
+    button {
+      padding-top: 0.35rem + rem-calc(1);
+      padding-bottom: 0.35rem + rem-calc(1);
+      margin-bottom: 0;
+      font-size: $topbar-button-font-size;
+
+      // position: relative;
+      // top: -1px;
+      // Corrects a slight misalignment when put next to an input field
+      @media #{$small-only} {
+        position: relative;
+        top: -1px;
+      }
+    }
+
+    // Title Area
+    .title-area {
+      position: relative;
+      margin: 0;
+    }
+
+    .name {
+      display: inline-flex;
+      height: $topbar-height;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin: 0;
+      font-size: $rem-base;
+      align-items: center;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      span {
+        margin: 0;
+        font-size: $topbar-title-font-size;
+        line-height: $topbar-height;
+
+        a {
+          display: block;
+          width: 75%;
+          padding: 0 $topbar-link-padding;
+          font-weight: $topbar-title-weight;
+          color: $topbar-link-color;
+        }
+      }
+    }
+
+    // Menu toggle button on small devices
+    .toggle-topbar {
+      position: absolute;
+      #{$topbar-menu-icon-position}: 0;
+      top: 0;
+
+      a {
+        position: relative;
+        display: block;
+        height: $topbar-height;
+        padding: 0 $topbar-link-padding;
+        font-size: $topbar-menu-link-font-size;
+        font-weight: $topbar-menu-link-weight;
+        line-height: $topbar-height;
+        color: $topbar-link-color;
+        text-transform: $topbar-menu-link-transform;
+      }
+
+      // Adding the class "menu-icon" will add the 3-line icon people love and adore.
+      &.menu-icon {
+        top: 50%;
+        margin-top: -16px;
+
+        a {
+          @include hamburger(
+            16px,
+            false,
+            0,
+            1px,
+            6px,
+            $topbar-menu-icon-color,
+            '',
+            false
+          );
+
+          @if $text-direction==rtl {
+            text-indent: -58px;
+          }
+
+          position: relative;
+          height: 34px;
+          padding: 0 ($topbar-link-padding + rem-calc(25)) 0
+            $topbar-link-padding;
+          line-height: 33px;
+          color: $topbar-menu-link-color;
+        }
+      }
+    }
+
+    // Change things up when the top-bar is expanded
+    &.expanded {
+      height: auto;
+      background: transparent;
+
+      .title-area {
+        background: $topbar-bg;
+      }
+
+      .toggle-topbar {
+        a {
+          color: $topbar-menu-link-color-toggled;
+
+          span::after {
+            // Shh, don't tell, but box-shadows create the menu icon :)
+            // Change the color of the bars when the menu is expanded, using given thickness from hamburger() above
+            box-shadow: 0 0 0 1px $topbar-menu-icon-color-toggled,
+              0 7px 0 1px $topbar-menu-icon-color-toggled,
+              0 14px 0 1px $topbar-menu-icon-color-toggled;
+          }
+        }
+      }
+
+      // Fixes an issue with Desktop and Mobile Safari where deeply-nested menus don't appear
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .top-bar-section {
+          .has-dropdown.moved > .dropdown,
+          .dropdown {
+            clip: initial;
+          }
+
+          // This was needed as parent ul's had padding, and the clip: was allowing content to peak through
+          .has-dropdown:not(.moved) > ul {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Right and Left Navigation that stacked by default
+  .top-bar-section {
+    #{$default-float}: 0;
+    position: relative;
+    width: auto;
+
+    @include single-transition($default-float, $topbar-transition-speed);
+
+    ul {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      font-size: $rem-base;
+    }
+
+    .divider,
+    [role='separator'] {
+      width: 100%;
+      height: 1px;
+      clear: both;
+      border-top: $topbar-divider-border-top;
+    }
+
+    ul li {
+      background: $topbar-dropdown-bg;
+
+      > a {
+        display: block;
+        width: 100%;
+        padding: 12px 0 12px $topbar-link-padding;
+        font-family: $topbar-link-font-family;
+        font-size: $topbar-link-font-size;
+        font-weight: $topbar-link-weight;
+        color: $topbar-link-color;
+        text-transform: $topbar-link-text-transform;
+        padding-#{$default-float}: $topbar-link-padding;
+
+        &.button {
+          font-size: $topbar-link-font-size;
+          padding-#{$default-float}: $topbar-link-padding;
+          padding-#{$opposite-direction}: $topbar-link-padding;
+
+          @include button-color($bg: $md-theme-50);
+        }
+
+        &.button.secondary {
+          @include button-color($bg: $md-gray-70);
+        }
+
+        &.button.success {
+          @include button-color($bg: $md-green-50);
+        }
+
+        &.button.alert {
+          @include button-color($bg: $md-red-50);
+        }
+
+        &.button.warning {
+          @include button-color($bg: $md-yellow-50);
+        }
+
+        &.button.info {
+          @include button-color($bg: $md-mint-50);
+        }
+      }
+
+      > button {
+        font-size: $topbar-link-font-size;
+        padding-#{$default-float}: $topbar-link-padding;
+        padding-#{$opposite-direction}: $topbar-link-padding;
+
+        @include button-color($bg: $md-theme-50);
+
+        &.secondary {
+          @include button-color($bg: $md-gray-70);
+        }
+
+        &.success {
+          @include button-color($bg: $md-green-50);
+        }
+
+        &.alert {
+          @include button-color($bg: $md-red-50);
+        }
+
+        &.warning {
+          @include button-color($bg: $md-yellow-50);
+        }
+
+        &.info {
+          @include button-color($bg: $md-mint-50);
+        }
+      }
+
+      // Apply the hover link color when it has that class
+      &:hover:not(.has-form) > a {
+        color: $topbar-link-color-hover;
+        background-color: $topbar-link-bg-color-hover;
+
+        @if $topbar-link-bg-hover {
+          background: $topbar-link-bg-hover;
+        }
+      }
+
+      // Apply the active link color when it has that class
+      &.active > a {
+        color: $topbar-link-color-active;
+        background: $topbar-link-bg-active;
+
+        &:hover {
+          color: $topbar-link-color-active-hover;
+          background: $topbar-link-bg-active-hover;
+        }
+      }
+    }
+
+    // Add some extra padding for list items contains buttons
+    .has-form {
+      padding: $topbar-link-padding;
+    }
+
+    // Styling for list items that have a dropdown within them.
+    .has-dropdown {
+      position: relative;
+
+      > a {
+        &:after {
+          @if $topbar-arrows {
+            @include css-triangle(
+              $topbar-dropdown-toggle-size,
+              rgba(
+                $topbar-dropdown-toggle-color,
+                $topbar-dropdown-toggle-alpha
+              ),
+              $default-float
+            );
+          }
+
+          margin-#{$opposite-direction}: $topbar-link-padding;
+          position: absolute;
+          top: 50%;
+          margin-top: -($topbar-dropdown-toggle-size / 2) - 2;
+          #{$opposite-direction}: 0;
+        }
+      }
+
+      &.moved {
+        position: static;
+
+        > .dropdown {
+          @include topbar-show-dropdown;
+
+          width: 100%;
+        }
+
+        > a:after {
+          display: none;
+        }
+      }
+    }
+
+    // Styling elements inside of dropdowns
+    .dropdown {
+      @include topbar-hide-dropdown;
+
+      position: absolute;
+      top: 0;
+      z-index: 99;
+      padding: 0;
+      #{$default-float}: 100%;
+
+      li {
+        width: 100%;
+        height: auto;
+
+        a {
+          padding: 8px $topbar-link-padding;
+          font-weight: $topbar-dropdown-link-weight;
+
+          &.parent-link {
+            font-weight: $topbar-link-weight;
+          }
+        }
+
+        &.title h5,
+        &.parent-link {
+          margin-top: 0;
+          // Back Button
+          margin-bottom: 0;
+          font-size: $topbar-back-link-size;
+
+          a {
+            // line-height: ($topbar-height / 2);
+            display: block;
+            color: $topbar-link-color;
+
+            &:hover {
+              background: none;
+            }
+          }
+        }
+
+        &.has-form {
+          padding: 8px $topbar-link-padding;
+        }
+
+        .button,
+        button {
+          top: auto;
+        }
+      }
+
+      label {
+        padding: 8px $topbar-link-padding 2px;
+        margin-bottom: 0;
+        font-size: $topbar-dropdown-label-font-size;
+        font-weight: $topbar-dropdown-label-font-weight;
+        color: $topbar-dropdown-label-color;
+        text-transform: $topbar-dropdown-label-text-transform;
+      }
+    }
+  }
+
+  .js-generated {
+    display: block;
+  }
+
+  // Top Bar styles intended for screen sizes above the breakpoint.
+  @media #{$topbar-media-query} {
+    .top-bar {
+      @include clearfix;
+
+      overflow: visible;
+      background: $topbar-bg;
+
+      .toggle-topbar {
+        display: none;
+      }
+
+      .title-area {
+        float: $default-float;
+      }
+
+      .name h1 a,
+      .name h2 a,
+      .name h3 a,
+      .name h4 a,
+      .name h5 a,
+      .name h6 a {
+        width: auto;
+      }
+
+      input,
+      select,
+      .button,
+      button {
+        height: $topbar-input-height;
+        font-size: rem-calc(14);
+        color: $md-gray-40;
+        // position: relative;
+        // top: (($topbar-height - $topbar-input-height) / 2);
+      }
+
+      &.expanded {
+        background: $topbar-bg;
+      }
+    }
+
+    .contain-to-grid .top-bar {
+      max-width: $row-width;
+      margin: 0 auto;
+      margin-bottom: $topbar-margin-bottom;
+    }
+
+    .top-bar-section {
+      @include single-transition(none, 0, 0);
+
+      #{$default-float}: 0 !important;
+
+      ul {
+        display: inline;
+        width: auto;
+        height: auto !important;
+
+        li {
+          float: $default-float;
+
+          .js-generated {
+            display: none;
+          }
+        }
+      }
+
+      li {
+        &.hover {
+          > a:not(.button) {
+            color: $topbar-link-color-hover;
+            background-color: $topbar-link-bg-color-hover;
+
+            @if $topbar-link-bg-hover {
+              background: $topbar-link-bg-hover;
+            }
+          }
+        }
+
+        &:not(.has-form) {
+          a:not(.button) {
+            padding: 0 $topbar-link-padding;
+            line-height: $topbar-height;
+            background: $topbar-link-bg;
+
+            &:hover {
+              background-color: $topbar-link-bg-color-hover;
+
+              @if $topbar-link-bg-hover {
+                background: $topbar-link-bg-hover;
+              }
+            }
+          }
+        }
+
+        &.active:not(.has-form) {
+          a:not(.button) {
+            padding: 0 $topbar-link-padding;
+            line-height: $topbar-height;
+            color: $topbar-link-color-active;
+            background: $topbar-link-bg-active;
+
+            &:hover {
+              color: $topbar-link-color-active-hover;
+              background: $topbar-link-bg-active-hover;
+            }
+          }
+        }
+      }
+
+      .has-dropdown {
+        @if $topbar-arrows {
+          > a {
+            padding-#{$opposite-direction}: (
+              $topbar-link-padding + $topbar-link-dropdown-padding
+            ) !important;
+
+            &:after {
+              @include css-triangle(
+                $topbar-dropdown-toggle-size,
+                rgba(
+                  $topbar-dropdown-toggle-color,
+                  $topbar-dropdown-toggle-alpha
+                ),
+                top
+              );
+
+              top: $topbar-height / 2;
+              margin-top: -($topbar-dropdown-toggle-size / 2);
+            }
+          }
+        }
+
+        &.moved {
+          position: relative;
+
+          > .dropdown {
+            @include topbar-hide-dropdown;
+          }
+        }
+
+        &.hover,
+        &.not-click:hover {
+          > .dropdown {
+            @include topbar-show-dropdown;
+          }
+        }
+
+        > a:focus + .dropdown {
+          @include topbar-show-dropdown;
+        }
+
+        .dropdown li.has-dropdown {
+          > a {
+            @if $topbar-dropdown-arrows {
+              &:after {
+                top: rem-calc(3);
+                border: none;
+                content: '\00bb';
+                #{$opposite-direction}: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .dropdown {
+        #{$default-float}: 0;
+        top: auto;
+        min-width: 100%;
+        background: transparent;
+
+        li {
+          a {
+            padding: 12px $topbar-link-padding;
+            line-height: $topbar-height;
+            color: $topbar-dropdown-link-color;
+            white-space: nowrap;
+            background: $topbar-dropdown-link-bg;
+          }
+
+          &:not(.has-form):not(.active) {
+            > a:not(.button) {
+              color: $topbar-dropdown-link-color;
+              background: $topbar-dropdown-link-bg;
+            }
+
+            &:hover > a:not(.button) {
+              color: $topbar-dropdown-link-color-hover;
+              background-color: $topbar-link-bg-color-hover;
+
+              @if $topbar-dropdown-link-bg-hover {
+                background: $topbar-dropdown-link-bg-hover;
+              }
+            }
+          }
+
+          label {
+            white-space: nowrap;
+            background: $topbar-dropdown-label-bg;
+          }
+
+          // Second Level Dropdowns
+          .dropdown {
+            #{$default-float}: 100%;
+            top: 0;
+          }
+        }
+      }
+
+      > ul > .divider,
+      > ul > [role='separator'] {
+        border-#{$opposite-direction}: $topbar-divider-border-bottom;
+        width: 0;
+        height: $topbar-height;
+        clear: none;
+        border-top: none;
+        border-bottom: none;
+      }
+
+      .has-form {
+        height: $topbar-height;
+        padding: 0 $topbar-link-padding;
+        background: $topbar-link-bg;
+      }
+
+      // Position overrides for ul.right and ul.left
+      .#{$opposite-direction} {
+        li .dropdown {
+          #{$default-float}: auto;
+          #{$opposite-direction}: 0;
+
+          li .dropdown {
+            #{$opposite-direction}: 100%;
+          }
+        }
+      }
+
+      .#{$default-float} {
+        li .dropdown {
+          #{$opposite-direction}: auto;
+          #{$default-float}: 0;
+
+          li .dropdown {
+            #{$default-float}: 100%;
+          }
+        }
+      }
+    }
+
+    // Degrade gracefully when Javascript is disabled. Displays dropdown and changes
+    // background & text color on hover.
+    .no-js .top-bar-section {
+      ul li {
+        // Apply the hover link color when it has that class
+        &:hover > a {
+          color: $topbar-link-color-hover;
+          background-color: $topbar-link-bg-color-hover;
+
+          @if $topbar-link-bg-hover {
+            background: $topbar-link-bg-hover;
+          }
+        }
+
+        // Apply the active link color when it has that class
+        &:active > a {
+          color: $topbar-link-color-active;
+          background: $topbar-link-bg-active;
+        }
+      }
+
+      .has-dropdown {
+        &:hover {
+          > .dropdown {
+            @include topbar-show-dropdown;
+          }
+        }
+
+        > a:focus + .dropdown {
+          @include topbar-show-dropdown;
+        }
+      }
+    }
+  }
+
+  .header-label {
+    display: none;
+
+    @media (min-width: 1070px) {
+      align-self: center;
+      display: inline-block;
+    }
+  }
+}

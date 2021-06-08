@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    #STICKY-ELEMENT
+\*------------------------------------*/
+%sticky {
+  position: sticky;
+  top: 0%;
+  display: inline-block;
+  // &--active {}
+}

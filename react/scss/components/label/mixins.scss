@@ -1,0 +1,23 @@
+@mixin form-label($alignment: false, $base-style: true) {
+  @if $base-style {
+    font-family: $label__font-family;
+    font-size: $label__font-size;
+    line-height: $label__line-height;
+    color: $label__font-color;
+
+    .#{$dark-class} &,
+    &.#{$label__class}--dark {
+      color: $label__font-color--dark;
+    }
+
+    cursor: pointer;
+  }
+
+  @if $alignment==right {
+    float: none !important;
+    text-align: right;
+  } @else if $alignment==inline {
+    padding: $label__spacing / 2 + rem-calc($input__border-width) 0;
+    margin: 0 0 $label__spacing 0;
+  }
+}
