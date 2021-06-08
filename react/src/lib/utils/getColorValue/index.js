@@ -4,7 +4,7 @@ const isEmpty = require('lodash/isEmpty');
 const colorTokens = require('@momentum-ui/tokens/dist/colors.json');
 const legacyColors = require('@momentum-ui/tokens/src/legacyColors.json');
 
-const getColorValue = (color, colorFormat) => {
+export const getColorValue = (color, colorFormat) => {
   const colorName = convertScssVariableToName(color);
   const colorObject = getColorObject(colorName);
   const colorValue = getColorValueFromToken(colorObject, colorFormat);
@@ -84,5 +84,3 @@ const consoleHandler = (message, data) => {
   }
   /* eslint-enable no-console */
 };
-
-module.exports = getColorValue;
