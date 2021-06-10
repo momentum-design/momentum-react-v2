@@ -1,0 +1,444 @@
+// @import  '../colors/settings';
+// @import  '../settings/core';
+// @import  '../settings/dropdown';
+// @import  '../tools/functions/core';
+// @import  '../tools/mixins/core';
+
+@mixin dropdown-container(
+  $content: list,
+  $triangle: true,
+  $max-width: $f-dropdown-max-width
+) {
+  position: absolute;
+  left: -9999px;
+  display: none;
+  list-style: $f-dropdown-list-style;
+  margin-#{$default-float}: 0;
+
+  &.open {
+    display: block;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @if $content==list {
+    background: $f-dropdown-bg;
+    border: $f-dropdown-border-style
+      $f-dropdown-border-width
+      $f-dropdown-border-color;
+    font-size: $f-dropdown-font-size;
+    height: $f-dropdown-height;
+    max-height: $f-dropdown-max-height;
+    width: 100%;
+    z-index: 89;
+  } @else if $content==content {
+    background: $f-dropdown-bg;
+    border: $f-dropdown-border-style
+      $f-dropdown-border-width
+      $f-dropdown-border-color;
+    font-size: $f-dropdown-font-size;
+    height: $f-dropdown-height;
+    max-height: $f-dropdown-max-height;
+    padding: $f-dropdown-content-padding;
+    width: 100%;
+    z-index: 89;
+  }
+
+  @if $triangle==bottom {
+    margin-top: $f-dropdown-margin-top;
+
+    @if $f-dropdown-triangle-size !=0px {
+      &:before {
+        @include css-triangle(
+          $f-dropdown-triangle-size,
+          $f-dropdown-triangle-color,
+          bottom
+        );
+
+        position: absolute;
+        top: -($f-dropdown-triangle-size * 2);
+        z-index: 89;
+        #{$default-float}: $f-dropdown-triangle-side-offset;
+      }
+
+      &:after {
+        @include css-triangle(
+          $f-dropdown-triangle-size + 1,
+          $f-dropdown-border-color,
+          bottom
+        );
+
+        position: absolute;
+        top: -(($f-dropdown-triangle-size + 1) * 2);
+        z-index: 88;
+        #{$default-float}: $f-dropdown-triangle-side-offset - 1;
+      }
+
+      &.right:before {
+        #{$default-float}: auto;
+        #{$opposite-direction}: $f-dropdown-triangle-side-offset;
+      }
+
+      &.right:after {
+        #{$default-float}: auto;
+        #{$opposite-direction}: $f-dropdown-triangle-side-offset - 1;
+      }
+    }
+  }
+
+  @if $triangle==$default-float {
+    margin-top: 0;
+    margin-#{$default-float}: $f-dropdown-margin-right;
+
+    &:before {
+      @include css-triangle(
+        $f-dropdown-triangle-size,
+        $f-dropdown-triangle-color,
+        #{$opposite-direction}
+      );
+
+      position: absolute;
+      top: $f-dropdown-triangle-side-offset;
+      z-index: 89;
+      #{$default-float}: -($f-dropdown-triangle-size * 2);
+    }
+
+    &:after {
+      @include css-triangle(
+        $f-dropdown-triangle-size + 1,
+        $f-dropdown-border-color,
+        #{$opposite-direction}
+      );
+
+      position: absolute;
+      top: $f-dropdown-triangle-side-offset - 1;
+      z-index: 88;
+      #{$default-float}: -($f-dropdown-triangle-size * 2) - 2;
+    }
+  }
+
+  @if $triangle==$opposite-direction {
+    margin-top: 0;
+    margin-#{$default-float}: -$f-dropdown-margin-right;
+
+    &:before {
+      @include css-triangle(
+        $f-dropdown-triangle-size,
+        $f-dropdown-triangle-color,
+        #{$default-float}
+      );
+
+      position: absolute;
+      top: $f-dropdown-triangle-side-offset;
+      z-index: 89;
+      #{$opposite-direction}: -($f-dropdown-triangle-size * 2);
+      #{$default-float}: auto;
+    }
+
+    &:after {
+      @include css-triangle(
+        $f-dropdown-triangle-size + 1,
+        $f-dropdown-border-color,
+        #{$default-float}
+      );
+
+      position: absolute;
+      top: $f-dropdown-triangle-side-offset - 1;
+      z-index: 88;
+      #{$opposite-direction}: -($f-dropdown-triangle-size * 2) - 2;
+      #{$default-float}: auto;
+    }
+  }
+
+  @if $triangle==top {
+    margin-left: 0;
+    margin-top: -$f-dropdown-margin-bottom;
+
+    &:before {
+      @include css-triangle(
+        $f-dropdown-triangle-size,
+        $f-dropdown-triangle-color,
+        top
+      );
+
+      position: absolute;
+      top: auto;
+      bottom: -($f-dropdown-triangle-size * 2);
+      z-index: 89;
+      #{$default-float}: $f-dropdown-triangle-side-offset;
+      #{$opposite-direction}: auto;
+    }
+
+    &:after {
+      @include css-triangle(
+        $f-dropdown-triangle-size + 1,
+        $f-dropdown-border-color,
+        top
+      );
+
+      position: absolute;
+      top: auto;
+      bottom: -($f-dropdown-triangle-size * 2) - 2;
+      z-index: 88;
+      #{$default-float}: $f-dropdown-triangle-side-offset - 1;
+      #{$opposite-direction}: auto;
+    }
+  }
+
+  @if $max-width {
+    max-width: $max-width;
+  } @else {
+    max-width: $f-dropdown-max-width;
+  }
+}
+
+@mixin dropdown-style {
+  margin: 0;
+  font-size: $f-dropdown-font-size;
+  line-height: $f-dropdown-line-height;
+  cursor: $cursor-pointer-value;
+
+  &:hover,
+  &:focus,
+  &.hover,
+  &.focus {
+    background: $f-dropdown-list-hover-bg;
+  }
+
+  &.radius {
+    @include radius($f-dropdown-radius);
+  }
+
+  a,
+  span {
+    display: block;
+    padding: $f-dropdown-list-padding;
+    color: $f-dropdown-font-color;
+  }
+}
+
+@include exports('ng-dropdown') {
+  /* Foundation Dropdowns */
+  .f-dropdown {
+    @include dropdown-container(list, bottom);
+
+    &.drop-#{$opposite-direction} {
+      @include dropdown-container(list, #{$default-float});
+    }
+
+    &.drop-#{$default-float} {
+      @include dropdown-container(list, #{$opposite-direction});
+    }
+
+    &.drop-top {
+      @include dropdown-container(list, top);
+    }
+
+    // max-width: none;
+    li {
+      @include dropdown-style;
+    }
+
+    // You can also put custom content in these dropdowns
+    &.content {
+      @include dropdown-container(content, $triangle: false);
+    }
+
+    // Sizes
+    &.tiny {
+      max-width: 200px;
+    }
+
+    &.small {
+      max-width: 300px;
+    }
+
+    &.medium {
+      max-width: 500px;
+    }
+
+    &.large {
+      max-width: 800px;
+    }
+
+    &.mega {
+      width: 100% !important;
+      max-width: 100% !important;
+
+      &.open {
+        left: 0 !important;
+      }
+    }
+  }
+}
+
+/* begin dropdown override */
+
+@include exports('ng-dropdown-ui') {
+  .dropdown,
+  [md-dropdown],
+  [md-dropdown] {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+  }
+
+  /* Foundation Dropdowns */
+  .actions-menu.open .dropdown-menu {
+    right: 14px;
+    left: auto;
+  }
+
+  .dropdown-menu {
+    @include dropdown-container(list, false);
+    @include radius($f-dropdown-radius);
+
+    top: calc(100%);
+    z-index: $f-dropdown-z-index;
+    width: auto;
+    max-width: none;
+    max-height: rem-calc(261);
+    border-color: $md-gray-30;
+
+    &:not(.nested) {
+      overflow-y: auto;
+    }
+
+    .sub-menu {
+      @extend %dropdown-menu;
+
+      display: none;
+    }
+
+    .open & {
+      &:not(.sub-menu) {
+        display: block !important;
+        visibility: visible !important;
+      }
+
+      left: 0;
+
+      .sub-menu {
+        left: calc(100% - 1px);
+        padding-left: inherit;
+      }
+    }
+
+    // vertical dropdown styles for isVisible method inside dropdown/dropdown.js
+    [md-dropdown] &,
+    [md-dropdown] & {
+      &:not(.sub-menu) {
+        visibility: hidden;
+      }
+
+      &.visible {
+        visibility: visible;
+      }
+    }
+
+    &.nested {
+      .md-list-item {
+        a,
+        span {
+          padding: $f-dropdown-list-padding;
+          color: $f-dropdown-font-color;
+        }
+      }
+    }
+
+    li {
+      @include dropdown-style;
+
+      a,
+      span {
+        white-space: nowrap;
+      }
+    }
+
+    .divider {
+      height: 1px;
+      margin: 9px 0;
+      overflow: hidden;
+      background-color: #ccc;
+    }
+
+    .pull-right > & {
+      right: 0;
+      left: auto;
+    }
+
+    // You can also put custom content in these dropdowns
+    &.content {
+      @include dropdown-container(content, $triangle: false);
+    }
+
+    &.top {
+      top: auto;
+      bottom: 100%;
+      margin-bottom: 2px;
+    }
+
+    // Sizes
+    &.tiny {
+      max-width: 200px;
+    }
+
+    &.small {
+      max-width: 300px;
+    }
+
+    &.medium {
+      max-width: 500px;
+    }
+
+    &.large {
+      max-width: 800px;
+    }
+
+    &.mega {
+      width: 100% !important;
+      max-width: 100% !important;
+
+      &.open {
+        left: 0 !important;
+      }
+    }
+  }
+
+  %dropdown-menu {
+    @extend .dropdown-menu;
+  }
+
+  .dropdown.open {
+    i {
+      color: $md-gray-70;
+    }
+  }
+
+  .dropdown-primary {
+    background: $md-white-100;
+    border: none;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.18);
+
+    li {
+      &:hover {
+        background: $md-gray-10;
+      }
+
+      a {
+        padding: 6px 16px;
+        color: $md-gray-70;
+
+        span {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

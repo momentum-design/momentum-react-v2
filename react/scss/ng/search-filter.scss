@@ -1,0 +1,314 @@
+// @import  '../tools/functions/core';
+// @import  '../colors/settings';
+
+@include exports('ng-search-filter') {
+  .searchfilter {
+    display: flex;
+    font-size: 18px;
+    line-height: 30px;
+    color: $md-gray-90;
+    align-items: baseline;
+
+    .page-header & {
+      position: relative;
+      top: rem-calc(-9);
+    }
+
+    > span {
+      font-family: $brand-font-light;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .search {
+    padding-right: 0.5rem;
+    color: $md-gray-40;
+    background: transparent;
+    border: none;
+
+    &:focus,
+    &:hover,
+    &.fakefocus:focus,
+    &.fakefocus:hover {
+      color: $md-gray-40;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .icon {
+      color: $md-gray-90;
+    }
+  }
+
+  .table-filter {
+    display: inline-block;
+
+    .dropdown-toggle {
+      color: $md-theme-50;
+
+      .md-button {
+        height: 25px;
+        min-width: initial;
+        padding: 0 2px 0 4px;
+        margin: 10px 0 0 30px;
+      }
+
+      .icon {
+        font-size: 14px;
+        vertical-align: middle;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown-menu {
+      left: calc(100% - 30px);
+
+      a {
+        display: inline-flex;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      icon {
+        top: 12px;
+      }
+    }
+
+    .filter {
+      cursor: pointer;
+
+      span {
+        font-size: 1rem;
+      }
+
+      > a > i {
+        visibility: hidden;
+      }
+
+      .showMe {
+        visibility: visible;
+      }
+    }
+
+    &.open {
+      .filter {
+        span {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  .searchbox {
+    margin-right: 1rem;
+    text-decoration: none;
+
+    .searchinput {
+      position: relative;
+      display: inline-block;
+      height: 36px;
+      min-width: 36px;
+      background: $md-white-100;
+      border: 1px solid $input__border-color;
+      border-radius: 2px;
+
+      > input {
+        position: relative;
+        top: 1px;
+      }
+
+      > input {
+        display: inline-block;
+        height: 32px;
+        max-width: 200px;
+        min-width: 35px;
+        padding: 8px 1px 7px 0;
+        margin-bottom: 3px;
+        margin-left: 38px;
+        font-family: $brand-font-light;
+        font-size: 1.125rem;
+        color: $gray !important;
+        background: $md-white-100;
+        border: none;
+
+        @include easing-transition(width, 500ms, $easeOutQuint);
+
+        &:focus {
+
+          outline: none;
+          box-shadow: none;
+
+          ::placeholder {
+            color: $md-gray-30;
+          }
+        }
+      }
+
+      > i {
+        position: absolute;
+        top: 9px;
+        left: 11px;
+        font-size: 16px;
+        color: $md-gray-90;
+        border: none;
+        border-radius: 0;
+      }
+
+      > i.clear {
+        right: 11px;
+        left: auto;
+        display: none;
+        color: $md-gray-50;
+      }
+
+      > input.ng-not-empty {
+        margin-right: 30px;
+
+        + i.clear {
+          display: block;
+        }
+      }
+    }
+
+    > button {
+      height: 29px;
+      padding: 2px;
+      color: $md-gray-40;
+      background: transparent;
+      border: none;
+
+      i {
+        font-size: 14px;
+        border: solid 1px;
+        border-color: transparent;
+        border-radius: 60%;
+
+        &:hover {
+          border-color: $md-gray-30;
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .fakefocus {
+    .searchinput {
+      cursor: default;
+
+      > input,
+      > span {
+        color: $md-theme-50;
+        cursor: default;
+      }
+    }
+  }
+
+  .screen-lg {
+    .searchfilter {
+      padding-bottom: 0px;
+      clear: none;
+    }
+
+    .table-filter {
+      position: relative;
+      top: 1px;
+      padding: 0;
+      margin: 8px 0 0 0;
+      font-size: 1.125rem;
+
+      & ul {
+        font-size: 0;
+      }
+
+      .filter {
+        display: inline-block;
+        margin: 0 0.5rem;
+        font-size: initial;
+
+        a {
+          color: $md-gray-50;
+          cursor: pointer;
+
+          &:hover {
+            color: $md-theme-50;
+            text-decoration: none;
+          }
+
+          &:focus {
+            color: $md-gray-40;
+            text-decoration: none;
+            border: none;
+            box-shadow: none;
+          }
+        }
+
+        i {
+          font-size: 10px;
+          line-height: 0.4;
+        }
+
+        .name {
+          font-family: $brand-font-light;
+        }
+
+        .count {
+          font-family: $brand-font-light;
+          visibility: visible;
+        }
+
+        &:hover,
+        &:focus {
+          color: $md-theme-50;
+        }
+      }
+
+      .active {
+        cursor: default;
+
+        .name,
+        .count,
+        > a {
+          color: $md-theme-50;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .screen-xs,
+  .screen-sm,
+  .screen-md {
+    .searchfilter {
+      .filter {
+        .count {
+          float: right;
+          visibility: visible;
+        }
+      }
+
+      .table-filter {
+        .dropdown-menu {
+          min-width: 195px;
+        }
+
+        .filter {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* --------- search-filter* --------- */

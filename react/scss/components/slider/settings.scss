@@ -1,0 +1,20 @@
+$slider__class: #{$prefix}-slider;
+
+$slider-selection__background-color: $md-theme-50;
+$slider-selection__background-color--disabled: $md-gray-30;
+$slider-selection__background-color--disabled--dark: $md-white-100;
+$slider-selection__background-color--red: $md-red-50;
+$slider-selection__background-color--green: $md-green-50;
+$slider-selection__background-color--yellow: $md-yellow-50;
+
+$slider-pointer__background-color: $md-white-100;
+$slider-pointer__background-color--hover: $md-theme-10;
+$slider-pointer__background-color--focus--dark: $md-gray-40;
+$slider-pointer__background-color--disabled: $md-gray-10;
+$slider-pointer__background-color--disabled--dark: $md-gray-40;
+
+$slider-bar__background-color: $md-gray-10;
+$slider-bar__background-color--dark: $md-gray-40;
+
+$slider-hashlabel__color: $md-gray-90;
+$slider-hashlabel__color--dark: $md-white-100;

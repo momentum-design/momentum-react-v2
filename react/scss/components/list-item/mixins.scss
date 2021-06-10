@@ -1,0 +1,453 @@
+@mixin list-item-section(
+  $order: 0,
+  $margin-left: 0,
+  $margin-right: 0,
+  $flex-grow: 1,
+  $flex-shrink: 1,
+  $flex-basis: auto
+) {
+  height: 100%;
+  margin-right: $margin-right;
+  margin-left: $margin-left;
+  order: $order;
+  flex: $flex-grow $flex-shrink $flex-basis;
+}
+
+@mixin list-item-size(
+  $padding: $list-item__padding,
+  $height: $list-item__height,
+  $section-margin: $list-item__section-margin-side,
+  $avatar-size: $list-item__avatar__dimension,
+  $avatar-font-size: $list-item__avatar__font-size
+) {
+  height: $height;
+  padding: $padding;
+
+  > [class$='__left'] {
+    margin-right: $section-margin;
+
+    > .#{$prefix}-list-item__avatar {
+      @include avatar-size($size: $avatar-size, $font-size: $avatar-font-size);
+    }
+  }
+
+  > [class$='__right'] {
+    margin-left: $section-margin;
+  }
+}
+
+@mixin list-item() {
+  @include flex($jc: flex-start);
+
+  position: relative;
+  width: 100%;
+  font-size: $list-item__font-size;
+  line-height: $list-item__line-height;
+  white-space: nowrap;
+  cursor: pointer;
+  flex: 1 1 auto;
+
+  > .#{$list-item__class} {
+    &__center {
+      @include flex($ai: flex-start, $fd: column);
+      @include list-item-section($order: 1);
+
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &__center-align {
+      @include flex($fd: column);
+
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &__left {
+      @include flex;
+      @include list-item-section($order: 0, $flex-shrink: 0);
+    }
+
+    &__right {
+      @include flex;
+      @include list-item-section($order: 2, $flex-shrink: 0);
+    }
+  }
+
+  .#{$list-item__class} {
+    &__header {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__subheader {
+      width: 100%;
+      overflow: hidden;
+      font-size: $list-item__font-size--subheader;
+      line-height: $list-item__line-height--subheader;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &.#{$list-item__class}--read-only {
+    cursor: default;
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &.#{$list-item__class}--separator {
+    border-right: none;
+    border-bottom: $list-item-separator;
+
+    .#{$list__class}--horizontal > & {
+      border-right: $list-item-separator;
+      border-bottom: none;
+    }
+  }
+
+  .md-input-container {
+    margin-bottom: 0;
+  }
+}
+
+@mixin list-item--dark(
+  $color: $list-item__color--dark,
+  $subheader-color: $list-item__color--subheader--dark,
+  $background-color: $list-item__background--dark,
+  $background-color--hover: $list-item__background--hover--dark,
+  $background-color--active: $list-item__background--pressed--dark,
+  $separator-border: $list-item-separator--dark,
+  $hover-header-color: $list-item__color--dark,
+) {
+  .#{$dark-class} & {
+    color: $color;
+    background-color: $background-color;
+  }
+
+  .#{$list-item__class} {
+    &__header {
+      .#{$dark-class} & {
+        color: $color;
+      }
+    }
+
+    &__subheader {
+      .#{$dark-class} & {
+        color: $subheader-color;
+      }
+    }
+  }
+
+  &:hover:not(.disabled):not(.#{$list-item__class}--read-only):not(:active):not(.active),
+  &:focus:not(.disabled):not(.#{$list-item__class}--read-only):not(:active):not(.active),
+  &.focus:not(.disabled):not(.#{$list-item__class}--read-only):not(:active):not(.active) {
+    .#{$dark-class} & {
+      color: $color;
+      background-color: $background-color--hover;
+    }
+  }
+
+  &:hover:not(.disabled),
+  &:hover:not(.#{$list-item__class}--read-only),
+  &:hover:not(:active),
+  &:hover:not(.active),
+  &:focus:not(.disabled),
+  &:focus:not(.#{$list-item__class}--read-only),
+  &:focus:not(:active),
+  &:focus:not(.active),
+  &.focus:not(.disabled),
+  &.focus:not(.#{$list-item__class}--read-only),
+  &.focus:not(:active),
+  &.focus:not(.active)
+    {
+    .#{$list-item__class} {
+      &__header {
+        .#{$dark-class} & {
+          color: $hover-header-color;
+        }
+      }
+    }
+  }
+
+  &:active:not(.#{$list-item__class}--read-only),
+  &.active:not(.#{$list-item__class}--read-only) {
+    .#{$dark-class} & {
+      color: $color;
+      background-color: $background-color--active;
+    }
+  }
+
+  &:focus,
+  &.focus {
+    .#{$dark-class} & {
+      @include focus-styles($focus-visible-only: false);
+      z-index: 1;
+    }
+  }
+
+  &.#{$list-item__class}--separator {
+    .#{$dark-class} & {
+      border-right: none;
+      border-bottom: $separator-border;
+    }
+
+    .#{$list__class}--horizontal > & {
+      .#{$dark-class} & {
+        border-right: $separator-border;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@mixin list-item--contrast(
+  $color--contrast: $list-item__color--contrast,
+  $color--dark--contrast: $list-item__color--dark--contrast,
+  $color--active--contrast: $list-item__color--contrast,
+  $color--dark--active--contrast: $list-item__color--dark--active--contrast,
+  $subheader-color--contrast: $list-item__color--subheader--contrast,
+  $subheader-color--dark--contrast: $list-item__color--subheader--dark--contrast,
+  $background-color--contrast: $list-item__background--contrast,
+  $background-color--dark--contrast: $list-item__background--dark--contrast,
+  $background-color--hover--contrast: $list-item__background--hover--contrast,
+  $background-color--hover--dark--contrast:
+    $list-item__background--hover--dark--contrast,
+  $background-color--active--contrast: $list-item__background--active--contrast,
+  $background-color--active--dark--contrast:
+    $list-item__background--active--dark--contrast
+) {
+  .#{$contrast-class} & {
+    color: $color--contrast;
+    background-color: $background-color--contrast;
+  }
+
+  .#{$contrast-class}.#{$dark-class} &,
+  .#{$contrast-class} .#{$dark-class} & {
+    color: $color--dark--contrast;
+    background-color: $background-color--dark--contrast;
+  }
+
+  .#{$list-item__class} {
+    &__header {
+      .#{$contrast-class} & {
+        color: $subheader-color--contrast;
+      }
+
+      .#{$contrast-class}.#{$dark-class} &,
+      .#{$contrast-class} .#{$dark-class} & {
+        color: $subheader-color--dark--contrast;
+      }
+    }
+
+    &__subheader {
+      .#{$contrast-class} & {
+        color: $subheader-color--contrast;
+      }
+
+      .#{$contrast-class}.#{$dark-class} &,
+      .#{$contrast-class} .#{$dark-class} & {
+        color: $subheader-color--dark--contrast;
+      }
+    }
+  }
+
+  &:hover:not(.disabled):not(.#{$list-item__class}--read-only):not(:active):not(.active),
+  &:focus:not(.disabled):not(.#{$list-item__class}--read-only):not(:active):not(.active),
+  &.focus:not(.disabled):not(.#{$list-item__class}--read-only):not(:active):not(.active) {
+    .#{$contrast-class} & {
+      color: $color--contrast;
+      background-color: $background-color--hover--contrast;
+    }
+
+    .#{$contrast-class}.#{$dark-class} &,
+    .#{$contrast-class} .#{$dark-class} & {
+      color: $color--dark--contrast;
+      background-color: $background-color--hover--dark--contrast;
+    }
+  }
+
+  &:active:not(.#{$list-item__class}--read-only),
+  &.active:not(.#{$list-item__class}--read-only) {
+    .#{$contrast-class} & {
+      color: $color--active--contrast;
+      background-color: $background-color--active--contrast;
+    }
+
+    .#{$contrast-class}.#{$dark-class} &,
+    .#{$contrast-class} .#{$dark-class} & {
+      color: $color--dark--active--contrast;
+      background-color: $background-color--active--dark--contrast;
+    }
+  }
+}
+
+@mixin list-item-color(
+  $color: $list-item__color, // Color must stay at top for hoisting reasons
+  $color-css-var: --md-textColor-primary,
+  $active-color: $color,
+  $active-color-css-var: $color-css-var,
+  $hover-color: $color,
+  $hover-color-css-var: $color-css-var,
+  $active-bgrd-color: $list-item__background--pressed,
+  $active-bgrd-color-css-var: --md-background-quaternary,
+  $active-section-left-color: $active-color,
+  $active-section-left-color-css-var: $active-color-css-var,
+  $active-section-right-color: $active-color,
+  $active-section-right-color-css-var: $active-color-css-var,
+  $active-header-color: $active-color,
+  $active-header-color-css-var: $active-color-css-var,
+  $active-subheader-color: $active-color,
+  $active-subheader-color-css-var: $active-color-css-var,
+  $hover-section-left-color: $hover-color,
+  $hover-section-left-color-css-var: $hover-color-css-var,
+  $hover-section-right-color: $hover-color,
+  $hover-section-right-color-css-var: $hover-color-css-var,
+  $hover-header-color: $hover-color,
+  $hover-header-color-css-var: $hover-color-css-var,
+  $hover-subheader-color: $hover-color,
+  $hover-subheader-color-css-var: $hover-color-css-var,
+  $background-color: $list-item__background,
+  $background-color-css-var: --null,
+  $disabled-opacity: $list-item__opacity--disabled,
+  $focus-color: $color,
+  $focus-color-css-var: $color-css-var,
+  $header-color: $color,
+  $header-color-css-var: $color-css-var,
+  $hover-bgrd-color: $list-item__background--hover,
+  $hover-bgrd-color-css-var: --md-background-tertiary,
+  $includeFocus: true,
+  $section-left-color: $color,
+  $section-left-color-css-var: $color-css-var,
+  $section-right-color: $color,
+  $section-right-color-css-var: $color-css-var,
+  $subheader-color: $list-item__color--subheader,
+  $subheader-color-css-var: --md-textColor-secondary,
+) {
+  color: $color;
+  color: var($color-css-var, $color);
+  background-color: $background-color;
+  background-color: var($background-color-css-var, $background-color);
+
+  .#{$list-item__class} {
+    &__header {
+      color: $header-color;
+      color: var($header-color-css-var, $header-color);
+    }
+
+    &__subheader {
+      color: $subheader-color;
+      color: var($subheader-color-css-var, $subheader-color);
+    }
+
+    &__left {
+      color: $section-left-color;
+      color: var($section-left-color-css-var, $section-left-color);
+      fill: $section-left-color;
+      fill: var($section-left-color-css-var, $section-left-color);
+    }
+
+    &__right {
+      color: $section-right-color;
+      color: var($section-right-color-css-var, $section-right-color);
+      fill: $section-right-color;
+      fill: var($section-right-color-css-var, $section-right-color);
+    }
+  }
+
+  &:hover:not(.disabled),
+  &:hover:not(.#{$list-item__class}--read-only),
+  &:hover:not(:active),
+  &:hover:not(.active),
+  &:focus:not(.disabled),
+  &:focus:not(.#{$list-item__class}--read-only),
+  &:focus:not(:active),
+  &:focus:not(.active),
+  &.focus:not(.disabled),
+  &.focus:not(.#{$list-item__class}--read-only),
+  &.focus:not(:active),
+  &.focus:not(.active)
+  {
+    color: $hover-color;
+    color: var($hover-color-css-var, $hover-color);
+    background-color: $hover-bgrd-color;
+    background-color: var($hover-bgrd-color-css-var, $hover-bgrd-color);
+
+    .#{$list-item__class} {
+      &__header {
+        color: $hover-header-color;
+        color: var($hover-header-color-css-var, $hover-header-color);
+      }
+
+      &__subheader {
+        color: $hover-subheader-color;
+        color: var($hover-subheader-color-css-var, $hover-subheader-color);
+      }
+
+      &__left {
+        color: $hover-section-left-color;
+        color: var($hover-section-left-color-css-var, $hover-section-left-color);
+        fill: $hover-section-left-color;
+        fill: var($hover-section-left-color-css-var, $hover-section-left-color);
+      }
+
+      &__right {
+        color: $hover-section-right-color;
+        color: var($hover-section-right-color-css-var, $hover-section-right-color);
+        fill: $hover-section-right-color;
+        fill: var($hover-section-right-color-css-var, $hover-section-right-color);
+      }
+    }
+  }
+
+  &:active:not(.#{$list-item__class}--read-only),
+  &.active:not(.#{$list-item__class}--read-only) {
+    color: $active-color;
+    color: var($active-color-css-var, $active-color);
+    background-color: $active-bgrd-color;
+    background-color: var($active-bgrd-color-css-var, $active-bgrd-color);
+
+    .#{$list-item__class} {
+      &__header {
+        color: $active-header-color;
+        color: var($active-header-color-css-var, $active-header-color);
+      }
+
+      &__subheader {
+        color: $active-subheader-color;
+        color: var($active-subheader-color-css-var, $active-subheader-color);
+      }
+
+      &__left {
+        color: $active-section-left-color;
+        color: var($active-section-left-color-css-var, $active-section-left-color);
+        fill: $active-section-left-color;
+        fill: var($active-section-left-color-css-var, $active-section-left-color);
+      }
+
+      &__right {
+        color: $active-section-right-color;
+        color: var($active-section-right-color-css-var, $active-section-right-color);
+        fill: $active-section-right-color;
+        fill: var($active-section-right-color-css-var, $active-section-right-color);
+      }
+    }
+  }
+
+  @if $includeFocus {
+    &:focus,
+    &.focus {
+      @include focus-styles($focus-visible-only: false);
+      z-index:1;
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: $list-item__opacity--disabled;
+  }
+}

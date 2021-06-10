@@ -1,0 +1,120 @@
+// @import  '../colors/settings';
+// @import  '../settings/core';
+// @import  '../typography/settings';
+// @import  '../tools/mixins/core';
+// @import  '~@momentum-ui/icons/scss/mixins';
+
+$accordion-navigation-padding: rem-calc(16) !default;
+$accordion-navigation-bg-color: $md-gray-20 !default;
+$accordion-navigation-hover-bg-color: scale-color(
+  $accordion-navigation-bg-color,
+  $lightness: -5%
+) !default;
+$accordion-navigation-active-bg-color: scale-color(
+  $accordion-navigation-bg-color,
+  $lightness: -3%
+) !default;
+$accordion-navigation-font-color: $md-black-100 !default;
+$accordion-navigation-font-size: rem-calc(16) !default;
+$accordion-navigation-font-family: $body-font-family !default;
+$accordion-content-padding: ($column-gutter/2) !default;
+$accordion-content-active-bg-color: $md-white-100 !default;
+
+@include exports('accordion-bem') {
+  .accordion {
+    @include clearfix;
+
+    margin-bottom: 0;
+
+    .accordion--navigation,
+    dd {
+      display: block;
+      margin-bottom: 0 !important;
+
+      &.active > a {
+        background: $accordion-navigation-active-bg-color;
+      }
+
+      > a {
+        display: block;
+        padding: $accordion-navigation-padding;
+        margin-top: rem-calc(10);
+        font-family: $accordion-navigation-font-family;
+        font-size: $accordion-navigation-font-size;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        font-weight: 500;
+        color: $md-white-100;
+        background: $md-theme-50;
+        border: 2px solid $md-theme-50;
+        border-radius: $global-radius;
+
+        &:hover {
+          background: $md-theme-50;
+          border-color: $md-theme-70;
+        }
+
+        &.text-muted {
+          color: $md-gray-40;
+        }
+
+        &:before {
+          display: inline-block;
+          margin-right: rem-calc(3);
+          margin-left: 0;
+          font-family: $icon-font-name;
+          font-size: 1rem;
+          line-height: 1;
+          vertical-align: middle;
+
+          @include icon-arrow-down_16;
+        }
+      }
+
+      > .content {
+        display: none;
+        padding: $accordion-content-padding;
+        margin-top: rem-calc(5);
+        font-size: rem-calc(13);
+        color: $md-black-100;
+        border: 1px solid $md-gray-40;
+        border-radius: $global-radius;
+
+        &.active {
+          display: block;
+          background: $accordion-content-active-bg-color;
+        }
+
+        h5 {
+          font-size: rem-calc(14);
+          color: $md-yellow-50;
+        }
+      }
+
+      &.accordion--primary {
+        > a {
+          background: $md-theme-50;
+        }
+      }
+
+      &.accordion--warning {
+        > a {
+          background: $md-yellow-50;
+          border-color: $md-yellow-50;
+        }
+      }
+
+      &.accordion--danger {
+        > a {
+          background: $md-red-50;
+          border-color: $md-red-50;
+        }
+      }
+    }
+  }
+}
+
+.caret {
+  position: relative;
+  right: rem-calc(10);
+}

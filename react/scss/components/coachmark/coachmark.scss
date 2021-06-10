@@ -1,0 +1,79 @@
+/** @component coachmark */
+
+@include exports('md-coachmark') {
+  .md-coachmark {
+    &.#{$prefix}-event-overlay {
+      @each $direction in (top, right, bottom, left) {
+        &--#{$direction} {
+          > .#{$prefix}-event-overlay__arrow {
+            border-#{$direction}-color: $md-cobalt-70;
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+
+      > .#{$prefix}-event-overlay__children {
+        color: white;
+        background-color: $md-cobalt-70;
+        border: none;
+        box-shadow: $select--children__box-shadow;
+
+        > [class$='__container'] {
+          @include flex($fd: column, $fw: wrap);
+
+          width: 100%;
+          padding: (rem-calc(24) rem-calc(16) rem-calc(19) rem-calc(16));
+
+          > [class$='__header'] {
+            margin-bottom: rem-calc(15);
+            font-family: $brand-font-bold;
+            font-size: rem-calc(14);
+            font-weight: bold;
+            line-height: rem-calc(22);
+            color: $md-white-100;
+            text-align: center;
+          }
+
+          > [class$='__subheader'] {
+            margin-bottom: rem-calc(15);
+            font-size: rem-calc(14);
+            line-height: rem-calc(22);
+            color: $md-white-100;
+            text-align: center;
+          }
+
+          > .#{$button__class} {
+            @include button-color(
+              $color: $md-white-100,
+              $color-hover: $md-cobalt-70,
+              $color-active: $md-cobalt-70,
+              $bg: transparent,
+              $bg-hover: $md-gray-10,
+              $bg-active: $md-white-100,
+              $border: 1px solid $md-white-100,
+              $border-hover: 1px solid $md-gray-10,
+              $border-active: 1px solid $md-white-100
+            );
+
+            .#{$dark-class} & {
+              @include button-color(
+                $color: $md-white-100,
+                $color-hover: $md-cobalt-70,
+                $color-active: $md-cobalt-70,
+                $bg: transparent,
+                $bg-hover: $md-gray-10,
+                $bg-active: $md-white-100,
+                $border: 1px solid $md-white-100,
+                $border-hover: 1px solid $md-gray-10,
+                $border-active: 1px solid $md-white-100
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}

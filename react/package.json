@@ -1,6 +1,6 @@
 {
-  "name": "@momentum-ui/react",
-  "version": "23.22.7",
+  "name": "@momentumreact/momentum-react-v2",
+  "version": "23.22.70000011",
   "description": "Cisco Momentum UI framework for ReactJs applications",
   "author": "Cisco Systems, Inc.",
   "contributors": [
@@ -38,6 +38,9 @@
     "build:CI": "run-s build:base copy:CI",
     "build:app": "node ./tools/website/build.js",
     "build:lib": "node ./tools/lib/build.js",
+    "css:build": "node-sass -i scss/templates/momentum-ui.scss -o css/ --importer=./node_modules/node-sass-tilde-importer",
+    "build:settings": "node ./tools/generateSettingsScss.js",
+    "build:tokens": "node ./tools/generateScssFromTokens.js",
     "ci:postpublish": "node ../tools/postpublish.js",
     "clean-dist": "yarn remove-dist && mkdir dist bundles lib",
     "copy:CI": "cp ./src/app/_redirects ./dist/",
@@ -78,15 +81,17 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-ui/core": "^19.11.0",
-    "@momentum-ui/icons": "^8.10.0",
-    "@momentum-ui/utils": "^6.2.13",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@momentum-ui/icons": "^8.18.0",
+    "@momentum-ui/tokens": "^1.7.0",
     "@restart/context": "^2.1.4",
+    "concat": "^1.0.3",
     "dom-helpers": "^3.4.0",
     "husky": "^1.1.2",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
+    "node-sass-tilde-importer": "^1.0.2",
     "object-assign": "4.1.1",
     "react-aria-modal": "^2.11.1",
     "react-focus-lock": "^1.19.1",
@@ -104,9 +109,9 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
+    "@commitlint/cli": "^8.3.5",
     "@cypress/webpack-preprocessor": "^4.1.0",
     "@hot-loader/react-dom": "~16.8.0",
-    "@momentum-ui/tokens": "^1.6.2",
     "@percy/cypress": "^0.2.3",
     "autoprefixer": "^7.2.4",
     "babel-core": "^7.0.0-bridge.0",
@@ -183,6 +188,6 @@
     "setupTestFrameworkScriptFile": "<rootDir>/src/helpers/enzyme_setup"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://engci-maven-master.cisco.com/artifactory/api/npm/webex-web-app-npm/"
   }
 }

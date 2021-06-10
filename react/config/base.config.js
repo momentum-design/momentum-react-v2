@@ -31,7 +31,6 @@ const baseConfig = {
         test: /\.(js|jsx)?$/,
         include: [
           path.resolve(codePath, 'src'),
-          path.resolve(codePath, 'node_modules/@momentum-ui/core/data'),
           path.resolve(codePath, 'node_modules/@momentum-ui/icons/data'),
         ],
         use: ['babel-loader'],

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Lightbox } from '@momentum-ui/react';
-import reactIcon from '@momentum-ui/core/images/momentum/momentum.jpg';
+import reactIcon from '../../../../images/momentum.jpg';
  export default class LightboxDefault extends React.Component {
   state = {
     index: 0,

@@ -1,0 +1,12 @@
+/** @component icon */
+
+@include exports('md-icon') {
+  .#{$icon__class} {
+    display: inline-flex;
+    fill: inherit;
+
+    .#{$dark-class} & {
+      fill: $md-white-100;
+    }
+  }
+}

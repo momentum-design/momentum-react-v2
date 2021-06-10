@@ -1,0 +1,18 @@
+@mixin reset-text() {
+  font-family: $brand-font-regular;
+  // We deliberately do NOT reset font-size.
+  font-style: normal;
+  font-weight: normal;
+  line-height: $line-height-base;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+  line-break: auto;
+}

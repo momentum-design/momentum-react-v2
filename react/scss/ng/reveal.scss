@@ -1,0 +1,581 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+// @import  '../colors/settings';
+// @import  '../typography/settings';
+// @import  '../components/button/settings';
+// @import  '../tools/mixins/core';
+// @import  '../tools/mixins/spacing';
+
+//
+// @name _reveal.scss
+// @dependencies _global.scss
+//
+
+// We use these to control the style of the reveal overlay.
+$reveal-overlay-bg: rgba($md-black-100, 0.45) !default;
+$reveal-overlay-bg-old: $md-black-100 !default;
+
+// We use these to control the style of the modal itself.
+$reveal-modal-bg: $md-white-100 !default;
+$reveal-position-top: rem-calc(100) !default;
+$reveal-default-width: 80% !default;
+$reveal-max-width: $row-width !default;
+$reveal-modal-padding: rem-calc(30) !default;
+$reveal-box-shadow: 0 0 10px rgba($md-black-100, 0.4) !default;
+
+// We use these to style the reveal close button
+$reveal-close-font-size: rem-calc(40) !default;
+$reveal-close-top: rem-calc(10) !default;
+$reveal-close-side: rem-calc(22) !default;
+$reveal-close-color: $base !default;
+$reveal-close-weight: $font-weight-bold !default;
+
+// We use this to set the default radius used throughout the core.
+$reveal-radius: $global-radius !default;
+$reveal-round: $global-rounded !default;
+
+// We use these to control the modal border
+$reveal-border-style: solid !default;
+$reveal-border-width: 1px !default;
+$reveal-border-color: $md-gray-90 !default;
+
+$reveal-modal-class: 'reveal-modal' !default;
+$close-reveal-modal-class: 'close-reveal-modal' !default;
+
+// Set base z-index
+$z-index-base: 1005;
+
+//
+// @mixins
+//
+
+// We use this to create the reveal background overlay styles
+@mixin reveal-bg() {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-base - 1;
+  display: none;
+  // position: absolute; // allows modal background to extend beyond window position
+  background: $reveal-overlay-bg-old; // Autoprefixer should be used to avoid such variables needed when Foundation for Sites can do so in the near future.
+  background: $reveal-overlay-bg;
+  #{$default-float}: 0;
+}
+
+// We use this mixin to create the structure of a reveal modal
+//
+// $base-style - Provides reveal base styles, can be set to false to override. Default: true, Options: false
+// $width - Sets reveal width Default: $reveal-default-width || 80%
+//
+@mixin reveal-modal-base(
+  $base-style: true,
+  $width: $reveal-default-width,
+  $max-width: $reveal-max-width,
+  $border-radius: $reveal-radius
+) {
+  @if $base-style {
+    border-radius: $border-radius;
+    display: none;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: $z-index-base;
+    #{$default-float}: 0;
+
+    @media #{$small-only} {
+      min-height: 100vh;
+    }
+
+    // Make sure rows don't have a min-width on them
+    .column,
+    .columns {
+      min-width: 0;
+    }
+
+    // Get rid of margin from first and last element inside modal
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @if $width {
+    @media #{$medium-up} {
+      right: 0;
+      left: 0;
+      width: $width;
+      max-width: $max-width;
+      margin: 0 auto;
+    }
+  }
+}
+
+// We use this to style the reveal modal defaults
+//
+// $bg - Sets background color of reveal modal. Default: $reveal-modal-bg || $md-white-100
+// $padding - Padding to apply to reveal modal. Default: $reveal-modal-padding.
+// $border - Choose whether reveal uses a border. Default: true, Options: false
+// $border-style - Set reveal border style. Default: $reveal-border-style || solid
+// $border-width - Width of border (i.e. 1px). Default: $reveal-border-width.
+// $border-color - Color of border. Default: $reveal-border-color.
+// $box-shadow - Choose whether or not to include the default box-shadow. Default: true, Options: false
+// $radius - If true, set to modal radius which is $global-radius || explicitly set radius amount in px (ex. $radius:10px). Default: false
+// $top-offset - Default: $reveal-position-top || 50px
+@mixin reveal-modal-style(
+  $bg: false,
+  $padding: false,
+  $border: false,
+  $border-style: $reveal-border-style,
+  $border-width: $reveal-border-width,
+  $border-color: $reveal-border-color,
+  $box-shadow: false,
+  $radius: false,
+  $top-offset: false
+) {
+  @if $bg {
+    background-color: $bg;
+  }
+
+  @if $padding != false {
+    padding: $padding;
+  }
+
+  @if $border {
+    border: $border-style $border-width $border-color;
+  }
+
+  // We can choose whether or not to include the default box-shadow.
+  @if $box-shadow {
+    box-shadow: $reveal-box-shadow;
+  }
+
+  // We can control how much radius is used on the modal
+  @if $radius == true {
+    @include radius($reveal-radius);
+  } @else if $radius {
+    @include radius($radius);
+  }
+
+  @if $top-offset {
+    @media #{$medium-up} {
+      top: $top-offset;
+    }
+  }
+}
+
+// We use this to create a close button for the reveal modal
+//
+// $color - Default: $reveal-close-color || $base
+@mixin reveal-close($color: $reveal-close-color) {
+  position: absolute;
+  top: $reveal-close-top;
+  font-size: $reveal-close-font-size;
+  font-weight: $reveal-close-weight;
+  line-height: 1;
+  color: $color;
+  cursor: $cursor-pointer-value;
+  #{$opposite-direction}: $reveal-close-side;
+}
+
+@include exports('reveal') {
+  // Reveal Modals
+  .reveal-modal-bg {
+    @include reveal-bg;
+  }
+
+  .#{$reveal-modal-class} {
+    @include reveal-modal-base;
+    @include reveal-modal-style(
+      $bg: $reveal-modal-bg,
+      $padding: $reveal-modal-padding,
+      $border: true,
+      $box-shadow: true,
+      $radius: false,
+      $top-offset: $reveal-position-top
+    );
+
+    &.radius {
+      @include reveal-modal-style($radius: true);
+    }
+
+    &.round {
+      @include reveal-modal-style($radius: $reveal-round);
+    }
+
+    &.collapse {
+      @include reveal-modal-style($padding: 0);
+    }
+
+    &.tiny {
+      @include reveal-modal-base(false, 30%);
+    }
+
+    &.md-modal--small {
+      @include reveal-modal-base(false, 40%);
+    }
+
+    &.medium {
+      @include reveal-modal-base(false, 60%);
+    }
+
+    &.large {
+      @include reveal-modal-base(false, 70%);
+    }
+
+    &.xlarge {
+      @include reveal-modal-base(false, 95%);
+    }
+
+    &.full {
+      @include reveal-modal-base(false, 100%);
+
+      top: 0;
+      left: 0;
+      height: 100vh;
+      height: 100%;
+      max-width: none !important;
+      min-height: 100vh;
+      margin-left: 0 !important;
+    }
+
+    // Modals pushed to back
+    &.toback {
+      z-index: $z-index-base - 2;
+    }
+
+    .#{$close-reveal-modal-class} {
+      @include reveal-close;
+    }
+  }
+}
+
+/* begin reveal override */
+
+@include exports('reveal-ui') {
+  // Reveal Modals
+  .reveal-modal-bg {
+    @include reveal-bg;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .#{$reveal-modal-class} {
+    @include reveal-modal-base;
+    @include reveal-modal-style(
+      $bg: $reveal-modal-bg,
+      $padding: $reveal-modal-padding,
+      $border: true,
+      $box-shadow: true,
+      $radius: false,
+      $top-offset: $reveal-position-top
+    );
+
+    position: fixed;
+
+    &.radius {
+      @include reveal-modal-style($radius: true);
+    }
+
+    &.round {
+      @include reveal-modal-style($radius: $reveal-round);
+    }
+
+    &.collapse {
+      @include reveal-modal-style($padding: 0);
+    }
+
+    &.dialog {
+      @include reveal-modal-base(false, 380px);
+
+      padding: 0;
+      outline: none;
+
+      .md-modal__content {
+        position: static;
+        border: none;
+      }
+
+      .md-close {
+        display: none;
+      }
+
+      .md-modal__header {
+        padding: rem-calc(24px);
+        padding-bottom: rem-calc(16px);
+      }
+
+      .md-modal__title {
+        font-family: $brand-font-light;
+        font-size: 20px;
+        color: $md-gray-70;
+        text-align: center;
+      }
+
+      .md-modal__body {
+        padding: 0 rem-calc(24px);
+        margin-bottom: rem-calc(32px);
+        text-align: center;
+        background: $md-white-100;
+      }
+
+      .md-modal__footer {
+        display: flex;
+        padding: 0;
+
+        .md-button {
+          line-height: 1.6;
+          color: $md-gray-70;
+          background: $md-white-100;
+          border-top: 1px solid $md-gray-30;
+          border-radius: 0;
+          border-bottom-left-radius: $reveal-radius;
+          flex: 1;
+
+          &.md-button--blue {
+            color: $md-theme-50;
+          }
+
+          &.md-button--blue:hover {
+            color: $md-white-100;
+            background-color: $md-theme-50;
+          }
+
+          &.md-button--red {
+            color: $md-red-50;
+          }
+
+          &.md-button--red:hover {
+            color: $md-white-100;
+            background-color: $md-red-50;
+          }
+
+          &:hover {
+            background: $md-gray-20;
+          }
+
+          &:disabled,
+          &.disabled {
+            color: $button__font-color--disabled;
+
+            &:hover,
+            &:focus {
+              color: $button__font-color--disabled;
+              background-color: $md-white-100;
+            }
+          }
+
+          &--primary,
+          &-primary {
+            color: $md-theme-50;
+
+            &:hover,
+            &:active {
+              color: $md-white-100;
+              background: $md-theme-50;
+            }
+
+            &:active {
+              background: $md-theme-60;
+            }
+          }
+
+          &--alert,
+          &--negative {
+            color: $md-red-50;
+
+            &:hover,
+            &:active {
+              color: $md-white-100;
+              background: $md-red-50;
+            }
+
+            &:active {
+              background: $md-red-60;
+            }
+          }
+
+          + .md-button {
+            margin-left: 0;
+            border-left: 1px solid $md-gray-30;
+            border-bottom-right-radius: $reveal-radius;
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+    }
+
+    &.full {
+      @include reveal-modal-base(false, 100%);
+
+      top: 24px;
+      left: 0;
+      height: 100vh;
+      max-width: none !important;
+      min-height: auto;
+      padding: 0;
+      margin-left: 0 !important;
+      overflow: auto;
+      background: transparent;
+      border: none;
+      outline: none;
+      box-shadow: none;
+
+      .md-modal__title {
+        max-width: 900px;
+        padding: 0 2rem 0 1rem;
+        margin: 0;
+        font-family: $brand-font-extra-light;
+        font-size: 36px;
+        line-height: 48px;
+        color: $md-white-100;
+      }
+
+      .md-modal__header {
+        width: 100%;
+        padding: 16px;
+        background: $md-theme-50;
+        flex: 0 0 76px;
+
+        .md-close {
+          color: $md-white-100;
+          text-shadow: none;
+          border: none;
+
+          &:before {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .md-modal__content,
+      .md-modal__content > [ui-view],
+      .md-modal__content > [ui-view] > [ui-view] {
+        position: static;
+        display: flex;
+        height: calc(100vh - 48px);
+        max-width: 60.25rem;
+        margin: 0 auto;
+        background: $md-gray-20;
+        border: none;
+        border-radius: 0;
+        flex-direction: column;
+
+        &.md-modal--small {
+          max-width: 40rem;
+          max-height: 500px;
+
+          .md-modal__header {
+            padding: 0.75rem 1rem;
+            flex: 0 0 50px;
+          }
+
+          .md-modal__title {
+            font-family: $brand-font-light;
+            font-size: 20px;
+            line-height: 32px;
+          }
+
+          .md-modal__footer {
+            padding: 16px;
+            padding-top: 12px;
+            flex: 0 0 64px;
+          }
+
+          .md-modal__body {
+            > * {
+              max-width: 590px;
+            }
+          }
+        }
+      }
+
+      .md-modal__content > [ui-view],
+      .md-modal__content > [ui-view] > [ui-view] {
+        margin: 0;
+      }
+
+      .md-modal__body {
+        display: flex;
+        padding: rem-calc(24) 2rem;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: $md-white-100;
+        flex-direction: column;
+        flex: 1 1 auto;
+        align-self: stretch;
+        align-items: stretch; // IE fix
+
+        > * {
+          width: auto; // IE fix
+          max-width: 900px;
+          min-width: 100%;
+          flex-shrink: 0;
+        }
+      }
+
+      .md-modal__footer {
+        width: 100%;
+        padding: 20px 2rem;
+        text-align: right;
+        background: $md-gray-20;
+        flex: 0 0 76px;
+      }
+
+      @media (max-width: $screen-md-min) {
+        .md-modal__title {
+          padding-left: calc(10vw - 12px);
+        }
+
+        .md-modal__body {
+          padding-right: 10vw;
+          padding-left: 10vw;
+        }
+      }
+    }
+
+    // Modals pushed to back
+    &.toback {
+      z-index: $z-index-base - 2;
+    }
+
+    .#{$close-reveal-modal-class} {
+      @include reveal-close;
+    }
+  }
+}
+
+.reveal-modal-bg.fade.in {
+  z-index: 10000;
+}
+
+//Till Bootstrap is removed
+
+.modal-alt .md-modal__content {
+  top: 0;
+  background: transparent;
+}
+
+.#{$reveal-modal-class} {
+  .md-modal__body {
+    padding: 0;
+  }
+}
+
+.reveal-bottom {
+  transform: translateY(100%);
+  transition: transform 0.3s;
+
+  &.in {
+    transform: translateY(0);
+  }
+}

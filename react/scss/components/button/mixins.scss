@@ -1,0 +1,327 @@
+@mixin button-base() {
+  position: relative;
+  display: inline-block;
+  min-width: rem-calc(72);
+  font-family: $brand-font-regular;
+  font-size: $button__font-size;
+  font-weight: normal;
+  line-height: rem-calc(24);
+  text-align: $button__font-align;
+  text-decoration: none;
+  cursor: $cursor-pointer-value;
+  border: none;
+  border-radius: $button__radius--36;
+
+  > * {
+    font-size: inherit;
+  }
+
+  .#{$button__class}__children {
+    @include flex;
+  }
+
+  + .#{$button__class} {
+    margin-left: rem-calc(5);
+  }
+
+  &:active,
+  &.active-state {
+    &:focus,
+    &.focus-state {
+      box-shadow: none;
+    }
+  }
+
+  &.disabled,
+  &.md-button--disabled,
+  &[disabled] {
+    pointer-events: none;
+    cursor: $button__cursor--disabled;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@mixin button-size(
+  $font-size: $button__font-size,
+  $full-width: false,
+  $height: false,
+  $line-height: $button__line-height,
+  $padding: false,
+  $radius: false
+) {
+  font-size: $button__font-size;
+  line-height: $line-height;
+
+  @if $radius {
+    @include radius($radius);
+  }
+
+  @if $height {
+    height: $height;
+
+    @if $height == auto or $height == initial or $height == inherit {
+      $height: 100%;
+    }
+
+    .#{$prefix}-prepend {
+      margin-right: calc(#{$height} / 4);
+    }
+    .#{$prefix}-append {
+      margin-left: calc(#{$height} / 4);
+    }
+  }
+
+  @if $padding {
+    padding: $padding;
+  }
+
+  @if $full-width {
+    width: 100%;
+  }
+}
+
+@mixin button-circle-size(
+  $font-size: false,
+  $line-height: $font-size,
+  $size: false
+) {
+  @if $size {
+    width: $size;
+    height: $size;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  @if $font-size {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+@mixin button-color(
+  $bg: $button__background-color,
+  $bg-css-var: --null,
+  $bg-active: $button__background-color--active,
+  $bg-active-css-var: --null,
+  $bg-disabled: $button__color--disabled,
+  $bg-disabled-css-var: --null,
+  $bg-hover: $button__background-color--hover,
+  $bg-hover-css-var: --null,
+  $border: false,
+  $border-color: null,
+  $border-color-css-var: --null,
+  $border-hover: false,
+  $border-hover-css-var: --null,
+  $border-active: false,
+  $border-active-css-var: --null,
+  $border-focus: $button__border-color--focus,
+  $border-focus-css-var: --null,
+  $box-shadow: false,
+  $box-shadow-css-var: --null,
+  $color: $button__font-color,
+  $color-css-var: --null,
+  $color-active: $color,
+  $color-active-css-var: --null,
+  $color-disabled: $button__font-color--disabled,
+  $color-disabled-css-var: --null,
+  $color-hover: $color,
+  $color-hover-css-var: --null,
+  $disabled: true,
+  $focus: false,
+  $opacity: false,
+  $opacity-css-var: --null,
+  $outline: false,
+  $outline-css-var: --null
+) {
+  color: $color;
+  color: var($color-css-var, $color);
+  background-color: $bg;
+  background-color: var($bg-css-var, $bg);
+  border-color: transparent;
+
+  @if $border {
+    border: $border;
+    border-color: $border-color;
+    border-color: var($border-color-css-var, $border-color);
+  }
+
+  @if $box-shadow {
+    box-shadow: $box-shadow;
+    box-shadow: var($box-shadow-css-var, $box-shadow);
+  }
+
+  @if $disabled {
+    @include button-color-disabled(
+      $color: $color-disabled,
+      $color-css-var: $color-disabled-css-var,
+      $bg: $bg-disabled,
+      $bg-css-var: $bg-disabled-css-var,
+      $opacity: $opacity,
+      $opacity-css-var: $opacity-css-var
+    );
+  }
+
+  @if $focus {
+    @include button-color-focus(
+      $color: $border-focus,
+      $color-css-var: $color-css-var
+    );
+  }
+
+  @if $outline {
+    outline: $outline;
+    outline: var($outline-css-var, $outline);
+  }
+
+  &:hover {
+    color: $color-hover;
+    color: var($color-hover-css-var, $color-hover);
+    background-color: $bg-hover;
+    background-color: var($bg-hover-css-var, $bg-hover);
+
+    @if $border-hover {
+      border: $border-hover;
+      border: var($border-hover-css-var, $border-hover);
+    }
+  }
+
+  &:active,
+  &.active {
+    color: $color-active;
+    color: var($color-active-css-var, $color-active);
+    background-color: $bg-active;
+    background-color: var($bg-active-css-var, $bg-active);
+
+    @if $border-active {
+      border: $border-active;
+      border: var($border-active-css-var, $border-active);
+    }
+  }
+}
+
+@mixin button-color-fill(
+  $fill: $button__font-color,
+  $fill-css-var: --null,
+  $fill-hover: $fill,
+  $fill-hover-css-var: --null,
+  $fill-active: $color,
+  $fill-active-css-var: --null,
+  $fill-disabled: $button__font-color--disabled,
+  $fill-disabled-css-var: --null,
+  $bg-disabled: transparent,
+  $bg-disabled-css-var: --null,
+  $focus: false
+) {
+  fill: $fill;
+  fill: var($fill-css-var, $fill);
+  color: $fill;
+  color: var($fill-css-var, $fill);
+
+  @include button-color-disabled(
+    $color: $fill-disabled,
+    $color-css-var: $fill-disabled-css-var,
+    $bg: $bg-disabled,
+    $bg-css-var: $bg-disabled
+  );
+
+  @if $focus {
+    @include button-color-focus(
+      $color: $border-focus,
+      $color-css-var: $color-css-var
+    )
+  }
+
+  &:hover,
+  &.hover-state {
+    fill: $fill-hover;
+    fill: var($fill-hover-css-var, $fill-hover);
+    color: $fill-hover;
+    color: var($fill-hover-css-var, $fill-hover);
+  }
+
+  &:active,
+  &.active-state {
+    fill: $fill-active;
+    fill: var($fill-active-css-var, $fill-active);
+    color: $fill-active;
+    color: var($fill-active-css-var, $fill-active);
+  }
+}
+
+@mixin button-color-focus(
+  $color: $button__border-color--focus,
+  $color-css-var: --null
+) {
+  &:focus,
+  &.focus-state {
+    @include focus-styles;
+  }
+}
+
+@mixin button-color-disabled(
+  $color: $button__font-color--disabled,
+  $color-css-var: --null,
+  $bg: $button__color--disabled,
+  $bg-css-var: --null,
+  $opacity: false,
+  $opacity-css-var: --null
+) {
+  &.disabled,
+  &.md-button--disabled,
+  &[disabled] {
+    @if $opacity {
+      opacity: $opacity;
+    } @else {
+      color: $color;
+      color: var($color-css-var, $color);
+      fill: $color;
+      fill: var($color-css-var, $color);
+      background-color: $bg;
+      background-color: var($bg-css-var, $bg);
+    }
+
+    &:hover,
+    &:focus {
+      color: $color;
+      color: var($color-css-var, $color);
+      fill: $color;
+      fill: var($color-css-var, $color);
+      background-color: $bg;
+      background-color: var($bg-css-var, $bg);
+    }
+  }
+}
+
+@mixin button(
+  $bg: $button__background-color,
+  $bg-disabled: $button__color--disabled,
+  $bg-hover: $button__background-color--hover,
+  $bg-active: $button__background-color--active,
+  $border-focus: $button__border-color--focus,
+  $color: $button__font-color,
+  $color-disabled: $button__font-color--disabled,
+  $radius: false,
+  $full-width: false,
+  $focus: false,
+  $disabled: true
+) {
+  @include button-base;
+  @include button-size($padding, $full-width, $radius);
+  @include button-color(
+    $color,
+    $color-disabled,
+    $bg,
+    $bg-active,
+    $bg-disabled,
+    $bg-hover,
+    $border-focus,
+    $disabled,
+    $focus
+  );
+  @include single-transition(background-color, $button__transition-speed, ease);
+}

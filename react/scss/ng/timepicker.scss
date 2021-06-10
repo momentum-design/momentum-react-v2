@@ -1,0 +1,5 @@
+@include exports('ng-timepicker') {
+  .md-timepicker__dropdown {
+    position: absolute;
+  }
+}

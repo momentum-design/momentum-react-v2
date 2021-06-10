@@ -1,0 +1,61 @@
+/** @component page-header */
+
+@include exports('md-page-header') {
+  .md-content,
+  .#{$sites-class} {
+    .page-header {
+      min-height: 30vh;
+      padding: 4rem;
+      padding-bottom: 5rem;
+      margin-bottom: 1rem;
+      // color: $md-black-100;
+      text-align: center;
+
+      &__container {
+        @include grid-row();
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &.page-header--left {
+          text-align: left;
+          align-items: left;
+        }
+      }
+
+      &__title {
+        // color: $md-black-100;
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+        font-family: $brand-font-regular;
+        font-size: 4.5rem;
+      }
+
+      &__lead {
+        // color: $md-black-100;
+        max-width: 90%;
+        font-family: $brand-font-light;
+        font-size: rem-calc(24);
+        line-height: rem-calc(40);
+
+        @media #{$medium-up} {
+          max-width: 70%;
+        }
+
+        @media #{$large-up} {
+          max-width: 50%;
+        }
+      }
+
+      &.page-header--dark {
+        .page-header__title,
+        .page-header__lead {
+          color: $md-white-100;
+          text-shadow: 0 0 1px rgba($md-black-100, 0.75);
+        }
+      }
+    }
+  }
+}

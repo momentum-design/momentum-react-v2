@@ -1,0 +1,31 @@
+@import '../../settings/focus';
+
+@mixin focus-styles($border-color: transparent, $focus-visible-only: true) {
+  @if $border-color {
+    border-color: $border-color;
+  }
+
+  outline: none;
+  box-shadow: 0 0 4px 2px rgba($focus-color, 0.75);
+
+  @if $focus-visible-only {
+    &:not(:focus-visible) {
+      box-shadow: none;
+    }
+  }
+}
+
+@mixin tab-focus($dark: false) {
+  outline: none;
+
+  @if $dark==false {
+    box-shadow: 0 0 0 $focus__size $focus__color;
+  } @else {
+    box-shadow: 0 0 0 $focus__size $focus__color--dark;
+  }
+}
+
+@mixin remove-focus() {
+  outline: 0;
+  box-shadow: none;
+}

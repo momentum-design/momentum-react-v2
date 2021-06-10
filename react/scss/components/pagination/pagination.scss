@@ -1,0 +1,17 @@
+/** @component pagination */
+
+@include exports('md-pagination') {
+  @include exports('pagination') {
+    ul.pagination {
+      @include pagination;
+    }
+
+    .pagination-centered {
+      @include pagination-container(true);
+
+      ul.pagination {
+        @include pagination(true, false);
+      }
+    }
+  }
+}

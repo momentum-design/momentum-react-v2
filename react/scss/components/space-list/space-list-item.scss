@@ -1,0 +1,424 @@
+/** @component list-item--space */
+
+@include exports('md-list-item--space') {
+  .#{$list-item__class} {
+    &--space {
+      .#{$prefix}--compact & {
+        @include list-item-size(
+          $padding: (
+            0 rem-calc(1) 0 rem-calc(18),
+          ),
+          $height: rem-calc(36),
+          $avatar-size: rem-calc(28),
+          $avatar-font-size: rem-calc(14)
+        );
+
+        .#{$list-item__class}__header {
+          width: auto;
+          font-size: rem-calc(14);
+          line-height: rem-calc(22);
+          flex-shrink: 0;
+        }
+
+        .#{$list-item__class}__center {
+          justify-content: flex-start;
+        }
+
+        .#{$list-item__class}__subheader {
+          width: auto;
+          padding-left: rem-calc(7);
+          font-size: rem-calc(14);
+          line-height: rem-calc(22);
+          flex-grow: 1;
+        }
+
+        .#{$list-item__class}__left {
+          padding-right: rem-calc(2);
+        }
+
+        .#{$list-item__class}__right {
+          min-width: rem-calc(12);
+          margin: 0 rem-calc(10) 0 rem-calc(12);
+        }
+
+        > [class$='__center'] {
+          flex-flow: row nowrap;
+          align-items: center;
+        }
+      }
+
+      @include list-item-size(
+        $padding: $list-item--space__padding,
+        $height: $list-item--large__height,
+        $section-margin: $list-item--space__section-margin-side,
+        $avatar-size: $list-item--space__avatar__dimension,
+        $avatar-font-size: $list-item--space__avatar__font-size
+      );
+      @include list-item-color(
+        $background-color: $list-item--space__background,
+        $background-color-css-var: --null,
+        $color: $list-item--space__color,
+        $color-css-var: --md-space__background-primary,
+        $hover-bgrd-color: $list-item--space__background--hover,
+        $hover-bgrd-color-css-var: --md-background-tertiary,
+        $active-bgrd-color: $list-item--space__background--pressed,
+        $active-bgrd-color-css-var: --md-background-quaternary,
+        $header-color: $list-item--space__color--header,
+        $header-color-css-var: --md-background-secondary,
+        $subheader-color: $list-item--space__color--header,
+        $subheader-color-css-var: --md-background-secondary,
+        $focus-color: $list-item__color--dark,
+        $focus-color-css-var: --md-background-primary,
+      );
+      @include list-item--contrast(
+        $color--contrast: $list-item__color--dark--contrast,
+        $color--active--contrast: $list-item__color--dark--active--contrast,
+        $subheader-color--contrast: $list-item__color--subheader--dark--contrast,
+        $background-color--contrast: $list-item__background--dark--contrast,
+        $background-color--hover--contrast:
+          $list-item__background--hover--dark--contrast,
+        $background-color--active--contrast:
+          $list-item__background--active--dark--contrast
+      );
+
+      &-filter-summary {
+        height: $list-item--space-overview__height;
+        padding: $list-item--space-overview__padding;
+
+        > [class$='__left'] {
+          fill: $list-item--space__color;
+        }
+
+        [class*='__header'] {
+          color: $list-item--space__color;
+        }
+      }
+
+      &-search,
+      &-filter,
+      &-flag,
+      &-filter-search {
+        height: auto;
+        max-height: $list-item--search__max-height;
+        min-height: $list-item--search__min-height;
+        padding: $list-item__search__padding;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        > [class$='__left'] {
+          height: 100%;
+          padding-top: rem-calc(3);
+        }
+
+        > [class$='__center'] {
+          height: auto;
+          justify-content: flex-start;
+
+          > [class*='__header'] {
+            @include flex($jc: space-between);
+
+            flex: 1 0 auto;
+
+            > [class$='-main'] {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              flex: 1 1 100%;
+            }
+
+            > [class$='-secondary'] {
+              font-family: $brand-font-regular;
+              font-size: rem-calc(12);
+              line-height: rem-calc(18);
+              color: $list-item__color--subheader--dark;
+              flex: 1 0 auto;
+            }
+          }
+        }
+
+        [class$='__result-container'] {
+          @include flex;
+
+          width: 100%;
+
+          [class$='__attachment'] {
+            font-size: rem-calc(14);
+            line-height: rem-calc(22);
+          }
+
+          [class$='__attachment'] {
+            width: 100%;
+
+            [class$='__attachment--top'] {
+              @include flex($jc: flex-start);
+
+              [class$='-left'] {
+                height: rem-calc(22);
+                overflow: hidden;
+                font: inherit;
+                color: $list-item--space__color--header;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                flex: 1 1 100%;
+              }
+
+              [class$='-right'] {
+                padding-left: rem-calc(15);
+                fill: $md-white-100;
+              }
+            }
+
+            [class$='__attachment--bottom'] {
+              height: rem-calc(22);
+              overflow: hidden;
+              font-family: $brand-font-bold;
+              font-weight: bold;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              fill: $md-white-100;
+            }
+          }
+        }
+
+        [class$='__result'] {
+          height: auto;
+          max-height: rem-calc(44);
+          min-height: rem-calc(22);
+          font-size: rem-calc(14);
+          line-height: rem-calc(22);
+          color: $list-item--space__color--header;
+          white-space: initial;
+          flex: 1 1 100%;
+        }
+
+        [class$='--highlight'] {
+          color: $md-mint-20;
+        }
+      }
+
+      &-filter:not(.md-list-item--unread),
+      &-filter-search:not(.md-list-item--unread),
+      &-flag:not(.md-list-item--unread) {
+        &:active,
+        &.active {
+          > [class$='__center'] {
+            [class$='__header'],
+            [class$='__header--overview'] {
+              color: $list-item--space__color--header;
+            }
+          }
+        }
+
+        > [class$='__center'] {
+          [class$='__header'],
+          [class$='__header--overview'] {
+            color: $list-item--space__color--header;
+          }
+        }
+      }
+
+      &-filter-search {
+        [class$='__result'] {
+          height: rem-calc(22);
+          max-height: rem-calc(22);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      [class$='__header--overview'] {
+        color: $list-item--space__color;
+
+        > [class$='--highlight'] {
+          font-family: $brand-font-bold;
+        }
+      }
+
+      &.#{$list-item__class}--unread {
+        .#{$list-item__class}__header {
+          font-family: $brand-font-bold;
+          color: $list-item--space__color;
+        }
+      }
+
+      &:active,
+      &.active {
+        color: $list-item--space__color;
+
+        .#{$list-item__class}__header {
+          color: $list-item--space__color;
+
+          .#{$contrast-class} & {
+            color: $list-item__color--dark--active--contrast;
+          }
+        }
+      }
+
+      &-meeting {
+        padding: $list-item--space-meeting__padding;
+
+        .#{$button__class} {
+          @include button-color-focus($color: $focus__color--dark);
+        }
+
+        &--attendees {
+          @include flex;
+
+          height: 100%;
+          padding: 0 rem-calc(6) 0 rem-calc(10);
+          font-size: rem-calc(14);
+          line-height: rem-calc(12);
+          color: $list-item--space__color--header;
+          fill: $list-item--space__color--header;
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          .#{$icon__class} {
+            margin-left: rem-calc(2);
+          }
+        }
+
+        .#{$prefix}-event-overlay__children {
+          width: 240px;
+          max-height: 308px;
+          overflow: auto;
+          cursor: default;
+
+          .#{$list-item__class} {
+            @include list-item-color(
+              $background-color: $list-item__background,
+              $background-color-css-var: --null,
+              $focus-color: transparent,
+              $focus-color-css-var: --null,
+              $hover-bgrd-color: $list-item__background,
+              $hover-bgrd-color-css-var: --null,
+              $active-bgrd-color: $list-item__background,
+              $active-bgrd-color-css-var: --null,
+            );
+          }
+        }
+
+        .#{$button__class} {
+          height: rem-calc(28);
+          min-width: 0;
+          padding: 0 rem-calc(14);
+          font-size: rem-calc(14);
+        }
+      }
+
+      &-light {
+        @include list-item-color(
+          $background-color: $md-gray-05,
+          $background-color-css-var:--md-background-secondary,
+          $color: $md-gray-70,
+          $color-css-var: --md-textColor-secondary,
+          $active-color: $md-gray-100,
+          $active-color-css-var: --md-textColor-primary,
+          $hover-bgrd-color: $md-gray-10,
+          $hover-bgrd-color-css-var: --md-background-tertiary,
+          $active-bgrd-color: $md-gray-10,
+          $active-bgrd-color-css-var:--md-background-tertiary,
+          $hover-header-color: $md-gray-100,
+          $hover-header-color-css-var: --md-textColor-primary,
+          $hover-subheader-color: $md-gray-100,
+          $hover-subheader-color-css-var: --md-textColor-primary,
+          $header-color: $md-gray-70,
+          $header-color-css-var: --md-textColor-secondary,
+          $subheader-color: $md-gray-70,
+          $subheader-color-css-var: --md-textColor-secondary,
+          $focus-color: $md-gray-10,
+          $focus-color-css-var: --md-background-tertiary,
+        );
+
+        .md-icon {
+          color: $md-gray-70;
+          color: var(--md-textColor-secondary, $md-gray-70);
+        }
+
+        &.#{$list-item__class}--space-filter-summary {
+          [class*='__header'] {
+            color: $md-gray-70;
+            color: var(--md-textColor-secondary, $md-gray-70);
+          }
+        }
+
+        &.#{$list-item__class}--space-search,
+        &.#{$list-item__class}--space-filter,
+        &.#{$list-item__class}--space-flag,
+        &.#{$list-item__class}--space-filter-search {
+          > [class$='__center'] {
+            > [class*='__header'] {
+              > [class$='-secondary'] {
+                color: $md-gray-70;
+                color: var(--md-textColor-secondary, $md-gray-70);
+              }
+            }
+          }
+
+          [class$='__result-container'] {
+            [class$='__attachment'] {
+              [class$='__attachment--top'] {
+                [class$='-left'] {
+                  color: $md-gray-70;
+                  color: var(--md-textColor-secondary, $md-gray-70);
+                }
+              }
+            }
+          }
+
+          [class*='__result'] {
+            color: $md-gray-70;
+            color: var(--md-textColor-secondary, $md-gray-70);
+          }
+        }
+
+        &.#{$list-item__class}--space-filter:not(.md-list-item--unread),
+        &.#{$list-item__class}--space-filter-search:not(.md-list-item--unread),
+        &.#{$list-item__class}--space-flag:not(.md-list-item--unread) {
+          > [class$='__center'] {
+            [class$='__header'],
+            [class$='__header--overview'] {
+              color: $md-gray-70;
+              color: var(--md-textColor-secondary, $md-gray-70);
+            }
+          }
+        }
+
+        [class$='__header--overview'] {
+          color: $md-gray-70;
+          color: var(--md-textColor-secondary, $md-gray-70);
+        }
+
+        &.#{$list-item__class}--unread {
+          .#{$list-item__class}__header {
+            color: $md-gray-100;
+            color: var(--md-textColor-primary, $md-gray-100);
+          }
+        }
+
+        &.#{$list-item__class}--space-meeting {
+          [class$='--attendees'] {
+            color: $md-gray-70;
+            color: var(--md-textColor-primary, $md-gray-70);
+            fill: $md-gray-70;
+            fill: var(--md-textColor-primary, $md-gray-70);
+          }
+
+          .#{$button__class} {
+            color: $md-gray-05;
+            color: var(--md-button-primary-text-color, $md-gray-05);
+            background-color: $md-green-60;
+            background-color: var(--md-button-join-bg-color, $md-green-60);
+            &:hover {
+              background-color: $md-green-70;
+              background-color: var(--md-button-join-hover-bg-color, $md-green-70);
+            }
+          }
+        }
+      }
+    }
+  }
+}
