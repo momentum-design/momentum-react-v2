@@ -58,8 +58,8 @@ const settingsFiles = [
 ].map(file => path.resolve(__dirname, file));
 
 const iconsSettingsFiles = [
-  '../../../icons/scss/variables.scss',
-  '../../../icons/scss/symphony/variable-mapping.scss',
+  '../../node_modules/@momentum-ui/icons/scss/variables.scss',
+  '../../node_modules/@momentum-ui/icons/scss/symphony/variable-mapping.scss',
 ].map(file => path.resolve(__dirname, file));
 
 module.exports = iconsSettingsFiles.concat(settingsFiles);

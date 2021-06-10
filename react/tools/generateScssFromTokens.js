@@ -1,5 +1,5 @@
-const generateFileFromTemplate = require('@momentum-ui/utils/src/generateFileFromTemplate');
-const generateFileFromThemeToken = require('@momentum-ui/utils/src/generateFileFromThemeToken');
+const generateFileFromTemplate = require('./generateFileFromTemplate');
+const generateFileFromThemeToken = require('./generateFileFromThemeToken');
 const path = require('path');
 const colorData = require('@momentum-ui/tokens/dist/colors.json');
 const buttonColorData = require('@momentum-ui/tokens/dist/button.json');
