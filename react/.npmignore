@@ -50,7 +50,6 @@ docs.js
 src/app
 CHANGELOG.md
 coverage/
-tools/
 examples/
 .babelrc.js
 .percy.yml
