@@ -82,8 +82,8 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@commitlint/config-conventional": "^8.3.4",
-    "@momentum-ui/icons": "^8.10.0",
-    "@momentum-ui/tokens": "^1.6.2",
+    "@momentum-ui/icons": "^8.18.0",
+    "@momentum-ui/tokens": "^1.7.0",
     "@restart/context": "^2.1.4",
     "concat": "^1.0.3",
     "dom-helpers": "^3.4.0",
