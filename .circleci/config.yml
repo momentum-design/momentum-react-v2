@@ -30,7 +30,7 @@ jobs:
           at: ~/
       - run:
           name: Lint all Libraries
-          command: yarn lint:react
+          command: yarn lint
 
   build_tokens:
     <<: *image_defaults
@@ -88,10 +88,10 @@ jobs:
       - run: yarn
       - run:
           name: Unit Test react library
-          command: yarn ci:test:react
+          command: yarn test:CI
       - run:
           name: Visual regression test react library with Percy.io snapshots
-          command: yarn ci:test:react:percy
+          command: yarn test:percy
       - run:
           name: Clear Git changed files
           command: git checkout -- .
