@@ -1,250 +1,125 @@
-
 # Contributing
 
-We'd love for you to contribute to our source code and to make Momentum UI even better than it is today! Below are the guidelines to follow.
+##### We'd love for you to contribute to our source code and to make Momentum UI React even better than it is today! Below are the guidelines to follow.
 
 ## Table of Contents
 
-- [Questions, Issues or Ideas](#question)
-  - [Issues](#issue)
-  - [Features](#feature)
-- [Requirements](#requirements)
-- [Development Environment](#environment)
-  - [Installing the project](#installing)
-  - [Setup your repository](#setup)
-  - [Contibuing to the Libraries](#libraries)
-- [Commit Guidelines](#commit)
-- [Submitting a Code Review](#code-review)
+- [Questions, Issues or Ideas](../CONTRIBUTING.md#question)
+  - [Issues](../CONTRIBUTING.md#issue)
+  - [Features](../CONTRIBUTING.md#feature)
+- [Requirements](../CONTRIBUTING.md#requirements)
+- [Development Environment](../CONTRIBUTING.md#environment)
+- [Running the project locally](#running)
+- [Adding a new component](#component)
+- [Testing](#testing)
+- [Code Guidelines](#rules)
+- [Commit Guidelines](../CONTRIBUTING.md#commit)
+- [Submitting a Code Review](../CONTRIBUTING.md#code-review)
 
-## <a name="question"></a> Got a Question, Issue or Idea?
+## <a name="running"></a> Running the project locally
 
-If you have questions about how to use a component or element in Momentum-UI, please look through the documentation first. If you still need help, please direct your questions to the Toolkit Q&A Webex Teams space. [Request an Invite to the Teams space](mailto:toolkit-info@cisco.com?subject=MomentumUI%20Q%26A%20Webex%20Teams%20space&body=Please%20add%20me%20to%20the%20MomentumUI%20Q%26A%20Webex%20Teams%20space)
+* Run the start script which will build and watch the library, then serve it at localhost:4400
+  * `yarn start:react` from the root (momentum-ui) directory
+  * `yarn start` from the react (momentum-ui/react) directory
+* You can access the playground `localhost:4400/playground`
 
-### <a name="issue"></a> Found an Issue?
+## <a name="component"></a> Adding a new component
 
-If you find a bug in the source code or a mistake in the documentation, you can help us by
-submitting an issue to our [GitHub Repository](https://github.com/momentum-design/momentum-ui/issues).  Even better you can submit a Pull Request
-with a fix.
+1.  cd into the react directory: `cd react/`
+2. For a new component, create a directory in the "src/lib/" directory: `src/lib/<ComponentName>/`
+3. Add a component file for your component: `<ComponentName>/index.js`
+4. Add a "tests" directory and file for the snapshot tests: `/tests/index.spec.js`
+6. Add an "examples" directory and file for the documentation: `/examples/<componentName>-default.html`
 
-### Guidelines to report an Issue
-
-Help us to maximize the effort we can spend fixing issues and adding new features, by not reporting duplicate issues. Please provide the following information to increase the chances of your issue being dealt with quickly:
-
-*   **Overview of the Issue** - Explain what issue you are seeing and attach a screenshot if possible.
-*   **Motivation for or Use Case** - Explain why this is a bug
-*   **Momentum-UI Version(s)** - What library(ies) and version(s) are you using?
-*   **Browsers and Operating System** - Which browsers did you find the problem on?
-*   **Reproduce the Error** - Provide a live example (using [CodeSandbox](https://codesandbox.io/) or [StackBlitz](https://stackblitz.com/)) or a unambiguous set of steps.
-*   **Related Issues** - Has a similar issue been reported before?
-*   **Suggest a Fix** - If you can't fix the bug yourself, perhaps you can point to what might be causing the problem (line of code or commit)
-
-
-### <a name="feature"></a> Want a Feature?
-
-You can request a new feature by requesting it in our [Toolkit Q&A Webex Teams space](mailto:toolkit-info@cisco.com?subject=MomentumUI%20Q%26A%20Webex%20Teams%20space&body=Please%20add%20me%20to%20the%20MomentumUI%20Q%26A%20Webex%20Teams%20space). If you would like to implement a new feature then consider what kind of change it is:
-
-*   **Major Changes** that you wish to contribute to the project should be discussed first in our [Toolkit Q&A Webex Teams space](mailto:toolkit-info@cisco.com?subject=MomentumUI%20Q%26A%20Webex%20Teams%20space&body=Please%20add%20me%20to%20the%20MomentumUI%20Q%26A%20Webex%20Teams%20space) so that we can better coordinate our efforts, prevent duplication of work, and help you to craft the change so that it is successfully accepted into the project.
-*   **Small Changes** can be crafted and submitted to our [GitHub Repository](https://github.com/momentum-design/momentum-ui-angular/pulls) as a Pull Request.
-
-## <a name="requirements"></a> Requirements
-
-To contribute to @momentum-ui, you need to have [>=Node 8.10.0](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/en/) installed globally on your machine.
-
-## <a name="environment"></a> Setting Up Your Local Development Environment
-
-### <a name="setup"></a> Setup your repository
-* `git clone git@github.com:momentum-design/momentum-ui.git`
-* `origin` should be the above momentum-ui repo  (`git remote -v` to see remote details)
-* You should work from a fork of the project.  From the GitHub repository, click on the Fork button on the upper right-hand side to fork.
-* Add the fork as a remote to the project:  `git remote add <username> https://github.com/<username>/momentum-ui.git`  (replace <username> with your username)
-
-### <a name="installing"></a> Installing the project
-
-*   install node.js version &gt;=v 8.0.0: [http://nodejs.org/download/](http://nodejs.org/download/)
-*   install [Yarn](https://yarnpkg.com/en/) globally if you do not already have it on your machine: `npm install yarn -g`
-*   Run package managers in the cloned project to pull dependencies: `yarn install && yarn bootstrap`
-
-### <a name="libraries"></a> Contibuing to the Libraries
-
-Check out the individual CONTRIBUTING docs for the library that you wish to contribute to for library specific instructions:
-- [@momentum-ui/core](/core/CONTRIBUTING.md)
-- [@momentum-ui/react](/react/CONTRIBUTING.md)
-- [@momentum-ui/angular](/angular/CONTRIBUTING.md)
-
-
-
-## <a name="commit"></a> Git Commit Guidelines
-
-We have very precise rules over how our git commit messages can be formatted.  This leads to **more
-readable messages** that are easy to follow when looking through the **project history**.  But also,
-we use the git commit messages to **generate the Angular change log**.
-
-### Commit Message Format
-Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
-format that includes a **type**, a **scope** and a **subject**:
-
-```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
+### Your components directory should look like this:
+``` bash
+└── src
+    └── lib
+        └── <Component>                     # component directory
+            ├── index.js                    # component file
+            ├── examples                    # examples directory
+            |   └── <Component>Default.js   # default example component
+            └── tests                       # tests directory
+                ├── index.spec.js           # component unit test
+                └── __snapshots__           # snapshots directory (will be generated Jest)
+                    └── index.spec.js.snap  # snapshots file (will be generated by Jest)
 ```
 
-The **header** is mandatory and the **scope** of the header is optional.
 
-Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
-to read on GitHub as well as in various git tools.
+## <a name="testing"></a> Testing
 
-Footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
+All UI components of `momentum-ui-react` are unit-tested using two approaches:
 
-Samples: (even more [samples](https://github.com/angular/angular/commits/master))
+1. [Jest](http://facebook.github.io/jest/) (Typically for snapshot testing)
+    * Jest is a JavaScript test runner maintained and recommended by Facebook. Jest is a batteries included unit testing framework and few of its benefits includes `being fast`, `feature rich`, and `integrates perfectly with Babel`. Jest provide `Painless JavaScript Testing`.
+    * Snapshot tests are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
+    * A typical snapshot test case for a web app renders a UI component, takes a screenshot, then compares it to a reference image stored alongside the test. The test will fail if the two images do not match: either the change is unexpected, or the screenshot needs to be updated to the new version of the UI component.
+    * Snapshot testing covers most cases of Unit testing.
+2. [Enzyme](http://airbnb.io/enzyme/) (Typically for Functional/DOM testing)
+    * Enzyme's API is meant to be intuitive and flexible by mimicking jQuery's API for DOM manipulation and traversal.
+    * Enzyme works well for functionality testing with shallow rendering of components.
+    * It features jQuery like API for quick DOM traversal.
+    * Use it when a runtime feature is to be tested that cannot be covered using snapshot testing, for example: Click behavior on a component.
+    * All properties used in components are invariably tested using inbuilt `React PropTypes`.
 
+
+## <a name="documentation"></a> Documentation
+
+  * The document site related to component usage/example is documented using components within the examples directory in each component directory.
+
+  * Any change/creation of additional components should include modified example file.
+
+## <a name="design"></a> Design Principles
+
+### Components
+
+  * `Momentum UI React` follows **components and their compositions** based architecture with focus on simplicity, flexibility and performance.
+
+  * Only statefull components are implemented as subclass of `React.Component`. Others are simple stateless functions or PureComponents.
+
+  * Source is written is ES6 and processed through babel to generate minified ES6 modules (ready to `import`).
+
+## <a name="rules"></a> Coding Guidelines
+
+* Prefer ES6 classes over prototypes.
+
+```js
+class Abc {
+  publicmethod() {}
+  render() {}
+}
 ```
-docs(changelog): update change log to beta.5
+
+* Prefer arrow functions =>, over the function keyword except when defining classes or methods.
+* Use PascalCase for classes and components, lowerCamelCase for variables and functions, SCREAMING_SNAKE_CASE for constants, \_singleLeadingUnderscore for private variables and functions.
+* Prefer template strings over string concatenation.
+
+```js
+let name = 'World!';
+let concatenatedvalue_correct = \`Hello ${name} everyone!\`; // ✔
+let concatenatedvalue_wrong = 'Hello ' + name + ' everyone'; // ✕
 ```
+
+* Prefer promises over callbacks.
+* Prefer array functions like map and forEach over for loops.
+* Use const for declaring variables that will never be re-assigned, and let otherwise.
+* Avoid var to declare variables.
+* Use lowercase names for folder names and PascalCase for component folder names.
+
+Please follow the coding style of the current code base. Momentum UI React uses [eslint](http://eslint.org/) for ES6/JS and [stylelint](https://stylelint.io/) for scss/css, so if possible, enable linting in your editor to get realtime feedback. The linting rules can be run manually as below
+
+```js
+npm run lint
 ```
-fix(release): need to depend on latest rxjs and zone.js
 
-The version in our package.json gets copied to the one we publish, and users need the latest of these.
-```
+### Tasks
 
-### Revert
-If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
+  All tasks are made available as `npm` or `yarn` scripts without any bloat that comes with usual task runners (like `grunt`, `gulp`, etc).
 
-### Type
-Must be one of the following:
+### Utils
 
-* **feat**: A new feature
-* **fix**: A bug fix
-* **docs**: Documentation only changes
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing
-  semi-colons, etc)
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **perf**: A code change that improves performance
-* **test**: Adding missing tests or correcting existing tests
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-* **chore**: Other changes that don't modify `src` or `test` files
-
-### Scope
-The scope could be anything specifying place of the commit change. For example
-`Compiler`, `ElementInjector`, etc.
-
-### Subject
-The subject contains succinct description of the change:
-
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize first letter
-* no dot (.) at the end
-
-### Body
-Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
-The body should include the motivation for the change and contrast this with previous behavior.
-
-### Footer
-The footer should contain any information about **Breaking Changes** and is also the place to
-reference GitHub issues that this commit **Closes**.
-
-**Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
-
-**Referencing issues** Closed bugs should be listed on a separate line in the footer prefixed with "Closes" keyword like this:
-
-`Closes #234`
-
-or in case of multiple issues:
-
-`Closes #123, Closes #245, Closes #992`
-
-## <a name="code-review"></a> Submitting a Code Review
-
-*   Before pushing to a PR, always use `git pull --rebase`
-*   After git pulls, run `yarn bootstrap:clean` at the repo root (momentum-ui) to make sure to pull new dependencies.
-(For setting up your [local environment, see above](#environment).)
-
-Before you submit your pull request consider the following guidelines:
-
-* Search [GitHub](https://github.com/momentum-design/momentum-ui-angular/pulls) for an open or closed Pull Request
-  that relates to your submission. You don't want to duplicate effort.
-* Make your changes in a new git branch:
-
-     ```shell
-     git checkout -b my-fix-branch master
-     ```
-
-* Create your patch, **including appropriate test cases**.
-* Follow our [Coding Rules](#rules).
-* Commit your changes using a descriptive commit message that follows our
-  [commit message conventions](#commit-message-format). Adherence to the [commit message conventions](#commit-message-format)
-  is required because release notes are automatically generated from these messages.
-
-     ```shell
-     git commit -a
-     ```
-  Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
-
-* Build your changes locally to ensure all the tests pass:
-
-    ```shell
-    yarn build
-    ```
-
-* Push your branch to GitHub:
-
-    ```shell
-    git push <username> my-fix-branch
-    ```
-
-* In GitHub, send a pull request to `momentum-design/momentum-ui:master`.
-* If we suggest changes then:
-  * Make the required updates.
-  * Re-run the @momentum-ui test suite to ensure tests are still passing.
-  * Commit your changes to your branch (e.g. `my-fix-branch`).
-  * Push the changes to your GitHub repository (this will update your Pull Request).
-
-* If the PR gets too outdated we may ask you to rebase and force push to update the PR:
-
-    ```shell
-    git rebase master -i
-    git push <username> my-fix-branch -f
-    ```
-
-*WARNING. Squashing or reverting commits and forced push thereafter may remove GitHub comments
-on code that were previously made by you and others in your commits.*
-
-That's it! Thank you for your contribution!
-
-#### After your pull request is merged
-
-After your pull request is merged, you can safely delete your branch and pull the changes
-from the main (upstream) repository:
-
-* Delete the remote branch on GitHub either through the GitHub web UI or your local shell as follows:
-
-    ```shell
-    git push <username> --delete my-fix-branch
-    ```
-
-* Check out the master branch:
-
-    ```shell
-    git checkout master -f
-    ```
-
-* Delete the local branch:
-
-    ```shell
-    git branch -D my-fix-branch
-    ```
-
-* Update your master with the latest upstream version:
-
-    ```shell
-    git pull --ff upstream master
-    ```
+  * There are few shared utility that are kept aside as `helpers` under 'src' but outside `components` folder.
 
 ## License
 
-By contributing your code to the `@momentum-ui` GitHub repository, you agree to license your contribution under the MIT license.
-
-
+By contributing your code to the `@momentum-ui/react` GitHub repository, you agree to license your contribution under the MIT license.

@@ -1,69 +1,107 @@
-# @momentum-ui
+# Momentum UI React
 
-[![CircleCI](https://img.shields.io/circleci/project/github/momentum-design/momentum-ui/master.svg)](https://circleci.com/gh/momentum-design/momentum-ui/)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
-[![license](https://img.shields.io/github/license/momentum-design/momentum-ui.svg?color=blueviolet)](https://github.com/momentum-design/momentum-ui/blob/master/LICENSE)
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+[![CircleCI](https://img.shields.io/circleci/build/github/momentum-design/momentum-ui)](https://circleci.com/gh/momentum-design/momentum-ui/)
+![npm (scoped)](https://img.shields.io/npm/v/@momentum-ui/react.svg)
+[![license](https://img.shields.io/github/license/momentum-design/momentum-ui.svg?color=blueviolet)](https://github.com/momentum-design/momentum-ui/blob/master/react/LICENSE)
 
+**`Momentum UI React`** is a resuable, component based, flexible React library available as
+npm module. It provides set of UI components and utilities based on [Momentum Design](https://momentum.design).
 
-> Momentum UI
+The git repo can be cloned from the [momentum-ui monorepo](https://github.com/momentum-design/momentum-ui) and found at [https://github.com/momentum-design/momentum-ui/tree/master/react](https://github.com/momentum-design/momentum-ui/tree/master/react).
 
-Momentum UI is a collection of UI libraries for implementing [Momentum Design](https://momentum.design) into web applications and websites.
+Checkout the [documentation](https://momentum.design) for documentation and live examples.
 
-## Table of Contents
+## Goals
+* **Independent** — pick and use only the components you need.
+* **Styled** — override styles of components by `className` and `style` properties.
+* **Customizable** — properties allow many different config options to suit your app.
+* **Performant** - high performance guaranteed with use of CSS3 Flexbox and non-bloated architecture.
+* **Reliable** — each component is rigorously tested.
 
-- [Background](#background)
-- [Usage](#usage)
-- [Requirements](#requirements)
-- [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
+## Getting Started
 
-## Background
+To use @momentum-ui/react in your application follow below steps:
 
-These libraries allow web developers to quickly and easily create Momentum Design web apps and sites. We provide libraries built on HTML/CSS and many of the modern JavaScript frameworks, including [ReactJS](https://reactjs.org/), [Angular](https://angular.io/) and [AngularJS](https://angularjs.org/). We use a [Lerna](http://lernajs.io) monorepo to manage all of the libraries in one repository.
+### Step 1 - Install and add @momentum-ui/react to your npm package dependencies
 
-## Usage
+#### Using npm
 
-The individual libraries are distributed through [npm](https://www.npmjs.com/search?q=momentum-ui). You can find information on usage and installation in each of their individual README files.
-- [@momentum-ui/core](/core/README.md)
-- [@momentum-ui/react](/react/README.md)
-- [@momentum-ui/icons](/icons/README.md)
-
-## Requirements
-
-To contribute to @momentum-ui, you need to have [>=Node 8.10.0](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/en/) installed globally on your machine.
-
-## Development
-
-Setting up your development environment:
-
-1. Clone this repo using a git client (e.g. `git clone https://github.com/momentum-design/momentum-ui.git`)
-1. Run `yarn install` from the root of the repo.
-1. Run `yarn bootstrap` from the root of the repo.
-1. Run `yarn start:all` to start the playground app for all libraries or `yarn start:<library>` to only start the library the you are working in.
-
-NOTE: Install watchman with `brew install watchman` if you are having the following or similar error after an initial `yarn start`:
-
-``` bash
-2017-09-05 00:44 node[68587] (FSEvents.framework) FSEventStreamStart: register_with_server: ERROR: f2d_register_rpc() => (null) (-22)
-    2017-09-05 00:44 node[68587] (FSEvents.framework) FSEventStreamStart: register_with_server: ERROR: f2d_register_rpc() => (null) (-22)
-    events.js:160
-          throw er; // Unhandled 'error' event
-          ^
-
-    Error: Error watching file for changes: EMFILE
-        at exports._errnoException (util.js:1022:11)
-        at FSEvent.FSWatcher._handle.onchange (fs.js:1406:11)
+```js
+npm i -S @momentum-ui/react
 ```
 
+#### Using yarn
 
-## Contributing
+```js
+yarn add @momentum-ui/react
+```
 
-PRs are welcome! See [CONTRIBUTING](CONTRIBUTING.md) for details.
+### Step 2. Import Momentum UI React components in your app
 
-## License
+Use ES6 import statement to import the component that you want to use:
 
-&copy;2013-2020 Cisco Systems, Inc. and/or its affiliates. All Rights Reserved.
+```jsx
+import { Button } from '@momentum-ui/react';
+// or
+import Button from from '@momentum-ui/react/button';
+...
+...
 
-See [LICENSE](LICENSE) for details.
+<div className="container">
+  <Button name="primary" size="large">Welcome to Momentum UI React !</Button>
+</div>
+```
+
+## Tools & Frameworks
+
+### Package manager
+
+* [yarn](https://github.com/yarnpkg/yarn) - BSD-2-Clause
+
+### Base framework
+
+* [react](https://github.com/facebook/react) - MIT
+
+* [react-dom](https://github.com/facebook/react) - MIT
+
+### Momentum Design System Look & Feel
+
+* [@momentum-ui/core](https://github.com/momentum-design/momentum-ui-core) - MIT
+* [@momentum-ui/icons](https://github.com/momentum-design/momentum-ui-icons) - MIT
+
+### ES6 Minifier
+
+* [babili](https://github.com/babel/babili) - MIT
+
+### ES6 Lint
+
+* [eslint](https://github.com/eslint/eslint) - MIT
+
+### CSS/SCSS Lint
+
+* [stylelint](https://github.com/stylelint/stylelint) - MIT
+
+### CSS Utility Tool
+
+* [normalize](https://github.com/necolas/normalize.css) - MIT
+
+* [postcss](https://github.com/postcss/postcss) - MIT
+
+### JsUnit Testing framework
+
+* [jest](https://github.com/facebook/jest) - BSD-3-Clause
+
+* [enzyme](https://github.com/airbnb/enzyme) - MIT
+
+
+## Contribution
+
+Want to contribute? Why not go through [Developer's Guide](./GETTING_STARTED.md) to understand more technical details about the project and contribution guidelines to be adhered.
+
+## Changelog
+
+The changelog can be found [here](./CHANGELOG.md).
+
+## Copyright
+
+Copyright (c) 2017 Cisco Systems
