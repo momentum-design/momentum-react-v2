@@ -46,6 +46,7 @@
     "copy:CI": "cp ./src/app/_redirects ./dist/",
     "copy:examples": "node ./tools/copyExamples.js",
     "ci:publishCDN": "yarn pushToS3",
+    "cypress:verify": "cypress verify",
     "pushToS3": "node ../tools/pushToS3.js --library=react",
     "lint": "esw **/webpack.config.* src config --color",
     "lint:watch": "yarn lint --watch",
