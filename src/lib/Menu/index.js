@@ -231,6 +231,7 @@ class Menu extends React.Component {
       return char.length === 1 && char.match(/\S/);
     };
     let flag = false;
+    let stopImmediatePropagation = false;
 
     switch (e.which) {
       case 38://up
@@ -251,18 +252,21 @@ class Menu extends React.Component {
         flag = true;
         break;
 
-      case 37: //left
-        currentElements.length - 1 &&
-        this.setState(state => ({
-          currentElements: state.currentElements.slice(0, currentElements.length - 1),
-          activeElement: null,
-          listContext: {
-            focus: state.currentElements.length
-              ? state.currentElements[0]
-              : state.listContext.focus,
-            active: []
-          }
-        }));
+      case 27:
+      case 37: //escape or left
+        if (currentElements.length - 1) {
+          stopImmediatePropagation = true;
+          this.setState(state => ({
+            currentElements: state.currentElements.slice(0, currentElements.length - 1),
+            activeElement: null,
+            listContext: {
+              focus: state.currentElements.length
+                ? state.currentElements[0]
+                : state.listContext.focus,
+              active: []
+            }
+          }));
+        }
         flag = true;
         break;
 
@@ -288,6 +292,7 @@ class Menu extends React.Component {
     if (flag) {
       e.stopPropagation();
       e.preventDefault();
+      stopImmediatePropagation && e.nativeEvent.stopImmediatePropagation();
     }
   }
 
