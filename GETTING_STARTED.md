@@ -105,17 +105,19 @@ momentum-ui-react
 
 * Each component folder (say button) houses JSX source code and `__snapshots__` folder.
 
-At the time of publishing only minimal files and folders are included in module to keep download / installation faster and save space on your disk. Post installation of colab-ui-react NPM
+At the time of publishing only minimal files and folders are included in module to keep download / installation faster and save space on your disk. Post installation of momentum-react-v2 NPM
 module it will have following directory structure:
 
 ```sh
-momentum-ui-react
+momentum-react-v2
 │  README.md
 │  LICENSE
 │  package.json
-|  index.js
 |  ...
+└───scss
+|  |  momentum-ui.scss
 └───lib
+|  └───index.js
 |  └───Button
 |  |  |  index.js
 |  |  |  ...
@@ -124,9 +126,10 @@ momentum-ui-react
 |  |  ...
 |
 └───bundles
-|  |  ...
-└───dist
-|  |  ...
+|  |  index.js
+└───es
+|  └───Button
+|  |    index.js
 ```
 
 As evident above, only assets (dist, bundles, lib) are part of published module.
