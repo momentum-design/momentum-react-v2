@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run: yarn global add @percy/agent lerna
-      - run: yarn bootstrap
+      - run: yarn
       - run: npm rebuild node-sass
       - run: yarn cypress:verify
       - persist_to_workspace:
@@ -30,7 +30,7 @@ jobs:
           at: ~/
       - run:
           name: Lint all Libraries
-          command: yarn lint:react
+          command: yarn lint
 
   build_tokens:
     <<: *image_defaults
@@ -68,7 +68,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: yarn bootstrap
+      - run: yarn
       - run:
           name: Test core library with Percy.io snapshots
           command: yarn ci:test:core:percy
@@ -85,13 +85,13 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: yarn bootstrap
+      - run: yarn
       - run:
           name: Unit Test react library
-          command: yarn ci:test:react
+          command: yarn test:CI
       - run:
           name: Visual regression test react library with Percy.io snapshots
-          command: yarn ci:test:react:percy
+          command: yarn test:percy
       - run:
           name: Clear Git changed files
           command: git checkout -- .
@@ -101,7 +101,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: yarn bootstrap
+      - run: yarn
       - run:
           name: Build web components library
           command: yarn build:wc
@@ -120,7 +120,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: yarn bootstrap
+      - run: yarn
       - run:
           name: Build web components library
           command: yarn build:wc
@@ -136,7 +136,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: yarn bootstrap
+      - run: yarn
       - run:
           name: Build web components library
           command: yarn build:wc
@@ -164,7 +164,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: yarn bootstrap
+      - run: yarn
       - run:
           name: Integration testing for www with Cypress.io
           command: yarn ci:test:www
@@ -179,7 +179,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: yarn global add @percy/agent lerna && yarn install --frozen-lockfile --non-interactive
-      - run: yarn bootstrap
+      - run: yarn
       - run: npm rebuild node-sass
       - run: yarn cypress:verify
       - run:
@@ -231,7 +231,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: yarn global add @percy/agent lerna && yarn install --frozen-lockfile --non-interactive
-      - run: yarn bootstrap
+      - run: yarn
       - run: npm rebuild node-sass
       - run:
           name: Build website

@@ -6,7 +6,7 @@ module.exports = {
     "import/resolver": {
       "alias": {
         "map": [
-          ["@momentum-ui/react", path.resolve(__dirname, 'react/src', 'lib')]
+          ["@momentum-ui/react", path.resolve(__dirname, 'src', 'lib')]
         ]
       },
       "node": {
@@ -34,7 +34,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended"
   ],
   "plugins": ["react", "jsx-a11y", "cypress"],
-  "parser": path.resolve(__dirname, 'react', 'node_modules', 'babel-eslint'),
+  "parser": path.resolve(__dirname, 'node_modules', 'babel-eslint'),
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
