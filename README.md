@@ -1,13 +1,12 @@
 # Momentum UI React
 
-[![CircleCI](https://img.shields.io/circleci/build/github/momentum-design/momentum-ui)](https://circleci.com/gh/momentum-design/momentum-ui/)
 ![npm (scoped)](https://img.shields.io/npm/v/@momentum-ui/react.svg)
 [![license](https://img.shields.io/github/license/momentum-design/momentum-ui.svg?color=blueviolet)](https://github.com/momentum-design/momentum-ui/blob/master/react/LICENSE)
 
-**`Momentum UI React`** is a resuable, component based, flexible React library available as
+**`Momentum React v2`** is a resuable, component based, flexible React library available as
 npm module. It provides set of UI components and utilities based on [Momentum Design](https://momentum.design).
 
-The git repo can be cloned from the [momentum-ui monorepo](https://github.com/momentum-design/momentum-ui) and found at [https://github.com/momentum-design/momentum-ui/tree/master/react](https://github.com/momentum-design/momentum-ui/tree/master/react).
+The git repo can be cloned from [https://github.com/momentum-design/momentum-react-v2](https://github.com/momentum-design/momentum-react-v2).
 
 Checkout the [documentation](https://momentum.design) for documentation and live examples.
 
@@ -20,21 +19,7 @@ Checkout the [documentation](https://momentum.design) for documentation and live
 
 ## Getting Started
 
-To use @momentum-ui/react in your application follow below steps:
-
-### Step 1 - Install and add @momentum-ui/react to your npm package dependencies
-
-#### Using npm
-
-```js
-npm i -S @momentum-ui/react
-```
-
-#### Using yarn
-
-```js
-yarn add @momentum-ui/react
-```
+This module is currently not published on npm. To use it, build and host it somewhere then alias `@momentum-ui/react` (the old monorepo) to the new module location.
 
 ### Step 2. Import Momentum UI React components in your app
 
@@ -104,4 +89,4 @@ The changelog can be found [here](./CHANGELOG.md).
 
 ## Copyright
 
-Copyright (c) 2017 Cisco Systems
+Copyright (c) 2021 Cisco Systems

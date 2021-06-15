@@ -6,15 +6,15 @@ It's fairly simple and easy. Just follow three simple steps as explained below:
 
 ### 2. Clone the repo
 
-Clone the `momentum-ui-react` git repo:
+Clone the `momentum-react-v2` git repo:
 
 ```sh
-git clone git@github.com:momentum-design/momentum-ui-react.git
+git clone git@github.com:momentum-design/momentum-react-v2.git
 ```
 
 ### 3. Install all dependencies & devdependencies
 
-From the command line navigate to 'momentum-ui-react' directory created in previous step
+From the command line navigate to 'momentum-react-v2' directory created in previous step
 and run following command:
 
 ```sh

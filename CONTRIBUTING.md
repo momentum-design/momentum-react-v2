@@ -1,35 +1,27 @@
 # Contributing
 
-##### We'd love for you to contribute to our source code and to make Momentum UI React even better than it is today! Below are the guidelines to follow.
+##### Below are the guidelines to follow.
 
 ## Table of Contents
 
-- [Questions, Issues or Ideas](../CONTRIBUTING.md#question)
-  - [Issues](../CONTRIBUTING.md#issue)
-  - [Features](../CONTRIBUTING.md#feature)
-- [Requirements](../CONTRIBUTING.md#requirements)
-- [Development Environment](../CONTRIBUTING.md#environment)
+- [Requirements](#requirements)
 - [Running the project locally](#running)
 - [Adding a new component](#component)
 - [Testing](#testing)
 - [Code Guidelines](#rules)
-- [Commit Guidelines](../CONTRIBUTING.md#commit)
-- [Submitting a Code Review](../CONTRIBUTING.md#code-review)
 
 ## <a name="running"></a> Running the project locally
 
 * Run the start script which will build and watch the library, then serve it at localhost:4400
-  * `yarn start:react` from the root (momentum-ui) directory
-  * `yarn start` from the react (momentum-ui/react) directory
+  * `yarn start` from the root
 * You can access the playground `localhost:4400/playground`
 
 ## <a name="component"></a> Adding a new component
 
-1.  cd into the react directory: `cd react/`
-2. For a new component, create a directory in the "src/lib/" directory: `src/lib/<ComponentName>/`
-3. Add a component file for your component: `<ComponentName>/index.js`
-4. Add a "tests" directory and file for the snapshot tests: `/tests/index.spec.js`
-6. Add an "examples" directory and file for the documentation: `/examples/<componentName>-default.html`
+1. For a new component, create a directory in the "src/lib/" directory: `src/lib/<ComponentName>/`
+2. Add a component file for your component: `<ComponentName>/index.js`
+3. Add a "tests" directory and file for the snapshot tests: `/tests/index.spec.js`
+4. Add an "examples" directory and file for the documentation: `/examples/<componentName>-default.html`
 
 ### Your components directory should look like this:
 ``` bash
@@ -48,7 +40,7 @@
 
 ## <a name="testing"></a> Testing
 
-All UI components of `momentum-ui-react` are unit-tested using two approaches:
+All UI components of `momentum-react-v2` are unit-tested using two approaches:
 
 1. [Jest](http://facebook.github.io/jest/) (Typically for snapshot testing)
     * Jest is a JavaScript test runner maintained and recommended by Facebook. Jest is a batteries included unit testing framework and few of its benefits includes `being fast`, `feature rich`, and `integrates perfectly with Babel`. Jest provide `Painless JavaScript Testing`.
@@ -73,7 +65,7 @@ All UI components of `momentum-ui-react` are unit-tested using two approaches:
 
 ### Components
 
-  * `Momentum UI React` follows **components and their compositions** based architecture with focus on simplicity, flexibility and performance.
+  * `Momentum React v2` follows **components and their compositions** based architecture with focus on simplicity, flexibility and performance.
 
   * Only statefull components are implemented as subclass of `React.Component`. Others are simple stateless functions or PureComponents.
 
@@ -122,4 +114,4 @@ npm run lint
 
 ## License
 
-By contributing your code to the `@momentum-ui/react` GitHub repository, you agree to license your contribution under the MIT license.
+By contributing your code to the `momentum-react-v2` GitHub repository, you agree to license your contribution under the MIT license.
