@@ -1,6 +1,5 @@
 # Momentum UI React
 
-![npm (scoped)](https://img.shields.io/npm/v/@momentum-ui/react.svg)
 [![license](https://img.shields.io/github/license/momentum-design/momentum-ui.svg?color=blueviolet)](https://github.com/momentum-design/momentum-ui/blob/master/react/LICENSE)
 
 **`Momentum React v2`** is a resuable, component based, flexible React library available as

@@ -101,7 +101,7 @@ let concatenatedvalue_wrong = 'Hello ' + name + ' everyone'; // ✕
 Please follow the coding style of the current code base. Momentum UI React uses [eslint](http://eslint.org/) for ES6/JS and [stylelint](https://stylelint.io/) for scss/css, so if possible, enable linting in your editor to get realtime feedback. The linting rules can be run manually as below
 
 ```js
-npm run lint
+yarn run lint
 ```
 
 ### Tasks
