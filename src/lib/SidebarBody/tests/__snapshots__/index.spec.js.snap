@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SidebarBody /> should render a SidebarBody 1`] = `
-<div
-  className="md-sidebar__body"
-/>
+<SidebarBody
+  className=""
+>
+  <div
+    className="md-sidebar__body"
+  />
+</SidebarBody>
 `;

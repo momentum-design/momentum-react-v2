@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import SidebarBody from '@momentum-ui/react/SidebarBody';
 
 describe('<SidebarBody />', () => {
   it('should render a SidebarBody', () => {
-    const wrapper = shallow(<SidebarBody />);
+    const wrapper = mount(<SidebarBody />);
 
     expect(wrapper).toMatchSnapshot();
   });

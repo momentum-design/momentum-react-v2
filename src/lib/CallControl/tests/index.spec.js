@@ -4,7 +4,7 @@ import { CallControl } from '@momentum-ui/react';
 
 describe('tests for <CallControl />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<CallControl type='microphone-muted' ariaLabel='test' />);
+    const container = mount(<CallControl type='microphone-muted' ariaLabel='test' />);
 
     expect(container).toMatchSnapshot();
   });

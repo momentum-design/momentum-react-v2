@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <FormContent /> should match SnapShot 1`] = `
-<div
-  className="section__content"
-/>
+<FormContent
+  id="test"
+>
+  <div
+    className="section__content"
+  />
+</FormContent>
 `;

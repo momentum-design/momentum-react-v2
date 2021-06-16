@@ -15,7 +15,7 @@ describe('tests for <MenuItem />', () => {
   };
 
   it('should render a MenuItem', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <MenuItem label="one"/>
     );
     expect(wrapper).toMatchSnapshot();

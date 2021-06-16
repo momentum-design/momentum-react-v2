@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <InputMessage /> should match text SnapShot 1`] = `
-<div
-  className="md-input__message"
-  role="alert"
+<InputMessage
+  message="test"
 >
-  test
-</div>
+  <div
+    className="md-input__message"
+    role="alert"
+  >
+    test
+  </div>
+</InputMessage>
 `;

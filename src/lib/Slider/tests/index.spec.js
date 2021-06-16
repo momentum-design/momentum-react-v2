@@ -12,7 +12,7 @@ describe('tests for <Slider />', () => {
 				high: 40
 			}
 		};
-		const container = shallow(<Slider {...props} />);
+		const container = mount(<Slider {...props} />);
 
 		expect(container).toMatchSnapshot();
 	});

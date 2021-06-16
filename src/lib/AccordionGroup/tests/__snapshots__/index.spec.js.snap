@@ -1,24 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <AccordionGroup /> should match SnapShot 1`] = `
-<div
-  aria-expanded={false}
-  className="md-accordion__group"
+<AccordionGroup
+  className=""
+  disabled={false}
+  focus={false}
+  isExpanded={false}
+  onClick={null}
+  onKeyDown={null}
+  showSeparator={false}
 >
-  <AccordionHeader
-    className=""
-    disabled={false}
-    focus={false}
-    height=""
-    key=".0"
-    showSeparator={false}
-  />
-  <AccordionContent
-    className=""
-    disabled={false}
-    focus={false}
-    key=".1"
-    showSeparator={false}
-  />
-</div>
+  <div
+    aria-expanded={false}
+    className="md-accordion__group"
+  >
+    <AccordionHeader
+      className=""
+      disabled={false}
+      focus={false}
+      height=""
+      key=".0"
+      showSeparator={false}
+    >
+      <div
+        className="md-accordion__header"
+        onClick={null}
+        onKeyDown={null}
+        role="button"
+        tabIndex={0}
+      >
+        <span
+          className="md-accordion__header-icon"
+        />
+      </div>
+    </AccordionHeader>
+    <AccordionContent
+      className=""
+      disabled={false}
+      focus={false}
+      key=".1"
+      showSeparator={false}
+    >
+      <div
+        className="md-accordion__content"
+      />
+    </AccordionContent>
+  </div>
+</AccordionGroup>
 `;

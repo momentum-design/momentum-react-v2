@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Badge /> should match SnapShot 1`] = `
-<span
-  className="md-badge"
-/>
+<Badge
+  className=""
+  rounded={false}
+>
+  <span
+    className="md-badge"
+  />
+</Badge>
 `;

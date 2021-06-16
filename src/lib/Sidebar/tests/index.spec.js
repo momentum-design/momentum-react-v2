@@ -8,7 +8,7 @@ import {
 
 describe('<Sidebar />', () => {
   it('should render a Sidebar', () => {
-    const wrapper = shallow(<Sidebar />);
+    const wrapper = mount(<Sidebar />);
 
     expect(wrapper).toMatchSnapshot();
   });

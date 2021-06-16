@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { CardSection } from '@momentum-ui/react';
 
 describe('tests for <CardSection />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<CardSection id="test" />);
+    const container = mount(<CardSection id="test" />);
 
     expect(container).toMatchSnapshot();
   });

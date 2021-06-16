@@ -26,7 +26,7 @@ describe('tests for <AlertCall />', () => {
   ];
 
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <AlertCall
         caller={caller1}
         show
@@ -38,7 +38,7 @@ describe('tests for <AlertCall />', () => {
   });
 
   it('should match SnapShot with devices', () => {
-    const container = shallow(
+    const container = mount(
       <AlertCall
         caller={caller1}
         devices={devices}

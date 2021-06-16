@@ -4,7 +4,7 @@ import { AccordionHeader } from '@momentum-ui/react';
 
 describe('tests for <AccordionHeader />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<AccordionHeader />);
+    const container = mount(<AccordionHeader />);
 
     expect(container).toMatchSnapshot();
   });

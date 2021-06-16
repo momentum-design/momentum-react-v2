@@ -8,7 +8,7 @@ describe('tests for <Menu />', () => {
   });
 
   it('should render a Menu', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Menu>
         <MenuItem label="one" />
       </Menu>

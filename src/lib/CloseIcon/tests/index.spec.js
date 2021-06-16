@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { CloseIcon } from '@momentum-ui/react';
 
 describe('tests for <CloseIcon />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<CloseIcon className='test' />);
+    const container = mount(<CloseIcon className='test' />);
 
     expect(container).toMatchSnapshot();
   });

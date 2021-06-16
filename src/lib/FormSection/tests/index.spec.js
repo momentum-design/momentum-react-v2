@@ -4,7 +4,7 @@ import { FormSection } from '@momentum-ui/react';
 
 describe('tests for <FormSection />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<FormSection id="test" title="test" />);
+    const container = mount(<FormSection id="test" title="test" />);
 
     expect(container).toMatchSnapshot();
   });

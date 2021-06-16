@@ -1,12 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <ListSeparator /> should match SnapShot 1`] = `
-<div
-  className="md-list-separator"
-  style={Object {}}
+<ListSeparator
+  className={null}
+  lineColor={null}
+  margin={null}
+  text={null}
+  textColor={null}
+  textPadding={null}
 >
-  <span
-    className="md-list-separator__container"
-  />
-</div>
+  <div
+    className="md-list-separator"
+    style={Object {}}
+  >
+    <span
+      className="md-list-separator__container"
+    />
+  </div>
+</ListSeparator>
 `;

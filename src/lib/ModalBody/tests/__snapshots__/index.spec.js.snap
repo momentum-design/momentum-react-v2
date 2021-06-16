@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <ModalBody /> should match SnapShot 1`] = `
-<div
-  className="md-modal__body"
+<ModalBody
+  className=""
   id="test"
-/>
+>
+  <div
+    className="md-modal__body"
+    id="test"
+  />
+</ModalBody>
 `;

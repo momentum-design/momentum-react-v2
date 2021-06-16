@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <FormSubSection /> should match SnapShot 1`] = `
-<div
-  className="sub-section"
-/>
+<FormSubSection
+  description=""
+  id="test"
+  label=""
+>
+  <div
+    className="sub-section"
+  />
+</FormSubSection>
 `;

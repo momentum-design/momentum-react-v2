@@ -1,30 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Topbar /> should render a Topbar 1`] = `
-<div
-  className="md-top-bar md-top-bar--dark"
-  role="navigation"
+<Topbar
+  anchor={null}
+  brandAnchorElement={null}
+  className=""
+  color="dark"
+  fixed={false}
+  icon="icon-cisco-logo"
+  image={null}
+  title=""
 >
   <div
-    className="md-top-bar__container"
+    className="md-top-bar md-top-bar--dark"
+    role="navigation"
   >
     <div
-      className="md-top-bar__brand"
+      className="md-top-bar__container"
     >
-      <a
-        className="md-brand"
-        href={null}
+      <div
+        className="md-top-bar__brand"
       >
-        <div
-          className="md-brand__logo"
-          key="md-brand__logo"
+        <a
+          className="md-brand"
+          href={null}
         >
-          <i
-            className="icon icon-cisco-logo"
-          />
-        </div>
-      </a>
+          <div
+            className="md-brand__logo"
+            key="md-brand__logo"
+          >
+            <i
+              className="icon icon-cisco-logo"
+            />
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</div>
+</Topbar>
 `;

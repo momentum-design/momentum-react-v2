@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SidebarFooter /> should render a SidebarFooter 1`] = `
-<div
-  className="md-sidebar__footer"
+<SidebarFooter
+  className=""
   navSectionTitle="Overview"
-/>
+>
+  <div
+    className="md-sidebar__footer"
+    navSectionTitle="Overview"
+  />
+</SidebarFooter>
 `;

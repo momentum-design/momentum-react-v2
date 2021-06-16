@@ -10,7 +10,7 @@ import {
 
 describe('tests for <Input />', () => {
   it('should match text SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Input htmlId="1" name="test" label="test" type="text" />
     );
 
@@ -26,7 +26,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should match number SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Input htmlId="1" name="test" label="test" type="number" />
     );
 
@@ -34,7 +34,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should match password SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Input htmlId="1" name="test" label="test" type="password" />
     );
 
@@ -42,7 +42,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should match aria SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Input htmlId="1" name="test" label="test" ariaDescribedBy="ariaDescribedBy" ariaLabel="ariaLabel" />
     );
 
@@ -50,7 +50,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should match clear SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Input htmlId="1" name="test" label="test" type="text" clear />
     );
 

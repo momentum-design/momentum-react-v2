@@ -1,37 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Accordion /> should match SnapShot 1`] = `
-<div
-  className="md-accordion"
+<Accordion
+  className=""
+  initialActive={Array []}
+  multipleVisible={false}
+  onSelect={null}
+  showSeparator={false}
 >
-  <AccordionGroup
-    className=""
-    disabled={false}
-    focus={true}
-    isExpanded={false}
-    key=".0"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    showSeparator={false}
+  <div
+    className="md-accordion"
   >
-    <AccordionHeader
+    <AccordionGroup
       className=""
       disabled={false}
-      focus={false}
-      height=""
-      showSeparator={true}
+      focus={true}
+      isExpanded={false}
+      key=".0"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      showSeparator={false}
     >
-      <span>
-        Hi
-      </span>
-    </AccordionHeader>
-    <AccordionContent
-      className=""
-    >
-      <span>
-        Hello
-      </span>
-    </AccordionContent>
-  </AccordionGroup>
-</div>
+      <div
+        aria-expanded={false}
+        className="md-accordion__group"
+      >
+        <AccordionHeader
+          className=""
+          disabled={false}
+          focus={true}
+          height=""
+          key=".0"
+          showSeparator={false}
+        >
+          <div
+            className="md-accordion__header"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span>
+              Hi
+            </span>
+            <span
+              className="md-accordion__header-icon"
+            />
+          </div>
+        </AccordionHeader>
+        <AccordionContent
+          className=""
+          disabled={false}
+          focus={true}
+          key=".1"
+          showSeparator={false}
+        >
+          <div
+            className="md-accordion__content"
+          >
+            <span>
+              Hello
+            </span>
+          </div>
+        </AccordionContent>
+      </div>
+    </AccordionGroup>
+  </div>
+</Accordion>
 `;

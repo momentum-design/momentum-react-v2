@@ -4,7 +4,7 @@ import { Avatar, Icon } from '@momentum-ui/react';
 
 describe('tests for <Avatar />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Avatar />);
+    const container = mount(<Avatar />);
 
     expect(container).toMatchSnapshot();
   });

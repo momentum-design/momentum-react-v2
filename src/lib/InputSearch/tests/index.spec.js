@@ -4,7 +4,7 @@ import { InputSearch } from '@momentum-ui/react';
 
 describe('tests for <InputSearch />', () => {
   it('should match normal SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <InputSearch id="1" name="test" />
     );
 
@@ -12,7 +12,7 @@ describe('tests for <InputSearch />', () => {
   });
 
   it('should match pill SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <InputSearch id="1" name="test" shape='pill' />
     );
 
@@ -20,7 +20,7 @@ describe('tests for <InputSearch />', () => {
   });
 
   it('should match loading SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <InputSearch id="1" name="test" isLoading />
     );
 

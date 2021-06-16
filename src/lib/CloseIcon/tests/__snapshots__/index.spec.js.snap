@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <CloseIcon /> should match SnapShot 1`] = `
-<button
-  className="md-close test"
+<CloseIcon
+  className="test"
   onClick={[Function]}
-/>
+>
+  <button
+    className="md-close test"
+    onClick={[Function]}
+  />
+</CloseIcon>
 `;

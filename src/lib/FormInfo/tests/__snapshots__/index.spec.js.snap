@@ -1,11 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <FormInfo /> should match SnapShot 1`] = `
-<div
-  className="section__info"
+<FormInfo
+  description=""
+  title=""
 >
-  <h4
-    className="section__title"
-  />
-</div>
+  <div
+    className="section__info"
+  >
+    <h4
+      className="section__title"
+    />
+  </div>
+</FormInfo>
 `;

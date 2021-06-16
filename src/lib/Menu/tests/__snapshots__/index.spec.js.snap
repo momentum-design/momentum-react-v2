@@ -1,7 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Menu /> should render a Menu 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextTransform(Menu)>
+  <Menu
+    ariaConfig={null}
+    ariaLabel=""
+    className=""
+    focusFirst={true}
+    onSelect={null}
+    parentOnSelect={null}
+  >
+    <div
+      aria-label=""
+      className="md-menu md-menu-item-container"
+      onSelect={null}
+      role="menubar"
+      tabIndex={-1}
+    >
+      <Component>
+        <ContextTransform(MenuItem)
+          label="one"
+        >
+          <MenuItem
+            className=""
+            isHeader={false}
+            isOpen={false}
+            itemClassName=""
+            keepMenuOpen={false}
+            label="one"
+            onClick={null}
+            parentKeyDown={[Function]}
+            parentOnSelect={[Function]}
+          >
+            <Component
+              name={[Function]}
+            >
+              <UID
+                idSource={
+                  Object {
+                    "prefix": "",
+                    "uid": [Function],
+                    "value": 1,
+                  }
+                }
+                name={[Function]}
+              >
+                <div
+                  aria-expanded={false}
+                  aria-haspopup={false}
+                  className="md-menu-item"
+                >
+                  <ContextTransform(ListItem)
+                    active={false}
+                    className=""
+                    focusOnLoad={true}
+                    id="md-menu-item-1"
+                    isReadOnly={false}
+                    label="one"
+                    role="menuitem"
+                  >
+                    <ListItem
+                      active={false}
+                      className=""
+                      customAnchorNode={null}
+                      customRefProp=""
+                      disabled={false}
+                      eventKey=""
+                      focus={false}
+                      focusLockTabbableChildren={false}
+                      focusLockTabbableChildrenProps={
+                        Object {
+                          "portalNodeQuery": "",
+                          "tabbableChildrenHasPopover": false,
+                          "tabbableChildrenQuery": "",
+                        }
+                      }
+                      focusOnLoad={true}
+                      id="md-menu-item-1"
+                      isReadOnly={false}
+                      itemIndex={null}
+                      keyboardKey=""
+                      label="one"
+                      link=""
+                      onBlur={null}
+                      onClick={null}
+                      onKeyDown={null}
+                      parentKeyDown={[Function]}
+                      parentOnSelect={[Function]}
+                      refName="navLink"
+                      role="menuitem"
+                      separator={false}
+                      specifyRoleWithoutList={false}
+                      title=""
+                      type=""
+                      value=""
+                    >
+                      <Component
+                        name={[Function]}
+                      >
+                        <UID
+                          idSource={
+                            Object {
+                              "prefix": "",
+                              "uid": [Function],
+                              "value": 1,
+                            }
+                          }
+                          name={[Function]}
+                        >
+                          <div
+                            aria-current="true"
+                            className="md-list-item"
+                            data-md-event-key="md-menu-item-1"
+                            data-md-keyboard-key="one"
+                            id="md-menu-item-1"
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onKeyDown={[Function]}
+                            role="menuitem"
+                            tabIndex={0}
+                            title="one"
+                          >
+                            one
+                          </div>
+                        </UID>
+                      </Component>
+                    </ListItem>
+                  </ContextTransform(ListItem)>
+                </div>
+              </UID>
+            </Component>
+          </MenuItem>
+        </ContextTransform(MenuItem)>
+      </Component>
+    </div>
+  </Menu>
+</ContextTransform(Menu)>
 `;

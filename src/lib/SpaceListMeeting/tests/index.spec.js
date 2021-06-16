@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { SpaceListMeeting } from '@momentum-ui/react';
 
 describe('tests for <SpaceListMeeting />', () => {
@@ -10,7 +10,7 @@ describe('tests for <SpaceListMeeting />', () => {
   });
 
   it('should match SnapShot', () => {
-    const container = shallow(<SpaceListMeeting header='header'/>);
+    const container = mount(<SpaceListMeeting header='header'/>);
 
     expect(container).toMatchSnapshot();
   });

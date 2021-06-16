@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <RadioGroup /> should match SnapShot 1`] = `
-<div
-  className="md-radio-group"
-/>
+<RadioGroup
+  name=""
+  onChange={[Function]}
+  values={Array []}
+>
+  <div
+    className="md-radio-group"
+  />
+</RadioGroup>
 `;

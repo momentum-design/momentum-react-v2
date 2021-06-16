@@ -9,7 +9,7 @@ describe('Tests for <Icon />', () => {
       color: 'blue-50',
       className: 'testClass',
     };
-    const container = shallow(<Icon {...props} />);
+    const container = mount(<Icon {...props} />);
     expect(container).toMatchSnapshot();
   });
 
@@ -21,7 +21,7 @@ describe('Tests for <Icon />', () => {
         color: 'red-50',
         className: 'testClass',
       };
-      const container = shallow(<Icon {...props} />);
+      const container = mount(<Icon {...props} />);
       expect(container).toMatchSnapshot();
     });
 
@@ -155,7 +155,7 @@ describe('Tests for <Icon />', () => {
       const props = {
         name: 'accessibility_16',
       };
-      const container = shallow(<Icon {...props} />);
+      const container = mount(<Icon {...props} />);
       expect(container).toMatchSnapshot();
     });
 
@@ -250,7 +250,7 @@ describe('Tests for <Icon />', () => {
         title,
         description,
       };
-      const container = shallow(<Icon {...props} />);
+      const container = mount(<Icon {...props} />);
       expect(container).toMatchSnapshot();
     });
 

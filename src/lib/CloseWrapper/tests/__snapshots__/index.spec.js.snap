@@ -1,25 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <CloseWrapper /> should match SnapShot 1`] = `
-<span
-  className="md-close-wrapper"
+<CloseWrapper
+  actionNode={null}
+  ariaLabel="Close"
+  className=""
+  onClick={null}
 >
-  <Icon
-    append={false}
-    ariaLabel="Close"
-    buttonClassName="md-close-wrapper__action"
-    buttonProps={null}
-    className=""
-    color=""
-    description=""
-    name="clear-active_20"
-    onClick={null}
-    prepend={false}
-    size={null}
-    sizeOverride={false}
-    style={null}
-    title=""
-    type=""
-  />
-</span>
+  <span
+    className="md-close-wrapper"
+  >
+    <Icon
+      append={false}
+      ariaLabel="Close"
+      buttonClassName="md-close-wrapper__action"
+      buttonProps={null}
+      className=""
+      color=""
+      description=""
+      name="clear-active_20"
+      onClick={null}
+      prepend={false}
+      size={null}
+      sizeOverride={false}
+      style={null}
+      title=""
+      type=""
+    >
+      <i
+        aria-label="Close"
+        className="md-icon icon icon-clear-active_20"
+        style={
+          Object {
+            "fontSize": 20,
+          }
+        }
+      />
+    </Icon>
+  </span>
+</CloseWrapper>
 `;

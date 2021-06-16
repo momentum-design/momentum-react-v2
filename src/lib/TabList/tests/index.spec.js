@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import {
   Tab,
   TabList,
@@ -8,7 +8,7 @@ import {
 describe('tests for <TabList />', () => {
   it('should match SnapShot', () => {
     const context = { focus: 0, onFocus: () => {}, onActivate: () => {} };
-    const container = shallow(<TabList id="test"><Tab heading="one"/></TabList>, { context });
+    const container = mount(<TabList id="test"><Tab heading="one"/></TabList>, { context });
 
     expect(container).toMatchSnapshot();
   });

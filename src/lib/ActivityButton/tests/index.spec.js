@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { ActivityButton } from '@momentum-ui/react';
 
 describe('tests for <ActivityButton />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ActivityButton type='chat' ariaLabel='test' />);
+    const container = mount(<ActivityButton type='chat' ariaLabel='test' />);
 
     expect(container).toMatchSnapshot();
   });

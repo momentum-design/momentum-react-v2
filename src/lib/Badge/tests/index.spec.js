@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { Badge } from '@momentum-ui/react';
 
 describe('tests for <Badge />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Badge />);
+    const container = mount(<Badge />);
 
     expect(container).toMatchSnapshot();
   });

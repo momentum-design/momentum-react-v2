@@ -1,9 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <SelectOption /> should match SnapShot 1`] = `
-<Component
-  name={[Function]}
+<SelectOption
+  active={false}
+  className=""
+  id=""
+  label=""
+  title=""
+  value=""
 >
-  <Component />
-</Component>
+  <Component
+    name={[Function]}
+  >
+    <UID
+      idSource={
+        Object {
+          "prefix": "",
+          "uid": [Function],
+          "value": 3,
+        }
+      }
+      name={[Function]}
+    >
+      <ContextTransform(ListItem)
+        className=""
+        id=""
+        label=""
+        title=""
+        value=""
+      >
+        <ListItem
+          active={false}
+          className=""
+          customAnchorNode={null}
+          customRefProp=""
+          disabled={false}
+          eventKey=""
+          focus={false}
+          focusLockTabbableChildren={false}
+          focusLockTabbableChildrenProps={
+            Object {
+              "portalNodeQuery": "",
+              "tabbableChildrenHasPopover": false,
+              "tabbableChildrenQuery": "",
+            }
+          }
+          focusOnLoad={false}
+          id=""
+          isReadOnly={false}
+          itemIndex={null}
+          keyboardKey=""
+          label=""
+          link=""
+          onBlur={null}
+          onClick={null}
+          onKeyDown={null}
+          parentKeyDown={null}
+          parentOnSelect={null}
+          refName="navLink"
+          role="listitem"
+          separator={false}
+          specifyRoleWithoutList={false}
+          title=""
+          type=""
+          value=""
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "",
+                  "uid": [Function],
+                  "value": 3,
+                }
+              }
+              name={[Function]}
+            >
+              <div
+                className="md-list-item"
+                data-md-event-key="md-list-item-2"
+                id="md-list-item-2"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="listitem"
+                tabIndex={-1}
+              >
+                <ListItemSection
+                  className=""
+                  key="child-0"
+                  position="center"
+                >
+                  <div
+                    className="md-list-item__center"
+                  />
+                </ListItemSection>
+                <ListItemSection
+                  className=""
+                  key="child-1"
+                  position="right"
+                >
+                  <div
+                    className="md-list-item__right"
+                  />
+                </ListItemSection>
+              </div>
+            </UID>
+          </Component>
+        </ListItem>
+      </ContextTransform(ListItem)>
+    </UID>
+  </Component>
+</SelectOption>
 `;

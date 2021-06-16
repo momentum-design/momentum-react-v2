@@ -1,12 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Label /> should match text SnapShot 1`] = `
-<label
-  className="md-label"
+<Label
+  className=""
   htmlFor="test"
+  label="test"
+  theme=""
 >
-  <span>
-    test
-  </span>
-</label>
+  <label
+    className="md-label"
+    htmlFor="test"
+  >
+    <span>
+      test
+    </span>
+  </label>
+</Label>
 `;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { ErrorBoundary } from '@momentum-ui/react';
 
 describe('tests for <ErrorBoundary />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ErrorBoundary />);
+    const container = mount(<ErrorBoundary />);
 
     expect(container).toMatchSnapshot();
   });

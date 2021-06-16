@@ -1,8 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Select /> should match normal SnapShot 1`] = `
-<ContextProvider
-  value={false}
+<Select
+  buttonProps={null}
+  className=""
+  defaultValue=""
+  id={null}
+  isDynamic={true}
+  isMulti={false}
+  listProps={null}
+  onSelect={null}
+  overlayProps={null}
 >
   <div
     className="md-input-container md-select"
@@ -15,29 +23,115 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
       name="md-select-1"
       onClick={[Function]}
     >
-      <div
-        className="md-select__label"
-        id="md-select-1__label"
+      <Button
+        active={false}
+        aria-haspopup="listbox"
+        ariaLabel=""
+        ariaLabelledBy="md-select-1__label"
+        ariaPressed={null}
+        circle={false}
+        className=""
+        color=""
+        containerLarge={false}
+        disabled={false}
+        eventKey=""
+        expand={false}
+        href=""
+        id="md-select-1"
+        keyboardKey=""
+        label=""
+        large={false}
+        loading={false}
+        name="md-select-1"
+        onClick={[Function]}
+        parentKeyDown={null}
+        parentOnSelect={null}
+        removeStyle={false}
+        size={36}
+        style={Object {}}
+        tag="button"
+        type="button"
       >
-        <Icon
-          append={false}
-          ariaLabel={null}
-          buttonClassName=""
-          buttonProps={null}
-          className=""
-          color=""
-          description=""
-          name="arrow-down_16"
-          onClick={null}
-          prepend={false}
-          size={null}
-          sizeOverride={false}
-          style={null}
-          title=""
-          type=""
-        />
-      </div>
+        <Component
+          name={[Function]}
+        >
+          <UID
+            idSource={
+              Object {
+                "prefix": "",
+                "uid": [Function],
+                "value": 2,
+              }
+            }
+            name={[Function]}
+          >
+            <button
+              alt=""
+              aria-haspopup="listbox"
+              aria-labelledby="md-select-1__label"
+              aria-pressed={null}
+              className="md-button md-button--36"
+              data-md-event-key="md-select-1"
+              disabled={false}
+              id="md-select-1"
+              name="md-select-1"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              style={
+                Object {
+                  "style": Object {},
+                }
+              }
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="md-button__children"
+                key="child-1"
+                style={
+                  Object {
+                    "opacity": "1",
+                  }
+                }
+              >
+                <div
+                  className="md-select__label"
+                  id="md-select-1__label"
+                >
+                  <Icon
+                    append={false}
+                    ariaLabel={null}
+                    buttonClassName=""
+                    buttonProps={null}
+                    className=""
+                    color=""
+                    description=""
+                    name="arrow-down_16"
+                    onClick={null}
+                    prepend={false}
+                    size={null}
+                    sizeOverride={false}
+                    style={null}
+                    title=""
+                    type=""
+                  >
+                    <i
+                      aria-label={null}
+                      className="md-icon icon icon-arrow-down_16"
+                      style={
+                        Object {
+                          "fontSize": 16,
+                        }
+                      }
+                    />
+                  </Icon>
+                </div>
+              </span>
+            </button>
+          </UID>
+        </Component>
+      </Button>
     </ContextTransform(Button)>
   </div>
-</ContextProvider>
+</Select>
 `;

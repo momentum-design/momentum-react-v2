@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { Chip } from '@momentum-ui/react';
 
 describe('<Chip />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Chip type="recording" title="Recording" />);
+    const container = mount(<Chip type="recording" title="Recording" />);
 
     expect(container).toMatchSnapshot();
   });

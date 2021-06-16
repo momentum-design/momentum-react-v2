@@ -8,7 +8,7 @@ import {
 
 describe('tests for <AccordionGroup />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <AccordionGroup>
         <AccordionHeader/>
         <AccordionContent/>

@@ -1,24 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Sidebar /> should render a Sidebar 1`] = `
-<div
-  className="md-sidebar__wrapper"
+<Sidebar
+  buttonProps={Object {}}
+  className=""
+  collapsable={false}
+  expanded={true}
+  isFixed={false}
+  isPageLevel={false}
+  theme=""
+  withIcons={true}
+  withToggle={false}
+  withTopbar={false}
+  wrapperClass=""
 >
   <div
-    className="md-sidebar md-sidebar--global md-sidebar--indented"
+    className="md-sidebar__wrapper"
   >
-    <ContextProvider
-      value={
-        Object {
-          "primary": true,
-          "secondary": false,
-          "setContext": [Function],
-          "tertiary": false,
-        }
-      }
+    <div
+      className="md-sidebar md-sidebar--global md-sidebar--indented"
     >
       <Component />
-    </ContextProvider>
+    </div>
   </div>
-</div>
+</Sidebar>
 `;

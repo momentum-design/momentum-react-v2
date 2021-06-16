@@ -10,7 +10,7 @@ import {
 
 describe('tests for <Tabs />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Tabs>
         <div />
       </Tabs>

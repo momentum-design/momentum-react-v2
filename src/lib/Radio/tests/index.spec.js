@@ -6,7 +6,7 @@ import InputHelper from '@momentum-ui/react/InputHelper';
 
 describe('tests for <Radio />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Radio htmlId="test123" />);
+    const container = mount(<Radio htmlId="test123" />);
 
     expect(container).toMatchSnapshot();
   });

@@ -4,7 +4,7 @@ import { Checkbox, CheckboxGroup } from '@momentum-ui/react';
 
 describe('tests for <CheckboxGroup />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<CheckboxGroup />);
+    const container = mount(<CheckboxGroup />);
 
     expect(container).toMatchSnapshot();
   });

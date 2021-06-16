@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <AlertContainer /> should match SnapShot 1`] = `
-<div
-  className="md-alert__container md-alert__container--bottom-right"
-  role="alert"
-/>
+<AlertContainer
+  className=""
+  position="bottom-right"
+>
+  <div
+    className="md-alert__container md-alert__container--bottom-right"
+    role="alert"
+  />
+</AlertContainer>
 `;

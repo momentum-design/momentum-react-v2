@@ -52,7 +52,7 @@ describe('tests for <AlertCallContainer />', () => {
   /* eslint-enable react/no-multi-comp */
 
   it('should match SnapShot', () => {
-    const container = shallow(<AlertCallContainer/>);
+    const container = mount(<AlertCallContainer/>);
 
     expect(container).toMatchSnapshot();
   });

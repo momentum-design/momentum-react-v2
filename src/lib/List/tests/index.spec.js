@@ -13,7 +13,7 @@ describe('tests for <List />', () => {
   });
 
   it('should match SnapShot', () => {
-    const container = shallow(<List id="test" />);
+    const container = mount(<List id="test" />);
 
     expect(container).toMatchSnapshot();
   });

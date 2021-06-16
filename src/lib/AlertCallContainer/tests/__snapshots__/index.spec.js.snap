@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <AlertCallContainer /> should match SnapShot 1`] = `
-<div
-  className="md-alert__container md-alert__container--call"
-/>
+<AlertCallContainer>
+  <div
+    className="md-alert__container md-alert__container--call"
+  />
+</AlertCallContainer>
 `;

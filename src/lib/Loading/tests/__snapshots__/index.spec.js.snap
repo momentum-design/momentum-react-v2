@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Loading /> should render a Loading 1`] = `
-<div
-  className="md-loading"
+<Loading
+  small={false}
 >
-  <span
-    className="md-loading__icon"
-  />
-  <span
-    className="md-loading__icon"
-  />
-  <span
-    className="md-loading__icon"
-  />
-</div>
+  <div
+    className="md-loading"
+  >
+    <span
+      className="md-loading__icon"
+    />
+    <span
+      className="md-loading__icon"
+    />
+    <span
+      className="md-loading__icon"
+    />
+  </div>
+</Loading>
 `;

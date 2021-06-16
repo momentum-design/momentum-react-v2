@@ -4,7 +4,7 @@ import { AlertBanner } from '@momentum-ui/react';
 
 describe('tests for <AlertBanner />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<AlertBanner show />);
+    const container = mount(<AlertBanner show />);
 
     expect(container).toMatchSnapshot();
   });

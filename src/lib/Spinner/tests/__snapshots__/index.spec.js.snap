@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Spinner /> should render a Spinner 1`] = `
-<i
-  className="md-spinner md-spinner--36 md-spinner--black"
-/>
+<Spinner
+  className=""
+  color="black"
+  percentage={null}
+  showCheck={false}
+  showPercentage={false}
+  size={36}
+>
+  <i
+    className="md-spinner md-spinner--36 md-spinner--black"
+  />
+</Spinner>
 `;

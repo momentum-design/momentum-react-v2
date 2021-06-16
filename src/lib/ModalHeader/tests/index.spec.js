@@ -4,7 +4,7 @@ import { ModalHeader } from '@momentum-ui/react';
 
 describe('tests for <ModalHeader />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ModalHeader id="test" />);
+    const container = mount(<ModalHeader id="test" />);
 
     expect(container).toMatchSnapshot();
   });

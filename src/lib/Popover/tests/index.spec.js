@@ -10,7 +10,7 @@ describe('tests for <Popover />', () => {
 
   it('should match SnapShot', () => {
     const content = <span key='1'>Hello how are you doing</span>;
-    const container = shallow(
+    const container = mount(
       <Popover content={content}>
         <button>Hello</button>
       </Popover>

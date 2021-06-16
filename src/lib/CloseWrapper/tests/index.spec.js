@@ -4,7 +4,7 @@ import { CloseWrapper } from '@momentum-ui/react';
 
 describe('tests for <CloseWrapper />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<CloseWrapper />);
+    const container = mount(<CloseWrapper />);
 
     expect(container).toMatchSnapshot();
   });

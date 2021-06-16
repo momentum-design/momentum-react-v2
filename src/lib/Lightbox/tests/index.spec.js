@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { Lightbox } from '@momentum-ui/react';
 
 describe('tests for <Lightbox />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"

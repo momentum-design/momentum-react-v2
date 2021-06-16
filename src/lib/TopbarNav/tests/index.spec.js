@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import TopbarNav from '../index';
 import { prefix } from '../../utils/index';
 
 describe('tests for <TopbarNav />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<TopbarNav id="test" />);
+    const container = mount(<TopbarNav id="test" />);
 
     expect(container).toMatchSnapshot();
   });

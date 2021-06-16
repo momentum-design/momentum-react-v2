@@ -4,7 +4,7 @@ import { Alert } from '@momentum-ui/react';
 
 describe('tests for <Alert />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Alert show />);
+    const container = mount(<Alert show />);
 
     expect(container).toMatchSnapshot();
   });

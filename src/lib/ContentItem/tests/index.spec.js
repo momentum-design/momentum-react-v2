@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { ContentItem } from '@momentum-ui/react';
 
 describe('tests for <ContentItem />', () => {
   const type = 'chat';
 
   it('should match SnapShot', () => {
-    const container = shallow(<ContentItem />);
+    const container = mount(<ContentItem />);
 
     expect(container).toMatchSnapshot();
   });

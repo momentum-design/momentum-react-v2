@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import MenuContent from '@momentum-ui/react/MenuContent';
 
 
 describe('tests for <MenuContent />', () => {
   it('should render a MenuContent', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <MenuContent>test</MenuContent>
     );
     expect(wrapper).toMatchSnapshot();

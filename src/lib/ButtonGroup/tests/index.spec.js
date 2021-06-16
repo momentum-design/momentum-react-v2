@@ -4,7 +4,7 @@ import { Button, ButtonGroup, Icon } from '@momentum-ui/react';
 
 describe('tests for <ButtonGroup />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <ButtonGroup>
         <Button ariaLabel="test">1</Button>
       </ButtonGroup>);

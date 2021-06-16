@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <CardSection /> should match SnapShot 1`] = `
-<div
-  className="md-card-section"
+<CardSection
+  className=""
+  full={false}
   id="test"
-/>
+>
+  <div
+    className="md-card-section"
+    id="test"
+  />
+</CardSection>
 `;

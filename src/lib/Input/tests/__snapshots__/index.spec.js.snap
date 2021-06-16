@@ -1,153 +1,378 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Input /> should match aria SnapShot 1`] = `
-<div
-  className="md-input-container"
+<Input
+  ariaDescribedBy="ariaDescribedBy"
+  ariaLabel="ariaLabel"
+  className=""
+  clear={false}
+  clearAriaLabel={null}
+  containerSize=""
+  defaultValue=""
+  disabled={false}
+  helpText=""
+  htmlId="1"
+  id={null}
+  inputAfter={null}
+  inputBefore={null}
+  inputClassName=""
+  inputRef={null}
+  inputSize=""
+  isFilled={false}
+  label="test"
+  messageArr={Array []}
+  multiline={false}
+  name="test"
+  nestedLevel={0}
+  onChange={null}
+  onDoneEditing={null}
+  onFocus={null}
+  onKeyDown={null}
+  onMouseDown={null}
+  placeholder=""
+  readOnly={false}
+  secondaryLabel=""
+  shape=""
+  type="text"
+  value=""
 >
-  <Label
-    className="md-input__label"
-    htmlFor="1"
-    label="test"
-    theme=""
-  />
   <div
-    className="md-input__wrapper"
+    className="md-input-container"
   >
-    <input
-      aria-describedby="ariaDescribedBy"
-      aria-label="ariaLabel"
-      className="md-input"
-      id="1"
-      name="test"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      tabIndex={0}
-      type="text"
-      value=""
-    />
+    <Label
+      className="md-input__label"
+      htmlFor="1"
+      label="test"
+      theme=""
+    >
+      <label
+        className="md-label md-input__label"
+        htmlFor="1"
+      >
+        <span>
+          test
+        </span>
+      </label>
+    </Label>
+    <div
+      className="md-input__wrapper"
+    >
+      <input
+        aria-describedby="ariaDescribedBy"
+        aria-label="ariaLabel"
+        className="md-input"
+        id="1"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+    </div>
   </div>
-</div>
+</Input>
 `;
 
 exports[`tests for <Input /> should match clear SnapShot 1`] = `
-<div
-  className="md-input-container"
+<Input
+  ariaDescribedBy={null}
+  ariaLabel={null}
+  className=""
+  clear={true}
+  clearAriaLabel={null}
+  containerSize=""
+  defaultValue=""
+  disabled={false}
+  helpText=""
+  htmlId="1"
+  id={null}
+  inputAfter={null}
+  inputBefore={null}
+  inputClassName=""
+  inputRef={null}
+  inputSize=""
+  isFilled={false}
+  label="test"
+  messageArr={Array []}
+  multiline={false}
+  name="test"
+  nestedLevel={0}
+  onChange={null}
+  onDoneEditing={null}
+  onFocus={null}
+  onKeyDown={null}
+  onMouseDown={null}
+  placeholder=""
+  readOnly={false}
+  secondaryLabel=""
+  shape=""
+  type="text"
+  value=""
 >
-  <Label
-    className="md-input__label"
-    htmlFor="1"
-    label="test"
-    theme=""
-  />
   <div
-    className="md-input__wrapper"
+    className="md-input-container"
   >
-    <input
-      className="md-input"
-      id="1"
-      name="test"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      tabIndex={0}
-      type="text"
-      value=""
-    />
+    <Label
+      className="md-input__label"
+      htmlFor="1"
+      label="test"
+      theme=""
+    >
+      <label
+        className="md-label md-input__label"
+        htmlFor="1"
+      >
+        <span>
+          test
+        </span>
+      </label>
+    </Label>
+    <div
+      className="md-input__wrapper"
+    >
+      <input
+        className="md-input"
+        id="1"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+    </div>
   </div>
-</div>
+</Input>
 `;
 
 exports[`tests for <Input /> should match number SnapShot 1`] = `
-<div
-  className="md-input-container"
+<Input
+  ariaDescribedBy={null}
+  ariaLabel={null}
+  className=""
+  clear={false}
+  clearAriaLabel={null}
+  containerSize=""
+  defaultValue=""
+  disabled={false}
+  helpText=""
+  htmlId="1"
+  id={null}
+  inputAfter={null}
+  inputBefore={null}
+  inputClassName=""
+  inputRef={null}
+  inputSize=""
+  isFilled={false}
+  label="test"
+  messageArr={Array []}
+  multiline={false}
+  name="test"
+  nestedLevel={0}
+  onChange={null}
+  onDoneEditing={null}
+  onFocus={null}
+  onKeyDown={null}
+  onMouseDown={null}
+  placeholder=""
+  readOnly={false}
+  secondaryLabel=""
+  shape=""
+  type="number"
+  value=""
 >
-  <Label
-    className="md-input__label"
-    htmlFor="1"
-    label="test"
-    theme=""
-  />
   <div
-    className="md-input__wrapper"
+    className="md-input-container"
   >
-    <input
-      className="md-input"
-      id="1"
-      name="test"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      tabIndex={0}
-      type="number"
-      value=""
-    />
+    <Label
+      className="md-input__label"
+      htmlFor="1"
+      label="test"
+      theme=""
+    >
+      <label
+        className="md-label md-input__label"
+        htmlFor="1"
+      >
+        <span>
+          test
+        </span>
+      </label>
+    </Label>
+    <div
+      className="md-input__wrapper"
+    >
+      <input
+        className="md-input"
+        id="1"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex={0}
+        type="number"
+        value=""
+      />
+    </div>
   </div>
-</div>
+</Input>
 `;
 
 exports[`tests for <Input /> should match password SnapShot 1`] = `
-<div
-  className="md-input-container"
+<Input
+  ariaDescribedBy={null}
+  ariaLabel={null}
+  className=""
+  clear={false}
+  clearAriaLabel={null}
+  containerSize=""
+  defaultValue=""
+  disabled={false}
+  helpText=""
+  htmlId="1"
+  id={null}
+  inputAfter={null}
+  inputBefore={null}
+  inputClassName=""
+  inputRef={null}
+  inputSize=""
+  isFilled={false}
+  label="test"
+  messageArr={Array []}
+  multiline={false}
+  name="test"
+  nestedLevel={0}
+  onChange={null}
+  onDoneEditing={null}
+  onFocus={null}
+  onKeyDown={null}
+  onMouseDown={null}
+  placeholder=""
+  readOnly={false}
+  secondaryLabel=""
+  shape=""
+  type="password"
+  value=""
 >
-  <Label
-    className="md-input__label"
-    htmlFor="1"
-    label="test"
-    theme=""
-  />
   <div
-    className="md-input__wrapper"
+    className="md-input-container"
   >
-    <input
-      className="md-input"
-      id="1"
-      name="test"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      tabIndex={0}
-      type="password"
-      value=""
-    />
+    <Label
+      className="md-input__label"
+      htmlFor="1"
+      label="test"
+      theme=""
+    >
+      <label
+        className="md-label md-input__label"
+        htmlFor="1"
+      >
+        <span>
+          test
+        </span>
+      </label>
+    </Label>
+    <div
+      className="md-input__wrapper"
+    >
+      <input
+        className="md-input"
+        id="1"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex={0}
+        type="password"
+        value=""
+      />
+    </div>
   </div>
-</div>
+</Input>
 `;
 
 exports[`tests for <Input /> should match text SnapShot 1`] = `
-<div
-  className="md-input-container"
+<Input
+  ariaDescribedBy={null}
+  ariaLabel={null}
+  className=""
+  clear={false}
+  clearAriaLabel={null}
+  containerSize=""
+  defaultValue=""
+  disabled={false}
+  helpText=""
+  htmlId="1"
+  id={null}
+  inputAfter={null}
+  inputBefore={null}
+  inputClassName=""
+  inputRef={null}
+  inputSize=""
+  isFilled={false}
+  label="test"
+  messageArr={Array []}
+  multiline={false}
+  name="test"
+  nestedLevel={0}
+  onChange={null}
+  onDoneEditing={null}
+  onFocus={null}
+  onKeyDown={null}
+  onMouseDown={null}
+  placeholder=""
+  readOnly={false}
+  secondaryLabel=""
+  shape=""
+  type="text"
+  value=""
 >
-  <Label
-    className="md-input__label"
-    htmlFor="1"
-    label="test"
-    theme=""
-  />
   <div
-    className="md-input__wrapper"
+    className="md-input-container"
   >
-    <input
-      className="md-input"
-      id="1"
-      name="test"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      tabIndex={0}
-      type="text"
-      value=""
-    />
+    <Label
+      className="md-input__label"
+      htmlFor="1"
+      label="test"
+      theme=""
+    >
+      <label
+        className="md-label md-input__label"
+        htmlFor="1"
+      >
+        <span>
+          test
+        </span>
+      </label>
+    </Label>
+    <div
+      className="md-input__wrapper"
+    >
+      <input
+        className="md-input"
+        id="1"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+    </div>
   </div>
-</div>
+</Input>
 `;

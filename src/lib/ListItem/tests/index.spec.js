@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { List, ListItem, ListItemSection } from '@momentum-ui/react';
 
 describe('tests for <ListItem />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ListItem />, { disableLifecycleMethods: true });
+    const container = mount(<ListItem />, { disableLifecycleMethods: true });
 
     expect(container).toMatchSnapshot();
   });

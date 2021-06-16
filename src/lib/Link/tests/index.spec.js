@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { Link } from '@momentum-ui/react';
 
 describe('tests for <Link />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Link>
         <div className='child' />
       </Link>

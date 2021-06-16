@@ -9,7 +9,7 @@ import {
 
 describe('tests for <MenuOverlay />', () => {
   it('should render a MenuOverlay', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <MenuOverlay menuTrigger={<div>Trigger</div>}>
         <Menu>
           <MenuItem label="one"/>

@@ -4,7 +4,7 @@ import { ProgressBar } from '@momentum-ui/react';
 
 describe('tests for <ProgressBar />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ProgressBar label="test" value={50} />);
+    const container = mount(<ProgressBar label="test" value={50} />);
 
     expect(container).toMatchSnapshot();
   });

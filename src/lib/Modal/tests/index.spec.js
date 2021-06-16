@@ -5,7 +5,7 @@ import { Modal } from '@momentum-ui/react';
 
 describe('tests for <Modal />', () => {
   it('should render a Modal', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Modal onHide={() => { }} applicationId="test" show htmlId="testModal" />
     );
 

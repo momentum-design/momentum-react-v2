@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { Loading } from '@momentum-ui/react';
 
 describe('tests for <Loading />', () => {
   it('should render a Loading', () => {
-    const wrapper = shallow(<Loading />);
+    const wrapper = mount(<Loading />);
 
     expect(wrapper).toMatchSnapshot();
   });

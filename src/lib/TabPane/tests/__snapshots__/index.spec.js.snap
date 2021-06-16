@@ -1,11 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <TabPane /> should match SnapShot 1`] = `
-<div
-  className="md-tab__pane"
+<TabPane
+  active={false}
 >
   <div
-    className="md-tab__content"
-  />
-</div>
+    className="md-tab__pane"
+  >
+    <div
+      className="md-tab__content"
+    />
+  </div>
+</TabPane>
 `;

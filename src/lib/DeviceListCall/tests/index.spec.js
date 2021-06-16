@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import DeviceListCall from '../index';
 
 describe('tests for <DeviceListCall />', () => {
@@ -10,7 +10,7 @@ describe('tests for <DeviceListCall />', () => {
   ];
 
   it('should match SnapShot', () => {
-    const container = shallow(<DeviceListCall header={header} devices={devices}/>);
+    const container = mount(<DeviceListCall header={header} devices={devices}/>);
 
     expect(container).toMatchSnapshot();
   });

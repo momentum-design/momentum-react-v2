@@ -6,7 +6,7 @@ import SidebarNavContext from '../../SidebarNavContext';
 
 describe('tests for <SidebarNavItem />', () => {
   it('should render a SidebarNavItem', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <SidebarNavItem label="one"/>
     );
     expect(wrapper).toMatchSnapshot();

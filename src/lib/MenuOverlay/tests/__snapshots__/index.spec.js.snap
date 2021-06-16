@@ -1,13 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <MenuOverlay /> should render a MenuOverlay 1`] = `
-<div
-  className="md-menu-overlay-wrapper"
+<MenuOverlay
+  className=""
+  focusFirstQuery=""
+  isOpen={false}
+  menuTrigger={
+    <div>
+      Trigger
+    </div>
+  }
+  onSelect={null}
+  showArrow={true}
 >
   <div
-    onClick={[Function]}
+    className="md-menu-overlay-wrapper"
   >
-    Trigger
+    <div
+      onClick={[Function]}
+    >
+      Trigger
+    </div>
   </div>
-</div>
+</MenuOverlay>
 `;

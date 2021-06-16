@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { TopbarRight } from '@momentum-ui/react';
 import { prefix } from '../../utils/index';
 
 describe('tests for <TopbarRight />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<TopbarRight id="test" />);
+    const container = mount(<TopbarRight id="test" />);
 
     expect(container).toMatchSnapshot();
   });
