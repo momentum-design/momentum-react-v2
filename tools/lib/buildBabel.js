@@ -11,13 +11,17 @@ const getConfig = ({ modules = true, optimize = true, test = false } = {}) => {
   return require('../../.babelrc.js');
 };
 
+const extensionMatch = /^(\.js|.tsx|.ts)$/;
+
 const buildFile = async (filename, destination, babelOptions = {}) => {
-  if (!path.extname(filename) === '.js') return;
+  if (!extensionMatch.test(path.extname(filename))) {
+    return;
+  }
   const content = await fse.readFile(filename, { encoding: 'utf8' });
   // We only want to build index.js files
-  if (path.basename(filename) === 'index.js') {
+  if (path.basename(filename) === 'index.js' || path.basename(filename) === 'index.tsx' || path.basename(filename) === 'index.ts') {
     const result = transform(content, { ...babelOptions, filename });
-    const output = path.join(destination, path.basename(filename));
+    const output = path.join(destination, path.parse(filename).name + '.js');
 
     await fse.outputFile(output, result.code);
   }
