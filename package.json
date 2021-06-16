@@ -86,17 +86,20 @@
     "@momentum-ui/icons": "^8.18.0",
     "@momentum-ui/tokens": "^1.7.0",
     "@restart/context": "^2.1.4",
+    "@types/react": "^17.0.11",
     "concat": "^1.0.3",
     "dom-helpers": "^3.4.0",
     "husky": "^1.1.2",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^5.0.0",
     "node-sass-tilde-importer": "^1.0.2",
     "object-assign": "4.1.1",
     "react-aria-modal": "^2.11.1",
     "react-focus-lock": "^1.19.1",
-    "react-uid": "^2.2.0"
+    "react-uid": "^2.2.0",
+    "ts-loader": "^8.2.0",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -110,10 +113,13 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
+    "@babel/preset-typescript": "^7.14.5",
     "@commitlint/cli": "^8.3.5",
     "@cypress/webpack-preprocessor": "^4.1.0",
     "@hot-loader/react-dom": "~16.8.0",
     "@percy/cypress": "^0.2.3",
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.23",
     "autoprefixer": "^7.2.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
@@ -133,6 +139,7 @@
     "cypress": "^3.4.1",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.6.2",
     "eslint": "^6.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-webpack": "^0.10.1",
@@ -141,12 +148,12 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "7.12.2",
     "eslint-watch": "^6.0.0",
-    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "fs-extra": "^5.0.0",
-    "html-webpack-plugin": "2.30.1",
-    "jest": "^23.6.0",
-    "jest-cli": "^23.6.0",
+    "html-webpack-plugin": "3.2.0",
+    "jest": "^26.0.0",
+    "jest-cli": "^26.0.0",
+    "mini-css-extract-plugin": "0.7.0",
     "moment-timezone": "^0.5.14",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.3.0",
@@ -167,9 +174,10 @@
     "rimraf": "^2.6.3",
     "sass-loader": "6.0.6",
     "style-loader": "^0.19.1",
+    "ts-jest": "^26.0.0",
     "url-loader": "^0.6.2",
     "wait-on": "^3.2.0",
-    "webpack": "^3.12.0",
+    "webpack": "^4.44",
     "webpack-bundle-analyzer": "3.3.2",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.22.2",
@@ -178,6 +186,13 @@
   },
   "jest": {
     "testURL": "http://localhost",
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>/src/lib"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/assetsTransformer.js",
       "\\.(scss|css|less)$": "<rootDir>/tools/assetsTransformer.js",
@@ -186,7 +201,13 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/src/app/"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/src/helpers/enzyme_setup"
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/helpers/enzyme_setup"
+    ],
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.(j|t)sx?$": "ts-jest"
+    }
   },
   "publishConfig": {
     "registry": "https://engci-maven-master.cisco.com/artifactory/api/npm/webex-web-app-npm/"

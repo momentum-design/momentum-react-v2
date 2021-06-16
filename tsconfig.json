@@ -1,12 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES2016",
-    "module": "commonjs",
+    "baseUrl": "src/lib",
+    "paths": {
+      "*": [
+        "*",
+      ]
+    },
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "noEmit": false,
+    "jsx": "react",
     "strict": true,
-    "esModuleInterop": true
+    "isolatedModules": true,
+    "sourceMap": true,
   },
-  "files": [
-    "/web-components/webpack.config.ts",
-    "/web-components/webpack.config.dev.server.ts"
-  ]
+  "include": [
+    "src/lib"
+  ],
 }

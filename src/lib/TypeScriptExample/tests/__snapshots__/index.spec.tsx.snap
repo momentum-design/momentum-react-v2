@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Button /> should match SnapShot 1`] = `
+<TypeScriptExample>
+  <div>
+    Hello this is a typescript component
+  </div>
+</TypeScriptExample>
+`;

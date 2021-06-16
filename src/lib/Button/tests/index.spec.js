@@ -6,7 +6,7 @@ import SelectableContext from '../../SelectableContext';
 
 describe('tests for <Button />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Button children='test' ariaLabel='test' />);
+    const container = mount(<Button children='test' ariaLabel='test' onClick={() => {}} />);
 
     expect(container).toMatchSnapshot();
   });

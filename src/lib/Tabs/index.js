@@ -100,8 +100,8 @@ class Tabs extends React.Component {
       }
     });
 
-    return ( <
-      div className = {
+    return (
+      <div className = {
         'md-tab' +
         `${(tabType && ` md-tab--${tabType}`) || ''}` +
         `${(justified && ` md-tab--justified`) || ''}` +
@@ -111,8 +111,7 @@ class Tabs extends React.Component {
         tabType
       } > {
         cloneChildren
-      } <
-      /div>
+      } </div>
     );
   }
 }

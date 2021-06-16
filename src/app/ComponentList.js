@@ -53,6 +53,7 @@ import TimePicker from '../lib/TimePicker/examples/KitchenSink';
 import Topbar from '../lib/Topbar/examples/KitchenSink';
 import ToggleSwitch from '../lib/ToggleSwitch/examples/KitchenSink';
 import Tooltip from '../lib/Tooltip/examples/KitchenSink';
+import TypeScriptExample from '../lib/TypeScriptExample/examples/KitchenSink';
 
 export default {
   Accordion,
@@ -110,4 +111,5 @@ export default {
   Topbar,
   ToggleSwitch,
   Tooltip,
+  TypeScriptExample,
 };

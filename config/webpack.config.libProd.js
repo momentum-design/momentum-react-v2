@@ -22,13 +22,7 @@ baseConfig.plugins.push(
       context: '/',
       postcss: () => [autoprefixer],
     },
-  }),
-  new webpack.optimize.UglifyJsPlugin({
-    sourceMap: true,
-    output: {
-      comments: false,
-    },
-  }),
+  })
 );
 
 baseConfig.module.rules.push({
