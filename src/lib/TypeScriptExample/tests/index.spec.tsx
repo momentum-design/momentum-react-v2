@@ -4,7 +4,7 @@ import { TypeScriptExample } from '..';
 
 describe('tests for <TypeScriptExample />', () => {
   it('should match SnapShot', () => {
-    const container = mount(<TypeScriptExample/>);
+    const container = mount(<TypeScriptExample param="test"/>);
 
     expect(container).toMatchSnapshot();
   });

@@ -1,3 +1,9 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-export const TypeScriptExample = () => <div>Hello this is a typescript component</div>
+type TypeScriptExampleProps = {
+  param: string
+}
+
+export const TypeScriptExample: FC<TypeScriptExampleProps> = ({param}) => {
+  return <div>Hello this is a typescript component: {param}</div>
+}

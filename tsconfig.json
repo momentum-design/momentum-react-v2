@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/lib",
+    "baseUrl": ".",
     "paths": {
-      "*": [
-        "*",
-      ]
+      "@momentum-ui/react/*": ["src/lib/*"]
     },
     "target": "ESNext",
     "module": "ESNext",
@@ -15,9 +13,9 @@
     "jsx": "react",
     "strict": true,
     "isolatedModules": true,
-    "sourceMap": true,
+    "sourceMap": true
   },
   "include": [
     "src/lib"
-  ],
+  ]
 }
