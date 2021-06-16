@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@momentum-ui/react/*": ["src/lib/*"]
+      "@momentum-ui/react/*": ["src/lib/*"],
+      "@momentum-ui/react": [
+        "src/lib/index.js"
+      ]
     },
     "target": "ESNext",
     "module": "ESNext",
