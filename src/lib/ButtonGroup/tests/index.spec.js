@@ -77,11 +77,15 @@ describe('tests for <ButtonGroup />', () => {
   });
 
   it('if focusOnLoad is set to true, then should set the focus on the first button', () => {
+    // focus was being transferred to component outside the dom
+    // see https://github.com/jsdom/jsdom/issues/2924
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
     mount(
       <ButtonGroup focusOnLoad>
         <Button ariaLabel="test" id="one">1</Button>
         <Button ariaLabel="test" id="two">2</Button>
-      </ButtonGroup>);
+      </ButtonGroup>, {attachTo: focusContainer});
     expect(document.activeElement.id).toEqual('one');
   });
 

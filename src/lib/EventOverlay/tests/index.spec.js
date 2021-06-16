@@ -215,6 +215,10 @@ describe('tests for <EventOverlay />', () => {
   });
 
   it('on closing the popover, show focus back on the trigger if onClick present', () => {
+    // focus was being transferred to component outside the dom
+    // see https://github.com/jsdom/jsdom/issues/2924
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
     const container = mount(
       <div className="wrapper">
         <Popover
@@ -226,7 +230,7 @@ describe('tests for <EventOverlay />', () => {
         >
           <Button ariaLabel='Hello'>Hello</Button>
         </Popover>
-      </div>
+      </div>, { attachTo: focusContainer }
     );
 
     container.find('Button').simulate('click');

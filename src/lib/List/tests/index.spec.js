@@ -326,12 +326,16 @@ describe('tests for <List />', () => {
   });
 
   it('should initially focus on active item', () => {
+    // focus was being transferred to component outside the dom
+    // see https://github.com/jsdom/jsdom/issues/2924
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
     const container = mount(
       <List active='test-list-2' shouldFocusActive focusFirst={true}>
         <ListItem className='firstIndex' label="test" id='test-list-1' link='javscript:void(0)' />
         <ListItem className='secondIndex' label="test" id='test-list-2' link='javscript:void(0)' />
         <ListItem className='thirdIndex' label="test" id='test-list-3' link='javscript:void(0)' />
-      </List>
+      </List>, { attachTo: focusContainer }
     );
 
     expect(container.state().listContext.active).toEqual('test-list-2');
