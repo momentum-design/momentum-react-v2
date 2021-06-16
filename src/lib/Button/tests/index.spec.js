@@ -8,7 +8,7 @@ import {utils} from '@momentum-ui/react';
 describe('tests for <Button />', () => {
   it('should match SnapShot', () => {
     const container = mount(<Button children='test' ariaLabel='test' onClick={() => {}} />);
-    utils.helloWorld();
+    utils.helloWorld({name: 'world'});
     expect(container).toMatchSnapshot();
   });
 
