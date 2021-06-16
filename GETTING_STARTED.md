@@ -6,15 +6,15 @@ It's fairly simple and easy. Just follow three simple steps as explained below:
 
 ### 2. Clone the repo
 
-Clone the `momentum-ui-react` git repo:
+Clone the `momentum-react-v2` git repo:
 
 ```sh
-git clone git@github.com:momentum-design/momentum-ui-react.git
+git clone git@github.com:momentum-design/momentum-react-v2.git
 ```
 
 ### 3. Install all dependencies & devdependencies
 
-From the command line navigate to 'momentum-ui-react' directory created in previous step
+From the command line navigate to 'momentum-react-v2' directory created in previous step
 and run following command:
 
 ```sh
@@ -105,17 +105,19 @@ momentum-ui-react
 
 * Each component folder (say button) houses JSX source code and `__snapshots__` folder.
 
-At the time of publishing only minimal files and folders are included in module to keep download / installation faster and save space on your disk. Post installation of colab-ui-react NPM
+At the time of publishing only minimal files and folders are included in module to keep download / installation faster and save space on your disk. Post installation of momentum-react-v2 NPM
 module it will have following directory structure:
 
 ```sh
-momentum-ui-react
+momentum-react-v2
 │  README.md
 │  LICENSE
 │  package.json
-|  index.js
 |  ...
+└───scss
+|  |  momentum-ui.scss
 └───lib
+|  └───index.js
 |  └───Button
 |  |  |  index.js
 |  |  |  ...
@@ -124,9 +126,10 @@ momentum-ui-react
 |  |  ...
 |
 └───bundles
-|  |  ...
-└───dist
-|  |  ...
+|  |  index.js
+└───es
+|  └───Button
+|  |    index.js
 ```
 
 As evident above, only assets (dist, bundles, lib) are part of published module.
