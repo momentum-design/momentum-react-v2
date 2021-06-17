@@ -21,12 +21,15 @@ module.exports = (on) => {
     'file:preprocessor',
     webpack({
       webpackOptions: {
+        resolve: {
+          extensions: ['*', '.js', '.jsx', '.json', '.ts', '.tsx'],
+        },
         target: 'web',
         node: { fs: 'empty'},
         module: {
           rules: [
             {
-              test: /\.(js|jsx)?$/,
+              test: /\.(js|jsx|ts|tsx)?$/,
               exclude: [/node_modules/],
               use: [
                 {
