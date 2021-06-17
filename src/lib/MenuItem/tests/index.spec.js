@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import MenuItem from '@momentum-ui/react/MenuItem';
 import SelectableContext from '../../SelectableContext';
 

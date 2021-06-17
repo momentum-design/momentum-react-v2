@@ -1,9 +1,8 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { Button, Loading } from '@momentum-ui/react';
+import { mount } from 'enzyme';
+import { Button, Loading, utils } from '@momentum-ui/react'; // eslint-disable-line import/named
 import ButtonGroupContext from '../../ButtonGroupContext';
 import SelectableContext from '../../SelectableContext';
-import {utils} from '@momentum-ui/react';
 
 describe('tests for <Button />', () => {
   it('should match SnapShot', () => {

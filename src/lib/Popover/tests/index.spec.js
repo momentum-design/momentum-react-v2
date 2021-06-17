@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { Button, Popover } from '@momentum-ui/react';
 
 describe('tests for <Popover />', () => {

@@ -13,14 +13,18 @@ module.exports = {
         "extensions": [
           ".js",
           ".jsx",
-          ".json"
+          ".json",
+          ".tsx",
+          ".ts"
         ]
       }
     },
     "import/extensions": [
       ".js",
       ".mjs",
-      ".jsx"
+      ".jsx",
+      ".ts",
+      ".tsx"
     ],
     "import/ignore": [
       "node_modules",
@@ -103,7 +107,9 @@ module.exports = {
     "import/extensions": ["error", "ignorePackages", {
       "js": "never",
       "mjs": "never",
-      "jsx": "never"
+      "jsx": "never",
+      "ts": "never",
+      "tsx": "never"
     }],
     "react/self-closing-comp": 1,
     "react/sort-comp": 1,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { Icon } from '@momentum-ui/react';
 
 describe('Tests for <Icon />', () => {
