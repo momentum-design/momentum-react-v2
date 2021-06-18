@@ -4,7 +4,7 @@ import { Tab } from '@momentum-ui/react';
 
 describe('tests for <Tab />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Tab heading="test" />);
+    const container = mount(<Tab heading="test" />);
 
     expect(container).toMatchSnapshot();
   });

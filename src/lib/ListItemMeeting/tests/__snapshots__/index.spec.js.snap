@@ -1,377 +1,144 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <ListItemMeeting /> should match SnapShot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ListItemMeeting
-    anchorLabel=""
-    anchorOnClick={null}
-    childrenRight={null}
-    className=""
-    date={null}
-    eventOverlayProps={null}
-    header="testHeader"
-    id=""
-    inProgress={false}
-    includeDate={false}
-    isAllDay={false}
-    isCompleted={false}
-    isRecurring={false}
-    onClick={null}
-    popoverContent={null}
-    ratioOffset={-0.4}
-    statusColor={null}
-    time={
-      Object {
-        "end": "",
-        "start": "",
-      }
+<ListItemMeeting
+  anchorLabel=""
+  anchorOnClick={null}
+  childrenRight={null}
+  className=""
+  date={null}
+  eventOverlayProps={null}
+  header="testHeader"
+  id=""
+  inProgress={false}
+  includeDate={false}
+  isAllDay={false}
+  isCompleted={false}
+  isRecurring={false}
+  onClick={null}
+  popoverContent={null}
+  ratioOffset={-0.4}
+  statusColor={null}
+  time={
+    Object {
+      "end": "",
+      "start": "",
     }
-    timeNode={null}
-    title=""
-    type=""
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": Array [
-        <ListItemSection
-          className=""
-          position="left"
-        />,
-        <ListItemSection
-          className=""
-          position="center"
+  }
+  timeNode={null}
+  title=""
+  type=""
+>
+  <ContextTransform(ListItem)
+    className="md-list-item-meeting"
+    id=""
+    onClick={[Function]}
+    title="testHeader"
+    type={60}
+  >
+    <ListItem
+      active={false}
+      className="md-list-item-meeting"
+      customAnchorNode={null}
+      customRefProp=""
+      disabled={false}
+      eventKey=""
+      focus={false}
+      focusLockTabbableChildren={false}
+      focusLockTabbableChildrenProps={
+        Object {
+          "portalNodeQuery": "",
+          "tabbableChildrenHasPopover": false,
+          "tabbableChildrenQuery": "",
+        }
+      }
+      focusOnLoad={false}
+      id=""
+      isReadOnly={false}
+      itemIndex={null}
+      keyboardKey=""
+      label=""
+      link=""
+      onBlur={null}
+      onClick={[Function]}
+      onKeyDown={null}
+      parentKeyDown={null}
+      parentOnSelect={null}
+      refName="navLink"
+      role="listitem"
+      separator={false}
+      specifyRoleWithoutList={false}
+      title="testHeader"
+      type={60}
+      value=""
+    >
+      <Component
+        name={[Function]}
+      >
+        <UID
+          idSource={
+            Object {
+              "prefix": "",
+              "uid": [Function],
+              "value": 2,
+            }
+          }
+          name={[Function]}
         >
           <div
-            className="md-list-item__header"
+            className="md-list-item md-list-item--60 md-list-item-meeting"
+            data-md-event-key="md-list-item-1"
+            data-md-keyboard-key="test-header"
+            id="md-list-item-1"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="listitem"
+            tabIndex={-1}
+            title="testHeader"
           >
-            <span>
-              testHeader
-            </span>
-          </div>
-          <div
-            className="md-list-item__space-link"
-          >
-            
-          </div>
-        </ListItemSection>,
-        <ListItemSection
-          className=""
-          position="right"
-        />,
-        false,
-      ],
-      "className": "md-list-item-meeting",
-      "id": "",
-      "onClick": [Function],
-      "title": "testHeader",
-      "type": 60,
-    },
-    "ref": [Function],
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "child-0",
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            false,
-            undefined,
-          ],
-          "className": "",
-          "position": "left",
-        },
-        "ref": null,
-        "rendered": Array [
-          false,
-          undefined,
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "child-1",
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <div
-              className="md-list-item__header"
+            <ListItemSection
+              className=""
+              key="child-0"
+              position="left"
             >
-              <span>
-                testHeader
-              </span>
-            </div>,
-            <div
-              className="md-list-item__space-link"
-            >
-              
-            </div>,
-          ],
-          "className": "",
-          "position": "center",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  testHeader
-                </span>,
-                false,
-              ],
-              "className": "md-list-item__header",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "testHeader",
-                },
-                "ref": null,
-                "rendered": "testHeader",
-                "type": "span",
-              },
-              false,
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "",
-              "className": "md-list-item__space-link",
-            },
-            "ref": null,
-            "rendered": "",
-            "type": "div",
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "child-2",
-        "nodeType": "function",
-        "props": Object {
-          "children": null,
-          "className": "",
-          "position": "right",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      false,
-    ],
-    "type": Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "defaultProps": undefined,
-      "displayName": "ContextTransform(ListItem)",
-      "propTypes": undefined,
-      "render": [Function],
-    },
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <ListItemSection
-            className=""
-            position="left"
-          />,
-          <ListItemSection
-            className=""
-            position="center"
-          >
-            <div
-              className="md-list-item__header"
-            >
-              <span>
-                testHeader
-              </span>
-            </div>
-            <div
-              className="md-list-item__space-link"
-            >
-              
-            </div>
-          </ListItemSection>,
-          <ListItemSection
-            className=""
-            position="right"
-          />,
-          false,
-        ],
-        "className": "md-list-item-meeting",
-        "id": "",
-        "onClick": [Function],
-        "title": "testHeader",
-        "type": 60,
-      },
-      "ref": [Function],
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "child-0",
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              false,
-              undefined,
-            ],
-            "className": "",
-            "position": "left",
-          },
-          "ref": null,
-          "rendered": Array [
-            false,
-            undefined,
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "child-1",
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
               <div
-                className="md-list-item__header"
-              >
-                <span>
-                  testHeader
-                </span>
-              </div>,
+                className="md-list-item__left"
+              />
+            </ListItemSection>
+            <ListItemSection
+              className=""
+              key="child-1"
+              position="center"
+            >
               <div
-                className="md-list-item__space-link"
+                className="md-list-item__center"
               >
-                
-              </div>,
-            ],
-            "className": "",
-            "position": "center",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
+                <div
+                  className="md-list-item__header"
+                >
                   <span>
                     testHeader
-                  </span>,
-                  false,
-                ],
-                "className": "md-list-item__header",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "testHeader",
-                  },
-                  "ref": null,
-                  "rendered": "testHeader",
-                  "type": "span",
-                },
-                false,
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "",
-                "className": "md-list-item__space-link",
-              },
-              "ref": null,
-              "rendered": "",
-              "type": "div",
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "child-2",
-          "nodeType": "function",
-          "props": Object {
-            "children": null,
-            "className": "",
-            "position": "right",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        false,
-      ],
-      "type": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "defaultProps": undefined,
-        "displayName": "ContextTransform(ListItem)",
-        "propTypes": undefined,
-        "render": [Function],
-      },
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+                  </span>
+                </div>
+                <div
+                  className="md-list-item__space-link"
+                />
+              </div>
+            </ListItemSection>
+            <ListItemSection
+              className=""
+              key="child-2"
+              position="right"
+            >
+              <div
+                className="md-list-item__right"
+              />
+            </ListItemSection>
+          </div>
+        </UID>
+      </Component>
+    </ListItem>
+  </ContextTransform(ListItem)>
+</ListItemMeeting>
 `;

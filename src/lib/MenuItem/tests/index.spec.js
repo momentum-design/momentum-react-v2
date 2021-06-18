@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import MenuItem from '@momentum-ui/react/MenuItem';
 import SelectableContext from '../../SelectableContext';
 
@@ -15,7 +15,7 @@ describe('tests for <MenuItem />', () => {
   };
 
   it('should render a MenuItem', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <MenuItem label="one"/>
     );
     expect(wrapper).toMatchSnapshot();

@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { Label } from '@momentum-ui/react';
 
 describe('tests for <Label />', () => {
   it('should match text SnapShot', () => {
-    const container = shallow(<Label htmlFor="test" label="test" />);
+    const container = mount(<Label htmlFor="test" label="test" />);
 
     expect(container).toMatchSnapshot();
   });

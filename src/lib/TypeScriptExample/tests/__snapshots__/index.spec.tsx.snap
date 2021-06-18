@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <TypeScriptExample /> should match SnapShot 1`] = `
+<TypeScriptExample
+  param="test"
+>
+  <div>
+    Hello this is a typescript component: 
+    test
+  </div>
+</TypeScriptExample>
+`;

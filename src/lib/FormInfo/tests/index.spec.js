@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { FormInfo } from '@momentum-ui/react';
 
 describe('tests for <FormInfo />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<FormInfo />);
+    const container = mount(<FormInfo />);
 
     expect(container).toMatchSnapshot();
   });

@@ -5,7 +5,7 @@ import { prefix } from '../../utils/index';
 
 describe('tests for <TopbarMobile />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<TopbarMobile id="test" />);
+    const container = mount(<TopbarMobile id="test" />);
 
     expect(container).toMatchSnapshot();
   });

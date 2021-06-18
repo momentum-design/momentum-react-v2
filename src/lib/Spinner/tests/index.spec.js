@@ -4,7 +4,7 @@ import { Spinner } from '@momentum-ui/react';
 
 describe('tests for <Spinner />', () => {
   it('should render a Spinner', () => {
-    const wrapper = shallow(<Spinner />);
+    const wrapper = mount(<Spinner />);
 
     expect(wrapper).toMatchSnapshot();
   });

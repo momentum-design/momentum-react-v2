@@ -7,7 +7,7 @@ import {
 
 describe('tests for <RadioGroup />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<RadioGroup />);
+    const container = mount(<RadioGroup />);
 
     expect(container).toMatchSnapshot();
   });

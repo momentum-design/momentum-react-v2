@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { ComboBox, ListItem, ListItemHeader } from '@momentum-ui/react';
 
 describe('tests for <ComboBox />', () => {
 
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <ComboBox options={['a', 'ab', 'abc']} />
     );
     expect(container).toMatchSnapshot();

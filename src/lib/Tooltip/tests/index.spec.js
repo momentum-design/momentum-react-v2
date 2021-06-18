@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import {
   Button,
   Tooltip,
@@ -12,7 +12,7 @@ describe('tests for <Tooltip />', () => {
   });
 
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Tooltip tooltip="test">
         <div>Hi</div>
       </Tooltip>

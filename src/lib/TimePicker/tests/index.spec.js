@@ -14,7 +14,7 @@ describe('tests for <TimePicker />', () => {
   });
 
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <TimePicker id="test" selectedTime={new Date('Mon Jan 29 2018 14:42:40 GMT+0530 (IST)')} />
     );
 

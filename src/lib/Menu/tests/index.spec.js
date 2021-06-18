@@ -8,7 +8,7 @@ describe('tests for <Menu />', () => {
   });
 
   it('should render a Menu', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Menu>
         <MenuItem label="one" />
       </Menu>
@@ -42,12 +42,16 @@ describe('tests for <Menu />', () => {
   });
 
   it('should focus first non disabled/ non readOnly menuItem', () => {
+    // focus was being transferred to component outside the dom
+    // see https://github.com/jsdom/jsdom/issues/2924
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
     const wrapper = mount(
       <Menu>
         <MenuItem label="one" isHeader eventKey="test-1"/>
         <MenuItem label="two" disabled eventKey="test-2"/>
         <MenuItem label="three" eventKey="test-3"/>
-      </Menu>
+      </Menu>, {attachTo: focusContainer}
     );
     const instance = wrapper.find('Menu').instance();
 

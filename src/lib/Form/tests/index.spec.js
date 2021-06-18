@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Form from '@momentum-ui/react/Form';
 
 describe('tests for <Form />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Form name="test" />);
+    const container = mount(<Form name="test" />);
 
     expect(container).toMatchSnapshot();
   });

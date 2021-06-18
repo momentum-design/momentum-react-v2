@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { SocialList } from '@momentum-ui/react';
 
 describe('<SocialList />', () => {
   it('should render a SocialList', () => {
-    const container = shallow(<SocialList />);
+    const container = mount(<SocialList />);
     expect(container).toMatchSnapshot();
   });
 

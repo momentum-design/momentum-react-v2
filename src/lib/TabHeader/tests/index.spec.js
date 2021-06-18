@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { TabHeader } from '@momentum-ui/react';
 
 describe('tests for <TabHeader />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<TabHeader heading="test" />);
+    const container = mount(<TabHeader heading="test" />);
 
     expect(container).toMatchSnapshot();
   });

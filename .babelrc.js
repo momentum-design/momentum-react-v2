@@ -20,7 +20,8 @@ module.exports = {
     [
       '@babel/preset-react',
       { development: process.env.NODE_ENV !== 'production' }
-    ]
+    ],
+    '@babel/preset-typescript'
   ],
   plugins: [
     [

@@ -4,7 +4,7 @@ import { ListItem, Select } from '@momentum-ui/react';
 
 describe('tests for <Select />', () => {
   it('should match normal SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <Select />
     );
 

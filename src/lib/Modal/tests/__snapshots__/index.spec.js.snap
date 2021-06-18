@@ -1,167 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <Modal /> should render a Modal 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Modal
-    applicationId="test"
-    backdrop={true}
-    backdropClickExit={false}
-    className=""
+<Modal
+  applicationId="test"
+  backdrop={true}
+  backdropClickExit={false}
+  className=""
+  escapeExits={true}
+  focusDialog={true}
+  htmlId="testModal"
+  icon={null}
+  onHide={[Function]}
+  renderTo={null}
+  show={true}
+  size="default"
+>
+  <Displaced
+    dialogClass="md-modal md-modal--default in"
     escapeExits={true}
     focusDialog={true}
-    htmlId="testModal"
+    getApplicationNode={[Function]}
     icon={null}
+    includeDefaultStyles={false}
+    mounted={true}
+    onExit={[Function]}
     onHide={[Function]}
-    renderTo={null}
-    show={true}
-    size="default"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <div
-        className="md-modal__content"
+    titleId="testModal"
+    underlayClass="md-modal__backdrop fade in"
+    underlayClickExits={false}
+  >
+    <Portal
+      containerInfo={
+        <div>
+          <div>
+            <div
+              class="md-modal__backdrop fade in"
+            >
+              <div
+                aria-labelledby="testModal"
+                class="md-modal md-modal--default in"
+                id="react-aria-modal-dialog"
+                role="dialog"
+                tabindex="-1"
+              >
+                <div
+                  class="md-modal__content"
+                >
+                  <div
+                    class="md-modal__flex-container"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    >
+      <Modal
+        dialogClass="md-modal md-modal--default in"
+        dialogId="react-aria-modal-dialog"
+        escapeExits={true}
+        focusDialog={true}
+        focusTrapPaused={false}
+        getApplicationNode={[Function]}
+        icon={null}
+        includeDefaultStyles={false}
+        mounted={true}
+        onExit={[Function]}
+        onHide={[Function]}
+        scrollDisabled={true}
+        titleId="testModal"
+        underlayClass="md-modal__backdrop fade in"
+        underlayClickExits={false}
+        underlayColor="rgba(0,0,0,0.5)"
+        underlayProps={Object {}}
       >
-        <div
-          className="md-modal__flex-container"
-        />
-      </div>,
-      "dialogClass": "md-modal md-modal--default in",
-      "escapeExits": true,
-      "focusDialog": true,
-      "getApplicationNode": [Function],
-      "icon": null,
-      "includeDefaultStyles": false,
-      "mounted": true,
-      "onExit": [Function],
-      "onHide": [Function],
-      "titleId": "testModal",
-      "underlayClass": "md-modal__backdrop fade in",
-      "underlayClickExits": false,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="md-modal__flex-container"
-        />,
-        "className": "md-modal__content",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": null,
-          "className": "md-modal__flex-container",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "div",
-      },
-      "type": "div",
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <div
-          className="md-modal__content"
+        <FocusTrap
+          _createFocusTrap={[Function]}
+          active={true}
+          focusTrapOptions={
+            Object {
+              "escapeDeactivates": true,
+              "initialFocus": "#react-aria-modal-dialog",
+            }
+          }
+          paused={false}
+          tag="div"
         >
-          <div
-            className="md-modal__flex-container"
-          />
-        </div>,
-        "dialogClass": "md-modal md-modal--default in",
-        "escapeExits": true,
-        "focusDialog": true,
-        "getApplicationNode": [Function],
-        "icon": null,
-        "includeDefaultStyles": false,
-        "mounted": true,
-        "onExit": [Function],
-        "onHide": [Function],
-        "titleId": "testModal",
-        "underlayClass": "md-modal__backdrop fade in",
-        "underlayClickExits": false,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className="md-modal__flex-container"
-          />,
-          "className": "md-modal__content",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": null,
-            "className": "md-modal__flex-container",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        "type": "div",
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): Object {
-    "handleClose": [Function],
-  },
-}
+          <div>
+            <div
+              className="md-modal__backdrop fade in"
+              style={Object {}}
+            >
+              <div
+                aria-labelledby="testModal"
+                className="md-modal md-modal--default in"
+                id="react-aria-modal-dialog"
+                key="b"
+                role="dialog"
+                style={Object {}}
+                tabIndex="-1"
+              >
+                <div
+                  className="md-modal__content"
+                >
+                  <div
+                    className="md-modal__flex-container"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </FocusTrap>
+      </Modal>
+    </Portal>
+  </Displaced>
+</Modal>
 `;

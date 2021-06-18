@@ -13,7 +13,7 @@ const baseConfig = {
   devtool: 'eval-source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
 
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json'],
+    extensions: ['*', '.js', '.jsx', '.json', '.ts', '.tsx'],
     alias: {
       'react-native': 'react-native-web',
       '@momentum-ui/react': path.resolve(codePath, 'src', 'lib'),
@@ -27,6 +27,14 @@ const baseConfig = {
 
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)?$/,
+        include: [
+          path.resolve(codePath, 'src'),
+          path.resolve(codePath, 'node_modules/@momentum-ui/icons/data'),
+        ],
+        use: ['babel-loader', 'ts-loader'],
+      },
       {
         test: /\.(js|jsx)?$/,
         include: [

@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { MenuItem, SubMenu } from '@momentum-ui/react';
 
 describe('tests for <SubMenu />', () => {
 
   it('should render a SubMenu', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <SubMenu label="one">
         <MenuItem label="two"/>
       </SubMenu>

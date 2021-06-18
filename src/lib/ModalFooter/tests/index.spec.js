@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { ModalFooter } from '@momentum-ui/react';
 
 describe('tests for <ModalFooter />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ModalFooter id="test" />);
+    const container = mount(<ModalFooter id="test" />);
 
     expect(container).toMatchSnapshot();
   });

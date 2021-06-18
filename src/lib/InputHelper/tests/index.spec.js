@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { InputHelper } from '@momentum-ui/react';
 
 describe('tests for <InputHelper />', () => {
   it('should match text SnapShot', () => {
-    const container = shallow(<InputHelper message='test' />);
+    const container = mount(<InputHelper message='test' />);
 
     expect(container).toMatchSnapshot();
   });

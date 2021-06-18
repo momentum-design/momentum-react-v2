@@ -1,103 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ForwardRef(render)
+<ContextTransform(MenuItem)
+  label="one"
+>
+  <MenuItem
+    className=""
+    isHeader={false}
+    isOpen={false}
+    itemClassName=""
+    keepMenuOpen={false}
     label="one"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": [Function],
-    },
-    "ref": null,
-    "rendered": [Function],
-    "type": Object {
-      "$$typeof": Symbol(react.context),
-      "_calculateChangedBits": null,
-      "_context": Object {
-        "$$typeof": Symbol(react.context),
-        "Consumer": [Circular],
-        "Provider": Object {
-          "$$typeof": Symbol(react.provider),
-          "_context": [Circular],
-        },
-        "_calculateChangedBits": null,
-        "_currentRenderer": null,
-        "_currentRenderer2": null,
-        "_currentValue": undefined,
-        "_currentValue2": undefined,
-        "_threadCount": 0,
-      },
-    },
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": [Function],
-      },
-      "ref": null,
-      "rendered": [Function],
-      "type": Object {
-        "$$typeof": Symbol(react.context),
-        "_calculateChangedBits": null,
-        "_context": Object {
-          "$$typeof": Symbol(react.context),
-          "Consumer": [Circular],
-          "Provider": Object {
-            "$$typeof": Symbol(react.provider),
-            "_context": [Circular],
-          },
-          "_calculateChangedBits": null,
-          "_currentRenderer": null,
-          "_currentRenderer2": null,
-          "_currentValue": undefined,
-          "_currentValue2": undefined,
-          "_threadCount": 0,
-        },
-      },
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+    onClick={null}
+    parentKeyDown={null}
+    parentOnSelect={null}
+  >
+    <Component
+      name={[Function]}
+    >
+      <UID
+        idSource={
+          Object {
+            "prefix": "",
+            "uid": [Function],
+            "value": 3,
+          }
+        }
+        name={[Function]}
+      >
+        <div
+          aria-expanded={null}
+          aria-haspopup={false}
+          className="md-menu-item"
+        >
+          <ContextTransform(ListItem)
+            active={null}
+            className=""
+            focusOnLoad={true}
+            id="md-menu-item-1"
+            isReadOnly={false}
+            label="one"
+            role="menuitem"
+          >
+            <ListItem
+              active={null}
+              className=""
+              customAnchorNode={null}
+              customRefProp=""
+              disabled={false}
+              eventKey=""
+              focus={false}
+              focusLockTabbableChildren={false}
+              focusLockTabbableChildrenProps={
+                Object {
+                  "portalNodeQuery": "",
+                  "tabbableChildrenHasPopover": false,
+                  "tabbableChildrenQuery": "",
+                }
+              }
+              focusOnLoad={true}
+              id="md-menu-item-1"
+              isReadOnly={false}
+              itemIndex={null}
+              keyboardKey=""
+              label="one"
+              link=""
+              onBlur={null}
+              onClick={null}
+              onKeyDown={null}
+              parentKeyDown={[Function]}
+              parentOnSelect={[Function]}
+              refName="navLink"
+              role="menuitem"
+              separator={false}
+              specifyRoleWithoutList={false}
+              title=""
+              type=""
+              value=""
+            >
+              <Component
+                name={[Function]}
+              >
+                <UID
+                  idSource={
+                    Object {
+                      "prefix": "",
+                      "uid": [Function],
+                      "value": 3,
+                    }
+                  }
+                  name={[Function]}
+                >
+                  <div
+                    className="md-list-item"
+                    data-md-event-key="md-menu-item-1"
+                    data-md-keyboard-key="one"
+                    id="md-menu-item-1"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={-1}
+                    title="one"
+                  >
+                    one
+                  </div>
+                </UID>
+              </Component>
+            </ListItem>
+          </ContextTransform(ListItem)>
+        </div>
+      </UID>
+    </Component>
+  </MenuItem>
+</ContextTransform(MenuItem)>
 `;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { Select, SelectOption } from '@momentum-ui/react';
 
 describe('tests for <SelectOption />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<SelectOption/>);
+    const container = mount(<SelectOption/>);
 
     expect(container).toMatchSnapshot();
   });

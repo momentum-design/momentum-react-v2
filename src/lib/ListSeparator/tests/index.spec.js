@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { ListSeparator } from '@momentum-ui/react';
 
 describe('tests for <ListSeparator />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ListSeparator />);
+    const container = mount(<ListSeparator />);
 
     expect(container).toMatchSnapshot();
   });

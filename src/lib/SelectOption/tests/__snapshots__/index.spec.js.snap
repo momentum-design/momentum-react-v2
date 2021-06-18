@@ -1,77 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <SelectOption /> should match SnapShot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SelectOption
-    active={false}
-    className=""
-    id=""
-    label=""
-    title=""
-    value=""
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": [Function],
-      "name": [Function],
-    },
-    "ref": null,
-    "rendered": [Function],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": [Function],
-        "name": [Function],
-      },
-      "ref": null,
-      "rendered": [Function],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+<SelectOption
+  active={false}
+  className=""
+  id=""
+  label=""
+  title=""
+  value=""
+>
+  <Component
+    name={[Function]}
+  >
+    <UID
+      idSource={
+        Object {
+          "prefix": "",
+          "uid": [Function],
+          "value": 3,
+        }
+      }
+      name={[Function]}
+    >
+      <ContextTransform(ListItem)
+        className=""
+        id=""
+        label=""
+        title=""
+        value=""
+      >
+        <ListItem
+          active={false}
+          className=""
+          customAnchorNode={null}
+          customRefProp=""
+          disabled={false}
+          eventKey=""
+          focus={false}
+          focusLockTabbableChildren={false}
+          focusLockTabbableChildrenProps={
+            Object {
+              "portalNodeQuery": "",
+              "tabbableChildrenHasPopover": false,
+              "tabbableChildrenQuery": "",
+            }
+          }
+          focusOnLoad={false}
+          id=""
+          isReadOnly={false}
+          itemIndex={null}
+          keyboardKey=""
+          label=""
+          link=""
+          onBlur={null}
+          onClick={null}
+          onKeyDown={null}
+          parentKeyDown={null}
+          parentOnSelect={null}
+          refName="navLink"
+          role="listitem"
+          separator={false}
+          specifyRoleWithoutList={false}
+          title=""
+          type=""
+          value=""
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "",
+                  "uid": [Function],
+                  "value": 3,
+                }
+              }
+              name={[Function]}
+            >
+              <div
+                className="md-list-item"
+                data-md-event-key="md-list-item-2"
+                id="md-list-item-2"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="listitem"
+                tabIndex={-1}
+              >
+                <ListItemSection
+                  className=""
+                  key="child-0"
+                  position="center"
+                >
+                  <div
+                    className="md-list-item__center"
+                  />
+                </ListItemSection>
+                <ListItemSection
+                  className=""
+                  key="child-1"
+                  position="right"
+                >
+                  <div
+                    className="md-list-item__right"
+                  />
+                </ListItemSection>
+              </div>
+            </UID>
+          </Component>
+        </ListItem>
+      </ContextTransform(ListItem)>
+    </UID>
+  </Component>
+</SelectOption>
 `;

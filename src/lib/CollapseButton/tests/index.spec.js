@@ -4,7 +4,7 @@ import { CollapseButton } from '@momentum-ui/react';
 
 describe('tests for <CollapseButton />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<CollapseButton/>);
+    const container = mount(<CollapseButton/>);
 
     expect(container).toMatchSnapshot();
   });

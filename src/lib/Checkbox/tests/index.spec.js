@@ -8,7 +8,7 @@ import {
 
 describe('tests for <Checkbox />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<Checkbox htmlId="test123" />);
+    const container = mount(<Checkbox htmlId="test123" />);
 
     expect(container).toMatchSnapshot();
   });

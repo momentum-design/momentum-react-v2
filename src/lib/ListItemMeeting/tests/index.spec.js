@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { ListItemMeeting } from '@momentum-ui/react';
 
 describe('tests for <ListItemMeeting />', () => {
@@ -16,7 +16,7 @@ describe('tests for <ListItemMeeting />', () => {
   const anchorClick = jest.fn();
 
   it('should match SnapShot', () => {
-    const container = shallow(<ListItemMeeting {...props} />);
+    const container = mount(<ListItemMeeting {...props} />);
 
     expect(container).toMatchSnapshot();
   });

@@ -9,7 +9,7 @@ import {
 
 describe('tests for <MenuOverlay />', () => {
   it('should render a MenuOverlay', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <MenuOverlay menuTrigger={<div>Trigger</div>}>
         <Menu>
           <MenuItem label="one"/>
@@ -27,6 +27,10 @@ describe('tests for <MenuOverlay />', () => {
   });
 
   it('should focus on focusFirstQuery', () => {
+    // focus was being transferred to component outside the dom
+    // see https://github.com/jsdom/jsdom/issues/2924
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
     const wrapper = mount(
       <MenuOverlay focusFirstQuery='.md-test' menuTrigger={<div className="trigger">Trigger</div>}>
         <MenuContent>
@@ -35,7 +39,7 @@ describe('tests for <MenuOverlay />', () => {
         <Menu focusFirst={false}>
           <MenuItem label="one"/>
         </Menu>
-      </MenuOverlay>
+      </MenuOverlay>, {attachTo: focusContainer}
     );
 
     wrapper.find('.trigger').simulate('click');

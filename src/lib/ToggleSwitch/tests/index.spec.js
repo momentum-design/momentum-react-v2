@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { ToggleSwitch } from '@momentum-ui/react';
 
 describe('tests for <ToggleSwitch />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(<ToggleSwitch htmlId="test123"/>);
+    const container = mount(<ToggleSwitch htmlId="test123"/>);
 
     expect(container).toMatchSnapshot();
   });

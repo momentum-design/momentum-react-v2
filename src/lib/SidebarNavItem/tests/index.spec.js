@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import SidebarNavItem from '@momentum-ui/react/SidebarNavItem';
 import SidebarContext from '../../SidebarContext';
 import SidebarNavContext from '../../SidebarNavContext';
 
 describe('tests for <SidebarNavItem />', () => {
   it('should render a SidebarNavItem', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <SidebarNavItem label="one"/>
     );
     expect(wrapper).toMatchSnapshot();

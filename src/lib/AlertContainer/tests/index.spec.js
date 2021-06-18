@@ -7,7 +7,7 @@ describe('tests for <AlertContainer />', () => {
   const alertMessage = 'Unit tesing like a boss!';
 
   it('should match SnapShot', () => {
-    const container = shallow(<AlertContainer/>);
+    const container = mount(<AlertContainer/>);
 
     expect(container).toMatchSnapshot();
   });

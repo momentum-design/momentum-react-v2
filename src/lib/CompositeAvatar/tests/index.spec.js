@@ -4,7 +4,7 @@ import { Avatar, CompositeAvatar } from '@momentum-ui/react';
 
 describe('tests for <CompositeAvatar />', () => {
   it('should match SnapShot', () => {
-    const container = shallow(
+    const container = mount(
       <CompositeAvatar>
         <Avatar title="test1" />
         <Avatar title="test2" />

@@ -13,7 +13,7 @@ describe('tests for <AlertMeeting />', () => {
   const attendeeListThree = [attendeeOne, attendeeTwo, attendeeThree];
 
   it('should match SnapShot', () => {
-    const container = shallow(<AlertMeeting show attendees={attendeeListOne} onSnooze={() => {}} />);
+    const container = mount(<AlertMeeting show attendees={attendeeListOne} onSnooze={() => {}} />);
 
     expect(container).toMatchSnapshot();
   });

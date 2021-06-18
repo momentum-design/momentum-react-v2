@@ -5,7 +5,7 @@ import { prefix } from '../../utils/index';
 
 describe('<Topbar />', () => {
   it('should render a Topbar', () => {
-    const wrapper = shallow(<Topbar />);
+    const wrapper = mount(<Topbar />);
 
     expect(wrapper).toMatchSnapshot();
   });

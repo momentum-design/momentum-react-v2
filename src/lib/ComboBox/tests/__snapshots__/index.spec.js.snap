@@ -1,174 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests for <ComboBox /> should match SnapShot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ComboBox
-    className=""
-    clear={false}
-    disabled={false}
-    hasSearchIcon={true}
-    id={null}
-    inputProps={null}
-    onChange={null}
-    onSelect={null}
-    options={
-      Array [
-        "a",
-        "ab",
-        "abc",
-      ]
-    }
-    placeholder=""
-    searchProp="label"
-    targetOffset={
-      Object {
-        "horizontal": 0,
-        "vertical": 4,
-      }
-    }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "aria-controls": "md-combo-box-1",
-      "aria-expanded": false,
-      "aria-haspopup": "listbox",
-      "children": Array [
-        <SearchInput
-          aria-autocomplete="list"
-          clear={false}
-          disabled={false}
-          inputRef={[Function]}
-          isLoading={false}
-          onChange={[Function]}
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          placeholder=""
-          value=""
-        />,
-        undefined,
-      ],
-      "className": "md-combo-box",
-      "role": "combobox",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "aria-autocomplete": "list",
-          "clear": false,
-          "disabled": false,
-          "inputRef": [Function],
-          "isLoading": false,
-          "onChange": [Function],
-          "onClick": [Function],
-          "onKeyDown": [Function],
-          "placeholder": "",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      undefined,
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
+<ComboBox
+  className=""
+  clear={false}
+  disabled={false}
+  hasSearchIcon={true}
+  id={null}
+  inputProps={null}
+  onChange={null}
+  onSelect={null}
+  options={
+    Array [
+      "a",
+      "ab",
+      "abc",
+    ]
+  }
+  placeholder=""
+  searchProp="label"
+  targetOffset={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "aria-controls": "md-combo-box-1",
-        "aria-expanded": false,
-        "aria-haspopup": "listbox",
-        "children": Array [
-          <SearchInput
-            aria-autocomplete="list"
-            clear={false}
-            disabled={false}
-            inputRef={[Function]}
-            isLoading={false}
-            onChange={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            placeholder=""
-            value=""
-          />,
-          undefined,
-        ],
-        "className": "md-combo-box",
-        "role": "combobox",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "aria-autocomplete": "list",
-            "clear": false,
-            "disabled": false,
-            "inputRef": [Function],
-            "isLoading": false,
-            "onChange": [Function],
-            "onClick": [Function],
-            "onKeyDown": [Function],
-            "placeholder": "",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        undefined,
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+      "horizontal": 0,
+      "vertical": 4,
+    }
+  }
+>
+  <div
+    aria-controls="md-combo-box-1"
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="md-combo-box"
+    role="combobox"
+  >
+    <SearchInput
+      aria-autocomplete="list"
+      clear={false}
+      disabled={false}
+      inputRef={[Function]}
+      isLoading={false}
+      onChange={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      value=""
+    >
+      <Input
+        aria-autocomplete="list"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        className=""
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={
+          <Icon
+            append={false}
+            ariaLabel={null}
+            buttonClassName=""
+            buttonProps={null}
+            className=""
+            color=""
+            description=""
+            name="search_20"
+            onClick={null}
+            prepend={false}
+            size={null}
+            sizeOverride={false}
+            style={null}
+            title=""
+            type=""
+          />
+        }
+        inputClassName=""
+        inputRef={[Function]}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onClick={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={[Function]}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <InputSection
+              className=""
+              position="before"
+            >
+              <span
+                className="md-input__before"
+              >
+                <Icon
+                  append={false}
+                  ariaLabel={null}
+                  buttonClassName=""
+                  buttonProps={null}
+                  className=""
+                  color=""
+                  description=""
+                  name="search_20"
+                  onClick={null}
+                  prepend={false}
+                  size={null}
+                  sizeOverride={false}
+                  style={null}
+                  title=""
+                  type=""
+                >
+                  <i
+                    aria-label={null}
+                    className="md-icon icon icon-search_20"
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  />
+                </Icon>
+              </span>
+            </InputSection>
+            <input
+              aria-autocomplete="list"
+              className="md-input md-input--before"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+    </SearchInput>
+  </div>
+</ComboBox>
 `;
