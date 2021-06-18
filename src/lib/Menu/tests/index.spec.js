@@ -144,10 +144,13 @@ describe('tests for <Menu />', () => {
       .at(0)
       .find('.md-event-overlay__children .md-list-item');
 
+    const stopImmediatePropagation = jest.fn();
+
     // press left arrow
-    subMenuItem.simulate('keyDown', { which: 37 });
+    subMenuItem.simulate('keyDown', { which: 37, nativeEvent: {stopImmediatePropagation: stopImmediatePropagation} });
 
     expect(instance.state.listContext.focus).toEqual('test-1');
+    expect(stopImmediatePropagation).toBeCalled();
   });
 
   it('when children are not MenuItem should throw error', () => {
