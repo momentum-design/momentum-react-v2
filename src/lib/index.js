@@ -95,6 +95,10 @@ export { default as TopbarMobile } from './TopbarMobile';
 export { default as TopbarNav } from './TopbarNav';
 export { default as TopbarRight } from './TopbarRight';
 export { default as Tooltip } from './Tooltip';
+
+/** V2 Components [TypeScript] */
 export { default as TypeScriptExample } from './TypeScriptExample';
+export { default as ThemeProvider } from './ThemeProvider';
+
 
 export * as utils from './utils';

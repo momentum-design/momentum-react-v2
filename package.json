@@ -70,7 +70,9 @@
     "test:CI:percy": "wait-on http://127.0.0.1:4300 && yarn run:percy",
     "test:cypress": "run-p --race start:app test:CI:cypress",
     "test:percy": "run-p --race start:app test:CI:percy",
-    "watch:lib": "npm-watch build:lib"
+    "watch:lib": "npm-watch build:lib",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "watch": {
     "build:lib": "src/lib/**/*.js"
@@ -117,6 +119,10 @@
     "@cypress/webpack-preprocessor": "^4.1.0",
     "@hot-loader/react-dom": "~16.8.0",
     "@percy/cypress": "^0.2.3",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.23",
     "autoprefixer": "^7.2.4",

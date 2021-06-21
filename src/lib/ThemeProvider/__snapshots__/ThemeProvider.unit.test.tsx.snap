@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
+<ThemeProvider
+  token="test"
+>
+  <div
+    className="md-theme-provider md-theme-test"
+  />
+</ThemeProvider>
+`;
