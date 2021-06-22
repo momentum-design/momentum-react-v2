@@ -14,10 +14,11 @@ class Button extends React.Component {
     const { onClick, parentOnSelect, parentKeyDown, tag } = this.props;
     if (e.which === 32 || e.which === 13 ||
         e.charCode === 32 || e.charCode === 13) {
-      if (tag !== 'button') {
-        parentOnSelect && parentOnSelect(e, { eventKey });
-        onClick && onClick(e);
+      if (tag === 'button') {
+        e.preventDefault();
       }
+      parentOnSelect && parentOnSelect(e, { eventKey });
+      onClick && onClick(e);
     } else {
       parentKeyDown && parentKeyDown(e, eventKey);
     }
@@ -29,6 +30,14 @@ class Button extends React.Component {
     onClick && onClick(e);
     parentOnSelect && parentOnSelect(e, { eventKey });
   };
+
+  handleKeyUp = (e) => {
+    const { tag } = this.props;
+    if (tag === 'button' && (e.which === 32 || e.which === 13 ||
+        e.charCode === 32 || e.charCode === 13)) {
+      e.preventDefault();
+    }
+  }
 
   render() {
     const {
@@ -174,6 +183,7 @@ class Button extends React.Component {
         'data-md-event-key': cxtProps.uniqueKey,
         onClick: e => this.handleClick(e, cxtProps.uniqueKey),
         onKeyDown: e => this.handleKeyDown(e, cxtProps.uniqueKey),
+        onKeyUp: this.handleKeyUp,
         style: {
           style,
           ...cxtProps.width && { width: cxtProps.width }
