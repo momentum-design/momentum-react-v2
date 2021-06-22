@@ -45,6 +45,7 @@ exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
           onClick={null}
           parentKeyDown={[Function]}
           parentOnSelect={[Function]}
+          preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={36}
           style={Object {}}
@@ -76,6 +77,7 @@ exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
                 id="md-button-1"
                 onClick={[Function]}
                 onKeyDown={[Function]}
+                onKeyUp={[Function]}
                 style={
                   Object {
                     "style": Object {},

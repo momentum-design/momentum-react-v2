@@ -11,10 +11,12 @@ import mapContextToProps from '@restart/context/mapContextToProps';
 
 class Button extends React.Component {
   handleKeyDown = (e, eventKey) => {
-    const { onClick, parentOnSelect, parentKeyDown } = this.props;
+    const { onClick, parentOnSelect, parentKeyDown, preventKeyboardDoubleClick } = this.props;
     if (e.which === 32 || e.which === 13 ||
         e.charCode === 32 || e.charCode === 13) {
-
+      if (preventKeyboardDoubleClick) {
+        e.preventDefault();
+      }
       parentOnSelect && parentOnSelect(e, { eventKey });
       onClick && onClick(e);
     } else {
@@ -28,6 +30,14 @@ class Button extends React.Component {
     onClick && onClick(e);
     parentOnSelect && parentOnSelect(e, { eventKey });
   };
+
+  handleKeyUp = (e) => {
+    const { preventKeyboardDoubleClick } = this.props;
+    if (preventKeyboardDoubleClick && (e.which === 32 || e.which === 13 ||
+        e.charCode === 32 || e.charCode === 13)) {
+      e.preventDefault();
+    }
+  }
 
   render() {
     const {
@@ -60,7 +70,8 @@ class Button extends React.Component {
       'id',
       'onClick',
       'parentOnSelect',
-      'parentKeyDown'
+      'parentKeyDown',
+      'preventKeyboardDoubleClick'
     ]);
 
     const isButtonGroupIcon = isButtonGroup => (
@@ -173,6 +184,7 @@ class Button extends React.Component {
         'data-md-event-key': cxtProps.uniqueKey,
         onClick: e => this.handleClick(e, cxtProps.uniqueKey),
         onKeyDown: e => this.handleKeyDown(e, cxtProps.uniqueKey),
+        onKeyUp: this.handleKeyUp,
         style: {
           style,
           ...cxtProps.width && { width: cxtProps.width }
@@ -255,6 +267,8 @@ Button.propTypes = {
   parentKeyDown: PropTypes.func,
   // Internal Context Use Only
   parentOnSelect: PropTypes.func,
+  /** @prop Optional prop to prevent space/enter running onClick twice on buttons */
+  preventKeyboardDoubleClick: PropTypes.bool,
   /** @prop Optional prop to remove Button's default style | false */
   removeStyle: PropTypes.bool,
   /** @prop Optional string or number size prop | 36 */
@@ -289,6 +303,7 @@ Button.defaultProps = {
   onClick: null,
   parentKeyDown: null,
   parentOnSelect: null,
+  preventKeyboardDoubleClick: false,
   removeStyle: false,
   size: 36,
   style: {},

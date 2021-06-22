@@ -123,6 +123,7 @@ describe('tests for <Button />', () => {
   it('should handle keyDown as onClick event for enter/space key', () => {
     const handleClick = jest.fn();
     const onClick = jest.fn();
+    const preventDefault = jest.fn();
     const container = mount(
       <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
         <Button children='test' onClick={onClick} ariaLabel='test' />
@@ -131,11 +132,68 @@ describe('tests for <Button />', () => {
 
     container
       .find('button')
-      .simulate('keyDown', { which: 13, charCode: 13, key: 'Enter' })
-      .simulate('keyDown', { which: 32, charCode: 32, key: 'Space' });
+      .simulate('keyDown', { which: 13, charCode: 13, key: 'Enter', preventDefault })
+      .simulate('keyDown', { which: 32, charCode: 32, key: 'Space', preventDefault });
 
     expect(onClick).toHaveBeenCalledTimes(2);
     expect(handleClick).toHaveBeenCalledTimes(2);
+    expect(preventDefault).not.toHaveBeenCalled();
+  });
+
+  it('should handle keyDown as onClick event and prevent default behaviour for enter/space key when preventKeyboardDoubleClick is set', () => {
+    const handleClick = jest.fn();
+    const onClick = jest.fn();
+    const preventDefault = jest.fn();
+    const container = mount(
+      <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
+        <Button children='test' onClick={onClick} ariaLabel='test' preventKeyboardDoubleClick={true} />
+      </SelectableContext.Provider>
+    );
+
+    container
+      .find('button')
+      .simulate('keyDown', { which: 13, charCode: 13, key: 'Enter', preventDefault })
+      .simulate('keyDown', { which: 32, charCode: 32, key: 'Space', preventDefault });
+
+    expect(onClick).toHaveBeenCalledTimes(2);
+    expect(handleClick).toHaveBeenCalledTimes(2);
+    expect(preventDefault).toHaveBeenCalledTimes(2);
+  });
+
+  it('keyUp should not prevent default behaviour for enter/space key when preventKeyboardDoubleClick is not set', () => {
+    const handleClick = jest.fn();
+    const onClick = jest.fn();
+    const preventDefault = jest.fn();
+    const container = mount(
+      <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
+        <Button children='test' onClick={onClick} ariaLabel='test' />
+      </SelectableContext.Provider>
+    );
+
+    container
+      .find('button')
+      .simulate('keyUp', { which: 13, charCode: 13, key: 'Enter', preventDefault })
+      .simulate('keyUp', { which: 32, charCode: 32, key: 'Space', preventDefault });
+
+    expect(preventDefault).not.toHaveBeenCalled();
+  });
+
+  it('should handle keyUp to prevent default behaviour for enter/space key when preventKeyboardDoubleClick is set', () => {
+    const handleClick = jest.fn();
+    const onClick = jest.fn();
+    const preventDefault = jest.fn();
+    const container = mount(
+      <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
+        <Button children='test' onClick={onClick} ariaLabel='test' preventKeyboardDoubleClick={true} />
+      </SelectableContext.Provider>
+    );
+
+    container
+      .find('button')
+      .simulate('keyUp', { which: 13, charCode: 13, key: 'Enter', preventDefault })
+      .simulate('keyUp', { which: 32, charCode: 32, key: 'Space', preventDefault });
+
+    expect(preventDefault).toHaveBeenCalledTimes(2);
   });
 
   it('should call context handleKeyDown callback on keyDown event (other than enter/space)', () => {
