@@ -45,6 +45,7 @@ exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
           onClick={null}
           parentKeyDown={[Function]}
           parentOnSelect={[Function]}
+          preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={36}
           style={Object {}}

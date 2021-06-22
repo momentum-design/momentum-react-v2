@@ -11,10 +11,10 @@ import mapContextToProps from '@restart/context/mapContextToProps';
 
 class Button extends React.Component {
   handleKeyDown = (e, eventKey) => {
-    const { onClick, parentOnSelect, parentKeyDown, tag } = this.props;
+    const { onClick, parentOnSelect, parentKeyDown, preventKeyboardDoubleClick } = this.props;
     if (e.which === 32 || e.which === 13 ||
         e.charCode === 32 || e.charCode === 13) {
-      if (tag === 'button') {
+      if (preventKeyboardDoubleClick) {
         e.preventDefault();
       }
       parentOnSelect && parentOnSelect(e, { eventKey });
@@ -32,8 +32,8 @@ class Button extends React.Component {
   };
 
   handleKeyUp = (e) => {
-    const { tag } = this.props;
-    if (tag === 'button' && (e.which === 32 || e.which === 13 ||
+    const { preventKeyboardDoubleClick } = this.props;
+    if (preventKeyboardDoubleClick && (e.which === 32 || e.which === 13 ||
         e.charCode === 32 || e.charCode === 13)) {
       e.preventDefault();
     }
@@ -70,7 +70,8 @@ class Button extends React.Component {
       'id',
       'onClick',
       'parentOnSelect',
-      'parentKeyDown'
+      'parentKeyDown',
+      'preventKeyboardDoubleClick'
     ]);
 
     const isButtonGroupIcon = isButtonGroup => (
@@ -266,6 +267,8 @@ Button.propTypes = {
   parentKeyDown: PropTypes.func,
   // Internal Context Use Only
   parentOnSelect: PropTypes.func,
+  /** @prop Optional prop to prevent space/enter running onClick twice on buttons */
+  preventKeyboardDoubleClick: PropTypes.bool,
   /** @prop Optional prop to remove Button's default style | false */
   removeStyle: PropTypes.bool,
   /** @prop Optional string or number size prop | 36 */
@@ -300,6 +303,7 @@ Button.defaultProps = {
   onClick: null,
   parentKeyDown: null,
   parentOnSelect: null,
+  preventKeyboardDoubleClick: false,
   removeStyle: false,
   size: 36,
   style: {},
