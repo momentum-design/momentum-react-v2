@@ -56,6 +56,7 @@ bundle.min.js.map
 /bundles
 /src/app/components
 /src/app/data
+/storybook-static
 
 # Packages #
 ############

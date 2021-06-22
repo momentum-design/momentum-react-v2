@@ -71,8 +71,9 @@
     "test:cypress": "run-p --race start:app test:CI:cypress",
     "test:percy": "run-p --race start:app test:CI:percy",
     "watch:lib": "npm-watch build:lib",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:build": "build-storybook",
+    "storybook:start": "start-storybook -p 6006",
+    "storybook:test": "yarn storybook:build && percy-storybook --widths=320, 1280"
   },
   "watch": {
     "build:lib": "src/lib/**/*.js"
@@ -119,6 +120,7 @@
     "@cypress/webpack-preprocessor": "^4.1.0",
     "@hot-loader/react-dom": "~16.8.0",
     "@percy/cypress": "^0.2.3",
+    "@percy/storybook": "^3.3.1",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
