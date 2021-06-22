@@ -99,7 +99,7 @@ describe('tests for <ButtonGroup />', () => {
     expect(container.find('button').at(1).hasClass('active')).toEqual(true);
   });
 
-  it('should handle keyBoard keys', () => {
+  it('should handle keyBoard keys (Button is a button)', () => {
     const container = mount(
       <ButtonGroup>
         <Button ariaLabel="test">one</Button>
@@ -116,14 +116,41 @@ describe('tests for <ButtonGroup />', () => {
     container.find('button').at(0).simulate('keydown', { keyCode: 38, which: 38 });
     expect(container.find('button').at(1).props().tabIndex).toEqual(0);
 
-    // enter key
+    // enter key (browser will produce click event, jest does not)
     container.find('button').at(1).simulate('keydown', { keyCode: 13, which: 13 });
-    expect(container.find('button').at(1).hasClass('active')).toEqual(true);
+    expect(container.find('button').at(1).hasClass('active')).toEqual(false);
 
     // enter char
     expect(container.find('button').at(1).props().tabIndex).toEqual(0);
     container.find('button').at(1).simulate('keydown', { keyCode: 79, which: 79, key: 'o' });
     expect(container.find('button').at(0).props().tabIndex).toEqual(0);
+  });
+
+  it('should handle keyBoard keys (Button is not a button)', () => {
+    const container = mount(
+      <ButtonGroup>
+        <Button ariaLabel="test" tag='a'>one</Button>
+        <Button ariaLabel="test" tag='a'>two</Button>
+      </ButtonGroup>);
+    expect(container.find('a').at(0).props().tabIndex).toEqual(0);
+    // right
+    container.find('a').at(0).simulate('keydown', { keyCode: 39, which: 39 });
+    expect(container.find('a').at(1).props().tabIndex).toEqual(0);
+    // left
+    container.find('a').at(1).simulate('keydown', { keyCode: 37, which: 37 });
+    expect(container.find('a').at(0).props().tabIndex).toEqual(0);
+    // up key
+    container.find('a').at(0).simulate('keydown', { keyCode: 38, which: 38 });
+    expect(container.find('a').at(1).props().tabIndex).toEqual(0);
+
+    // enter key
+    container.find('a').at(1).simulate('keydown', { keyCode: 13, which: 13 });
+    expect(container.find('a').at(1).hasClass('active')).toEqual(true);
+
+    // enter char
+    expect(container.find('a').at(1).props().tabIndex).toEqual(0);
+    container.find('a').at(1).simulate('keydown', { keyCode: 79, which: 79, key: 'o' });
+    expect(container.find('a').at(0).props().tabIndex).toEqual(0);
   });
 
   it('should not throw error if child is not a Button', () => {

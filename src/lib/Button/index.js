@@ -11,12 +11,13 @@ import mapContextToProps from '@restart/context/mapContextToProps';
 
 class Button extends React.Component {
   handleKeyDown = (e, eventKey) => {
-    const { onClick, parentOnSelect, parentKeyDown } = this.props;
+    const { onClick, parentOnSelect, parentKeyDown, tag } = this.props;
     if (e.which === 32 || e.which === 13 ||
         e.charCode === 32 || e.charCode === 13) {
-
-      parentOnSelect && parentOnSelect(e, { eventKey });
-      onClick && onClick(e);
+      if (tag !== 'button') {
+        parentOnSelect && parentOnSelect(e, { eventKey });
+        onClick && onClick(e);
+      }
     } else {
       parentKeyDown && parentKeyDown(e, eventKey);
     }
