@@ -115,6 +115,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
           onClick={[Function]}
           parentKeyDown={null}
           parentOnSelect={null}
+          preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={44}
           style={Object {}}
@@ -144,6 +145,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                 id="md-button-1"
                 onClick={[Function]}
                 onKeyDown={[Function]}
+                onKeyUp={[Function]}
                 style={
                   Object {
                     "style": Object {},
@@ -225,6 +227,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
           onClick={null}
           parentKeyDown={null}
           parentOnSelect={null}
+          preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={44}
           style={Object {}}
@@ -254,6 +257,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                 id="md-button-2"
                 onClick={[Function]}
                 onKeyDown={[Function]}
+                onKeyUp={[Function]}
                 style={
                   Object {
                     "style": Object {},
