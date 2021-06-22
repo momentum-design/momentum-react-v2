@@ -46,6 +46,7 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
         onClick={[Function]}
         parentKeyDown={null}
         parentOnSelect={null}
+        preventKeyboardDoubleClick={false}
         removeStyle={false}
         size={36}
         style={Object {}}
@@ -77,6 +78,7 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
               name="md-select-1"
               onClick={[Function]}
               onKeyDown={[Function]}
+              onKeyUp={[Function]}
               style={
                 Object {
                   "style": Object {},
