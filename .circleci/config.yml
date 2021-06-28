@@ -91,7 +91,7 @@ jobs:
           command: yarn test:CI
       - run:
           name: Test Storybooks with Percy
-          command: yarn storybook:test
+          command: yarn examples:test
       - run:
           name: Visual regression test react library with Percy.io snapshots
           command: yarn test:percy
