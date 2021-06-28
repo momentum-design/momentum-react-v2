@@ -24,8 +24,9 @@
     "Webex Teams"
   ],
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/momentum-design/momentum-ui.git"
@@ -71,9 +72,15 @@
     "test:cypress": "run-p --race start:app test:CI:cypress",
     "test:percy": "run-p --race start:app test:CI:percy",
     "watch:lib": "npm-watch build:lib",
-    "storybook:build": "build-storybook",
-    "storybook:start": "start-storybook -p 6006",
-    "storybook:test": "yarn storybook:build && percy-storybook --widths=320, 1280"
+    "examples:build": "build-storybook",
+    "examples:start": "start-storybook -p 6006",
+    "examples:test": "yarn examples:build && percy-storybook --widths=320, 1280",
+    "build:new": "yarn build:clean && yarn build:compile && yarn build:assets",
+    "build:assets": "copyfiles -u 2 ./src/lib/**/*.style.css ./dist/esm && copyfiles -u 2 ./src/lib/**/*.style.css ./dist/cjs",
+    "build:clean": "rimraf ./dist",
+    "build:cjs": "tsc --project ./config/tsconfig.cjs.json",
+    "build:compile": "yarn build:cjs && yarn build:esm",
+    "build:esm": "tsc --project ./config/tsconfig.esm.json"
   },
   "watch": {
     "build:lib": "src/lib/**/*.js"
@@ -142,6 +149,7 @@
     "chalk": "^2.3.0",
     "child-process-promise": "^2.2.1",
     "connect-history-api-fallback": "^1.4.0",
+    "copyfiles": "^2.4.1",
     "coveralls": "^3.0.1",
     "css-loader": "0.28.8",
     "cypress": "^3.4.1",
