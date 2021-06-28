@@ -100,5 +100,5 @@ export { default as Tooltip } from './Tooltip';
 export { default as TypeScriptExample } from './TypeScriptExample';
 export { default as ThemeProvider } from './ThemeProvider';
 
-
-export * as utils from './utils';
+import * as utils from './utils';
+export { utils };

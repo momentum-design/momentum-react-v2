@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@momentum-ui/react';
-import DatePickerContext from '@momentum-ui/react/DatePickerContext';
+import DatePickerContext from '../../DatePickerContext';
 import {
   getDate,
   getMonth,
   isDayDisabled,
   isSameDay,
   now,
-} from '@momentum-ui/react/utils/dateUtils';
+} from '../../utils/dateUtils';
 import mapContextToProps from '@restart/context/mapContextToProps';
 import moment from 'moment';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePickerContext from '@momentum-ui/react/DatePickerContext';
-import DatePickerMonth from '@momentum-ui/react/DatePicker/DatePickerMonth';
+import DatePickerContext from '../../DatePickerContext';
+import DatePickerMonth from '../DatePickerMonth';
 import { Icon }  from '@momentum-ui/react';
 import {
   addDays,
@@ -15,7 +15,7 @@ import {
   shouldNextMonthDisable,
   shouldPrevMonthDisable,
   subtractMonths,
-} from '@momentum-ui/react/utils/dateUtils';
+} from '../../utils/dateUtils';
 import mapContextToProps from '@restart/context/mapContextToProps';
 import moment from 'moment';
 

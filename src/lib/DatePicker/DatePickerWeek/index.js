@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePickerDay from '@momentum-ui/react/DatePicker/DatePickerDay';
-import { addDays, getStartOfWeek } from '@momentum-ui/react/utils/dateUtils';
+import DatePickerDay from '../DatePickerDay';
+import { addDays, getStartOfWeek } from '../../utils/dateUtils';
 import moment from 'moment';
 
 class DatePickerWeek extends React.PureComponent {

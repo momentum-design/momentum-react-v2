@@ -2,9 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChatContentItem from '@momentum-ui/react/ContentItem/ChatContent';
-import FileContentItem from '@momentum-ui/react/ContentItem/FileContent';
-import IconContent from '@momentum-ui/react/ContentItem/IconContent';
+import ChatContentItem from './ChatContent';
+import FileContentItem from './FileContent';
+import IconContent from './IconContent';
 import omit from 'lodash/omit';
 
 class ContentItem extends React.PureComponent {

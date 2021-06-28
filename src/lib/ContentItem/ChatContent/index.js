@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { snakeCase } from '@momentum-ui/react/utils/snakeCase';
+import { snakeCase } from '../../utils/snakeCase';
 import { Spinner } from '@momentum-ui/react';
 
 const ChatContentItem = props => {

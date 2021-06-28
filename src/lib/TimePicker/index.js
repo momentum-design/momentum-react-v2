@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import uniqueId from 'lodash/uniqueId';
-import TimePickerDropdown from '@momentum-ui/react/TimePicker/TimePickerDropdown';
-import TimeSelector from '@momentum-ui/react/TimePicker/TimeSelector';
+import TimePickerDropdown from './TimePickerDropdown';
+import TimeSelector from './TimeSelector';
 import {
   Input,
   EventOverlay,
