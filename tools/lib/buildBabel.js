@@ -11,27 +11,28 @@ const getConfig = ({ modules = true, optimize = true, test = false } = {}) => {
   return require('../../.babelrc.js');
 };
 
-const extensionMatch = /^(\.js|.tsx|.ts)$/;
+const babelExtensionMatch = /^(\.js|.tsx|.ts)$/;
+const otherExtensionMatch = /^(\.css)$/;
 
 const buildFile = async (filename, destination, babelOptions = {}) => {
-  if (!extensionMatch.test(path.extname(filename))) {
-    return;
-  }
   const content = await fse.readFile(filename, { encoding: 'utf8' });
-  // We only want to build index.js files
-  if (path.basename(filename) === 'index.js' || path.basename(filename) === 'index.tsx' || path.basename(filename) === 'index.ts') {
-    const result = transform(content, { ...babelOptions, filename });
-    const output = path.join(destination, path.parse(filename).name + '.js');
 
-    await fse.outputFile(output, result.code);
-  }
+  const result = transform(content, { ...babelOptions, filename });
+  const output = path.join(destination, path.parse(filename).name + '.js');
+
+  await fse.outputFile(output, result.code);
 }
 
 const _build = async (folderPath, destination, babelOptions = {}, firstFolder = true) => {
   let stats = fse.statSync(folderPath);
 
   if (stats.isFile()) {
-    await buildFile(folderPath, destination, babelOptions);
+    if (babelExtensionMatch.test(path.extname(folderPath))) {
+      await buildFile(folderPath, destination, babelOptions);
+    } else if (otherExtensionMatch.test(path.extname(folderPath))) {
+      const dest = path.join(destination, path.basename(folderPath));
+      await fse.copy(folderPath, dest);
+    }
   } else if (stats.isDirectory()) {
     let outputPath = firstFolder
       ? destination
