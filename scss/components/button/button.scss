@@ -256,6 +256,40 @@
         transform: translateX(-50%);
       }
 
+      &--files {
+        @include button-color(
+          $bg-css-var: --md-button-files-normal-bg-color,
+          $bg-active-css-var: --md-button-files-pressed-bg-color,
+          $bg-hover-css-var: --md-button-files-hover-bg-color,
+
+          $color-css-var: --md-button-files-normal-text-color,
+          $color-active-css-var: --md-button-files-pressed-text-color,
+          $color-hover-css-var: --md-button-files-hover-text-color,
+
+          $color: $button__font-color,
+          $bg: transparent,
+          $bg-hover: $button--yellow__background-color--hover,
+          $bg-active: $button--yellow__background-color--active
+        );
+      }
+
+      &--whiteboards {
+        @include button-color(
+          $bg-css-var: --md-button-whiteboards-normal-bg-color,
+          $bg-active-css-var: --md-button-whiteboards-pressed-bg-color,
+          $bg-hover-css-var: --md-button-whiteboards-hover-bg-color,
+
+          $color-css-var: --md-button-whiteboards-normal-text-color,
+          $color-active-css-var: --md-button-whiteboards-pressed-text-color,
+          $color-hover-css-var: --md-button-whiteboards-hover-text-color,
+
+          $color: $button__font-color,
+          $bg: transparent,
+          $bg-hover: $button--purple__background-color--hover,
+          $bg-active: $button--purple__background-color--active
+        );
+      }
+
       &--blue {
         @include button-color(
           $bg-css-var: --md-button-primary-bg-color,

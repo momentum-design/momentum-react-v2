@@ -84,7 +84,20 @@ export const light = {
   "--md-avatar-slate": "#CED2ED",
   "--md-avatar-violet": "#E2CAFC",
   "--md-separator-primary": "#CCCCCC",
-  "--md-separator-secondary": "#B2B2B2"
+  "--md-separator-secondary": "#B2B2B2",
+  "--md-button-files-normal-bg-color": "none",
+  "--md-button-files-pressed-bg-color": "#54330D",
+  "--md-button-files-hover-bg-color": "#7D4705",
+  "--md-button-files-normal-text-color": "#121212",
+  "--md-button-files-pressed-text-color": "#F7F7F7",
+  "--md-button-files-hover-text-color": '#FFFFFF',
+  "--md-button-whiteboards-normal-bg-color": "none",
+  "--md-button-whiteboards-pressed-bg-color": "#601E66",
+  "--md-button-whiteboards-hover-bg-color": "#932099",
+  "--md-button-whiteboards-normal-text-color": "#121212",
+  "--md-button-whiteboards-pressed-text-color": "#F7F7F7",
+  "--md-button-whiteboards-hover-text-color": '#FFFFFF'
+
 };
 
 export const dark = {
@@ -173,5 +186,17 @@ export const dark = {
   "--md-avatar-slate": "#CED2ED",
   "--md-avatar-violet": "#E2CAFC",
   "--md-separator-primary": "#545454",
-  "--md-separator-secondary": "#707070"
+  "--md-separator-secondary": "#707070",
+  "--md-button-files-normal-bg-color": "none",
+  "--md-button-files-pressed-bg-color": "#D97F00",
+  "--md-button-files-hover-bg-color": "#3B3B3B",
+  "--md-button-files-normal-text-color": "#F7F7F7",
+  "--md-button-files-pressed-text-color": "#F7F7F7",
+  "--md-button-files-hover-text-color": "#F7F7F7",
+  "--md-button-whiteboards-normal-bg-color": "none",
+  "--md-button-whiteboards-pressed-bg-color": "#E060DE",
+  "--md-button-whiteboards-hover-bg-color": "#3B3B3B",
+  "--md-button-whiteboards-normal-text-color": "#F7F7F7",
+  "--md-button-whiteboards-pressed-text-color": "#F7F7F7",
+  "--md-button-whiteboards-hover-text-color": '#F7F7F7'
 };

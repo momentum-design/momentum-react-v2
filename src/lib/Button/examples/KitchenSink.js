@@ -8,6 +8,7 @@ import {
   ButtonLoading,
   ButtonSize,
   ButtonTags,
+  ButtonFileWhiteboard,
 } from './index';
 
 export default class ButtonKitchenSink extends React.Component {
@@ -22,6 +23,7 @@ export default class ButtonKitchenSink extends React.Component {
         <ButtonLoading />
         <ButtonSize />
         <ButtonTags />
+        <ButtonFileWhiteboard />
       </React.Fragment>
     );
   }
