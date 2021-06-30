@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { CLASSES, THEME_CLASS_PREFIX } from './ThemeProvider.constants';
-import { ThemeProviderProps as Props } from './ThemeProvider.types';
+import { Props } from './ThemeProvider.types';
 import './ThemeProvider.style.css';
 
 /**

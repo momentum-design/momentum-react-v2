@@ -7,7 +7,7 @@ import './ThemeProvider.stories.css';
 import ThemeProvider, { ThemeProviderProps as Props } from './';
 
 export default {
-  title: 'ThemeProvider',
+  title: 'Momentum UI/ThemeProvider',
   component: ThemeProvider,
 };
 

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface ThemeProviderProps {
+export interface Props {
   children?: ReactNode;
   theme?: string;
 }
