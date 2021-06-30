@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button } from '@momentum-ui/react';
+import { Button, ButtonGroup } from '@momentum-ui/react';
 export default function ButtonFileWhiteboard() {
   return(
-    <React.Fragment>
+    <ButtonGroup type="unstyled">
     <Button
       className='files'
       children='Files'
@@ -17,6 +17,6 @@ export default function ButtonFileWhiteboard() {
       ariaLabel='Test'
       color='whiteboards'
     />
-    </React.Fragment>
+    </ButtonGroup>
   );
 }

@@ -1,7 +1,7 @@
 /** @component button-group */
 
 @include exports('md-button-group') {
-  .#{$button-group__class} {
+  .#{$button-group__class}:not(.#{$button-group__class}--unstyled) {
     display: flex;
     width: 100%;
 
