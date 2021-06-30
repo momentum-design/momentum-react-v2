@@ -323,7 +323,7 @@ ButtonGroup.propTypes = {
   /** @prop Optional Button color theme for ButtonGroup | '' */
   theme: PropTypes.oneOf(['', 'dark']),
   /** @prop Optional Button type for ButtonGroup | '' */
-  type: PropTypes.oneOf(['', 'pill']),
+  type: PropTypes.oneOf(['', 'pill', 'unstyled']),
 };
 
 ButtonGroup.defaultProps = {
