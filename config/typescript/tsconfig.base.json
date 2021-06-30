@@ -7,28 +7,14 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react",
-    "module": "ES6",
     "moduleResolution": "node",
-    "outDir": "../dist/esm",
     "paths": {
-      "@momentum-ui/react/*": ["../src/lib/*"],
-      "@momentum-ui/react": [
-        "../src/lib/index.js"
-      ]
+      "@momentum-ui/react": ["../../src"]
     },
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "preserveConstEnums": true,
     "removeComments": false,
     "sourceMap": true,
     "target": "ES6"
-  },
-  "include": [
-    "../src/lib/**/*"
-  ],
-  "exclude": [
-    "../src/lib/**/*.stories.*",
-    "../src/lib/**/*.test.*",
-    "../src/lib/**/examples",
-    "../src/lib/**/tests"
-  ]
+  }
 }
