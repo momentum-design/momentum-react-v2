@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <List /> should match SnapShot 1`] = `
+<List
+  active={null}
+  ariaConfig={null}
+  className=""
+  focus={null}
+  focusFirst={true}
+  focusFirstQuery=""
+  focusQuery=""
+  id="test"
+  itemRole="listitem"
+  navigationDirection="both"
+  onSelect={null}
+  role="list"
+  shouldFocusActive={false}
+  shouldFocusInitial={true}
+  shouldLoop={true}
+  shouldPropagateKeyDown={false}
+  tabType="vertical"
+  trackActive={true}
+  type={null}
+  wrap={false}
+>
+  <div
+    aria-activedescendant={null}
+    className="md-list md-list--vertical"
+    focus={null}
+    id="test"
+    onSelect={null}
+    role="list"
+  />
+</List>
+`;

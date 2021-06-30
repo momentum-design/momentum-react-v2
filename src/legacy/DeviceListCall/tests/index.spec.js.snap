@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <DeviceListCall /> should match SnapShot 1`] = `
+<DeviceListCall
+  className=""
+  defaultSelected={null}
+  devices={
+    Array [
+      Object {
+        "name": "SJC21-Babelfish",
+        "title": "testTitle",
+        "type": "device",
+        "value": "1010101",
+      },
+      Object {
+        "name": "Use my computer",
+        "value": "2020202",
+      },
+    ]
+  }
+  header="Device selection"
+  onSelect={null}
+>
+  <List
+    active={null}
+    ariaConfig={null}
+    className=""
+    focus={null}
+    focusFirst={true}
+    focusFirstQuery=""
+    focusQuery=""
+    id={null}
+    itemRole="listitem"
+    navigationDirection="both"
+    onSelect={[Function]}
+    role="list"
+    shouldFocusActive={false}
+    shouldFocusInitial={true}
+    shouldLoop={true}
+    shouldPropagateKeyDown={false}
+    tabType="vertical"
+    trackActive={true}
+    type={null}
+    wrap={false}
+  >
+    <div
+      aria-activedescendant={null}
+      className="md-list md-list--vertical"
+      focus={null}
+      id={null}
+      onSelect={[Function]}
+      role="list"
+    >
+      <ListItemHeader
+        className=""
+        header="Device selection"
+        id=""
+        isReadOnly={true}
+        title=""
+        type=""
+      >
+        <ContextTransform(ListItem)
+          className="md-list-item-header"
+          id=""
+          isReadOnly={true}
+          title="Device selection"
+        >
+          <ListItem
+            active={false}
+            className="md-list-item-header"
+            customAnchorNode={null}
+            customRefProp=""
+            disabled={false}
+            eventKey=""
+            focus={false}
+            focusLockTabbableChildren={false}
+            focusLockTabbableChildrenProps={
+              Object {
+                "portalNodeQuery": "",
+                "tabbableChildrenHasPopover": false,
+                "tabbableChildrenQuery": "",
+              }
+            }
+            focusOnLoad={false}
+            id=""
+            isReadOnly={true}
+            itemIndex={null}
+            keyboardKey=""
+            label=""
+            link=""
+            onBlur={null}
+            onClick={null}
+            onKeyDown={null}
+            parentKeyDown={[Function]}
+            parentOnSelect={[Function]}
+            refName="navLink"
+            role="listitem"
+            separator={false}
+            specifyRoleWithoutList={false}
+            title="Device selection"
+            type=""
+            value=""
+          >
+            <Component
+              name={[Function]}
+            >
+              <UID
+                idSource={
+                  Object {
+                    "prefix": "",
+                    "uid": [Function],
+                    "value": 6,
+                  }
+                }
+                name={[Function]}
+              >
+                <div
+                  className="md-list-item md-list-item--read-only md-list-item-header"
+                  data-md-event-key="md-list-item-1"
+                  data-md-keyboard-key="device-selection"
+                  id="md-list-item-1"
+                  role="listitem"
+                  title="Device selection"
+                >
+                  <ListItemSection
+                    className=""
+                    key="child-0"
+                    position="center"
+                  >
+                    <div
+                      className="md-list-item__center"
+                    >
+                      <div
+                        className="md-list-item__header"
+                      >
+                        Device selection
+                      </div>
+                    </div>
+                  </ListItemSection>
+                  <ListItemSection
+                    className=""
+                    key="child-1"
+                    position="right"
+                  >
+                    <div
+                      className="md-list-item__right"
+                    />
+                  </ListItemSection>
+                </div>
+              </UID>
+            </Component>
+          </ListItem>
+        </ContextTransform(ListItem)>
+      </ListItemHeader>
+      <Component
+        key="device-0"
+        name={[Function]}
+      >
+        <UID
+          idSource={
+            Object {
+              "prefix": "",
+              "uid": [Function],
+              "value": 6,
+            }
+          }
+          name={[Function]}
+        >
+          <ContextTransform(ListItem)
+            id="md-device-list-call-2"
+            label="SJC21-Babelfish"
+            title="testTitle"
+            value="1010101"
+          >
+            <ListItem
+              active={false}
+              className=""
+              customAnchorNode={null}
+              customRefProp=""
+              disabled={false}
+              eventKey=""
+              focus={false}
+              focusLockTabbableChildren={false}
+              focusLockTabbableChildrenProps={
+                Object {
+                  "portalNodeQuery": "",
+                  "tabbableChildrenHasPopover": false,
+                  "tabbableChildrenQuery": "",
+                }
+              }
+              focusOnLoad={false}
+              id="md-device-list-call-2"
+              isReadOnly={false}
+              itemIndex={null}
+              keyboardKey=""
+              label="SJC21-Babelfish"
+              link=""
+              onBlur={null}
+              onClick={null}
+              onKeyDown={null}
+              parentKeyDown={[Function]}
+              parentOnSelect={[Function]}
+              refName="navLink"
+              role="listitem"
+              separator={false}
+              specifyRoleWithoutList={false}
+              title="testTitle"
+              type=""
+              value="1010101"
+            >
+              <Component
+                name={[Function]}
+              >
+                <UID
+                  idSource={
+                    Object {
+                      "prefix": "",
+                      "uid": [Function],
+                      "value": 6,
+                    }
+                  }
+                  name={[Function]}
+                >
+                  <div
+                    aria-current="true"
+                    className="md-list-item"
+                    data-md-event-key="md-device-list-call-2"
+                    data-md-keyboard-key="test-title"
+                    id="md-device-list-call-2"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="listitem"
+                    tabIndex={0}
+                    title="testTitle"
+                  >
+                    <ListItemSection
+                      className=""
+                      position="left"
+                    >
+                      <div
+                        className="md-list-item__left"
+                      >
+                        <Icon
+                          append={false}
+                          ariaLabel={null}
+                          buttonClassName=""
+                          buttonProps={null}
+                          className=""
+                          color=""
+                          description=""
+                          name="spark-board_20"
+                          onClick={null}
+                          prepend={false}
+                          size={null}
+                          sizeOverride={false}
+                          style={null}
+                          title=""
+                          type=""
+                        >
+                          <i
+                            aria-label={null}
+                            className="md-icon icon icon-spark-board_20"
+                            style={
+                              Object {
+                                "fontSize": 20,
+                              }
+                            }
+                          />
+                        </Icon>
+                      </div>
+                    </ListItemSection>
+                    <ListItemSection
+                      className=""
+                      position="center"
+                    >
+                      <div
+                        className="md-list-item__center"
+                      >
+                        <div
+                          className="md-list-item__header"
+                        >
+                          SJC21-Babelfish
+                        </div>
+                      </div>
+                    </ListItemSection>
+                    <ListItemSection
+                      className=""
+                      position="right"
+                    >
+                      <div
+                        className="md-list-item__right"
+                      />
+                    </ListItemSection>
+                  </div>
+                </UID>
+              </Component>
+            </ListItem>
+          </ContextTransform(ListItem)>
+        </UID>
+      </Component>
+      <Component
+        key="device-1"
+        name={[Function]}
+      >
+        <UID
+          idSource={
+            Object {
+              "prefix": "",
+              "uid": [Function],
+              "value": 6,
+            }
+          }
+          name={[Function]}
+        >
+          <ContextTransform(ListItem)
+            id="md-device-list-call-4"
+            label="Use my computer"
+            title="Use my computer"
+            value="2020202"
+          >
+            <ListItem
+              active={false}
+              className=""
+              customAnchorNode={null}
+              customRefProp=""
+              disabled={false}
+              eventKey=""
+              focus={false}
+              focusLockTabbableChildren={false}
+              focusLockTabbableChildrenProps={
+                Object {
+                  "portalNodeQuery": "",
+                  "tabbableChildrenHasPopover": false,
+                  "tabbableChildrenQuery": "",
+                }
+              }
+              focusOnLoad={false}
+              id="md-device-list-call-4"
+              isReadOnly={false}
+              itemIndex={null}
+              keyboardKey=""
+              label="Use my computer"
+              link=""
+              onBlur={null}
+              onClick={null}
+              onKeyDown={null}
+              parentKeyDown={[Function]}
+              parentOnSelect={[Function]}
+              refName="navLink"
+              role="listitem"
+              separator={false}
+              specifyRoleWithoutList={false}
+              title="Use my computer"
+              type=""
+              value="2020202"
+            >
+              <Component
+                name={[Function]}
+              >
+                <UID
+                  idSource={
+                    Object {
+                      "prefix": "",
+                      "uid": [Function],
+                      "value": 6,
+                    }
+                  }
+                  name={[Function]}
+                >
+                  <div
+                    className="md-list-item"
+                    data-md-event-key="md-device-list-call-4"
+                    data-md-keyboard-key="use-my-computer"
+                    id="md-device-list-call-4"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="listitem"
+                    tabIndex={-1}
+                    title="Use my computer"
+                  >
+                    <ListItemSection
+                      className=""
+                      position="left"
+                    >
+                      <div
+                        className="md-list-item__left"
+                      >
+                        <Icon
+                          append={false}
+                          ariaLabel={null}
+                          buttonClassName=""
+                          buttonProps={null}
+                          className=""
+                          color=""
+                          description=""
+                          name="laptop_20"
+                          onClick={null}
+                          prepend={false}
+                          size={null}
+                          sizeOverride={false}
+                          style={null}
+                          title=""
+                          type=""
+                        >
+                          <i
+                            aria-label={null}
+                            className="md-icon icon icon-laptop_20"
+                            style={
+                              Object {
+                                "fontSize": 20,
+                              }
+                            }
+                          />
+                        </Icon>
+                      </div>
+                    </ListItemSection>
+                    <ListItemSection
+                      className=""
+                      position="center"
+                    >
+                      <div
+                        className="md-list-item__center"
+                      >
+                        <div
+                          className="md-list-item__header"
+                        >
+                          Use my computer
+                        </div>
+                      </div>
+                    </ListItemSection>
+                    <ListItemSection
+                      className=""
+                      position="right"
+                    >
+                      <div
+                        className="md-list-item__right"
+                      />
+                    </ListItemSection>
+                  </div>
+                </UID>
+              </Component>
+            </ListItem>
+          </ContextTransform(ListItem)>
+        </UID>
+      </Component>
+    </div>
+  </List>
+</DeviceListCall>
+`;

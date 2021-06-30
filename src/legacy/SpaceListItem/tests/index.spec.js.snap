@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <SpaceListItem /> should match SnapShot 1`] = `
+<SpaceListItem
+  attachments={null}
+  childrenLeft={null}
+  childrenRight={null}
+  className=""
+  header="header"
+  headerSecondary=""
+  highlightColor=""
+  id=""
+  isAlertOn={false}
+  isBold={false}
+  isDecrypting={false}
+  isMentioned={false}
+  isMuted={false}
+  isOverview={false}
+  isUnread={false}
+  resultRight={null}
+  searchTerm=""
+  subheader=""
+  theme=""
+  title=""
+  type=""
+>
+  <ContextTransform(ListItem)
+    className=""
+    id=""
+    title="header"
+    type="space"
+  >
+    <ListItem
+      active={false}
+      className=""
+      customAnchorNode={null}
+      customRefProp=""
+      disabled={false}
+      eventKey=""
+      focus={false}
+      focusLockTabbableChildren={false}
+      focusLockTabbableChildrenProps={
+        Object {
+          "portalNodeQuery": "",
+          "tabbableChildrenHasPopover": false,
+          "tabbableChildrenQuery": "",
+        }
+      }
+      focusOnLoad={false}
+      id=""
+      isReadOnly={false}
+      itemIndex={null}
+      keyboardKey=""
+      label=""
+      link=""
+      onBlur={null}
+      onClick={null}
+      onKeyDown={null}
+      parentKeyDown={null}
+      parentOnSelect={null}
+      refName="navLink"
+      role="listitem"
+      separator={false}
+      specifyRoleWithoutList={false}
+      title="header"
+      type="space"
+      value=""
+    >
+      <Component
+        name={[Function]}
+      >
+        <UID
+          idSource={
+            Object {
+              "prefix": "",
+              "uid": [Function],
+              "value": 2,
+            }
+          }
+          name={[Function]}
+        >
+          <div
+            className="md-list-item md-list-item--space"
+            data-md-event-key="md-list-item-1"
+            data-md-keyboard-key="header"
+            id="md-list-item-1"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="listitem"
+            tabIndex={-1}
+            title="header"
+          >
+            <ListItemSection
+              className=""
+              key="child-0"
+              position="left"
+            >
+              <div
+                className="md-list-item__left"
+              >
+                <Avatar
+                  alt=""
+                  backgroundColor=""
+                  buttonClassName=""
+                  className={null}
+                  color=""
+                  failureBadge={false}
+                  hasNotification={false}
+                  hideDefaultTooltip={false}
+                  icon={null}
+                  initials={null}
+                  isDecrypting={false}
+                  isOverview={false}
+                  onClick={null}
+                  size="medium"
+                  src={null}
+                  theme={null}
+                  title="NA"
+                  type=""
+                >
+                  <div
+                    className="md-avatar md-avatar--medium"
+                    title="NA"
+                  >
+                    <span
+                      className="md-avatar__letter"
+                      key="letter"
+                      style={
+                        Object {
+                          "backgroundColor": "",
+                          "color": "",
+                        }
+                      }
+                    >
+                      N
+                    </span>
+                  </div>
+                </Avatar>
+              </div>
+            </ListItemSection>
+            <ListItemSection
+              className=""
+              key="child-1"
+              position="center"
+            >
+              <div
+                className="md-list-item__center"
+              >
+                <div
+                  className="md-list-item__header"
+                >
+                  header
+                </div>
+                <div
+                  className="md-list-item__subheader"
+                />
+              </div>
+            </ListItemSection>
+            <ListItemSection
+              className=""
+              key="child-2"
+              position="right"
+            >
+              <div
+                className="md-list-item__right"
+              />
+            </ListItemSection>
+          </div>
+        </UID>
+      </Component>
+    </ListItem>
+  </ContextTransform(ListItem)>
+</SpaceListItem>
+`;

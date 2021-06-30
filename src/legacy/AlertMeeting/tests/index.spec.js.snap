@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
+<AlertMeeting
+  attendees={
+    Array [
+      Object {
+        "props": Object {
+          "id": "testid",
+        },
+        "title": "J $",
+      },
+    ]
+  }
+  avatar={null}
+  className=""
+  closeAriaLabel="close"
+  closeBtnProps={null}
+  message=""
+  onClick={null}
+  onHide={null}
+  onKeyDown={null}
+  onSnooze={[Function]}
+  remindAriaLabel="snooze"
+  show={true}
+  snoozeBtnProps={null}
+  status=""
+  title=""
+>
+  <div
+    className="md-alert md-alert--meeting"
+  >
+    <Avatar
+      alt=""
+      backgroundColor=""
+      buttonClassName=""
+      className={null}
+      color=""
+      failureBadge={false}
+      hasNotification={false}
+      hideDefaultTooltip={false}
+      icon={null}
+      id="testid"
+      initials={null}
+      isDecrypting={false}
+      isOverview={false}
+      onClick={null}
+      size="medium"
+      src={null}
+      theme={null}
+      title="J $"
+      type=""
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        id="testid"
+        title="J $"
+      >
+        <span
+          className="md-avatar__letter"
+          key="letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          J$
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-alert__content"
+    >
+      <div
+        className="md-alert__title"
+        title=""
+      />
+      <div
+        className="md-alert__status"
+      />
+      <div
+        className="md-alert__message"
+        title=""
+      />
+    </div>
+    <div
+      className="md-alert__button"
+    >
+      <ContextTransform(Button)
+        ariaLabel="snooze"
+        circle={true}
+        onClick={[Function]}
+        size={44}
+      >
+        <Button
+          active={false}
+          ariaLabel="snooze"
+          ariaLabelledBy=""
+          ariaPressed={null}
+          circle={true}
+          className=""
+          color=""
+          containerLarge={false}
+          disabled={false}
+          eventKey=""
+          expand={false}
+          href=""
+          id=""
+          keyboardKey=""
+          label=""
+          large={false}
+          loading={false}
+          onClick={[Function]}
+          parentKeyDown={null}
+          parentOnSelect={null}
+          preventKeyboardDoubleClick={false}
+          removeStyle={false}
+          size={44}
+          style={Object {}}
+          tag="button"
+          type="button"
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "",
+                  "uid": [Function],
+                  "value": 3,
+                }
+              }
+              name={[Function]}
+            >
+              <button
+                alt="snooze"
+                aria-label="snooze"
+                aria-pressed={null}
+                className="md-button md-button--circle md-button--44"
+                data-md-event-key="md-button-1"
+                disabled={false}
+                id="md-button-1"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                style={
+                  Object {
+                    "style": Object {},
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="md-button__children"
+                  key="child-1"
+                  style={
+                    Object {
+                      "opacity": "1",
+                    }
+                  }
+                >
+                  <Icon
+                    append={false}
+                    ariaLabel={null}
+                    buttonClassName=""
+                    buttonProps={null}
+                    className=""
+                    color=""
+                    description=""
+                    name="alarm_16"
+                    onClick={null}
+                    prepend={false}
+                    size={null}
+                    sizeOverride={false}
+                    style={null}
+                    title=""
+                    type=""
+                  >
+                    <i
+                      aria-label={null}
+                      className="md-icon icon icon-alarm_16"
+                      style={
+                        Object {
+                          "fontSize": 16,
+                        }
+                      }
+                    />
+                  </Icon>
+                </span>
+              </button>
+            </UID>
+          </Component>
+        </Button>
+      </ContextTransform(Button)>
+    </div>
+    <div
+      className="md-alert__button"
+    >
+      <ContextTransform(Button)
+        ariaLabel="close"
+        circle={true}
+        onClick={null}
+        size={44}
+      >
+        <Button
+          active={false}
+          ariaLabel="close"
+          ariaLabelledBy=""
+          ariaPressed={null}
+          circle={true}
+          className=""
+          color=""
+          containerLarge={false}
+          disabled={false}
+          eventKey=""
+          expand={false}
+          href=""
+          id=""
+          keyboardKey=""
+          label=""
+          large={false}
+          loading={false}
+          onClick={null}
+          parentKeyDown={null}
+          parentOnSelect={null}
+          preventKeyboardDoubleClick={false}
+          removeStyle={false}
+          size={44}
+          style={Object {}}
+          tag="button"
+          type="button"
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "",
+                  "uid": [Function],
+                  "value": 3,
+                }
+              }
+              name={[Function]}
+            >
+              <button
+                alt="close"
+                aria-label="close"
+                aria-pressed={null}
+                className="md-button md-button--circle md-button--44"
+                data-md-event-key="md-button-2"
+                disabled={false}
+                id="md-button-2"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                style={
+                  Object {
+                    "style": Object {},
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="md-button__children"
+                  key="child-1"
+                  style={
+                    Object {
+                      "opacity": "1",
+                    }
+                  }
+                >
+                  <Icon
+                    append={false}
+                    ariaLabel={null}
+                    buttonClassName=""
+                    buttonProps={null}
+                    className=""
+                    color=""
+                    description=""
+                    name="cancel_16"
+                    onClick={null}
+                    prepend={false}
+                    size={null}
+                    sizeOverride={false}
+                    style={null}
+                    title=""
+                    type=""
+                  >
+                    <i
+                      aria-label={null}
+                      className="md-icon icon icon-cancel_16"
+                      style={
+                        Object {
+                          "fontSize": 16,
+                        }
+                      }
+                    />
+                  </Icon>
+                </span>
+              </button>
+            </UID>
+          </Component>
+        </Button>
+      </ContextTransform(Button)>
+    </div>
+  </div>
+</AlertMeeting>
+`;

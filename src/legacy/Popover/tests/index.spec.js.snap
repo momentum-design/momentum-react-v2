@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Popover /> should match SnapShot 1`] = `
+<Popover
+  autoFocusOnFirstElt={false}
+  className=""
+  closeOnFocusLeavesContent={false}
+  content={
+    <span>
+      Hello how are you doing
+    </span>
+  }
+  delay={0}
+  doesAnchorToggle={true}
+  hideDelay={0}
+  hoverDelay={500}
+  includeFocusOnHover={true}
+  onClose={null}
+  overflowType="auto"
+  popoverTrigger="MouseEnter"
+  showArrow={true}
+  showDelay={0}
+  startOpen={false}
+>
+  <button
+    key="child-1"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Hello
+  </button>
+</Popover>
+`;

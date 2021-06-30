@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <DatePickerWeek /> should match week SnapShot 1`] = `
+<div
+  className="md-datepicker__week"
+>
+  <ContextTransform(DatePickerDay)
+    day={"2018-03-31T18:30:00.000Z"}
+    key="0"
+    month={3}
+  />
+  <ContextTransform(DatePickerDay)
+    day={"2018-04-01T18:30:00.000Z"}
+    key="1"
+    month={3}
+  />
+  <ContextTransform(DatePickerDay)
+    day={"2018-04-02T18:30:00.000Z"}
+    key="2"
+    month={3}
+  />
+  <ContextTransform(DatePickerDay)
+    day={"2018-04-03T18:30:00.000Z"}
+    key="3"
+    month={3}
+  />
+  <ContextTransform(DatePickerDay)
+    day={"2018-04-04T18:30:00.000Z"}
+    key="4"
+    month={3}
+  />
+  <ContextTransform(DatePickerDay)
+    day={"2018-04-05T18:30:00.000Z"}
+    key="5"
+    month={3}
+  />
+  <ContextTransform(DatePickerDay)
+    day={"2018-04-06T18:30:00.000Z"}
+    key="6"
+    month={3}
+  />
+</div>
+`;

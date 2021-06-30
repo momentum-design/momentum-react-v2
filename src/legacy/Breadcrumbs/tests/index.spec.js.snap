@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Breadcrumbs /> should match SnapShot 1`] = `
+<Breadcrumbs
+  className=""
+>
+  <ul
+    className="md-breadcrumbs "
+  />
+</Breadcrumbs>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <TabContent /> should match SnapShot 1`] = `
+<TabContent
+  activeIndex={null}
+  id="test"
+>
+  <div
+    className="md-tab__content"
+  />
+</TabContent>
+`;

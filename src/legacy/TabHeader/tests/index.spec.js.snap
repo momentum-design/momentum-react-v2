@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <TabHeader /> should match SnapShot 1`] = `
+<TabHeader
+  heading="test"
+  subHeading=""
+>
+  <md-tab-heading>
+    test
+  </md-tab-heading>
+</TabHeader>
+`;

@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
+<TopbarMobile
+  brandNode={null}
+  className=""
+  closeMenuAriaLabel="Close Menu"
+  id="test"
+  openMenuAriaLabel="Open Menu"
+  shouldCloseOnClick={true}
+>
+  <div>
+    <Icon
+      append={false}
+      aria-pressed={false}
+      ariaLabel="Open Menu"
+      buttonClassName="md-top-bar__mobile-menu-button"
+      buttonProps={null}
+      className=""
+      color=""
+      description=""
+      name="list-menu_20"
+      onClick={[Function]}
+      prepend={false}
+      size={null}
+      sizeOverride={false}
+      style={null}
+      title=""
+      type=""
+    >
+      <ContextTransform(Button)
+        aria-pressed={false}
+        ariaLabel="Open Menu"
+        className="md-button--icon md-top-bar__mobile-menu-button"
+        onClick={[Function]}
+      >
+        <Button
+          active={false}
+          aria-pressed={false}
+          ariaLabel="Open Menu"
+          ariaLabelledBy=""
+          ariaPressed={null}
+          circle={false}
+          className="md-button--icon md-top-bar__mobile-menu-button"
+          color=""
+          containerLarge={false}
+          disabled={false}
+          eventKey=""
+          expand={false}
+          href=""
+          id=""
+          keyboardKey=""
+          label=""
+          large={false}
+          loading={false}
+          onClick={[Function]}
+          parentKeyDown={null}
+          parentOnSelect={null}
+          preventKeyboardDoubleClick={false}
+          removeStyle={false}
+          size={36}
+          style={Object {}}
+          tag="button"
+          type="button"
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "",
+                  "uid": [Function],
+                  "value": 3,
+                }
+              }
+              name={[Function]}
+            >
+              <button
+                alt="Open Menu"
+                aria-label="Open Menu"
+                aria-pressed={false}
+                className="md-button md-button--36 md-button--icon md-top-bar__mobile-menu-button"
+                data-md-event-key="md-button-1"
+                disabled={false}
+                id="md-button-1"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                style={
+                  Object {
+                    "style": Object {},
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="md-button__children"
+                  key="child-1"
+                  style={
+                    Object {
+                      "opacity": "1",
+                    }
+                  }
+                >
+                  <i
+                    aria-label={null}
+                    className="md-icon icon icon-list-menu_20"
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  />
+                </span>
+              </button>
+            </UID>
+          </Component>
+        </Button>
+      </ContextTransform(Button)>
+    </Icon>
+    <div
+      className="md-top-bar__mobile md-tb-mobile"
+      id="test"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="menu"
+      tabIndex={0}
+    >
+      <Icon
+        append={false}
+        aria-pressed={false}
+        ariaLabel="Close Menu"
+        buttonClassName="md-tb-mobile__close"
+        buttonProps={null}
+        className=""
+        color=""
+        description=""
+        name="cancel_20"
+        onClick={[Function]}
+        prepend={false}
+        size={null}
+        sizeOverride={false}
+        style={null}
+        title=""
+        type=""
+      >
+        <ContextTransform(Button)
+          aria-pressed={false}
+          ariaLabel="Close Menu"
+          className="md-button--icon md-tb-mobile__close"
+          onClick={[Function]}
+        >
+          <Button
+            active={false}
+            aria-pressed={false}
+            ariaLabel="Close Menu"
+            ariaLabelledBy=""
+            ariaPressed={null}
+            circle={false}
+            className="md-button--icon md-tb-mobile__close"
+            color=""
+            containerLarge={false}
+            disabled={false}
+            eventKey=""
+            expand={false}
+            href=""
+            id=""
+            keyboardKey=""
+            label=""
+            large={false}
+            loading={false}
+            onClick={[Function]}
+            parentKeyDown={null}
+            parentOnSelect={null}
+            preventKeyboardDoubleClick={false}
+            removeStyle={false}
+            size={36}
+            style={Object {}}
+            tag="button"
+            type="button"
+          >
+            <Component
+              name={[Function]}
+            >
+              <UID
+                idSource={
+                  Object {
+                    "prefix": "",
+                    "uid": [Function],
+                    "value": 3,
+                  }
+                }
+                name={[Function]}
+              >
+                <button
+                  alt="Close Menu"
+                  aria-label="Close Menu"
+                  aria-pressed={false}
+                  className="md-button md-button--36 md-button--icon md-tb-mobile__close"
+                  data-md-event-key="md-button-2"
+                  disabled={false}
+                  id="md-button-2"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  style={
+                    Object {
+                      "style": Object {},
+                    }
+                  }
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="md-button__children"
+                    key="child-1"
+                    style={
+                      Object {
+                        "opacity": "1",
+                      }
+                    }
+                  >
+                    <i
+                      aria-label={null}
+                      className="md-icon icon icon-cancel_20"
+                      style={
+                        Object {
+                          "fontSize": 20,
+                        }
+                      }
+                    />
+                  </span>
+                </button>
+              </UID>
+            </Component>
+          </Button>
+        </ContextTransform(Button)>
+      </Icon>
+      <span
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      />
+      <ListSeparator
+        className={null}
+        lineColor={null}
+        margin={null}
+        text={null}
+        textColor={null}
+        textPadding={null}
+      >
+        <div
+          className="md-list-separator"
+          style={Object {}}
+        >
+          <span
+            className="md-list-separator__container"
+          />
+        </div>
+      </ListSeparator>
+      <nav
+        className="md-tb-mobile__nav"
+      />
+    </div>
+    <div
+      className="md-tb-mobile__mask"
+      onClick={[Function]}
+      role="none"
+    />
+  </div>
+</TopbarMobile>
+`;

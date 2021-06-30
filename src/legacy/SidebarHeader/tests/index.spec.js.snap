@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SidebarHeader /> should render a SidebarHeader 1`] = `
+<SidebarHeader
+  className=""
+  navSectionTitle="Overview"
+>
+  <div
+    className="md-sidebar__header"
+    navSectionTitle="Overview"
+  />
+</SidebarHeader>
+`;

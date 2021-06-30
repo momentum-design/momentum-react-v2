@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
+<ContextTransform(SubMenu)
+  label="one"
+>
+  <SubMenu
+    className=""
+    content={null}
+    customNode={null}
+    eventOverlayProps={null}
+    index={Array []}
+    isHeader={false}
+    isOpen={false}
+    keepMenuOpen={false}
+    label="one"
+    onClick={null}
+    parentKeyDown={null}
+    parentOnSelect={null}
+    selectedValue=""
+  >
+    <Component>
+      <Component>
+        <UID
+          idSource={
+            Object {
+              "prefix": "",
+              "uid": [Function],
+              "value": 2,
+            }
+          }
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "1-",
+                  "uid": [Function],
+                  "value": 3,
+                }
+              }
+              name={[Function]}
+            >
+              <div
+                aria-expanded={null}
+                aria-haspopup={true}
+                className="md-menu-item"
+              >
+                <ContextTransform(ListItem)
+                  active={null}
+                  focusOnLoad={true}
+                  id="md-sub-menu-item-1-1"
+                  isReadOnly={false}
+                  role="menuitem"
+                >
+                  <ListItem
+                    active={null}
+                    className=""
+                    customAnchorNode={null}
+                    customRefProp=""
+                    disabled={false}
+                    eventKey=""
+                    focus={false}
+                    focusLockTabbableChildren={false}
+                    focusLockTabbableChildrenProps={
+                      Object {
+                        "portalNodeQuery": "",
+                        "tabbableChildrenHasPopover": false,
+                        "tabbableChildrenQuery": "",
+                      }
+                    }
+                    focusOnLoad={true}
+                    id="md-sub-menu-item-1-1"
+                    isReadOnly={false}
+                    itemIndex={null}
+                    keyboardKey=""
+                    label=""
+                    link=""
+                    onBlur={null}
+                    onClick={null}
+                    onKeyDown={null}
+                    parentKeyDown={[Function]}
+                    parentOnSelect={[Function]}
+                    refName="navLink"
+                    role="menuitem"
+                    separator={false}
+                    specifyRoleWithoutList={false}
+                    title=""
+                    type=""
+                    value=""
+                  >
+                    <Component
+                      name={[Function]}
+                    >
+                      <UID
+                        idSource={
+                          Object {
+                            "prefix": "1-",
+                            "uid": [Function],
+                            "value": 3,
+                          }
+                        }
+                        name={[Function]}
+                      >
+                        <div
+                          className="md-list-item"
+                          data-md-event-key="md-sub-menu-item-1-1"
+                          id="md-sub-menu-item-1-1"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onKeyDown={[Function]}
+                          role="menuitem"
+                          tabIndex={-1}
+                        >
+                          <div
+                            className="md-menu-item__content"
+                            key="content-0"
+                          >
+                            one
+                          </div>
+                          <div
+                            className="md-menu-item__selected-value"
+                            key="content-1"
+                            title=""
+                          />
+                          <div
+                            className="md-menu-item__arrow"
+                            key="content-2"
+                          >
+                            <Icon
+                              append={false}
+                              ariaLabel={null}
+                              buttonClassName=""
+                              buttonProps={null}
+                              className=""
+                              color=""
+                              description=""
+                              name="arrow-right_16"
+                              onClick={null}
+                              prepend={false}
+                              size={null}
+                              sizeOverride={false}
+                              style={null}
+                              title=""
+                              type=""
+                            >
+                              <i
+                                aria-label={null}
+                                className="md-icon icon icon-arrow-right_16"
+                                style={
+                                  Object {
+                                    "fontSize": 16,
+                                  }
+                                }
+                              />
+                            </Icon>
+                          </div>
+                        </div>
+                      </UID>
+                    </Component>
+                  </ListItem>
+                </ContextTransform(ListItem)>
+              </div>
+            </UID>
+          </Component>
+        </UID>
+      </Component>
+    </Component>
+  </SubMenu>
+</ContextTransform(SubMenu)>
+`;

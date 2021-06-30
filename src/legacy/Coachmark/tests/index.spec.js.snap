@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Coachmark /> should match SnapShot 1`] = `
+<Fragment>
+  <button>
+    Hello
+  </button>
+</Fragment>
+`;

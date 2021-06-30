@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> should render a Sidebar 1`] = `
+<Sidebar
+  buttonProps={Object {}}
+  className=""
+  collapsable={false}
+  expanded={true}
+  isFixed={false}
+  isPageLevel={false}
+  theme=""
+  withIcons={true}
+  withToggle={false}
+  withTopbar={false}
+  wrapperClass=""
+>
+  <div
+    className="md-sidebar__wrapper"
+  >
+    <div
+      className="md-sidebar md-sidebar--global md-sidebar--indented"
+    >
+      <Component />
+    </div>
+  </div>
+</Sidebar>
+`;

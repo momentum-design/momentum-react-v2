@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <CallControl /> should match SnapShot 1`] = `
+<CallControl
+  active={false}
+  ariaLabel="test"
+  className=""
+  disabled={false}
+  iconColor="white-100"
+  iconSize={24}
+  onClick={null}
+  size={56}
+  type="microphone-muted"
+>
+  <ContextTransform(Button)
+    ariaLabel="test"
+    circle={true}
+    className="md-call-control"
+    color="dark-gray"
+    disabled={false}
+    onClick={null}
+    size={56}
+  >
+    <Button
+      active={false}
+      ariaLabel="test"
+      ariaLabelledBy=""
+      ariaPressed={null}
+      circle={true}
+      className="md-call-control"
+      color="dark-gray"
+      containerLarge={false}
+      disabled={false}
+      eventKey=""
+      expand={false}
+      href=""
+      id=""
+      keyboardKey=""
+      label=""
+      large={false}
+      loading={false}
+      onClick={null}
+      parentKeyDown={null}
+      parentOnSelect={null}
+      preventKeyboardDoubleClick={false}
+      removeStyle={false}
+      size={56}
+      style={Object {}}
+      tag="button"
+      type="button"
+    >
+      <Component
+        name={[Function]}
+      >
+        <UID
+          idSource={
+            Object {
+              "prefix": "",
+              "uid": [Function],
+              "value": 2,
+            }
+          }
+          name={[Function]}
+        >
+          <button
+            alt="test"
+            aria-label="test"
+            aria-pressed={null}
+            className="md-button md-button--circle md-button--56 md-button--dark-gray md-call-control"
+            data-md-event-key="md-button-1"
+            disabled={false}
+            id="md-button-1"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            style={
+              Object {
+                "style": Object {},
+              }
+            }
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="md-button__children"
+              key="child-1"
+              style={
+                Object {
+                  "opacity": "1",
+                }
+              }
+            >
+              <Icon
+                append={false}
+                ariaLabel={null}
+                buttonClassName=""
+                buttonProps={null}
+                className=""
+                color="white-100"
+                description=""
+                name="microphone-muted_24"
+                onClick={null}
+                prepend={false}
+                size={null}
+                sizeOverride={false}
+                style={null}
+                title=""
+                type=""
+              >
+                <i
+                  aria-label={null}
+                  className="md-icon icon icon-microphone-muted_24"
+                  style={
+                    Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "fontSize": 24,
+                    }
+                  }
+                />
+              </Icon>
+            </span>
+          </button>
+        </UID>
+      </Component>
+    </Button>
+  </ContextTransform(Button)>
+</CallControl>
+`;

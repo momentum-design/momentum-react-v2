@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import SidebarHeader from '@momentum-ui/react/SidebarHeader';
+import { SidebarHeader } from '@momentum-ui/react';
 
 describe('<SidebarHeader />', () => {
   it('should render a SidebarHeader', () => {

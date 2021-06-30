@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <AccordionContent /> should match SnapShot 1`] = `
+<AccordionContent
+  className=""
+>
+  <div
+    className="md-accordion__content"
+  />
+</AccordionContent>
+`;

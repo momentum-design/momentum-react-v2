@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <AccordionHeader /> should match SnapShot 1`] = `
+<AccordionHeader
+  className=""
+  disabled={false}
+  focus={false}
+  height=""
+  showSeparator={true}
+>
+  <div
+    className="md-accordion__header md-accordion__header--separator"
+    role="button"
+    tabIndex={0}
+  >
+    <span
+      className="md-accordion__header-icon"
+    />
+  </div>
+</AccordionHeader>
+`;

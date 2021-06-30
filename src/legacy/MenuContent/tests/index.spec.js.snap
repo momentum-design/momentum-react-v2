@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <MenuContent /> should render a MenuContent 1`] = `
+<MenuContent
+  className=""
+>
+  <div
+    className="md-menu-content"
+  >
+    test
+  </div>
+</MenuContent>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <TopbarRight /> should match SnapShot 1`] = `
+<TopbarRight
+  className=""
+  id="test"
+>
+  <div
+    className="md-top-bar__right"
+    id="test"
+  />
+</TopbarRight>
+`;

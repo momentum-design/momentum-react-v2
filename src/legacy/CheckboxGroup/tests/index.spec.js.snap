@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <CheckboxGroup /> should match SnapShot 1`] = `
+<CheckboxGroup
+  name=""
+  onChange={[Function]}
+  values={Array []}
+>
+  <div
+    className="md-checkbox-group"
+  />
+</CheckboxGroup>
+`;

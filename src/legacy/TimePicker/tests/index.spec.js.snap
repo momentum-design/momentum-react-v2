@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <TimePicker /> should match SnapShot 1`] = `
+<TimePicker
+  className=""
+  id="test"
+  inputId=""
+  militaryTime={false}
+  minuteInterval={1}
+  onChange={null}
+  selectedTime={2018-01-29T09:12:40.000Z}
+>
+  <div
+    className="md-timepicker-container"
+  >
+    <Input
+      ariaDescribedBy={null}
+      ariaLabel={null}
+      className=""
+      clear={false}
+      clearAriaLabel={null}
+      containerSize=""
+      defaultValue=""
+      disabled={false}
+      helpText=""
+      htmlId={null}
+      id="md-timepicker__input-1"
+      inputAfter={null}
+      inputBefore={null}
+      inputClassName=""
+      inputRef={[Function]}
+      inputSize=""
+      isFilled={false}
+      label=""
+      messageArr={Array []}
+      multiline={false}
+      name="md-timepicker__input-1"
+      nestedLevel={0}
+      onChange={[Function]}
+      onDoneEditing={null}
+      onFocus={[Function]}
+      onKeyDown={null}
+      onMouseDown={[Function]}
+      placeholder=""
+      readOnly={true}
+      secondaryLabel=""
+      shape=""
+      type="text"
+      value="2:42 PM"
+    >
+      <div
+        className="md-input-container md-read-only"
+      >
+        <div
+          className="md-input__wrapper"
+        >
+          <input
+            className="md-input md-read-only md-dirty"
+            id="md-timepicker__input-1"
+            name="md-timepicker__input-1"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            readOnly={true}
+            tabIndex={0}
+            type="text"
+            value="2:42 PM"
+          />
+        </div>
+      </div>
+    </Input>
+  </div>
+</TimePicker>
+`;

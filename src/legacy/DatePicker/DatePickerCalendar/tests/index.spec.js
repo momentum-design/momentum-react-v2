@@ -1,11 +1,11 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import DatePickerCalendar from '../index';
-import DatePickerContext from '@momentum-ui/react/DatePickerContext';
+import DatePickerContext from '../../../DatePickerContext';
 import {
   isSameDay,
   now
-} from '@momentum-ui/react/utils/dateUtils';
+} from '../../../utils/dateUtils';
 import moment from 'moment-timezone';
 
 describe('tests for <DatePickerCalendar />', () => {

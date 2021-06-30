@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <ListItemHeader /> should match SnapShot 1`] = `
+<ListItemHeader
+  className=""
+  header="header"
+  id=""
+  isReadOnly={true}
+  title=""
+  type=""
+>
+  <ContextTransform(ListItem)
+    className="md-list-item-header"
+    id=""
+    isReadOnly={true}
+    title="header"
+  >
+    <ListItem
+      active={false}
+      className="md-list-item-header"
+      customAnchorNode={null}
+      customRefProp=""
+      disabled={false}
+      eventKey=""
+      focus={false}
+      focusLockTabbableChildren={false}
+      focusLockTabbableChildrenProps={
+        Object {
+          "portalNodeQuery": "",
+          "tabbableChildrenHasPopover": false,
+          "tabbableChildrenQuery": "",
+        }
+      }
+      focusOnLoad={false}
+      id=""
+      isReadOnly={true}
+      itemIndex={null}
+      keyboardKey=""
+      label=""
+      link=""
+      onBlur={null}
+      onClick={null}
+      onKeyDown={null}
+      parentKeyDown={null}
+      parentOnSelect={null}
+      refName="navLink"
+      role="listitem"
+      separator={false}
+      specifyRoleWithoutList={false}
+      title="header"
+      type=""
+      value=""
+    >
+      <Component
+        name={[Function]}
+      >
+        <UID
+          idSource={
+            Object {
+              "prefix": "",
+              "uid": [Function],
+              "value": 2,
+            }
+          }
+          name={[Function]}
+        >
+          <div
+            className="md-list-item md-list-item--read-only md-list-item-header"
+            data-md-event-key="md-list-item-1"
+            data-md-keyboard-key="header"
+            id="md-list-item-1"
+            role="listitem"
+            title="header"
+          >
+            <ListItemSection
+              className=""
+              key="child-0"
+              position="center"
+            >
+              <div
+                className="md-list-item__center"
+              >
+                <div
+                  className="md-list-item__header"
+                >
+                  header
+                </div>
+              </div>
+            </ListItemSection>
+            <ListItemSection
+              className=""
+              key="child-1"
+              position="right"
+            >
+              <div
+                className="md-list-item__right"
+              />
+            </ListItemSection>
+          </div>
+        </UID>
+      </Component>
+    </ListItem>
+  </ContextTransform(ListItem)>
+</ListItemHeader>
+`;

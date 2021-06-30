@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <ListItem /> should match SnapShot 1`] = `
+<ContextTransform(ListItem)>
+  <ListItem
+    active={false}
+    className=""
+    customAnchorNode={null}
+    customRefProp=""
+    disabled={false}
+    eventKey=""
+    focus={false}
+    focusLockTabbableChildren={false}
+    focusLockTabbableChildrenProps={
+      Object {
+        "portalNodeQuery": "",
+        "tabbableChildrenHasPopover": false,
+        "tabbableChildrenQuery": "",
+      }
+    }
+    focusOnLoad={false}
+    id={null}
+    isReadOnly={false}
+    itemIndex={null}
+    keyboardKey=""
+    label=""
+    link=""
+    onBlur={null}
+    onClick={null}
+    onKeyDown={null}
+    parentKeyDown={null}
+    parentOnSelect={null}
+    refName="navLink"
+    role="listitem"
+    separator={false}
+    specifyRoleWithoutList={false}
+    title=""
+    type=""
+    value=""
+  >
+    <Component
+      name={[Function]}
+    >
+      <UID
+        idSource={
+          Object {
+            "prefix": "",
+            "uid": [Function],
+            "value": 2,
+          }
+        }
+        name={[Function]}
+      >
+        <div
+          className="md-list-item"
+          data-md-event-key="md-list-item-1"
+          id="md-list-item-1"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="listitem"
+          tabIndex={-1}
+        />
+      </UID>
+    </Component>
+  </ListItem>
+</ContextTransform(ListItem)>
+`;

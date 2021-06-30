@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Button /> should match SnapShot 1`] = `
+<ContextTransform(Button)
+  ariaLabel="test"
+  onClick={[Function]}
+>
+  <Button
+    active={false}
+    ariaLabel="test"
+    ariaLabelledBy=""
+    ariaPressed={null}
+    circle={false}
+    className=""
+    color=""
+    containerLarge={false}
+    disabled={false}
+    eventKey=""
+    expand={false}
+    href=""
+    id=""
+    keyboardKey=""
+    label=""
+    large={false}
+    loading={false}
+    onClick={[Function]}
+    parentKeyDown={null}
+    parentOnSelect={null}
+    preventKeyboardDoubleClick={false}
+    removeStyle={false}
+    size={36}
+    style={Object {}}
+    tag="button"
+    type="button"
+  >
+    <Component
+      name={[Function]}
+    >
+      <UID
+        idSource={
+          Object {
+            "prefix": "",
+            "uid": [Function],
+            "value": 2,
+          }
+        }
+        name={[Function]}
+      >
+        <button
+          alt="test"
+          aria-label="test"
+          aria-pressed={null}
+          className="md-button md-button--36"
+          data-md-event-key="md-button-1"
+          data-md-keyboard-key="test"
+          disabled={false}
+          id="md-button-1"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          style={
+            Object {
+              "style": Object {},
+            }
+          }
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="md-button__children"
+            key="child-1"
+            style={
+              Object {
+                "opacity": "1",
+              }
+            }
+          >
+            test
+          </span>
+        </button>
+      </UID>
+    </Component>
+  </Button>
+</ContextTransform(Button)>
+`;

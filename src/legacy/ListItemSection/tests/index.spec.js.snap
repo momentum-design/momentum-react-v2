@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <ListItemSection /> should match SnapShot 1`] = `
+<ListItemSection
+  className=""
+  position="center"
+>
+  <div
+    className="md-list-item__center"
+  />
+</ListItemSection>
+`;

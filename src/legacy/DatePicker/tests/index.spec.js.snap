@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <DatePicker /> should show the calendar when focusing on the date input 1`] = `
+<div
+  className="md-datepicker-container"
+>
+  <div
+    className="trigger"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    Select Date
+  </div>
+</div>
+`;

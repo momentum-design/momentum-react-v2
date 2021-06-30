@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import MenuItem from '@momentum-ui/react/MenuItem';
+import { MenuItem } from '@momentum-ui/react';
 import SelectableContext from '../../SelectableContext';
 
 beforeEach(() => {

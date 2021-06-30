@@ -1,0 +1,905 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <AlertCall /> should match SnapShot 1`] = `
+<AlertCall
+  avatar={null}
+  avatarProps={null}
+  caller={
+    Object {
+      "alt": "+1 408-555-1212",
+      "title": "Jefe Guadelupe",
+    }
+  }
+  defaultSelectedDevice={0}
+  deviceListHeader="Device selection"
+  deviceListProps={null}
+  devices={Array []}
+  onAnswerShare={null}
+  onAnswerVideo={null}
+  onAnswerVoice={null}
+  onDeviceSelect={null}
+  onReject={null}
+  rejectAriaLabel="reject call"
+  rejectBtnProps={null}
+  shareAriaLabel="answer call with share"
+  shareBtnProps={null}
+  show={true}
+  title="Incoming call"
+  videoAriaLabel="answer call with video"
+  videoBtnProps={null}
+  voiceAriaLabel="answer call with voice"
+  voiceBtnProps={null}
+>
+  <div
+    className="md-alert md-alert--call"
+  >
+    <div
+      className="md-alert__title"
+    >
+      Incoming call
+    </div>
+    <div
+      className="md-alert__caller"
+    >
+      <Avatar
+        alt="Jefe Guadelupe"
+        backgroundColor=""
+        buttonClassName=""
+        className={null}
+        color=""
+        failureBadge={false}
+        hasNotification={false}
+        hideDefaultTooltip={false}
+        icon={null}
+        initials={null}
+        isDecrypting={false}
+        isOverview={false}
+        onClick={null}
+        size="xlarge"
+        src={null}
+        theme={null}
+        title="Jefe Guadelupe"
+        type=""
+      >
+        <div
+          className="md-avatar md-avatar--xlarge"
+          title="Jefe Guadelupe"
+        >
+          <span
+            className="md-avatar__letter"
+            key="letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            JG
+          </span>
+        </div>
+      </Avatar>
+      <div
+        className="md-alert__caller-title"
+      >
+        Jefe Guadelupe
+      </div>
+      <div
+        className="md-alert__caller-subtitle"
+      >
+        +1 408-555-1212
+      </div>
+    </div>
+    <Component />
+    <div
+      className="md-alert--call--buttons"
+    >
+      <ContextTransform(Button)
+        ariaLabel="reject call"
+        circle={true}
+        color="red"
+        onClick={null}
+        size={44}
+      >
+        <Button
+          active={false}
+          ariaLabel="reject call"
+          ariaLabelledBy=""
+          ariaPressed={null}
+          circle={true}
+          className=""
+          color="red"
+          containerLarge={false}
+          disabled={false}
+          eventKey=""
+          expand={false}
+          href=""
+          id=""
+          keyboardKey=""
+          label=""
+          large={false}
+          loading={false}
+          onClick={null}
+          parentKeyDown={null}
+          parentOnSelect={null}
+          preventKeyboardDoubleClick={false}
+          removeStyle={false}
+          size={44}
+          style={Object {}}
+          tag="button"
+          type="button"
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "",
+                  "uid": [Function],
+                  "value": 2,
+                }
+              }
+              name={[Function]}
+            >
+              <button
+                alt="reject call"
+                aria-label="reject call"
+                aria-pressed={null}
+                className="md-button md-button--circle md-button--44 md-button--red"
+                data-md-event-key="md-button-1"
+                disabled={false}
+                id="md-button-1"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                style={
+                  Object {
+                    "style": Object {},
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="md-button__children"
+                  key="child-1"
+                  style={
+                    Object {
+                      "opacity": "1",
+                    }
+                  }
+                >
+                  <Icon
+                    append={false}
+                    ariaLabel={null}
+                    buttonClassName=""
+                    buttonProps={null}
+                    className=""
+                    color=""
+                    description=""
+                    name="cancel_24"
+                    onClick={null}
+                    prepend={false}
+                    size={null}
+                    sizeOverride={false}
+                    style={null}
+                    title=""
+                    type=""
+                  >
+                    <i
+                      aria-label={null}
+                      className="md-icon icon icon-cancel_24"
+                      style={
+                        Object {
+                          "fontSize": 24,
+                        }
+                      }
+                    />
+                  </Icon>
+                </span>
+              </button>
+            </UID>
+          </Component>
+        </Button>
+      </ContextTransform(Button)>
+    </div>
+  </div>
+</AlertCall>
+`;
+
+exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
+<AlertCall
+  avatar={null}
+  avatarProps={null}
+  caller={
+    Object {
+      "alt": "+1 408-555-1212",
+      "title": "Jefe Guadelupe",
+    }
+  }
+  defaultSelectedDevice={0}
+  deviceListHeader="Device selection"
+  deviceListProps={null}
+  devices={
+    Array [
+      Object {
+        "name": "SJC21-Babelfish",
+        "type": "device",
+        "value": "1010101",
+      },
+      Object {
+        "name": "Use my computer",
+        "value": "2020202",
+      },
+    ]
+  }
+  onAnswerShare={null}
+  onAnswerVideo={null}
+  onAnswerVoice={null}
+  onDeviceSelect={null}
+  onReject={null}
+  rejectAriaLabel="reject call"
+  rejectBtnProps={null}
+  shareAriaLabel="answer call with share"
+  shareBtnProps={null}
+  show={true}
+  title="Incoming call"
+  videoAriaLabel="answer call with video"
+  videoBtnProps={null}
+  voiceAriaLabel="answer call with voice"
+  voiceBtnProps={null}
+>
+  <div
+    className="md-alert md-alert--call"
+  >
+    <div
+      className="md-alert__title"
+    >
+      Incoming call
+    </div>
+    <div
+      className="md-alert__caller"
+    >
+      <Avatar
+        alt="Jefe Guadelupe"
+        backgroundColor=""
+        buttonClassName=""
+        className={null}
+        color=""
+        failureBadge={false}
+        hasNotification={false}
+        hideDefaultTooltip={false}
+        icon={null}
+        initials={null}
+        isDecrypting={false}
+        isOverview={false}
+        onClick={null}
+        size="xlarge"
+        src={null}
+        theme={null}
+        title="Jefe Guadelupe"
+        type=""
+      >
+        <div
+          className="md-avatar md-avatar--xlarge"
+          title="Jefe Guadelupe"
+        >
+          <span
+            className="md-avatar__letter"
+            key="letter"
+            style={
+              Object {
+                "backgroundColor": "",
+                "color": "",
+              }
+            }
+          >
+            JG
+          </span>
+        </div>
+      </Avatar>
+      <div
+        className="md-alert__caller-title"
+      >
+        Jefe Guadelupe
+      </div>
+      <div
+        className="md-alert__caller-subtitle"
+      >
+        +1 408-555-1212
+      </div>
+    </div>
+    <Component>
+      <DeviceListCall
+        className=""
+        defaultSelected={0}
+        devices={
+          Array [
+            Object {
+              "name": "SJC21-Babelfish",
+              "type": "device",
+              "value": "1010101",
+            },
+            Object {
+              "name": "Use my computer",
+              "value": "2020202",
+            },
+          ]
+        }
+        header="Device selection"
+        onSelect={null}
+      >
+        <List
+          active={0}
+          ariaConfig={null}
+          className=""
+          focus={null}
+          focusFirst={true}
+          focusFirstQuery=""
+          focusQuery=""
+          id={null}
+          itemRole="listitem"
+          navigationDirection="both"
+          onSelect={[Function]}
+          role="list"
+          shouldFocusActive={false}
+          shouldFocusInitial={true}
+          shouldLoop={true}
+          shouldPropagateKeyDown={false}
+          tabType="vertical"
+          trackActive={true}
+          type={null}
+          wrap={false}
+        >
+          <div
+            aria-activedescendant={0}
+            className="md-list md-list--vertical"
+            focus={null}
+            id={null}
+            onSelect={[Function]}
+            role="list"
+          >
+            <ListItemHeader
+              className=""
+              header="Device selection"
+              id=""
+              isReadOnly={true}
+              title=""
+              type=""
+            >
+              <ContextTransform(ListItem)
+                className="md-list-item-header"
+                id=""
+                isReadOnly={true}
+                title="Device selection"
+              >
+                <ListItem
+                  active={false}
+                  className="md-list-item-header"
+                  customAnchorNode={null}
+                  customRefProp=""
+                  disabled={false}
+                  eventKey=""
+                  focus={false}
+                  focusLockTabbableChildren={false}
+                  focusLockTabbableChildrenProps={
+                    Object {
+                      "portalNodeQuery": "",
+                      "tabbableChildrenHasPopover": false,
+                      "tabbableChildrenQuery": "",
+                    }
+                  }
+                  focusOnLoad={false}
+                  id=""
+                  isReadOnly={true}
+                  itemIndex={null}
+                  keyboardKey=""
+                  label=""
+                  link=""
+                  onBlur={null}
+                  onClick={null}
+                  onKeyDown={null}
+                  parentKeyDown={[Function]}
+                  parentOnSelect={[Function]}
+                  refName="navLink"
+                  role="listitem"
+                  separator={false}
+                  specifyRoleWithoutList={false}
+                  title="Device selection"
+                  type=""
+                  value=""
+                >
+                  <Component
+                    name={[Function]}
+                  >
+                    <UID
+                      idSource={
+                        Object {
+                          "prefix": "",
+                          "uid": [Function],
+                          "value": 6,
+                        }
+                      }
+                      name={[Function]}
+                    >
+                      <div
+                        className="md-list-item md-list-item--read-only md-list-item-header"
+                        data-md-event-key="md-list-item-1"
+                        data-md-keyboard-key="device-selection"
+                        id="md-list-item-1"
+                        role="listitem"
+                        title="Device selection"
+                      >
+                        <ListItemSection
+                          className=""
+                          key="child-0"
+                          position="center"
+                        >
+                          <div
+                            className="md-list-item__center"
+                          >
+                            <div
+                              className="md-list-item__header"
+                            >
+                              Device selection
+                            </div>
+                          </div>
+                        </ListItemSection>
+                        <ListItemSection
+                          className=""
+                          key="child-1"
+                          position="right"
+                        >
+                          <div
+                            className="md-list-item__right"
+                          />
+                        </ListItemSection>
+                      </div>
+                    </UID>
+                  </Component>
+                </ListItem>
+              </ContextTransform(ListItem)>
+            </ListItemHeader>
+            <Component
+              key="device-0"
+              name={[Function]}
+            >
+              <UID
+                idSource={
+                  Object {
+                    "prefix": "",
+                    "uid": [Function],
+                    "value": 6,
+                  }
+                }
+                name={[Function]}
+              >
+                <ContextTransform(ListItem)
+                  id="md-device-list-call-2"
+                  label="SJC21-Babelfish"
+                  title="SJC21-Babelfish"
+                  value="1010101"
+                >
+                  <ListItem
+                    active={false}
+                    className=""
+                    customAnchorNode={null}
+                    customRefProp=""
+                    disabled={false}
+                    eventKey=""
+                    focus={false}
+                    focusLockTabbableChildren={false}
+                    focusLockTabbableChildrenProps={
+                      Object {
+                        "portalNodeQuery": "",
+                        "tabbableChildrenHasPopover": false,
+                        "tabbableChildrenQuery": "",
+                      }
+                    }
+                    focusOnLoad={false}
+                    id="md-device-list-call-2"
+                    isReadOnly={false}
+                    itemIndex={null}
+                    keyboardKey=""
+                    label="SJC21-Babelfish"
+                    link=""
+                    onBlur={null}
+                    onClick={null}
+                    onKeyDown={null}
+                    parentKeyDown={[Function]}
+                    parentOnSelect={[Function]}
+                    refName="navLink"
+                    role="listitem"
+                    separator={false}
+                    specifyRoleWithoutList={false}
+                    title="SJC21-Babelfish"
+                    type=""
+                    value="1010101"
+                  >
+                    <Component
+                      name={[Function]}
+                    >
+                      <UID
+                        idSource={
+                          Object {
+                            "prefix": "",
+                            "uid": [Function],
+                            "value": 6,
+                          }
+                        }
+                        name={[Function]}
+                      >
+                        <div
+                          aria-current="true"
+                          className="md-list-item"
+                          data-md-event-key="md-device-list-call-2"
+                          data-md-keyboard-key="sjc-21-babelfish"
+                          id="md-device-list-call-2"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onKeyDown={[Function]}
+                          role="listitem"
+                          tabIndex={0}
+                          title="SJC21-Babelfish"
+                        >
+                          <ListItemSection
+                            className=""
+                            position="left"
+                          >
+                            <div
+                              className="md-list-item__left"
+                            >
+                              <Icon
+                                append={false}
+                                ariaLabel={null}
+                                buttonClassName=""
+                                buttonProps={null}
+                                className=""
+                                color=""
+                                description=""
+                                name="spark-board_20"
+                                onClick={null}
+                                prepend={false}
+                                size={null}
+                                sizeOverride={false}
+                                style={null}
+                                title=""
+                                type=""
+                              >
+                                <i
+                                  aria-label={null}
+                                  className="md-icon icon icon-spark-board_20"
+                                  style={
+                                    Object {
+                                      "fontSize": 20,
+                                    }
+                                  }
+                                />
+                              </Icon>
+                            </div>
+                          </ListItemSection>
+                          <ListItemSection
+                            className=""
+                            position="center"
+                          >
+                            <div
+                              className="md-list-item__center"
+                            >
+                              <div
+                                className="md-list-item__header"
+                              >
+                                SJC21-Babelfish
+                              </div>
+                            </div>
+                          </ListItemSection>
+                          <ListItemSection
+                            className=""
+                            position="right"
+                          >
+                            <div
+                              className="md-list-item__right"
+                            >
+                              <Icon
+                                append={false}
+                                ariaLabel={null}
+                                buttonClassName=""
+                                buttonProps={null}
+                                className=""
+                                color="blue-50"
+                                description=""
+                                name="check_20"
+                                onClick={null}
+                                prepend={false}
+                                size={null}
+                                sizeOverride={false}
+                                style={null}
+                                title=""
+                                type=""
+                              >
+                                <i
+                                  aria-label={null}
+                                  className="md-icon icon icon-check_20"
+                                  style={
+                                    Object {
+                                      "color": "rgba(0, 160, 209, 1)",
+                                      "fontSize": 20,
+                                    }
+                                  }
+                                />
+                              </Icon>
+                            </div>
+                          </ListItemSection>
+                        </div>
+                      </UID>
+                    </Component>
+                  </ListItem>
+                </ContextTransform(ListItem)>
+              </UID>
+            </Component>
+            <Component
+              key="device-1"
+              name={[Function]}
+            >
+              <UID
+                idSource={
+                  Object {
+                    "prefix": "",
+                    "uid": [Function],
+                    "value": 6,
+                  }
+                }
+                name={[Function]}
+              >
+                <ContextTransform(ListItem)
+                  id="md-device-list-call-4"
+                  label="Use my computer"
+                  title="Use my computer"
+                  value="2020202"
+                >
+                  <ListItem
+                    active={false}
+                    className=""
+                    customAnchorNode={null}
+                    customRefProp=""
+                    disabled={false}
+                    eventKey=""
+                    focus={false}
+                    focusLockTabbableChildren={false}
+                    focusLockTabbableChildrenProps={
+                      Object {
+                        "portalNodeQuery": "",
+                        "tabbableChildrenHasPopover": false,
+                        "tabbableChildrenQuery": "",
+                      }
+                    }
+                    focusOnLoad={false}
+                    id="md-device-list-call-4"
+                    isReadOnly={false}
+                    itemIndex={null}
+                    keyboardKey=""
+                    label="Use my computer"
+                    link=""
+                    onBlur={null}
+                    onClick={null}
+                    onKeyDown={null}
+                    parentKeyDown={[Function]}
+                    parentOnSelect={[Function]}
+                    refName="navLink"
+                    role="listitem"
+                    separator={false}
+                    specifyRoleWithoutList={false}
+                    title="Use my computer"
+                    type=""
+                    value="2020202"
+                  >
+                    <Component
+                      name={[Function]}
+                    >
+                      <UID
+                        idSource={
+                          Object {
+                            "prefix": "",
+                            "uid": [Function],
+                            "value": 6,
+                          }
+                        }
+                        name={[Function]}
+                      >
+                        <div
+                          className="md-list-item"
+                          data-md-event-key="md-device-list-call-4"
+                          data-md-keyboard-key="use-my-computer"
+                          id="md-device-list-call-4"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onKeyDown={[Function]}
+                          role="listitem"
+                          tabIndex={-1}
+                          title="Use my computer"
+                        >
+                          <ListItemSection
+                            className=""
+                            position="left"
+                          >
+                            <div
+                              className="md-list-item__left"
+                            >
+                              <Icon
+                                append={false}
+                                ariaLabel={null}
+                                buttonClassName=""
+                                buttonProps={null}
+                                className=""
+                                color=""
+                                description=""
+                                name="laptop_20"
+                                onClick={null}
+                                prepend={false}
+                                size={null}
+                                sizeOverride={false}
+                                style={null}
+                                title=""
+                                type=""
+                              >
+                                <i
+                                  aria-label={null}
+                                  className="md-icon icon icon-laptop_20"
+                                  style={
+                                    Object {
+                                      "fontSize": 20,
+                                    }
+                                  }
+                                />
+                              </Icon>
+                            </div>
+                          </ListItemSection>
+                          <ListItemSection
+                            className=""
+                            position="center"
+                          >
+                            <div
+                              className="md-list-item__center"
+                            >
+                              <div
+                                className="md-list-item__header"
+                              >
+                                Use my computer
+                              </div>
+                            </div>
+                          </ListItemSection>
+                          <ListItemSection
+                            className=""
+                            position="right"
+                          >
+                            <div
+                              className="md-list-item__right"
+                            />
+                          </ListItemSection>
+                        </div>
+                      </UID>
+                    </Component>
+                  </ListItem>
+                </ContextTransform(ListItem)>
+              </UID>
+            </Component>
+          </div>
+        </List>
+      </DeviceListCall>
+    </Component>
+    <div
+      className="md-alert--call--buttons"
+    >
+      <ContextTransform(Button)
+        ariaLabel="reject call"
+        circle={true}
+        color="red"
+        onClick={null}
+        size={44}
+      >
+        <Button
+          active={false}
+          ariaLabel="reject call"
+          ariaLabelledBy=""
+          ariaPressed={null}
+          circle={true}
+          className=""
+          color="red"
+          containerLarge={false}
+          disabled={false}
+          eventKey=""
+          expand={false}
+          href=""
+          id=""
+          keyboardKey=""
+          label=""
+          large={false}
+          loading={false}
+          onClick={null}
+          parentKeyDown={null}
+          parentOnSelect={null}
+          preventKeyboardDoubleClick={false}
+          removeStyle={false}
+          size={44}
+          style={Object {}}
+          tag="button"
+          type="button"
+        >
+          <Component
+            name={[Function]}
+          >
+            <UID
+              idSource={
+                Object {
+                  "prefix": "",
+                  "uid": [Function],
+                  "value": 3,
+                }
+              }
+              name={[Function]}
+            >
+              <button
+                alt="reject call"
+                aria-label="reject call"
+                aria-pressed={null}
+                className="md-button md-button--circle md-button--44 md-button--red"
+                data-md-event-key="md-button-2"
+                disabled={false}
+                id="md-button-2"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                style={
+                  Object {
+                    "style": Object {},
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="md-button__children"
+                  key="child-1"
+                  style={
+                    Object {
+                      "opacity": "1",
+                    }
+                  }
+                >
+                  <Icon
+                    append={false}
+                    ariaLabel={null}
+                    buttonClassName=""
+                    buttonProps={null}
+                    className=""
+                    color=""
+                    description=""
+                    name="cancel_24"
+                    onClick={null}
+                    prepend={false}
+                    size={null}
+                    sizeOverride={false}
+                    style={null}
+                    title=""
+                    type=""
+                  >
+                    <i
+                      aria-label={null}
+                      className="md-icon icon icon-cancel_24"
+                      style={
+                        Object {
+                          "fontSize": 24,
+                        }
+                      }
+                    />
+                  </Icon>
+                </span>
+              </button>
+            </UID>
+          </Component>
+        </Button>
+      </ContextTransform(Button)>
+    </div>
+  </div>
+</AlertCall>
+`;

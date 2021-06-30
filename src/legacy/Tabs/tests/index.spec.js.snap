@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Tabs /> should match SnapShot 1`] = `
+<Tabs
+  active={false}
+  className=""
+  focus={0}
+  justified={false}
+  onSelect={null}
+  tabType="pills"
+>
+  <div
+    className="md-tab md-tab--pills"
+    type="pills"
+  >
+     
+    <div
+      key=".0"
+    />
+     
+  </div>
+</Tabs>
+`;

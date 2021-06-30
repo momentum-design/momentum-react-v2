@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <SidebarNavItem /> should render a SidebarNavItem 1`] = `
+<ContextTransform(SidebarNavItem)
+  label="one"
+>
+  <SidebarNavItem
+    expanded={false}
+    icon={null}
+    keyboardKey=""
+    label="one"
+    level={null}
+    primary={false}
+    secondary={false}
+    setContext={null}
+    tertiary={false}
+    title=""
+    titleNode={null}
+  >
+    <Component
+      name={[Function]}
+    >
+      <UID
+        idSource={
+          Object {
+            "prefix": "",
+            "uid": [Function],
+            "value": 3,
+          }
+        }
+        name={[Function]}
+      >
+        <ContextTransform(ListItem)
+          id="md-sidebar__nav-item-1"
+          keyboardKey=""
+          label="one"
+          onClick={[Function]}
+        >
+          <ListItem
+            active={false}
+            className=""
+            customAnchorNode={null}
+            customRefProp=""
+            disabled={false}
+            eventKey=""
+            focus={false}
+            focusLockTabbableChildren={false}
+            focusLockTabbableChildrenProps={
+              Object {
+                "portalNodeQuery": "",
+                "tabbableChildrenHasPopover": false,
+                "tabbableChildrenQuery": "",
+              }
+            }
+            focusOnLoad={false}
+            id="md-sidebar__nav-item-1"
+            isReadOnly={false}
+            itemIndex={null}
+            keyboardKey=""
+            label="one"
+            link=""
+            onBlur={null}
+            onClick={[Function]}
+            onKeyDown={null}
+            parentKeyDown={null}
+            parentOnSelect={null}
+            refName="navLink"
+            role="listitem"
+            separator={false}
+            specifyRoleWithoutList={false}
+            title=""
+            type=""
+            value=""
+          >
+            <Component
+              name={[Function]}
+            >
+              <UID
+                idSource={
+                  Object {
+                    "prefix": "",
+                    "uid": [Function],
+                    "value": 3,
+                  }
+                }
+                name={[Function]}
+              >
+                <div
+                  className="md-list-item"
+                  data-md-event-key="md-sidebar__nav-item-1"
+                  data-md-keyboard-key="one"
+                  id="md-sidebar__nav-item-1"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="listitem"
+                  tabIndex={-1}
+                  title="one"
+                >
+                  <ListItemSection
+                    className=""
+                    position="center"
+                  >
+                    <div
+                      className="md-list-item__center"
+                    />
+                  </ListItemSection>
+                </div>
+              </UID>
+            </Component>
+          </ListItem>
+        </ContextTransform(ListItem)>
+      </UID>
+    </Component>
+  </SidebarNavItem>
+</ContextTransform(SidebarNavItem)>
+`;

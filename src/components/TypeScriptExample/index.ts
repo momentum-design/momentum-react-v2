@@ -1,3 +1,3 @@
-import { default as TypescriptExample } from './TypescriptExample';
+import { default as TypeScriptExample } from './TypeScriptExample';
 
-export default TypescriptExample;
+export default TypeScriptExample;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Card /> should match SnapShot 1`] = `
+<Card
+  className=""
+  id="test"
+  onClick={null}
+>
+  <div
+    className="md-card"
+    id="test"
+    onClick={null}
+    onKeyDown={[Function]}
+    role="presentation"
+  />
+</Card>
+`;

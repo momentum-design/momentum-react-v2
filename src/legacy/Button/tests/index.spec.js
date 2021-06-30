@@ -1,13 +1,12 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Button, Loading, utils } from '@momentum-ui/react'; // eslint-disable-line import/named
+import { Button, Loading } from '@momentum-ui/react'; // eslint-disable-line import/named
 import ButtonGroupContext from '../../ButtonGroupContext';
 import SelectableContext from '../../SelectableContext';
 
 describe('tests for <Button />', () => {
   it('should match SnapShot', () => {
     const container = mount(<Button children='test' ariaLabel='test' onClick={() => {}} />);
-    utils.helloWorld({name: 'world'});
     expect(container).toMatchSnapshot();
   });
 
