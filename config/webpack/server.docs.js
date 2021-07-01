@@ -16,10 +16,8 @@ browserSync({
     port: 4301,
   },
   server: {
-    baseDir: 'dist/esm',
+    baseDir: 'docs/examples',
   },
-
-  files: ['src/*.html'],
 
   middleware: [historyApiFallback()],
   notify: false,

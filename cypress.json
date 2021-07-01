@@ -1,6 +1,6 @@
 {
   "testFiles": "**/*.cy.js",
-  "integrationFolder": "src/lib",
+  "integrationFolder": "src",
   "numTestsKeptInMemory": 1,
   "pluginsFile": "test/plugins/index.js",
   "supportFile": "test/support/index.js",

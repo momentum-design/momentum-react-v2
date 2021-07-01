@@ -1,13 +1,13 @@
 const { pathsToModuleNameMapper } = require('ts-jest/utils');
-const { compilerOptions } = require('./tsconfig');
+const { compilerOptions } = require('./tsconfig.json');
 
-const paths = pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' })
+const moduleMaps = pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' });
 
 module.exports = {
   "preset": 'ts-jest',
   "moduleDirectories": [
     "node_modules",
-    "<rootDir>/src/lib"
+    "<rootDir>/src"
   ],
   "modulePathIgnorePatterns": [
     "<rootDir>/src/app/"
@@ -15,6 +15,7 @@ module.exports = {
   "snapshotSerializers": [
     "enzyme-to-json/serializer"
   ],
+  "snapshotResolver": "<rootDir>/config/jest/jest.snapshot-resolver.js",
   "setupFilesAfterEnv": [
     "<rootDir>/src/helpers/enzyme_setup"
   ],
@@ -24,6 +25,6 @@ module.exports = {
   "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/assetsTransformer.js",
     "\\.(scss|css|less)$": "<rootDir>/tools/assetsTransformer.js",
-    ...paths
+    ...moduleMaps
   }
 };

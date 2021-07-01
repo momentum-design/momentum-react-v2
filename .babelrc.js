@@ -28,7 +28,7 @@ module.exports = {
       "module-resolver",
       {
         "alias": {
-          "@momentum-ui/react": "./src/lib"
+          "@momentum-ui/react": "./src/legacy"
         }
       }
     ],

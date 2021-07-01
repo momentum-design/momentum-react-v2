@@ -36,6 +36,101 @@ import Button from from '@momentum-ui/react/button';
 </div>
 ```
 
+## Scripts
+
+The following section includes definitions and details on the scripts available within this package. Each script is broken into its appropriate scope, with the exception of the general scripts immediately below. The general scripts should be used in most cases, while the auxiliary scoped scripts can be used to perform specific actions.
+
+```bash
+build # Compiles documentation and source for distribution.
+lint # Performs static analysis of './src'.
+lint:watch # Performs static analysis when a file is changed in './src'.
+test # Performs tests against './src' files.
+test:watch # Performs tests against './src' when a file is changed.
+start # Starts storybook in watch mode for development.
+start:components # Starts storybook in watch mode.
+start:examples # Starts the examples in watch mode.
+start:watch # Starts persistent static analysis, testing, and rendering on file change.
+```
+
+### cd
+
+`cd` scripts are for strict usage with our continual delivery system.
+
+```bash
+cd:build # Used to build the application for artifact deployment.
+```
+
+### ci
+
+`ci` scripts are for strict usage with our continuos integration system.
+
+```bash
+ci:build # Builds source, docs, and specific tests into the './dist/{cjs|esm}` folder.
+ci:test:examples # Launches and tests examples using the built project files.
+ci:test:lint # Performs static anaysis [linting] of './src' and './config' folder files.
+ci:test:src # Runs unit tests within the './src' folder.
+ci:test:storybook # Launches and tests storybook using the built project files.
+```
+
+### docs
+
+`docs` scripts are used for building servable documentation.
+
+```bash
+docs:clean # Removes the './docs' directory and contents.
+docs:build # Cleans built documentation and builds all documentation from './dist'.
+```
+
+### examples
+
+`examples` scripts are used for operating the examples application [kitchen sink].
+
+```bash
+examples:build # Cleans built examples and builds from './dist'.
+examples:clean # Removes the './docs/examples' directory and contents.
+examples:start:esm # Starts built examples from './dist/esm'.
+examples:start:src # Starts source examples from './src'.
+examples:test # Performs visual tests of the built examples.
+```
+
+### lint
+
+`lint` scripts perform actions related to static analysis.
+
+```bash
+lint:config # Performs static analysis of the './config' directory.
+lint:src # Performs static analysis of the './src' directory.
+```
+
+### storybook
+
+`storybook` scripts are used for operating [Storybook](https://storybook.js.org/) actions.
+
+```bash
+storybook:build # Cleans the built storybook and builds a storybook from './dist/esm'.
+storybook:build:cjs # Builds a storybook to './docs/storybook' from './dist/cjs'.
+storybook:build:esm # Builds a storybook to './docs/storybook' from './dist/esm'.
+storybook:build:src # Builds a storybook to './docs/storybook' from './src'.
+storybook:clean # Removes the './docs/storybook' folder and its contents.
+storybook:start # Starts the storybook examples from './src'.
+storybook:test # Performs visual tests of the built storybook.
+```
+
+### source
+
+`source` scripts perform actions against source files in this project.
+
+```bash
+source:build # Cleans built files from './dist' and builds types, esm, and cjs bundles.
+source:build:styles # Builds style files from './src' into their paired './dist' folders.
+source:build:clean # Removes the './dist' folder and its contents.
+source:build:cjs # Builds the './src' files into './dist/cjs' as CommonJS.
+source:build:compile # Builds CommonJS and ESModule from './src' to './dist'.
+source:build:esm # Builds the './src' files into './dist/esm' as ESModule.
+source:build:stories # Builds the storybook files into './dist' for production testing.
+source:test # Runs unit and integration tests within './src'.
+``` 
+
 ## Tools & Frameworks
 
 ### Package manager
