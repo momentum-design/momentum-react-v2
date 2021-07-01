@@ -1,15 +1,15 @@
 import React from 'react';
 import { Story } from '@storybook/react';
 
-import TypeScriptExample, { TypeScriptExampleProps as Props } from './';
+import ExampleComponent, { ExampleComponentProps as Props } from './';
 
 export default {
-  title: 'Momentum UI/TypeScriptExample',
-  component: TypeScriptExample,
+  title: 'Momentum UI/ExampleComponent',
+  component: ExampleComponent,
 };
 
 const Template: Story<Props> = (args) => (
-  <TypeScriptExample {...args} />
+  <ExampleComponent {...args} />
 );
 
 const Demo = Template.bind({});

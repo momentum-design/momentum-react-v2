@@ -1,8 +1,16 @@
+# definitions:
+#   image_defaults: &image_defaults
+#     working_directory: ~/repo
+#     docker:
+#       - image: cypress/included:7.5.0
+#         environment:
+#           TERM: xterm
+
 definitions:
   image_defaults: &image_defaults
     working_directory: ~/repo
     docker:
-      - image: cypress/included:7.5.0
+      - image: cypress/included:7.6.0
         environment:
           TERM: xterm
 
@@ -310,12 +318,10 @@ workflows:
             - initialize
       - test-examples:
           requires:
-            - initialize
             - test-static
             - test-source
       - test-storybook:
           requires:
-            - initialize
             - test-static
             - test-source
             

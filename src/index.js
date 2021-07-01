@@ -100,7 +100,7 @@ export {
  
  /** V2 Components [TypeScript] */
 export {
-  TypeScriptExample,
+  ExampleComponent,
   ThemeProvider,
 } from './components';
  
