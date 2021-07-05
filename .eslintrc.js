@@ -6,7 +6,7 @@ module.exports = {
     "import/resolver": {
       "alias": {
         "map": [
-          ["@momentum-ui/react", path.resolve(__dirname, 'src', 'lib')]
+          ["@momentum-ui/react", path.resolve(__dirname, 'src')]
         ]
       },
       "node": {

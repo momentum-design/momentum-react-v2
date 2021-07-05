@@ -1,0 +1,139 @@
+name: Pull Request CI
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  initialize:
+    name: Initialize
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+
+      - name: Setup Node/Yarn Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
+
+      - name: Intall Dependencies
+        run: yarn
+
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          key: node-modules
+          path: node_modules/
+
+
+  test-source:
+    name: Test - Source
+    needs: initialize
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v2
+
+      - name: Setup Node/Yarn Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
+
+      - name: Uncache Dependencies
+        uses: actions/cache@v2.1.4
+        with:
+          key: node-modules
+          path: node_modules/
+
+      - name: Test - Source
+        run: yarn ci:test:src
+
+  test-static:
+    name: Test - static
+    needs: initialize
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v2
+
+      - name: Setup Node/Yarn Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
+
+      - name: Uncache Dependencies
+        uses: actions/cache@v2.1.4
+        with:
+          key: node-modules
+          path: node_modules/
+
+      - name: Test - Static
+        run: yarn ci:test:lint
+
+# This section is TODO, only unit/static testing for now.
+#   build-source:
+#     name: Build Source
+#     needs: initialize
+#     runs-on: ubuntu-20.04
+#     steps:
+#       - name: Checkout project
+#         uses: actions/checkout@v2
+
+#       - name: Setup Node/Yarn Environment
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 14.x
+#           check-latest: true
+
+#       - name: Uncache Dependencies
+#         uses: actions/cache@v2.1.4
+#         with:
+#           key: node-modules
+#           path: node_modules/
+
+#       - name: Build - Source
+#         run: yarn ci:build
+
+#       - name: Archive Production Artifacts
+#         uses: actions/upload-artifacts@v2
+#         with:
+#           name: dist
+#           path: dist
+#           retention-days: 1
+
+#   test-examples:
+#     name: Test - Examples
+#     needs: build
+#     runs-on: ubuntu-20.04
+#     steps:
+#       - name: Checkout project
+#         uses: actions/checkout@v2
+
+#       - name: Setup Node/Yarn Environment
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 14.x
+#           check-latest: true
+
+#       - name: Uncache Dependencies
+#         uses: actions/cache@v2.1.4
+#         with:
+#           key: node-modules
+#           path: node_modules/
+
+#       - name: Download Artifacts
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: dist
+
+#       - name: 
+
+  
+#   test-storybook:
+#     needs: [test-source, test-static]
+#     runs-on: ubuntu-20.04
