@@ -10,11 +10,12 @@ The git repo can be cloned from [https://github.com/momentum-design/momentum-rea
 Checkout the [documentation](https://momentum.design) for documentation and live examples.
 
 ## Goals
-* **Independent** — pick and use only the components you need.
-* **Styled** — override styles of components by `className` and `style` properties.
-* **Customizable** — properties allow many different config options to suit your app.
-* **Performant** - high performance guaranteed with use of CSS3 Flexbox and non-bloated architecture.
-* **Reliable** — each component is rigorously tested.
+
+- **Independent** — pick and use only the components you need.
+- **Styled** — override styles of components by `className` and `style` properties.
+- **Customizable** — properties allow many different config options to suit your app.
+- **Performant** - high performance guaranteed with use of CSS3 Flexbox and non-bloated architecture.
+- **Reliable** — each component is rigorously tested.
 
 ## Getting Started
 
@@ -129,49 +130,54 @@ source:build:compile # Builds CommonJS and ESModule from './src' to './dist'.
 source:build:esm # Builds the './src' files into './dist/esm' as ESModule.
 source:build:stories # Builds the storybook files into './dist' for production testing.
 source:test # Runs unit and integration tests within './src'.
-``` 
+```
+
+### source
+
+```bash
+generate:component # Generates a plain component (including folder structure and imports) to speedup TTI
+```
 
 ## Tools & Frameworks
 
 ### Package manager
 
-* [yarn](https://github.com/yarnpkg/yarn) - BSD-2-Clause
+- [yarn](https://github.com/yarnpkg/yarn) - BSD-2-Clause
 
 ### Base framework
 
-* [react](https://github.com/facebook/react) - MIT
+- [react](https://github.com/facebook/react) - MIT
 
-* [react-dom](https://github.com/facebook/react) - MIT
+- [react-dom](https://github.com/facebook/react) - MIT
 
 ### Momentum Design System Look & Feel
 
-* [@momentum-ui/core](https://github.com/momentum-design/momentum-ui-core) - MIT
-* [@momentum-ui/icons](https://github.com/momentum-design/momentum-ui-icons) - MIT
+- [@momentum-ui/core](https://github.com/momentum-design/momentum-ui-core) - MIT
+- [@momentum-ui/icons](https://github.com/momentum-design/momentum-ui-icons) - MIT
 
 ### ES6 Minifier
 
-* [babili](https://github.com/babel/babili) - MIT
+- [babili](https://github.com/babel/babili) - MIT
 
 ### ES6 Lint
 
-* [eslint](https://github.com/eslint/eslint) - MIT
+- [eslint](https://github.com/eslint/eslint) - MIT
 
 ### CSS/SCSS Lint
 
-* [stylelint](https://github.com/stylelint/stylelint) - MIT
+- [stylelint](https://github.com/stylelint/stylelint) - MIT
 
 ### CSS Utility Tool
 
-* [normalize](https://github.com/necolas/normalize.css) - MIT
+- [normalize](https://github.com/necolas/normalize.css) - MIT
 
-* [postcss](https://github.com/postcss/postcss) - MIT
+- [postcss](https://github.com/postcss/postcss) - MIT
 
 ### JsUnit Testing framework
 
-* [jest](https://github.com/facebook/jest) - BSD-3-Clause
+- [jest](https://github.com/facebook/jest) - BSD-3-Clause
 
-* [enzyme](https://github.com/airbnb/enzyme) - MIT
-
+- [enzyme](https://github.com/airbnb/enzyme) - MIT
 
 ## Contribution
 
