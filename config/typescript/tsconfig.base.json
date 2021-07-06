@@ -11,7 +11,6 @@
     "paths": {
       "@momentum-ui/react": ["../../src"]
     },
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "preserveConstEnums": true,
     "removeComments": false,
     "sourceMap": true,
