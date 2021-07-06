@@ -2,8 +2,7 @@ name: Pull Request CI
 
 on:
   pull_request:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   initialize:
