@@ -88,6 +88,8 @@ docs:build # Cleans built documentation and builds all documentation from './dis
 ```bash
 examples:build # Cleans built examples and builds from './dist'.
 examples:clean # Removes the './docs/examples' directory and contents.
+examples:start # Starts source examples from './src'.
+examples:start:docs # Starts built examples from './docs/examples'.
 examples:start:esm # Starts built examples from './dist/esm'.
 examples:start:src # Starts source examples from './src'.
 examples:test # Performs visual tests of the built examples.
@@ -113,6 +115,8 @@ storybook:build:esm # Builds a storybook to './docs/storybook' from './dist/esm'
 storybook:build:src # Builds a storybook to './docs/storybook' from './src'.
 storybook:clean # Removes the './docs/storybook' folder and its contents.
 storybook:start # Starts the storybook examples from './src'.
+storybook:start:docs # Starts the storybook examples from './docs/storybook'.
+storybook:start:src # Starts the storybook examples from './src'.
 storybook:test # Performs visual tests of the built storybook.
 ```
 
