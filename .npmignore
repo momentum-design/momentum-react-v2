@@ -21,7 +21,6 @@ Desktop.ini
 __mocks__/
 .github/
 .vscode/
-dist/
 docs/
 typings/*
 config/

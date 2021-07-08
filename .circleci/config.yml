@@ -320,11 +320,10 @@ workflows:
           requires:
             - test-static
             - test-source
-# Enable this once percy snapshot limit is extended
-    #   - test-storybook:
-    #       requires:
-    #         - test-static
-    #         - test-source
+      - test-storybook:
+          requires:
+            - test-static
+            - test-source
             
 #   lint_test:
 #     jobs:

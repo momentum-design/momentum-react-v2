@@ -37,6 +37,13 @@ module.exports = {
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended"
   ],
+  ignorePatterns: [
+    '**/src/app',
+    '**/es',
+    '**/dist',
+    '**/docs',
+    '**/*.d.ts',
+  ],
   "plugins": ["react", "jsx-a11y", "cypress"],
   "parser": path.resolve(__dirname, 'node_modules', 'babel-eslint'),
   "parserOptions": {
