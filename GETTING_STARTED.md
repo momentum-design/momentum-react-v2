@@ -1,139 +1,76 @@
-## Getting Started
+# Getting Started
 
-It's fairly simple and easy. Just follow three simple steps as explained below:
+This project is currently not published to any artifactory. To use it within another project, it must be initialized, built, and linked locally via a package manager.
 
-### 1. Fork the repo
+If you would like to contribute to this project, please review our [contributing guide](./CONTRIBUTING.md).
 
-### 2. Clone the repo
+## Cloning
 
-Clone the `momentum-react-v2` git repo:
+In order to begin utilizing this project, it must be cloned locally. This can be done using multiple methods, but the preferred method would be to utilize [git](https://git-scm.com/). Once [git](https://git-scm.com/) is installed and operational on your platform, navigate to the folder you would like this project to reside in and run the following command:
 
-```sh
+```bash
 git clone git@github.com:momentum-design/momentum-react-v2.git
 ```
 
-### 3. Install all dependencies & devdependencies
+This will download the latest version available via this project's GitHub repository for usage locally. Once the above command finishes its execution, navigate to that folder using the following command:
 
-From the command line navigate to 'momentum-react-v2' directory created in previous step
-and run following command:
-
-```sh
-yarn
+```bash
+cd ./momentum-react-v2
 ```
 
-### 4. Start Docs Site
+## Initializing
 
-From the command line run the code
-as below:
+In order to execute any scripts associated with this project, the projects dependencies must be initialized using the following command:
 
-```sh
-yarn start
+```bash
+yarn install # installing with yarn package manager
+
+# or
+
+npm install # installing with node package manager
 ```
 
-Behind the scene above command does all the heavy lifting which can be summarized as below:
+## Building
 
-* Building ES6/JSX source and output to `dist` folder
-* Watching `src` folder to build on every changes
-* Bundling docs application using webpack
+In order to build this project for downstream projects, the following command must be used to compile the source code:
 
-There are npm scripts available for each of these individual task that alone can be run. Refer `package.json` for more details.
+```bash
+yarn build # building with yarn package manager
 
-Now you can try editing source in src folder. With every changes in source saved, the demo app automagically updates without hitting F5 or browser reload button.
-This setup provide a playground environment and also act as a demo of components showing their typical usage with various source examples.
+# or
 
-### 5.  Build
-
-To build the project for production, use following npm script:
-
-```sh
-yarn build
+npm run build # building with node package manager
 ```
 
-If everything goes fine, folders [`dist`, `bundles`, `lib`] will be created in root folder of this project. Folder `lib` will have minified ES6 modules with similar directory structure as source.
-Generated minified ES6 files can be directly imported in ES6 application source code.
+## Consumption
 
-## Codebase Directory Structure
+In the case of [npm](https://www.npmjs.com/) or [yarn](https://classic.yarnpkg.com/en/), adding the following dependency to your project's `package.json` file will link this project to your project.
 
-The React Toolkit codebase has following folder structure:
-
-```sh
-momentum-ui-react
-│  CHANGELOG.md
-│  CONTRIBUTING.md
-│  GETTING_STARTED.md
-│  README.md
-│  LICENSE
-│  package.json
-|  .babelrc
-|  .editorconfig
-|  .eslintignore
-|  .eslintrc
-|  .gitignore
-│  .istanbul.yml
-│  .npmignore
-|  .npmrc
-│  .watchmanconfig
-|  ...
-└───src
-│  │
-│  └───lib
-│  |  └───Button
-|  |  |  |  index.js
-|  |  |  |  index.spec.js
-|  |  |  |  __snapshots__
-|  │  |  |  └───index.spec.js.snap
-|  |  |  |  ...
-│  |  └───Select
-|  |  |  |  ...
-|  |  |  index.js
-│  └───docs
-|  |  |  ...
-│  └───helpers
-└───tools
-|  │  script.js
-|  |  ...
-└───config
-|  |  webpack.config.dev.js
-|  |  ...
+```json
+{
+  /* ...other package definitions... */
+  "dependencies": {
+    /* ...other package dependencies... */
+    "@momentum-ui/react": "link:./path/to/this/project",
+  }
+}
 ```
 
-### About directory structure
+**Note**: Since this package will collide with the [original @momentum-ui](https://github.com/momentum-design/momentum-ui)'s `/react` sub-module, you may need to alias this package seperately in your `package.json`.
 
-* All source goes inside `src` folder written using ES6/JSX standard.
+## Usage
 
-* For every component there is a folder inside `src/lib`.
+Once the package is properly linked, the components can be imported for usage within your application:
 
-* Each component folder (say button) houses JSX source code and `__snapshots__` folder.
+```jsx
+/* ...other imports... */
+import { Button } from '@momentum-ui/react';
 
-At the time of publishing only minimal files and folders are included in module to keep download / installation faster and save space on your disk. Post installation of momentum-react-v2 NPM
-module it will have following directory structure:
+const Component = () => (
+  <div>
+    <Button name="primary" size="large">Welcome to Momentum UI React</Button>
+  </div>
+);
 
-```sh
-momentum-react-v2
-│  README.md
-│  LICENSE
-│  package.json
-|  ...
-└───scss
-|  |  momentum-ui.scss
-└───lib
-|  └───index.js
-|  └───Button
-|  |  |  index.js
-|  |  |  ...
-|  └───Select
-|  |  |  ...
-|  |  ...
-|
-└───bundles
-|  |  index.js
-└───es
-|  └───Button
-|  |    index.js
+/* ...export statements... */
 ```
-
-As evident above, only assets (dist, bundles, lib) are part of published module.
-
-## References & Links
-
-[Contribution guidelines](/CONTRIBUTING.md)
