@@ -76,7 +76,7 @@
     "source:build:stories": "copyfiles -u 1 \"./src/**/*.stories.*\" ./dist/esm && copyfiles -u 1 \"./src/**/*.stories.*\" ./dist/cjs",
     "source:test": "jest",
     "cypress:verify": "cypress verify",
-    "generate:component": "plop"
+    "generate:component": "plop --cwd ./config/plop --dest ."
   },
   "watch": {
     "build:lib": "src/lib/**/*.js"

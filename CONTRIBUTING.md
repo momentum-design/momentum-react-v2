@@ -205,6 +205,14 @@ source:build:stories # Builds the storybook files into './dist' for production t
 source:test # Runs unit and integration tests within './src'.
 ```
 
+### automation
+
+Tooling scripts for automation.
+
+```bash
+generate:component # generates folder structure, files and manages imports of a new component
+```
+
 ### legacy
 
 These scripts do not contain special scopes, and are limited to scripts required by legacy CI commands.
