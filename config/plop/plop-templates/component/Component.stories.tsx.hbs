@@ -1,16 +1,32 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import { Story } from '@storybook/react';
 
-import { {{~componentName}},  Momentum{{componentName}}Props} from './';
+import {{componentName}}, { {{componentName}}Props } from './';
 
-storiesOf('{{componentName}}', module)
-  .add(
-    'name me',
-    () => render({})
-  );
+import ThemeProvider from '../ThemeProvider';
 
-const render = (props: Momentum{{componentName}}Props) => {
-  return (
-    <{{componentName}} {...props}/>
-  );
-}
+export default {
+  title: 'Momentum UI/{{componentName}}',
+  component: {{componentName}},
+  argTypes: {
+    propName: {
+      description: 'Description with what the prop does.',
+      options: ['Value 1', 'Value 2'],
+      control: { type: 'select' }, // change as needed
+    },
+  },
+};
+
+const Template: Story<{{componentName}}Props> = (args) => (
+  <ThemeProvider>
+    <{{componentName}} {...args} />
+  </ThemeProvider>
+);
+
+const Story1 = Template.bind({});
+
+Story1.args = {
+  propName: 'Value 1',
+};
+
+export { Story1 };

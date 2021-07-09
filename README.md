@@ -8,11 +8,11 @@
 
 The components in this project are built to meet the following project goals:
 
-- **Modular** - Components can be imported independently as needed
-- **Styled** - Fully styled to meet Cisco's [Momentum Design](https://momentum.design/)
-- **Themed** - Themes can be provided to change the flavor of nested components
-- **Performant** - Each component is designed to be as performant as possible
-- **Reliable** - Comonents are rigorously tested visually and functionally
+* **Modular** - Components can be imported independently as needed
+* **Styled** - Fully styled to meet Cisco's [Momentum Design](https://momentum.design/)
+* **Themed** - Themes can be provided to change the flavor of nested components
+* **Performant** - Each component is designed to be as performant as possible
+* **Reliable** - Components are rigorously tested visually and functionally
 
 ## Getting Started
 
@@ -28,13 +28,13 @@ See [the commit history](https://github.com/momentum-design/momentum-react-v2/co
 
 ## Tooling
 
-- [yarn](https://github.com/yarnpkg/yarn) - Package Manager
-- [react](https://github.com/facebook/react) / [react-dom](https://github.com/facebook/react) - Component Framework
-- [momentum-ui](https://github.com/momentum-design/momentum-ui) - Icons, Images, Fonts
-- [eslint](https://github.com/eslint/eslint) / [stylelint](https://github.com/stylelint/stylelint) - Static Analysis
-- [jest](https://github.com/facebook/jest) / [enzyme](https://github.com/airbnb/enzyme) - Unit Testing
-- [storybook](https://github.com/storybookjs/storybook) / [webpack](https://github.com/webpack/webpack) - Documentation
-- [percy](https://percy.io/) / [cypress](https://github.com/cypress-io/cypress) - Visual Testing
+* [yarn](https://github.com/yarnpkg/yarn) - Package Manager
+* [react](https://github.com/facebook/react) / [react-dom](https://github.com/facebook/react) - Component Framework
+* [momentum-ui](https://github.com/momentum-design/momentum-ui) - Icons, Images, Fonts
+* [eslint](https://github.com/eslint/eslint) / [stylelint](https://github.com/stylelint/stylelint) - Static Analysis
+* [jest](https://github.com/facebook/jest) / [enzyme](https://github.com/airbnb/enzyme) - Unit Testing
+* [storybook](https://github.com/storybookjs/storybook) / [webpack](https://github.com/webpack/webpack) - Documentation
+* [percy](https://percy.io/) / [cypress](https://github.com/cypress-io/cypress) - Visual Testing
 
 ## Copyright
 

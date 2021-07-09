@@ -1,19 +1,19 @@
-import React, { RefObject } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 
-import styles from './{{componentName}}.style.module.scss';
-import { Momentum{{componentName}}Props} from './';
+import styles from './{{componentName}}.style.scss';
+import { Props } from './{{componentName}}.types';
 
-const {{componentName}} = (props: Momentum{{componentName}}Props) => {
+const {{componentName}} = (props: Props) => {
   const {className} = props;
 
   // Implementation goes here
-  return null;
+  return <div />;
 };
 
 /**
  * TODO: Add description of component here.
  */
 
-export { {{componentName}} };
+export default {{componentName}};
 

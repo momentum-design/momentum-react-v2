@@ -205,12 +205,12 @@ source:build:stories # Builds the storybook files into './dist' for production t
 source:test # Runs unit and integration tests within './src'.
 ```
 
-### automation
+### generate
 
-Tooling scripts for automation.
+`generate` scripts are used to automatically create files within the ./src directory to promote consistent code styling.
 
 ```bash
-generate:component # generates folder structure, files and manages imports of a new component
+generate:component # generates folder structure, files and manages imports of a new component via prompts
 ```
 
 ### legacy
