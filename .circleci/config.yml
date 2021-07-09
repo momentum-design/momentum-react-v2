@@ -15,6 +15,10 @@ definitions:
           TERM: xterm
 
 version: 2
+
+orbs:
+  percy: percy/agent
+
 jobs:
 #   checkout_install:
 #     <<: *image_defaults
@@ -316,14 +320,18 @@ workflows:
       - test-source:
           requires:
             - initialize
-      - test-examples:
-          requires:
-            - test-static
-            - test-source
+      # - test-examples:
+      #     requires:
+      #       - test-static
+      #       - test-source
       - test-storybook:
           requires:
             - test-static
             - test-source
+      - percy/finalize_all:
+          requires:
+            # - test-examples
+            - test-storybook
             
 #   lint_test:
 #     jobs:
