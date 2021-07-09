@@ -1,21 +1,28 @@
 import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 
-// This reference will be removed once themes are available.
-import './ThemeProvider.stories.css';
-
-import ThemeProvider, { ThemeProviderProps as Props } from './';
+import ThemeProvider, {
+  ThemeProviderProps as Props,
+  THEME_PROVIDER_CONSTANTS as CONSTANTS
+} from './';
 
 export default {
   title: 'Momentum UI/ThemeProvider',
   component: ThemeProvider,
+  argTypes: {
+    theme: {
+      description: 'The name of the target theme to use.',
+      options: [...Object.values(CONSTANTS.THEME_NAMES)],
+      control: { type: 'select' }
+    },
+  },
 };
 
 const ExampleDiv: FC = () => (
   <div style={{
     alignItems: 'center',
-    backgroundColor: 'var(--sbe-bg-color, #eee)',
-    color: 'var(--sbe-font-color, #333)',
+    backgroundColor: 'var(--button-primary-background, #eee)',
+    color: 'var(--button-primary-text, #333)',
     display: 'flex',
     height: '4rem',
     justifyContent: 'center',
@@ -32,7 +39,7 @@ const Template: Story<Props> = (args) => (
 const Themed = Template.bind({});
 
 Themed.args = {
-  theme: 'storybook-example-theme',
+  theme: 'lightWebex',
 };
 
 const Unthemed = Template.bind({});
