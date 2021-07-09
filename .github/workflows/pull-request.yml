@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  rid: ${{ github.run_id }}-${{ github.run_number }}
+
 jobs:
   initialize:
     name: Initialize
@@ -13,20 +16,36 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v2
 
-      - name: Setup Node/Yarn Environment
+      - name: Setup Environment
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
           check-latest: true
 
-      - name: Intall Dependencies
+      - name: Validate Dependencies
+        id: validate-dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Dependencies
+        if: steps.validate-dependencies.outputs.cache-hit != 'true'
         run: yarn
 
       - name: Cache Dependencies
         uses: actions/cache@v2
+        if: steps.validate-dependencies.outputs.cache-hit != 'true'
         with:
-          key: node-modules
           path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Cache Cypress
+        uses: actions/cache@v2
+        if: steps.validate-dependencies.outputs.cache-hit != 'true'
+        with:
+          path: /home/runner/.cache/Cypress
+          key: cypress-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
 
   test-source:
@@ -34,22 +53,22 @@ jobs:
     needs: initialize
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout project
+      - name: Checkout Project
         uses: actions/checkout@v2
 
-      - name: Setup Node/Yarn Environment
+      - name: Setup Environment
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
           check-latest: true
 
       - name: Uncache Dependencies
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2
         with:
-          key: node-modules
           path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Test - Source
+      - name: Test Source
         run: yarn ci:test:src
 
   test-static:
@@ -57,83 +76,139 @@ jobs:
     needs: initialize
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout project
+      - name: Checkout Project
         uses: actions/checkout@v2
 
-      - name: Setup Node/Yarn Environment
+      - name: Setup Environment
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
           check-latest: true
 
       - name: Uncache Dependencies
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2
         with:
-          key: node-modules
           path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Test - Static
+      - name: test-static
         run: yarn ci:test:lint
 
-# This section is TODO, only unit/static testing for now.
-#   build-source:
-#     name: Build Source
-#     needs: initialize
-#     runs-on: ubuntu-20.04
-#     steps:
-#       - name: Checkout project
-#         uses: actions/checkout@v2
+  build-source:
+    name: Build - Source
+    needs: initialize
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+      
+      - name: Setup Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
 
-#       - name: Setup Node/Yarn Environment
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: 14.x
-#           check-latest: true
+      - name: Uncache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-#       - name: Uncache Dependencies
-#         uses: actions/cache@v2.1.4
-#         with:
-#           key: node-modules
-#           path: node_modules/
+      - name: Build Source
+        run: yarn ci:build
 
-#       - name: Build - Source
-#         run: yarn ci:build
+      - name: Cache Dist
+        uses: actions/cache@v2
+        with:
+          path: dist/
+          key: dist-${{ runner.os }}-${{ env.rid }}
 
-#       - name: Archive Production Artifacts
-#         uses: actions/upload-artifacts@v2
-#         with:
-#           name: dist
-#           path: dist
-#           retention-days: 1
+      - name: Cache Docs
+        uses: actions/cache@v2
+        with:
+          path: docs/
+          key: docs-${{ runner.os }}-${{ env.rid }}
 
-#   test-examples:
-#     name: Test - Examples
-#     needs: build
-#     runs-on: ubuntu-20.04
-#     steps:
-#       - name: Checkout project
-#         uses: actions/checkout@v2
+  test-storybook:
+    name: Test - Storybook
+    needs: build-source
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
 
-#       - name: Setup Node/Yarn Environment
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: 14.x
-#           check-latest: true
+      - name: Setup Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
 
-#       - name: Uncache Dependencies
-#         uses: actions/cache@v2.1.4
-#         with:
-#           key: node-modules
-#           path: node_modules/
+      - name: Uncache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-#       - name: Download Artifacts
-#         uses: actions/download-artifact@v2
-#         with:
-#           name: dist
+      - name: Uncache Dist
+        uses: actions/cache@v2
+        with:
+          path: dist/
+          key: dist-${{ runner.os }}-${{ env.rid }}
 
-#       - name: 
+      - name: Uncache Docs
+        uses: actions/cache@v2
+        with:
+          path: docs/
+          key: docs-${{ runner.os }}-${{ env.rid }}
 
-  
-#   test-storybook:
-#     needs: [test-source, test-static]
-#     runs-on: ubuntu-20.04
+      - name: Test - Storybook
+        uses: percy/storybook-action@v0.1.6
+        with:
+          custom-command: 'yarn ci:test:storybook'
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+
+  test-examples:
+    name: Test - Examples
+    needs: build-source
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+
+      - name: Setup Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
+
+      - name: Uncache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Uncache Cypress
+        uses: actions/cache@v2
+        with:
+          path: /home/runner/.cache/Cypress
+          key: cypress-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Uncache Dist
+        uses: actions/cache@v2
+        with:
+          path: dist/
+          key: dist-${{ runner.os }}-${{ env.rid }}
+
+      - name: Uncache Docs
+        uses: actions/cache@v2
+        with:
+          path: docs/
+          key: docs-${{ runner.os }}-${{ env.rid }}
+
+      - name: Test - Examples
+        uses: cypress-io/github-action@v2
+        with:
+          command: yarn ci:test:examples
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
