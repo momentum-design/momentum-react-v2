@@ -205,6 +205,14 @@ source:build:stories # Builds the storybook files into './dist' for production t
 source:test # Runs unit and integration tests within './src'.
 ```
 
+### generate
+
+`generate` scripts are used to automatically create files within the ./src directory to promote consistent code styling.
+
+```bash
+generate:component # generates folder structure, files and manages imports of a new component via prompts
+```
+
 ### legacy
 
 These scripts do not contain special scopes, and are limited to scripts required by legacy CI commands.

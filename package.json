@@ -75,7 +75,8 @@
     "source:build:esm": "tsc --project ./config/typescript/tsconfig.esm.json",
     "source:build:stories": "copyfiles -u 1 \"./src/**/*.stories.*\" ./dist/esm && copyfiles -u 1 \"./src/**/*.stories.*\" ./dist/cjs",
     "source:test": "jest",
-    "cypress:verify": "cypress verify"
+    "cypress:verify": "cypress verify",
+    "generate:component": "plop --cwd ./config/plop --dest ."
   },
   "watch": {
     "build:lib": "src/lib/**/*.js"
@@ -92,6 +93,7 @@
     "@types/react": "^17.0.11",
     "concat": "^1.0.3",
     "dom-helpers": "^3.4.0",
+    "globby": "^11.0.4",
     "handlebars": "^4.1.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
@@ -170,6 +172,7 @@
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.3.0",
     "opn-cli": "3.1.0",
+    "plop": "^2.7.4",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "^2.1.3",
     "prop-types": "15.6.0",

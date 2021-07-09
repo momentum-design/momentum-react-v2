@@ -12,7 +12,7 @@ The components in this project are built to meet the following project goals:
 * **Styled** - Fully styled to meet Cisco's [Momentum Design](https://momentum.design/)
 * **Themed** - Themes can be provided to change the flavor of nested components
 * **Performant** - Each component is designed to be as performant as possible
-* **Reliable** - Comonents are rigorously tested visually and functionally
+* **Reliable** - Components are rigorously tested visually and functionally
 
 ## Getting Started
 
