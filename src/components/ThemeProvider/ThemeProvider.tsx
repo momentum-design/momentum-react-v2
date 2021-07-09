@@ -1,5 +1,8 @@
 import React, { FC } from 'react';
 
+// This import can be updated once css/scss modules are supported.
+import '@momentum-ui/design-tokens/dist/index.css';
+
 import { STYLE, THEME_CLASS_PREFIX } from './ThemeProvider.constants';
 import { Props } from './ThemeProvider.types';
 import './ThemeProvider.style.scss';

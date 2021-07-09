@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from '@momentum-ui/react';
 
-import { STYLE, THEME_CLASS_PREFIX } from './ThemeProvider.constants';
+import { STYLE, THEME_CLASS_PREFIX, THEME_NAMES } from './ThemeProvider.constants';
 
 describe('<ThemeProvider />', () => {
   let container;
@@ -11,7 +11,9 @@ describe('<ThemeProvider />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      container = mount(<ThemeProvider theme="test" />);
+      const themeName = THEME_NAMES[Object.keys(THEME_NAMES)[0]];
+
+      container = mount(<ThemeProvider theme={themeName} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -29,11 +31,11 @@ describe('<ThemeProvider />', () => {
     it('should have an abstracted theme class', () => {
       expect.assertions(1);
 
-      const theme = 'test';
+      const themeName = THEME_NAMES[Object.keys(THEME_NAMES)[0]];
 
-      const component = mount(<ThemeProvider theme={theme} />).childAt(0);
+      const component = mount(<ThemeProvider theme={themeName} />).childAt(0);
 
-      expect(component.hasClass(`${THEME_CLASS_PREFIX}-${theme}`)).toBe(true);
+      expect(component.hasClass(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
     });
 
     it('should mount children to the component nodes', () => {
