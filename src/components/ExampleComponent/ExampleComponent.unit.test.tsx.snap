@@ -5,8 +5,7 @@ exports[`tests for <ExampleComponent /> should match SnapShot 1`] = `
   param="test"
 >
   <div>
-    Hello this is a typescript component: 
-    test
+    Hello! This is a TypeScript React component: test
   </div>
 </ExampleComponent>
 `;

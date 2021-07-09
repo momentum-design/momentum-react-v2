@@ -25,7 +25,7 @@ describe('<ThemeProvider />', () => {
 
       const component = mount(<ThemeProvider />).childAt(0);
 
-      expect(component.hasClass(STYLE.root)).toBe(true);
+      expect(component.hasClass(STYLE.wrapper)).toBe(true);
     });
 
     it('should have an abstracted theme class', () => {
