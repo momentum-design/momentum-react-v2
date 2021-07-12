@@ -58,6 +58,7 @@
     "examples:test": "wait-on http://127.0.0.1:4300 && percy exec -t 350 -- cypress run",
     "lint:config": "esw \"./config/**/*.{js,jsx,ts,tsx}\"",
     "lint:src": "esw \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "prepublishOnly": "yarn build",
     "storybook:build": "yarn storybook:clean && yarn storybook:build:esm",
     "storybook:build:cjs": "build-storybook -c ./config/storybook/cjs -o ./docs/storybook",
     "storybook:build:esm": "build-storybook -c ./config/storybook/esm -o ./docs/storybook",
