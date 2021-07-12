@@ -41,7 +41,6 @@
     "start:components": "yarn storybook:start",
     "start:examples": "yarn examples:start:src",
     "start:watch": "run-p lint:watch test:watch start",
-    "cd:build": "yarn source:build && yarn docs:build",
     "ci:build": "yarn source:build && yarn source:build:stories && yarn docs:build",
     "ci:test:examples": "run-p --race examples:start:esm examples:test",
     "ci:test:lint": "yarn lint:src && yarn lint:config",

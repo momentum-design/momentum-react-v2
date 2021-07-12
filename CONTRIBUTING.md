@@ -122,14 +122,6 @@ start:examples # Starts the examples in watch mode.
 start:watch # Starts persistent static analysis, testing, and rendering on file change.
 ```
 
-### cd
-
-`cd` scripts are for strict usage with our continual delivery system.
-
-```bash
-cd:build # Used to build the application for artifact deployment.
-```
-
 ### ci
 
 `ci` scripts are for strict usage with our continuos integration system.
