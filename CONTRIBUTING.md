@@ -10,9 +10,11 @@
   - [CI](#ci)
   - [docs](#docs)
   - [examples](#examples)
+  - [generate](#generate)
   - [lint](#lint)
   - [storybook](#storybook)
   - [source](#source)
+  - [styles](#styles)
   - [legacy](#legacy)
 - [Submitting Changes](#submitting-changes)
 - [License](#license)
@@ -165,6 +167,14 @@ examples:start:src # Starts source examples from './src'.
 examples:test # Performs visual tests of the built examples.
 ```
 
+### generate
+
+`generate` scripts are used to automatically create files within the ./src directory to promote consistent code styling.
+
+```bash
+generate:component # generates folder structure, files and manages imports of a new component via prompts
+```
+
 ### lint
 
 `lint` scripts perform actions related to static analysis.
@@ -172,6 +182,21 @@ examples:test # Performs visual tests of the built examples.
 ```bash
 lint:config # Performs static analysis of the './config' directory.
 lint:src # Performs static analysis of the './src' directory.
+```
+
+### source
+
+`source` scripts perform actions against source files in this project.
+
+```bash
+source:build # Cleans built files from './dist' and builds types, esm, and cjs bundles.
+source:build:styles # Builds style files from './src' into their paired './dist' folders.
+source:build:clean # Removes the './dist' folder and its contents.
+source:build:cjs # Builds the './src' files into './dist/cjs' as CommonJS.
+source:build:compile # Builds CommonJS and ESModule from './src' to './dist'.
+source:build:esm # Builds the './src' files into './dist/esm' as ESModule.
+source:build:stories # Builds the storybook files into './dist' for production testing.
+source:test # Runs unit and integration tests within './src'.
 ```
 
 ### storybook
@@ -190,27 +215,14 @@ storybook:start:src # Starts the storybook examples from './src'.
 storybook:test # Performs visual tests of the built storybook.
 ```
 
-### source
+### styles
 
-`source` scripts perform actions against source files in this project.
-
-```bash
-source:build # Cleans built files from './dist' and builds types, esm, and cjs bundles.
-source:build:styles # Builds style files from './src' into their paired './dist' folders.
-source:build:clean # Removes the './dist' folder and its contents.
-source:build:cjs # Builds the './src' files into './dist/cjs' as CommonJS.
-source:build:compile # Builds CommonJS and ESModule from './src' to './dist'.
-source:build:esm # Builds the './src' files into './dist/esm' as ESModule.
-source:build:stories # Builds the storybook files into './dist' for production testing.
-source:test # Runs unit and integration tests within './src'.
-```
-
-### generate
-
-`generate` scripts are used to automatically create files within the ./src directory to promote consistent code styling.
+`styles` scripts perform actions against style files within the `./scss` folder.
 
 ```bash
-generate:component # generates folder structure, files and manages imports of a new component via prompts
+styles:build:css # Builds './scss' files into a bundled css file.
+styles:build:settings # Generates scss files from settings within the './scss' directory.
+styles:build:tokens: # Generates scss files from tokens within the './scss' directory.
 ```
 
 ### legacy
