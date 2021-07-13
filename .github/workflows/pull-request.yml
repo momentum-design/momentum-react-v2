@@ -129,6 +129,12 @@ jobs:
           path: docs/
           key: docs-${{ runner.os }}-${{ env.rid }}
 
+      - name: Cache Styles
+        uses: actions/cache@v2
+        with:
+          path: scss/
+          key: scss-${{ runner.os }}-${{ env.rid }}
+
   test-storybook:
     name: Test - Storybook
     needs: build-source
@@ -160,6 +166,12 @@ jobs:
         with:
           path: docs/
           key: docs-${{ runner.os }}-${{ env.rid }}
+
+      - name: Uncache Styles
+        uses: actions/cache@v2
+        with:
+          path: scss/
+          key: scss-${{ runner.os }}-${{ env.rid }}
 
       - name: Test - Storybook
         uses: percy/storybook-action@v0.1.6
@@ -205,6 +217,12 @@ jobs:
         with:
           path: docs/
           key: docs-${{ runner.os }}-${{ env.rid }}
+
+      - name: Uncache Styles
+        uses: actions/cache@v2
+        with:
+          path: scss/
+          key: scss-${{ runner.os }}-${{ env.rid }}
 
       - name: Test - Examples
         uses: cypress-io/github-action@v2
