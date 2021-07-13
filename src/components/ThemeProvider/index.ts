@@ -7,5 +7,6 @@ export {
 };
 
 export type ThemeProviderProps = Props;
+export type { ThemeNames } from './ThemeProvider.types';
 
 export default ThemeProvider;

@@ -1,8 +1,8 @@
-const startsWith = require('lodash/startsWith');
-const trimStart = require('lodash/trimStart');
-const isEmpty = require('lodash/isEmpty');
-const colorTokens = require('@momentum-ui/tokens/dist/colors.json');
-const legacyColors = require('@momentum-ui/tokens/src/legacyColors.json');
+const startsWith = require('lodash/startsWith'); // eslint-disable-line
+const trimStart = require('lodash/trimStart'); // eslint-disable-line
+const isEmpty = require('lodash/isEmpty'); // eslint-disable-line
+const colorTokens = require('@momentum-ui/tokens/dist/colors.json'); // eslint-disable-line
+const legacyColors = require('@momentum-ui/tokens/src/legacyColors.json'); // eslint-disable-line
 
 export const getColorValue = (color, colorFormat) => {
   const colorName = convertScssVariableToName(color);

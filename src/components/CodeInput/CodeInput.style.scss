@@ -1,0 +1,54 @@
+
+// Add this for focus
+// input:focus-visible ~ .container .character {
+//   &--selected:empty {
+//     border-color: var(--code-input-border-focused);
+//     outline: none;
+//   }
+// }
+
+.code-input-container {
+  .code-input-character {
+    font-family: 'CiscoSansTT Regular';
+    width: 2.75rem;
+    height: 3rem;
+    border: 1px solid var(--code-input-border);
+    color: var(--code-input-text);
+    background-color: var(--code-input-background);
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.625rem;
+    line-height: 3rem;
+    &:hover {
+      border: 1px solid var(--code-input-border-hovered);
+      color: var(--code-input-text-hovered);
+      background-color: var(--code-input-background-hovered);
+    }
+    &:active {
+      border-color: var(--code-input-border-active);
+      color: var(--code-input-text-active);
+      background-color: var(--code-input-background-active);
+    }
+
+    &--selected:empty {
+      &:before {
+        font-family: 'CiscoSansTT Thin';
+        content: '|';
+        animation: 1s blink step-end infinite;
+      }
+      border-color: var(--code-input-border-active);
+      color: var(--code-input-text-active);
+      background-color: var(--code-input-background-active);
+    }
+  }
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: var(--code-input-text-active);
+  }
+}

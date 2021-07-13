@@ -18,11 +18,12 @@ render(
 
 if (module.hot) {
   module.hot.accept('./App', () => {
+    // eslint-disable-next-line
     const NewApp = require('./App').default;
     render(
       <AppContainer>
         <BrowserRouter>
-            <NewApp />
+          <NewApp />
         </BrowserRouter>
       </AppContainer>,
       document.getElementById('app')
