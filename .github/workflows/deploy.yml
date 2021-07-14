@@ -1,0 +1,125 @@
+name: Deploy Documentation CD
+
+on:
+  pull_request:
+    branches:
+      - master
+    types: [closed]
+
+env:
+  rid: ${{ github.run_id }}-${{ github.run_number }}
+
+jobs:
+  initialize:
+    name: Initialize
+    runs-on: ubuntu-20.04
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+
+      - name: Setup Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+  build-source:
+    name: Build - Source
+    needs: initialize
+    runs-on: ubuntu-20.04
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+      
+      - name: Setup Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
+
+      - name: Uncache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Build Source
+        run: yarn ci:build
+
+    # NOTE: enable this step once we are ready to begin deploying the build artifact.
+    # - name: Cache Dist
+    #   uses: actions/cache@v2
+    #   with:
+    #     path: dist/
+    #     key: dist-${{ runner.os }}-${{ env.rid }}
+
+      - name: Cache Docs
+        uses: actions/cache@v2
+        with:
+          path: docs/
+          key: docs-${{ runner.os }}-${{ env.rid }}
+
+  deploy-documentation:
+    name: Deploy - Documentation
+    needs: build-source
+    runs-on: ubuntu-20.04
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+
+      - name: Setup Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
+
+      - name: Uncache Docs
+        uses: actions/cache@v2
+        with:
+          path: docs/
+          key: docs-${{ runner.os }}-${{ env.rid }}
+
+      - name: Deploy Documentation
+        run: |
+          git config --global user.name "Automation"
+          git config --global user.email "automation@no-reply.webex.com"
+          git add ./docs
+          git commit -m "ci(docs): deploy documentation"
+          git push
+
+# NOTE: enable and update this workflow once we are ready to begin deploying the build artifact.
+# deploy-distributable:
+#   name: Deploy - Distributable
+#   needs: build-source
+#   runs-on: ubuntu-20.04
+#   if: github.event.pull_request.merged == true
+#   steps:
+#     - name: Checkout Project
+#       uses: actions/checkout@v2
+
+#     - name: Setup Environment
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: 14.x
+#         check-latest: true
+
+#     - name: Uncache Dist
+#       uses: actions/cache@v2
+#       with:
+#         path: dist/
+#         key: dist-${{ runner.os }}-${{ env.rid }}
+
+#     NOTE: Modify the steps after this to configure distributable deployment steps.
+#     - name: Deploy Distributable
