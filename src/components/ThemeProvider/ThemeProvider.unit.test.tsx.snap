@@ -2,10 +2,10 @@
 
 exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
 <ThemeProvider
-  theme="darkBronze"
+  theme="darkWebex"
 >
   <div
-    className="md-theme-provider md-theme-darkBronze"
+    className="md-theme-provider md-theme-darkWebex"
   />
 </ThemeProvider>
 `;

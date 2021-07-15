@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Story } from '@storybook/react';
 
 import ThemeProvider, {
@@ -11,44 +11,63 @@ export default {
   component: ThemeProvider,
   argTypes: {
     theme: {
-      description: 'The name of the target theme to use.',
+      defaultValue: CONSTANTS.DEFAULTS.THEME,
+      description: 'The name of the target theme to apply to all child nodes of this `<ThemeProvider />`.',
       options: [...Object.values(CONSTANTS.THEME_NAMES)],
-      control: { type: 'select' }
+      control: { type: 'select' },
+      table: {
+        type: {
+          sumary: 'string'
+        },
+        defaultValue: {
+          summary: CONSTANTS.DEFAULTS.THEME,
+        },
+      },
+    },
+    children: {
+      defaultValue: 'Example Text',
+      description: 'Provides the child nodes for this element. The child nodes of this element are themed by the assigned theme.',
+      control: { type: 'text' },
+      table: {
+        type: {
+          summary: 'ReactNode',
+        },
+        defaultValue: {
+          summary: 'undefined',
+        },
+      },
     },
   },
 };
 
-const ExampleDiv: FC = () => (
-  <div style={{
-    alignItems: 'center',
-    backgroundColor: 'var(--button-primary-background, #eee)',
-    color: 'var(--button-primary-text, #333)',
-    display: 'flex',
-    height: '4rem',
-    justifyContent: 'center',
-    width: '16rem',
-  }}>Example Container</div>
-);
+const Template: Story<Props> = (args) => {
+  const { children } = args;
+  const mutatedArgs = { ...args };
 
-const Template: Story<Props> = (args) => (
-  <ThemeProvider {...args}>
-    <ExampleDiv />
-  </ThemeProvider>
-);
-
-const Themed = Template.bind({});
-
-Themed.args = {
-  theme: 'lightWebex',
+  return (
+    <ThemeProvider {...mutatedArgs}>
+      <div style={{
+        backgroundColor: 'var(--theme-background-solid-normal)',
+        padding: '2rem',
+      }}>
+        <div style={{
+          alignItems: 'center',
+          backgroundColor: 'var(--button-primary-background, #eee)',
+          color: 'var(--button-primary-text, #333)',
+          display: 'flex',
+          height: '4rem',
+          justifyContent: 'center',
+          width: '16rem',
+        }}>{children}</div>
+      </div>
+    </ThemeProvider>
+  );
 };
 
-const Unthemed = Template.bind({});
+const Example = Template.bind({});
 
-Unthemed.args = {
-  theme: undefined,
-};
+Example.args = {};
 
 export {
-  Themed,
-  Unthemed,
+  Example,
 };
