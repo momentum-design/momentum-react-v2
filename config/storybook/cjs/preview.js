@@ -1,3 +1,5 @@
+import globals from './globals';
+import theme from './theme.decorator';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,3 +11,9 @@ export const parameters = {
   },
   viewMode: 'docs',
 };
+
+export const globalTypes = { ...globals };
+
+export const decorators = [
+  theme,
+];
