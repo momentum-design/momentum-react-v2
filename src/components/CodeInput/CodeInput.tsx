@@ -11,7 +11,7 @@ const ReactVerificationInput : React.FC<Props> = (props: Props) : ReactElement =
     <VerificationInput
       length={numDigits}
       onChange={(value) => {
-        if (value.length === 6) {
+        if (value.length === numDigits) {
           onComplete(value);
         }
       }}
