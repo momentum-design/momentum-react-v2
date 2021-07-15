@@ -43,7 +43,7 @@
     "start:watch": "run-p lint:watch test:watch start",
     "ci:build": "yarn source:build && yarn source:build:stories && yarn docs:build",
     "ci:test:examples": "run-p --race examples:start:esm examples:test",
-    "ci:test:lint": "yarn lint:src && yarn lint:config",
+    "ci:test:lint": "yarn lint:src",
     "ci:test:src": "yarn source:test --maxWorkers=2 --bail",
     "ci:test:storybook": "yarn storybook:test",
     "docs:clean": "rimraf ./docs",
