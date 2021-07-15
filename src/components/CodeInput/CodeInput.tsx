@@ -19,10 +19,10 @@ const ReactVerificationInput : React.FC<Props> = (props: Props) : ReactElement =
       validChars="0-9"
       placeholder=""
       classNames={{
-        container: 'code-input-container',
-        character: 'code-input-character',
-        characterInactive: 'code-input-character--inactive',
-        characterSelected: 'code-input-character--selected',
+        container: 'md-code-input-container',
+        character: 'md-code-input-character',
+        characterInactive: 'md-code-input-character--inactive',
+        characterSelected: 'md-code-input-character--selected',
       }}
     />
   );

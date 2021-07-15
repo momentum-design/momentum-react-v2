@@ -15,8 +15,8 @@ describe('CodeInput', () => {
   describe('attributes', () => {
     it('should have correct number of boxes', () => {
       const component = mount(<CodeInput numDigits={6} />).childAt(0);
-      expect(component.find('.code-input-container').length).toBe(1);
-      expect(component.find('.code-input-character').length).toBe(6);
+      expect(component.find('.md-code-input-container').length).toBe(1);
+      expect(component.find('.md-code-input-character').length).toBe(6);
     });
   });
 });
