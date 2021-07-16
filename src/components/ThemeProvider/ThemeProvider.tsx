@@ -1,10 +1,6 @@
 import React, { FC } from 'react';
 
-// This import can be updated once css/scss modules are supported.
-// import '@momentum-ui/design-tokens/dist/index.css';
-
-// Imports all of the theme tokens. Use this until the artifact exists for yarn install.
-import './tokens/index.style.css';
+import '@momentum-ui/design-tokens/dist/index.css';
 
 import { DEFAULTS, STYLE, THEME_CLASS_PREFIX } from './ThemeProvider.constants';
 import { Props } from './ThemeProvider.types';

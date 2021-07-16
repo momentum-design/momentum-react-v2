@@ -47,13 +47,13 @@ const Template: Story<Props> = (args) => {
   return (
     <ThemeProvider {...mutatedArgs}>
       <div style={{
-        backgroundColor: 'var(--theme-background-solid-normal)',
+        backgroundColor: 'var(--theme-background-solid-primary-normal)',
         padding: '2rem',
       }}>
         <div style={{
           alignItems: 'center',
-          backgroundColor: 'var(--button-primary-background, #eee)',
-          color: 'var(--button-primary-text, #333)',
+          backgroundColor: 'var(--button-primary-background)',
+          color: 'var(--button-primary-text)',
           display: 'flex',
           height: '4rem',
           justifyContent: 'center',
