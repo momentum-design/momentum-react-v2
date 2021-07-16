@@ -1,12 +1,4 @@
 
-// Add this for focus
-// input:focus-visible ~ .container .character {
-//   &--selected:empty {
-//     border-color: var(--code-input-border-focused);
-//     outline: none;
-//   }
-// }
-
 .md-code-input-container {
   .md-code-input-character {
     font-family: 'CiscoSansTT Regular';
@@ -37,7 +29,7 @@
         content: '|';
         animation: 1s blink step-end infinite;
       }
-      border-color: var(--code-input-border-active);
+      border-color: var(--code-input-border-focused);
       color: var(--code-input-text-active);
       background-color: var(--code-input-background-active);
     }
