@@ -27,7 +27,7 @@ const argTypes = {
   },
   color: {
     defaultValue: undefined,
-    description: 'Modifies the size of this Button. Some colors do not include an outline variant.',
+    description: 'Modifies the size of this `<ButtonPill />`. Some colors do not include an outline variant.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -41,7 +41,7 @@ const argTypes = {
   },
   disabled: {
     defaultValue: CONSTANTS.DEFAULTS.DISABLED,
-    description: 'Whether to render the Button is disabled.',
+    description: 'Whether to render the `<ButtonPill />` is disabled.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -55,7 +55,7 @@ const argTypes = {
   },
   ghost: {
     defaultValue: CONSTANTS.DEFAULTS.GHOST,
-    description: 'Whether this Button is a ghost. This overrides the `color` and `outline` props.',
+    description: 'Whether this `<ButtonPill />` is a ghost. This overrides the `color` and `outline` props.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -67,9 +67,21 @@ const argTypes = {
       },
     },
   },
+  onPress: {
+    action: 'clicked',
+    description: 'Function that is called when this `<ButtonPill />` is pressed.',
+    table: {
+      type: {
+        summary: '() => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   outline: {
     defaultValue: CONSTANTS.DEFAULTS.OUTLINE,
-    description: 'Whether to render the outline variant of this Button.',
+    description: 'Whether to render the outline variant of this `<ButtonPill />`.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -83,7 +95,7 @@ const argTypes = {
   },
   size: {
     defaultValue: CONSTANTS.DEFAULTS.SIZE,
-    description: 'Modifies the size of this Button.',
+    description: 'Modifies the size of this `<ButtonPill />`.',
     options: [1, 2, 3, 4],
     control: { type: 'select' },
     table: {
@@ -112,7 +124,7 @@ const MultiTemplate: Story<ButtonPillProps> = (args: ButtonPillProps, { paramete
   const { variants } = parameters;
 
   const items = variants.map(
-    (variant: {}, index: number) => (
+    (variant, index: number) => (
       <ButtonPill key={index} {...variant} {...args}>{children}</ButtonPill>
     )
   );

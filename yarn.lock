@@ -2913,7 +2913,7 @@
     "@react-stately/toggle" "^3.2.1"
     "@react-types/button" "^3.2.1"
 
-"@react-aria/focus@^3.2.2":
+"@react-aria/focus@^3.2.2", "@react-aria/focus@^3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.4.0.tgz#b883b90595e02fcc126d1aad6c82de2a1fe19826"
   integrity sha512-XlGn5XhYqPF6tAv+CBUDRqZHlpXTEWHQmpq/Oc+n8UaEICfrxkUrIqMatidEoeG21Sm5uCU7M6TNMmwhWIKLQQ==

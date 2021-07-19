@@ -6,7 +6,7 @@ const DEFAULTS = {
   GHOST: false,
   OUTLINE: false,
   SHAPE: 'pill',
-  SIZE: 1,
+  SIZE: 40,
 };
 
 const COLORS = {
@@ -15,13 +15,22 @@ const COLORS = {
   MESSAGE: 'message',
 };
 
+const SIZES = {
+  40: 40,
+  32: 32,
+  28: 28,
+  24: 24,
+};
+
 const STYLE = {
+  focusRing: `${CLASS_PREFIX}-focus-ring`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
 export {
   COLORS,
   DEFAULTS,
+  SIZES,
   STYLE,
   CLASS_PREFIX,
 };

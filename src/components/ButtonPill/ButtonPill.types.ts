@@ -1,6 +1,7 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
+import { PressEvents } from '@react-types/shared';
 
-export interface Props {
+export interface Props extends PressEvents {
   /**
    * Child components of this ButtonPill.
    */
@@ -17,21 +18,6 @@ export interface Props {
   ghost?: boolean;
 
   /**
-   * Icon to display on this ButtonPill.
-   */
-  icon?: ReactNode;
-
-  /**
-   * Message to display on this ButtonPill.
-   */
-  message?: string;
-
-  /**
-   * Click event handler.
-   */
-  onClick?: () => void;
-
-  /**
    * Whether to use the outline variant of this ButtonPill if available.
    */
   outline?: boolean;
@@ -39,7 +25,7 @@ export interface Props {
   /**
    * Size index of this ButtonPill.
    */
-  size?: number;
+  size?: 40 | 32 | 28 | 24;
 
   /**
    * Color profile to use with this ButtonPill.
