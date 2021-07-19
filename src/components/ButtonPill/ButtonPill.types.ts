@@ -1,6 +1,7 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
+import { AriaButtonProps } from '@react-types/button';
 
-export interface Props {
+export interface Props extends AriaButtonProps {
   /**
    * Child components of this ButtonPill.
    */
@@ -15,21 +16,6 @@ export interface Props {
    * Whether or not this ButtonPill is ghosted.
    */
   ghost?: boolean;
-
-  /**
-   * Icon to display on this ButtonPill.
-   */
-  icon?: ReactNode;
-
-  /**
-   * Message to display on this ButtonPill.
-   */
-  message?: string;
-
-  /**
-   * Click event handler.
-   */
-  onClick?: () => void;
 
   /**
    * Whether to use the outline variant of this ButtonPill if available.

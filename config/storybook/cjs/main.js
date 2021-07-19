@@ -1,10 +1,9 @@
 const path = require('path');
-const { REPO_ROOT, CJS_DIR } = require('../constants');
+const { COMPONENTS_DIR, REPO_ROOT, CJS_DIR } = require('../constants');
 
 module.exports = {
   stories: [
-    path.join(REPO_ROOT, CJS_DIR, '**/*.stories.mdx'),
-    path.join(REPO_ROOT, CJS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
+    path.join(REPO_ROOT, CJS_DIR, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
   ],
   addons: [
     '@storybook/addon-links',

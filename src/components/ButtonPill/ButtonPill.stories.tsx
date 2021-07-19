@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Story } from '@storybook/react';
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs';
 
 import ButtonPill, { ButtonPillProps, BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
+import Documentation from './Button.documentation.mdx';
+
+const DocsPage: FC = () => (
+  <>
+    <Title />
+    <Subtitle />
+    <Description />
+    <Documentation />
+    <Primary />
+    <ArgsTable story={PRIMARY_STORY} />
+  </>
+);
 
 export default {
   title: 'Momentum UI/ButtonPill',
   component: ButtonPill,
   parameters: {
     expanded: true,
+    docs: {
+      page: DocsPage
+    },
   },
 };
 
@@ -27,7 +50,7 @@ const argTypes = {
   },
   color: {
     defaultValue: undefined,
-    description: 'Modifies the size of this Button. Some colors do not include an outline variant.',
+    description: 'Modifies the size of this `<ButtonPill />`. Some colors do not include an outline variant.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -41,7 +64,7 @@ const argTypes = {
   },
   disabled: {
     defaultValue: CONSTANTS.DEFAULTS.DISABLED,
-    description: 'Whether to render the Button is disabled.',
+    description: 'Whether to render the `<ButtonPill />` is disabled.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -55,7 +78,7 @@ const argTypes = {
   },
   ghost: {
     defaultValue: CONSTANTS.DEFAULTS.GHOST,
-    description: 'Whether this Button is a ghost. This overrides the `color` and `outline` props.',
+    description: 'Whether this `<ButtonPill />` is a ghost. This overrides the `color` and `outline` props.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -69,7 +92,7 @@ const argTypes = {
   },
   outline: {
     defaultValue: CONSTANTS.DEFAULTS.OUTLINE,
-    description: 'Whether to render the outline variant of this Button.',
+    description: 'Whether to render the outline variant of this `<ButtonPill />`.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -83,8 +106,8 @@ const argTypes = {
   },
   size: {
     defaultValue: CONSTANTS.DEFAULTS.SIZE,
-    description: 'Modifies the size of this Button.',
-    options: [1, 2, 3, 4],
+    description: 'Modifies the size of this `<ButtonPill />`.',
+    options: [40, 32, 28, 24],
     control: { type: 'select' },
     table: {
       type: {
@@ -92,6 +115,45 @@ const argTypes = {
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.SIZE
+      },
+    },
+  },
+  onPress: {
+    action: 'onPress',
+    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when the press is released over the target.',
+    table: {
+      category: 'AriaButtonProps',
+      type: {
+        summary: '(e: PressEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  autoFocus: {
+    action: 'autoFocus',
+    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Whether the element should receive focus on render.',
+    table: {
+      category: 'AriaButtonProps',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onKeyDown: {
+    action: 'onKeyDown',
+    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when a key is pressed.',
+    table: {
+      category: 'AriaButtonProps',
+      type: {
+        summary: '(e: KeyboardEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
       },
     },
   },
@@ -112,7 +174,7 @@ const MultiTemplate: Story<ButtonPillProps> = (args: ButtonPillProps, { paramete
   const { variants } = parameters;
 
   const items = variants.map(
-    (variant: {}, index: number) => (
+    (variant, index: number) => (
       <ButtonPill key={index} {...variant} {...args}>{children}</ButtonPill>
     )
   );
@@ -173,9 +235,9 @@ const Sizes = MultiTemplate.bind({});
 Sizes.parameters = {
   variants: [
     {},
-    { size: 2 },
-    { size: 3 },
-    { size: 4 },
+    { size: 32 },
+    { size: 28 },
+    { size: 24 },
   ],
 };
 

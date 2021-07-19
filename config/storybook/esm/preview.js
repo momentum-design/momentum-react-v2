@@ -1,6 +1,5 @@
 import globals from './globals';
 import theme from './theme.decorator';
-import styles from '../styles.decorator';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -16,6 +15,5 @@ export const parameters = {
 export const globalTypes = { ...globals };
 
 export const decorators = [
-  styles,
   theme,
 ];
