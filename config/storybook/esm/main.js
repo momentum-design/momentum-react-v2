@@ -11,4 +11,9 @@ module.exports = {
   typescript: {
     reactDocgen: 'none',
   },
+  webpackFinal: (config) => {
+    config.resolve.alias['@momentum-ui/react'] = '../../../dist/esm/index';
+
+    return config;
+  },
 };
