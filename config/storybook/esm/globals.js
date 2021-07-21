@@ -1,4 +1,4 @@
-import { DEFAULTS, THEME_NAMES } from '../../../dist/esm/components/ThemeProvider/ThemeProvider.constants';
+import { DEFAULTS, THEME_NAMES } from '../../../dist/esm/components/ThemeProvider/ThemeProvider.constants'; // eslint-disable-line import/named
 
 const globals = {
   theme: {
