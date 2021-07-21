@@ -1,46 +1,67 @@
 
-.md-code-input-container {
-  .md-code-input-character {
-    font-family: 'CiscoSansTT Regular';
-    width: 2.75rem;
-    height: 3rem;
-    border: 1px solid var(--code-input-border);
-    color: var(--code-input-text);
-    background-color: var(--code-input-background);
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-    margin-left: 0.5rem;
-    font-size: 1.625rem;
-    line-height: 3rem;
-    &:hover {
-      border: 1px solid var(--code-input-border-hovered);
-      color: var(--code-input-text-hovered);
-      background-color: var(--code-input-background-hovered);
-    }
-    &:active {
-      border-color: var(--code-input-border-active);
-      color: var(--code-input-text-active);
-      background-color: var(--code-input-background-active);
-    }
+.md-code-input-wrapper {
+  .md-code-input-container {
+    .md-code-input-character {
+      font-family: 'CiscoSansTT Regular';
+      width: 2.75rem;
+      height: 3rem;
+      border: 1px solid var(--code-input-border);
+      color: var(--code-input-text);
+      background-color: var(--code-input-background);
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+      font-size: 1.625rem;
+      line-height: 3rem;
 
-    &--selected:empty {
-      &:before {
-        font-family: 'CiscoSansTT Thin';
-        content: '|';
-        animation: 1s blink step-end infinite;
+      &:not(:first-child) {
+        margin-left: 0.5rem;
       }
-      border-color: var(--code-input-border-focused);
-      color: var(--code-input-text-active);
-      background-color: var(--code-input-background-active);
+
+      &:hover {
+        border: 1px solid var(--code-input-border-hovered);
+        color: var(--code-input-text-hovered);
+        background-color: var(--code-input-background-hovered);
+      }
+
+      &:active {
+        border-color: var(--code-input-border-active);
+        color: var(--code-input-text-active);
+        background-color: var(--code-input-background-active);
+      }
+
+      &--selected:empty {
+        &:before {
+          font-family: 'CiscoSansTT Thin';
+          content: '|';
+          animation: 1s blink step-end infinite;
+        }
+        border-color: var(--code-input-border-focused);
+        color: var(--code-input-text-active);
+        background-color: var(--code-input-background-active);
+      }
     }
   }
-}
 
-@keyframes blink {
-  from, to {
-    color: transparent;
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: var(--code-input-text-active);
+    }
   }
-  50% {
-    color: var(--code-input-text-active);
+
+  &[data-level=error] {
+    .md-code-input-container {
+      .md-code-input-character {
+        border-color: var(--theme-outline-cancel);
+        background-color: var(--theme-background-error);
+
+        &:hover, &:active {
+          border-color: var(--theme-outline-cancel);
+          background-color: var(--code-input-background-hovered);
+        }
+      }
+    }
   }
 }

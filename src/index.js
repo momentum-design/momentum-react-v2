@@ -100,6 +100,8 @@ export {
  
  /** V2 Components [TypeScript] */
 export {
+  CodeInput,
+  InputMessage as InputMessageNew,
   ExampleComponent,
   ThemeProvider,
 } from './components';

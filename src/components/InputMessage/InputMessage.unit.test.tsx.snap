@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputMessage snapshot should match snapshot 1`] = `
+<InputMessage
+  level="error"
+  message="some message"
+>
+  <div
+    className="md-input-message-wrapper"
+  >
+    <div
+      className="md-input-message"
+      message-level="error"
+      role="alert"
+    >
+      <div
+        className="md-input-message--icon"
+      >
+        <svg
+          height="100%"
+          viewBox="0 0 32 32"
+          width="100%"
+        />
+      </div>
+      <div
+        className="md-input-message--text"
+      >
+        some message
+      </div>
+    </div>
+  </div>
+</InputMessage>
+`;

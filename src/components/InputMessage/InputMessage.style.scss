@@ -1,0 +1,37 @@
+.md-input-message-wrapper {
+  font-family: 'CiscoSansTT Regular';
+
+  .md-input-message {
+    color: var(--theme-text-primary-normal);
+    fill: var(--theme-text-primary-normal);
+    margin-top: 1rem;
+
+    &[message-level=error] {
+      color: var(--theme-text-error-normal); 
+      fill: var(--theme-text-error-normal); 
+    }
+
+    &[message-level=warning] {
+      color: var(--theme-text-warning-normal); 
+      fill: var(--theme-text-warning-normal); 
+    }
+
+    &[message-level=success] {
+      color: var(--theme-text-success-normal); 
+      fill: var(--theme-text-success-normal); 
+    }
+
+    .md-input-message--icon {
+      float: left;
+      height: 1rem;
+      width: 1rem;
+      overflow: hidden;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .md-input-message--text {
+      float: left;
+    }
+  }
+}
