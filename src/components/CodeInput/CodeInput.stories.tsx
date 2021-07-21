@@ -36,7 +36,7 @@ export default {
     },
     onCompleteChoice: {
       description: 'What happens when the code is complete',
-      options: ['show error', 'go disabled'],
+      options: ['show error', 'go disabled', 'alert'],
       control: { type: 'select' },
     },
   },
@@ -74,6 +74,8 @@ const Template: Story<StoryProps> = (args) => {
               case 'go disabled':
                 setDisabled(true);
                 break;
+              case 'alert':
+                alert(`code is ${code}`);
             }
           }}
         />
