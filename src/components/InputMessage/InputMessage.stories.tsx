@@ -9,7 +9,7 @@ export default {
   title: 'Momentum UI/InputMessage',
   component: InputMessage,
   argTypes: {
-    type: {
+    level: {
       description: 'The level of the message.',
       options: INPUT_MESSAGE_CONSTANTS.MESSAGE_LEVEL,
       control: { type: 'select' },
