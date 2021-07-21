@@ -22,6 +22,7 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       inputProps={
         Object {
           "aria-label": undefined,
+          "disabled": false,
         }
       }
       length={6}
@@ -37,6 +38,7 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       >
         <input
           className="vi"
+          disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
