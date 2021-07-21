@@ -1,7 +1,9 @@
+const path = require('path');
+const { COMPONENTS_DIR, REPO_ROOT, CJS_DIR } = require('../constants');
+
 module.exports = {
   stories: [
-    '../../../dist/cjs/**/*.stories.mdx',
-    '../../../dist/cjs/**/*.stories.@(js|jsx|ts|tsx)'
+    path.join(REPO_ROOT, CJS_DIR, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
   ],
   addons: [
     '@storybook/addon-links',
@@ -12,7 +14,7 @@ module.exports = {
     reactDocgen: 'none',
   },
   webpackFinal: (config) => {
-    config.resolve.alias['@momentum-ui/react'] = '../../../dist/cjs/index';
+    config.resolve.alias['@momentum-ui/react'] = path.resolve(REPO_ROOT, CJS_DIR, 'index');
 
     return config;
   },

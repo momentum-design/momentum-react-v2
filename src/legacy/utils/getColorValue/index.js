@@ -1,8 +1,11 @@
-const startsWith = require('lodash/startsWith');
-const trimStart = require('lodash/trimStart');
-const isEmpty = require('lodash/isEmpty');
-const colorTokens = require('@momentum-ui/tokens/dist/colors.json');
-const legacyColors = require('@momentum-ui/tokens/src/legacyColors.json');
+import {
+  startsWith,
+  trimStart,
+  isEmpty,
+} from 'lodash';
+
+import colorTokens from '@momentum-ui/tokens/dist/colors.json';
+import legacyColors from '@momentum-ui/tokens/src/legacyColors.json';
 
 export const getColorValue = (color, colorFormat) => {
   const colorName = convertScssVariableToName(color);
