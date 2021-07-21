@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CodeInput snapshot should match snapshot 1`] = `
-<ReactVerificationInput
+<CodeInput
   numDigits={6}
 >
   <div
@@ -26,9 +26,11 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       }
       length={6}
       onChange={[Function]}
+      onFocus={[Function]}
       placeholder=""
       removeDefaultStyles={true}
       validChars="0-9"
+      value=""
     >
       <div
         className="vi__wrapper"
@@ -169,5 +171,5 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       className="md-code-input__messages"
     />
   </div>
-</ReactVerificationInput>
+</CodeInput>
 `;
