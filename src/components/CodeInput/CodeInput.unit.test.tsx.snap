@@ -4,90 +4,98 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
 <ReactVerificationInput
   numDigits={6}
 >
-  <VerificationInput
-    autoFocus={false}
-    classNames={
-      Object {
-        "character": "md-code-input-character",
-        "characterInactive": "md-code-input-character--inactive",
-        "characterSelected": "md-code-input-character--selected",
-        "container": "md-code-input-container",
-      }
-    }
-    debug={false}
-    inputProps={Object {}}
-    length={6}
-    onChange={[Function]}
-    placeholder=""
-    removeDefaultStyles={true}
-    validChars="0-9"
+  <div
+    className="md-code-input-wrapper"
+    data-level="none"
   >
-    <div
-      className="vi__wrapper"
+    <VerificationInput
+      autoFocus={false}
+      classNames={
+        Object {
+          "character": "md-code-input-character",
+          "characterInactive": "md-code-input-character--inactive",
+          "characterSelected": "md-code-input-character--selected",
+          "container": "md-code-input-container",
+        }
+      }
+      debug={false}
+      inputProps={
+        Object {
+          "aria-label": undefined,
+        }
+      }
+      length={6}
+      onChange={[Function]}
+      placeholder=""
+      removeDefaultStyles={true}
+      validChars="0-9"
     >
-      <input
-        className="vi"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        value=""
-      />
       <div
-        className="vi__container md-code-input-container"
-        data-testid="container"
-        onClick={[Function]}
+        className="vi__wrapper"
       >
-        <div
-          className="vi__character md-code-input-character"
-          data-testid="character-0"
-          id="field-0"
-          key="0"
-          onClick={[Function]}
+        <input
+          className="vi"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          value=""
         />
         <div
-          className="vi__character md-code-input-character md-code-input-character--inactive"
-          data-testid="character-1"
-          id="field-1"
-          key="1"
+          className="vi__container md-code-input-container"
+          data-testid="container"
           onClick={[Function]}
-        />
-        <div
-          className="vi__character md-code-input-character md-code-input-character--inactive"
-          data-testid="character-2"
-          id="field-2"
-          key="2"
-          onClick={[Function]}
-        />
-        <div
-          className="vi__character md-code-input-character md-code-input-character--inactive"
-          data-testid="character-3"
-          id="field-3"
-          key="3"
-          onClick={[Function]}
-        />
-        <div
-          className="vi__character md-code-input-character md-code-input-character--inactive"
-          data-testid="character-4"
-          id="field-4"
-          key="4"
-          onClick={[Function]}
-        />
-        <div
-          className="vi__character md-code-input-character md-code-input-character--inactive"
-          data-testid="character-5"
-          id="field-5"
-          key="5"
-          onClick={[Function]}
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": Array [
-              Array [
-                28,
-                ".vi__wrapper {
+        >
+          <div
+            className="vi__character md-code-input-character"
+            data-testid="character-0"
+            id="field-0"
+            key="0"
+            onClick={[Function]}
+          />
+          <div
+            className="vi__character md-code-input-character md-code-input-character--inactive"
+            data-testid="character-1"
+            id="field-1"
+            key="1"
+            onClick={[Function]}
+          />
+          <div
+            className="vi__character md-code-input-character md-code-input-character--inactive"
+            data-testid="character-2"
+            id="field-2"
+            key="2"
+            onClick={[Function]}
+          />
+          <div
+            className="vi__character md-code-input-character md-code-input-character--inactive"
+            data-testid="character-3"
+            id="field-3"
+            key="3"
+            onClick={[Function]}
+          />
+          <div
+            className="vi__character md-code-input-character md-code-input-character--inactive"
+            data-testid="character-4"
+            id="field-4"
+            key="4"
+            onClick={[Function]}
+          />
+          <div
+            className="vi__character md-code-input-character md-code-input-character--inactive"
+            data-testid="character-5"
+            id="field-5"
+            key="5"
+            onClick={[Function]}
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": Array [
+                Array [
+                  28,
+                  ".vi__wrapper {
   position: relative;
 }
 
@@ -149,13 +157,17 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
   color: cornflowerblue;
 }
 ",
-                "",
+                  "",
+                ],
               ],
-            ],
+            }
           }
-        }
-      />
-    </div>
-  </VerificationInput>
+        />
+      </div>
+    </VerificationInput>
+    <div
+      className="md-code-input__messages"
+    />
+  </div>
 </ReactVerificationInput>
 `;
