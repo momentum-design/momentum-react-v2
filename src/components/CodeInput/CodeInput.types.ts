@@ -20,4 +20,8 @@ export interface Props {
    * messageArr: array of messages and their types
    */
   messageArr?: Message[];
+  /**
+   * disabled: whether code input is disabled
+   */
+  disabled?: boolean;
 }

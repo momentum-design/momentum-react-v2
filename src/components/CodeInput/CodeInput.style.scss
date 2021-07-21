@@ -2,6 +2,7 @@
 .md-code-input-wrapper {
   .md-code-input-container {
     .md-code-input-character {
+      cursor: text;
       font-family: 'CiscoSansTT Regular';
       width: 2.75rem;
       height: 3rem;
@@ -64,4 +65,13 @@
       }
     }
   }
+
+  input:disabled ~ .md-code-input-container {
+    .md-code-input-character {
+      cursor: default;
+      background-color: var(--theme-background-disabled);
+      border-color: rgba(0,0,0,0);
+    }
+  }
+
 }

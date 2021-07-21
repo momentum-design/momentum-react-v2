@@ -17,7 +17,7 @@ const filterMessagesByType = (array, value) => {
 
 
 const CodeInput : React.FC<Props> = (props: Props) : ReactElement => {
-  const {numDigits, onComplete, ariaLabel, messageArr=[]} = props;
+  const {numDigits, onComplete, ariaLabel, messageArr=[], disabled=false} = props;
 
   const [internalMessageArray, setInternalMessageArray] = useState(messageArr);
   const [isComplete, setComplete] = useState(false);
@@ -39,12 +39,9 @@ const CodeInput : React.FC<Props> = (props: Props) : ReactElement => {
   }, [JSON.stringify(messageArr)]);
 
   return (
-    <div
-      className="md-code-input-wrapper"
-      data-level={messageType}
-    >
+    <div className="md-code-input-wrapper" data-level={messageType}>
       <VerificationInput
-        inputProps={{ 'aria-label': ariaLabel }}
+        inputProps={{ 'aria-label': ariaLabel, disabled }}
         length={numDigits}
         onChange={setValue}
         onFocus={() => {

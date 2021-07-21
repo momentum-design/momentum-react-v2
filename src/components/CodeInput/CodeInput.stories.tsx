@@ -12,6 +12,7 @@ const messageArrOptions = {
   warning: [{ message: 'Warning message', type: 'warning' }],
 };
 
+
 export default {
   title: 'Momentum UI/CodeInput',
   component: CodeInput,
@@ -30,17 +31,28 @@ export default {
       mapping: messageArrOptions,
       control: { type: 'select' },
     },
+    disabled: {
+      control: { type: 'boolean' },
+    },
+    onCompleteChoice: {
+      description: 'What happens when the code is complete',
+      options: ['show error', 'go disabled'],
+      control: { type: 'select' },
+    },
   },
 };
 
 interface StoryProps extends CodeInputProps {
   theme: ThemeNames;
-  messageArr: []
+  messageArr: [];
+  onCompleteChoice;
 }
 
 const Template: Story<StoryProps> = (args) => {
-  const {theme} = args;
+  const {theme, onCompleteChoice} = args;
   const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
+  const [isDisabled, setDisabled] = useState(args.disabled);
+
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -53,9 +65,16 @@ const Template: Story<StoryProps> = (args) => {
         <CodeInput
           numDigits={args.numDigits}
           messageArr={messageArrInt}
+          disabled={isDisabled}
           onComplete={(code) => {
-            console.log(`code is ${code}`);
-            setMessageArr([{ message: 'test', type: 'error' }]);
+            switch (onCompleteChoice) {
+              case 'show error':
+                setMessageArr([{ message: 'test', type: 'error' }]);
+                break;
+              case 'go disabled':
+                setDisabled(true);
+                break;
+            }
           }}
         />
       </div>
@@ -68,7 +87,9 @@ const Story1 = Template.bind({});
 Story1.args = {
   theme: 'lightWebex',
   numDigits: 6,
-  messageArr: 'empty'
+  messageArr: 'empty',
+  disabled: false,
+  onCompleteChoice: 'show error'
 };
 
 export { Story1 };
