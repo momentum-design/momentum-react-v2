@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState, useEffect } from 'react';
 import VerificationInput from 'react-verification-input';
 
 import './CodeInput.style.scss';
@@ -16,12 +16,27 @@ const filterMessagesByType = (array, value) => {
 };
 
 
-const ReactVerificationInput : React.FC<Props> = (props: Props) : ReactElement => {
+const CodeInput : React.FC<Props> = (props: Props) : ReactElement => {
   const {numDigits, onComplete, ariaLabel, messageArr=[]} = props;
 
+  const [internalMessageArray, setInternalMessageArray] = useState(messageArr);
+  const [isComplete, setComplete] = useState(false);
+  const [value, setValue] = useState('');
+
   const messageType: MessageLevel =
-    (messageArr.length > 0 && determineMessageType(messageArr)) || 'none';
-  const messages = (messageType && filterMessagesByType(messageArr, messageType)) || null;
+  (internalMessageArray.length > 0 && determineMessageType(internalMessageArray)) || 'none';
+  const messages = (messageType && filterMessagesByType(internalMessageArray, messageType)) || null;
+
+  useEffect(() => {
+    if (value.length === numDigits) {
+      onComplete(value);
+      setComplete(true);
+    }
+  }, [value]);
+
+  useEffect(() => {
+    setInternalMessageArray(messageArr);
+  }, [JSON.stringify(messageArr)]);
 
   return (
     <div
@@ -31,11 +46,16 @@ const ReactVerificationInput : React.FC<Props> = (props: Props) : ReactElement =
       <VerificationInput
         inputProps={{ 'aria-label': ariaLabel }}
         length={numDigits}
-        onChange={(value) => {
-          if (value.length === numDigits) {
-            onComplete(value);
+        onChange={setValue}
+        onFocus={() => {
+          if (isComplete) {
+            // When completed, refocusing the input will clear the code and any messages
+            setComplete(false);
+            setValue('');
+            setInternalMessageArray([]);
           }
         }}
+        value={value}
         removeDefaultStyles={true}
         validChars="0-9"
         placeholder=""
@@ -61,5 +81,5 @@ const ReactVerificationInput : React.FC<Props> = (props: Props) : ReactElement =
  * Numeric code input for use with confirmation codes
  */
 
-export default ReactVerificationInput;
+export default CodeInput;
 

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Story } from '@storybook/react';
 
 import ThemeProvider, { ThemeNames, THEME_PROVIDER_CONSTANTS } from '../ThemeProvider';
 import CodeInput, {CodeInputProps } from './';
+import {Message} from './CodeInput.types';
 
 const messageArrOptions = {
   empty: [],
@@ -38,18 +39,28 @@ interface StoryProps extends CodeInputProps {
 }
 
 const Template: Story<StoryProps> = (args) => {
-  const {theme, messageArr} = args;
-  return (<ThemeProvider theme={theme}>
-    <div style={{
-      display: 'inline-block',
-      padding: '2rem',
-      backgroundColor: 'var(--theme-background-solid-primary-normal)'
-    }}>
-      <CodeInput messageArr={messageArr} onComplete={(code) => {
-        alert(`code is ${code}`);
-      }} {...args} />
-    </div>
-  </ThemeProvider>);
+  const {theme} = args;
+  const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
+  return (
+    <ThemeProvider theme={theme}>
+      <div
+        style={{
+          display: 'inline-block',
+          padding: '2rem',
+          backgroundColor: 'var(--theme-background-solid-primary-normal)',
+        }}
+      >
+        <CodeInput
+          numDigits={args.numDigits}
+          messageArr={messageArrInt}
+          onComplete={(code) => {
+            console.log(`code is ${code}`);
+            setMessageArr([{ message: 'test', type: 'error' }]);
+          }}
+        />
+      </div>
+    </ThemeProvider>
+  );
 };
 
 const Story1 = Template.bind({});
