@@ -6,9 +6,9 @@
       font-family: 'CiscoSansTT Regular';
       width: 2.75rem;
       height: 3rem;
-      border: 1px solid var(--code-input-border);
-      color: var(--code-input-text);
-      background-color: var(--code-input-background);
+      border: 1px solid var(--codeinput-border);
+      color: var(--codeinput-text);
+      background-color: var(--codeinput-background);
       box-sizing: border-box;
       border-radius: 0.5rem;
       font-size: 1.625rem;
@@ -19,15 +19,15 @@
       }
 
       &:hover {
-        border: 1px solid var(--code-input-border-hovered);
-        color: var(--code-input-text-hovered);
-        background-color: var(--code-input-background-hovered);
+        border: 1px solid var(--codeinput-border-hovered);
+        color: var(--codeinput-text-hovered);
+        background-color: var(--codeinput-background-hovered);
       }
 
       &:active {
-        border-color: var(--code-input-border-active);
-        color: var(--code-input-text-active);
-        background-color: var(--code-input-background-active);
+        border-color: var(--codeinput-border-active);
+        color: var(--codeinput-text-active);
+        background-color: var(--codeinput-background-active);
       }
 
       &--selected:empty {
@@ -36,9 +36,9 @@
           content: '|';
           animation: 1s blink step-end infinite;
         }
-        border-color: var(--code-input-border-focused);
-        color: var(--code-input-text-active);
-        background-color: var(--code-input-background-active);
+        border-color: var(--codeinput-border-focused);
+        color: var(--codeinput-text-active);
+        background-color: var(--codeinput-background-active);
       }
     }
   }
@@ -48,19 +48,26 @@
       color: transparent;
     }
     50% {
-      color: var(--code-input-text-active);
+      color: var(--codeinput-text-active);
     }
   }
 
   &[data-level=error] {
     .md-code-input-container {
       .md-code-input-character {
-        border-color: var(--theme-outline-cancel);
-        background-color: var(--theme-background-error);
+        border-color: var(--codeinput-error-border);
+        color: var(--codeinput-error-text);
+        background-color: var(--codeinput-error-background);
 
-        &:hover, &:active {
-          border-color: var(--theme-outline-cancel);
-          background-color: var(--code-input-background-hovered);
+        &:hover {
+          border-color: var(--codeinput-error-border-hovered);
+          color: var(--codeinput-error-text-hovered);
+          background-color: var(--codeinput-error-background-hovered);
+        }
+        &:active {
+          border-color: var(--codeinput-error-border-active);
+          color: var(--codeinput-error-text-active);
+          background-color: var(--codeinput-error-background-active);
         }
       }
     }
@@ -69,8 +76,9 @@
   input:disabled ~ .md-code-input-container {
     .md-code-input-character {
       cursor: default;
-      background-color: var(--theme-background-disabled);
-      border-color: rgba(0,0,0,0);
+      border-color: var(--codeinput-border-disabled);
+      color: var(--codeinput-text-disabled);
+      background-color: var(--codeinput-background-disabled);
     }
   }
 
