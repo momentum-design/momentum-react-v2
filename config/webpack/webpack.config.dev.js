@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
-const { baseConfig } = require('./webpack.config.base.js');
+const { baseConfig } = require('./webpack.config.base');
 const { repoRoot } = require('./constants');
 
 // baseConfig.resolve.alias['react-dom'] = '@hot-loader/react-dom';

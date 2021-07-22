@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon snapshot should match snapshot 1`] = `
+<Icon
+  name="accessibility"
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      data-scale={32}
+      height="100%"
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
+exports[`Icon snapshot should match snapshot with invalid name 1`] = `
+<Icon
+  name="invalid_icon_name"
+>
+  <p
+    className="md-icon-not-found"
+  >
+    Icon not found.
+  </p>
+</Icon>
+`;
+
+exports[`Icon snapshot should match snapshot with scale 1`] = `
+<Icon
+  name="accessibility"
+  scale={16}
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      data-scale={16}
+      height="100%"
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
+exports[`Icon snapshot should match snapshot with weight 1`] = `
+<Icon
+  name="accessibility"
+  weight="light"
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      data-scale={32}
+      height="100%"
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;

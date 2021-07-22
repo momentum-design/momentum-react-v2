@@ -38,7 +38,7 @@ const runWebpack = () => {
     console.log(`Webpack stats: ${stats}`);
 
     // if we got this far, the build succeeded.
-    console.log(chalkSuccess("Your app is compiled in production mode in /dist. It's ready to roll!"));
+    console.log(chalkSuccess('Your app is compiled in production mode in /dist. It\'s ready to roll!'));
 
     return 'success';
   });
