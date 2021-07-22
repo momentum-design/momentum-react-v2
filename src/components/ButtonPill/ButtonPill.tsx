@@ -1,4 +1,4 @@
-import React, { useRef, FC } from 'react';
+import React, { forwardRef, useRef, FC, RefObject } from 'react';
 import { useButton } from '@react-aria/button';
 import { FocusRing } from '@react-aria/focus';
 
@@ -6,8 +6,8 @@ import { DEFAULTS, STYLE } from './ButtonPill.constants';
 import { Props } from './ButtonPill.types';
 import './ButtonPill.style.scss';
 
-const ButtonPill: FC<Props> = (props: Props) => {
-  const ref = useRef();
+const ButtonPill: FC<Props> = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+  const ref = providedRef || useRef();
   const mutatedProps = {
     ...props,
     isDisabled: props.disabled,
@@ -34,6 +34,8 @@ const ButtonPill: FC<Props> = (props: Props) => {
       </button>
     </FocusRing>
   );
-};
+});
+
+ButtonPill.displayName = 'ButtonPill';
 
 export default ButtonPill;

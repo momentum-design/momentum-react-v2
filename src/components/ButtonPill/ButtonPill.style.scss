@@ -4,6 +4,7 @@
   border-style: solid;
   cursor: pointer;
   margin: 0.5rem;
+  outline: none;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
   /* Colorization */
@@ -20,7 +21,7 @@
     color: var(--button-primary-text-pressed);
   }
 
-  .md-button-pill-focus-ring {
+  &.md-button-pill-focus-ring {
     outline: none;
     box-shadow: 0 0 0.25rem 0.125rem var(--theme-outline-focus);
   }
