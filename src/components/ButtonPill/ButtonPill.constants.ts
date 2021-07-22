@@ -28,9 +28,9 @@ const STYLE = {
 };
 
 export {
+  CLASS_PREFIX,
   COLORS,
   DEFAULTS,
   SIZES,
   STYLE,
-  CLASS_PREFIX,
 };

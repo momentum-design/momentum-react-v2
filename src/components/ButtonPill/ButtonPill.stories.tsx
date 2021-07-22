@@ -10,7 +10,7 @@ import {
 } from '@storybook/addon-docs';
 
 import ButtonPill, { ButtonPillProps, BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
-import Documentation from './Button.documentation.mdx';
+import Documentation from './ButtonPill.documentation.mdx';
 
 const DocsPage: FC = () => (
   <>
@@ -107,7 +107,7 @@ const argTypes = {
   size: {
     defaultValue: CONSTANTS.DEFAULTS.SIZE,
     description: 'Modifies the size of this `<ButtonPill />`.',
-    options: [40, 32, 28, 24],
+    options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     control: { type: 'select' },
     table: {
       type: {
