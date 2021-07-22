@@ -1,13 +1,39 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 
 import Icon, { IconProps } from './';
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs';
 
 import ThemeProvider from '../ThemeProvider';
+import Documentation from './Icon.documentation.mdx';
+
+const DocsPage: FC = () => (
+  <>
+    <Title />
+    <Subtitle />
+    <Description />
+    <Documentation />
+    <Primary />
+    <ArgsTable story={PRIMARY_STORY} />
+  </>
+);
 
 export default {
   title: 'Momentum UI/Icon',
   component: Icon,
+  parameters: {
+    expanded: true,
+    docs: {
+      page: DocsPage,
+    },
+  },
   argTypes: {
     scale: {
       description: 'Scale represents the size/scale of te icon.',
@@ -27,14 +53,17 @@ export default {
 
 const Template: Story<IconProps> = (args) => (
   <ThemeProvider>
-    <Icon {...args} />{' '}
+    <Icon {...args} />
+    <Icon {...args} weight="light" />
+    <Icon {...args} weight="regular" />
+    <Icon {...args} weight="bold" />
   </ThemeProvider>
 );
 
-const IconStory = Template.bind({});
+const Example = Template.bind({});
 
-IconStory.args = {
+Example.args = {
   name: 'accessibility',
 };
 
-export { IconStory };
+export { Example };

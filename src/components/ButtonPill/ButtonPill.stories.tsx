@@ -90,18 +90,6 @@ const argTypes = {
       },
     },
   },
-  onPress: {
-    action: 'clicked',
-    description: 'Function that is called when this `<ButtonPill />` is pressed.',
-    table: {
-      type: {
-        summary: '() => void',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
   outline: {
     defaultValue: CONSTANTS.DEFAULTS.OUTLINE,
     description: 'Whether to render the outline variant of this `<ButtonPill />`.',

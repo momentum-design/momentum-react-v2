@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import '@momentum-ui/design-tokens';
+import '@momentum-ui/design-tokens/dist/index.css';
 
 import { DEFAULTS, STYLE, THEME_CLASS_PREFIX } from './ThemeProvider.constants';
 import { Props } from './ThemeProvider.types';
