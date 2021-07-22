@@ -7,7 +7,7 @@ npm-debug.log*
 package-lock.json
 .npmrc
 .env
-
+docs
 
 # Ignore Yarn
 ###################
