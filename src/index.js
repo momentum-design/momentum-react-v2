@@ -99,4 +99,4 @@ export {
 } from './legacy';
 
 /** V2 Components [TypeScript] */
-export { ButtonPill, ExampleComponent, ThemeProvider } from './components';
+export { ButtonDialpad, ButtonPill, ExampleComponent, ThemeProvider } from './components';

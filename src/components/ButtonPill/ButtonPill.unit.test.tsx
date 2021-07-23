@@ -29,7 +29,7 @@ describe('<ButtonPill />', () => {
     it('should match snapshot with size', () => {
       expect.assertions(1);
 
-      const size = COLORS[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
+      const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
       container = mount(<ButtonPill size={size}>Example Text</ButtonPill>);
 
