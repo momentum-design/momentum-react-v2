@@ -18,6 +18,18 @@ describe('CodeInput', () => {
       expect(component.find('.md-code-input-container').length).toBe(1);
       expect(component.find('.md-code-input-character').length).toBe(6);
     });
+
+    it('disabled code input should have input disabled', () => {
+      const component = mount(<CodeInput numDigits={6} disabled />).childAt(0);
+      expect(component.find('input').props().disabled).toBeTruthy();
+    });
+
+    it('when a message array is passing in messages should be displayed', () => {
+      const component = mount(<CodeInput numDigits={6} messageArr={[{message: 'test', type: 'error'}]} />).childAt(0);
+      const message = component.find('.md-input-message');
+      expect(message.length).toBe(1);
+      expect(message.props()['message-level']).toEqual('error');
+    });
   });
 
   describe('digit entry', () => {
