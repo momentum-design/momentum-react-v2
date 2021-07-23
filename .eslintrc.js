@@ -1,4 +1,4 @@
-const path = require("path"); // eslint-disable-line
+const path = require('path'); // eslint-disable-line
 
 module.exports = {
   root: true,
@@ -8,16 +8,30 @@ module.exports = {
     },
     'import/resolver': {
       alias: {
-        map: [['@momentum-ui/react', path.resolve(__dirname, 'src')]],
+        map: [
+          ['@momentum-ui/react', path.resolve(__dirname, 'src')],
+        ],
       },
       node: {
-        extensions: ['.js', '.jsx', '.json', '.tsx', '.ts'],
+        extensions: [
+          '.js',
+          '.jsx',
+          '.json',
+          '.tsx',
+          '.ts',
+        ],
       },
       typescript: {
         alwaysTryTypes: true,
       },
     },
-    'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
+    'import/extensions': [
+      '.js',
+      '.mjs',
+      '.jsx',
+      '.ts',
+      '.tsx',
+    ],
     'import/ignore': [
       'node_modules',
       '\\.(coffee|scss|css|less|hbs|svg|json)$',
@@ -31,8 +45,14 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],
-  plugins: ['react', 'jsx-a11y', 'cypress', 'prettier'],
+  ignorePatterns: [
+    '**/src/app',
+    '**/es',
+    '**/dist',
+    '**/docs',
+    '**/*.d.ts',
+  ],
+  plugins: ['react', 'jsx-a11y', 'cypress'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 6,
@@ -63,16 +83,9 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 0,
       },
     },
-    {
-      files: ['src/legacy/**', 'src/examples/**'],
-      rules: {
-        'prettier/prettier': 0,
-        quotes: 0,
-      },
-    },
   ],
   rules: {
-    quotes: ['error', 'single', { allowTemplateLiterals: true }],
+    quotes: 0,
     'no-console': 1,
     'no-debugger': 1,
     'no-var': 1,
@@ -115,43 +128,26 @@ module.exports = {
     'react/no-did-mount-set-state': 1,
     'react/no-did-update-set-state': 1,
     'react/no-direct-mutation-state': 1,
-    'react/no-multi-comp': [1, { ignoreStateless: true }],
+    'react/no-multi-comp': [1, { 'ignoreStateless': true }],
     'react/no-set-state': 0,
     'react/no-unknown-property': 1,
     'react/prefer-es6-class': 1,
     'react/prop-types': 1,
     'react/react-in-jsx-scope': 1,
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': ['error', 'ignorePackages', {
+      js: 'never',
+      mjs: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }],
     'react/self-closing-comp': 1,
     'react/sort-comp': 1,
-    'jsx-a11y/label-has-for': [
-      2,
-      {
-        required: {
-          some: ['nesting', 'id'],
-        },
+    'jsx-a11y/label-has-for': [2, {
+      required: {
+        some: ['nesting', 'id'],
       },
-    ],
+    }],
   },
   globals: {},
 };
-
-// 'prettier/prettier': [
-//   'error',
-//   {
-//     endOfLine: 'auto',
-//   },
-//   {
-//     usePrettierrc: true,
-//   },
-// ],

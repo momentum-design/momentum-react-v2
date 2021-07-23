@@ -3,12 +3,7 @@ const { COMPONENTS_DIR, REPO_ROOT, ESM_DIR } = require('../constants');
 
 module.exports = {
   stories: [
-    path.join(
-      REPO_ROOT,
-      ESM_DIR,
-      COMPONENTS_DIR,
-      '**/*.stories.@(js|jsx|ts|tsx)'
-    ),
+    path.join(REPO_ROOT, ESM_DIR, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
   ],
   addons: [
     '@storybook/addon-links',

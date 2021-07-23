@@ -2,7 +2,7 @@
   display: inline-block;
 
   svg {
-    fill: var(--theme-text-primary-normal);
+    fill: var(--theme-text-primary-normal, white);
   }
 
   svg[data-scale="8"] {

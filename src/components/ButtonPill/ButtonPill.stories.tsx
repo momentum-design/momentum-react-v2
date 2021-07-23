@@ -191,9 +191,9 @@ const Colors = MultiTemplate.bind({});
 Colors.parameters = {
   variants: [
     {},
-    { color: 'join' },
-    { color: 'cancel' },
-    { color: 'message' },
+    { color: "join" },
+    { color: "cancel" },
+    { color: "message" },
   ],
 };
 
@@ -205,9 +205,9 @@ const Outline = MultiTemplate.bind({});
 Outline.parameters = {
   variants: [
     { outline: true },
-    { color: 'join', outline: true },
-    { color: 'cancel', outline: true },
-    { color: 'message', outline: true },
+    { color: "join", outline: true },
+    { color: "cancel", outline: true },
+    { color: "message", outline: true },
   ],
 };
 
