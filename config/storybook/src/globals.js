@@ -1,9 +1,12 @@
-import { DEFAULTS, THEME_NAMES } from '../../../src/components/ThemeProvider/ThemeProvider.constants';
+import {
+  DEFAULTS,
+  THEME_NAMES,
+} from '../../../src/components/ThemeProvider/ThemeProvider.constants';
 
 const globals = {
   theme: {
     name: 'Theme',
-    description: 'Select the component\'s theme',
+    description: "Select the component's theme",
     defaultValue: DEFAULTS.THEME,
     toolbar: {
       icon: 'paintbrush',
