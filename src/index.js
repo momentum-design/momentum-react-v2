@@ -100,6 +100,7 @@ export {
  
  /** V2 Components [TypeScript] */
 export {
+  ButtonDialpad,
   ButtonPill,
   ExampleComponent,
   ThemeProvider,

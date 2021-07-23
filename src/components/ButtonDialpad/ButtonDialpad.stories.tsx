@@ -9,8 +9,8 @@ import {
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
 
-import ButtonPill, { ButtonPillProps, BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
-import Documentation from './ButtonPill.documentation.mdx';
+import ButtonDialPad, { ButtonDialpadProps, BUTTON_DIALPAD_CONSTANTS as CONSTANTS } from './';
+import Documentation from './ButtonDialpad.documentation.mdx';
 
 const DocsPage: FC = () => (
   <>
@@ -24,8 +24,8 @@ const DocsPage: FC = () => (
 );
 
 export default {
-  title: 'Momentum UI/ButtonPill',
-  component: ButtonPill,
+  title: 'Momentum UI/ButtonDialpad',
+  component: ButtonDialPad,
   parameters: {
     expanded: true,
     docs: {
@@ -36,8 +36,8 @@ export default {
 
 const argTypes = {
   children: {
-    defaultValue: 'Example Text',
-    description: 'Provides the child nodes for this element.',
+    defaultValue: '',
+    description: 'Provides the child node for this element.',
     control: { type: 'text' },
     table: {
       type: {
@@ -48,23 +48,9 @@ const argTypes = {
       },
     },
   },
-  color: {
-    defaultValue: undefined,
-    description: 'Modifies the size of this `<ButtonPill />`. Some colors do not include an outline variant.',
-    options: [undefined, ...Object.values(CONSTANTS.COLORS)],
-    control: { type: 'select' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
   disabled: {
     defaultValue: CONSTANTS.DEFAULTS.DISABLED,
-    description: 'Whether to render the `<ButtonPill />` is disabled.',
+    description: 'Whether to render the `<ButtonDialpad />` is disabled.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -76,31 +62,29 @@ const argTypes = {
       },
     },
   },
-  ghost: {
-    defaultValue: CONSTANTS.DEFAULTS.GHOST,
-    description: 'Whether this `<ButtonPill />` is a ghost. This overrides the `color` and `outline` props.',
-    options: [true, false],
-    control: { type: 'boolean' },
+  primaryText: {
+    defaultValue: '1',
+    description: 'Provides the primary text for this `<ButtonDialPad />`.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'boolean',
+        summary: 'string',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.GHOST
+        summary: 'undefined',
       },
     },
   },
-  outline: {
-    defaultValue: CONSTANTS.DEFAULTS.OUTLINE,
-    description: 'Whether to render the outline variant of this `<ButtonPill />`.',
-    options: [true, false],
-    control: { type: 'boolean' },
+  secondaryText: {
+    defaultValue: 'ABC',
+    description: 'Provides the prsecondaryimary text for this `<ButtonDialPad />`.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'boolean',
+        summary: 'string',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.OUTLINE
+        summary: 'undefined',
       },
     },
   },
@@ -159,14 +143,14 @@ const argTypes = {
   },
 };
 
-const Template: Story<ButtonPillProps> = (args: ButtonPillProps) => {
+const Template: Story<ButtonDialpadProps> = (args: ButtonDialpadProps) => {
   const mutatedArgs = { ...args };
   delete mutatedArgs.children;
 
-  return (<ButtonPill {...mutatedArgs}>{args.children}</ButtonPill>);
+  return (<ButtonDialPad {...mutatedArgs}>{args.children}</ButtonDialPad>);
 };
 
-const MultiTemplate: Story<ButtonPillProps> = (args: ButtonPillProps, { parameters }) => {
+const MultiTemplate: Story<ButtonDialpadProps> = (args: ButtonDialpadProps, { parameters }) => {
   const mutatedArgs = { ...args };
   const { children } = mutatedArgs;
   delete mutatedArgs.children;
@@ -175,7 +159,7 @@ const MultiTemplate: Story<ButtonPillProps> = (args: ButtonPillProps, { paramete
 
   const items = variants.map(
     (variant, index: number) => (
-      <ButtonPill key={index} {...variant} {...args}>{children}</ButtonPill>
+      <ButtonDialPad key={index} {...variant} {...args}>{children}</ButtonDialPad>
     )
   );
 
@@ -186,62 +170,57 @@ const Example = Template.bind({});
 
 Example.argTypes = { ...argTypes };
 
-const Colors = MultiTemplate.bind({});
-
-Colors.parameters = {
-  variants: [
-    {},
-    { color: "join" },
-    { color: "cancel" },
-    { color: "message" },
-  ],
-};
-
-Colors.argTypes = { ...argTypes };
-delete Colors.argTypes.color;
-
-const Outline = MultiTemplate.bind({});
-
-Outline.parameters = {
-  variants: [
-    { outline: true },
-    { color: "join", outline: true },
-    { color: "cancel", outline: true },
-    { color: "message", outline: true },
-  ],
-};
-
-Outline.argTypes = { ...argTypes };
-delete Outline.argTypes.color;
-delete Outline.argTypes.outline;
-
-const States = MultiTemplate.bind({});
-
-States.parameters = {
-  variants: [
-    {},
-    { ghost: true },
-    { disabled: true },
-    { ghost: true, disabled: true },
-  ],
-};
-
-States.argTypes = { ...argTypes };
-delete States.argTypes.disabled;
-delete States.argTypes.ghost;
-
 const Sizes = MultiTemplate.bind({});
 
 Sizes.parameters = {
   variants: [
     {},
-    { size: 32 },
-    { size: 28 },
-    { size: 24 },
+    { size: 52 },
   ],
 };
 
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
-export { Example, Colors, Outline, States, Sizes };
+const Common = MultiTemplate.bind({});
+
+const States = MultiTemplate.bind({});
+
+States.parameters = {
+  variants: [
+    {},
+    { disabled: true },
+  ],
+};
+
+States.argTypes = { ...argTypes };
+delete States.argTypes.disabled;
+
+Common.parameters = {
+  variants: [
+    { primaryText: '1' },
+    { primaryText: '2', secondaryText: 'ABC' },
+    { primaryText: '3', secondaryText: 'DEF' },
+    { primaryText: '4', secondaryText: 'GHI' },
+    { primaryText: '5', secondaryText: 'JKL' },
+    { primaryText: '6', secondaryText: 'MNO' },
+    { primaryText: '7', secondaryText: 'PQRS' },
+    { primaryText: '8', secondaryText: 'TUV' },
+    { primaryText: '9', secondaryText: 'WXYZ' },
+    { primaryText: '0' },
+    { primaryText: '*' },
+    { primaryText: '#' },
+  ]
+};
+
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.children;
+delete Common.argTypes.primaryText;
+delete Common.argTypes.secondaryText;
+
+export {
+  Example,
+  Sizes,
+  States,
+  Common,
+};

@@ -3,6 +3,7 @@
   border-color: rgba(0, 0, 0, 0);
   border-style: solid;
   cursor: pointer;
+  font-family: CiscoSansTT;
   margin: 0.5rem;
   outline: none;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -23,7 +24,7 @@
 
   &.md-button-pill-focus-ring {
     outline: none;
-    box-shadow: 0 0 0.25rem 0.125rem var(--theme-outline-focus);
+    box-shadow: 0 0 0 0.125rem white, 0 0 0 0.25rem var(--theme-outline-focus);
   }
 
   &[data-outline=true] {
@@ -183,7 +184,6 @@
     }
 
     &:focus {
-      outline-style: none;
       box-shadow: none;
     }
 
