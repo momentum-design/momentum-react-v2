@@ -52,12 +52,12 @@ export default {
 };
 
 const Template: Story<IconProps> = (args) => (
-  <ThemeProvider>
+  <>
     <Icon {...args} />
     <Icon {...args} weight="light" />
     <Icon {...args} weight="regular" />
     <Icon {...args} weight="bold" />
-  </ThemeProvider>
+  </>
 );
 
 const Example = Template.bind({});

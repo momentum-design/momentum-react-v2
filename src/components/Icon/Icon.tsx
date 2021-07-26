@@ -3,7 +3,7 @@ import './Icon.style.scss';
 import { Props } from './Icon.types';
 import { useDynamicSVGImport } from '../../hooks/useDynamicSVGImport';
 import { DEFAULTS, STYLE } from './Icon.constants';
-
+import classnames from 'classnames';
 const Icon: React.FC<Props> = (props: Props) => {
   const { className, scale, name, weight = DEFAULTS.WEIGHT } = props;
   const { SvgIcon, error } = useDynamicSVGImport(`${name}-${weight}`);
@@ -16,7 +16,7 @@ const Icon: React.FC<Props> = (props: Props) => {
     return (
       <div className={STYLE.wrapper}>
         <SvgIcon
-          className={className}
+          className={classnames(className, { "coloured" : name.indexOf("coloured") > 0})}
           viewBox="0, 0, 32, 32"
           width="100%"
           height="100%"

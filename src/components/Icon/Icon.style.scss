@@ -1,8 +1,16 @@
+svg.coloured {
+  fill: initial;
+
+  path:not([fill])  {
+    fill: var(--theme-text-primary-normal, black);
+  }
+}
+
 .md-icon-wrapper {
   display: inline-block;
 
   svg {
-    fill: var(--theme-text-primary-normal, white);
+    fill: var(--theme-text-primary-normal, black);
   }
 
   svg[data-scale="8"] {
