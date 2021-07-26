@@ -41,11 +41,7 @@ describe('<ThemeProvider />', () => {
     it('should mount children to the component nodes', () => {
       expect.assertions(1);
 
-      const children = [
-        <div key="0" />,
-        <div key="1" />,
-        <div key="2" />,
-      ];
+      const children = [<div key="0" />, <div key="1" />, <div key="2" />];
 
       const component = mount(<ThemeProvider>{children}</ThemeProvider>).childAt(0);
 

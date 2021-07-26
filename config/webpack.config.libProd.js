@@ -9,7 +9,7 @@ baseConfig.devtool = 'source-map';
 
 baseConfig.plugins.push(
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('production')
+    'process.env.NODE_ENV': JSON.stringify('production'),
   }),
   new webpack.LoaderOptionsPlugin({
     minimize: true,
@@ -60,10 +60,7 @@ exports.config = [
   {
     ...baseConfig,
 
-    entry: [
-      'babel-polyfill',
-      path.resolve(repoRoot, 'src/lib/index')
-    ],
+    entry: ['babel-polyfill', path.resolve(repoRoot, 'src/lib/index')],
 
     output: {
       library: 'momentum-ui-react',

@@ -1,19 +1,18 @@
 import globals from './globals';
 import theme from './theme.decorator';
+import fonts from '../fonts.decorator';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
+    expanded: true,
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
     },
   },
-  viewMode: 'docs',
 };
 
 export const globalTypes = { ...globals };
 
-export const decorators = [
-  theme,
-];
+export const decorators = [fonts, theme];

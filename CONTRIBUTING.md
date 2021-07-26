@@ -188,6 +188,7 @@ source:build:cjs # Builds the './src' files into './dist/cjs' as CommonJS.
 source:build:compile # Builds CommonJS and ESModule from './src' to './dist'.
 source:build:esm # Builds the './src' files into './dist/esm' as ESModule.
 source:build:stories # Builds the storybook files into './dist' for production testing.
+source:build:documentation # Builds the storybook mdx files into './dist' for production testing.
 source:test # Runs unit and integration tests within './src'.
 ```
 

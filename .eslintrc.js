@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path'); // eslint-disable-line
 
 module.exports = {
   root: true,
@@ -10,6 +10,9 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.json', '.tsx', '.ts'],
       },
+      typescript: {
+        alwaysTryTypes: true,
+      },
     },
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
     'import/ignore': ['node_modules', '\\.(coffee|scss|css|less|hbs|svg|json)$'],
@@ -19,10 +22,12 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:jsx-a11y/recommended',
+    'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],
   plugins: ['react', 'jsx-a11y', 'cypress', '@typescript-eslint'],
+  ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],
+  plugins: ['react', 'jsx-a11y', 'cypress', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 6,
@@ -53,9 +58,16 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 0,
       },
     },
+    {
+      files: ['src/legacy/**', 'src/examples/**'],
+      rules: {
+        'prettier/prettier': 0,
+        quotes: 0,
+      },
+    }
   ],
   rules: {
-    quotes: 0,
+    quotes: ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
     'no-console': 1,
     'no-debugger': 1,
     'no-var': 1,
@@ -123,6 +135,13 @@ module.exports = {
         required: {
           some: ['nesting', 'id'],
         },
+      },
+    ],
+    'prettier/prettier': [
+      'error',
+      {},
+      {
+        usePrettierrc: true,
       },
     ],
   },
