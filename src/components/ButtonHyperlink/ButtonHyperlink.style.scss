@@ -1,0 +1,31 @@
+.md-button-hyperlink-wrapper {
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0.125rem;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  color: var(--theme-text-accent-normal);
+  cursor: pointer;
+  font-family: CiscoSansTT;
+  margin: 0.5rem;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: var(--theme-text-accent-hover);
+  }
+
+  &:active {
+    color: var(--theme-text-accent-active);
+  }
+
+  &.md-button-hyperlink-focus-ring {
+    outline: none;
+    box-shadow: 0 0 0 0.125rem white, 0 0 0 0.25rem var(--theme-outline-focus);
+  }
+
+  &[data-disabled='true'] {
+    color: var(--theme-text-primary-disabled);
+  }
+}
