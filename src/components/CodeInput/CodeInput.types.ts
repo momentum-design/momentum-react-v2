@@ -1,7 +1,7 @@
 export type Message = {
-  message: string,
-  type: 'error' | 'warning' | 'success'
-}
+  message: string;
+  type: 'error' | 'warning' | 'success';
+};
 
 export interface Props {
   /**

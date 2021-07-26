@@ -1,12 +1,12 @@
-import React, {ReactElement} from 'react';
+import React, { ReactElement } from 'react';
 
 import './InputMessage.style.scss';
 import { Props } from './InputMessage.types';
 
-import {ReactComponent as WarningTriangle} from '@momentum-ui/icons-rebrand/svg/warning-bold.svg';
+import { ReactComponent as WarningTriangle } from '@momentum-ui/icons-rebrand/svg/warning-bold.svg';
 
 const InputMessage = (props: Props): ReactElement => {
-  const { message, level='none' } = props;
+  const { message, level = 'none' } = props;
 
   return (
     <div className="md-input-message-wrapper">
@@ -27,4 +27,3 @@ const InputMessage = (props: Props): ReactElement => {
  */
 
 export default InputMessage;
-

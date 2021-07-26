@@ -10,7 +10,7 @@ module.exports = {
   webpackFinal: (config) => {
     config.module.rules.unshift({
       test: /\.svg$/,
-      use: ["@svgr/webpack"]
+      use: ['@svgr/webpack'],
     });
     config.resolve.alias['@momentum-ui/react'] = path.resolve(REPO_ROOT, SRC_DIR, 'index');
 

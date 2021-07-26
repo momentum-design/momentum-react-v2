@@ -97,8 +97,8 @@ export {
   TopbarRight,
   Tooltip,
 } from './legacy';
- 
- /** V2 Components [TypeScript] */
+
+/** V2 Components [TypeScript] */
 export {
   ButtonDialpad,
   ButtonPill,

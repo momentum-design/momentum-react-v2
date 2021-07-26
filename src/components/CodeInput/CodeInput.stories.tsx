@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Story } from '@storybook/react';
 
 import ThemeProvider, { ThemeNames, THEME_PROVIDER_CONSTANTS } from '../ThemeProvider';
-import CodeInput, {CodeInputProps } from './';
-import {Message} from './CodeInput.types';
+import CodeInput, { CodeInputProps } from './';
+import { Message } from './CodeInput.types';
 
 const messageArrOptions = {
   empty: [],
@@ -11,7 +11,6 @@ const messageArrOptions = {
   success: [{ message: 'Success message', type: 'success' }],
   warning: [{ message: 'Warning message', type: 'warning' }],
 };
-
 
 export default {
   title: 'Momentum UI/CodeInput',
@@ -49,7 +48,7 @@ interface StoryProps extends CodeInputProps {
 }
 
 const Template: Story<StoryProps> = (args) => {
-  const {theme, onCompleteChoice} = args;
+  const { theme, onCompleteChoice } = args;
   const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
   const [isDisabled, setDisabled] = useState(args.disabled);
 
@@ -91,7 +90,7 @@ Story1.args = {
   numDigits: 6,
   messageArr: 'empty',
   disabled: false,
-  onCompleteChoice: 'show error'
+  onCompleteChoice: 'show error',
 };
 
 export { Story1 };

@@ -1,11 +1,11 @@
 import InputMessage from '.';
-import {mount} from 'enzyme';
+import { mount } from 'enzyme';
 import React from 'react';
 
 describe('InputMessage', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      const container = mount(<InputMessage message='some message' level='error' />);
+      const container = mount(<InputMessage message="some message" level="error" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -13,7 +13,7 @@ describe('InputMessage', () => {
 
   describe('attributes', () => {
     it('should render warning triangle for an error', () => {
-      const component = mount(<InputMessage message='some message' level='error' />).childAt(0);
+      const component = mount(<InputMessage message="some message" level="error" />).childAt(0);
       expect(component.find('svg').length).toBe(1);
     });
 
