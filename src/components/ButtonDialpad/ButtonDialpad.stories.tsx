@@ -29,7 +29,7 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage
+      page: DocsPage,
     },
   },
 };
@@ -58,7 +58,7 @@ const argTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.DISABLED
+        summary: CONSTANTS.DEFAULTS.DISABLED,
       },
     },
   },
@@ -98,13 +98,14 @@ const argTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE
+        summary: CONSTANTS.DEFAULTS.SIZE,
       },
     },
   },
   onPress: {
     action: 'onPress',
-    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when the press is released over the target.',
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when the press is released over the target.',
     table: {
       category: 'AriaButtonProps',
       type: {
@@ -117,7 +118,8 @@ const argTypes = {
   },
   autoFocus: {
     action: 'autoFocus',
-    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Whether the element should receive focus on render.',
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Whether the element should receive focus on render.',
     table: {
       category: 'AriaButtonProps',
       type: {
@@ -130,7 +132,8 @@ const argTypes = {
   },
   onKeyDown: {
     action: 'onKeyDown',
-    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when a key is pressed.',
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when a key is pressed.',
     table: {
       category: 'AriaButtonProps',
       type: {
@@ -147,7 +150,7 @@ const Template: Story<ButtonDialpadProps> = (args: ButtonDialpadProps) => {
   const mutatedArgs = { ...args };
   delete mutatedArgs.children;
 
-  return (<ButtonDialPad {...mutatedArgs}>{args.children}</ButtonDialPad>);
+  return <ButtonDialPad {...mutatedArgs}>{args.children}</ButtonDialPad>;
 };
 
 const MultiTemplate: Story<ButtonDialpadProps> = (args: ButtonDialpadProps, { parameters }) => {
@@ -157,13 +160,13 @@ const MultiTemplate: Story<ButtonDialpadProps> = (args: ButtonDialpadProps, { pa
 
   const { variants } = parameters;
 
-  const items = variants.map(
-    (variant, index: number) => (
-      <ButtonDialPad key={index} {...variant} {...args}>{children}</ButtonDialPad>
-    )
-  );
+  const items = variants.map((variant, index: number) => (
+    <ButtonDialPad key={index} {...variant} {...args}>
+      {children}
+    </ButtonDialPad>
+  ));
 
-  return (<>{items}</>);
+  return <>{items}</>;
 };
 
 const Example = Template.bind({});
@@ -173,10 +176,7 @@ Example.argTypes = { ...argTypes };
 const Sizes = MultiTemplate.bind({});
 
 Sizes.parameters = {
-  variants: [
-    {},
-    { size: 52 },
-  ],
+  variants: [{}, { size: 52 }],
 };
 
 Sizes.argTypes = { ...argTypes };
@@ -187,10 +187,7 @@ const Common = MultiTemplate.bind({});
 const States = MultiTemplate.bind({});
 
 States.parameters = {
-  variants: [
-    {},
-    { disabled: true },
-  ],
+  variants: [{}, { disabled: true }],
 };
 
 States.argTypes = { ...argTypes };
@@ -210,7 +207,7 @@ Common.parameters = {
     { primaryText: '0' },
     { primaryText: '*' },
     { primaryText: '#' },
-  ]
+  ],
 };
 
 Common.argTypes = { ...argTypes };
@@ -218,9 +215,4 @@ delete Common.argTypes.children;
 delete Common.argTypes.primaryText;
 delete Common.argTypes.secondaryText;
 
-export {
-  Example,
-  Sizes,
-  States,
-  Common,
-};
+export { Example, Sizes, States, Common };

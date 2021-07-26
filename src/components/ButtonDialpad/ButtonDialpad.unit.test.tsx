@@ -4,7 +4,6 @@ import { ButtonDialpad } from '@momentum-ui/react';
 
 import { DEFAULTS, SIZES, STYLE } from './ButtonDialpad.constants';
 
-
 describe('<ButtonPill />', () => {
   let container;
 
@@ -52,7 +51,11 @@ describe('<ButtonPill />', () => {
     it('should match snapshot with primaryText, secondaryText and children', () => {
       expect.assertions(1);
 
-      container = mount(<ButtonDialpad primaryText="1" secondaryText="ABC">2</ButtonDialpad>);
+      container = mount(
+        <ButtonDialpad primaryText="1" secondaryText="ABC">
+          2
+        </ButtonDialpad>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -82,7 +85,9 @@ describe('<ButtonPill />', () => {
     it('should have its main class', () => {
       expect.assertions(1);
 
-      const element = mount(<ButtonDialpad />).find(ButtonDialpad).getDOMNode();
+      const element = mount(<ButtonDialpad />)
+        .find(ButtonDialpad)
+        .getDOMNode();
 
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
@@ -92,7 +97,9 @@ describe('<ButtonPill />', () => {
 
       const disabled = !DEFAULTS.DISABLED;
 
-      const element = mount(<ButtonDialpad disabled={disabled} />).find(ButtonDialpad).getDOMNode();
+      const element = mount(<ButtonDialpad disabled={disabled} />)
+        .find(ButtonDialpad)
+        .getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
     });
@@ -102,7 +109,9 @@ describe('<ButtonPill />', () => {
 
       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
-      const element = mount(<ButtonDialpad size={size} />).find(ButtonDialpad).getDOMNode();
+      const element = mount(<ButtonDialpad size={size} />)
+        .find(ButtonDialpad)
+        .getDOMNode();
 
       expect(element.getAttribute('data-size')).toBe(`${size}`);
     });
@@ -112,7 +121,9 @@ describe('<ButtonPill />', () => {
 
       const child = '1';
 
-      const element = mount(<ButtonDialpad>{child}</ButtonDialpad>).find(ButtonDialpad).getDOMNode();
+      const element = mount(<ButtonDialpad>{child}</ButtonDialpad>)
+        .find(ButtonDialpad)
+        .getDOMNode();
       const target = element.getElementsByClassName(STYLE.primaryText)[0];
 
       expect(target.innerHTML).toBe(child);
@@ -123,7 +134,9 @@ describe('<ButtonPill />', () => {
 
       const primaryText = '1';
 
-      const element = mount(<ButtonDialpad primaryText={primaryText} />).find(ButtonDialpad).getDOMNode();
+      const element = mount(<ButtonDialpad primaryText={primaryText} />)
+        .find(ButtonDialpad)
+        .getDOMNode();
       const target = element.getElementsByClassName(STYLE.primaryText)[0];
 
       expect(target.innerHTML).toBe(primaryText);
@@ -134,7 +147,9 @@ describe('<ButtonPill />', () => {
 
       const secondaryText = 'ABC';
 
-      const element = mount(<ButtonDialpad secondaryText={secondaryText} />).find(ButtonDialpad).getDOMNode();
+      const element = mount(<ButtonDialpad secondaryText={secondaryText} />)
+        .find(ButtonDialpad)
+        .getDOMNode();
       const target = element.getElementsByClassName(STYLE.secondaryText)[0];
 
       expect(target.innerHTML).toBe(secondaryText);
@@ -146,7 +161,9 @@ describe('<ButtonPill />', () => {
       const primaryText = '1';
       const child = '2';
 
-      const element = mount(<ButtonDialpad primaryText={primaryText}>{child}</ButtonDialpad>).find(ButtonDialpad).getDOMNode();
+      const element = mount(<ButtonDialpad primaryText={primaryText}>{child}</ButtonDialpad>)
+        .find(ButtonDialpad)
+        .getDOMNode();
       const target = element.getElementsByClassName(STYLE.primaryText)[0];
 
       expect(target.innerHTML).toBe(child);

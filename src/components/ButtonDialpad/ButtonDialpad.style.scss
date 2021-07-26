@@ -39,7 +39,7 @@
     box-shadow: 0 0 0 0.125rem white, 0 0 0 0.25rem var(--theme-outline-focus);
   }
 
-  &[data-disabled=true] {
+  &[data-disabled='true'] {
     background-color: var(--button-dialpad-background-disabled);
     color: var(--button-dialpad-text-number);
     cursor: auto;
@@ -47,7 +47,7 @@
     > .md-button-dialpad-primary-text {
       color: var(--button-dialpad-text-number);
     }
-  
+
     > .md-button-dialpad-secondary-text {
       color: var(--button-dialpad-text-characters);
     }
@@ -74,27 +74,27 @@
   flex-shrink: 0;
   justify-content: center;
 
-  &[data-size="64"] {
+  &[data-size='64'] {
     height: 4rem;
     width: 4rem;
 
     > .md-button-dialpad-primary-text {
       font-size: 1.625rem;
     }
-  
+
     > .md-button-dialpad-secondary-text {
       font-size: 0.75rem;
     }
   }
 
-  &[data-size="52"] {
+  &[data-size='52'] {
     height: 3.25rem;
     width: 3.25rem;
 
     > .md-button-dialpad-primary-text {
       font-size: 1.25rem;
     }
-  
+
     > .md-button-dialpad-secondary-text {
       font-size: 0.75rem;
     }

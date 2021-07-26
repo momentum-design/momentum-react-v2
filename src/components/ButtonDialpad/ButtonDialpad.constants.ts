@@ -17,9 +17,4 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
-export {
-  CLASS_PREFIX,
-  DEFAULTS,
-  SIZES,
-  STYLE,
-};
+export { CLASS_PREFIX, DEFAULTS, SIZES, STYLE };

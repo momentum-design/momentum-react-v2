@@ -22,23 +22,25 @@ const runWebpack = () => {
     const jsonStats = stats.toJson();
 
     if (jsonStats.hasErrors) {
-      return jsonStats.errors.map(error => console.log(chalkError(error)));
+      return jsonStats.errors.map((error) => console.log(chalkError(error)));
     }
 
     if (jsonStats.hasWarnings) {
       console.log(chalkWarning('Webpack generated the following warnings: '));
-      jsonStats.warnings.map(warning => console.log(chalkWarning(warning)));
+      jsonStats.warnings.map((warning) => console.log(chalkWarning(warning)));
     }
 
     const json = JSON.stringify(jsonStats);
-    fs.writeFile('tools/website/webpack-stats.json', json, 'utf8', err => {
+    fs.writeFile('tools/website/webpack-stats.json', json, 'utf8', (err) => {
       if (err) return console.error(err);
     });
 
     console.log(`Webpack stats: ${stats}`);
 
     // if we got this far, the build succeeded.
-    console.log(chalkSuccess("Your app is compiled in production mode in /dist. It's ready to roll!"));
+    console.log(
+      chalkSuccess("Your app is compiled in production mode in /dist. It's ready to roll!")
+    );
 
     return 'success';
   });
