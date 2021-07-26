@@ -1,0 +1,102 @@
+.md-button-dialpad-wrapper {
+  border-width: 0.125rem;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  cursor: pointer;
+  font-family: CiscoSansTT;
+  margin: 0.5rem;
+  outline: none;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  background-color: var(--button-dialpad-background);
+
+  &:hover {
+    background-color: var(--button-dialpad-background-hovered);
+  }
+
+  &:active {
+    background-color: var(--button-dialpad-background-pressed);
+  }
+
+  > * {
+    align-items: center;
+    display: flex;
+    height: 1em;
+    justify-content: center;
+  }
+
+  > .md-button-dialpad-primary-text {
+    color: var(--button-dialpad-special-text-number);
+  }
+
+  > .md-button-dialpad-secondary-text {
+    color: var(--button-dialpad-special-text-characters);
+    margin-top: 0.2em;
+  }
+
+  &.md-button-dialpad-focus-ring {
+    outline: none;
+    box-shadow: 0 0 0 0.125rem white, 0 0 0 0.25rem var(--theme-outline-focus);
+  }
+
+  &[data-disabled='true'] {
+    background-color: var(--button-dialpad-background-disabled);
+    color: var(--button-dialpad-text-number);
+    cursor: auto;
+
+    > .md-button-dialpad-primary-text {
+      color: var(--button-dialpad-text-number);
+    }
+
+    > .md-button-dialpad-secondary-text {
+      color: var(--button-dialpad-text-characters);
+    }
+
+    &:hover {
+      background-color: var(--button-dialpad-background-disabled);
+    }
+
+    &:active {
+      background-color: var(--button-dialpad-background-disabled);
+    }
+
+    &.md-button-dialpad-focus-ring {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  /* Sizing and spacing. */
+  align-items: center;
+  border-radius: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+
+  &[data-size='64'] {
+    height: 4rem;
+    width: 4rem;
+
+    > .md-button-dialpad-primary-text {
+      font-size: 1.625rem;
+    }
+
+    > .md-button-dialpad-secondary-text {
+      font-size: 0.75rem;
+    }
+  }
+
+  &[data-size='52'] {
+    height: 3.25rem;
+    width: 3.25rem;
+
+    > .md-button-dialpad-primary-text {
+      font-size: 1.25rem;
+    }
+
+    > .md-button-dialpad-secondary-text {
+      font-size: 0.75rem;
+    }
+  }
+}

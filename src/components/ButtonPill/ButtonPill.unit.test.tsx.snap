@@ -230,7 +230,9 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
-<ButtonPill>
+<ButtonPill
+  size={40}
+>
   <FocusRing
     focusRingClass="md-button-pill-focus-ring"
   >

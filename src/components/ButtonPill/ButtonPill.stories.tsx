@@ -10,7 +10,7 @@ import {
 } from '@storybook/addon-docs';
 
 import ButtonPill, { ButtonPillProps, BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
-import Documentation from './Button.documentation.mdx';
+import Documentation from './ButtonPill.documentation.mdx';
 
 const DocsPage: FC = () => (
   <>
@@ -29,7 +29,7 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage
+      page: DocsPage,
     },
   },
 };
@@ -50,7 +50,8 @@ const argTypes = {
   },
   color: {
     defaultValue: undefined,
-    description: 'Modifies the size of this `<ButtonPill />`. Some colors do not include an outline variant.',
+    description:
+      'Modifies the size of this `<ButtonPill />`. Some colors do not include an outline variant.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -72,13 +73,14 @@ const argTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.DISABLED
+        summary: CONSTANTS.DEFAULTS.DISABLED,
       },
     },
   },
   ghost: {
     defaultValue: CONSTANTS.DEFAULTS.GHOST,
-    description: 'Whether this `<ButtonPill />` is a ghost. This overrides the `color` and `outline` props.',
+    description:
+      'Whether this `<ButtonPill />` is a ghost. This overrides the `color` and `outline` props.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -86,7 +88,7 @@ const argTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.GHOST
+        summary: CONSTANTS.DEFAULTS.GHOST,
       },
     },
   },
@@ -100,27 +102,28 @@ const argTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.OUTLINE
+        summary: CONSTANTS.DEFAULTS.OUTLINE,
       },
     },
   },
   size: {
     defaultValue: CONSTANTS.DEFAULTS.SIZE,
     description: 'Modifies the size of this `<ButtonPill />`.',
-    options: [40, 32, 28, 24],
+    options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     control: { type: 'select' },
     table: {
       type: {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE
+        summary: CONSTANTS.DEFAULTS.SIZE,
       },
     },
   },
   onPress: {
     action: 'onPress',
-    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when the press is released over the target.',
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when the press is released over the target.',
     table: {
       category: 'AriaButtonProps',
       type: {
@@ -133,7 +136,8 @@ const argTypes = {
   },
   autoFocus: {
     action: 'autoFocus',
-    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Whether the element should receive focus on render.',
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Whether the element should receive focus on render.',
     table: {
       category: 'AriaButtonProps',
       type: {
@@ -146,7 +150,8 @@ const argTypes = {
   },
   onKeyDown: {
     action: 'onKeyDown',
-    description: 'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when a key is pressed.',
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when a key is pressed.',
     table: {
       category: 'AriaButtonProps',
       type: {
@@ -163,7 +168,7 @@ const Template: Story<ButtonPillProps> = (args: ButtonPillProps) => {
   const mutatedArgs = { ...args };
   delete mutatedArgs.children;
 
-  return (<ButtonPill {...mutatedArgs}>{args.children}</ButtonPill>);
+  return <ButtonPill {...mutatedArgs}>{args.children}</ButtonPill>;
 };
 
 const MultiTemplate: Story<ButtonPillProps> = (args: ButtonPillProps, { parameters }) => {
@@ -173,13 +178,13 @@ const MultiTemplate: Story<ButtonPillProps> = (args: ButtonPillProps, { paramete
 
   const { variants } = parameters;
 
-  const items = variants.map(
-    (variant, index: number) => (
-      <ButtonPill key={index} {...variant} {...args}>{children}</ButtonPill>
-    )
-  );
+  const items = variants.map((variant, index: number) => (
+    <ButtonPill key={index} {...variant} {...args}>
+      {children}
+    </ButtonPill>
+  ));
 
-  return (<>{items}</>);
+  return <>{items}</>;
 };
 
 const Example = Template.bind({});
@@ -189,12 +194,7 @@ Example.argTypes = { ...argTypes };
 const Colors = MultiTemplate.bind({});
 
 Colors.parameters = {
-  variants: [
-    {},
-    { color: "join" },
-    { color: "cancel" },
-    { color: "message" },
-  ],
+  variants: [{}, { color: 'join' }, { color: 'cancel' }, { color: 'message' }],
 };
 
 Colors.argTypes = { ...argTypes };
@@ -205,9 +205,9 @@ const Outline = MultiTemplate.bind({});
 Outline.parameters = {
   variants: [
     { outline: true },
-    { color: "join", outline: true },
-    { color: "cancel", outline: true },
-    { color: "message", outline: true },
+    { color: 'join', outline: true },
+    { color: 'cancel', outline: true },
+    { color: 'message', outline: true },
   ],
 };
 
@@ -218,12 +218,7 @@ delete Outline.argTypes.outline;
 const States = MultiTemplate.bind({});
 
 States.parameters = {
-  variants: [
-    {},
-    { ghost: true },
-    { disabled: true },
-    { ghost: true, disabled: true },
-  ],
+  variants: [{}, { ghost: true }, { disabled: true }, { ghost: true, disabled: true }],
 };
 
 States.argTypes = { ...argTypes };
@@ -233,12 +228,7 @@ delete States.argTypes.ghost;
 const Sizes = MultiTemplate.bind({});
 
 Sizes.parameters = {
-  variants: [
-    {},
-    { size: 32 },
-    { size: 28 },
-    { size: 24 },
-  ],
+  variants: [{}, { size: 32 }, { size: 28 }, { size: 24 }],
 };
 
 Sizes.argTypes = { ...argTypes };

@@ -8,7 +8,7 @@ const { repoRoot } = require('./constants');
 
 baseConfig.plugins.push(
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('production')
+    'process.env.NODE_ENV': JSON.stringify('production'),
   }),
   new MiniCssExtractPlugin('[name].[contenthash].css'),
   new HtmlWebpackPlugin({
@@ -35,11 +35,7 @@ baseConfig.plugins.push(
 
 baseConfig.module.rules.push({
   test: /(\.css|\.scss|\.sass)$/,
-  use: [
-    { loader: MiniCssExtractPlugin.loader },
-    'css-loader?sourceMap',
-    'sass-loader?sourceMap'
-  ]
+  use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader?sourceMap', 'sass-loader?sourceMap'],
 });
 
 exports.config = [
@@ -48,10 +44,7 @@ exports.config = [
 
     target: 'web',
 
-    entry: [
-      'babel-polyfill',
-      path.resolve(repoRoot, 'src/app/index')
-    ],
+    entry: ['babel-polyfill', path.resolve(repoRoot, 'src/app/index')],
 
     output: {
       path: path.resolve(repoRoot, 'dist'),
