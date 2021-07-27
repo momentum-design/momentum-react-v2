@@ -25,7 +25,7 @@ export interface Props extends AriaButtonProps {
   /**
    * Size index of this ButtonPill.
    */
-  size?: 40 | 32 | 28 | 24;
+  size?: number;
 
   /**
    * Color profile to use with this ButtonPill.

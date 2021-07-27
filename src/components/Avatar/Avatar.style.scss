@@ -1,0 +1,128 @@
+.md-avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vh;
+
+  span {
+    color: var(--avatar-color-avatar-text);
+  }
+
+  &[data-size="24"] {
+    span {
+      font-size: 0.75rem;
+    }
+
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  img {
+    border-radius: 100vh;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Background Color
+  &[data-color=default] {
+    background-color: var(--avatar-color-avatar-background-default);
+  }
+
+  &[data-color=gold] {
+    background-color: var(--avatar-color-avatar-background-gold);
+  }
+
+  &[data-color=orange] {
+    background-color: var(--avatar-color-avatar-background-orange);
+  }
+
+  &[data-color=lime] {
+    background-color: var(--avatar-color-avatar-background-lime);
+  }
+
+  &[data-color=mint] {
+    background-color: var(--avatar-color-avatar-background-mint);
+  }
+
+  &[data-color=cyan] {
+    background-color: var(--avatar-color-avatar-background-cyan);
+  }
+
+  &[data-color=cobalt] {
+    background-color: var(--avatar-color-avatar-background-cobalt);
+  }
+
+  &[data-color=slate] {
+    background-color: var(--avatar-color-avatar-background-slate);
+  }
+
+  &[data-color=violet] {
+    background-color: var(--avatar-color-avatar-background-violet);
+  }
+
+  &[data-color=purple] {
+    background-color: var(--avatar-color-avatar-background-purple);
+  }
+
+  &[data-color=pink] {
+    background-color: var(--avatar-color-avatar-background-pink);
+  }
+
+  // Sizes
+  &[data-size="24"] {
+    span {
+      font-size: 0.75rem;
+    }
+
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &[data-size="32"] {
+    span {
+      font-size: 0.875rem;
+    }
+
+    width: 2em;
+    height: 2em;
+  }
+
+  &[data-size="48"] {
+    span {
+      font-size: 0.75rem;
+    }
+
+    width: 3em;
+    height: 3em;
+  }
+
+  &[data-size="72"] {
+    span {
+      font-size: 0.75rem;
+    }
+
+    width: 4.5em;
+    height: 4.5em;
+  }
+
+  &[data-size="88"] {
+    span {
+      font-size: 0.75rem;
+    }
+
+    width: 5.5em;
+    height: 5.5em;
+  }
+
+  &[data-size="124"] {
+    span {
+      font-size: 0.75rem;
+    }
+
+    width: 7.75em;
+    height: 7.75em;
+  }
+}
+
+
+
