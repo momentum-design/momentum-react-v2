@@ -14,6 +14,7 @@
   "engines": {
     "node": "14.x.x"
   },
+  "private": true,
   "keywords": [
     "Cisco",
     "Cisco Spark",
@@ -81,7 +82,8 @@
     "styles:build:settings": "node ./tools/generateSettingsScss.js",
     "styles:build:tokens": "node ./tools/generateScssFromTokens.js",
     "cypress:verify": "cypress verify",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "prepare": "husky install"
   },
   "watch": {
     "build:lib": "src/lib/**/*.js"
@@ -179,7 +181,7 @@
     "file-loader": "^1.1.6",
     "fs-extra": "^5.0.0",
     "html-webpack-plugin": "3.2.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.1",
     "jest": "^26.0.0",
     "jest-cli": "^26.0.0",
     "mini-css-extract-plugin": "0.7.0",
@@ -206,6 +208,7 @@
     "sass-loader": "6.0.6",
     "serve": "^12.0.0",
     "style-loader": "^0.19.1",
+    "stylelint": "^13.13.1",
     "ts-jest": "^26.0.0",
     "url-loader": "^0.6.2",
     "wait-on": "^3.2.0",
@@ -220,5 +223,10 @@
   },
   "publishConfig": {
     "registry": "https://engci-maven-master.cisco.com/artifactory/api/npm/webex-web-app-npm/"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
