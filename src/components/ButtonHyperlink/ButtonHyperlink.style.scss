@@ -1,0 +1,30 @@
+.md-button-hyperlink-wrapper {
+  background-color: rgba(0, 0, 0, 0);
+  border: var(--border-clear);
+  color: var(--theme-text-accent-normal);
+  cursor: pointer;
+  font-family: var(--font-default);
+  margin: 0.5rem;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: var(--theme-text-accent-hover);
+  }
+
+  &:active {
+    color: var(--theme-text-accent-active);
+  }
+
+  &.md-button-hyperlink-focus-ring {
+    outline: var(--focus-ring-outline);
+    box-shadow: var(--focus-ring-box-shadow);
+  }
+
+  &[data-disabled='true'] {
+    color: var(--theme-text-primary-disabled);
+    cursor: auto;
+  }
+}

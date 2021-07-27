@@ -101,8 +101,9 @@ export {
 /** V2 Components [TypeScript] */
 export {
   ButtonDialpad,
+  ButtonHyperlink,
   ButtonPill,
   ExampleComponent,
-  ThemeProvider,
   Icon as IconNext,
+  ThemeProvider,
 } from './components';
