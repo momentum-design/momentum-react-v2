@@ -35,14 +35,9 @@ describe('Icon', () => {
     const name = 'bad_icon';
     const onCompleteMock = jest.fn();
     const onErrorMock = jest.fn();
-    const expectedError = new TypeError(
-      'Cannot read property \'ReactComponent\' of undefined'
-    );
+    const expectedError = new TypeError("Cannot read property 'ReactComponent' of undefined");
 
-    jest.setMock(
-      '@momentum-ui/icons-rebrand/svg/bad_icon-regular.svg',
-      undefined
-    );
+    jest.setMock('@momentum-ui/icons-rebrand/svg/bad_icon-regular.svg', undefined);
 
     const hook = renderHook(() =>
       useDynamicSVGImport(name, {
