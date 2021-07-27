@@ -13,9 +13,7 @@ export default {
   },
 };
 
-const Template: Story<Props> = (args) => (
-  <ExampleComponent {...args} />
-);
+const Template: Story<Props> = (args) => <ExampleComponent {...args} />;
 
 const Demo = Template.bind({});
 
@@ -23,6 +21,4 @@ Demo.args = {
   param: 'Demonstration Text',
 };
 
-export {
-  Demo,
-};
+export { Demo };

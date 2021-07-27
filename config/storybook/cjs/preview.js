@@ -1,9 +1,9 @@
 import globals from './globals';
 import theme from './theme.decorator';
-import styles from '../styles.decorator';
+import fonts from '../fonts.decorator';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     expanded: true,
     matchers: {
@@ -15,7 +15,4 @@ export const parameters = {
 
 export const globalTypes = { ...globals };
 
-export const decorators = [
-  styles,
-  theme,
-];
+export const decorators = [fonts, theme];

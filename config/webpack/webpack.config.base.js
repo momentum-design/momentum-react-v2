@@ -8,5 +8,5 @@ const baseConfig = {
 };
 
 module.exports = {
-  baseConfig
+  baseConfig,
 };

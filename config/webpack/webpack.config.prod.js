@@ -8,7 +8,7 @@ const { repoRoot } = require('./constants');
 
 baseConfig.plugins.push(
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('production')
+    'process.env.NODE_ENV': JSON.stringify('production'),
   }),
   new MiniCssExtractPlugin('[name].[contenthash].css'),
   new HtmlWebpackPlugin({
@@ -48,53 +48,46 @@ exports.config = [
 
     target: 'web',
 
-    entry: [
-      'babel-polyfill',
-      path.resolve(repoRoot, 'src/examples/index')
-    ],
+    entry: ['babel-polyfill', path.resolve(repoRoot, 'src/examples/index')],
 
-
-  module: {
-    rules: [
-      {
-        test: /(\.css|\.scss|\.sass)$/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          'css-loader?sourceMap',
-          'sass-loader?sourceMap'
-        ]
-      },
-      {
-        test: /\.(js)?$/,
-        include: [
-          path.resolve(repoRoot, 'src'),
-          path.resolve(repoRoot, 'node_modules/@momentum-ui/icons/data'),
-        ],
-        use: ['babel-loader'],
-      },
-      {
-        test: /\.eot(\?v=\d+.\d+.\d+)?$/,
-        loader: 'url-loader?name=[name].[ext]',
-      },
-      {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader:
-          'url-loader?limit=10000&mimetype=application/font-woff&name=[name].[ext]',
-      },
-      {
-        test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
-        loader:
-          'url-loader?limit=10000&mimetype=application/octet-stream&name=[name].[ext]',
-      },
-      {
-        test: /\.svg(\?v=\d+.\d+.\d+)?$/,
-        loader:
-          'url-loader?limit=10000&mimetype=image/svg+xml&name=[name].[ext]',
-      },
-      { test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=[name].[ext]' },
-      { test: /\.ico$/, loader: 'file-loader?name=[name].[ext]' },
-    ],
-  },
+    module: {
+      rules: [
+        {
+          test: /(\.css|\.scss|\.sass)$/,
+          use: [
+            { loader: MiniCssExtractPlugin.loader },
+            'css-loader?sourceMap',
+            'sass-loader?sourceMap',
+          ],
+        },
+        {
+          test: /\.(js)?$/,
+          include: [
+            path.resolve(repoRoot, 'src'),
+            path.resolve(repoRoot, 'node_modules/@momentum-ui/icons/data'),
+          ],
+          use: ['babel-loader'],
+        },
+        {
+          test: /\.eot(\?v=\d+.\d+.\d+)?$/,
+          loader: 'url-loader?name=[name].[ext]',
+        },
+        {
+          test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=[name].[ext]',
+        },
+        {
+          test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
+          loader: 'url-loader?limit=10000&mimetype=application/octet-stream&name=[name].[ext]',
+        },
+        {
+          test: /\.svg(\?v=\d+.\d+.\d+)?$/,
+          loader: 'url-loader?limit=10000&mimetype=image/svg+xml&name=[name].[ext]',
+        },
+        { test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=[name].[ext]' },
+        { test: /\.ico$/, loader: 'file-loader?name=[name].[ext]' },
+      ],
+    },
 
     output: {
       path: path.resolve(repoRoot, './docs/examples'),

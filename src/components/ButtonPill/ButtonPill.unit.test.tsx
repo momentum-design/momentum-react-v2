@@ -4,7 +4,6 @@ import { ButtonPill } from '@momentum-ui/react';
 
 import { COLORS, DEFAULTS, SIZES, STYLE } from './ButtonPill.constants';
 
-
 describe('<ButtonPill />', () => {
   let container;
 
@@ -30,7 +29,7 @@ describe('<ButtonPill />', () => {
     it('should match snapshot with size', () => {
       expect.assertions(1);
 
-      const size = COLORS[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
+      const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
       container = mount(<ButtonPill size={size}>Example Text</ButtonPill>);
 
@@ -63,7 +62,11 @@ describe('<ButtonPill />', () => {
       const ghost = !DEFAULTS.GHOST;
       const disabled = !DEFAULTS.DISABLED;
 
-      container = mount(<ButtonPill ghost={ghost} disabled={disabled}>Example Text</ButtonPill>);
+      container = mount(
+        <ButtonPill ghost={ghost} disabled={disabled}>
+          Example Text
+        </ButtonPill>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -83,7 +86,9 @@ describe('<ButtonPill />', () => {
     it('should have its main class', () => {
       expect.assertions(1);
 
-      const element = mount(<ButtonPill />).find(ButtonPill).getDOMNode();
+      const element = mount(<ButtonPill />)
+        .find(ButtonPill)
+        .getDOMNode();
 
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
@@ -93,7 +98,9 @@ describe('<ButtonPill />', () => {
 
       const disabled = !DEFAULTS.DISABLED;
 
-      const element = mount(<ButtonPill disabled={disabled} />).find(ButtonPill).getDOMNode();
+      const element = mount(<ButtonPill disabled={disabled} />)
+        .find(ButtonPill)
+        .getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
     });
@@ -103,7 +110,9 @@ describe('<ButtonPill />', () => {
 
       const ghost = !DEFAULTS.GHOST;
 
-      const element = mount(<ButtonPill ghost={ghost} />).find(ButtonPill).getDOMNode();
+      const element = mount(<ButtonPill ghost={ghost} />)
+        .find(ButtonPill)
+        .getDOMNode();
 
       expect(element.getAttribute('data-ghost')).toBe(`${ghost}`);
     });
@@ -113,7 +122,9 @@ describe('<ButtonPill />', () => {
 
       const outline = !DEFAULTS.OUTLINE;
 
-      const element = mount(<ButtonPill outline={outline} />).find(ButtonPill).getDOMNode();
+      const element = mount(<ButtonPill outline={outline} />)
+        .find(ButtonPill)
+        .getDOMNode();
 
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
     });
@@ -123,7 +134,9 @@ describe('<ButtonPill />', () => {
 
       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
-      const element = mount(<ButtonPill size={size} />).find(ButtonPill).getDOMNode();
+      const element = mount(<ButtonPill size={size} />)
+        .find(ButtonPill)
+        .getDOMNode();
 
       expect(element.getAttribute('data-size')).toBe(`${size}`);
     });
@@ -133,7 +146,9 @@ describe('<ButtonPill />', () => {
 
       const color = COLORS[Object.keys(COLORS)[Object.keys(COLORS).length - 1]];
 
-      const element = mount(<ButtonPill color={color} />).find(ButtonPill).getDOMNode();
+      const element = mount(<ButtonPill color={color} />)
+        .find(ButtonPill)
+        .getDOMNode();
 
       expect(element.getAttribute('data-color')).toBe(`${color}`);
     });

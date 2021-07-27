@@ -6,11 +6,14 @@ const globby = require('globby');
 
 const renameAsync = util.promisify(fs.rename);
 
-module.exports = async function renameMany (data, userConfig, plop) {
+module.exports = async function renameMany(data, userConfig, plop) {
   // shallow-merge default config and input config
-  const cfg = Object.assign({
-    verbose: true
-  }, userConfig);
+  const cfg = Object.assign(
+    {
+      verbose: true,
+    },
+    userConfig
+  );
 
   if (typeof cfg.renamer !== 'function') {
     throw new Error('Invalid "renamer" argument - must be a function');
@@ -22,10 +25,10 @@ module.exports = async function renameMany (data, userConfig, plop) {
 
   cfg.templateFiles = []
     .concat(cfg.templateFiles) // Ensure `cfg.templateFiles` is an array, even if a string is passed.
-    .map(file => plop.renderString(file, data)); // render the paths as hbs templates
+    .map((file) => plop.renderString(file, data)); // render the paths as hbs templates
 
   const templateFiles = globby.sync(cfg.templateFiles, {
-    nobrace: true
+    nobrace: true,
   });
 
   const filesRenamed = [];

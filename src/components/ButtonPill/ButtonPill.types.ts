@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import { PressEvents } from '@react-types/shared';
+import { AriaButtonProps } from '@react-types/button';
 
-export interface Props extends PressEvents {
+export interface Props extends AriaButtonProps {
   /**
    * Child components of this ButtonPill.
    */
