@@ -1,11 +1,9 @@
 .md-button-hyperlink-wrapper {
   background-color: rgba(0, 0, 0, 0);
-  border-width: 0.125rem;
-  border-color: rgba(0, 0, 0, 0);
-  border-style: solid;
+  border: var(--border-clear);
   color: var(--theme-text-accent-normal);
   cursor: pointer;
-  font-family: CiscoSansTT;
+  font-family: var(--font-default);
   margin: 0.5rem;
   outline: none;
   padding: 0;
@@ -21,11 +19,12 @@
   }
 
   &.md-button-hyperlink-focus-ring {
-    outline: none;
-    box-shadow: 0 0 0 0.125rem white, 0 0 0 0.25rem var(--theme-outline-focus);
+    outline: var(--focus-ring-outline);
+    box-shadow: var(--focus-ring-box-shadow);
   }
 
   &[data-disabled='true'] {
     color: var(--theme-text-primary-disabled);
+    cursor: auto;
   }
 }
