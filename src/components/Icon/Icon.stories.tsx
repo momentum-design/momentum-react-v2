@@ -163,8 +163,8 @@ Common.args = {
   name: 'accessories',
 };
 
-const cartesian = (a, mapping: (...x) => any) =>
-  a.reduce((a, b) => a.flatMap((d) => b.map((c) => mapping(d, c))));
+const cartesian = (a, mapping: (...x) => any) => // eslint-disable-line
+  a.reduce((a, b) => a.flatMap((d) => b.map((c) => mapping(d, c)))); // eslint-disable-line
 
 Common.parameters = {
   variants: [
