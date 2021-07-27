@@ -163,13 +163,13 @@ Common.args = {
   name: 'accessories',
 };
 
-const cartesian = (a, mapping: (...x) => any) => // eslint-disable-line
-  a.reduce((a, b) => a.flatMap((d) => b.map((c) => mapping(d, c)))); // eslint-disable-line
+const cartesian = <T extends (string | number)[][]>(...arr: T) =>
+  arr.reduce((a, b) => a.flatMap((c) => b.map((d) => [...c, d])), [[]]);
 
 Common.parameters = {
   variants: [
-    ...cartesian([Object.values(WEIGHTS), Object.values(SIZES)], (weight, scale) => {
-      return { weight, scale };
+    ...cartesian(Object.values(WEIGHTS), Object.values(SIZES)).flatMap((variant) => {
+      return { weight: variant[0], scale: variant[1] };
     }),
   ],
 };

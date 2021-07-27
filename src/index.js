@@ -104,5 +104,5 @@ export {
   ButtonPill,
   ExampleComponent,
   ThemeProvider,
-  Icon as IconV2,
+  Icon as IconNext,
 } from './components';
