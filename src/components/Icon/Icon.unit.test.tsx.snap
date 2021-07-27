@@ -8,7 +8,29 @@ exports[`Icon snapshot should match snapshot 1`] = `
     className="md-icon-wrapper"
   >
     <svg
+      className=""
+      data-autoscale={false}
       data-scale={32}
+      height="100%"
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
+exports[`Icon snapshot should match snapshot with autoScale 1`] = `
+<Icon
+  autoScale={true}
+  name="accessibility"
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      className=""
+      data-autoscale={true}
+      data-scale={false}
       height="100%"
       viewBox="0, 0, 32, 32"
       width="100%"
@@ -38,6 +60,8 @@ exports[`Icon snapshot should match snapshot with scale 1`] = `
     className="md-icon-wrapper"
   >
     <svg
+      className=""
+      data-autoscale={false}
       data-scale={16}
       height="100%"
       viewBox="0, 0, 32, 32"
@@ -56,6 +80,8 @@ exports[`Icon snapshot should match snapshot with weight 1`] = `
     className="md-icon-wrapper"
   >
     <svg
+      className=""
+      data-autoscale={false}
       data-scale={32}
       height="100%"
       viewBox="0, 0, 32, 32"

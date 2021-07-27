@@ -1,4 +1,4 @@
-svg.coloured {
+svg.md-icon-coloured {
   fill: initial;
 
   path:not([fill])  {
@@ -11,6 +11,11 @@ svg.coloured {
 
   svg {
     fill: var(--theme-text-primary-normal, black);
+  }
+
+  svg[data-autoscale=true] {
+    width: 1em;
+    height: 1em;
   }
 
   svg[data-scale="8"] {

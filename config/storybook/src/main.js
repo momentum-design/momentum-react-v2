@@ -8,11 +8,7 @@ module.exports = {
     reactDocgen: 'none',
   },
   webpackFinal: (config) => {
-    config.resolve.alias['@momentum-ui/react'] = path.resolve(
-      REPO_ROOT,
-      SRC_DIR,
-      'index'
-    );
+    config.resolve.alias['@momentum-ui/react'] = path.resolve(REPO_ROOT, SRC_DIR, 'index');
 
     // Add SVGR Loader
     // ========================================================
