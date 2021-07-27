@@ -1,7 +1,15 @@
-.md-theme-provider {
+.md-theme-provider-wrapper {
   border: 0;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+/* Global variables not available as tokens. */
+.md-theme-provider-globals {
+  --border-clear: 0rem solid rgba(0, 0, 0, 0);
+  --focus-ring-box-shadow: 0 0 0 0.0625rem var(--theme-background-solid-primary-normal), 0 0 0 0.125rem var(--theme-outline-focus);
+  --focus-ring-outline: none;
+  --font-default: CiscoSansTT;
 }
