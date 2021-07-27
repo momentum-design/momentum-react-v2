@@ -17,7 +17,7 @@
     "sourceMap": true,
     "target": "ES6",
     "lib": [
-      "ESNext"
+      "ESNext", "DOM"
     ]
   },
   "include": [
