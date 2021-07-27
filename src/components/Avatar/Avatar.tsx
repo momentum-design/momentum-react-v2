@@ -5,13 +5,12 @@ import './Avatar.style.scss';
 import { PresenceType, Props } from './Avatar.types';
 import { STYLE, DEFAULTS } from './Avatar.constants';
 
-const Avatar = (props: Props) => {
+const Avatar: React.FC<Props> = (props: Props) => {
   const { className, src, initials, size, color, presence } = props;
 
   const renderPresence = (presence: PresenceType) => {
     if (presence === PresenceType.Default) return;
     let icon = 'i';
-    const color = '';
 
     switch (presence) {
       case PresenceType.Active:
@@ -51,7 +50,7 @@ const Avatar = (props: Props) => {
       data-size={size || DEFAULTS.SIZE}
       data-color={color || DEFAULTS.COLOR}
     >
-      {src && <img src={src} />}
+      {src && <img src={src} alt="Profile" />}
       {initials && <span>{initials}</span>}
       {presence && renderPresence(presence)}
     </div>
