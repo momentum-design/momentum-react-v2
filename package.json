@@ -93,7 +93,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-ui/design-tokens": "^0.0.3",
+    "@momentum-ui/design-tokens": "0.0.9",
     "@momentum-ui/icons": "^8.18.0",
     "@momentum-ui/icons-rebrand": "^1.2.0",
     "@momentum-ui/tokens": "^1.7.1",
@@ -112,11 +112,13 @@
     "node-sass": "^5.0.0",
     "node-sass-tilde-importer": "^1.0.2",
     "object-assign": "4.1.1",
+    "react-aria": "^3.7.1",
     "react-aria-modal": "^2.11.1",
     "react-focus-lock": "^1.19.1",
     "react-uid": "^2.2.0",
+    "react-verification-input": "^2.0.1",
     "ts-loader": "^8.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -151,7 +153,6 @@
     "@typescript-eslint/parser": "^4.28.3",
     "autoprefixer": "^7.2.4",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-add-module-exports": "^0.2.1",
