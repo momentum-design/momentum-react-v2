@@ -36,6 +36,7 @@
           content: '|';
           animation: 1s blink step-end infinite;
         }
+
         border-color: var(--codeinput-border-focused);
         color: var(--codeinput-text-active);
         background-color: var(--codeinput-background-active);
@@ -47,6 +48,7 @@
     from, to {
       color: transparent;
     }
+
     50% {
       color: var(--codeinput-text-active);
     }
@@ -64,6 +66,7 @@
           color: var(--codeinput-error-text-hovered);
           background-color: var(--codeinput-error-background-hovered);
         }
+
         &:active {
           border-color: var(--codeinput-error-border-active);
           color: var(--codeinput-error-text-active);
