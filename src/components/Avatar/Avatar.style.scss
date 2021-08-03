@@ -19,40 +19,6 @@
   right: -0.2rem;
 }
 
-.md-avatar-in-meeting {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 100vh;
-  background: linear-gradient( 45deg,
-    var(--avatar-personas-speaker-static-inner-ring-0),
-    var(--avatar-personas-speaker-static-inner-ring-1),
-    var(--avatar-personas-speaker-static-inner-ring-2)
-  );
-  padding: 2px;
-  clip-path: circle(95% at center);
-}
-
-.md-avatar-in-meeting-speaking-inactive {
-  padding: 0px;
-  position: absolute;
-  opacity: var(--avatar-personas-speaker-speaking-outer-ring-opacity);
-  width: 100%;
-  height: 100%;
-  border-radius: 100vh;
-  background: linear-gradient( 45deg,
-    var(--avatar-personas-speaker-static-inner-ring-0),
-    var(--avatar-personas-speaker-static-inner-ring-1),
-    var(--avatar-personas-speaker-static-inner-ring-2)
-  );
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &.md-avatar-in-meeting-speaking-active {
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    padding: 6px;
-  }
-}
-
 .md-avatar-wrapper {
   display: flex;
   justify-content: center;

@@ -148,35 +148,6 @@ export default {
         },
       },
     },
-    isInMeeting: {
-      defaultValue: DEFAULTS.IS_IN_MEETING,
-      description: 'Determines weather the avatar component is used in a meeting list/context.',
-      options: [undefined, true, false],
-      control: { type: 'boolean' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: DEFAULTS.IS_IN_MEETING,
-        },
-      },
-    },
-    isSpeaking: {
-      defaultValue: DEFAULTS.IS_SPEAKING,
-      description:
-        'Determines weather the user is speaking. Should only be used in combination with `isInMeeting`',
-      options: [undefined, true, false],
-      control: { type: 'boolean' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: DEFAULTS.IS_SPEAKING,
-        },
-      },
-    },
   },
 };
 
@@ -247,40 +218,6 @@ Sizes.parameters = {
   ],
 };
 
-const States = MultiTemplate.bind({});
-
-States.args = {
-  src: 'https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2855&q=80',
-  size: 48,
-};
-
-States.parameters = {
-  variants: [
-    { label: 'Default' },
-    { label: 'In Meeting x Active', isInMeeting: true, presence: PresenceType.Active },
-    { label: 'In Meeting x Meet', isInMeeting: true, presence: PresenceType.Meet },
-    { label: 'In Meeting x Present', isInMeeting: true, presence: PresenceType.Presenting },
-    {
-      label: 'In Meeting x Active x Speaking',
-      isInMeeting: true,
-      isSpeaking: true,
-      presence: PresenceType.Active,
-    },
-    {
-      label: 'In Meeting x Meet x Speaking',
-      isInMeeting: true,
-      isSpeaking: true,
-      presence: PresenceType.Meet,
-    },
-    {
-      label: 'In Meeting x Present x Speaking',
-      isInMeeting: true,
-      isSpeaking: true,
-      presence: PresenceType.Presenting,
-    },
-  ],
-};
-
 const Common = MultiTemplate.bind({});
 
 const cartesian = <T extends (string | number)[][]>(...arr: T) =>
@@ -304,4 +241,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, PresenceTypes, Sizes, States, Common };
+export { Example, PresenceTypes, Sizes, Common };

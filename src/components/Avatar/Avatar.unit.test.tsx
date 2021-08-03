@@ -60,14 +60,6 @@ describe('Avatar', () => {
 
       expect(container).toMatchSnapshot();
     });
-
-    it('should match snapshot with isInMeeting & isSpeaking', () => {
-      expect.assertions(1);
-
-      const container = mount(<Avatar title="Cisco Webex" isInMeeting isSpeaking />);
-
-      expect(container).toMatchSnapshot();
-    });
   });
 
   describe('attributes', () => {
@@ -168,18 +160,6 @@ describe('Avatar', () => {
 
       expect(element.textContent.length).toBe(MAX_INITIALS_SPACE);
       expect(element.textContent).toBe(`${initials}`);
-    });
-
-    it('should pass the isInMeeting & isSpeaking prop', () => {
-      expect.assertions(2);
-
-      const container = mount(<Avatar title="Cisco Webex" isInMeeting isSpeaking />);
-
-      const innerRing = container.find(`div.${STYLE.inMeeting}`).getDOMNode();
-      const innerRingSpeaking = container.find(`div.${STYLE.inMeetingSpeakingInactive}`);
-
-      expect(innerRing).toBeDefined();
-      expect(innerRingSpeaking).toBeDefined();
     });
   });
 

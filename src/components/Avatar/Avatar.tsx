@@ -25,8 +25,6 @@ const Avatar: React.FC<Props> = (props: Props) => {
     color,
     presence,
     type = DEFAULTS.TYPE,
-    isInMeeting = DEFAULTS.IS_IN_MEETING,
-    isSpeaking = DEFAULTS.IS_SPEAKING,
   } = props;
 
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -132,25 +130,6 @@ const Avatar: React.FC<Props> = (props: Props) => {
     );
   };
 
-  const renderInnerRing = () => {
-    if (isInMeeting) {
-      return <div className={STYLE.inMeeting} />;
-    }
-    return;
-  };
-
-  const renderInnerRingSpeaking = () => {
-    if (isInMeeting) {
-      return (
-        <div
-          className={classnames(STYLE.inMeetingSpeakingInactive, {
-            [STYLE.inMeetingSpeakingActive]: isSpeaking,
-          })}
-        />
-      );
-    }
-  };
-
   const renderImage = () => {
     if (src && !imageLoadFailed) {
       return (
@@ -177,8 +156,6 @@ const Avatar: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="md-avatar-outer-wrapper">
-      {renderInnerRingSpeaking()}
-      {renderInnerRing()}
       <div
         className={classnames(STYLE.wrapper, className)}
         data-size={size || DEFAULTS.SIZE}

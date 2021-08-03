@@ -68,12 +68,4 @@ export interface Props {
    * Determines if the avatar is for a space or person
    */
   type?: 'person' | 'space';
-  /**
-   * Determines if the person is in a meeting
-   */
-  isInMeeting?: boolean;
-  /**
-   * Indicates whether the person is speaking
-   */
-  isSpeaking?: boolean;
 }

@@ -40,34 +40,6 @@ exports[`Avatar snapshot should match snapshot with initials 1`] = `
 </Avatar>
 `;
 
-exports[`Avatar snapshot should match snapshot with isInMeeting & isSpeaking 1`] = `
-<Avatar
-  isInMeeting={true}
-  isSpeaking={true}
-  title="Cisco Webex"
->
-  <div
-    className="md-avatar-outer-wrapper"
-  >
-    <div
-      className="md-avatar-in-meeting-speaking-inactive md-avatar-in-meeting-speaking-active"
-    />
-    <div
-      className="md-avatar-in-meeting"
-    />
-    <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
-    >
-      <span>
-        CW
-      </span>
-    </div>
-  </div>
-</Avatar>
-`;
-
 exports[`Avatar snapshot should match snapshot with presence 1`] = `
 <div>
   <Avatar

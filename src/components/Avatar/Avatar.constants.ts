@@ -46,9 +46,6 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   outerWrapper: `${CLASS_PREFIX}-outer-wrapper`,
   iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
-  inMeeting: `${CLASS_PREFIX}-in-meeting`,
-  inMeetingSpeakingInactive: `${CLASS_PREFIX}-in-meeting-speaking-inactive`,
-  inMeetingSpeakingActive: `${CLASS_PREFIX}-in-meeting-speaking-active`,
   imageHidden: `${CLASS_PREFIX}-image-hidden`,
 };
 
@@ -57,8 +54,6 @@ const DEFAULTS = {
   SIZE: SIZES[24],
   COLOR: COLORS.default,
   TYPE: TYPES.person,
-  IS_IN_MEETING: false,
-  IS_SPEAKING: false,
 };
 
 export {
