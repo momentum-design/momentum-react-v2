@@ -23,4 +23,8 @@ export interface Props {
    * Note: Not all icons have all 4 styles.
    */
   weight?: 'light' | 'regular' | 'bold' | 'filled';
+  /**
+   * Color for the icon to be filled with
+   */
+  fillColor?: string;
 }
