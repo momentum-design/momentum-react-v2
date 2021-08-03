@@ -5,6 +5,5 @@ import { Props } from './ThemeProvider.types';
 export { CONSTANTS as THEME_PROVIDER_CONSTANTS };
 
 export type ThemeProviderProps = Props;
-export type { ThemeNames } from './ThemeProvider.types';
 
 export default ThemeProvider;
