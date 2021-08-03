@@ -4,7 +4,6 @@ import React from 'react';
 import { COLORS, MAX_INITIALS_SPACE, SIZES, STYLE } from './Avatar.constants';
 import { AvatarColor, AvatarSize, PresenceType } from './Avatar.types';
 import { mountAndWait } from '../../../test/utils';
-import { act } from 'react-dom/test-utils';
 
 describe('Avatar', () => {
   describe('snapshot', () => {

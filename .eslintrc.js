@@ -70,7 +70,7 @@ module.exports = {
   ],
   rules: {
     quotes: ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
-    'no-console': 1,
+    'no-console': ['error', { allow: ['warn'] }],
     'no-debugger': 1,
     'no-var': 1,
     semi: [1, 'always'],
