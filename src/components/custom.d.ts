@@ -9,10 +9,10 @@ declare module '*.module.scss' {
 }
 
 declare module '*.svg' {
-  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
-  const content: string;
-  export {ReactComponent}
-  export default content;
+  import React = require('react');
+  export const ReactComponent: React.SFC<React.SVGProps<SVGSVGElement>>;
+  const src: string;
+  export default src;
 }
 
 declare module '*.mdx' {

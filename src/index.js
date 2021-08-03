@@ -106,5 +106,6 @@ export {
   InputMessage as InputMessageNew,
   ButtonHyperlink,
   ExampleComponent,
+  Icon as IconNext,
   ThemeProvider,
 } from './components';
