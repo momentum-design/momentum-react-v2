@@ -1,8 +1,10 @@
-const STYLE = {
-  wrapper: 'md-theme-provider',
-};
-
 const THEME_CLASS_PREFIX = 'md-theme';
+const CLASS_PREFIX = `${THEME_CLASS_PREFIX}-provider`;
+
+const STYLE = {
+  wrapper: `${CLASS_PREFIX}-wrapper`,
+  globals: `${CLASS_PREFIX}-globals`,
+};
 
 // Some themes are disabled until tokens are properly imported.
 const THEME_NAMES = {
@@ -24,4 +26,4 @@ const DEFAULTS = {
   THEME: THEME_NAMES.DARK_WEBEX,
 };
 
-export { DEFAULTS, STYLE, THEME_CLASS_PREFIX, THEME_NAMES };
+export { CLASS_PREFIX, DEFAULTS, STYLE, THEME_CLASS_PREFIX, THEME_NAMES };

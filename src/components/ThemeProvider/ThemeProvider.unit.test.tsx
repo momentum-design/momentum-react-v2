@@ -23,9 +23,21 @@ describe('<ThemeProvider />', () => {
     it('should have its main class', () => {
       expect.assertions(1);
 
-      const component = mount(<ThemeProvider />).childAt(0);
+      const element = mount(<ThemeProvider />)
+        .find(ThemeProvider)
+        .getDOMNode();
 
-      expect(component.hasClass(STYLE.wrapper)).toBe(true);
+      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
+    });
+
+    it('should have its globals class', () => {
+      expect.assertions(1);
+
+      const element = mount(<ThemeProvider />)
+        .find(ThemeProvider)
+        .getDOMNode();
+
+      expect(element.classList.contains(STYLE.globals)).toBe(true);
     });
 
     it('should have an abstracted theme class', () => {
@@ -33,19 +45,23 @@ describe('<ThemeProvider />', () => {
 
       const themeName = THEME_NAMES[Object.keys(THEME_NAMES)[0]];
 
-      const component = mount(<ThemeProvider theme={themeName} />).childAt(0);
+      const element = mount(<ThemeProvider theme={themeName} />)
+        .find(ThemeProvider)
+        .getDOMNode();
 
-      expect(component.hasClass(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
+      expect(element.classList.contains(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
     });
 
-    it('should mount children to the component nodes', () => {
+    it('should pass child props', () => {
       expect.assertions(1);
 
       const children = [<div key="0" />, <div key="1" />, <div key="2" />];
 
-      const component = mount(<ThemeProvider>{children}</ThemeProvider>).childAt(0);
+      const component = mount(<ThemeProvider>{children}</ThemeProvider>)
+        .find(ThemeProvider)
+        .getDOMNode();
 
-      expect(component.children().length).toBe(children.length);
+      expect(component.childNodes.length).toBe(children.length);
     });
   });
 });

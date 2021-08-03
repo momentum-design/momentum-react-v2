@@ -104,6 +104,7 @@ export {
   ButtonPill,
   CodeInput,
   InputMessage as InputMessageNew,
+  ButtonHyperlink,
   ExampleComponent,
   ThemeProvider,
 } from './components';
