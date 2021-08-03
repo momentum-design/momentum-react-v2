@@ -6,8 +6,10 @@ import { DEFAULTS, STYLE } from './Icon.constants';
 import classnames from 'classnames';
 
 const Icon: React.FC<Props> = (props: Props) => {
-  const { className, scale, name, weight, autoScale } = props;
+  const { className, scale, name, weight, autoScale, fillColor } = props;
   const { SvgIcon, error } = useDynamicSVGImport(`${name}-${weight || DEFAULTS.WEIGHT}`);
+
+  const isColouredIcon = name.indexOf('coloured') > 0;
 
   if (error) {
     return <p className={STYLE.notFound}>Icon not found.</p>;
@@ -18,12 +20,13 @@ const Icon: React.FC<Props> = (props: Props) => {
       <div className={STYLE.wrapper}>
         <SvgIcon
           // coloured class is added to avoid theming the fixed colours inside coloured icons
-          className={classnames(className, { [STYLE.coloured]: name.indexOf('coloured') > 0 })}
+          className={classnames(className, { [STYLE.coloured]: isColouredIcon })}
           viewBox="0, 0, 32, 32"
           width="100%"
           height="100%"
           data-scale={!autoScale && (scale || DEFAULTS.SCALE)}
           data-autoscale={autoScale || DEFAULTS.AUTO_SCALE}
+          style={fillColor && !isColouredIcon && { fill: fillColor }}
         />
       </div>
     );

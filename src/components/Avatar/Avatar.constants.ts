@@ -1,4 +1,23 @@
+import { PresenceType } from './Avatar.types';
+
 const CLASS_PREFIX = 'md-avatar';
+
+const MAX_INITIALS_SPACE = 1;
+const MAX_INITIALS_PERSON = 2;
+
+const COLORS = {
+  default: 'default',
+  gold: 'gold',
+  orange: 'orange',
+  lime: 'lime',
+  mint: 'mint',
+  cyan: 'cyan',
+  cobalt: 'cobalt',
+  slate: 'slate',
+  violet: 'violet',
+  purple: 'purple',
+  pink: 'pink',
+};
 
 const SIZES = {
   24: 24,
@@ -9,14 +28,47 @@ const SIZES = {
   124: 124,
 };
 
+const AVATAR_ICON_SIZE_MAPPING: Record<number, number> = {
+  24: 8,
+  32: 12,
+  48: 14,
+  72: 16,
+  88: 20,
+  124: 28,
+};
+
+const TYPES = {
+  person: 'person',
+  space: 'space',
+};
+
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  iconWrapper: `${CLASS_PREFIX}-iconWrapper`,
+  outerWrapper: `${CLASS_PREFIX}-outer-wrapper`,
+  iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
+  inMeeting: `${CLASS_PREFIX}-in-meeting`,
+  inMeetingSpeakingInactive: `${CLASS_PREFIX}-in-meeting-speaking-inactive`,
+  inMeetingSpeakingActive: `${CLASS_PREFIX}-in-meeting-speaking-active`,
+  imageHidden: `${CLASS_PREFIX}-image-hidden`,
 };
 
 const DEFAULTS = {
+  PRESENCE: PresenceType.Default,
   SIZE: SIZES[24],
-  COLOR: 'default',
+  COLOR: COLORS.default,
+  TYPE: TYPES.person,
+  IS_IN_MEETING: false,
+  IS_SPEAKING: false,
 };
 
-export { DEFAULTS, SIZES, STYLE, CLASS_PREFIX };
+export {
+  DEFAULTS,
+  SIZES,
+  STYLE,
+  CLASS_PREFIX,
+  TYPES,
+  MAX_INITIALS_SPACE,
+  MAX_INITIALS_PERSON,
+  AVATAR_ICON_SIZE_MAPPING,
+  COLORS,
+};

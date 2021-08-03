@@ -1,64 +1,199 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
 
 import './Avatar.style.scss';
 import { PresenceType, Props } from './Avatar.types';
-import { STYLE, DEFAULTS } from './Avatar.constants';
+import {
+  STYLE,
+  DEFAULTS,
+  TYPES,
+  MAX_INITIALS_PERSON,
+  MAX_INITIALS_SPACE,
+  AVATAR_ICON_SIZE_MAPPING,
+} from './Avatar.constants';
+import Icon, { IconScale } from '../Icon';
+import { getInitials } from './Avatar.utils';
 
 const Avatar: React.FC<Props> = (props: Props) => {
-  const { className, src, initials, size, color, presence } = props;
+  const {
+    className,
+    src,
+    alt,
+    title,
+    initials,
+    size,
+    color,
+    presence,
+    type = DEFAULTS.TYPE,
+    isInMeeting = DEFAULTS.IS_IN_MEETING,
+    isSpeaking = DEFAULTS.IS_SPEAKING,
+  } = props;
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageLoadFailed, setImageLoadFailed] = useState(false);
+  const imageRef = useRef<HTMLImageElement>();
+
+  useEffect(() => {
+    if (imageRef && imageRef.current && imageRef.current.complete) {
+      handleOnLoad();
+    }
+  }, []);
+
+  useEffect(() => {
+    setImageLoadFailed(false);
+    setImageLoaded(false);
+  }, [src]);
 
   const renderPresence = (presence: PresenceType) => {
+    if (!presence) return;
     if (presence === PresenceType.Default) return;
-    let icon = 'i';
+    let icon: string;
+    let fill: string;
 
     switch (presence) {
       case PresenceType.Active:
-        icon = 'i';
+        icon = 'unread';
+        fill = 'var(--avatar-presence-icon-active)';
         break;
       case PresenceType.Meet:
-        icon = 'i';
+        icon = 'camera-presence';
+        fill = 'var(--avatar-presence-icon-meeting)';
         break;
       case PresenceType.Schedule:
-        icon = 'i';
+        icon = 'meetings-presence';
+        fill = 'var(--avatar-presence-icon-schedule)';
         break;
       case PresenceType.DND:
-        icon = 'i';
+        icon = 'dnd-presence';
+        fill = 'var(--avatar-presence-icon-dnd)';
         break;
       case PresenceType.Presenting:
-        icon = 'i';
+        icon = 'share-screen';
+        fill = 'var(--avatar-presence-icon-presenting)';
         break;
       case PresenceType.QuietHours:
-        icon = 'i';
+        icon = 'quiet-hours-presence';
+        fill = 'var(--avatar-presence-icon-quiet-hours)';
         break;
       case PresenceType.Away:
-        icon = 'i';
+        icon = 'recents-presence';
+        fill = 'var(--avatar-presence-icon-away)';
         break;
       case PresenceType.OOO:
-        icon = 'i';
+        icon = 'pto-presence';
+        fill = 'var(--avatar-presence-icon-ooo)';
         break;
       default:
         break;
     }
 
-    return <div className={STYLE.iconWrapper}>{icon}</div>;
+    return (
+      <div className={STYLE.iconWrapper}>
+        <Icon
+          name={icon}
+          weight="filled"
+          fillColor={fill}
+          scale={AVATAR_ICON_SIZE_MAPPING[size] as IconScale}
+        />
+      </div>
+    );
+  };
+
+  const renderInitials = () => {
+    if (src) {
+      if (!imageLoadFailed && imageLoaded) {
+        return null;
+      }
+    }
+
+    // Error handling for initials length
+    if (initials) {
+      type === TYPES.person &&
+        initials.length > MAX_INITIALS_PERSON &&
+        console.warn(
+          `Avatar with type person should not have more than ${MAX_INITIALS_PERSON} initials.`
+        );
+
+      type === TYPES.space &&
+        initials.length > MAX_INITIALS_SPACE &&
+        console.warn(
+          `Avatar with type space should not have more than ${MAX_INITIALS_SPACE} initials.`
+        );
+    }
+
+    return (
+      <span>
+        {initials
+          ? initials
+          : title
+          ? getInitials(title, type)
+          : 'Please provide a title/initials.'}
+      </span>
+    );
+  };
+
+  const renderInnerRing = () => {
+    if (isInMeeting) {
+      return <div className={STYLE.inMeeting} />;
+    }
+    return;
+  };
+
+  const renderInnerRingSpeaking = () => {
+    if (isInMeeting) {
+      return (
+        <div
+          className={classnames(STYLE.inMeetingSpeakingInactive, {
+            [STYLE.inMeetingSpeakingActive]: isSpeaking,
+          })}
+        />
+      );
+    }
+  };
+
+  const renderImage = () => {
+    if (src && !imageLoadFailed) {
+      return (
+        <img
+          src={src}
+          alt={alt}
+          onLoad={handleOnLoad}
+          onError={handleOnError}
+          ref={imageRef}
+          className={!imageLoaded ? STYLE.imageHidden : ''}
+        />
+      );
+    }
+    return null;
+  };
+
+  const handleOnLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const handleOnError = () => {
+    setImageLoadFailed(true);
   };
 
   return (
-    <div
-      className={classnames(STYLE.wrapper, className)}
-      data-size={size || DEFAULTS.SIZE}
-      data-color={color || DEFAULTS.COLOR}
-    >
-      {src && <img src={src} alt="Profile" />}
-      {initials && <span>{initials}</span>}
-      {presence && renderPresence(presence)}
+    <div className="md-avatar-outer-wrapper">
+      {renderInnerRingSpeaking()}
+      {renderInnerRing()}
+      <div
+        className={classnames(STYLE.wrapper, className)}
+        data-size={size || DEFAULTS.SIZE}
+        data-color={color || DEFAULTS.COLOR}
+      >
+        {renderInitials()}
+        {renderImage()}
+        {renderPresence(presence)}
+      </div>
     </div>
   );
 };
 
 /**
- * TODO: Add description of component here.
+ * Avatar component that can contain an image or initials
  */
 
 export default Avatar;

@@ -12,7 +12,7 @@ export enum PresenceType {
   OOO = 'OOO',
 }
 
-type AvatarColor =
+export type AvatarColor =
   | 'default'
   | 'gold'
   | 'orange'
@@ -25,6 +25,8 @@ type AvatarColor =
   | 'purple'
   | 'pink';
 
+export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
+
 export interface Props {
   /**
    * className prop description
@@ -35,7 +37,7 @@ export interface Props {
    * Size of the avatar
    * @default 32
    */
-  size?: 24 | 32 | 48 | 72 | 88 | 124;
+  size?: AvatarSize;
 
   /**
    * Determines the type of presence the user has. Eg: meet or presenting
@@ -46,6 +48,32 @@ export interface Props {
    * URL of image to display
    */
   src?: string;
+  /**
+   * Alternative text when image cannot be rendered
+   */
+  alt?: string;
+  /**
+   * Initials to be displayed on the avatar
+   */
   initials?: string;
+  /**
+   * Name of person/space this avatar is for
+   */
+  title?: string;
+  /**
+   * Background color for avatar
+   */
   color?: AvatarColor;
+  /**
+   * Determines if the avatar is for a space or person
+   */
+  type?: 'person' | 'space';
+  /**
+   * Determines if the person is in a meeting
+   */
+  isInMeeting?: boolean;
+  /**
+   * Indicates whether the person is speaking
+   */
+  isSpeaking?: boolean;
 }
