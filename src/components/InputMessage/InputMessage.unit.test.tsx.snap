@@ -16,11 +16,24 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
       <div
         className="md-input-message--icon"
       >
-        <svg
-          height="100%"
-          viewBox="0 0 32 32"
-          width="100%"
-        />
+        <Icon
+          name="warning"
+          scale={20}
+          weight="bold"
+        >
+          <div
+            className="md-icon-wrapper"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={20}
+              height="100%"
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
       </div>
       <div
         className="md-input-message--text"

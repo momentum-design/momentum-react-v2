@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import './InputMessage.style.scss';
 import { Props } from './InputMessage.types';
 
-import { ReactComponent as WarningTriangle } from '@momentum-ui/icons-rebrand/svg/warning-bold.svg';
+import Icon from '../Icon';
 
 const InputMessage = (props: Props): ReactElement => {
   const { message, level = 'none' } = props;
@@ -13,7 +13,7 @@ const InputMessage = (props: Props): ReactElement => {
       <div className="md-input-message" role="alert" message-level={level}>
         <div className="md-input-message--icon">
           {(level == 'error' || level == 'warning') && (
-            <WarningTriangle viewBox="0 0 32 32" width="100%" height="100%" />
+            <Icon name="warning" weight="bold" scale={20}></Icon>
           )}
         </div>
         <div className="md-input-message--text">{message}</div>

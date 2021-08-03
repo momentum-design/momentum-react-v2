@@ -1,6 +1,7 @@
 import CodeInput from '.';
 import { mount } from 'enzyme';
 import React from 'react';
+import { act } from 'react-dom/test-utils';
 
 describe('CodeInput', () => {
   describe('snapshot', () => {
@@ -23,10 +24,13 @@ describe('CodeInput', () => {
       expect(component.find('input').props().disabled).toBeTruthy();
     });
 
-    it('when a message array is passing in messages should be displayed', () => {
-      const component = mount(
-        <CodeInput numDigits={6} messageArr={[{ message: 'test', type: 'error' }]} />
-      ).childAt(0);
+    it('when a message array is passing in messages should be displayed', async () => {
+      let component;
+      await act(async () => {
+        component = mount(
+          <CodeInput numDigits={6} messageArr={[{ message: 'test', type: 'error' }]} />
+        ).childAt(0);
+      });
       const message = component.find('.md-input-message');
       expect(message.length).toBe(1);
       expect(message.props()['message-level']).toEqual('error');
