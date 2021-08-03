@@ -14,7 +14,6 @@
   "engines": {
     "node": "14.x.x"
   },
-  "private": true,
   "keywords": [
     "Cisco",
     "Cisco Spark",
