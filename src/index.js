@@ -104,5 +104,6 @@ export {
   ButtonHyperlink,
   ButtonPill,
   ExampleComponent,
+  Icon as IconNext,
   ThemeProvider,
 } from './components';
