@@ -25,6 +25,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
     color,
     presence,
     type = DEFAULTS.TYPE,
+    icon,
   } = props;
 
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -130,6 +131,12 @@ const Avatar: React.FC<Props> = (props: Props) => {
     );
   };
 
+  const renderIcon = () => {
+    if (icon) {
+      return <Icon name={icon} scale={32} />;
+    }
+  };
+
   const renderImage = () => {
     if (src && !imageLoadFailed) {
       return (
@@ -161,8 +168,13 @@ const Avatar: React.FC<Props> = (props: Props) => {
         data-size={size || DEFAULTS.SIZE}
         data-color={color || DEFAULTS.COLOR}
       >
+        {/* Renders by default with initials or title. Doesn't render if src provided */}
         {renderInitials()}
+        {/* Renders if src is provided. */}
         {renderImage()}
+        {/* Renders if icon is provided. */}
+        {renderIcon()}
+        {/* Renders if presence is provided. */}
         {renderPresence(presence)}
       </div>
     </div>

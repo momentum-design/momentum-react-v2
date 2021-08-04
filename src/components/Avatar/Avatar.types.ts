@@ -68,4 +68,8 @@ export interface Props {
    * Determines if the avatar is for a space or person
    */
   type?: 'person' | 'space';
+  /**
+   * Determines if the avatar should display an icon inside
+   */
+  icon?: string;
 }
