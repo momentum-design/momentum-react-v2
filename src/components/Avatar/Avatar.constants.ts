@@ -1,3 +1,4 @@
+import { IconScale, IconWeight } from '../Icon/Icon.types';
 import { PresenceType } from './Avatar.types';
 
 const CLASS_PREFIX = 'md-avatar';
@@ -28,13 +29,22 @@ const SIZES = {
   124: 124,
 };
 
-const AVATAR_ICON_SIZE_MAPPING: Record<number, number> = {
+const AVATAR_PRESENCE_ICON_SIZE_MAPPING: Record<number, IconScale> = {
   24: 8,
   32: 12,
   48: 14,
   72: 16,
   88: 20,
   124: 28,
+};
+
+const AVATAR_ICON_SIZE_MAPPING: Record<number, { scale: IconScale; weight: IconWeight }> = {
+  24: { scale: 16, weight: 'bold' },
+  32: { scale: 20, weight: 'regular' },
+  48: { scale: 28, weight: 'regular' },
+  72: { scale: 40, weight: 'regular' },
+  88: { scale: 48, weight: 'regular' },
+  124: { scale: 64, weight: 'light' },
 };
 
 const TYPES = {
@@ -47,6 +57,7 @@ const STYLE = {
   outerWrapper: `${CLASS_PREFIX}-outer-wrapper`,
   iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
   imageHidden: `${CLASS_PREFIX}-image-hidden`,
+  presenceIconWrapper: `${CLASS_PREFIX}-presence-icon-wrapper`,
 };
 
 const DEFAULTS = {
@@ -64,6 +75,7 @@ export {
   TYPES,
   MAX_INITIALS_SPACE,
   MAX_INITIALS_PERSON,
+  AVATAR_PRESENCE_ICON_SIZE_MAPPING,
   AVATAR_ICON_SIZE_MAPPING,
   COLORS,
 };

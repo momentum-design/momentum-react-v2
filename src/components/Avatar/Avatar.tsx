@@ -9,9 +9,10 @@ import {
   TYPES,
   MAX_INITIALS_PERSON,
   MAX_INITIALS_SPACE,
+  AVATAR_PRESENCE_ICON_SIZE_MAPPING,
   AVATAR_ICON_SIZE_MAPPING,
 } from './Avatar.constants';
-import Icon, { IconScale } from '../Icon';
+import Icon from '../Icon';
 import { getInitials } from './Avatar.utils';
 
 const Avatar: React.FC<Props> = (props: Props) => {
@@ -87,12 +88,12 @@ const Avatar: React.FC<Props> = (props: Props) => {
     }
 
     return (
-      <div className={STYLE.iconWrapper}>
+      <div className={STYLE.presenceIconWrapper}>
         <Icon
           name={icon}
           weight="filled"
           fillColor={fill}
-          scale={AVATAR_ICON_SIZE_MAPPING[size] as IconScale}
+          scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
         />
       </div>
     );
@@ -103,6 +104,10 @@ const Avatar: React.FC<Props> = (props: Props) => {
       if (!imageLoadFailed && imageLoaded) {
         return null;
       }
+    }
+
+    if (icon) {
+      return null;
     }
 
     // Error handling for initials length
@@ -133,7 +138,14 @@ const Avatar: React.FC<Props> = (props: Props) => {
 
   const renderIcon = () => {
     if (icon) {
-      return <Icon name={icon} scale={32} />;
+      return (
+        <Icon
+          className={STYLE.iconWrapper}
+          name={icon}
+          scale={AVATAR_ICON_SIZE_MAPPING[size].scale}
+          weight={AVATAR_ICON_SIZE_MAPPING[size].weight}
+        />
+      );
     }
   };
 
@@ -168,7 +180,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
         data-size={size || DEFAULTS.SIZE}
         data-color={color || DEFAULTS.COLOR}
       >
-        {/* Renders by default with initials or title. Doesn't render if src provided */}
+        {/* Renders by default with initials or title. Doesn't render if src or icon provided */}
         {renderInitials()}
         {/* Renders if src is provided. */}
         {renderImage()}

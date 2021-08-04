@@ -83,6 +83,7 @@ export default {
     src: {
       defaultValue: undefined,
       description: 'URL with profile image for the avatar.',
+      control: { type: 'text' },
       table: {
         type: {
           summary: 'string',
@@ -134,6 +135,19 @@ export default {
         },
       },
     },
+    icon: {
+      defaultValue: undefined,
+      description: 'Name of the icon to be displayed inside the Avatar. Must be a valid icon name.',
+      control: { type: 'text' },
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: undefined,
+        },
+      },
+    },
     type: {
       defaultValue: DEFAULTS.TYPE,
       description: 'Determines weather the avatar is for a person or a space.',
@@ -167,7 +181,7 @@ const MultiTemplate: Story<AvatarProps> = (args: AvatarProps, { parameters }) =>
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: `repeat(4, auto)`,
+        gridTemplateColumns: `repeat(7, auto)`,
         gap: '1.5rem',
         alignItems: 'end',
       }}
@@ -218,6 +232,24 @@ Sizes.parameters = {
   ],
 };
 
+const Icons = MultiTemplate.bind({});
+
+Icons.args = {
+  initials: 'A',
+};
+
+Icons.parameters = {
+  variants: [
+    ...Object.values(SIZES).map((size) => {
+      return {
+        size,
+        icon: 'accessories',
+        label: `Size: ${size} + icon`,
+      };
+    }),
+  ],
+};
+
 const Common = MultiTemplate.bind({});
 
 const cartesian = <T extends (string | number)[][]>(...arr: T) =>
@@ -241,4 +273,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, PresenceTypes, Sizes, Common };
+export { Example, PresenceTypes, Sizes, Icons, Common };

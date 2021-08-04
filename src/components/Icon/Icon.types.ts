@@ -17,6 +17,8 @@ export type IconScale =
   | 64
   | 120
   | 124;
+
+export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
 export interface Props {
   /**
    * className custom class to be able to override  the icon's CSS
@@ -41,7 +43,7 @@ export interface Props {
    * Represents the style of the icon.
    * Note: Not all icons have all 4 styles.
    */
-  weight?: 'light' | 'regular' | 'bold' | 'filled';
+  weight?: IconWeight;
   /**
    * Color to fill the icon. Theming is provided by default (dark/light)
    */
