@@ -1,0 +1,24 @@
+.md-separator-wrapper {
+  color: var(--theme-text-secondary-normal);
+
+  div {
+    display: flex;
+    flex-direction: row;
+
+    &:before,
+    &:after {
+      content: '';
+      flex: 1 1;
+      border-bottom: 1px solid var(--theme-outline-primary-normal);
+      margin: auto;
+    }
+
+    &:before {
+      margin-right: 0.5rem;
+    }
+
+    &:after {
+      margin-left: 0.5rem;
+    }
+  }
+}
