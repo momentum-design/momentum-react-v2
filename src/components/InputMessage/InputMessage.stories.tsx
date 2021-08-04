@@ -23,11 +23,11 @@ const Template: Story<InputMessageProps> = (args) => (
   </ThemeProvider>
 );
 
-const Story1 = Template.bind({});
+const Example = Template.bind({});
 
-Story1.args = {
+Example.args = {
   message: 'This is a message',
   level: 'error',
 };
 
-export { Story1 };
+export { Example };
