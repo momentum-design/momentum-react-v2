@@ -13,7 +13,12 @@ const InputMessage = (props: Props): ReactElement => {
       <div className="md-input-message" role="alert" message-level={level}>
         <div className="md-input-message--icon">
           {(level == 'error' || level == 'warning') && (
-            <Icon name="warning" weight="bold" scale={20} />
+            <Icon
+              name="warning"
+              weight="bold"
+              scale={20}
+              fillColor={'var(--theme-text-error-normal)'}
+            />
           )}
         </div>
         <div className="md-input-message--text">{message}</div>

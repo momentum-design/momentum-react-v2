@@ -17,6 +17,7 @@ export default {
   argTypes: {
     numDigits: {
       description: 'Number of boxes',
+      control: { type: 'number' },
     },
     messageArr: {
       description: 'The list of messages to be passed in',
@@ -67,13 +68,13 @@ const Template: Story<StoryProps> = (args) => {
   );
 };
 
-const Story1 = Template.bind({});
+const Example = Template.bind({});
 
-Story1.args = {
+Example.args = {
   numDigits: 6,
   messageArr: 'empty',
   disabled: false,
   onCompleteChoice: 'show error',
 };
 
-export { Story1 };
+export { Example };

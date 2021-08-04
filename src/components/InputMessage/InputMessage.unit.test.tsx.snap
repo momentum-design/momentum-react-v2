@@ -17,6 +17,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
         className="md-input-message--icon"
       >
         <Icon
+          fillColor="var(--theme-text-error-normal)"
           name="warning"
           scale={20}
           weight="bold"
@@ -29,6 +30,11 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
               data-autoscale={false}
               data-scale={20}
               height="100%"
+              style={
+                Object {
+                  "fill": "var(--theme-text-error-normal)",
+                }
+              }
               viewBox="0, 0, 32, 32"
               width="100%"
             />
