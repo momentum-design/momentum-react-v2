@@ -29,6 +29,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
               data-autoscale={false}
               data-scale={20}
               height="100%"
+              style={null}
               viewBox="0, 0, 32, 32"
               width="100%"
             />
