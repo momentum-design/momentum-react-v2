@@ -250,6 +250,24 @@ Icons.parameters = {
   ],
 };
 
+const Color = MultiTemplate.bind({});
+
+Color.args = {
+  initials: 'A',
+  size: 48,
+};
+
+Color.parameters = {
+  variants: [
+    ...Object.values(COLORS).map((color) => {
+      return {
+        color: color,
+        label: `Color: ${color}`,
+      };
+    }),
+  ],
+};
+
 const Common = MultiTemplate.bind({});
 
 const cartesian = <T extends (string | number)[][]>(...arr: T) =>
@@ -273,4 +291,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, PresenceTypes, Sizes, Icons, Common };
+export { Example, PresenceTypes, Color, Sizes, Icons, Common };

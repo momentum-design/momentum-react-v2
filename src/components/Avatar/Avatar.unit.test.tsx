@@ -162,29 +162,4 @@ describe('Avatar', () => {
       expect(element.textContent).toBe(`${initials}`);
     });
   });
-
-  // describe('image loading', () => {
-  //   it('should render initials until image has finished loading', () => {
-  //     const container = mount(<Avatar src="src" />);
-  //     const handleError = container.find('img').prop('onError');
-  //     expect(typeof handleError).toBe('function');
-
-  //     const mockEvent = {
-  //       target: {
-  //         src: 'z',
-  //         complete: false,
-  //       },
-  //     } as React.ChangeEvent<HTMLImageElement>;
-  //     let image = container.find('img').getDOMNode();
-  //     expect(image).toBeDefined();
-  //     act(() => {
-  //       handleError(mockEvent);
-  //     });
-  //     Object.defineProperty(HTMLImageElement.prototype, 'complete', { get: () => false });
-
-  //     image = container.find('img').getDOMNode();
-  //     expect(image).toBeUndefined();
-  //     expect(mockEvent.target.src).toBe('/default.png');
-  //   });
-  // });
 });
