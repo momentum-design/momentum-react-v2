@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 
 import './{{componentName}}.style.scss';
 import { Props } from './{{componentName}}.types';
+import { DEFAULTS, STYLE } from './{{componentName}}.constants';
 
-const {{componentName}} = (props: Props) => {
-  const {className} = props;
+const {{componentName}}: FC<Props> = (props: Props) => {
+  const { className } = props;
 
   // Implementation goes here
-  return <div />;
+  return <div className={classnames(className, STYLE.wrapper)} />;
 };
 
 /**
@@ -16,4 +17,3 @@ const {{componentName}} = (props: Props) => {
  */
 
 export default {{componentName}};
-

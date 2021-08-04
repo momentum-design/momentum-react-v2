@@ -9,16 +9,24 @@ module.exports = function (plop) {
     return array.includes(string);
   });
 
+  plop.setHelper('snakeCase', (str) => {
+    return str.replace(/[A-Z]/g, (letter, index) => {
+      return index == 0 ? letter.toLowerCase() : '-' + letter.toLowerCase();
+    });
+  });
+
+  plop.setHelper('snakeCaseCapital', (str) => {
+    return str
+      .replace(/[A-Z]/g, (letter, index) => {
+        return index == 0 ? letter.toLowerCase() : '_' + letter.toLowerCase();
+      })
+      .toUpperCase();
+  });
+
   // controller generator
   plop.setGenerator('component', {
     description: 'Add new component',
     prompts: [
-      {
-        type: 'input',
-        name: 'folderName',
-        message: 'folder name, all lowercase (e.g. textfield)',
-        validate: (answer) => answer.length > 0,
-      },
       {
         type: 'input',
         name: 'componentName',
@@ -27,19 +35,19 @@ module.exports = function (plop) {
       },
     ],
     actions: function (data) {
-      let { folderName, componentName } = data;
+      let { componentName } = data;
       let actions = [];
 
       actions.push({
         type: 'addMany',
         templateFiles: 'plop-templates/component/**',
         base: 'plop-templates/component',
-        destination: `src/components/${folderName}`,
-        data: { folderName, componentName },
+        destination: `src/components/${componentName}`,
+        data: { componentName },
       });
       actions.push({
         type: 'renameMany',
-        templateFiles: `src/components/${folderName}/**`,
+        templateFiles: `src/components/${componentName}/**`,
         renamer: (name) => `${name.replace('Component', componentName)}`,
       });
 
