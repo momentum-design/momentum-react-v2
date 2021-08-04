@@ -104,6 +104,19 @@ export default {
         },
       },
     },
+    fillColor: {
+      defaultValue: undefined,
+      description: 'Color for the icon to be filled with.',
+      control: { type: 'color' },
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: undefined,
+        },
+      },
+    },
   },
 };
 
