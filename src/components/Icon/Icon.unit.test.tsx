@@ -38,6 +38,14 @@ describe('Icon', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with fillColor', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(<Icon name="accessibility" fillColor="red" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with invalid name', async () => {
       expect.assertions(1);
       jest.setMock('@momentum-ui/icons-rebrand/svg/invalid_icon_name.svg', undefined);
@@ -90,6 +98,26 @@ describe('Icon', () => {
       const icon = wrapper.find('svg').getDOMNode();
 
       expect(icon.classList.contains('md-icon-coloured')).toBe(true);
+    });
+
+    it('should pass fillColor prop', async () => {
+      const fillColor = 'blue';
+
+      const wrapper = await mountAndWait(<Icon name={'accessibility'} fillColor={fillColor} />);
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('style')).toBe(`fill: ${fillColor};`);
+    });
+
+    it('should not pass fillColor prop if icon is already coloured', async () => {
+      const fillColor = 'blue';
+
+      const wrapper = await mountAndWait(
+        <Icon name={'accessibility-coloured'} fillColor={fillColor} />
+      );
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('style')).toBe(null);
     });
   });
 });

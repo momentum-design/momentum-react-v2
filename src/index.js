@@ -101,8 +101,10 @@ export {
 /** V2 Components [TypeScript] */
 export {
   ButtonDialpad,
-  ButtonHyperlink,
   ButtonPill,
+  CodeInput,
+  InputMessage as InputMessageNew,
+  ButtonHyperlink,
   ExampleComponent,
   Icon as IconNext,
   ThemeProvider,
