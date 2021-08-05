@@ -1,13 +1,16 @@
-
 .md-code-input-wrapper {
   .md-code-input-container {
     .md-code-input-character {
+      flex: auto;
       cursor: text;
       font-family: 'CiscoSansTT Regular';
       width: 2.75rem;
       height: 3rem;
+      border: 1px solid rgba(0, 0, 0, 0.5);
       border: 1px solid var(--codeinput-border);
+      color: rgba(0, 0, 0, 0.95);
       color: var(--codeinput-text);
+      background-color: rgba(255, 255, 255, 1);
       background-color: var(--codeinput-background);
       box-sizing: border-box;
       border-radius: 0.5rem;
@@ -19,14 +22,20 @@
       }
 
       &:hover {
+        border: 1px solid rgba(0, 0, 0, 0.5);
         border: 1px solid var(--codeinput-border-hovered);
+        color: rgba(0, 0, 0, 0.95);
         color: var(--codeinput-text-hovered);
+        background-color: rgba(0, 0, 0, 0.04);
         background-color: var(--codeinput-background-hovered);
       }
 
       &:active {
+        border-color: rgba(0, 0, 0, 0.9);
         border-color: var(--codeinput-border-active);
+        color: rgba(0, 0, 0, 0.95);
         color: var(--codeinput-text-active);
+        background-color: rgba(0, 0, 0, 0.11);
         background-color: var(--codeinput-background-active);
       }
 
@@ -37,39 +46,53 @@
           animation: 1s blink step-end infinite;
         }
 
+        border-color: rgba(17, 112, 207, 1);
         border-color: var(--codeinput-border-focused);
+        color: rgba(0, 0, 0, 0.95);
         color: var(--codeinput-text-active);
+        background-color: rgba(0, 0, 0, 0.11);
         background-color: var(--codeinput-background-active);
       }
     }
   }
 
   @keyframes blink {
-    from, to {
+    from,
+    to {
       color: transparent;
     }
 
     50% {
+      color: rgba(0, 0, 0, 0.95);
       color: var(--codeinput-text-active);
     }
   }
 
-  &[data-level=error] {
+  &[data-level='error'] {
     .md-code-input-container {
       .md-code-input-character {
+        border-color: rgba(171, 10, 21, 1);
         border-color: var(--codeinput-error-border);
+        color: rgba(0, 0, 0, 0.95);
         color: var(--codeinput-error-text);
+        background-color: rgba(255, 232, 234, 1);
         background-color: var(--codeinput-error-background);
 
         &:hover {
+          border-color: rgba(171, 10, 21, 1);
           border-color: var(--codeinput-error-border-hovered);
+          color: rgba(0, 0, 0, 0.95);
           color: var(--codeinput-error-text-hovered);
+          background-color: rgba(0, 0, 0, 0.04);
           background-color: var(--codeinput-error-background-hovered);
         }
 
         &:active {
+          border-color: rgba(171, 10, 21, 1);
           border-color: var(--codeinput-error-border-active);
+          color: rgba(0, 0, 0, 0.95);
           color: var(--codeinput-error-text-active);
+          background-color: rgba(0, 0, 0, 0.04);
           background-color: var(--codeinput-error-background-active);
         }
       }
@@ -79,10 +102,12 @@
   input:disabled ~ .md-code-input-container {
     .md-code-input-character {
       cursor: default;
+      border-color: rgba(255, 255, 255, 0);
       border-color: var(--codeinput-border-disabled);
+      color: rgba(0, 0, 0, 0.95);
       color: var(--codeinput-text-disabled);
+      background-color: rgba(0, 0, 0, 0.11);
       background-color: var(--codeinput-background-disabled);
     }
   }
-
 }
