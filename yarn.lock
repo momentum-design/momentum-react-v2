@@ -1916,10 +1916,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@momentum-ui/design-tokens@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.11.tgz#df4de713cd594d8a38cff96cf880f3ba095aca11"
-  integrity sha512-10gF/qZIe+MWDQMqrvFEkROQe7nTbB4dGEotBPRVCZx0hsca+CnVwHax/mG55Z99qjGgLG6kzVwK1GeQs9z7vw==
+"@momentum-ui/design-tokens@0.0.12":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.13.tgz#2cd80c0c1a555a4e12bc14db09e0ff826152e659"
+  integrity sha512-QIvJeGlFL/RLOj4JIvsJl7b60zuDPZpHUVf9zu2kUQg150yXMhs1z8KEK/8X0VEcyq49K9bIKhghNwkiw+qn0Q==
 
 "@momentum-ui/icons-rebrand@^1.2.0":
   version "1.3.0"
