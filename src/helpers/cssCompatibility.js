@@ -29,7 +29,7 @@ const getColor = function (cssVar) {
   if (!colors[cssVar]) {
     throw `color not found for ${cssVar}`;
   }
-  return colors[cssVar];
+  return colors[cssVar].trim();
 };
 
 const makeCompatible = function (source) {
@@ -42,7 +42,7 @@ const makeCompatible = function (source) {
     const numVars = (currentLine.match(/var/g) || []).length;
 
     if (numVars > 1) {
-      console.log('WARNING: unable to handle multiple vars in:', currentLine);
+      console.warn('unable to handle multiple vars in:', currentLine);
     }
 
     if (match && match[3] && numVars === 1) {
@@ -73,7 +73,8 @@ const makeIncompatible = function (source) {
 };
 
 const makeFileCompatible = function (filePath) {
-  const data = fs.readFileSync(filePath, 'utf8');
+  let data = fs.readFileSync(filePath, 'utf8');
+  data = makeIncompatible(data); // Remove compatibility first to make it idempotent
   const compatibleSource = makeCompatible(data);
   fs.writeFileSync(filePath, compatibleSource);
 };
@@ -88,13 +89,15 @@ const removeCompatibility = function (filePath) {
 
 const args = process.argv.slice(2);
 
-const file = args[0];
-const reverse = args[1];
+const mode = args[0];
+const file = args[1];
 
 if (file) {
-  if (reverse) {
+  if (mode === 'remove') {
     removeCompatibility(file);
-  } else {
+  } else if (mode === 'add') {
     makeFileCompatible(file);
+  } else {
+    throw Error('Bad mode: must be "add" or "remove"');
   }
 }
