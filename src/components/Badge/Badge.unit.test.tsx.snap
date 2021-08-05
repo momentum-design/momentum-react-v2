@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge snapshot should match snapshot 1`] = `
+<Badge>
+  <div
+    className="md-badge-wrapper"
+    data-size="L"
+  >
+    20
+  </div>
+</Badge>
+`;
