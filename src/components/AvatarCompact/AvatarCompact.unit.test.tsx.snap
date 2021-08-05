@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarCompact snapshot should match snapshot 1`] = `
+<AvatarCompact
+  count={1}
+>
+  <div
+    className="md-avatar-compact-wrapper"
+  >
+    +1
+  </div>
+</AvatarCompact>
+`;
+
+exports[`AvatarCompact snapshot should match snapshot with 50 -> +50 1`] = `
+<AvatarCompact
+  count={50}
+>
+  <div
+    className="md-avatar-compact-wrapper"
+  >
+    +50
+  </div>
+</AvatarCompact>
+`;
+
+exports[`AvatarCompact snapshot should match snapshot with 1000 -> +1K 1`] = `
+<AvatarCompact
+  count={1000}
+>
+  <div
+    className="md-avatar-compact-wrapper"
+  >
+    +1K
+  </div>
+</AvatarCompact>
+`;
+
+exports[`AvatarCompact snapshot should match snapshot with 1001 -> +1K 1`] = `
+<AvatarCompact
+  count={1001}
+>
+  <div
+    className="md-avatar-compact-wrapper"
+  >
+    +1K
+  </div>
+</AvatarCompact>
+`;
+
+exports[`AvatarCompact snapshot should match snapshot with 15343 -> +15.3K 1`] = `
+<AvatarCompact
+  count={15343}
+>
+  <div
+    className="md-avatar-compact-wrapper"
+  >
+    +15.3K
+  </div>
+</AvatarCompact>
+`;
+
+exports[`AvatarCompact snapshot should match snapshot with 100000 -> +100K 1`] = `
+<AvatarCompact
+  count={100000}
+>
+  <div
+    className="md-avatar-compact-wrapper"
+  >
+    +100K
+  </div>
+</AvatarCompact>
+`;
+
+exports[`AvatarCompact snapshot should match snapshot with 125343 -> +125.3K 1`] = `
+<AvatarCompact
+  count={125343}
+>
+  <div
+    className="md-avatar-compact-wrapper"
+  >
+    +125.3K
+  </div>
+</AvatarCompact>
+`;
