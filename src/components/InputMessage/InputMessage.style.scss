@@ -2,22 +2,30 @@
   font-family: 'CiscoSansTT Regular';
 
   .md-input-message {
+    color: rgba(0, 0, 0, 0.95);
     color: var(--theme-text-primary-normal);
+    fill: rgba(0, 0, 0, 0.95);
     fill: var(--theme-text-primary-normal);
     margin-top: 1rem;
 
     &[message-level='error'] {
+      color: #ab0a15;
       color: var(--theme-text-error-normal);
+      fill: #ab0a15;
       fill: var(--theme-text-error-normal);
     }
 
     &[message-level='warning'] {
+      color: #7d4705;
       color: var(--theme-text-warning-normal);
+      fill: #7d4705;
       fill: var(--theme-text-warning-normal);
     }
 
     &[message-level='success'] {
+      color: #185e46;
       color: var(--theme-text-success-normal);
+      fill: #185e46;
       fill: var(--theme-text-success-normal);
     }
 
