@@ -78,7 +78,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-active)"
@@ -124,7 +124,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-meeting)"
@@ -170,7 +170,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-schedule)"
@@ -216,7 +216,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-dnd)"
@@ -262,7 +262,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-presenting)"
@@ -308,7 +308,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-quiet-hours)"
@@ -354,7 +354,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-away)"
@@ -400,7 +400,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           CW
         </span>
         <div
-          className="md-avatar-icon-wrapper"
+          className="md-avatar-presence-icon-wrapper"
         >
           <Icon
             fillColor="var(--avatar-presence-icon-ooo)"
