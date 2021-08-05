@@ -80,6 +80,8 @@
     "styles:build:css": "node-sass -i templates/momentum-ui.scss -o css/ --importer=./node_modules/node-sass-tilde-importer",
     "styles:build:settings": "node ./tools/generateSettingsScss.js",
     "styles:build:tokens": "node ./tools/generateScssFromTokens.js",
+    "styles:makeIECompatible": "node ./src/helpers/cssCompatibility.js add",
+    "styles:makeIEIncompatible": "node ./src/helpers/cssCompatibility.js remove",
     "cypress:verify": "cypress verify",
     "prepublishOnly": "yarn build",
     "prepare": "husky install"
