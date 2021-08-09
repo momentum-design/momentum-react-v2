@@ -100,6 +100,7 @@ export {
 
 /** V2 Components [TypeScript] */
 export {
+  Badge as BadgeNext,
   ButtonDialpad,
   ButtonPill,
   CodeInput,
