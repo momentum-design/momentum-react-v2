@@ -21,7 +21,8 @@
       font-size: $avatar-failure-badge__size;
       color: $avatar-failure-badge__color;
       background-color: $avatar-failure-badge__background;
-      content: $icon-priority_12;
+      content: $icon-private_12;
+      font-weight: $font-weight-bold;
 
       @include flex;
       @include border-radius($global-rounded);
