@@ -7,7 +7,7 @@ svg.md-icon-coloured {
 }
 
 .md-icon-wrapper {
-  display: inline-block;
+  display: flex;
 
   svg {
     fill: var(--theme-text-primary-normal, black);
