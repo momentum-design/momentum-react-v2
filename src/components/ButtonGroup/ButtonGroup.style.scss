@@ -1,5 +1,4 @@
 .md-button-group-wrapper {
-  --outline-primary-normal: var(--theme-text-primary-disabled); /* replace once token is available */
   align-items: center;
   display: flex;
   margin: 0.5rem;
@@ -7,7 +6,7 @@
   &[data-separation='partial'] {
 
     .md-button-group-separator {
-      background-color: var(--outline-primary-normal);
+      background-color: var(--button-group-separator-background);
       height: 50%;
       width: 0.0625rem;
     }
@@ -16,7 +15,7 @@
   &[data-separation='full'] {
 
     .md-button-group-separator {
-      background-color: var(--outline-primary-normal);
+      background-color: var(--button-group-separator-background);
       height: 100%;
       width: 0.0625rem;
     }
