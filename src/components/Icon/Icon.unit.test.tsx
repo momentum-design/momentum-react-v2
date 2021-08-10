@@ -80,7 +80,7 @@ describe('Icon', () => {
       expect(icon.classList.contains(STYLE.wrapper));
     });
 
-    it('svg should have custom class if provided', async () => {
+    it('should have custom class if provided', async () => {
       const testClass = 'testClass';
 
       const wrapper = await mountAndWait(<Icon name="accessibility" className={testClass} />);
