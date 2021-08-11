@@ -37,9 +37,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example A
-          </div>
+          Example A
         </button>
       </FocusRing>
     </ButtonPill>
@@ -76,9 +74,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -115,9 +111,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -164,9 +158,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when provided a className
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example A
-          </div>
+          Example A
         </button>
       </FocusRing>
     </ButtonPill>
@@ -203,9 +195,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when provided a className
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -242,9 +232,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when provided a className
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -291,9 +279,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example A
-          </div>
+          Example A
         </button>
       </FocusRing>
     </ButtonPill>
@@ -330,9 +316,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -369,9 +353,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -418,9 +400,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example A
-          </div>
+          Example A
         </button>
       </FocusRing>
     </ButtonPill>
@@ -457,9 +437,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -496,9 +474,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -545,9 +521,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with seperation 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example A
-          </div>
+          Example A
         </button>
       </FocusRing>
     </ButtonPill>
@@ -584,9 +558,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with seperation 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
@@ -623,9 +595,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with seperation 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <div>
-            Example B
-          </div>
+          Example B
         </button>
       </FocusRing>
     </ButtonPill>
