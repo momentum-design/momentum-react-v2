@@ -1,22 +1,22 @@
-import Separator from '.';
+import ContentSeparator from '.';
 import { mount } from 'enzyme';
 import React from 'react';
 
-describe('Separator', () => {
+describe('ContentSeparator', () => {
   describe('snapshot', () => {
     it('should match snapshot when text is used', () => {
-      const container = mount(<Separator>hello</Separator>);
+      const container = mount(<ContentSeparator>hello</ContentSeparator>);
 
       expect(container).toMatchSnapshot();
     });
 
     it('should match snapshot when another component is used', () => {
       const container = mount(
-        <Separator>
+        <ContentSeparator>
           <div>
             <div>Some nested text</div>
           </div>
-        </Separator>
+        </ContentSeparator>
       );
 
       expect(container).toMatchSnapshot();

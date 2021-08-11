@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story } from '@storybook/react';
 
-import Separator, { SeparatorProps } from './';
+import ContentSeparator, { ContentSeparatorProps } from './';
 
 import Icon from '../Icon';
 
@@ -15,8 +15,8 @@ const childrenOptions = {
 };
 
 export default {
-  title: 'Momentum UI/Separator',
-  component: Separator,
+  title: 'Momentum UI/ContentSeparator',
+  component: ContentSeparator,
   argTypes: {
     children: {
       description: 'Text or other component to put in the middle of the separator',
@@ -27,19 +27,19 @@ export default {
   },
 };
 
-const Template: Story<SeparatorProps> = (args) => {
+const Template: Story<ContentSeparatorProps> = (args) => {
   const { children } = args;
   return (
     <div style={{ width: '15rem' }}>
-      <Separator {...args}>{children}</Separator>
+      <ContentSeparator {...args}>{children}</ContentSeparator>
     </div>
   );
 };
 
-const Story1 = Template.bind({});
+const Example = Template.bind({});
 
-Story1.args = {
+Example.args = {
   children: 'Some separator text',
 };
 
-export { Story1 };
+export { Example };

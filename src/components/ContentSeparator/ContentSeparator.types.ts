@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 export interface Props {
   /**
-   * className custom class to be able to override  the separators's CSS
+   * className custom class to be able to override the content separators's CSS
    */
   className?: string;
   /**

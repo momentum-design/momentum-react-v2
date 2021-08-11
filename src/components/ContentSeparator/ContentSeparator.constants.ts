@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-separator';
+const CLASS_PREFIX = 'md-content-separator';
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
