@@ -34,7 +34,7 @@ const ButtonPill: FC<Props> = forwardRef(
           data-size={props.size || DEFAULTS.SIZE}
           data-disabled={props.disabled || DEFAULTS.DISABLED}
         >
-          <div>{children}</div>
+          {children}
         </button>
       </FocusRing>
     );

@@ -28,9 +28,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <div>
-        Example Text
-      </div>
+      Example Text
     </button>
   </FocusRing>
 </ButtonPill>
@@ -66,9 +64,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <div>
-        Example Text
-      </div>
+      Example Text
     </button>
   </FocusRing>
 </ButtonPill>
@@ -106,9 +102,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled
       onTouchStart={[Function]}
       type="button"
     >
-      <div>
-        Example Text
-      </div>
+      Example Text
     </button>
   </FocusRing>
 </ButtonPill>
@@ -144,9 +138,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
       onTouchStart={[Function]}
       type="button"
     >
-      <div>
-        Example Text
-      </div>
+      Example Text
     </button>
   </FocusRing>
 </ButtonPill>
@@ -183,9 +175,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <div>
-        Example Text
-      </div>
+      Example Text
     </button>
   </FocusRing>
 </ButtonPill>
@@ -221,9 +211,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <div>
-        Example Text
-      </div>
+      Example Text
     </button>
   </FocusRing>
 </ButtonPill>
@@ -259,9 +247,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <div>
-        Example Text
-      </div>
+      Example Text
     </button>
   </FocusRing>
 </ButtonPill>
