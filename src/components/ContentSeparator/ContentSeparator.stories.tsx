@@ -12,6 +12,7 @@ const childrenOptions = {
       <Icon name="meetings" />
     </div>
   ),
+  undefined: undefined,
 };
 
 export default {
@@ -23,6 +24,14 @@ export default {
       options: Object.keys(childrenOptions),
       mapping: childrenOptions,
       control: { type: 'select' },
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: undefined,
+        },
+      },
     },
   },
 };
