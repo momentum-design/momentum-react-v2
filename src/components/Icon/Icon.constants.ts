@@ -1,13 +1,26 @@
 const CLASS_PREFIX = 'md-icon';
 
-export const WEIGHTS: Record<string, string> = {
+const WEIGHTS: Record<string, string> = {
   light: 'light',
   regular: 'regular',
   bold: 'bold',
   filled: 'filled',
 };
 
-export const SIZES: Record<number, number> = {
+const GLYPH_NOT_FOUND = String.fromCharCode(0x20de);
+
+const SCALES = {
+  25: 25,
+  50: 50,
+  75: 75,
+  100: 100,
+  125: 125,
+  150: 150,
+  175: 175,
+  200: 200,
+};
+
+const SIZES: Record<number, number> = {
   8: 8,
   10: 10,
   12: 12,
@@ -40,4 +53,4 @@ const STYLE = {
   coloured: `${CLASS_PREFIX}-coloured`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE };
+export { CLASS_PREFIX, DEFAULTS, GLYPH_NOT_FOUND, SCALES, SIZES, STYLE, WEIGHTS };
