@@ -5,6 +5,10 @@ export type Message = {
 
 export interface Props {
   /**
+   * Custom class to be able to override the component's CSS
+   */
+  className?: string;
+  /**
    * numDigits: the number of input boxes in the code input
    */
   numDigits: number;

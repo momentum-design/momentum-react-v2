@@ -93,7 +93,7 @@ export default {
     className: {
       defaultValue: undefined,
       description:
-        'If present, the class name will be added to the underlying svg. Used to override styles by consumers.',
+        'If present, the class name will be added to the underlying component. Used to override styles by consumers.',
       control: { type: 'text' },
       table: {
         type: {
