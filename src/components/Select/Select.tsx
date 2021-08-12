@@ -89,6 +89,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     <div className={classnames(className, STYLE.wrapper)} ref={ref}>
       {label && (
         <label htmlFor={name} {...labelProps}>
+          {/* //TODO: change with <Text /> when available */}
           {label}
         </label>
       )}
