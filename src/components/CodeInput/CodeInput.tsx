@@ -4,6 +4,7 @@ import VerificationInput from 'react-verification-input';
 import './CodeInput.style.scss';
 import { Props } from './CodeInput.types';
 import InputMessage, { MessageLevel } from '../InputMessage';
+import classnames from 'classnames';
 
 const determineMessageType = (array): MessageLevel => {
   return array.reduce((agg, e) => {
@@ -16,7 +17,7 @@ const filterMessagesByType = (array, value) => {
 };
 
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
-  const { numDigits, onComplete, ariaLabel, messageArr = [], disabled = false } = props;
+  const { numDigits, onComplete, ariaLabel, messageArr = [], disabled = false, className } = props;
 
   const [internalMessageArray, setInternalMessageArray] = useState(messageArr);
   const [isComplete, setComplete] = useState(false);
@@ -38,7 +39,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   }, [JSON.stringify(messageArr)]);
 
   return (
-    <div className="md-code-input-wrapper" data-level={messageType}>
+    <div className={classnames('md-code-input-wrapper', className)} data-level={messageType}>
       <VerificationInput
         inputProps={{ 'aria-label': ariaLabel, disabled }}
         length={numDigits}

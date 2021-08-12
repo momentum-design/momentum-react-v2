@@ -9,6 +9,20 @@ export default {
   title: 'Momentum UI/InputMessage',
   component: InputMessage,
   argTypes: {
+    className: {
+      defaultValue: undefined,
+      description:
+        'If present, the class name will be added to the underlying component. Used to override styles by consumers.',
+      control: { type: 'text' },
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: undefined,
+        },
+      },
+    },
     level: {
       description: 'The level of the message.',
       options: INPUT_MESSAGE_CONSTANTS.MESSAGE_LEVEL,
@@ -23,11 +37,11 @@ const Template: Story<InputMessageProps> = (args) => (
   </ThemeProvider>
 );
 
-const Story1 = Template.bind({});
+const Example = Template.bind({});
 
-Story1.args = {
+Example.args = {
   message: 'This is a message',
   level: 'error',
 };
 
-export { Story1 };
+export { Example };

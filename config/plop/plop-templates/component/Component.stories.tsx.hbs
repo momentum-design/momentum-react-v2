@@ -1,32 +1,96 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 
 import {{componentName}}, { {{componentName}}Props } from './';
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs';
 
-import ThemeProvider from '../ThemeProvider';
+import Documentation from './{{componentName}}.documentation.mdx';
+
+const DocsPage: FC = () => (
+  <>
+    <Title />
+    <Subtitle />
+    <Description />
+    <Documentation />
+    <Primary />
+    <ArgsTable story={PRIMARY_STORY} />
+  </>
+);
 
 export default {
   title: 'Momentum UI/{{componentName}}',
   component: {{componentName}},
+  parameters: {
+    expanded: true,
+    docs: {
+      page: DocsPage,
+    },
+  },
   argTypes: {
     propName: {
-      description: 'Description with what the prop does.',
-      options: ['Value 1', 'Value 2'],
-      control: { type: 'select' }, // change as needed
+      defaultValue: undefined,
+      description: 'Description goes here.',
+      options: [undefined, 'Option 1', 'Option 2'],
+      control: { type: 'select' },
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: undefined,
+        },
+      },
     },
   },
 };
 
-const Template: Story<{{componentName}}Props> = (args) => (
-  <ThemeProvider>
-    <{{componentName}} {...args} />
-  </ThemeProvider>
-);
+const MultiTemplate: Story<{{componentName}}Props> = (args: {{componentName}}Props, { parameters }) => {
+  const { variants } = parameters;
 
-const Story1 = Template.bind({});
+  const items = variants.map((variant, index: number) => (
+    <div key={index}>
+      <{{componentName}} {...args} {...variant} />
+      <p>{variant.label}</p>
+    </div>
+  ));
 
-Story1.args = {
+  return (
+    <div
+      style=\{{
+        display: 'grid',
+        gridTemplateColumns: `repeat(4, auto)`,
+        gap: '1.5rem',
+        alignItems: 'end',
+      }}
+    >
+      {items}
+    </div>
+  );
+};
+
+const Template: Story<{{componentName}}Props> = (args) => <{{componentName}} {...args} />;
+
+const Example = Template.bind({});
+
+Example.args = {
   propName: 'Value 1',
 };
 
-export { Story1 };
+const Common = MultiTemplate.bind({});
+
+Common.parameters = {
+  variants: [
+    {},
+    { propName: 'Value 1', label: 'With value 1' },
+    { propName: 'Value 2', label: 'With value 2' },
+  ],
+};
+
+export { Example, Common };

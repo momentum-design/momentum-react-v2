@@ -15,8 +15,23 @@ export default {
   title: 'Momentum UI/CodeInput',
   component: CodeInput,
   argTypes: {
+    className: {
+      defaultValue: undefined,
+      description:
+        'If present, the class name will be added to the underlying component. Used to override styles by consumers.',
+      control: { type: 'text' },
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: undefined,
+        },
+      },
+    },
     numDigits: {
       description: 'Number of boxes',
+      control: { type: 'number' },
     },
     messageArr: {
       description: 'The list of messages to be passed in',
@@ -67,13 +82,13 @@ const Template: Story<StoryProps> = (args) => {
   );
 };
 
-const Story1 = Template.bind({});
+const Example = Template.bind({});
 
-Story1.args = {
+Example.args = {
   numDigits: 6,
   messageArr: 'empty',
   disabled: false,
   onCompleteChoice: 'show error',
 };
 
-export { Story1 };
+export { Example };
