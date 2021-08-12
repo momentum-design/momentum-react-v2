@@ -1,0 +1,118 @@
+.md-text-wrapper {
+    font-family: CiscoSansTT; // IEFIX
+    font-family: var(--font-default);
+
+    color: var(--theme-text-primary-normal);
+
+    &[data-type='display']{
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &[data-type='banner-tertiary']{
+        font-size: 1.625rem;
+        font-weight: bold;
+        line-height: 2.25rem;
+    }
+
+    &[data-type='banner-primary']{
+        font-size: 1.625rem;
+        font-weight: 500;
+        line-height: 2.25rem;
+    }
+
+    &[data-type='banner-secondary']{
+        font-size: 1.625rem;
+        font-weight: normal;
+        line-height: 2.25rem;
+    }
+
+    &[data-type='title']{
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.875rem;
+    }
+
+    &[data-type='header-primary']{
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    &[data-type='highlight-primary']{
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    &[data-type='subheader-primary']{
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+
+    &[data-type='body-primary']{
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5rem;
+    }
+
+    &[data-type='hyperlink-primary']{
+        font-size: 1rem;
+        font-weight: normal;
+        text-decoration: underline;
+        line-height: 1.5rem;
+    }
+
+    &[data-type='subheader-secondary']{
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.375rem;
+    }
+
+    &[data-type='highlight-secondary']{
+        font-size: 0.875rem;
+        font-weight: bold;
+        line-height: 1.375rem;
+    }
+
+    &[data-type='header-secondary']{
+        font-size: 0.875rem;
+        font-weight: bold;
+        line-height: 1.375rem;
+    }
+
+    &[data-type='body-secondary']{
+        font-size: 0.875rem;
+        font-weight: normal;
+        line-height: 1.375rem;
+    }
+
+    &[data-type='hyperlink-secondary']{
+        font-size: 0.875rem;
+        font-weight: normal;
+        text-decoration: underline;
+        line-height: 1.375rem;
+    }
+
+    &[data-type='highlight-compact']{
+        font-size: 0.75rem;
+        font-weight: bold;
+        line-height: 1.125rem;
+    }
+
+    &[data-type='body-compact']{
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height:  1.125rem;
+    }
+
+    &[data-type='label-compact']{
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height:  1.125rem;
+    }
+
+
+}
