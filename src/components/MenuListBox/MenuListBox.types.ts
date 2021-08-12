@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { SelectDirection } from '../Select/Select.types';
 
 export interface Props {
   /**
@@ -9,4 +10,5 @@ export interface Props {
    * children props
    */
   children?: ReactNode;
+  direction?: SelectDirection;
 }

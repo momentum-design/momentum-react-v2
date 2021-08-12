@@ -6,11 +6,16 @@ import { Props } from './MenuListBox.types';
 import { DEFAULTS, STYLE } from './MenuListBox.constants';
 
 const MenuListBox = (props: Props, ref: RefObject<HTMLUListElement>) => {
-  const { className, children, ...rest } = props;
+  const { className, children, direction, ...rest } = props;
 
   // Implementation goes here
   return (
-    <ul {...rest} ref={ref} className={classnames(className, STYLE.wrapper)}>
+    <ul
+      {...rest}
+      data-direction={direction}
+      ref={ref}
+      className={classnames(className, STYLE.wrapper)}
+    >
       {children}
     </ul>
   );

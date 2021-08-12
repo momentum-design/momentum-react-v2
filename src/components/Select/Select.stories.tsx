@@ -243,7 +243,7 @@ Common.parameters = {
               value: (
                 <Flex alignItems="center" xgap="0.875rem">
                   <Icon name="active-speaker" scale={18} weight="bold" />
-                  <span>Active Speaker</span>
+                  <span>Active Speaker Active Speaker Active Speaker Active Speaker</span>
                 </Flex>
               ),
             },
@@ -316,6 +316,7 @@ Common.parameters = {
         },
       ] as SelectData[],
     },
+    { label: 'Direction Top', items: singleItems, direction: 'top' },
   ],
 };
 

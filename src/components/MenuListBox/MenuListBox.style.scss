@@ -1,15 +1,11 @@
 .md-menu-list-box-wrapper {
-  min-width: 16rem;
-  position: absolute;
-  margin: 0.25rem 0 0 0;
-  padding: 0;
+  margin: 0;
   list-style: none;
   background: var(--theme-background-solid-primary-normal);
   padding: 0.5rem;
   border: 1px solid var(--codeinput-border);
   border-radius: 0.75rem;
   box-sizing: border-box;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
   &:focus {
     box-shadow: var(--focus-ring-box-shadow);
