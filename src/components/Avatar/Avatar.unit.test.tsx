@@ -161,5 +161,17 @@ describe('Avatar', () => {
       expect(element.textContent.length).toBe(MAX_INITIALS_SPACE);
       expect(element.textContent).toBe(`${initials}`);
     });
+
+    it('should pass the icon prop', async () => {
+      expect.assertions(1);
+
+      // space type only generates 1 initial
+      const icon = 'check';
+
+      const container = await mountAndWait(<Avatar title="Cisco Webex" icon={icon} />);
+      const element = container.find('svg').getDOMNode();
+
+      expect(element).toBeDefined();
+    });
   });
 });

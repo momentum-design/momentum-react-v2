@@ -22,8 +22,8 @@ const Avatar: React.FC<Props> = (props: Props) => {
     alt,
     title,
     initials,
-    size,
-    color,
+    size = DEFAULTS.SIZE,
+    color = DEFAULTS.COLOR,
     presence,
     type = DEFAULTS.TYPE,
     icon,
@@ -44,44 +44,44 @@ const Avatar: React.FC<Props> = (props: Props) => {
     setImageLoaded(false);
   }, [src]);
 
-  const renderPresence = (presence: PresenceType) => {
-    if (!presence) return;
-    if (presence === PresenceType.Default) return;
-    let icon: string;
-    let fill: string;
+  const renderPresence = (presenceType: PresenceType) => {
+    if (!presenceType) return;
+    if (presenceType === PresenceType.Default) return;
+    let presenceIcon: string;
+    let presenceFill: string;
 
-    switch (presence) {
+    switch (presenceType) {
       case PresenceType.Active:
-        icon = 'unread';
-        fill = 'var(--avatar-presence-icon-active)';
+        presenceIcon = 'unread';
+        presenceFill = 'var(--avatar-presence-icon-active)';
         break;
       case PresenceType.Meet:
-        icon = 'camera-presence';
-        fill = 'var(--avatar-presence-icon-meeting)';
+        presenceIcon = 'camera-presence';
+        presenceFill = 'var(--avatar-presence-icon-meeting)';
         break;
       case PresenceType.Schedule:
-        icon = 'meetings-presence';
-        fill = 'var(--avatar-presence-icon-schedule)';
+        presenceIcon = 'meetings-presence';
+        presenceFill = 'var(--avatar-presence-icon-schedule)';
         break;
       case PresenceType.DND:
-        icon = 'dnd-presence';
-        fill = 'var(--avatar-presence-icon-dnd)';
+        presenceIcon = 'dnd-presence';
+        presenceFill = 'var(--avatar-presence-icon-dnd)';
         break;
       case PresenceType.Presenting:
-        icon = 'share-screen';
-        fill = 'var(--avatar-presence-icon-presenting)';
+        presenceIcon = 'share-screen';
+        presenceFill = 'var(--avatar-presence-icon-presenting)';
         break;
       case PresenceType.QuietHours:
-        icon = 'quiet-hours-presence';
-        fill = 'var(--avatar-presence-icon-quiet-hours)';
+        presenceIcon = 'quiet-hours-presence';
+        presenceFill = 'var(--avatar-presence-icon-quiet-hours)';
         break;
       case PresenceType.Away:
-        icon = 'recents-presence';
-        fill = 'var(--avatar-presence-icon-away)';
+        presenceIcon = 'recents-presence';
+        presenceFill = 'var(--avatar-presence-icon-away)';
         break;
       case PresenceType.OOO:
-        icon = 'pto-presence';
-        fill = 'var(--avatar-presence-icon-ooo)';
+        presenceIcon = 'pto-presence';
+        presenceFill = 'var(--avatar-presence-icon-ooo)';
         break;
       default:
         break;
@@ -90,9 +90,9 @@ const Avatar: React.FC<Props> = (props: Props) => {
     return (
       <div className={STYLE.presenceIconWrapper}>
         <Icon
-          name={icon}
+          name={presenceIcon}
           weight="filled"
-          fillColor={fill}
+          fillColor={presenceFill}
           scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
         />
       </div>
@@ -175,12 +175,12 @@ const Avatar: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="md-avatar-outer-wrapper">
-      <div
-        className={classnames(STYLE.wrapper, className)}
-        data-size={size || DEFAULTS.SIZE}
-        data-color={color || DEFAULTS.COLOR}
-      >
-        {/* Renders by default with initials or title. Doesn't render if src or icon provided */}
+      <div className={classnames(STYLE.wrapper, className)} data-size={size} data-color={color}>
+        {/*
+          Renders by default with initials or title.
+          Doesn't render if src has loaded successfully or icon is provided.
+          It also renders if src has failed to load.
+        */}
         {renderInitials()}
         {/* Renders if src is provided. */}
         {renderImage()}

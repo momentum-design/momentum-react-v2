@@ -69,7 +69,7 @@ export interface Props {
    */
   type?: 'person' | 'space';
   /**
-   * Determines if the avatar should display an icon inside
+   * The icon name to display instead of initials or image
    */
   icon?: string;
 }

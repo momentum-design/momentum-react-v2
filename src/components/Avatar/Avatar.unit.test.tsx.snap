@@ -83,6 +83,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-active)"
             name="unread"
+            scale={8}
             weight="filled"
           >
             <div
@@ -91,7 +92,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
@@ -129,6 +130,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-meeting)"
             name="camera-presence"
+            scale={8}
             weight="filled"
           >
             <div
@@ -137,7 +139,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
@@ -175,6 +177,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-schedule)"
             name="meetings-presence"
+            scale={8}
             weight="filled"
           >
             <div
@@ -183,7 +186,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
@@ -221,6 +224,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-dnd)"
             name="dnd-presence"
+            scale={8}
             weight="filled"
           >
             <div
@@ -229,7 +233,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
@@ -267,6 +271,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-presenting)"
             name="share-screen"
+            scale={8}
             weight="filled"
           >
             <div
@@ -275,7 +280,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
@@ -313,6 +318,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-quiet-hours)"
             name="quiet-hours-presence"
+            scale={8}
             weight="filled"
           >
             <div
@@ -321,7 +327,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
@@ -359,6 +365,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-away)"
             name="recents-presence"
+            scale={8}
             weight="filled"
           >
             <div
@@ -367,7 +374,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
@@ -405,6 +412,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           <Icon
             fillColor="var(--avatar-presence-icon-ooo)"
             name="pto-presence"
+            scale={8}
             weight="filled"
           >
             <div
@@ -413,7 +421,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               <svg
                 className=""
                 data-autoscale={false}
-                data-scale={32}
+                data-scale={8}
                 height="100%"
                 style={
                   Object {
