@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 
-import ListBoxItem, { ListBoxItemProps } from './';
+import SelectOption, { SelectOptionProps } from './';
 import {
   Title,
   Subtitle,
@@ -12,8 +11,7 @@ import {
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
 
-import Documentation from './ListBoxItem.documentation.mdx';
-import { Item } from '@react-stately/collections';
+import Documentation from './SelectOption.documentation.mdx';
 
 const DocsPage: FC = () => (
   <>
@@ -27,8 +25,8 @@ const DocsPage: FC = () => (
 );
 
 export default {
-  title: 'Momentum UI/ListBoxItem',
-  component: ListBoxItem,
+  title: 'Momentum UI/SelectOption',
+  component: SelectOption,
   parameters: {
     expanded: true,
     docs: {
@@ -53,15 +51,12 @@ export default {
   },
 };
 
-const MultiTemplate: Story<ListBoxItemProps<any>> = (
-  args: ListBoxItemProps<any>,
-  { parameters }
-) => {
+const MultiTemplate: Story<SelectOptionProps> = (args: SelectOptionProps, { parameters }) => {
   const { variants } = parameters;
 
   const items = variants.map((variant, index: number) => (
     <div key={index}>
-      <ListBoxItem {...args} {...variant} />
+      <SelectOption {...args} {...variant} />
       <p>{variant.label}</p>
     </div>
   ));
@@ -80,21 +75,21 @@ const MultiTemplate: Story<ListBoxItemProps<any>> = (
   );
 };
 
-const Template: Story<ListBoxItemProps<any>> = (args) => <ListBoxItem {...args} />;
+const Template: Story<SelectOptionProps> = (args) => <SelectOption {...args} />;
 
 const Example = Template.bind({});
 
 Example.args = {
-  item: <Item>Item</Item>,
+  propName: 'Value 1',
 };
 
 const Common = MultiTemplate.bind({});
 
 Common.parameters = {
   variants: [
-    { item: <Item>Item</Item> },
-    { item: <Item>Item</Item>, label: 'With value 1' },
-    { item: <Item>Item</Item>, label: 'With value 2' },
+    {},
+    { propName: 'Value 1', label: 'With value 1' },
+    { propName: 'Value 2', label: 'With value 2' },
   ],
 };
 

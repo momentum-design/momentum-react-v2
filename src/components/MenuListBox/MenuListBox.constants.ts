@@ -1,10 +1,9 @@
-const CLASS_PREFIX = 'md-list-box-section';
+const CLASS_PREFIX = 'md-menu-list-box';
 
 const DEFAULTS = {};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  separator: `${CLASS_PREFIX}-separator`,
 };
 
 export { DEFAULTS, STYLE };

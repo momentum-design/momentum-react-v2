@@ -1,14 +1,14 @@
-import React, { FC, useContext } from 'react';
+/* eslint-disable @typescript-eslint/ban-types */
+import React, { ReactElement, useContext } from 'react';
 import classnames from 'classnames';
 
 import './ListBoxSection.style.scss';
 import { Props } from './ListBoxSection.types';
 import { DEFAULTS, STYLE } from './ListBoxSection.constants';
 import { useListBoxSection, useSeparator } from 'react-aria';
-import { ListBoxContext } from '../ListBox/ListBox';
-import ListBoxItem from '../ListBoxItem';
+import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 
-const ListBoxSection: FC<Props<unknown>> = <T extends unknown>(props: Props<T>) => {
+const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
   const { className, section } = props;
 
   const { itemProps, headingProps, groupProps } = useListBoxSection({
@@ -17,7 +17,7 @@ const ListBoxSection: FC<Props<unknown>> = <T extends unknown>(props: Props<T>) 
   });
 
   const { separatorProps } = useSeparator({
-    elementType: 'li',
+    elementType: 'div',
   });
 
   const state = useContext(ListBoxContext);
@@ -28,32 +28,13 @@ const ListBoxSection: FC<Props<unknown>> = <T extends unknown>(props: Props<T>) 
   return (
     <>
       {section.key !== state.collection.getFirstKey() && (
-        <li
-          {...separatorProps}
-          style={{
-            borderTop: '1px solid gray',
-            margin: '2px 5px',
-          }}
-        />
+        <div {...separatorProps} className={STYLE.separator} />
       )}
-      <li {...itemProps}>
-        {section.rendered && (
-          <span {...headingProps} className={STYLE.wrapper}>
-            {section.rendered}
-          </span>
-        )}
-        <ul
-          {...groupProps}
-          style={{
-            padding: 0,
-            listStyle: 'none',
-          }}
-        >
-          {[...section.childNodes].map((node) => (
-            <ListBoxItem key={node.key} item={node} />
-          ))}
-        </ul>
-      </li>
+      {section.rendered && (
+        <div {...headingProps} className={STYLE.wrapper}>
+          {section.rendered}
+        </div>
+      )}
     </>
   );
 };

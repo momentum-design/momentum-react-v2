@@ -1,4 +1,4 @@
-import { AriaSelectProps } from '@react-types/select';
+import type { AriaSelectProps } from '@react-types/select';
 
 export interface Props<T> extends AriaSelectProps<T> {
   /**

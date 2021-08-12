@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react';
+import React, { ReactElement, RefObject, useRef, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import './Select.style.scss';
@@ -9,11 +9,11 @@ import { useButton } from '@react-aria/button';
 import { DismissButton, useOverlay } from '@react-aria/overlays';
 import { FocusScope } from '@react-aria/focus';
 import { useSelect, HiddenSelect } from '@react-aria/select';
-import ListBox from '../ListBox';
 import Icon from '../Icon';
+import ListBoxBase from '../ListBoxBase';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-const Select: FC<Props<unknown>> = <T extends object>(props: Props<T>) => {
+function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
   const { className, isDisabled, label, name, placeholder } = props;
   const state = useSelectState(props);
 
@@ -40,10 +40,12 @@ const Select: FC<Props<unknown>> = <T extends object>(props: Props<T>) => {
     <FocusScope restoreFocus>
       <div {...overlayProps} ref={overlayRef}>
         <DismissButton onDismiss={() => state.close()} />
-        <ListBox
+        <ListBoxBase
           ref={boxRef}
           {...menuProps}
           state={state}
+          disallowEmptySelection
+          shouldHaveMenuListBoxWrapper
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={state.focusStrategy || true}
         />
@@ -53,7 +55,7 @@ const Select: FC<Props<unknown>> = <T extends object>(props: Props<T>) => {
   );
 
   return (
-    <div className={classnames(className, STYLE.wrapper)}>
+    <div className={classnames(className, STYLE.wrapper)} ref={ref}>
       {label && (
         <label htmlFor={name} {...labelProps}>
           {label}
@@ -80,10 +82,16 @@ const Select: FC<Props<unknown>> = <T extends object>(props: Props<T>) => {
       {state.isOpen && listBox}
     </div>
   );
-};
+}
 
 /**
  * Dropdown / Select Element which displays a listbox with options.
  */
 
-export default Select;
+const _Select = forwardRef(Select);
+
+_Select.displayName = 'Select';
+
+export default _Select as <T>(
+  props: Props<T> & { ref?: RefObject<HTMLDivElement> }
+) => ReactElement;

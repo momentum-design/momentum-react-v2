@@ -1,12 +1,8 @@
-import { FocusStrategy } from '@react-types/shared';
-import { ListState } from '@react-stately/list';
+import type { AriaListBoxProps } from '@react-types/listbox';
 
-export interface Props<T> {
+export interface Props<T> extends AriaListBoxProps<T> {
   /**
    * className prop description
    */
   className?: string;
-  state: ListState<T>;
-  autoFocus?: boolean | FocusStrategy;
-  displayName?: string;
 }

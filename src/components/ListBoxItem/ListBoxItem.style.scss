@@ -1,31 +1,6 @@
+
 .md-list-box-item-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  cursor: pointer;
-  color: var(--theme-text-primary-normal);
-  border-radius: 0.5rem;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-  &:focus {
-    box-shadow: var(--focus-ring-box-shadow);
-    outline: var(--focus-ring-outline);
-  }
-
-  &:hover {
-    background-color: var(--theme-background-primary-hover);
-  }
-
-  &:active {
-    background-color: var(--theme-background-primary-active);
-  }
-
-  .md-list-box-item-tick-icon {
-    fill: var(--theme-control-active-normal);
-  }
 }
 
 .md-list-box-item-contents-wrapper {
@@ -34,6 +9,6 @@
   align-items: center;
 
   > *:not(:first-child) {
-    margin-left: 0.75em;
+    margin-left: 0.75rem;
   }
 }

@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react';
 import { Story } from '@storybook/react';
+import { action, actions } from '@storybook/addon-actions';
 
 import ListBox, { ListBoxProps } from './';
 import {
@@ -12,7 +14,8 @@ import {
 } from '@storybook/addon-docs';
 
 import Documentation from './ListBox.documentation.mdx';
-
+import { Item, Section } from '@react-stately/collections';
+import ListItem from '../ListItem';
 const DocsPage: FC = () => (
   <>
     <Title />
@@ -51,13 +54,14 @@ export default {
   },
 };
 
-const MultiTemplate: Story<ListBoxProps> = (args: ListBoxProps, { parameters }) => {
+const MultiTemplate: Story<ListBoxProps<any>> = (args: ListBoxProps<any>, { parameters }) => {
   const { variants } = parameters;
 
   const items = variants.map((variant, index: number) => (
     <div key={index}>
-      <ListBox {...args} {...variant} />
-      <p>{variant.label}</p>
+      <ListBox<{ name: string; id: number }> {...args} {...variant}>
+        {(item) => <Item key={item.id}>{item.name}</Item>}
+      </ListBox>
     </div>
   ));
 
@@ -75,22 +79,84 @@ const MultiTemplate: Story<ListBoxProps> = (args: ListBoxProps, { parameters }) 
   );
 };
 
-const Template: Story<ListBoxProps> = (args) => <ListBox {...args} />;
+const SimpleTemplate: Story<ListBoxProps<any>> = (args) => (
+  <ListBox aria-labelledby="label" selectionMode="none" {...args}>
+    <Item>
+      <ListItem>Test</ListItem>
+    </Item>
+    <Item>Three</Item>
+    <Item>Four</Item>
+    <Item>Five</Item>
+    <Item>Six</Item>
+  </ListBox>
+);
 
-const Example = Template.bind({});
+const SectionWithNoLabelTemplate: Story<ListBoxProps<any>> = (args) => (
+  <ListBox aria-labelledby="label" selectionMode="none" {...args}>
+    <Section>
+      <Item>One</Item>
+      <Item>Two</Item>
+      <Item>Three</Item>
+    </Section>
+    <Section>
+      <Item>One</Item>
+      <Item>Two</Item>
+      <Item>Three</Item>
+    </Section>
+  </ListBox>
+);
+
+const SectionWithLabelTemplate: Story<ListBoxProps<any>> = (args) => (
+  <>
+    <ListBox aria-labelledby="label" selectionMode="none" {...args}>
+      <Section title="Section 1">
+        <Item>One</Item>
+        <Item>Two</Item>
+        <Item>Three</Item>
+      </Section>
+      <Section title={'Section 2'}>
+        <Item>One</Item>
+        <Item>Two</Item>
+        <Item>Three</Item>
+      </Section>
+    </ListBox>
+  </>
+);
+
+const Example = SimpleTemplate.bind({});
 
 Example.args = {
-  propName: 'Value 1',
+  label: 'Simple',
+  onSelectionChange: actions('onSelectionChange'),
+};
+
+const SectionsWithNoLabel = SectionWithNoLabelTemplate.bind({});
+
+SectionsWithNoLabel.args = {
+  label: 'Sections with no Label',
+  onSelectionChange: actions('onSelectionChange'),
+};
+
+const SectionWithLabel = SectionWithLabelTemplate.bind({});
+
+SectionWithLabel.args = {
+  label: 'Sections with Label',
+  onSelectionChange: actions('onSelectionChange'),
 };
 
 const Common = MultiTemplate.bind({});
 
 Common.parameters = {
   variants: [
-    {},
-    { propName: 'Value 1', label: 'With value 1' },
-    { propName: 'Value 2', label: 'With value 2' },
+    {
+      label: 'Simple ListBox',
+      items: [
+        { name: 'Red', id: 0 },
+        { name: 'Blue', id: 1 },
+        { name: 'Green', id: 2 },
+      ],
+    },
   ],
 };
 
-export { Example, Common };
+export { Example, SectionsWithNoLabel, SectionWithLabel, Common };

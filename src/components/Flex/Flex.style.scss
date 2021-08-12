@@ -1,0 +1,13 @@
+.md-flex-wrapper {
+  &[data-xgap=true] {
+    > *:not(:first-child) {
+      margin-left: var(--flex-xgap-size);
+    }
+  }
+
+  &[data-ygap=true] {
+    > *:not(:first-child) {
+      margin-top: var(--flex-ygap-size);
+    }
+  }
+}

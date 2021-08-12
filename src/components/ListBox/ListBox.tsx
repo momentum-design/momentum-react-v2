@@ -1,46 +1,27 @@
-import React, { RefObject, ReactElement, forwardRef } from 'react';
-import classnames from 'classnames';
+/* eslint-disable react/display-name */
+/* eslint-disable @typescript-eslint/ban-types */
+import React, { RefObject, ReactElement, forwardRef, useRef } from 'react';
 
 import './ListBox.style.scss';
 import { Props } from './ListBox.types';
 import { DEFAULTS, STYLE } from './ListBox.constants';
-import { useListBox } from 'react-aria';
-import { ListState } from '@react-stately/list';
-import ListBoxSection from '../ListBoxSection';
-import ListBoxItem from '../ListBoxItem';
-
-export const ListBoxContext = React.createContext<ListState<unknown>>(null);
+import ListBoxBase from '../ListBoxBase';
+import { useListState } from '@react-stately/list';
+import classnames from 'classnames';
 
 const ListBox = forwardRef(
-  <T extends unknown>(props: Props<T>, ref: RefObject<HTMLUListElement>) => {
+  <T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) => {
+    const _ref = ref || useRef<HTMLUListElement>(null);
     const { className } = props;
-
-    // Implementation goes here
-    const { state, ...otherProps } = props;
-
-    // Get props for the listbox
-    const { listBoxProps } = useListBox(
-      {
-        autoFocus: props.autoFocus,
-        disallowEmptySelection: true,
-        ...otherProps,
-      },
-      state,
-      ref
-    );
+    const state = useListState(props);
 
     return (
-      <ListBoxContext.Provider value={state}>
-        <ul {...listBoxProps} ref={ref} className={classnames(className, STYLE.wrapper)}>
-          {[...state.collection].map((item) =>
-            item.hasChildNodes ? (
-              <ListBoxSection key={item.key} section={item} header={item.rendered} />
-            ) : (
-              <ListBoxItem item={item} key={item.key} />
-            )
-          )}
-        </ul>
-      </ListBoxContext.Provider>
+      <ListBoxBase
+        {...props}
+        ref={_ref}
+        state={state}
+        className={classnames(STYLE.wrapper, className)}
+      />
     );
   }
 ) as <T>(props: Props<T> & { ref?: RefObject<HTMLUListElement> }) => ReactElement;
