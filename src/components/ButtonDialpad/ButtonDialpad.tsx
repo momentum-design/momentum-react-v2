@@ -5,9 +5,11 @@ import { FocusRing } from '@react-aria/focus';
 import { DEFAULTS, STYLE } from './ButtonDialpad.constants';
 import { Props } from './ButtonDialpad.types';
 import './ButtonDialpad.style.scss';
+import classnames from 'classnames';
 
 const ButtonDialpad: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+    const { className } = props;
     const ref = providedRef || useRef();
     const mutatedProps = {
       ...props,
@@ -15,6 +17,7 @@ const ButtonDialpad: FC<Props> = forwardRef(
     };
 
     delete mutatedProps.disabled;
+    delete mutatedProps.className;
 
     const { buttonProps } = useButton(mutatedProps, ref);
     const children = props.children || props.primaryText;
@@ -22,7 +25,7 @@ const ButtonDialpad: FC<Props> = forwardRef(
     return (
       <FocusRing focusRingClass={STYLE.focusRing}>
         <button
-          className={`${STYLE.wrapper}`}
+          className={classnames(STYLE.wrapper, className)}
           {...buttonProps}
           ref={ref}
           data-size={props.size || DEFAULTS.SIZE}

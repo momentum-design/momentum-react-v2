@@ -104,6 +104,15 @@ describe('<ButtonPill />', () => {
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
     });
 
+    it('should have custom class if provided', () => {
+      const testClass = 'testClass';
+
+      const wrapper = mount(<ButtonDialpad className={testClass} />);
+      const element = wrapper.find(ButtonDialpad).getDOMNode();
+
+      expect(element.classList.contains(testClass)).toBe(true);
+    });
+
     it('should pass size prop', () => {
       expect.assertions(1);
 

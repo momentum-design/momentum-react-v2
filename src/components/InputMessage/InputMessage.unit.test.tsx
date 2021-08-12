@@ -53,5 +53,16 @@ describe('InputMessage', () => {
       ).childAt(0);
       expect(component.find('svg').length).toBe(0);
     });
+
+    it('should have custom class if provided', async () => {
+      const testClass = 'testClass';
+
+      const wrapper = await mountAndWait(
+        <InputMessage message="some message" className={testClass} />
+      );
+      const element = wrapper.find(InputMessage).getDOMNode();
+
+      expect(element.classList.contains(testClass)).toBe(true);
+    });
   });
 });

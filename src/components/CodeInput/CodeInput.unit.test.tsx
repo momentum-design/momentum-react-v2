@@ -35,6 +35,15 @@ describe('CodeInput', () => {
       expect(message.length).toBe(1);
       expect(message.props()['message-level']).toEqual('error');
     });
+
+    it('should have custom class if provided', () => {
+      const testClass = 'testClass';
+
+      const wrapper = mount(<CodeInput numDigits={6} className={testClass} />);
+      const element = wrapper.find(CodeInput).getDOMNode();
+
+      expect(element.classList.contains(testClass)).toBe(true);
+    });
   });
 
   describe('digit entry', () => {

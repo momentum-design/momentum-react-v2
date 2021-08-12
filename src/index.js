@@ -101,11 +101,13 @@ export {
 /** V2 Components [TypeScript] */
 export {
   ButtonDialpad,
+  ButtonGroup as ButtonGroupNext,
+  ButtonHyperlink,
   ButtonPill,
   CodeInput,
   InputMessage as InputMessageNew,
-  ButtonHyperlink,
   ExampleComponent,
   Icon as IconNext,
   ThemeProvider,
+  ContentSeparator,
 } from './components';
