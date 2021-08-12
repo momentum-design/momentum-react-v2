@@ -21,7 +21,7 @@ export type IconScale =
 export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
 export interface Props {
   /**
-   * className custom class to be able to override  the icon's CSS
+   * Custom class to be able to override the component's CSS
    */
   className?: string;
   /**
