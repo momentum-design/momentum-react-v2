@@ -1,6 +1,10 @@
+import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
+
 import { BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
 
 export default {
+  ...commonStyles,
+  ...commonAriaButton,
   children: {
     defaultValue: 'Example Text',
     description: 'Provides the child nodes for this element.',
@@ -83,48 +87,6 @@ export default {
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.SIZE,
-      },
-    },
-  },
-  onPress: {
-    action: 'onPress',
-    description:
-      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when the press is released over the target.',
-    table: {
-      category: 'AriaButtonProps',
-      type: {
-        summary: '(e: PressEvent) => void',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  autoFocus: {
-    action: 'autoFocus',
-    description:
-      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Whether the element should receive focus on render.',
-    table: {
-      category: 'AriaButtonProps',
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  onKeyDown: {
-    action: 'onKeyDown',
-    description:
-      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Handler that is called when a key is pressed.',
-    table: {
-      category: 'AriaButtonProps',
-      type: {
-        summary: '(e: KeyboardEvent) => void',
-      },
-      defaultValue: {
-        summary: 'undefined',
       },
     },
   },

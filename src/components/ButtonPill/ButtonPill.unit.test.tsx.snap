@@ -181,6 +181,40 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
 </ButtonPill>
 `;
 
+exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
+<ButtonPill
+  className="example-class"
+>
+  <FocusRing
+    focusRingClass="md-button-pill-focus-ring"
+  >
+    <button
+      className="md-button-pill-wrapper example-class"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-outline={false}
+      data-size={40}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    />
+  </FocusRing>
+</ButtonPill>
+`;
+
 exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
 <ButtonPill
   color="message"
@@ -217,6 +251,41 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
 </ButtonPill>
 `;
 
+exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
+<ButtonPill
+  id="example-id"
+>
+  <FocusRing
+    focusRingClass="md-button-pill-focus-ring"
+  >
+    <button
+      className="md-button-pill-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-outline={false}
+      data-size={40}
+      id="example-id"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    />
+  </FocusRing>
+</ButtonPill>
+`;
+
 exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
 <ButtonPill
   size={40}
@@ -249,6 +318,49 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
     >
       Example Text
     </button>
+  </FocusRing>
+</ButtonPill>
+`;
+
+exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
+<ButtonPill
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <FocusRing
+    focusRingClass="md-button-pill-focus-ring"
+  >
+    <button
+      className="md-button-pill-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-outline={false}
+      data-size={40}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+      type="button"
+    />
   </FocusRing>
 </ButtonPill>
 `;
