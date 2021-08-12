@@ -6,7 +6,8 @@ import { DEFAULTS, GLYPH_NOT_FOUND, STYLE } from './Icon.constants';
 import classnames from 'classnames';
 
 const Icon: React.FC<Props> = (props: Props) => {
-  const { autoScale, className, color, fillColor, name, scale, strokeColor, weight } = props;
+  const { autoScale, className, color, fillColor, id, name, scale, strokeColor, style, weight } =
+    props;
   const { SvgIcon, error } = useDynamicSVGImport(`${name}-${weight || DEFAULTS.WEIGHT}`);
 
   const isColoredIcon = name.indexOf('coloured') > 0;
@@ -50,7 +51,7 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   if (SvgIcon) {
     return (
-      <div className={STYLE.wrapper}>
+      <div className={STYLE.wrapper} id={id} style={style}>
         <SvgIcon
           // coloured class is added to avoid theming the fixed colours inside coloured icons
           className={classnames(className, { [STYLE.coloured]: isColoredIcon })}
