@@ -31,7 +31,6 @@ const Sizes = MultiTemplate<IconProps>(Icon).bind({});
 
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.autoScale;
-delete Sizes.argTypes.className;
 delete Sizes.argTypes.scale;
 
 Sizes.args = {
@@ -51,7 +50,6 @@ Sizes.parameters = {
 const Weights = MultiTemplate<IconProps>(Icon).bind({});
 
 Weights.argTypes = { ...argTypes };
-delete Weights.argTypes.className;
 delete Weights.argTypes.weight;
 
 Weights.args = {
@@ -72,7 +70,6 @@ const Common = MultiTemplate<IconProps>(Icon).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.autoScale;
-delete Common.argTypes.className;
 delete Common.argTypes.scale;
 delete Common.argTypes.weight;
 

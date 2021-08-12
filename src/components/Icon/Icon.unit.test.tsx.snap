@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon snapshot should match snapshot 1`] = `
+exports[`<Icon /> snapshot should match snapshot 1`] = `
 <Icon
   name="accessibility"
 >
@@ -22,7 +22,7 @@ exports[`Icon snapshot should match snapshot 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with autoScale set to 'true' 1`] = `
+exports[`<Icon /> snapshot should match snapshot with autoScale set to 'true' 1`] = `
 <Icon
   autoScale={true}
   name="accessibility"
@@ -45,7 +45,7 @@ exports[`Icon snapshot should match snapshot with autoScale set to 'true' 1`] = 
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with autoScale set to a percentage value 1`] = `
+exports[`<Icon /> snapshot should match snapshot with autoScale set to a percentage value 1`] = `
 <Icon
   autoScale={150}
   name="accessibility"
@@ -68,7 +68,14 @@ exports[`Icon snapshot should match snapshot with autoScale set to a percentage 
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with color 1`] = `
+exports[`<Icon /> snapshot should match snapshot with className 1`] = `
+<Icon
+  className="example-class"
+  name="accessibility"
+/>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with color 1`] = `
 <Icon
   color="red"
   name="accessibility"
@@ -96,7 +103,7 @@ exports[`Icon snapshot should match snapshot with color 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with fillColor 1`] = `
+exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
 <Icon
   fillColor="red"
   name="accessibility"
@@ -123,7 +130,14 @@ exports[`Icon snapshot should match snapshot with fillColor 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with invalid name 1`] = `
+exports[`<Icon /> snapshot should match snapshot with id 1`] = `
+<Icon
+  id="example-id"
+  name="accessibility"
+/>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with invalid name 1`] = `
 <Icon
   name="invalid_icon_name"
 >
@@ -141,7 +155,7 @@ exports[`Icon snapshot should match snapshot with invalid name 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with scale 1`] = `
+exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
 <Icon
   name="accessibility"
   scale={16}
@@ -164,7 +178,7 @@ exports[`Icon snapshot should match snapshot with scale 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with strokeColor 1`] = `
+exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
 <Icon
   name="accessibility"
   strokeColor="red"
@@ -191,7 +205,18 @@ exports[`Icon snapshot should match snapshot with strokeColor 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with weight 1`] = `
+exports[`<Icon /> snapshot should match snapshot with style 1`] = `
+<Icon
+  name="accessibility"
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+/>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
 <Icon
   name="accessibility"
   weight="light"

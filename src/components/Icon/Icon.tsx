@@ -5,6 +5,9 @@ import { useDynamicSVGImport } from '../../hooks/useDynamicSVGImport';
 import { DEFAULTS, GLYPH_NOT_FOUND, STYLE } from './Icon.constants';
 import classnames from 'classnames';
 
+/**
+ * Icon component that can dynamically display SVG icons with a valid name.
+ */
 const Icon: React.FC<Props> = (props: Props) => {
   const { autoScale, className, color, fillColor, id, name, scale, strokeColor, style, weight } =
     props;
@@ -14,7 +17,7 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   if (error) {
     return (
-      <div className={STYLE.wrapper}>
+      <div className={STYLE.wrapper} id={id} style={style}>
         <div
           className={STYLE.notFound}
           data-scale={!autoScale && (scale || DEFAULTS.SCALE)}
@@ -51,10 +54,10 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   if (SvgIcon) {
     return (
-      <div className={STYLE.wrapper} id={id} style={style}>
+      <div className={classnames(STYLE.wrapper, className)} id={id} style={style}>
         <SvgIcon
           // coloured class is added to avoid theming the fixed colours inside coloured icons
-          className={classnames(className, { [STYLE.coloured]: isColoredIcon })}
+          className={classnames({ [STYLE.coloured]: isColoredIcon })}
           style={{ ...getColors() }}
           stroke="currentColor"
           fill="currentColor"
@@ -70,9 +73,5 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   return null;
 };
-
-/**
- * Icon component that can dynamically display SVG icons with a valid name.
- */
 
 export default Icon;
