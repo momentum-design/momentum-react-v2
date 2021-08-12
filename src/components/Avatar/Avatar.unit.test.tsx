@@ -60,6 +60,14 @@ describe('Avatar', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with icon', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(<Avatar icon="check" />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

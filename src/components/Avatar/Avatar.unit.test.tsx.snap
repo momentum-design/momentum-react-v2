@@ -20,6 +20,43 @@ exports[`Avatar snapshot should match snapshot 1`] = `
 </Avatar>
 `;
 
+exports[`Avatar snapshot should match snapshot with icon 1`] = `
+<Avatar
+  icon="check"
+>
+  <div
+    className="md-avatar-outer-wrapper"
+  >
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+    >
+      <Icon
+        className="md-avatar-icon-wrapper"
+        name="check"
+        scale={16}
+        weight="bold"
+      >
+        <div
+          className="md-icon-wrapper"
+        >
+          <svg
+            className="md-avatar-icon-wrapper"
+            data-autoscale={false}
+            data-scale={16}
+            height="100%"
+            style={null}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+    </div>
+  </div>
+</Avatar>
+`;
+
 exports[`Avatar snapshot should match snapshot with initials 1`] = `
 <Avatar
   initials="CW"

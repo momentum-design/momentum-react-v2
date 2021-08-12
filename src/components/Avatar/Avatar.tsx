@@ -33,6 +33,12 @@ const Avatar: React.FC<Props> = (props: Props) => {
   const [imageLoadFailed, setImageLoadFailed] = useState(false);
   const imageRef = useRef<HTMLImageElement>();
 
+  if (src && icon) {
+    console.warn(
+      'Avatar: You can only use either an image or an icon inside the Avatar but not both.'
+    );
+  }
+
   useEffect(() => {
     if (imageRef && imageRef.current && imageRef.current.complete) {
       handleOnLoad();
