@@ -6,6 +6,7 @@ const theme = (Story, { globals }) => (
   <ThemeProvider theme={globals.theme}>
     <div
       style={{
+        alignItems: 'center',
         backgroundColor: 'var(--theme-background-solid-primary-normal)',
         color: 'var(--theme-text-primary-normal)',
         display: 'flex',
