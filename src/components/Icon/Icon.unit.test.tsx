@@ -16,32 +16,32 @@ describe('<Icon />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with className', () => {
+    it('should match snapshot with className', async () => {
       expect.assertions(1);
 
       const className = 'example-class';
 
-      container = mount(<Icon name="accessibility" className={className} />);
+      container = mountAndWait(<Icon name="accessibility" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with id', () => {
+    it('should match snapshot with id', async () => {
       expect.assertions(1);
 
       const id = 'example-id';
 
-      container = mount(<Icon name="accessibility" id={id} />);
+      container = mountAndWait(<Icon name="accessibility" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with style', () => {
+    it('should match snapshot with style', async () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
 
-      container = mount(<Icon name="accessibility" style={style} />);
+      container = mountAndWait(<Icon name="accessibility" style={style} />);
 
       expect(container).toMatchSnapshot();
     });

@@ -68,12 +68,7 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to a percent
 </Icon>
 `;
 
-exports[`<Icon /> snapshot should match snapshot with className 1`] = `
-<Icon
-  className="example-class"
-  name="accessibility"
-/>
-`;
+exports[`<Icon /> snapshot should match snapshot with className 1`] = `Promise {}`;
 
 exports[`<Icon /> snapshot should match snapshot with color 1`] = `
 <Icon
@@ -130,12 +125,7 @@ exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
 </Icon>
 `;
 
-exports[`<Icon /> snapshot should match snapshot with id 1`] = `
-<Icon
-  id="example-id"
-  name="accessibility"
-/>
-`;
+exports[`<Icon /> snapshot should match snapshot with id 1`] = `Promise {}`;
 
 exports[`<Icon /> snapshot should match snapshot with invalid name 1`] = `
 <Icon
@@ -205,16 +195,7 @@ exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
 </Icon>
 `;
 
-exports[`<Icon /> snapshot should match snapshot with style 1`] = `
-<Icon
-  name="accessibility"
-  style={
-    Object {
-      "color": "pink",
-    }
-  }
-/>
-`;
+exports[`<Icon /> snapshot should match snapshot with style 1`] = `Promise {}`;
 
 exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
 <Icon
