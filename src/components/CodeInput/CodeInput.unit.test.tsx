@@ -1,7 +1,17 @@
 import CodeInput from '.';
 import { mount } from 'enzyme';
-import React from 'react';
+import React, { useState } from 'react';
 import { act } from 'react-dom/test-utils';
+
+// TODO: swap for test util when available
+const waitForAsync = (wrapper) =>
+  new Promise<void>((resolve) =>
+    setTimeout(() => {
+      wrapper.update();
+
+      return resolve();
+    }, 0)
+  );
 
 describe('CodeInput', () => {
   describe('snapshot', () => {
@@ -29,8 +39,9 @@ describe('CodeInput', () => {
       await act(async () => {
         component = mount(
           <CodeInput numDigits={6} messageArr={[{ message: 'test', type: 'error' }]} />
-        ).childAt(0);
+        );
       });
+      await waitForAsync(component);
       const message = component.find('.md-input-message');
       expect(message.length).toBe(1);
       expect(message.props()['message-level']).toEqual('error');
@@ -43,6 +54,42 @@ describe('CodeInput', () => {
       const element = wrapper.find(CodeInput).getDOMNode();
 
       expect(element.classList.contains(testClass)).toBe(true);
+    });
+  });
+
+  describe('error on complete', () => {
+    const ExampleContainer = () => {
+      const [msgArr, setMsgArr] = useState([]);
+
+      const onComplete = () => {
+        setMsgArr([{ message: 'test', type: 'error' }]);
+      };
+
+      return <CodeInput onComplete={onComplete} numDigits={6} messageArr={msgArr} />;
+    };
+
+    it('displays a message when the message array changes', async () => {
+      let component;
+
+      await act(async () => {
+        component = mount(<ExampleContainer />);
+      });
+      const message = component.find('.md-input-message');
+      expect(message.length).toBe(0);
+
+      let codeInput;
+      await act(async () => {
+        codeInput = component.find(CodeInput);
+        codeInput.simulate('click');
+        codeInput
+          .find('input')
+          .hostNodes()
+          .simulate('change', { target: { value: '123456' } });
+      });
+
+      await waitForAsync(component);
+      const message2 = component.find('.md-input-message');
+      expect(message2.length).toEqual(1);
     });
   });
 
