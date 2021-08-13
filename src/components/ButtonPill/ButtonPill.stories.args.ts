@@ -21,7 +21,7 @@ export default {
   color: {
     defaultValue: undefined,
     description:
-      'Modifies the size of this `<ButtonPill />`. Some colors do not include an outline variant.',
+      'Modifies the color of this `<ButtonPill />`. Some colors do not include an outline variant.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
