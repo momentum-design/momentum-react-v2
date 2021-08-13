@@ -38,6 +38,15 @@ describe('ButtonHyperlink', () => {
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
+    it('should have custom class if provided', () => {
+      const testClass = 'testClass';
+
+      const wrapper = mount(<ButtonHyperlink className={testClass} />);
+      const element = wrapper.find(ButtonHyperlink).getDOMNode();
+
+      expect(element.classList.contains(testClass)).toBe(true);
+    });
+
     it('should pass disabled prop', () => {
       expect.assertions(1);
 

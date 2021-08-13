@@ -48,6 +48,20 @@ const argTypes = {
       },
     },
   },
+  className: {
+    defaultValue: undefined,
+    description:
+      'If present, the class name will be added to the underlying component. Used to override styles by consumers.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
   color: {
     defaultValue: undefined,
     description:

@@ -5,9 +5,11 @@ import { FocusRing } from '@react-aria/focus';
 import { DEFAULTS, STYLE } from './ButtonHyperlink.constants';
 import { Props } from './ButtonHyperlink.types';
 import './ButtonHyperlink.style.scss';
+import classnames from 'classnames';
 
 const ButtonHyperlink: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+    const { className } = props;
     const ref = providedRef || useRef();
     const mutatedProps = {
       ...props,
@@ -15,13 +17,14 @@ const ButtonHyperlink: FC<Props> = forwardRef(
     };
 
     delete mutatedProps.disabled;
+    delete mutatedProps.className;
 
     const { buttonProps } = useButton(mutatedProps, ref);
 
     return (
       <FocusRing focusRingClass={STYLE.focusRing}>
         <button
-          className={`${STYLE.wrapper}`}
+          className={classnames(STYLE.wrapper, className)}
           {...buttonProps}
           ref={ref}
           data-disabled={props.disabled || DEFAULTS.DISABLED}

@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  color: var(--theme-text-primary-normal);
+  font-family: var(--font-default);
+  font-weight: normal;
 }
 
 /* Global variables not available as tokens. */

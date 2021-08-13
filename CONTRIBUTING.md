@@ -51,16 +51,6 @@ While there are other files and directories within the project that contain othe
 
 ### New Components
 
-When a changes occur against the new React components in this project, a few standards must be met:
-
-- All logical code must be written in TypeScript
-- Style definitions must be written without the help of functional style generations, such as mixins
-- Component entry points must export constants and types for easy downstream consumption
-- Components should be functional whenever possible
-- Components must include unit and integration testing with [jest](http://facebook.github.io/jest/)
-- Components must include visual testing with [storybook](https://github.com/storybookjs/storybook)
-- Components must include documentation with [storybook](https://storybook.js.org/docs/web-components/writing-docs/introduction)
-
 Most feature contributions to this project will be implementing new React components within the `./src/components/` directory. We ask that all contributions that include new React components follow the following directory model:
 
 ```bash
@@ -71,14 +61,46 @@ Most feature contributions to this project will be implementing new React compon
   +-+ {component}/ # typescript react component directory
     +-- index.ts # entry point for component, should contain all exports [component, constants, types, etc]
     +-- {Component}.constants.ts # constants scoped to this component [styles, text, etc]
+    +-- {Component}.documentation.mdx # storybook stories description this component.
     +-- {Component}.stories.tsx # storybook stories for this component [be robust, as these are tested visually]
     +-- {Component}.style.scss # scoped styles, class selectors should follow 'md-{component}' for the root selector
     +-- {Component}.tsx # react component file
     +-- {Component}.types.ts # scoped types for this component [props, state, etc]
     +-- {Component}.unit.test.tsx # scoped unit tests for this component
+    +-- {Component}.unit.test.tsx.snap # scoped unit test snapshot for this component
 ```
 
 After a component has been implemented, it will need to be added to the `./src/index.js` and `./src/components/index.ts` files for exporting. Be sure to add the new component in the appropriately commented section within these files once the component is ready.
+
+When generating a new component, the `generate:component` script can be used to automatically generate a majority of the boiler-plate for the new component. Be sure to validate that the folder's name is properly capitalized and that your component is exported via the various `index` files appropriately after generation is complete.
+
+When a changes occur against the new React components in this project, a few standards must be met:
+
+#### General
+
+- All logical code must be written in TypeScript.
+- Style definitions must be written without the help of functional style generations, such as mixins.
+- Component entry points must export constants and types for easy downstream consumption.
+- Component style assignment should be via attribute selectors prefixed with `data-` and classes prefixed with `md-{component}`.
+- Component styles should be referenced in the renderer as constants in `{component}.constants.ts`.
+- Component constants should be used for all limited prop variations and defined in a `{component}.constants.ts` file.
+- Components should be functional whenever possible.
+
+#### Testing
+
+- Components must include unit and integration testing with [jest](http://facebook.github.io/jest/).
+- Component unit tests should separate snapshots, attributes, and actions respectfully.
+- Components must include visual testing with [storybook](https://github.com/storybookjs/storybook).
+- Component stories should be written to provide an example for each provided prop.
+
+#### Documentation
+
+- Components must include documentation with [storybook](https://storybook.js.org/docs/web-components/writing-docs/introduction).
+- Component documentation must be fully specified, see other component stories in this project for examples.
+- Components should have a default story: `Example` which allows for mutation of all props.
+- Specific prop stories should remove the associated prop from the arglist.
+- For components with large amounts of variations, a `Common` story can be written with common examples.
+- Most components should have a `{component}.documentation.mdx` file that includes a description of the component.
 
 ### Legacy Components
 

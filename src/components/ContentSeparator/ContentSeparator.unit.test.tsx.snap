@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentSeparator snapshot should match snapshot when another component is used 1`] = `
+<ContentSeparator>
+  <div
+    className="md-content-separator-wrapper"
+  >
+    <div
+      className=""
+    >
+      <div>
+        <div>
+          Some nested text
+        </div>
+      </div>
+    </div>
+  </div>
+</ContentSeparator>
+`;
+
+exports[`ContentSeparator snapshot should match snapshot when text is used 1`] = `
+<ContentSeparator>
+  <div
+    className="md-content-separator-wrapper"
+  >
+    <div
+      className=""
+    >
+      hello
+    </div>
+  </div>
+</ContentSeparator>
+`;

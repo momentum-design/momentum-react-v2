@@ -101,12 +101,16 @@ export {
 /** V2 Components [TypeScript] */
 export {
   Badge as BadgeNext,
+  Avatar as AvatarNext,
+  AvatarCompact as AvatarCompactNext,
   ButtonDialpad,
+  ButtonGroup as ButtonGroupNext,
+  ButtonHyperlink,
   ButtonPill,
   CodeInput,
   InputMessage as InputMessageNew,
-  ButtonHyperlink,
   ExampleComponent,
   Icon as IconNext,
   ThemeProvider,
+  ContentSeparator,
 } from './components';

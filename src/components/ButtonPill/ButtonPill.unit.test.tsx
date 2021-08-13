@@ -93,6 +93,15 @@ describe('<ButtonPill />', () => {
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
+    it('should have custom class if provided', () => {
+      const testClass = 'testClass';
+
+      const wrapper = mount(<ButtonPill className={testClass} />);
+      const element = wrapper.find(ButtonPill).getDOMNode();
+
+      expect(element.classList.contains(testClass)).toBe(true);
+    });
+
     it('should pass disabled prop', () => {
       expect.assertions(1);
 
