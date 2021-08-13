@@ -1,22 +1,7 @@
 import Icon from '.';
-import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import { STYLE } from './Icon.constants';
-import { act } from 'react-dom/test-utils';
-
-const mountAndWait = async (component) => {
-  const _container = mount(component);
-  await waitForComponentToPaint(_container);
-  return _container;
-};
-
-const waitForComponentToPaint = async (wrapper: ReactWrapper) => {
-  await act(async () => {
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    wrapper.update();
-  });
-};
-
+import { mountAndWait } from '../../../test/utils';
 describe('Icon', () => {
   let container;
 
