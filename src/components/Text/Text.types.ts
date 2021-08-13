@@ -10,10 +10,10 @@ export interface Props {
   /**
    * the token that defines the style (size, weight, line height) of the text
    */
-  type?: fontstyle;
+  type?: FontStyle;
 }
 
-export type fontstyle =
+export type FontStyle =
   | 'display'
   | 'banner-tertiary'
   | 'banner-primary'

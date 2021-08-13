@@ -6,7 +6,7 @@ import './Text.style.scss';
 import classnames from 'classnames';
 
 const Text: FC<Props> = (props: Props) => {
-  const { children, type, className } = props;
+  const { children, type = DEFAULTS.TYPE, className } = props;
 
   const h1Styles = new Set(['display', 'banner-tertiary', 'banner-primary', 'banner-secondary']);
   const h2Styles = new Set(['title']);
@@ -30,46 +30,32 @@ const Text: FC<Props> = (props: Props) => {
   return (
     <>
       {h1Styles.has(type) ? (
-        <h1
-          className={classnames(STYLE.wrapper, className)}
-          data-type={props.type || DEFAULTS.TYPE}
-        >
+        <h1 className={classnames(STYLE.wrapper, className)} data-type={type}>
           {children}
         </h1>
       ) : h2Styles.has(type) ? (
-        <h2
-          className={classnames(STYLE.wrapper, className)}
-          data-type={props.type || DEFAULTS.TYPE}
-        >
+        <h2 className={classnames(STYLE.wrapper, className)} data-type={type}>
           {children}
         </h2>
       ) : h3Styles.has(type) ? (
-        <h3
-          className={classnames(STYLE.wrapper, className)}
-          data-type={props.type || DEFAULTS.TYPE}
-        >
+        <h3 className={classnames(STYLE.wrapper, className)} data-type={type}>
           {children}
         </h3>
       ) : pStyles.has(type) ? (
-        <p className={classnames(STYLE.wrapper, className)} data-type={props.type || DEFAULTS.TYPE}>
+        <p className={classnames(STYLE.wrapper, className)} data-type={type}>
           {children}
         </p>
       ) : smallStyles.has(type) ? (
-        <small
-          className={classnames(STYLE.wrapper, className)}
-          data-type={props.type || DEFAULTS.TYPE}
-        >
+        <small className={classnames(STYLE.wrapper, className)} data-type={type}>
           {children}
         </small>
       ) : (
-        <p className={classnames(STYLE.wrapper, className)} data-type={props.type || DEFAULTS.TYPE}>
+        <p className={classnames(STYLE.wrapper, className)} data-type={type}>
           {children}
         </p>
       )}
     </>
   );
 };
-
-Text.displayName = 'Text';
 
 export default Text;

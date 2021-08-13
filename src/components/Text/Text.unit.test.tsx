@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Text from '.';
+import { FontStyle } from './Text.types';
 
 import { TYPES, STYLE } from './Text.constants';
 
@@ -14,12 +15,17 @@ describe('Text', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should match snapshot with type', () => {
+  it(`should match snapshot with type`, async () => {
     expect.assertions(1);
 
-    const type = TYPES[Object.keys(TYPES)[Object.keys(TYPES).length - 1]];
-
-    container = mount(<Text type={type}>Example Text</Text>);
+    const texts = Object.values(TYPES).map((type, index) => {
+      return (
+        <Text key={index} type={type as FontStyle}>
+          Example Text
+        </Text>
+      );
+    });
+    container = await mount(<div>{texts}</div>);
 
     expect(container).toMatchSnapshot();
   });

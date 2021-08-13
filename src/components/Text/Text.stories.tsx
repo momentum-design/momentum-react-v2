@@ -39,7 +39,6 @@ const argTypes = {
   children: {
     defaultValue: 'Example Text',
     description: 'Provides the child nodes for this element.',
-    options: [undefined, 'Option 1', 'Option 2'],
     control: { type: 'text' },
     table: {
       type: {
