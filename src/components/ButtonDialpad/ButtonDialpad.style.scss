@@ -33,7 +33,7 @@
 
   &.md-button-dialpad-focus-ring {
     outline: var(--md-globals-focus-ring-outline);
-    box-shadow: var--md-globals-focus-ring-box-shadow);
+    box-shadow: var(--md-globals-focus-ring-box-shadow);
   }
 
   &[data-disabled='true'] {
