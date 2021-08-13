@@ -1,5 +1,27 @@
 import { CSSProperties } from 'react';
 
+export type IconScale =
+  | 8
+  | 10
+  | 12
+  | 14
+  | 16
+  | 18
+  | 20
+  | 22
+  | 24
+  | 28
+  | 32
+  | 36
+  | 40
+  | 48
+  | 56
+  | 64
+  | 120
+  | 124;
+
+export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
+
 export interface Props {
   /**
    * If set to true, then the icon size will scale according to the parent element.
@@ -40,7 +62,7 @@ export interface Props {
    * Scale represents the size/scale of te icon.
    * @default 32
    */
-  scale?: 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 28 | 32 | 36 | 40 | 48 | 56 | 64 | 120 | 124;
+  scale?: IconScale;
 
   /**
    * Color the Icon will be stroked with.
@@ -59,5 +81,5 @@ export interface Props {
    * @remarks
    * Not all icons have all 4 styles.
    */
-  weight?: 'light' | 'regular' | 'bold' | 'filled';
+  weight?: IconWeight;
 }
