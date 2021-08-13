@@ -101,6 +101,7 @@ export {
 /** V2 Components [TypeScript] */
 export {
   Avatar as AvatarNext,
+  ButtonCircle,
   AvatarCompact as AvatarCompactNext,
   ButtonDialpad,
   ButtonGroup as ButtonGroupNext,
