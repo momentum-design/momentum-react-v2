@@ -8,9 +8,9 @@
 
 /* Global variables not available as tokens. */
 .md-theme-provider-globals {
-  --border-clear: 0rem solid rgba(0, 0, 0, 0);
-  --focus-ring-box-shadow: 0 0 0 0.0625rem var(--theme-background-solid-primary-normal),
+  --md-globals-border-clear: 0rem solid rgba(0, 0, 0, 0);
+  --md-globals-focus-ring-box-shadow: 0 0 0 0.0625rem var(--theme-background-solid-primary-normal),
     0 0 0 0.125rem var(--theme-outline-focus-normal);
-  --focus-ring-outline: none;
-  --font-default: CiscoSansTT;
+  --md-globals-focus-ring-outline: none;
+  --md-globals-font-default: CiscoSansTT;
 }
