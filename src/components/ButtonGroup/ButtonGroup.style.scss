@@ -3,21 +3,17 @@
   display: flex;
   margin: 0.5rem;
 
-  &[data-separation='partial'] {
+  &[data-spaced='true'] {
+    > * {
+      margin: 0.25em;
 
-    .md-button-group-separator {
-      background-color: var(--button-group-separator-background);
-      height: 50%;
-      width: 0.0625rem;
-    }
-  }
+      &:first-child {
+        margin-left: 0.3em
+      }
 
-  &[data-separation='full'] {
-
-    .md-button-group-separator {
-      background-color: var(--button-group-separator-background);
-      height: 100%;
-      width: 0.0625rem;
+      &:last-child {
+        margin-right: 0.3em;
+      }
     }
   }
 
