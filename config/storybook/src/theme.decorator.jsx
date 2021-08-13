@@ -7,6 +7,7 @@ const theme = (Story, { globals }) => (
     <div
       style={{
         backgroundColor: 'var(--theme-background-solid-primary-normal)',
+        color: 'var(--theme-text-primary-normal)',
         display: 'flex',
         flexWrap: 'wrap',
         padding: '2rem',
