@@ -204,7 +204,7 @@
   border-radius: 100vh;
   display: flex;
   flex-shrink: 0;
-  justify-content: center;
+  justify-content: space-evenly;
 
   &[data-size="64"] {
     font-size: 1.6rem;

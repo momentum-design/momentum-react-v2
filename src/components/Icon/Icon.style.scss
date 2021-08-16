@@ -9,7 +9,9 @@ svg.md-icon-coloured {
 .md-icon-wrapper {
   align-items: center;
   display: flex;
+  height: fit-content;
   justify-content: center;
+  width: fit-content;
 
   > *[data-autoscale=true] {
     width: 1em;

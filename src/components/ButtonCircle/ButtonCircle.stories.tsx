@@ -78,15 +78,52 @@ delete States.argTypes.ghost;
 
 const Sizes = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
 
-Sizes.args = {
-  children: <Icon name="redo" weight="bold" autoScale={150} />,
-};
-
 Sizes.parameters = {
-  variants: [{ size: 64 }, { size: 52 }, {}, { size: 32 }, { size: 28 }],
+  variants: [
+    { children: <Icon name="email" weight="bold" autoScale={150} />, size: 64 },
+    { children: <Icon name="email" weight="bold" autoScale={150} />, size: 52 },
+    { children: <Icon name="email" weight="bold" autoScale={150} /> },
+    { children: <Icon name="email" weight="bold" autoScale={150} />, size: 32 },
+    { children: <Icon name="email" weight="bold" autoScale={150} />, size: 28 },
+    {
+      children: [
+        <div key={0}>64</div>,
+        <Icon key={1} name="email" weight="bold" autoScale={150} />,
+      ],
+      size: 64,
+    },
+    {
+      children: [
+        <div key={0}>52</div>,
+        <Icon key={1} name="email" weight="bold" autoScale={150} />,
+      ],
+      size: 52,
+    },
+    {
+      children: [
+        <div key={0}>40</div>,
+        <Icon key={1} name="email" weight="bold" autoScale={150} />,
+      ],
+    },
+    {
+      children: [
+        <div key={0}>32</div>,
+        <Icon key={1} name="email" weight="bold" autoScale={150} />,
+      ],
+      size: 32,
+    },
+    {
+      children: [
+        <div key={0}>28</div>,
+        <Icon key={1} name="email" weight="bold" autoScale={150} />,
+      ],
+      size: 28,
+    },
+  ],
 };
 
 Sizes.argTypes = { ...argTypes };
+delete Sizes.argTypes.children;
 delete Sizes.argTypes.size;
 
 const Common = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});

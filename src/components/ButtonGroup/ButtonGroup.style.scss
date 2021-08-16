@@ -1,7 +1,9 @@
 .md-button-group-wrapper {
   align-items: center;
   display: flex;
+  height: fit-content;
   margin: 0.5rem;
+  width: fit-content;
 
   &[data-spaced='true'] {
     > * {
