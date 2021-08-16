@@ -210,6 +210,30 @@
       color: var(--button-secondary-text-pressed);
     }
 
+    &[data-color="cancel"][data-disabled="false"] {
+      color: var(--button-cancel-ghost-text);
+  
+      &:hover {
+        color: var(--button-cancel-ghost-text-hovered);
+      }
+  
+      &:active {
+        color: var(--button-cancel-ghost-text-pressed);
+      }
+    }
+
+    &[data-color="message"][data-disabled="false"] {
+      color: var(--button-message-ghost-text);
+  
+      &:hover {
+        color: var(--button-message-ghost-text-hovered);
+      }
+  
+      &:active {
+        color: var(--button-message-ghost-text-pressed);
+      }
+    }
+
     &[data-outline=true] {
       background-color:  rgba(0, 0, 0, 0); // IEFIX
       background-color: var(--button-ghost-background);
@@ -319,6 +343,6 @@
   }
 
   > *:not(:first-child) {
-    margin-left: 0.25em;
+    margin-left: 0.5em;
   }
 }

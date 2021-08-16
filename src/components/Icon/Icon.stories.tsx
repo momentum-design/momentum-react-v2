@@ -1,29 +1,12 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
-
 import Icon, { IconProps } from './';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
 
-import Documentation from './Icon.documentation.mdx';
-import { DEFAULTS, SIZES, WEIGHTS } from './Icon.constants';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
+import argTypes from './Icon.stories.args';
+import Documentation from './Icon.stories.docs.mdx';
+import { SIZES, WEIGHTS } from './Icon.constants';
 
 export default {
   title: 'Momentum UI/Icon',
@@ -31,114 +14,24 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
-    },
-  },
-  argTypes: {
-    name: {
-      defaultValue: 'accessibility',
-      description: 'Name of the icon.',
-      control: { type: 'text' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: 'accessibility',
-        },
-      },
-    },
-    scale: {
-      defaultValue: DEFAULTS.SCALE,
-      description: 'Scale represents the size/scale of te icon.',
-      options: [undefined, ...Object.values(SIZES)],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'number',
-        },
-        defaultValue: {
-          summary: DEFAULTS.SCALE,
-        },
-      },
-    },
-    autoScale: {
-      defaultValue: DEFAULTS.AUTO_SCALE,
-      description: 'If set to true, the icon size will match the parent size.',
-      options: [undefined, true, false],
-      control: { type: 'boolean' },
-      table: {
-        type: {
-          summary: 'boolean',
-        },
-        defaultValue: {
-          summary: DEFAULTS.AUTO_SCALE,
-        },
-      },
-    },
-    weight: {
-      defaultValue: DEFAULTS.WEIGHT,
-      description: 'Represents the style of the icon. Note: Not all icons have all 4 styles.',
-      options: [undefined, ...Object.values(WEIGHTS)],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: DEFAULTS.WEIGHT,
-        },
-      },
-    },
-    className: {
-      defaultValue: undefined,
-      description:
-        'If present, the class name will be added to the underlying component. Used to override styles by consumers.',
-      control: { type: 'text' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
-    fillColor: {
-      defaultValue: undefined,
-      description: 'Color for the icon to be filled with.',
-      control: { type: 'color' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
+      page: DocumentationPage(Documentation, StyleDocs),
     },
   },
 };
 
-const MultiTemplate: Story<IconProps> = (args: IconProps, { parameters }) => {
-  const { variants } = parameters;
+const Example = Template<IconProps>(Icon).bind({});
 
-  const items = variants.map((variant, index: number) => (
-    <Icon key={index} {...args} {...variant} />
-  ));
-
-  return <div style={{ alignItems: 'flex-end' }}>{items}</div>;
-};
-
-const Template: Story<IconProps> = (args) => <Icon {...args} />;
-
-const Example = Template.bind({});
+Example.argTypes = { ...argTypes };
 
 Example.args = {
-  name: 'accessories',
+  name: 'accessibility',
 };
 
-const Sizes = MultiTemplate.bind({});
+const Sizes = MultiTemplate<IconProps>(Icon).bind({});
+
+Sizes.argTypes = { ...argTypes };
+delete Sizes.argTypes.autoScale;
+delete Sizes.argTypes.scale;
 
 Sizes.args = {
   name: 'accessibility',
@@ -154,7 +47,10 @@ Sizes.parameters = {
   ],
 };
 
-const Weights = MultiTemplate.bind({});
+const Weights = MultiTemplate<IconProps>(Icon).bind({});
+
+Weights.argTypes = { ...argTypes };
+delete Weights.argTypes.weight;
 
 Weights.args = {
   name: 'accessories',
@@ -170,7 +66,12 @@ Weights.parameters = {
   ],
 };
 
-const Common = MultiTemplate.bind({});
+const Common = MultiTemplate<IconProps>(Icon).bind({});
+
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.autoScale;
+delete Common.argTypes.scale;
+delete Common.argTypes.weight;
 
 Common.args = {
   name: 'accessories',

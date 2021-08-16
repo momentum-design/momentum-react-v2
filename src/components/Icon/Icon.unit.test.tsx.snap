@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon snapshot should match snapshot 1`] = `
+exports[`<Icon /> snapshot should match snapshot 1`] = `
 <Icon
   name="accessibility"
 >
@@ -11,8 +11,10 @@ exports[`Icon snapshot should match snapshot 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
+      fill="currentColor"
       height="100%"
-      style={null}
+      stroke="currentColor"
+      style={Object {}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -20,7 +22,7 @@ exports[`Icon snapshot should match snapshot 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with autoScale 1`] = `
+exports[`<Icon /> snapshot should match snapshot with autoScale set to 'true' 1`] = `
 <Icon
   autoScale={true}
   name="accessibility"
@@ -32,8 +34,10 @@ exports[`Icon snapshot should match snapshot with autoScale 1`] = `
       className=""
       data-autoscale={true}
       data-scale={false}
+      fill="currentColor"
       height="100%"
-      style={null}
+      stroke="currentColor"
+      style={Object {}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -41,7 +45,60 @@ exports[`Icon snapshot should match snapshot with autoScale 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with fillColor 1`] = `
+exports[`<Icon /> snapshot should match snapshot with autoScale set to a percentage value 1`] = `
+<Icon
+  autoScale={150}
+  name="accessibility"
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      className=""
+      data-autoscale={150}
+      data-scale={false}
+      fill="currentColor"
+      height="100%"
+      stroke="currentColor"
+      style={Object {}}
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with className 1`] = `Promise {}`;
+
+exports[`<Icon /> snapshot should match snapshot with color 1`] = `
+<Icon
+  color="red"
+  name="accessibility"
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      className=""
+      data-autoscale={false}
+      data-scale={32}
+      fill="currentColor"
+      height="100%"
+      stroke="currentColor"
+      style={
+        Object {
+          "fill": "red",
+          "stroke": "red",
+        }
+      }
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
 <Icon
   fillColor="red"
   name="accessibility"
@@ -53,7 +110,9 @@ exports[`Icon snapshot should match snapshot with fillColor 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
+      fill="currentColor"
       height="100%"
+      stroke="currentColor"
       style={
         Object {
           "fill": "red",
@@ -66,19 +125,27 @@ exports[`Icon snapshot should match snapshot with fillColor 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with invalid name 1`] = `
+exports[`<Icon /> snapshot should match snapshot with id 1`] = `Promise {}`;
+
+exports[`<Icon /> snapshot should match snapshot with invalid name 1`] = `
 <Icon
   name="invalid_icon_name"
 >
-  <p
-    className="md-icon-not-found"
+  <div
+    className="md-icon-wrapper"
   >
-    Icon not found.
-  </p>
+    <div
+      className="md-icon-not-found"
+      data-autoscale={false}
+      data-scale={32}
+    >
+      ⃞
+    </div>
+  </div>
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with scale 1`] = `
+exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
 <Icon
   name="accessibility"
   scale={16}
@@ -90,8 +157,10 @@ exports[`Icon snapshot should match snapshot with scale 1`] = `
       className=""
       data-autoscale={false}
       data-scale={16}
+      fill="currentColor"
       height="100%"
-      style={null}
+      stroke="currentColor"
+      style={Object {}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -99,7 +168,36 @@ exports[`Icon snapshot should match snapshot with scale 1`] = `
 </Icon>
 `;
 
-exports[`Icon snapshot should match snapshot with weight 1`] = `
+exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
+<Icon
+  name="accessibility"
+  strokeColor="red"
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      className=""
+      data-autoscale={false}
+      data-scale={32}
+      fill="currentColor"
+      height="100%"
+      stroke="currentColor"
+      style={
+        Object {
+          "stroke": "red",
+        }
+      }
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with style 1`] = `Promise {}`;
+
+exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
 <Icon
   name="accessibility"
   weight="light"
@@ -111,8 +209,10 @@ exports[`Icon snapshot should match snapshot with weight 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
+      fill="currentColor"
       height="100%"
-      style={null}
+      stroke="currentColor"
+      style={Object {}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
