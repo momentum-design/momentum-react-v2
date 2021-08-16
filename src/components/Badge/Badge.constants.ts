@@ -1,12 +1,12 @@
 const CLASS_PREFIX = 'md-badge';
 
 const DEFAULTS = {
-  SIZE: 'M',
+  SIZE: 18,
 };
 
 const SIZES = {
-  M: 'M',
-  S: 'S',
+  18: 18,
+  12: 12,
 };
 
 const STYLE = {

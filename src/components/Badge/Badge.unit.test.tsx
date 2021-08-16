@@ -14,9 +14,17 @@ describe('Badge', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size', () => {
+    it('should match snapshot with size 12', () => {
       expect.assertions(1);
-      const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
+      const size = 12;
+      container = mount(<Badge data-size={size} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with size 18', () => {
+      expect.assertions(1);
+      const size = 18;
       container = mount(<Badge data-size={size}>10</Badge>);
 
       expect(container).toMatchSnapshot();

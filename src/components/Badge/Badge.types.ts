@@ -7,5 +7,5 @@ export interface Props {
   /**
    * Size index of this Badge
    */
-  size?: string;
+  size?: number;
 }

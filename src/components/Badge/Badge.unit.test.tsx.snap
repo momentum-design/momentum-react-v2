@@ -4,18 +4,29 @@ exports[`Badge snapshot should match snapshot 1`] = `
 <Badge>
   <div
     className="md-badge-wrapper"
-    data-size="M"
+    data-size={18}
   />
 </Badge>
 `;
 
-exports[`Badge snapshot should match snapshot with size 1`] = `
+exports[`Badge snapshot should match snapshot with size 12 1`] = `
 <Badge
-  data-size="S"
+  data-size={12}
 >
   <div
     className="md-badge-wrapper"
-    data-size="M"
+    data-size={18}
+  />
+</Badge>
+`;
+
+exports[`Badge snapshot should match snapshot with size 18 1`] = `
+<Badge
+  data-size={18}
+>
+  <div
+    className="md-badge-wrapper"
+    data-size={18}
   />
 </Badge>
 `;

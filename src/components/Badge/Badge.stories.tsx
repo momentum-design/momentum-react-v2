@@ -55,7 +55,7 @@ const argTypes = {
     control: { type: 'select' },
     table: {
       type: {
-        summary: 'string',
+        summary: 'number',
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.SIZE,
@@ -89,7 +89,7 @@ Example.argTypes = { ...argTypes };
 
 const Sizes = MultiTemplate.bind({});
 Sizes.parameters = {
-  variants: [{}, { size: 'S' }, { size: 'M' }],
+  variants: [{}, { size: 18 }, { size: 12 }],
 };
 
 Sizes.argTypes = { ...argTypes };

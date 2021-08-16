@@ -3,19 +3,13 @@
     font-family: var(--font-default);
     outline: none;
 
-     /* Colorization */
-    background-color:  rgba(17, 112, 207, 1); // IEFIX
-    background-color: var(--theme-background-accent-normal); // Update with component token
-    color:  rgba(255, 255, 255, 1); // IEFIX
-    color: var(--theme-text-button-normal); // Update with component token
+    &[data-size="18"]{
+        /* Colorization */
+        background-color: var(--badge-background);
+        color: var(--badge-text); // Update with component token
 
-    /* Sizing */
-    height: 0.625rem;
-    width: 0.625rem;
-    border-radius: 4rem;
-
-    &[data-size="M"]{
          /* Sizing */
+        border-radius: 2rem;
         height: 1.125rem;
         min-width: 1.125rem;
         width: auto;
