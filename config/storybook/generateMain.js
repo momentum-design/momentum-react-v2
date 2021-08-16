@@ -3,12 +3,13 @@ const { COMPONENTS_DIR, REPO_ROOT } = require('./constants');
 
 const generateMain = (dir) => {
   return {
-    stories: [path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)')],
+    stories: [path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx|mdx)')],
     addons: [
       '@storybook/addon-links',
       '@storybook/addon-essentials',
       '@storybook/preset-scss',
       '@storybook/addon-ie11',
+      '@storybook/addon-docs',
     ],
     typescript: {
       reactDocgen: 'none',

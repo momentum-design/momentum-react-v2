@@ -4,7 +4,6 @@ const DEFAULTS = {};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  contentsWrapper: `${CLASS_PREFIX}-contents-wrapper`,
   tickIcon: `${CLASS_PREFIX}-tick-icon`,
 };
 

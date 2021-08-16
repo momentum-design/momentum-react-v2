@@ -17,6 +17,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   const { className, isDisabled, label, name, placeholder, direction = DEFAULTS.DIRECTION } = props;
   const state = useSelectState(props);
 
+  // used to calculate position of top direction dropdown
   const [inputHeight, setInputHeight] = useState(0);
 
   const selectRef = useRef<HTMLButtonElement>(null);
@@ -47,6 +48,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     }
   };
 
+  // used to calculate position of top direction dropdown
   useEffect(() => {
     if (selectRef && selectRef.current && selectRef.current.clientHeight)
       setInputHeight(selectRef.current.clientHeight + SELECT_HEIGHT_ADJUST_BORDER);
@@ -55,6 +57,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   const listBox = (
     <FocusScope restoreFocus>
       {/*
+        //TODO:
         This div should really be a Popover component but I will refrain from creating another
         component as this PR is already big. I have created a workaround, so the Select can work meanwhile
       */}
@@ -63,9 +66,11 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         ref={overlayRef}
         className={STYLE.overlay}
         data-direction={direction}
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         style={{
-          ['--select-dropdown-input-height' as any]: `${(inputHeight / 16).toFixed(1)}rem`,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          ['--md-global-select-dropdown-input-height' as any]: `${(inputHeight / 16).toFixed(
+            1
+          )}rem`,
         }}
       >
         {/* Invisible button for accessibility */}
@@ -75,7 +80,6 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
           ref={boxRef}
           state={state}
           disallowEmptySelection
-          shouldHaveMenuListBoxWrapper
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={state.focusStrategy || DEFAULTS.SHOULD_AUTOFOCUS}
         />

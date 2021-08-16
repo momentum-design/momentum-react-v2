@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 
-import SelectOption, { SelectOptionProps } from './';
+import ListItemSection, { ListItemSectionProps } from './';
 import {
   Title,
   Subtitle,
@@ -11,7 +11,7 @@ import {
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
 
-import Documentation from './SelectOption.documentation.mdx';
+import Documentation from './ListItemSection.documentation.mdx';
 
 const DocsPage: FC = () => (
   <>
@@ -25,8 +25,8 @@ const DocsPage: FC = () => (
 );
 
 export default {
-  title: 'Momentum UI/SelectOption',
-  component: SelectOption,
+  title: 'Momentum UI/ListItemSection',
+  component: ListItemSection,
   parameters: {
     expanded: true,
     docs: {
@@ -51,12 +51,12 @@ export default {
   },
 };
 
-const MultiTemplate: Story<SelectOptionProps> = (args: SelectOptionProps, { parameters }) => {
+const MultiTemplate: Story<ListItemSectionProps> = (args: ListItemSectionProps, { parameters }) => {
   const { variants } = parameters;
 
   const items = variants.map((variant, index: number) => (
     <div key={index}>
-      <SelectOption {...args} {...variant} />
+      <ListItemSection {...args} {...variant} />
       <p>{variant.label}</p>
     </div>
   ));
@@ -75,7 +75,7 @@ const MultiTemplate: Story<SelectOptionProps> = (args: SelectOptionProps, { para
   );
 };
 
-const Template: Story<SelectOptionProps> = (args) => <SelectOption {...args} />;
+const Template: Story<ListItemSectionProps> = (args) => <ListItemSection {...args} />;
 
 const Example = Template.bind({});
 

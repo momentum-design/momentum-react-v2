@@ -2,8 +2,13 @@ import { SelectDirection } from './Select.types';
 
 const CLASS_PREFIX = 'md-select';
 
+const DIRECTIONS = {
+  bottom: 'bottom',
+  top: 'top',
+};
+
 const DEFAULTS = {
-  DIRECTION: 'bottom' as SelectDirection,
+  DIRECTION: DIRECTIONS.bottom as SelectDirection,
   SHOULD_AUTOFOCUS: true,
 };
 
@@ -19,4 +24,4 @@ const STYLE = {
 
 const SELECT_HEIGHT_ADJUST_BORDER = 2; // 2px extra because of the border(top, down);
 
-export { DEFAULTS, STYLE, SELECT_HEIGHT_ADJUST_BORDER };
+export { DEFAULTS, STYLE, SELECT_HEIGHT_ADJUST_BORDER, DIRECTIONS };

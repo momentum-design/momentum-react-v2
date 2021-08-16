@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-select-option';
+const CLASS_PREFIX = 'md-list-item-section';
 
 const DEFAULTS = {};
 

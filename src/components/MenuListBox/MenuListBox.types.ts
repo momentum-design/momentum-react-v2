@@ -1,11 +1,22 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
+
 import { SelectDirection } from '../Select/Select.types';
 
 export interface Props {
   /**
-   * className prop description
+   * Custom class for overriding this component's CSS.
    */
   className?: string;
+
+  /**
+   * Custom id for overriding this component's CSS.
+   */
+  id?: string;
+
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
   /**
    * children props
    */

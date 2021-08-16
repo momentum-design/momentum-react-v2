@@ -58,7 +58,7 @@ const MultiTemplate: Story<ListBoxProps<any>> = (args: ListBoxProps<any>, { para
   const { variants } = parameters;
 
   const items = variants.map((variant, index: number) => (
-    <div key={index}>
+    <div key={index} style={{ minWidth: '16rem' }}>
       <ListBox<{ name: string; id: number }> {...args} {...variant}>
         {(item) => <Item key={item.id}>{item.name}</Item>}
       </ListBox>
@@ -80,10 +80,7 @@ const MultiTemplate: Story<ListBoxProps<any>> = (args: ListBoxProps<any>, { para
 };
 
 const SimpleTemplate: Story<ListBoxProps<any>> = (args) => (
-  <ListBox aria-labelledby="label" selectionMode="none" {...args}>
-    <Item>
-      <ListItem>Test</ListItem>
-    </Item>
+  <ListBox style={{ minWidth: '16rem' }} selectionMode="single" {...args}>
     <Item>Three</Item>
     <Item>Four</Item>
     <Item>Five</Item>
@@ -92,7 +89,7 @@ const SimpleTemplate: Story<ListBoxProps<any>> = (args) => (
 );
 
 const SectionWithNoLabelTemplate: Story<ListBoxProps<any>> = (args) => (
-  <ListBox aria-labelledby="label" selectionMode="none" {...args}>
+  <ListBox style={{ minWidth: '16rem' }} selectionMode="none" {...args}>
     <Section>
       <Item>One</Item>
       <Item>Two</Item>
@@ -107,34 +104,30 @@ const SectionWithNoLabelTemplate: Story<ListBoxProps<any>> = (args) => (
 );
 
 const SectionWithLabelTemplate: Story<ListBoxProps<any>> = (args) => (
-  <>
-    <ListBox aria-labelledby="label" selectionMode="none" {...args}>
-      <Section title="Section 1">
-        <Item>One</Item>
-        <Item>Two</Item>
-        <Item>Three</Item>
-      </Section>
-      <Section title={'Section 2'}>
-        <Item>One</Item>
-        <Item>Two</Item>
-        <Item>Three</Item>
-      </Section>
-    </ListBox>
-  </>
+  <ListBox {...args} style={{ minWidth: '16rem' }} selectionMode="single">
+    <Section title="Section 1">
+      <Item>One</Item>
+      <Item>Two</Item>
+      <Item>Three</Item>
+    </Section>
+    <Section title={'Section 2'}>
+      <Item>Four</Item>
+      <Item>Five</Item>
+      <Item>Six</Item>
+    </Section>
+  </ListBox>
 );
 
 const Example = SimpleTemplate.bind({});
 
 Example.args = {
   label: 'Simple',
-  onSelectionChange: actions('onSelectionChange'),
 };
 
 const SectionsWithNoLabel = SectionWithNoLabelTemplate.bind({});
 
 SectionsWithNoLabel.args = {
   label: 'Sections with no Label',
-  onSelectionChange: actions('onSelectionChange'),
 };
 
 const SectionWithLabel = SectionWithLabelTemplate.bind({});

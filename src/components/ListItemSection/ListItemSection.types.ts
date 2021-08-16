@@ -6,5 +6,5 @@ export interface Props {
    */
   className?: string;
   children?: ReactNode;
-  textValue?: string;
+  position?: 'start' | 'middle' | 'end' | 'fill';
 }

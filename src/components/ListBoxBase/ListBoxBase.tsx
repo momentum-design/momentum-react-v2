@@ -14,10 +14,11 @@ import { Node } from '@react-types/shared';
 import MenuListBox from '../MenuListBox';
 
 export const ListBoxContext = React.createContext<ListState<unknown>>(null);
-
+/**
+ * @internal
+ */
 function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) {
-  const { className, shouldHaveMenuListBoxWrapper = DEFAULTS.SHOULD_HAVE_MENU_LIST_BOX_WRAPPER } =
-    props;
+  const { className } = props;
 
   const { state, ...otherProps } = props;
 
@@ -43,15 +44,9 @@ function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUList
 
   return (
     <ListBoxContext.Provider value={state}>
-      {shouldHaveMenuListBoxWrapper ? (
-        <MenuListBox {...listBoxProps} ref={ref}>
-          {renderItems()}
-        </MenuListBox>
-      ) : (
-        <ul {...listBoxProps} ref={ref} className={classnames(className, STYLE.wrapper)}>
-          {renderItems()}
-        </ul>
-      )}
+      <MenuListBox style={props.style} {...listBoxProps} ref={ref}>
+        {renderItems()}
+      </MenuListBox>
     </ListBoxContext.Provider>
   );
 }

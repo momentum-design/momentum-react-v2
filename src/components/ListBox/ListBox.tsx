@@ -10,7 +10,7 @@ import { useListState } from '@react-stately/list';
 import classnames from 'classnames';
 
 const ListBox = forwardRef(
-  <T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) => {
+  <T extends object>(props: Props<T>, ref?: RefObject<HTMLUListElement>) => {
     const _ref = ref || useRef<HTMLUListElement>(null);
     const { className } = props;
     const state = useListState(props);

@@ -8,7 +8,12 @@ import { DEFAULTS, STYLE } from './ListBoxItem.constants';
 import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 import { useOption } from '@react-aria/listbox';
 import Icon from '../Icon';
+import ListItem from '../ListItem';
+import ListItemSection from '../ListItemSection';
 
+/**
+ * @internal
+ */
 function ListBoxItem<T>(props: Props<T>): ReactElement {
   const { item } = props;
   // Get props for the option element
@@ -30,17 +35,15 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
     ref
   );
 
-  const contents = (
-    <>
-      {item.rendered}
-      {isSelected && <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} />}
-    </>
-  );
-
   return (
-    <li key={item.key} ref={ref} {...optionProps} className={classnames(STYLE.wrapper)}>
-      {contents}
-    </li>
+    <ListItem key={item.key} ref={ref} {...optionProps} isDisabled={isDisabled}>
+      <ListItemSection position="fill">{item.rendered}</ListItemSection>
+      {isSelected && (
+        <ListItemSection position="end">
+          <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} />
+        </ListItemSection>
+      )}
+    </ListItem>
   );
 }
 

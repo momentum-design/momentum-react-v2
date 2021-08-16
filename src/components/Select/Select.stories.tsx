@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import React, { FC, ReactElement, useState } from 'react';
+import React, { FC, ReactElement } from 'react';
 import { Story } from '@storybook/react';
 import { Item, Section } from '@react-stately/collections';
 import { action } from '@storybook/addon-actions';
@@ -16,6 +16,7 @@ import {
 import Documentation from './Select.documentation.mdx';
 import Icon from '../Icon';
 import Flex from '../Flex';
+import argTypes from './Select.stories.args';
 
 const DocsPage: FC = () => (
   <>
@@ -38,20 +39,7 @@ export default {
     },
   },
   argTypes: {
-    propName: {
-      defaultValue: undefined,
-      description: 'Description goes here.',
-      options: [undefined, 'Option 1', 'Option 2'],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
+    ...argTypes,
   },
 };
 
@@ -103,7 +91,7 @@ const MultiTemplate =
     return (
       <div
         style={{
-          height: '100vh',
+          height: '50vh',
           display: 'grid',
           gridTemplateColumns: `repeat(3, auto)`,
           gap: '1.5rem',
@@ -116,7 +104,7 @@ const MultiTemplate =
   };
 
 const SingleTemplate: Story<SelectProps<object>> = (args) => (
-  <div style={{ height: '100vh' }}>
+  <div style={{ height: '15rem' }}>
     <Select {...args}>
       <Item>Red</Item>
       <Item>Blue</Item>
@@ -126,13 +114,12 @@ const SingleTemplate: Story<SelectProps<object>> = (args) => (
   </div>
 );
 
-const SectionTemplate: Story<SelectProps<object>> = (args) => (
-  <div style={{ height: '100vh' }}>
+const SectionsTemplate: Story<SelectProps<object>> = (args) => (
+  <div style={{ height: '24rem' }}>
     <Select {...args}>
       <Section title="Colors">
         <Item>Red</Item>
         <Item>Blue</Item>
-        <Item>Green</Item>
         <Item>Yellow</Item>
       </Section>
       <Section title="Animals">
@@ -156,6 +143,23 @@ Example.args = {
   label: 'Single Value',
   placeholder: 'Select an option',
   onSelectionChange: action('onSelectionChange'),
+};
+
+const Sections = SectionsTemplate.bind({});
+
+Sections.args = {
+  label: 'With Sections',
+  placeholder: 'Select an option',
+  onSelectionChange: action('onSelectionChange'),
+};
+
+const DisabledOptions = SectionsTemplate.bind({});
+
+DisabledOptions.args = {
+  label: 'With Disabled Options',
+  placeholder: 'Select an option',
+  onSelectionChange: action('onSelectionChange'),
+  disabledKeys: ['$.0.0', '$.0.1', '$.1.1'],
 };
 
 const Common = MultiTemplate().bind({});
@@ -243,7 +247,7 @@ Common.parameters = {
               value: (
                 <Flex alignItems="center" xgap="0.875rem">
                   <Icon name="active-speaker" scale={18} weight="bold" />
-                  <span>Active Speaker Active Speaker Active Speaker Active Speaker</span>
+                  <span>Active Speaker</span>
                 </Flex>
               ),
             },
@@ -252,7 +256,7 @@ Common.parameters = {
               textValue: 'Apps',
               value: (
                 <Flex alignItems="center" xgap="0.875rem">
-                  <Icon name="apps" scale={18} weight="bold" />
+                  <Icon name="accessories" scale={18} weight="bold" />
                   <span>Apps</span>
                 </Flex>
               ),
@@ -307,7 +311,7 @@ Common.parameters = {
               textValue: 'Apps',
               value: (
                 <Flex alignItems="center" xgap="0.875rem">
-                  <Icon name="apps" scale={18} weight="bold" />
+                  <Icon name="accessories" scale={18} weight="bold" />
                   <span>Apps</span>
                 </Flex>
               ),
@@ -320,12 +324,4 @@ Common.parameters = {
   ],
 };
 
-const Sections = SectionTemplate.bind({});
-
-Sections.args = {
-  label: 'Sections',
-  placeholder: 'Select an option',
-  onSelectionChange: action('onSelectionChange'),
-};
-
-export { Example, Common, Sections };
+export { Example, Sections, DisabledOptions, Common };

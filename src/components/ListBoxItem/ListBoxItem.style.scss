@@ -1,14 +1,7 @@
-
 .md-list-box-item-wrapper {
 
 }
 
-.md-list-box-item-contents-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  > *:not(:first-child) {
-    margin-left: 0.75rem;
-  }
+svg.md-list-box-item-tick-icon {
+  fill: var(--listitem-tick);
 }

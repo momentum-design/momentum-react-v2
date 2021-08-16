@@ -1,8 +1,8 @@
-import SelectOption from '.';
+import ListItemSection from '.';
 import { mount } from 'enzyme';
 import React from 'react';
 
-describe('SelectOption', () => {
+describe('ListItemSection', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       /* ...snapshot test... */

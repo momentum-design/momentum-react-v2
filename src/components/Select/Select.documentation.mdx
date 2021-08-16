@@ -1,1 +1,66 @@
-Select Documentation
+import { Story } from '@storybook/addon-docs';
+
+`<Select />` component that utilizes [AriaSelectProps](https://react-spectrum.adobe.com/react-aria/useSelect.html) in addition to its core props.
+Select elements allow users to choose a single option from a collapsible list of options when space is limited.
+
+## Content
+
+The Select element follows the [Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from the @react-stately library, accepting both static and dynamic collections. Select accepts `<Item>` elements as children, each with a key prop. Basic usage of `Select`, seen in the example below, shows multiple options populated with a string.
+Simple element with simple options as text.
+
+```js
+import { Item, Section } from '@react-stately/collections';
+
+<Select label="Single Value" onSelectionChange={(key) => console.log}>
+  <Item>Red</Item>
+  <Item>Blue</Item>
+  <Item>Green</Item>
+  <Item>Yellow</Item>
+</Select>;
+```
+
+<Story id="momentum-ui-select--example" />
+
+## Dynamic Content
+
+An iterable list of options is can be passed to the Select using the items prop. Each item accepts a key prop, which is passed to the onSelectionChange handler to identify the selected item. Alternatively, if the item objects contain an `id` property like in the example below, then this is used automatically and a key prop is not required.
+
+```js
+import { Item } from '@react-stately/collections';
+
+const options = [
+  { id: 1, value: 'One' },
+  { id: 2, value: 'Two' },
+  { id: 3, value: 'Three' },
+  { id: 4, value: 'Four' },
+]
+
+<Select onSelectionChange={(key) => console.log} items={options}>
+  {(item) => <Item>{item.value}</Item>}
+</Select>
+```
+
+## Sections
+
+Select supports sections in order to group options. Sections can be used by wrapping groups of items in a `Section` element. Each `Section` takes a title and key prop.
+
+```js
+import { Item, Section } from '@react-stately/collections';
+
+<Select onSelectionChange={(key) => console.log}>
+  <Section title="Colors">
+    <Item>Red</Item>
+    <Item>Blue</Item>
+    <Item>Green</Item>
+    <Item>Yellow</Item>
+  </Section>
+  <Section title="Animals">
+    <Item>Dog</Item>
+    <Item>Cat</Item>
+  </Section>
+</Select>;
+```
+
+<Story id="momentum-ui-select--sections" />
+
+## Default Preview
