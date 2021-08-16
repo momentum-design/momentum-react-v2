@@ -1,8 +1,10 @@
 import Icon from '.';
 import React from 'react';
 import { STYLE } from './Icon.constants';
+
 import { mountAndWait } from '../../../test/utils';
-describe('Icon', () => {
+
+describe('<Icon />', () => {
   let container;
 
   describe('snapshot', () => {
@@ -10,6 +12,36 @@ describe('Icon', () => {
       expect.assertions(1);
 
       container = await mountAndWait(<Icon name="accessibility" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with className', async () => {
+      expect.assertions(1);
+
+      const className = 'example-class';
+
+      container = mountAndWait(<Icon name="accessibility" className={className} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with id', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      container = mountAndWait(<Icon name="accessibility" id={id} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with style', async () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      container = mountAndWait(<Icon name="accessibility" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -22,10 +54,18 @@ describe('Icon', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with autoScale', async () => {
+    it("should match snapshot with autoScale set to 'true'", async () => {
       expect.assertions(1);
 
       container = await mountAndWait(<Icon name="accessibility" autoScale={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with autoScale set to a percentage value', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(<Icon name="accessibility" autoScale={150} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -38,10 +78,26 @@ describe('Icon', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with color', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(<Icon name="accessibility" color="red" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with fillColor', async () => {
       expect.assertions(1);
 
       container = await mountAndWait(<Icon name="accessibility" fillColor="red" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with strokeColor', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(<Icon name="accessibility" strokeColor="red" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -58,20 +114,45 @@ describe('Icon', () => {
   });
 
   describe('attributes', () => {
-    it('should have its main class', async () => {
+    it('should have its wrapper class', async () => {
       const wrapper = await mountAndWait(<Icon name="accessibility" />);
       const icon = wrapper.find(Icon).getDOMNode();
 
       expect(icon.classList.contains(STYLE.wrapper));
     });
 
-    it('should have custom class if provided', async () => {
-      const testClass = 'testClass';
+    it('should have provided class when className is provided', async () => {
+      expect.assertions(1);
 
-      const wrapper = await mountAndWait(<Icon name="accessibility" className={testClass} />);
-      const svg = wrapper.find('svg').getDOMNode();
+      const className = 'example-class';
 
-      expect(svg.classList.contains(testClass)).toBe(true);
+      const wrapper = await mountAndWait(<Icon name="accessibility" className={className} />);
+      const element = wrapper.find(Icon).getDOMNode();
+
+      expect(element.classList.contains(className)).toBe(true);
+    });
+
+    it('should have provided id when id is provided', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const wrapper = await mountAndWait(<Icon name="accessibility" id={id} />);
+      const element = wrapper.find(Icon).getDOMNode();
+
+      expect(element.id).toBe(id);
+    });
+
+    it('should have provided style when style is provided', async () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
+
+      const wrapper = await mountAndWait(<Icon name="accessibility" style={style} />);
+      const element = wrapper.find(Icon).getDOMNode();
+
+      expect(element.getAttribute('style')).toBe(styleString);
     });
 
     it('should pass scale prop', async () => {
@@ -93,11 +174,30 @@ describe('Icon', () => {
       expect(icon.getAttribute('data-scale')).toBe('false');
     });
 
+    it('should pass autoScale prop as numeric value when set appropriately', async () => {
+      const autoScale = 150;
+
+      const wrapper = await mountAndWait(<Icon name={'accessibility'} autoScale={autoScale} />);
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('data-autoscale')).toBe(`${autoScale}`);
+      expect(icon.getAttribute('data-scale')).toBe('false');
+    });
+
     it('should pass md-icon-coloured class if name of icon contains coloured', async () => {
       const wrapper = await mountAndWait(<Icon name={'accessibility-coloured'} />);
       const icon = wrapper.find('svg').getDOMNode();
 
       expect(icon.classList.contains('md-icon-coloured')).toBe(true);
+    });
+
+    it('should pass color prop', async () => {
+      const color = 'blue';
+
+      const wrapper = await mountAndWait(<Icon name={'accessibility'} color={color} />);
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('style')).toBe(`fill: ${color}; stroke: ${color};`);
     });
 
     it('should pass fillColor prop', async () => {
@@ -107,6 +207,34 @@ describe('Icon', () => {
       const icon = wrapper.find('svg').getDOMNode();
 
       expect(icon.getAttribute('style')).toBe(`fill: ${fillColor};`);
+    });
+
+    it('should pass strokeColor prop', async () => {
+      const strokeColor = 'blue';
+
+      const wrapper = await mountAndWait(<Icon name={'accessibility'} strokeColor={strokeColor} />);
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('style')).toBe(`stroke: ${strokeColor};`);
+    });
+
+    it('should override fillColor and strokeColor when color is provided', async () => {
+      const color = 'blue';
+      const fillColor = 'green';
+      const strokeColor = 'red';
+
+      const wrapper = await mountAndWait(
+        <Icon
+          name={'accessibility'}
+          color={color}
+          fillColor={fillColor}
+          strokeColor={strokeColor}
+        />
+      );
+
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('style')).toBe(`fill: ${color}; stroke: ${color};`);
     });
 
     it('should not pass fillColor prop if icon is already coloured', async () => {

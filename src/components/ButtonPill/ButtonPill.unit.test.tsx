@@ -1,8 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ButtonPill } from '@momentum-ui/react';
 
-import { COLORS, DEFAULTS, SIZES, STYLE } from './ButtonPill.constants';
+import ButtonPill, { BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
+
+const { COLORS, DEFAULTS, SIZES, STYLE } = CONSTANTS;
 
 describe('<ButtonPill />', () => {
   let container;
@@ -12,6 +13,36 @@ describe('<ButtonPill />', () => {
       expect.assertions(1);
 
       container = mount(<ButtonPill>Example Text</ButtonPill>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with className', () => {
+      expect.assertions(1);
+
+      const className = 'example-class';
+
+      container = mount(<ButtonPill className={className} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with id', () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      container = mount(<ButtonPill id={id} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with style', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      container = mount(<ButtonPill style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -83,7 +114,7 @@ describe('<ButtonPill />', () => {
   });
 
   describe('attributes', () => {
-    it('should have its main class', () => {
+    it('should have its wrapper class', () => {
       expect.assertions(1);
 
       const element = mount(<ButtonPill />)
@@ -93,13 +124,41 @@ describe('<ButtonPill />', () => {
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
-    it('should have custom class if provided', () => {
-      const testClass = 'testClass';
+    it('should have provided class when className is provided', () => {
+      expect.assertions(1);
 
-      const wrapper = mount(<ButtonPill className={testClass} />);
-      const element = wrapper.find(ButtonPill).getDOMNode();
+      const className = 'example-class';
 
-      expect(element.classList.contains(testClass)).toBe(true);
+      const element = mount(<ButtonPill className={className} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.classList.contains(className)).toBe(true);
+    });
+
+    it('should have provided id when id is provided', () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const element = mount(<ButtonPill id={id} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.id).toBe(id);
+    });
+
+    it('should have provided style when style is provided', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
+
+      const element = mount(<ButtonPill style={style} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('style')).toBe(styleString);
     });
 
     it('should pass disabled prop', () => {
