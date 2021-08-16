@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-import { SelectDirection } from '../Select/Select.types';
+import { SelectDirection } from '../Select';
 
 export interface Props {
   /**

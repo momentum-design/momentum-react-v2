@@ -4,6 +4,6 @@ import * as CONSTANTS from './ListBoxBase.constants';
 
 export { CONSTANTS as LIST_BOX_BASE_CONSTANTS };
 
-export type ListBoxBaseProps = Props;
+export type ListBoxBaseProps<T> = Props<T>;
 
 export default ListBoxBase;

@@ -14,7 +14,16 @@ import ListBoxBase from '../ListBoxBase';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
-  const { className, isDisabled, label, name, placeholder, direction = DEFAULTS.DIRECTION } = props;
+  const {
+    className,
+    style,
+    id,
+    isDisabled,
+    label,
+    name,
+    placeholder,
+    direction = DEFAULTS.DIRECTION,
+  } = props;
   const state = useSelectState(props);
 
   // used to calculate position of top direction dropdown
@@ -90,7 +99,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   );
 
   return (
-    <div className={classnames(className, STYLE.wrapper)} ref={ref}>
+    <div className={classnames(className, STYLE.wrapper)} ref={ref} style={style} id={id}>
       {label && (
         <label htmlFor={name} {...labelProps}>
           {/* //TODO: change with <Text /> when available */}

@@ -1,14 +1,14 @@
-import { SelectDirection } from './Select.types';
+import { SelectDirection } from '.';
 
 const CLASS_PREFIX = 'md-select';
 
-const DIRECTIONS = {
+const DIRECTIONS: Record<string, SelectDirection> = {
   bottom: 'bottom',
   top: 'top',
 };
 
 const DEFAULTS = {
-  DIRECTION: DIRECTIONS.bottom as SelectDirection,
+  DIRECTION: DIRECTIONS.bottom,
   SHOULD_AUTOFOCUS: true,
 };
 

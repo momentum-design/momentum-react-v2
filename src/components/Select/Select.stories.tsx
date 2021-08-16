@@ -3,7 +3,7 @@ import React, { FC, ReactElement } from 'react';
 import { Story } from '@storybook/react';
 import { Item, Section } from '@react-stately/collections';
 import { action } from '@storybook/addon-actions';
-import Select, { SelectProps } from './';
+import Select, { SelectProps } from '.';
 import {
   Title,
   Subtitle,

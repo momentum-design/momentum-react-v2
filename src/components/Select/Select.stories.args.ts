@@ -1,9 +1,9 @@
-// import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { SELECT_CONSTANTS as CONSTANTS } from '.';
 
 export default {
-  // ...commonStyles,
+  ...commonStyles,
   placeholder: {
     defaultValue: undefined,
     description: 'Text to display inside the dropdown when there is no selection.',
@@ -37,7 +37,7 @@ export default {
       'From [AriaSelectProps](https://react-spectrum.adobe.com/react-aria/useSelect.html). Text displayed on top of the element.',
     control: { type: 'text' },
     table: {
-      category: 'AriaSelectProps',
+      category: 'React Aria - Select',
       type: {
         summary: 'string',
       },
@@ -52,7 +52,7 @@ export default {
       'From [AriaSelectProps](https://react-spectrum.adobe.com/react-aria/useSelect.html). The list of options for this select element.',
     control: { type: 'object' },
     table: {
-      category: 'AriaSelectProps',
+      category: 'React Aria - Select',
       type: {
         summary: 'CollectionBase<T>',
       },
@@ -67,7 +67,7 @@ export default {
       'From [AriaSelectProps](https://react-spectrum.adobe.com/react-aria/useSelect.html). Default selected keys. (Must be exact type as the key)',
     control: { type: 'string' },
     table: {
-      category: 'AriaSelectProps',
+      category: 'React Aria - Select',
       type: {
         summary: 'React.Key',
       },
@@ -82,7 +82,7 @@ export default {
       'From [AriaSelectProps](https://react-spectrum.adobe.com/react-aria/useSelect.html). List with disabled keys. (They must be exact type as the key)',
     control: { type: 'array' },
     table: {
-      category: 'AriaSelectProps',
+      category: 'React Aria - Select',
       type: {
         summary: 'React.Key[]',
       },
@@ -97,7 +97,7 @@ export default {
       'From [AriaSelectProps](https://react-spectrum.adobe.com/react-aria/useSelect.html). Handler that is called when the selection changes.',
     control: { type: 'function' },
     table: {
-      category: 'AriaSelectProps',
+      category: 'React Aria - Select',
       type: {
         summary: '(key: React.Key) => any',
       },
