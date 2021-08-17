@@ -1,8 +1,9 @@
 svg.md-icon-coloured {
   fill: initial;
 
-  path:not([fill])  {
-    fill: var(--theme-text-primary-normal, black);
+  path:not([fill]) {
+    fill: rgba(0, 0, 0, 0.95); // IEFIX
+    fill: var(--theme-text-primary-normal);
   }
 }
 
