@@ -20,6 +20,9 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs, AriaButtonDocs),
     },
   },
+  args: {
+    children: 'A',
+  },
 };
 
 const Example = Template<ButtonCircleProps>(ButtonCircle).bind({});
