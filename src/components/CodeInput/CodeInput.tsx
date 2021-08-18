@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, useEffect } from 'react';
+import React, { ReactElement, useState, useEffect, useRef } from 'react';
 import VerificationInput from 'react-verification-input';
 
 import './CodeInput.style.scss';
@@ -17,7 +17,19 @@ const filterMessagesByType = (array, value) => {
 };
 
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
-  const { numDigits, onComplete, ariaLabel, messageArr = [], disabled = false, className } = props;
+  const {
+    numDigits,
+    onChange = () => {
+      /* Optional */
+    },
+    onComplete = () => {
+      /* Optional */
+    },
+    ariaLabel,
+    messageArr = [],
+    disabled = false,
+    className,
+  } = props;
 
   const [internalMessageArray, setInternalMessageArray] = useState(messageArr);
   const [isComplete, setComplete] = useState(false);
@@ -27,7 +39,13 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
     (internalMessageArray.length > 0 && determineMessageType(internalMessageArray)) || 'none';
   const messages = (messageType && filterMessagesByType(internalMessageArray, messageType)) || null;
 
+  const firstUpdate = useRef(true);
   useEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+      return;
+    }
+    onChange(value);
     if (value.length === numDigits) {
       onComplete(value);
       setComplete(true);
