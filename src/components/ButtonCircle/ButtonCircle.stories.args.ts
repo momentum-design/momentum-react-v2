@@ -1,10 +1,13 @@
 import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
 
-import { BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
+import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from './';
 
 export default {
   ...commonStyles,
   ...commonAriaButton,
+  /**
+   * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
+   */
   children: {
     description: 'Provides the child nodes for this element.',
     control: { type: 'text' },
@@ -19,7 +22,7 @@ export default {
   },
   color: {
     description:
-      'Modifies the color of this `<ButtonPill />`. Some colors do not include an outline variant.',
+      'Modifies the color of this `<ButtonCircle />`. Some colors do not include an outline variant.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -32,7 +35,7 @@ export default {
     },
   },
   disabled: {
-    description: 'Whether to render the `<ButtonPill />` as disabled.',
+    description: 'Whether to render the `<ButtonCircle />` is disabled.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -46,7 +49,7 @@ export default {
   },
   ghost: {
     description:
-      'Whether this `<ButtonPill />` is a ghost. This overrides the `color` and `outline` props.',
+      'Whether this `<ButtonCircle />` is a ghost. This overrides the `color` and `outline` props.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -59,7 +62,7 @@ export default {
     },
   },
   outline: {
-    description: 'Whether to render the outline variant of this `<ButtonPill />`.',
+    description: 'Whether to render the outline variant of this `<ButtonCircle />`.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -72,7 +75,7 @@ export default {
     },
   },
   size: {
-    description: 'Modifies the size of this `<ButtonPill />`.',
+    description: 'Modifies the size of this `<ButtonCircle />`.',
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     control: { type: 'select' },
     table: {

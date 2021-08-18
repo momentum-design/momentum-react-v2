@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-button-pill';
+const CLASS_PREFIX = 'md-button-circle';
 
 const DEFAULTS = {
   COLOR: 'primary',
@@ -15,10 +15,11 @@ const COLORS = {
 };
 
 const SIZES = {
+  64: 64,
+  52: 52,
   40: 40,
   32: 32,
   28: 28,
-  24: 24,
 };
 
 const STYLE = {

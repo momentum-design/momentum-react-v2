@@ -6,15 +6,9 @@ const DEFAULTS = {
   SPACED: false,
 };
 
-const SEPARATIONS = {
-  FULL: 'full',
-  PARTIAL: 'partial',
-  NONE: 'none',
-};
-
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   separator: `${CLASS_PREFIX}-separator`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, SEPARATIONS, STYLE };
+export { CLASS_PREFIX, DEFAULTS, STYLE };

@@ -5,7 +5,6 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
   <div
     className="md-button-group-wrapper"
     data-round={false}
-    data-separation="none"
     data-spaced={false}
   >
     <ButtonPill
@@ -41,21 +40,18 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
         </button>
       </FocusRing>
     </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-1"
-    />
-    <ButtonPill
+    <ButtonCircle
       key="1"
     >
       <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
+        focusRingClass="md-button-circle-focus-ring"
       >
         <button
-          className="md-button-pill-wrapper"
+          className="md-button-circle-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-multiple-children={false}
           data-outline={false}
           data-size={40}
           onBlur={[Function]}
@@ -74,168 +70,10 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          Example B
+          A
         </button>
       </FocusRing>
-    </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-2"
-    />
-    <ButtonPill
-      key="2"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example B
-        </button>
-      </FocusRing>
-    </ButtonPill>
-  </div>
-</ButtonGroup>
-`;
-
-exports[`<ButtonPill /> snapshot should match snapshot when provided a className 1`] = `
-<ButtonGroup
-  className="test-example-class"
->
-  <div
-    className="md-button-group-wrapper test-example-class"
-    data-round={false}
-    data-separation="none"
-    data-spaced={false}
-  >
-    <ButtonPill
-      key="0"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example A
-        </button>
-      </FocusRing>
-    </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-1"
-    />
-    <ButtonPill
-      key="1"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example B
-        </button>
-      </FocusRing>
-    </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-2"
-    />
-    <ButtonPill
-      key="2"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example B
-        </button>
-      </FocusRing>
-    </ButtonPill>
+    </ButtonCircle>
   </div>
 </ButtonGroup>
 `;
@@ -247,7 +85,6 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
   <div
     className="md-button-group-wrapper"
     data-round={false}
-    data-separation="none"
     data-spaced={true}
   >
     <ButtonPill
@@ -283,21 +120,18 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
         </button>
       </FocusRing>
     </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-1"
-    />
-    <ButtonPill
+    <ButtonCircle
       key="1"
     >
       <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
+        focusRingClass="md-button-circle-focus-ring"
       >
         <button
-          className="md-button-pill-wrapper"
+          className="md-button-circle-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-multiple-children={false}
           data-outline={false}
           data-size={40}
           onBlur={[Function]}
@@ -316,49 +150,83 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          Example B
+          A
         </button>
       </FocusRing>
-    </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-2"
-    />
-    <ButtonPill
-      key="2"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example B
-        </button>
-      </FocusRing>
-    </ButtonPill>
+    </ButtonCircle>
   </div>
 </ButtonGroup>
+`;
+
+exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
+<ButtonCircle
+  className="example-class"
+>
+  <FocusRing
+    focusRingClass="md-button-circle-focus-ring"
+  >
+    <button
+      className="md-button-circle-wrapper example-class"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-size={40}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    />
+  </FocusRing>
+</ButtonCircle>
+`;
+
+exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
+<ButtonCircle
+  id="example-id"
+>
+  <FocusRing
+    focusRingClass="md-button-circle-focus-ring"
+  >
+    <button
+      className="md-button-circle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-size={40}
+      id="example-id"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    />
+  </FocusRing>
+</ButtonCircle>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
@@ -368,7 +236,6 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
   <div
     className="md-button-group-wrapper"
     data-round={true}
-    data-separation="none"
     data-spaced={false}
   >
     <ButtonPill
@@ -404,21 +271,18 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
         </button>
       </FocusRing>
     </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-1"
-    />
-    <ButtonPill
+    <ButtonCircle
       key="1"
     >
       <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
+        focusRingClass="md-button-circle-focus-ring"
       >
         <button
-          className="md-button-pill-wrapper"
+          className="md-button-circle-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-multiple-children={false}
           data-outline={false}
           data-size={40}
           onBlur={[Function]}
@@ -437,168 +301,54 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          Example B
+          A
         </button>
       </FocusRing>
-    </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-2"
-    />
-    <ButtonPill
-      key="2"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example B
-        </button>
-      </FocusRing>
-    </ButtonPill>
+    </ButtonCircle>
   </div>
 </ButtonGroup>
 `;
 
-exports[`<ButtonPill /> snapshot should match snapshot with seperation 1`] = `
-<ButtonGroup
-  separation="none"
+exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
+<ButtonCircle
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
 >
-  <div
-    className="md-button-group-wrapper"
-    data-round={false}
-    data-separation="none"
-    data-spaced={false}
+  <FocusRing
+    focusRingClass="md-button-circle-focus-ring"
   >
-    <ButtonPill
-      key="0"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example A
-        </button>
-      </FocusRing>
-    </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-1"
+    <button
+      className="md-button-circle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-size={40}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+      type="button"
     />
-    <ButtonPill
-      key="1"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example B
-        </button>
-      </FocusRing>
-    </ButtonPill>
-    <div
-      className="md-button-group-separator"
-      key="separator-2"
-    />
-    <ButtonPill
-      key="2"
-    >
-      <FocusRing
-        focusRingClass="md-button-pill-focus-ring"
-      >
-        <button
-          className="md-button-pill-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-outline={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          Example B
-        </button>
-      </FocusRing>
-    </ButtonPill>
-  </div>
-</ButtonGroup>
+  </FocusRing>
+</ButtonCircle>
 `;
