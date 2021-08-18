@@ -1,8 +1,6 @@
 .md-text-wrapper {
     font-family: CiscoSansTT; // IEFIX
     font-family: var(--font-default);
-    
-    color: var(--label-primary-text);
 
     &[data-type='display']{
         font-size: 2.5rem;
@@ -112,5 +110,9 @@
         font-size: 0.75rem;
         font-weight: 500;
         line-height:  1.125rem;
+    }
+
+    &.md-text-color {
+        color: var(--label-primary-text);
     }
 }

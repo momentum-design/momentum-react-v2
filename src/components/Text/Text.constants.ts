@@ -27,6 +27,7 @@ const TYPES = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
+  color: `${CLASS_PREFIX}-color`,
 };
 
 export { DEFAULTS, STYLE, TYPES };

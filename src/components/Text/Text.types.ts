@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react';
 export interface Props {
   /**
    * Custom class to be able to override the component's CSS
@@ -11,6 +12,14 @@ export interface Props {
    * the token that defines the style (size, weight, line height) of the text
    */
   type?: FontStyle;
+  /**
+   * Custom id for overriding this component's CSS.
+   */
+  id?: string;
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
 }
 
 export type FontStyle =

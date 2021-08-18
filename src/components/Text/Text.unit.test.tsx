@@ -15,6 +15,36 @@ describe('Text', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should match snapshot with className', () => {
+    expect.assertions(1);
+
+    const className = 'example-class';
+
+    container = mount(<Text className={className} />);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot with id', () => {
+    expect.assertions(1);
+
+    const id = 'example-id';
+
+    container = mount(<Text id={id} />);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot with style', () => {
+    expect.assertions(1);
+
+    const style = { color: 'red' };
+
+    container = mount(<Text style={style} />);
+
+    expect(container).toMatchSnapshot();
+  });
+
   it(`should match snapshot with type`, async () => {
     expect.assertions(1);
 
@@ -39,6 +69,31 @@ describe('Text', () => {
         .getDOMNode();
 
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
+    });
+
+    it('should have provided id when id is provided', () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const element = mount(<Text id={id} />)
+        .find(Text)
+        .getDOMNode();
+
+      expect(element.id).toBe(id);
+    });
+
+    it('should have provided style when style is provided', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
+
+      const element = mount(<Text style={style} />)
+        .find(Text)
+        .getDOMNode();
+
+      expect(element.getAttribute('style')).toBe(styleString);
     });
 
     it('should pass type prop', () => {
