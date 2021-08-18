@@ -1,14 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ButtonGroupNext as ButtonGroup, ButtonPill } from '@momentum-ui/react';
+import { ButtonCircle, ButtonGroupNext as ButtonGroup, ButtonPill } from '@momentum-ui/react';
 
-import { DEFAULTS, SEPARATIONS, STYLE } from './ButtonGroup.constants';
+import { DEFAULTS, STYLE } from './ButtonGroup.constants';
 
 describe('<ButtonPill />', () => {
   const childrenTemplate = [
     <ButtonPill key="0">Example A</ButtonPill>,
-    <ButtonPill key="1">Example B</ButtonPill>,
-    <ButtonPill key="2">Example B</ButtonPill>,
+    <ButtonCircle key="1">A</ButtonCircle>,
   ];
   let container;
 
@@ -31,16 +30,6 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with seperation', () => {
-      expect.assertions(1);
-
-      const separation = SEPARATIONS[Object.keys(SEPARATIONS)[Object.keys(SEPARATIONS).length - 1]];
-
-      container = mount(<ButtonGroup separation={separation}>{childrenTemplate}</ButtonGroup>);
-
-      expect(container).toMatchSnapshot();
-    });
-
     it('should match snapshot when spaced', () => {
       expect.assertions(1);
 
@@ -51,19 +40,39 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot when provided a className', () => {
+    it('should match snapshot with className', () => {
       expect.assertions(1);
 
-      const className = 'test-example-class';
+      const className = 'example-class';
 
-      container = mount(<ButtonGroup className={className}>{childrenTemplate}</ButtonGroup>);
+      const container = mount(<ButtonCircle className={className} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with id', () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const container = mount(<ButtonCircle id={id} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with style', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      const container = mount(<ButtonCircle style={style} />);
 
       expect(container).toMatchSnapshot();
     });
   });
 
   describe('attributes', () => {
-    it('should have its main class', () => {
+    it('should have its wrapper class', () => {
       expect.assertions(1);
 
       const element = mount(<ButtonGroup>{childrenTemplate}</ButtonGroup>)
@@ -73,41 +82,41 @@ describe('<ButtonPill />', () => {
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
-    it('should pass child props with separators', () => {
+    it('should have provided class when className is provided', () => {
       expect.assertions(1);
 
-      const element = mount(<ButtonGroup>{childrenTemplate}</ButtonGroup>)
-        .find(ButtonGroup)
-        .getDOMNode();
+      const className = 'example-class';
 
-      const expectedChildrenLength =
-        childrenTemplate.length + Math.floor(childrenTemplate.length - 1);
-
-      expect(element.childNodes.length).toBe(expectedChildrenLength);
-    });
-
-    it('should pass className prop', () => {
-      expect.assertions(1);
-
-      const className = 'text-example-class';
-
-      const element = mount(<ButtonGroup className={className}>{childrenTemplate}</ButtonGroup>)
-        .find(ButtonGroup)
+      const element = mount(<ButtonCircle className={className} />)
+        .find(ButtonCircle)
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should pass separation prop', () => {
+    it('should have provided id when id is provided', () => {
       expect.assertions(1);
 
-      const separation = SEPARATIONS[Object.keys(SEPARATIONS)[Object.keys(SEPARATIONS).length - 1]];
+      const id = 'example-id';
 
-      const element = mount(<ButtonGroup separation={separation}>{childrenTemplate}</ButtonGroup>)
-        .find(ButtonGroup)
+      const element = mount(<ButtonCircle id={id} />)
+        .find(ButtonCircle)
         .getDOMNode();
 
-      expect(element.getAttribute('data-separation')).toBe(separation);
+      expect(element.id).toBe(id);
+    });
+
+    it('should have provided style when style is provided', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
+
+      const element = mount(<ButtonCircle style={style} />)
+        .find(ButtonCircle)
+        .getDOMNode();
+
+      expect(element.getAttribute('style')).toBe(styleString);
     });
 
     it('should pass spaced prop', () => {

@@ -5,7 +5,6 @@ const DEFAULTS = {
   DISABLED: false,
   GHOST: false,
   OUTLINE: false,
-  SHAPE: 'pill',
   SIZE: 40,
 };
 

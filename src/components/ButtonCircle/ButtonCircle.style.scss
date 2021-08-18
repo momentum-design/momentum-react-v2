@@ -1,0 +1,341 @@
+.md-button-circle-wrapper {
+  background-color: rgba(0, 0, 0, 0.95); // IEFIX
+  background-color: var(--button-primary-background);
+  border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
+  border: var(--border-clear);
+  border-width: 0.0625rem;
+  color: rgba(255, 255, 255, 0.95); // IEFIX
+  color: var(--button-primary-text);
+  cursor: pointer;
+  font-family: CiscoSansTT; // IEFIX
+  font-family: var(--font-default);
+  margin: 0.5rem;
+  outline: none;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  &.md-button-circle-focus-ring {
+    outline: none; // IEFIX
+    outline: var(--focus-ring-outline);
+    box-shadow: 0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1); // IEFIX
+    box-shadow: var(--focus-ring-box-shadow);
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8); // IEFIX
+    background-color: var(--button-primary-background-hovered);
+    color: rgba(255, 255, 255, 0.95); // IEFIX
+    color: var(--button-primary-text-hovered);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.7); // IEFIX
+    background-color: var(--button-primary-background-pressed);
+    color: rgba(255, 255, 255, 0.95); // IEFIX
+    color: var(--button-primary-text-pressed);
+  }
+
+  &[data-color="message"] {
+    background-color: rgba(17, 112, 207, 1); // IEFIX
+    background-color: var(--button-message-fill-background);
+    color: rgba(255, 255, 255, 1); // IEFIX
+    color: var(--button-message-fill-text);
+
+    &:hover {
+      background-color: rgba(3, 83, 168, 1); // IEFIX
+      background-color: var(--button-message-fill-background-hovered);
+      color: rgba(255, 255, 255, 1); // IEFIX
+      color: var(--button-message-fill-text-hovered);
+    }
+
+    &:active {
+      background-color: rgba(6, 58, 117, 1); // IEFIX
+      background-color: var(--button-message-fill-background-pressed);
+      color: rgba(255, 255, 255, 1); // IEFIX
+      color: var(--button-message-fill-text-pressed);
+    }
+  }
+
+  &[data-color="join"] {
+    background-color: rgba(29, 128, 95, 1); // IEFIX
+    background-color: var(--button-join-fill-background);
+    color: rgba(255, 255, 255, 1); // IEFIX
+    color: var(--button-join-fill-text);
+
+    &:hover {
+      background-color: rgba(24, 94, 70, 1); // IEFIX
+      background-color: var(--button-join-fill-background-hovered);
+      color: rgba(255, 255, 255, 1); // IEFIX
+      color: var(--button-join-fill-text-hovered);
+    }
+
+    &:active {
+      background-color: rgba(19, 66, 49, 1); // IEFIX
+      background-color: var(--button-join-fill-background-pressed);
+      color: rgba(255, 255, 255, 1); // IEFIX
+      color: var(--button-join-fill-text-pressed);
+    }
+  }
+
+  &[data-color="cancel"] {
+    background-color: rgba(219, 31, 46, 1); // IEFIX
+    background-color: var(--button-cancel-fill-background);
+    color: rgba(255, 255, 255, 1); // IEFIX
+    color: var(--button-cancel-fill-text);
+
+    &:hover {
+      background-color: rgba(171, 10, 21, 1); // IEFIX
+      background-color: var(--button-cancel-fill-background-hovered);
+      color: rgba(255, 255, 255, 1); // IEFIX
+      color: var(--button-cancel-fill-text-hovered);
+    }
+
+    &:active {
+      background-color: rgba(120, 13, 19, 1); // IEFIX
+      background-color: var(--button-cancel-fill-background-pressed);
+      color: rgba(255, 255, 255, 1); // IEFIX
+      color: var(--button-cancel-fill-text-pressed);
+    }
+  }
+
+  &[data-disabled=true] {
+    background-color: rgba(0, 0, 0, 0.2); // IEFIX
+    background-color: var(--button-primary-background-disabled);
+    color: rgba(0, 0, 0, 0.4); // IEFIX
+    color: var(--button-primary-text-disabled);
+    cursor: auto;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2); // IEFIX
+      background-color: var(--button-primary-background-disabled);
+      color: rgba(0, 0, 0, 0.4); // IEFIX
+      color: var(--button-primary-text-disabled);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2); // IEFIX
+      background-color: var(--button-primary-background-disabled);
+      color: rgba(0, 0, 0, 0.4); // IEFIX
+      color: var(--button-primary-text-disabled);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &[data-outline=true][data-ghost=false] {
+    background-color: rgba(0, 0, 0, 0); // IEFIX
+    background-color: var(--button-secondary-background);
+    border-color: rgba(0, 0, 0, 0.3); // IEFIX
+    border-color: var(--button-secondary-border);
+    color: rgba(0, 0, 0, 0.95); // IEFIX
+    color: var(--button-secondary-text);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.07); // IEFIX
+      background-color: var(--button-secondary-background-hovered);
+      border-color: rgba(0, 0, 0, 0.3); // IEFIX
+      border-color: var(--button-secondary-border-hovered);
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--button-secondary-text-hovered);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2); // IEFIX
+      background-color: var(--button-secondary-background-pressed);
+      border-color: rgba(0, 0, 0, 0.3); // IEFIX
+      border-color: var(--button-secondary-border-pressed);
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--button-secondary-text-pressed);
+    }
+
+    &[data-color="join"] {
+      background-color: rgba(0, 0, 0, 0); // IEFIX
+      background-color: var(--button-join-outline-background);
+      border-color: rgba(24, 94, 70, 1); // IEFIX
+      border-color: var(--button-join-outline-border);
+      color: rgba(24, 94, 70, 1); // IEFIX
+      color: var(--button-join-outline-text);
+
+      &:hover {
+        background-color: rgba(24, 94, 70, 1); // IEFIX
+        background-color: var(--button-join-outline-background-hovered);
+        border-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 1); // IEFIX
+        color: var(--button-join-outline-text-hovered);
+      }
+
+      &:active {
+        background-color: rgba(19, 66, 49, 1); // IEFIX
+        background-color: var(--button-join-outline-background-pressed);
+        border-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 1); // IEFIX
+        color: var(--button-join-outline-text-pressed);
+      }
+    }
+
+    &[data-color="cancel"] {
+      background-color: rgba(0, 0, 0, 0); // IEFIX
+      background-color: var(--button-cancel-outline-background);
+      border-color: rgba(171, 10, 21, 1); // IEFIX
+      border-color: var(--button-cancel-outline-border);
+      color: rgba(171, 10, 21, 1); // IEFIX
+      color: var(--button-cancel-outline-text);
+
+      &:hover {
+        background-color: rgba(171, 10, 21, 1); // IEFIX
+        background-color: var(--button-cancel-outline-background-hovered);
+        border-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 1); // IEFIX
+        color: var(--button-cancel-outline-text-hovered);
+      }
+
+      &:active {
+        background-color: rgba(120, 13, 19, 1); // IEFIX
+        background-color: var(--button-cancel-outline-background-pressed);
+        border-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 1); // IEFIX
+        color: var(--button-cancel-outline-text-pressed);
+      }
+    }
+
+    &[data-disabled=true] {
+      background-color: rgba(0, 0, 0, 0); // IEFIX
+      background-color: var(--button-secondary-background-disabled);
+      border-color: rgba(0, 0, 0, 0.2); // IEFIX
+      border-color: var(--button-secondary-border-disabled);
+      color: rgba(0, 0, 0, 0.4); // IEFIX
+      color: var(--button-secondary-text-disabled);
+      cursor: auto;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0); // IEFIX
+        background-color: var(--button-secondary-background-disabled);
+        border-color: rgba(0, 0, 0, 0.2); // IEFIX
+        border-color: var(--button-secondary-border-disabled);
+        color: rgba(0, 0, 0, 0.4); // IEFIX
+        color: var(--button-secondary-text-disabled);
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0); // IEFIX
+        background-color: var(--button-secondary-background-disabled);
+        border-color: rgba(0, 0, 0, 0.2); // IEFIX
+        border-color: var(--button-secondary-border-disabled);
+        color: rgba(0, 0, 0, 0.4); // IEFIX
+        color: var(--button-secondary-text-disabled);
+      }
+    }
+  }
+
+  &[data-ghost=true] {
+    background-color: rgba(0, 0, 0, 0); // IEFIX
+    background-color: var(--button-ghost-background);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.95); // IEFIX
+    color: var(--button-ghost-text);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.07); // IEFIX
+      background-color: var(--button-ghost-background-hovered);
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--button-ghost-text-hovered);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2); // IEFIX
+      background-color: var(--button-secondary-background-pressed);
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--button-secondary-text-pressed);
+    }
+
+    &[data-disabled=true] {
+      background-color: rgba(0, 0, 0, 0.2); // IEFIX
+      background-color: var(--button-primary-background-disabled);
+      color: rgba(0, 0, 0, 0.4); // IEFIX
+      color: var(--button-primary-text-disabled);
+      cursor: auto;
+  
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2); // IEFIX
+        background-color: var(--button-primary-background-disabled);
+        color: rgba(0, 0, 0, 0.4); // IEFIX
+        color: var(--button-primary-text-disabled);
+      }
+  
+      &:active {
+        background-color: rgba(0, 0, 0, 0.2); // IEFIX
+        background-color: var(--button-primary-background-disabled);
+        color: rgba(0, 0, 0, 0.4); // IEFIX
+        color: var(--button-primary-text-disabled);
+      }
+  
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  /* Sizing and spacing */
+
+  align-items: center;
+  border-radius: 100vh;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-evenly;
+
+  &[data-size="64"] {
+    font-size: 1.6rem;
+    height: 4rem;
+    width: 4rem;
+  }
+
+  &[data-size="52"] {
+    font-size: 1.3rem;
+    height: 3.25rem;
+    width: 3.25rem;
+  }
+
+  &[data-size="40"] {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  &[data-size="32"] {
+    font-size: 0.8rem;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &[data-size="28"] {
+    font-size: 0.7rem;
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  &[data-multiple-children=true] {
+    > *:not(:first-child) {
+      margin-left: 0.1em;
+    }
+
+    &[data-size="64"] {
+      font-size: 1.0rem;
+    }
+  
+    &[data-size="52"] {
+      font-size: 0.875rem;
+    }
+  
+    &[data-size="40"] {
+      font-size: 0.75rem;
+    }
+  
+    &[data-size="32"] {
+      font-size: 0.625rem;
+    }
+  
+    &[data-size="28"] {
+      font-size: 0.5rem;
+    }
+  }
+}
