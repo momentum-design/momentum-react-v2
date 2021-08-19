@@ -13,6 +13,10 @@ export interface Props {
    */
   numDigits: number;
   /**
+   * onChange: callback that fires whenever the entered code changes
+   */
+  onChange?: (code: string) => void;
+  /**
    * onComplete: callback that fires when the user enters the final digit
    */
   onComplete?: (code: string) => void;

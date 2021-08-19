@@ -43,9 +43,14 @@ export default {
       description: 'Whether the input is disabled or not',
       control: { type: 'boolean' },
     },
-    onCompleteChoice: {
+    onComplete: {
       description: 'What happens when the code is complete',
       options: ['show error', 'go disabled', 'alert'],
+      control: { type: 'select' },
+    },
+    onChange: {
+      description: 'If present, the this handler will fire whenever the code changes',
+      options: ['alert'],
       control: { type: 'select' },
     },
   },
@@ -53,11 +58,12 @@ export default {
 
 interface StoryProps extends CodeInputProps {
   messageArr: [];
-  onCompleteChoice;
+  onComplete;
+  onChange;
 }
 
 const Template: Story<StoryProps> = (args) => {
-  const { onCompleteChoice } = args;
+  const { onComplete, onChange } = args;
   const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
   const [isDisabled, setDisabled] = useState(args.disabled);
 
@@ -67,7 +73,7 @@ const Template: Story<StoryProps> = (args) => {
       messageArr={messageArrInt}
       disabled={isDisabled}
       onComplete={(code) => {
-        switch (onCompleteChoice) {
+        switch (onComplete) {
           case 'show error':
             setMessageArr([{ message: 'test', type: 'error' }]);
             break;
@@ -75,7 +81,12 @@ const Template: Story<StoryProps> = (args) => {
             setDisabled(true);
             break;
           case 'alert':
-            alert(`code is ${code}`);
+            alert(`onComplete: code is ${code}`);
+        }
+      }}
+      onChange={(code) => {
+        if (onChange === 'alert') {
+          alert(`onChange: code is ${code}`);
         }
       }}
     />
