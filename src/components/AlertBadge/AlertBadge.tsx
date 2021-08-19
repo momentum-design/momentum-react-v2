@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { useButton } from '@react-aria/button';
 import { FocusRing } from '@react-aria/focus';
 
-import { PrimativeConverter } from '../../utils';
+import { PrimitiveConverter } from '../../utils';
 
 import { STYLE } from './AlertBadge.constants';
 import { Props } from './AlertBadge.types';
@@ -15,11 +15,11 @@ const AlertBadge: FC<Props> = forwardRef(
     const ref = providedRef || useRef();
 
     const mutatedChildren = children ? (
-      <PrimativeConverter>{children}</PrimativeConverter>
+      <PrimitiveConverter>{children}</PrimitiveConverter>
     ) : (
       [
-        image ? <PrimativeConverter key={0}>{image}</PrimativeConverter> : null,
-        label ? <PrimativeConverter key={1}>{label}</PrimativeConverter> : null,
+        image ? <PrimitiveConverter key={0}>{image}</PrimitiveConverter> : null,
+        label ? <PrimitiveConverter key={1}>{label}</PrimitiveConverter> : null,
       ]
     );
 

@@ -1,1 +1,1 @@
-export { PrimativeConverter } from './component-conversions';
+export { PrimitiveConverter } from './component-conversions';

@@ -61,11 +61,11 @@ exports[`<AlertBadge /> snapshot should match snapshot with children, image and 
       onTouchStart={[Function]}
       type="button"
     >
-      <PrimativeConverter>
+      <PrimitiveConverter>
         <div>
           Example Children
         </div>
-      </PrimativeConverter>
+      </PrimitiveConverter>
     </button>
   </FocusRing>
 </AlertBadge>
@@ -126,11 +126,11 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <PrimativeConverter>
+      <PrimitiveConverter>
         <div>
           Example Text
         </div>
-      </PrimativeConverter>
+      </PrimitiveConverter>
     </button>
   </FocusRing>
 </AlertBadge>
@@ -195,13 +195,13 @@ exports[`<AlertBadge /> snapshot should match snapshot with image 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <PrimativeConverter
+      <PrimitiveConverter
         key="0"
       >
         <div>
           A
         </div>
-      </PrimativeConverter>
+      </PrimitiveConverter>
     </button>
   </FocusRing>
 </AlertBadge>
@@ -241,20 +241,20 @@ exports[`<AlertBadge /> snapshot should match snapshot with image and label 1`] 
       onTouchStart={[Function]}
       type="button"
     >
-      <PrimativeConverter
+      <PrimitiveConverter
         key="0"
       >
         <div>
           A
         </div>
-      </PrimativeConverter>
-      <PrimativeConverter
+      </PrimitiveConverter>
+      <PrimitiveConverter
         key="1"
       >
         <div>
           Example Label
         </div>
-      </PrimativeConverter>
+      </PrimitiveConverter>
     </button>
   </FocusRing>
 </AlertBadge>
@@ -289,13 +289,13 @@ exports[`<AlertBadge /> snapshot should match snapshot with label 1`] = `
       onTouchStart={[Function]}
       type="button"
     >
-      <PrimativeConverter
+      <PrimitiveConverter
         key="1"
       >
         <div>
           Example Text
         </div>
-      </PrimativeConverter>
+      </PrimitiveConverter>
     </button>
   </FocusRing>
 </AlertBadge>
