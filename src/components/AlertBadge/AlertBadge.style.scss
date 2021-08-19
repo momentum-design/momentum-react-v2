@@ -1,0 +1,92 @@
+.md-alert-badge-wrapper {
+  align-items: center;
+  border: var(--border-clear);
+  display: flex;
+  background-color: var(--theme-background-alert-default-normal);
+  border-radius: 0.25rem;
+  color: var(--theme-text-secondary-normal);
+  cursor: pointer;
+  font-size: 0.875rem;
+  height: 1.5rem;
+  margin: 0.125rem;
+  outline: none;
+  padding: 0 0.5rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  width: fit-content;
+
+  &:hover {
+    color: var(--theme-text-primary-normal);
+  }
+
+  &:active {
+    color: var(--theme-text-primary-normal);
+    background-color: var(--theme-background-alert-default-active);
+  }
+
+  &[data-color="theme"] {
+    color: var(--theme-text-accent-normal);
+    background-color: var(--theme-background-alert-theme-normal);
+
+    &:hover {
+      color: var(--theme-text-accent-hover);
+    }
+
+    &:active {
+      color: var(--theme-text-accent-active);
+      background-color: var(--theme-background-alert-theme-active);
+    }
+  }
+
+  &[data-color="success"] {
+    color: var(--theme-text-success-normal);
+    background-color: var(--theme-background-alert-success-normal);
+
+    &:hover {
+      color: var(--theme-text-success-hover);
+    }
+
+    &:active {
+      color: var(--theme-text-success-active);
+      background-color: var(--theme-background-alert-success-active);
+    }
+  }
+
+  &[data-color="warning"] {
+    color: var(--theme-text-warning-normal);
+    background-color: var(--theme-background-alert-warning-normal);
+
+    &:hover {
+      color: var(--theme-text-warning-hover);
+    }
+
+    &:active {
+      color: var(--theme-text-warning-active);
+      background-color: var(--theme-background-alert-warning-active);
+    }
+  }
+
+  &[data-color="error"] {
+    color: var(--theme-text-error-normal);
+    background-color: var(--theme-background-alert-error-normal);
+
+    &:hover {
+      color: var(--theme-text-error-hover);
+    }
+
+    &:active {
+      color: var(--theme-text-error-active);
+      background-color: var(--theme-background-alert-error-active);
+    }
+  }
+  
+  > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  &.md-alert-badge-focus-ring {
+    outline: none; // IEFIX
+    outline: var(--focus-ring-outline);
+    box-shadow: 0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1); // IEFIX
+    box-shadow: var(--focus-ring-box-shadow);
+  }
+}
