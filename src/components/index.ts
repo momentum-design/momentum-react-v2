@@ -1,3 +1,4 @@
+export { default as AlertBanner } from './AlertBanner';
 export { default as Avatar } from './Avatar';
 export { default as AvatarCompact } from './AvatarCompact';
 export { default as ButtonCircle } from './ButtonCircle';
