@@ -22,7 +22,6 @@ const ButtonPill: FC<Props> = forwardRef(
     delete mutatedProps.style;
 
     const { buttonProps } = useButton(mutatedProps, ref);
-
     return (
       <FocusRing disabled={disabled}>
         <button
