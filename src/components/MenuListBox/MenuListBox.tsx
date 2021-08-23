@@ -1,28 +1,25 @@
-import React, { FC, RefObject, forwardRef } from 'react';
+import React, { RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import './MenuListBox.style.scss';
 import { Props } from './MenuListBox.types';
-import { DEFAULTS, STYLE } from './MenuListBox.constants';
+import { STYLE } from './MenuListBox.constants';
+
+//TODO: Implement notch version, Also probably needs renaming
+//TODO: Add elevation / shadow when tokens available
 
 const MenuListBox = (props: Props, ref: RefObject<HTMLUListElement>) => {
-  const { className, children, direction, ...rest } = props;
+  const { className, children, ...rest } = props;
 
-  // Implementation goes here
   return (
-    <ul
-      {...rest}
-      data-direction={direction}
-      ref={ref}
-      className={classnames(className, STYLE.wrapper)}
-    >
+    <ul {...rest} ref={ref} className={classnames(className, STYLE.wrapper)}>
       {children}
     </ul>
   );
 };
 
 /**
- * TODO: Add description of component here.
+ * Menu Background for Select and Menu List
  */
 
 const _MenuListBox = forwardRef(MenuListBox);

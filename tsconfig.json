@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "module": "ESNext",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
@@ -15,7 +16,7 @@
     "preserveConstEnums": true,
     "removeComments": false,
     "sourceMap": true,
-    "target": "ES6",
+    "target": "ES2017",
     "lib": [
       "ESNext", "DOM"
     ]

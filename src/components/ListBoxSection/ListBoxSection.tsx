@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React, { ReactElement, useContext } from 'react';
-import classnames from 'classnames';
 
 import './ListBoxSection.style.scss';
 import { Props } from './ListBoxSection.types';
-import { DEFAULTS, STYLE } from './ListBoxSection.constants';
-import { useListBoxSection, useSeparator } from 'react-aria';
+import { STYLE } from './ListBoxSection.constants';
+import { useListBoxSection } from '@react-aria/listbox';
+import { useSeparator } from '@react-aria/separator';
 import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
+import ListBoxItem from '../ListBoxItem';
 
 const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
-  const { className, section } = props;
+  const { section } = props;
 
   const { itemProps, headingProps, groupProps } = useListBoxSection({
     heading: section.rendered,
@@ -30,17 +31,26 @@ const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
       {section.key !== state.collection.getFirstKey() && (
         <div {...separatorProps} className={STYLE.separator} />
       )}
-      {section.rendered && (
-        <div {...headingProps} className={STYLE.wrapper}>
-          {section.rendered}
-        </div>
-      )}
+      <li {...itemProps}>
+        {section.rendered && (
+          <div {...headingProps} className={STYLE.wrapper}>
+            {section.rendered}
+          </div>
+        )}
+        <ul {...groupProps} className={STYLE.subItemsWrapper}>
+          {[...section.childNodes].map((node) => (
+            <ListBoxItem key={node.key} item={node} />
+          ))}
+        </ul>
+      </li>
     </>
   );
 };
 
 /**
- * TODO: Add description of component here.
+ * ListBoxSection is used internally to display sectioned items.
+ * This component should not be exported as part of the library.
+ * @internal
  */
 
 export default ListBoxSection;

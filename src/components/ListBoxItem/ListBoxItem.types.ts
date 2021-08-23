@@ -2,8 +2,7 @@ import { Node } from '@react-types/shared';
 
 export interface Props<T> {
   /**
-   * className prop description
+   * Represents the item to be displayed in this ListBoxItem
    */
-  className?: string;
   item: Node<T>;
 }

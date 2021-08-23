@@ -15,26 +15,32 @@ const Flex: FC<Props> = (props: Props) => {
     justifyContent,
     alignItems,
     alignContent,
+    wrap,
+    style,
+    id,
     ...rest
   } = props;
-  const style: CSSProperties = {
-    flexDirection: direction || 'row',
-    justifyContent: justifyContent || 'start',
-    alignItems: alignItems || 'start',
-    alignContent: alignContent || 'start',
+  const _style = {
+    flexDirection: direction || DEFAULTS.DIRECTION,
+    justifyContent: justifyContent || DEFAULTS.JUSTIFY_CONTENT,
+    alignItems: alignItems || DEFAULTS.ALIGN_ITEMS,
+    alignContent: alignContent || DEFAULTS.ALIGN_CONTENT,
+    flexWrap: wrap || 'nowrap',
   };
   return (
     <div
       {...rest}
-      data-xgap={style.flexDirection === 'row' && true}
-      data-ygap={style.flexDirection === 'column' && true}
+      id={id}
+      data-xgap={_style.flexDirection === 'row' && true}
+      data-ygap={_style.flexDirection === 'column' && true}
       style={{
         display: 'flex',
-        ...style,
+        ...(_style as CSSProperties),
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ['--flex-xgap-size' as any]: xgap,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ['--flex-ygap-size' as any]: ygap,
+        ...style,
       }}
       className={classnames(className, STYLE.wrapper)}
     >

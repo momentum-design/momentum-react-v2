@@ -12,6 +12,8 @@ import {
 } from '@storybook/addon-docs';
 
 import Documentation from './ListItemSection.documentation.mdx';
+import ListItem from '../ListItem';
+import argTypes from './ListItemSection.stories.args';
 
 const DocsPage: FC = () => (
   <>
@@ -34,20 +36,7 @@ export default {
     },
   },
   argTypes: {
-    propName: {
-      defaultValue: undefined,
-      description: 'Description goes here.',
-      options: [undefined, 'Option 1', 'Option 2'],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
+    ...argTypes,
   },
 };
 
@@ -56,7 +45,9 @@ const MultiTemplate: Story<ListItemSectionProps> = (args: ListItemSectionProps, 
 
   const items = variants.map((variant, index: number) => (
     <div key={index}>
-      <ListItemSection {...args} {...variant} />
+      <ListItem style={{ minWidth: '20rem', border: '1px solid red' }}>
+        <ListItemSection {...args} {...variant} style={{ border: '1px solid blue' }} />
+      </ListItem>
       <p>{variant.label}</p>
     </div>
   ));
@@ -65,7 +56,7 @@ const MultiTemplate: Story<ListItemSectionProps> = (args: ListItemSectionProps, 
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: `repeat(4, auto)`,
+        gridTemplateColumns: `repeat(1, auto)`,
         gap: '1.5rem',
         alignItems: 'end',
       }}
@@ -75,22 +66,19 @@ const MultiTemplate: Story<ListItemSectionProps> = (args: ListItemSectionProps, 
   );
 };
 
-const Template: Story<ListItemSectionProps> = (args) => <ListItemSection {...args} />;
+const Positions = MultiTemplate.bind({});
 
-const Example = Template.bind({});
-
-Example.args = {
-  propName: 'Value 1',
+Positions.args = {
+  children: 'Content',
 };
 
-const Common = MultiTemplate.bind({});
-
-Common.parameters = {
+Positions.parameters = {
   variants: [
-    {},
-    { propName: 'Value 1', label: 'With value 1' },
-    { propName: 'Value 2', label: 'With value 2' },
+    { position: 'start', label: 'Start' },
+    { position: 'middle', label: 'Middle' },
+    { position: 'end', label: 'End' },
+    { position: 'fill', label: 'Fill' },
   ],
 };
 
-export { Example, Common };
+export { Positions };

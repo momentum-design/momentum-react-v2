@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListBoxItem snapshot should match snapshot 1`] = `
+<ListBoxItem
+  item={
+    Object {
+      "aria-label": "0",
+      "childNodes": Object {
+        Symbol(Symbol.iterator): [Function],
+      },
+      "hasChildNodes": false,
+      "index": 0,
+      "key": "$.0",
+      "level": 0,
+      "nextKey": "$.1",
+      "parentKey": null,
+      "prevKey": undefined,
+      "props": Object {
+        "aria-label": "0",
+        "children": "Item 1",
+      },
+      "rendered": "Item 1",
+      "shouldInvalidate": undefined,
+      "textValue": "Item 1",
+      "type": "item",
+      "value": undefined,
+      "wrapper": undefined,
+    }
+  }
+>
+  <ListItem
+    isDisabled={false}
+    key="$.0"
+  >
+    <li
+      className="md-list-item-wrapper"
+      data-disabled={false}
+      data-shape="rectangle"
+      data-size={40}
+      role="listitem"
+    >
+      <ListItemSection
+        position="fill"
+      >
+        <div
+          data-position="fill"
+        >
+          Item 1
+        </div>
+      </ListItemSection>
+    </li>
+  </ListItem>
+</ListBoxItem>
+`;

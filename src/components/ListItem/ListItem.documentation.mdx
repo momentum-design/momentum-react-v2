@@ -1,1 +1,50 @@
-ListItem Documentation
+import { Story } from '@storybook/addon-docs';
+import ListItem, { ListItemProps } from '.';
+import ListItemSection from '../ListItemSection';
+import Avatar from '../ListItemSection';
+
+`<ListItem />` component that can be used inside Lists, Menus, Space Lists etc. The component is highly customisable.
+
+## Structure
+
+The structure of the component is as follows:
+
+```
++---------------+----------------+-------------+
+| Start Section | Middle Section | End Section |
++---------------+----------------+-------------+
+
+or
+
++---------------+----------------+-------------+
+|                  Fill Section                |
++---------------+----------------+-------------+
+```
+
+The 4 sections can be mixed together as needed. We provide a `<ListItemSection />` component that will handle
+spacing and padding accordingly.
+
+## Simple example
+
+```js
+<ListItem>
+  <ListItemSection position="start">
+    <Avatar title="Webex User" />
+  </ListItemSection>
+  <ListItemSection position="fill">Webex User</ListItemSection>
+</ListItem>
+```
+
+## Complex example
+
+```js
+<ListItem size={50} shape="rounded">
+  <ListItemSection position="start">
+    <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
+  </ListItemSection>
+  <ListItemSection position="fill">Text goes here</ListItemSection>
+  <ListItemSection position="end">
+    <Icon name="placeholder" scale={16} />
+  </ListItemSection>
+</ListItem>
+```

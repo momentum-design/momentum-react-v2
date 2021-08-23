@@ -1,20 +1,11 @@
 import Select from '.';
-import { mount } from 'enzyme';
 import React from 'react';
 import { Item } from '@react-stately/collections';
-import { DIRECTIONS } from './Select.constants';
+import { DIRECTIONS, STYLE } from './Select.constants';
 import { mountAndWait } from '../../../test/utils';
+import ListBoxBase from '../ListBoxBase';
 
-jest.mock('@react-aria/utils', () => {
-  const originalModule = jest.requireActual('@react-aria/utils');
-
-  return {
-    ...originalModule,
-    useId: () => {
-      return `react-spectrum-0`;
-    },
-  };
-});
+jest.mock('@react-aria/utils');
 
 describe('Select', () => {
   let container;
@@ -24,7 +15,7 @@ describe('Select', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <Select label="Label">
+        <Select id="test-id" label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -39,7 +30,7 @@ describe('Select', () => {
       const className = 'example-class';
 
       container = await mountAndWait(
-        <Select className={className} label="Label">
+        <Select id="test-id" className={className} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -54,7 +45,7 @@ describe('Select', () => {
       const id = 'example-id';
 
       container = await mountAndWait(
-        <Select id={id} label="Label">
+        <Select id={id} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -69,7 +60,7 @@ describe('Select', () => {
       const style = { color: 'pink' };
 
       container = await mountAndWait(
-        <Select style={style} label="Label">
+        <Select id="test-id" style={style} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -84,7 +75,7 @@ describe('Select', () => {
       const placeholder = 'Select an option';
 
       container = await mountAndWait(
-        <Select placeholder={placeholder} label="Label">
+        <Select id="test-id" placeholder={placeholder} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -99,7 +90,59 @@ describe('Select', () => {
       const direction = DIRECTIONS.top;
 
       container = await mountAndWait(
-        <Select direction={direction} label="Label">
+        <Select id="test-id" direction={direction} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with listbox opened', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(
+        <Select id="test-id" label="test" isOpen={true}>
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with disabled option', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(
+        <Select id="test-id" label="test" isOpen={true} disabledKeys={['$.0']}>
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with selected option and listbox closed', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(
+        <Select id="test-id" label="test" defaultSelectedKey={'$.0'}>
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with selected option and listbox open', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(
+        <Select id="test-id" label="test" isOpen={true} defaultSelectedKey={'$.0'}>
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -110,8 +153,93 @@ describe('Select', () => {
   });
 
   describe('attributes', () => {
-    it('should have X value', () => {
-      /* ...attribute tests... */
+    it('should have its wrapper class', async () => {
+      container = await mountAndWait(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const element = container.find(Select).getDOMNode();
+
+      expect(element.classList.contains(STYLE.wrapper));
+    });
+
+    it('should have provided class when className is provided', async () => {
+      expect.assertions(1);
+      const className = 'example-class';
+
+      container = await mountAndWait(
+        <Select id="test-id" className={className} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      const element = container.find(Select).getDOMNode();
+
+      expect(element.classList.contains(className)).toBe(true);
+    });
+
+    it('should have provided id when id is provided', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const wrapper = await mountAndWait(
+        <Select id={id} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const element = wrapper.find(Select).getDOMNode();
+
+      expect(element.id).toBe(id);
+    });
+
+    it('should have provided style when style is provided', async () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
+
+      const wrapper = await mountAndWait(
+        <Select id="test-id" style={style} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const element = wrapper.find(Select).getDOMNode();
+
+      expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should have listbox open when isOpen prop is set to true', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(
+        <Select id="test-id" isOpen={true} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const element = wrapper.find(ListBoxBase).getDOMNode();
+
+      expect(element).toBeDefined();
+    });
+
+    it('should display tick next to selected option', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(
+        <Select id="test-id" isOpen={true} label="test" defaultSelectedKey={'$.0'}>
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const svg = wrapper.find('li[data-key="$.0"] svg').getDOMNode();
+
+      expect(svg).toBeDefined();
     });
   });
 });

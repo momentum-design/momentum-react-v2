@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem snapshot should match snapshot 1`] = `
+<ListItem>
+  <li
+    className="md-list-item-wrapper"
+    data-disabled={false}
+    data-shape="rectangle"
+    data-size={40}
+    role="listitem"
+  >
+    Test
+  </li>
+</ListItem>
+`;
+
+exports[`ListItem snapshot should match snapshot with className 1`] = `
+<ListItem
+  className="example-class"
+>
+  <li
+    className="example-class md-list-item-wrapper"
+    data-disabled={false}
+    data-shape="rectangle"
+    data-size={40}
+    role="listitem"
+  >
+    Test
+  </li>
+</ListItem>
+`;
+
+exports[`ListItem snapshot should match snapshot with id 1`] = `
+<ListItem
+  id="example-id"
+>
+  <li
+    className="md-list-item-wrapper"
+    data-disabled={false}
+    data-shape="rectangle"
+    data-size={40}
+    id="example-id"
+    role="listitem"
+  >
+    Test
+  </li>
+</ListItem>
+`;
+
+exports[`ListItem snapshot should match snapshot with isDisabled 1`] = `
+<ListItem
+  isDisabled={true}
+>
+  <li
+    className="md-list-item-wrapper"
+    data-disabled={true}
+    data-shape="rectangle"
+    data-size={40}
+    role="listitem"
+  >
+    Test
+  </li>
+</ListItem>
+`;
+
+exports[`ListItem snapshot should match snapshot with role 1`] = `
+<ListItem
+  role="role"
+>
+  <li
+    className="md-list-item-wrapper"
+    data-disabled={false}
+    data-shape="rectangle"
+    data-size={40}
+    role="role"
+  >
+    Test
+  </li>
+</ListItem>
+`;
+
+exports[`ListItem snapshot should match snapshot with shape 1`] = `
+<ListItem
+  shape="rounded"
+>
+  <li
+    className="md-list-item-wrapper"
+    data-disabled={false}
+    data-shape="rounded"
+    data-size={40}
+    role="listitem"
+  >
+    Test
+  </li>
+</ListItem>
+`;
+
+exports[`ListItem snapshot should match snapshot with size 1`] = `
+<ListItem
+  size={40}
+>
+  <li
+    className="md-list-item-wrapper"
+    data-disabled={false}
+    data-shape="rectangle"
+    data-size={40}
+    role="listitem"
+  >
+    Test
+  </li>
+</ListItem>
+`;
+
+exports[`ListItem snapshot should match snapshot with style 1`] = `
+<ListItem
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <li
+    className="md-list-item-wrapper"
+    data-disabled={false}
+    data-shape="rectangle"
+    data-size={40}
+    role="listitem"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    Test
+  </li>
+</ListItem>
+`;

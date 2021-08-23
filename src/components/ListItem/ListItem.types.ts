@@ -26,16 +26,25 @@ export interface Props {
 
   /**
    * Determines if this item is disabled
+   * @default false
    */
   isDisabled?: boolean;
 
   /**
    * Size of the list item
+   * @default 40
    */
   size?: ListItemSize;
 
   /**
    * The shape of the list item container
+   * @default "rectangle"
    */
   shape?: 'rectangle' | 'rounded';
+
+  /**
+   * Aria role
+   * @default "listitem"
+   */
+  role?: string;
 }

@@ -1,7 +1,5 @@
-.md-list-box-item-wrapper {
-
-}
-
-svg.md-list-box-item-tick-icon {
-  fill: var(--listitem-tick);
+.md-list-box-item-tick-icon {
+  svg {
+    fill: var(--listitem-tick);
+  }
 }

@@ -14,6 +14,7 @@ const ListItem = (props: Props, ref: RefObject<HTMLLIElement>) => {
     shape = DEFAULTS.SHAPE,
     size = DEFAULTS.SIZE,
     isDisabled = DEFAULTS.IS_DISABLED,
+    role = DEFAULTS.ROLE,
     ...rest
   } = props;
 
@@ -68,6 +69,7 @@ const ListItem = (props: Props, ref: RefObject<HTMLLIElement>) => {
       data-disabled={isDisabled}
       data-shape={shape}
       className={classnames(className, STYLE.wrapper)}
+      role={role}
       {...rest}
     >
       {content}

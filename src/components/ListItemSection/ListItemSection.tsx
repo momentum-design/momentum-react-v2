@@ -1,23 +1,21 @@
 import React, { FC } from 'react';
-import classnames from 'classnames';
 
 import './ListItemSection.style.scss';
 import { Props } from './ListItemSection.types';
-import { DEFAULTS, STYLE } from './ListItemSection.constants';
 
 const ListItemSection: FC<Props> = (props: Props) => {
-  const { className, children, position } = props;
+  const { className, children, position, style, id } = props;
 
-  // Implementation goes here
   return (
-    <div data-position={position} className={classnames(className, STYLE.wrapper)}>
+    <div data-position={position} className={className} style={style} id={id}>
       {children}
     </div>
   );
 };
 
 /**
- * TODO: Add description of component here.
+ * Component that can be used inside ListItem to wrap content and display
+ * it in a certain position.
  */
 
 export default ListItemSection;

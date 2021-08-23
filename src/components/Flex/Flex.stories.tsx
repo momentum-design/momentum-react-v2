@@ -12,6 +12,7 @@ import {
 } from '@storybook/addon-docs';
 
 import Documentation from './Flex.documentation.mdx';
+import argTypes from './Flex.stories.args';
 
 const DocsPage: FC = () => (
   <>
@@ -34,29 +35,32 @@ export default {
     },
   },
   argTypes: {
-    propName: {
-      defaultValue: undefined,
-      description: 'Description goes here.',
-      options: [undefined, 'Option 1', 'Option 2'],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
+    ...argTypes,
   },
 };
+
+const Items = () => {
+  return (
+    <>
+      <p style={{ border: '1px solid blue' }}>Item 1</p>
+      <p style={{ border: '1px solid blue' }}>Item 2</p>
+      <p style={{ border: '1px solid blue' }}>Item 3</p>
+    </>
+  );
+};
+
+const Template: Story<FlexProps> = (args: FlexProps) => (
+  <Flex {...args} style={{ border: '1px solid red', minWidth: '20rem', height: '20rem' }}>
+    <Items />
+  </Flex>
+);
 
 const MultiTemplate: Story<FlexProps> = (args: FlexProps, { parameters }) => {
   const { variants } = parameters;
 
   const items = variants.map((variant, index: number) => (
     <div key={index}>
-      <Flex {...args} {...variant} />
+      <Flex {...args} {...variant} style={{ minWidth: '20rem', border: '1px solid red' }} />
       <p>{variant.label}</p>
     </div>
   ));
@@ -65,7 +69,7 @@ const MultiTemplate: Story<FlexProps> = (args: FlexProps, { parameters }) => {
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: `repeat(4, auto)`,
+        gridTemplateColumns: `repeat(3, auto)`,
         gap: '1.5rem',
         alignItems: 'end',
       }}
@@ -75,21 +79,18 @@ const MultiTemplate: Story<FlexProps> = (args: FlexProps, { parameters }) => {
   );
 };
 
-const Template: Story<FlexProps> = (args) => <Flex {...args} />;
-
 const Example = Template.bind({});
-
-Example.args = {
-  propName: 'Value 1',
-};
 
 const Common = MultiTemplate.bind({});
 
 Common.parameters = {
   variants: [
-    {},
-    { propName: 'Value 1', label: 'With value 1' },
-    { propName: 'Value 2', label: 'With value 2' },
+    { children: <Items />, justifyContent: 'flex-start', xgap: '1rem' },
+    { children: <Items />, justifyContent: 'center', xgap: '1rem' },
+    { children: <Items />, justifyContent: 'flex-end', xgap: '1rem' },
+    { children: <Items />, direction: 'column', alignItems: 'flex-start', ygap: '1rem' },
+    { children: <Items />, direction: 'column', alignItems: 'center', ygap: '1rem' },
+    { children: <Items />, direction: 'column', alignItems: 'flex-end', ygap: '1rem' },
   ],
 };
 

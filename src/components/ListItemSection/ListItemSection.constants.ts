@@ -1,9 +1,14 @@
-const CLASS_PREFIX = 'md-list-item-section';
+// const CLASS_PREFIX = 'md-list-item-section';
 
-const DEFAULTS = {};
-
-const STYLE = {
-  wrapper: `${CLASS_PREFIX}-wrapper`,
+const POSITIONS = {
+  start: 'start',
+  middle: 'middle',
+  end: 'end',
+  fill: 'fill',
 };
 
-export { DEFAULTS, STYLE };
+const DEFAULTS = {
+  POSITION: POSITIONS.start,
+};
+
+export { POSITIONS, DEFAULTS };

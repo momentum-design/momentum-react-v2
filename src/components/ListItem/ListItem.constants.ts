@@ -15,6 +15,7 @@ const DEFAULTS = {
   SIZE: SIZES[40],
   IS_DISABLED: false,
   SHAPE: SHAPES.rectangle,
+  ROLE: 'listitem',
 };
 
 const STYLE = {

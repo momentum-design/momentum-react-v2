@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 export type FlexStyleProps = {
   /**
@@ -6,8 +6,8 @@ export type FlexStyleProps = {
    * @default 'stretch'
    */
   justifyContent?:
-    | 'start'
-    | 'end'
+    | 'flex-start'
+    | 'flex-end'
     | 'center'
     | 'left'
     | 'right'
@@ -21,8 +21,8 @@ export type FlexStyleProps = {
    * @default 'start'
    */
   alignContent?:
-    | 'start'
-    | 'end'
+    | 'flex-start'
+    | 'flex-end'
     | 'center'
     | 'space-between'
     | 'space-around'
@@ -33,7 +33,14 @@ export type FlexStyleProps = {
    * The alignment of children within their container. See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items).
    * @default 'stretch'
    */
-  alignItems?: 'start' | 'end' | 'center' | 'stretch' | 'self-start' | 'self-end' | 'baseline';
+  alignItems?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'stretch'
+    | 'self-start'
+    | 'self-end'
+    | 'baseline';
   /**
    * The direction in which to layout children. See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction).
    * @default 'row'
@@ -59,7 +66,22 @@ export type FlexStyleProps = {
 export interface Props extends FlexStyleProps {
   /**
    * className prop description
+   * Child components of this ButtonPill.
+   */
+  children?: ReactNode;
+
+  /**
+   * Custom class for overriding this component's CSS.
    */
   className?: string;
-  children?: ReactNode;
+
+  /**
+   * Custom id for overriding this component's CSS.
+   */
+  id?: string;
+
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
 }

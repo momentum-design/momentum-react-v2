@@ -1,27 +1,23 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import React, { FC, ReactElement, useContext } from 'react';
-import classnames from 'classnames';
+import React, { ReactElement, useContext } from 'react';
 
 import './ListBoxItem.style.scss';
 import { Props } from './ListBoxItem.types';
-import { DEFAULTS, STYLE } from './ListBoxItem.constants';
+import { STYLE } from './ListBoxItem.constants';
 import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 import { useOption } from '@react-aria/listbox';
 import Icon from '../Icon';
 import ListItem from '../ListItem';
 import ListItemSection from '../ListItemSection';
 
-/**
- * @internal
- */
 function ListBoxItem<T>(props: Props<T>): ReactElement {
   const { item } = props;
-  // Get props for the option element
   const ref = React.useRef<HTMLLIElement>(null);
   const state = useContext(ListBoxContext);
 
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.isSelected(item.key);
+
   const { optionProps } = useOption(
     {
       key: item.key,
@@ -48,7 +44,9 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
 }
 
 /**
- * TODO: Add description of component here.
+ * ListBoxItem component used internally as a wrapper for items inside a listbox.
+ * It's using the ListItem component internally.
+ * @internal
  */
 
 export default ListBoxItem;

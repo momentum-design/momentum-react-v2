@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React, { RefObject, ReactElement, forwardRef } from 'react';
-import classnames from 'classnames';
 
 import './ListBoxBase.style.scss';
 import { Props } from './ListBoxBase.types';
-import { DEFAULTS, STYLE } from './ListBoxBase.constants';
 import ListBoxSection from '../ListBoxSection';
 import ListBoxItem from '../ListBoxItem';
 import { useListBox } from '@react-aria/listbox';
@@ -14,18 +12,21 @@ import { Node } from '@react-types/shared';
 import MenuListBox from '../MenuListBox';
 
 export const ListBoxContext = React.createContext<ListState<unknown>>(null);
-/**
- * @internal
- */
-function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) {
-  const { className } = props;
 
-  const { state, ...otherProps } = props;
+function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) {
+  const { state, className, id, style } = props;
+
+  const mutatedProps = {
+    ...props,
+  };
+
+  delete mutatedProps.id;
 
   const { listBoxProps } = useListBox(
     {
       autoFocus: props.autoFocus,
-      ...otherProps,
+      ...mutatedProps,
+      id,
     },
     state,
     ref
@@ -34,17 +35,17 @@ function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUList
   const renderItems = () => {
     return [...state.collection.getKeys()].map((key) => {
       const item = state.collection.getItem(key) as Node<T>;
-      return item.hasChildNodes ? (
-        <ListBoxSection key={item.key} section={item} header={item.rendered} />
-      ) : (
-        <ListBoxItem item={item} key={item.key} />
-      );
+      if (item.type === 'section') {
+        return <ListBoxSection key={item.key} section={item} />;
+      } else if (item.type === 'item' && !item.parentKey) {
+        return <ListBoxItem item={item} key={item.key} />;
+      }
     });
   };
 
   return (
     <ListBoxContext.Provider value={state}>
-      <MenuListBox style={props.style} {...listBoxProps} ref={ref}>
+      <MenuListBox {...listBoxProps} ref={ref} style={style} className={className}>
         {renderItems()}
       </MenuListBox>
     </ListBoxContext.Provider>
@@ -52,7 +53,10 @@ function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUList
 }
 
 /**
- * TODO: Add description of component here.
+ * ListBox component that displays a list of options
+ * and allows a user to select one or more of them.
+ *
+ * @internal Used internally only, should not be exported as part of the library.
  */
 
 const _ListBoxBase = forwardRef(ListBoxBase);

@@ -18,7 +18,18 @@ export interface Props<T> {
    */
   style?: CSSProperties;
 
+  /**
+   * List state which contains the items (and their config) to be rendered inside the list box
+   */
   state: ListState<T>;
+
+  /**
+   * Determines if the listbox should autofocus or not
+   */
   autoFocus?: boolean | FocusStrategy;
+
+  /**
+   * Determines if the listbox allows for empty selection
+   */
   disallowEmptySelection?: boolean;
 }

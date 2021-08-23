@@ -19,6 +19,7 @@ import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
+import argTypes from './ListItem.stories.args';
 
 const COMPONENT_STATES = ['', 'Hover', 'Active', 'Disable', 'Focus'];
 
@@ -43,20 +44,7 @@ export default {
     },
   },
   argTypes: {
-    propName: {
-      defaultValue: undefined,
-      description: 'Description goes here.',
-      options: [undefined, 'Option 1', 'Option 2'],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
+    ...argTypes,
   },
 };
 
