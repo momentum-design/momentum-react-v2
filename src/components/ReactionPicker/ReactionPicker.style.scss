@@ -1,0 +1,32 @@
+.md-reaction-picker-wrapper {
+  height: 2.25rem;
+  background-color: black;
+  &[data-round='true'] {
+    border-radius: 100vh;
+
+    &[data-spaced='false'] {
+      > * {
+        &:first-child {
+          border-radius: 100vh;
+        }
+        &:last-child {
+          border-radius: 100vh;
+        }
+      }
+    }
+  }
+  .md-button-circle-wrapper {
+    border-radius: 100vh;
+    &:hover {
+      background-color: green;
+    }
+    &[data-reacted="true"] {
+      background-color: red;
+    }
+    span {
+      &:hover {
+        transform: scale(1.4);
+      }
+    }
+  }
+}
