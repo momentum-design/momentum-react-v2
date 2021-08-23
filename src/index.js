@@ -101,6 +101,7 @@ export {
 /** V2 Components [TypeScript] */
 export {
   AlertBadge,
+  AlertBanner as AlertBannerNext,
   Badge as BadgeNext,
   Avatar as AvatarNext,
   ButtonCircle,

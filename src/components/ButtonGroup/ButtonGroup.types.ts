@@ -1,8 +1,9 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { ButtonCircle, ButtonPill } from '@momentum-ui/react';
+import { ButtonCircleProps } from '../ButtonCircle';
+import { ButtonPillProps } from '../ButtonPill';
 
-type SupportedComponents = typeof ButtonPill | typeof ButtonCircle;
+export type SupportedComponents = ButtonCircleProps | ButtonPillProps;
 
 export interface Props {
   /**
