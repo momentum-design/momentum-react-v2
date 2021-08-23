@@ -1,3 +1,4 @@
+export { default as AlertBadge } from './AlertBadge';
 export { default as AlertBanner } from './AlertBanner';
 export { default as Avatar } from './Avatar';
 export { default as AvatarCompact } from './AvatarCompact';
