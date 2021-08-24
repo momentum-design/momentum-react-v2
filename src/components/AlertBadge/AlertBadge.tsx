@@ -1,7 +1,7 @@
 import React, { FC, forwardRef, useRef, RefObject } from 'react';
 import classnames from 'classnames';
 import { useButton } from '@react-aria/button';
-import { FocusRing } from '@react-aria/focus';
+import FocusRing from '../FocusRing';
 
 import { PrimitiveConverter } from '../../utils';
 
@@ -35,7 +35,7 @@ const AlertBadge: FC<Props> = forwardRef(
     const { buttonProps } = useButton(mutatedProps, ref);
 
     return (
-      <FocusRing focusRingClass={STYLE.focusRing}>
+      <FocusRing>
         <button
           className={classnames(className, STYLE.wrapper)}
           {...buttonProps}
