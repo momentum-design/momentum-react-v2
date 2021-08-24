@@ -50,7 +50,7 @@ const Flex: FC<Props> = (props: Props) => {
 };
 
 /**
- * TODO: Add description of component here.
+ * Utility component which displays children in a flex container.
  */
 
 export default Flex;
