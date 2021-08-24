@@ -43,7 +43,15 @@ describe('<MenuListBackground />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    /* ...additional snapshot tests... */
+    it('should match snapshot with color', () => {
+      expect.assertions(1);
+
+      const color = 'tertiary';
+
+      const container = mount(<MenuListBackground color={color} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -94,6 +102,16 @@ describe('<MenuListBackground />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    /* ...additional attribute tests... */
+    it('should have provided color when color is provided', () => {
+      expect.assertions(1);
+
+      const color = 'tertiary';
+
+      const element = mount(<MenuListBackground color={color} />)
+        .find(MenuListBackground)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-color')).toBe(color);
+    });
   });
 });

@@ -4,6 +4,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot 1`] = `
 <MenuListBackground>
   <ul
     className="md-menu-list-background-wrapper"
+    data-color="primary"
   />
 </MenuListBackground>
 `;
@@ -14,6 +15,18 @@ exports[`<MenuListBackground /> snapshot should match snapshot with className 1`
 >
   <ul
     className="example-class md-menu-list-background-wrapper"
+    data-color="primary"
+  />
+</MenuListBackground>
+`;
+
+exports[`<MenuListBackground /> snapshot should match snapshot with color 1`] = `
+<MenuListBackground
+  color="tertiary"
+>
+  <ul
+    className="md-menu-list-background-wrapper"
+    data-color="tertiary"
   />
 </MenuListBackground>
 `;
@@ -24,6 +37,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with id 1`] = `
 >
   <ul
     className="md-menu-list-background-wrapper"
+    data-color="primary"
     id="example-id"
   />
 </MenuListBackground>
@@ -39,6 +53,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with style 1`] = 
 >
   <ul
     className="md-menu-list-background-wrapper"
+    data-color="primary"
     style={
       Object {
         "color": "pink",

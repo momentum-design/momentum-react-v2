@@ -31,4 +31,19 @@ const Example = Template<MenuListBackgroundProps>((args) => (
 
 Example.argTypes = { ...argTypes };
 
-export { Example };
+const Colors = MultiTemplate<MenuListBackgroundProps>((args) => (
+  <MenuListBackground {...args} style={{ width: '20rem', height: '20rem', marginRight: '1rem' }}>
+    {/* <Flex justifyContent="center" alignItems="center" style={{ height: '100%' }}> */}
+    This is a Menu Background
+    {/* </Flex> */}
+  </MenuListBackground>
+)).bind({});
+
+Colors.parameters = {
+  variants: [{ color: 'primary' }, { color: 'secondary' }, { color: 'tertiary' }],
+};
+
+Colors.argTypes = { ...argTypes };
+delete Colors.argTypes.color;
+
+export { Example, Colors };

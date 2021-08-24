@@ -20,4 +20,10 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * Determines the colour of the background.
+   * @default "primary"
+   */
+  color?: 'primary' | 'secondary' | 'tertiary';
 }
