@@ -12,7 +12,7 @@ import {
 } from '@storybook/addon-docs';
 
 import Documentation from './MenuListBox.documentation.mdx';
-import Flex from '../Flex';
+// import Flex from '../Flex';
 import argTypes from './MenuListBox.stories.args';
 
 const DocsPage: FC = () => (
@@ -42,9 +42,9 @@ export default {
 
 const Template: Story<MenuListBoxProps> = (args) => (
   <MenuListBox {...args} style={{ width: '20rem', height: '20rem' }}>
-    <Flex justifyContent="center" alignItems="center" style={{ height: '100%' }}>
-      This is a Menu Background
-    </Flex>
+    {/* <Flex justifyContent="center" alignItems="center" style={{ height: '100%' }}> */}
+    This is a Menu Background
+    {/* </Flex> */}
   </MenuListBox>
 );
 
