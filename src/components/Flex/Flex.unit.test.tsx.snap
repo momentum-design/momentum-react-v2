@@ -10,12 +10,12 @@ exports[`Flex snapshot should match snapshot 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -37,11 +37,11 @@ exports[`Flex snapshot should match snapshot with alignContent 1`] = `
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
         "alignContent": "center",
-        "alignItems": "start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -62,12 +62,12 @@ exports[`Flex snapshot should match snapshot with alignItems 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
+        "alignContent": "flex-start",
         "alignItems": "center",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -88,12 +88,12 @@ exports[`Flex snapshot should match snapshot with className 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -115,12 +115,12 @@ exports[`Flex snapshot should match snapshot with id 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -141,8 +141,8 @@ exports[`Flex snapshot should match snapshot with justifyContent 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
@@ -171,13 +171,13 @@ exports[`Flex snapshot should match snapshot with style 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "color": "pink",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -198,12 +198,12 @@ exports[`Flex snapshot should match snapshot with wrap 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap-reverse",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -224,12 +224,12 @@ exports[`Flex snapshot should match snapshot with xgap 1`] = `
       Object {
         "--flex-xgap-size": "1rem",
         "--flex-ygap-size": undefined,
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
@@ -250,12 +250,12 @@ exports[`Flex snapshot should match snapshot with ygap 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": "1rem",
-        "alignContent": "start",
-        "alignItems": "start",
+        "alignContent": "flex-start",
+        "alignItems": "flex-start",
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "nowrap",
-        "justifyContent": "start",
+        "justifyContent": "flex-start",
       }
     }
   >
