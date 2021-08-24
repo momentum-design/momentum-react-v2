@@ -111,6 +111,7 @@ export {
   ButtonHyperlink,
   ButtonPill,
   CodeInput,
+  FocusRing,
   InputMessage as InputMessageNew,
   ExampleComponent,
   Icon as IconNext,
