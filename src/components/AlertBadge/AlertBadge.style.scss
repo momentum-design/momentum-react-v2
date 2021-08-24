@@ -108,11 +108,4 @@
   > *:not(:last-child) {
     margin-right: 0.5rem;
   }
-
-  &.md-alert-badge-focus-ring {
-    outline: none; // IEFIX
-    outline: var(--focus-ring-outline);
-    box-shadow: 0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1); // IEFIX
-    box-shadow: var(--focus-ring-box-shadow);
-  }
 }

@@ -1,7 +1,7 @@
 import React, { Children, forwardRef, FC, RefObject, useRef } from 'react';
 import classnames from 'classnames';
 import { useButton } from '@react-aria/button';
-import { FocusRing } from '@react-aria/focus';
+import FocusRing from '../FocusRing';
 
 import { DEFAULTS, STYLE } from './ButtonCircle.constants';
 import { Props } from './ButtonCircle.types';
@@ -29,7 +29,7 @@ const ButtonCircle: FC<Props> = forwardRef(
     const multipleChildren = Children.count(children) > 1;
 
     return (
-      <FocusRing focusRingClass={STYLE.focusRing}>
+      <FocusRing disabled={disabled}>
         <button
           className={classnames(STYLE.wrapper, className)}
           {...buttonProps}

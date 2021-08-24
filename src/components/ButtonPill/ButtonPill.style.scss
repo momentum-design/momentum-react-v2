@@ -29,13 +29,6 @@
     color: var(--button-primary-text-pressed);
   }
 
-  &.md-button-pill-focus-ring {
-    outline: none; // IEFIX
-    outline: var(--focus-ring-outline);
-    box-shadow: 0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1); // IEFIX
-    box-shadow: var(--focus-ring-box-shadow);
-  }
-
   &[data-outline=true] {
     background-color:  rgba(0, 0, 0, 0); // IEFIX
     background-color: var(--button-secondary-background);
@@ -276,10 +269,6 @@
       background-color: var(--button-primary-background-disabled);
       color:  rgba(0, 0, 0, 0.4); // IEFIX
       color: var(--button-primary-text-disabled);
-    }
-
-    &:focus {
-      box-shadow: none;
     }
 
     &[data-outline=true] {
