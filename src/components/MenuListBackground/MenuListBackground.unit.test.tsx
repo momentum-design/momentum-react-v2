@@ -1,16 +1,14 @@
-import MenuListBox from '.';
-import { mount } from 'enzyme';
 import React from 'react';
-import { STYLE } from './MenuListBox.constants';
+import { mount } from 'enzyme';
 
-describe('MenuListBox', () => {
-  let container;
+import MenuListBackground, { MENU_LIST_BACKGROUND_CONSTANTS as CONSTANTS } from './';
 
+describe('<MenuListBackground />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      container = mount(<MenuListBox>Test</MenuListBox>);
+      const container = mount(<MenuListBackground />);
 
       expect(container).toMatchSnapshot();
     });
@@ -20,7 +18,7 @@ describe('MenuListBox', () => {
 
       const className = 'example-class';
 
-      container = mount(<MenuListBox className={className}>Test</MenuListBox>);
+      const container = mount(<MenuListBackground className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -30,7 +28,7 @@ describe('MenuListBox', () => {
 
       const id = 'example-id';
 
-      container = mount(<MenuListBox id={id}>Test</MenuListBox>);
+      const container = mount(<MenuListBackground id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -40,19 +38,23 @@ describe('MenuListBox', () => {
 
       const style = { color: 'pink' };
 
-      container = mount(<MenuListBox style={style}>Test</MenuListBox>);
+      const container = mount(<MenuListBackground style={style} />);
 
       expect(container).toMatchSnapshot();
     });
+
+    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', async () => {
-      container = mount(<MenuListBox>Test</MenuListBox>);
+    it('should have its wrapper class', () => {
+      expect.assertions(1);
 
-      const element = container.find(MenuListBox).getDOMNode();
+      const element = mount(<MenuListBackground />)
+        .find(MenuListBackground)
+        .getDOMNode();
 
-      expect(element.classList.contains(STYLE.wrapper));
+      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
 
     it('should have provided class when className is provided', () => {
@@ -60,9 +62,9 @@ describe('MenuListBox', () => {
 
       const className = 'example-class';
 
-      container = mount(<MenuListBox className={className}>Test</MenuListBox>);
-
-      const element = container.find(MenuListBox).getDOMNode();
+      const element = mount(<MenuListBackground className={className} />)
+        .find(MenuListBackground)
+        .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
@@ -72,9 +74,9 @@ describe('MenuListBox', () => {
 
       const id = 'example-id';
 
-      container = mount(<MenuListBox id={id}>Test</MenuListBox>);
-
-      const element = container.find(MenuListBox).getDOMNode();
+      const element = mount(<MenuListBackground id={id} />)
+        .find(MenuListBackground)
+        .getDOMNode();
 
       expect(element.id).toBe(id);
     });
@@ -85,11 +87,13 @@ describe('MenuListBox', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      container = mount(<MenuListBox style={style}>Test</MenuListBox>);
-
-      const element = container.find(MenuListBox).getDOMNode();
+      const element = mount(<MenuListBackground style={style} />)
+        .find(MenuListBackground)
+        .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
+
+    /* ...additional attribute tests... */
   });
 });

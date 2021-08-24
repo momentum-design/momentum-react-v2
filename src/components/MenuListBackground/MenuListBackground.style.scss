@@ -1,12 +1,12 @@
-.md-menu-list-box-wrapper {
+.md-menu-list-background-wrapper {
   margin: 0;
   list-style: none;
-  //TODO: change tokens with correct component tokens
-  background: var(--theme-background-solid-primary-normal);
+  background: var(--menulistbackground-primary-background);
   padding: 0.5rem;
-  border: 1px solid var(--codeinput-border);
   border-radius: 0.75rem;
   box-sizing: border-box;
+  border: 1px solid var(--menulistbackground-primary-border);
+  box-shadow: var(--elevation-4);
 
   &:focus {
     box-shadow: var(--focus-ring-box-shadow);

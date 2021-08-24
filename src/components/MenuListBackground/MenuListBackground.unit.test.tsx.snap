@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuListBackground /> snapshot should match snapshot 1`] = `
+<MenuListBackground>
+  <ul
+    className="md-menu-list-background-wrapper"
+  />
+</MenuListBackground>
+`;
+
+exports[`<MenuListBackground /> snapshot should match snapshot with className 1`] = `
+<MenuListBackground
+  className="example-class"
+>
+  <ul
+    className="example-class md-menu-list-background-wrapper"
+  />
+</MenuListBackground>
+`;
+
+exports[`<MenuListBackground /> snapshot should match snapshot with id 1`] = `
+<MenuListBackground
+  id="example-id"
+>
+  <ul
+    className="md-menu-list-background-wrapper"
+    id="example-id"
+  />
+</MenuListBackground>
+`;
+
+exports[`<MenuListBackground /> snapshot should match snapshot with style 1`] = `
+<MenuListBackground
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ul
+    className="md-menu-list-background-wrapper"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  />
+</MenuListBackground>
+`;
