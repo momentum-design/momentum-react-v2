@@ -29,7 +29,6 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
               className=""
               data-autoscale={false}
               data-scale={20}
-              fill="currentColor"
               height="100%"
               stroke="currentColor"
               style={

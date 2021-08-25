@@ -1,4 +1,5 @@
 const CLASS_PREFIX = 'md-icon';
+const COLOR_INHERIT = 'currentColor';
 
 const WEIGHTS: Record<string, string> = {
   light: 'light',
@@ -53,4 +54,4 @@ const STYLE = {
   coloured: `${CLASS_PREFIX}-coloured`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, GLYPH_NOT_FOUND, SCALES, SIZES, STYLE, WEIGHTS };
+export { CLASS_PREFIX, COLOR_INHERIT, DEFAULTS, GLYPH_NOT_FOUND, SCALES, SIZES, STYLE, WEIGHTS };
