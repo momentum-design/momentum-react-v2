@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode, RefObject } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 
 export interface Props extends AriaButtonProps {
@@ -21,6 +21,11 @@ export interface Props extends AriaButtonProps {
    * Whether or not this ButtonPill is disabled.
    */
   disabled?: boolean;
+
+  /**
+   * ref object passed to ButtonPill.
+   */
+  forwardedRef?: RefObject<HTMLButtonElement>;
 
   /**
    * Whether or not this ButtonPill is ghosted.

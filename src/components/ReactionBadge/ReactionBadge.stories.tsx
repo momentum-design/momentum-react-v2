@@ -1,4 +1,4 @@
-import { Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
@@ -28,4 +28,24 @@ const Example = Template<ReactionBadgeProps>(ReactionBadge).bind({});
 
 Example.argTypes = { ...argTypes };
 
-export { Example };
+const Common = MultiTemplate<ReactionBadgeProps>(ReactionBadge).bind({});
+
+Common.argTypes = { ...argTypes };
+
+delete Common.argTypes.children;
+
+Common.parameters = {
+  variants: [
+    {
+      children: ['👍 1'],
+    },
+    {
+      children: ['👍 1'],
+    },
+    {
+      children: ['👍 1'],
+    },
+  ],
+};
+
+export { Example, Common };
