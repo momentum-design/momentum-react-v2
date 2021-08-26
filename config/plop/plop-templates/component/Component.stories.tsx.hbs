@@ -1,28 +1,10 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import {{componentName}}, { {{componentName}}Props } from './';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
-
-import Documentation from './{{componentName}}.documentation.mdx';
-
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
+import argTypes from './{{componentName}}.stories.args';
+import Documentation from './{{componentName}}.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/{{componentName}}',
@@ -30,67 +12,33 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation, StyleDocs),
     },
   },
-  argTypes: {
-    propName: {
-      defaultValue: undefined,
-      description: 'Description goes here.',
-      options: [undefined, 'Option 1', 'Option 2'],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
+  args: { // Args provided to all stories by default.
+    children: 'A', // Example of a default arg for all stories.
   },
 };
 
-const MultiTemplate: Story<{{componentName}}Props> = (args: {{componentName}}Props, { parameters }) => {
-  const { variants } = parameters;
+/**
+ * Primary story. This renders a single component with all external props.
+ */
+const Example = Template<{{componentName}}Props>({{componentName}}).bind({});
 
-  const items = variants.map((variant, index: number) => (
-    <div key={index}>
-      <{{componentName}} {...args} {...variant} />
-      <p>{variant.label}</p>
-    </div>
-  ));
+Example.argTypes = { ...argTypes };
 
-  return (
-    <div
-      style=\{{
-        display: 'grid',
-        gridTemplateColumns: `repeat(4, auto)`,
-        gap: '1.5rem',
-        alignItems: 'end',
-      }}
-    >
-      {items}
-    </div>
-  );
-};
+// TODO: Inject additional stories here.
 
-const Template: Story<{{componentName}}Props> = (args) => <{{componentName}} {...args} />;
+/**
+ * Common variants story. This renders multiple variants of a single component.
+ */
+const Common = MultiTemplate<{{componentName}}Props>({{componentName}}).bind({});
 
-const Example = Template.bind({});
-
-Example.args = {
-  propName: 'Value 1',
-};
-
-const Common = MultiTemplate.bind({});
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.children;
 
 Common.parameters = {
-  variants: [
-    {},
-    { propName: 'Value 1', label: 'With value 1' },
-    { propName: 'Value 2', label: 'With value 2' },
-  ],
+  variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
 };
 
 export { Example, Common };

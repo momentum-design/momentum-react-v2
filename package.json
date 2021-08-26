@@ -1,6 +1,6 @@
 {
   "name": "@momentumreact/momentum-react-v2",
-  "version": "25.0.15",
+  "version": "25.0.17",
   "description": "Cisco Momentum UI framework for ReactJs applications",
   "author": "Cisco Systems, Inc.",
   "contributors": [
@@ -96,7 +96,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-ui/design-tokens": "^0.0.14",
+    "@momentum-ui/design-tokens": "0.0.19",
     "@momentum-ui/icons": "8.22.2",
     "@momentum-ui/icons-rebrand": "^1.2.0",
     "@momentum-ui/tokens": "^1.7.1",

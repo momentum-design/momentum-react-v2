@@ -100,11 +100,18 @@ export {
 
 /** V2 Components [TypeScript] */
 export {
+  AlertBadge,
+  AlertBanner as AlertBannerNext,
+  Badge as BadgeNext,
+  Avatar as AvatarNext,
+  ButtonCircle,
+  AvatarCompact as AvatarCompactNext,
   ButtonDialpad,
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,
   ButtonPill,
   CodeInput,
+  FocusRing,
   InputMessage as InputMessageNew,
   ExampleComponent,
   Icon as IconNext,

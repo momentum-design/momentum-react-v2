@@ -42,6 +42,7 @@ The following definition provides an overview of commonly used files, when contr
   +-- examples/ # legacy examples
   +-- helpers/ # enzyme test helpers
   +-- legacy/ # legacy react components cloned from the original @momentum-ui/react project
+  +-- storybook/ # storybook utilities
   +-- index.js # entry file for all module exports
 ```
 
@@ -61,7 +62,8 @@ Most feature contributions to this project will be implementing new React compon
   +-+ {component}/ # typescript react component directory
     +-- index.ts # entry point for component, should contain all exports [component, constants, types, etc]
     +-- {Component}.constants.ts # constants scoped to this component [styles, text, etc]
-    +-- {Component}.documentation.mdx # storybook stories description this component.
+    +-- {Component}.stories.args.ts # global story argTypes.
+    +-- {Component}.stories.docs.mdx # storybook stories description this component.
     +-- {Component}.stories.tsx # storybook stories for this component [be robust, as these are tested visually]
     +-- {Component}.style.scss # scoped styles, class selectors should follow 'md-{component}' for the root selector
     +-- {Component}.tsx # react component file

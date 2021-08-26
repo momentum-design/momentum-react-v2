@@ -5,7 +5,6 @@ const DEFAULTS = {
   DISABLED: false,
   GHOST: false,
   OUTLINE: false,
-  SHAPE: 'pill',
   SIZE: 40,
 };
 
@@ -23,7 +22,6 @@ const SIZES = {
 };
 
 const STYLE = {
-  focusRing: `${CLASS_PREFIX}-focus-ring`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 

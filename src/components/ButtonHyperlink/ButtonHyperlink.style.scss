@@ -18,11 +18,6 @@
     color: var(--theme-text-accent-active);
   }
 
-  &.md-button-hyperlink-focus-ring {
-    outline: var(--md-globals-focus-ring-outline);
-    box-shadow: var(----md-globals-focus-ring-box-shadow);
-  }
-
   &[data-disabled='true'] {
     color: var(--theme-text-primary-disabled);
     cursor: auto;

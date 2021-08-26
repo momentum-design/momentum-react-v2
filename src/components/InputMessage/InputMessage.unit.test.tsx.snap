@@ -30,6 +30,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
               data-autoscale={false}
               data-scale={20}
               height="100%"
+              stroke="currentColor"
               style={
                 Object {
                   "fill": "var(--theme-text-error-normal)",
