@@ -1,7 +1,7 @@
 .md-alert-badge-wrapper {
   align-items: center;
   border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
-  border: var(--border-clear);
+  border: var(--md-globals-border-clear);
   display: flex;
   background-color: rgba(237, 237, 237, 1); // IEFIX
   background-color: var(--theme-background-alert-default-normal);

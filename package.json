@@ -82,6 +82,7 @@
     "styles:build:tokens": "node ./tools/generateScssFromTokens.js",
     "styles:makeIECompatible": "node ./src/helpers/cssCompatibility.js add",
     "styles:makeIEIncompatible": "node ./src/helpers/cssCompatibility.js remove",
+    "styles:tokenCheck": "node ./src/helpers/cssTokenCheck.js",
     "cypress:verify": "cypress verify",
     "prepublishOnly": "yarn build",
     "prepare": "husky install"

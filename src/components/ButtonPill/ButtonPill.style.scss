@@ -1,10 +1,10 @@
 .md-button-pill-wrapper {
   border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
-  border: var(--border-clear);
+  border: var(--md-globals-border-clear);
   border-width: 0.0625rem;
   cursor: pointer;
   font-family: CiscoSansTT; // IEFIX
-  font-family: var(--font-default);
+  font-family: var(--md-globals-font-default);
   margin: 0.5rem;
   outline: none;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;

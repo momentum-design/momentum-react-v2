@@ -2,13 +2,13 @@
   background-color: rgba(0, 0, 0, 0.95); // IEFIX
   background-color: var(--button-primary-background);
   border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
-  border: var(--border-clear);
+  border: var(--md-globals-border-clear);
   border-width: 0.0625rem;
   color: rgba(255, 255, 255, 0.95); // IEFIX
   color: var(--button-primary-text);
   cursor: pointer;
   font-family: CiscoSansTT; // IEFIX
-  font-family: var(--font-default);
+  font-family: var(--md-globals-font-default);
   margin: 0.5rem;
   outline: none;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;

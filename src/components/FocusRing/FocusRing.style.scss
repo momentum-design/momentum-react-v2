@@ -1,8 +1,8 @@
 .md-focus-ring-wrapper {
   box-shadow: 0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1); // IEFIX
-  box-shadow: var(--focus-ring-box-shadow);
+  box-shadow: var(--md-globals-focus-ring-box-shadow);
   outline: none; // IEFIX
-  outline: var(--focus-ring-outline);
+  outline: var(--md-globals-focus-ring-outline);
   position: relative; // Needed to apply z-index.
   z-index: 9999; // Needed to bring box-shadow to front.
 }
