@@ -4,7 +4,13 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
 <ReactionBadge>
   <ButtonPill
     className="md-reaction-badge-wrapper"
+    data-count={1}
     data-reacted={false}
+    forwardedRef={
+      Object {
+        "current": undefined,
+      }
+    }
     size={20}
   >
     <FocusRing
@@ -13,6 +19,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
       <button
         className="md-button-pill-wrapper md-reaction-badge-wrapper"
         data-color="primary"
+        data-count={1}
         data-disabled={false}
         data-ghost={false}
         data-outline={false}
@@ -37,6 +44,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
         <PrimitiveConverter>
           <div />
         </PrimitiveConverter>
+        <span />
       </button>
     </FocusRing>
   </ButtonPill>
@@ -49,7 +57,13 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
 >
   <ButtonPill
     className="example-class md-reaction-badge-wrapper"
+    data-count={1}
     data-reacted={false}
+    forwardedRef={
+      Object {
+        "current": undefined,
+      }
+    }
     size={20}
   >
     <FocusRing
@@ -58,6 +72,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
       <button
         className="md-button-pill-wrapper example-class md-reaction-badge-wrapper"
         data-color="primary"
+        data-count={1}
         data-disabled={false}
         data-ghost={false}
         data-outline={false}
@@ -82,6 +97,62 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
         <PrimitiveConverter>
           <div />
         </PrimitiveConverter>
+        <span />
+      </button>
+    </FocusRing>
+  </ButtonPill>
+</ReactionBadge>
+`;
+
+exports[`<ReactionBadge /> snapshot should match snapshot with count 1`] = `
+<ReactionBadge
+  count={1}
+>
+  <ButtonPill
+    className="md-reaction-badge-wrapper"
+    data-count={1}
+    data-reacted={false}
+    forwardedRef={
+      Object {
+        "current": undefined,
+      }
+    }
+    size={20}
+  >
+    <FocusRing
+      focusRingClass="md-button-pill-focus-ring"
+    >
+      <button
+        className="md-button-pill-wrapper md-reaction-badge-wrapper"
+        data-color="primary"
+        data-count={1}
+        data-disabled={false}
+        data-ghost={false}
+        data-outline={false}
+        data-reacted={false}
+        data-size={20}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        <PrimitiveConverter>
+          <div />
+        </PrimitiveConverter>
+        <span>
+          1
+        </span>
       </button>
     </FocusRing>
   </ButtonPill>
@@ -94,7 +165,13 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
 >
   <ButtonPill
     className="md-reaction-badge-wrapper"
+    data-count={1}
     data-reacted={false}
+    forwardedRef={
+      Object {
+        "current": undefined,
+      }
+    }
     id="example-id"
     size={20}
   >
@@ -104,6 +181,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
       <button
         className="md-button-pill-wrapper md-reaction-badge-wrapper"
         data-color="primary"
+        data-count={1}
         data-disabled={false}
         data-ghost={false}
         data-outline={false}
@@ -129,6 +207,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
         <PrimitiveConverter>
           <div />
         </PrimitiveConverter>
+        <span />
       </button>
     </FocusRing>
   </ButtonPill>
@@ -141,7 +220,13 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
 >
   <ButtonPill
     className="md-reaction-badge-wrapper"
+    data-count={1}
     data-reacted={true}
+    forwardedRef={
+      Object {
+        "current": undefined,
+      }
+    }
     size={20}
   >
     <FocusRing
@@ -150,6 +235,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
       <button
         className="md-button-pill-wrapper md-reaction-badge-wrapper"
         data-color="primary"
+        data-count={1}
         data-disabled={false}
         data-ghost={false}
         data-outline={false}
@@ -174,6 +260,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
         <PrimitiveConverter>
           <div />
         </PrimitiveConverter>
+        <span />
       </button>
     </FocusRing>
   </ButtonPill>
@@ -190,7 +277,13 @@ exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
 >
   <ButtonPill
     className="md-reaction-badge-wrapper"
+    data-count={1}
     data-reacted={false}
+    forwardedRef={
+      Object {
+        "current": undefined,
+      }
+    }
     size={20}
     style={
       Object {
@@ -204,6 +297,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
       <button
         className="md-button-pill-wrapper md-reaction-badge-wrapper"
         data-color="primary"
+        data-count={1}
         data-disabled={false}
         data-ghost={false}
         data-outline={false}
@@ -233,6 +327,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
         <PrimitiveConverter>
           <div />
         </PrimitiveConverter>
+        <span />
       </button>
     </FocusRing>
   </ButtonPill>

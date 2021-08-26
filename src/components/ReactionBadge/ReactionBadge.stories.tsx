@@ -17,7 +17,8 @@ export default {
     },
   },
   args: {
-    children: '👍 1',
+    children: '👍',
+    count: '1',
   },
 };
 
@@ -37,13 +38,16 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      children: ['👍 1'],
+      children: ['👍'],
+      count: 1,
     },
     {
-      children: ['👍 1'],
+      children: ['👍'],
+      count: 1,
     },
     {
-      children: ['👍 1'],
+      children: ['👍'],
+      count: 1,
     },
   ],
 };

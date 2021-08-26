@@ -50,6 +50,14 @@ describe('<ReactionBadge />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with count', () => {
+      expect.assertions(1);
+
+      const container = mount(<ReactionBadge count={1} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -110,6 +118,18 @@ describe('<ReactionBadge />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-reacted')).toBe(`${reacted}`);
+    });
+
+    it('should have provided count when count is provided', () => {
+      expect.assertions(1);
+
+      const count = 1;
+
+      const element = mount(<ReactionBadge count={count} />)
+        .find(ReactionBadge)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-count')).toBe(`${count}`);
     });
   });
 

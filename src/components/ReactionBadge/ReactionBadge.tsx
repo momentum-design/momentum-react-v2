@@ -9,11 +9,14 @@ import { PrimitiveConverter } from '../../utils';
 
 const ReactionBadge: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { children, className, id, reacted, style, ...otherProps } = props;
+    // for now children is the native emoji until i make the emoji/reaction component we discussed during
+    // meeting today about mapping string -> SVG
+    const { children, className, count, id, reacted, style, ...otherProps } = props;
     const ref = providedRef || useRef();
     return (
       <ButtonPill
         className={classnames(className, STYLE.wrapper)}
+        data-count={count || DEFAULTS.COUNT}
         data-reacted={reacted || DEFAULTS.REACTED}
         forwardedRef={ref}
         id={id}
@@ -22,6 +25,7 @@ const ReactionBadge: FC<Props> = forwardRef(
         {...otherProps}
       >
         <PrimitiveConverter>{children}</PrimitiveConverter>
+        <span>{count}</span>
       </ButtonPill>
     );
   }

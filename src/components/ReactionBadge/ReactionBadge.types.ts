@@ -4,6 +4,7 @@ import { AriaButtonProps } from '@react-types/button';
 export interface Props extends AriaButtonProps {
   /**
    * Child components of this ButtonPill.
+   * TODO: this will become custom emoji/reaction component mapping string -> SVG
    */
   children?: ReactNode;
 
@@ -15,7 +16,7 @@ export interface Props extends AriaButtonProps {
   /**
    * Custom number of people who have reacted.
    */
-  count?: string;
+  count?: number;
 
   /**
    * Custom id for overriding this component's CSS.
