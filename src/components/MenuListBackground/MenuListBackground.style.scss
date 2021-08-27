@@ -1,0 +1,23 @@
+.md-menu-list-background-wrapper {
+  margin: 0;
+  list-style: none;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+  box-shadow: var(--md-globals-elevation-4);
+
+  &[data-color="primary"] {
+    background: var(--menulistbackground-primary-background);
+    border: 1px solid var(--menulistbackground-primary-border);
+  }
+
+  &[data-color="secondary"] {
+    background: var(--menulistbackground-secondary-background);
+    border: 1px solid var(--menulistbackground-secondary-border);
+  }
+
+  &[data-color="tertiary"] {
+    background: var(--menulistbackground-tertiary-background);
+    border: 1px solid var(--menulistbackground-tertiary-border);
+  }
+}
