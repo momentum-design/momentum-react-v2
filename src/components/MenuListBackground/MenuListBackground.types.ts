@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode } from 'react';
 
 export interface Props {
   /**
-   * Child components of this ButtonPill.
+   * Child components of this component.
    */
   children?: ReactNode;
 
