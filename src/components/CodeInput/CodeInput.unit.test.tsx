@@ -94,17 +94,47 @@ describe('CodeInput', () => {
   });
 
   describe('digit entry', () => {
-    it('fires codeComplete when number of digits reached', () => {
+    it('fires onChange when digits are entered', () => {
+      const spy = jest.fn();
+      const codeInput = mount(<CodeInput numDigits={3} onChange={spy} />);
+      codeInput.simulate('click');
+
+      const testInput = (value) => {
+        codeInput.find('input').hostNodes().simulate('change', { target: { value } });
+        expect(codeInput.find('input').props().value).toEqual(value);
+        expect(spy).toBeCalledWith(value);
+        spy.mockClear();
+      };
+
+      testInput('1');
+      testInput('12');
+      testInput('123');
+      testInput('45');
+      testInput('6');
+    });
+
+    it('fires onComplete when number of digits reached', () => {
       const spy = jest.fn();
       const codeInput = mount(<CodeInput numDigits={3} onComplete={spy} />);
       codeInput.simulate('click');
-      codeInput
-        .find('input')
-        .hostNodes()
-        .simulate('change', { target: { value: '123' } });
-      const input = codeInput.find('input');
-      expect(input.props().value).toEqual('123');
-      expect(spy).toBeCalledWith('123');
+
+      const testInput = (value, expectOnComplete) => {
+        codeInput.find('input').hostNodes().simulate('change', { target: { value } });
+        expect(codeInput.find('input').props().value).toEqual(value);
+        if (expectOnComplete) {
+          expect(spy).toBeCalledWith(value);
+        } else {
+          expect(spy).not.toHaveBeenCalled();
+        }
+        spy.mockClear();
+      };
+
+      testInput('1', false);
+      testInput('12', false);
+      testInput('123', true);
+      testInput('45', false);
+      testInput('6', false);
+      testInput('789', true);
     });
   });
 });

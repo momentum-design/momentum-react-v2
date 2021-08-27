@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef, FC, RefObject } from 'react';
 import { useButton } from '@react-aria/button';
-import { FocusRing } from '@react-aria/focus';
+import FocusRing from '../FocusRing';
 
 import { DEFAULTS, STYLE } from './ButtonHyperlink.constants';
 import { Props } from './ButtonHyperlink.types';
@@ -22,7 +22,7 @@ const ButtonHyperlink: FC<Props> = forwardRef(
     const { buttonProps } = useButton(mutatedProps, ref);
 
     return (
-      <FocusRing focusRingClass={STYLE.focusRing}>
+      <FocusRing disabled={props.disabled}>
         <button
           className={classnames(STYLE.wrapper, className)}
           {...buttonProps}

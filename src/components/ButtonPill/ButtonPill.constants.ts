@@ -22,7 +22,6 @@ const SIZES = {
 };
 
 const STYLE = {
-  focusRing: `${CLASS_PREFIX}-focus-ring`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 

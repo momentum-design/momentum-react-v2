@@ -1,6 +1,6 @@
 {
   "name": "@momentumreact/momentum-react-v2",
-  "version": "25.0.16",
+  "version": "25.0.17",
   "description": "Cisco Momentum UI framework for ReactJs applications",
   "author": "Cisco Systems, Inc.",
   "contributors": [
@@ -82,6 +82,7 @@
     "styles:build:tokens": "node ./tools/generateScssFromTokens.js",
     "styles:makeIECompatible": "node ./src/helpers/cssCompatibility.js add",
     "styles:makeIEIncompatible": "node ./src/helpers/cssCompatibility.js remove",
+    "styles:tokenCheck": "node ./src/helpers/cssTokenCheck.js",
     "cypress:verify": "cypress verify",
     "prepublishOnly": "yarn build",
     "prepare": "husky install"

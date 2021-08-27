@@ -54,40 +54,40 @@ const Avatar: React.FC<Props> = (props: Props) => {
     if (!presenceType) return;
     if (presenceType === PresenceType.Default) return;
     let presenceIcon: string;
-    let presenceFill: string;
+    let presenceColor: string;
 
     switch (presenceType) {
       case PresenceType.Active:
         presenceIcon = 'unread';
-        presenceFill = 'var(--avatar-presence-icon-active)';
+        presenceColor = 'var(--avatar-presence-icon-active)';
         break;
       case PresenceType.Meet:
         presenceIcon = 'camera-presence';
-        presenceFill = 'var(--avatar-presence-icon-meeting)';
+        presenceColor = 'var(--avatar-presence-icon-meeting)';
         break;
       case PresenceType.Schedule:
         presenceIcon = 'meetings-presence';
-        presenceFill = 'var(--avatar-presence-icon-schedule)';
+        presenceColor = 'var(--avatar-presence-icon-schedule)';
         break;
       case PresenceType.DND:
         presenceIcon = 'dnd-presence';
-        presenceFill = 'var(--avatar-presence-icon-dnd)';
+        presenceColor = 'var(--avatar-presence-icon-dnd)';
         break;
       case PresenceType.Presenting:
         presenceIcon = 'share-screen';
-        presenceFill = 'var(--avatar-presence-icon-presenting)';
+        presenceColor = 'var(--avatar-presence-icon-presenting)';
         break;
       case PresenceType.QuietHours:
         presenceIcon = 'quiet-hours-presence';
-        presenceFill = 'var(--avatar-presence-icon-quiet-hours)';
+        presenceColor = 'var(--avatar-presence-icon-quiet-hours)';
         break;
       case PresenceType.Away:
         presenceIcon = 'recents-presence';
-        presenceFill = 'var(--avatar-presence-icon-away)';
+        presenceColor = 'var(--avatar-presence-icon-away)';
         break;
       case PresenceType.OOO:
         presenceIcon = 'pto-presence';
-        presenceFill = 'var(--avatar-presence-icon-ooo)';
+        presenceColor = 'var(--avatar-presence-icon-ooo)';
         break;
       default:
         break;
@@ -98,7 +98,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
         <Icon
           name={presenceIcon}
           weight="filled"
-          fillColor={presenceFill}
+          color={presenceColor}
           scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
         />
       </div>

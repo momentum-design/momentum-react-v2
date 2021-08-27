@@ -36,7 +36,6 @@ export default {
 
 const argTypes = {
   children: {
-    defaultValue: '1',
     description: 'Provides the child text for this element.',
     control: { type: 'text' },
     table: {
@@ -49,7 +48,6 @@ const argTypes = {
     },
   },
   size: {
-    defaultValue: CONSTANTS.DEFAULTS.SIZE,
     description: 'Modifies the size of this element.',
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     control: { type: 'select' },
