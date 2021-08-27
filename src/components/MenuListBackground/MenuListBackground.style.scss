@@ -6,11 +6,6 @@
   box-sizing: border-box;
   box-shadow: var(--md-globals-elevation-4);
 
-  &:focus {
-    box-shadow: var(--focus-ring-box-shadow);
-    outline: var(--focus-ring-outline);
-  }
-
   &[data-color="primary"] {
     background: var(--menulistbackground-primary-background);
     border: 1px solid var(--menulistbackground-primary-border);
