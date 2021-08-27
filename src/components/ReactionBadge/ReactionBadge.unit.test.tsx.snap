@@ -13,39 +13,42 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
     }
     size={20}
   >
-    <FocusRing
-      focusRingClass="md-button-pill-focus-ring"
-    >
-      <button
-        className="md-button-pill-wrapper md-reaction-badge-wrapper"
-        data-color="primary"
-        data-count={1}
-        data-disabled={false}
-        data-ghost={false}
-        data-outline={false}
-        data-reacted={false}
-        data-size={20}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+    <FocusRing>
+      <FocusRing
+        focusClass="children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <PrimitiveConverter>
-          <div />
-        </PrimitiveConverter>
-        <span />
-      </button>
+        <button
+          className="md-button-pill-wrapper md-reaction-badge-wrapper"
+          data-color="primary"
+          data-count={1}
+          data-disabled={false}
+          data-ghost={false}
+          data-outline={false}
+          data-reacted={false}
+          data-size={20}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter>
+            <div />
+          </PrimitiveConverter>
+          <span />
+        </button>
+      </FocusRing>
     </FocusRing>
   </ButtonPill>
 </ReactionBadge>
@@ -66,39 +69,42 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
     }
     size={20}
   >
-    <FocusRing
-      focusRingClass="md-button-pill-focus-ring"
-    >
-      <button
-        className="md-button-pill-wrapper example-class md-reaction-badge-wrapper"
-        data-color="primary"
-        data-count={1}
-        data-disabled={false}
-        data-ghost={false}
-        data-outline={false}
-        data-reacted={false}
-        data-size={20}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+    <FocusRing>
+      <FocusRing
+        focusClass="children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <PrimitiveConverter>
-          <div />
-        </PrimitiveConverter>
-        <span />
-      </button>
+        <button
+          className="md-button-pill-wrapper example-class md-reaction-badge-wrapper"
+          data-color="primary"
+          data-count={1}
+          data-disabled={false}
+          data-ghost={false}
+          data-outline={false}
+          data-reacted={false}
+          data-size={20}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter>
+            <div />
+          </PrimitiveConverter>
+          <span />
+        </button>
+      </FocusRing>
     </FocusRing>
   </ButtonPill>
 </ReactionBadge>
@@ -119,41 +125,44 @@ exports[`<ReactionBadge /> snapshot should match snapshot with count 1`] = `
     }
     size={20}
   >
-    <FocusRing
-      focusRingClass="md-button-pill-focus-ring"
-    >
-      <button
-        className="md-button-pill-wrapper md-reaction-badge-wrapper"
-        data-color="primary"
-        data-count={1}
-        data-disabled={false}
-        data-ghost={false}
-        data-outline={false}
-        data-reacted={false}
-        data-size={20}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+    <FocusRing>
+      <FocusRing
+        focusClass="children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <PrimitiveConverter>
-          <div />
-        </PrimitiveConverter>
-        <span>
-          1
-        </span>
-      </button>
+        <button
+          className="md-button-pill-wrapper md-reaction-badge-wrapper"
+          data-color="primary"
+          data-count={1}
+          data-disabled={false}
+          data-ghost={false}
+          data-outline={false}
+          data-reacted={false}
+          data-size={20}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter>
+            <div />
+          </PrimitiveConverter>
+          <span>
+            1
+          </span>
+        </button>
+      </FocusRing>
     </FocusRing>
   </ButtonPill>
 </ReactionBadge>
@@ -175,40 +184,43 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
     id="example-id"
     size={20}
   >
-    <FocusRing
-      focusRingClass="md-button-pill-focus-ring"
-    >
-      <button
-        className="md-button-pill-wrapper md-reaction-badge-wrapper"
-        data-color="primary"
-        data-count={1}
-        data-disabled={false}
-        data-ghost={false}
-        data-outline={false}
-        data-reacted={false}
-        data-size={20}
-        id="example-id"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+    <FocusRing>
+      <FocusRing
+        focusClass="children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <PrimitiveConverter>
-          <div />
-        </PrimitiveConverter>
-        <span />
-      </button>
+        <button
+          className="md-button-pill-wrapper md-reaction-badge-wrapper"
+          data-color="primary"
+          data-count={1}
+          data-disabled={false}
+          data-ghost={false}
+          data-outline={false}
+          data-reacted={false}
+          data-size={20}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter>
+            <div />
+          </PrimitiveConverter>
+          <span />
+        </button>
+      </FocusRing>
     </FocusRing>
   </ButtonPill>
 </ReactionBadge>
@@ -229,39 +241,42 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
     }
     size={20}
   >
-    <FocusRing
-      focusRingClass="md-button-pill-focus-ring"
-    >
-      <button
-        className="md-button-pill-wrapper md-reaction-badge-wrapper"
-        data-color="primary"
-        data-count={1}
-        data-disabled={false}
-        data-ghost={false}
-        data-outline={false}
-        data-reacted={true}
-        data-size={20}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+    <FocusRing>
+      <FocusRing
+        focusClass="children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <PrimitiveConverter>
-          <div />
-        </PrimitiveConverter>
-        <span />
-      </button>
+        <button
+          className="md-button-pill-wrapper md-reaction-badge-wrapper"
+          data-color="primary"
+          data-count={1}
+          data-disabled={false}
+          data-ghost={false}
+          data-outline={false}
+          data-reacted={true}
+          data-size={20}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter>
+            <div />
+          </PrimitiveConverter>
+          <span />
+        </button>
+      </FocusRing>
     </FocusRing>
   </ButtonPill>
 </ReactionBadge>
@@ -291,44 +306,47 @@ exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <FocusRing
-      focusRingClass="md-button-pill-focus-ring"
-    >
-      <button
-        className="md-button-pill-wrapper md-reaction-badge-wrapper"
-        data-color="primary"
-        data-count={1}
-        data-disabled={false}
-        data-ghost={false}
-        data-outline={false}
-        data-reacted={false}
-        data-size={20}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        style={
-          Object {
-            "color": "pink",
-          }
-        }
-        type="button"
+    <FocusRing>
+      <FocusRing
+        focusClass="children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <PrimitiveConverter>
-          <div />
-        </PrimitiveConverter>
-        <span />
-      </button>
+        <button
+          className="md-button-pill-wrapper md-reaction-badge-wrapper"
+          data-color="primary"
+          data-count={1}
+          data-disabled={false}
+          data-ghost={false}
+          data-outline={false}
+          data-reacted={false}
+          data-size={20}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <PrimitiveConverter>
+            <div />
+          </PrimitiveConverter>
+          <span />
+        </button>
+      </FocusRing>
     </FocusRing>
   </ButtonPill>
 </ReactionBadge>
