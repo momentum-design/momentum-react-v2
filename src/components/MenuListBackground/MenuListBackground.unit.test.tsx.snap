@@ -2,10 +2,19 @@
 
 exports[`<MenuListBackground /> snapshot should match snapshot 1`] = `
 <MenuListBackground>
-  <ul
-    className="md-menu-list-background-wrapper"
-    data-color="primary"
-  />
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <ul
+        className="md-menu-list-background-wrapper"
+        data-color="primary"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      />
+    </FocusRing>
+  </FocusRing>
 </MenuListBackground>
 `;
 
@@ -13,10 +22,19 @@ exports[`<MenuListBackground /> snapshot should match snapshot with className 1`
 <MenuListBackground
   className="example-class"
 >
-  <ul
-    className="example-class md-menu-list-background-wrapper"
-    data-color="primary"
-  />
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <ul
+        className="example-class md-menu-list-background-wrapper"
+        data-color="primary"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      />
+    </FocusRing>
+  </FocusRing>
 </MenuListBackground>
 `;
 
@@ -24,10 +42,19 @@ exports[`<MenuListBackground /> snapshot should match snapshot with color 1`] = 
 <MenuListBackground
   color="tertiary"
 >
-  <ul
-    className="md-menu-list-background-wrapper"
-    data-color="tertiary"
-  />
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <ul
+        className="md-menu-list-background-wrapper"
+        data-color="tertiary"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      />
+    </FocusRing>
+  </FocusRing>
 </MenuListBackground>
 `;
 
@@ -35,11 +62,20 @@ exports[`<MenuListBackground /> snapshot should match snapshot with id 1`] = `
 <MenuListBackground
   id="example-id"
 >
-  <ul
-    className="md-menu-list-background-wrapper"
-    data-color="primary"
-    id="example-id"
-  />
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <ul
+        className="md-menu-list-background-wrapper"
+        data-color="primary"
+        id="example-id"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      />
+    </FocusRing>
+  </FocusRing>
 </MenuListBackground>
 `;
 
@@ -51,14 +87,23 @@ exports[`<MenuListBackground /> snapshot should match snapshot with style 1`] = 
     }
   }
 >
-  <ul
-    className="md-menu-list-background-wrapper"
-    data-color="primary"
-    style={
-      Object {
-        "color": "pink",
-      }
-    }
-  />
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <ul
+        className="md-menu-list-background-wrapper"
+        data-color="primary"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+      />
+    </FocusRing>
+  </FocusRing>
 </MenuListBackground>
 `;
