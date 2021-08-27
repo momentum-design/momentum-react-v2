@@ -9,6 +9,7 @@
   "include": [
     "../../src/index.ts",
     "../../src/legacy/**/*.*",
-    "../../src/components/**/*.*"
+    "../../src/components/**/*.*",
+    "../../src/utils/**/*.*"
   ]
 }

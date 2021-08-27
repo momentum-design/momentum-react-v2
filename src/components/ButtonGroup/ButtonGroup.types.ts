@@ -1,8 +1,9 @@
-import { ReactElement } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 
-import { ButtonPill } from '@momentum-ui/react';
+import { ButtonCircleProps } from '../ButtonCircle';
+import { ButtonPillProps } from '../ButtonPill';
 
-type SupportedComponents = typeof ButtonPill;
+export type SupportedComponents = ButtonCircleProps | ButtonPillProps;
 
 export interface Props {
   /**
@@ -11,9 +12,14 @@ export interface Props {
   children?: ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>>;
 
   /**
-   * Custom class name to be provided to this <ButtonGroup />.
+   * Custom class for overriding this component's CSS.
    */
   className?: string;
+
+  /**
+   * Custom id for overriding this component's CSS.
+   */
+  id?: string;
 
   /**
    * Whether this <ButtonGroup /> is rounded.
@@ -21,12 +27,12 @@ export interface Props {
   round?: boolean;
 
   /**
-   * Type of separators to use on this ButtonGroup.
-   */
-  separation?: 'full' | 'none' | 'partial';
-
-  /**
    * Whether to include spacing around <SupportedComponents />.
    */
   spaced?: boolean;
+
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
 }

@@ -4,6 +4,16 @@ import {
 } from '../../../dist/esm/components/ThemeProvider/ThemeProvider.constants';
 
 const globals = {
+  display: {
+    name: 'Display',
+    description: 'Select the display type for Stories',
+    defaultValue: 'Block',
+    toolbar: {
+      icon: 'structure',
+      items: ['Block', 'Flex'],
+      showName: true,
+    },
+  },
   theme: {
     name: 'Theme',
     description: "Select the component's theme",

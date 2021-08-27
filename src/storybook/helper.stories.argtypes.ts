@@ -41,11 +41,38 @@ const commonAriaButton = {
       },
     },
   },
+  'aria-details': {
+    control: { type: 'text' },
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Sets the `aria-details` value.',
+    table: {
+      category: 'React Aria - Button',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-label': {
+    control: { type: 'text' },
+    description:
+      'From [AriaButtonProps](https://react-spectrum.adobe.com/react-aria/useButton.html). Sets the `aria-label` value.',
+    table: {
+      category: 'React Aria - Button',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 const commonStyles = {
   className: {
-    defaultValue: undefined,
     description: "If present, this value will be added to the rendered element's `class` attribute",
     control: { type: 'text' },
     table: {
@@ -59,7 +86,6 @@ const commonStyles = {
     },
   },
   id: {
-    defaultValue: undefined,
     description:
       "If present, this value will be this component's the rendered element's `id` attribute",
     control: { type: 'text' },
@@ -74,7 +100,6 @@ const commonStyles = {
     },
   },
   style: {
-    defaultValue: undefined,
     description:
       "If present, this value will be this component's the rendered element's `id` attribute",
     control: { type: 'object' },

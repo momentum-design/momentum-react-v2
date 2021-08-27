@@ -11,7 +11,6 @@ const SIZES = {
 };
 
 const STYLE = {
-  focusRing: `${CLASS_PREFIX}-focus-ring`,
   primaryText: `${CLASS_PREFIX}-primary-text`,
   secondaryText: `${CLASS_PREFIX}-secondary-text`,
   wrapper: `${CLASS_PREFIX}-wrapper`,

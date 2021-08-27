@@ -82,9 +82,7 @@ exports[`<Icon /> snapshot should match snapshot with color 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
-      fill="currentColor"
       height="100%"
-      stroke="currentColor"
       style={
         Object {
           "fill": "red",
@@ -110,7 +108,6 @@ exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
-      fill="currentColor"
       height="100%"
       stroke="currentColor"
       style={
@@ -182,7 +179,6 @@ exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
       data-scale={32}
       fill="currentColor"
       height="100%"
-      stroke="currentColor"
       style={
         Object {
           "stroke": "red",
