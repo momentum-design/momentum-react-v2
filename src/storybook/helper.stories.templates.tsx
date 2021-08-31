@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+
 import React, { FC, ReactElement } from 'react';
 import { Story } from '@storybook/react';
 
@@ -39,7 +42,8 @@ const COMPONENT_STATES = ['', 'Hover', 'Active', 'Disable', 'Focus'];
  * @param variant
  * @returns ReactElement
  */
-export const getComponentStates = (Component: FC, args, variant): ReactElement => {
+
+export const getComponentStates = (Component: FC, args: any, variant: any): ReactElement => {
   const items = COMPONENT_STATES.map((state, index) => {
     const getChildren = () => {
       if (variant.children) {
