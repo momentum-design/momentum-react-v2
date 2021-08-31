@@ -1,30 +1,14 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
+import React from 'react';
 
-import ListItemBaseSection, { ListItemBaseSectionProps } from '.';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
+import ListItemBaseSection from '.';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import Documentation from './ListItemBaseSection.documentation.mdx';
 import ListItemBase from '../ListItemBase';
 import argTypes from './ListItemBaseSection.stories.args';
 
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 
 export default {
   title: 'Momentum UI/ListItemBaseSection',
@@ -32,44 +16,35 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation, StyleDocs),
     },
   },
-  argTypes: {
-    ...argTypes,
-  },
 };
 
-const MultiTemplate: Story<ListItemBaseSectionProps> = (
-  args: ListItemBaseSectionProps,
-  { parameters }
-) => {
-  const { variants } = parameters;
-
-  const items = variants.map((variant, index: number) => (
-    <div key={index}>
-      <ListItemBase style={{ minWidth: '20rem', border: '1px solid red' }}>
-        <ListItemBaseSection {...args} {...variant} style={{ border: '1px solid blue' }} />
-      </ListItemBase>
-      <p>{variant.label}</p>
-    </div>
-  ));
-
+const Example = Template((args) => {
   return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: `repeat(1, auto)`,
-        gap: '1.5rem',
-        alignItems: 'end',
-      }}
-    >
-      {items}
-    </div>
+    <ListItemBase style={{ minWidth: '20rem', border: '1px solid red' }}>
+      <ListItemBaseSection {...args} style={{ border: '1px solid blue' }} />
+    </ListItemBase>
   );
+}).bind({});
+
+Example.argTypes = { ...argTypes };
+
+Example.args = {
+  children: 'Content',
 };
 
-const Positions = MultiTemplate.bind({});
+const Positions = MultiTemplate((args) => {
+  return (
+    <ListItemBase style={{ minWidth: '20rem', border: '1px solid red' }}>
+      <ListItemBaseSection {...args} style={{ border: '1px solid blue' }} />
+    </ListItemBase>
+  );
+}).bind({});
+
+Positions.argTypes = { ...argTypes };
+delete Positions.argTypes.position;
 
 Positions.args = {
   children: 'Content',
@@ -84,4 +59,4 @@ Positions.parameters = {
   ],
 };
 
-export { Positions };
+export { Example, Positions };

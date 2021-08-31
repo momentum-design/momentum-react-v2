@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import './ListItemBase.style.scss';
 import { Props } from './ListItemBase.types';
-import { DEFAULTS, STYLE } from './ListItemBase.constants';
+import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import FocusRing from '../FocusRing';
@@ -14,13 +14,19 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
     className,
     children,
     shape = DEFAULTS.SHAPE,
-    size = DEFAULTS.SIZE,
+    size = DEFAULTS.SIZE(shape || DEFAULTS.SHAPE),
     isDisabled = DEFAULTS.IS_DISABLED,
     role = DEFAULTS.ROLE,
     ...rest
   } = props;
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
+
+  if (shape === SHAPES.rounded && size === SIZES[40]) {
+    console.warn(
+      'ListItemBase: This variation is against the design spec. Rounded List Items can only be size 32 or 50.'
+    );
+  }
 
   if (Array.isArray(children)) {
     if (children.length > 3) {

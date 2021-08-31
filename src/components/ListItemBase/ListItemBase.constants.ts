@@ -12,7 +12,7 @@ const SHAPES = {
 };
 
 const DEFAULTS = {
-  SIZE: SIZES[40],
+  SIZE: (shape: string): number => (shape === SHAPES.rounded ? SIZES[50] : SIZES[40]),
   IS_DISABLED: false,
   SHAPE: SHAPES.rectangle,
   ROLE: 'listitem',
