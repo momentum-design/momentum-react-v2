@@ -10,7 +10,11 @@ import './Reaction.style.scss';
 
 const Reaction: FC<Props> = (props: Props) => {
   const { autoPlay, className, id, loop, name, size, style } = props;
+<<<<<<< HEAD
   const { animationData, error } = useDynamicJSONImport(name);
+=======
+  const { animationData, loading, error } = useDynamicJSONImport(name);
+>>>>>>> ff1f59009 (feat(reactions): implement SVG reactions)
   const svgContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,11 +23,19 @@ const Reaction: FC<Props> = (props: Props) => {
         container: svgContainer.current, // the dom element that will contain the animation
         renderer: 'svg',
         loop: loop,
+<<<<<<< HEAD
         autoplay: autoPlay,
         animationData: animationData,
       });
     }
   }, [svgContainer, animationData]);
+=======
+        autoplay: autoPlay || true,
+        animationData: animationData, // the path to the animation json
+      });
+    }
+  });
+>>>>>>> ff1f59009 (feat(reactions): implement SVG reactions)
 
   if (error) {
     return <Icon name={'warning'} scale={16} />;
@@ -39,9 +51,18 @@ const Reaction: FC<Props> = (props: Props) => {
       />
     );
   }
+<<<<<<< HEAD
   if (!animationData) {
     // TODO: spinner NYI
     return <Icon name={'spinner'} scale={16} />;
+=======
+  if (loading) {
+    // TODO: revisit this
+    return <Icon name={'spinner'} scale={16} />;
+    // TODO: im not sure how this can possibly happen, but maybe?
+  } else {
+    return <Icon name={'warning'} scale={16} />;
+>>>>>>> ff1f59009 (feat(reactions): implement SVG reactions)
   }
 };
 

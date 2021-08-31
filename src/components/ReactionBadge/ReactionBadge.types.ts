@@ -21,6 +21,12 @@ export interface Props extends AriaButtonProps {
   id?: string;
 
   /**
+   * The name of the Reaction component we want to render
+   *
+   */
+  name: string;
+
+  /**
    * Whether or not the person ahs reacted with the specific reaction
    */
   reacted?: boolean;
