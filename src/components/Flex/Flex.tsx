@@ -47,9 +47,9 @@ const Flex: FC<Props> = (props: Props) => {
       data-ygap={_style.flexDirection === 'column' && true}
       style={{
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ['--flex-xgap-size' as any]: xgap,
+        ['--md-globals-flex-xgap-size' as any]: xgap,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ['--flex-ygap-size' as any]: ygap,
+        ['--md-globals-flex-ygap-size' as any]: ygap,
         ...style,
       }}
       className={classnames(STYLE.wrapper, ...buildClasses(), className)}

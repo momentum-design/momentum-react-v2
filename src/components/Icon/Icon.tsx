@@ -2,7 +2,7 @@ import React from 'react';
 import './Icon.style.scss';
 import { Props } from './Icon.types';
 import { useDynamicSVGImport } from '../../hooks/useDynamicSVGImport';
-import { DEFAULTS, GLYPH_NOT_FOUND, STYLE } from './Icon.constants';
+import { COLOR_INHERIT, DEFAULTS, GLYPH_NOT_FOUND, STYLE } from './Icon.constants';
 import classnames from 'classnames';
 
 /**
@@ -30,27 +30,36 @@ const Icon: React.FC<Props> = (props: Props) => {
   }
 
   const getColors = () => {
-    if (!isColoredIcon) {
-      const style: Record<string, string> = {};
+    const inheritedColors: { fill?: string; stroke?: string } = {};
+    const styleColors: { fill?: string; stroke?: string } = {};
 
+    if (!isColoredIcon) {
       if (fillColor) {
-        style.fill = fillColor;
+        styleColors.fill = fillColor;
       }
 
       if (strokeColor) {
-        style.stroke = strokeColor;
+        styleColors.stroke = strokeColor;
       }
 
       if (color) {
-        style.fill = color;
-        style.stroke = color;
+        styleColors.fill = color;
+        styleColors.stroke = color;
       }
-
-      return style;
     }
 
-    return null;
+    if (!styleColors.fill) {
+      inheritedColors.fill = COLOR_INHERIT;
+    }
+
+    if (!styleColors.stroke) {
+      inheritedColors.stroke = COLOR_INHERIT;
+    }
+
+    return { inheritedColors, styleColors };
   };
+
+  const { inheritedColors, styleColors } = getColors();
 
   if (SvgIcon) {
     return (
@@ -58,9 +67,8 @@ const Icon: React.FC<Props> = (props: Props) => {
         <SvgIcon
           // coloured class is added to avoid theming the fixed colours inside coloured icons
           className={classnames({ [STYLE.coloured]: isColoredIcon })}
-          style={{ ...getColors() }}
-          stroke="currentColor"
-          fill="currentColor"
+          style={{ ...styleColors }}
+          {...inheritedColors}
           viewBox="0, 0, 32, 32"
           width="100%"
           height="100%"

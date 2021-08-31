@@ -2,30 +2,33 @@
 
 exports[`ButtonHyperlink snapshot should match snapshot 1`] = `
 <ButtonHyperlink>
-  <FocusRing
-    focusRingClass="md-button-hyperlink-focus-ring"
-  >
-    <button
-      className="md-button-hyperlink-wrapper"
-      data-disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragStart={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchCancel={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      type="button"
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
     >
-      Hyperlink
-    </button>
+      <button
+        className="md-button-hyperlink-wrapper"
+        data-disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        Hyperlink
+      </button>
+    </FocusRing>
   </FocusRing>
 </ButtonHyperlink>
 `;
@@ -35,30 +38,36 @@ exports[`ButtonHyperlink snapshot should match snapshot when disabled 1`] = `
   disabled={true}
 >
   <FocusRing
-    focusRingClass="md-button-hyperlink-focus-ring"
+    disabled={true}
   >
-    <button
-      className="md-button-hyperlink-wrapper"
-      data-disabled={true}
+    <FocusRing
       disabled={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragStart={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchCancel={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      type="button"
+      focusClass="md-focus-ring-wrapper-disabled"
+      focusRingClass="md-focus-ring-wrapper-disabled"
     >
-      Hyperlink
-    </button>
+      <button
+        className="md-button-hyperlink-wrapper"
+        data-disabled={true}
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        Hyperlink
+      </button>
+    </FocusRing>
   </FocusRing>
 </ButtonHyperlink>
 `;

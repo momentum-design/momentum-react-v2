@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlertBanner /> snapshot should match snapshot 1`] = `
+<AlertBanner>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with buttons 1`] = `
+<AlertBanner
+  buttons={
+    Array [
+      <div>
+        button 1
+      </div>,
+      <div>
+        button 2
+      </div>,
+    ]
+  }
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    >
+      <div
+        className="md-alert-banner-button"
+        ghost={true}
+        key=".$0"
+      >
+        button 1
+      </div>
+      <div
+        className="md-alert-banner-button"
+        ghost={true}
+        key=".$1"
+      >
+        button 2
+      </div>
+    </div>
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with children 1`] = `
+<AlertBanner>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    >
+      children
+    </p>
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with className 1`] = `
+<AlertBanner
+  className="example-class"
+>
+  <div
+    className="md-alert-banner-wrapper example-class"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with color 1`] = `
+<AlertBanner
+  color="warning"
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="warning"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    >
+      Example Text
+    </p>
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with id 1`] = `
+<AlertBanner
+  id="example-id"
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+    id="example-id"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with image 1`] = `
+<AlertBanner
+  image={
+    <div>
+      A
+    </div>
+  }
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    >
+      A
+    </div>
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with isCentered 1`] = `
+<AlertBanner
+  isCentered={true}
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={true}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with isGrown 1`] = `
+<AlertBanner
+  isGrown={true}
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={true}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with isPilled 1`] = `
+<AlertBanner
+  isPilled={true}
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={true}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with label 1`] = `
+<AlertBanner
+  label="Example Text"
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    >
+      Example Text
+    </p>
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with size 1`] = `
+<AlertBanner
+  size="small"
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="small"
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    >
+      Example Text
+    </p>
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with style 1`] = `
+<AlertBanner
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;

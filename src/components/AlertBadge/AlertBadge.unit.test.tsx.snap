@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlertBadge /> snapshot should match snapshot 1`] = `
+<AlertBadge>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      />
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with children, image and label 1`] = `
+<AlertBadge
+  image={
+    <div>
+      A
+    </div>
+  }
+  label={
+    <div>
+      Example Label
+    </div>
+  }
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        <PrimitiveConverter>
+          <div>
+            Example Children
+          </div>
+        </PrimitiveConverter>
+      </button>
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with className 1`] = `
+<AlertBadge
+  className="example-class"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="example-class md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      />
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
+<AlertBadge
+  color="warning"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        data-color="warning"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        <PrimitiveConverter>
+          <div>
+            Example Text
+          </div>
+        </PrimitiveConverter>
+      </button>
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with id 1`] = `
+<AlertBadge
+  id="example-id"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        id="example-id"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      />
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with image 1`] = `
+<AlertBadge
+  image={
+    <div>
+      A
+    </div>
+  }
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        <PrimitiveConverter
+          key="0"
+        >
+          <div>
+            A
+          </div>
+        </PrimitiveConverter>
+      </button>
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with image and label 1`] = `
+<AlertBadge
+  image={
+    <div>
+      A
+    </div>
+  }
+  label={
+    <div>
+      Example Label
+    </div>
+  }
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        <PrimitiveConverter
+          key="0"
+        >
+          <div>
+            A
+          </div>
+        </PrimitiveConverter>
+        <PrimitiveConverter
+          key="1"
+        >
+          <div>
+            Example Label
+          </div>
+        </PrimitiveConverter>
+      </button>
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with label 1`] = `
+<AlertBadge
+  label={
+    <div>
+      Example Text
+    </div>
+  }
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      >
+        <PrimitiveConverter
+          key="1"
+        >
+          <div>
+            Example Text
+          </div>
+        </PrimitiveConverter>
+      </button>
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with style 1`] = `
+<AlertBadge
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+        type="button"
+      />
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;

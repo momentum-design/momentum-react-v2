@@ -8,8 +8,8 @@ exports[`Flex snapshot should match snapshot 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -28,8 +28,8 @@ exports[`Flex snapshot should match snapshot with alignContent 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -48,8 +48,8 @@ exports[`Flex snapshot should match snapshot with alignItems 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -68,8 +68,8 @@ exports[`Flex snapshot should match snapshot with className 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -89,8 +89,8 @@ exports[`Flex snapshot should match snapshot with id 1`] = `
     id="example-id"
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -109,8 +109,8 @@ exports[`Flex snapshot should match snapshot with justifyContent 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -133,8 +133,8 @@ exports[`Flex snapshot should match snapshot with style 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
         "color": "pink",
       }
     }
@@ -154,8 +154,8 @@ exports[`Flex snapshot should match snapshot with wrap 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -174,8 +174,8 @@ exports[`Flex snapshot should match snapshot with xgap 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": "1rem",
-        "--flex-ygap-size": undefined,
+        "--md-globals-flex-xgap-size": "1rem",
+        "--md-globals-flex-ygap-size": undefined,
       }
     }
   >
@@ -194,8 +194,8 @@ exports[`Flex snapshot should match snapshot with ygap 1`] = `
     data-ygap={false}
     style={
       Object {
-        "--flex-xgap-size": undefined,
-        "--flex-ygap-size": "1rem",
+        "--md-globals-flex-xgap-size": undefined,
+        "--md-globals-flex-ygap-size": "1rem",
       }
     }
   >

@@ -220,7 +220,7 @@ describe('Flex', () => {
       expect.assertions(2);
 
       const xgap = '1rem';
-      const cssVar = '--flex-xgap-size: 1rem;';
+      const cssVar = '--md-globals-flex-xgap-size: 1rem;';
 
       container = mount(
         <Flex direction="row" xgap={xgap}>
@@ -238,7 +238,7 @@ describe('Flex', () => {
       expect.assertions(2);
 
       const ygap = '1rem';
-      const cssVar = '--flex-ygap-size: 1rem;';
+      const cssVar = '--md-globals-flex-ygap-size: 1rem;';
 
       container = mount(
         <Flex direction="column" ygap={ygap}>

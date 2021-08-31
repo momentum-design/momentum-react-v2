@@ -1,10 +1,10 @@
 .md-button-pill-wrapper {
   border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
-  border: var(--border-clear);
-  border-width: 0.125rem;
+  border: var(--md-globals-border-clear);
+  border-width: 0.0625rem;
   cursor: pointer;
   font-family: CiscoSansTT; // IEFIX
-  font-family: var(--font-default);
+  font-family: var(--md-globals-font-default);
   margin: 0.5rem;
   outline: none;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -27,13 +27,6 @@
     background-color: var(--button-primary-background-pressed);
     color:  rgba(255, 255, 255, 0.95); // IEFIX
     color: var(--button-primary-text-pressed);
-  }
-
-  &.md-button-pill-focus-ring {
-    outline: none; // IEFIX
-    outline: var(--focus-ring-outline);
-    box-shadow: 0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1); // IEFIX
-    box-shadow: var(--focus-ring-box-shadow);
   }
 
   &[data-outline=true] {
@@ -276,10 +269,6 @@
       background-color: var(--button-primary-background-disabled);
       color:  rgba(0, 0, 0, 0.4); // IEFIX
       color: var(--button-primary-text-disabled);
-    }
-
-    &:focus {
-      box-shadow: none;
     }
 
     &[data-outline=true] {

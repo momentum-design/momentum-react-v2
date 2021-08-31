@@ -1,7 +1,7 @@
 .md-button-dialpad-wrapper {
-  border: var(--border-clear);
+  border: var(--md-globals-border-clear);
   cursor: pointer;
-  font-family: var(--font-default);
+  font-family: var(--md-globals-font-default);
   margin: 0.5rem;
   outline: none;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -31,11 +31,6 @@
     margin-top: 0.2em;
   }
 
-  &.md-button-dialpad-focus-ring {
-    outline: var(--focus-ring-outline);
-    box-shadow: var(--focus-ring-box-shadow);
-  }
-
   &[data-disabled='true'] {
     background-color: var(--button-dialpad-background-disabled);
     color: var(--button-dialpad-text-number);
@@ -55,10 +50,6 @@
 
     &:active {
       background-color: var(--button-dialpad-background-disabled);
-    }
-
-    &.md-button-dialpad-focus-ring {
-      box-shadow: none;
     }
   }
 

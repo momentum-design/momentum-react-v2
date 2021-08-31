@@ -6,13 +6,13 @@
   // depending on the direction.
   &[data-xgap=true] {
     > *:not(:first-child) {
-      margin-left: var(--flex-xgap-size);
+      margin-left: var(--md-globals-flex-xgap-size);
     }
   }
 
   &[data-ygap=true] {
     > *:not(:first-child) {
-      margin-top: var(--flex-ygap-size);
+      margin-top: var(--md-globals-flex-ygap-size);
     }
   }
 }

@@ -1,28 +1,15 @@
-const path = require('path'); // eslint-disable-line
 const fs = require('fs'); // eslint-disable-line
+const getTokenCssVars = require('./getTokenCssVars'); // eslint-disable-line
 
-let colors = JSON.parse(
-  fs
-    .readFileSync(
-      path.join(__dirname, '../../node_modules/@momentum-ui/design-tokens/dist/lightWebex.css'),
-      'utf8'
-    )
-    .split(';')
-    .join('",')
-    .split('--')
-    .join('"--')
-    .split(':')
-    .join('":"')
-    .slice(20, -4) + '}'
-);
+let colors = getTokenCssVars();
 
 colors = {
   ...colors,
-  '--border-clear': '0rem solid rgba(0, 0, 0, 0)',
-  '--focus-ring-box-shadow':
+  '--md-globals-border-clear': '0rem solid rgba(0, 0, 0, 0)',
+  '--md-globals-focus-ring-box-shadow':
     '0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1)',
-  '--focus-ring-outline': 'none',
-  '--font-default': 'CiscoSansTT',
+  '--md-globals-focus-ring-outline': 'none',
+  '--md-globals-font-default': 'CiscoSansTT',
 };
 
 const getColor = function (cssVar) {

@@ -1,29 +1,16 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
+import React from 'react';
+
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import ButtonPill from '../ButtonPill';
+import ButtonCircle from '../ButtonCircle';
+import Icon from '../Icon';
 
-import ButtonGroup, { ButtonGroupProps, BUTTON_GROUP_CONSTANTS as CONSTANTS } from './';
-import Documentation from './ButtonGroup.documentation.mdx';
-
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
+import ButtonGroup, { ButtonGroupProps } from './';
+import argTypes from './ButtonGroup.stories.args';
+import Documentation from './ButtonGroup.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/ButtonGroup',
@@ -31,165 +18,34 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation, StyleDocs),
     },
   },
   subComponents: { ButtonPill },
 };
 
-const argTypes = {
-  children: {
-    description: 'Provides the SupportedButton child nodes for this component.',
-    control: {
-      type: 'none',
-    },
-    table: {
-      type: {
-        summary: 'ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>>',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  className: {
-    defaultValue: undefined,
-    description: 'Provides additional classes to this `<ButtonGroup />`',
-    control: { type: 'none' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  separation: {
-    defaultValue: CONSTANTS.DEFAULTS.SEPARATION,
-    description: 'Type of seperators to use with this `<ButtonGroup />`.',
-    options: Object.values(CONSTANTS.SEPARATIONS),
-    control: { type: 'select' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SEPARATION,
-      },
-    },
-  },
-  spaced: {
-    defaultValue: CONSTANTS.DEFAULTS.SPACED,
-    description: 'Whether to apply spacing around ChildNodes.',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SPACED,
-      },
-    },
-  },
-  round: {
-    defaultValue: CONSTANTS.DEFAULTS.ROUND,
-    description: 'Whether this `<ButtonGroup /> is rounded.',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.ROUND,
-      },
-    },
-  },
-};
+const commonChildren = [
+  <ButtonPill key="0">Example</ButtonPill>,
+  <ButtonCircle key="1">
+    <Icon name="redo" autoScale={150} />
+  </ButtonCircle>,
+  <ButtonCircle key="2">
+    <Icon name="cancel" autoScale={150} />
+  </ButtonCircle>,
+];
 
-const Template: Story<ButtonGroupProps> = (args: ButtonGroupProps) => {
-  const mutatedArgs = { ...args };
-  delete mutatedArgs.children;
-
-  return (
-    <ButtonGroup className="custom" {...args}>
-      {args.children}
-    </ButtonGroup>
-  );
-};
-
-const MultiTemplate: Story<ButtonGroupProps> = (args: ButtonGroupProps, { parameters }) => {
-  const mutatedArgs = { ...args };
-  const { children } = mutatedArgs;
-  delete mutatedArgs.children;
-
-  const { variants } = parameters;
-
-  const items = variants.map((variant, index: number) => (
-    <ButtonGroup className="custom" key={index} {...variant} {...args}>
-      {children}
-    </ButtonGroup>
-  ));
-
-  return <>{items}</>;
-};
-
-const Example = Template.bind({});
+const Example = Template<ButtonGroupProps>(ButtonGroup).bind({});
 
 Example.args = {
-  children: [
-    <ButtonPill key="0">Example A</ButtonPill>,
-    <ButtonPill key="1">Example B</ButtonPill>,
-    <ButtonPill key="2">Example B</ButtonPill>,
-  ],
+  children: [...commonChildren],
 };
 
 Example.argTypes = { ...argTypes };
 
-const Separations = MultiTemplate.bind({});
-
-Separations.args = {
-  children: [
-    <ButtonPill key="0">Example A</ButtonPill>,
-    <ButtonPill key="1">Example B</ButtonPill>,
-    <ButtonPill key="2">Example B</ButtonPill>,
-  ],
-};
-
-Separations.parameters = {
-  variants: [{}, { separation: 'partial' }, { separation: 'full' }],
-};
-
-Separations.argTypes = { ...argTypes };
-delete Separations.argTypes.separation;
-
-const Spacing = MultiTemplate.bind({});
-
-Spacing.args = {
-  children: [
-    <ButtonPill key="0">Example A</ButtonPill>,
-    <ButtonPill key="1">Example B</ButtonPill>,
-    <ButtonPill key="2">Example B</ButtonPill>,
-  ],
-};
-
-Spacing.parameters = {
-  variants: [{}, { spaced: true }],
-};
-
-Spacing.argTypes = { ...argTypes };
-delete Spacing.argTypes.spaced;
-
-const Rounding = MultiTemplate.bind({});
+const Rounding = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 
 Rounding.args = {
-  children: [
-    <ButtonPill key="0">Example A</ButtonPill>,
-    <ButtonPill key="1">Example B</ButtonPill>,
-    <ButtonPill key="2">Example B</ButtonPill>,
-  ],
+  children: [...commonChildren],
 };
 
 Rounding.parameters = {
@@ -199,4 +55,123 @@ Rounding.parameters = {
 Rounding.argTypes = { ...argTypes };
 delete Rounding.argTypes.round;
 
-export { Example, Rounding, Separations, Spacing };
+const Spacing = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+
+Spacing.args = {
+  children: [...commonChildren],
+};
+
+Spacing.parameters = {
+  variants: [{}, { spaced: true }],
+};
+
+Spacing.argTypes = { ...argTypes };
+delete Spacing.argTypes.spaced;
+
+const Common = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.children;
+delete Common.argTypes.separation;
+delete Common.argTypes.spaced;
+delete Common.argTypes.round;
+
+Common.parameters = {
+  variants: [
+    {
+      children: [
+        <ButtonPill key="0">Example</ButtonPill>,
+        <ButtonCircle key="1">
+          <Icon name="redo" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="2">
+          <Icon name="cancel" autoScale={150} />
+        </ButtonCircle>,
+      ],
+      round: true,
+    },
+    {
+      children: [
+        <ButtonPill color="message" key="0">
+          Message
+        </ButtonPill>,
+        <ButtonCircle color="message" key="1">
+          <Icon name="send" autoScale={150} />
+        </ButtonCircle>,
+      ],
+      round: true,
+    },
+    {
+      children: [
+        <ButtonPill color="join" key="0">
+          Join
+        </ButtonPill>,
+        <ButtonCircle color="join" key="1">
+          <Icon name="enter-room" autoScale={150} />
+        </ButtonCircle>,
+      ],
+      round: true,
+    },
+    {
+      children: [
+        <ButtonPill color="cancel" key="0">
+          Cancel
+        </ButtonPill>,
+        <ButtonCircle color="cancel" key="1">
+          <Icon name="cancel" autoScale={150} />
+        </ButtonCircle>,
+      ],
+      round: true,
+    },
+    {
+      children: [
+        <ButtonCircle key="0" ghost size={64}>
+          <Icon name="exit-room" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="1" ghost size={64}>
+          <Icon name="location" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="2" ghost size={64}>
+          <Icon name="room-calendar" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="3" ghost size={64}>
+          <Icon name="assign-host" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="4" ghost size={64}>
+          <Icon name="settings" autoScale={150} />
+        </ButtonCircle>,
+      ],
+      round: true,
+      spaced: true,
+      style: {
+        backgroundColor: 'IndianRed',
+      },
+    },
+    {
+      children: [
+        <ButtonCircle key="0" ghost size={32}>
+          <Icon name="camera-presence" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="1" ghost size={32}>
+          <Icon name="quiet-hours-presence" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="2" ghost size={32}>
+          <Icon name="handset" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="3" ghost size={32}>
+          <Icon name="meetings-presence" autoScale={150} />
+        </ButtonCircle>,
+        <ButtonCircle key="4" ghost size={32}>
+          <Icon name="pto-presence" autoScale={150} />
+        </ButtonCircle>,
+      ],
+      round: true,
+      spaced: true,
+      style: {
+        backgroundColor: 'Chocolate',
+      },
+    },
+  ],
+};
+
+export { Example, Rounding, Spacing, Common };
