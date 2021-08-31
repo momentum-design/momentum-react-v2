@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-list-item';
+const CLASS_PREFIX = 'md-list-item-base';
 
 const SIZES = {
   32: 32,

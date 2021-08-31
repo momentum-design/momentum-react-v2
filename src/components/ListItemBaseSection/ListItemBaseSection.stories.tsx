@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 
-import ListItemSection, { ListItemSectionProps } from './';
+import ListItemBaseSection, { ListItemBaseSectionProps } from '.';
 import {
   Title,
   Subtitle,
@@ -11,9 +11,9 @@ import {
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
 
-import Documentation from './ListItemSection.documentation.mdx';
-import ListItem from '../ListItem';
-import argTypes from './ListItemSection.stories.args';
+import Documentation from './ListItemBaseSection.documentation.mdx';
+import ListItemBase from '../ListItemBase';
+import argTypes from './ListItemBaseSection.stories.args';
 
 const DocsPage: FC = () => (
   <>
@@ -27,8 +27,8 @@ const DocsPage: FC = () => (
 );
 
 export default {
-  title: 'Momentum UI/ListItemSection',
-  component: ListItemSection,
+  title: 'Momentum UI/ListItemBaseSection',
+  component: ListItemBaseSection,
   parameters: {
     expanded: true,
     docs: {
@@ -40,14 +40,17 @@ export default {
   },
 };
 
-const MultiTemplate: Story<ListItemSectionProps> = (args: ListItemSectionProps, { parameters }) => {
+const MultiTemplate: Story<ListItemBaseSectionProps> = (
+  args: ListItemBaseSectionProps,
+  { parameters }
+) => {
   const { variants } = parameters;
 
   const items = variants.map((variant, index: number) => (
     <div key={index}>
-      <ListItem style={{ minWidth: '20rem', border: '1px solid red' }}>
-        <ListItemSection {...args} {...variant} style={{ border: '1px solid blue' }} />
-      </ListItem>
+      <ListItemBase style={{ minWidth: '20rem', border: '1px solid red' }}>
+        <ListItemBaseSection {...args} {...variant} style={{ border: '1px solid blue' }} />
+      </ListItemBase>
       <p>{variant.label}</p>
     </div>
   ));

@@ -1,0 +1,47 @@
+[INTERNAL] `<ListItemBase />` component should be the base of any List Item component that the Momentum Library requires (i.e. SpaceListItem, SearchResultListItem etc.). This component acts like a skeleton that
+helps you develop more complex ListItems. Below are a few examples on how to use it and what you can achieve. This component should not be exported
+as part of the library and should be used internally only.
+
+## Structure
+
+The structure of the component is as follows:
+
+```
++---------------+----------------+-------------+
+| Start Section | Middle Section | End Section |
++---------------+----------------+-------------+
+
+or
+
++---------------+----------------+-------------+
+|                  Fill Section                |
++---------------+----------------+-------------+
+```
+
+The 4 sections can be mixed together as needed. We provide a `<ListItemBaseSection />` component that will handle
+spacing and padding accordingly.
+
+## Simple example
+
+```js
+<ListItemBase>
+  <ListItemBaseSection position="start">
+    <Avatar title="Webex User" />
+  </ListItemBaseSection>
+  <ListItemBaseSection position="fill">Webex User</ListItemBaseSection>
+</ListItemBase>
+```
+
+## Complex example
+
+```js
+<ListItemBase size={50} shape="rounded">
+  <ListItemBaseSection position="start">
+    <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
+  </ListItemBaseSection>
+  <ListItemBaseSection position="fill">Text goes here</ListItemBaseSection>
+  <ListItemBaseSection position="end">
+    <Icon name="placeholder" scale={16} />
+  </ListItemBaseSection>
+</ListItemBase>
+```

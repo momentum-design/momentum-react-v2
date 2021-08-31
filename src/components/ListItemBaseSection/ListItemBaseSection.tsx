@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-import './ListItemSection.style.scss';
-import { Props } from './ListItemSection.types';
+import './ListItemBaseSection.style.scss';
+import { Props } from './ListItemBaseSection.types';
 
-const ListItemSection: FC<Props> = (props: Props) => {
+const ListItemBaseSection: FC<Props> = (props: Props) => {
   const { className, children, position, style, id } = props;
 
   return (
@@ -18,4 +18,4 @@ const ListItemSection: FC<Props> = (props: Props) => {
  * it in a certain position.
  */
 
-export default ListItemSection;
+export default ListItemBaseSection;

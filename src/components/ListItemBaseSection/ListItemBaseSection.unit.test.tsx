@@ -1,15 +1,15 @@
-import ListItemSection from '.';
+import ListItemBaseSection from '.';
 import { mount } from 'enzyme';
 import React from 'react';
 
-describe('ListItemSection', () => {
+describe('ListItemBaseSection', () => {
   let container;
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      container = mount(<ListItemSection>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection>Test</ListItemBaseSection>);
 
       expect(container).toMatchSnapshot();
     });
@@ -19,7 +19,7 @@ describe('ListItemSection', () => {
 
       const className = 'example-class';
 
-      container = mount(<ListItemSection className={className}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection className={className}>Test</ListItemBaseSection>);
 
       expect(container).toMatchSnapshot();
     });
@@ -29,7 +29,7 @@ describe('ListItemSection', () => {
 
       const id = 'example-id';
 
-      container = mount(<ListItemSection id={id}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection id={id}>Test</ListItemBaseSection>);
 
       expect(container).toMatchSnapshot();
     });
@@ -39,7 +39,7 @@ describe('ListItemSection', () => {
 
       const style = { color: 'pink' };
 
-      container = mount(<ListItemSection style={style}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection style={style}>Test</ListItemBaseSection>);
 
       expect(container).toMatchSnapshot();
     });
@@ -49,7 +49,7 @@ describe('ListItemSection', () => {
 
       const position = 'end';
 
-      container = mount(<ListItemSection position={position}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection position={position}>Test</ListItemBaseSection>);
 
       expect(container).toMatchSnapshot();
     });
@@ -61,9 +61,9 @@ describe('ListItemSection', () => {
 
       const className = 'example-class';
 
-      container = mount(<ListItemSection className={className}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection className={className}>Test</ListItemBaseSection>);
 
-      const element = container.find(ListItemSection).getDOMNode();
+      const element = container.find(ListItemBaseSection).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
@@ -73,9 +73,9 @@ describe('ListItemSection', () => {
 
       const id = 'example-id';
 
-      container = mount(<ListItemSection id={id}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection id={id}>Test</ListItemBaseSection>);
 
-      const element = container.find(ListItemSection).getDOMNode();
+      const element = container.find(ListItemBaseSection).getDOMNode();
 
       expect(element.id).toBe(id);
     });
@@ -86,9 +86,9 @@ describe('ListItemSection', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      container = mount(<ListItemSection style={style}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection style={style}>Test</ListItemBaseSection>);
 
-      const element = container.find(ListItemSection).getDOMNode();
+      const element = container.find(ListItemBaseSection).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
@@ -98,9 +98,9 @@ describe('ListItemSection', () => {
 
       const position = 'end';
 
-      container = mount(<ListItemSection position={position}>Test</ListItemSection>);
+      container = mount(<ListItemBaseSection position={position}>Test</ListItemBaseSection>);
 
-      const element = container.find(ListItemSection).getDOMNode();
+      const element = container.find(ListItemBaseSection).getDOMNode();
 
       expect(element.getAttribute('data-position')).toBe(position);
     });

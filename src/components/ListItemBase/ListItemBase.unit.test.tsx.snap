@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListItem snapshot should match snapshot 1`] = `
-<ListItem>
+exports[`ListItemBase snapshot should match snapshot 1`] = `
+<ListItemBase>
   <li
-    className="md-list-item-wrapper"
+    className="md-list-item-base-wrapper"
     data-disabled={false}
     data-shape="rectangle"
     data-size={40}
@@ -11,15 +11,15 @@ exports[`ListItem snapshot should match snapshot 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;
 
-exports[`ListItem snapshot should match snapshot with className 1`] = `
-<ListItem
+exports[`ListItemBase snapshot should match snapshot with className 1`] = `
+<ListItemBase
   className="example-class"
 >
   <li
-    className="example-class md-list-item-wrapper"
+    className="example-class md-list-item-base-wrapper"
     data-disabled={false}
     data-shape="rectangle"
     data-size={40}
@@ -27,15 +27,15 @@ exports[`ListItem snapshot should match snapshot with className 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;
 
-exports[`ListItem snapshot should match snapshot with id 1`] = `
-<ListItem
+exports[`ListItemBase snapshot should match snapshot with id 1`] = `
+<ListItemBase
   id="example-id"
 >
   <li
-    className="md-list-item-wrapper"
+    className="md-list-item-base-wrapper"
     data-disabled={false}
     data-shape="rectangle"
     data-size={40}
@@ -44,15 +44,15 @@ exports[`ListItem snapshot should match snapshot with id 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;
 
-exports[`ListItem snapshot should match snapshot with isDisabled 1`] = `
-<ListItem
+exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
+<ListItemBase
   isDisabled={true}
 >
   <li
-    className="md-list-item-wrapper"
+    className="md-list-item-base-wrapper"
     data-disabled={true}
     data-shape="rectangle"
     data-size={40}
@@ -60,15 +60,15 @@ exports[`ListItem snapshot should match snapshot with isDisabled 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;
 
-exports[`ListItem snapshot should match snapshot with role 1`] = `
-<ListItem
+exports[`ListItemBase snapshot should match snapshot with role 1`] = `
+<ListItemBase
   role="role"
 >
   <li
-    className="md-list-item-wrapper"
+    className="md-list-item-base-wrapper"
     data-disabled={false}
     data-shape="rectangle"
     data-size={40}
@@ -76,15 +76,15 @@ exports[`ListItem snapshot should match snapshot with role 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;
 
-exports[`ListItem snapshot should match snapshot with shape 1`] = `
-<ListItem
+exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
+<ListItemBase
   shape="rounded"
 >
   <li
-    className="md-list-item-wrapper"
+    className="md-list-item-base-wrapper"
     data-disabled={false}
     data-shape="rounded"
     data-size={40}
@@ -92,15 +92,15 @@ exports[`ListItem snapshot should match snapshot with shape 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;
 
-exports[`ListItem snapshot should match snapshot with size 1`] = `
-<ListItem
+exports[`ListItemBase snapshot should match snapshot with size 1`] = `
+<ListItemBase
   size={40}
 >
   <li
-    className="md-list-item-wrapper"
+    className="md-list-item-base-wrapper"
     data-disabled={false}
     data-shape="rectangle"
     data-size={40}
@@ -108,11 +108,11 @@ exports[`ListItem snapshot should match snapshot with size 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;
 
-exports[`ListItem snapshot should match snapshot with style 1`] = `
-<ListItem
+exports[`ListItemBase snapshot should match snapshot with style 1`] = `
+<ListItemBase
   style={
     Object {
       "color": "pink",
@@ -120,7 +120,7 @@ exports[`ListItem snapshot should match snapshot with style 1`] = `
   }
 >
   <li
-    className="md-list-item-wrapper"
+    className="md-list-item-base-wrapper"
     data-disabled={false}
     data-shape="rectangle"
     data-size={40}
@@ -133,5 +133,5 @@ exports[`ListItem snapshot should match snapshot with style 1`] = `
   >
     Test
   </li>
-</ListItem>
+</ListItemBase>
 `;

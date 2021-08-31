@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 
-import ListItem, { ListItemProps } from './';
+import ListItemBase, { ListItemBaseProps } from '.';
 import {
   Title,
   Subtitle,
@@ -11,15 +11,15 @@ import {
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
 
-import Documentation from './ListItem.documentation.mdx';
-import ListItemSection from '../ListItemSection';
-import { SHAPES, SIZES } from './ListItem.constants';
+import Documentation from './ListItemBase.documentation.mdx';
+import ListItemBaseSection from '../ListItemBaseSection';
+import { SHAPES, SIZES } from './ListItemBase.constants';
 
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
-import argTypes from './ListItem.stories.args';
+import argTypes from './ListItemBase.stories.args';
 
 const COMPONENT_STATES = ['', 'Hover', 'Active', 'Disable', 'Focus'];
 
@@ -35,8 +35,8 @@ const DocsPage: FC = () => (
 );
 
 export default {
-  title: 'Momentum UI/ListItem',
-  component: ListItem,
+  title: 'Momentum UI/ListItemBase',
+  component: ListItemBase,
   parameters: {
     expanded: true,
     docs: {
@@ -56,7 +56,7 @@ export default {
 const getVariants = (variants) => {
   const items = variants.map((variant, index: number) => (
     <div key={index} style={{ minWidth: '16rem' }}>
-      <ListItem {...variant} className={variant.pseudo} />
+      <ListItemBase {...variant} className={variant.pseudo} />
       <p>{variant.label}</p>
     </div>
   ));
@@ -75,7 +75,7 @@ const getVariants = (variants) => {
   );
 };
 
-const MultiTemplate: Story<ListItemProps> = (args: ListItemProps, { parameters }) => {
+const MultiTemplate: Story<ListItemBaseProps> = (args: ListItemBaseProps, { parameters }) => {
   const { variants, columns } = parameters;
 
   const items = variants.map((variant, index: number) => (
@@ -99,16 +99,16 @@ const MultiTemplate: Story<ListItemProps> = (args: ListItemProps, { parameters }
   );
 };
 
-const Template: Story<ListItemProps> = (args) => (
+const Template: Story<ListItemBaseProps> = (args) => (
   <div style={{ display: 'grid', gap: '1rem', minWidth: '16rem' }}>
     Simple
     {COMPONENT_STATES.map((state, index) => {
       return (
-        <ListItem {...args} className={state.toLowerCase()} key={index}>
-          <ListItemSection position="start">Start</ListItemSection>
-          <ListItemSection position="middle">{state}</ListItemSection>
-          <ListItemSection position="end">end</ListItemSection>
-        </ListItem>
+        <ListItemBase {...args} className={state.toLowerCase()} key={index}>
+          <ListItemBaseSection position="start">Start</ListItemBaseSection>
+          <ListItemBaseSection position="middle">{state}</ListItemBaseSection>
+          <ListItemBaseSection position="end">end</ListItemBaseSection>
+        </ListItemBase>
       );
     })}
   </div>
@@ -130,7 +130,7 @@ Common.parameters = {
             pseudo: state.toLowerCase(),
             children: (
               <>
-                <ListItemSection position="fill">{state || 'Normal'}</ListItemSection>
+                <ListItemBaseSection position="fill">{state || 'Normal'}</ListItemBaseSection>
               </>
             ),
           };
@@ -145,10 +145,10 @@ Common.parameters = {
             pseudo: state.toLowerCase(),
             children: (
               <>
-                <ListItemSection position="fill">{state || 'Normal'}</ListItemSection>
-                <ListItemSection position="end">
+                <ListItemBaseSection position="fill">{state || 'Normal'}</ListItemBaseSection>
+                <ListItemBaseSection position="end">
                   <Icon name="placeholder" scale={16} />
-                </ListItemSection>
+                </ListItemBaseSection>
               </>
             ),
           };
@@ -163,12 +163,12 @@ Common.parameters = {
             pseudo: state.toLowerCase(),
             children: (
               <>
-                <ListItemSection position="fill">{state || 'Normal'}</ListItemSection>
-                <ListItemSection position="end">
+                <ListItemBaseSection position="fill">{state || 'Normal'}</ListItemBaseSection>
+                <ListItemBaseSection position="end">
                   <ButtonPill disabled={state === 'Disable'} color="join" size={24}>
                     Join
                   </ButtonPill>
-                </ListItemSection>
+                </ListItemBaseSection>
               </>
             ),
           };
@@ -183,13 +183,13 @@ Common.parameters = {
             pseudo: state.toLowerCase(),
             children: (
               <>
-                <ListItemSection position="start">
+                <ListItemBaseSection position="start">
                   <Icon name="placeholder" scale={16} />
-                </ListItemSection>
-                <ListItemSection position="fill">{state || 'Normal'}</ListItemSection>
-                <ListItemSection position="end">
+                </ListItemBaseSection>
+                <ListItemBaseSection position="fill">{state || 'Normal'}</ListItemBaseSection>
+                <ListItemBaseSection position="end">
                   <Icon name="placeholder" scale={16} />
-                </ListItemSection>
+                </ListItemBaseSection>
               </>
             ),
           };
@@ -215,13 +215,13 @@ Sizes.parameters = {
               pseudo: state.toLowerCase(),
               children: (
                 <>
-                  <ListItemSection position="start">
+                  <ListItemBaseSection position="start">
                     <Icon name="placeholder" scale={16} />
-                  </ListItemSection>
-                  <ListItemSection position="fill">{state || 'Normal'}</ListItemSection>
-                  <ListItemSection position="end">
+                  </ListItemBaseSection>
+                  <ListItemBaseSection position="fill">{state || 'Normal'}</ListItemBaseSection>
+                  <ListItemBaseSection position="end">
                     <Icon name="placeholder" scale={16} />
-                  </ListItemSection>
+                  </ListItemBaseSection>
                 </>
               ),
             };
@@ -248,17 +248,17 @@ Shapes.parameters = {
               size: SIZES[50],
               children: (
                 <>
-                  <ListItemSection position="start">
+                  <ListItemBaseSection position="start">
                     {shape === SHAPES.rounded ? (
                       <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
                     ) : (
                       <Icon name="placeholder" scale={16} />
                     )}
-                  </ListItemSection>
-                  <ListItemSection position="fill">{state || 'Normal'}</ListItemSection>
-                  <ListItemSection position="end">
+                  </ListItemBaseSection>
+                  <ListItemBaseSection position="fill">{state || 'Normal'}</ListItemBaseSection>
+                  <ListItemBaseSection position="end">
                     <Icon name="placeholder" scale={16} />
-                  </ListItemSection>
+                  </ListItemBaseSection>
                 </>
               ),
             };
@@ -278,17 +278,17 @@ Shapes.parameters = {
               size: SIZES[32],
               children: (
                 <>
-                  <ListItemSection position="start">
+                  <ListItemBaseSection position="start">
                     {shape === SHAPES.rounded ? (
                       <Avatar title="John Adams" size={24} presence={PresenceType.Active} />
                     ) : (
                       <Icon name="placeholder" scale={16} />
                     )}
-                  </ListItemSection>
-                  <ListItemSection position="fill">{state || 'Normal'}</ListItemSection>
-                  <ListItemSection position="end">
+                  </ListItemBaseSection>
+                  <ListItemBaseSection position="fill">{state || 'Normal'}</ListItemBaseSection>
+                  <ListItemBaseSection position="end">
                     <Icon name="placeholder" scale={16} />
-                  </ListItemSection>
+                  </ListItemBaseSection>
                 </>
               ),
             };

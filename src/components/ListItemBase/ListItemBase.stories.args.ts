@@ -1,6 +1,6 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
-import { LIST_ITEM_CONSTANTS as CONSTANTS } from '.';
+import { LIST_ITEM_BASE_CONSTANTS as CONSTANTS } from '.';
 
 export default {
   ...commonStyles,
@@ -19,12 +19,12 @@ export default {
   },
   size: {
     defaultValue: CONSTANTS.DEFAULTS.SIZE,
-    description: 'Size of the list item',
+    description: 'Size of the list item base',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     table: {
       type: {
-        summary: 'ListItemSize',
+        summary: 'ListItemBaseSize',
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.SIZE,
@@ -33,7 +33,7 @@ export default {
   },
   shape: {
     defaultValue: CONSTANTS.DEFAULTS.SHAPE,
-    description: 'The shape of the list item container',
+    description: 'The shape of the list item base container',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.SHAPES)],
     table: {

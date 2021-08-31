@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-export type ListItemSize = 32 | 40 | 50;
+export type ListItemBaseSize = 32 | 40 | 50;
 
 export interface Props {
   /**
@@ -34,7 +34,7 @@ export interface Props {
    * Size of the list item
    * @default 40
    */
-  size?: ListItemSize;
+  size?: ListItemBaseSize;
 
   /**
    * The shape of the list item container

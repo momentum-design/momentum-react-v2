@@ -1,16 +1,16 @@
-import ListItem from '.';
+import ListItemBase from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-import { STYLE } from './ListItem.constants';
+import { STYLE } from './ListItemBase.constants';
 
-describe('ListItem', () => {
+describe('ListItemBase', () => {
   let container;
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      container = mount(<ListItem>Test</ListItem>);
+      container = mount(<ListItemBase>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -20,7 +20,7 @@ describe('ListItem', () => {
 
       const className = 'example-class';
 
-      container = mount(<ListItem className={className}>Test</ListItem>);
+      container = mount(<ListItemBase className={className}>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -30,7 +30,7 @@ describe('ListItem', () => {
 
       const id = 'example-id';
 
-      container = mount(<ListItem id={id}>Test</ListItem>);
+      container = mount(<ListItemBase id={id}>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -40,7 +40,7 @@ describe('ListItem', () => {
 
       const style = { color: 'pink' };
 
-      container = mount(<ListItem style={style}>Test</ListItem>);
+      container = mount(<ListItemBase style={style}>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -50,7 +50,7 @@ describe('ListItem', () => {
 
       const isDisabled = true;
 
-      container = mount(<ListItem isDisabled={isDisabled}>Test</ListItem>);
+      container = mount(<ListItemBase isDisabled={isDisabled}>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -60,7 +60,7 @@ describe('ListItem', () => {
 
       const size = 40;
 
-      container = mount(<ListItem size={size}>Test</ListItem>);
+      container = mount(<ListItemBase size={size}>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -70,7 +70,7 @@ describe('ListItem', () => {
 
       const shape = 'rounded';
 
-      container = mount(<ListItem shape={shape}>Test</ListItem>);
+      container = mount(<ListItemBase shape={shape}>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -80,7 +80,7 @@ describe('ListItem', () => {
 
       const role = 'role';
 
-      container = mount(<ListItem role={role}>Test</ListItem>);
+      container = mount(<ListItemBase role={role}>Test</ListItemBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -88,9 +88,9 @@ describe('ListItem', () => {
 
   describe('attributes', () => {
     it('should have its wrapper class', () => {
-      container = mount(<ListItem>Test</ListItem>);
+      container = mount(<ListItemBase>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.classList.contains(STYLE.wrapper));
     });
@@ -100,9 +100,9 @@ describe('ListItem', () => {
 
       const className = 'example-class';
 
-      container = mount(<ListItem className={className}>Test</ListItem>);
+      container = mount(<ListItemBase className={className}>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
@@ -112,9 +112,9 @@ describe('ListItem', () => {
 
       const id = 'example-id';
 
-      container = mount(<ListItem id={id}>Test</ListItem>);
+      container = mount(<ListItemBase id={id}>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.id).toBe(id);
     });
@@ -125,9 +125,9 @@ describe('ListItem', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      container = mount(<ListItem style={style}>Test</ListItem>);
+      container = mount(<ListItemBase style={style}>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
@@ -137,9 +137,9 @@ describe('ListItem', () => {
 
       const isDisabled = true;
 
-      container = mount(<ListItem isDisabled={isDisabled}>Test</ListItem>);
+      container = mount(<ListItemBase isDisabled={isDisabled}>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe('true');
     });
@@ -149,9 +149,9 @@ describe('ListItem', () => {
 
       const size = 32;
 
-      container = mount(<ListItem size={size}>Test</ListItem>);
+      container = mount(<ListItemBase size={size}>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('data-size')).toBe(size.toString());
     });
@@ -161,9 +161,9 @@ describe('ListItem', () => {
 
       const shape = 'rounded';
 
-      container = mount(<ListItem shape={shape}>Test</ListItem>);
+      container = mount(<ListItemBase shape={shape}>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('data-shape')).toBe(shape);
     });
@@ -173,9 +173,9 @@ describe('ListItem', () => {
 
       const role = 'role';
 
-      container = mount(<ListItem role={role}>Test</ListItem>);
+      container = mount(<ListItemBase role={role}>Test</ListItemBase>);
 
-      const element = container.find(ListItem).getDOMNode();
+      const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('role')).toBe(role);
     });
