@@ -5,7 +5,6 @@ const DEFAULTS = {
 };
 
 const STYLE = {
-  focusRing: `${CLASS_PREFIX}-focus-ring`,
   text: `${CLASS_PREFIX}-text`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };

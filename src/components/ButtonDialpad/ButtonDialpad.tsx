@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef, FC, RefObject } from 'react';
 import { useButton } from '@react-aria/button';
-import { FocusRing } from '@react-aria/focus';
+import FocusRing from '../FocusRing';
 
 import { DEFAULTS, STYLE } from './ButtonDialpad.constants';
 import { Props } from './ButtonDialpad.types';
@@ -23,7 +23,7 @@ const ButtonDialpad: FC<Props> = forwardRef(
     const children = props.children || props.primaryText;
 
     return (
-      <FocusRing focusRingClass={STYLE.focusRing}>
+      <FocusRing disabled={props.disabled}>
         <button
           className={classnames(STYLE.wrapper, className)}
           {...buttonProps}

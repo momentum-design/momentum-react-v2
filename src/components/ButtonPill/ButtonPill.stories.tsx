@@ -20,6 +20,9 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs, AriaButtonDocs),
     },
   },
+  args: {
+    children: 'Example Text',
+  },
 };
 
 const Example = Template<ButtonPillProps>(ButtonPill).bind({});

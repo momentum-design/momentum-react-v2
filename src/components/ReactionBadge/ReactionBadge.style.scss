@@ -1,0 +1,32 @@
+.md-reaction-badge-wrapper {
+  border: 0.0625remrem solid rgba(255, 255, 255, 0.2); // IEFIX
+  border-color: var(--theme-outline-secondary-normal);
+  border-width: 0.0625rem;
+  margin: 0 0.125rem;
+
+  /* Colorization */
+  background-color:  rgba(255, 255, 255, 0.11); // IEFIX
+  background-color: var(--reaction-badge-primary-background);
+  color:  rgba(255, 255, 255, 0.95); // IEFIX
+  color: var(--reaction-badge-primary-unreacted-text);
+
+  &:hover {
+    background-color:  rgba(255, 255, 255, 0.2);  // IEFIX
+    background-color: var(--reaction-badge-primary-background-hovered);
+    color:  rgba(255, 255, 255, 0.95); // IEFIX
+    color: var(--button-secondary-text-hovered);
+  }
+
+  &:active {
+    background-color:  rgba(255, 255, 255, 0.3);  // IEFIX
+    background-color: var(--reaction-badge-primary-background-pressed);
+    color:  rgba(255, 255, 255, 0.95); // IEFIX
+    color: var(--button-secondary-text-pressed);
+  }
+
+  &[data-reacted='true'] {
+    color:  rgba(100, 180, 250, 1); // IEFIX
+    color: var(--reaction-badge-primary-reacted-text);
+  }
+}
+

@@ -1996,10 +1996,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@momentum-ui/design-tokens@0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.19.tgz#e4976db4a45a64c81f4b60ecf67020688aeeed25"
-  integrity sha512-V4BPzfE0JceVw9HF2QjgBbV4wNOqrEe1Q9hubLerUPmFg4JTSjyZzIdOvAyxToYfnj0/nWTMDf0CML1V5c8MGg==
+"@momentum-ui/design-tokens@^0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.24.tgz#913deffb3b357e06a63fe935c52a7c1803b21cbe"
+  integrity sha512-vf3ZrCqVnSCWrsXKbIkDrIBrtFxTe/qR49Xixk9TX+30fLrrvhf0vDGVlkgTo0FOxPdNQJqO6TgxbH4SwKPfgA==
 
 "@momentum-ui/icons-rebrand@^1.2.0":
   version "1.6.1"
@@ -3081,7 +3081,7 @@
     core-js "^3.8.2"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-docs@6.3.7", "@storybook/addon-docs@^6.3.7":
+"@storybook/addon-docs@6.3.7":
   version "6.3.7"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-6.3.7.tgz#a7b8ff2c0baf85fc9cc1b3d71f481ec40499f3cc"
   integrity sha512-cyuyoLuB5ELhbrXgnZneDCHqNq1wSdWZ4dzdHy1E5WwLPEhLlD6INfEsm8gnDIb4IncYuzMhK3XYBDd7d3ijOg==
