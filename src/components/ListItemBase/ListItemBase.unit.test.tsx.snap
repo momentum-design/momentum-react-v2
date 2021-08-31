@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemBase snapshot should match snapshot 1`] = `
+<ListItemBase>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with className 1`] = `
+<ListItemBase
+  className="example-class"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="example-class md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with id 1`] = `
+<ListItemBase
+  id="example-id"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        id="example-id"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
+<ListItemBase
+  isDisabled={true}
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={true}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with role 1`] = `
+<ListItemBase
+  role="role"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="role"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
+<ListItemBase
+  shape="isPilled"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="isPilled"
+        data-size={50}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with size 1`] = `
+<ListItemBase
+  size={40}
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with style 1`] = `
+<ListItemBase
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
