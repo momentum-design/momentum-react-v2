@@ -132,7 +132,7 @@ describe('ListItemBase', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should have provided isDisabled when isDisabled is provided', () => {
+    it('should have provided data-disabled when isDisabled is provided', () => {
       expect.assertions(1);
 
       const isDisabled = true;
@@ -144,7 +144,7 @@ describe('ListItemBase', () => {
       expect(element.getAttribute('data-disabled')).toBe('true');
     });
 
-    it('should have provided size when size is provided', () => {
+    it('should have provided data-size when size is provided', () => {
       expect.assertions(1);
 
       const size = 32;
@@ -156,7 +156,7 @@ describe('ListItemBase', () => {
       expect(element.getAttribute('data-size')).toBe(size.toString());
     });
 
-    it('should have provided shape when shape is provided', () => {
+    it('should have provided data-shape when shape is provided', () => {
       expect.assertions(1);
 
       const shape = 'isPilled';
