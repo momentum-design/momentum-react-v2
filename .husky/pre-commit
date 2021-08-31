@@ -1,7 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-yarn lint &&  npx stylelint --fix 'src/components/**/*.scss' --config .stylelintrc.json
-
 yarn styles:tokenCheck
 
+yarn run lint-staged -v
