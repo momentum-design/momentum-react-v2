@@ -38,7 +38,7 @@ export default {
     options: [undefined, ...Object.values(CONSTANTS.SHAPES)],
     table: {
       type: {
-        summary: "'rectangle' | 'rounded'",
+        summary: "'rectangle' | 'isPilled'",
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.SHAPE,

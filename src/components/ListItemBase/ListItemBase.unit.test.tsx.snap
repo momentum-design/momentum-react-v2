@@ -126,7 +126,7 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
 
 exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
 <ListItemBase
-  shape="rounded"
+  shape="isPilled"
 >
   <FocusRing>
     <FocusRing
@@ -136,7 +136,7 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={false}
-        data-shape="rounded"
+        data-shape="isPilled"
         data-size={50}
         onBlur={[Function]}
         onFocus={[Function]}

@@ -63,7 +63,7 @@
     border-radius: 0.5rem;
   }
 
-  &[data-shape="rounded"] {
+  &[data-shape="isPilled"] {
     border-radius: 100vh;
 
     &[data-size="32"] {

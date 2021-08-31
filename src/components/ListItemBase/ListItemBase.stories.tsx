@@ -152,7 +152,7 @@ Shapes.parameters = {
         children: (
           <>
             <ListItemBaseSection position="start">
-              {shape === SHAPES.rounded ? (
+              {shape === SHAPES.isPilled ? (
                 <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
               ) : (
                 <Icon name="placeholder" scale={16} />
@@ -174,7 +174,7 @@ Shapes.parameters = {
         children: (
           <>
             <ListItemBaseSection position="start">
-              {shape === SHAPES.rounded ? (
+              {shape === SHAPES.isPilled ? (
                 <Avatar title="John Adams" size={24} presence={PresenceType.Active} />
               ) : (
                 <Icon name="placeholder" scale={16} />

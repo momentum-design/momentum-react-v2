@@ -68,7 +68,7 @@ describe('ListItemBase', () => {
     it('should match snapshot with shape', () => {
       expect.assertions(1);
 
-      const shape = 'rounded';
+      const shape = 'isPilled';
 
       container = mount(<ListItemBase shape={shape}>Test</ListItemBase>);
 
@@ -159,7 +159,7 @@ describe('ListItemBase', () => {
     it('should have provided shape when shape is provided', () => {
       expect.assertions(1);
 
-      const shape = 'rounded';
+      const shape = 'isPilled';
 
       container = mount(<ListItemBase shape={shape}>Test</ListItemBase>);
 
