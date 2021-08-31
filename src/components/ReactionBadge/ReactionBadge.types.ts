@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 import { ReactionProps } from '../Reaction';
 
@@ -11,7 +11,7 @@ export interface Props extends AriaButtonProps {
   className?: string;
 
   /**
-   * Custom number of people who have reacted.
+   * Custom number of reactions.
    */
   count?: number;
 
@@ -21,8 +21,7 @@ export interface Props extends AriaButtonProps {
   id?: string;
 
   /**
-   * The name of the Reaction component we want to render
-   *
+   * The name of the Reaction component to render.
    */
   name: string;
 
