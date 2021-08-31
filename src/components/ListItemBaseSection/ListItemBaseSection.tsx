@@ -14,7 +14,7 @@ const ListItemBaseSection: FC<Props> = (props: Props) => {
 };
 
 /**
- * Component that can be used inside ListItem to wrap content and display
+ * Component that can be used inside ListItemBase to wrap content and display
  * it in a certain position.
  */
 

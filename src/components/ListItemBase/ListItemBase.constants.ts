@@ -20,7 +20,6 @@ const DEFAULTS = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  focusRing: `${CLASS_PREFIX}-focus-ring`,
 };
 
 export { DEFAULTS, STYLE, SIZES, SHAPES };

@@ -25,7 +25,7 @@ function MultiTemplate<Props>(Component: FC): Story<Props> {
     const { variants } = parameters;
 
     const items = variants.map((variant, index: number) => (
-      <Component key={index} {...args} {...variant} className={variant.pseudo} />
+      <Component key={index} {...args} {...variant} />
     ));
 
     return <>{items}</>;
