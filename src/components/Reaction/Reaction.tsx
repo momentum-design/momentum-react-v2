@@ -20,7 +20,7 @@ const Reaction: FC<Props> = (props: Props) => {
         renderer: 'svg',
         loop: loop,
         autoplay: autoPlay || true,
-        animationData: animationData, // the path to the animation json
+        animationData: animationData,
       });
     }
   });
@@ -42,8 +42,8 @@ const Reaction: FC<Props> = (props: Props) => {
   if (loading) {
     // TODO: revisit this
     return <Icon name={'spinner'} scale={16} />;
-    // TODO: im not sure how this can possibly happen, but maybe?
   } else {
+    // TODO: im not sure how this can possibly happen, but maybe?
     return <Icon name={'warning'} scale={16} />;
   }
 };

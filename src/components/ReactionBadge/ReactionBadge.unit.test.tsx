@@ -3,12 +3,12 @@ import { mount } from 'enzyme';
 
 import ReactionBadge, { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 
-describe('<ReactionBadge />', () => {
+describe('<ReactionBadge name="haha" />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<ReactionBadge />);
+      const container = mount(<ReactionBadge name="haha" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -18,7 +18,7 @@ describe('<ReactionBadge />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<ReactionBadge className={className} />);
+      const container = mount(<ReactionBadge name="haha" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -28,7 +28,7 @@ describe('<ReactionBadge />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<ReactionBadge id={id} />);
+      const container = mount(<ReactionBadge name="haha" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -38,7 +38,7 @@ describe('<ReactionBadge />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<ReactionBadge style={style} />);
+      const container = mount(<ReactionBadge name="haha" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -46,7 +46,7 @@ describe('<ReactionBadge />', () => {
     it('should match snapshot with reacted', () => {
       expect.assertions(1);
 
-      const container = mount(<ReactionBadge reacted={true} />);
+      const container = mount(<ReactionBadge name="haha" reacted={true} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -54,7 +54,7 @@ describe('<ReactionBadge />', () => {
     it('should match snapshot with count', () => {
       expect.assertions(1);
 
-      const container = mount(<ReactionBadge count={1} />);
+      const container = mount(<ReactionBadge name="haha" count={1} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -64,7 +64,7 @@ describe('<ReactionBadge />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<ReactionBadge />)
+      const element = mount(<ReactionBadge name="haha" />)
         .find(ReactionBadge)
         .getDOMNode();
 
@@ -76,7 +76,7 @@ describe('<ReactionBadge />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<ReactionBadge className={className} />)
+      const element = mount(<ReactionBadge name="haha" className={className} />)
         .find(ReactionBadge)
         .getDOMNode();
 
@@ -88,7 +88,7 @@ describe('<ReactionBadge />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<ReactionBadge id={id} />)
+      const element = mount(<ReactionBadge name="haha" id={id} />)
         .find(ReactionBadge)
         .getDOMNode();
 
@@ -101,7 +101,7 @@ describe('<ReactionBadge />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<ReactionBadge style={style} />)
+      const element = mount(<ReactionBadge name="haha" style={style} />)
         .find(ReactionBadge)
         .getDOMNode();
 
@@ -113,7 +113,7 @@ describe('<ReactionBadge />', () => {
 
       const reacted = true;
 
-      const element = mount(<ReactionBadge reacted={reacted} />)
+      const element = mount(<ReactionBadge name="haha" reacted={reacted} />)
         .find(ReactionBadge)
         .getDOMNode();
 
@@ -125,7 +125,7 @@ describe('<ReactionBadge />', () => {
 
       const count = 1;
 
-      const element = mount(<ReactionBadge count={count} />)
+      const element = mount(<ReactionBadge name="haha" count={count} />)
         .find(ReactionBadge)
         .getDOMNode();
 
@@ -139,7 +139,9 @@ describe('<ReactionBadge />', () => {
 
       const mockCallback = jest.fn();
 
-      const component = mount(<ReactionBadge onPress={mockCallback} />).find(ReactionBadge);
+      const component = mount(<ReactionBadge name="haha" onPress={mockCallback} />).find(
+        ReactionBadge
+      );
 
       component.props().onPress({
         type: 'press',
