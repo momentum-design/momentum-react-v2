@@ -5,7 +5,7 @@ import { DEFAULTS, STYLE } from './ReactionBadge.constants';
 import { Props } from './ReactionBadge.types';
 import './ReactionBadge.style.scss';
 import ButtonPill from '../ButtonPill';
-import { PrimitiveConverter } from '../../utils';
+import Reaction from '../Reaction';
 
 const ReactionBadge: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
@@ -26,8 +26,8 @@ const ReactionBadge: FC<Props> = forwardRef(
         style={style}
         {...otherProps}
       >
-        <PrimitiveConverter>{children}</PrimitiveConverter>
-        <span>{count}</span>
+        <Reaction name={name} />
+        <span className="reaction-badge-count">{count}</span>
       </ButtonPill>
     );
   }

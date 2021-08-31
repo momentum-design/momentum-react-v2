@@ -1,3 +1,4 @@
+import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -17,7 +18,7 @@ export default {
     },
   },
   args: {
-    children: '👍',
+    name: 'haha',
     count: '1',
   },
 };
@@ -38,15 +39,15 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      children: ['👍'],
+      name: 'popper',
       count: 1,
     },
     {
-      children: ['👍'],
+      name: 'heart',
       count: 1,
     },
     {
-      children: ['👍'],
+      name: 'sad',
       count: 1,
     },
   ],
