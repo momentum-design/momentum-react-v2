@@ -1,17 +1,12 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Story } from '@storybook/react';
 
 import ListItemBase, { ListItemBaseProps } from '.';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
 
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import Documentation from './ListItemBase.documentation.mdx';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+
 import ListItemBaseSection from '../ListItemBaseSection';
 import { SHAPES, SIZES } from './ListItemBase.constants';
 
@@ -23,28 +18,14 @@ import argTypes from './ListItemBase.stories.args';
 
 const COMPONENT_STATES = ['', 'Hover', 'Active', 'Disable', 'Focus'];
 
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
-
 export default {
   title: 'Momentum UI/ListItemBase',
   component: ListItemBase,
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation, StyleDocs),
     },
-  },
-  argTypes: {
-    ...argTypes,
   },
 };
 
@@ -116,9 +97,14 @@ const Template: Story<ListItemBaseProps> = (args) => (
 
 const Example = Template.bind({});
 
-Example.args = {};
+Example.argTypes = { ...argTypes };
 
 const Common = MultiTemplate.bind({});
+
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.isDisabled;
+delete Common.argTypes.size;
+delete Common.argTypes.shape;
 
 Common.parameters = {
   variants: [
@@ -201,6 +187,9 @@ Common.parameters = {
 
 const Sizes = MultiTemplate.bind({});
 
+Sizes.argTypes = { ...argTypes };
+delete Sizes.argTypes.size;
+
 Sizes.parameters = {
   columns: 3,
   variants: [
@@ -233,6 +222,9 @@ Sizes.parameters = {
 };
 
 const Shapes = MultiTemplate.bind({});
+
+Shapes.argTypes = { ...argTypes };
+delete Shapes.argTypes.shape;
 
 Shapes.parameters = {
   variants: [

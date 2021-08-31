@@ -2,15 +2,24 @@
 
 exports[`ListItemBase snapshot should match snapshot 1`] = `
 <ListItemBase>
-  <li
-    className="md-list-item-base-wrapper"
-    data-disabled={false}
-    data-shape="rectangle"
-    data-size={40}
-    role="listitem"
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;
 
@@ -18,15 +27,24 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
 <ListItemBase
   className="example-class"
 >
-  <li
-    className="example-class md-list-item-base-wrapper"
-    data-disabled={false}
-    data-shape="rectangle"
-    data-size={40}
-    role="listitem"
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="example-class md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;
 
@@ -34,16 +52,25 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
 <ListItemBase
   id="example-id"
 >
-  <li
-    className="md-list-item-base-wrapper"
-    data-disabled={false}
-    data-shape="rectangle"
-    data-size={40}
-    id="example-id"
-    role="listitem"
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        id="example-id"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;
 
@@ -51,15 +78,24 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
 <ListItemBase
   isDisabled={true}
 >
-  <li
-    className="md-list-item-base-wrapper"
-    data-disabled={true}
-    data-shape="rectangle"
-    data-size={40}
-    role="listitem"
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={true}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;
 
@@ -67,15 +103,24 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
 <ListItemBase
   role="role"
 >
-  <li
-    className="md-list-item-base-wrapper"
-    data-disabled={false}
-    data-shape="rectangle"
-    data-size={40}
-    role="role"
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="role"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;
 
@@ -83,15 +128,24 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
 <ListItemBase
   shape="rounded"
 >
-  <li
-    className="md-list-item-base-wrapper"
-    data-disabled={false}
-    data-shape="rounded"
-    data-size={40}
-    role="listitem"
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rounded"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;
 
@@ -99,15 +153,24 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
 <ListItemBase
   size={40}
 >
-  <li
-    className="md-list-item-base-wrapper"
-    data-disabled={false}
-    data-shape="rectangle"
-    data-size={40}
-    role="listitem"
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;
 
@@ -119,19 +182,28 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <li
-    className="md-list-item-base-wrapper"
-    data-disabled={false}
-    data-shape="rectangle"
-    data-size={40}
-    role="listitem"
-    style={
-      Object {
-        "color": "pink",
-      }
-    }
-  >
-    Test
-  </li>
+  <FocusRing>
+    <FocusRing
+      focusClass="children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
 </ListItemBase>
 `;

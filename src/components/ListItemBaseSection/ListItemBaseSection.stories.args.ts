@@ -1,6 +1,6 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
-import { LIST_ITEM_SECTION_CONSTANTS as CONSTANTS } from '.';
+import { LIST_ITEM_BASE_SECTION_CONSTANTS as CONSTANTS } from '.';
 
 export default {
   ...commonStyles,

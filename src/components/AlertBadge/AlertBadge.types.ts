@@ -1,13 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 
-<<<<<<< HEAD:src/components/ListItemBase/ListItemBase.types.ts
-export type ListItemBaseSize = 32 | 40 | 50;
-
-export interface Props {
-=======
 export interface Props extends AriaButtonProps {
->>>>>>> master:src/components/AlertBadge/AlertBadge.types.ts
   /**
    * Child components of this ButtonPill.
    */
@@ -31,11 +25,7 @@ export interface Props extends AriaButtonProps {
   /**
    * Image to use for this component.
    */
-<<<<<<< HEAD:src/components/ListItemBase/ListItemBase.types.ts
-  size?: ListItemBaseSize;
-=======
   image?: ReactNode;
->>>>>>> master:src/components/AlertBadge/AlertBadge.types.ts
 
   /**
    * Label to use for this component.

@@ -10,11 +10,6 @@
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
 
-  &:focus, &.focus {
-    box-shadow: var(--focus-ring-box-shadow);
-    outline: var(--focus-ring-outline);
-  }
-
   &:hover, &.hover {
     background-color: var(--theme-background-primary-hover);
   }

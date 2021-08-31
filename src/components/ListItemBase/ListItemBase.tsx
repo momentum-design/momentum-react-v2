@@ -6,6 +6,7 @@ import { Props } from './ListItemBase.types';
 import { DEFAULTS, STYLE } from './ListItemBase.constants';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { verifyTypes } from '../../helpers/verifyTypes';
+import FocusRing from '../FocusRing';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
@@ -47,17 +48,19 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
   }
 
   return (
-    <li
-      ref={ref}
-      data-size={size}
-      data-disabled={isDisabled}
-      data-shape={shape}
-      className={classnames(className, STYLE.wrapper)}
-      role={role}
-      {...rest}
-    >
-      {content}
-    </li>
+    <FocusRing>
+      <li
+        ref={ref}
+        data-size={size}
+        data-disabled={isDisabled}
+        data-shape={shape}
+        className={classnames(className, STYLE.wrapper)}
+        role={role}
+        {...rest}
+      >
+        {content}
+      </li>
+    </FocusRing>
   );
 };
 
