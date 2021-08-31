@@ -1,9 +1,9 @@
-import React, { CSSProperties, FC } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 
 import './Flex.style.scss';
 import { Props } from './Flex.types';
-import { DEFAULTS, STYLE } from './Flex.constants';
+import { CLASS_PREFIX, DEFAULTS, STYLE } from './Flex.constants';
 
 const Flex: FC<Props> = (props: Props) => {
   const {
@@ -20,6 +20,7 @@ const Flex: FC<Props> = (props: Props) => {
     id,
     ...rest
   } = props;
+
   const _style = {
     flexDirection: direction || DEFAULTS.DIRECTION,
     justifyContent: justifyContent || DEFAULTS.JUSTIFY_CONTENT,
@@ -27,6 +28,17 @@ const Flex: FC<Props> = (props: Props) => {
     alignContent: alignContent || DEFAULTS.ALIGN_CONTENT,
     flexWrap: wrap || 'nowrap',
   };
+
+  const buildClasses = () => {
+    return [
+      `${CLASS_PREFIX}-direction-${_style.flexDirection}`,
+      `${CLASS_PREFIX}-justify-content-${_style.justifyContent}`,
+      `${CLASS_PREFIX}-align-items-${_style.alignItems}`,
+      `${CLASS_PREFIX}-align-content-${_style.alignContent}`,
+      `${CLASS_PREFIX}-${_style.flexWrap}`,
+    ];
+  };
+
   return (
     <div
       {...rest}
@@ -34,15 +46,13 @@ const Flex: FC<Props> = (props: Props) => {
       data-xgap={_style.flexDirection === 'row' && true}
       data-ygap={_style.flexDirection === 'column' && true}
       style={{
-        display: 'flex',
-        ...(_style as CSSProperties),
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ['--flex-xgap-size' as any]: xgap,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ['--flex-ygap-size' as any]: ygap,
         ...style,
       }}
-      className={classnames(className, STYLE.wrapper)}
+      className={classnames(STYLE.wrapper, ...buildClasses(), className)}
     >
       {children}
     </div>

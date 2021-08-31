@@ -3,19 +3,13 @@
 exports[`Flex snapshot should match snapshot 1`] = `
 <Flex>
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -29,19 +23,13 @@ exports[`Flex snapshot should match snapshot with alignContent 1`] = `
   alignContent="center"
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-center md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "center",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -55,19 +43,13 @@ exports[`Flex snapshot should match snapshot with alignItems 1`] = `
   alignItems="center"
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-center md-flex-align-content-flex-start md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -81,19 +63,13 @@ exports[`Flex snapshot should match snapshot with className 1`] = `
   className="example-class"
 >
   <div
-    className="example-class md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-nowrap example-class"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -107,7 +83,7 @@ exports[`Flex snapshot should match snapshot with id 1`] = `
   id="example-id"
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     id="example-id"
@@ -115,12 +91,6 @@ exports[`Flex snapshot should match snapshot with id 1`] = `
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -134,19 +104,13 @@ exports[`Flex snapshot should match snapshot with justifyContent 1`] = `
   justifyContent="center"
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-center md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "center",
       }
     }
   >
@@ -164,20 +128,14 @@ exports[`Flex snapshot should match snapshot with style 1`] = `
   }
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
         "color": "pink",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -191,19 +149,13 @@ exports[`Flex snapshot should match snapshot with wrap 1`] = `
   wrap="wrap-reverse"
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-wrap-reverse"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap-reverse",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -217,19 +169,13 @@ exports[`Flex snapshot should match snapshot with xgap 1`] = `
   xgap="1rem"
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": "1rem",
         "--flex-ygap-size": undefined,
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >
@@ -243,19 +189,13 @@ exports[`Flex snapshot should match snapshot with ygap 1`] = `
   ygap="1rem"
 >
   <div
-    className="md-flex-wrapper"
+    className="md-flex-wrapper md-flex-direction-row md-flex-justify-content-flex-start md-flex-align-items-flex-start md-flex-align-content-flex-start md-flex-nowrap"
     data-xgap={true}
     data-ygap={false}
     style={
       Object {
         "--flex-xgap-size": undefined,
         "--flex-ygap-size": "1rem",
-        "alignContent": "flex-start",
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
       }
     }
   >

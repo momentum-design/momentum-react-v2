@@ -156,64 +156,64 @@ describe('Flex', () => {
       expect.assertions(1);
 
       const justifyContent = 'center';
-      const styleString = 'justify-content: center;';
+      const className = 'md-flex-justify-content-center';
 
       container = mount(<Flex justifyContent={justifyContent}>Test</Flex>);
 
       const element = container.find(Flex).getDOMNode();
 
-      expect(element.getAttribute('style').indexOf(styleString)).not.toBe(-1);
+      expect(element.classList.contains(className)).toBe(true);
     });
 
     it('should have provided alignContent when alignContent is provided', () => {
       expect.assertions(1);
 
       const alignContent = 'center';
-      const styleString = 'align-content: center;';
+      const className = 'md-flex-align-content-center';
 
       container = mount(<Flex alignContent={alignContent}>Test</Flex>);
 
       const element = container.find(Flex).getDOMNode();
 
-      expect(element.getAttribute('style').indexOf(styleString)).not.toBe(-1);
+      expect(element.classList.contains(className)).toBe(true);
     });
 
     it('should have provided alignItems when alignItems is provided', () => {
       expect.assertions(1);
 
       const alignItems = 'center';
-      const styleString = 'align-items: center;';
+      const className = 'md-flex-align-items-center';
 
       container = mount(<Flex alignItems={alignItems}>Test</Flex>);
 
       const element = container.find(Flex).getDOMNode();
 
-      expect(element.getAttribute('style').indexOf(styleString)).not.toBe(-1);
+      expect(element.classList.contains(className)).toBe(true);
     });
 
     it('should have provided direction when direction is provided', () => {
       expect.assertions(1);
 
       const direction = 'row-reverse';
-      const styleString = 'flex-direction: row-reverse;';
+      const className = 'md-flex-direction-row-reverse';
 
       container = mount(<Flex direction={direction}>Test</Flex>);
 
       const element = container.find(Flex).getDOMNode();
 
-      expect(element.getAttribute('style').indexOf(styleString)).not.toBe(-1);
+      expect(element.classList.contains(className)).toBe(true);
     });
 
     it('should have provided wrap when wrap is provided', () => {
       expect.assertions(1);
 
       const wrap = 'wrap-reverse';
-      const styleString = 'flex-wrap: wrap-reverse;';
+      const className = 'md-flex-wrap-reverse';
 
       container = mount(<Flex wrap={wrap}>Test</Flex>);
 
       const element = container.find(Flex).getDOMNode();
-      expect(element.getAttribute('style').indexOf(styleString)).not.toBe(-1);
+      expect(element.classList.contains(className)).toBe(true);
     });
 
     it('should have provided xgap when xgap is provided', () => {

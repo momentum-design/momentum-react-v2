@@ -1,29 +1,12 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Story } from '@storybook/react';
 
 import Flex, { FlexProps } from './';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
 
 import Documentation from './Flex.documentation.mdx';
 import argTypes from './Flex.stories.args';
-
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 export default {
   title: 'Momentum UI/Flex',
@@ -31,20 +14,17 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation, StyleDocs),
     },
-  },
-  argTypes: {
-    ...argTypes,
   },
 };
 
 const Items = () => {
   return (
     <>
-      <p style={{ border: '1px solid blue' }}>Item 1</p>
-      <p style={{ border: '1px solid blue' }}>Item 2</p>
-      <p style={{ border: '1px solid blue' }}>Item 3</p>
+      <div style={{ border: '1px solid blue' }}>Item 1</div>
+      <div style={{ border: '1px solid blue' }}>Item 2</div>
+      <div style={{ border: '1px solid blue' }}>Item 3</div>
     </>
   );
 };
@@ -81,6 +61,8 @@ const MultiTemplate: Story<FlexProps> = (args: FlexProps, { parameters }) => {
 
 const Example = Template.bind({});
 
+Example.argTypes = { ...argTypes };
+
 const Common = MultiTemplate.bind({});
 
 Common.parameters = {
@@ -93,5 +75,13 @@ Common.parameters = {
     { children: <Items />, direction: 'column', alignItems: 'flex-end', ygap: '1rem' },
   ],
 };
+
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.children;
+delete Common.argTypes.justifyContent;
+delete Common.argTypes.xgap;
+delete Common.argTypes.ygap;
+delete Common.argTypes.direction;
+delete Common.argTypes.alignItems;
 
 export { Example, Common };
