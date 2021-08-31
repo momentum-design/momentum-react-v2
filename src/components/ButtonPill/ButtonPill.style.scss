@@ -305,7 +305,7 @@
   border-radius: 100vh;
   display: flex;
   flex-shrink: 0;
-  min-width: 4em;
+  min-width: 1em;
 
   &[data-size="40"] {
     font-size: 1rem;
@@ -329,6 +329,13 @@
     font-size: 0.75rem;
     height: 1.5rem;
     padding: 0 0.625rem;
+  }
+
+  &[data-size="20"] {
+    font-size: 0.75rem;
+    height: 1.25rem;
+    line-height: 1.125rem;
+    padding: 0 0.5rem;
   }
 
   > *:not(:first-child) {
