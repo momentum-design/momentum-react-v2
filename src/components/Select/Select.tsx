@@ -78,7 +78,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         data-direction={direction}
         style={{
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          ['--md-global-select-dropdown-input-height' as any]: `${(inputHeight / 16).toFixed(
+          ['--md-globals-select-dropdown-input-height' as any]: `${(inputHeight / 16).toFixed(
             1
           )}rem`,
         }}

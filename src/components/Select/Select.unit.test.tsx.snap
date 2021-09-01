@@ -1255,7 +1255,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         onKeyDown={[Function]}
         style={
           Object {
-            "--md-global-select-dropdown-input-height": "0.0rem",
+            "--md-globals-select-dropdown-input-height": "0.0rem",
           }
         }
       >
@@ -2335,7 +2335,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         onKeyDown={[Function]}
         style={
           Object {
-            "--md-global-select-dropdown-input-height": "0.0rem",
+            "--md-globals-select-dropdown-input-height": "0.0rem",
           }
         }
       >
@@ -3780,7 +3780,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         onKeyDown={[Function]}
         style={
           Object {
-            "--md-global-select-dropdown-input-height": "0.0rem",
+            "--md-globals-select-dropdown-input-height": "0.0rem",
           }
         }
       >

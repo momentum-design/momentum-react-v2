@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React, { RefObject, ReactElement, forwardRef } from 'react';
 
-import './ListBoxBase.style.scss';
 import { Props } from './ListBoxBase.types';
 import ListBoxSection from '../ListBoxSection';
 import ListBoxItem from '../ListBoxItem';

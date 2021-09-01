@@ -85,7 +85,7 @@
 
   &[data-direction="top"] {
     // internal token set in React code
-    bottom: calc(var(--md-global-select-dropdown-input-height) + 0.25rem);
+    bottom: calc(var(--md-globals-select-dropdown-input-height) + 0.25rem);
   }
 
   &[data-direction="bottom"] {

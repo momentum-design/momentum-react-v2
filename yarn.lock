@@ -1805,7 +1805,7 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@momentum-ui/design-tokens@0.0.24":
+"@momentum-ui/design-tokens@^0.0.24":
   version "0.0.24"
   resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.24.tgz#913deffb3b357e06a63fe935c52a7c1803b21cbe"
   integrity sha512-vf3ZrCqVnSCWrsXKbIkDrIBrtFxTe/qR49Xixk9TX+30fLrrvhf0vDGVlkgTo0FOxPdNQJqO6TgxbH4SwKPfgA==
