@@ -1,0 +1,12 @@
+.md-list-box-base-wrapper {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  box-sizing: border-box;
+
+  &:focus {
+    box-shadow: var(--focus-ring-box-shadow);
+    outline: var(--focus-ring-outline);
+    border-radius: 0.5rem;
+  }
+}

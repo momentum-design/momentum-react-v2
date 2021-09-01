@@ -4,7 +4,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot 1`] = `
 <MenuListBackground>
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ul
@@ -24,7 +24,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with className 1`
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ul
@@ -44,7 +44,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with color 1`] = 
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ul
@@ -64,7 +64,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with id 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ul
@@ -89,7 +89,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with style 1`] = 
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ul

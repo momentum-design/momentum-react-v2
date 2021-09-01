@@ -1,0 +1,94 @@
+.md-select-wrapper {
+  min-width: 16rem;
+  position: relative;
+  display: inline-block;
+
+  label {
+    display: flex;
+    color: var(--label-primary-text);
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    margin-left: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+}
+
+.md-select-dropdown-input {
+  width: 100%;
+  background-color: var(--textinput-background);
+  color: var(--textinput-placeholder-text);
+  border: 1px solid var(--textinput-border);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  outline: none;
+
+  &:hover {
+    background-color: var(--textinput-background-hovered);
+    color: var(--textinput-text-hovered);
+    border-color: var(--textinput-border-hovered);
+  }
+
+  &:active {
+    background-color: var(--textinput-background-focused);
+    color: var(--textinput-text-focused);
+  }
+
+  &.md-select-selected {
+    color: var(--textinput-text);
+  }
+
+  &.md-select-open {
+    background-color: var(--textinput-background-active);
+    border-color: var(--textinput-border-active);
+    color: var(--textinput-text-disabled);
+  }
+
+  &:disabled {
+    background-color: var(--textinput-background-disabled);
+    color: var(--theme-text-primary-disabled);
+    border-color: var(--textinput-border-disabled);
+
+    svg {
+      fill: var(--theme-text-primary-disabled);
+    }
+  }
+}
+
+.md-select-icon-wrapper {
+  padding-left: 0.5rem;
+}
+
+.md-select-selected-item-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  > *:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
+
+.md-select-overlay {
+  min-width: 16rem;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+
+  &[data-direction="top"] {
+    // internal token set in React code
+    bottom: calc(var(--md-global-select-dropdown-input-height) + 0.25rem);
+  }
+
+  &[data-direction="bottom"] {
+    margin-top: 0.25rem;
+  }
+}
