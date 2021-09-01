@@ -106,6 +106,7 @@ export {
   Avatar as AvatarNext,
   ButtonCircle,
   AvatarCompact as AvatarCompactNext,
+  ButtonControl,
   ButtonDialpad,
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,
