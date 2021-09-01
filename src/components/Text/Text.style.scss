@@ -1,6 +1,6 @@
 .md-text-wrapper {
     font-family: CiscoSansTT; // IEFIX
-    font-family: var(--font-default);
+    font-family: var(--md-globals-font-default);
 
     &[data-type='display']{
         font-size: 2.5rem;

@@ -7,7 +7,7 @@ const DEFAULTS = {
 const TYPES = {
   DISPLAY: 'display',
   BANNER_TERTIARY: 'banner-tertiary',
-  BANNERPRIMARY: 'banner-primary',
+  BANNER_PRIMARY: 'banner-primary',
   BANNER_SECONDARY: 'banner-secondary',
   TITLE: 'title',
   HEADER_PRIMARY: 'header-primary',
