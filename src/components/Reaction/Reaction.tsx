@@ -19,7 +19,7 @@ const Reaction: FC<Props> = (props: Props) => {
         container: svgContainer.current, // the dom element that will contain the animation
         renderer: 'svg',
         loop: loop,
-        autoplay: autoPlay || true,
+        autoplay: autoPlay,
         animationData: animationData,
       });
     }

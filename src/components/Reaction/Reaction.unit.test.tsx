@@ -3,7 +3,7 @@ import { mountAndWait } from '../../../test/utils';
 
 import Reaction, { REACTION_CONSTANTS as CONSTANTS } from './';
 
-describe('<Reaction name="haha"/>', () => {
+describe('<Reaction/>', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
@@ -42,8 +42,6 @@ describe('<Reaction name="haha"/>', () => {
 
       expect(container).toMatchSnapshot();
     });
-
-    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
@@ -90,10 +88,15 @@ describe('<Reaction name="haha"/>', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    /* ...additional attribute tests... */
-  });
+    it('should have provided size when size is provided', async () => {
+      expect.assertions(1);
 
-  describe('actions', () => {
-    /* ...action tests... */
+      const size = 16;
+
+      const wrapper = await mountAndWait(<Reaction name="haha" size={size} />);
+      const element = wrapper.find(Reaction).getDOMNode();
+
+      expect(element.getAttribute('data-size')).toBe(`${size}`);
+    });
   });
 });

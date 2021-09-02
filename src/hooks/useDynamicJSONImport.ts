@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 
 interface UseDynamicJSONImportOptions {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onCompleted?: (name: string, animationData: any) => void;
   onError?: (err: Error) => void;
 }
@@ -8,6 +9,7 @@ interface UseDynamicJSONImportOptions {
 interface UseDynamicJSONImportReturn {
   error?: Error;
   loading?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   animationData?: any;
 }
 
@@ -22,6 +24,7 @@ function useDynamicJSONImport(
   name: string,
   options: UseDynamicJSONImportOptions = {}
 ): UseDynamicJSONImportReturn {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ImportedJSONRef = useRef<any | any>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>(undefined);
@@ -31,6 +34,7 @@ function useDynamicJSONImport(
     setLoading(true);
     const importJSON = async (): Promise<void> => {
       try {
+        setError(undefined);
         setError(undefined);
         ImportedJSONRef.current =
           await require(`@momentum-ui/animations/lottie/reactions/${name}.json`);

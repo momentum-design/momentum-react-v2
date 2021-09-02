@@ -5,15 +5,27 @@ import { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 export default {
   ...commonAriaButton,
   ...commonStyles,
-  children: {
-    description: 'Provides the child nodes for this element.',
+  count: {
+    description: 'Number of reactions.',
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: 1,
+      },
+    },
+  },
+  name: {
+    description: 'Name of the reaction emoji to render.',
     control: { type: 'text' },
     table: {
       type: {
-        summary: 'ReactNode',
+        summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: 'haha',
       },
     },
   },

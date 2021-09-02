@@ -137,4 +137,6 @@ export {
   SearchInput,
   TextInput,
   AvatarListItem,
+  Reaction,
+  ReactionBadge,
 } from './components';
