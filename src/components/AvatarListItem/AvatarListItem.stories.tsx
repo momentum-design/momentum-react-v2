@@ -15,7 +15,8 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
-  args: { // Args provided to all stories by default.
+  args: {
+    // Args provided to all stories by default.
     children: 'A', // Example of a default arg for all stories.
   },
 };
