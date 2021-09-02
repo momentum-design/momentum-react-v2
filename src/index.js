@@ -110,6 +110,7 @@ export {
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,
   ButtonPill,
+  ButtonSimple,
   CodeInput,
   FocusRing,
   InputMessage as InputMessageNew,

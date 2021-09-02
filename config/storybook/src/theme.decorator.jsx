@@ -8,7 +8,7 @@ const theme = (Story, { globals }) => {
   const displayProperties =
     display === 'Flex'
       ? {
-          alignItems: 'center',
+          alignItems: 'flex-start',
           display: 'flex',
           flexWrap: 'wrap',
         }

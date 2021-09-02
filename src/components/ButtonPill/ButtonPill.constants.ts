@@ -19,6 +19,7 @@ const SIZES = {
   32: 32,
   28: 28,
   24: 24,
+  20: 20,
 };
 
 const STYLE = {

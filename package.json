@@ -96,7 +96,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-ui/design-tokens": "0.0.19",
+    "@momentum-ui/design-tokens": "^0.0.24",
     "@momentum-ui/icons": "8.22.2",
     "@momentum-ui/icons-rebrand": "^1.2.0",
     "@momentum-ui/tokens": "^1.7.1",

@@ -5,6 +5,7 @@ const generateMain = (dir) => {
   return {
     stories: [path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)')],
     addons: [
+      '@storybook/addon-docs',
       '@storybook/addon-links',
       '@storybook/addon-essentials',
       '@storybook/preset-scss',
