@@ -106,6 +106,7 @@ export {
   Avatar as AvatarNext,
   ButtonCircle,
   AvatarCompact as AvatarCompactNext,
+  ButtonControl,
   ButtonDialpad,
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,
@@ -117,5 +118,6 @@ export {
   ExampleComponent,
   Icon as IconNext,
   ThemeProvider,
+  Text,
   ContentSeparator,
 } from './components';
