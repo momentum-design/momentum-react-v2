@@ -442,9 +442,9 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
           <Reaction
             name="haha"
           >
-            <Icon
-              name="spinner"
-              scale={16}
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
             />
           </Reaction>
           <span
@@ -506,9 +506,9 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
           <Reaction
             name="haha"
           >
-            <Icon
-              name="spinner"
-              scale={16}
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
             />
           </Reaction>
           <span
@@ -570,9 +570,9 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
           <Reaction
             name="haha"
           >
-            <Icon
-              name="spinner"
-              scale={16}
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
             />
           </Reaction>
           <span
@@ -638,9 +638,9 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
           <Reaction
             name="haha"
           >
-            <Icon
-              name="spinner"
-              scale={16}
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
             />
           </Reaction>
           <span
@@ -702,9 +702,9 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
           <Reaction
             name="haha"
           >
-            <Icon
-              name="spinner"
-              scale={16}
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
             />
           </Reaction>
           <span
@@ -780,9 +780,9 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
           <Reaction
             name="haha"
           >
-            <Icon
-              name="spinner"
-              scale={16}
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
             />
           </Reaction>
           <span
