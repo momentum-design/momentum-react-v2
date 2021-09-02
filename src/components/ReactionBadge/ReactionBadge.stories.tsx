@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> ff1f59009 (feat(reactions): implement SVG reactions)
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -25,11 +21,7 @@ export default {
     },
   },
   args: {
-<<<<<<< HEAD
     reaction: <Reaction name={REACTION_NAMES.haha} autoPlay loop />,
-=======
-    name: 'haha',
->>>>>>> ff1f59009 (feat(reactions): implement SVG reactions)
     count: '1',
   },
 };
@@ -50,7 +42,6 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-<<<<<<< HEAD
       reaction: <Reaction name={REACTION_NAMES.popper} autoPlay loop />,
       count: 1,
     },
@@ -60,17 +51,6 @@ Common.parameters = {
     },
     {
       reaction: <Reaction name={REACTION_NAMES.sad} autoPlay loop />,
-=======
-      name: 'popper',
-      count: 1,
-    },
-    {
-      name: 'heart',
-      count: 1,
-    },
-    {
-      name: 'sad',
->>>>>>> ff1f59009 (feat(reactions): implement SVG reactions)
       count: 1,
     },
   ],

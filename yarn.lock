@@ -13656,13 +13656,8 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3
 
 lottie-web@^5.7.13:
   version "5.7.13"
-<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.7.13.tgz#c4087e4742c485fc2c4034adad65d1f3fcd438b0"
   integrity sha512-6iy93BGPkdk39b0jRgJ8Zosxi8QqcMP5XcDvg1f0XAvEkke6EMCl6BUO4Lu78dpgvfG2tzut4QJ+0vCrfbrldQ==
-=======
-  resolved "https://engci-maven.cisco.com/artifactory/api/npm/collab-npm/lottie-web/-/lottie-web-5.7.13.tgz#c4087e4742c485fc2c4034adad65d1f3fcd438b0"
-  integrity sha1-xAh+R0LEhfwsQDStrWXR8/zUOLA=
->>>>>>> ff1f59009 (feat(reactions): implement SVG reactions)
 
 loud-rejection@^1.0.0, loud-rejection@^1.6.0:
   version "1.6.0"
