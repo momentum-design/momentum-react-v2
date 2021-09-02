@@ -118,5 +118,6 @@ export {
   ExampleComponent,
   Icon as IconNext,
   ThemeProvider,
+  Text,
   ContentSeparator,
 } from './components';
