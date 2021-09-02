@@ -39,7 +39,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
   delete buttonProps.color;
 
-  const overlayRef = useRef(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const { overlayProps } = useOverlay(
     {
       onClose: () => state.close(),

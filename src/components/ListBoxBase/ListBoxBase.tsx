@@ -12,7 +12,7 @@ import MenuListBackground from '../MenuListBackground';
 
 export const ListBoxContext = React.createContext<ListState<unknown>>(null);
 
-function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) {
+const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) => {
   const { state, className, id, style } = props;
 
   const mutatedProps = {
@@ -55,7 +55,7 @@ function ListBoxBase<T extends object>(props: Props<T>, ref: RefObject<HTMLUList
       </MenuListBackground>
     </ListBoxContext.Provider>
   );
-}
+};
 
 /**
  * ListBox component that displays a list of options
