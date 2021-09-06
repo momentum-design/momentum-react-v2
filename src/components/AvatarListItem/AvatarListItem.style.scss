@@ -1,14 +1,41 @@
-.md-avatar-list-item-wrapper {}
-
 .md-avatar-list-item-text-wrapper {
-  p {
-    margin: 0;
+  display: flex;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0;
+      float: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 10rem; // I need help with this, I'd like to make this responsive but I didn't manage
+    }
+
+    small {
+      margin: 0;
+      color: var(--label-secondary-text) !important;
+      margin-top: -4px;
+      overflow: auto;
+      text-overflow: ellipsis;
+    }
   }
-  small {
-    margin: 0;
+
+  svg {
+    margin-right: 0.5rem;
   }
+
+
 }
 
 .md-avatar-list-item-actions-wrapper {
   display: flex;
+  justify-content: flex-end;
+
+  > button:last-child {
+    margin-left: 0.5rem !important;
+  }
 }

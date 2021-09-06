@@ -1,11 +1,12 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import AvatarListItem, { AvatarListItemProps } from './';
 import argTypes from './AvatarListItem.stories.args';
 import Documentation from './AvatarListItem.stories.docs.mdx';
-
+import { action } from '@storybook/addon-actions';
+import { PresenceType } from '../Avatar/Avatar.types';
 export default {
   title: 'Momentum UI/AvatarListItem',
   component: AvatarListItem,
@@ -15,31 +16,65 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
-  args: {
-    // Args provided to all stories by default.
-    children: 'A', // Example of a default arg for all stories.
+};
+
+const Example = Template<AvatarListItemProps>(AvatarListItem).bind({});
+
+Example.args = {
+  firstLine: 'This is a first line',
+  secondLine: 'This is a second line',
+  avatarProps: {
+    title: 'Cisco',
+    presence: PresenceType.Active,
   },
 };
 
-/**
- * Primary story. This renders a single component with all external props.
- */
-const Example = Template<AvatarListItemProps>(AvatarListItem).bind({});
-
 Example.argTypes = { ...argTypes };
 
-// TODO: Inject additional stories here.
-
-/**
- * Common variants story. This renders multiple variants of a single component.
- */
-const Common = MultiTemplate<AvatarListItemProps>(AvatarListItem).bind({});
+const Common = MultiTemplateWithPseudoStates<AvatarListItemProps>(AvatarListItem).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
+Common.args = {
+  avatarProps: {
+    title: 'Cisco',
+    presence: PresenceType.Active,
+  },
+};
+
 Common.parameters = {
-  variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
+  variants: [
+    {
+      label: 'Long text',
+      firstLine: 'This is a very long first line',
+      isSchedulerAvailable: true,
+      displayMoreAction: false,
+      displayMuteAction: true,
+    },
+    {
+      label: 'Two lines',
+      firstLine: 'Example B',
+      secondLine: 'Example second line',
+      isSchedulerUnavailable: true,
+      displayMoreAction: true,
+      displayMuteAction: true,
+      isMuted: false,
+    },
+    {
+      label: 'Scheduler Unknown',
+      firstLine: 'Example C',
+      isSchedulerUnknown: true,
+      displayMuteAction: true,
+    },
+    { label: 'Scheduler Quite Hours', firstLine: 'Example C', isSchedulerQHours: true },
+    {
+      label: 'With hover action',
+      firstLine: 'Example C',
+      isSchedulerQHours: true,
+      onHoverActionCallback: action('onHoverActionCallback'),
+    },
+  ],
 };
 
 export { Example, Common };
