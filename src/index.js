@@ -114,6 +114,7 @@ export {
   ButtonSimple,
   CodeInput,
   FocusRing,
+  NavigationTab,
   InputMessage as InputMessageNew,
   ExampleComponent,
   Icon as IconNext,

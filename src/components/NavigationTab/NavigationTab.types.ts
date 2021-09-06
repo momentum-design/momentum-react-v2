@@ -17,12 +17,27 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * Child component of this Badge
-   */
-  children?: string;
-
-  /**
-   * Size index of this Badge
+   * Size index of this NavTab.
    */
   size?: number;
+
+  /**
+   * Size index of this NavTab.
+   */
+  label?: string;
+
+  /**
+   * Size index of this NavTab.
+   */
+  icon?: string;
+
+  /**
+   * Child components of this ButtonPill.
+   */
+  count?: number;
+
+  /**
+   * True if the tab is active.
+   */
+  active?: boolean;
 }
