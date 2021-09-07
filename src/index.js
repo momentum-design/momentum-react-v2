@@ -118,4 +118,5 @@ export {
   Icon as IconNext,
   ThemeProvider,
   ContentSeparator,
+  GlobalSearchInput,
 } from './components';
