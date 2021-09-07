@@ -39,7 +39,14 @@ Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
 Common.parameters = {
-  variants: [{ value: 'Typed' }, { searching: true }, { disabled: true }],
+  variants: [
+    { value: 'Typed' },
+    { searching: true, placeholder: 'Searching...' },
+    { disabled: true },
+    { searchContext: 'With:' },
+    { searchContext: 'From:' },
+    { searchContext: 'In:' },
+  ],
 };
 
 export { Example, Common };

@@ -1,6 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
+import { AriaSearchFieldProps } from '@react-types/searchfield';
 
-export interface Props {
+export interface Props extends AriaSearchFieldProps {
   /**
    * Child components of this ButtonPill.
    */
@@ -22,27 +23,12 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * Current value of input
-   */
-  value?: string;
-
-  /**
    * Whether the global search is searching or not
    */
   searching?: boolean;
 
   /**
-   * Called when the input changes
+   * Text to add before input
    */
-  onChange?: () => string;
-
-  /**
-   * Placeholder text
-   */
-  placeholder?: string;
-
-  /**
-   * Whether the input is disabled
-   */
-  disabled?: boolean;
+  searchContext?: string;
 }

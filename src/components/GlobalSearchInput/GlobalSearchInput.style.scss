@@ -1,20 +1,26 @@
 .md-global-search-input-wrapper {
-  display: inline-block;
   position: relative;
+  border-radius: 6.25rem;
+  width: 22.5rem;
+  background-color: var(--theme-background-secondary-normal);
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  height: 1.75rem;
+  &.search-input-focus {
+    border: 1px solid var(--theme-outline-focus-normal);
+  }
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
 
   input {
-    border-radius: 6.25rem;
     border: 0;
-    width: 22.5rem;
-    padding: 0 1rem 0 2.5rem;
-    height: 1.75rem;
-    box-sizing: border-box;
-    background-color: var(--theme-background-secondary-normal);
+    background-color: transparent;
+
     color: var(--theme-text-primary-normal);
     font-family: var(--md-globals-font-default);
-    &:focus {
-      border: 1px solid var(--theme-outline-focus-normal);
-    }
+    flex-grow: 1;
 
     &:focus-visible {
       outline: none;
@@ -25,16 +31,22 @@
     }
   }  
 
+  .search-context-container ~ input {
+    padding-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
   &:hover {
-    input {
-      background-color: var(--theme-background-secondary-hover);
-    }  
+    background-color: var(--theme-background-secondary-hover);
   }  
 
   .search-icon {
-    position: absolute;
-    left: 1rem;
-    top: 0.25rem;
+    margin-left: 1.125rem;
+    margin-right: 0.5625rem;
+    height: 1.625rem;
+    align-content: center;
+    flex-grow: 0;
   }
 
   .clear-icon {
@@ -45,8 +57,28 @@
     right: 0.75rem;
     top: 0.25rem;
     color: var(--theme-text-secondary-normal);
+
     &:active {
       color: var(--theme-text-primary-normal);
+    }
+  }
+
+  .search-context-container {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: var(--theme-button-primary-normal);
+    color: var(--theme-text-primary-inverted);
+    border-radius: 1rem;
+    padding: 2px 8px 2px 8px;
+    margin-top: 1px;
+    margin-right: 1px;
+    font-size: 0.875rem;
+    height: 1.5rem;
+    box-sizing: border-box;
+    p {
+      margin: 0;
     }
   }
 
