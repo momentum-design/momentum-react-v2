@@ -116,7 +116,7 @@ describe('<ButtonControl />', () => {
       const wrapper = await mountAndWait(<ButtonControl control="close" isCircular />);
       const element = wrapper.find(ButtonControl).getDOMNode();
 
-      expect(element.attributes['data-circular']).toBe('true');
+      expect(element.getAttribute('data-circular')).toBe('true');
     });
   });
 
