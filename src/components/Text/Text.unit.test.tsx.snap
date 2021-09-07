@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should match snapshot 1`] = `
+<Text>
+  <p
+    className="md-text-wrapper md-text-color"
+    data-type="body-primary"
+  >
+    Hello
+  </p>
+</Text>
+`;
+
+exports[`Text should match snapshot with className 1`] = `
+<Text
+  className="example-class"
+>
+  <p
+    className="md-text-wrapper md-text-color example-class"
+    data-type="body-primary"
+  />
+</Text>
+`;
+
+exports[`Text should match snapshot with id 1`] = `
+<Text
+  id="example-id"
+>
+  <p
+    className="md-text-wrapper md-text-color"
+    data-type="body-primary"
+    id="example-id"
+  />
+</Text>
+`;
+
+exports[`Text should match snapshot with style 1`] = `
+<Text
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  <p
+    className="md-text-wrapper md-text-color"
+    data-type="body-primary"
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  />
+</Text>
+`;
+
+exports[`Text should match snapshot with type 1`] = `
+<div>
+  <Text
+    key="0"
+    type="display"
+  >
+    <h1
+      className="md-text-wrapper md-text-color"
+      data-type="display"
+    >
+      Example Text
+    </h1>
+  </Text>
+  <Text
+    key="1"
+    type="banner-tertiary"
+  >
+    <h1
+      className="md-text-wrapper md-text-color"
+      data-type="banner-tertiary"
+    >
+      Example Text
+    </h1>
+  </Text>
+  <Text
+    key="2"
+    type="banner-primary"
+  >
+    <h1
+      className="md-text-wrapper md-text-color"
+      data-type="banner-primary"
+    >
+      Example Text
+    </h1>
+  </Text>
+  <Text
+    key="3"
+    type="banner-secondary"
+  >
+    <h1
+      className="md-text-wrapper md-text-color"
+      data-type="banner-secondary"
+    >
+      Example Text
+    </h1>
+  </Text>
+  <Text
+    key="4"
+    type="title"
+  >
+    <h2
+      className="md-text-wrapper md-text-color"
+      data-type="title"
+    >
+      Example Text
+    </h2>
+  </Text>
+  <Text
+    key="5"
+    type="header-primary"
+  >
+    <h3
+      className="md-text-wrapper md-text-color"
+      data-type="header-primary"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="6"
+    type="highlight-primary"
+  >
+    <h3
+      className="md-text-wrapper md-text-color"
+      data-type="highlight-primary"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="7"
+    type="subheader-primary"
+  >
+    <h3
+      className="md-text-wrapper md-text-color"
+      data-type="subheader-primary"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="8"
+    type="body-primary"
+  >
+    <p
+      className="md-text-wrapper md-text-color"
+      data-type="body-primary"
+    >
+      Example Text
+    </p>
+  </Text>
+  <Text
+    key="9"
+    type="hyperlink-primary"
+  >
+    <p
+      className="md-text-wrapper md-text-color"
+      data-type="hyperlink-primary"
+    >
+      Example Text
+    </p>
+  </Text>
+  <Text
+    key="10"
+    type="subheader-secondary"
+  >
+    <h3
+      className="md-text-wrapper md-text-color"
+      data-type="subheader-secondary"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="11"
+    type="highlight-secondary"
+  >
+    <h3
+      className="md-text-wrapper md-text-color"
+      data-type="highlight-secondary"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="12"
+    type="header-secondary"
+  >
+    <h3
+      className="md-text-wrapper md-text-color"
+      data-type="header-secondary"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="13"
+    type="body-secondary"
+  >
+    <small
+      className="md-text-wrapper md-text-color"
+      data-type="body-secondary"
+    >
+      Example Text
+    </small>
+  </Text>
+  <Text
+    key="14"
+    type="hyperlink-secondary"
+  >
+    <small
+      className="md-text-wrapper md-text-color"
+      data-type="hyperlink-secondary"
+    >
+      Example Text
+    </small>
+  </Text>
+  <Text
+    key="15"
+    type="highlight-compact"
+  >
+    <small
+      className="md-text-wrapper md-text-color"
+      data-type="highlight-compact"
+    >
+      Example Text
+    </small>
+  </Text>
+  <Text
+    key="16"
+    type="body-compact"
+  >
+    <small
+      className="md-text-wrapper md-text-color"
+      data-type="body-compact"
+    >
+      Example Text
+    </small>
+  </Text>
+  <Text
+    key="17"
+    type="label-compact"
+  >
+    <small
+      className="md-text-wrapper md-text-color"
+      data-type="label-compact"
+    >
+      Example Text
+    </small>
+  </Text>
+</div>
+`;
