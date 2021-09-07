@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { FC, useRef, useState } from 'react';
 import classnames from 'classnames';
 import { useFocus } from '@react-aria/interactions';
@@ -15,11 +18,11 @@ import Icon from '../Icon';
  * Global search input. Used for global search only
  */
 const GlobalSearchInput: FC<Props> = (props: Props) => {
-  const { className, id, style, searching, searchContext } = props;
+  const { className, id, style, searching, numHighlighted } = props;
   const [focus, setFocus] = useState(false);
 
   const state = useSearchFieldState(props);
-  const ref = useRef();
+  const ref = useRef(null);
   const { focusProps } = useFocus({
     onFocus: () => {
       setFocus(true);
@@ -35,20 +38,33 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     additionalClasses.push('search-input-focus');
   }
 
+  const handleClick = () => {
+    if (ref.current) {
+      ref.current.focus();
+    }
+  };
+
   return (
-    <div className={classnames(className, STYLE.wrapper, ...additionalClasses)} id={id}>
+    <div
+      className={classnames(className, STYLE.wrapper, ...additionalClasses)}
+      id={id}
+      onClick={handleClick}
+    >
       <Icon
         weight="light"
         scale={18}
         className="search-icon"
         name={searching ? 'spinner' : 'search'}
       />
-      {searchContext && (
+      {numHighlighted && (
         <div className="search-context-container">
-          <p>{searchContext}</p>
+          <p>{state.value.slice(0, numHighlighted)}</p>
         </div>
       )}
-      <input style={style} {...inputProps} {...focusProps} ref={ref} />
+      <input className="real-input" style={style} {...inputProps} {...focusProps} ref={ref} />
+      <div className="fake-input">
+        <p>{state.value.slice(numHighlighted)}</p>
+      </div>
       {state.value && (
         <ButtonSimple className="clear-icon" {...clearButtonProps}>
           <Icon scale={18} name="cancel" />

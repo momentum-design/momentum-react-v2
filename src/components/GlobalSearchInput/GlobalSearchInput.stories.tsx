@@ -43,7 +43,7 @@ Common.parameters = {
     { value: 'Typed' },
     { searching: true, placeholder: 'Searching...' },
     { disabled: true },
-    { searchContext: 'With:' },
+    { value: 'With: Joe', numHighlighted: 5 },
     { searchContext: 'From:' },
     { searchContext: 'In:' },
   ],
