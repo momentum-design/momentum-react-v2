@@ -18,7 +18,7 @@ import Icon from '../Icon';
  * Global search input. Used for global search only
  */
 const GlobalSearchInput: FC<Props> = (props: Props) => {
-  const { className, id, style, searching, numHighlighted } = props;
+  const { className, id, style, searching, onChange, onKeyDown, numHighlighted } = props;
   const [focus, setFocus] = useState(false);
 
   const state = useSearchFieldState(props);
@@ -44,6 +44,21 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     }
   };
 
+  const handleKeyDown = (e) => {
+    const { keyCode } = e;
+    if (keyCode === 8) {
+      if (e.target.value.length < numHighlighted + 1) {
+        onChange('');
+      }
+    } else if (keyCode === 37) {
+      if (e.target.selectionStart < numHighlighted + 1) {
+        e.preventDefault();
+      }
+    } else {
+      onKeyDown(e);
+    }
+  };
+
   return (
     <div
       className={classnames(className, STYLE.wrapper, ...additionalClasses)}
@@ -56,14 +71,20 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
         className="search-icon"
         name={searching ? 'spinner' : 'search'}
       />
-      {numHighlighted && (
-        <div className="search-context-container">
-          <p>{state.value.slice(0, numHighlighted)}</p>
-        </div>
-      )}
-      <input className="real-input" style={style} {...inputProps} {...focusProps} ref={ref} />
-      <div className="fake-input">
-        <p>{state.value.slice(numHighlighted)}</p>
+      <div className="input-container">
+        <input
+          className="real-input"
+          style={style}
+          {...inputProps}
+          {...focusProps}
+          ref={ref}
+          onKeyDown={handleKeyDown}
+        />
+        {state.value && !!numHighlighted && (
+          <div className="search-context-container">
+            <p>{state.value.slice(0, numHighlighted)}</p>
+          </div>
+        )}
       </div>
       {state.value && (
         <ButtonSimple className="clear-icon" {...clearButtonProps}>

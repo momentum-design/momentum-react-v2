@@ -5,6 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import GlobalSearchInput, { GlobalSearchInputProps } from './';
 import argTypes from './GlobalSearchInput.stories.args';
 import Documentation from './GlobalSearchInput.stories.docs.mdx';
+import React, { useState, FC } from 'react';
 
 export default {
   title: 'Momentum UI/GlobalSearchInput',
@@ -18,13 +19,47 @@ export default {
   args: {
     // Args provided to all stories by default.
     placeholder: 'Search, meet, and call',
+    initialText: 'From: ',
+    initialNumHighlighted: 5,
   },
+};
+
+interface GlobalSearchInputExampleProps extends GlobalSearchInputProps {
+  initialText: string;
+  initialNumHighlighted: number;
+}
+
+const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInputExampleProps) => {
+  const { initialText, initialNumHighlighted } = props;
+
+  const mutatedProps = { ...props };
+  delete mutatedProps.initialText;
+  delete mutatedProps.initialNumHighlighted;
+
+  const [val, setVal] = useState(initialText);
+  const [numHighlighted, setNumHighlighted] = useState(initialNumHighlighted);
+
+  const handleChange = (e) => {
+    setVal(e);
+    if (!val) {
+      setNumHighlighted(0);
+    }
+  };
+
+  return (
+    <GlobalSearchInput
+      value={val}
+      numHighlighted={numHighlighted}
+      onChange={handleChange}
+      {...mutatedProps}
+    />
+  );
 };
 
 /**
  * Primary story. This renders a single component with all external props.
  */
-const Example = Template<GlobalSearchInputProps>(GlobalSearchInput).bind({});
+const Example = Template<GlobalSearchInputExampleProps>(BetterExample).bind({});
 
 Example.argTypes = { ...argTypes };
 
@@ -44,8 +79,8 @@ Common.parameters = {
     { searching: true, placeholder: 'Searching...' },
     { disabled: true },
     { value: 'With: Joe', numHighlighted: 5 },
-    { searchContext: 'From:' },
-    { searchContext: 'In:' },
+    { value: 'From: Fred', numHighlighted: 5 },
+    { value: 'In: Example Space', numHighlighted: 3 },
   ],
 };
 

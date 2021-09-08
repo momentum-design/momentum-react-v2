@@ -28,7 +28,7 @@ export interface Props extends AriaSearchFieldProps {
   searching?: boolean;
 
   /**
-   * Text to add before input
+   * Number of characters to highlight in bubble
    */
-  searchContext?: string;
+  numHighlighted?: number;
 }
