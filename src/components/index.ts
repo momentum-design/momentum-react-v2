@@ -12,6 +12,7 @@ export { default as ButtonPill } from './ButtonPill';
 export { default as ButtonSimple } from './ButtonSimple';
 export { default as FocusRing } from './FocusRing';
 export { default as ThemeProvider } from './ThemeProvider';
+export { default as ToastDetails } from './ToastDetails';
 export { default as ExampleComponent } from './ExampleComponent';
 export { default as CodeInput } from './CodeInput';
 export { default as InputMessage } from './InputMessage';
