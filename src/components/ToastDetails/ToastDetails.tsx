@@ -33,7 +33,7 @@ const ToastDetails: FC<Props> = (props: Props) => {
   const infoComponent =
     badges && badges.length > 0 ? (
       <div className={STYLE.badges}>
-        {[...badges].map((badge, index) => (
+        {badges.map((badge, index) => (
           <div key={index} className={STYLE.badge}>
             {badge}
           </div>

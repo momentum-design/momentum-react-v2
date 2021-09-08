@@ -9,7 +9,7 @@ export default {
     control: { type: 'object' },
     table: {
       type: {
-        summary: 'string | Array<string>',
+        summary: 'Array<string>',
       },
       defaultValue: {
         summary: 'undefined',

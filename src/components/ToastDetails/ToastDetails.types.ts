@@ -10,7 +10,7 @@ export interface Props {
   /**
    * Badges to display on this ToastDetails. This overrides the info prop.
    */
-  badges?: string | Array<string>;
+  badges?: Array<string>;
 
   /**
    * The title of this ToastDetails.
