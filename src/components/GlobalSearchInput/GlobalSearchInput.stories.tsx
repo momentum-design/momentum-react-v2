@@ -63,12 +63,19 @@ const Example = Template<GlobalSearchInputExampleProps>(BetterExample).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Inject additional stories here.
-
 /**
  * Common variants story. This renders multiple variants of a single component.
  */
-const Common = MultiTemplate<GlobalSearchInputProps>(GlobalSearchInput).bind({});
+
+const PaddedExample: FC<GlobalSearchInputProps> = (props: GlobalSearchInputProps) => {
+  return (
+    <div style={{ margin: '1rem' }}>
+      <GlobalSearchInput {...props} />
+    </div>
+  );
+};
+
+const Common = MultiTemplate<GlobalSearchInputProps>(PaddedExample).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

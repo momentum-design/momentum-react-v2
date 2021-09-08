@@ -55,7 +55,10 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
         e.preventDefault();
       }
     } else {
-      onKeyDown(e);
+      if (onKeyDown) {
+        onKeyDown(e);
+      }
+      inputProps.onKeyDown(e);
     }
   };
 
@@ -82,7 +85,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
         />
         {state.value && !!numHighlighted && (
           <div className="search-context-container">
-            <p>{state.value.slice(0, numHighlighted)}</p>
+            <p aria-hidden="true">{state.value.slice(0, numHighlighted)}</p>
           </div>
         )}
       </div>
