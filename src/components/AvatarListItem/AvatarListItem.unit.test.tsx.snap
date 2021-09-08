@@ -308,7 +308,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
 
 exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreAction 1`] = `
 <AvatarListItem
-  displayMoreAction={true}
+  displayActions={
+    Array [
+      "more",
+    ]
+  }
 >
   <ListItemBase
     className="md-avatar-list-item-wrapper"
@@ -458,7 +462,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
 
 exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteAction && !isMuted 1`] = `
 <AvatarListItem
-  displayMuteAction={true}
+  displayActions={
+    Array [
+      "mute",
+    ]
+  }
   isMuted={false}
 >
   <ListItemBase
@@ -614,7 +622,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
 
 exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteAction 1`] = `
 <AvatarListItem
-  displayMuteAction={true}
+  displayActions={
+    Array [
+      "mute",
+    ]
+  }
 >
   <ListItemBase
     className="md-avatar-list-item-wrapper"
@@ -953,9 +965,9 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
 </AvatarListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with isSchedulerAvailable 1`] = `
+exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = available 1`] = `
 <AvatarListItem
-  isSchedulerAvailable={true}
+  schedulerState="available"
 >
   <ListItemBase
     className="md-avatar-list-item-wrapper"
@@ -1070,9 +1082,9 @@ exports[`<AvatarListItem /> snapshot should match snapshot with isSchedulerAvail
 </AvatarListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with isSchedulerQHours 1`] = `
+exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = quiet-hours 1`] = `
 <AvatarListItem
-  isSchedulerQHours={true}
+  schedulerState="quiet-hours"
 >
   <ListItemBase
     className="md-avatar-list-item-wrapper"
@@ -1187,9 +1199,9 @@ exports[`<AvatarListItem /> snapshot should match snapshot with isSchedulerQHour
 </AvatarListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with isSchedulerUnavailable 1`] = `
+exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = unavailable 1`] = `
 <AvatarListItem
-  isSchedulerUnavailable={true}
+  schedulerState="unavailable"
 >
   <ListItemBase
     className="md-avatar-list-item-wrapper"
@@ -1304,9 +1316,9 @@ exports[`<AvatarListItem /> snapshot should match snapshot with isSchedulerUnava
 </AvatarListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with isSchedulerUnknown 1`] = `
+exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = unknown 1`] = `
 <AvatarListItem
-  isSchedulerUnknown={true}
+  schedulerState="unknown"
 >
   <ListItemBase
     className="md-avatar-list-item-wrapper"

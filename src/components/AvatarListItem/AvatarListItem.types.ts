@@ -2,6 +2,11 @@ import { PressEvent } from '@react-types/shared';
 import { CSSProperties, ReactElement, ReactNode } from 'react';
 import { AvatarProps } from '../Avatar';
 
+export enum AvatarListItemActions {
+  mute = 'mute',
+  more = 'more',
+  closeOnHover = 'close-on-hover',
+}
 export interface Props {
   /**
    * Child components of this ButtonPill.
@@ -29,24 +34,9 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * If the scheduler is unknown, an appropriate icon will be displayed.
+   * Determines the state of the scheduler and will display an according icon.
    */
-  isSchedulerUnknown?: boolean;
-
-  /**
-   * If the scheduler is unavailable, an appropriate icon will be displayed.
-   */
-  isSchedulerUnavailable?: boolean;
-
-  /**
-   * If the scheduler is available, an appropriate icon will be displayed.
-   */
-  isSchedulerAvailable?: boolean;
-
-  /**
-   * If the scheduler is quiet hours, an appropriate icon will be displayed.
-   */
-  isSchedulerQHours?: boolean;
+  schedulerState?: 'available' | 'unavailable' | 'unknown' | 'quiet-hours' | 'none';
 
   /**
    * Text displayed on the first line of the item. (if only firstLine is provided, it will be centered).
@@ -59,11 +49,6 @@ export interface Props {
   secondLine?: string;
 
   /**
-   * If true, a close button will appear on hover.
-   */
-  displayHoverAction?: boolean;
-
-  /**
    *  Callback passed to hover close button as event handler.
    */
   onHoverActionCallback?: (e: PressEvent) => void;
@@ -74,20 +59,14 @@ export interface Props {
   onPressMuteAction?: (e: PressEvent) => void;
 
   /**
+   * Determines what actions will be displayed inside the list item.
+   */
+  displayActions?: AvatarListItemActions[];
+
+  /**
    * Determines the style/color of the microphone icon button if present.
    */
   isMuted?: boolean;
-
-  /**
-   * Determines weather to display the mute icon button.
-   */
-  displayMuteAction?: boolean;
-
-  /**
-   * Determines weather to display the more action menu list.
-   */
-  displayMoreAction?: boolean;
-
   /**
    * Represents the actions menu displayed when the more button is pressed.
    */

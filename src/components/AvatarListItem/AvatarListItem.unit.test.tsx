@@ -3,6 +3,7 @@ import { mountAndWait } from '../../../test/utils';
 import { PresenceType } from '../Avatar/Avatar.types';
 import AvatarListItem, { AVATAR_LIST_ITEM_CONSTANTS as CONSTANTS } from './';
 import ButtonCircle from '../ButtonCircle';
+import { AvatarListItemActions } from './AvatarListItem.types';
 
 describe('<AvatarListItem />', () => {
   describe('snapshot', () => {
@@ -44,50 +45,42 @@ describe('<AvatarListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isSchedulerUnknown', async () => {
+    it('should match snapshot with scheduler state = unknown', async () => {
       expect.assertions(1);
 
-      const isSchedulerUnknown = true;
+      const schedulerState = 'unknown';
 
-      const container = await mountAndWait(
-        <AvatarListItem isSchedulerUnknown={isSchedulerUnknown} />
-      );
+      const container = await mountAndWait(<AvatarListItem schedulerState={schedulerState} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isSchedulerUnavailable', async () => {
+    it('should match snapshot with scheduler state = unavailable', async () => {
       expect.assertions(1);
 
-      const isSchedulerUnavailable = true;
+      const schedulerState = 'unavailable';
 
-      const container = await mountAndWait(
-        <AvatarListItem isSchedulerUnavailable={isSchedulerUnavailable} />
-      );
+      const container = await mountAndWait(<AvatarListItem schedulerState={schedulerState} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isSchedulerAvailable', async () => {
+    it('should match snapshot with scheduler state = available', async () => {
       expect.assertions(1);
 
-      const isSchedulerAvailable = true;
+      const schedulerState = 'available';
 
-      const container = await mountAndWait(
-        <AvatarListItem isSchedulerAvailable={isSchedulerAvailable} />
-      );
+      const container = await mountAndWait(<AvatarListItem schedulerState={schedulerState} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isSchedulerQHours', async () => {
+    it('should match snapshot with scheduler state = quiet-hours', async () => {
       expect.assertions(1);
 
-      const isSchedulerQHours = true;
+      const schedulerState = 'quiet-hours';
 
-      const container = await mountAndWait(
-        <AvatarListItem isSchedulerQHours={isSchedulerQHours} />
-      );
+      const container = await mountAndWait(<AvatarListItem schedulerState={schedulerState} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -115,11 +108,9 @@ describe('<AvatarListItem />', () => {
     it('should match snapshot with displayMuteAction', async () => {
       expect.assertions(1);
 
-      const displayMuteAction = true;
+      const displayActions = [AvatarListItemActions.mute];
 
-      const container = await mountAndWait(
-        <AvatarListItem displayMuteAction={displayMuteAction} />
-      );
+      const container = await mountAndWait(<AvatarListItem displayActions={displayActions} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -127,11 +118,11 @@ describe('<AvatarListItem />', () => {
     it('should match snapshot with displayMuteAction && !isMuted', async () => {
       expect.assertions(1);
 
-      const displayMuteAction = true;
+      const displayActions = [AvatarListItemActions.mute];
       const isMuted = false;
 
       const container = await mountAndWait(
-        <AvatarListItem displayMuteAction={displayMuteAction} isMuted={isMuted} />
+        <AvatarListItem displayActions={displayActions} isMuted={isMuted} />
       );
 
       expect(container).toMatchSnapshot();
@@ -140,11 +131,9 @@ describe('<AvatarListItem />', () => {
     it('should match snapshot with displayMoreAction', async () => {
       expect.assertions(1);
 
-      const displayMoreAction = true;
+      const displayActions = [AvatarListItemActions.more];
 
-      const container = await mountAndWait(
-        <AvatarListItem displayMoreAction={displayMoreAction} />
-      );
+      const container = await mountAndWait(<AvatarListItem displayActions={displayActions} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -209,54 +198,48 @@ describe('<AvatarListItem />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should have provided correct icon when isSchedulerUnknown is provided', async () => {
+    it('should have provided correct icon when state = unknown is provided', async () => {
       expect.assertions(1);
 
-      const isSchedulerUnknown = true;
+      const schedulerState = 'unknown';
 
-      const element = (
-        await mountAndWait(<AvatarListItem isSchedulerUnknown={isSchedulerUnknown} />)
-      )
+      const element = (await mountAndWait(<AvatarListItem schedulerState={schedulerState} />))
         .find('Icon[name="scheduler-unknown"]')
         .getDOMNode();
 
       expect(element).toBeDefined();
     });
 
-    it('should have provided correct icon when isSchedulerUnavailable is provided', async () => {
+    it('should have provided correct icon when schedulerState = unavailable is provided', async () => {
       expect.assertions(1);
 
-      const isSchedulerUnavailable = true;
+      const schedulerState = 'unavailable';
 
-      const element = (
-        await mountAndWait(<AvatarListItem isSchedulerUnavailable={isSchedulerUnavailable} />)
-      )
+      const element = (await mountAndWait(<AvatarListItem schedulerState={schedulerState} />))
         .find('Icon[name="scheduler-unavailable"]')
         .getDOMNode();
 
       expect(element).toBeDefined();
     });
 
-    it('should have provided correct icon when isSchedulerAvailable is provided', async () => {
+    it('should have provided correct icon when schedulerState = available is provided', async () => {
       expect.assertions(1);
 
-      const isSchedulerAvailable = true;
+      const schedulerState = 'available';
 
-      const element = (
-        await mountAndWait(<AvatarListItem isSchedulerAvailable={isSchedulerAvailable} />)
-      )
+      const element = (await mountAndWait(<AvatarListItem schedulerState={schedulerState} />))
         .find('Icon[name="scheduler-available"]')
         .getDOMNode();
 
       expect(element).toBeDefined();
     });
 
-    it('should have provided correct icon when isSchedulerQHours is provided', async () => {
+    it('should have provided correct icon when schedulerState = quiet-hours is provided', async () => {
       expect.assertions(1);
 
-      const isSchedulerQHours = true;
+      const schedulerState = 'quiet-hours';
 
-      const element = (await mountAndWait(<AvatarListItem isSchedulerQHours={isSchedulerQHours} />))
+      const element = (await mountAndWait(<AvatarListItem schedulerState={schedulerState} />))
         .find('Icon[name="scheduler-not-working-hours"]')
         .getDOMNode();
 
@@ -293,13 +276,11 @@ describe('<AvatarListItem />', () => {
     it('should display correct icon when displayMuteAction && isMuted is provided', async () => {
       expect.assertions(1);
 
-      const displayMuteAction = true;
+      const displayActions = [AvatarListItemActions.mute];
       const isMuted = true;
 
       const element = (
-        await mountAndWait(
-          <AvatarListItem displayMuteAction={displayMuteAction} isMuted={isMuted} />
-        )
+        await mountAndWait(<AvatarListItem displayActions={displayActions} isMuted={isMuted} />)
       )
         .find('Icon[name="microphone-muted"]')
         .getDOMNode();
@@ -310,13 +291,11 @@ describe('<AvatarListItem />', () => {
     it('should display correct icon when displayMuteAction && !isMuted is provided', async () => {
       expect.assertions(1);
 
-      const displayMuteAction = true;
+      const displayActions = [AvatarListItemActions.mute];
       const isMuted = false;
 
       const element = (
-        await mountAndWait(
-          <AvatarListItem displayMuteAction={displayMuteAction} isMuted={isMuted} />
-        )
+        await mountAndWait(<AvatarListItem displayActions={displayActions} isMuted={isMuted} />)
       )
         .find('Icon[name="audio-microphone-on-green-colored"]')
         .getDOMNode();
@@ -327,9 +306,9 @@ describe('<AvatarListItem />', () => {
     it('should display correct icon when displayMoreAction is provided', async () => {
       expect.assertions(1);
 
-      const displayMoreAction = true;
+      const displayActions = [AvatarListItemActions.more];
 
-      const element = (await mountAndWait(<AvatarListItem displayMoreAction={displayMoreAction} />))
+      const element = (await mountAndWait(<AvatarListItem displayActions={displayActions} />))
         .find('Icon[name="more"]')
         .getDOMNode();
 
@@ -345,7 +324,10 @@ describe('<AvatarListItem />', () => {
 
       const component = (
         await mountAndWait(
-          <AvatarListItem displayMuteAction={true} onPressMuteAction={mockOnPressMuteAction} />
+          <AvatarListItem
+            displayActions={[AvatarListItemActions.mute]}
+            onPressMuteAction={mockOnPressMuteAction}
+          />
         )
       ).find(ButtonCircle);
 

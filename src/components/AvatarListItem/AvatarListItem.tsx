@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './AvatarListItem.constants';
-import { Props } from './AvatarListItem.types';
+import { DEFAULTS, SCHEDULER_STATES, STYLE } from './AvatarListItem.constants';
+import { AvatarListItemActions, Props } from './AvatarListItem.types';
 import './AvatarListItem.style.scss';
 import ListItemBase from '../ListItemBase';
 import ListItemBaseSection from '../ListItemBaseSection';
 import Avatar from '../Avatar';
 import Text from '../Text';
-import Icon from '../Icon';
+import Icon, { IconWeight, IconScale } from '../Icon';
 import ButtonCircle from '../ButtonCircle';
 import { useHover } from '@react-aria/interactions';
 
@@ -20,65 +20,54 @@ const AvatarListItem: FC<Props> = (props: Props) => {
     className,
     id,
     style,
-    isSchedulerAvailable,
-    isSchedulerUnavailable,
-    isSchedulerUnknown,
-    isSchedulerQHours,
+    schedulerState = DEFAULTS.SCHEDULER_STATE,
     firstLine,
     secondLine,
-    isMuted = true,
-    displayMoreAction,
-    displayMuteAction,
+    isMuted = DEFAULTS.IS_MUTED,
+    displayActions,
     //TODO: moreActionMenu, Once popover component is implemented, add way to customize the menu
-    displayHoverAction,
     onHoverActionCallback,
     onPressMuteAction,
-    avatarProps = { title: 'C' },
+    avatarProps = DEFAULTS.AVATAR_PROPS,
   } = props;
 
+  const iconProps = { scale: 16 as IconScale, weight: 'bold' as IconWeight, strokeColor: 'none' };
+
+  let displayHoverAction = false;
+  let displayMoreAction = false;
+  let displayMuteAction = false;
+
+  if (displayActions && Array.isArray(displayActions)) {
+    displayHoverAction = displayActions.includes(AvatarListItemActions.closeOnHover);
+    displayMoreAction = displayActions.includes(AvatarListItemActions.more);
+    displayMuteAction = displayActions.includes(AvatarListItemActions.mute);
+  }
+
   const renderSchedulerIcon = () => {
-    if (isSchedulerAvailable) {
-      return (
-        <Icon
-          name="scheduler-available"
-          scale={16}
-          weight="bold"
-          fillColor="var(--label-success-text)"
-          strokeColor="none"
-        />
-      );
-    } else if (isSchedulerUnavailable) {
-      return (
-        <Icon
-          name="scheduler-unavailable"
-          scale={16}
-          weight="bold"
-          fillColor="var(--label-warning-text)"
-          strokeColor="none"
-        />
-      );
-    } else if (isSchedulerUnknown) {
-      return (
-        <Icon
-          name="scheduler-unknown"
-          scale={16}
-          weight="bold"
-          fillColor="var(--label-error-text)"
-          strokeColor="none"
-        />
-      );
-    } else if (isSchedulerQHours) {
-      return (
-        <Icon
-          name="scheduler-not-working-hours"
-          scale={16}
-          weight="bold"
-          fillColor="var(--label-secondary-text)"
-          strokeColor="none"
-        />
-      );
-    } else {
-      return;
+    switch (schedulerState) {
+      case SCHEDULER_STATES.available:
+        return (
+          <Icon name="scheduler-available" fillColor="var(--label-success-text)" {...iconProps} />
+        );
+
+      case SCHEDULER_STATES.unavailable:
+        return (
+          <Icon name="scheduler-unavailable" fillColor="var(--label-warning-text)" {...iconProps} />
+        );
+
+      case SCHEDULER_STATES.unknown:
+        return <Icon name="scheduler-unknown" fillColor="var(--label-error-text)" {...iconProps} />;
+
+      case SCHEDULER_STATES.quietHours:
+        return (
+          <Icon
+            name="scheduler-not-working-hours"
+            fillColor="var(--label-secondary-text)"
+            {...iconProps}
+          />
+        );
+      case SCHEDULER_STATES.none:
+        return null;
     }
   };
 

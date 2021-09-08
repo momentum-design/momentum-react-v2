@@ -7,6 +7,8 @@ import argTypes from './AvatarListItem.stories.args';
 import Documentation from './AvatarListItem.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
 import { PresenceType } from '../Avatar/Avatar.types';
+import { SCHEDULER_STATES } from './AvatarListItem.constants';
+import { AvatarListItemActions } from './AvatarListItem.types';
 export default {
   title: 'Momentum UI/AvatarListItem',
   component: AvatarListItem,
@@ -48,31 +50,37 @@ Common.parameters = {
     {
       label: 'Long text',
       firstLine: 'This is a very long first line',
-      isSchedulerAvailable: true,
-      displayMoreAction: false,
-      displayMuteAction: true,
+      schedulerState: SCHEDULER_STATES.available,
+      displayActions: [AvatarListItemActions.mute, AvatarListItemActions.more],
+      onPressMuteAction: action('onPressMuteAction'),
     },
     {
       label: 'Two lines',
       firstLine: 'Example B',
       secondLine: 'Example second line',
-      isSchedulerUnavailable: true,
-      displayMoreAction: true,
-      displayMuteAction: true,
+      schedulerState: SCHEDULER_STATES.unavailable,
+      displayActions: [AvatarListItemActions.mute, AvatarListItemActions.more],
+      onPressMuteAction: action('onPressMuteAction'),
       isMuted: false,
     },
     {
       label: 'Scheduler Unknown',
       firstLine: 'Example C',
-      isSchedulerUnknown: true,
-      displayMuteAction: true,
+      schedulerState: SCHEDULER_STATES.unknown,
+      displayActions: [AvatarListItemActions.mute],
+      onPressMuteAction: action('onPressMuteAction'),
     },
-    { label: 'Scheduler Quite Hours', firstLine: 'Example C', isSchedulerQHours: true },
+    {
+      label: 'Scheduler Quite Hours',
+      firstLine: 'Example C',
+      schedulerState: SCHEDULER_STATES.quietHours,
+    },
     {
       label: 'With hover action',
       firstLine: 'Example C',
-      isSchedulerQHours: true,
+      schedulerState: SCHEDULER_STATES.quietHours,
       onHoverActionCallback: action('onHoverActionCallback'),
+      displayActions: [AvatarListItemActions.closeOnHover],
     },
   ],
 };

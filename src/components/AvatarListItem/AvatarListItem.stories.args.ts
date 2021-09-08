@@ -1,55 +1,22 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { SCHEDULER_STATES } from './AvatarListItem.constants';
 
 export default {
   ...commonStyles,
   /**
    * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
    */
-  isSchedulerUnknown: {
-    description: 'If the scheduler is unknown, an appropriate icon will be displayed.',
-    control: { type: 'boolean' },
+
+  schedulerState: {
+    description: 'Determines the state of the scheduler and will display an according icon.',
+    control: { type: 'select' },
+    options: [...Object.values(SCHEDULER_STATES)],
     table: {
       type: {
-        summary: 'boolean',
+        summary: "'available' | 'unavailable' | 'unknown' | 'quiet-hours' | 'none'",
       },
       defaultValue: {
-        summary: false,
-      },
-    },
-  },
-  isSchedulerUnavailable: {
-    description: 'If the scheduler is unavailable, an appropriate icon will be displayed.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: false,
-      },
-    },
-  },
-  isSchedulerAvailable: {
-    description: 'If the scheduler is available, an appropriate icon will be displayed.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: false,
-      },
-    },
-  },
-  isSchedulerQHours: {
-    description: 'If the scheduler is quiet hours, an appropriate icon will be displayed.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: false,
+        summary: SCHEDULER_STATES.none,
       },
     },
   },
@@ -115,42 +82,19 @@ export default {
       },
     },
   },
-  displayMuteAction: {
-    description: 'Determines weather to display the mute icon button.',
-    control: { type: 'boolean' },
+  displayActions: {
+    description: 'Determines what actions will be displayed inside the list item.',
+    control: { type: 'array' },
     table: {
       type: {
-        summary: 'boolean',
+        summary: 'array',
       },
       defaultValue: {
-        summary: false,
+        summary: [],
       },
     },
   },
-  displayMoreAction: {
-    description: 'Determines weather to display the more action menu list.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: false,
-      },
-    },
-  },
-  displayHoverAction: {
-    description: 'If true, a close button will appear on hover.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: false,
-      },
-    },
-  },
+
   //TODO: once Popover is implemented, add arg type for menuAction
   // moreActionMenu: {
   //   description: 'Contains the menu list.',
