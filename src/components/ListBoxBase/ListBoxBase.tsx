@@ -32,7 +32,7 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
   );
 
   const renderItems = () => {
-    return [...state.collection.getKeys()].map((key) => {
+    return Array.from(state.collection.getKeys()).map((key) => {
       const item = state.collection.getItem(key) as Node<T>;
       if (item.type === 'section') {
         return <ListBoxSection key={item.key} section={item} />;

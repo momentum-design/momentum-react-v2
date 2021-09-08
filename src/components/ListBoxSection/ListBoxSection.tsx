@@ -38,7 +38,7 @@ const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
           </div>
         )}
         <ul {...groupProps} className={STYLE.subItemsWrapper}>
-          {[...section.childNodes].map((node) => (
+          {Array.from(section.childNodes).map((node) => (
             <ListBoxItem key={node.key} item={node} />
           ))}
         </ul>

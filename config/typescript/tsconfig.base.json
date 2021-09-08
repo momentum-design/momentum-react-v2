@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "downlevelIteration": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
