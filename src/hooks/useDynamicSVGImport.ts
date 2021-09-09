@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+import { makeCancelable } from '../utils/makeCancelable';
 
 interface UseDynamicSVGImportOptions {
   onCompleted?: (
@@ -28,18 +29,9 @@ function useDynamicSVGImport(
   const ImportedIconRef = useRef<React.FC<React.SVGProps<SVGSVGElement>>>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>(undefined);
-  const [_isMounted, _setIsMounted] = useState(false);
-
-  useEffect(() => {
-    _setIsMounted(true);
-    return () => {
-      _setIsMounted(false);
-    };
-  }, []);
 
   const { onCompleted, onError } = options;
   useEffect(() => {
-    if (!_isMounted) return;
     setLoading(true);
     const importIcon = async (): Promise<void> => {
       try {
@@ -49,18 +41,18 @@ function useDynamicSVGImport(
         ).ReactComponent;
         onCompleted?.(name, ImportedIconRef.current);
       } catch (err) {
-        if (_isMounted) {
-          onError?.(err);
-          setError(err);
-        }
+        onError?.(err);
+        setError(err);
       } finally {
-        if (_isMounted) {
-          setLoading(false);
-        }
+        setLoading(false);
       }
     };
-    importIcon();
-  }, [name, onCompleted, onError, _isMounted]);
+
+    const { cancel } = makeCancelable(importIcon());
+    return () => {
+      return cancel();
+    };
+  }, [name, onCompleted, onError]);
 
   return { error, loading, SvgIcon: ImportedIconRef.current };
 }
