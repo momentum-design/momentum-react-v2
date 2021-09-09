@@ -28,9 +28,18 @@ function useDynamicSVGImport(
   const ImportedIconRef = useRef<React.FC<React.SVGProps<SVGSVGElement>>>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>(undefined);
+  const [_isMounted, _setIsMounted] = useState(false);
+
+  useEffect(() => {
+    _setIsMounted(true);
+    return () => {
+      _setIsMounted(false);
+    };
+  }, []);
 
   const { onCompleted, onError } = options;
   useEffect(() => {
+    if (!_isMounted) return;
     setLoading(true);
     const importIcon = async (): Promise<void> => {
       try {
@@ -40,14 +49,18 @@ function useDynamicSVGImport(
         ).ReactComponent;
         onCompleted?.(name, ImportedIconRef.current);
       } catch (err) {
-        onError?.(err);
-        setError(err);
+        if (_isMounted) {
+          onError?.(err);
+          setError(err);
+        }
       } finally {
-        setLoading(false);
+        if (_isMounted) {
+          setLoading(false);
+        }
       }
     };
     importIcon();
-  }, [name, onCompleted, onError]);
+  }, [name, onCompleted, onError, _isMounted]);
 
   return { error, loading, SvgIcon: ImportedIconRef.current };
 }

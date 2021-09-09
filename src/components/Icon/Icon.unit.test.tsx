@@ -31,7 +31,7 @@ describe('<Icon />', () => {
 
       const id = 'example-id';
 
-      container = mountAndWait(<Icon name="accessibility" id={id} />);
+      container = await mountAndWait(<Icon name="accessibility" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -41,7 +41,7 @@ describe('<Icon />', () => {
 
       const style = { color: 'pink' };
 
-      container = mountAndWait(<Icon name="accessibility" style={style} />);
+      container = await mountAndWait(<Icon name="accessibility" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
