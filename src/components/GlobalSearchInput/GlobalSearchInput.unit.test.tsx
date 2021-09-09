@@ -53,6 +53,26 @@ describe('<GlobalSearchInput />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when searching', () => {
+      expect.assertions(1);
+
+      const container = mountComponent(
+        <GlobalSearchInput aria-label="global search" searching={true} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when numHighlighted is set', () => {
+      expect.assertions(1);
+
+      const container = mountComponent(
+        <GlobalSearchInput aria-label="global search" value="From: someone" numHighlighted={5} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     /* ...additional snapshot tests... */
   });
 

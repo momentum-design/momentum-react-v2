@@ -37,6 +37,133 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
 </SSRProvider>
 `;
 
+exports[`<GlobalSearchInput /> snapshot should match snapshot when numHighlighted is set 1`] = `
+<SSRProvider>
+  <GlobalSearchInput
+    aria-label="global search"
+    numHighlighted={5}
+    value="From: someone"
+  >
+    <div
+      className="md-global-search-input-wrapper"
+      onClick={[Function]}
+    >
+      <Icon
+        className="search-icon"
+        name="search"
+        scale={18}
+        weight="light"
+      />
+      <div
+        className="input-container"
+      >
+        <input
+          aria-label="global search"
+          className="real-input"
+          disabled={false}
+          id="react-aria-0-1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value="From: someone"
+        />
+        <div
+          className="search-context-container"
+        >
+          <p
+            aria-hidden="true"
+          >
+            From:
+          </p>
+        </div>
+      </div>
+      <ButtonSimple
+        aria-label="Clear search"
+        className="clear-icon"
+        excludeFromTabOrder={true}
+        onPress={[Function]}
+        onPressStart={[Function]}
+        preventFocusOnPress={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              aria-label="Clear search"
+              className="clear-icon"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <Icon
+                name="cancel"
+                scale={18}
+              />
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+    </div>
+  </GlobalSearchInput>
+</SSRProvider>
+`;
+
+exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`] = `
+<SSRProvider>
+  <GlobalSearchInput
+    aria-label="global search"
+    searching={true}
+  >
+    <div
+      className="md-global-search-input-wrapper"
+      onClick={[Function]}
+    >
+      <Icon
+        className="search-icon"
+        name="spinner"
+        scale={18}
+        weight="light"
+      />
+      <div
+        className="input-container"
+      >
+        <input
+          aria-label="global search"
+          className="real-input"
+          disabled={false}
+          id="react-aria-0-1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value=""
+        />
+      </div>
+    </div>
+  </GlobalSearchInput>
+</SSRProvider>
+`;
+
 exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`] = `
 <SSRProvider>
   <GlobalSearchInput

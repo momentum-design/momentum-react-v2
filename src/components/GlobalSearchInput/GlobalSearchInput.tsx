@@ -76,13 +76,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
         name={searching ? 'spinner' : 'search'}
       />
       <div className="input-container">
-        <input
-          className="real-input"
-          {...inputProps}
-          {...focusProps}
-          ref={ref}
-          onKeyDown={handleKeyDown}
-        />
+        <input {...inputProps} {...focusProps} ref={ref} onKeyDown={handleKeyDown} />
         {state.value && !!numHighlighted && (
           <div className="search-context-container">
             <p aria-hidden="true">{state.value.slice(0, numHighlighted)}</p>

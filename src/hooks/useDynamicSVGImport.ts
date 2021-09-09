@@ -29,11 +29,10 @@ function useDynamicSVGImport(
   const ImportedIconRef = useRef<React.FC<React.SVGProps<SVGSVGElement>>>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>(undefined);
-
-  let cancelled = false;
+  const [cancelled, setCancelled] = useState(false);
 
   const cancel = () => {
-    cancelled = true;
+    setCancelled(true);
   };
 
   const { onCompleted, onError } = options;
