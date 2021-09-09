@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Icon.style.scss';
 import { Props } from './Icon.types';
 import { useDynamicSVGImport } from '../../hooks/useDynamicSVGImport';
@@ -11,13 +11,7 @@ import classnames from 'classnames';
 const Icon: React.FC<Props> = (props: Props) => {
   const { autoScale, className, color, fillColor, id, name, scale, strokeColor, style, weight } =
     props;
-  const { SvgIcon, error, cancel } = useDynamicSVGImport(`${name}-${weight || DEFAULTS.WEIGHT}`);
-
-  useEffect(() => {
-    return () => {
-      cancel();
-    };
-  }, [cancel]);
+  const { SvgIcon, error } = useDynamicSVGImport(`${name}-${weight || DEFAULTS.WEIGHT}`);
 
   const isColoredIcon = name.indexOf('coloured') > 0;
 
