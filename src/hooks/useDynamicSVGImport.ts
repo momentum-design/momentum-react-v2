@@ -12,6 +12,7 @@ interface UseDynamicSVGImportReturn {
   error?: Error;
   loading?: boolean;
   SvgIcon?: React.FC<React.SVGProps<SVGSVGElement>>;
+  cancel(): void;
 }
 
 /**
@@ -29,6 +30,12 @@ function useDynamicSVGImport(
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>(undefined);
 
+  let cancelled = false;
+
+  const cancel = () => {
+    cancelled = true;
+  };
+
   const { onCompleted, onError } = options;
   useEffect(() => {
     setLoading(true);
@@ -38,18 +45,24 @@ function useDynamicSVGImport(
         ImportedIconRef.current = (
           await require(`@momentum-ui/icons-rebrand/svg/${name}.svg`)
         ).ReactComponent;
-        onCompleted?.(name, ImportedIconRef.current);
+        if (!cancelled) {
+          onCompleted?.(name, ImportedIconRef.current);
+        }
       } catch (err) {
-        onError?.(err);
-        setError(err);
+        if (!cancelled) {
+          onError?.(err);
+          setError(err);
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
     };
     importIcon();
   }, [name, onCompleted, onError]);
 
-  return { error, loading, SvgIcon: ImportedIconRef.current };
+  return { error, loading, SvgIcon: ImportedIconRef.current, cancel };
 }
 
 export { useDynamicSVGImport };

@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
+<SSRProvider>
+  <GlobalSearchInput
+    aria-label="global search"
+  >
+    <div
+      className="md-global-search-input-wrapper"
+      onClick={[Function]}
+    >
+      <Icon
+        className="search-icon"
+        name="search"
+        scale={18}
+        weight="light"
+      />
+      <div
+        className="input-container"
+      >
+        <input
+          aria-label="global search"
+          className="real-input"
+          disabled={false}
+          id="react-aria-0-1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value=""
+        />
+      </div>
+    </div>
+  </GlobalSearchInput>
+</SSRProvider>
+`;
+
+exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`] = `
+<SSRProvider>
+  <GlobalSearchInput
+    aria-label="global search"
+    className="example-class"
+  >
+    <div
+      className="example-class md-global-search-input-wrapper"
+      onClick={[Function]}
+    >
+      <Icon
+        className="search-icon"
+        name="search"
+        scale={18}
+        weight="light"
+      />
+      <div
+        className="input-container"
+      >
+        <input
+          aria-label="global search"
+          className="real-input"
+          disabled={false}
+          id="react-aria-0-1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value=""
+        />
+      </div>
+    </div>
+  </GlobalSearchInput>
+</SSRProvider>
+`;
+
+exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
+<SSRProvider>
+  <GlobalSearchInput
+    aria-label="global search"
+    id="example-id"
+  >
+    <div
+      className="md-global-search-input-wrapper"
+      id="example-id"
+      onClick={[Function]}
+    >
+      <Icon
+        className="search-icon"
+        name="search"
+        scale={18}
+        weight="light"
+      />
+      <div
+        className="input-container"
+      >
+        <input
+          aria-label="global search"
+          className="real-input"
+          disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value=""
+        />
+      </div>
+    </div>
+  </GlobalSearchInput>
+</SSRProvider>
+`;
+
+exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
+<SSRProvider>
+  <GlobalSearchInput
+    aria-label="global search"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      className="md-global-search-input-wrapper"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    >
+      <Icon
+        className="search-icon"
+        name="search"
+        scale={18}
+        weight="light"
+      />
+      <div
+        className="input-container"
+      >
+        <input
+          aria-label="global search"
+          className="real-input"
+          disabled={false}
+          id="react-aria-0-1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value=""
+        />
+      </div>
+    </div>
+  </GlobalSearchInput>
+</SSRProvider>
+`;

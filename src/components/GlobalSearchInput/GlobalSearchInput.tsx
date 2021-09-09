@@ -67,6 +67,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       className={classnames(className, STYLE.wrapper, ...additionalClasses)}
       id={id}
       onClick={handleClick}
+      style={style}
     >
       <Icon
         weight="light"
@@ -77,7 +78,6 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       <div className="input-container">
         <input
           className="real-input"
-          style={style}
           {...inputProps}
           {...focusProps}
           ref={ref}

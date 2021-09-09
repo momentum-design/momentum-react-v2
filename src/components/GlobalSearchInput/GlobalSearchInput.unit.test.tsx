@@ -1,14 +1,20 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { SSRProvider } from '@react-aria/ssr';
 
 import GlobalSearchInput, { GLOBAL_SEARCH_INPUT_CONSTANTS as CONSTANTS } from './';
 
 describe('<GlobalSearchInput />', () => {
   describe('snapshot', () => {
+    const mountComponent = (component) => {
+      const container = mount(<SSRProvider>{component}</SSRProvider>);
+      return container;
+    };
+
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<GlobalSearchInput />);
+      const container = mountComponent(<GlobalSearchInput aria-label="global search" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -18,7 +24,9 @@ describe('<GlobalSearchInput />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<GlobalSearchInput className={className} />);
+      const container = mountComponent(
+        <GlobalSearchInput aria-label="global search" className={className} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -28,7 +36,7 @@ describe('<GlobalSearchInput />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<GlobalSearchInput id={id} />);
+      const container = mountComponent(<GlobalSearchInput aria-label="global search" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -38,7 +46,9 @@ describe('<GlobalSearchInput />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<GlobalSearchInput style={style} />);
+      const container = mountComponent(
+        <GlobalSearchInput aria-label="global search" style={style} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -50,7 +60,7 @@ describe('<GlobalSearchInput />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<GlobalSearchInput />)
+      const element = mount(<GlobalSearchInput aria-label="global search" />)
         .find(GlobalSearchInput)
         .getDOMNode();
 
@@ -62,7 +72,7 @@ describe('<GlobalSearchInput />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<GlobalSearchInput className={className} />)
+      const element = mount(<GlobalSearchInput aria-label="global search" className={className} />)
         .find(GlobalSearchInput)
         .getDOMNode();
 
@@ -74,7 +84,7 @@ describe('<GlobalSearchInput />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<GlobalSearchInput id={id} />)
+      const element = mount(<GlobalSearchInput aria-label="global search" id={id} />)
         .find(GlobalSearchInput)
         .getDOMNode();
 
@@ -87,7 +97,7 @@ describe('<GlobalSearchInput />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<GlobalSearchInput style={style} />)
+      const element = mount(<GlobalSearchInput aria-label="global search" style={style} />)
         .find(GlobalSearchInput)
         .getDOMNode();
 

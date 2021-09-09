@@ -1,12 +1,7 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties } from 'react';
 import { AriaSearchFieldProps } from '@react-types/searchfield';
 
 export interface Props extends AriaSearchFieldProps {
-  /**
-   * Child components of this ButtonPill.
-   */
-  children?: ReactNode;
-
   /**
    * Custom class for overriding this component's CSS.
    */
