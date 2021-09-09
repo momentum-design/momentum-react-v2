@@ -118,6 +118,7 @@ export {
   ExampleComponent,
   Icon as IconNext,
   ToastDetails,
+  ToastContent,
   ThemeProvider,
   Text,
   ContentSeparator,
