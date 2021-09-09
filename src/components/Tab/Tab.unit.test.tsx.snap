@@ -35,7 +35,7 @@ exports[`<Tab /> snapshot should match snapshot 1`] = `
             className="md-text-wrapper md-text-color"
             data-type="subheader-secondary"
           >
-            children
+            Example label
           </h3>
         </Text>
       </button>
