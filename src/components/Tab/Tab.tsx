@@ -35,7 +35,11 @@ const Tab: FC<Props> = forwardRef((props: Props, providedRef: RefObject<HTMLButt
         id={id}
         style={style}
       >
-        {typeof children === 'string' ? <Text type="subheader-secondary">children</Text> : children}
+        {typeof children === 'string' ? (
+          <Text type="subheader-secondary">{children}</Text>
+        ) : (
+          children
+        )}
       </button>
     </FocusRing>
   );
