@@ -21,6 +21,7 @@ export default {
     placeholder: 'Search, meet, and call',
     initialText: 'From: ',
     initialNumHighlighted: 5,
+    searching: false,
   },
 };
 
