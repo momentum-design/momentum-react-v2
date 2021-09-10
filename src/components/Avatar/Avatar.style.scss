@@ -1,11 +1,3 @@
-.md-avatar-outer-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-}
-
 .md-avatar-presence-icon-wrapper {
   position: absolute;
   background-color: var(--avatar-presence-icon-background);
@@ -25,6 +17,7 @@
   align-items: center;
   border-radius: 100vh;
   position: relative;
+  width: fit-content;
 
   span {
     font-weight: 500;
@@ -102,8 +95,8 @@
       height: 0.75rem;
     }
 
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   &[data-size="32"] {
@@ -116,8 +109,8 @@
       height: 1rem;
     }
 
-    width: 2em;
-    height: 2em;
+    width: 2rem;
+    height: 2rem;
   }
 
   &[data-size="48"] {
@@ -130,8 +123,8 @@
       height: 1.125rem;
     }
 
-    width: 3em;
-    height: 3em;
+    width: 3rem;
+    height: 3rem;
   }
 
   &[data-size="72"] {
@@ -144,8 +137,8 @@
       height: 1.5rem;
     }
 
-    width: 4.5em;
-    height: 4.5em;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   &[data-size="88"] {
@@ -158,8 +151,8 @@
       height: 2rem;
     }
 
-    width: 5.5em;
-    height: 5.5em;
+    width: 5.5rem;
+    height: 5.5rem;
   }
 
   &[data-size="124"] {
@@ -172,8 +165,8 @@
       height: 2.75rem;
     }
 
-    width: 7.75em;
-    height: 7.75em;
+    width: 7.75rem;
+    height: 7.75rem;
   }
 }
 

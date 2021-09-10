@@ -1,4 +1,4 @@
-.md-focus-ring-wrapper {
+.md-focus-ring-wrapper, .focus {
   box-shadow: 0 0 0 0.0625rem rgba(255, 255, 255, 1), 0 0 0 0.125rem rgba(17, 112, 207, 1); // IEFIX
   box-shadow: var(--md-globals-focus-ring-box-shadow);
   outline: none; // IEFIX

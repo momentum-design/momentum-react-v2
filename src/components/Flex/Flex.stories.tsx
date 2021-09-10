@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story } from '@storybook/react';
 
-import Flex, { FlexProps } from './';
+import Flex, { FlexProps } from '.';
 
 import Documentation from './Flex.documentation.mdx';
 import argTypes from './Flex.stories.args';

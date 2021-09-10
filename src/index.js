@@ -106,6 +106,7 @@ export {
   Avatar as AvatarNext,
   ButtonCircle,
   AvatarCompact as AvatarCompactNext,
+  ButtonControl,
   ButtonDialpad,
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,
@@ -117,7 +118,10 @@ export {
   InputHelper as InputHelperNew,
   ExampleComponent,
   Icon as IconNext,
+  ToastDetails,
+  ToastContent,
   ThemeProvider,
+  Text,
   ContentSeparator,
   TextInput,
 } from './components';
