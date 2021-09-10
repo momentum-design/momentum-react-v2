@@ -119,5 +119,8 @@ export {
   Icon as IconNext,
   ThemeProvider,
   Text,
+  Flex,
   ContentSeparator,
+  ListItemBase,
+  ListItemBaseSection,
 } from './components';

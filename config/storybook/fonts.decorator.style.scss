@@ -1,14 +1,14 @@
 /* 100 */
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTThin.woff2') format('woff2'), url('../../fonts/CiscoSansTTThin.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTThin.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTThin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTThinOblique.woff2') format('woff2'), url('../../fonts/CiscoSansTTThinOblique.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTThinOblique.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTThinOblique.woff') format('woff');
   font-weight: 100;
   font-style: italic;
 }
@@ -16,14 +16,14 @@
 /* 200 */
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTExtraLight.woff2') format('woff2'), url('../../fonts/CiscoSansTTExtraLight.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTExtraLight.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTExtraLight.woff') format('woff');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTExtraLightOblique.woff2') format('woff2'), url('../../fonts/CiscoSansTTExtraLightOblique.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTExtraLightOblique.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTExtraLightOblique.woff') format('woff');
   font-weight: 200;
   font-style: italic;
 }
@@ -31,14 +31,14 @@
 /* 300 */
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTLight.woff2') format('woff2'), url('../../fonts/CiscoSansTTLight.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTLight.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTLight.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTLightOblique.woff2') format('woff2'), url('../../fonts/CiscoSansTTLightOblique.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTLightOblique.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTLightOblique.woff') format('woff');
   font-weight: 300;
   font-style: italic;
 }
@@ -46,14 +46,14 @@
 /* regular/normal/400 */
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTRegular.woff2') format('woff2'), url('../../fonts/CiscoSansTTRegular.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTRegular.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTRegularOblique.woff2') format('woff2'), url('../../fonts/CiscoSansTTRegularOblique.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTRegularOblique.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTRegularOblique.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
@@ -61,7 +61,7 @@
 /* 500 */
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTT-Medium.woff2') format('woff2'), url('../../fonts/CiscoSansTT-Medium.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTT-Medium.woff2') format('woff2'), url('../../src/fonts/CiscoSansTT-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
@@ -69,14 +69,14 @@
 /* 700 */
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTBold.woff2') format('woff2'), url('../../fonts/CiscoSansTTBold.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTBold.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTBoldOblique.woff2') format('woff2'), url('../../fonts/CiscoSansTTBoldOblique.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTBoldOblique.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTBoldOblique.woff') format('woff');
   font-weight: bold;
   font-style: italic;
 }
@@ -84,14 +84,14 @@
 /* 800 */
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTHeavy.woff2') format('woff2'), url('../../fonts/CiscoSansTTHeavy.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTHeavy.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTHeavy.woff') format('woff');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CiscoSansTT';
-  src: url('../../fonts/CiscoSansTTHeavyOblique.woff2') format('woff2'), url('../../fonts/CiscoSansTTHeavyOblique.woff') format('woff');
+  src: url('../../src/fonts/CiscoSansTTHeavyOblique.woff2') format('woff2'), url('../../src/fonts/CiscoSansTTHeavyOblique.woff') format('woff');
   font-weight: 800;
   font-style: italic;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './fonts.decorator.style.scss';
+// import './fonts.decorator.style.scss';
 
 const fonts = (Story) => <Story />;
 

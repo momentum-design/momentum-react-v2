@@ -1,3 +1,114 @@
+  /* 100 */
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTThin.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTThinOblique.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTThinOblique.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  /* 200 */
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTExtraLight.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTExtraLightOblique.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTExtraLightOblique.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  /* 300 */
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTLight.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTLightOblique.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTLightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  /* regular/normal/400 */
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTRegular.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTRegularOblique.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTRegularOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  /* 500 */
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTT-Medium.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* 700 */
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTBold.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTBoldOblique.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTBoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  /* 800 */
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTHeavy.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTHeavy.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CiscoSansTT';
+    src: url('../../fonts/CiscoSansTTHeavyOblique.woff2') format('woff2'),
+      url('../../fonts/CiscoSansTTHeavyOblique.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+  }
+
 .md-theme-provider-wrapper {
   border: 0;
   height: 100%;
@@ -5,14 +116,13 @@
   padding: 0;
   width: 100%;
   color: var(--theme-text-primary-normal);
-  font-family: var(--md-globals-font-default);
+  font-family: CiscoSansTT !important;
   font-weight: normal;
 
   // Firefox fix for scrollbar
   // On macOS, you need to set the General > Show scroll bars
   // setting in System Preferences to "Always" for this property to have any effect.
   scrollbar-color: var(--scrollbar-track-background) var(--scrollbar-thumb-background);
-
 }
 
 /* Global variables not available as tokens. */
@@ -22,7 +132,7 @@
     0 0 0 0.125rem var(--theme-outline-focus-normal);
   --md-globals-elevation-4: 0px 24px 48px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.12);
   --md-globals-focus-ring-outline: none;
-  --md-globals-font-default: CiscoSansTT;
+  --md-globals-font-default: 'CiscoSansTT';
 }
 
 /* Scrollbar Theme */
