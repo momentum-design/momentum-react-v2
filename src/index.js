@@ -114,8 +114,10 @@ export {
   CodeInput,
   FocusRing,
   InputMessage as InputMessageNew,
+  InputHelper as InputHelperNew,
   ExampleComponent,
   Icon as IconNext,
   ThemeProvider,
   ContentSeparator,
+  TextInput,
 } from './components';
