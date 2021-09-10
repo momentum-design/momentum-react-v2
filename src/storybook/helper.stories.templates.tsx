@@ -54,16 +54,15 @@ export const getComponentStates = (Component: FC, args: any, variant: any): Reac
     };
 
     return (
-      <>
-        <div>{state || 'Normal'}</div>
+      <div key={index}>
+        <p>{state || 'Normal'}</p>
         <Component
-          key={index}
           {...variant}
           {...args}
           children={getChildren()}
           className={state.toLowerCase()}
         />
-      </>
+      </div>
     );
   });
 
