@@ -1,5 +1,5 @@
 import Icon from '.';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { STYLE } from './Icon.constants';
 
 import { mountAndWait } from '../../../test/utils';
@@ -246,6 +246,24 @@ describe('<Icon />', () => {
       const icon = wrapper.find('svg').getDOMNode();
 
       expect(icon.getAttribute('style')).toBe(null);
+    });
+  });
+
+  describe('clean up', () => {
+    it('can unmount the Icon component without erroring', async () => {
+      expect.assertions(0);
+
+      const Component = () => {
+        const [visible, setVisible] = useState(true);
+
+        useEffect(() => {
+          setVisible(false);
+        }, []);
+
+        return <div>{visible && <Icon name="accessibility" />}</div>;
+      };
+
+      await mountAndWait(<Component />);
     });
   });
 });
