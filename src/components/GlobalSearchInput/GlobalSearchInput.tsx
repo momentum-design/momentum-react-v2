@@ -45,12 +45,12 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
   };
 
   const handleKeyDown = (e) => {
-    const { keyCode } = e;
-    if (keyCode === 8) {
+    const { key } = e;
+    if (key === 'Backspace') {
       if (e.target.value.length < numHighlighted + 1) {
         onChange('');
       }
-    } else if (keyCode === 37) {
+    } else if (key === 'ArrowLeft') {
       if (e.target.selectionStart < numHighlighted + 1) {
         e.preventDefault();
       }

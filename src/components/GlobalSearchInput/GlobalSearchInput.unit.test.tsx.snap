@@ -14,7 +14,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
         name="search"
         scale={18}
         weight="light"
-      />
+      >
+        <div
+          className="md-icon-wrapper search-icon"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={18}
+            fill="currentColor"
+            height="100%"
+            stroke="currentColor"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
       <div
         className="input-container"
       >
@@ -52,7 +68,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when numHighlighte
         name="search"
         scale={18}
         weight="light"
-      />
+      >
+        <div
+          className="md-icon-wrapper search-icon"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={18}
+            fill="currentColor"
+            height="100%"
+            stroke="currentColor"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
       <div
         className="input-container"
       >
@@ -114,7 +146,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when numHighlighte
               <Icon
                 name="cancel"
                 scale={18}
-              />
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={18}
+                    fill="currentColor"
+                    height="100%"
+                    stroke="currentColor"
+                    style={Object {}}
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
             </button>
           </FocusRing>
         </FocusRing>
@@ -139,7 +187,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
         name="spinner"
         scale={18}
         weight="light"
-      />
+      >
+        <div
+          className="md-icon-wrapper search-icon"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={18}
+            fill="currentColor"
+            height="100%"
+            stroke="currentColor"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
       <div
         className="input-container"
       >
@@ -176,7 +240,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
         name="search"
         scale={18}
         weight="light"
-      />
+      >
+        <div
+          className="md-icon-wrapper search-icon"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={18}
+            fill="currentColor"
+            height="100%"
+            stroke="currentColor"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
       <div
         className="input-container"
       >
@@ -214,7 +294,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
         name="search"
         scale={18}
         weight="light"
-      />
+      >
+        <div
+          className="md-icon-wrapper search-icon"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={18}
+            fill="currentColor"
+            height="100%"
+            stroke="currentColor"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
       <div
         className="input-container"
       >
@@ -260,7 +356,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
         name="search"
         scale={18}
         weight="light"
-      />
+      >
+        <div
+          className="md-icon-wrapper search-icon"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={18}
+            fill="currentColor"
+            height="100%"
+            stroke="currentColor"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
       <div
         className="input-container"
       >
