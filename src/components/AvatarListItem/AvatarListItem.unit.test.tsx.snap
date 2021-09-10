@@ -12,7 +12,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -38,17 +38,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -108,7 +104,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -135,45 +131,41 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
                 title="Cisco"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
+                  <span>
+                    C
+                  </span>
                   <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
+                    className="md-avatar-presence-icon-wrapper"
                   >
-                    <span>
-                      C
-                    </span>
-                    <div
-                      className="md-avatar-presence-icon-wrapper"
+                    <Icon
+                      color="var(--avatar-presence-icon-active)"
+                      name="unread"
+                      scale={12}
+                      weight="filled"
                     >
-                      <Icon
-                        color="var(--avatar-presence-icon-active)"
-                        name="unread"
-                        scale={12}
-                        weight="filled"
+                      <div
+                        className="md-icon-wrapper"
                       >
-                        <div
-                          className="md-icon-wrapper"
-                        >
-                          <svg
-                            className=""
-                            data-autoscale={false}
-                            data-scale={12}
-                            height="100%"
-                            style={
-                              Object {
-                                "fill": "var(--avatar-presence-icon-active)",
-                                "stroke": "var(--avatar-presence-icon-active)",
-                              }
+                        <svg
+                          className=""
+                          data-autoscale={false}
+                          data-scale={12}
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "var(--avatar-presence-icon-active)",
+                              "stroke": "var(--avatar-presence-icon-active)",
                             }
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </div>
+                          }
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </Icon>
                   </div>
                 </div>
               </Avatar>
@@ -229,7 +221,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -255,17 +247,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -324,7 +312,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -350,17 +338,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -399,7 +383,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
               >
                 <FocusRing>
                   <FocusRing
-                    focusClass="children"
+                    focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
@@ -479,7 +463,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -505,17 +489,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -554,7 +534,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
               >
                 <FocusRing>
                   <FocusRing
-                    focusClass="children"
+                    focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
@@ -638,7 +618,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -664,17 +644,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -713,7 +689,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
               >
                 <FocusRing>
                   <FocusRing
-                    focusClass="children"
+                    focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
@@ -793,7 +769,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -819,17 +795,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -887,7 +859,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -914,17 +886,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -979,7 +947,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -1005,17 +973,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -1096,7 +1060,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -1122,17 +1086,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -1213,7 +1173,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -1239,17 +1199,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -1330,7 +1286,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -1356,17 +1312,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -1447,7 +1399,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -1473,17 +1425,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
@@ -1557,7 +1505,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
@@ -1588,17 +1536,13 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
                 title="C"
               >
                 <div
-                  className="md-avatar-outer-wrapper"
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
                 >
-                  <div
-                    className="md-avatar-wrapper"
-                    data-color="default"
-                    data-size={32}
-                  >
-                    <span>
-                      C
-                    </span>
-                  </div>
+                  <span>
+                    C
+                  </span>
                 </div>
               </Avatar>
             </div>
