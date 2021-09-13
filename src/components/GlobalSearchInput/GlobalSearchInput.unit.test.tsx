@@ -67,11 +67,18 @@ describe('<GlobalSearchInput />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot when numHighlighted is set', async () => {
+    it('should match snapshot when filters are set', async () => {
       expect.assertions(1);
 
       const container = await mountComponent(
-        <GlobalSearchInput aria-label="global search" value="From: someone" numHighlighted={5} />
+        <GlobalSearchInput
+          aria-label="global search"
+          value="From: someone"
+          filters={[
+            { term: 'from', value: 'Joe' },
+            { term: 'in', value: 'a space' },
+          ]}
+        />
       );
 
       expect(container).toMatchSnapshot();
@@ -161,7 +168,12 @@ describe('<GlobalSearchInput />', () => {
 
       const inputElement = (
         await mountAndWait(
-          <GlobalSearchInput aria-label="global search" value="abc" numHighlighted={2} id="thing" />
+          <GlobalSearchInput
+            aria-label="global search"
+            value="abc"
+            filters={[{ term: 'from', value: 'ab' }]}
+            id="thing"
+          />
         )
       ).find('input');
 
@@ -187,18 +199,20 @@ describe('<GlobalSearchInput />', () => {
     });
   });
 
-  it('pressing backspace should clear input if length less than highlighted text', async () => {
-    expect.assertions(2);
+  it('pressing backspace should clear input there is only one keyword left', async () => {
+    expect.assertions(4);
 
     const onChange = jest.fn();
+    const onFiltersChange = jest.fn();
 
     const inputElement = (
       await mountAndWait(
         <GlobalSearchInput
           onChange={onChange}
+          onFiltersChange={onFiltersChange}
           aria-label="global search"
           value="ab"
-          numHighlighted={2}
+          filters={[{ term: 'from', value: '' }]}
           id="thing"
         />
       )
@@ -214,20 +228,60 @@ describe('<GlobalSearchInput />', () => {
 
     expect(onChange).toBeCalledTimes(1);
     expect(onChange).toBeCalledWith('');
+    expect(onFiltersChange).toBeCalledTimes(1);
+    expect(onFiltersChange).toBeCalledWith([]);
   });
 
-  it('pressing backspace should not clear input if length not less than highlighted text', async () => {
-    expect.assertions(1);
+  it('pressing backspace should remove a keyword if the cursor is next to it', async () => {
+    expect.assertions(4);
 
     const onChange = jest.fn();
+    const onFiltersChange = jest.fn();
 
     const inputElement = (
       await mountAndWait(
         <GlobalSearchInput
           onChange={onChange}
+          onFiltersChange={onFiltersChange}
+          aria-label="global search"
+          value="ab cd"
+          filters={[
+            { term: 'from', value: '' },
+            { term: 'in', value: '' },
+          ]}
+          id="thing"
+        />
+      )
+    ).find('input');
+
+    const domNode = inputElement.getDOMNode() as HTMLInputElement;
+
+    domNode.setSelectionRange(5, 5);
+
+    await act(async () => {
+      inputElement.simulate('keydown', { key: 'Backspace' });
+    });
+
+    expect(onChange).toBeCalledTimes(1);
+    expect(onChange).toBeCalledWith('ab');
+    expect(onFiltersChange).toBeCalledTimes(1);
+    expect(onFiltersChange).toBeCalledWith(['ab ']);
+  });
+
+  it('pressing backspace should not clear input if not deleting the last keyword', async () => {
+    expect.assertions(2);
+
+    const onChange = jest.fn();
+    const onFiltersChange = jest.fn();
+
+    const inputElement = (
+      await mountAndWait(
+        <GlobalSearchInput
+          onChange={onChange}
+          onFiltersChange={onFiltersChange}
           aria-label="global search"
           value="abc"
-          numHighlighted={2}
+          filters={[{ term: 'from', value: '' }]}
           id="thing"
         />
       )
@@ -242,6 +296,7 @@ describe('<GlobalSearchInput />', () => {
     });
 
     expect(onChange).not.toHaveBeenCalled();
+    expect(onFiltersChange).not.toHaveBeenCalled();
   });
 
   it('clicking on another part of the component gives focus to the input', async () => {

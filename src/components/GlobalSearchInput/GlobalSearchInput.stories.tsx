@@ -2,7 +2,7 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import GlobalSearchInput, { GlobalSearchInputProps } from './';
+import GlobalSearchInput, { GlobalSearchInputProps, GlobalSearchInputSearchFilter } from './';
 import argTypes from './GlobalSearchInput.stories.args';
 import Documentation from './GlobalSearchInput.stories.docs.mdx';
 import React, { useState, FC } from 'react';
@@ -19,38 +19,48 @@ export default {
   args: {
     // Args provided to all stories by default.
     placeholder: 'Search, meet, and call',
-    initialText: 'From: ',
-    initialNumHighlighted: 5,
+    initialText: 'message',
+    initialFilters: [
+      { term: 'from', value: 'Joe' },
+      { term: 'in', value: 'a space' },
+    ],
     searching: false,
   },
 };
 
 interface GlobalSearchInputExampleProps extends GlobalSearchInputProps {
   initialText: string;
-  initialNumHighlighted: number;
+  initialFilters: GlobalSearchInputSearchFilter[];
 }
 
 const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInputExampleProps) => {
-  const { initialText, initialNumHighlighted } = props;
+  const { initialText, initialFilters } = props;
 
   const mutatedProps = { ...props };
   delete mutatedProps.initialText;
-  delete mutatedProps.initialNumHighlighted;
+  delete mutatedProps.initialFilters;
 
   const [val, setVal] = useState(initialText);
-  const [numHighlighted, setNumHighlighted] = useState(initialNumHighlighted);
+  const [filters, setFilters] = useState(initialFilters);
 
   const handleChange = (e) => {
-    setVal(e);
-    if (!val) {
-      setNumHighlighted(0);
+    if (e.startsWith('From:')) {
+      setFilters([{ term: 'from', value: '' }, ...filters]);
+      setVal(e.slice('From:'.length, e.length));
+    } else {
+      setVal(e);
     }
+  };
+
+  const handleFiltersChange = (filters) => {
+    setFilters(filters);
   };
 
   return (
     <GlobalSearchInput
       value={val}
-      numHighlighted={numHighlighted}
+      filters={filters}
+      onFiltersChange={handleFiltersChange}
       onChange={handleChange}
       {...mutatedProps}
     />

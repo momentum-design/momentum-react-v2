@@ -1,6 +1,11 @@
 import { CSSProperties } from 'react';
 import { AriaSearchFieldProps } from '@react-types/searchfield';
 
+export interface SearchFilter {
+  term: 'from' | 'in' | 'with';
+  value: string;
+}
+
 export interface Props extends AriaSearchFieldProps {
   /**
    * Custom class for overriding this component's CSS.
@@ -23,7 +28,12 @@ export interface Props extends AriaSearchFieldProps {
   searching?: boolean;
 
   /**
-   * Number of characters to highlight in bubble
+   * List of keywords to highlight at the beginning of the input
    */
-  numHighlighted?: number;
+  filters?: SearchFilter[];
+
+  /**
+   * Callback that is triggered when user deletes a keyword
+   */
+  onFiltersChange?: (keywords: SearchFilter[]) => void;
 }

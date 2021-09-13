@@ -52,11 +52,16 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
 </SSRProvider>
 `;
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot when numHighlighted is set 1`] = `
+exports[`<GlobalSearchInput /> snapshot should match snapshot when keywords are set 1`] = `
 <SSRProvider>
   <GlobalSearchInput
     aria-label="global search"
-    numHighlighted={5}
+    keywords={
+      Array [
+        "From: Joe",
+        "In: a space",
+      ]
+    }
     value="From: someone"
   >
     <div
@@ -101,12 +106,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when numHighlighte
           value="From: someone"
         />
         <div
-          className="search-context-container"
+          className="search-context-container remove-padding"
+          key="From: Joe"
         >
           <p
             aria-hidden="true"
           >
-            From:
+            From: som
+          </p>
+        </div>
+        <div
+          className="search-context-container "
+          key="In: a space"
+        >
+          <p
+            aria-hidden="true"
+          >
+            eone
           </p>
         </div>
       </div>

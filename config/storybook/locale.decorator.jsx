@@ -8,7 +8,7 @@ const Locale = (Story, { globals }) => {
 
   return (
     <IntlProvider locale={locale}>
-      <Story />;
+      <Story />
     </IntlProvider>
   );
 };

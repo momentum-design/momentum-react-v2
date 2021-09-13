@@ -7,7 +7,7 @@
   box-sizing: border-box;
   height: 1.75rem;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-content: center;
 
   &.search-input-focus {
@@ -20,7 +20,14 @@
 
   .input-container {
     position: relative;
+    display: flex;
     flex-grow: 1;
+  }
+
+  label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 
   input {
@@ -29,11 +36,10 @@
     box-shadow: none;
     color: var(--theme-text-primary-normal);
     font-family: var(--md-globals-font-default);
-    width: calc(100% - 2rem);
-    position: absolute;
-    left: 0;
     font-size: 0.875rem;
     height: 1.75rem;
+    display: inline-block;
+    flex: 1;
 
     &:focus-visible {
       outline: none;
@@ -73,6 +79,17 @@
     flex-direction: column;
     height: 1.625rem;
 
+    &.remove-padding {
+      margin-right: 0.0625rem;
+      padding-right: 0.0625rem;
+
+      p {
+        // white-space: normal;
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+
     p {
       box-sizing: border-box;
       background-color: var(--theme-button-primary-normal);
@@ -86,6 +103,7 @@
       height: 1.5rem;
       margin: 0;
       line-height: 1.5rem;
+      white-space: pre-wrap;
     }
   }
 
