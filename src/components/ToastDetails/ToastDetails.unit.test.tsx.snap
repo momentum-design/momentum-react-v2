@@ -262,7 +262,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -321,7 +321,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -380,7 +380,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -531,7 +531,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -590,7 +590,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -649,7 +649,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -767,7 +767,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -826,7 +826,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
@@ -885,7 +885,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
         >
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button

@@ -189,7 +189,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with isCircular 1`] = 
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
