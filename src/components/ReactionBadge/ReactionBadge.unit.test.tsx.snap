@@ -15,7 +15,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
@@ -71,7 +71,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
@@ -127,7 +127,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with count 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
@@ -186,7 +186,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
@@ -243,7 +243,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
@@ -308,7 +308,7 @@ exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
   >
     <FocusRing>
       <FocusRing
-        focusClass="children"
+        focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button

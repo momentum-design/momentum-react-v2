@@ -4,7 +4,7 @@ exports[`ButtonHyperlink snapshot should match snapshot 1`] = `
 <ButtonHyperlink>
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button

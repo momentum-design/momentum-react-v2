@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 
-export type ButtonControlControl = 'close' | 'maximize' | 'minimize';
+export type ButtonControlControl = 'close' | 'favorite' | 'maximize' | 'minimize' | 'mute';
 
 export interface Props extends AriaButtonProps {
   /**
@@ -18,6 +18,11 @@ export interface Props extends AriaButtonProps {
    * Custom id for overriding this component's CSS.
    */
   id?: string;
+
+  /**
+   * Whether to render this button as a circle.
+   */
+  isCircular?: boolean;
 
   /**
    * Custom style for overriding this component's CSS.

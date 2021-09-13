@@ -4,7 +4,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
 <ButtonDialpad>
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -94,7 +94,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -137,7 +137,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText and chil
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -181,7 +181,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText and seco
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -227,7 +227,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText, seconda
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -272,7 +272,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with secondaryText 1`] = 
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -315,7 +315,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button

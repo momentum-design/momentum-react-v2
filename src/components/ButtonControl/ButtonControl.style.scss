@@ -31,4 +31,9 @@
     color: rgba(0, 0, 0, 0.95); // IEFIX
     color: var(--button-secondary-text-pressed);
   }
+
+  &[data-circular="true"] {
+    border-radius: 100vh;
+    margin-left: 0.125rem;
+  }
 }
