@@ -24,6 +24,16 @@ const globals = {
       showName: true,
     },
   },
+  locale: {
+    name: 'Locale',
+    description: 'Select the locale for Stories',
+    defaultValue: 'en',
+    toolbar: {
+      icon: 'globe',
+      items: ['en', 'fr'],
+      showName: true,
+    },
+  },
 };
 
 export default globals;
