@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
 import { useFocus } from '@react-aria/interactions';
 
@@ -10,17 +10,27 @@ import { Props } from './GlobalSearchInput.types';
 import './GlobalSearchInput.style.scss';
 import { useSearchField } from '@react-aria/searchfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
-import { useIntl } from 'react-intl';
+import { difference } from 'lodash';
 
 import Icon from '../Icon';
-import messages from './translations';
 /**
  * Global search input. Used for global search only
  */
 const GlobalSearchInput: FC<Props> = (props: Props) => {
-  const { className, id, style, searching, onKeyDown, onFiltersChange, filters = [] } = props;
+  const {
+    initialLabel,
+    className,
+    id,
+    style,
+    searching,
+    onKeyDown,
+    onFiltersChange,
+    filters = [],
+    clearButtonAriaLabel,
+  } = props;
+  const [previousFilters, setPreviousFilters] = useState(filters);
   const [focus, setFocus] = useState(false);
-  const { formatMessage } = useIntl();
+  const [ariaAlert, setAriaAlert] = useState('');
   const state = useSearchFieldState(props);
   const ref = useRef(null);
   const { focusProps } = useFocus({
@@ -32,7 +42,19 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     },
   });
 
-  const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, ref);
+  useEffect(() => {
+    const newFilters = difference(filters, previousFilters);
+    if (newFilters.length) {
+      setAriaAlert(newFilters[0].translations.filterAdded);
+    }
+    setPreviousFilters(filters);
+  }, [JSON.stringify(filters)]);
+
+  const { inputProps, clearButtonProps, labelProps } = useSearchField(
+    { ...props, placeholder: filters.length ? '' : props.placeholder },
+    state,
+    ref
+  );
 
   const additionalClasses = [];
   if (focus) {
@@ -48,10 +70,12 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
   const handleKeyDown = (e) => {
     const { key } = e;
     if (key === 'Backspace') {
-      onFiltersChange &&
-        filters.length &&
-        !e.target.value &&
-        onFiltersChange(filters.slice(0, filters.length - 1));
+      if (e.target.value) {
+        return;
+      }
+      const filterToRemove = filters[filters.length - 1];
+      onFiltersChange && filters.length && onFiltersChange(filters.slice(0, filters.length - 1));
+      setAriaAlert(filterToRemove.translations.filterRemoved);
     } else {
       if (onKeyDown) {
         onKeyDown(e);
@@ -64,11 +88,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     const filterArray = [];
     const labels = [];
     filters.forEach((filter, index) => {
-      labels.push(
-        formatMessage(messages[`${filter.term}Label${filter.value ? 'Non' : ''}Empty`], {
-          value: filter.value,
-        })
-      );
+      labels.push(filter.value ? filter.translations.nonempty : filter.translations.empty);
 
       const removePadding = index !== filters.length - 1;
       filterArray.push(
@@ -76,12 +96,12 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
           key={filter.term}
           className={`search-context-container ${removePadding ? 'remove-padding' : ''}`}
         >
-          <p>{`${formatMessage(messages[filter.term])} ${filter.value}`}</p>
+          <p>{filter.translations.text}</p>
         </div>
       );
     });
 
-    const label = labels.length ? labels.join('. ') : formatMessage(messages.placeholder);
+    const label = labels.length ? labels.join(', ') + ':' : initialLabel;
 
     return { filterArray, label };
   };
@@ -107,9 +127,18 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       <div className="input-container">
         {!!filters.length && filterArray}
         <input {...inputProps} {...focusProps} ref={ref} onKeyDown={handleKeyDown} />
+        {ariaAlert && (
+          <div className="aria-alert" aria-live="assertive" role="alert">
+            {ariaAlert}
+          </div>
+        )}
       </div>
       {state.value && (
-        <ButtonSimple className="clear-icon" {...clearButtonProps}>
+        <ButtonSimple
+          className="clear-icon"
+          {...clearButtonProps}
+          aria-label={clearButtonAriaLabel}
+        >
           <Icon scale={18} name="cancel" />
         </ButtonSimple>
       )}

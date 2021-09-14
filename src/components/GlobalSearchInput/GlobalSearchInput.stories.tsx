@@ -18,11 +18,32 @@ export default {
   },
   args: {
     // Args provided to all stories by default.
-    placeholder: 'Search, meet, and call',
+    placeholder: 'Search',
     initialText: 'message',
+    clearButtonAriaLabel: 'CLEAR',
     initialFilters: [
-      { term: 'from', value: 'Joe' },
-      { term: 'in', value: 'a space' },
+      {
+        term: 'from',
+        value: 'Joe',
+        translations: {
+          filterRemoved: 'From Joe removed',
+          filterAdded: 'From filter added',
+          text: 'From: Joe',
+          empty: 'Choose who to filter by',
+          nonempty: 'Filtering by Joe',
+        },
+      },
+      {
+        term: 'in',
+        value: 'a space',
+        translations: {
+          filterRemoved: 'In a space removed',
+          filterAdded: 'In filter added',
+          text: 'In: a space',
+          empty: 'Choose a space to filter by',
+          nonempty: 'Filtering in a space',
+        },
+      },
     ],
     searching: false,
   },
@@ -43,9 +64,22 @@ const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInp
   const [val, setVal] = useState(initialText);
   const [filters, setFilters] = useState(initialFilters);
 
-  const handleChange = (e) => {
-    if (e.startsWith('From:')) {
-      setFilters([{ term: 'from', value: '' }, ...filters]);
+  const handleChange = (e: string) => {
+    if (e.toLowerCase().startsWith('from:')) {
+      setFilters([
+        {
+          term: 'from',
+          value: '',
+          translations: {
+            filterAdded: 'From filter added',
+            filterRemoved: 'From filter removed',
+            text: 'From:',
+            empty: 'Choose who to filter by',
+            nonempty: '',
+          },
+        },
+        ...filters,
+      ]);
       setVal(e.slice('From:'.length, e.length));
     } else {
       setVal(e);
@@ -62,6 +96,7 @@ const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInp
       filters={filters}
       onFiltersChange={handleFiltersChange}
       onChange={handleChange}
+      initialLabel="Search messages by person or space"
       {...mutatedProps}
     />
   );

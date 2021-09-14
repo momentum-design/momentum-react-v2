@@ -1,9 +1,18 @@
 import { CSSProperties } from 'react';
 import { AriaSearchFieldProps } from '@react-types/searchfield';
 
+export interface SearchFilterTranslations {
+  text: string;
+  empty: string;
+  nonempty: string;
+  filterAdded: string;
+  filterRemoved: string;
+}
+
 export interface SearchFilter {
-  term: 'from' | 'in' | 'with';
+  term: string;
   value: string;
+  translations: SearchFilterTranslations;
 }
 
 export interface Props extends AriaSearchFieldProps {
@@ -36,4 +45,14 @@ export interface Props extends AriaSearchFieldProps {
    * Callback that is triggered when user deletes a keyword
    */
   onFiltersChange?: (keywords: SearchFilter[]) => void;
+
+  /**
+   * aria-label for clear button
+   */
+  clearButtonAriaLabel?: string;
+
+  /**
+   * Initial text for hidden label
+   */
+  initialLabel: string;
 }

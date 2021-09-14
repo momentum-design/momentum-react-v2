@@ -3,7 +3,7 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   placeholder: {
     id: 'GlobalSearchInput.placeholder',
-    defaultMessage: 'Search, meet, and call',
+    defaultMessage: 'Search messages by person or space',
   },
   from: {
     id: 'GlobalSearchInput.from',
@@ -16,6 +16,18 @@ export default defineMessages({
   fromLabelNonEmpty: {
     id: 'GlobalSearchInput.fromLabelNonEmpty',
     defaultMessage: 'Filtering by {value}',
+  },
+  fromLabelAdded: {
+    id: 'GlobalSearchInput.fromLabelAdded',
+    defaultMessage: 'From filter added',
+  },
+  fromLabelRemoved: {
+    id: 'GlobalSearchInput.fromLabelRemoved',
+    defaultMessage: 'From filter removed',
+  },
+  fromLabelRemovedFull: {
+    id: 'GlobalSearchInput.fromLabelRemovedFull',
+    defaultMessage: 'From {value} filter removed',
   },
   in: {
     id: 'GlobalSearchInput.in',
