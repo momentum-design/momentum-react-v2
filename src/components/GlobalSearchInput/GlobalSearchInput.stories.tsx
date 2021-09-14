@@ -63,8 +63,13 @@ const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInp
 
   const [val, setVal] = useState(initialText);
   const [filters, setFilters] = useState(initialFilters);
+  const [searching, setSearching] = useState(false);
 
   const handleChange = (e: string) => {
+    setSearching(true);
+    setTimeout(() => {
+      setSearching(false);
+    }, 500);
     if (e.toLowerCase().startsWith('from:')) {
       setFilters([
         {
@@ -98,6 +103,7 @@ const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInp
       onChange={handleChange}
       initialLabel="Search messages by person or space"
       {...mutatedProps}
+      searching={searching}
     />
   );
 };
