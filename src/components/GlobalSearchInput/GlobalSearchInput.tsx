@@ -13,6 +13,7 @@ import { useSearchFieldState } from '@react-stately/searchfield';
 import { difference } from 'lodash';
 
 import Icon from '../Icon';
+import { BaseEvent } from '@react-types/shared';
 /**
  * Global search input. Used for global search only
  */
@@ -27,6 +28,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     onFiltersChange,
     filters = [],
     clearButtonAriaLabel,
+    onClear,
   } = props;
   const [previousFilters, setPreviousFilters] = useState(filters);
   const [focus, setFocus] = useState(false);
@@ -50,8 +52,13 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     setPreviousFilters(filters);
   }, [JSON.stringify(filters)]);
 
+  const onClearPress = () => {
+    onFiltersChange([]);
+    onClear();
+  };
+
   const { inputProps, clearButtonProps, labelProps } = useSearchField(
-    { ...props, placeholder: filters.length ? '' : props.placeholder },
+    { ...props, placeholder: filters.length ? '' : props.placeholder, onClear: onClearPress },
     state,
     ref
   );
@@ -67,10 +74,11 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     }
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const { key } = e;
+    const target = e.target as HTMLInputElement;
     if (key === 'Backspace') {
-      if (e.target.value) {
+      if (!(target.selectionStart === 0 && target.selectionEnd === 0)) {
         return;
       }
       const filterToRemove = filters[filters.length - 1];
@@ -78,7 +86,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       setAriaAlert(filterToRemove.translations.filterRemoved);
     } else {
       if (onKeyDown) {
-        onKeyDown(e);
+        onKeyDown(e as BaseEvent<React.KeyboardEvent<HTMLInputElement>>);
       }
       inputProps.onKeyDown(e);
     }
@@ -87,21 +95,17 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
   const buildFilters = () => {
     const filterArray = [];
     const labels = [];
-    filters.forEach((filter, index) => {
+    filters.forEach((filter) => {
       labels.push(filter.value ? filter.translations.nonempty : filter.translations.empty);
 
-      const removePadding = index !== filters.length - 1;
       filterArray.push(
-        <div
-          key={filter.term}
-          className={`search-context-container ${removePadding ? 'remove-padding' : ''}`}
-        >
+        <div key={filter.term} className="search-context-container">
           <p>{filter.translations.text}</p>
         </div>
       );
     });
 
-    const label = labels.length ? labels.join(', ') + ':' : initialLabel;
+    const label = labels.length ? `${labels.join(', ')}:` : initialLabel;
 
     return { filterArray, label };
   };
@@ -118,14 +122,16 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       <label htmlFor={inputProps.id} {...labelProps}>
         {label}
       </label>
-      <Icon
-        weight="light"
-        scale={18}
-        className="search-icon"
-        name={searching ? 'spinner' : 'search'}
-      />
+      <div>
+        <Icon
+          weight="light"
+          scale={18}
+          className="search-icon"
+          name={searching ? 'spinner' : 'search'}
+        />
+      </div>
       <div className="input-container">
-        {!!filters.length && filterArray}
+        {filterArray}
         <input {...inputProps} {...focusProps} ref={ref} onKeyDown={handleKeyDown} />
         {ariaAlert && (
           <div className="aria-alert" aria-live="assertive" role="alert">
@@ -133,7 +139,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
           </div>
         )}
       </div>
-      {state.value && (
+      {(!!state.value || !!filters.length) && (
         <ButtonSimple
           className="clear-icon"
           {...clearButtonProps}
