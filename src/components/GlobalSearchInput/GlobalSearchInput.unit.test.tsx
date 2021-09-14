@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SSRProvider } from '@react-aria/ssr';
 
 import { mountAndWait } from '../../../test/utils';
@@ -179,23 +179,64 @@ describe('<GlobalSearchInput />', () => {
   });
 
   describe('actions', () => {
-    it('pressing backspace should delete a filter if the cursor is at the beginning', async () => {
+    it('adding a filter should change the aria alert', async () => {
       expect.assertions(3);
 
       const onChange = jest.fn();
       const onFiltersChange = jest.fn();
 
-      const inputElement = (
-        await mountAndWait(
+      let setParentFilters;
+
+      const ParentComponent = () => {
+        const [filters, setFilters] = useState([]);
+        setParentFilters = setFilters;
+
+        return (
           <GlobalSearchInput
             onChange={onChange}
             onFiltersChange={onFiltersChange}
             aria-label="global search"
             value="ab"
-            filters={[{ term: 'from', value: '', translations: testTranslations }]}
+            filters={filters}
           />
-        )
-      ).find('input');
+        );
+      };
+
+      const wrapper = await mountAndWait(<ParentComponent />);
+      const inputElement = wrapper.find('input');
+
+      const domNode = inputElement.getDOMNode() as HTMLInputElement;
+
+      domNode.setSelectionRange(0, 0);
+
+      await act(async () => {
+        setParentFilters([{ term: 'from', value: '', translations: testTranslations }]);
+      });
+
+      wrapper.update();
+      const ariaAlert = wrapper.find('.aria-alert');
+
+      expect(ariaAlert.text()).toEqual('filteradded');
+      expect(onChange).not.toHaveBeenCalled();
+      expect(onFiltersChange).not.toHaveBeenCalled();
+    });
+
+    it('pressing backspace should delete a filter if the cursor is at the beginning', async () => {
+      expect.assertions(4);
+
+      const onChange = jest.fn();
+      const onFiltersChange = jest.fn();
+
+      const wrapper = await mountAndWait(
+        <GlobalSearchInput
+          onChange={onChange}
+          onFiltersChange={onFiltersChange}
+          aria-label="global search"
+          value="ab"
+          filters={[{ term: 'from', value: '', translations: testTranslations }]}
+        />
+      );
+      const inputElement = wrapper.find('input');
 
       const domNode = inputElement.getDOMNode() as HTMLInputElement;
 
@@ -205,6 +246,10 @@ describe('<GlobalSearchInput />', () => {
         inputElement.simulate('keydown', { key: 'Backspace' });
       });
 
+      wrapper.update();
+      const ariaAlert = wrapper.find('.aria-alert');
+
+      expect(ariaAlert.text()).toEqual('filterremoved');
       expect(onChange).not.toHaveBeenCalled();
       expect(onFiltersChange).toBeCalledTimes(1);
       expect(onFiltersChange).toBeCalledWith([]);
