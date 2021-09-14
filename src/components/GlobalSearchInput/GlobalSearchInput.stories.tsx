@@ -20,6 +20,7 @@ export default {
     // Args provided to all stories by default.
     placeholder: 'Search',
     initialText: 'message',
+    initialLabel: 'Search messages by person or space',
     clearButtonAriaLabel: 'CLEAR',
     initialFilters: [
       {
@@ -55,7 +56,7 @@ interface GlobalSearchInputExampleProps extends GlobalSearchInputProps {
 }
 
 const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInputExampleProps) => {
-  const { initialText, initialFilters } = props;
+  const { initialText, initialFilters, initialLabel } = props;
 
   const mutatedProps = { ...props };
   delete mutatedProps.initialText;
@@ -101,7 +102,7 @@ const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInp
       filters={filters}
       onFiltersChange={handleFiltersChange}
       onChange={handleChange}
-      initialLabel="Search messages by person or space"
+      initialLabel={initialLabel}
       {...mutatedProps}
       searching={searching}
     />
@@ -130,7 +131,6 @@ const PaddedExample: FC<GlobalSearchInputProps> = (props: GlobalSearchInputProps
 const Common = MultiTemplate<GlobalSearchInputProps>(PaddedExample).bind({});
 
 Common.argTypes = { ...argTypes };
-delete Common.argTypes.children;
 
 Common.parameters = {
   variants: [
