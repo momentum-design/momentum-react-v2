@@ -8,16 +8,16 @@
 
   &[data-color="primary"] {
     background: var(--menulistbackground-primary-background);
-    border: 1px solid var(--menulistbackground-primary-border);
+    border: 1px solid var(--menulistbackground-primary-border-color);
   }
 
   &[data-color="secondary"] {
     background: var(--menulistbackground-secondary-background);
-    border: 1px solid var(--menulistbackground-secondary-border);
+    border: 1px solid var(--menulistbackground-secondary-border-color);
   }
 
   &[data-color="tertiary"] {
     background: var(--menulistbackground-tertiary-background);
-    border: 1px solid var(--menulistbackground-tertiary-border);
+    border: 1px solid var(--menulistbackground-tertiary-border-color);
   }
 }

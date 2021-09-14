@@ -2,20 +2,19 @@
   position: relative;
   border-radius: 6.25rem;
   width: 22.5rem;
-  background-color: var(--theme-background-secondary-normal);
+  background-color: var(--globalHeader-textfield-background);
   border: 1px solid transparent;
   box-sizing: border-box;
   height: 1.75rem;
   display: flex;
-  // justify-content: center;
   align-content: center;
 
   &.search-input-focus {
-    border: 1px solid var(--theme-outline-focus-normal);
+    border: 1px solid var(--globalHeader-textfield-border-color-focused);
   }
 
   &:hover {
-    background-color: var(--theme-background-secondary-hover);
+    background-color: var(--globalHeader-textfield-background-hovered);
   }
 
   .input-container {
@@ -34,7 +33,7 @@
     border: 0;
     background-color: transparent;
     box-shadow: none;
-    color: var(--theme-text-primary-normal);
+    color: var(--globalHeader-textfield-text);
     font-family: var(--md-globals-font-default);
     font-size: 0.875rem;
     height: 1.75rem;
@@ -46,7 +45,7 @@
     }
 
     &::placeholder {
-      color: var(--theme-text-secondary-normal);
+      color: var(--globalHeader-textfieldPlaceholderText-text);
     }
   }  
 
@@ -71,10 +70,10 @@
     position: absolute;
     right: 0.75rem;
     top: 0.25rem;
-    color: var(--theme-text-secondary-normal);
+    color: var(--globalHeader-buttonIcon-icon);
 
     &:active {
-      color: var(--theme-text-primary-normal);
+      color: var(--globalHeader-buttonIcon-icon-pressed);
     }
   }
 
@@ -90,7 +89,6 @@
       padding-right: 0.0625rem;
 
       p {
-        // white-space: normal;
         padding-right: 0;
         margin-right: 0;
       }
@@ -98,8 +96,8 @@
 
     p {
       box-sizing: border-box;
-      background-color: var(--theme-button-primary-normal);
-      color: var(--theme-text-primary-inverted);
+      background-color: var(--globalHeader-modifierChip-background);
+      color: var(--globalHeader-modifierChip-text);
       z-index: 1;
       border-radius: 0.5rem;
       padding: 0.125rem 0.0625rem 0.125rem 0.0625rem;
