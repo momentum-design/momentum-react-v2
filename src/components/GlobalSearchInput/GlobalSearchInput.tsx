@@ -19,7 +19,7 @@ import { BaseEvent } from '@react-types/shared';
  */
 const GlobalSearchInput: FC<Props> = (props: Props) => {
   const {
-    initialLabel,
+    initialLabel = '',
     className,
     id,
     style,

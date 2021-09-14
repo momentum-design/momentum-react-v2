@@ -9,35 +9,40 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
       className="md-global-search-input-wrapper"
       onClick={[Function]}
     >
-      <Icon
-        className="search-icon"
-        name="search"
-        scale={18}
-        weight="light"
-      >
-        <div
-          className="md-icon-wrapper search-icon"
+      <label
+        htmlFor="test-ID"
+      />
+      <div>
+        <Icon
+          className="search-icon"
+          name="search"
+          scale={18}
+          weight="light"
         >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={18}
-            fill="currentColor"
-            height="100%"
-            stroke="currentColor"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
+          <div
+            className="md-icon-wrapper search-icon"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={18}
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
       <div
         className="input-container"
       >
         <input
           aria-label="global search"
           disabled={false}
-          id="react-aria-0-1"
+          id="test-ID"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -52,14 +57,34 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
 </SSRProvider>
 `;
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot when keywords are set 1`] = `
+exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are set 1`] = `
 <SSRProvider>
   <GlobalSearchInput
     aria-label="global search"
-    keywords={
+    filters={
       Array [
-        "From: Joe",
-        "In: a space",
+        Object {
+          "term": "from",
+          "translations": Object {
+            "empty": "empty",
+            "filterAdded": "filteradded",
+            "filterRemoved": "filterremoved",
+            "nonempty": "nonempty",
+            "text": "text",
+          },
+          "value": "Joe",
+        },
+        Object {
+          "term": "in",
+          "translations": Object {
+            "empty": "empty",
+            "filterAdded": "filteradded",
+            "filterRemoved": "filterremoved",
+            "nonempty": "nonempty",
+            "text": "text",
+          },
+          "value": "a space",
+        },
       ]
     }
     value="From: someone"
@@ -68,66 +93,69 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when keywords are 
       className="md-global-search-input-wrapper"
       onClick={[Function]}
     >
-      <Icon
-        className="search-icon"
-        name="search"
-        scale={18}
-        weight="light"
+      <label
+        htmlFor="test-ID"
       >
-        <div
-          className="md-icon-wrapper search-icon"
+        nonempty, nonempty:
+      </label>
+      <div>
+        <Icon
+          className="search-icon"
+          name="search"
+          scale={18}
+          weight="light"
         >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={18}
-            fill="currentColor"
-            height="100%"
-            stroke="currentColor"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
+          <div
+            className="md-icon-wrapper search-icon"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={18}
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
       <div
         className="input-container"
       >
+        <div
+          className="search-context-container"
+          key="from"
+        >
+          <p>
+            text
+          </p>
+        </div>
+        <div
+          className="search-context-container"
+          key="in"
+        >
+          <p>
+            text
+          </p>
+        </div>
         <input
           aria-label="global search"
           disabled={false}
-          id="react-aria-0-1"
+          id="test-ID"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
+          placeholder=""
           readOnly={false}
           type="search"
           value="From: someone"
         />
-        <div
-          className="search-context-container remove-padding"
-          key="From: Joe"
-        >
-          <p
-            aria-hidden="true"
-          >
-            From: som
-          </p>
-        </div>
-        <div
-          className="search-context-container "
-          key="In: a space"
-        >
-          <p
-            aria-hidden="true"
-          >
-            eone
-          </p>
-        </div>
       </div>
       <ButtonSimple
-        aria-label="Clear search"
         className="clear-icon"
         excludeFromTabOrder={true}
         onPress={[Function]}
@@ -136,11 +164,10 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when keywords are 
       >
         <FocusRing>
           <FocusRing
-            focusClass="children"
+            focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
-              aria-label="Clear search"
               className="clear-icon"
               onBlur={[Function]}
               onClick={[Function]}
@@ -198,35 +225,40 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
       className="md-global-search-input-wrapper"
       onClick={[Function]}
     >
-      <Icon
-        className="search-icon"
-        name="spinner"
-        scale={18}
-        weight="light"
-      >
-        <div
-          className="md-icon-wrapper search-icon"
+      <label
+        htmlFor="test-ID"
+      />
+      <div>
+        <Icon
+          className="search-icon"
+          name="spinner"
+          scale={18}
+          weight="light"
         >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={18}
-            fill="currentColor"
-            height="100%"
-            stroke="currentColor"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
+          <div
+            className="md-icon-wrapper search-icon"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={18}
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
       <div
         className="input-container"
       >
         <input
           aria-label="global search"
           disabled={false}
-          id="react-aria-0-1"
+          id="test-ID"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -251,35 +283,40 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
       className="example-class md-global-search-input-wrapper"
       onClick={[Function]}
     >
-      <Icon
-        className="search-icon"
-        name="search"
-        scale={18}
-        weight="light"
-      >
-        <div
-          className="md-icon-wrapper search-icon"
+      <label
+        htmlFor="test-ID"
+      />
+      <div>
+        <Icon
+          className="search-icon"
+          name="search"
+          scale={18}
+          weight="light"
         >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={18}
-            fill="currentColor"
-            height="100%"
-            stroke="currentColor"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
+          <div
+            className="md-icon-wrapper search-icon"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={18}
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
       <div
         className="input-container"
       >
         <input
           aria-label="global search"
           disabled={false}
-          id="react-aria-0-1"
+          id="test-ID"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -305,28 +342,33 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
       id="example-id"
       onClick={[Function]}
     >
-      <Icon
-        className="search-icon"
-        name="search"
-        scale={18}
-        weight="light"
-      >
-        <div
-          className="md-icon-wrapper search-icon"
+      <label
+        htmlFor="example-id"
+      />
+      <div>
+        <Icon
+          className="search-icon"
+          name="search"
+          scale={18}
+          weight="light"
         >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={18}
-            fill="currentColor"
-            height="100%"
-            stroke="currentColor"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
+          <div
+            className="md-icon-wrapper search-icon"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={18}
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
       <div
         className="input-container"
       >
@@ -367,35 +409,40 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
         }
       }
     >
-      <Icon
-        className="search-icon"
-        name="search"
-        scale={18}
-        weight="light"
-      >
-        <div
-          className="md-icon-wrapper search-icon"
+      <label
+        htmlFor="test-ID"
+      />
+      <div>
+        <Icon
+          className="search-icon"
+          name="search"
+          scale={18}
+          weight="light"
         >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={18}
-            fill="currentColor"
-            height="100%"
-            stroke="currentColor"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
+          <div
+            className="md-icon-wrapper search-icon"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={18}
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
       <div
         className="input-container"
       >
         <input
           aria-label="global search"
           disabled={false}
-          id="react-aria-0-1"
+          id="test-ID"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}

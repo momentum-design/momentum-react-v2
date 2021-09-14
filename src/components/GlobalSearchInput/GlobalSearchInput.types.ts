@@ -54,5 +54,5 @@ export interface Props extends AriaSearchFieldProps {
   /**
    * Initial text for hidden label
    */
-  initialLabel: string;
+  initialLabel?: string;
 }
