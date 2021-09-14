@@ -131,9 +131,54 @@ Common.parameters = {
     { value: 'Typed' },
     { searching: true, placeholder: 'Searching...' },
     { disabled: true },
-    { value: 'With: Joe', numHighlighted: 5 },
-    { value: 'From: Fred', numHighlighted: 5 },
-    { value: 'In: Example Space', numHighlighted: 3 },
+    {
+      value: 'Joe',
+      filters: [
+        {
+          term: 'from',
+          value: '',
+          translations: {
+            filterAdded: 'From filter added',
+            filterRemoved: 'From filter removed',
+            text: 'From:',
+            empty: 'Choose who to filter by',
+            nonempty: '',
+          },
+        },
+      ],
+    },
+    {
+      value: '',
+      filters: [
+        {
+          term: 'from',
+          value: 'Joe',
+          translations: {
+            filterAdded: 'From filter added',
+            filterRemoved: 'From filter removed',
+            text: 'From: Joe',
+            empty: 'Choose who to filter by',
+            nonempty: 'Filtering by Joe',
+          },
+        },
+      ],
+    },
+    {
+      value: 'a message',
+      filters: [
+        {
+          term: 'in',
+          value: 'Joe',
+          translations: {
+            filterAdded: 'In filter added',
+            filterRemoved: 'In filter removed',
+            text: 'In: A Space',
+            empty: 'Choose a space to filter by',
+            nonempty: 'Filtering in a space',
+          },
+        },
+      ],
+    },
   ],
 };
 
