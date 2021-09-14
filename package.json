@@ -66,7 +66,6 @@
     "source:build:esm": "tsc --project ./config/typescript/tsconfig.esm.json",
     "source:build:stories": "copyfiles -u 1 \"./src/**/*.stories.*\" ./dist/esm && copyfiles -u 1 \"./src/**/*.stories.*\" ./dist/cjs",
     "source:build:documentation": "copyfiles -u 1 \"./src/**/*.documentation.*\" ./dist/esm && copyfiles -u 1 \"./src/**/*.documentation.*\" ./dist/cjs",
-    "source:extract:translations": "formatjs extract 'src/components/**/*.ts*' --ignore '*.d.ts' --out-file dist/translations.json --id-interpolation-pattern [sha512:contenthash:base64:6]",
     "source:test": "jest",
     "storybook:build": "yarn storybook:clean && yarn storybook:build:esm",
     "storybook:build:cjs": "build-storybook -c ./config/storybook/cjs -o ./docs/storybook",
@@ -95,12 +94,8 @@
     "react": ">=16.14.0",
     "react-dom": ">=16.14.0"
   },
-  "resolutions": {
-    "@types/react": "^17.0.11"
-  },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@formatjs/cli": "^4.2.33",
     "@momentum-ui/design-tokens": "^0.0.24",
     "@momentum-ui/icons": "8.22.2",
     "@momentum-ui/icons-rebrand": "^1.2.0",
@@ -124,7 +119,6 @@
     "react-aria": "^3.7.1",
     "react-aria-modal": "^2.11.1",
     "react-focus-lock": "^1.19.1",
-    "react-intl": "^3.1.12",
     "react-uid": "^2.2.0",
     "react-verification-input": "^2.0.1",
     "ts-loader": "^8.2.0",
