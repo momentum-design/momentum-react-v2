@@ -1290,6 +1290,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         <ListBoxBase
           aria-labelledby="test-ID"
           autoFocus={true}
+          className="md-select-menu-listbox"
           disallowEmptySelection={true}
           id="test-ID"
           onBlur={[Function]}
@@ -1439,6 +1440,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         >
           <MenuListBackground
             aria-labelledby="test-ID"
+            className="md-select-menu-listbox"
             color="primary"
             id="test-ID"
             onBlur={[Function]}
@@ -1456,7 +1458,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               >
                 <ul
                   aria-labelledby="test-ID"
-                  className="md-menu-list-background-wrapper"
+                  className="md-select-menu-listbox md-menu-list-background-wrapper"
                   data-color="primary"
                   id="test-ID"
                   onBlur={[Function]}
@@ -2370,6 +2372,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         <ListBoxBase
           aria-labelledby="test-ID"
           autoFocus={true}
+          className="md-select-menu-listbox"
           disallowEmptySelection={true}
           id="test-ID"
           onBlur={[Function]}
@@ -2515,6 +2518,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         >
           <MenuListBackground
             aria-labelledby="test-ID"
+            className="md-select-menu-listbox"
             color="primary"
             id="test-ID"
             onBlur={[Function]}
@@ -2532,7 +2536,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               >
                 <ul
                   aria-labelledby="test-ID"
-                  className="md-menu-list-background-wrapper"
+                  className="md-select-menu-listbox md-menu-list-background-wrapper"
                   data-color="primary"
                   id="test-ID"
                   onBlur={[Function]}
@@ -3815,6 +3819,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         <ListBoxBase
           aria-labelledby="test-ID"
           autoFocus={true}
+          className="md-select-menu-listbox"
           disallowEmptySelection={true}
           id="test-ID"
           onBlur={[Function]}
@@ -3983,6 +3988,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         >
           <MenuListBackground
             aria-labelledby="test-ID"
+            className="md-select-menu-listbox"
             color="primary"
             id="test-ID"
             onBlur={[Function]}
@@ -4000,7 +4006,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               >
                 <ul
                   aria-labelledby="test-ID"
-                  className="md-menu-list-background-wrapper"
+                  className="md-select-menu-listbox md-menu-list-background-wrapper"
                   data-color="primary"
                   id="test-ID"
                   onBlur={[Function]}
