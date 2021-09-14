@@ -117,6 +117,7 @@ export {
   InputMessage as InputMessageNew,
   ExampleComponent,
   Icon as IconNext,
+  ModalContainer,
   Toast,
   ToastDetails,
   ToastContent,
