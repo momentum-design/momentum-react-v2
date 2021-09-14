@@ -2,16 +2,42 @@ import { CSSProperties } from 'react';
 import { AriaSearchFieldProps } from '@react-types/searchfield';
 
 export interface SearchFilterTranslations {
+  /**
+   * The text shown in the filter bubble
+   */
   text: string;
+  /**
+   * The accessible description of the empty state of the filter
+   * e.g. describing what to do with this filter
+   */
   empty: string;
+  /**
+   * The accessible description of the nonempty state of the filter
+   * e.g. describing the active filter
+   */
   nonempty: string;
+  /**
+   * The accessible description of the filter being added
+   */
   filterAdded: string;
+  /**
+   * The accessible description of the filter being removed
+   */
   filterRemoved: string;
 }
 
 export interface SearchFilter {
+  /**
+   * The type of filter, used at the key so must be unique e.g. from/in/with
+   */
   term: string;
+  /**
+   * The value currently being filtered by the filter
+   */
   value: string;
+  /**
+   * The translations object for filter
+   */
   translations: SearchFilterTranslations;
 }
 
@@ -52,7 +78,7 @@ export interface Props extends AriaSearchFieldProps {
   clearButtonAriaLabel?: string;
 
   /**
-   * Initial text for hidden label
+   * Initial text for accessible label
    */
   initialLabel?: string;
 }
