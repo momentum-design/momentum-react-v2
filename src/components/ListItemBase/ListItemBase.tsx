@@ -1,4 +1,4 @@
-import React, { RefObject, forwardRef, ReactNode } from 'react';
+import React, { RefObject, forwardRef, ReactNode, useRef } from 'react';
 import classnames from 'classnames';
 
 import './ListItemBase.style.scss';
@@ -7,9 +7,10 @@ import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import FocusRing from '../FocusRing';
+import { usePress } from '@react-aria/interactions';
 
 //TODO: Implement multi-line
-const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
+const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const {
     className,
     children,
@@ -21,6 +22,8 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
   } = props;
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
+
+  const ref = providedRef || useRef();
 
   if (shape === SHAPES.isPilled && size === SIZES[40]) {
     console.warn(
@@ -53,6 +56,8 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
     content = children;
   }
 
+  const { pressProps, isPressed } = usePress({ preventFocusOnPress: true, ...rest });
+
   return (
     <FocusRing>
       <li
@@ -60,9 +65,9 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
         data-size={size}
         data-disabled={isDisabled}
         data-shape={shape}
-        className={classnames(className, STYLE.wrapper)}
+        className={classnames(className, STYLE.wrapper, { active: isPressed })}
         role={role}
-        {...rest}
+        {...pressProps}
       >
         {content}
       </li>

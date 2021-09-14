@@ -126,4 +126,5 @@ export {
   ContentSeparator,
   ListItemBase,
   ListItemBaseSection,
+  Select as SelectNext,
 } from './components';

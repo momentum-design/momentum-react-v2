@@ -14,7 +14,7 @@ import {
 
 import ListItemBaseSection from '../ListItemBaseSection';
 import { SHAPES, SIZES } from './ListItemBase.constants';
-
+import { action } from '@storybook/addon-actions';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import Avatar from '../Avatar';
@@ -45,6 +45,7 @@ const Example = Template((args) => (
             <ListItemBaseSection position="end">end</ListItemBaseSection>
           </>
         ),
+        onPress: () => action('onPress'),
       },
       {}
     )}
