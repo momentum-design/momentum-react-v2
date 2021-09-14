@@ -1,0 +1,1206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToastDetails /> snapshot should match snapshot 1`] = `
+<ToastDetails
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={true}
+      />
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with badges 1`] = `
+<ToastDetails
+  badges={
+    Array [
+      "Static1",
+      "Static2",
+      "Static3",
+    ]
+  }
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={false}
+      />
+      <div
+        className="md-toast-details-badges"
+      >
+        <div
+          className="md-toast-details-badge"
+          key="0"
+        >
+          Static1
+        </div>
+        <div
+          className="md-toast-details-badge"
+          key="1"
+        >
+          Static2
+        </div>
+        <div
+          className="md-toast-details-badge"
+          key="2"
+        >
+          Static3
+        </div>
+      </div>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with children 1`] = `
+<ToastDetails
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={true}
+      >
+        Children
+      </div>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with className 1`] = `
+<ToastDetails
+  className="example-class"
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+>
+  <div
+    className="example-class md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={true}
+      />
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`] = `
+<ToastDetails
+  controls={
+    Array [
+      <ButtonControl
+        control="close"
+      />,
+      <ButtonControl
+        control="mute"
+      />,
+      <ButtonControl
+        control="favorite"
+      />,
+    ]
+  }
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+  info="Information"
+  infoColor="join"
+  subject="Subject"
+  title="Title"
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={false}
+      >
+        Title
+      </div>
+      <div
+        className="md-toast-details-subject"
+      >
+        Subject
+      </div>
+      <div
+        className="md-toast-details-info"
+        data-color="join"
+      >
+        Information
+      </div>
+    </div>
+    <div
+      className="md-toast-details-controls"
+    >
+      <ButtonControl
+        control="close"
+        isCircular={true}
+        key=".$0"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  name="cancel"
+                  weight="bold"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+      <ButtonControl
+        control="mute"
+        isCircular={true}
+        key=".$1"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  name="alert-muted"
+                  weight="bold"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+      <ButtonControl
+        control="favorite"
+        isCircular={true}
+        key=".$2"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  color="var(--theme-text-warning-normal)"
+                  name="favorite"
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--theme-text-warning-normal)",
+                          "stroke": "var(--theme-text-warning-normal)",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with complete props and badges 1`] = `
+<ToastDetails
+  badges={
+    Array [
+      "Badge 1",
+      "Badge 2",
+    ]
+  }
+  controls={
+    Array [
+      <ButtonControl
+        control="close"
+      />,
+      <ButtonControl
+        control="mute"
+      />,
+      <ButtonControl
+        control="favorite"
+      />,
+    ]
+  }
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+  info="Information"
+  infoColor="join"
+  subject="Subject"
+  title="Title"
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={false}
+      >
+        Title
+      </div>
+      <div
+        className="md-toast-details-subject"
+      >
+        Subject
+      </div>
+      <div
+        className="md-toast-details-badges"
+      >
+        <div
+          className="md-toast-details-badge"
+          key="0"
+        >
+          Badge 1
+        </div>
+        <div
+          className="md-toast-details-badge"
+          key="1"
+        >
+          Badge 2
+        </div>
+      </div>
+    </div>
+    <div
+      className="md-toast-details-controls"
+    >
+      <ButtonControl
+        control="close"
+        isCircular={true}
+        key=".$0"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  name="cancel"
+                  weight="bold"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+      <ButtonControl
+        control="mute"
+        isCircular={true}
+        key=".$1"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  name="alert-muted"
+                  weight="bold"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+      <ButtonControl
+        control="favorite"
+        isCircular={true}
+        key=".$2"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  color="var(--theme-text-warning-normal)"
+                  name="favorite"
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--theme-text-warning-normal)",
+                          "stroke": "var(--theme-text-warning-normal)",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
+<ToastDetails
+  controls={
+    Array [
+      <ButtonControl
+        control="close"
+      />,
+      <ButtonControl
+        control="mute"
+      />,
+      <ButtonControl
+        control="favorite"
+      />,
+    ]
+  }
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={true}
+      />
+    </div>
+    <div
+      className="md-toast-details-controls"
+    >
+      <ButtonControl
+        control="close"
+        isCircular={true}
+        key=".$0"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  name="cancel"
+                  weight="bold"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+      <ButtonControl
+        control="mute"
+        isCircular={true}
+        key=".$1"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  name="alert-muted"
+                  weight="bold"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+      <ButtonControl
+        control="favorite"
+        isCircular={true}
+        key=".$2"
+      >
+        <ButtonSimple
+          className="md-button-control-wrapper"
+          data-circular={true}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-control-wrapper"
+                data-circular={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  autoScale={true}
+                  color="var(--theme-text-warning-normal)"
+                  name="favorite"
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={true}
+                      data-scale={false}
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--theme-text-warning-normal)",
+                          "stroke": "var(--theme-text-warning-normal)",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonControl>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with id 1`] = `
+<ToastDetails
+  id="example-id"
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+>
+  <div
+    className="md-toast-details-wrapper"
+    id="example-id"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={true}
+      />
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with info 1`] = `
+<ToastDetails
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+  info="Information"
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={false}
+      />
+      <div
+        className="md-toast-details-info"
+      >
+        Information
+      </div>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with infoColor 1`] = `
+<ToastDetails
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+  info="Information"
+  infoColor="join"
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={false}
+      />
+      <div
+        className="md-toast-details-info"
+        data-color="join"
+      >
+        Information
+      </div>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with style 1`] = `
+<ToastDetails
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-toast-details-wrapper"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={true}
+      />
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with subject 1`] = `
+<ToastDetails
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+  subject="Subject"
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={false}
+      />
+      <div
+        className="md-toast-details-subject"
+      >
+        Subject
+      </div>
+    </div>
+  </div>
+</ToastDetails>
+`;
+
+exports[`<ToastDetails /> snapshot should match snapshot with title 1`] = `
+<ToastDetails
+  image={
+    <Avatar
+      initials="T"
+    />
+  }
+  title="Title"
+>
+  <div
+    className="md-toast-details-wrapper"
+  >
+    <Avatar
+      className="md-toast-details-image"
+      initials="T"
+      size={32}
+    >
+      <div
+        className="md-avatar-wrapper md-toast-details-image"
+        data-color="default"
+        data-size={32}
+      >
+        <span>
+          T
+        </span>
+      </div>
+    </Avatar>
+    <div
+      className="md-toast-details-content"
+    >
+      <div
+        className="md-toast-details-title"
+        data-centered={true}
+      >
+        Title
+      </div>
+    </div>
+  </div>
+</ToastDetails>
+`;
