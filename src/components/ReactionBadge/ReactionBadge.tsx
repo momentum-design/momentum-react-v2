@@ -13,6 +13,7 @@ const ReactionBadge: FC<Props> = forwardRef(
     // meeting today about mapping string -> SVG
     const { children, className, count, id, reacted, style, ...otherProps } = props;
     const ref = providedRef || useRef();
+
     return (
       <ButtonPill
         className={classnames(className, STYLE.wrapper)}
