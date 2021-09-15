@@ -139,4 +139,6 @@ export {
   AvatarListItem,
   Reaction,
   ReactionBadge,
+  ReactionButton,
+  ReactionPicker,
 } from './components';

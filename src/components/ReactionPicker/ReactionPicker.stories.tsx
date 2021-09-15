@@ -4,7 +4,7 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import ReactionPicker, { ReactionPickerProps } from './';
-import ButtonCircle from '../ButtonCircle';
+import ReactionButton from '../ReactionButton';
 import argTypes from './ReactionPicker.stories.args';
 import Documentation from './ReactionPicker.stories.docs.mdx';
 
@@ -17,20 +17,18 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
-  subComponents: { ButtonCircle },
+  subComponents: { ReactionButton },
   args: {
     // Args provided to all stories by default.
     children: [
-      <ButtonCircle key="1" size={32}>
-        <span>🎉</span>
-      </ButtonCircle>,
-      <ButtonCircle key="2" size={32}>
-        <span>🎉</span>
-      </ButtonCircle>,
-      <ButtonCircle key="3" size={32}>
-        <span>🎉</span>
-      </ButtonCircle>,
-    ], // Example of a default arg for all stories.
+      <ReactionButton name={'popper'} />,
+      <ReactionButton name={'heart'} />,
+      <ReactionButton name={'thumb-up-yellow'} />,
+      <ReactionButton name={'smile'} />,
+      <ReactionButton name={'haha'} />,
+      <ReactionButton name={'wow'} />,
+      <ReactionButton name={'sad'} />,
+    ],
   },
 };
 

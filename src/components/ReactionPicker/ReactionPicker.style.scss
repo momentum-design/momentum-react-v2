@@ -1,6 +1,6 @@
 .md-reaction-picker-wrapper {
   height: 2.25rem;
-  background-color: black;
+  background-color: var(--theme-groupedbackground-primary-normal);
   &[data-round='true'] {
     border-radius: 100vh;
 
@@ -18,10 +18,10 @@
   .md-button-circle-wrapper {
     border-radius: 100vh;
     &:hover {
-      background-color: green;
+      // background-color: green;
     }
     &[data-reacted="true"] {
-      background-color: red;
+      // background-color: red;
     }
     span {
       &:hover {
