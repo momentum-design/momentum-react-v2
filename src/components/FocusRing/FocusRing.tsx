@@ -7,7 +7,7 @@ import { Props } from './FocusRing.types';
 import './FocusRing.style.scss';
 
 /**
- * The wrapped `<FocusRing />` from `@react-aria/focus`.
+ * The wraped `<FocusRing />` from `@react-aria/focus`.
  *
  * @remarks
  * This does not support typical style inheritance via `className`, `id`, and `style`. See [react-aria/focus]{@link https://react-spectrum.adobe.com/react-aria/FocusRing.html}
@@ -22,9 +22,7 @@ const FocusRing: FC<Props> = (props: Props) => {
 
   return (
     <AriaFocusRing
-      focusClass={
-        props.disabled ? classnames(STYLE.disabled) : classnames(STYLE.wrapper, focusClass)
-      }
+      focusClass={props.disabled ? classnames(STYLE.disabled) : classnames(focusClass)}
       focusRingClass={
         props.disabled ? classnames(STYLE.disabled) : classnames(STYLE.wrapper, focusRingClass)
       }

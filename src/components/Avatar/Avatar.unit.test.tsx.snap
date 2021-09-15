@@ -5,13 +5,17 @@ exports[`Avatar snapshot should match snapshot 1`] = `
   title="Cisco Webex"
 >
   <div
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={24}
+    className="md-avatar-outer-wrapper"
   >
-    <span>
-      CW
-    </span>
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+    >
+      <span>
+        CW
+      </span>
+    </div>
   </div>
 </Avatar>
 `;
@@ -21,32 +25,36 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
   icon="check"
 >
   <div
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={24}
+    className="md-avatar-outer-wrapper"
   >
-    <Icon
-      className="md-avatar-icon-wrapper"
-      name="check"
-      scale={16}
-      weight="bold"
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
     >
-      <div
-        className="md-icon-wrapper md-avatar-icon-wrapper"
+      <Icon
+        className="md-avatar-icon-wrapper"
+        name="check"
+        scale={16}
+        weight="bold"
       >
-        <svg
-          className=""
-          data-autoscale={false}
-          data-scale={16}
-          fill="currentColor"
-          height="100%"
-          stroke="currentColor"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
+        <div
+          className="md-icon-wrapper md-avatar-icon-wrapper"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={16}
+            fill="currentColor"
+            height="100%"
+            stroke="currentColor"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+    </div>
   </div>
 </Avatar>
 `;
@@ -56,13 +64,17 @@ exports[`Avatar snapshot should match snapshot with initials 1`] = `
   initials="CW"
 >
   <div
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={24}
+    className="md-avatar-outer-wrapper"
   >
-    <span>
-      CW
-    </span>
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+    >
+      <span>
+        CW
+      </span>
+    </div>
   </div>
 </Avatar>
 `;
@@ -75,13 +87,17 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
+      <div
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
+      >
+        <span>
+          CW
+        </span>
+      </div>
     </div>
   </Avatar>
   <Avatar
@@ -90,41 +106,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-active)"
-          name="unread"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-active)"
+            name="unread"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-active)",
-                  "stroke": "var(--avatar-presence-icon-active)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-active)",
+                    "stroke": "var(--avatar-presence-icon-active)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -134,41 +154,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-meeting)"
-          name="camera-presence"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-meeting)"
+            name="camera-presence"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-meeting)",
-                  "stroke": "var(--avatar-presence-icon-meeting)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-meeting)",
+                    "stroke": "var(--avatar-presence-icon-meeting)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -178,41 +202,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-schedule)"
-          name="meetings-presence"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-schedule)"
+            name="meetings-presence"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-schedule)",
-                  "stroke": "var(--avatar-presence-icon-schedule)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-schedule)",
+                    "stroke": "var(--avatar-presence-icon-schedule)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -222,41 +250,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-dnd)"
-          name="dnd-presence"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-dnd)"
+            name="dnd-presence"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-dnd)",
-                  "stroke": "var(--avatar-presence-icon-dnd)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-dnd)",
+                    "stroke": "var(--avatar-presence-icon-dnd)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -266,41 +298,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-presenting)"
-          name="share-screen"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-presenting)"
+            name="share-screen"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-presenting)",
-                  "stroke": "var(--avatar-presence-icon-presenting)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-presenting)",
+                    "stroke": "var(--avatar-presence-icon-presenting)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -310,41 +346,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-quiet-hours)"
-          name="quiet-hours-presence"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-quiet-hours)"
+            name="quiet-hours-presence"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-quiet-hours)",
-                  "stroke": "var(--avatar-presence-icon-quiet-hours)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-quiet-hours)",
+                    "stroke": "var(--avatar-presence-icon-quiet-hours)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -354,41 +394,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-away)"
-          name="recents-presence"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-away)"
+            name="recents-presence"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-away)",
-                  "stroke": "var(--avatar-presence-icon-away)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-away)",
+                    "stroke": "var(--avatar-presence-icon-away)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -398,41 +442,45 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     title="Cisco Webex"
   >
     <div
-      className="md-avatar-wrapper"
-      data-color="default"
-      data-size={24}
+      className="md-avatar-outer-wrapper"
     >
-      <span>
-        CW
-      </span>
       <div
-        className="md-avatar-presence-icon-wrapper"
+        className="md-avatar-wrapper"
+        data-color="default"
+        data-size={24}
       >
-        <Icon
-          color="var(--avatar-presence-icon-ooo)"
-          name="pto-presence"
-          scale={8}
-          weight="filled"
+        <span>
+          CW
+        </span>
+        <div
+          className="md-avatar-presence-icon-wrapper"
         >
-          <div
-            className="md-icon-wrapper"
+          <Icon
+            color="var(--avatar-presence-icon-ooo)"
+            name="pto-presence"
+            scale={8}
+            weight="filled"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={8}
-              height="100%"
-              style={
-                Object {
-                  "fill": "var(--avatar-presence-icon-ooo)",
-                  "stroke": "var(--avatar-presence-icon-ooo)",
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={8}
+                height="100%"
+                style={
+                  Object {
+                    "fill": "var(--avatar-presence-icon-ooo)",
+                    "stroke": "var(--avatar-presence-icon-ooo)",
+                  }
                 }
-              }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
       </div>
     </div>
   </Avatar>
@@ -445,13 +493,17 @@ exports[`Avatar snapshot should match snapshot with size 1`] = `
   title="CW"
 >
   <div
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={124}
+    className="md-avatar-outer-wrapper"
   >
-    <span>
-      C
-    </span>
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={124}
+    >
+      <span>
+        C
+      </span>
+    </div>
   </div>
 </Avatar>
 `;
@@ -463,20 +515,24 @@ exports[`Avatar snapshot should match snapshot with src & alt 1`] = `
   title="CW"
 >
   <div
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={24}
+    className="md-avatar-outer-wrapper"
   >
-    <span>
-      C
-    </span>
-    <img
-      alt="alt"
-      className="md-avatar-image-hidden"
-      onError={[Function]}
-      onLoad={[Function]}
-      src="src"
-    />
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+    >
+      <span>
+        C
+      </span>
+      <img
+        alt="alt"
+        className="md-avatar-image-hidden"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="src"
+      />
+    </div>
   </div>
 </Avatar>
 `;
@@ -487,13 +543,17 @@ exports[`Avatar snapshot should match snapshot with type 1`] = `
   type="space"
 >
   <div
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={24}
+    className="md-avatar-outer-wrapper"
   >
-    <span>
-      C
-    </span>
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+    >
+      <span>
+        C
+      </span>
+    </div>
   </div>
 </Avatar>
 `;

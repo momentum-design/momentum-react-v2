@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react';
+import { AriaButtonProps } from '@react-types/button';
 
-export interface Props {
+export interface Props extends AriaButtonProps {
   /**
    * Custom class for overriding this component's CSS.
    */

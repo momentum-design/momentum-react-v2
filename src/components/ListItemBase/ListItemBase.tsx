@@ -71,7 +71,7 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
 };
 
 /**
- * List Item Base component that can be used inside Lists/Menus
+ * List Item component that can be used inside Lists/Menus
  */
 
 const _ListItemBase = forwardRef(ListItemBase);

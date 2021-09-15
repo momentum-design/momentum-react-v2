@@ -1,5 +1,5 @@
 import Icon from '.';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { STYLE } from './Icon.constants';
 
 import { mountAndWait } from '../../../test/utils';
@@ -21,7 +21,7 @@ describe('<Icon />', () => {
 
       const className = 'example-class';
 
-      container = await mountAndWait(<Icon name="accessibility" className={className} />);
+      container = mountAndWait(<Icon name="accessibility" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -31,7 +31,7 @@ describe('<Icon />', () => {
 
       const id = 'example-id';
 
-      container = await mountAndWait(<Icon name="accessibility" id={id} />);
+      container = mountAndWait(<Icon name="accessibility" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -41,7 +41,7 @@ describe('<Icon />', () => {
 
       const style = { color: 'pink' };
 
-      container = await mountAndWait(<Icon name="accessibility" style={style} />);
+      container = mountAndWait(<Icon name="accessibility" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -246,24 +246,6 @@ describe('<Icon />', () => {
       const icon = wrapper.find('svg').getDOMNode();
 
       expect(icon.getAttribute('style')).toBe(null);
-    });
-  });
-
-  describe('clean up', () => {
-    it('can unmount the Icon component without erroring', async () => {
-      expect.assertions(0);
-
-      const Component = () => {
-        const [visible, setVisible] = useState(true);
-
-        useEffect(() => {
-          setVisible(false);
-        }, []);
-
-        return <div>{visible && <Icon name="accessibility" />}</div>;
-      };
-
-      await mountAndWait(<Component />);
     });
   });
 });

@@ -7,107 +7,107 @@ import { mountAndWait } from '../../../test/utils';
 
 describe('<NavigationTab />', () => {
   describe('snapshot', () => {
-    it('should match snapshot', () => {
+    it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = mount(<NavigationTab />);
+      const container = await mountAndWait(<NavigationTab />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with className', () => {
+    it('should match snapshot with className', async () => {
       expect.assertions(1);
 
       const className = 'example-class';
 
-      const container = mount(<NavigationTab className={className} />);
+      const container = await mountAndWait(<NavigationTab className={className} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with id', () => {
+    it('should match snapshot with id', async () => {
       expect.assertions(1);
 
       const id = 'example-id';
 
-      const container = mount(<NavigationTab id={id} />);
+      const container = await mountAndWait(<NavigationTab id={id} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with style', () => {
+    it('should match snapshot with style', async () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
 
-      const container = mount(<NavigationTab style={style} />);
+      const container = await mountAndWait(<NavigationTab style={style} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size', () => {
+    it('should match snapshot with size', async () => {
       expect.assertions(1);
 
       const size = 200;
 
-      const container = mount(<NavigationTab size={size} />);
+      const container = await mountAndWait(<NavigationTab size={size} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with label', () => {
+    it('should match snapshot with label', async () => {
       expect.assertions(1);
 
       const label = 'Example label';
 
-      const container = mount(<NavigationTab label={label} />);
+      const container = await mountAndWait(<NavigationTab label={label} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with icon', () => {
+    it('should match snapshot with icon', async () => {
       expect.assertions(1);
 
       const icon = 'contacts';
 
-      const container = mount(<NavigationTab icon={icon} />);
+      const container = await mountAndWait(<NavigationTab icon={icon} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with count', () => {
+    it('should match snapshot with count', async () => {
       expect.assertions(1);
 
       const count = 100;
 
-      const container = mount(<NavigationTab count={count} />);
+      const container = await mountAndWait(<NavigationTab count={count} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with active', () => {
+    it('should match snapshot with active', async () => {
       expect.assertions(1);
 
       const active = true;
 
-      const container = mount(<NavigationTab active={active} />);
+      const container = await mountAndWait(<NavigationTab active={active} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size, label, icon', () => {
+    it('should match snapshot with size, label, icon', async () => {
       expect.assertions(1);
 
       const size = 48;
       const label = 'Contacts';
       const icon = 'contacts';
 
-      const container = mount(<NavigationTab size={size} label={label} icon={icon} />);
+      const container = await mountAndWait(<NavigationTab size={size} label={label} icon={icon} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size, label, icon, count, active', () => {
+    it('should match snapshot with size, label, icon, count, active', async () => {
       expect.assertions(1);
 
       const size = 48;
@@ -116,7 +116,7 @@ describe('<NavigationTab />', () => {
       const count = 0;
       const active = false;
 
-      const container = mount(
+      const container = await mountAndWait(
         <NavigationTab size={size} label={label} icon={icon} count={count} active={active} />
       );
 
@@ -125,107 +125,117 @@ describe('<NavigationTab />', () => {
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
+    it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = mount(<NavigationTab />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = await mountAndWait(<NavigationTab />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
-    it('should have provided class when className is provided', () => {
+    it('should have provided class when className is provided', async () => {
       expect.assertions(1);
 
       const className = 'example-class';
 
-      const element = mount(<NavigationTab className={className} />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = await mountAndWait(<NavigationTab className={className} />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should have provided id when id is provided', () => {
+    it('should have provided id when id is provided', async () => {
       expect.assertions(1);
 
       const id = 'example-id';
 
-      const element = mount(<NavigationTab id={id} />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = mount(<NavigationTab id={id} />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.id).toBe(id);
     });
 
-    it('should have provided style when style is provided', () => {
+    it('should have provided style when style is provided', async () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<NavigationTab style={style} />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = await mountAndWait(<NavigationTab style={style} />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should have provided size when size is provided', () => {
+    it('should have provided size when size is provided', async () => {
       expect.assertions(1);
 
       const size = CONSTANTS.DEFAULTS.SIZE;
 
-      const element = mount(<NavigationTab size={size} />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = await mountAndWait(<NavigationTab size={size} />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.getAttribute('data-size')).toBe(`${size}`);
     });
 
-    it('should have provided label when label is provided and size is 200 (size 48 has no label)', () => {
+    it('should have provided label when label is provided and size is 200 (size 48 has no label)', async () => {
       expect.assertions(1);
 
       const label = DEFAULTS.LABEL;
 
-      const element = mount(<NavigationTab size={200} label={label} />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = await mountAndWait(<NavigationTab size={200} label={label} />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       const target = element.getElementsByClassName(STYLE.label)[0];
 
       expect(target.innerHTML).toBe(label);
     });
 
-    it('should have provided count when count is provided', () => {
+    it('should have provided count when count is provided', async () => {
       expect.assertions(1);
 
       const count = DEFAULTS.COUNT;
 
-      const element = mount(<NavigationTab count={count} />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = await mountAndWait(<NavigationTab count={count} />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       const target = element.getElementsByClassName(STYLE.count)[0];
 
       expect(parseInt(target.innerHTML)).toBe(count);
     });
 
-    it('should have provided active when active is provided', () => {
+    it('should have provided active when active is provided', async () => {
       expect.assertions(1);
 
       const active = CONSTANTS.DEFAULTS.ACTIVE;
 
-      const element = mount(<NavigationTab active={active} />)
-        .find(NavigationTab)
-        .getDOMNode();
+      const wrapper = await mountAndWait(<NavigationTab active={active} />);
+      const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.getAttribute('data-active')).toBe(`${active}`);
     });
   });
 
   describe('actions', () => {
-    /* ...action tests... */
+    it('should handle mouse press events', async () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const wrapper = await mountAndWait(<NavigationTab onPress={mockCallback} />);
+      const component = wrapper.find(NavigationTab);
+
+      component.props().onPress({
+        type: 'press',
+        pointerType: 'mouse',
+        shiftKey: false,
+        ctrlKey: false,
+        metaKey: false,
+        target: component.getDOMNode(),
+      });
+
+      expect(mockCallback).toBeCalledTimes(1);
+    });
   });
 });

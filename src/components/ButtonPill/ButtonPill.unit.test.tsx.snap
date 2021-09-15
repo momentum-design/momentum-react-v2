@@ -4,7 +4,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
 <ButtonPill>
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -43,7 +43,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -126,7 +126,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -208,7 +208,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -245,7 +245,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -284,7 +284,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -322,7 +322,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -365,7 +365,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button

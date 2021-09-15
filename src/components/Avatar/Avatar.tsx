@@ -180,19 +180,21 @@ const Avatar: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className={classnames(STYLE.wrapper, className)} data-size={size} data-color={color}>
-      {/*
-        Renders by default with initials or title.
-        Doesn't render if src has loaded successfully or icon is provided.
-        It also renders if src has failed to load.
-      */}
-      {renderInitials()}
-      {/* Renders if src is provided. */}
-      {renderImage()}
-      {/* Renders if icon is provided. */}
-      {renderIcon()}
-      {/* Renders if presence is provided. */}
-      {renderPresence(presence)}
+    <div className="md-avatar-outer-wrapper">
+      <div className={classnames(STYLE.wrapper, className)} data-size={size} data-color={color}>
+        {/*
+          Renders by default with initials or title.
+          Doesn't render if src has loaded successfully or icon is provided.
+          It also renders if src has failed to load.
+        */}
+        {renderInitials()}
+        {/* Renders if src is provided. */}
+        {renderImage()}
+        {/* Renders if icon is provided. */}
+        {renderIcon()}
+        {/* Renders if presence is provided. */}
+        {renderPresence(presence)}
+      </div>
     </div>
   );
 };

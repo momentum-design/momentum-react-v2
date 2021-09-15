@@ -4,7 +4,7 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
 <ListItemBase>
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li
@@ -29,7 +29,7 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li
@@ -54,7 +54,7 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li
@@ -80,7 +80,7 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li
@@ -105,7 +105,7 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li
@@ -130,7 +130,7 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li
@@ -155,7 +155,7 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li
@@ -184,7 +184,7 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="md-focus-ring-wrapper children"
+      focusClass="children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <li

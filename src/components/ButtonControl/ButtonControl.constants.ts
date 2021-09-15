@@ -6,18 +6,14 @@ const DEFAULTS = {};
 
 const CONTROLS: Record<string, ButtonControlControl> = {
   CLOSE: 'close',
-  FAVORITE: 'favorite',
   MAXIMIZE: 'maximize',
   MINIMIZE: 'minimize',
-  MUTE: 'mute',
 };
 
 const ICONS = {
   close: 'cancel',
-  favorite: 'favorite',
   maximize: 'arrow-up',
   minimize: 'arrow-down',
-  mute: 'alert-muted',
 };
 
 const STYLE = {

@@ -44,14 +44,6 @@ describe('<ButtonControl />', () => {
 
       expect(container).toMatchSnapshot();
     });
-
-    it('should match snapshot with isCircular', async () => {
-      expect.assertions(1);
-
-      const container = await mountAndWait(<ButtonControl control="close" isCircular />);
-
-      expect(container).toMatchSnapshot();
-    });
   });
 
   describe('attributes', () => {
@@ -108,15 +100,6 @@ describe('<ButtonControl />', () => {
       const child = wrapper.find(Icon);
 
       expect(child.props().name).toBe(icon);
-    });
-
-    it('should have provided data-circular when isCircle is provided', async () => {
-      expect.assertions(1);
-
-      const wrapper = await mountAndWait(<ButtonControl control="close" isCircular />);
-      const element = wrapper.find(ButtonControl).getDOMNode();
-
-      expect(element.getAttribute('data-circular')).toBe('true');
     });
   });
 

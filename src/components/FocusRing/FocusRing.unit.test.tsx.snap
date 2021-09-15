@@ -3,7 +3,7 @@
 exports[`<FocusRing /> snapshot should match snapshot 1`] = `
 <FocusRing>
   <FocusRing
-    focusClass="md-focus-ring-wrapper children"
+    focusClass="children"
     focusRingClass="md-focus-ring-wrapper children"
   >
     <button

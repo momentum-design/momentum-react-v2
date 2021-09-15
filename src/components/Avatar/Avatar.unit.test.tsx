@@ -78,7 +78,7 @@ describe('Avatar', () => {
         .find(Avatar)
         .getDOMNode();
 
-      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
+      expect(element.classList.contains(STYLE.outerWrapper)).toBe(true);
     });
 
     it('should pass the size prop', () => {
