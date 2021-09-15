@@ -13,6 +13,7 @@ export { default as ButtonSimple } from './ButtonSimple';
 export { default as FocusRing } from './FocusRing';
 export { default as Tab } from './Tab';
 export { default as ThemeProvider } from './ThemeProvider';
+export { default as Toast } from './Toast';
 export { default as ToastContent } from './ToastContent';
 export { default as ToastDetails } from './ToastDetails';
 export { default as ExampleComponent } from './ExampleComponent';

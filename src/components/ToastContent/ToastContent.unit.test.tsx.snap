@@ -165,7 +165,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
         <ButtonPill>
           <FocusRing>
             <FocusRing
-              focusClass="children"
+              focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button

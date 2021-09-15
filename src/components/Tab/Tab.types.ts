@@ -6,7 +6,7 @@ import { AriaButtonProps } from '@react-types/button';
 
 export interface Props extends AriaButtonProps {
   /**
-   * Child components of this ButtonPill.
+   * Child components of this Tab.
    */
   children?: string | ReactElement<TextProps | BadgeProps | IconProps>[];
 
@@ -34,9 +34,4 @@ export interface Props extends AriaButtonProps {
    * Determines whether the tab is disabled or not.
    */
   disabled?: boolean;
-
-  /**
-   * Determines whether the tab is opened or not.
-   */
-  open?: boolean;
 }

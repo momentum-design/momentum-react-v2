@@ -32,7 +32,6 @@ const States = MultiTemplate<TabProps>(Tab).bind({});
 States.argTypes = { ...argTypes };
 delete States.argTypes.active;
 delete States.argTypes.disabled;
-delete States.argTypes.open;
 
 States.parameters = {
   variants: [
@@ -42,9 +41,6 @@ States.parameters = {
     { disabled: undefined },
     { disabled: true },
     { disabled: false },
-    { open: undefined },
-    { open: true },
-    { open: false },
   ],
 };
 

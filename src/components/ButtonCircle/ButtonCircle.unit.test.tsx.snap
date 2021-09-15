@@ -4,7 +4,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
 <ButtonCircle>
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -42,7 +42,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -126,7 +126,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -209,7 +209,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -247,7 +247,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -287,7 +287,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -324,7 +324,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
 <ButtonCircle>
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -369,7 +369,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button
@@ -413,7 +413,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
 >
   <FocusRing>
     <FocusRing
-      focusClass="children"
+      focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <button

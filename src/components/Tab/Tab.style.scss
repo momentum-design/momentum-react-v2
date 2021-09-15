@@ -43,21 +43,6 @@
             background-color: var(--tab-active-background-pressed);
             color: var(--tab-active-text-pressed);
         }
-    }
-
-    &[data-open=true] {
-        background-color: var(--tab-active-background);
-        color: var(--tab-inactive-text);
-
-        &:hover {
-            background-color: var(--tab-active-background-hovered);
-            color: var(--tab-active-text-hovered);
-        }
-    
-        &:active {
-            background-color: var(--tab-active-background-pressed);
-            color: var(--tab-active-text-pressed);
-        }
 
         > .md-icon-wrapper {
             &:last-child {

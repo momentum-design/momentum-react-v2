@@ -5,11 +5,12 @@ export default {
   ...commonStyles,
   ...commonAriaButton,
   children: {
-    description: 'Provides the child nodes for this element.',
+    description:
+      'Provides the child nodes for this element. It can be a free string, or an Icon, Badge or Text component.',
     control: 'text',
     table: {
       type: {
-        summary: 'ReactNode',
+        summary: 'string | Text | Icon | Badge',
       },
       defaultValue: {
         summary: 'undefined',
@@ -37,18 +38,6 @@ export default {
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.DISABLED,
-      },
-    },
-  },
-  open: {
-    description: 'Tells whether the tab is currently open or not.',
-    control: 'boolean',
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.OPEN,
       },
     },
   },

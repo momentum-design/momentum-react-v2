@@ -1,49 +1,33 @@
-import React, { forwardRef, useRef, FC, RefObject } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
-import { useButton } from '@react-aria/button';
 import FocusRing from '../FocusRing';
 
 import { DEFAULTS, STYLE } from './Tab.constants';
 import { Props } from './Tab.types';
 import './Tab.style.scss';
 import Text from '../Text';
+import ButtonSimple from '../ButtonSimple';
 
-const Tab: FC<Props> = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { children, className, id, style, active, disabled, open } = props;
-  const ref = providedRef || useRef();
-  const mutatedProps = {
-    ...props,
-    isDisabled: props.disabled,
-  };
-
-  delete mutatedProps.className;
-  delete mutatedProps.disabled;
-  delete mutatedProps.id;
-  delete mutatedProps.style;
-
-  const { buttonProps } = useButton(mutatedProps, ref);
+const Tab: FC<Props> = (props: Props) => {
+  const { children, className, active, disabled, ...otherProps } = props;
 
   return (
     <FocusRing disabled={disabled}>
-      <button
+      <ButtonSimple
         className={classnames(STYLE.wrapper, className)}
-        {...buttonProps}
+        {...otherProps}
         data-active={active || DEFAULTS.ACTIVE}
         data-disabled={disabled || DEFAULTS.DISABLED}
-        data-open={open || DEFAULTS.OPEN}
-        ref={ref}
-        id={id}
-        style={style}
       >
         {typeof children === 'string' ? (
           <Text type="subheader-secondary">{children}</Text>
         ) : (
           children
         )}
-      </button>
+      </ButtonSimple>
     </FocusRing>
   );
-});
+};
 
 Tab.displayName = 'Tab';
 
