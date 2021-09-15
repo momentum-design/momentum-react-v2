@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+import { useIsMounted } from './useIsMounted';
 
 interface UseDynamicSVGImportOptions {
   onCompleted?: (
@@ -28,6 +29,7 @@ function useDynamicSVGImport(
   const ImportedIconRef = useRef<React.FC<React.SVGProps<SVGSVGElement>>>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>(undefined);
+  const isMounted = useIsMounted();
 
   const { onCompleted, onError } = options;
   useEffect(() => {
@@ -38,12 +40,18 @@ function useDynamicSVGImport(
         ImportedIconRef.current = (
           await require(`@momentum-ui/icons-rebrand/svg/${name}.svg`)
         ).ReactComponent;
-        onCompleted?.(name, ImportedIconRef.current);
+        if (isMounted()) {
+          onCompleted?.(name, ImportedIconRef.current);
+        }
       } catch (err) {
-        onError?.(err);
-        setError(err);
+        if (isMounted()) {
+          onError?.(err);
+          setError(err);
+        }
       } finally {
-        setLoading(false);
+        if (isMounted()) {
+          setLoading(false);
+        }
       }
     };
     importIcon();
