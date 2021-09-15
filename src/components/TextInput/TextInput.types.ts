@@ -1,9 +1,39 @@
+import {AriaTextFieldProps} from '@react-types/textfield';
+
 export type Message = {
   message: string;
   type: 'error' | 'warning' | 'success';
 };
 
-export interface Props {
+export interface Props extends AriaTextFieldProps {
+  /**
+   * Optional css class name
+   */
+  className?: string;
+  /**
+   * Optional aria label on the clear button
+   */
+  clearAriaLabel?: string;
+  /**
+   * Input css class name string
+   */
+  inputClassName?: string;
+  /**
+   * Help Text to show form validation rules
+   */
+  helpText?: string;
+  /**
+   * Optional Input ref prop type
+   */
+  inputRef?: (text: string) => void;
+  /**
+   * Array of Objects with message and type [{error: '', type: 'error, success, warning'}] to display error message and assign class
+   */
+  messageArr?: Message[];
+};
+
+
+const interface OldProps {
   /**
    * ID to reference for blindness accessibility feature
    */
@@ -121,4 +151,4 @@ export interface Props {
    */
   value?: string | number;
 };
-// removed multiline, password(in type), secondaryLabel, shape, nestedLevel
+// removed multiline, password(in type), secondaryLabel, shape, nestedLevel, clear

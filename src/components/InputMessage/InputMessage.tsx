@@ -34,10 +34,13 @@ export const getFilteredMessages = (allMessages) => {
 }
 
 const InputMessage = (props: Props): ReactElement => {
-  const { message, level = 'none', className } = props;
+  const { message, level = 'none', className, id } = props;
 
   return (
-    <div className={classnames('md-input-message-wrapper', className)}>
+    <div
+      className={classnames('md-input-message-wrapper', className)}
+      id={id}
+    >
       <div className="md-input-message" role="alert" message-level={level}>
         <div className="md-input-message--icon">
           {(level == 'error' || level == 'warning') && (

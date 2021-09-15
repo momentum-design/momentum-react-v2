@@ -116,6 +116,7 @@ export {
   FocusRing,
   InputMessage as InputMessageNew,
   InputHelper as InputHelperNew,
+  Label as LabelNew,
   ExampleComponent,
   Icon as IconNext,
   ToastDetails,
@@ -124,4 +125,5 @@ export {
   Text,
   ContentSeparator,
   TextInput,
+  
 } from './components';

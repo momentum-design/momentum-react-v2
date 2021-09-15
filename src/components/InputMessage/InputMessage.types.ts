@@ -13,4 +13,8 @@ export interface Props {
    * level: the severity of the message
    */
   level?: MessageLevel;
+  /**
+   * id: id of help message
+   */
+  id?: string;
 }

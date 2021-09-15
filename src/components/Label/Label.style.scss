@@ -1,0 +1,8 @@
+.md-label {
+  font-family: 'CiscoSansTT Regular';
+  color:  rgba(0, 0, 0, 0.95); // IEFIX
+  color: var(--theme-text-primary-normal);
+  fill:  rgba(0, 0, 0, 0.95); // IEFIX
+  fill: var(--theme-text-primary-normal);
+  margin-top: 1rem;
+}

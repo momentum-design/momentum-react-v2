@@ -7,4 +7,8 @@ export interface Props {
    * message: Input help message for parent Input
    */
   message?: string;
+  /**
+   * id: id of help message
+   */
+  id?: string;
 }
