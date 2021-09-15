@@ -8,18 +8,22 @@
     outline: none;
     border-color: rgba(0, 0, 0, 0);
     background-color: var(--navigationtab-background);
+
     &:hover {
         background-color: var(--navigationtab-background-hovered); 
     }
+
     &:active {
         background-color: var(--navigationtab-background-active);
     }
 
     &[data-active=true]{
         background-color: var(--navigationtab-background-active);
+
         &:hover {
             background-color: var(--navigationtab-background-active); 
         }
+
         &:active {
             background-color: var(--navigationtab-background-active);
         }
@@ -28,17 +32,22 @@
     // Icon //
     > .md-navigation-tab-icon > * {
         color: var(--navigationtab-text);
+
         &:hover {
             color: var(--navigationtab-text-hovered);
         }
+
         &:active {
             color: var(--navigationtab-text-active);
         }
+
         &[data-active=true]{
             background-color: var(--navigationtab-text-active);
+
             &:hover {
                 background-color: var(--navigationtab-text-active); 
             }
+
             &:active {
                 background-color: var(--navigationtab-text-active);
             }
@@ -48,17 +57,22 @@
     // Label //
     > .md-navigation-tab-label {
         color: var(--navigationtab-text);
+
         &:hover {
             color: var(--navigationtab-text-hovered);
         }
+
         &:active {
             color: var(--navigationtab-text-active);
         }
+
         &[data-active=true]{
             background-color: var(--navigationtab-text-active);
+
             &:hover {
                 background-color: var(--navigationtab-text-active); 
             }
+
             &:active {
                 background-color: var(--navigationtab-text-active);
             }

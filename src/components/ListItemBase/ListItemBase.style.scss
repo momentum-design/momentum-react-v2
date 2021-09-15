@@ -9,6 +9,7 @@
   color: var(--theme-text-primary-normal);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
+  outline: none;
 
   &:hover, &.hover {
     background-color: var(--theme-background-primary-hover);
@@ -29,7 +30,7 @@
 
   & > div[data-position="start"] {
     width: fit-content;
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
   }
 
   & > div[data-position="fill"], *[data-position="middle"] {
@@ -38,7 +39,7 @@
 
   & > div[data-position="end"] {
     width: auto;
-    margin-left: auto;
+    margin-left: 0.75rem;
 
     & > button {
       margin: 0;
