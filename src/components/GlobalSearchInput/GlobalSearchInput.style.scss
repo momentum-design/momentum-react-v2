@@ -9,7 +9,7 @@
   align-content: center;
 
   &.search-input-focus {
-    border: 0.0625rem solid var(--globalHeader-textfield-border-color-focused);
+    box-shadow: var(--md-globals-focus-ring-box-shadow);
   }
 
   &:hover {
