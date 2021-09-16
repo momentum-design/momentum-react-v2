@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputHelper snapshot should match snapshot 1`] = `
+<InputHelper
+  message="Help me!"
+>
+  <div
+    className="md-input-helper"
+  >
+    Help me!
+  </div>
+</InputHelper>
+`;

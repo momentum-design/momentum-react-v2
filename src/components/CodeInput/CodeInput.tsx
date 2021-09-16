@@ -3,18 +3,8 @@ import VerificationInput from 'react-verification-input';
 
 import './CodeInput.style.scss';
 import { Props } from './CodeInput.types';
-import InputMessage, { MessageLevel } from '../InputMessage';
+import InputMessage, { getFilteredMessages } from '../InputMessage';
 import classnames from 'classnames';
-
-const determineMessageType = (array): MessageLevel => {
-  return array.reduce((agg, e) => {
-    return agg === 'error' ? agg : e.type || '';
-  }, '');
-};
-
-const filterMessagesByType = (array, value) => {
-  return array.reduce((agg, e) => (e.type === value ? agg.concat(e.message) : agg), []);
-};
 
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const {
@@ -35,9 +25,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const [isComplete, setComplete] = useState(false);
   const [value, setValue] = useState('');
 
-  const messageType: MessageLevel =
-    (internalMessageArray.length > 0 && determineMessageType(internalMessageArray)) || 'none';
-  const messages = (messageType && filterMessagesByType(internalMessageArray, messageType)) || null;
+  const [messageType, messages] = getFilteredMessages(internalMessageArray);
 
   const firstUpdate = useRef(true);
   useEffect(() => {

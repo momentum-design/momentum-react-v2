@@ -22,3 +22,6 @@ export { default as Icon } from './Icon';
 export { default as ContentSeparator } from './ContentSeparator';
 export { default as GlobalSearchInput } from './GlobalSearchInput';
 export { default as Text } from './ContentSeparator';
+export { default as TextInput } from './TextInput';
+export { default as InputHelper } from './InputHelper';
+export { default as Label } from './Label';
