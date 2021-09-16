@@ -1,5 +1,10 @@
 export type MessageLevel = 'error' | 'warning' | 'success' | 'none';
 
+export interface Message {
+  type: MessageLevel;
+  message: string;
+}
+
 export interface Props {
   /**
    * Custom class to be able to override the component's CSS

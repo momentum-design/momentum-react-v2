@@ -1,5 +1,5 @@
-import React, { ReactElement, useState, useEffect, useRef } from 'react';
-import {useTextField} from '@react-aria/textfield';
+import React, { ReactElement, InputHTMLAttributes } from 'react';
+import { useTextField } from '@react-aria/textfield';
 import classnames from 'classnames';
 
 //import './TextInput.style.scss';
@@ -16,55 +16,30 @@ const TextInput: React.FC<Props> = (props: Props): ReactElement => {
     className,
     clearAriaLabel,
     inputClassName,
-    inputRef
+    inputRef,
   } = props;
 
   const ref = React.useRef();
-  const {
-    labelProps,
-    inputProps,
-    descriptionProps,
-    errorMessageProps
-  } = useTextField({...props, description:helpText, errorMessage:messageArr?.[0]?.message}, inputRef || ref);
-  
+  const { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(
+    { ...props, description: helpText, errorMessage: messageArr?.[0]?.message },
+    inputRef || ref
+  );
+
   const [messageType, messages] = getFilteredMessages(messageArr);
 
   return (
-    <div
-      data-level={messageType}
-      className={classnames('md-text-input-wrapper', className)}
-    >
-      {
-        label &&
-        <Label
-          {...labelProps}
-          label={label}
-        />
-      }
-      <div
-        className='md-text-input-container'
-      >
+    <div data-level={messageType} className={classnames('md-text-input-wrapper', className)}>
+      {label && <Label {...labelProps}>{label}</Label>}
+      <div className="md-text-input-container">
         <input
-          {...inputProps}
+          {...(inputProps as InputHTMLAttributes<HTMLInputElement>)}
           className={inputClassName}
         />
-        <button
-          aria-label={clearAriaLabel}
-        >
-          X
-        </button>
+        <button aria-label={clearAriaLabel}>X</button>
       </div>
-      {!!helpText && !(messages?.length) && (
-        <InputHelper
-          {...descriptionProps}
-          message={helpText}
-        />
-      )}
+      {!!helpText && !messages?.length && <InputHelper {...descriptionProps} message={helpText} />}
       {messages && !!messages.length && (
-        <div
-          {...errorMessageProps}
-          className="md-text-input__messages"
-        >
+        <div {...errorMessageProps} className="md-text-input__messages">
           {messages.map((m, i) => (
             <InputMessage message={m} key={`input-message-${i}`} level={messageType} />
           ))}

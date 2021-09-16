@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import './InputMessage.style.scss';
-import { Props, MessageLevel } from './InputMessage.types';
+import { Props, MessageLevel, Message } from './InputMessage.types';
 
 import Icon from '../Icon';
 import classnames from 'classnames';
@@ -23,7 +23,9 @@ const filterMessagesByType = (array, value) => {
   return array.reduce((agg, e) => (e.type === value ? agg.concat(e.message) : agg), []);
 };
 
-export const getFilteredMessages = (allMessages) => {
+type GetFilteredMessagesReturn = [MessageLevel, string[]];
+
+export const getFilteredMessages = (allMessages: Message[]): GetFilteredMessagesReturn => {
   const messageType: MessageLevel =
     (allMessages.length > 0 && determineMessageType(allMessages)) || 'none';
   const messages = (messageType && filterMessagesByType(allMessages, messageType)) || null;

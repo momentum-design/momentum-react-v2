@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { Story } from '@storybook/react';
 
 import TextInput, { TextInputProps } from './';
@@ -43,7 +44,8 @@ export default {
       control: { type: 'text' },
     },
     inputClassName: {
-      description: 'If present, the class name will be added to the underlying input. Used to override styles by consumers.',
+      description:
+        'If present, the class name will be added to the underlying input. Used to override styles by consumers.',
       control: { type: 'text' },
     },
   },
@@ -51,28 +53,59 @@ export default {
 
 interface StoryProps extends TextInputProps {
   messageArr: [];
-  provideInputRef
+  provideInputRef;
 }
 
-const Template: Story<StoryProps> = (args) => {
-  const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
-  const inputRef = React.useRef();
+const PaddedExample: FC<TextInputProps> = (props: TextInputProps) => {
   return (
-    <TextInput
-      messageArr={messageArrInt}
-      helpText={args.helpText}
-      isDisabled={args.isDisabled}
-      label={args.label}
-      className={args.className}
-      clearAriaLabel={args.clearAriaLabel}
-      inputClassName={args.inputClassName}
-    />
+    <div style={{ margin: '1rem' }}>
+      <TextInput {...props} />
+    </div>
   );
 };
 
-const Example = Template.bind({});
+// const Template: Story<StoryProps> = (args) => {
+//   const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
+//   const inputRef = React.useRef();
+//   return (
+//     <TextInput
+//       messageArr={messageArrInt}
+//       helpText={args.helpText}
+//       isDisabled={args.isDisabled}
+//       label={args.label}
+//       className={args.className}
+//       clearAriaLabel={args.clearAriaLabel}
+//       inputClassName={args.inputClassName}
+//     />
+//   );
+// };
 
-Example.args = {
+const Example = Template(TextInput).bind({});
+
+Example.args = {};
+
+const Common = MultiTemplate<TextInputProps>(PaddedExample).bind({});
+Common.args = {};
+Common.parameters = {
+  variants: [
+    {
+      value: 'test',
+      label: 'Label',
+      helpText: 'This is help text for the input.',
+    },
+    {
+      label: 'Label',
+      value: 'test',
+      disabled: true,
+      helpText: 'This is help text for the input.',
+    },
+    {
+      label: 'Label',
+      value: 'test',
+      helpText: 'This is help text for the input.',
+      messageArr: [{ type: 'error', message: 'Error message' }],
+    },
+  ],
 };
 
-export { Example };
+export { Example, Common };

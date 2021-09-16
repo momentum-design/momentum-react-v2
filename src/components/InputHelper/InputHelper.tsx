@@ -9,10 +9,7 @@ const InputHelper = (props: Props): ReactElement => {
   const { message, className, id } = props;
 
   return (
-    <div
-      id={id}
-      className={classnames('md-input-helper', className)}
-    >
+    <div id={id} className={classnames('md-input-helper', className)}>
       {message}
     </div>
   );
