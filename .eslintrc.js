@@ -3,6 +3,9 @@ const path = require('path'); // eslint-disable-line
 module.exports = {
   root: true,
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
       alias: {
         map: [['@momentum-ui/react', path.resolve(__dirname, 'src')]],
@@ -25,9 +28,8 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],
-  plugins: ['react', 'jsx-a11y', 'cypress', '@typescript-eslint'],
+  plugins: ['react', 'jsx-a11y', 'cypress', '@typescript-eslint', 'prettier'],
   ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],
-  plugins: ['react', 'jsx-a11y', 'cypress', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 6,
@@ -64,7 +66,7 @@ module.exports = {
         'prettier/prettier': 0,
         quotes: 0,
       },
-    }
+    },
   ],
   rules: {
     quotes: ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
