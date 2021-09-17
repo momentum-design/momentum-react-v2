@@ -101,7 +101,7 @@ Common.parameters = {
     {
       label: 'Label',
       value: 'test',
-      disabled: true,
+      isDisabled: true,
       helpText: 'This is help text for the input.',
     },
     {

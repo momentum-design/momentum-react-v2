@@ -10,7 +10,15 @@ import InputMessage, { getFilteredMessages } from '../InputMessage';
 import { ButtonSimple, Icon } from '..';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
-  const { helpText, messageArr = [], label, className, clearAriaLabel, inputClassName } = props;
+  const {
+    helpText,
+    messageArr = [],
+    label,
+    className,
+    clearAriaLabel,
+    inputClassName,
+    isDisabled,
+  } = props;
 
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -42,6 +50,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     <div
       data-level={messageType}
       data-focus={focus}
+      data-disabled={isDisabled}
       className={classnames('md-text-input-wrapper', className)}
     >
       {label && (

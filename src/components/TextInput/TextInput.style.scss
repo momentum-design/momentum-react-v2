@@ -15,6 +15,10 @@
     &:hover {
       background-color: var(--textinput-background-hovered);
       border-color: var(--textinput-border-color-hovered);
+
+      input {
+        color: var(--textinput-text-hovered);
+      }
     }
   }
 
@@ -53,6 +57,17 @@
     }
   }
 
+  &[data-disabled='true'] {
+    .md-text-input-container {
+      background-color: var(--textinput-background-disabled);
+      border-color: var(--textinput-background-disabled);
+
+      input {
+        color: var(--textinput-text-disabled);
+      }
+    }
+  }
+
   .text-input-help,
   .text-input-error {
     margin-left: 0.75rem;
@@ -68,5 +83,6 @@
     display: inline-flex;
     height: 2rem;
     align-items: center;
+    outline: none;
   }
 }
