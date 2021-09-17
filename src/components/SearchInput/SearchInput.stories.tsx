@@ -136,7 +136,7 @@ Common.parameters = {
   variants: [
     { value: 'Typed' },
     { searching: true, placeholder: 'Searching...' },
-    { disabled: true },
+    { isDisabled: true, value: 'Disabled' },
     {
       value: 'Joe',
     },

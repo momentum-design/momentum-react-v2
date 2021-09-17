@@ -16,6 +16,19 @@
     background-color: var(--textinput-background-hovered);
   }
 
+  &[data-disabled='true'] {
+    background-color: var(--textinput-background-disabled);
+    border-color: var(--textinput-background-disabled);
+
+    input {
+      color: var(--textinput-text-disabled);
+    }
+
+    .search-icon {
+      color: var(--textinput-text-disabled);
+    }
+  }
+
   .input-container {
     position: relative;
     display: flex;
@@ -46,7 +59,7 @@
     &::placeholder {
       color: var(--globalHeader-textfieldPlaceholderText-text);
     }
-  }  
+  }
 
   .aria-alert {
     width: 1px;
@@ -73,7 +86,7 @@
     }
   }
 
-  ::-webkit-search-cancel-button{
+  ::-webkit-search-cancel-button {
     -webkit-appearance: none;
     pointer-events: none;
   }

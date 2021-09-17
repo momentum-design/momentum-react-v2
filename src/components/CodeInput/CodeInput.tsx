@@ -72,7 +72,12 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
       {messages && (
         <div className="md-code-input__messages">
           {messages.map((m, i) => (
-            <InputMessage message={m} key={`input-message-${i}`} level={messageType} />
+            <InputMessage
+              className="code-input-message"
+              message={m}
+              key={`input-message-${i}`}
+              level={messageType}
+            />
           ))}
         </div>
       )}

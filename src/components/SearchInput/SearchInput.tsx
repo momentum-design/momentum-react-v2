@@ -17,7 +17,7 @@ import Icon from '../Icon';
  *  Search input
  */
 const SearchInput: FC<Props> = (props: Props) => {
-  const { className, id, style, searching, clearButtonAriaLabel, label } = props;
+  const { className, id, style, searching, clearButtonAriaLabel, label, isDisabled } = props;
   const [focus, setFocus] = useState(false);
   const state = useSearchFieldState(props);
   const ref = useRef(null);
@@ -30,8 +30,7 @@ const SearchInput: FC<Props> = (props: Props) => {
     },
   });
 
-  const { inputProps, clearButtonProps, labelProps, descriptionProps, errorMessageProps } =
-    useSearchField(props, state, ref);
+  const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, ref);
 
   const additionalClasses = [];
   if (focus) {
@@ -50,6 +49,7 @@ const SearchInput: FC<Props> = (props: Props) => {
       id={id}
       onClick={handleClick}
       style={style}
+      data-disabled={isDisabled}
     >
       <label htmlFor={inputProps.id} {...labelProps}>
         {label}
@@ -65,7 +65,7 @@ const SearchInput: FC<Props> = (props: Props) => {
       <div className="input-container">
         <input {...inputProps} {...focusProps} ref={ref} />
       </div>
-      {!!state.value && (
+      {!!state.value && !isDisabled && (
         <ButtonSimple
           className="clear-icon"
           {...clearButtonProps}
