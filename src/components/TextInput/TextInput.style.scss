@@ -1,5 +1,4 @@
 .md-text-input-wrapper {
-
   position: relative;
 
   label {
@@ -34,14 +33,13 @@
     &::placeholder {
       color: var(--textinput-placeholder-text);
     }
-
-
   }
 
-  &[data-level="error"] {
+  &[data-level='error'] {
     .md-text-input-container {
       background-color: var(--textinput-error-background);
       border-color: var(--textinput-error-border-color);
+
       &:hover {
         background-color: var(--textinput-error-background-hovered);
         border-color: var(--textinput-error-border-color-hovered);
@@ -49,13 +47,14 @@
     }
   }
 
-  &[data-focus="true"] {
+  &[data-focus='true'] {
     .md-text-input-container {
       box-shadow: var(--md-globals-focus-ring-box-shadow);
     }
   }
 
-  .text-input-help, .text-input-error {
+  .text-input-help,
+  .text-input-error {
     margin-left: 0.75rem;
     margin-top: 0.5rem;
   }
