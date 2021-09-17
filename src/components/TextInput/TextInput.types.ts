@@ -1,4 +1,4 @@
-import { AriaTextFieldProps } from '@react-types/textfield';
+import type { AriaTextFieldProps } from '@react-types/textfield';
 
 export type Message = {
   message: string;

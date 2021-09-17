@@ -1,4 +1,4 @@
-export type MessageLevel = 'error' | 'warning' | 'success' | 'none';
+export type MessageLevel = 'error' | 'warning' | 'success' | 'help' | 'none';
 
 export interface Message {
   type: MessageLevel;

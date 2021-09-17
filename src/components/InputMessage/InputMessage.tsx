@@ -38,16 +38,16 @@ const InputMessage = (props: Props): ReactElement => {
   return (
     <div className={classnames('md-input-message-wrapper', className)} id={id}>
       <div className="md-input-message" role="alert" message-level={level}>
-        <div className="md-input-message--icon">
-          {(level == 'error' || level == 'warning') && (
+        {(level == 'error' || level == 'warning') && (
+          <div className="md-input-message--icon">
             <Icon
               name="warning"
               weight="bold"
               scale={20}
               fillColor={`var(--theme-text-${level}-normal)`}
             />
-          )}
-        </div>
+          </div>
+        )}
         <div className="md-input-message--text">{message}</div>
       </div>
     </div>

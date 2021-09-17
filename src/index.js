@@ -115,8 +115,6 @@ export {
   CodeInput,
   FocusRing,
   InputMessage as InputMessageNew,
-  InputHelper as InputHelperNew,
-  Label as LabelNew,
   ExampleComponent,
   Icon as IconNext,
   Toast,

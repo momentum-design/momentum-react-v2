@@ -1,9 +1,7 @@
-import React, { useState, FC } from 'react';
+import React, { useState, FC, useRef } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { Story } from '@storybook/react';
 
 import TextInput, { TextInputProps } from './';
-import { Message } from './TextInput.types';
 
 const messageArrOptions = {
   empty: [],
@@ -15,6 +13,12 @@ const messageArrOptions = {
 export default {
   title: 'Momentum UI/TextInput',
   component: TextInput,
+  args: {
+    label: 'Label',
+    helpText: 'Help text for this input',
+    initialValue: 'some input',
+    placeholder: 'Input placeholder',
+  },
   argTypes: {
     messageArr: {
       description: 'The list of messages to be passed in',
@@ -52,8 +56,7 @@ export default {
 };
 
 interface StoryProps extends TextInputProps {
-  messageArr: [];
-  provideInputRef;
+  initialValue: string;
 }
 
 const PaddedExample: FC<TextInputProps> = (props: TextInputProps) => {
@@ -64,23 +67,25 @@ const PaddedExample: FC<TextInputProps> = (props: TextInputProps) => {
   );
 };
 
-// const Template: Story<StoryProps> = (args) => {
-//   const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
-//   const inputRef = React.useRef();
-//   return (
-//     <TextInput
-//       messageArr={messageArrInt}
-//       helpText={args.helpText}
-//       isDisabled={args.isDisabled}
-//       label={args.label}
-//       className={args.className}
-//       clearAriaLabel={args.clearAriaLabel}
-//       inputClassName={args.inputClassName}
-//     />
-//   );
-// };
+const BetterExample: FC<StoryProps> = (props: StoryProps) => {
+  const mutatedProps = { ...props };
+  delete mutatedProps.initialValue;
 
-const Example = Template(TextInput).bind({});
+  const [value, setValue] = useState(props.initialValue);
+
+  const ref = useRef<HTMLInputElement>();
+  const onChange = (e) => {
+    setValue(e);
+    if (ref.current) {
+      // eslint-disable-next-line no-console
+      console.log(ref.current.value);
+    }
+  };
+
+  return <TextInput {...mutatedProps} value={value} ref={ref} onChange={onChange} />;
+};
+
+const Example = Template<StoryProps>(BetterExample).bind({});
 
 Example.args = {};
 
