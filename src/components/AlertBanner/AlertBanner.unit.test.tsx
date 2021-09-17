@@ -58,7 +58,7 @@ describe('<AlertBanner />', () => {
     it('should match snapshot with isCentered', () => {
       expect.assertions(1);
 
-      const isCentered = !DEFAULTS.ISCENTERED;
+      const isCentered = !DEFAULTS.IS_CENTERED;
 
       const container = mount(<AlertBanner isCentered={isCentered} />);
 
@@ -88,9 +88,19 @@ describe('<AlertBanner />', () => {
     it('should match snapshot with isGrown', () => {
       expect.assertions(1);
 
-      const isGrown = !DEFAULTS.ISGROWN;
+      const isGrown = !DEFAULTS.IS_GROWN;
 
       const container = mount(<AlertBanner isGrown={isGrown} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with isStatic', () => {
+      expect.assertions(1);
+
+      const isStatic = !DEFAULTS.IS_STATIC;
+
+      const container = mount(<AlertBanner isStatic={isStatic} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -118,7 +128,7 @@ describe('<AlertBanner />', () => {
     it('should match snapshot with isPilled', () => {
       expect.assertions(1);
 
-      const isPilled = !DEFAULTS.ISPILLED;
+      const isPilled = !DEFAULTS.IS_PILLED;
 
       const container = mount(<AlertBanner isPilled={isPilled} />);
 
@@ -194,6 +204,18 @@ describe('<AlertBanner />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-centered')).toBe(`${isCentered}`);
+    });
+
+    it('should have provided centered when isCentered is provided', () => {
+      expect.assertions(1);
+
+      const isStatic = true;
+
+      const element = mount(<AlertBanner isStatic={isStatic} />)
+        .find(AlertBanner)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-static')).toBe(`${isStatic}`);
     });
 
     it('should have provided color when color is provided', () => {
