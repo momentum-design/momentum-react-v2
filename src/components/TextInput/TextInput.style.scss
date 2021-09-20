@@ -1,5 +1,6 @@
 .md-text-input-wrapper {
   position: relative;
+  text-align: left;
 
   label {
     margin-bottom: 0.5rem;
@@ -28,6 +29,7 @@
     outline: none;
     height: 2rem;
     box-sizing: border-box;
+    box-shadow: none;
     background-color: transparent;
     border: 0;
     font-family: var(--md-globals-font-default);
