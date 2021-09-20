@@ -20,7 +20,15 @@
   --md-globals-border-clear: 0rem solid rgba(0, 0, 0, 0);
   --md-globals-focus-ring-box-shadow: 0 0 0 0.0625rem var(--theme-background-solid-primary-normal),
     0 0 0 0.125rem var(--theme-outline-focus-normal);
-  --md-globals-elevation-4: 0px 24px 48px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.12);
+  --md-globals-elevation-0: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-1: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-2: 0 0.5rem 1rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-3: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-4: 0 1rem 2rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-5: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-6: 0 1.5rem 3rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-7: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
+  --md-globals-elevation-8: 0 2rem 4rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-focus-ring-outline: none;
   --md-globals-font-default: CiscoSansTT;
 }

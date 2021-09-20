@@ -1,8 +1,11 @@
 import { CSSProperties, ReactNode } from 'react';
 
+export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+
 export interface Props {
   /**
-   * Child components of this {{componentName}}.
+   * Child components of this ModalContainer.
    */
   children?: ReactNode;
 
@@ -10,6 +13,16 @@ export interface Props {
    * Custom class for overriding this component's CSS.
    */
   className?: string;
+
+  /**
+   * Color of this ModalContainer.
+   */
+  color?: Color;
+
+  /**
+   * The elevation of this ModalContainer.
+   */
+  elevation?: Elevation;
 
   /**
    * Custom id for overriding this component's CSS.
