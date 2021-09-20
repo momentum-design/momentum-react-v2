@@ -8,6 +8,7 @@ import './TextInput.style.scss';
 import { Props } from './TextInput.types';
 import InputMessage, { getFilteredMessages } from '../InputMessage';
 import { ButtonSimple, Icon } from '..';
+import { STYLE } from './TextInput.constants';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
@@ -51,14 +52,14 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       data-level={messageType}
       data-focus={focus}
       data-disabled={isDisabled}
-      className={classnames('md-text-input-wrapper', className)}
+      className={classnames(STYLE.wrapper, className)}
     >
       {label && (
         <label {...otherLabelProps} htmlFor={htmlFor}>
           {label}
         </label>
       )}
-      <div className="md-text-input-container">
+      <div className={STYLE.container}>
         <input
           {...(inputProps as InputHTMLAttributes<HTMLInputElement>)}
           {...focusProps}
@@ -77,17 +78,17 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       </div>
       {!!helpText && !messages?.length && (
         <InputMessage
-          className="text-input-help"
+          className={STYLE.help}
           level="help"
           {...descriptionProps}
           message={helpText}
         />
       )}
       {messages && !!messages.length && (
-        <div {...errorMessageProps} className="md-text-input__messages">
+        <div {...errorMessageProps}>
           {messages.map((m, i) => (
             <InputMessage
-              className="text-input-error"
+              className={STYLE.error}
               message={m}
               key={`input-message-${i}`}
               level={messageType}
