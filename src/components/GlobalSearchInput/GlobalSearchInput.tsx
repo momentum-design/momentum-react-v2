@@ -56,11 +56,6 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     ref
   );
 
-  const additionalClasses = [];
-  if (focus) {
-    additionalClasses.push('search-input-focus');
-  }
-
   const handleClick = () => {
     if (ref.current) {
       ref.current.focus();
@@ -92,7 +87,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       labels.push(filter.value ? filter.translations.nonempty : filter.translations.empty);
 
       filterArray.push(
-        <div key={filter.term} className="search-context-container">
+        <div key={filter.term} className={STYLE.searchContext}>
           <p>{filter.translations.text}</p>
         </div>
       );
@@ -107,10 +102,11 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={classnames(className, STYLE.wrapper, ...additionalClasses)}
+      className={classnames(className, STYLE.wrapper)}
       id={id}
       onClick={handleClick}
       style={style}
+      data-focus={focus}
     >
       <label htmlFor={inputProps.id} {...labelProps}>
         {label}
@@ -119,11 +115,11 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
         <Icon
           weight="light"
           scale={18}
-          className="search-icon"
+          className={STYLE.search}
           name={searching ? 'spinner' : 'search'}
         />
       </div>
-      <div className="input-container">
+      <div className={STYLE.container}>
         {filterArray}
         <input {...inputProps} {...focusProps} ref={ref} onKeyDown={handleKeyDown} />
         {ariaAlert && (
@@ -134,7 +130,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       </div>
       {(!!state.value || !!filters.length) && (
         <ButtonSimple
-          className="clear-icon"
+          className={STYLE.clear}
           {...clearButtonProps}
           aria-label={clearButtonAriaLabel}
         >
