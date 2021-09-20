@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useRef } from 'react';
 import classnames from 'classnames';
-import { useFocus } from '@react-aria/interactions';
 
 import ButtonSimple from '../ButtonSimple';
 import { STYLE } from './SearchInput.constants';
@@ -11,24 +10,18 @@ import './SearchInput.style.scss';
 import { useSearchField } from '@react-aria/searchfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
 import InputMessage from '../InputMessage';
+import { useFocusState } from '../../hooks/useFocusState';
 
 import Icon from '../Icon';
+
 /**
  *  Search input
  */
 const SearchInput: FC<Props> = (props: Props) => {
   const { className, id, style, searching, clearButtonAriaLabel, label, isDisabled } = props;
-  const [focus, setFocus] = useState(false);
   const state = useSearchFieldState(props);
   const ref = useRef(null);
-  const { focusProps } = useFocus({
-    onFocus: () => {
-      setFocus(true);
-    },
-    onBlur: () => {
-      setFocus(false);
-    },
-  });
+  const { focusProps, focus } = useFocusState(props);
 
   const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, ref);
 

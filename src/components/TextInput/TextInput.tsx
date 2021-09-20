@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { ReactElement, InputHTMLAttributes, RefObject, forwardRef, useState } from 'react';
+import React, { ReactElement, InputHTMLAttributes, RefObject, forwardRef } from 'react';
 import { useTextField } from '@react-aria/textfield';
-import { useFocus } from '@react-aria/interactions';
 import { useSearchFieldState } from '@react-stately/searchfield';
 import classnames from 'classnames';
 
@@ -11,6 +10,7 @@ import { Props } from './TextInput.types';
 import InputMessage, { getFilteredMessages } from '../InputMessage';
 import { ButtonSimple, Icon } from '..';
 import { STYLE } from './TextInput.constants';
+import { useFocusState } from '../../hooks/useFocusState';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
@@ -34,20 +34,14 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   );
 
   const [messageType, messages] = getFilteredMessages(messageArr);
-  const [focus, setFocus] = useState(false);
+  const { focus, focusProps } = useFocusState(props);
   const state = useSearchFieldState(props);
-
-  const { focusProps } = useFocus({
-    onFocus: () => {
-      setFocus(true);
-    },
-    onBlur: () => {
-      setFocus(false);
-    },
-  });
 
   const onClearButtonPress = () => {
     state.setValue('');
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   };
 
   const handleClick = () => {

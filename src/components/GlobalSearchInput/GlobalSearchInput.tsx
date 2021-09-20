@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { FC, useRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { useFocus } from '@react-aria/interactions';
 
 import ButtonSimple from '../ButtonSimple';
 import { STYLE } from './GlobalSearchInput.constants';
@@ -14,6 +13,7 @@ import { difference } from 'lodash';
 
 import Icon from '../Icon';
 import { BaseEvent } from '@react-types/shared';
+import { useFocusState } from '../../hooks/useFocusState';
 /**
  * Global search input. Used for global search only
  */
@@ -31,18 +31,11 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     onClear,
   } = props;
   const [previousFilters, setPreviousFilters] = useState(filters);
-  const [focus, setFocus] = useState(false);
+  const { focus, focusProps } = useFocusState(props);
+
   const [ariaAlert, setAriaAlert] = useState('');
   const state = useSearchFieldState(props);
   const ref = useRef(null);
-  const { focusProps } = useFocus({
-    onFocus: () => {
-      setFocus(true);
-    },
-    onBlur: () => {
-      setFocus(false);
-    },
-  });
 
   useEffect(() => {
     const newFilters = difference(filters, previousFilters);
