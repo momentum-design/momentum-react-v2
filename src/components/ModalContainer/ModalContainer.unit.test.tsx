@@ -63,6 +63,22 @@ describe('<ModalContainer />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with isPadded', () => {
+      expect.assertions(1);
+
+      const container = mount(<ModalContainer isPadded />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with isRounded', () => {
+      expect.assertions(1);
+
+      const container = mount(<ModalContainer isRounded />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with children', () => {
       expect.assertions(1);
 
@@ -144,6 +160,30 @@ describe('<ModalContainer />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-elevation')).toBe(`${elevation}`);
+    });
+
+    it('should have provided data-padded when isPadded is provided', () => {
+      expect.assertions(1);
+
+      const isPadded = true;
+
+      const element = mount(<ModalContainer isPadded={isPadded} />)
+        .find(ModalContainer)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-padded')).toBe(`${isPadded}`);
+    });
+
+    it('should have provided data-rounded when isRounded is provided', () => {
+      expect.assertions(1);
+
+      const isRounded = true;
+
+      const element = mount(<ModalContainer isRounded={isRounded} />)
+        .find(ModalContainer)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-rounded')).toBe(`${isRounded}`);
     });
   });
 });

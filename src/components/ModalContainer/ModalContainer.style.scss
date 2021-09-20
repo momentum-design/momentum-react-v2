@@ -1,65 +1,75 @@
 // This file needs to be updated after shadow color black-alpha-16 is implemented, or a subsitute is defined.
 
 .md-modal-container-wrapper {
-  margin: 0.5rem;
+  list-style: none;
+  margin: 0;
   min-height: 2rem; // This can be adjusted once min/max sizes are defined.
   min-width: 6rem; // This can be adjusted once min/max sizes are defined.
   border: 0.0625rem solid rgba(0, 0, 0, 0.2); // IEFIX
   border: 0.0625rem solid var(--modal-primary-border);
+  outline: none;
 
-  &[data-color="primary"] {
+  &[data-rounded='true'] {
+    border-radius: 0.75rem;
+  }
+
+  &[data-padded='true'] {
+    padding: 0.5rem;
+  }
+
+  &[data-color='primary'] {
     background-color: rgba(255, 255, 255, 1); // IEFIX
     background-color: var(--theme-background-solid-primary-normal);
   }
 
-  &[data-color="secondary"] {
+  &[data-color='secondary'] {
     background-color: rgba(247, 247, 247, 1); // IEFIX
     background-color: var(--theme-background-solid-secondary-normal);
   }
 
-  &[data-color="tertiary"] {
+  &[data-color='tertiary'] {
     background-color: rgba(237, 237, 237, 1); // IEFIX
     background-color: var(--theme-background-solid-tertiary-normal);
   }
 
-  &[data-color="quaternary"] {
+  &[data-color='quaternary'] {
     background-color: rgba(255, 255, 255, 1); // IEFIX
     background-color: var(--theme-background-solid-quaternary-normal);
   }
 
-  &[data-elevation="0"] {
+  &[data-elevation='0'] {
     box-shadow: var(--md-globals-elevation-0);
   }
 
-  &[data-elevation="1"] {
+  &[data-elevation='1'] {
     box-shadow: var(--md-globals-elevation-1);
   }
 
-  &[data-elevation="2"] {
+  &[data-elevation='2'] {
     box-shadow: var(--md-globals-elevation-2);
   }
 
-  &[data-elevation="3"] {
+  &[data-elevation='3'] {
     box-shadow: var(--md-globals-elevation-3);
   }
 
-  &[data-elevation="4"] {
+  &[data-elevation='4'] {
     box-shadow: var(--md-globals-elevation-4);
   }
 
-  &[data-elevation="5"] {
+  &[data-elevation='5'] {
     box-shadow: var(--md-globals-elevation-5);
   }
 
-  &[data-elevation="6"] {
+  &[data-elevation='6'] {
     box-shadow: var(--md-globals-elevation-6);
   }
 
-  &[data-elevation="7"] {
+  &[data-elevation='7'] {
     box-shadow: var(--md-globals-elevation-7);
   }
 
-  &[data-elevation="8"] {
+  &[data-elevation='8'] {
     box-shadow: var(--md-globals-elevation-8);
   }
 }
