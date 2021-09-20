@@ -1,4 +1,5 @@
 import type { AriaTextFieldProps } from '@react-types/textfield';
+import { CSSProperties } from 'react';
 import type { Message } from '../InputMessage/InputMessage.types';
 
 export interface Props extends AriaTextFieldProps {
@@ -6,6 +7,10 @@ export interface Props extends AriaTextFieldProps {
    * Optional css class name
    */
   className?: string;
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
   /**
    * Optional aria label on the clear button
    */

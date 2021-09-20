@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput/> snapshot should match snapshot 1`] = `
+<SSRProvider>
+  <TextInput
+    aria-label="text-input"
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-label="text-input"
+          disabled={false}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
+exports[`<TextInput/> snapshot should match snapshot with className 1`] = `
+<SSRProvider>
+  <TextInput
+    aria-label="text-input"
+    className="example-class"
+  >
+    <div
+      className="md-text-input-wrapper example-class"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-label="text-input"
+          disabled={false}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
+exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
+<SSRProvider>
+  <TextInput
+    aria-label="text-input"
+    id="example-id"
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      id="example-id"
+      onClick={[Function]}
+    >
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-label="text-input"
+          disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
+exports[`<TextInput/> snapshot should match snapshot with style 1`] = `
+<SSRProvider>
+  <TextInput
+    aria-label="text-input"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    >
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-label="text-input"
+          disabled={false}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;

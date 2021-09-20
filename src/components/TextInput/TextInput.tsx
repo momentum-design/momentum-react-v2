@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { ReactElement, InputHTMLAttributes, RefObject, forwardRef, useState } from 'react';
 import { useTextField } from '@react-aria/textfield';
 import { useFocus } from '@react-aria/interactions';
@@ -19,13 +21,16 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     clearAriaLabel,
     inputClassName,
     isDisabled,
+    style,
+    id,
   } = props;
 
-  const inputRef = React.useRef<HTMLInputElement>(null);
+  const componentRef = React.useRef<HTMLInputElement>();
+  const inputRef = ref || componentRef;
 
   const { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(
     { ...props, description: helpText, errorMessage: messageArr?.[0]?.message },
-    ref || inputRef
+    inputRef
   );
 
   const [messageType, messages] = getFilteredMessages(messageArr);
@@ -45,6 +50,12 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     state.setValue('');
   };
 
+  const handleClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
+
   const { htmlFor, ...otherLabelProps } = labelProps;
 
   return (
@@ -52,6 +63,9 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       data-level={messageType}
       data-focus={focus}
       data-disabled={isDisabled}
+      id={id}
+      style={style}
+      onClick={handleClick}
       className={classnames(STYLE.wrapper, className)}
     >
       {label && (
@@ -64,7 +78,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           {...(inputProps as InputHTMLAttributes<HTMLInputElement>)}
           {...focusProps}
           className={inputClassName}
-          ref={ref}
+          ref={inputRef}
         />
         {!!state.value && (
           <ButtonSimple
