@@ -8,7 +8,7 @@
   display: flex;
   align-content: center;
 
-  &.search-input-focus {
+  &[data-focus='true'] {
     box-shadow: var(--md-globals-focus-ring-box-shadow);
   }
 
@@ -29,7 +29,7 @@
     }
   }
 
-  .input-container {
+  .md-search-input-container {
     position: relative;
     display: flex;
     flex-grow: 1;
@@ -61,13 +61,7 @@
     }
   }
 
-  .aria-alert {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
-
-  .search-icon {
+  .md-search-input-search {
     margin-left: 0.5625rem;
     margin-right: 0.5625rem;
     height: 1.625rem;
@@ -75,7 +69,7 @@
     flex-grow: 0;
   }
 
-  .clear-icon {
+  .md-search-input-clear {
     border: 0;
     background-color: transparent;
     cursor: pointer;

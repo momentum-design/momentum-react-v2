@@ -32,11 +32,6 @@ const SearchInput: FC<Props> = (props: Props) => {
 
   const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, ref);
 
-  const additionalClasses = [];
-  if (focus) {
-    additionalClasses.push('search-input-focus');
-  }
-
   const handleClick = () => {
     if (ref.current) {
       ref.current.focus();
@@ -45,11 +40,12 @@ const SearchInput: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={classnames(className, STYLE.wrapper, ...additionalClasses)}
+      className={classnames(className, STYLE.wrapper)}
       id={id}
       onClick={handleClick}
       style={style}
       data-disabled={isDisabled}
+      data-focus={focus}
     >
       <label htmlFor={inputProps.id} {...labelProps}>
         {label}
@@ -58,16 +54,16 @@ const SearchInput: FC<Props> = (props: Props) => {
         <Icon
           weight="light"
           scale={18}
-          className="search-icon"
+          className={STYLE.search}
           name={searching ? 'spinner' : 'search'}
         />
       </div>
-      <div className="input-container">
+      <div className={STYLE.container}>
         <input {...inputProps} {...focusProps} ref={ref} />
       </div>
       {!!state.value && !isDisabled && (
         <ButtonSimple
-          className="clear-icon"
+          className={STYLE.clear}
           {...clearButtonProps}
           aria-label={clearButtonAriaLabel}
         >
