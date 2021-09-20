@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
+exports[`<SearchInput /> snapshot should match snapshot 1`] = `
 <SSRProvider>
-  <GlobalSearchInput
-    aria-label="global search"
+  <SearchInput
+    aria-label=" search"
   >
     <div
-      className="md-global-search-input-wrapper"
+      className="md-search-input-wrapper"
+      data-focus={false}
       onClick={[Function]}
     >
       <label
@@ -14,13 +15,13 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
       />
       <div>
         <Icon
-          className="search-icon"
+          className="md-search-input-search"
           name="search"
           scale={18}
           weight="light"
         >
           <div
-            className="md-icon-wrapper search-icon"
+            className="md-icon-wrapper md-search-input-search"
           >
             <svg
               className=""
@@ -37,10 +38,10 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
         </Icon>
       </div>
       <div
-        className="input-container"
+        className="md-search-input-container"
       >
         <input
-          aria-label="global search"
+          aria-label=" search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -52,15 +53,30 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
           value=""
         />
       </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message"
+            message-level="none"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            />
+          </div>
+        </div>
+      </InputMessage>
     </div>
-  </GlobalSearchInput>
+  </SearchInput>
 </SSRProvider>
 `;
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are set 1`] = `
+exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`] = `
 <SSRProvider>
-  <GlobalSearchInput
-    aria-label="global search"
+  <SearchInput
+    aria-label=" search"
     filters={
       Array [
         Object {
@@ -90,23 +106,22 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
     value="From: someone"
   >
     <div
-      className="md-global-search-input-wrapper"
+      className="md-search-input-wrapper"
+      data-focus={false}
       onClick={[Function]}
     >
       <label
         htmlFor="test-ID"
-      >
-        nonempty, nonempty:
-      </label>
+      />
       <div>
         <Icon
-          className="search-icon"
+          className="md-search-input-search"
           name="search"
           scale={18}
           weight="light"
         >
           <div
-            className="md-icon-wrapper search-icon"
+            className="md-icon-wrapper md-search-input-search"
           >
             <svg
               className=""
@@ -123,40 +138,23 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
         </Icon>
       </div>
       <div
-        className="input-container"
+        className="md-search-input-container"
       >
-        <div
-          className="search-context-container"
-          key="from"
-        >
-          <p>
-            text
-          </p>
-        </div>
-        <div
-          className="search-context-container"
-          key="in"
-        >
-          <p>
-            text
-          </p>
-        </div>
         <input
-          aria-label="global search"
+          aria-label=" search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
-          placeholder=""
           readOnly={false}
           type="search"
           value="From: someone"
         />
       </div>
       <ButtonSimple
-        className="clear-icon"
+        className="md-search-input-clear"
         excludeFromTabOrder={true}
         onPress={[Function]}
         onPressStart={[Function]}
@@ -168,7 +166,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
-              className="clear-icon"
+              className="md-search-input-clear"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -210,19 +208,35 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
           </FocusRing>
         </FocusRing>
       </ButtonSimple>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message"
+            message-level="none"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            />
+          </div>
+        </div>
+      </InputMessage>
     </div>
-  </GlobalSearchInput>
+  </SearchInput>
 </SSRProvider>
 `;
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`] = `
+exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
 <SSRProvider>
-  <GlobalSearchInput
-    aria-label="global search"
+  <SearchInput
+    aria-label=" search"
     searching={true}
   >
     <div
-      className="md-global-search-input-wrapper"
+      className="md-search-input-wrapper"
+      data-focus={false}
       onClick={[Function]}
     >
       <label
@@ -230,13 +244,13 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
       />
       <div>
         <Icon
-          className="search-icon"
+          className="md-search-input-search"
           name="spinner"
           scale={18}
           weight="light"
         >
           <div
-            className="md-icon-wrapper search-icon"
+            className="md-icon-wrapper md-search-input-search"
           >
             <svg
               className=""
@@ -253,10 +267,10 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
         </Icon>
       </div>
       <div
-        className="input-container"
+        className="md-search-input-container"
       >
         <input
-          aria-label="global search"
+          aria-label=" search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -268,19 +282,35 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
           value=""
         />
       </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message"
+            message-level="none"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            />
+          </div>
+        </div>
+      </InputMessage>
     </div>
-  </GlobalSearchInput>
+  </SearchInput>
 </SSRProvider>
 `;
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`] = `
+exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
 <SSRProvider>
-  <GlobalSearchInput
-    aria-label="global search"
+  <SearchInput
+    aria-label=" search"
     className="example-class"
   >
     <div
-      className="example-class md-global-search-input-wrapper"
+      className="example-class md-search-input-wrapper"
+      data-focus={false}
       onClick={[Function]}
     >
       <label
@@ -288,13 +318,13 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
       />
       <div>
         <Icon
-          className="search-icon"
+          className="md-search-input-search"
           name="search"
           scale={18}
           weight="light"
         >
           <div
-            className="md-icon-wrapper search-icon"
+            className="md-icon-wrapper md-search-input-search"
           >
             <svg
               className=""
@@ -311,10 +341,10 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
         </Icon>
       </div>
       <div
-        className="input-container"
+        className="md-search-input-container"
       >
         <input
-          aria-label="global search"
+          aria-label=" search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -326,19 +356,35 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
           value=""
         />
       </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message"
+            message-level="none"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            />
+          </div>
+        </div>
+      </InputMessage>
     </div>
-  </GlobalSearchInput>
+  </SearchInput>
 </SSRProvider>
 `;
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
+exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
 <SSRProvider>
-  <GlobalSearchInput
-    aria-label="global search"
+  <SearchInput
+    aria-label=" search"
     id="example-id"
   >
     <div
-      className="md-global-search-input-wrapper"
+      className="md-search-input-wrapper"
+      data-focus={false}
       id="example-id"
       onClick={[Function]}
     >
@@ -347,13 +393,13 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
       />
       <div>
         <Icon
-          className="search-icon"
+          className="md-search-input-search"
           name="search"
           scale={18}
           weight="light"
         >
           <div
-            className="md-icon-wrapper search-icon"
+            className="md-icon-wrapper md-search-input-search"
           >
             <svg
               className=""
@@ -370,10 +416,10 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
         </Icon>
       </div>
       <div
-        className="input-container"
+        className="md-search-input-container"
       >
         <input
-          aria-label="global search"
+          aria-label=" search"
           disabled={false}
           id="example-id"
           onBlur={[Function]}
@@ -385,15 +431,30 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
           value=""
         />
       </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message"
+            message-level="none"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            />
+          </div>
+        </div>
+      </InputMessage>
     </div>
-  </GlobalSearchInput>
+  </SearchInput>
 </SSRProvider>
 `;
 
-exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
+exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
 <SSRProvider>
-  <GlobalSearchInput
-    aria-label="global search"
+  <SearchInput
+    aria-label=" search"
     style={
       Object {
         "color": "pink",
@@ -401,7 +462,8 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
     }
   >
     <div
-      className="md-global-search-input-wrapper"
+      className="md-search-input-wrapper"
+      data-focus={false}
       onClick={[Function]}
       style={
         Object {
@@ -414,13 +476,13 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
       />
       <div>
         <Icon
-          className="search-icon"
+          className="md-search-input-search"
           name="search"
           scale={18}
           weight="light"
         >
           <div
-            className="md-icon-wrapper search-icon"
+            className="md-icon-wrapper md-search-input-search"
           >
             <svg
               className=""
@@ -437,10 +499,10 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
         </Icon>
       </div>
       <div
-        className="input-container"
+        className="md-search-input-container"
       >
         <input
-          aria-label="global search"
+          aria-label=" search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -452,7 +514,22 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
           value=""
         />
       </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message"
+            message-level="none"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            />
+          </div>
+        </div>
+      </InputMessage>
     </div>
-  </GlobalSearchInput>
+  </SearchInput>
 </SSRProvider>
 `;
