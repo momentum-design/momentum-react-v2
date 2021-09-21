@@ -10,9 +10,6 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
       data-focus={false}
       onClick={[Function]}
     >
-      <label
-        htmlFor="test-ID"
-      />
       <div>
         <Icon
           className="md-search-input-search"
@@ -110,9 +107,6 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
       data-focus={false}
       onClick={[Function]}
     >
-      <label
-        htmlFor="test-ID"
-      />
       <div>
         <Icon
           className="md-search-input-search"
@@ -239,9 +233,6 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
       data-focus={false}
       onClick={[Function]}
     >
-      <label
-        htmlFor="test-ID"
-      />
       <div>
         <Icon
           className="md-search-input-search"
@@ -302,6 +293,86 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
 </SSRProvider>
 `;
 
+exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
+<SSRProvider>
+  <SearchInput
+    aria-label=" search"
+    id="example-id-label"
+    label="search"
+  >
+    <div
+      className="md-search-input-wrapper"
+      data-focus={false}
+      id="example-id-label"
+      onClick={[Function]}
+    >
+      <label
+        htmlFor="test-ID"
+        id="test-ID"
+      >
+        search
+      </label>
+      <div>
+        <Icon
+          className="md-search-input-search"
+          name="search"
+          scale={18}
+          weight="light"
+        >
+          <div
+            className="md-icon-wrapper md-search-input-search"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={18}
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+      <div
+        className="md-search-input-container"
+      >
+        <input
+          aria-label=" search"
+          aria-labelledby="test-ID example-id-label"
+          disabled={false}
+          id="example-id-label"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value=""
+        />
+      </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message"
+            message-level="none"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            />
+          </div>
+        </div>
+      </InputMessage>
+    </div>
+  </SearchInput>
+</SSRProvider>
+`;
+
 exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
 <SSRProvider>
   <SearchInput
@@ -313,9 +384,6 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
       data-focus={false}
       onClick={[Function]}
     >
-      <label
-        htmlFor="test-ID"
-      />
       <div>
         <Icon
           className="md-search-input-search"
@@ -388,9 +456,6 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
       id="example-id"
       onClick={[Function]}
     >
-      <label
-        htmlFor="example-id"
-      />
       <div>
         <Icon
           className="md-search-input-search"
@@ -471,9 +536,6 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
         }
       }
     >
-      <label
-        htmlFor="test-ID"
-      />
       <div>
         <Icon
           className="md-search-input-search"

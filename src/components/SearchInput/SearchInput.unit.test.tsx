@@ -51,6 +51,18 @@ describe('<SearchInput />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with a label', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id-label';
+
+      const container = await mountComponent(
+        <SearchInput label="search" aria-label=" search" id={id} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with style', async () => {
       expect.assertions(1);
 

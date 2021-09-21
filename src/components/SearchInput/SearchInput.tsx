@@ -40,9 +40,11 @@ const SearchInput: FC<Props> = (props: Props) => {
       data-disabled={isDisabled}
       data-focus={focus}
     >
-      <label htmlFor={labelProps.htmlFor} {...labelProps}>
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={labelProps.htmlFor} {...labelProps}>
+          {label}
+        </label>
+      )}
       <div>
         <Icon
           weight="light"

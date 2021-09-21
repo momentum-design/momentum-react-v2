@@ -38,7 +38,7 @@ describe('CodeInput', () => {
       let component;
       await act(async () => {
         component = mount(
-          <CodeInput numDigits={6} messageArr={[{ message: 'test', type: 'error' }]} />
+          <CodeInput numDigits={6} messageArr={[{ message: 'test', level: 'error' }]} />
         );
       });
       await waitForAsync(component);
@@ -62,7 +62,7 @@ describe('CodeInput', () => {
       const [msgArr, setMsgArr] = useState([]);
 
       const onComplete = () => {
-        setMsgArr([{ message: 'test', type: 'error' }]);
+        setMsgArr([{ message: 'test', level: 'error' }]);
       };
 
       return <CodeInput onComplete={onComplete} numDigits={6} messageArr={msgArr} />;

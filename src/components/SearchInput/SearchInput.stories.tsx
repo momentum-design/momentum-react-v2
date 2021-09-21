@@ -19,6 +19,7 @@ export default {
   args: {
     // Args provided to all stories by default.
     placeholder: 'Search',
+    label: 'This is a search',
     initialText: 'message',
     initialLabel: 'Search messages by person or space',
     clearButtonAriaLabel: 'CLEAR',
@@ -102,7 +103,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
       filters={filters}
       onFiltersChange={handleFiltersChange}
       onChange={handleChange}
-      initialLabel={initialLabel}
+      label={initialLabel}
       {...mutatedProps}
       searching={searching}
     />
