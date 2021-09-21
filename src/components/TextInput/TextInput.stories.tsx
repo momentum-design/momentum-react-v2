@@ -62,7 +62,7 @@ interface StoryProps extends TextInputProps {
 const PaddedExample: FC<TextInputProps> = (props: TextInputProps) => {
   return (
     <div style={{ margin: '1rem' }}>
-      <TextInput {...props} />
+      <TextInput style={{ width: '20rem' }} {...props} />
     </div>
   );
 };

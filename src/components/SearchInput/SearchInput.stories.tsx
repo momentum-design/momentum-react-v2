@@ -123,7 +123,7 @@ Example.argTypes = { ...argTypes };
 const PaddedExample: FC<SearchInputProps> = (props: SearchInputProps) => {
   return (
     <div style={{ margin: '1rem' }}>
-      <SearchInput {...props} />
+      <SearchInput style={{ width: '20rem' }} {...props} />
     </div>
   );
 };
