@@ -30,6 +30,16 @@ export interface Props {
   id?: string;
 
   /**
+   * If this ModalContainer is padded.
+   */
+  isPadded?: boolean;
+
+  /**
+   * If this ModalContainer is round.
+   */
+  isRounded?: boolean;
+
+  /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;

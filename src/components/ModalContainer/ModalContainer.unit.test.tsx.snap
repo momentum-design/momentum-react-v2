@@ -73,6 +73,32 @@ exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
 </ModalContainer>
 `;
 
+exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
+<ModalContainer
+  isPadded={true}
+>
+  <div
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={true}
+  />
+</ModalContainer>
+`;
+
+exports[`<ModalContainer /> snapshot should match snapshot with isRounded 1`] = `
+<ModalContainer
+  isRounded={true}
+>
+  <div
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-rounded={true}
+  />
+</ModalContainer>
+`;
+
 exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
 <ModalContainer
   style={

@@ -9,13 +9,15 @@ import './ModalContainer.style.scss';
  * The ModalContainer component.
  */
 const ModalContainer: FC<Props> = (props: Props) => {
-  const { className, children, color, elevation, id, style } = props;
+  const { className, children, color, elevation, id, isPadded, isRounded, style } = props;
 
   return (
     <div
       className={classnames(className, STYLE.wrapper)}
       data-color={color || DEFAULTS.COLOR}
       data-elevation={elevation || DEFAULTS.ELEVATION}
+      data-padded={isPadded}
+      data-rounded={isRounded}
       id={id}
       style={style}
     >

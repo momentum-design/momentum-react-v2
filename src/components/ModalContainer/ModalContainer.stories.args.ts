@@ -17,28 +17,55 @@ export default {
     },
   },
   color: {
-    description: 'Provides the child nodes for this `<ModalContainer />`.',
+    description: 'Provides the color of this `<ModalContainer />`.',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     table: {
       type: {
-        summary: 'ReactNode',
+        summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: 'primary',
       },
     },
   },
   elevation: {
-    description: 'Provides the child nodes for this `<ModalContainer />`.',
+    description:
+      'Provides the elevation for this `<ModalContainer />`. This only applies to the box-shadow depth.',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
     table: {
       type: {
-        summary: 'ReactNode',
+        summary: 'number',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: '0',
+      },
+    },
+  },
+  isPadded: {
+    description: 'Identifies if this `<ModalContainer />` should be rendered with padding.',
+    control: { type: 'boolean' },
+    options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  isRounded: {
+    description: 'Identifies if this `<ModalContainer />` should be rendered with round corners.',
+    control: { type: 'boolean' },
+    options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
       },
     },
   },
