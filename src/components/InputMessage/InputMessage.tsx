@@ -13,23 +13,23 @@ const messagePriority = {
   error: 3,
 };
 
-const determineMessageType = (array) => {
+const determineMessageLevel = (array) => {
   return array.reduce((agg, e) => {
-    return messagePriority[agg] > messagePriority[e.type] ? agg : e.type || 'none';
+    return messagePriority[agg] > messagePriority[e.type] ? agg : e.level || 'none';
   }, 'none');
 };
 
-const filterMessagesByType = (array, value) => {
-  return array.reduce((agg, e) => (e.type === value ? agg.concat(e.message) : agg), []);
+const filterMessagesByLevel = (array, value) => {
+  return array.reduce((agg, e) => (e.level === value ? agg.concat(e.message) : agg), []);
 };
 
 type GetFilteredMessagesReturn = [MessageLevel, string[]];
 
 export const getFilteredMessages = (allMessages: Message[]): GetFilteredMessagesReturn => {
-  const messageType: MessageLevel =
-    (allMessages.length > 0 && determineMessageType(allMessages)) || 'none';
-  const messages = (messageType && filterMessagesByType(allMessages, messageType)) || null;
-  return [messageType, messages];
+  const messageLevel: MessageLevel =
+    (allMessages.length > 0 && determineMessageLevel(allMessages)) || 'none';
+  const messages = (messageLevel && filterMessagesByLevel(allMessages, messageLevel)) || null;
+  return [messageLevel, messages];
 };
 
 const InputMessage = (props: Props): ReactElement => {

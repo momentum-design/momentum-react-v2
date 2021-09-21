@@ -2,7 +2,7 @@ import type { AriaTextFieldProps } from '@react-types/textfield';
 import { CSSProperties } from 'react';
 import type { Message } from '../InputMessage/InputMessage.types';
 
-export interface Props extends AriaTextFieldProps {
+export interface Props extends Omit<AriaTextFieldProps, 'errorMessage'> {
   /**
    * Optional css class name
    */
@@ -20,9 +20,9 @@ export interface Props extends AriaTextFieldProps {
    */
   inputClassName?: string;
   /**
-   * Help Text to show form validation rules
+   * Description text to be displayed below the input
    */
-  helpText?: string;
+  description?: string;
   /**
    * Optional Input ref prop type
    */

@@ -4,6 +4,7 @@ import { SSRProvider } from '@react-aria/ssr';
 import { mountAndWait } from '../../../test/utils';
 import TextInput, { TEXT_INPUT_CONSTANTS as CONSTANTS } from './';
 import { act } from 'react-dom/test-utils';
+import { Message } from '../InputMessage/InputMessage.types';
 
 describe('<TextInput/>', () => {
   describe('snapshot', () => {
@@ -48,6 +49,28 @@ describe('<TextInput/>', () => {
       const style = { color: 'pink' };
 
       const container = await mountComponent(<TextInput aria-label="text-input" style={style} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with error text', async () => {
+      expect.assertions(1);
+
+      const message: Message = { message: 'test', level: 'error' };
+
+      const container = await mountComponent(
+        <TextInput aria-label="text-input" messageArr={[message]} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with description', async () => {
+      expect.assertions(1);
+
+      const container = await mountComponent(
+        <TextInput aria-label="text-input" description="some input" />
+      );
 
       expect(container).toMatchSnapshot();
     });

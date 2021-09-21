@@ -1,7 +1,7 @@
 export type MessageLevel = 'error' | 'warning' | 'success' | 'help' | 'none';
 
 export interface Message {
-  type: MessageLevel;
+  level: MessageLevel;
   message: string;
 }
 

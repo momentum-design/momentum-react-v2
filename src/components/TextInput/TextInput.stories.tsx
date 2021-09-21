@@ -15,7 +15,7 @@ export default {
   component: TextInput,
   args: {
     label: 'Label',
-    helpText: 'Help text for this input',
+    description: 'Description text for this input',
     initialValue: 'some input',
     placeholder: 'Input placeholder',
   },
@@ -26,8 +26,8 @@ export default {
       mapping: messageArrOptions,
       control: { type: 'select' },
     },
-    helpText: {
-      description: 'The helptext for the input',
+    description: {
+      description: 'The description text for the input',
       control: { type: 'text' },
     },
     isDisabled: {
@@ -96,18 +96,18 @@ Common.parameters = {
     {
       value: 'test',
       label: 'Label',
-      helpText: 'This is help text for the input.',
+      description: 'This is help text for the input.',
     },
     {
       label: 'Label',
       value: 'test',
       isDisabled: true,
-      helpText: 'This is help text for the input.',
+      description: 'This is help text for the input.',
     },
     {
       label: 'Label',
       value: 'test',
-      helpText: 'This is help text for the input.',
+      description: 'This is help text for the input.',
       messageArr: [{ type: 'error', message: 'Error message' }],
     },
   ],

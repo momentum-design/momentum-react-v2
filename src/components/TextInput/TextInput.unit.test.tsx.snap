@@ -61,6 +61,153 @@ exports[`<TextInput/> snapshot should match snapshot with className 1`] = `
 </SSRProvider>
 `;
 
+exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
+<SSRProvider>
+  <TextInput
+    aria-label="text-input"
+    description="some input"
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-label="text-input"
+          disabled={false}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+      <InputMessage
+        className="md-text-input-help"
+        id={null}
+        level="help"
+        message="some input"
+      >
+        <div
+          className="md-input-message-wrapper md-text-input-help"
+          id={null}
+        >
+          <div
+            className="md-input-message"
+            message-level="help"
+            role="alert"
+          >
+            <div
+              className="md-input-message--text"
+            >
+              some input
+            </div>
+          </div>
+        </div>
+      </InputMessage>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
+exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
+<SSRProvider>
+  <TextInput
+    aria-label="text-input"
+    messageArr={
+      Array [
+        Object {
+          "level": "error",
+          "message": "test",
+        },
+      ]
+    }
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="error"
+      onClick={[Function]}
+    >
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-label="text-input"
+          disabled={false}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+      <div
+        id={null}
+      >
+        <InputMessage
+          className="md-text-input-error"
+          key="input-message-0"
+          level="error"
+          message="test"
+        >
+          <div
+            className="md-input-message-wrapper md-text-input-error"
+          >
+            <div
+              className="md-input-message"
+              message-level="error"
+              role="alert"
+            >
+              <div
+                className="md-input-message--icon"
+              >
+                <Icon
+                  fillColor="var(--theme-text-error-normal)"
+                  name="warning"
+                  scale={20}
+                  weight="bold"
+                >
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={20}
+                      height="100%"
+                      stroke="currentColor"
+                      style={
+                        Object {
+                          "fill": "var(--theme-text-error-normal)",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+              <div
+                className="md-input-message--text"
+              >
+                test
+              </div>
+            </div>
+          </div>
+        </InputMessage>
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
 exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
 <SSRProvider>
   <TextInput

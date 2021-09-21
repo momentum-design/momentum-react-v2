@@ -14,11 +14,11 @@ import { useFocusState } from '../../hooks/useFocusState';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
-    helpText,
     messageArr = [],
     label,
     className,
     clearAriaLabel,
+    description,
     inputClassName,
     isDisabled,
     style,
@@ -28,12 +28,14 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const componentRef = React.useRef<HTMLInputElement>();
   const inputRef = ref || componentRef;
 
+  const [messageType, messages] = getFilteredMessages(messageArr);
+  const errorMessage = messageType === 'error' ? messages[0] : undefined;
+
   const { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(
-    { ...props, description: helpText, errorMessage: messageArr?.[0]?.message },
+    { ...props, errorMessage },
     inputRef
   );
 
-  const [messageType, messages] = getFilteredMessages(messageArr);
   const { focus, focusProps } = useFocusState(props);
   const state = useSearchFieldState(props);
 
@@ -50,8 +52,6 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     }
   };
 
-  const { htmlFor, ...otherLabelProps } = labelProps;
-
   return (
     <div
       data-level={messageType}
@@ -63,7 +63,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       className={classnames(STYLE.wrapper, className)}
     >
       {label && (
-        <label {...otherLabelProps} htmlFor={htmlFor}>
+        <label {...labelProps} htmlFor={labelProps.htmlFor}>
           {label}
         </label>
       )}
@@ -84,12 +84,12 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           </ButtonSimple>
         )}
       </div>
-      {!!helpText && !messages?.length && (
+      {!!description && !messages?.length && (
         <InputMessage
           className={STYLE.help}
           level="help"
           {...descriptionProps}
-          message={helpText}
+          message={description}
         />
       )}
       {messages && !!messages.length && (

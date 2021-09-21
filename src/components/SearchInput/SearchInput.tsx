@@ -40,7 +40,7 @@ const SearchInput: FC<Props> = (props: Props) => {
       data-disabled={isDisabled}
       data-focus={focus}
     >
-      <label htmlFor={inputProps.id} {...labelProps}>
+      <label htmlFor={labelProps.htmlFor} {...labelProps}>
         {label}
       </label>
       <div>
