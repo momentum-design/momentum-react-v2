@@ -3,7 +3,7 @@
 exports[`<SearchInput /> snapshot should match snapshot 1`] = `
 <SSRProvider>
   <SearchInput
-    aria-label=" search"
+    aria-label="search"
   >
     <div
       className="md-search-input-wrapper"
@@ -38,7 +38,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
         className="md-search-input-container"
       >
         <input
-          aria-label=" search"
+          aria-label="search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -73,7 +73,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
 exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`] = `
 <SSRProvider>
   <SearchInput
-    aria-label=" search"
+    aria-label="search"
     filters={
       Array [
         Object {
@@ -135,7 +135,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
         className="md-search-input-container"
       >
         <input
-          aria-label=" search"
+          aria-label="search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -225,7 +225,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
 exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
 <SSRProvider>
   <SearchInput
-    aria-label=" search"
+    aria-label="search"
     searching={true}
   >
     <div
@@ -261,7 +261,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
         className="md-search-input-container"
       >
         <input
-          aria-label=" search"
+          aria-label="search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -296,7 +296,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
 exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
 <SSRProvider>
   <SearchInput
-    aria-label=" search"
+    aria-label="search"
     id="example-id-label"
     label="search"
   >
@@ -340,7 +340,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
         className="md-search-input-container"
       >
         <input
-          aria-label=" search"
+          aria-label="search"
           aria-labelledby="test-ID example-id-label"
           disabled={false}
           id="example-id-label"
@@ -376,7 +376,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
 exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
 <SSRProvider>
   <SearchInput
-    aria-label=" search"
+    aria-label="search"
     className="example-class"
   >
     <div
@@ -412,7 +412,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
         className="md-search-input-container"
       >
         <input
-          aria-label=" search"
+          aria-label="search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -447,7 +447,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
 exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
 <SSRProvider>
   <SearchInput
-    aria-label=" search"
+    aria-label="search"
     id="example-id"
   >
     <div
@@ -484,7 +484,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
         className="md-search-input-container"
       >
         <input
-          aria-label=" search"
+          aria-label="search"
           disabled={false}
           id="example-id"
           onBlur={[Function]}
@@ -519,7 +519,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
 exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
 <SSRProvider>
   <SearchInput
-    aria-label=" search"
+    aria-label="search"
     style={
       Object {
         "color": "pink",
@@ -564,7 +564,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
         className="md-search-input-container"
       >
         <input
-          aria-label=" search"
+          aria-label="search"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}

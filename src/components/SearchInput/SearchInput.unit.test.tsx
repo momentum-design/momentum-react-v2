@@ -24,7 +24,7 @@ describe('<SearchInput />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<SearchInput aria-label=" search" />);
+      const container = await mountComponent(<SearchInput aria-label="search" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe('<SearchInput />', () => {
       const className = 'example-class';
 
       const container = await mountComponent(
-        <SearchInput aria-label=" search" className={className} />
+        <SearchInput aria-label="search" className={className} />
       );
 
       expect(container).toMatchSnapshot();
@@ -46,7 +46,7 @@ describe('<SearchInput />', () => {
 
       const id = 'example-id';
 
-      const container = await mountComponent(<SearchInput aria-label=" search" id={id} />);
+      const container = await mountComponent(<SearchInput aria-label="search" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -54,11 +54,7 @@ describe('<SearchInput />', () => {
     it('should match snapshot with a label', async () => {
       expect.assertions(1);
 
-      const id = 'example-id-label';
-
-      const container = await mountComponent(
-        <SearchInput label="search" aria-label=" search" id={id} />
-      );
+      const container = await mountComponent(<SearchInput label="search" aria-label="search" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -68,7 +64,7 @@ describe('<SearchInput />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountComponent(<SearchInput aria-label=" search" style={style} />);
+      const container = await mountComponent(<SearchInput aria-label="search" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -76,7 +72,7 @@ describe('<SearchInput />', () => {
     it('should match snapshot when searching', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<SearchInput aria-label=" search" searching={true} />);
+      const container = await mountComponent(<SearchInput aria-label="search" searching={true} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -86,7 +82,7 @@ describe('<SearchInput />', () => {
 
       const container = await mountComponent(
         <SearchInput
-          aria-label=" search"
+          aria-label="search"
           value="From: someone"
           filters={[
             {
@@ -111,7 +107,7 @@ describe('<SearchInput />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<SearchInput aria-label=" search" />))
+      const element = (await mountAndWait(<SearchInput aria-label="search" />))
         .find(SearchInput)
         .getDOMNode();
 
@@ -124,7 +120,7 @@ describe('<SearchInput />', () => {
       const className = 'example-class';
 
       const element = (
-        await mountAndWait(<SearchInput aria-label=" search" className={className} />)
+        await mountAndWait(<SearchInput aria-label="search" className={className} />)
       )
         .find(SearchInput)
         .getDOMNode();
@@ -137,7 +133,7 @@ describe('<SearchInput />', () => {
 
       const id = 'example-id-2';
 
-      const element = (await mountAndWait(<SearchInput aria-label=" search" id={id} />))
+      const element = (await mountAndWait(<SearchInput aria-label="search" id={id} />))
         .find(SearchInput)
         .getDOMNode();
 
@@ -150,7 +146,7 @@ describe('<SearchInput />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = (await mountAndWait(<SearchInput aria-label=" search" style={style} />))
+      const element = (await mountAndWait(<SearchInput aria-label="search" style={style} />))
         .find(SearchInput)
         .getDOMNode();
 
@@ -160,21 +156,22 @@ describe('<SearchInput />', () => {
     it('should pass the aria label to the input', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<SearchInput aria-label=" search" searching={true} />))
+      const element = (await mountAndWait(<SearchInput aria-label="search" searching={true} />))
         .find('input')
         .getDOMNode();
 
-      expect(element.getAttribute('aria-label')).toBe(' search');
+      expect(element.getAttribute('aria-label')).toBe('search');
     });
 
-    it('should pass the aria label to the input', async () => {
-      expect.assertions(1);
+    it('should pass label to the label', async () => {
+      expect.assertions(2);
 
-      const element = (await mountAndWait(<SearchInput aria-label=" search" searching={true} />))
-        .find('input')
-        .getDOMNode();
+      const wrapper = await mountAndWait(<SearchInput aria-label="search" label="a label" />);
+      const label = wrapper.find('label');
+      const realInputId = wrapper.find('input').getDOMNode().getAttribute('id');
 
-      expect(element.getAttribute('aria-label')).toBe(' search');
+      expect((label.getDOMNode() as HTMLLabelElement).htmlFor).toBe(realInputId);
+      expect(label.text()).toBe('a label');
     });
   });
 
@@ -182,7 +179,7 @@ describe('<SearchInput />', () => {
     it('clicking on another part of the component gives focus to the input', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<SearchInput aria-label=" search" />);
+      const wrapper = await mountAndWait(<SearchInput aria-label="search" />);
 
       const inputElement = wrapper.find('input');
       const icon = wrapper.find(Icon);
