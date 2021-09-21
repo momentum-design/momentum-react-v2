@@ -68,9 +68,7 @@ describe('InputMessage', () => {
     it('should have id if provided', async () => {
       const testId = 'testId';
 
-      const wrapper = await mountAndWait(
-        <InputMessage message="some message" id={testId} />
-      );
+      const wrapper = await mountAndWait(<InputMessage message="some message" id={testId} />);
       const element = wrapper.find(InputMessage).getDOMNode();
 
       expect(element.id).toEqual(testId);
