@@ -64,6 +64,10 @@
     border-radius: 0.5rem;
   }
 
+  &[data-shape="rectangleNoPadding"] {
+    border-radius: 0.5rem;
+  }
+
   &[data-shape="isPilled"] {
     border-radius: 100vh;
 

@@ -1,0 +1,74 @@
+.md-meeting-list-item-wrapper {
+    margin: 1rem 0;
+    padding-right: 0.5rem;
+    
+    &[data-color="join"],
+    &[data-color="inactive"],
+    &[data-color="activeNoJoin"] {
+        background-color:  rgba(255, 255, 255, 0.11); // IEFIX
+        background-color: var(--theme-background-primary-active);
+
+        &[data-disabled="true"], &.disable {
+            background-color:  rgba(255, 255, 255, 0.11); // IEFIX
+            background-color: var(--theme-background-primary-active);
+        }
+    }
+
+    &[data-color="empty"] {
+        background-color:  rgba(255, 255, 255, 0.11); // IEFIX
+        background-color: var(--theme-background-primary-active);
+
+        &:hover, &.hover, &[data-disabled="true"], &.disable {
+            background-color:  rgba(255, 255, 255, 0.11);  // IEFIX
+            background-color: var(--theme-background-primary-active);
+        }
+    }
+
+    .md-meeting-list-item-start-section {
+        display: flex;
+        align-items: center;
+        .md-meeting-list-item-border {
+            height: 3.125rem;
+            width: 0.3rem;
+            border-radius: 0.5rem 0 0 0.5rem;
+            margin-right: 0.5rem;
+
+            &[data-color="join"] {
+                background-color: rgba(29, 128, 95, 1); // IEFIX
+                background-color: var(--button-join-fill-background);
+            }
+
+            &[data-color="activeNoJoin"] {
+                background-color: rgba(0, 0, 0 , 0.2); // IEFIX
+                background-color: var(--button-secondary-border-disabled);
+            }
+            
+            &[data-color="inactive"] {
+
+                background: webkit-repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 7%,
+                    rgba(255, 255, 255, 0.3) 7%,
+                    rgba(255, 255, 255, 0.3) 14%
+                );
+
+                background: -o-repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 7%,
+                    rgba(255, 255, 255, 0.3) 7%,
+                    rgba(255, 255, 255, 0.3) 14%
+                );
+
+                background: repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 7%,
+                    rgba(255, 255, 255, 0.3) 7%,
+                    rgba(255, 255, 255, 0.3) 14%
+                );
+            }
+        }
+    }
+}

@@ -9,6 +9,7 @@ const SIZES = {
 const SHAPES = {
   rectangle: 'rectangle',
   isPilled: 'isPilled',
+  rectangleNoPadding: 'rectangleNoPadding',
 };
 
 const DEFAULTS = {

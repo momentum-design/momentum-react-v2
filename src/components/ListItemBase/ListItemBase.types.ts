@@ -40,7 +40,7 @@ export interface Props {
    * The shape of the list item container
    * @default "rectangle"
    */
-  shape?: 'rectangle' | 'isPilled';
+  shape?: 'rectangle' | 'isPilled' | 'rectangleNoPadding';
 
   /**
    * Aria role
