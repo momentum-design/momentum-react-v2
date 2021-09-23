@@ -31,7 +31,7 @@ export interface Props {
   isDisabled?: boolean;
 
   /**
-   * Determines if this itme is padded
+   * Determines if this item is padded
    * @default false
    */
   isPadded?: boolean;
