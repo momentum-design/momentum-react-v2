@@ -1,6 +1,10 @@
 .md-reaction-picker-wrapper {
   height: 2.25rem;
+  background-color: rgba(0, 0, 0, 1);
   background-color: var(--theme-groupedbackground-primary-normal);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  border: 0.0625rem solid var(--theme-outline-secondary-normal);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.16), 0 0 0.0625rem rgba(0, 0, 0, 0.16);
   &[data-round='true'] {
     border-radius: 100vh;
 
@@ -15,13 +19,17 @@
       }
     }
   }
-  .md-button-circle-wrapper {
+  .md-reaction-button-wrapper {
     border-radius: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    background-color: var(--theme-groupedbackground-primary-normal);
     &:hover {
-      // background-color: green;
+      background-color: rgba(255, 255, 255, 0.07);
+      background-color: var(--theme-button-secondary-hover);
     }
     &[data-reacted="true"] {
-      // background-color: red;
+      background-color: rgba(255, 255, 255, 0.11);
+      background-color: var(--theme-background-primary-active);
     }
     span {
       &:hover {

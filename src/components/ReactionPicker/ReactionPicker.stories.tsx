@@ -24,7 +24,7 @@ export default {
       <ReactionButton name={'popper'} />,
       <ReactionButton name={'heart'} />,
       <ReactionButton name={'thumb-up-yellow'} />,
-      <ReactionButton name={'smile'} />,
+      <ReactionButton name={'smile'} reacted />,
       <ReactionButton name={'haha'} />,
       <ReactionButton name={'wow'} />,
       <ReactionButton name={'sad'} />,
