@@ -40,10 +40,10 @@ const Reaction: FC<Props> = (props: Props) => {
     );
   }
   if (loading) {
-    // TODO: revisit this
+    // TODO: spinner NYI
     return <Icon name={'spinner'} scale={16} />;
   } else {
-    // TODO: im not sure how this can possibly happen, but maybe?
+    // im not sure how this can possibly happen, but maybe?
     return <Icon name={'warning'} scale={16} />;
   }
 };
