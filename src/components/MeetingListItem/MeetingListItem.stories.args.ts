@@ -53,7 +53,7 @@ export default {
       },
     },
   },
-  startImage: {
+  image: {
     defaultValue: undefined,
     description: 'Provides the nodes for the start of the item',
     control: { type: 'none' },

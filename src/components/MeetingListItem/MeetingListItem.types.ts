@@ -35,7 +35,7 @@ export interface Props {
   /**
    * Icon, Avatar, or other content for beginning of item
    */
-  startImage?: ReactNode;
+  image?: ReactNode;
 
   /**
    * Custom style for overriding this component's CSS.

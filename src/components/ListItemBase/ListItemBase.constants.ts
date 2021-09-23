@@ -9,12 +9,12 @@ const SIZES = {
 const SHAPES = {
   rectangle: 'rectangle',
   isPilled: 'isPilled',
-  rectangleNoPadding: 'rectangleNoPadding',
 };
 
 const DEFAULTS = {
   SIZE: (shape: string): number => (shape === SHAPES.isPilled ? SIZES[50] : SIZES[40]),
   IS_DISABLED: false,
+  IS_PADDED: false,
   SHAPE: SHAPES.rectangle,
   ROLE: 'listitem',
 };

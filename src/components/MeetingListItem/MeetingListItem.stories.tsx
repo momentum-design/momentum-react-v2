@@ -73,7 +73,7 @@ Example.args = {
     </>
   ),
   color: 'join',
-  startImage: <Avatar initials="TU" size={32} />,
+  image: <Avatar initials="TU" size={32} />,
 };
 
 /**
@@ -101,7 +101,7 @@ Common.parameters = {
           <div>11:00 - 12:00</div>
         </>
       ),
-      startImage: (
+      image: (
         <ButtonCircle>
           <Icon autoScale name="play" />
         </ButtonCircle>
@@ -122,7 +122,7 @@ Common.parameters = {
           <div>11:00 - 12:00</div>
         </>
       ),
-      startImage: (
+      image: (
         <ButtonCircle>
           <Icon autoScale name="play" />
         </ButtonCircle>
@@ -146,7 +146,7 @@ Common.parameters = {
         </>
       ),
       color: 'join',
-      startImage: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" size={32} />,
     },
     {
       label: 'Inactive meeting',
@@ -163,7 +163,7 @@ Common.parameters = {
         </>
       ),
       color: 'inactive',
-      startImage: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" size={32} />,
     },
     {
       label: 'Active meeting without join button',
@@ -180,7 +180,7 @@ Common.parameters = {
         </>
       ),
       color: 'activeNoJoin',
-      startImage: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" size={32} />,
     },
     {
       label: 'No meetings scheduled',
@@ -236,7 +236,7 @@ Colors.parameters = {
       ),
       children: <div>Join</div>,
       color: 'join',
-      startImage: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" size={32} />,
     },
     {
       buttonGroup: (
@@ -246,7 +246,7 @@ Colors.parameters = {
       ),
       children: <div>Inactive</div>,
       color: 'inactive',
-      startImage: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" size={32} />,
     },
     {
       buttonGroup: (
@@ -256,9 +256,9 @@ Colors.parameters = {
       ),
       children: <div>Active No Join</div>,
       color: 'activeNoJoin',
-      startImage: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" size={32} />,
     },
   ],
 };
 
-export { Example, Common, Colors };
+export { Example, Colors, Common };

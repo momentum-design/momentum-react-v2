@@ -75,12 +75,12 @@ describe('<MeetingListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with startImage', () => {
+    it('should match snapshot with image', () => {
       expect.assertions(1);
 
-      const startImage = <Icon name="placeholder" />;
+      const image = <Icon name="placeholder" />;
 
-      const container = mount(<MeetingListItem startImage={startImage} />);
+      const container = mount(<MeetingListItem image={image} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -154,16 +154,6 @@ describe('<MeetingListItem />', () => {
       const element = container.find(MeetingListItem).getDOMNode();
 
       expect(element.getAttribute('data-size')).toBe('50');
-    });
-
-    it('should have provided data-shape', () => {
-      expect.assertions(1);
-
-      const container = mount(<MeetingListItem>Test</MeetingListItem>);
-
-      const element = container.find(MeetingListItem).getDOMNode();
-
-      expect(element.getAttribute('data-shape')).toBe('rectangleNoPadding');
     });
 
     it('should have provided role', () => {

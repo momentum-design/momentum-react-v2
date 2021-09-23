@@ -8,20 +8,19 @@ import ListItemBase from '../ListItemBase';
 import ListItemBaseSection from '../ListItemBaseSection';
 
 const MeetingListItem: FC<Props> = (props: Props) => {
-  const { children, className, color, isDisabled, buttonGroup, startImage, ...rest } = props;
+  const { children, className, color, isDisabled, buttonGroup, image, ...rest } = props;
 
   return (
     <ListItemBase
       className={`${classnames(className, STYLE.wrapper)}`}
       data-color={color}
       isDisabled={isDisabled}
-      shape="rectangleNoPadding"
       size={50}
       {...rest}
     >
       <ListItemBaseSection className="md-meeting-list-item-start-section" position="start">
         <div className="md-meeting-list-item-border" data-color={color} />
-        {startImage}
+        {image}
       </ListItemBaseSection>
 
       <ListItemBaseSection position="middle">{children}</ListItemBaseSection>

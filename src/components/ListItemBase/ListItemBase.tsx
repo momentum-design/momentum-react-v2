@@ -16,6 +16,7 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
     shape = DEFAULTS.SHAPE,
     size = DEFAULTS.SIZE(shape || DEFAULTS.SHAPE),
     isDisabled = DEFAULTS.IS_DISABLED,
+    isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
     ...rest
   } = props;
@@ -59,6 +60,7 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
         ref={ref}
         data-size={size}
         data-disabled={isDisabled}
+        data-padded={isPadded}
         data-shape={shape}
         className={classnames(className, STYLE.wrapper)}
         role={role}

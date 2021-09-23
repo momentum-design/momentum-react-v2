@@ -188,6 +188,28 @@ Shapes.parameters = {
         ),
       };
     }),
+    ...Object.values(SHAPES).map((shape) => {
+      return {
+        isPadded: true,
+        shape,
+        label: `Padded Default Size List Item + Shape ${shape}`,
+        children: (
+          <>
+            <ListItemBaseSection position="start">
+              {shape === SHAPES.isPilled ? (
+                <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
+              ) : (
+                <Icon name="placeholder" scale={16} />
+              )}
+            </ListItemBaseSection>
+            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+            <ListItemBaseSection position="end">
+              <Icon name="placeholder" scale={16} />
+            </ListItemBaseSection>
+          </>
+        ),
+      };
+    }),
   ],
 };
 

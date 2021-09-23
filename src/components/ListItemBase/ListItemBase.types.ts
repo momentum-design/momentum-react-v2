@@ -31,6 +31,12 @@ export interface Props {
   isDisabled?: boolean;
 
   /**
+   * Determines if this itme is padded
+   * @default false
+   */
+  isPadded?: boolean;
+
+  /**
    * Size of the list item
    * @default 40
    */
@@ -40,7 +46,7 @@ export interface Props {
    * The shape of the list item container
    * @default "rectangle"
    */
-  shape?: 'rectangle' | 'isPilled' | 'rectangleNoPadding';
+  shape?: 'rectangle' | 'isPilled';
 
   /**
    * Aria role
