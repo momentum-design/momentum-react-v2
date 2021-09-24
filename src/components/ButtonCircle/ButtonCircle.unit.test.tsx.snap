@@ -97,6 +97,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
         data-multiple-children={false}
         data-outline={false}
         data-size={40}
+        disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -180,6 +181,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
         data-multiple-children={false}
         data-outline={false}
         data-size={40}
+        disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
