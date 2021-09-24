@@ -58,7 +58,7 @@
     "generate:component": "plop --cwd ./config/plop --dest .",
     "lint:config": "esw \"./config/**/*.{js,jsx,ts,tsx}\"",
     "lint:src": "esw \"./src/**/*.{js,jsx,ts,tsx}\"",
-    "source:build": "yarn source:build:clean && yarn source:build:compile && yarn source:build:styles && yarn source:build:fonts",
+    "source:build": "yarn source:build:clean && yarn source:build:compile && yarn source:build:fonts && yarn source:build:styles",
     "source:build:styles": "copyfiles -u 1 \"./src/**/*.style.*\" ./dist/esm && copyfiles -u 1 \"./src/**/*.style.*\" ./dist/cjs",
     "source:build:fonts": "copyfiles -u 1 \"./src/fonts/*\" ./dist/esm && copyfiles -u 1 \"./src/fonts/*\" ./dist/cjs",
     "source:build:clean": "rimraf ./dist",
