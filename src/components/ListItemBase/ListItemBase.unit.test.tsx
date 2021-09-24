@@ -84,6 +84,16 @@ describe('ListItemBase', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with isSelected', () => {
+      expect.assertions(1);
+
+      const isSelected = true;
+
+      container = mount(<ListItemBase isSelected={isSelected}>Test</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -178,6 +188,18 @@ describe('ListItemBase', () => {
       const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('role')).toBe(role);
+    });
+
+    it('should have provided active class when isSelected is provided', () => {
+      expect.assertions(1);
+
+      const isSelected = true;
+
+      container = mount(<ListItemBase isSelected={isSelected}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase).getDOMNode();
+
+      expect(element.classList.contains('active')).toBe(true);
     });
   });
 });

@@ -18,6 +18,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     size = DEFAULTS.SIZE(shape || DEFAULTS.SHAPE),
     isDisabled = DEFAULTS.IS_DISABLED,
     role = DEFAULTS.ROLE,
+    isSelected,
     ...rest
   } = props;
 
@@ -65,7 +66,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         data-size={size}
         data-disabled={isDisabled}
         data-shape={shape}
-        className={classnames(className, STYLE.wrapper, { active: isPressed })}
+        className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         role={role}
         {...pressProps}
       >

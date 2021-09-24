@@ -32,6 +32,12 @@ export interface Props extends PressEvents {
   isDisabled?: boolean;
 
   /**
+   * Determines if this item is selected
+   * @default false
+   */
+  isSelected?: boolean;
+
+  /**
    * Size of the list item
    * @default 40
    */
