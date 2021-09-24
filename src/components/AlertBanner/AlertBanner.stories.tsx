@@ -4,7 +4,7 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import ButtonCircle from '../ButtonCircle';
+import ButtonSimple from '../ButtonSimple';
 import Icon from '../Icon';
 
 import AlertBanner, { AlertBannerProps } from './';
@@ -23,12 +23,12 @@ export default {
 };
 
 const commonButtons = [
-  <ButtonCircle key={0}>
+  <ButtonSimple key={0}>
     <Icon name="refresh" autoScale />
-  </ButtonCircle>,
-  <ButtonCircle key={1}>
+  </ButtonSimple>,
+  <ButtonSimple key={1}>
     <Icon name="cancel" autoScale />
-  </ButtonCircle>,
+  </ButtonSimple>,
 ];
 
 const Example = Template<AlertBannerProps>(AlertBanner).bind({});
@@ -212,6 +212,21 @@ Sizes.parameters = {
   ],
 };
 
+const Static = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+
+Static.argTypes = { ...argTypes };
+delete Static.argTypes.isStatic;
+
+Static.args = {
+  buttons: commonButtons,
+  image: <Icon name="info-circle" autoScale />,
+  label: 'Example Label Default',
+};
+
+Static.parameters = {
+  variants: [{}, { isStatic: true }],
+};
+
 const Common = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -290,6 +305,19 @@ Common.parameters = {
       label: 'Error',
       isPilled: true,
     },
+    {
+      isCentered: true,
+      image: <Icon name="error-legacy" weight="filled" autoScale />,
+      label: 'isStatic',
+      isPilled: true,
+      isStatic: true,
+    },
+    {
+      image: <Icon name="error-legacy" weight="filled" autoScale />,
+      label: 'isStatic',
+      isPilled: true,
+      isStatic: true,
+    },
 
     // Lorem Ipsum.
     {
@@ -298,9 +326,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       image: <Icon name="spinner-filled" autoScale />,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
@@ -312,9 +340,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'theme',
       image: <Icon name="info-circle" weight="filled" autoScale />,
@@ -327,9 +355,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'success',
       image: <Icon name="check" autoScale />,
@@ -342,9 +370,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'warning',
       image: <Icon name="warning" autoScale />,
@@ -357,13 +385,28 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'error',
       image: <Icon name="error-legacy" weight="filled" autoScale />,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
+    },
+    {
+      image: <Icon name="error-legacy" weight="filled" autoScale />,
+      label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
+      isStatic: true,
+    },
+    {
+      buttons: (
+        <ButtonSimple key={1}>
+          <Icon name="cancel" autoScale />
+        </ButtonSimple>
+      ),
+      image: <Icon name="error-legacy" weight="filled" autoScale />,
+      label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
+      isStatic: true,
     },
 
     // Lorem Ipsum Small.
@@ -374,9 +417,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       image: <Icon name="spinner-filled" autoScale />,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
@@ -390,9 +433,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'theme',
       image: <Icon name="info-circle" weight="filled" autoScale />,
@@ -407,9 +450,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'success',
       image: <Icon name="check" autoScale />,
@@ -424,9 +467,9 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'warning',
       image: <Icon name="warning" autoScale />,
@@ -441,12 +484,29 @@ Common.parameters = {
     },
     {
       buttons: (
-        <ButtonCircle key={1}>
+        <ButtonSimple key={1}>
           <Icon name="cancel" autoScale />
-        </ButtonCircle>
+        </ButtonSimple>
       ),
       color: 'error',
       image: <Icon name="error-legacy" weight="filled" autoScale />,
+      label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
+      size: 'small',
+    },
+    {
+      image: <Icon name="error-legacy" weight="filled" autoScale />,
+      isStatic: true,
+      label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
+      size: 'small',
+    },
+    {
+      buttons: (
+        <ButtonSimple key={1}>
+          <Icon name="cancel" autoScale />
+        </ButtonSimple>
+      ),
+      image: <Icon name="error-legacy" weight="filled" autoScale />,
+      isStatic: true,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
       size: 'small',
     },
@@ -515,7 +575,20 @@ Common.parameters = {
       label: 'Error [small] \n- Bulleted Message',
       size: 'small',
     },
+    {
+      buttons: commonButtons,
+      isPilled: true,
+      isStatic: true,
+      label: 'isStatic [small]',
+      size: 'small',
+    },
+    {
+      buttons: commonButtons,
+      isStatic: true,
+      label: 'isStatic [small] \n- Bulleted Message',
+      size: 'small',
+    },
   ],
 };
 
-export { Example, Centering, Colors, Growing, Pilling, Sizes, Common };
+export { Example, Centering, Colors, Growing, Pilling, Sizes, Static, Common };

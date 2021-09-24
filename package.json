@@ -1,6 +1,6 @@
 {
   "name": "@momentumreact/momentum-react-v2",
-  "version": "25.0.17",
+  "version": "25.0.19",
   "description": "Cisco Momentum UI framework for ReactJs applications",
   "author": "Cisco Systems, Inc.",
   "contributors": [
@@ -204,6 +204,7 @@
     "husky": "^7.0.1",
     "jest": "^26.0.0",
     "jest-cli": "^26.0.0",
+    "lint-staged": "^11.1.2",
     "mini-css-extract-plugin": "0.7.0",
     "moment-timezone": "^0.5.14",
     "nodemon": "^2.0.12",
@@ -249,6 +250,16 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "{config,src}/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "{config,src}/**/*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix"
     ]
   }
 }
