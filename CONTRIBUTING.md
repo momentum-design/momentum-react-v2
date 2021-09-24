@@ -20,7 +20,6 @@
 - [Submitting Changes](#submitting-changes)
 - [License](#license)
 
-
 ## How to Contribute
 
 When creating new components in this repository, there are a few common developer flow patterns that can help new contributors get started. This section maps out the process for creating a new component from start to finish.
@@ -256,6 +255,8 @@ source:build:compile # Builds CommonJS and ESModule from './src' to './dist'.
 source:build:esm # Builds the './src' files into './dist/esm' as ESModule.
 source:build:stories # Builds the storybook files into './dist' for production testing.
 source:build:documentation # Builds the storybook mdx files into './dist' for production testing.
+source:build:fonts # Builds font files from './src' into their paired './dist' folders.
+source:build:watch # Watches all ts,tsx,js and scss files and builds via source:build
 source:test # Runs unit and integration tests within './src'.
 ```
 
