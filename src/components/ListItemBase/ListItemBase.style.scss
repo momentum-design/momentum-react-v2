@@ -63,6 +63,10 @@
     height: 3.125rem;
   }
 
+  &[data-size='70'] {
+    height: 4.375rem;
+  }
+
   &[data-shape='rectangle'] {
     border-radius: 0.5rem;
   }

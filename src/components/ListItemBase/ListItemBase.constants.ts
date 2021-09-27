@@ -4,6 +4,7 @@ const SIZES = {
   32: 32,
   40: 40,
   50: 50,
+  70: 70,
 };
 
 const SHAPES = {

@@ -23,7 +23,7 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
-  if (shape === SHAPES.isPilled && size === SIZES[40]) {
+  if (shape === SHAPES.isPilled && (size === SIZES[40] || size === SIZES[70])) {
     console.warn(
       'ListItemBase: This variation is against the design spec. Rounded List Items can only be size 32 or 50.'
     );

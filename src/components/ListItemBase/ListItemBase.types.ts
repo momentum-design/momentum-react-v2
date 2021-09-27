@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-export type ListItemBaseSize = 32 | 40 | 50;
+export type ListItemBaseSize = 32 | 40 | 50 | 70;
 
 export interface Props {
   /**

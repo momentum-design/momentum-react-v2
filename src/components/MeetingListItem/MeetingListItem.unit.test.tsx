@@ -4,6 +4,10 @@ import { mount } from 'enzyme';
 import MeetingListItem, { MEETING_LIST_ITEM_CONSTANTS as CONSTANTS } from './';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
+import Avatar from '../Avatar';
+import ButtonPill from '../ButtonPill';
+import ButtonCircle from '../ButtonCircle';
+import { mountAndWait } from '../../../test/utils';
 
 describe('<MeetingListItem />', () => {
   describe('snapshot', () => {
@@ -164,6 +168,35 @@ describe('<MeetingListItem />', () => {
       const element = container.find(MeetingListItem).getDOMNode();
 
       expect(element.getAttribute('role')).toBe('listitem');
+    });
+
+    it('should have appropriate sizes for button group', async () => {
+      expect.assertions(5);
+
+      const container = await mountAndWait(
+        <MeetingListItem
+          buttonGroup={
+            <ButtonGroup>
+              <ButtonPill className="button-pill" />
+              <ButtonCircle className="button-circle">
+                <Icon name="chat" />
+              </ButtonCircle>
+              <Icon name="placeholder" />
+              <Avatar className="avatar" />
+            </ButtonGroup>
+          }
+        />
+      );
+
+      const element = container.find(MeetingListItem).getDOMNode();
+
+      expect(element.getElementsByClassName('button-pill')[0].getAttribute('data-size')).toBe('28');
+      expect(element.getElementsByClassName('button-circle')[0].getAttribute('data-size')).toBe(
+        '32'
+      );
+      expect(element.getElementsByTagName('svg')[0].getAttribute('data-autoscale')).toBe('true');
+      expect(element.getElementsByTagName('svg')[1].getAttribute('data-autoscale')).toBe('true');
+      expect(element.getElementsByClassName('avatar')[0].getAttribute('data-size')).toBe('32');
     });
   });
 });

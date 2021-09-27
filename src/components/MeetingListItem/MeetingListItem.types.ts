@@ -19,7 +19,7 @@ export interface Props {
   /**
    * Color status
    */
-  color?: 'join' | 'inactive' | 'activeNoJoin' | 'empty';
+  color?: 'join' | 'inactive' | 'activeNoJoin' | 'empty' | 'scheduled';
 
   /**
    * Custom id for overriding this component's CSS.
@@ -36,6 +36,11 @@ export interface Props {
    * Icon, Avatar, or other content for beginning of item
    */
   image?: ReactNode;
+
+  /**
+   * Determines if this item has a larger height
+   */
+  large?: boolean;
 
   /**
    * Custom style for overriding this component's CSS.

@@ -35,9 +35,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
             position="middle"
           >
             <div
+              className="md-meeting-list-item-middle-section"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -85,16 +87,20 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
             position="middle"
           >
             <div
+              className="md-meeting-list-item-middle-section"
               data-position="middle"
             />
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-end-section"
             position="end"
           >
             <div
+              className="md-meeting-list-item-end-section"
               data-position="end"
             >
               <ButtonGroup>
@@ -150,9 +156,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
             position="middle"
           >
             <div
+              className="md-meeting-list-item-middle-section"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -203,9 +211,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-join"
             position="middle"
           >
             <div
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-join"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -255,60 +265,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
             position="middle"
           >
             <div
-              data-position="middle"
-            />
-          </ListItemBaseSection>
-        </li>
-      </FocusRing>
-    </FocusRing>
-  </ListItemBase>
-</MeetingListItem>
-`;
-
-exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] = `
-<MeetingListItem
-  isDisabled={true}
->
-  <ListItemBase
-    className="md-meeting-list-item-wrapper"
-    isDisabled={true}
-    size={50}
-  >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <li
-          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-disabled={true}
-          data-padded={false}
-          data-shape="rectangle"
-          data-size={50}
-          onBlur={[Function]}
-          onFocus={[Function]}
-          role="listitem"
-        >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="middle"
-          >
-            <div
+              className="md-meeting-list-item-middle-section"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -358,14 +319,70 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                 className="md-meeting-list-item-border"
               />
               <Icon
+                autoScale={true}
                 name="placeholder"
               />
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
             position="middle"
           >
             <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] = `
+<MeetingListItem
+  isDisabled={true}
+>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    isDisabled={true}
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={true}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -427,9 +444,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
             position="middle"
           >
             <div
+              className="md-meeting-list-item-middle-section"
               data-position="middle"
             />
           </ListItemBaseSection>

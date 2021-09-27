@@ -60,9 +60,8 @@ Example.args = {
   buttonGroup: (
     <ButtonGroup spaced>
       <ButtonHyperlink>Link</ButtonHyperlink>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        17 <Icon autoScale name="participant-list" />
-      </div>
+      <div style={{ paddingRight: 0 }}>17</div>
+      <Icon name="participant-list" />
       <ButtonPill color="join">Join</ButtonPill>
     </ButtonGroup>
   ),
@@ -73,7 +72,7 @@ Example.args = {
     </>
   ),
   color: 'join',
-  image: <Avatar initials="TU" size={32} />,
+  image: <Avatar initials="TU" />,
 };
 
 /**
@@ -90,9 +89,15 @@ Common.parameters = {
       label: 'Recording with buttons',
       buttonGroup: (
         <ButtonGroup spaced>
-          <Icon autoScale name="info-circle" />
-          <Icon autoScale name="share-c-native-iph" />
-          <Icon autoScale name="chat" />
+          <ButtonCircle ghost={true}>
+            <Icon name="info-circle" />
+          </ButtonCircle>
+          <ButtonCircle ghost={true}>
+            <Icon name="share-c-native-iph" />
+          </ButtonCircle>
+          <ButtonCircle ghost={true}>
+            <Icon name="chat" />
+          </ButtonCircle>
         </ButtonGroup>
       ),
       children: (
@@ -103,7 +108,7 @@ Common.parameters = {
       ),
       image: (
         <ButtonCircle>
-          <Icon autoScale name="play" />
+          <Icon name="play" />
         </ButtonCircle>
       ),
     },
@@ -112,8 +117,12 @@ Common.parameters = {
       buttonGroup: (
         <ButtonGroup spaced>
           <ButtonHyperlink>hyperlink</ButtonHyperlink>
-          <Icon autoScale name="info-circle" />
-          <Icon autoScale name="chat" />
+          <ButtonCircle ghost={true}>
+            <Icon name="info-circle" />
+          </ButtonCircle>
+          <ButtonCircle ghost={true}>
+            <Icon name="chat" />
+          </ButtonCircle>
         </ButtonGroup>
       ),
       children: (
@@ -124,7 +133,7 @@ Common.parameters = {
       ),
       image: (
         <ButtonCircle>
-          <Icon autoScale name="play" />
+          <Icon name="play" />
         </ButtonCircle>
       ),
     },
@@ -133,9 +142,8 @@ Common.parameters = {
       buttonGroup: (
         <ButtonGroup spaced>
           <ButtonHyperlink>Link</ButtonHyperlink>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            17 <Icon autoScale name="participant-list" />
-          </div>
+          <div style={{ paddingRight: 0, marginRight: 0 }}>17</div>
+          <Icon name="participant-list" />
           <ButtonPill color="join">Join</ButtonPill>
         </ButtonGroup>
       ),
@@ -146,14 +154,14 @@ Common.parameters = {
         </>
       ),
       color: 'join',
-      image: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" />,
     },
     {
       label: 'Inactive meeting',
       buttonGroup: (
         <ButtonGroup spaced>
-          <Icon autoScale name="recurring" />
-          <Icon autoScale name="calendar-empty" />
+          <Icon name="recurring" />
+          <Icon name="calendar-empty" />
         </ButtonGroup>
       ),
       children: (
@@ -163,14 +171,14 @@ Common.parameters = {
         </>
       ),
       color: 'inactive',
-      image: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" />,
     },
     {
       label: 'Active meeting without join button',
       buttonGroup: (
         <ButtonGroup spaced>
-          <Icon autoScale name="recurring" />
-          <Icon autoScale name="calendar-empty" />
+          <Icon name="recurring" />
+          <Icon name="calendar-empty" />
         </ButtonGroup>
       ),
       children: (
@@ -180,7 +188,7 @@ Common.parameters = {
         </>
       ),
       color: 'activeNoJoin',
-      image: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" />,
     },
     {
       label: 'No meetings scheduled',
@@ -196,27 +204,35 @@ Common.parameters = {
             <div>Time - Time</div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px' }}>
-            <div style={{ marginRight: '5px' }}>Normal</div> <Icon autoScale name="recurring" />
+            <div style={{ marginRight: '5px' }}>Normal</div> <Icon name="recurring" />
           </div>
         </div>
       ),
-      buttonGroup: <Avatar initials="TU" size={32} />,
+      buttonGroup: <Avatar initials="TU" />,
+      color: 'scheduled',
     },
     {
-      label: 'Scheduled meeting',
+      label: 'Three-line item',
       children: (
-        <div style={{ display: 'flex' }}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div>Date</div>
-            <div>Time - Time</div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px' }}>
-            <div style={{ marginRight: '5px' }}>Normal</div> <Icon autoScale name="recurring" />
-          </div>
-        </div>
+        <>
+          <div>Primary</div>
+          <div>Name</div>
+          <div>Date</div>
+        </>
       ),
-      buttonGroup: <Avatar initials="TU" size={32} />,
-      isDisabled: true,
+      buttonGroup: (
+        <ButtonGroup spaced>
+          <ButtonHyperlink>hyperlink</ButtonHyperlink>
+          <ButtonCircle ghost={true}>
+            <Icon name="copy" />
+          </ButtonCircle>
+          <ButtonCircle ghost={true}>
+            <Icon name="chat" />
+          </ButtonCircle>
+        </ButtonGroup>
+      ),
+      image: <Icon name="placeholder" />,
+      large: true,
     },
   ],
 };
@@ -236,7 +252,7 @@ Colors.parameters = {
       ),
       children: <div>Join</div>,
       color: 'join',
-      image: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" />,
     },
     {
       buttonGroup: (
@@ -246,7 +262,7 @@ Colors.parameters = {
       ),
       children: <div>Inactive</div>,
       color: 'inactive',
-      image: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" />,
     },
     {
       buttonGroup: (
@@ -256,9 +272,47 @@ Colors.parameters = {
       ),
       children: <div>Active No Join</div>,
       color: 'activeNoJoin',
-      image: <Avatar initials="TU" size={32} />,
+      image: <Avatar initials="TU" />,
+    },
+    {
+      buttonGroup: (
+        <ButtonGroup spaced>
+          <ButtonHyperlink>Link</ButtonHyperlink>
+        </ButtonGroup>
+      ),
+      children: <div>Active No Join</div>,
+      color: 'scheduled',
+      image: <Avatar initials="TU" />,
     },
   ],
 };
 
-export { Example, Colors, Common };
+const Sizes = MultiTemplate<MeetingListItemProps>(MeetingListItem).bind({});
+
+Sizes.argTypes = { ...argTypes };
+delete Sizes.argTypes.children;
+
+Sizes.parameters = {
+  variants: [
+    {
+      children: (
+        <>
+          <div>Normal</div>
+          <div>Size</div>
+        </>
+      ),
+    },
+    {
+      children: (
+        <>
+          <div>Large</div>
+          <div>Size</div>
+          <div>Item</div>
+        </>
+      ),
+      large: true,
+    },
+  ],
+};
+
+export { Example, Colors, Sizes, Common };
