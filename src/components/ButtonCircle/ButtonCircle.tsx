@@ -16,7 +16,7 @@ const ButtonCircle: FC<Props> = forwardRef(
     const ref = providedRef || useRef();
     const mutatedProps = {
       ...props,
-      isDisbled: props.disabled,
+      isDisabled: props.disabled,
     };
 
     delete mutatedProps.className;
