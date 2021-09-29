@@ -16,13 +16,14 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
     shape = DEFAULTS.SHAPE,
     size = DEFAULTS.SIZE(shape || DEFAULTS.SHAPE),
     isDisabled = DEFAULTS.IS_DISABLED,
+    isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
     ...rest
   } = props;
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
-  if (shape === SHAPES.isPilled && size === SIZES[40]) {
+  if (shape === SHAPES.isPilled && (size === SIZES[40] || size === SIZES[70])) {
     console.warn(
       'ListItemBase: This variation is against the design spec. Rounded List Items can only be size 32 or 50.'
     );
@@ -59,6 +60,7 @@ const ListItemBase = (props: Props, ref: RefObject<HTMLLIElement>) => {
         ref={ref}
         data-size={size}
         data-disabled={isDisabled}
+        data-padded={isPadded}
         data-shape={shape}
         className={classnames(className, STYLE.wrapper)}
         role={role}

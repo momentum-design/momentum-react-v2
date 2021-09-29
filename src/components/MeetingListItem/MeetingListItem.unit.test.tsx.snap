@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
+<MeetingListItem>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`] = `
+<MeetingListItem
+  buttonGroup={<ButtonGroup />}
+>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-end-section"
+            position="end"
+          >
+            <div
+              className="md-meeting-list-item-end-section"
+              data-position="end"
+            >
+              <ButtonGroup>
+                <div
+                  className="md-button-group-wrapper"
+                  data-round={false}
+                  data-spaced={false}
+                />
+              </ButtonGroup>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] = `
+<MeetingListItem
+  className="example-class"
+>
+  <ListItemBase
+    className="example-class md-meeting-list-item-wrapper"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="example-class md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
+<MeetingListItem
+  color="join"
+>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    data-color="join"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="join"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="join"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-join"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-join"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
+<MeetingListItem
+  id="example-id"
+>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    id="example-id"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          id="example-id"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
+<MeetingListItem
+  image={
+    <Icon
+      name="placeholder"
+    />
+  }
+>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+              <Icon
+                autoScale={true}
+                name="placeholder"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] = `
+<MeetingListItem
+  isDisabled={true}
+>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    isDisabled={true}
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={true}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;
+
+exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
+<MeetingListItem
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ListItemBase
+    className="md-meeting-list-item-wrapper"
+    size={50}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="rectangle"
+          data-size={50}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="listitem"
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+        >
+          <ListItemBaseSection
+            className="md-meeting-list-item-start-section"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section"
+            position="middle"
+          >
+            <div
+              className="md-meeting-list-item-middle-section"
+              data-position="middle"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MeetingListItem>
+`;

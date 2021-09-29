@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-export type ListItemBaseSize = 32 | 40 | 50;
+export type ListItemBaseSize = 32 | 40 | 50 | 70;
 
 export interface Props {
   /**
@@ -29,6 +29,12 @@ export interface Props {
    * @default false
    */
   isDisabled?: boolean;
+
+  /**
+   * Determines if this item is padded
+   * @default false
+   */
+  isPadded?: boolean;
 
   /**
    * Size of the list item

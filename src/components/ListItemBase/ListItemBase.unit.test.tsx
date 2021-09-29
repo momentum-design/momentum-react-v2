@@ -144,6 +144,18 @@ describe('ListItemBase', () => {
       expect(element.getAttribute('data-disabled')).toBe('true');
     });
 
+    it('should have provided data-padding when isPadded is provided', () => {
+      expect.assertions(1);
+
+      const isPadded = true;
+
+      container = mount(<ListItemBase isPadded={isPadded}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase).getDOMNode();
+
+      expect(element.getAttribute('data-padded')).toBe('true');
+    });
+
     it('should have provided data-size when size is provided', () => {
       expect.assertions(1);
 
