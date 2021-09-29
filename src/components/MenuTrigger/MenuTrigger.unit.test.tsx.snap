@@ -198,6 +198,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
               restoreFocus={true}
             >
               <span
+                data-focus-scope-start={true}
                 hidden={true}
               />
               <DismissButton
@@ -1906,6 +1907,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                 </VisuallyHidden>
               </DismissButton>
               <span
+                data-focus-scope-end={true}
                 hidden={true}
               />
             </FocusScope>
@@ -1998,6 +2000,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
               restoreFocus={true}
             >
               <span
+                data-focus-scope-start={true}
                 hidden={true}
               />
               <DismissButton
@@ -3706,6 +3709,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                 </VisuallyHidden>
               </DismissButton>
               <span
+                data-focus-scope-end={true}
                 hidden={true}
               />
             </FocusScope>
@@ -3855,6 +3859,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
               restoreFocus={true}
             >
               <span
+                data-focus-scope-start={true}
                 hidden={true}
               />
               <DismissButton
@@ -5563,6 +5568,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                 </VisuallyHidden>
               </DismissButton>
               <span
+                data-focus-scope-end={true}
                 hidden={true}
               />
             </FocusScope>
@@ -5654,6 +5660,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
               restoreFocus={true}
             >
               <span
+                data-focus-scope-start={true}
                 hidden={true}
               />
               <DismissButton
@@ -7362,6 +7369,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                 </VisuallyHidden>
               </DismissButton>
               <span
+                data-focus-scope-end={true}
                 hidden={true}
               />
             </FocusScope>
@@ -7574,6 +7582,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
               restoreFocus={true}
             >
               <span
+                data-focus-scope-start={true}
                 hidden={true}
               />
               <DismissButton
@@ -9282,6 +9291,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                 </VisuallyHidden>
               </DismissButton>
               <span
+                data-focus-scope-end={true}
                 hidden={true}
               />
             </FocusScope>

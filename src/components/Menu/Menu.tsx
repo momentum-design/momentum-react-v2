@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-
+import { Node } from '@react-types/shared';
 import React, { forwardRef, ReactElement, RefObject, useContext, useRef } from 'react';
 import classnames from 'classnames';
 
@@ -44,7 +44,8 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
         ref={ref}
         {...menuProps}
       >
-        {[...state.collection].map((item) => {
+        {Array.from(state.collection.getKeys()).map((key) => {
+          const item = state.collection.getItem(key) as Node<T>;
           if (item.type === 'section') {
             return (
               <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />
