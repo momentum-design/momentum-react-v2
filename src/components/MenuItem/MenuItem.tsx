@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 import React, { ReactElement, useContext } from 'react';
-import classnames from 'classnames';
 
 import { STYLE } from './MenuItem.constants';
 import { Props } from './MenuItem.types';
@@ -12,13 +11,9 @@ import ListItemBaseSection from '../ListItemBaseSection';
 import Icon from '../Icon';
 import { MenuContext } from '../Menu';
 
-/**
- * @internal
- */
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { className, id, style, item, state, onAction } = props;
+  const { item, state, onAction } = props;
 
-  // Get props for the menu item element
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
@@ -39,22 +34,26 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   );
 
   return (
-    <ListItemBase
-      className={classnames(className, STYLE.wrapper)}
-      id={id}
-      style={style}
-      {...menuItemProps}
-      ref={ref}
-      isDisabled={isDisabled}
-    >
+    <ListItemBase className={STYLE.wrapper} {...menuItemProps} ref={ref} isDisabled={isDisabled}>
       <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
       {isSelected && (
         <ListItemBaseSection position="end">
-          <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} />
+          <Icon
+            className={STYLE.tickIcon}
+            name="check"
+            weight="bold"
+            scale={16}
+            strokeColor="none"
+          />
         </ListItemBaseSection>
       )}
     </ListItemBase>
   );
 };
+
+/**
+ * Should not be exported as part of the library. Used in implementation of Menu component.
+ * @internal
+ */
 
 export default MenuItem;

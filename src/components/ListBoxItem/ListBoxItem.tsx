@@ -36,7 +36,13 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
       <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
       {isSelected && (
         <ListItemBaseSection position="end">
-          <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} />
+          <Icon
+            className={STYLE.tickIcon}
+            name="check"
+            weight="bold"
+            scale={16}
+            strokeColor="none"
+          />
         </ListItemBaseSection>
       )}
     </ListItemBase>

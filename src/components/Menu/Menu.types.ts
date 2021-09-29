@@ -1,5 +1,6 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, HTMLAttributes, MutableRefObject } from 'react';
 import { AriaMenuProps } from '@react-types/menu';
+import { FocusStrategy } from '@react-types/shared';
 
 export interface Props<T> extends AriaMenuProps<T> {
   /**
@@ -16,5 +17,12 @@ export interface Props<T> extends AriaMenuProps<T> {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
-  singleSelection?: string;
+}
+
+export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
+  onClose?: () => void;
+  closeOnSelect?: boolean;
+  shouldFocusWrap?: boolean;
+  autoFocus?: boolean | FocusStrategy;
+  ref?: MutableRefObject<HTMLUListElement>;
 }

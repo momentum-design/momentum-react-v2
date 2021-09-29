@@ -4,6 +4,6 @@ import { Props } from './MenuSection.types';
 
 export { CONSTANTS as MENU_SECTION_CONSTANTS };
 
-export type MenuSectionProps = Props;
+export type MenuSectionProps<T> = Props<T>;
 
 export default MenuSection;

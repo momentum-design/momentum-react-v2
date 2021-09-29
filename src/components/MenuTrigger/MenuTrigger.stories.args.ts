@@ -1,17 +1,30 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonAriaOverlay, commonStyles } from '../../storybook/helper.stories.argtypes';
 
 export default {
   ...commonStyles,
+  ...commonAriaOverlay,
   // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
   children: {
-    description: 'Provides the child nodes for this element.', // NOTE: Description of this prop.
-    control: { type: 'text' }, // NOTE: Control type for this prop.
+    description:
+      'First Child is the Target (button). All following children must be Menu components. ',
     table: {
       type: {
-        summary: 'ReactNode', // NOTE: Explicit type of this prop.
+        summary: 'ReactElement[]',
       },
       defaultValue: {
-        summary: 'undefined', // NOTE: Default value for this prop.
+        summary: 'undefined',
+      },
+    },
+  },
+  closeOnSelect: {
+    description: 'Whether the Menu closes when a selection is made.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
       },
     },
   },

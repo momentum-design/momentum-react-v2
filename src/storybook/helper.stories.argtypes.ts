@@ -115,4 +115,46 @@ const commonStyles = {
   },
 };
 
-export { commonAriaButton, commonStyles };
+const commonAriaOverlay = {
+  isOpen: {
+    description: 'Whether the overlay is open by default (controlled)',
+    control: { type: 'boolean' },
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  defaultOpen: {
+    description: 'Whether the overlay is open by default (uncontrolled)',
+    control: { type: 'boolean' },
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  onOpenChange: {
+    action: 'onOpenChange',
+    description: "Handler that is called when the overlay's open state changes.",
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: '(isOpen: boolean) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+};
+
+export { commonAriaButton, commonAriaOverlay, commonStyles };

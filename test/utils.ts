@@ -20,3 +20,20 @@ export const mountAndWait = async (component: React.ReactElement): Promise<React
   await waitForComponentToPaint(_container);
   return _container;
 };
+
+/**
+ * Helper function to trigger a press on buttons
+ * built using react-aria
+ * @param button
+ */
+export const triggerPress = (button: ReactWrapper): void => {
+  button.simulate('click', {
+    button: 0,
+    detail: 0,
+    nativeEvent: { detail: 0 },
+    currentTarget: button.getDOMNode(),
+    target: button.getDOMNode(),
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    stopPropagation: () => {},
+  });
+};

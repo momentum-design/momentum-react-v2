@@ -1,11 +1,18 @@
 .md-menu-trigger-wrapper {
   position: relative;
-  width: 18rem;
 
   &:focus,
   &:focus-visible {
     outline: none;
   }
+}
+
+.md-menu-trigger-overlay {
+  position: absolute;
+  margin: 0;
+  z-index: 10000;
+  width: 18rem;
+  margin-top: 0.25rem;
 }
 
 .md-menu-trigger-separator {

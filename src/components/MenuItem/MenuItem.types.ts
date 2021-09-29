@@ -1,25 +1,20 @@
-import { CSSProperties, Key } from 'react';
+import { Key } from 'react';
 import { Node } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
 
 export interface Props<T> {
   /**
-   * Custom class for overriding this component's CSS.
+   * The contents of this menu item
    */
-  className?: string;
-
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
-
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
-
   item: Node<T>;
+
+  /**
+   * The current state of the list of items
+   */
   state: TreeState<T>;
-  isVirtualized?: boolean;
+
+  /**
+   * Handler to be called when this element is selected
+   */
   onAction?: (key: Key) => void;
 }

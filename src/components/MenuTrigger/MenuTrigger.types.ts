@@ -1,6 +1,7 @@
-import React, { CSSProperties, ReactElement } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 import { MenuTriggerProps } from '@react-types/menu';
-export interface Props extends MenuTriggerProps {
+
+export interface Props extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip'> {
   children: ReactElement[];
   /**
    * Custom class for overriding this component's CSS.
@@ -16,6 +17,4 @@ export interface Props extends MenuTriggerProps {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
-
-  button?: React.ReactElement;
 }

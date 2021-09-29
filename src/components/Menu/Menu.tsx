@@ -1,34 +1,16 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
-import React, {
-  forwardRef,
-  HTMLAttributes,
-  MutableRefObject,
-  ReactElement,
-  RefObject,
-  useContext,
-  useRef,
-  useEffect,
-} from 'react';
+import React, { forwardRef, ReactElement, RefObject, useContext, useRef } from 'react';
 import classnames from 'classnames';
 
 import { STYLE } from './Menu.constants';
-import { Props } from './Menu.types';
+import { MenuContextValue, Props } from './Menu.types';
 import './Menu.style.scss';
 import { useMenu } from '@react-aria/menu';
 import { useTreeState } from '@react-stately/tree';
 import MenuItem from '../MenuItem';
-import MenuListBackground from '../MenuListBackground';
-import { FocusStrategy } from '@react-types/shared';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
-
-export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
-  onClose?: () => void;
-  closeOnSelect?: boolean;
-  shouldFocusWrap?: boolean;
-  autoFocus?: boolean | FocusStrategy;
-}
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -56,8 +38,8 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}
-      {...menuProps}
       ref={ref}
+      {...menuProps}
     >
       {[...state.collection].map((item) => {
         if (item.type === 'section') {
@@ -79,6 +61,10 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     </ul>
   );
 };
+
+/**
+ * Menu Element which displays a list of options/actions.
+ */
 
 const _Menu = forwardRef(Menu);
 _Menu.displayName = '_Menu';

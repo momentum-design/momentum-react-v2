@@ -4,6 +4,6 @@ import { Props } from './Menu.types';
 
 export { CONSTANTS as MENU_CONSTANTS, MenuContext };
 
-export type MenuProps = Props;
+export type MenuProps<T> = Props<T>;
 
 export default Menu;

@@ -1,103 +1,86 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { Item } from '@react-stately/collections';
+import { renderHook } from '@testing-library/react-hooks';
 
-import MenuItem, { MENU_ITEM_CONSTANTS as CONSTANTS } from './';
+import MenuItem from './';
+import { useTreeState } from '@react-stately/tree';
+import { triggerPress } from '../../../test/utils';
 
 describe('<MenuItem />', () => {
+  const { result } = renderHook(() =>
+    useTreeState({
+      children: [
+        <Item key="$.0" aria-label="0">
+          Item 1
+        </Item>,
+        <Item key="$.1" aria-label="1">
+          Item 2
+        </Item>,
+      ],
+    })
+  );
+
+  const state = result.current;
+
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      expect.assertions(1);
+      const item = state.collection.getItem('$.0');
+      useContextMock.mockReturnValue({ onClose: jest.fn(), closeOnSelect: true });
 
-      const container = mount(<MenuItem />);
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
 
-      expect(container).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
     });
+  });
 
-    it('should match snapshot with className', () => {
-      expect.assertions(1);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let useContextMock: jest.Mock<any, any>;
 
-      const className = 'example-class';
-
-      const container = mount(<MenuItem className={className} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with id', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const container = mount(<MenuItem id={id} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with style', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-
-      const container = mount(<MenuItem style={style} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    /* ...additional snapshot tests... */
+  beforeEach(() => {
+    useContextMock = React.useContext = jest.fn();
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
-      expect.assertions(1);
+    it('should render the given item', () => {
+      const item = state.collection.getItem('$.1');
+      useContextMock.mockReturnValue({ onClose: jest.fn(), closeOnSelect: true });
 
-      const element = mount(<MenuItem />)
-        .find(MenuItem)
-        .getDOMNode();
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
 
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
+      const element = wrapper.find('li div').getDOMNode();
+
+      expect(element.innerHTML).toBe(item.rendered);
     });
-
-    it('should have provided class when className is provided', () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const element = mount(<MenuItem className={className} />)
-        .find(MenuItem)
-        .getDOMNode();
-
-      expect(element.classList.contains(className)).toBe(true);
-    });
-
-    it('should have provided id when id is provided', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const element = mount(<MenuItem id={id} />)
-        .find(MenuItem)
-        .getDOMNode();
-
-      expect(element.id).toBe(id);
-    });
-
-    it('should have provided style when style is provided', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-      const styleString = 'color: pink;';
-
-      const element = mount(<MenuItem style={style} />)
-        .find(MenuItem)
-        .getDOMNode();
-
-      expect(element.getAttribute('style')).toBe(styleString);
-    });
-
-    /* ...additional attribute tests... */
   });
 
-  describe('actions', () => {
-    /* ...action tests... */
+  it('should call onClose after clicking if closeOnSelect is true', () => {
+    const item = state.collection.getItem('$.1');
+    const onCloseMock = jest.fn();
+    useContextMock.mockReturnValue({ onClose: onCloseMock, closeOnSelect: true });
+
+    const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+    expect(onCloseMock).not.toHaveBeenCalled();
+
+    const element = wrapper.find('li');
+    triggerPress(element);
+
+    expect(onCloseMock).toHaveBeenCalled();
+  });
+
+  it('should not call onClose after clicking if closeOnSelect is false', () => {
+    const item = state.collection.getItem('$.1');
+    const onCloseMock = jest.fn();
+    useContextMock.mockReturnValue({ onClose: onCloseMock, closeOnSelect: false });
+
+    const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+    expect(onCloseMock).not.toHaveBeenCalled();
+
+    const element = wrapper.find('li');
+    triggerPress(element);
+
+    expect(onCloseMock).not.toHaveBeenCalled();
   });
 });

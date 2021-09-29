@@ -1,103 +1,57 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { Item, Section } from '@react-stately/collections';
 
-import MenuSection, { MENU_SECTION_CONSTANTS as CONSTANTS } from './';
+import MenuSection from './';
+import { renderHook } from '@testing-library/react-hooks';
+import { useTreeState } from '@react-stately/tree';
 
 describe('<MenuSection />', () => {
+  const { result } = renderHook(() =>
+    useTreeState({
+      children: [
+        <Section title="Section Title" key="$.0" aria-label="section">
+          <Item key="$.0.0" aria-label="0">
+            Item 1
+          </Item>
+          <Item key="$.0.1" aria-label="1">
+            Item 2
+          </Item>
+        </Section>,
+      ],
+    })
+  );
+
+  const state = result.current;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let useContextMock: jest.Mock<any, any>;
+
+  beforeEach(() => {
+    useContextMock = React.useContext = jest.fn();
+  });
+
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      expect.assertions(1);
+      useContextMock.mockReturnValue(state);
 
-      const container = mount(<MenuSection />);
+      const item = state.collection.getItem('$.0');
+      const wrapper = mount(<MenuSection state={state} key={item.key} item={item} />);
 
-      expect(container).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
     });
-
-    it('should match snapshot with className', () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const container = mount(<MenuSection className={className} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with id', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const container = mount(<MenuSection id={id} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with style', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-
-      const container = mount(<MenuSection style={style} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
-      expect.assertions(1);
+    it('should render the items inside the section', () => {
+      useContextMock.mockReturnValue(state);
 
-      const element = mount(<MenuSection />)
-        .find(MenuSection)
-        .getDOMNode();
+      const item = state.collection.getItem('$.0');
+      const numberOfItems = [...item.childNodes].length;
 
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
+      const wrapper = mount(<MenuSection state={state} key={item.key} item={item} />);
+
+      const element = wrapper.find('ListItemBase li div');
+      expect(element.length).toEqual(numberOfItems);
     });
-
-    it('should have provided class when className is provided', () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const element = mount(<MenuSection className={className} />)
-        .find(MenuSection)
-        .getDOMNode();
-
-      expect(element.classList.contains(className)).toBe(true);
-    });
-
-    it('should have provided id when id is provided', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const element = mount(<MenuSection id={id} />)
-        .find(MenuSection)
-        .getDOMNode();
-
-      expect(element.id).toBe(id);
-    });
-
-    it('should have provided style when style is provided', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-      const styleString = 'color: pink;';
-
-      const element = mount(<MenuSection style={style} />)
-        .find(MenuSection)
-        .getDOMNode();
-
-      expect(element.getAttribute('style')).toBe(styleString);
-    });
-
-    /* ...additional attribute tests... */
-  });
-
-  describe('actions', () => {
-    /* ...action tests... */
   });
 });

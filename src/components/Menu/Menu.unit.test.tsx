@@ -1,14 +1,21 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { Item } from '@react-stately/collections';
 
 import Menu, { MENU_CONSTANTS as CONSTANTS } from './';
+import { triggerPress } from '../../../test/utils';
 
 describe('<Menu />', () => {
+  const defaultProps = {
+    children: [<Item key="one">One</Item>, <Item key="two">Two</Item>],
+    'aria-label': 'Menu component',
+  };
+
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<Menu />);
+      const container = mount(<Menu {...defaultProps} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -18,7 +25,7 @@ describe('<Menu />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<Menu className={className} />);
+      const container = mount(<Menu {...defaultProps} className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -28,7 +35,7 @@ describe('<Menu />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<Menu id={id} />);
+      const container = mount(<Menu {...defaultProps} id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -38,19 +45,17 @@ describe('<Menu />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<Menu style={style} />);
+      const container = mount(<Menu {...defaultProps} style={style} />);
 
       expect(container).toMatchSnapshot();
     });
-
-    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<Menu />)
+      const element = mount(<Menu {...defaultProps} />)
         .find(Menu)
         .getDOMNode();
 
@@ -62,7 +67,7 @@ describe('<Menu />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<Menu className={className} />)
+      const element = mount(<Menu {...defaultProps} className={className} />)
         .find(Menu)
         .getDOMNode();
 
@@ -74,7 +79,7 @@ describe('<Menu />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<Menu id={id} />)
+      const element = mount(<Menu {...defaultProps} id={id} />)
         .find(Menu)
         .getDOMNode();
 
@@ -87,17 +92,29 @@ describe('<Menu />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<Menu style={style} />)
+      const element = mount(<Menu {...defaultProps} style={style} />)
         .find(Menu)
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
-
-    /* ...additional attribute tests... */
   });
 
   describe('actions', () => {
-    /* ...action tests... */
+    it('should call onAction with the correct key when action clicked', () => {
+      expect.assertions(1);
+
+      const key = 'one';
+
+      const onActionMock = jest.fn();
+
+      const listItem = mount(<Menu onAction={onActionMock} {...defaultProps} />).find(
+        `li[data-key="${key}"]`
+      );
+
+      triggerPress(listItem);
+
+      expect(onActionMock).toHaveBeenCalledWith(key);
+    });
   });
 });
