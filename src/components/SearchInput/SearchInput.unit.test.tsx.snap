@@ -297,13 +297,11 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
 <SSRProvider>
   <SearchInput
     aria-label="search"
-    id="example-id-label"
     label="search"
   >
     <div
       className="md-search-input-wrapper"
       data-focus={false}
-      id="example-id-label"
       onClick={[Function]}
     >
       <label
@@ -341,9 +339,9 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
       >
         <input
           aria-label="search"
-          aria-labelledby="test-ID example-id-label"
+          aria-labelledby="test-ID"
           disabled={false}
-          id="example-id-label"
+          id="test-ID"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
