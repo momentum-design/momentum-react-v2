@@ -1,4 +1,4 @@
-import { Color, Elevation } from './ModalContainer.types';
+import { Color, Elevation, ModalContainerRadius } from './ModalContainer.types';
 
 const CLASS_PREFIX = 'md-modal-container';
 
@@ -21,13 +21,20 @@ const ELEVATIONS: Record<number, Elevation> = {
   8: 8,
 };
 
+const RADIUS: Record<number, ModalContainerRadius> = {
+  0: 0,
+  12: 12,
+  24: 24,
+};
+
 const DEFAULTS = {
   COLOR: COLORS.PRIMARY,
   ELEVATION: ELEVATIONS[0],
+  RADIUS: RADIUS[0],
 };
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
-export { CLASS_PREFIX, COLORS, DEFAULTS, ELEVATIONS, STYLE };
+export { CLASS_PREFIX, COLORS, DEFAULTS, ELEVATIONS, STYLE, RADIUS };

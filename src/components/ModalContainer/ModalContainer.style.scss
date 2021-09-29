@@ -9,8 +9,16 @@
   border: 0.0625rem solid var(--modal-primary-border);
   outline: none;
 
-  &[data-rounded='true'] {
+  &[data-radius='0'] {
+    border-radius: 0;
+  }
+
+  &[data-radius='12'] {
     border-radius: 0.75rem;
+  }
+
+  &[data-radius='24'] {
+    border-radius: 1.5rem;
   }
 
   &[data-padded='true'] {

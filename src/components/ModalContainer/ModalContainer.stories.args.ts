@@ -56,16 +56,16 @@ export default {
       },
     },
   },
-  isRounded: {
-    description: 'Identifies if this `<ModalContainer />` should be rendered with round corners.',
-    control: { type: 'boolean' },
-    options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
+  radius: {
+    description: 'Specifies the amount of radius to apply to the container',
+    control: { type: 'number' },
+    options: [undefined, ...Object.values(CONSTANTS.RADIUS)],
     table: {
       type: {
-        summary: 'boolean',
+        summary: ' 0 | 12 | 24',
       },
       defaultValue: {
-        summary: 'false',
+        summary: '0',
       },
     },
   },

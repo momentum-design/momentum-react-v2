@@ -8,13 +8,21 @@ import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
 import Menu, { MenuContext } from '../Menu';
 import { DismissButton, useOverlay } from '@react-aria/overlays';
-import MenuListBackground from '../MenuListBackground';
 import { useSeparator } from '@react-aria/separator';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import { FocusScope } from '@react-aria/focus';
+import ModalContainer from '../ModalContainer';
+import FocusRing from '../FocusRing';
 
 const MenuTrigger: FC<Props> = (props: Props) => {
-  const { className, id, style, closeOnSelect, children } = props;
+  const {
+    className,
+    id,
+    style,
+    closeOnSelect,
+    children,
+    overlayRadius = DEFAULTS.OVERLAY_RADIUS,
+  } = props;
 
   const state = useMenuTriggerState(props);
 
@@ -26,7 +34,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     );
   }
 
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>();
   const menuRef = useRef<HTMLUListElement>();
   const overlayRef = useRef<HTMLUListElement>();
 
@@ -67,26 +75,35 @@ const MenuTrigger: FC<Props> = (props: Props) => {
         ref: buttonRef,
       })}
       {state.isOpen && (
-        <MenuListBackground className={STYLE.overlay} {...overlayProps} color={DEFAULTS.BACKGROUND}>
-          <FocusScope restoreFocus>
-            <DismissButton onDismiss={state.close} />
-            <MenuContext.Provider value={menuContext}>
-              {menus.map((menu: ReactElement, index) => (
-                <Fragment key={`{fragment-${index}}`}>
-                  {menu}
-                  {index !== menus.length - 1 && (
-                    <li
-                      {...separatorProps}
-                      className={STYLE.separator}
-                      key={`separator-${index}`}
-                    />
-                  )}
-                </Fragment>
-              ))}
-            </MenuContext.Provider>
-            <DismissButton onDismiss={state.close} />
-          </FocusScope>
-        </MenuListBackground>
+        <FocusRing>
+          <ModalContainer
+            isPadded
+            radius={overlayRadius}
+            className={STYLE.overlay}
+            {...overlayProps}
+            color={DEFAULTS.BACKGROUND}
+            elevation={4}
+          >
+            <FocusScope restoreFocus>
+              <DismissButton onDismiss={state.close} />
+              <MenuContext.Provider value={menuContext}>
+                {menus.map((menu: ReactElement, index) => (
+                  <Fragment key={`{fragment-${index}}`}>
+                    {menu}
+                    {index !== menus.length - 1 && (
+                      <li
+                        {...separatorProps}
+                        className={STYLE.separator}
+                        key={`separator-${index}`}
+                      />
+                    )}
+                  </Fragment>
+                ))}
+              </MenuContext.Provider>
+              <DismissButton onDismiss={state.close} />
+            </FocusScope>
+          </ModalContainer>
+        </FocusRing>
       )}
     </div>
   );

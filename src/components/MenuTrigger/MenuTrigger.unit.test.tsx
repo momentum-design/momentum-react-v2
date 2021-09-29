@@ -6,6 +6,7 @@ import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { mountAndWait, triggerPress } from '../../../test/utils';
 import { act } from 'react-dom/test-utils';
+import ModalContainer from '../ModalContainer';
 
 describe('<MenuTrigger />', () => {
   const defaultProps = {
@@ -59,6 +60,18 @@ describe('<MenuTrigger />', () => {
       const style = { color: 'pink' };
 
       const container = await mountAndWait(<MenuTrigger {...defaultProps} style={style} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with overlayRadius', async () => {
+      expect.assertions(1);
+
+      const overlayRadius = 24;
+
+      const container = await mountAndWait(
+        <MenuTrigger {...defaultProps} defaultOpen={true} overlayRadius={overlayRadius} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -150,6 +163,22 @@ describe('<MenuTrigger />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should have provided data-radius when overlayRadius is provided', async () => {
+      expect.assertions(1);
+
+      const overlayRadius = 24;
+
+      const element = (
+        await mountAndWait(
+          <MenuTrigger defaultOpen={true} {...defaultProps} overlayRadius={overlayRadius} />
+        )
+      )
+        .find(ModalContainer)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-radius')).toBe(`${overlayRadius}`);
     });
   });
 });

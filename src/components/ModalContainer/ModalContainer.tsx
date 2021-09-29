@@ -9,7 +9,7 @@ import './ModalContainer.style.scss';
  * The ModalContainer component.
  */
 const ModalContainer: FC<Props> = (props: Props) => {
-  const { className, children, color, elevation, id, isPadded, isRounded, style } = props;
+  const { className, children, color, elevation, id, isPadded, radius, style } = props;
 
   return (
     <div
@@ -17,7 +17,7 @@ const ModalContainer: FC<Props> = (props: Props) => {
       data-color={color || DEFAULTS.COLOR}
       data-elevation={elevation || DEFAULTS.ELEVATION}
       data-padded={isPadded}
-      data-rounded={isRounded}
+      data-radius={radius || DEFAULTS.RADIUS}
       id={id}
       style={style}
     >

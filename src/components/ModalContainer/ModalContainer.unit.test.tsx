@@ -71,10 +71,10 @@ describe('<ModalContainer />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isRounded', () => {
+    it('should match snapshot with radius', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer isRounded />);
+      const container = mount(<ModalContainer radius={24} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -177,13 +177,13 @@ describe('<ModalContainer />', () => {
     it('should have provided data-rounded when isRounded is provided', () => {
       expect.assertions(1);
 
-      const isRounded = true;
+      const radius = 24;
 
-      const element = mount(<ModalContainer isRounded={isRounded} />)
+      const element = mount(<ModalContainer radius={radius} />)
         .find(ModalContainer)
         .getDOMNode();
 
-      expect(element.getAttribute('data-rounded')).toBe(`${isRounded}`);
+      expect(element.getAttribute('data-radius')).toBe(`${radius}`);
     });
   });
 });

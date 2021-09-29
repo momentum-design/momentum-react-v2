@@ -6,6 +6,7 @@ exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
+    data-radius={0}
   />
 </ModalContainer>
 `;
@@ -16,6 +17,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
+    data-radius={0}
   >
     <div>
       Example Text
@@ -32,6 +34,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with className 1`] = 
     className="example-class md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
+    data-radius={0}
   />
 </ModalContainer>
 `;
@@ -44,6 +47,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with color 1`] = `
     className="md-modal-container-wrapper"
     data-color="quaternary"
     data-elevation={0}
+    data-radius={0}
   />
 </ModalContainer>
 `;
@@ -56,6 +60,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with color 2`] = `
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={8}
+    data-radius={0}
   />
 </ModalContainer>
 `;
@@ -68,6 +73,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
+    data-radius={0}
     id="example-id"
   />
 </ModalContainer>
@@ -82,19 +88,20 @@ exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
     data-color="primary"
     data-elevation={0}
     data-padded={true}
+    data-radius={0}
   />
 </ModalContainer>
 `;
 
-exports[`<ModalContainer /> snapshot should match snapshot with isRounded 1`] = `
+exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
 <ModalContainer
-  isRounded={true}
+  radius={24}
 >
   <div
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
-    data-rounded={true}
+    data-radius={24}
   />
 </ModalContainer>
 `;
@@ -111,6 +118,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
+    data-radius={0}
     style={
       Object {
         "color": "pink",

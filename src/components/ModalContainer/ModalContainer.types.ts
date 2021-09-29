@@ -2,6 +2,7 @@ import { CSSProperties, ReactNode } from 'react';
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+export type ModalContainerRadius = 0 | 12 | 24;
 
 export interface Props {
   /**
@@ -35,9 +36,9 @@ export interface Props {
   isPadded?: boolean;
 
   /**
-   * If this ModalContainer is round.
+   * Amount of radius for the container
    */
-  isRounded?: boolean;
+  radius?: ModalContainerRadius;
 
   /**
    * Custom style for overriding this component's CSS.
