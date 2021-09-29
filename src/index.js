@@ -118,6 +118,7 @@ export {
   ExampleComponent,
   Icon as IconNext,
   MeetingListItem,
+  ModalArrow,
   ModalContainer,
   Toast,
   ToastDetails,

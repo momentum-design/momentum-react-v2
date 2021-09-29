@@ -12,7 +12,8 @@ import './AlertBadge.style.scss';
 const AlertBadge: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
     const { children, className, color, image, id, label, style } = props;
-    const ref = providedRef || useRef();
+    const internalRef = useRef();
+    const ref = providedRef || internalRef;
 
     const mutatedChildren = children ? (
       <PrimitiveConverter>{children}</PrimitiveConverter>
