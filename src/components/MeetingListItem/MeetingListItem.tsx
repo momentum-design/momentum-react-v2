@@ -64,20 +64,20 @@ const MeetingListItem: FC<Props> = (props: Props) => {
       size={large ? 70 : 50}
       {...rest}
     >
-      <ListItemBaseSection className="md-meeting-list-item-start-section" position="start">
-        <div className="md-meeting-list-item-border" data-color={color} />
+      <ListItemBaseSection className={STYLE.startSection} position="start">
+        <div className={STYLE.border} data-color={color} />
         {React.isValidElement(image) ? getSizedElement(image) : image}
       </ListItemBaseSection>
 
       <ListItemBaseSection
-        className={`md-meeting-list-item-middle-section${middleSectionColorClass}`}
+        className={`${STYLE.middleSection}${middleSectionColorClass}`}
         position="middle"
       >
         {getSizedElement(children)}
       </ListItemBaseSection>
 
       {buttonSection && (
-        <ListItemBaseSection className="md-meeting-list-item-end-section" position="end">
+        <ListItemBaseSection className={STYLE.endSection} position="end">
           {buttonSection}
         </ListItemBaseSection>
       )}
