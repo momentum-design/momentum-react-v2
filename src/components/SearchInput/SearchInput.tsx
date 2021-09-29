@@ -21,7 +21,7 @@ const SearchInput: FC<Props> = (props: Props) => {
   const { className, id, style, searching, clearButtonAriaLabel, label, isDisabled } = props;
   const state = useSearchFieldState(props);
   const ref = useRef(null);
-  const { focusProps, focus } = useFocusState(props);
+  const { focusProps, isFocused } = useFocusState(props);
 
   const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, ref);
 
@@ -38,7 +38,7 @@ const SearchInput: FC<Props> = (props: Props) => {
       onClick={handleClick}
       style={style}
       data-disabled={isDisabled}
-      data-focus={focus}
+      data-focus={isFocused}
     >
       {label && (
         <label htmlFor={labelProps.htmlFor} {...labelProps}>

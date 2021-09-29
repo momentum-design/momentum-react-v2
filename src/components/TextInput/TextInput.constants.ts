@@ -6,6 +6,7 @@ const STYLE = {
   help: `${CLASS_PREFIX}-help`,
   error: `${CLASS_PREFIX}-error`,
   messages: `${CLASS_PREFIX}-messages`,
+  clear: `${CLASS_PREFIX}-clear`,
 };
 
 export { STYLE };

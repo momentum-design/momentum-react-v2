@@ -10,11 +10,11 @@ describe('useFocusStateTests', () => {
     const originalOnBlur = jest.fn();
 
     const Component = () => {
-      const { focus, focusProps } = useFocusState({
+      const { isFocused, focusProps } = useFocusState({
         onFocus: originalOnFocus,
         onBlur: originalOnBlur,
       });
-      focused = focus;
+      focused = isFocused;
 
       return <input {...focusProps} />;
     };

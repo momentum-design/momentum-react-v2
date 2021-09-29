@@ -42,7 +42,7 @@ describe('CodeInput', () => {
         );
       });
       await waitForAsync(component);
-      const message = component.find('.md-input-message');
+      const message = component.find('.md-input-message-message');
       expect(message.length).toBe(1);
       expect(message.props()['message-level']).toEqual('error');
     });
@@ -74,7 +74,7 @@ describe('CodeInput', () => {
       await act(async () => {
         component = mount(<ExampleContainer />);
       });
-      const message = component.find('.md-input-message');
+      const message = component.find('.md-input-message-message');
       expect(message.length).toBe(0);
 
       let codeInput;
@@ -88,7 +88,7 @@ describe('CodeInput', () => {
       });
 
       await waitForAsync(component);
-      const message2 = component.find('.md-input-message');
+      const message2 = component.find('.md-input-message-message');
       expect(message2.length).toEqual(1);
     });
   });

@@ -98,7 +98,7 @@ exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
           id={null}
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="help"
             role="alert"
           >
@@ -161,7 +161,7 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
             className="md-input-message-wrapper md-text-input-error"
           >
             <div
-              className="md-input-message"
+              className="md-input-message-message"
               message-level="error"
               role="alert"
             >
@@ -172,6 +172,7 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
                   fillColor="var(--theme-text-error-normal)"
                   name="warning"
                   scale={20}
+                  strokeColor="var(--theme-text-error-normal)"
                   weight="bold"
                 >
                   <div
@@ -182,10 +183,10 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
                       data-autoscale={false}
                       data-scale={20}
                       height="100%"
-                      stroke="currentColor"
                       style={
                         Object {
                           "fill": "var(--theme-text-error-normal)",
+                          "stroke": "var(--theme-text-error-normal)",
                         }
                       }
                       viewBox="0, 0, 32, 32"

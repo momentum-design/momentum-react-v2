@@ -36,7 +36,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     inputRef
   );
 
-  const { focus, focusProps } = useFocusState(props);
+  const { isFocused, focusProps } = useFocusState(props);
   const state = useSearchFieldState(props);
 
   const onClearButtonPress = () => {
@@ -55,7 +55,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   return (
     <div
       data-level={messageType}
-      data-focus={focus}
+      data-focus={isFocused}
       data-disabled={isDisabled}
       id={id}
       style={style}

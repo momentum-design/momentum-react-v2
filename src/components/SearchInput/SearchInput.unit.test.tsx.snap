@@ -55,7 +55,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
           className="md-input-message-wrapper"
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="none"
             role="alert"
           >
@@ -207,7 +207,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
           className="md-input-message-wrapper"
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="none"
             role="alert"
           >
@@ -278,7 +278,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
           className="md-input-message-wrapper"
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="none"
             role="alert"
           >
@@ -356,7 +356,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
           className="md-input-message-wrapper"
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="none"
             role="alert"
           >
@@ -427,7 +427,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
           className="md-input-message-wrapper"
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="none"
             role="alert"
           >
@@ -499,7 +499,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
           className="md-input-message-wrapper"
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="none"
             role="alert"
           >
@@ -579,7 +579,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
           className="md-input-message-wrapper"
         >
           <div
-            className="md-input-message"
+            className="md-input-message-message"
             message-level="none"
             role="alert"
           >

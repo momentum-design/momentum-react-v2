@@ -31,7 +31,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     onClear,
   } = props;
   const [previousFilters, setPreviousFilters] = useState(filters);
-  const { focus, focusProps } = useFocusState(props);
+  const { isFocused, focusProps } = useFocusState(props);
 
   const [ariaAlert, setAriaAlert] = useState('');
   const state = useSearchFieldState(props);
@@ -106,7 +106,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       id={id}
       onClick={handleClick}
       style={style}
-      data-focus={focus}
+      data-focus={isFocused}
     >
       <label htmlFor={inputProps.id} {...labelProps}>
         {label}
@@ -116,6 +116,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
           weight="light"
           scale={18}
           className={STYLE.search}
+          strokeColor="var(--theme-text-primary-normal)"
           name={searching ? 'spinner' : 'search'}
         />
       </div>
