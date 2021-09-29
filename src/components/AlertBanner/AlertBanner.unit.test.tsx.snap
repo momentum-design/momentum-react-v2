@@ -9,6 +9,7 @@ exports[`<AlertBanner /> snapshot should match snapshot 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -43,6 +44,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with buttons 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -55,14 +57,12 @@ exports[`<AlertBanner /> snapshot should match snapshot with buttons 1`] = `
     >
       <div
         className="md-alert-banner-button"
-        ghost={true}
         key=".$0"
       >
         button 1
       </div>
       <div
         className="md-alert-banner-button"
-        ghost={true}
         key=".$1"
       >
         button 2
@@ -81,6 +81,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with children 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -108,6 +109,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with className 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -133,6 +135,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with color 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -160,6 +163,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with id 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
     id="example-id"
   >
     <div
@@ -190,6 +194,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with image 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -217,6 +222,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with isCentered 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -242,6 +248,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with isGrown 1`] = `
     data-grow={true}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -267,6 +274,32 @@ exports[`<AlertBanner /> snapshot should match snapshot with isPilled 1`] = `
     data-grow={false}
     data-pill={true}
     data-size="default"
+    data-static={false}
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <p
+      className="md-alert-banner-label"
+    />
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with isStatic 1`] = `
+<AlertBanner
+  isStatic={true}
+>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+    data-static={true}
   >
     <div
       className="md-alert-banner-image"
@@ -292,6 +325,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with label 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -319,6 +353,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with size 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="small"
+    data-static={false}
   >
     <div
       className="md-alert-banner-image"
@@ -350,6 +385,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with style 1`] = `
     data-grow={false}
     data-pill={false}
     data-size="default"
+    data-static={false}
     style={
       Object {
         "color": "pink",

@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   height: fit-content;
-  margin: 0.5rem;
   width: fit-content;
 
   &[data-spaced='true'] {
@@ -10,7 +9,7 @@
       margin: 0.25em;
 
       &:first-child {
-        margin-left: 0.3em
+        margin-left: 0.3em;
       }
 
       &:last-child {
@@ -34,7 +33,7 @@
         &:first-child {
           border-radius: 100vh 0 0 100vh;
         }
-    
+
         &:last-child {
           border-radius: 0 100vh 100vh 0;
         }

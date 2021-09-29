@@ -9,7 +9,6 @@
   cursor: pointer;
   font-family: CiscoSansTT; // IEFIX
   font-family: var(--md-globals-font-default);
-  margin: 0.5rem;
   outline: none;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
@@ -27,7 +26,7 @@
     color: var(--button-primary-text-pressed);
   }
 
-  &[data-color="message"] {
+  &[data-color='message'] {
     background-color: rgba(17, 112, 207, 1); // IEFIX
     background-color: var(--button-message-fill-background);
     color: rgba(255, 255, 255, 1); // IEFIX
@@ -48,7 +47,7 @@
     }
   }
 
-  &[data-color="join"] {
+  &[data-color='join'] {
     background-color: rgba(29, 128, 95, 1); // IEFIX
     background-color: var(--button-join-fill-background);
     color: rgba(255, 255, 255, 1); // IEFIX
@@ -69,7 +68,7 @@
     }
   }
 
-  &[data-color="cancel"] {
+  &[data-color='cancel'] {
     background-color: rgba(219, 31, 46, 1); // IEFIX
     background-color: var(--button-cancel-fill-background);
     color: rgba(255, 255, 255, 1); // IEFIX
@@ -90,7 +89,7 @@
     }
   }
 
-  &[data-disabled=true] {
+  &[data-disabled='true'] {
     background-color: rgba(0, 0, 0, 0.2); // IEFIX
     background-color: var(--button-primary-background-disabled);
     color: rgba(0, 0, 0, 0.4); // IEFIX
@@ -112,7 +111,7 @@
     }
   }
 
-  &[data-outline=true][data-ghost=false] {
+  &[data-outline='true'][data-ghost='false'] {
     background-color: rgba(0, 0, 0, 0); // IEFIX
     background-color: var(--button-secondary-background);
     border-color: rgba(0, 0, 0, 0.3); // IEFIX
@@ -138,7 +137,7 @@
       color: var(--button-secondary-text-pressed);
     }
 
-    &[data-color="join"] {
+    &[data-color='join'] {
       background-color: rgba(0, 0, 0, 0); // IEFIX
       background-color: var(--button-join-outline-background);
       border-color: rgba(24, 94, 70, 1); // IEFIX
@@ -163,7 +162,7 @@
       }
     }
 
-    &[data-color="cancel"] {
+    &[data-color='cancel'] {
       background-color: rgba(0, 0, 0, 0); // IEFIX
       background-color: var(--button-cancel-outline-background);
       border-color: rgba(171, 10, 21, 1); // IEFIX
@@ -188,7 +187,7 @@
       }
     }
 
-    &[data-disabled=true] {
+    &[data-disabled='true'] {
       background-color: rgba(0, 0, 0, 0); // IEFIX
       background-color: var(--button-secondary-background-disabled);
       border-color: rgba(0, 0, 0, 0.2); // IEFIX
@@ -217,7 +216,7 @@
     }
   }
 
-  &[data-ghost=true] {
+  &[data-ghost='true'] {
     background-color: rgba(0, 0, 0, 0); // IEFIX
     background-color: var(--button-ghost-background);
     border-color: rgba(0, 0, 0, 0);
@@ -238,20 +237,20 @@
       color: var(--button-secondary-text-pressed);
     }
 
-    &[data-disabled=true] {
+    &[data-disabled='true'] {
       background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--button-primary-background-disabled);
       color: rgba(0, 0, 0, 0.4); // IEFIX
       color: var(--button-primary-text-disabled);
       cursor: auto;
-  
+
       &:hover {
         background-color: rgba(0, 0, 0, 0.2); // IEFIX
         background-color: var(--button-primary-background-disabled);
         color: rgba(0, 0, 0, 0.4); // IEFIX
         color: var(--button-primary-text-disabled);
       }
-  
+
       &:active {
         background-color: rgba(0, 0, 0, 0.2); // IEFIX
         background-color: var(--button-primary-background-disabled);
@@ -269,57 +268,57 @@
   flex-shrink: 0;
   justify-content: space-evenly;
 
-  &[data-size="64"] {
+  &[data-size='64'] {
     font-size: 1.6rem;
     height: 4rem;
     width: 4rem;
   }
 
-  &[data-size="52"] {
+  &[data-size='52'] {
     font-size: 1.3rem;
     height: 3.25rem;
     width: 3.25rem;
   }
 
-  &[data-size="40"] {
+  &[data-size='40'] {
     height: 2.5rem;
     width: 2.5rem;
   }
 
-  &[data-size="32"] {
+  &[data-size='32'] {
     font-size: 0.8rem;
     height: 2rem;
     width: 2rem;
   }
 
-  &[data-size="28"] {
+  &[data-size='28'] {
     font-size: 0.7rem;
     height: 1.75rem;
     width: 1.75rem;
   }
 
-  &[data-multiple-children=true] {
+  &[data-multiple-children='true'] {
     > *:not(:first-child) {
       margin-left: 0.1em;
     }
 
-    &[data-size="64"] {
-      font-size: 1.0rem;
+    &[data-size='64'] {
+      font-size: 1rem;
     }
-  
-    &[data-size="52"] {
+
+    &[data-size='52'] {
       font-size: 0.875rem;
     }
-  
-    &[data-size="40"] {
+
+    &[data-size='40'] {
       font-size: 0.75rem;
     }
-  
-    &[data-size="32"] {
+
+    &[data-size='32'] {
       font-size: 0.625rem;
     }
-  
-    &[data-size="28"] {
+
+    &[data-size='28'] {
       font-size: 0.5rem;
     }
   }
