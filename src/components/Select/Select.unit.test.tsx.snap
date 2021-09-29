@@ -1245,6 +1245,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       restoreFocus={true}
     >
       <span
+        data-focus-scope-start={true}
         hidden={true}
       />
       <div
@@ -1702,6 +1703,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         </DismissButton>
       </div>
       <span
+        data-focus-scope-end={true}
         hidden={true}
       />
     </FocusScope>
@@ -2327,6 +2329,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       restoreFocus={true}
     >
       <span
+        data-focus-scope-start={true}
         hidden={true}
       />
       <div
@@ -2780,6 +2783,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         </DismissButton>
       </div>
       <span
+        data-focus-scope-end={true}
         hidden={true}
       />
     </FocusScope>
@@ -3774,6 +3778,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       restoreFocus={true}
     >
       <span
+        data-focus-scope-start={true}
         hidden={true}
       />
       <div
@@ -4280,6 +4285,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         </DismissButton>
       </div>
       <span
+        data-focus-scope-end={true}
         hidden={true}
       />
     </FocusScope>

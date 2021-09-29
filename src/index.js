@@ -126,4 +126,6 @@ export {
   ThemeProvider,
   Text,
   ContentSeparator,
+  GlobalSearchInput,
+  TextInput,
 } from './components';

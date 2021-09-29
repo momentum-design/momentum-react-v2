@@ -22,5 +22,7 @@ export { default as CodeInput } from './CodeInput';
 export { default as InputMessage } from './InputMessage';
 export { default as Icon } from './Icon';
 export { default as ContentSeparator } from './ContentSeparator';
+export { default as GlobalSearchInput } from './GlobalSearchInput';
 export { default as Text } from './ContentSeparator';
 export { default as MeetingListItem } from './MeetingListItem';
+export { default as TextInput } from './TextInput';
