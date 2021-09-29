@@ -7,7 +7,7 @@ import './MenuTrigger.style.scss';
 import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
 import Menu, { MenuContext } from '../Menu';
-import { useOverlay } from '@react-aria/overlays';
+import { DismissButton, useOverlay } from '@react-aria/overlays';
 import MenuListBackground from '../MenuListBackground';
 import { useSeparator } from '@react-aria/separator';
 import { verifyTypes } from '../../helpers/verifyTypes';
@@ -26,7 +26,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     );
   }
 
-  const buttonRef = useRef<HTMLButtonElement>();
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLUListElement>();
   const overlayRef = useRef<HTMLUListElement>();
 
@@ -37,7 +37,8 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       onClose: () => state.close(),
       shouldCloseOnBlur: true,
       isOpen: state.isOpen,
-      isDismissable: true,
+      isDismissable: state.isOpen,
+      isKeyboardDismissDisabled: false,
     },
     overlayRef
   );
@@ -47,26 +48,32 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     onClose: state.close,
     closeOnSelect,
     ref: menuRef,
+    autoFocus: state.focusStrategy,
   };
 
   const { separatorProps } = useSeparator({
     elementType: 'li',
   });
 
+  // BUG:
+  // There is a current bug where if there are more than one menus inside the menu
+  // trigger, the focus goes on the first element of the last menu component
+  // instead of focusing the very first.
+
   return (
     <div className={classnames(className, STYLE.wrapper)} id={id} style={style}>
-      {React.cloneElement(menuTrigger as ReactElement, { ...menuTriggerProps, ref: buttonRef })}
+      {React.cloneElement(menuTrigger as ReactElement, {
+        ...menuTriggerProps,
+        ref: buttonRef,
+      })}
       {state.isOpen && (
-        <FocusScope restoreFocus>
-          <MenuListBackground
-            {...overlayProps}
-            className={STYLE.overlay}
-            color={DEFAULTS.BACKGROUND}
-          >
+        <MenuListBackground className={STYLE.overlay} {...overlayProps} color={DEFAULTS.BACKGROUND}>
+          <FocusScope restoreFocus>
+            <DismissButton onDismiss={state.close} />
             <MenuContext.Provider value={menuContext}>
               {menus.map((menu: ReactElement, index) => (
                 <Fragment key={`{fragment-${index}}`}>
-                  {React.cloneElement(menu)}
+                  {menu}
                   {index !== menus.length - 1 && (
                     <li
                       {...separatorProps}
@@ -77,8 +84,9 @@ const MenuTrigger: FC<Props> = (props: Props) => {
                 </Fragment>
               ))}
             </MenuContext.Provider>
-          </MenuListBackground>
-        </FocusScope>
+            <DismissButton onDismiss={state.close} />
+          </FocusScope>
+        </MenuListBackground>
       )}
     </div>
   );

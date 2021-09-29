@@ -29,19 +29,19 @@ const Example = Template<MenuTriggerProps>(MenuTrigger).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  closeOnSelect: false,
+  closeOnSelect: true,
   'aria-label': 'Menu trigger',
   children: [
-    <ButtonPill key="1">Hello world</ButtonPill>,
+    <ButtonPill key="1">
+      <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+    </ButtonPill>,
     <Menu selectionMode="single" key="2">
       <Item key="one">One</Item>
       <Item key="two">Two</Item>
       <Item key="three">Three</Item>
-    </Menu>,
-    <Menu selectionMode="multiple" key="4">
-      <Item key="asd">Four</Item>
-      <Item key="ff">Five</Item>
-      <Item key="d">Six</Item>
+      <Item key="four">Four</Item>
+      <Item key="five">Five</Item>
+      <Item key="six">Six</Item>
     </Menu>,
   ],
 };
@@ -150,6 +150,19 @@ Common.parameters = {
               </Flex>
             </Item>
           </Section>
+        </Menu>,
+      ],
+    },
+    {
+      label: 'Default selected Keys',
+      children: [
+        <ButtonCircle key="1" color="message">
+          <Icon name="chat" weight="filled" autoScale={150} />
+        </ButtonCircle>,
+        <Menu selectionMode="multiple" defaultSelectedKeys={['one', 'two']} key="2">
+          <Item key="one">One</Item>
+          <Item key="two">Two</Item>
+          <Item key="three">Three</Item>
         </Menu>,
       ],
     },

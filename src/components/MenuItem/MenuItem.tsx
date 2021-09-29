@@ -22,6 +22,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
 
   const { menuItemProps } = useMenuItem(
     {
+      isSelected,
       key: item.key,
       isDisabled,
       onClose,

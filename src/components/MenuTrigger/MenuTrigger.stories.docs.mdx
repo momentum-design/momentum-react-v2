@@ -1,1 +1,60 @@
-The `<MenuTrigger />` component.
+The `<MenuTrigger />` component. Implemented using [useMenuTrigger](https://react-spectrum.adobe.com/react-aria/useMenuTrigger.html) from React-Aria.
+
+## Content
+
+The Menu element follows the [Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from the @react-stately library, accepting both static and dynamic collections. `Menu` accepts `<Item>` elements as children, each with a key prop. Basic usage of `Menu`, seen in the example below, shows multiple options populated with a string.
+Simple element with simple options as text.
+
+## Children Structure
+
+```
++-------------------------+
+| Target Button Component |
++-------------------------+
+| Menu Component 1        |
++-------------------------+
+| Menu Component 2        |
++-------------------------+
+| Menu Component ...      |
++-------------------------+
+```
+
+## Simple example
+
+```js
+<MenuTrigger closeOnSelect={true}>
+  <ButtonPill key="1">
+    <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+  </ButtonPill>
+  <Menu selectionMode="single" key="2">
+    <Item key="one">One</Item>
+    <Item key="two">Two</Item>
+    <Item key="three">Three</Item>
+    <Item key="four">Four</Item>
+    <Item key="five">Five</Item>
+    <Item key="six">Six</Item>
+  </Menu>
+</MenuTrigger>
+```
+
+## Complex example
+
+This is a more complex example showing how to build a menu trigger with multiple selection modes
+
+```js
+<MenuTrigger closeOnSelect={false}>
+  <ButtonPill key="1">
+    <div>Mixed Selection</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+  </ButtonPill>
+  <Menu selectionMode="single" key="2">
+    <Item key="one">One</Item>
+    <Item key="two">Two</Item>
+    <Item key="three">Three</Item>
+  </Menu>
+  <Menu selectionMode="multiple" key="2">
+    <Item key="four">Four</Item>
+    <Item key="five">Five</Item>
+    <Item key="six">Six</Item>
+  </Menu>
+</MenuTrigger>
+```

@@ -4115,6 +4115,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                   className="md-list-box-item-tick-icon"
                                   name="check"
                                   scale={16}
+                                  strokeColor="none"
                                   weight="bold"
                                 >
                                   <div
@@ -4126,8 +4127,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                       data-scale={16}
                                       fill="currentColor"
                                       height="100%"
-                                      stroke="currentColor"
-                                      style={Object {}}
+                                      style={
+                                        Object {
+                                          "stroke": "none",
+                                        }
+                                      }
                                       viewBox="0, 0, 32, 32"
                                       width="100%"
                                     />

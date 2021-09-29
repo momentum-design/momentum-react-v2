@@ -76,7 +76,7 @@ describe('<MenuTrigger />', () => {
 
       const listItem = container.find(`li[data-key="one"]`);
 
-      act(() => {
+      await act(async () => {
         triggerPress(listItem);
       });
 
@@ -96,7 +96,7 @@ describe('<MenuTrigger />', () => {
 
       const listItem = container.find(`li[data-key="one"]`);
 
-      act(() => {
+      await act(async () => {
         triggerPress(listItem);
       });
 
