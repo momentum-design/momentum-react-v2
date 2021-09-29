@@ -6,7 +6,7 @@
   min-height: 2rem; // This can be adjusted once min/max sizes are defined.
   min-width: 6rem; // This can be adjusted once min/max sizes are defined.
   border: 0.0625rem solid rgba(0, 0, 0, 0.2); // IEFIX
-  border: 0.0625rem solid var(--modal-primary-border);
+  border: 0.0625rem solid var(--modal-primary-border-color);
   outline: none;
 
   &[data-radius='0'] {

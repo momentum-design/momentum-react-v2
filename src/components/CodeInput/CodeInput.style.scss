@@ -7,7 +7,7 @@
       width: 2.75rem;
       height: 3rem;
       border: 1px solid rgba(0, 0, 0, 0.5); // IEFIX
-      border: 1px solid var(--codeinput-border);
+      border: 1px solid var(--codeinput-border-color);
       color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--codeinput-text);
       background-color: rgba(255, 255, 255, 1); // IEFIX
@@ -23,7 +23,7 @@
 
       &:hover {
         border: 1px solid rgba(0, 0, 0, 0.5); // IEFIX
-        border: 1px solid var(--codeinput-border-hovered);
+        border: 1px solid var(--codeinput-border-color-hovered);
         color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--codeinput-text-hovered);
         background-color: rgba(0, 0, 0, 0.04); // IEFIX
@@ -32,7 +32,7 @@
 
       &:active {
         border-color: rgba(0, 0, 0, 0.9); // IEFIX
-        border-color: var(--codeinput-border-active);
+        border-color: var(--codeinput-border-color-active);
         color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--codeinput-text-active);
         background-color: rgba(0, 0, 0, 0.11); // IEFIX
@@ -47,7 +47,7 @@
         }
 
         border-color: rgba(17, 112, 207, 1); // IEFIX
-        border-color: var(--codeinput-border-focused);
+        border-color: var(--codeinput-border-color-focused);
         color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--codeinput-text-active);
         background-color: rgba(0, 0, 0, 0.11); // IEFIX
@@ -72,7 +72,7 @@
     .md-code-input-container {
       .md-code-input-character {
         border-color: rgba(171, 10, 21, 1); // IEFIX
-        border-color: var(--codeinput-error-border);
+        border-color: var(--codeinput-error-border-color);
         color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--codeinput-error-text);
         background-color: rgba(255, 232, 234, 1); // IEFIX
@@ -80,7 +80,7 @@
 
         &:hover {
           border-color: rgba(171, 10, 21, 1); // IEFIX
-          border-color: var(--codeinput-error-border-hovered);
+          border-color: var(--codeinput-error-border-color-hovered);
           color: rgba(0, 0, 0, 0.95); // IEFIX
           color: var(--codeinput-error-text-hovered);
           background-color: rgba(0, 0, 0, 0.04); // IEFIX
@@ -89,7 +89,7 @@
 
         &:active {
           border-color: rgba(171, 10, 21, 1); // IEFIX
-          border-color: var(--codeinput-error-border-active);
+          border-color: var(--codeinput-error-border-color-active);
           color: rgba(0, 0, 0, 0.95); // IEFIX
           color: var(--codeinput-error-text-active);
           background-color: rgba(0, 0, 0, 0.04); // IEFIX
@@ -103,11 +103,15 @@
     .md-code-input-character {
       cursor: default;
       border-color: rgba(255, 255, 255, 0); // IEFIX
-      border-color: var(--codeinput-border-disabled);
+      border-color: var(--codeinput-border-color-disabled);
       color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--codeinput-text-disabled);
       background-color: rgba(0, 0, 0, 0.11); // IEFIX
       background-color: var(--codeinput-background-disabled);
     }
+  }
+
+  .md-code-input-message {
+    margin-top: 0.5rem;
   }
 }

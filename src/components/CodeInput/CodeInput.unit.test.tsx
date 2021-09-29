@@ -38,11 +38,11 @@ describe('CodeInput', () => {
       let component;
       await act(async () => {
         component = mount(
-          <CodeInput numDigits={6} messageArr={[{ message: 'test', type: 'error' }]} />
+          <CodeInput numDigits={6} messageArr={[{ message: 'test', level: 'error' }]} />
         );
       });
       await waitForAsync(component);
-      const message = component.find('.md-input-message');
+      const message = component.find('.md-input-message-message');
       expect(message.length).toBe(1);
       expect(message.props()['message-level']).toEqual('error');
     });
@@ -62,7 +62,7 @@ describe('CodeInput', () => {
       const [msgArr, setMsgArr] = useState([]);
 
       const onComplete = () => {
-        setMsgArr([{ message: 'test', type: 'error' }]);
+        setMsgArr([{ message: 'test', level: 'error' }]);
       };
 
       return <CodeInput onComplete={onComplete} numDigits={6} messageArr={msgArr} />;
@@ -74,7 +74,7 @@ describe('CodeInput', () => {
       await act(async () => {
         component = mount(<ExampleContainer />);
       });
-      const message = component.find('.md-input-message');
+      const message = component.find('.md-input-message-message');
       expect(message.length).toBe(0);
 
       let codeInput;
@@ -88,7 +88,7 @@ describe('CodeInput', () => {
       });
 
       await waitForAsync(component);
-      const message2 = component.find('.md-input-message');
+      const message2 = component.find('.md-input-message-message');
       expect(message2.length).toEqual(1);
     });
   });
