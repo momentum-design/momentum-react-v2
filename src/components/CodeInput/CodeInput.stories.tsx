@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Story } from '@storybook/react';
 
 import CodeInput, { CodeInputProps } from './';
-import { Message } from './CodeInput.types';
+import { Message } from '../InputMessage/InputMessage.types';
 
 const messageArrOptions = {
   empty: [],
-  error: [{ message: 'Error message', type: 'error' }],
-  success: [{ message: 'Success message', type: 'success' }],
-  warning: [{ message: 'Warning message', type: 'warning' }],
+  error: [{ message: 'Error message', level: 'error' }],
+  success: [{ message: 'Success message', level: 'success' }],
+  warning: [{ message: 'Warning message', level: 'warning' }],
 };
 
 export default {
@@ -75,7 +75,7 @@ const Template: Story<StoryProps> = (args) => {
       onComplete={(code) => {
         switch (onComplete) {
           case 'show error':
-            setMessageArr([{ message: 'test', type: 'error' }]);
+            setMessageArr([{ message: 'test', level: 'error' }]);
             break;
           case 'go disabled':
             setDisabled(true);

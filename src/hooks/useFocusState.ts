@@ -8,8 +8,8 @@ interface Props {
 
 const useFocusState = (
   props: Props
-): { focus: boolean; focusProps: HTMLAttributes<HTMLElement> } => {
-  const [focus, setFocus] = useState(false);
+): { isFocused: boolean; focusProps: HTMLAttributes<HTMLElement> } => {
+  const [isFocused, setFocus] = useState(false);
   const { focusProps } = useFocus({
     onFocus: (...args) => {
       setFocus(true);
@@ -24,7 +24,7 @@ const useFocusState = (
       }
     },
   });
-  return { focus, focusProps };
+  return { isFocused, focusProps };
 };
 
 export { useFocusState };

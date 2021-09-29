@@ -5,6 +5,7 @@ import './CodeInput.style.scss';
 import { Props } from './CodeInput.types';
 import InputMessage, { getFilteredMessages } from '../InputMessage';
 import classnames from 'classnames';
+import { STYLE } from './CodeInput.constants';
 
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const {
@@ -45,7 +46,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   }, [JSON.stringify(messageArr)]);
 
   return (
-    <div className={classnames('md-code-input-wrapper', className)} data-level={messageType}>
+    <div className={classnames(STYLE.wrapper, className)} data-level={messageType}>
       <VerificationInput
         inputProps={{ 'aria-label': ariaLabel, disabled }}
         length={numDigits}
@@ -63,17 +64,17 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
         validChars="0-9"
         placeholder=""
         classNames={{
-          container: 'md-code-input-container',
-          character: 'md-code-input-character',
-          characterInactive: 'md-code-input-character--inactive',
-          characterSelected: 'md-code-input-character--selected',
+          container: STYLE.container,
+          character: STYLE.character,
+          characterInactive: STYLE.characterInactive,
+          characterSelected: STYLE.characterSelected,
         }}
       />
       {messages && (
-        <div className="md-code-input__messages">
+        <div className={STYLE.messages}>
           {messages.map((m, i) => (
             <InputMessage
-              className="code-input-message"
+              className={STYLE.message}
               message={m}
               key={`input-message-${i}`}
               level={messageType}
