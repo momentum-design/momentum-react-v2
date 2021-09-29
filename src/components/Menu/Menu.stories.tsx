@@ -8,6 +8,9 @@ import Menu, { MenuProps } from './';
 import argTypes from './Menu.stories.args';
 import Documentation from './Menu.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
+import Flex from '../Flex';
+import Avatar from '../Avatar';
+import { PresenceType } from '../Avatar/Avatar.types';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -72,6 +75,29 @@ Common.parameters = {
         <Section title="Animals">
           <Item>Dog</Item>
           <Item>Cat</Item>
+        </Section>,
+      ],
+    },
+
+    {
+      itemShape: 'isPilled',
+      itemSize: 50,
+      children: [
+        // If key is not provided the elements get generated ones
+        // eslint-disable-next-line react/jsx-key
+        <Section title="People">
+          <Item textValue="Cisco">
+            <Flex alignItems="center" xgap="0.875rem">
+              <Avatar initials="CW" size={32} presence={PresenceType.Active} />
+              <span>Cisco Webex</span>
+            </Flex>
+          </Item>
+          <Item textValue="Josh">
+            <Flex alignItems="center" xgap="0.875rem">
+              <Avatar initials="CW" size={32} presence={PresenceType.Active} />
+              <span>Josh Webex</span>
+            </Flex>
+          </Item>
         </Section>,
       ],
     },

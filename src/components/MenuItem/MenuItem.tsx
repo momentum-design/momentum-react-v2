@@ -10,6 +10,7 @@ import { useMenuItem } from '@react-aria/menu';
 import ListItemBaseSection from '../ListItemBaseSection';
 import Icon from '../Icon';
 import { MenuContext } from '../Menu';
+import { MenuAppearanceContext } from '../Menu/Menu';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction } = props;
@@ -19,6 +20,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
 
   const { onClose, closeOnSelect } = useContext(MenuContext);
+  const { itemShape, itemSize } = useContext(MenuAppearanceContext);
 
   const { menuItemProps } = useMenuItem(
     {
@@ -35,7 +37,14 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   );
 
   return (
-    <ListItemBase className={STYLE.wrapper} {...menuItemProps} ref={ref} isDisabled={isDisabled}>
+    <ListItemBase
+      size={itemSize}
+      shape={itemShape}
+      className={STYLE.wrapper}
+      {...menuItemProps}
+      ref={ref}
+      isDisabled={isDisabled}
+    >
       <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
       {isSelected && (
         <ListItemBaseSection position="end">

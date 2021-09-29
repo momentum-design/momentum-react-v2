@@ -12,6 +12,8 @@ import ButtonCircle from '../ButtonCircle';
 import Menu from '../Menu';
 import Icon from '../Icon';
 import Flex from '../Flex';
+import Avatar from '../Avatar';
+import { PresenceType } from '../Avatar/Avatar.types';
 
 export default {
   title: 'Momentum UI/MenuTrigger',
@@ -163,6 +165,36 @@ Common.parameters = {
           <Item key="one">One</Item>
           <Item key="two">Two</Item>
           <Item key="three">Three</Item>
+        </Menu>,
+      ],
+    },
+    {
+      label: 'With People',
+      children: [
+        <ButtonCircle key="1" color="join">
+          <Icon name="chat" weight="filled" autoScale={150} />
+        </ButtonCircle>,
+        <Menu
+          itemShape="isPilled"
+          itemSize={50}
+          selectionMode="multiple"
+          defaultSelectedKeys={['one', 'two']}
+          key="2"
+        >
+          <Section title="People">
+            <Item textValue="Cisco">
+              <Flex alignItems="center" xgap="0.875rem">
+                <Avatar initials="C" size={32} presence={PresenceType.Active} />
+                <span>Cisco Webex</span>
+              </Flex>
+            </Item>
+            <Item textValue="Josh">
+              <Flex alignItems="center" xgap="0.875rem">
+                <Avatar initials="J" size={32} presence={PresenceType.Meet} />
+                <span>Josh Webex</span>
+              </Flex>
+            </Item>
+          </Section>
         </Menu>,
       ],
     },

@@ -4,7 +4,7 @@ import React, { forwardRef, ReactElement, RefObject, useContext, useRef } from '
 import classnames from 'classnames';
 
 import { STYLE } from './Menu.constants';
-import { MenuContextValue, Props } from './Menu.types';
+import { MenuAppearanceContextValue, MenuContextValue, Props } from './Menu.types';
 import './Menu.style.scss';
 import { useMenu } from '@react-aria/menu';
 import { useTreeState } from '@react-stately/tree';
@@ -18,8 +18,10 @@ export function useMenuContext(): MenuContextValue {
   return useContext(MenuContext);
 }
 
+export const MenuAppearanceContext = React.createContext<MenuAppearanceContextValue>({});
+
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLUListElement>) => {
-  const { className, id, style } = props;
+  const { className, id, style, itemShape, itemSize } = props;
   const contextProps = useContext(MenuContext);
 
   const _props = {
@@ -34,31 +36,33 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   const { menuProps } = useMenu(_props, state, ref);
 
   return (
-    <ul
-      className={classnames(className, STYLE.wrapper)}
-      id={id}
-      style={style}
-      ref={ref}
-      {...menuProps}
-    >
-      {[...state.collection].map((item) => {
-        if (item.type === 'section') {
-          return (
-            <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />
+    <MenuAppearanceContext.Provider value={{ itemShape, itemSize }}>
+      <ul
+        className={classnames(className, STYLE.wrapper)}
+        id={id}
+        style={style}
+        ref={ref}
+        {...menuProps}
+      >
+        {[...state.collection].map((item) => {
+          if (item.type === 'section') {
+            return (
+              <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />
+            );
+          }
+
+          let menuItem = (
+            <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
           );
-        }
 
-        let menuItem = (
-          <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
-        );
+          if (item.wrapper) {
+            menuItem = item.wrapper(menuItem);
+          }
 
-        if (item.wrapper) {
-          menuItem = item.wrapper(menuItem);
-        }
-
-        return menuItem;
-      })}
-    </ul>
+          return menuItem;
+        })}
+      </ul>
+    </MenuAppearanceContext.Provider>
   );
 };
 

@@ -4,6 +4,7 @@ import { Item } from '@react-stately/collections';
 
 import Menu, { MENU_CONSTANTS as CONSTANTS } from './';
 import { triggerPress } from '../../../test/utils';
+import ListItemBase from '../ListItemBase';
 
 describe('<Menu />', () => {
   const defaultProps = {
@@ -46,6 +47,26 @@ describe('<Menu />', () => {
       const style = { color: 'pink' };
 
       const container = mount(<Menu {...defaultProps} style={style} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with itemSize', () => {
+      expect.assertions(1);
+
+      const itemSize = 50;
+
+      const container = mount(<Menu {...defaultProps} itemSize={itemSize} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with itemShape', () => {
+      expect.assertions(1);
+
+      const itemShape = 'isPilled';
+
+      const container = mount(<Menu {...defaultProps} itemShape={itemShape} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -97,6 +118,32 @@ describe('<Menu />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should have provided data-size when itemSize is provided', () => {
+      expect.assertions(1);
+
+      const itemSize = 50;
+
+      const element = mount(<Menu {...defaultProps} itemSize={itemSize} />)
+        .find(ListItemBase)
+        .at(0)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-size')).toBe(`${itemSize}`);
+    });
+
+    it('should have provided data-shape when itemShape is provided', () => {
+      expect.assertions(1);
+
+      const itemShape = 'isPilled';
+
+      const element = mount(<Menu {...defaultProps} itemShape={itemShape} />)
+        .find(ListItemBase)
+        .at(0)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-shape')).toBe(itemShape);
     });
   });
 
