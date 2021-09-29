@@ -116,7 +116,7 @@
   padding: 0;
   width: 100%;
   color: var(--theme-text-primary-normal);
-  font-family: CiscoSansTT;
+  font-family: var(--md-globals-font-default);
   font-weight: normal;
 
   // Firefox fix for scrollbar

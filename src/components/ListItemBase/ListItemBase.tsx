@@ -24,7 +24,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
-  const ref = providedRef || useRef();
+  const internalRef = useRef();
+  const ref = providedRef || internalRef;
 
   if (shape === SHAPES.isPilled && size === SIZES[40]) {
     console.warn(
