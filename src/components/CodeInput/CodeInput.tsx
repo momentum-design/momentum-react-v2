@@ -3,18 +3,9 @@ import VerificationInput from 'react-verification-input';
 
 import './CodeInput.style.scss';
 import { Props } from './CodeInput.types';
-import InputMessage, { MessageLevel } from '../InputMessage';
+import InputMessage, { getFilteredMessages } from '../InputMessage';
 import classnames from 'classnames';
-
-const determineMessageType = (array): MessageLevel => {
-  return array.reduce((agg, e) => {
-    return agg === 'error' ? agg : e.type || '';
-  }, '');
-};
-
-const filterMessagesByType = (array, value) => {
-  return array.reduce((agg, e) => (e.type === value ? agg.concat(e.message) : agg), []);
-};
+import { STYLE } from './CodeInput.constants';
 
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const {
@@ -35,9 +26,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const [isComplete, setComplete] = useState(false);
   const [value, setValue] = useState('');
 
-  const messageType: MessageLevel =
-    (internalMessageArray.length > 0 && determineMessageType(internalMessageArray)) || 'none';
-  const messages = (messageType && filterMessagesByType(internalMessageArray, messageType)) || null;
+  const [messageType, messages] = getFilteredMessages(internalMessageArray);
 
   const firstUpdate = useRef(true);
   useEffect(() => {
@@ -57,7 +46,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   }, [JSON.stringify(messageArr)]);
 
   return (
-    <div className={classnames('md-code-input-wrapper', className)} data-level={messageType}>
+    <div className={classnames(STYLE.wrapper, className)} data-level={messageType}>
       <VerificationInput
         inputProps={{ 'aria-label': ariaLabel, disabled }}
         length={numDigits}
@@ -75,16 +64,21 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
         validChars="0-9"
         placeholder=""
         classNames={{
-          container: 'md-code-input-container',
-          character: 'md-code-input-character',
-          characterInactive: 'md-code-input-character--inactive',
-          characterSelected: 'md-code-input-character--selected',
+          container: STYLE.container,
+          character: STYLE.character,
+          characterInactive: STYLE.characterInactive,
+          characterSelected: STYLE.characterSelected,
         }}
       />
       {messages && (
-        <div className="md-code-input__messages">
+        <div className={STYLE.messages}>
           {messages.map((m, i) => (
-            <InputMessage message={m} key={`input-message-${i}`} level={messageType} />
+            <InputMessage
+              className={STYLE.message}
+              message={m}
+              key={`input-message-${i}`}
+              level={messageType}
+            />
           ))}
         </div>
       )}
