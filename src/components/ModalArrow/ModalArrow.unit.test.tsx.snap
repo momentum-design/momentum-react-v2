@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalArrow /> snapshot should match snapshot 1`] = `
+<ModalArrow
+  side="bottom"
+>
+  <svg
+    className="md-modal-arrow-wrapper"
+    data-side="bottom"
+    height={12}
+    viewBox="0 0 24 12"
+    width={24}
+    xmlns="http://www.w3.org/svg/2000"
+  >
+    <defs>
+      <clipPath
+        id="modal-arrow-cut-stroke-bottom"
+      >
+        <path
+          d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+        />
+      </clipPath>
+    </defs>
+    <path
+      clipPath="url(#modal-arrow-cut-stroke-bottom)"
+      d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+      data-color="primary"
+    />
+  </svg>
+</ModalArrow>
+`;
+
+exports[`<ModalArrow /> snapshot should match snapshot with className 1`] = `
+<ModalArrow
+  className="example-class"
+  side="bottom"
+>
+  <svg
+    className="md-modal-arrow-wrapper example-class"
+    data-side="bottom"
+    height={12}
+    viewBox="0 0 24 12"
+    width={24}
+    xmlns="http://www.w3.org/svg/2000"
+  >
+    <defs>
+      <clipPath
+        id="modal-arrow-cut-stroke-bottom"
+      >
+        <path
+          d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+        />
+      </clipPath>
+    </defs>
+    <path
+      clipPath="url(#modal-arrow-cut-stroke-bottom)"
+      d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+      data-color="primary"
+    />
+  </svg>
+</ModalArrow>
+`;
+
+exports[`<ModalArrow /> snapshot should match snapshot with color 1`] = `
+<ModalArrow
+  color="quaternary"
+  side="bottom"
+>
+  <svg
+    className="md-modal-arrow-wrapper"
+    data-side="bottom"
+    height={12}
+    viewBox="0 0 24 12"
+    width={24}
+    xmlns="http://www.w3.org/svg/2000"
+  >
+    <defs>
+      <clipPath
+        id="modal-arrow-cut-stroke-bottom"
+      >
+        <path
+          d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+        />
+      </clipPath>
+    </defs>
+    <path
+      clipPath="url(#modal-arrow-cut-stroke-bottom)"
+      d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+      data-color="quaternary"
+    />
+  </svg>
+</ModalArrow>
+`;
+
+exports[`<ModalArrow /> snapshot should match snapshot with id 1`] = `
+<ModalArrow
+  id="example-id"
+  side="bottom"
+>
+  <svg
+    className="md-modal-arrow-wrapper"
+    data-side="bottom"
+    height={12}
+    id="example-id"
+    viewBox="0 0 24 12"
+    width={24}
+    xmlns="http://www.w3.org/svg/2000"
+  >
+    <defs>
+      <clipPath
+        id="modal-arrow-cut-stroke-bottom"
+      >
+        <path
+          d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+        />
+      </clipPath>
+    </defs>
+    <path
+      clipPath="url(#modal-arrow-cut-stroke-bottom)"
+      d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+      data-color="primary"
+    />
+  </svg>
+</ModalArrow>
+`;
+
+exports[`<ModalArrow /> snapshot should match snapshot with style 1`] = `
+<ModalArrow
+  side="bottom"
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <svg
+    className="md-modal-arrow-wrapper"
+    data-side="bottom"
+    height={12}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+    viewBox="0 0 24 12"
+    width={24}
+    xmlns="http://www.w3.org/svg/2000"
+  >
+    <defs>
+      <clipPath
+        id="modal-arrow-cut-stroke-bottom"
+      >
+        <path
+          d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+        />
+      </clipPath>
+    </defs>
+    <path
+      clipPath="url(#modal-arrow-cut-stroke-bottom)"
+      d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+      data-color="primary"
+    />
+  </svg>
+</ModalArrow>
+`;
