@@ -132,4 +132,5 @@ export {
   Select as SelectNext,
   GlobalSearchInput,
   TextInput,
+  AvatarListItem,
 } from './components';

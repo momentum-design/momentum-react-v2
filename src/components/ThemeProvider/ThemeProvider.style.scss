@@ -116,6 +116,9 @@
   padding: 0;
   width: 100%;
   color: var(--theme-text-primary-normal);
+  // IE11 Bug with scroll bar: See https://www.sitepoint.com/community/t/content-shifting/110141/9
+  background: var(--theme-background-solid-primary-normal);
+  background: var(--md-globals-gradient-primary);
   font-family: var(--md-globals-font-default);
   font-weight: normal;
 
@@ -141,6 +144,18 @@
   --md-globals-elevation-8: 0 2rem 4rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-focus-ring-outline: none;
   --md-globals-font-default: 'CiscoSansTT';
+
+  // Gradient backgrounds
+  --md-globals-gradient-primary: linear-gradient(
+    180deg,
+    var(--theme-background-gradient-primary-0) 0%,
+    var(--theme-background-gradient-primary-1) 100%
+  );
+  --md-globals-gradient-secondary: linear-gradient(
+    180deg,
+    var(--theme-background-gradient-secondary-0) 0%,
+    var(--theme-background-gradient-secondary-1) 100%
+  );
 }
 
 /* Scrollbar Theme */
