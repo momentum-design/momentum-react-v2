@@ -25,6 +25,12 @@ export default {
 
 const Example = Template<TabProps>(Tab).bind({});
 
+Example.args = {
+  children: 'This is some primitive text',
+  active: false,
+  disabled: false,
+};
+
 Example.argTypes = { ...argTypes };
 
 const States = MultiTemplate<TabProps>(Tab).bind({});
@@ -35,16 +41,21 @@ delete States.argTypes.disabled;
 
 States.parameters = {
   variants: [
-    { active: undefined },
-    { active: true },
-    { active: false },
-    { disabled: undefined },
-    { disabled: true },
-    { disabled: false },
+    { active: undefined, children: 'Active undefined' },
+    { active: true, children: 'Active true' },
+    { active: false, children: 'Active false' },
+    { disabled: undefined, children: 'Disabled undefined' },
+    { disabled: true, children: 'Disabled true' },
+    { disabled: false, children: 'Disabled false' },
   ],
 };
 
 const Children = MultiTemplate<TabProps>(Tab).bind({});
+
+Children.args = {
+  active: false,
+  disabled: false,
+};
 
 Children.argTypes = { ...argTypes };
 delete Children.argTypes.children;

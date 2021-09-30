@@ -2,60 +2,64 @@
 
 exports[`<Tab /> snapshot Badge children should match snapshot 1`] = `
 <Tab>
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Badge
-                key="1"
-                size={18}
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-badge-wrapper"
-                  data-size={18}
+                <Badge
+                  key="1"
+                  size={18}
                 >
-                  2
-                </div>
-              </Badge>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-badge-wrapper"
+                    data-size={18}
+                  >
+                    2
+                  </div>
+                </Badge>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -63,60 +67,64 @@ exports[`<Tab /> snapshot Badge children should match snapshot with active 1`] =
 <Tab
   active={false}
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Badge
-                key="5"
-                size={18}
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-badge-wrapper"
-                  data-size={18}
+                <Badge
+                  key="5"
+                  size={18}
                 >
-                  2
-                </div>
-              </Badge>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-badge-wrapper"
+                    data-size={18}
+                  >
+                    2
+                  </div>
+                </Badge>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -124,60 +132,64 @@ exports[`<Tab /> snapshot Badge children should match snapshot with className 1`
 <Tab
   className="example-class"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper example-class"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper example-class"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Badge
-                key="2"
-                size={18}
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-badge-wrapper"
-                  data-size={18}
+                <Badge
+                  key="2"
+                  size={18}
                 >
-                  2
-                </div>
-              </Badge>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-badge-wrapper"
+                    data-size={18}
+                  >
+                    2
+                  </div>
+                </Badge>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -185,63 +197,64 @@ exports[`<Tab /> snapshot Badge children should match snapshot with disabled 1`]
 <Tab
   disabled={false}
 >
-  <FocusRing
-    disabled={false}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
   >
-    <FocusRing
-      disabled={false}
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Badge
-                key="6"
-                size={18}
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-badge-wrapper"
-                  data-size={18}
+                <Badge
+                  key="6"
+                  size={18}
                 >
-                  2
-                </div>
-              </Badge>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-badge-wrapper"
+                    data-size={18}
+                  >
+                    2
+                  </div>
+                </Badge>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -249,62 +262,66 @@ exports[`<Tab /> snapshot Badge children should match snapshot with id 1`] = `
 <Tab
   id="example-id"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        id="example-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              id="example-id"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Badge
-                key="3"
-                size={18}
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-badge-wrapper"
-                  data-size={18}
+                <Badge
+                  key="3"
+                  size={18}
                 >
-                  2
-                </div>
-              </Badge>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-badge-wrapper"
+                    data-size={18}
+                  >
+                    2
+                  </div>
+                </Badge>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -316,140 +333,148 @@ exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = 
     }
   }
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "color": "pink",
-          }
-        }
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              style={
-                Object {
-                  "color": "pink",
-                }
-              }
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Badge
-                key="4"
-                size={18}
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-badge-wrapper"
-                  data-size={18}
+                <Badge
+                  key="4"
+                  size={18}
                 >
-                  2
-                </div>
-              </Badge>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-badge-wrapper"
+                    data-size={18}
+                  >
+                    2
+                  </div>
+                </Badge>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
 exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
 <Tab>
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Icon
-                key="0"
-                name="plus"
-                scale={12}
-                weight="bold"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-icon-wrapper"
+                <Icon
+                  key="0"
+                  name="plus"
+                  scale={12}
+                  weight="bold"
                 >
-                  <svg
-                    className=""
-                    data-autoscale={false}
-                    data-scale={12}
-                    fill="currentColor"
-                    height="100%"
-                    stroke="currentColor"
-                    style={Object {}}
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -457,71 +482,75 @@ exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = 
 <Tab
   active={false}
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Icon
-                key="4"
-                name="plus"
-                scale={12}
-                weight="bold"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-icon-wrapper"
+                <Icon
+                  key="4"
+                  name="plus"
+                  scale={12}
+                  weight="bold"
                 >
-                  <svg
-                    className=""
-                    data-autoscale={false}
-                    data-scale={12}
-                    fill="currentColor"
-                    height="100%"
-                    stroke="currentColor"
-                    style={Object {}}
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -529,71 +558,75 @@ exports[`<Tab /> snapshot Icon children should match snapshot with className 1`]
 <Tab
   className="example-class"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper example-class"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper example-class"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Icon
-                key="1"
-                name="plus"
-                scale={12}
-                weight="bold"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-icon-wrapper"
+                <Icon
+                  key="1"
+                  name="plus"
+                  scale={12}
+                  weight="bold"
                 >
-                  <svg
-                    className=""
-                    data-autoscale={false}
-                    data-scale={12}
-                    fill="currentColor"
-                    height="100%"
-                    stroke="currentColor"
-                    style={Object {}}
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -601,74 +634,75 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
 <Tab
   disabled={false}
 >
-  <FocusRing
-    disabled={false}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
   >
-    <FocusRing
-      disabled={false}
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Icon
-                key="5"
-                name="plus"
-                scale={12}
-                weight="bold"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-icon-wrapper"
+                <Icon
+                  key="5"
+                  name="plus"
+                  scale={12}
+                  weight="bold"
                 >
-                  <svg
-                    className=""
-                    data-autoscale={false}
-                    data-scale={12}
-                    fill="currentColor"
-                    height="100%"
-                    stroke="currentColor"
-                    style={Object {}}
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -676,73 +710,77 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
 <Tab
   id="example-id"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        id="example-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              id="example-id"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Icon
-                key="2"
-                name="plus"
-                scale={12}
-                weight="bold"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-icon-wrapper"
+                <Icon
+                  key="2"
+                  name="plus"
+                  scale={12}
+                  weight="bold"
                 >
-                  <svg
-                    className=""
-                    data-autoscale={false}
-                    data-scale={12}
-                    fill="currentColor"
-                    height="100%"
-                    stroke="currentColor"
-                    style={Object {}}
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -754,140 +792,148 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
     }
   }
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "color": "pink",
-          }
-        }
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              style={
-                Object {
-                  "color": "pink",
-                }
-              }
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Icon
-                key="3"
-                name="plus"
-                scale={12}
-                weight="bold"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <div
-                  className="md-icon-wrapper"
+                <Icon
+                  key="3"
+                  name="plus"
+                  scale={12}
+                  weight="bold"
                 >
-                  <svg
-                    className=""
-                    data-autoscale={false}
-                    data-scale={12}
-                    fill="currentColor"
-                    height="100%"
-                    stroke="currentColor"
-                    style={Object {}}
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <div
+                    className="md-icon-wrapper"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      fill="currentColor"
+                      height="100%"
+                      stroke="currentColor"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
 exports[`<Tab /> snapshot Text children should match snapshot 1`] = `
 <Tab>
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Text
-                key="1"
-                type="subheader-secondary"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <h3
-                  className="md-text-wrapper md-text-color"
-                  data-type="subheader-secondary"
+                <Text
+                  key="1"
+                  type="subheader-secondary"
                 >
-                  Example Text
-                </h3>
-              </Text>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <h3
+                    className="md-text-wrapper md-text-color"
+                    data-type="subheader-secondary"
+                  >
+                    Example Text
+                  </h3>
+                </Text>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -895,60 +941,64 @@ exports[`<Tab /> snapshot Text children should match snapshot with active 1`] = 
 <Tab
   active={false}
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Text
-                key="5"
-                type="subheader-secondary"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <h3
-                  className="md-text-wrapper md-text-color"
-                  data-type="subheader-secondary"
+                <Text
+                  key="5"
+                  type="subheader-secondary"
                 >
-                  Example Text
-                </h3>
-              </Text>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <h3
+                    className="md-text-wrapper md-text-color"
+                    data-type="subheader-secondary"
+                  >
+                    Example Text
+                  </h3>
+                </Text>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -956,60 +1006,64 @@ exports[`<Tab /> snapshot Text children should match snapshot with className 1`]
 <Tab
   className="example-class"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper example-class"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper example-class"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Text
-                key="2"
-                type="subheader-secondary"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <h3
-                  className="md-text-wrapper md-text-color"
-                  data-type="subheader-secondary"
+                <Text
+                  key="2"
+                  type="subheader-secondary"
                 >
-                  Example Text
-                </h3>
-              </Text>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <h3
+                    className="md-text-wrapper md-text-color"
+                    data-type="subheader-secondary"
+                  >
+                    Example Text
+                  </h3>
+                </Text>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1017,63 +1071,64 @@ exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] 
 <Tab
   disabled={false}
 >
-  <FocusRing
-    disabled={false}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
   >
-    <FocusRing
-      disabled={false}
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Text
-                key="6"
-                type="subheader-secondary"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <h3
-                  className="md-text-wrapper md-text-color"
-                  data-type="subheader-secondary"
+                <Text
+                  key="6"
+                  type="subheader-secondary"
                 >
-                  Example Text
-                </h3>
-              </Text>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <h3
+                    className="md-text-wrapper md-text-color"
+                    data-type="subheader-secondary"
+                  >
+                    Example Text
+                  </h3>
+                </Text>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1081,62 +1136,66 @@ exports[`<Tab /> snapshot Text children should match snapshot with id 1`] = `
 <Tab
   id="example-id"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        id="example-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              id="example-id"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Text
-                key="3"
-                type="subheader-secondary"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <h3
-                  className="md-text-wrapper md-text-color"
-                  data-type="subheader-secondary"
+                <Text
+                  key="3"
+                  type="subheader-secondary"
                 >
-                  Example Text
-                </h3>
-              </Text>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <h3
+                    className="md-text-wrapper md-text-color"
+                    data-type="subheader-secondary"
+                  >
+                    Example Text
+                  </h3>
+                </Text>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1148,128 +1207,127 @@ exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
     }
   }
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "color": "pink",
-          }
-        }
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              style={
-                Object {
-                  "color": "pink",
-                }
-              }
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Text
-                key="4"
-                type="subheader-secondary"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <h3
-                  className="md-text-wrapper md-text-color"
-                  data-type="subheader-secondary"
+                <Text
+                  key="4"
+                  type="subheader-secondary"
                 >
-                  Example Text
-                </h3>
-              </Text>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                  <h3
+                    className="md-text-wrapper md-text-color"
+                    data-type="subheader-secondary"
+                  >
+                    Example Text
+                  </h3>
+                </Text>
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
 exports[`<Tab /> snapshot string children should match snapshot 1`] = `
 <Tab>
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
+            <Text
+              type="subheader-secondary"
             >
-              <Text
-                type="subheader-secondary"
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
               >
-                <h3
-                  className="md-text-wrapper md-text-color"
-                  data-type="subheader-secondary"
-                >
-                  Example label
-                </h3>
-              </Text>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+                Example label
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1277,48 +1335,52 @@ exports[`<Tab /> snapshot string children should match snapshot with active 1`] 
 <Tab
   active={false}
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            />
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+            <Text
+              type="subheader-secondary"
+            >
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
+              />
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1326,48 +1388,52 @@ exports[`<Tab /> snapshot string children should match snapshot with className 1
 <Tab
   className="example-class"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper example-class"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper example-class"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            />
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+            <Text
+              type="subheader-secondary"
+            >
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
+              />
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1375,51 +1441,52 @@ exports[`<Tab /> snapshot string children should match snapshot with disabled 1`
 <Tab
   disabled={false}
 >
-  <FocusRing
-    disabled={false}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
   >
-    <FocusRing
-      disabled={false}
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            />
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+            <Text
+              type="subheader-secondary"
+            >
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
+              />
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1427,50 +1494,54 @@ exports[`<Tab /> snapshot string children should match snapshot with id 1`] = `
 <Tab
   id="example-id"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        id="example-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              id="example-id"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            />
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+            <Text
+              type="subheader-secondary"
+            >
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
+              />
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
 
@@ -1482,57 +1553,61 @@ exports[`<Tab /> snapshot string children should match snapshot with style 1`] =
     }
   }
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <ButtonSimple
-        className="md-tab-wrapper"
-        data-active={false}
-        data-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "color": "pink",
-          }
-        }
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
           >
-            <button
-              className="md-tab-wrapper"
-              data-active={false}
-              data-disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              style={
-                Object {
-                  "color": "pink",
-                }
-              }
-              type="button"
-            />
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+            <Text
+              type="subheader-secondary"
+            >
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
+              />
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </Tab>
 `;
