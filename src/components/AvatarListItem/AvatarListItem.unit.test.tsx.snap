@@ -18,6 +18,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -119,6 +120,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -245,6 +247,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
         <li
           className="example-class md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -345,6 +348,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -505,6 +509,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -669,6 +674,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -829,6 +835,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -928,6 +935,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           id="example-id"
@@ -1025,6 +1033,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -1147,6 +1156,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -1269,6 +1279,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -1391,6 +1402,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -1513,6 +1525,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}
@@ -1628,6 +1641,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
         <li
           className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-padded={false}
           data-shape="isPilled"
           data-size={50}
           onBlur={[Function]}

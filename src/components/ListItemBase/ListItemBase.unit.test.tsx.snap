@@ -10,6 +10,7 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={false}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
@@ -47,6 +48,7 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
       <li
         className="example-class md-list-item-base-wrapper"
         data-disabled={false}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
@@ -84,6 +86,7 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={false}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         id="example-id"
@@ -122,6 +125,7 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={true}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
@@ -196,6 +200,7 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={false}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
@@ -233,6 +238,7 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={false}
+        data-padded={false}
         data-shape="isPilled"
         data-size={50}
         onBlur={[Function]}
@@ -270,6 +276,7 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={false}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
@@ -311,6 +318,7 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
       <li
         className="md-list-item-base-wrapper"
         data-disabled={false}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}

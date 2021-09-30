@@ -2,41 +2,50 @@
   font-family: 'CiscoSansTT Regular';
 
   .md-input-message {
-    color:  rgba(0, 0, 0, 0.95); // IEFIX
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: rgba(0, 0, 0, 0.95); // IEFIX
     color: var(--theme-text-primary-normal);
-    fill:  rgba(0, 0, 0, 0.95); // IEFIX
+    fill: rgba(0, 0, 0, 0.95); // IEFIX
     fill: var(--theme-text-primary-normal);
-    margin-top: 1rem;
 
     &[message-level='error'] {
-      color:  rgba(171, 10, 21, 1); // IEFIX
+      color: rgba(171, 10, 21, 1); // IEFIX
       color: var(--theme-text-error-normal);
-      fill:  rgba(171, 10, 21, 1); // IEFIX
+      fill: rgba(171, 10, 21, 1); // IEFIX
       fill: var(--theme-text-error-normal);
     }
 
     &[message-level='warning'] {
-      color:  rgba(125, 71, 5, 1); // IEFIX
+      color: rgba(125, 71, 5, 1); // IEFIX
       color: var(--theme-text-warning-normal);
-      fill:  rgba(125, 71, 5, 1); // IEFIX
+      fill: rgba(125, 71, 5, 1); // IEFIX
       fill: var(--theme-text-warning-normal);
     }
 
     &[message-level='success'] {
-      color:  rgba(24, 94, 70, 1); // IEFIX
+      color: rgba(24, 94, 70, 1); // IEFIX
       color: var(--theme-text-success-normal);
-      fill:  rgba(24, 94, 70, 1); // IEFIX
+      fill: rgba(24, 94, 70, 1); // IEFIX
       fill: var(--theme-text-success-normal);
     }
 
+    &[message-level='help'] {
+      color: var(--theme-text-secondary-normal);
+      fill: var(--theme-text-secondary-normal);
+    }
+
     .md-input-message--icon {
-      float: left;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
+      flex: 0 1 auto;
+
+      & ~ .md-input-message--text {
+        padding-left: 0.5rem;
+      }
     }
 
     .md-input-message--text {
-      float: left;
+      flex: 0 1 auto;
     }
   }
 }

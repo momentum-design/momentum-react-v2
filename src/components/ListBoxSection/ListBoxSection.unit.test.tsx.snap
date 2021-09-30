@@ -74,6 +74,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
+                data-padded={false}
                 data-shape="rectangle"
                 data-size={40}
                 onBlur={[Function]}
@@ -146,6 +147,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
+                data-padded={false}
                 data-shape="rectangle"
                 data-size={40}
                 onBlur={[Function]}

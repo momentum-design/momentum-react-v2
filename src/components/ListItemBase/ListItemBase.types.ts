@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
 import { PressEvents } from '@react-types/shared';
 
-export type ListItemBaseSize = 32 | 40 | 50;
+export type ListItemBaseSize = 32 | 40 | 50 | 70;
 
 export interface Props extends PressEvents {
   /**
@@ -36,6 +36,12 @@ export interface Props extends PressEvents {
    * @default false
    */
   isSelected?: boolean;
+
+  /**
+   * Determines if this item is padded
+   * @default false
+   */
+  isPadded?: boolean;
 
   /**
    * Size of the list item

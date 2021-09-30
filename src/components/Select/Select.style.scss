@@ -11,14 +11,13 @@
     margin-left: 0.75rem;
     margin-bottom: 0.25rem;
   }
-
 }
 
 .md-select-dropdown-input {
   width: 100%;
   background-color: var(--textinput-background);
   color: var(--textinput-placeholder-text);
-  border: 1px solid var(--textinput-border);
+  border: 1px solid var(--textinput-border-color);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -34,7 +33,7 @@
   &:hover {
     background-color: var(--textinput-background-hovered);
     color: var(--textinput-text-hovered);
-    border-color: var(--textinput-border-hovered);
+    border-color: var(--textinput-border-color-hovered);
   }
 
   &:active {
@@ -48,14 +47,14 @@
 
   &.md-select-open {
     background-color: var(--textinput-background-active);
-    border-color: var(--textinput-border-active);
+    border-color: var(--textinput-border-color-active);
     color: var(--textinput-text-disabled);
   }
 
   &:disabled {
     background-color: var(--textinput-background-disabled);
     color: var(--theme-text-primary-disabled);
-    border-color: var(--textinput-border-disabled);
+    border-color: var(--textinput-border-color-disabled);
 
     svg {
       fill: var(--theme-text-primary-disabled);
@@ -84,12 +83,12 @@
   margin: 0;
   z-index: 9999;
 
-  &[data-direction="top"] {
+  &[data-direction='top'] {
     // internal token set in React code
     bottom: calc(var(--md-globals-select-dropdown-input-height) + 0.25rem);
   }
 
-  &[data-direction="bottom"] {
+  &[data-direction='bottom'] {
     margin-top: 0.25rem;
   }
 }

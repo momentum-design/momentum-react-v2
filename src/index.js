@@ -117,6 +117,8 @@ export {
   InputMessage as InputMessageNew,
   ExampleComponent,
   Icon as IconNext,
+  MeetingListItem,
+  ModalArrow,
   ModalContainer,
   Toast,
   ToastDetails,
@@ -128,4 +130,6 @@ export {
   ListItemBase,
   ListItemBaseSection,
   Select as SelectNext,
+  GlobalSearchInput,
+  TextInput,
 } from './components';
