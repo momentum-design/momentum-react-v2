@@ -163,6 +163,7 @@ exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
       <li
         className="md-list-item-base-wrapper active"
         data-disabled={false}
+        data-padded={false}
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}

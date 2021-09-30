@@ -45,7 +45,7 @@
 
       &[data-color='activeNoJoin'] {
         background-color: rgba(0, 0, 0, 0.2); // IEFIX
-        background-color: var(--button-secondary-border-disabled);
+        background-color: var(--button-secondary-border-color-disabled);
       }
 
       &[data-color='inactive'] {
