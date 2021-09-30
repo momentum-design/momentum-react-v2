@@ -16,20 +16,8 @@ export default {
       },
     },
   },
-  isCentered: {
-    description: 'If this component should have its contents centered.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.ISCENTERED,
-      },
-    },
-  },
   children: {
-    description: 'Label or message to display on this component. Overrides `label`.',
+    description: 'Label or message to display on this component.',
     control: { type: 'text' },
     table: {
       type: {
@@ -53,6 +41,18 @@ export default {
       },
     },
   },
+  isCentered: {
+    description: 'If this component should have its contents centered.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.IS_CENTERED,
+      },
+    },
+  },
   isGrown: {
     description: 'If this component should grow its width to the parent container.',
     control: { type: 'boolean' },
@@ -61,7 +61,32 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.ISGROWN,
+        summary: CONSTANTS.DEFAULTS.IS_GROWN,
+      },
+    },
+  },
+  isPilled: {
+    description: 'If this component should be the pill shape.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.IS_PILLED,
+      },
+    },
+  },
+  isStatic: {
+    description:
+      'If this `<AlertBanner />` is for displaying static children. This overrides the `color` prop.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.IS_STATIC,
       },
     },
   },
@@ -78,26 +103,15 @@ export default {
     },
   },
   label: {
-    description: 'Label or message to display on this component.',
-    control: { type: 'none' },
+    description:
+      'Label or message to display on this component. This overrides the `children` prop.',
+    control: { type: 'text' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
         summary: 'undefined',
-      },
-    },
-  },
-  isPilled: {
-    description: 'If this component should be the pill shape.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.ISPILLED,
       },
     },
   },

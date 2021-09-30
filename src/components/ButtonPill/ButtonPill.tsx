@@ -10,7 +10,9 @@ import './ButtonPill.style.scss';
 const ButtonPill: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
     const { children, className, color, disabled, ghost, id, outline, size, style } = props;
-    const ref = providedRef || useRef();
+    const internalRef = useRef();
+    const ref = providedRef || internalRef;
+
     const mutatedProps = {
       ...props,
       isDisabled: props.disabled,

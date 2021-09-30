@@ -175,6 +175,7 @@ describe('<AlertBadge />', () => {
       component.props().onPress({
         type: 'press',
         pointerType: 'mouse',
+        altKey: false,
         shiftKey: false,
         ctrlKey: false,
         metaKey: false,

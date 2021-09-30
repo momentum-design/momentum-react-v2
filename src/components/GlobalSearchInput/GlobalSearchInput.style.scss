@@ -1,0 +1,103 @@
+.md-global-search-input-wrapper {
+  position: relative;
+  border-radius: 6.25rem;
+  background-color: var(--globalHeader-textfield-background);
+  border: 0.0625rem solid transparent;
+  box-sizing: border-box;
+  height: 1.75rem;
+  display: flex;
+  align-content: center;
+
+  &[data-focus='true'] {
+    box-shadow: var(--md-globals-focus-ring-box-shadow);
+  }
+
+  &:hover {
+    background-color: var(--globalHeader-textfield-background-hovered);
+  }
+
+  .md-global-search-input-container {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  input {
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--globalHeader-textfield-text);
+    font-family: var(--md-globals-font-default);
+    font-size: 0.875rem;
+    height: 1.75rem;
+    display: inline-block;
+    flex: 1;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--globalHeader-textfieldPlaceholderText-text);
+    }
+  }
+
+  .aria-alert {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .md-global-search-input-search {
+    margin-left: 1.125rem;
+    margin-right: 0.5625rem;
+    height: 1.625rem;
+    align-content: center;
+    flex-grow: 0;
+  }
+
+  .md-global-search-input-clear {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--globalHeader-buttonIcon-icon);
+
+    &:active {
+      color: var(--globalHeader-buttonIcon-icon-pressed);
+    }
+  }
+
+  .md-global-search-input-search-context {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 1.625rem;
+    padding-right: 0.25rem;
+
+    p {
+      box-sizing: border-box;
+      background-color: var(--globalHeader-modifierChip-background);
+      color: var(--globalHeader-modifierChip-text);
+      z-index: 1;
+      border-radius: 1rem;
+      padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+      font-size: 0.875rem;
+      height: 1.5rem;
+      margin: 0;
+      line-height: 1.5rem;
+      white-space: nowrap;
+    }
+  }
+
+  ::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    pointer-events: none;
+  }
+}

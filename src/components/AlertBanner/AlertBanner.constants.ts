@@ -14,10 +14,11 @@ const SIZES = {
 };
 
 const DEFAULTS = {
-  ISCENTERED: false,
   COLOR: 'default',
-  ISGROWN: false,
-  ISPILLED: false,
+  IS_CENTERED: false,
+  IS_GROWN: false,
+  IS_PILLED: false,
+  IS_STATIC: false,
   SIZE: 'default',
 };
 

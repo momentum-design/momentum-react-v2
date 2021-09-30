@@ -57,6 +57,8 @@ bundle.min.js.map
 /src/app/components
 /src/app/data
 /storybook-static
+# UNTIL WE DO PUBLIC RELEASE
+/docs
 
 # Packages #
 ############

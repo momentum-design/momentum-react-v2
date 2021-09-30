@@ -22,6 +22,7 @@ export default {
   },
   args: {
     children: 'Example Text',
+    style: { margin: '0.5rem' },
   },
 };
 

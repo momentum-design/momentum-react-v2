@@ -7,18 +7,18 @@
   box-shadow: var(--md-globals-elevation-4);
   outline: none;
 
-  &[data-color="primary"] {
+  &[data-color='primary'] {
     background: var(--menulistbackground-primary-background);
-    border: 1px solid var(--menulistbackground-primary-border);
+    border: 1px solid var(--menulistbackground-primary-border-color);
   }
 
-  &[data-color="secondary"] {
+  &[data-color='secondary'] {
     background: var(--menulistbackground-secondary-background);
-    border: 1px solid var(--menulistbackground-secondary-border);
+    border: 1px solid var(--menulistbackground-secondary-border-color);
   }
 
-  &[data-color="tertiary"] {
+  &[data-color='tertiary'] {
     background: var(--menulistbackground-tertiary-background);
-    border: 1px solid var(--menulistbackground-tertiary-border);
+    border: 1px solid var(--menulistbackground-tertiary-border-color);
   }
 }
