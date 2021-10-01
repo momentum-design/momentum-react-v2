@@ -1,7 +1,7 @@
 .md-modal-arrow-wrapper {
   path {
     stroke: rgba(0, 0, 0, 0.2); // IEFIX
-    stroke: var(--menulistbackground-primary-border);
+    stroke: var(--menulistbackground-primary-border-color);
     stroke-width: 0.125rem;
 
     &[data-color='primary'] {

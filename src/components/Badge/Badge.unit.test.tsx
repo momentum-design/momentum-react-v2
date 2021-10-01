@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Badge from '.';
-
+import { mountAndWait } from '../../../test/utils';
 import { SIZES, STYLE } from './Badge.constants';
 
 describe('Badge', () => {
@@ -14,10 +14,10 @@ describe('Badge', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size 12', () => {
+    it('should match snapshot with size 12', async () => {
       expect.assertions(1);
       const size = 12;
-      container = mount(<Badge data-size={size} />);
+      container = await mountAndWait(<Badge data-size={size} />);
 
       expect(container).toMatchSnapshot();
     });

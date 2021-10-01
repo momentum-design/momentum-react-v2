@@ -9,15 +9,19 @@
     "jsx": "react",
     "moduleResolution": "node",
     "outDir": "./dist/esm",
+    "baseUrl": ".",
     "paths": {
-      "@momentum-ui/react": ["./src"]
+      "@momentum-ui/react": [
+        "./src"
+      ]
     },
     "preserveConstEnums": true,
     "removeComments": false,
     "sourceMap": true,
     "target": "ES6",
     "lib": [
-      "ESNext", "DOM"
+      "ESNext",
+      "DOM"
     ]
   },
   "include": [

@@ -92,6 +92,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
           disallowEmptySelection
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={state.focusStrategy || DEFAULTS.SHOULD_AUTOFOCUS}
+          className={STYLE.menuListBox}
         />
         {/* Invisible button for accessibility */}
         <DismissButton onDismiss={() => state.close()} />
