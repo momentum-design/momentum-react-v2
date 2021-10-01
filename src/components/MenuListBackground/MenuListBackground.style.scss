@@ -6,6 +6,8 @@
   box-sizing: border-box;
   box-shadow: var(--md-globals-elevation-4);
   outline: none;
+  max-height: 30rem;
+  overflow-y: auto;
 
   &[data-color='primary'] {
     background: var(--menulistbackground-primary-background);

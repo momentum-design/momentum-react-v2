@@ -310,24 +310,28 @@
     font-size: 1rem;
     height: 2.5rem;
     padding: 0 1rem;
+    line-height: 2.5rem;
   }
 
   &[data-size='32'] {
     font-size: 1rem;
     height: 2rem;
     padding: 0 0.75rem;
+    line-height: 2rem;
   }
 
   &[data-size='28'] {
     font-size: 0.75rem;
     height: 1.75rem;
     padding: 0 0.625rem;
+    line-height: 1.75rem;
   }
 
   &[data-size='24'] {
     font-size: 0.75rem;
     height: 1.5rem;
     padding: 0 0.625rem;
+    line-height: 1.5rem;
   }
 
   &[data-size='20'] {

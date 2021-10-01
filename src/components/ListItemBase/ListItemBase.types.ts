@@ -1,8 +1,9 @@
 import { CSSProperties, ReactNode } from 'react';
+import { PressEvents } from '@react-types/shared';
 
 export type ListItemBaseSize = 32 | 40 | 50 | 70;
 
-export interface Props {
+export interface Props extends PressEvents {
   /**
    * className prop description
    * Child components of this ButtonPill.
@@ -29,6 +30,12 @@ export interface Props {
    * @default false
    */
   isDisabled?: boolean;
+
+  /**
+   * Determines if this item is selected
+   * @default false
+   */
+  isSelected?: boolean;
 
   /**
    * Determines if this item is padded
