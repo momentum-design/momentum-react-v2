@@ -31,7 +31,7 @@ const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConvert
   const { children, className, fontStyle = 'body-primary' } = props;
   const isElement = isValidElement(children);
 
-  const addedProps: { className?: string; type?: FontStyle } = { type: fontStyle };
+  const addedProps: { className?: string } = {};
 
   if (className) {
     addedProps.className = isElement ? classNames(children.classNames, className) : className;
@@ -40,7 +40,9 @@ const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConvert
   return isElement ? (
     React.cloneElement(children, { ...addedProps })
   ) : (
-    <Text {...addedProps}>{children}</Text>
+    <Text {...addedProps} type={fontStyle}>
+      {children}
+    </Text>
   );
 };
 
