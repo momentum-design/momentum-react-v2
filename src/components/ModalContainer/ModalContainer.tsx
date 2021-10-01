@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './ModalContainer.constants';
@@ -8,7 +8,7 @@ import './ModalContainer.style.scss';
 /**
  * The ModalContainer component.
  */
-const ModalContainer: FC<Props> = (props: Props) => {
+const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>): JSX.Element => {
   const { className, children, color, elevation, id, isPadded, radius, style } = props;
 
   return (
@@ -20,10 +20,14 @@ const ModalContainer: FC<Props> = (props: Props) => {
       data-radius={radius || DEFAULTS.RADIUS}
       id={id}
       style={style}
+      ref={ref}
     >
       {children}
     </div>
   );
 };
 
-export default ModalContainer;
+const _ModalContainer = forwardRef(ModalContainer);
+_ModalContainer.displayName = 'ModalContainer';
+
+export default _ModalContainer;

@@ -7,7 +7,7 @@ import { Props } from './MenuSection.types';
 import './MenuSection.style.scss';
 import MenuItem from '../MenuItem';
 import { useMenuSection } from '@react-aria/menu';
-import { useSeparator } from '@react-aria/separator';
+import ContentSeparator from '../ContentSeparator';
 
 const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction } = props;
@@ -17,15 +17,9 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
     'aria-label': item['aria-label'],
   });
 
-  const { separatorProps } = useSeparator({
-    elementType: 'li',
-  });
-
   return (
     <>
-      {item.key !== state.collection.getFirstKey() && (
-        <li {...separatorProps} className={STYLE.separator} />
-      )}
+      {item.key !== state.collection.getFirstKey() && <ContentSeparator />}
       <li {...itemProps}>
         {item.rendered && (
           <span {...headingProps} className={STYLE.header}>
@@ -33,7 +27,7 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
           </span>
         )}
         <ul {...groupProps} className={STYLE.wrapper}>
-          {[...item.childNodes].map((node) => (
+          {Array.from(item.childNodes).map((node) => (
             <MenuItem key={node.key} item={node} state={state} onAction={onAction} />
           ))}
         </ul>

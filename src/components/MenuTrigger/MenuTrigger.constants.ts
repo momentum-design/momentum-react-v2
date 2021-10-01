@@ -7,7 +7,6 @@ const DEFAULTS = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  separator: `${CLASS_PREFIX}-separator`,
   overlay: `${CLASS_PREFIX}-overlay`,
 };
 

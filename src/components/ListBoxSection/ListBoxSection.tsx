@@ -5,9 +5,9 @@ import './ListBoxSection.style.scss';
 import { Props } from './ListBoxSection.types';
 import { STYLE } from './ListBoxSection.constants';
 import { useListBoxSection } from '@react-aria/listbox';
-import { useSeparator } from '@react-aria/separator';
 import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 import ListBoxItem from '../ListBoxItem';
+import ContentSeparator from '../ContentSeparator';
 
 const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
   const { section } = props;
@@ -17,20 +17,11 @@ const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
     'aria-label': section['aria-label'],
   });
 
-  const { separatorProps } = useSeparator({
-    elementType: 'div',
-  });
-
   const state = useContext(ListBoxContext);
 
-  // If the section is not the first, add a separator element.
-  // The heading is rendered inside an <li> element, which contains
-  // a <ul> with the child items.
   return (
     <>
-      {section.key !== state.collection.getFirstKey() && (
-        <div {...separatorProps} className={STYLE.separator} />
-      )}
+      {section.key !== state.collection.getFirstKey() && <ContentSeparator />}
       <li {...itemProps}>
         {section.rendered && (
           <div {...headingProps} className={STYLE.wrapper}>

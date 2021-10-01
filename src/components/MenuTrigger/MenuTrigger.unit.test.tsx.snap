@@ -1051,11 +1051,14 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   </MenuItem>
                 </ul>
               </_Menu>
-              <li
-                className="md-menu-trigger-separator"
+              <ContentSeparator
                 key="separator-0"
-                role="separator"
-              />
+              >
+                <li
+                  className="md-content-separator-wrapper"
+                  role="separator"
+                />
+              </ContentSeparator>
               <_Menu
                 key=".$4"
                 selectionMode="multiple"
@@ -2853,11 +2856,14 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   </MenuItem>
                 </ul>
               </_Menu>
-              <li
-                className="md-menu-trigger-separator"
+              <ContentSeparator
                 key="separator-0"
-                role="separator"
-              />
+              >
+                <li
+                  className="md-content-separator-wrapper"
+                  role="separator"
+                />
+              </ContentSeparator>
               <_Menu
                 key=".$4"
                 selectionMode="multiple"
@@ -4712,11 +4718,14 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   </MenuItem>
                 </ul>
               </_Menu>
-              <li
-                className="md-menu-trigger-separator"
+              <ContentSeparator
                 key="separator-0"
-                role="separator"
-              />
+              >
+                <li
+                  className="md-content-separator-wrapper"
+                  role="separator"
+                />
+              </ContentSeparator>
               <_Menu
                 key=".$4"
                 selectionMode="multiple"
@@ -6513,11 +6522,14 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   </MenuItem>
                 </ul>
               </_Menu>
-              <li
-                className="md-menu-trigger-separator"
+              <ContentSeparator
                 key="separator-0"
-                role="separator"
-              />
+              >
+                <li
+                  className="md-content-separator-wrapper"
+                  role="separator"
+                />
+              </ContentSeparator>
               <_Menu
                 key=".$4"
                 selectionMode="multiple"
@@ -8435,11 +8447,14 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                   </MenuItem>
                 </ul>
               </_Menu>
-              <li
-                className="md-menu-trigger-separator"
+              <ContentSeparator
                 key="separator-0"
-                role="separator"
-              />
+              >
+                <li
+                  className="md-content-separator-wrapper"
+                  role="separator"
+                />
+              </ContentSeparator>
               <_Menu
                 key=".$4"
                 selectionMode="multiple"

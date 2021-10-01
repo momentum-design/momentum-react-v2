@@ -2,32 +2,26 @@
 
 exports[`ContentSeparator snapshot should match snapshot when another component is used 1`] = `
 <ContentSeparator>
-  <div
+  <li
     className="md-content-separator-wrapper"
+    role="separator"
   >
-    <div
-      className=""
-    >
+    <div>
       <div>
-        <div>
-          Some nested text
-        </div>
+        Some nested text
       </div>
     </div>
-  </div>
+  </li>
 </ContentSeparator>
 `;
 
 exports[`ContentSeparator snapshot should match snapshot when text is used 1`] = `
 <ContentSeparator>
-  <div
+  <li
     className="md-content-separator-wrapper"
+    role="separator"
   >
-    <div
-      className=""
-    >
-      hello
-    </div>
-  </div>
+    hello
+  </li>
 </ContentSeparator>
 `;

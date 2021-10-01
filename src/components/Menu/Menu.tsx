@@ -50,17 +50,23 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
             return (
               <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />
             );
+          } else {
+            // collection.getKeys() return all keys (including sub-keys of child elements)
+            // and we don't want to render items twice
+            if (item.parentKey !== null) {
+              return;
+            }
+
+            let menuItem = (
+              <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
+            );
+
+            if (item.wrapper) {
+              menuItem = item.wrapper(menuItem);
+            }
+
+            return menuItem;
           }
-
-          let menuItem = (
-            <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
-          );
-
-          if (item.wrapper) {
-            menuItem = item.wrapper(menuItem);
-          }
-
-          return menuItem;
         })}
       </ul>
     </MenuAppearanceContext.Provider>
