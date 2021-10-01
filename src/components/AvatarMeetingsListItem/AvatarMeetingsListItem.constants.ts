@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-avatar-list-item';
+const CLASS_PREFIX = 'md-avatar-meetings-list-item';
 
 const SCHEDULER_STATES = {
   available: 'available',

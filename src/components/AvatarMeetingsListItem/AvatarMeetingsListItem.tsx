@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import { DEFAULTS, SCHEDULER_STATES, STYLE } from './AvatarListItem.constants';
-import { AvatarListItemActions, Props } from './AvatarListItem.types';
-import './AvatarListItem.style.scss';
+import { DEFAULTS, SCHEDULER_STATES, STYLE } from './AvatarMeetingsListItem.constants';
+import { AvatarMeetingsListItemActions, Props } from './AvatarMeetingsListItem.types';
+import './AvatarMeetingsListItem.style.scss';
 import ListItemBase from '../ListItemBase';
 import ListItemBaseSection from '../ListItemBaseSection';
 import Avatar from '../Avatar';
@@ -13,9 +13,9 @@ import ButtonCircle from '../ButtonCircle';
 import { useHover } from '@react-aria/interactions';
 
 /**
- * Avatar List Item component used in in-meeting experience participants lists.
+ * Avatar Meetings List Item component used in in-meeting experience participants lists.
  */
-const AvatarListItem: FC<Props> = (props: Props) => {
+const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
   const {
     className,
     id,
@@ -38,9 +38,9 @@ const AvatarListItem: FC<Props> = (props: Props) => {
   let displayMuteAction = false;
 
   if (displayActions && Array.isArray(displayActions)) {
-    displayHoverAction = displayActions.includes(AvatarListItemActions.closeOnHover);
-    displayMoreAction = displayActions.includes(AvatarListItemActions.more);
-    displayMuteAction = displayActions.includes(AvatarListItemActions.mute);
+    displayHoverAction = displayActions.includes(AvatarMeetingsListItemActions.closeOnHover);
+    displayMoreAction = displayActions.includes(AvatarMeetingsListItemActions.more);
+    displayMuteAction = displayActions.includes(AvatarMeetingsListItemActions.mute);
   }
 
   const renderSchedulerIcon = () => {
@@ -129,4 +129,4 @@ const AvatarListItem: FC<Props> = (props: Props) => {
   );
 };
 
-export default AvatarListItem;
+export default AvatarMeetingsListItem;

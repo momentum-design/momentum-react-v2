@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
-<AvatarListItem>
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
+<AvatarMeetingsListItem>
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -16,7 +16,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -51,11 +51,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -71,11 +71,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -83,11 +83,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarProps 1`] = `
+<AvatarMeetingsListItem
   avatarProps={
     Object {
       "presence": "active",
@@ -96,7 +96,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
   }
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -109,7 +109,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -174,11 +174,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -194,11 +194,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -206,15 +206,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with className 1`] = `
+<AvatarMeetingsListItem
   className="example-class"
 >
   <ListItemBase
-    className="example-class md-avatar-list-item-wrapper"
+    className="example-class md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -227,7 +227,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="example-class md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="example-class md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -262,11 +262,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -282,11 +282,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -294,11 +294,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreAction 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayMoreAction 1`] = `
+<AvatarMeetingsListItem
   displayActions={
     Array [
       "more",
@@ -306,7 +306,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
   }
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -319,7 +319,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -354,11 +354,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -374,11 +374,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             >
               <ButtonCircle
@@ -445,11 +445,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteAction && !isMuted 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayMuteAction && !isMuted 1`] = `
+<AvatarMeetingsListItem
   displayActions={
     Array [
       "mute",
@@ -458,7 +458,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
   isMuted={false}
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -471,7 +471,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -506,11 +506,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -526,11 +526,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             >
               <ButtonCircle
@@ -602,11 +602,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteAction 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayMuteAction 1`] = `
+<AvatarMeetingsListItem
   displayActions={
     Array [
       "mute",
@@ -614,7 +614,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
   }
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -627,7 +627,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -662,11 +662,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -682,11 +682,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             >
               <ButtonCircle
@@ -758,15 +758,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLine 1`] = `
+<AvatarMeetingsListItem
   firstLine="firstLine"
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -779,7 +779,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -814,11 +814,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -836,11 +836,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -848,15 +848,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] = `
+<AvatarMeetingsListItem
   id="example-id"
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     id="example-id"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -870,7 +870,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -906,11 +906,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -926,11 +926,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -938,15 +938,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = available 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with scheduler state = available 1`] = `
+<AvatarMeetingsListItem
   schedulerState="available"
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -959,7 +959,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -994,11 +994,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <Icon
@@ -1040,11 +1040,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -1052,15 +1052,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = quiet-hours 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with scheduler state = quiet-hours 1`] = `
+<AvatarMeetingsListItem
   schedulerState="quiet-hours"
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -1073,7 +1073,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -1108,11 +1108,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <Icon
@@ -1154,11 +1154,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -1166,15 +1166,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = unavailable 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with scheduler state = unavailable 1`] = `
+<AvatarMeetingsListItem
   schedulerState="unavailable"
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -1187,7 +1187,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -1222,11 +1222,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <Icon
@@ -1268,11 +1268,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -1280,15 +1280,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state = unknown 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with scheduler state = unknown 1`] = `
+<AvatarMeetingsListItem
   schedulerState="unknown"
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -1301,7 +1301,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -1336,11 +1336,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <Icon
@@ -1382,11 +1382,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -1394,15 +1394,15 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLine 1`] = `
+<AvatarMeetingsListItem
   secondLine="secondLine"
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -1415,7 +1415,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -1450,11 +1450,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -1480,11 +1480,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -1492,11 +1492,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
 
-exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
-<AvatarListItem
+exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`] = `
+<AvatarMeetingsListItem
   style={
     Object {
       "color": "pink",
@@ -1504,7 +1504,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ListItemBase
-    className="md-avatar-list-item-wrapper"
+    className="md-avatar-meetings-list-item-wrapper"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onTouchStart={[Function]}
@@ -1522,7 +1522,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <li
-          className="md-avatar-list-item-wrapper md-list-item-base-wrapper"
+          className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -1562,11 +1562,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-text-wrapper"
+            className="md-avatar-meetings-list-item-text-wrapper"
             position="middle"
           >
             <div
-              className="md-avatar-list-item-text-wrapper"
+              className="md-avatar-meetings-list-item-text-wrapper"
               data-position="middle"
             >
               <div>
@@ -1582,11 +1582,11 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-avatar-list-item-actions-wrapper"
+            className="md-avatar-meetings-list-item-actions-wrapper"
             position="end"
           >
             <div
-              className="md-avatar-list-item-actions-wrapper"
+              className="md-avatar-meetings-list-item-actions-wrapper"
               data-position="end"
             />
           </ListItemBaseSection>
@@ -1594,5 +1594,5 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
       </FocusRing>
     </FocusRing>
   </ListItemBase>
-</AvatarListItem>
+</AvatarMeetingsListItem>
 `;
