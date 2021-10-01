@@ -1,6 +1,13 @@
-import { Color, Elevation } from './ModalContainer.types';
+import { Arrow, Color, Elevation, Round } from './ModalContainer.types';
 
 const CLASS_PREFIX = 'md-modal-container';
+
+const ARROWS: Record<string, Arrow> = {
+  BOTTOM: 'bottom',
+  LEFT: 'left',
+  RIGHT: 'right',
+  TOP: 'top',
+};
 
 const COLORS: Record<string, Color> = {
   PRIMARY: 'primary',
@@ -21,13 +28,25 @@ const ELEVATIONS: Record<number, Elevation> = {
   8: 8,
 };
 
+const ROUNDS: Record<number, Round> = {
+  0: 0,
+  25: 25,
+  50: 50,
+  75: 75,
+  100: 100,
+  125: 125,
+  150: 150,
+};
+
 const DEFAULTS = {
   COLOR: COLORS.PRIMARY,
   ELEVATION: ELEVATIONS[0],
+  ROUND: ROUNDS[0],
 };
 
 const STYLE = {
+  content: `${CLASS_PREFIX}-content`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
-export { CLASS_PREFIX, COLORS, DEFAULTS, ELEVATIONS, STYLE };
+export { ARROWS, CLASS_PREFIX, COLORS, DEFAULTS, ELEVATIONS, ROUNDS, STYLE };
