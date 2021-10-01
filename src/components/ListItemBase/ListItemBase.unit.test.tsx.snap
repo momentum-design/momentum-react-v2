@@ -14,7 +14,19 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
       >
         Test
@@ -40,7 +52,19 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
       >
         Test
@@ -67,7 +91,19 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
         data-size={40}
         id="example-id"
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
       >
         Test
@@ -93,7 +129,57 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="listitem"
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
+<ListItemBase
+  isSelected={true}
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <li
+        className="md-list-item-base-wrapper active"
+        data-disabled={false}
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
       >
         Test
@@ -119,7 +205,19 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="role"
       >
         Test
@@ -145,7 +243,19 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
         data-shape="isPilled"
         data-size={50}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
       >
         Test
@@ -171,7 +281,19 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
       >
         Test
@@ -201,7 +323,19 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
         style={
           Object {

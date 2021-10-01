@@ -14,9 +14,9 @@ const messagePriority = {
   error: 3,
 };
 
-const determineMessageLevel = (array) => {
-  return array.reduce((agg, e) => {
-    return messagePriority[agg] > messagePriority[e.type] ? agg : e.level || 'none';
+const determineMessageLevel = (array: Message[]): MessageLevel => {
+  return array.reduce((agg, e: Message) => {
+    return messagePriority[agg] > messagePriority[e.level] ? agg : e.level || 'none';
   }, 'none');
 };
 

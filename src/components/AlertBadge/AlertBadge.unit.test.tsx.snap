@@ -138,9 +138,16 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
         type="button"
       >
         <PrimitiveConverter>
-          <div>
-            Example Text
-          </div>
+          <Text
+            type="body-primary"
+          >
+            <p
+              className="md-text-wrapper md-text-color"
+              data-type="body-primary"
+            >
+              Example Text
+            </p>
+          </Text>
         </PrimitiveConverter>
       </button>
     </FocusRing>

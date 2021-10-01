@@ -2,7 +2,7 @@ import Select from '.';
 import React from 'react';
 import { Item } from '@react-stately/collections';
 import { DIRECTIONS, STYLE } from './Select.constants';
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, triggerPress, waitForComponentToPaint } from '../../../test/utils';
 import ListBoxBase from '../ListBoxBase';
 
 jest.mock('@react-aria/utils');
@@ -148,6 +148,26 @@ describe('Select', () => {
         </Select>
       );
 
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot before and after opening select dropdown', async () => {
+      expect.assertions(2);
+
+      container = await mountAndWait(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      const button = container.find('.md-select-dropdown-input');
+
+      triggerPress(button);
+
+      await waitForComponentToPaint(container);
       expect(container).toMatchSnapshot();
     });
   });
