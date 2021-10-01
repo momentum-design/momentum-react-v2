@@ -20,6 +20,7 @@ const STYLE = {
   iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
   selectedItemWrapper: `${CLASS_PREFIX}-selected-item-wrapper`,
   overlay: `${CLASS_PREFIX}-overlay`,
+  menuListBox: `${CLASS_PREFIX}-menu-listbox`,
 };
 
 const SELECT_HEIGHT_ADJUST_BORDER = 2; // 2px extra because of the border(top, down);
