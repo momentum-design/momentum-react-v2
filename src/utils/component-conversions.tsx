@@ -1,7 +1,7 @@
 import React, { FC, isValidElement } from 'react';
 import classNames from 'classnames';
 import Text from '../components/Text';
-import { FontStyle } from 'src/components/Text/Text.types';
+import { FontStyle } from '../components/Text/Text.types';
 
 export interface PrimativeConverterProps {
   /**

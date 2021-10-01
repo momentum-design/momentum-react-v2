@@ -17,7 +17,11 @@ const Tab: FC<Props> = (props: Props) => {
       data-active={(!disabled && active) || DEFAULTS.ACTIVE}
       data-disabled={disabled || DEFAULTS.DISABLED}
     >
-      <PrimitiveConverter fontStyle="subheader-secondary">{children}</PrimitiveConverter>
+      {typeof children === 'string' ? (
+        <PrimitiveConverter fontStyle="subheader-secondary">{children}</PrimitiveConverter>
+      ) : (
+        children
+      )}
     </ButtonSimple>
   );
 };

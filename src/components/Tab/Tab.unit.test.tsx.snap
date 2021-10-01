@@ -32,30 +32,17 @@ exports[`<Tab /> snapshot Badge children should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Badge
+            key="1"
+            size={18}
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Badge
-                  key="1"
-                  size={18}
-                >
-                  <div
-                    className="md-badge-wrapper"
-                    data-size={18}
-                  >
-                    2
-                  </div>
-                </Badge>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              2
+            </div>
+          </Badge>
         </button>
       </FocusRing>
     </FocusRing>
@@ -97,30 +84,17 @@ exports[`<Tab /> snapshot Badge children should match snapshot with active 1`] =
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Badge
+            key="5"
+            size={18}
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Badge
-                  key="5"
-                  size={18}
-                >
-                  <div
-                    className="md-badge-wrapper"
-                    data-size={18}
-                  >
-                    2
-                  </div>
-                </Badge>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              2
+            </div>
+          </Badge>
         </button>
       </FocusRing>
     </FocusRing>
@@ -162,30 +136,17 @@ exports[`<Tab /> snapshot Badge children should match snapshot with className 1`
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Badge
+            key="2"
+            size={18}
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Badge
-                  key="2"
-                  size={18}
-                >
-                  <div
-                    className="md-badge-wrapper"
-                    data-size={18}
-                  >
-                    2
-                  </div>
-                </Badge>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              2
+            </div>
+          </Badge>
         </button>
       </FocusRing>
     </FocusRing>
@@ -227,30 +188,17 @@ exports[`<Tab /> snapshot Badge children should match snapshot with disabled 1`]
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Badge
+            key="6"
+            size={18}
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Badge
-                  key="6"
-                  size={18}
-                >
-                  <div
-                    className="md-badge-wrapper"
-                    data-size={18}
-                  >
-                    2
-                  </div>
-                </Badge>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              2
+            </div>
+          </Badge>
         </button>
       </FocusRing>
     </FocusRing>
@@ -294,30 +242,17 @@ exports[`<Tab /> snapshot Badge children should match snapshot with id 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Badge
+            key="3"
+            size={18}
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Badge
-                  key="3"
-                  size={18}
-                >
-                  <div
-                    className="md-badge-wrapper"
-                    data-size={18}
-                  >
-                    2
-                  </div>
-                </Badge>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              2
+            </div>
+          </Badge>
         </button>
       </FocusRing>
     </FocusRing>
@@ -373,30 +308,17 @@ exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = 
           }
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Badge
+            key="4"
+            size={18}
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Badge
-                  key="4"
-                  size={18}
-                >
-                  <div
-                    className="md-badge-wrapper"
-                    data-size={18}
-                  >
-                    2
-                  </div>
-                </Badge>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              2
+            </div>
+          </Badge>
         </button>
       </FocusRing>
     </FocusRing>
@@ -436,41 +358,28 @@ exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Icon
+            key="0"
+            name="plus"
+            scale={12}
+            weight="bold"
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-icon-wrapper"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Icon
-                  key="0"
-                  name="plus"
-                  scale={12}
-                  weight="bold"
-                >
-                  <div
-                    className="md-icon-wrapper"
-                  >
-                    <svg
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      fill="currentColor"
-                      height="100%"
-                      stroke="currentColor"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -512,41 +421,28 @@ exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = 
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Icon
+            key="4"
+            name="plus"
+            scale={12}
+            weight="bold"
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-icon-wrapper"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Icon
-                  key="4"
-                  name="plus"
-                  scale={12}
-                  weight="bold"
-                >
-                  <div
-                    className="md-icon-wrapper"
-                  >
-                    <svg
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      fill="currentColor"
-                      height="100%"
-                      stroke="currentColor"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -588,41 +484,28 @@ exports[`<Tab /> snapshot Icon children should match snapshot with className 1`]
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Icon
+            key="1"
+            name="plus"
+            scale={12}
+            weight="bold"
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-icon-wrapper"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Icon
-                  key="1"
-                  name="plus"
-                  scale={12}
-                  weight="bold"
-                >
-                  <div
-                    className="md-icon-wrapper"
-                  >
-                    <svg
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      fill="currentColor"
-                      height="100%"
-                      stroke="currentColor"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -664,41 +547,28 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Icon
+            key="5"
+            name="plus"
+            scale={12}
+            weight="bold"
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-icon-wrapper"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Icon
-                  key="5"
-                  name="plus"
-                  scale={12}
-                  weight="bold"
-                >
-                  <div
-                    className="md-icon-wrapper"
-                  >
-                    <svg
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      fill="currentColor"
-                      height="100%"
-                      stroke="currentColor"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -742,41 +612,28 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Icon
+            key="2"
+            name="plus"
+            scale={12}
+            weight="bold"
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-icon-wrapper"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Icon
-                  key="2"
-                  name="plus"
-                  scale={12}
-                  weight="bold"
-                >
-                  <div
-                    className="md-icon-wrapper"
-                  >
-                    <svg
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      fill="currentColor"
-                      height="100%"
-                      stroke="currentColor"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -832,41 +689,28 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
           }
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Icon
+            key="3"
+            name="plus"
+            scale={12}
+            weight="bold"
           >
-            <Text
-              type="subheader-secondary"
+            <div
+              className="md-icon-wrapper"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Icon
-                  key="3"
-                  name="plus"
-                  scale={12}
-                  weight="bold"
-                >
-                  <div
-                    className="md-icon-wrapper"
-                  >
-                    <svg
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      fill="currentColor"
-                      height="100%"
-                      stroke="currentColor"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -906,30 +750,17 @@ exports[`<Tab /> snapshot Text children should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Text
+            key="1"
+            type="subheader-secondary"
           >
-            <Text
-              type="subheader-secondary"
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Text
-                  key="1"
-                  type="subheader-secondary"
-                >
-                  <h3
-                    className="md-text-wrapper md-text-color"
-                    data-type="subheader-secondary"
-                  >
-                    Example Text
-                  </h3>
-                </Text>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              Example Text
+            </h3>
+          </Text>
         </button>
       </FocusRing>
     </FocusRing>
@@ -971,30 +802,17 @@ exports[`<Tab /> snapshot Text children should match snapshot with active 1`] = 
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Text
+            key="5"
+            type="subheader-secondary"
           >
-            <Text
-              type="subheader-secondary"
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Text
-                  key="5"
-                  type="subheader-secondary"
-                >
-                  <h3
-                    className="md-text-wrapper md-text-color"
-                    data-type="subheader-secondary"
-                  >
-                    Example Text
-                  </h3>
-                </Text>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              Example Text
+            </h3>
+          </Text>
         </button>
       </FocusRing>
     </FocusRing>
@@ -1036,30 +854,17 @@ exports[`<Tab /> snapshot Text children should match snapshot with className 1`]
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Text
+            key="2"
+            type="subheader-secondary"
           >
-            <Text
-              type="subheader-secondary"
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Text
-                  key="2"
-                  type="subheader-secondary"
-                >
-                  <h3
-                    className="md-text-wrapper md-text-color"
-                    data-type="subheader-secondary"
-                  >
-                    Example Text
-                  </h3>
-                </Text>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              Example Text
+            </h3>
+          </Text>
         </button>
       </FocusRing>
     </FocusRing>
@@ -1101,30 +906,17 @@ exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] 
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Text
+            key="6"
+            type="subheader-secondary"
           >
-            <Text
-              type="subheader-secondary"
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Text
-                  key="6"
-                  type="subheader-secondary"
-                >
-                  <h3
-                    className="md-text-wrapper md-text-color"
-                    data-type="subheader-secondary"
-                  >
-                    Example Text
-                  </h3>
-                </Text>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              Example Text
+            </h3>
+          </Text>
         </button>
       </FocusRing>
     </FocusRing>
@@ -1168,30 +960,17 @@ exports[`<Tab /> snapshot Text children should match snapshot with id 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Text
+            key="3"
+            type="subheader-secondary"
           >
-            <Text
-              type="subheader-secondary"
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Text
-                  key="3"
-                  type="subheader-secondary"
-                >
-                  <h3
-                    className="md-text-wrapper md-text-color"
-                    data-type="subheader-secondary"
-                  >
-                    Example Text
-                  </h3>
-                </Text>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              Example Text
+            </h3>
+          </Text>
         </button>
       </FocusRing>
     </FocusRing>
@@ -1247,30 +1026,17 @@ exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
           }
           type="button"
         >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
+          <Text
+            key="4"
+            type="subheader-secondary"
           >
-            <Text
-              type="subheader-secondary"
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
             >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              >
-                <Text
-                  key="4"
-                  type="subheader-secondary"
-                >
-                  <h3
-                    className="md-text-wrapper md-text-color"
-                    data-type="subheader-secondary"
-                  >
-                    Example Text
-                  </h3>
-                </Text>
-              </h3>
-            </Text>
-          </PrimitiveConverter>
+              Example Text
+            </h3>
+          </Text>
         </button>
       </FocusRing>
     </FocusRing>
@@ -1364,20 +1130,7 @@ exports[`<Tab /> snapshot string children should match snapshot with active 1`] 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           type="button"
-        >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
-          >
-            <Text
-              type="subheader-secondary"
-            >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              />
-            </Text>
-          </PrimitiveConverter>
-        </button>
+        />
       </FocusRing>
     </FocusRing>
   </ButtonSimple>
@@ -1417,20 +1170,7 @@ exports[`<Tab /> snapshot string children should match snapshot with className 1
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           type="button"
-        >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
-          >
-            <Text
-              type="subheader-secondary"
-            >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              />
-            </Text>
-          </PrimitiveConverter>
-        </button>
+        />
       </FocusRing>
     </FocusRing>
   </ButtonSimple>
@@ -1470,20 +1210,7 @@ exports[`<Tab /> snapshot string children should match snapshot with disabled 1`
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           type="button"
-        >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
-          >
-            <Text
-              type="subheader-secondary"
-            >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              />
-            </Text>
-          </PrimitiveConverter>
-        </button>
+        />
       </FocusRing>
     </FocusRing>
   </ButtonSimple>
@@ -1525,20 +1252,7 @@ exports[`<Tab /> snapshot string children should match snapshot with id 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           type="button"
-        >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
-          >
-            <Text
-              type="subheader-secondary"
-            >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              />
-            </Text>
-          </PrimitiveConverter>
-        </button>
+        />
       </FocusRing>
     </FocusRing>
   </ButtonSimple>
@@ -1592,20 +1306,7 @@ exports[`<Tab /> snapshot string children should match snapshot with style 1`] =
             }
           }
           type="button"
-        >
-          <PrimitiveConverter
-            fontStyle="subheader-secondary"
-          >
-            <Text
-              type="subheader-secondary"
-            >
-              <h3
-                className="md-text-wrapper md-text-color"
-                data-type="subheader-secondary"
-              />
-            </Text>
-          </PrimitiveConverter>
-        </button>
+        />
       </FocusRing>
     </FocusRing>
   </ButtonSimple>
