@@ -2,7 +2,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import NavigationTab, { NAVIGATION_TAB_CONSTANTS as CONSTANTS } from './';
-import { DEFAULTS, STYLE } from './NavigationTab.constants';
+import { DEFAULTS, STYLE, SIZES } from './NavigationTab.constants';
+import { NavTabSize } from './NavigationTab.types';
 import { mountAndWait } from '../../../test/utils';
 
 describe('<NavigationTab />', () => {
@@ -48,9 +49,10 @@ describe('<NavigationTab />', () => {
     it('should match snapshot with size', async () => {
       expect.assertions(1);
 
-      const size = 200;
-
-      const container = await mountAndWait(<NavigationTab size={size} />);
+      const sizes = Object.values(SIZES).map((size, index) => {
+        return <NavigationTab key={index} size={size as NavTabSize} />;
+      });
+      const container = await mountAndWait(<div>{sizes}</div>);
 
       expect(container).toMatchSnapshot();
     });

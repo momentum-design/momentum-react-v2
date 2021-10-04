@@ -33,7 +33,7 @@ export interface Props extends AriaButtonProps {
   icon?: string;
 
   /**
-   * Child components of this ButtonPill.
+   * The amount inside the badge of components of this NavTab. If 0, then it is not shown.
    */
   count?: number;
 
@@ -42,3 +42,5 @@ export interface Props extends AriaButtonProps {
    */
   active?: boolean;
 }
+
+export type NavTabSize = 48 | 200;

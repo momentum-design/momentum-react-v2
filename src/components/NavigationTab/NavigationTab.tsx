@@ -33,7 +33,7 @@ const NavigationTab: FC<Props> = (props: Props) => {
 
   //If the count is 100 or more, the count displayed should be :).
   const countToDisplay = (n: number) => {
-    return n < 100 ? n.toString() : ':)';
+    return n < 100 ? n.toString() : '+99';
   };
 
   const badgeComponent =

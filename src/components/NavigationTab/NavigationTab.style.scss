@@ -1,123 +1,141 @@
 .md-navigation-tab-wrapper {
-    font-family: var(--md-globals-font-default);
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-    // ----- COLOR ----- //
+  font-family: CiscoSansTT; // IEFIX
+  font-family: var(--md-globals-font-default);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  // ----- COLOR ----- //
 
-    // Circle/Pill //
-    border-radius: 6rem;
-    outline: none;
-    border-color: rgba(0, 0, 0, 0);
-    background-color: var(--navigationtab-background);
+  // Circle/Pill //
+  border-radius: 6rem;
+  outline: none;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0); // IEFIX
+  background-color: var(--navigationtab-background);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.07);  // IEFIX
+    background-color: var(--navigationtab-background-hovered); 
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.2); // IEFIX
+    background-color: var(--navigationtab-background-active);
+  }
+
+  &[data-active=true]{
+    background-color: rgba(0, 0, 0, 0.2); // IEFIX
+    background-color: var(--navigationtab-background-active);
 
     &:hover {
-        background-color: var(--navigationtab-background-hovered); 
+      background-color: rgba(0, 0, 0, 0.2);  // IEFIX
+      background-color: var(--navigationtab-background-active); 
     }
 
     &:active {
-        background-color: var(--navigationtab-background-active);
+      background-color: rgba(0, 0, 0, 0.2); // IEFIX
+      background-color: var(--navigationtab-background-active);
+    }
+  }
+
+  // Icon //
+  > .md-navigation-tab-icon > * {
+    color: rgba(0, 0, 0, 0.6); // IEFIX
+    color: var(--navigationtab-text);
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6); // IEFIX
+      color: var(--navigationtab-text-hovered);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--navigationtab-text-active);
     }
 
     &[data-active=true]{
-        background-color: var(--navigationtab-background-active);
+      background-color: rgba(0, 0, 0, 0.95); // IEFIX
+      background-color: var(--navigationtab-text-active);
 
-        &:hover {
-            background-color: var(--navigationtab-background-active); 
-        }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.95);  // IEFIX
+        background-color: var(--navigationtab-text-active); 
+      }
 
-        &:active {
-            background-color: var(--navigationtab-background-active);
-        }
+      &:active {
+        background-color: rgba(0, 0, 0, 0.95); // IEFIX
+        background-color: var(--navigationtab-text-active);
+      }
+    }
+  }
+
+  // Label //
+  > .md-navigation-tab-label {
+    color: rgba(0, 0, 0, 0.6); // IEFIX
+    color: var(--navigationtab-text);
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6); // IEFIX
+      color: var(--navigationtab-text-hovered);
     }
 
-    // Icon //
-    > .md-navigation-tab-icon > * {
-        color: var(--navigationtab-text);
-
-        &:hover {
-            color: var(--navigationtab-text-hovered);
-        }
-
-        &:active {
-            color: var(--navigationtab-text-active);
-        }
-
-        &[data-active=true]{
-            background-color: var(--navigationtab-text-active);
-
-            &:hover {
-                background-color: var(--navigationtab-text-active); 
-            }
-
-            &:active {
-                background-color: var(--navigationtab-text-active);
-            }
-        }
+    &:active {
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--navigationtab-text-active);
     }
 
-    // Label //
-    > .md-navigation-tab-label {
-        color: var(--navigationtab-text);
+    &[data-active=true]{
+      background-color: rgba(0, 0, 0, 0.95); // IEFIX
+      background-color: var(--navigationtab-text-active);
 
-        &:hover {
-            color: var(--navigationtab-text-hovered);
-        }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.95);  // IEFIX
+        background-color: var(--navigationtab-text-active); 
+      }
 
-        &:active {
-            color: var(--navigationtab-text-active);
-        }
+      &:active {
+        background-color: rgba(0, 0, 0, 0.95); // IEFIX
+        background-color: var(--navigationtab-text-active);
+      }
+    }
+  }
 
-        &[data-active=true]{
-            background-color: var(--navigationtab-text-active);
+  // ----- SIZING & ALIGNMENT ----- //
 
-            &:hover {
-                background-color: var(--navigationtab-text-active); 
-            }
+  > .md-navigation-tab-label {
+    padding-left: 1rem;
+    padding-right: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-            &:active {
-                background-color: var(--navigationtab-text-active);
-            }
-        }
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &[data-size="48"] {
+    height: 3rem;
+    width: 3rem;
+    justify-content: center;
+
+    > .md-navigation-tab-count {
+      position: absolute;
+      left: 1.4rem;
+      top: 0.25rem;
+      }
+  }
+
+  &[data-size="200"] {
+    height: 3rem;
+    width: 100%;
+
+    > .md-navigation-tab-icon {
+      padding-left: 0.2rem;
     }
 
-    // ----- SIZING & ALIGNMENT ----- //
-
-    > .md-navigation-tab-label {
-        padding-left: 1rem;
-        padding-right: 2rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
+    > .md-navigation-tab-count {
+      position: absolute;
+      right: 0.75rem;
+      top: 0.75rem;
     }
-
-    display: flex;
-    position: relative;
-    align-items: center;
-
-    &[data-size="48"] {
-        height: 3rem;
-        width: 3rem;
-        justify-content: center;
-
-        > .md-navigation-tab-count {
-            position: absolute;
-            left: 1.4rem;
-            top: 0.25rem;
-        }
-    }
-
-    &[data-size="200"] {
-        height: 3rem;
-        width: 100%;
-
-        > .md-navigation-tab-icon {
-            padding-left: 0.2rem;
-        }
-
-        > .md-navigation-tab-count {
-            position: absolute;
-            right: 0.75rem;
-            top: 0.75rem;
-        }
-    }
+  }
 }
