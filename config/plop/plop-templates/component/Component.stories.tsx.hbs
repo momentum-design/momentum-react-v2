@@ -15,30 +15,34 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
-  args: { // Args provided to all stories by default.
-    children: 'A', // Example of a default arg for all stories.
-  },
 };
 
-/**
- * Primary story. This renders a single component with all external props.
- */
+// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<{{componentName}}Props>({{componentName}}).bind({});
 
 Example.argTypes = { ...argTypes };
 
+// TODO: Provide default arguments for this story here. These populate into the argument table for this component.
+Example.args = {
+  children: 'Example',
+};
+
 // TODO: Inject additional stories here.
 
-/**
- * Common variants story. This renders multiple variants of a single component.
- */
+// NOTE: Common variants story. This renders multiple variants of a single component.
 const Common = MultiTemplate<{{componentName}}Props>({{componentName}}).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
+// TODO: Provide default arguments for this story here. These populate into the argument table for this component for all variants.
+Common.args = {
+  children: 'Example',
+};
+
 Common.parameters = {
   variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
 };
 
+// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example, Common };

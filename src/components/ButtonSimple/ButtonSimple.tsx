@@ -11,7 +11,9 @@ import { Props } from './ButtonSimple.types';
 const ButtonSimple: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
     const { children, className, isDisabled, id, style } = props;
-    const ref = providedRef || useRef();
+    const internalRef = useRef();
+    const ref = providedRef || internalRef;
+
     const mutatedProps = {
       ...props,
     };

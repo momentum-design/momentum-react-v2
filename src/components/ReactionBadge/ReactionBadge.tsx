@@ -12,7 +12,9 @@ const ReactionBadge: FC<Props> = forwardRef(
     // for now children is the native emoji until i make the emoji/reaction component we discussed during
     // meeting today about mapping string -> SVG
     const { children, className, count, id, reacted, style, ...otherProps } = props;
-    const ref = providedRef || useRef();
+    const internalRef = useRef();
+    const ref = providedRef || internalRef;
+
     return (
       <ButtonPill
         className={classnames(className, STYLE.wrapper)}

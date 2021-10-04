@@ -14,7 +14,7 @@ import {
 
 import ListItemBaseSection from '../ListItemBaseSection';
 import { SHAPES, SIZES } from './ListItemBase.constants';
-
+import { action } from '@storybook/addon-actions';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import Avatar from '../Avatar';
@@ -45,6 +45,7 @@ const Example = Template((args) => (
             <ListItemBaseSection position="end">end</ListItemBaseSection>
           </>
         ),
+        onPress: () => action('onPress'),
       },
       {}
     )}
@@ -176,6 +177,28 @@ Shapes.parameters = {
             <ListItemBaseSection position="start">
               {shape === SHAPES.isPilled ? (
                 <Avatar title="John Adams" size={24} presence={PresenceType.Active} />
+              ) : (
+                <Icon name="placeholder" scale={16} />
+              )}
+            </ListItemBaseSection>
+            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+            <ListItemBaseSection position="end">
+              <Icon name="placeholder" scale={16} />
+            </ListItemBaseSection>
+          </>
+        ),
+      };
+    }),
+    ...Object.values(SHAPES).map((shape) => {
+      return {
+        isPadded: true,
+        shape,
+        label: `Padded Default Size List Item + Shape ${shape}`,
+        children: (
+          <>
+            <ListItemBaseSection position="start">
+              {shape === SHAPES.isPilled ? (
+                <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
               ) : (
                 <Icon name="placeholder" scale={16} />
               )}

@@ -44,7 +44,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
           type="button"
         >
           <PrimitiveConverter>
-            <div />
+            <Text
+              type="body-primary"
+            >
+              <p
+                className="md-text-wrapper md-text-color"
+                data-type="body-primary"
+              />
+            </Text>
           </PrimitiveConverter>
           <span />
         </button>
@@ -100,7 +107,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
           type="button"
         >
           <PrimitiveConverter>
-            <div />
+            <Text
+              type="body-primary"
+            >
+              <p
+                className="md-text-wrapper md-text-color"
+                data-type="body-primary"
+              />
+            </Text>
           </PrimitiveConverter>
           <span />
         </button>
@@ -156,7 +170,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with count 1`] = `
           type="button"
         >
           <PrimitiveConverter>
-            <div />
+            <Text
+              type="body-primary"
+            >
+              <p
+                className="md-text-wrapper md-text-color"
+                data-type="body-primary"
+              />
+            </Text>
           </PrimitiveConverter>
           <span>
             1
@@ -216,7 +237,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
           type="button"
         >
           <PrimitiveConverter>
-            <div />
+            <Text
+              type="body-primary"
+            >
+              <p
+                className="md-text-wrapper md-text-color"
+                data-type="body-primary"
+              />
+            </Text>
           </PrimitiveConverter>
           <span />
         </button>
@@ -272,7 +300,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
           type="button"
         >
           <PrimitiveConverter>
-            <div />
+            <Text
+              type="body-primary"
+            >
+              <p
+                className="md-text-wrapper md-text-color"
+                data-type="body-primary"
+              />
+            </Text>
           </PrimitiveConverter>
           <span />
         </button>
@@ -342,7 +377,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
           type="button"
         >
           <PrimitiveConverter>
-            <div />
+            <Text
+              type="body-primary"
+            >
+              <p
+                className="md-text-wrapper md-text-color"
+                data-type="body-primary"
+              />
+            </Text>
           </PrimitiveConverter>
           <span />
         </button>

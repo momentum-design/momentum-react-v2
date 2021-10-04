@@ -1,4 +1,9 @@
-export type MessageLevel = 'error' | 'warning' | 'success' | 'none';
+export type MessageLevel = 'error' | 'warning' | 'success' | 'help' | 'none';
+
+export interface Message {
+  level: MessageLevel;
+  message: string;
+}
 
 export interface Props {
   /**
@@ -13,4 +18,8 @@ export interface Props {
    * level: the severity of the message
    */
   level?: MessageLevel;
+  /**
+   * id: id of help message
+   */
+  id?: string;
 }

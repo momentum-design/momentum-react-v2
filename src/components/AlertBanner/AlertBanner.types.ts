@@ -1,8 +1,8 @@
 import { CSSProperties, ReactElement } from 'react';
-import { ButtonCircleProps } from '../ButtonCircle';
+import { ButtonSimpleProps } from '../ButtonSimple';
 import { IconProps } from '../Icon';
 
-export type SupportedButtons = ButtonCircleProps;
+export type SupportedButtons = ButtonSimpleProps;
 export type SupportedImages = IconProps;
 
 export interface Props {
@@ -10,11 +10,6 @@ export interface Props {
    * Buttons to mount to this component.
    */
   buttons?: ReactElement<SupportedButtons> | Array<ReactElement<SupportedButtons>>;
-
-  /**
-   * If this component should have its contents centered.
-   */
-  isCentered?: boolean;
 
   /**
    * Label/message to be displayed with this component. Overrides `label`.
@@ -32,11 +27,6 @@ export interface Props {
   color?: 'default' | 'error' | 'success' | 'theme' | 'warning';
 
   /**
-   * If this component show grow its width to the parent container.
-   */
-  isGrown?: boolean;
-
-  /**
    * Custom id for overriding this component's CSS.
    */
   id?: string;
@@ -47,14 +37,29 @@ export interface Props {
   image?: ReactElement<SupportedImages>;
 
   /**
-   * Label/message to be displayed with this component.
+   * If this component should have its contents centered.
    */
-  label?: string;
+  isCentered?: boolean;
+
+  /**
+   * If this component show grow its width to the parent container.
+   */
+  isGrown?: boolean;
 
   /**
    * If this component should be the pill shape.
    */
   isPilled?: boolean;
+
+  /**
+   * If this ToastBanner will display static children. This will override the `color` prop.
+   */
+  isStatic?: boolean;
+
+  /**
+   * Label/message to be displayed with this component.
+   */
+  label?: string;
 
   /**
    * Size of this component.

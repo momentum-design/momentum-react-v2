@@ -22,6 +22,7 @@ export default {
   },
   args: {
     children: 'A',
+    style: { margin: '0.5rem' },
   },
 };
 

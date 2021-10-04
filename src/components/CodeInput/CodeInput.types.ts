@@ -1,7 +1,4 @@
-export type Message = {
-  message: string;
-  type: 'error' | 'warning' | 'success';
-};
+import { Message } from '../InputMessage/InputMessage.types';
 
 export interface Props {
   /**

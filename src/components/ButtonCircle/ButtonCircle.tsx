@@ -13,10 +13,12 @@ import './ButtonCircle.style.scss';
 const ButtonCircle: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
     const { children, className, color, disabled, ghost, id, outline, size, style } = props;
-    const ref = providedRef || useRef();
+    const internalRef = useRef();
+    const ref = providedRef || internalRef;
+
     const mutatedProps = {
       ...props,
-      isDisbled: props.disabled,
+      isDisabled: props.disabled,
     };
 
     delete mutatedProps.className;

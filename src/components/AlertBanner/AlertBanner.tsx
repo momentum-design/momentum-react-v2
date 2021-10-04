@@ -17,14 +17,14 @@ const AlertBanner: FC<Props> = (props: Props) => {
     image,
     label,
     isPilled,
+    isStatic,
     size,
     style,
   } = props;
 
   const mutatedButtons = Children.map(buttons, (button) =>
     cloneElement(button, {
-      className: classnames(button.props.className, STYLE.button),
-      ghost: true,
+      className: classnames(STYLE.button, button.props.className),
     })
   );
 
@@ -38,16 +38,17 @@ const AlertBanner: FC<Props> = (props: Props) => {
     <div className={STYLE.image} />
   );
 
-  const labelComponent = <p className={STYLE.label}>{children || label}</p>;
+  const labelComponent = <p className={STYLE.label}>{label || children}</p>;
 
   return (
     <div
-      data-centered={isCentered || DEFAULTS.ISCENTERED}
+      data-centered={isCentered || DEFAULTS.IS_CENTERED}
       className={classnames(STYLE.wrapper, className)}
-      data-color={color || DEFAULTS.COLOR}
-      data-grow={isGrown || DEFAULTS.ISGROWN}
-      data-pill={isPilled || DEFAULTS.ISPILLED}
+      data-color={isStatic ? undefined : color || DEFAULTS.COLOR}
+      data-grow={isGrown || DEFAULTS.IS_GROWN}
+      data-pill={isPilled || DEFAULTS.IS_PILLED}
       data-size={size || DEFAULTS.SIZE}
+      data-static={isStatic || DEFAULTS.IS_STATIC}
       id={id}
       style={style}
     >
