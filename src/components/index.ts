@@ -12,6 +12,7 @@ export { default as ButtonHyperlink } from './ButtonHyperlink';
 export { default as ButtonPill } from './ButtonPill';
 export { default as ButtonSimple } from './ButtonSimple';
 export { default as FocusRing } from './FocusRing';
+export { default as Tab } from './Tab';
 export { default as ModalArrow } from './ModalArrow';
 export { default as ModalContainer } from './ModalContainer';
 export { default as ThemeProvider } from './ThemeProvider';

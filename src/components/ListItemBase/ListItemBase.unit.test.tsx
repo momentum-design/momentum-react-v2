@@ -230,6 +230,7 @@ describe('ListItemBase', () => {
         ctrlKey: false,
         metaKey: false,
         target: component.getDOMNode(),
+        altKey: false,
       });
 
       expect(mockCallback).toBeCalledTimes(1);

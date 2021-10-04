@@ -1,0 +1,1314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tab /> snapshot Badge children should match snapshot 1`] = `
+<Tab>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Badge
+            key="1"
+            size={18}
+          >
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
+            >
+              2
+            </div>
+          </Badge>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Badge children should match snapshot with active 1`] = `
+<Tab
+  active={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Badge
+            key="5"
+            size={18}
+          >
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
+            >
+              2
+            </div>
+          </Badge>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Badge children should match snapshot with className 1`] = `
+<Tab
+  className="example-class"
+>
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Badge
+            key="2"
+            size={18}
+          >
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
+            >
+              2
+            </div>
+          </Badge>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Badge children should match snapshot with disabled 1`] = `
+<Tab
+  disabled={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Badge
+            key="6"
+            size={18}
+          >
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
+            >
+              2
+            </div>
+          </Badge>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Badge children should match snapshot with id 1`] = `
+<Tab
+  id="example-id"
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Badge
+            key="3"
+            size={18}
+          >
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
+            >
+              2
+            </div>
+          </Badge>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = `
+<Tab
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <Badge
+            key="4"
+            size={18}
+          >
+            <div
+              className="md-badge-wrapper"
+              data-size={18}
+            >
+              2
+            </div>
+          </Badge>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
+<Tab>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Icon
+            key="0"
+            name="plus"
+            scale={12}
+            weight="bold"
+          >
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = `
+<Tab
+  active={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Icon
+            key="4"
+            name="plus"
+            scale={12}
+            weight="bold"
+          >
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Icon children should match snapshot with className 1`] = `
+<Tab
+  className="example-class"
+>
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Icon
+            key="1"
+            name="plus"
+            scale={12}
+            weight="bold"
+          >
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] = `
+<Tab
+  disabled={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Icon
+            key="5"
+            name="plus"
+            scale={12}
+            weight="bold"
+          >
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
+<Tab
+  id="example-id"
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Icon
+            key="2"
+            name="plus"
+            scale={12}
+            weight="bold"
+          >
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
+<Tab
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <Icon
+            key="3"
+            name="plus"
+            scale={12}
+            weight="bold"
+          >
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={12}
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Text children should match snapshot 1`] = `
+<Tab>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Text
+            key="1"
+            type="subheader-secondary"
+          >
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
+            >
+              Example Text
+            </h3>
+          </Text>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Text children should match snapshot with active 1`] = `
+<Tab
+  active={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Text
+            key="5"
+            type="subheader-secondary"
+          >
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
+            >
+              Example Text
+            </h3>
+          </Text>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Text children should match snapshot with className 1`] = `
+<Tab
+  className="example-class"
+>
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Text
+            key="2"
+            type="subheader-secondary"
+          >
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
+            >
+              Example Text
+            </h3>
+          </Text>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] = `
+<Tab
+  disabled={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Text
+            key="6"
+            type="subheader-secondary"
+          >
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
+            >
+              Example Text
+            </h3>
+          </Text>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Text children should match snapshot with id 1`] = `
+<Tab
+  id="example-id"
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Text
+            key="3"
+            type="subheader-secondary"
+          >
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
+            >
+              Example Text
+            </h3>
+          </Text>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
+<Tab
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        >
+          <Text
+            key="4"
+            type="subheader-secondary"
+          >
+            <h3
+              className="md-text-wrapper md-text-color"
+              data-type="subheader-secondary"
+            >
+              Example Text
+            </h3>
+          </Text>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot string children should match snapshot 1`] = `
+<Tab>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <PrimitiveConverter
+            fontStyle="subheader-secondary"
+          >
+            <Text
+              type="subheader-secondary"
+            >
+              <h3
+                className="md-text-wrapper md-text-color"
+                data-type="subheader-secondary"
+              >
+                Example label
+              </h3>
+            </Text>
+          </PrimitiveConverter>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot string children should match snapshot with active 1`] = `
+<Tab
+  active={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        />
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot string children should match snapshot with className 1`] = `
+<Tab
+  className="example-class"
+>
+  <ButtonSimple
+    className="md-tab-wrapper example-class"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper example-class"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        />
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot string children should match snapshot with disabled 1`] = `
+<Tab
+  disabled={false}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        />
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot string children should match snapshot with id 1`] = `
+<Tab
+  id="example-id"
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        />
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot string children should match snapshot with style 1`] = `
+<Tab
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper"
+          data-active={false}
+          data-disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+          type="button"
+        />
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;

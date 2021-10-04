@@ -1,0 +1,103 @@
+.md-tab-wrapper {
+  border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
+  border: var(--md-globals-border-clear);
+  cursor: pointer;
+  font-family: CiscoSansTT; // IEFIX
+  font-family: var(--md-globals-font-default);
+  outline: none;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  /* Colorization */
+  &[data-active='false'] {
+    &[data-disabled='false'] {
+      background-color: var(--tab-inactive-background);
+
+      .md-text-wrapper,
+      .md-icon-wrapper {
+        color: var(--tab-inactive-text);
+      }
+
+      &:hover {
+        background-color: var(--tab-inactive-background-hovered);
+
+        .md-text-wrapper,
+        .md-icon-wrapper {
+          color: var(--tab-inactive-text-hovered);
+        }
+      }
+
+      &:active {
+        background-color: var(--tab-inactive-background-pressed);
+
+        .md-text-wrapper,
+        .md-icon-wrapper {
+          color: var(--tab-inactive-text-pressed);
+        }
+      }
+    }
+
+    &[data-disabled='true'] {
+      background-color: var(--tab-inactive-background);
+
+      .md-text-wrapper,
+      .md-icon-wrapper {
+        color: var(--tab-inactive-text-disabled);
+      }
+    }
+  }
+
+  &[data-active='true'] {
+    background-color: var(--tab-active-background);
+
+    .md-text-wrapper,
+    .md-icon-wrapper {
+      color: var(--tab-inactive-text);
+    }
+
+    &:hover {
+      background-color: var(--tab-active-background-hovered);
+
+      .md-text-wrapper,
+      .md-icon-wrapper {
+        color: var(--tab-active-text-hovered);
+      }
+    }
+
+    &:active {
+      background-color: var(--tab-active-background-pressed);
+
+      .md-text-wrapper,
+      .md-icon-wrapper {
+        color: var(--tab-active-text-pressed);
+      }
+    }
+
+    > .md-icon-wrapper {
+      &:last-child {
+        transform: rotate(180deg);
+      }
+    }
+
+    &[data-disabled='true'] {
+      background-color: var(--tab-inactive-background);
+
+      .md-text-wrapper,
+      .md-icon-wrapper {
+        color: var(--tab-inactive-text-disabled);
+      }
+    }
+  }
+
+  /* Sizing and spacing */
+  border-radius: 0.875rem;
+  justify-content: center;
+  align-items: center;
+  height: 1.75rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  display: flex;
+
+  > *:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}

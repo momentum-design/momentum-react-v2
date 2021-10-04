@@ -4,6 +4,19 @@ import { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from '.';
 
 export default {
   ...commonStyles,
+  arrow: {
+    description: 'Where to render the `<ModalArrow />` for this `<ModalContainer />`.',
+    control: { type: 'select' },
+    options: [undefined, ...Object.values(CONSTANTS.ARROWS)],
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   children: {
     description: 'Provides the child nodes for this `<ModalContainer />`.',
     control: { type: 'text' },
@@ -56,13 +69,14 @@ export default {
       },
     },
   },
-  isRounded: {
-    description: 'Identifies if this `<ModalContainer />` should be rendered with round corners.',
-    control: { type: 'boolean' },
-    options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
+  round: {
+    description:
+      'Identifies if this `<ModalContainer />` should be rendered with round corners and to what degree.',
+    control: { type: 'select' },
+    options: [undefined, ...Object.values(CONSTANTS.ROUNDS)],
     table: {
       type: {
-        summary: 'boolean',
+        summary: 'number',
       },
       defaultValue: {
         summary: 'false',
