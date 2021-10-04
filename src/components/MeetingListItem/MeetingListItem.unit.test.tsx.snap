@@ -393,7 +393,23 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
               <Icon
                 autoScale={true}
                 name="placeholder"
-              />
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={true}
+                    data-scale={false}
+                    fill="currentColor"
+                    height="100%"
+                    stroke="currentColor"
+                    style={Object {}}
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection

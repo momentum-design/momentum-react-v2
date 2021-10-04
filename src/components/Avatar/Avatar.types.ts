@@ -1,3 +1,5 @@
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+
 export enum PresenceType {
   Default = 'default',
   Active = 'active',
@@ -11,19 +13,6 @@ export enum PresenceType {
   // Out of Office
   OOO = 'OOO',
 }
-
-export type AvatarColor =
-  | 'default'
-  | 'gold'
-  | 'orange'
-  | 'lime'
-  | 'mint'
-  | 'cyan'
-  | 'cobalt'
-  | 'slate'
-  | 'violet'
-  | 'purple'
-  | 'pink';
 
 export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
 
@@ -63,7 +52,7 @@ export interface Props {
   /**
    * Background color for avatar
    */
-  color?: AvatarColor;
+  color?: TeamColor;
   /**
    * Determines if the avatar is for a space or person
    */

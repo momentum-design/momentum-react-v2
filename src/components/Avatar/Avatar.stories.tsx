@@ -14,7 +14,8 @@ import {
 
 import Documentation from './Avatar.documentation.mdx';
 import { PresenceType } from './Avatar.types';
-import { COLORS, DEFAULTS, SIZES, TYPES } from './Avatar.constants';
+import { DEFAULTS, SIZES, TYPES } from './Avatar.constants';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 
 const DocsPage: FC = () => (
   <>
@@ -124,7 +125,7 @@ export default {
       defaultValue: DEFAULTS.COLOR,
       description:
         'In case `src` is not provided, we can provide a color for the avatar using this property.',
-      options: [undefined, ...Object.values(COLORS)],
+      options: [undefined, ...Object.values(TEAM_COLORS)],
       control: { type: 'select' },
       table: {
         type: {
@@ -259,7 +260,7 @@ Color.args = {
 
 Color.parameters = {
   variants: [
-    ...Object.values(COLORS).map((color) => {
+    ...Object.values(TEAM_COLORS).map((color) => {
       return {
         color: color,
         label: `Color: ${color}`,

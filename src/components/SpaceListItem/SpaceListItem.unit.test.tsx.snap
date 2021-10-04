@@ -1,0 +1,1389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
+<SpaceListItem>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
+<SpaceListItem
+  action={
+    <p>
+      action
+    </p>
+  }
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <p>
+                action
+              </p>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
+<SpaceListItem
+  className="example-class"
+>
+  <ListItemBase
+    className="example-class"
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="example-class md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
+<SpaceListItem
+  firstLine="firstLine"
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  >
+                    firstLine
+                  </p>
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
+<SpaceListItem
+  id="example-id"
+>
+  <ListItemBase
+    className=""
+    id="example-id"
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] = `
+<SpaceListItem
+  isAlertMuted={true}
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                fillColor="var(--listitem-icon)"
+                name="alert-muted"
+                scale={14}
+                strokeColor="none"
+                weight="bold"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "var(--listitem-icon)",
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] = `
+<SpaceListItem
+  isEnterRoom={true}
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                fillColor="var(--listitem-tick)"
+                name="enter-room"
+                scale={14}
+                strokeColor="none"
+                weight="bold"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "var(--listitem-tick)",
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
+<SpaceListItem
+  isError={true}
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                fillColor="var(--label-error-text)"
+                name="priority-circle"
+                scale={14}
+                strokeColor="none"
+                weight="filled"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "var(--label-error-text)",
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
+<SpaceListItem
+  isMention={true}
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                fillColor="var(--listitem-tick)"
+                name="mention"
+                scale={14}
+                strokeColor="none"
+                weight="bold"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "var(--listitem-tick)",
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`] = `
+<SpaceListItem
+  isNewActivity={true}
+>
+  <ListItemBase
+    className="md-space-list-item-is-new-activity"
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                fillColor="var(--listitem-tick)"
+                name="unread"
+                scale={14}
+                strokeColor="none"
+                weight="bold"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "var(--listitem-tick)",
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = `
+<SpaceListItem
+  secondLine="secondLine"
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "var(--theme-text-team-default-normal)",
+                    }
+                  }
+                  type="body-secondary"
+                >
+                  <small
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-secondary"
+                    style={
+                      Object {
+                        "color": "var(--theme-text-team-default-normal)",
+                      }
+                    }
+                  >
+                    secondLine
+                  </small>
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
+<SpaceListItem
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="default"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
+<SpaceListItem
+  teamColor="cobalt"
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            >
+              <Avatar
+                color="cobalt"
+                size={32}
+                title="C"
+              >
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="cobalt"
+                  data-size={32}
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+              </Avatar>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper md-text-color"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;

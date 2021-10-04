@@ -1,24 +1,11 @@
 import { IconScale, IconWeight } from '../Icon/Icon.types';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 import { PresenceType } from './Avatar.types';
 
 const CLASS_PREFIX = 'md-avatar';
 
 const MAX_INITIALS_SPACE = 1;
 const MAX_INITIALS_PERSON = 2;
-
-const COLORS = {
-  default: 'default',
-  gold: 'gold',
-  orange: 'orange',
-  lime: 'lime',
-  mint: 'mint',
-  cyan: 'cyan',
-  cobalt: 'cobalt',
-  slate: 'slate',
-  violet: 'violet',
-  purple: 'purple',
-  pink: 'pink',
-};
 
 const SIZES = {
   24: 24,
@@ -63,7 +50,7 @@ const STYLE = {
 const DEFAULTS = {
   PRESENCE: PresenceType.Default,
   SIZE: SIZES[24],
-  COLOR: COLORS.default,
+  COLOR: TEAM_COLORS.default,
   TYPE: TYPES.person,
 };
 
@@ -77,5 +64,4 @@ export {
   MAX_INITIALS_PERSON,
   AVATAR_PRESENCE_ICON_SIZE_MAPPING,
   AVATAR_ICON_SIZE_MAPPING,
-  COLORS,
 };

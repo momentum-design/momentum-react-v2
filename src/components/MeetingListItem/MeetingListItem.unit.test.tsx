@@ -79,12 +79,12 @@ describe('<MeetingListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with image', () => {
+    it('should match snapshot with image', async () => {
       expect.assertions(1);
 
       const image = <Icon name="placeholder" />;
 
-      const container = mount(<MeetingListItem image={image} />);
+      const container = await mountAndWait(<MeetingListItem image={image} />);
 
       expect(container).toMatchSnapshot();
     });
