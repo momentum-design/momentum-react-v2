@@ -25,7 +25,24 @@ const Example = Template<ModalContainerProps>(ModalContainer).bind({});
 
 Example.argTypes = { ...argTypes };
 Example.args = {
-  children: commonChildren,
+  children: 'Example Children',
+  isPadded: true,
+};
+
+const Arrows = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
+
+Arrows.argTypes = { ...argTypes };
+delete Arrows.argTypes.arrow;
+
+Arrows.parameters = {
+  variants: [undefined, ...Object.values(CONSTANTS.ARROWS)].map((arrow) => ({
+    arrow,
+    children: `arrow === '${arrow}'`,
+  })),
+};
+
+Arrows.args = {
+  color: 'tertiary',
   isPadded: true,
 };
 
@@ -35,7 +52,10 @@ Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.color;
 
 Colors.parameters = {
-  variants: Object.values(CONSTANTS.COLORS).map((color) => ({ color })),
+  variants: [undefined, ...Object.values(CONSTANTS.COLORS)].map((color) => ({
+    color,
+    children: `color === '${color}'`,
+  })),
 };
 
 Colors.args = {
@@ -49,11 +69,13 @@ Elevations.argTypes = { ...argTypes };
 delete Elevations.argTypes.elevation;
 
 Elevations.parameters = {
-  variants: Object.values(CONSTANTS.ELEVATIONS).map((elevation) => ({ elevation })),
+  variants: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)].map((elevation) => ({
+    elevation,
+    children: `elevation = '${elevation}'`,
+  })),
 };
 
 Elevations.args = {
-  children: commonChildren,
   isPadded: true,
 };
 
@@ -65,10 +87,10 @@ delete Padding.argTypes.isPadded;
 Padding.parameters = {
   variants: [
     {
-      children: <div>isPadded != true</div>,
+      children: <div>isPadded !== true</div>,
     },
     {
-      children: <div>isPadded = true</div>,
+      children: <div>isPadded === true</div>,
       isPadded: true,
     },
   ],
@@ -77,22 +99,18 @@ Padding.parameters = {
 const Rounding = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
 
 Rounding.argTypes = { ...argTypes };
-delete Rounding.argTypes.isRounded;
+delete Rounding.argTypes.round;
 
 Rounding.parameters = {
-  variants: [
-    {
-      children: <div>isRound != true</div>,
-    },
-    {
-      children: <div>isRound = true</div>,
-      isRounded: true,
-    },
-  ],
+  variants: [undefined, ...Object.values(CONSTANTS.ROUNDS)].map((round) => ({
+    round,
+    children: `round === '${round}'`,
+  })),
 };
 
 Rounding.args = {
   isPadded: true,
+  color: 'tertiary',
 };
 
 const Common = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
@@ -128,4 +146,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Colors, Elevations, Padding, Rounding, Common };
+export { Example, Arrows, Colors, Elevations, Padding, Rounding, Common };
