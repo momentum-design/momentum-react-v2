@@ -42,12 +42,11 @@ export default {
       },
     },
   },
-  avatarProps: {
-    description: 'Props passed to the Avatar component, apart from size which is fixed.',
-    control: { type: 'object' },
+  avatar: {
+    description: 'Avatar Component.',
     table: {
       type: {
-        summary: "Omit<AvatarProps, 'size'>",
+        summary: 'ReactNode',
       },
       defaultValue: {
         summary: 'undefined',

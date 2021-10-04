@@ -178,17 +178,17 @@ describe('<SpaceListItem />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should have provided avatarProps when id is avatarProps', async () => {
+    it('should have provided avatar when id is avatar', async () => {
       expect.assertions(1);
 
-      const avatarProps = { title: 'C' };
+      const avatar = <Avatar title="C" />;
 
-      const element = (await mountAndWait(<SpaceListItem avatarProps={avatarProps} />))
+      const element = (await mountAndWait(<SpaceListItem avatar={avatar} />))
         .find(Avatar)
         .find('span')
         .getDOMNode();
 
-      expect(element.textContent).toBe(avatarProps.title);
+      expect(element.textContent).toBe('C');
     });
 
     it('should have provided firstLine when firstLine is provided', async () => {

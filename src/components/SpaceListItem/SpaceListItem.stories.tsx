@@ -12,6 +12,8 @@ import Flex from '../Flex';
 import Text from '../Text';
 import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 import Icon from '../Icon';
+import Avatar from '../Avatar';
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
 export default {
   title: 'Momentum UI/SpaceListItem',
@@ -46,62 +48,83 @@ Common.args = {
 Common.parameters = {
   variants: [
     {
-      avatarProps: {
-        title: 'CW',
-        presence: PresenceType.Away,
-      },
+      avatar: <Avatar title="C" presence={PresenceType.Away} size={32} />,
       isNewActivity: true,
     },
     {
-      avatarProps: {
-        title: 'C',
-        presence: PresenceType.Meet,
-      },
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Meet}
+          size={32}
+          color={TEAM_COLORS.gold as TeamColor}
+        />
+      ),
       isMention: true,
       teamColor: TEAM_COLORS.gold,
     },
 
     {
-      avatarProps: {
-        title: 'C',
-        presence: PresenceType.DND,
-      },
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.DND}
+          size={32}
+          color={TEAM_COLORS.pink as TeamColor}
+        />
+      ),
       isEnterRoom: true,
       teamColor: TEAM_COLORS.pink,
     },
 
     {
-      avatarProps: {
-        title: 'C',
-        presence: PresenceType.Default,
-      },
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Default}
+          size={32}
+          color={TEAM_COLORS.purple as TeamColor}
+        />
+      ),
       isAlertMuted: true,
       teamColor: TEAM_COLORS.purple,
     },
 
     {
-      avatarProps: {
-        title: 'C',
-        presence: PresenceType.Schedule,
-      },
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Schedule}
+          size={32}
+          color={TEAM_COLORS.slate as TeamColor}
+        />
+      ),
       isError: true,
       teamColor: TEAM_COLORS.slate,
     },
 
     {
-      avatarProps: {
-        title: 'C',
-        presence: PresenceType.Schedule,
-      },
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Schedule}
+          size={32}
+          color={TEAM_COLORS.slate as TeamColor}
+        />
+      ),
       isError: true,
       teamColor: TEAM_COLORS.slate,
       secondLine: ['Test', 'Another Test'],
     },
     {
-      avatarProps: {
-        title: 'C',
-        presence: PresenceType.Active,
-      },
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Active}
+          size={32}
+          color={TEAM_COLORS.mint as TeamColor}
+        />
+      ),
       // eslint-disable-next-line react/display-name
       action: (
         <Flex alignItems="center" xgap="0.5rem">

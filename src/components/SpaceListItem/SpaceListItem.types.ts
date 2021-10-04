@@ -1,5 +1,4 @@
 import { CSSProperties, ReactNode } from 'react';
-import { AvatarProps } from '../Avatar';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
 export interface Props {
@@ -19,9 +18,9 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * Props passed to the Avatar component, apart from size which is fixed.
+   * Avatar Component
    */
-  avatarProps?: Omit<AvatarProps, 'size'>;
+  avatar?: ReactNode;
 
   /**
    * Text displayed on the first line of the item. (if only firstLine is provided, it will be centered).

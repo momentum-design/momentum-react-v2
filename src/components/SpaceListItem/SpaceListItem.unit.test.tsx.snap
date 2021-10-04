@@ -39,23 +39,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -136,23 +120,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -233,23 +201,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -326,23 +278,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -423,23 +359,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -516,23 +436,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -636,23 +540,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -756,23 +644,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -876,23 +748,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -996,23 +852,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -1116,23 +956,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -1243,23 +1067,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="default"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="default"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"
@@ -1336,23 +1144,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
           >
             <div
               data-position="start"
-            >
-              <Avatar
-                color="cobalt"
-                size={32}
-                title="C"
-              >
-                <div
-                  className="md-avatar-wrapper"
-                  data-color="cobalt"
-                  data-size={32}
-                >
-                  <span>
-                    C
-                  </span>
-                </div>
-              </Avatar>
-            </div>
+            />
           </ListItemBaseSection>
           <ListItemBaseSection
             className="md-space-list-item-text-wrapper"

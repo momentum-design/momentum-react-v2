@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './SpaceListItem.constants';
@@ -6,21 +6,19 @@ import { Props } from './SpaceListItem.types';
 import './SpaceListItem.style.scss';
 import ListItemBase from '../ListItemBase';
 import ListItemBaseSection from '../ListItemBaseSection';
-import Avatar from '../Avatar';
 import Text from '../Text';
 import Icon from '../Icon';
-import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
 //TODO: support 2-line labels for right section.
 /**
  * The SpaceListItem component.
  */
-const SpaceListItem: FC<Props> = (props: Props) => {
+const SpaceListItem: FC<Props> = forwardRef((props: Props, ref: RefObject<HTMLLIElement>) => {
   const {
     className,
     id,
     style,
-    avatarProps = DEFAULTS.AVATAR_PROPS,
+    avatar,
     firstLine,
     secondLine,
     isNewActivity,
@@ -83,21 +81,22 @@ const SpaceListItem: FC<Props> = (props: Props) => {
 
   return (
     <ListItemBase
+      ref={ref}
       size={50}
       shape="isPilled"
       className={classnames(className, { [STYLE.isNewActivity]: isNewActivity })}
       id={id}
       style={style}
     >
-      <ListItemBaseSection position="start">
-        <Avatar size={32} {...avatarProps} color={teamColor as TeamColor} />
-      </ListItemBaseSection>
+      <ListItemBaseSection position="start">{avatar}</ListItemBaseSection>
       <ListItemBaseSection position="middle" className={STYLE.textWrapper}>
         <div>{renderText()}</div>
       </ListItemBaseSection>
       <ListItemBaseSection position="end">{renderRightSection()}</ListItemBaseSection>
     </ListItemBase>
   );
-};
+});
+
+SpaceListItem.displayName = 'SpaceListItem';
 
 export default SpaceListItem;
