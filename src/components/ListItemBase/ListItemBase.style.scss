@@ -34,6 +34,7 @@
   & > div[data-position='start'] {
     width: fit-content;
     margin-right: 0.75rem;
+    flex-shrink: 0;
   }
 
   & > div[data-position='fill'],
@@ -44,6 +45,7 @@
   & > div[data-position='end'] {
     width: auto;
     margin-left: 0.75rem;
+    flex-shrink: 0;
 
     & > button {
       margin: 0;

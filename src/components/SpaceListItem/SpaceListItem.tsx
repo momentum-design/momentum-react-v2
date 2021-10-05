@@ -28,6 +28,8 @@ const SpaceListItem: FC<Props> = forwardRef((props: Props, ref: RefObject<HTMLLI
     isAlertMuted,
     isError,
     action,
+    isSelected,
+    ...rest
   } = props;
 
   const renderText = () => {
@@ -87,6 +89,8 @@ const SpaceListItem: FC<Props> = forwardRef((props: Props, ref: RefObject<HTMLLI
       className={classnames(className, { [STYLE.isNewActivity]: isNewActivity })}
       id={id}
       style={style}
+      {...rest}
+      isSelected={isSelected}
     >
       <ListItemBaseSection position="start">{avatar}</ListItemBaseSection>
       <ListItemBaseSection position="middle" className={STYLE.textWrapper}>

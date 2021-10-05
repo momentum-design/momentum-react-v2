@@ -6,6 +6,7 @@ import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
+import ListItemBase from '../ListItemBase';
 
 describe('<SpaceListItem />', () => {
   describe('snapshot', () => {
@@ -137,7 +138,15 @@ describe('<SpaceListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    /* ...additional snapshot tests... */
+    it('should match snapshot with isSelected', async () => {
+      expect.assertions(1);
+
+      const isSelected = true;
+
+      const container = await mountAndWait(<SpaceListItem isSelected={isSelected} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -287,6 +296,20 @@ describe('<SpaceListItem />', () => {
         .getDOMNode();
 
       expect(element.textContent).toBe('action');
+    });
+
+    it('should have provided active class when isSelected is provided', async () => {
+      expect.assertions(1);
+
+      const isSelected = true;
+
+      const element = (
+        await mountAndWait(<SpaceListItem isSelected={isSelected}>Test</SpaceListItem>)
+      )
+        .find(ListItemBase)
+        .getDOMNode();
+
+      expect(element.classList.contains('active')).toBe(true);
     });
   });
 });

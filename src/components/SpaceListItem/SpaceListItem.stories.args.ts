@@ -112,4 +112,17 @@ export default {
       },
     },
   },
+  isSelected: {
+    defaultValue: false,
+    description: 'Determines if the list item is selected.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
 };

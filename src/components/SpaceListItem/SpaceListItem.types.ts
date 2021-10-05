@@ -1,7 +1,8 @@
+import { PressEvents } from '@react-types/shared';
 import { CSSProperties, ReactNode } from 'react';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
-export interface Props {
+export interface Props extends PressEvents {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -66,4 +67,9 @@ export interface Props {
    * If provided, it will be displayed on the right side of the list item.
    */
   action?: ReactNode;
+
+  /**
+   * Determines weather this list item is selected (part of ListItemBase)
+   */
+  isSelected?: boolean;
 }
