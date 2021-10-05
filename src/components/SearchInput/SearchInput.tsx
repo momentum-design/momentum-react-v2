@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { FC, useRef } from 'react';
+import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
@@ -17,17 +17,18 @@ import Icon from '../Icon';
 /**
  *  Search input
  */
-const SearchInput: FC<Props> = (props: Props) => {
+const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const { className, id, style, searching, clearButtonAriaLabel, label, isDisabled } = props;
   const state = useSearchFieldState(props);
-  const ref = useRef(null);
+  const componentRef = useRef(null);
+  const inputRef = ref || componentRef;
   const { focusProps, isFocused } = useFocusState(props);
 
   const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, ref);
 
   const handleClick = () => {
-    if (ref.current) {
-      ref.current.focus();
+    if (inputRef.current) {
+      inputRef.current.focus();
     }
   };
 
@@ -54,7 +55,7 @@ const SearchInput: FC<Props> = (props: Props) => {
         />
       </div>
       <div className={STYLE.container}>
-        <input {...inputProps} {...focusProps} ref={ref} />
+        <input {...inputProps} {...focusProps} ref={inputRef} />
       </div>
       {!!state.value && !isDisabled && (
         <ButtonSimple
@@ -70,4 +71,8 @@ const SearchInput: FC<Props> = (props: Props) => {
   );
 };
 
-export default SearchInput;
+const _SearchInput = forwardRef(SearchInput);
+
+_SearchInput.displayName = 'SearchInput';
+
+export default _SearchInput;
