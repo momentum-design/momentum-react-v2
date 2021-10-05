@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import NavigationTab, { NAVIGATION_TAB_CONSTANTS as CONSTANTS } from './';
-import { DEFAULTS, STYLE, SIZES } from './NavigationTab.constants';
+import { STYLE, SIZES } from './NavigationTab.constants';
 import { NavTabSize } from './NavigationTab.types';
 import { mountAndWait } from '../../../test/utils';
 
