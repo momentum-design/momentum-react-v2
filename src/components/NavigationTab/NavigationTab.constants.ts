@@ -2,9 +2,7 @@ const CLASS_PREFIX = 'md-navigation-tab';
 
 const DEFAULTS = {
   SIZE: 48,
-  ICON: 'chat',
-  LABEL: 'Messaging',
-  COUNT: 1,
+  COUNT: 0,
   ACTIVE: false,
 };
 

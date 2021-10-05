@@ -26,7 +26,7 @@ export default {
         summary: 'string',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.LABEL,
+        summary: undefined,
       },
     },
   },
@@ -38,7 +38,7 @@ export default {
         summary: 'string',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.ICON,
+        summary: undefined,
       },
     },
   },

@@ -184,7 +184,7 @@ describe('<NavigationTab />', () => {
     it('should have provided label when label is provided and size is 200 (size 48 has no label)', async () => {
       expect.assertions(1);
 
-      const label = DEFAULTS.LABEL;
+      const label = 'Messaging';
 
       const wrapper = await mountAndWait(<NavigationTab size={200} label={label} />);
       const element = wrapper.find(NavigationTab).getDOMNode();
@@ -194,10 +194,10 @@ describe('<NavigationTab />', () => {
       expect(target.innerHTML).toBe(label);
     });
 
-    it('should have provided count when count is provided', async () => {
+    it('should have provided count when count is provided and is >0', async () => {
       expect.assertions(1);
 
-      const count = DEFAULTS.COUNT;
+      const count = 1;
 
       const wrapper = await mountAndWait(<NavigationTab count={count} />);
       const element = wrapper.find(NavigationTab).getDOMNode();

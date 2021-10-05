@@ -14,20 +14,14 @@ import './NavigationTab.style.scss';
 const NavigationTab: FC<Props> = (props: Props) => {
   const { icon, label, count = 0, className, id, size, style, active, ...otherProps } = props;
 
-  const iconComponent = (
-    <Icon
-      className={STYLE.icon}
-      name={icon || DEFAULTS.ICON}
-      scale={24}
-      weight={'filled'}
-      strokeColor={'none'}
-    />
-  );
+  const iconComponent = icon ? (
+    <Icon className={STYLE.icon} name={icon} scale={24} weight={'filled'} strokeColor={'none'} />
+  ) : null;
 
   const labelComponent =
-    size == 200 ? (
+    size == 200 && label ? (
       <Text className={STYLE.label} type="subheader-secondary">
-        {label || DEFAULTS.LABEL}
+        {label}
       </Text>
     ) : null;
 
