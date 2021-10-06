@@ -4,6 +4,7 @@ const SIZES = {
   32: 32,
   40: 40,
   50: 50,
+  70: 70,
 };
 
 const SHAPES = {
@@ -14,6 +15,7 @@ const SHAPES = {
 const DEFAULTS = {
   SIZE: (shape: string): number => (shape === SHAPES.isPilled ? SIZES[50] : SIZES[40]),
   IS_DISABLED: false,
+  IS_PADDED: false,
   SHAPE: SHAPES.rectangle,
   ROLE: 'listitem',
 };

@@ -74,10 +74,23 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
+                data-padded={false}
                 data-shape="rectangle"
                 data-size={40}
                 onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
                 onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
                 role="listitem"
               >
                 <ListItemBaseSection
@@ -134,10 +147,23 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
+                data-padded={false}
                 data-shape="rectangle"
                 data-size={40}
                 onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
                 onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
                 role="listitem"
               >
                 <ListItemBaseSection

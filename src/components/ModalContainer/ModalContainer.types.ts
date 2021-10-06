@@ -1,10 +1,16 @@
 import { CSSProperties, ReactNode } from 'react';
 
+export type Arrow = 'bottom' | 'left' | 'right' | 'top';
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-export type ModalContainerRadius = 0 | 12 | 24;
+export type Round = 0 | 25 | 50 | 75 | 100 | 125 | 150;
 
 export interface Props {
+  /**
+   * Where to render the ModalArrow component.
+   */
+  arrow?: Arrow;
+
   /**
    * Child components of this ModalContainer.
    */
@@ -36,9 +42,9 @@ export interface Props {
   isPadded?: boolean;
 
   /**
-   * Amount of radius for the container
+   * If this ModalContainer is round and to what degree.
    */
-  radius?: ModalContainerRadius;
+  round?: Round;
 
   /**
    * Custom style for overriding this component's CSS.

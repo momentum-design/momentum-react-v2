@@ -53,7 +53,7 @@ describe('<ModalContainer />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with color', () => {
+    it('should match snapshot with elevation', () => {
       expect.assertions(1);
 
       const elevation = Object.values(CONSTANTS.ELEVATIONS).pop();
@@ -74,7 +74,19 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with radius', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer radius={24} />);
+      const round = Object.values(CONSTANTS.ROUNDS).pop();
+
+      const container = mount(<ModalContainer round={round} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with arrow', () => {
+      expect.assertions(1);
+
+      const arrow = Object.values(CONSTANTS.ARROWS).pop();
+
+      const container = mount(<ModalContainer arrow={arrow} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -145,7 +157,8 @@ describe('<ModalContainer />', () => {
 
       const element = mount(<ModalContainer color={color} />)
         .find(ModalContainer)
-        .getDOMNode();
+        .getDOMNode()
+        .getElementsByTagName('div')[0];
 
       expect(element.getAttribute('data-color')).toBe(color);
     });
@@ -157,7 +170,8 @@ describe('<ModalContainer />', () => {
 
       const element = mount(<ModalContainer elevation={elevation} />)
         .find(ModalContainer)
-        .getDOMNode();
+        .getDOMNode()
+        .getElementsByTagName('div')[0];
 
       expect(element.getAttribute('data-elevation')).toBe(`${elevation}`);
     });
@@ -169,21 +183,61 @@ describe('<ModalContainer />', () => {
 
       const element = mount(<ModalContainer isPadded={isPadded} />)
         .find(ModalContainer)
-        .getDOMNode();
+        .getDOMNode()
+        .getElementsByTagName('div')[0];
 
       expect(element.getAttribute('data-padded')).toBe(`${isPadded}`);
     });
 
-    it('should have provided data-rounded when isRounded is provided', () => {
+    it('should have provided data-round when round is provided', () => {
       expect.assertions(1);
 
-      const radius = 24;
+      const round = Object.values(CONSTANTS.ROUNDS).pop();
 
-      const element = mount(<ModalContainer radius={radius} />)
+      const element = mount(<ModalContainer round={round} />)
+        .find(ModalContainer)
+        .getDOMNode()
+        .getElementsByTagName('div')[0];
+
+      expect(element.getAttribute('data-round')).toBe(`${round}`);
+    });
+
+    it('should have provided data-arrow when arrow is provided', () => {
+      expect.assertions(1);
+
+      const arrow = Object.values(CONSTANTS.ARROWS).pop();
+
+      const element = mount(<ModalContainer arrow={arrow} />)
         .find(ModalContainer)
         .getDOMNode();
 
-      expect(element.getAttribute('data-radius')).toBe(`${radius}`);
+      expect(element.getAttribute('data-arrow')).toBe(arrow);
+    });
+
+    it('should have provided data-horizontal-arrow when a horizontal arrow is provided', () => {
+      expect.assertions(1);
+
+      const arrow = CONSTANTS.ARROWS.LEFT;
+
+      const element = mount(<ModalContainer arrow={arrow} />)
+        .find(ModalContainer)
+        .getDOMNode()
+        .getElementsByTagName('div')[0];
+
+      expect(element.getAttribute('data-horizontal-arrow')).toBe('true');
+    });
+
+    it('should have provided data-vertical-arrow when a vertical arrow is provided', () => {
+      expect.assertions(1);
+
+      const arrow = CONSTANTS.ARROWS.TOP;
+
+      const element = mount(<ModalContainer arrow={arrow} />)
+        .find(ModalContainer)
+        .getDOMNode()
+        .getElementsByTagName('div')[0];
+
+      expect(element.getAttribute('data-vertical-arrow')).toBe('true');
     });
   });
 });

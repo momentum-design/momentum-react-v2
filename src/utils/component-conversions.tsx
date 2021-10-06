@@ -1,5 +1,7 @@
 import React, { FC, isValidElement } from 'react';
 import classNames from 'classnames';
+import Text from '../components/Text';
+import { FontStyle } from '../components/Text/Text.types';
 
 export interface PrimativeConverterProps {
   /**
@@ -11,6 +13,11 @@ export interface PrimativeConverterProps {
    * Class to amend to this primative or component.
    */
   className?: string;
+
+  /**
+   * Style of the Text. Default: body-primary.
+   */
+  fontStyle?: FontStyle;
 }
 
 /**
@@ -21,7 +28,7 @@ export interface PrimativeConverterProps {
  * @returns - FC of provided child if needed.
  */
 const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConverterProps) => {
-  const { children, className } = props;
+  const { children, className, fontStyle = 'body-primary' } = props;
   const isElement = isValidElement(children);
 
   const addedProps: { className?: string } = {};
@@ -33,7 +40,9 @@ const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConvert
   return isElement ? (
     React.cloneElement(children, { ...addedProps })
   ) : (
-    <div {...addedProps}>{children}</div>
+    <Text {...addedProps} type={fontStyle}>
+      {children}
+    </Text>
   );
 };
 

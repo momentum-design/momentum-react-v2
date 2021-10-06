@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 
-const waitForComponentToPaint = async (wrapper: ReactWrapper): Promise<undefined> => {
+export const waitForComponentToPaint = async (wrapper: ReactWrapper): Promise<undefined> => {
   return await act(async () => {
     await new Promise((resolve) => setTimeout(resolve, 0));
     wrapper.update();
@@ -22,9 +22,9 @@ export const mountAndWait = async (component: React.ReactElement): Promise<React
 };
 
 /**
- * Helper function to trigger a press on buttons
- * built using react-aria
- * @param button
+ * React-aria handles interactions slightly different, so we must pass exactly
+ * these event object for it to pass through
+ * @param element
  */
 export const triggerPress = (button: ReactWrapper): void => {
   button.simulate('click', {
