@@ -2,7 +2,7 @@ const CLASS_PREFIX = 'md-menu-trigger';
 
 const DEFAULTS = {
   BACKGROUND: 'primary' as const,
-  OVERLAY_RADIUS: 12 as const,
+  OVERLAY_RADIUS: 75 as const,
 };
 
 const STYLE = {

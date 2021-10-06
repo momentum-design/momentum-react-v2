@@ -87,7 +87,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
         <FocusScope restoreFocus contain>
           <ModalContainer
             isPadded
-            radius={overlayRadius}
+            round={overlayRadius}
             className={STYLE.overlay}
             {...overlayProps}
             color={DEFAULTS.BACKGROUND}

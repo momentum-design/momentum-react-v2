@@ -11,6 +11,9 @@
   position: absolute;
   margin: 0;
   z-index: 10000;
-  width: 18rem;
   margin-top: 0.25rem;
+
+  & > div {
+    width: 18rem;
+  }
 }

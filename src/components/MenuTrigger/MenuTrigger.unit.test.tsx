@@ -6,7 +6,6 @@ import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { mountAndWait, triggerPress } from '../../../test/utils';
 import { act } from 'react-dom/test-utils';
-import ModalContainer from '../ModalContainer';
 
 describe('<MenuTrigger />', () => {
   const defaultProps = {
@@ -67,7 +66,7 @@ describe('<MenuTrigger />', () => {
     it('should match snapshot with overlayRadius', async () => {
       expect.assertions(1);
 
-      const overlayRadius = 24;
+      const overlayRadius = 75;
 
       const container = await mountAndWait(
         <MenuTrigger {...defaultProps} defaultOpen={true} overlayRadius={overlayRadius} />
@@ -168,17 +167,17 @@ describe('<MenuTrigger />', () => {
     it('should have provided data-radius when overlayRadius is provided', async () => {
       expect.assertions(1);
 
-      const overlayRadius = 24;
+      const overlayRadius = 75;
 
       const element = (
         await mountAndWait(
           <MenuTrigger defaultOpen={true} {...defaultProps} overlayRadius={overlayRadius} />
         )
       )
-        .find(ModalContainer)
+        .find('.md-modal-container-content')
         .getDOMNode();
 
-      expect(element.getAttribute('data-radius')).toBe(`${overlayRadius}`);
+      expect(element.getAttribute('data-round')).toBe(`${overlayRadius}`);
     });
   });
 });

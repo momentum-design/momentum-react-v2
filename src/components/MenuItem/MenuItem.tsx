@@ -44,6 +44,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
       {...menuItemProps}
       ref={ref}
       isDisabled={isDisabled}
+      isPadded={true}
     >
       <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
       {isSelected && (
