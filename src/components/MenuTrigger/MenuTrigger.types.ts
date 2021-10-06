@@ -1,6 +1,6 @@
 import { CSSProperties, ReactElement } from 'react';
 import { MenuTriggerProps } from '@react-types/menu';
-import { ModalContainerRadius } from '../ModalContainer/ModalContainer.types';
+import { Round } from '../ModalContainer/ModalContainer.types';
 
 export interface Props extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip'> {
   children: ReactElement[];
@@ -22,5 +22,5 @@ export interface Props extends Omit<MenuTriggerProps, 'align' | 'direction' | 's
   /**
    * Radius of the modal container where menus are wrapped in.
    */
-  overlayRadius?: ModalContainerRadius;
+  overlayRadius?: Round;
 }
