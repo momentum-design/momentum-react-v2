@@ -132,6 +132,7 @@ export {
   ListItemBaseSection,
   Select as SelectNext,
   GlobalSearchInput,
+  SearchInput,
   TextInput,
   AvatarListItem,
 } from './components';

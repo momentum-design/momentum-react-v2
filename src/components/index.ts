@@ -29,6 +29,7 @@ export { default as Select } from './Select';
 export { default as ListItemBase } from './ListItemBase';
 export { default as ListItemBaseSection } from './ListItemBaseSection';
 export { default as GlobalSearchInput } from './GlobalSearchInput';
+export { default as SearchInput } from './SearchInput';
 export { default as Text } from './Text';
 export { default as MeetingListItem } from './MeetingListItem';
 export { default as TextInput } from './TextInput';
