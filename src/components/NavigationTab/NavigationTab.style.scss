@@ -11,89 +11,87 @@
   background-color: rgba(0, 0, 0, 0); // IEFIX
   background-color: var(--navigationtab-background);
 
+  > .md-navigation-tab-icon > * {
+    color: rgba(0, 0, 0, 0.6); // IEFIX
+    color: var(--navigationtab-text);
+  }
+
+  > .md-navigation-tab-label {
+    color: rgba(0, 0, 0, 0.6); // IEFIX
+    color: var(--navigationtab-text);
+  }
+
   &:hover {
-    background-color: rgba(0, 0, 0, 0.07);  // IEFIX
-    background-color: var(--navigationtab-background-hovered); 
+    background-color: rgba(0, 0, 0, 0.07); // IEFIX
+    background-color: var(--navigationtab-background-hovered);
+
+    > .md-navigation-tab-icon > * {
+      color: rgba(0, 0, 0, 0.6); // IEFIX
+      color: var(--navigationtab-text-hovered);
+    }
+
+    > .md-navigation-tab-label {
+      color: rgba(0, 0, 0, 0.6); // IEFIX
+      color: var(--navigationtab-text-hovered);
+    }
   }
 
   &:active {
     background-color: rgba(0, 0, 0, 0.2); // IEFIX
     background-color: var(--navigationtab-background-active);
+
+    > .md-navigation-tab-icon > * {
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--navigationtab-text-active);
+    }
+
+    > .md-navigation-tab-label {
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--navigationtab-text-active);
+    }
   }
 
-  &[data-active=true]{
+  &[data-active='true'] {
     background-color: rgba(0, 0, 0, 0.2); // IEFIX
     background-color: var(--navigationtab-background-active);
 
+    > .md-navigation-tab-icon > * {
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--navigationtab-text-active);
+    }
+
+    > .md-navigation-tab-label {
+      color: rgba(0, 0, 0, 0.95); // IEFIX
+      color: var(--navigationtab-text-active);
+    }
+
     &:hover {
-      background-color: rgba(0, 0, 0, 0.2);  // IEFIX
-      background-color: var(--navigationtab-background-active); 
+      background-color: rgba(0, 0, 0, 0.2); // IEFIX
+      background-color: var(--navigationtab-background-active);
+
+      > .md-navigation-tab-icon > * {
+        color: rgba(0, 0, 0, 0.95); // IEFIX
+        color: var(--navigationtab-text-active);
+      }
+
+      > .md-navigation-tab-label {
+        color: rgba(0, 0, 0, 0.95); // IEFIX
+        color: var(--navigationtab-text-active);
+      }
     }
 
     &:active {
       background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--navigationtab-background-active);
-    }
-  }
 
-  // Icon //
-  > .md-navigation-tab-icon > * {
-    color: rgba(0, 0, 0, 0.6); // IEFIX
-    color: var(--navigationtab-text);
-
-    &:hover {
-      color: rgba(0, 0, 0, 0.6); // IEFIX
-      color: var(--navigationtab-text-hovered);
-    }
-
-    &:active {
-      color: rgba(0, 0, 0, 0.95); // IEFIX
-      color: var(--navigationtab-text-active);
-    }
-
-    &[data-active=true]{
-      background-color: rgba(0, 0, 0, 0.95); // IEFIX
-      background-color: var(--navigationtab-text-active);
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.95);  // IEFIX
-        background-color: var(--navigationtab-text-active); 
+      > .md-navigation-tab-icon > * {
+        color: rgba(0, 0, 0, 0.95); // IEFIX
+        color: var(--navigationtab-text-active);
       }
 
-      &:active {
-        background-color: rgba(0, 0, 0, 0.95); // IEFIX
-        background-color: var(--navigationtab-text-active);
-      }
-    }
-  }
-
-  // Label //
-  > .md-navigation-tab-label {
-    color: rgba(0, 0, 0, 0.6); // IEFIX
-    color: var(--navigationtab-text);
-
-    &:hover {
-      color: rgba(0, 0, 0, 0.6); // IEFIX
-      color: var(--navigationtab-text-hovered);
-    }
-
-    &:active {
-      color: rgba(0, 0, 0, 0.95); // IEFIX
-      color: var(--navigationtab-text-active);
-    }
-
-    &[data-active=true]{
-      background-color: rgba(0, 0, 0, 0.95); // IEFIX
-      background-color: var(--navigationtab-text-active);
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.95);  // IEFIX
-        background-color: var(--navigationtab-text-active); 
-      }
-
-      &:active {
-        background-color: rgba(0, 0, 0, 0.95); // IEFIX
-        background-color: var(--navigationtab-text-active);
+      > .md-navigation-tab-label {
+        color: rgba(0, 0, 0, 0.95); // IEFIX
+        color: var(--navigationtab-text-active);
       }
     }
   }
@@ -112,7 +110,7 @@
   position: relative;
   align-items: center;
 
-  &[data-size="48"] {
+  &[data-size='48'] {
     height: 3rem;
     width: 3rem;
     justify-content: center;
@@ -121,10 +119,10 @@
       position: absolute;
       left: 1.4rem;
       top: 0.25rem;
-      }
+    }
   }
 
-  &[data-size="200"] {
+  &[data-size='200'] {
     height: 3rem;
     width: 100%;
 
