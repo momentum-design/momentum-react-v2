@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import classnames from 'classnames';
 
 import './Badge.style.scss';
 import { Props } from './Badge.types';
@@ -7,8 +8,14 @@ import { DEFAULTS, STYLE } from './Badge.constants';
 import Icon from '../Icon/Icon';
 
 const Badge: FC<Props> = (props: Props) => {
+  const { className, id, size, style } = props;
   return (
-    <div className={STYLE.wrapper} data-size={props.size || DEFAULTS.SIZE}>
+    <div
+      className={classnames(STYLE.wrapper, className)}
+      id={id}
+      style={style}
+      data-size={size || DEFAULTS.SIZE}
+    >
       {props.size == 18 ? (
         props.children
       ) : props.size == 12 ? (
