@@ -2,7 +2,7 @@
   align-items: flex-start;
   display: flex;
   margin: 1rem;
-  max-width: 20.75rem;
+  max-width: 25rem;
 
   &:not(:last-child) {
     margin-bottom: 0.5rem;
@@ -28,7 +28,7 @@
       font-size: 1rem;
       margin-bottom: 0;
 
-      &[data-centered="true"] {
+      &[data-centered='true'] {
         align-items: center;
         display: flex;
         height: 2rem;
@@ -44,19 +44,19 @@
     > .md-toast-details-info {
       font-size: 0.875rem;
 
-      &[data-color="cancel"] {
+      &[data-color='cancel'] {
         color: var(--theme-text-error-normal);
       }
 
-      &[data-color="join"] {
+      &[data-color='join'] {
         color: var(--theme-text-accent-normal);
       }
 
-      &[data-color="success"] {
+      &[data-color='success'] {
         color: var(--theme-text-success-normal);
       }
 
-      &[data-color="warning"] {
+      &[data-color='warning'] {
         color: var(--theme-text-warning-normal);
       }
     }
