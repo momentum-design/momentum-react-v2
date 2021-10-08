@@ -1,5 +1,6 @@
 const path = require('path');
 const { COMPONENTS_DIR, REPO_ROOT, LEGACY_COMPONENTS_DIR } = require('./constants');
+const util = require('util');
 
 const generateMain = (dir) => {
   return {
@@ -48,6 +49,8 @@ const generateMain = (dir) => {
         nodeModulesRule.include,
         /[\\/]node_modules[\\/](@react-aria|react-verification-input)/,
       ];
+      // eslint-disable-next-line no-console
+      console.log(util.inspect(config, { depth: null }));
       return config;
     },
   };
