@@ -20,6 +20,7 @@ const generateMain = (dir) => {
     webpackFinal: (config) => {
       config.resolve.alias['@momentum-ui/react'] = path.resolve(REPO_ROOT, dir, 'index');
       config.resolve.alias['@momentum-ui/core/images'] = path.resolve(REPO_ROOT, 'images');
+      config.resolve.alias['legacystyles'] = path.resolve(REPO_ROOT, 'scss');
 
       // Add SVGR Loader
       // ========================================================
