@@ -4,55 +4,46 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import toLower from 'lodash/toLower';
-import {
-  Icon,
-  InputHelper,
-  InputMessage,
-  InputSection,
-  Label,
- } from '@momentum-ui/react';
+import { InputHelper, InputMessage, InputSection, Label } from '@momentum-ui/react';
+import IconNext from '../../components/Icon';
+import ButtonSimple from '../../components/ButtonSimple';
 
-const determineMessageType = array => {
+const determineMessageType = (array) => {
   return array.reduce((agg, e) => {
     return agg === 'error' ? agg : e.type || '';
   }, '');
 };
 
 const filterMessagesByType = (array, value) => {
-  return array.reduce(
-    (agg, e) => (e.type === value ? agg.concat(e.message) : agg),
-    []
-  );
+  return array.reduce((agg, e) => (e.type === value ? agg.concat(e.message) : agg), []);
 };
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
 class Input extends React.Component {
-
   state = {
     isEditing: false,
     value: this.props.value || this.props.defaultValue,
   };
 
-  componentDidUpdate (prevProps) {
+  componentDidUpdate(prevProps) {
     const { value } = this.props;
 
-    value !== prevProps.value
-    && this.setValue(value);
+    value !== prevProps.value && this.setValue(value);
   }
 
-  setValue = value => {
+  setValue = (value) => {
     this.setState({
-      value
+      value,
     });
   };
 
-  handleKeyDown = e => {
+  handleKeyDown = (e) => {
     const { onKeyDown } = this.props;
 
     onKeyDown && onKeyDown(e);
   };
 
-  handleFocus = e => {
+  handleFocus = (e) => {
     const { onFocus, disabled } = this.props;
 
     if (disabled) {
@@ -68,7 +59,7 @@ class Input extends React.Component {
     });
   };
 
-  handleMouseDown = e => {
+  handleMouseDown = (e) => {
     const { onMouseDown, disabled } = this.props;
 
     if (disabled) {
@@ -84,7 +75,7 @@ class Input extends React.Component {
     });
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { onChange } = this.props;
     const value = e.target.value;
     e.persist();
@@ -94,20 +85,17 @@ class Input extends React.Component {
     });
   };
 
-  handleBlur = e => {
+  handleBlur = (e) => {
     const { onDoneEditing } = this.props;
     const value = e.target.value;
 
     if (e.which === 27 || e.which === 13 || e.type === 'blur') {
-      this.setState(
-        { isEditing: false }
-        , () => onDoneEditing && onDoneEditing(e, value)
-      );
+      this.setState({ isEditing: false }, () => onDoneEditing && onDoneEditing(e, value));
     }
     e.stopPropagation();
   };
 
-  handleClear = e => {
+  handleClear = (e) => {
     const value = '';
     e.target.value = value;
     e.persist();
@@ -115,11 +103,11 @@ class Input extends React.Component {
     this.handleChange(e);
   };
 
-  setInputRef = input => {
+  setInputRef = (input) => {
     const { clear, inputRef } = this.props;
-    if (clear)  this.input = input;
+    if (clear) this.input = input;
     if (inputRef) return inputRef(input);
-  }
+  };
 
   render() {
     const {
@@ -163,29 +151,32 @@ class Input extends React.Component {
       'value',
     ]);
 
-    const messageType =
-      (messageArr.length > 0 && determineMessageType(messageArr)) || '';
+    const messageType = (messageArr.length > 0 && determineMessageType(messageArr)) || '';
     const messages = (messageType && filterMessagesByType(messageArr, messageType)) || null;
 
-    const clearButton = (clear && !disabled && value) && (
-      <InputSection position='after'>
-        <Icon
-          name='clear-active_16'
+    const clearButton = clear && !disabled && value && (
+      <InputSection position="after">
+        <ButtonSimple
+          className="md-input__icon-clear"
+          aria-label={clearAriaLabel || 'clear input'}
+          onPress={this.handleClear}
+        >
+          <IconNext scale={18} name="cancel" />
+        </ButtonSimple>
+        {/* <IconNext
+          name='cancel'
           onClick={this.handleClear}
           ariaLabel={clearAriaLabel || 'clear input'}
           buttonClassName='md-input__icon-clear'
-        />
+          scale={18}
+        /> */}
       </InputSection>
     );
 
-    const inputSection = position => (
-      this.props[`input${position}`]
-      && (
-        <InputSection position={toLower(position)}>
-          {this.props[`input${position}`]}
-        </InputSection>
-      )
-    );
+    const inputSection = (position) =>
+      this.props[`input${position}`] && (
+        <InputSection position={toLower(position)}>{this.props[`input${position}`]}</InputSection>
+      );
 
     const inputLeft = inputSection('Before');
     const inputRight = clearButton || inputSection('After');
@@ -193,10 +184,7 @@ class Input extends React.Component {
     const InputTag = multiline ? 'textarea' : 'input';
 
     const inputElement = (
-      <div className={
-        'md-input__wrapper' +
-        `${inputSize ? ` columns ${inputSize}` : ''}`
-      }>
+      <div className={'md-input__wrapper' + `${inputSize ? ` columns ${inputSize}` : ''}`}>
         {inputLeft}
         <InputTag
           className={
@@ -220,13 +208,13 @@ class Input extends React.Component {
           tabIndex={0}
           type={type}
           value={value}
-          {...ariaDescribedBy && { 'aria-describedby': ariaDescribedBy }}
-          {...ariaLabel && { 'aria-label': ariaLabel }}
-          {...disabled && { disabled }}
-          {...(htmlId || id) && { id: htmlId || id }}
+          {...(ariaDescribedBy && { 'aria-describedby': ariaDescribedBy })}
+          {...(ariaLabel && { 'aria-label': ariaLabel })}
+          {...(disabled && { disabled })}
+          {...((htmlId || id) && { id: htmlId || id })}
           {...otherProps}
-          {...placeholder && { placeholder }}
-          {...readOnly && { readOnly }}
+          {...(placeholder && { placeholder })}
+          {...(readOnly && { readOnly })}
         />
         {inputRight}
       </div>
@@ -236,40 +224,31 @@ class Input extends React.Component {
       <div
         className={
           `md-input-container` +
-          `${isFilled ? ' md-input--filled' : ''}` +
           `${containerSize ? ` columns ${containerSize}` : ''}` +
           `${readOnly ? ' md-read-only' : ''}` +
           `${disabled ? ' md-disabled' : ''}` +
           `${messageType ? ` md-${messageType}` : ''}` +
-          `${nestedLevel && ` md-input--nested-${nestedLevel}` || ''}` +
+          `${(nestedLevel && ` md-input--nested-${nestedLevel}`) || ''}` +
           `${className ? ` ${className}` : ''}`
         }
       >
-        {
-          label &&
-          <Label
-            className='md-input__label'
-            htmlFor={htmlId || id}
-            label={label}
-          />
-        }
+        {label && <Label className="md-input__label" htmlFor={htmlId || id} label={label} />}
         {inputElement}
-        {
-          secondaryLabel &&
+        {secondaryLabel && (
           <Label
-            className='md-input__secondary-label'
+            className="md-input__secondary-label"
             htmlFor={htmlId || id}
             label={secondaryLabel}
           />
-        }
+        )}
         {helpText && <InputHelper message={helpText} />}
-        {messages &&
-          <div className='md-input__messages'>
+        {messages && (
+          <div className="md-input__messages">
             {messages.map((m, i) => (
               <InputMessage message={m} key={`input-message-${i}`} />
             ))}
           </div>
-        }
+        )}
       </div>
     );
   }
