@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Lightbox } from '@momentum-ui/react';
-import reactIcon from '../../../../images/momentum.jpg';
-import ciscoWebex from '../../../../images/cisco-webex-lockup-blue.png';
+import reactIcon from './momentum.jpg';
+import ciscoWebex from './cisco-webex-lockup-blue.png';
 
 export default class LightBoxMultiple extends React.Component {
   state = {
@@ -13,16 +13,13 @@ export default class LightBoxMultiple extends React.Component {
   render() {
     return (
       <div>
-        <Button
-          ariaLabel="Show Lightbox"
-          onClick={() => this.setState({ show: true })}
-        >
+        <Button ariaLabel="Show Lightbox" onClick={() => this.setState({ show: true })}>
           Show
         </Button>
         {this.state.show && (
           <Lightbox
             onClose={() => this.setState({ show: false })}
-            onChange={idx => this.setState({ index: idx })}
+            onChange={(idx) => this.setState({ index: idx })}
             name="Screen Shot 2018-04-11 at 7.32.51 PM.png"
             applicationId="app"
             onDownload={() => {
