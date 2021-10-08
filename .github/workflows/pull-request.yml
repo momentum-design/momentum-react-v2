@@ -108,11 +108,8 @@ jobs:
           node-version: 14.x
           check-latest: true
 
-      - name: Uncache Dependencies
-        uses: actions/cache@v2
-        with:
-          path: node_modules/
-          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+      - name: Install Dependencies
+        run: yarn
 
       - name: Build Source
         run: yarn ci:build
