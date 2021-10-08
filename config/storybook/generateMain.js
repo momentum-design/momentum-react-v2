@@ -1,5 +1,7 @@
 const path = require('path');
-const { COMPONENTS_DIR, REPO_ROOT, LEGACY_COMPONENTS_DIR } = require('./constants');
+const { COMPONENTS_DIR, LEGACY_COMPONENTS_DIR } = require('./constants');
+
+const REPO_ROOT = path.resolve(__dirname, '../../');
 
 const generateMain = (dir) => {
   return {
