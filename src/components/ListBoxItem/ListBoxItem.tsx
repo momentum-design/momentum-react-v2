@@ -9,14 +9,57 @@ import { useOption } from '@react-aria/listbox';
 import Icon from '../Icon';
 import ListItemBaseSection from '../ListItemBaseSection';
 import ListItemBase from '../ListItemBase';
+import { useKeyboard } from '@react-aria/interactions';
 
 function ListBoxItem<T>(props: Props<T>): ReactElement {
-  const { item } = props;
+  const { item, wrapped = true } = props;
   const ref = React.useRef<HTMLLIElement>(null);
   const state = useContext(ListBoxContext);
 
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.isSelected(item.key);
+
+  /**
+   * Handle keyboard navigation for any focusable elements inside list items
+   * Aria is ignoring these, and jumps outside of the list. This prevents that
+   */
+  const { keyboardProps } = useKeyboard({
+    onKeyDown: (e) => {
+      if (e.key === 'Tab') {
+        const focusableElements = ref.current.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+
+        if (focusableElements.length === 0) {
+          e.continuePropagation();
+          return;
+        }
+
+        const first = focusableElements[0] as HTMLElement;
+        const last = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+        if (document.activeElement === ref.current) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (first) {
+            first.focus();
+          }
+        } else if (document.activeElement === last) {
+          if (e.shiftKey) {
+            e.stopPropagation();
+            e.preventDefault();
+            return;
+          } else {
+            e.continuePropagation();
+          }
+        } else {
+          e.stopPropagation();
+        }
+      } else {
+        e.continuePropagation();
+      }
+    },
+  });
 
   const { optionProps } = useOption(
     {
@@ -26,21 +69,43 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
       isSelected,
       shouldSelectOnPressUp: true,
       shouldFocusOnHover: false,
+      isVirtualized: true,
     },
     state,
     ref
   );
 
-  return (
-    <ListItemBase key={item.key} ref={ref} {...optionProps} isDisabled={isDisabled}>
-      <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
-      {isSelected && (
-        <ListItemBaseSection position="end">
-          <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} />
-        </ListItemBaseSection>
-      )}
-    </ListItemBase>
-  );
+  if (wrapped) {
+    return (
+      <ListItemBase
+        key={item.key}
+        ref={ref}
+        {...optionProps}
+        isDisabled={isDisabled}
+        {...keyboardProps}
+      >
+        <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
+        {isSelected && (
+          <ListItemBaseSection position="end">
+            <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} />
+          </ListItemBaseSection>
+        )}
+      </ListItemBase>
+    );
+  } else {
+    if (React.isValidElement(item.rendered)) {
+      return React.cloneElement(item.rendered as ReactElement, {
+        key: item.key,
+        ref,
+        isDisabled,
+        isSelected,
+        ...optionProps,
+        ...keyboardProps,
+      });
+    } else {
+      return <>{item.rendered}</>;
+    }
+  }
 }
 
 /**

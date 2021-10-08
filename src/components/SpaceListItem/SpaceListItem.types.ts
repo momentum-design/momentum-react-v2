@@ -34,7 +34,7 @@ export interface Props extends PressEvents {
   secondLine?: string | string[];
 
   /**
-   * Determines weather there is new activity in this space (text appears in bold).
+   * Determines whether there is new activity in this space (text appears in bold).
    */
   isNewActivity?: boolean;
 
@@ -44,17 +44,17 @@ export interface Props extends PressEvents {
   teamColor?: TeamColor;
 
   /**
-   * Determines weather somebody mentioned the logged in user in this chat.
+   * Determines whether somebody mentioned the logged in user in this chat.
    */
   isMention?: boolean;
 
   /**
-   * Determines weather the user has just been invited to this space.
+   * Determines whether the user has just been invited to this space.
    */
   isEnterRoom?: boolean;
 
   /**
-   * Determines weather alerts on this space are muted.
+   * Determines whether alerts on this space are muted.
    */
   isAlertMuted?: boolean;
 
@@ -69,7 +69,12 @@ export interface Props extends PressEvents {
   action?: ReactNode;
 
   /**
-   * Determines weather this list item is selected (part of ListItemBase)
+   * Determines whether this list item is selected (part of ListItemBase)
    */
   isSelected?: boolean;
+
+  /**
+   * Determines whether the list item is compact or not
+   */
+  isCompact?: boolean;
 }

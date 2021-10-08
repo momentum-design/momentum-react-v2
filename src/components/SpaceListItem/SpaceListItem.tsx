@@ -29,13 +29,14 @@ const SpaceListItem: FC<Props> = forwardRef((props: Props, ref: RefObject<HTMLLI
     isError,
     action,
     isSelected,
+    isCompact = false,
     ...rest
   } = props;
 
   const renderText = () => {
     const _secondLineArray: string[] = typeof secondLine === 'string' ? [secondLine] : secondLine;
 
-    if (secondLine) {
+    if (secondLine && !isCompact) {
       return (
         <>
           <Text type="body-primary">{firstLine}</Text>
@@ -59,9 +60,7 @@ const SpaceListItem: FC<Props> = forwardRef((props: Props, ref: RefObject<HTMLLI
       scale: 14 as const,
       strokeColor: 'none',
     };
-    if (isNewActivity) {
-      return <Icon name="unread" fillColor={'var(--listitem-tick)'} {...iconProps} />;
-    } else if (isMention) {
+    if (isMention) {
       return <Icon fillColor={'var(--listitem-tick)'} name="mention" {...iconProps} />;
     } else if (isEnterRoom) {
       return <Icon fillColor={'var(--listitem-tick)'} name="enter-room" {...iconProps} />;
@@ -76,6 +75,8 @@ const SpaceListItem: FC<Props> = forwardRef((props: Props, ref: RefObject<HTMLLI
           weight="filled"
         />
       );
+    } else if (isNewActivity) {
+      return <Icon name="unread" fillColor={'var(--listitem-tick)'} {...iconProps} />;
     } else if (action) {
       return <>{action}</>;
     }
@@ -84,9 +85,11 @@ const SpaceListItem: FC<Props> = forwardRef((props: Props, ref: RefObject<HTMLLI
   return (
     <ListItemBase
       ref={ref}
-      size={50}
+      size={isCompact ? 32 : 50}
       shape="isPilled"
-      className={classnames(className, { [STYLE.isNewActivity]: isNewActivity })}
+      className={classnames(className, {
+        [STYLE.isNewActivity]: isNewActivity || isMention || isEnterRoom,
+      })}
       id={id}
       style={style}
       {...rest}

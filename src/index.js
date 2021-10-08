@@ -135,4 +135,5 @@ export {
   TextInput,
   AvatarMeetingsListItem,
   SpaceListItem as SpaceListItemNext,
+  List as ListNext,
 } from './components';

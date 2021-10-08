@@ -1,0 +1,9 @@
+.md-list-wrapper {
+  height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+  overflow: hidden;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+}

@@ -16,7 +16,7 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.BANNER_PRIMARY:
         return (
           <h1
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
@@ -29,7 +29,7 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.TITLE:
         return (
           <h2
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
@@ -47,7 +47,7 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.SUBHEADER_SECONDARY:
         return (
           <h3
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
@@ -61,7 +61,7 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.HYPERLINK_PRIMARY:
         return (
           <p
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
@@ -78,7 +78,7 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.LABEL_COMPACT:
         return (
           <small
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
@@ -91,7 +91,7 @@ const Text: FC<Props> = (props: Props) => {
       default:
         return (
           <p
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}

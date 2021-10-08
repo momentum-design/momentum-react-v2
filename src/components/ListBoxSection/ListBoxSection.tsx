@@ -10,7 +10,7 @@ import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 import ListBoxItem from '../ListBoxItem';
 
 const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
-  const { section } = props;
+  const { section, itemWrapped = true } = props;
 
   const { itemProps, headingProps, groupProps } = useListBoxSection({
     heading: section.rendered,
@@ -39,7 +39,7 @@ const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
         )}
         <ul {...groupProps} className={STYLE.subItemsWrapper}>
           {Array.from(section.childNodes).map((node) => (
-            <ListBoxItem key={node.key} item={node} />
+            <ListBoxItem wrapped={itemWrapped} key={node.key} item={node} />
           ))}
         </ul>
       </li>

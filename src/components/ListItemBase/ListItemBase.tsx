@@ -59,10 +59,13 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     content = children;
   }
 
-  const { pressProps, isPressed } = usePress({ preventFocusOnPress: true, ...rest });
+  const { pressProps, isPressed } = usePress({
+    preventFocusOnPress: true,
+    ...rest,
+  });
 
   return (
-    <FocusRing>
+    <FocusRing isInset={true}>
       <li
         ref={ref}
         data-size={size}

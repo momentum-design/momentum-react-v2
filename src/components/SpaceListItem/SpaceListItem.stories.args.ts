@@ -125,4 +125,17 @@ export default {
       },
     },
   },
+  isCompact: {
+    defaultValue: false,
+    description: 'Determines if the list item is compact.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
 };
