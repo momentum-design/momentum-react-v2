@@ -7,10 +7,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -54,7 +57,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -88,10 +91,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -135,7 +141,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -169,10 +175,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="example-class md-list-item-base-wrapper"
@@ -216,7 +225,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -246,10 +255,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -293,7 +305,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   >
                     firstLine
@@ -326,10 +338,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -374,7 +389,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -404,10 +419,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -451,7 +469,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -504,17 +522,20 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
   isEnterRoom={true}
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-is-new-activity"
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -555,7 +576,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -612,10 +633,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -659,7 +683,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -712,17 +736,20 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
   isMention={true}
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-is-new-activity"
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
           data-disabled={false}
           data-padded={false}
           data-shape="isPilled"
@@ -763,7 +790,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -820,10 +847,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
@@ -867,7 +897,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -915,6 +945,87 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
 </SpaceListItem>
 `;
 
+exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = `
+<SpaceListItem
+  isSelected={true}
+>
+  <ListItemBase
+    className=""
+    isSelected={true}
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          className="md-list-item-base-wrapper active"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
 exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = `
 <SpaceListItem
   secondLine="secondLine"
@@ -924,10 +1035,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -971,7 +1085,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -984,7 +1098,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                   type="body-secondary"
                 >
                   <small
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-secondary"
                     style={
                       Object {
@@ -1030,10 +1144,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -1082,7 +1199,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1112,10 +1229,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -1159,7 +1279,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>

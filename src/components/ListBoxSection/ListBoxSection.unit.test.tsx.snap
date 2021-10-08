@@ -65,11 +65,15 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
         <ListItemBase
           isDisabled={false}
           key="$.0.0"
+          onKeyDown={[Function]}
         >
-          <FocusRing>
+          <FocusRing
+            isInset={false}
+          >
             <FocusRing
               focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
             >
               <li
                 className="md-list-item-base-wrapper"
@@ -138,11 +142,15 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
         <ListItemBase
           isDisabled={false}
           key="$.0.1"
+          onKeyDown={[Function]}
         >
-          <FocusRing>
+          <FocusRing
+            isInset={false}
+          >
             <FocusRing
               focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
             >
               <li
                 className="md-list-item-base-wrapper"

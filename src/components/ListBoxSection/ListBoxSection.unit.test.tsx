@@ -38,7 +38,7 @@ describe('ListBoxSection', () => {
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      useContextMock.mockReturnValue(state);
+      useContextMock.mockReturnValue({ state, shouldWrapItems: true });
 
       const item = state.collection.getItem('$.0');
       const wrapper = mount(<ListBoxSection key={item.key} section={item} />);
@@ -49,7 +49,7 @@ describe('ListBoxSection', () => {
 
   describe('attributes', () => {
     it('should render the items inside the section', () => {
-      useContextMock.mockReturnValue(state);
+      useContextMock.mockReturnValue({ state, shouldWrapItems: true });
 
       const item = state.collection.getItem('$.0');
       const numberOfItems = [...item.childNodes].length;

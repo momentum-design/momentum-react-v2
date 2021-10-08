@@ -32,4 +32,22 @@ export interface Props<T> {
    * Determines if the listbox allows for empty selection
    */
   disallowEmptySelection?: boolean;
+
+  /**
+   * Determines wether items should be virtualized
+   * @default false
+   */
+  shouldVirtualizeItems?: boolean;
+
+  /**
+   * Determines if the items inside the listbox are wrapped inside ListItemBase or not
+   * @default true
+   */
+  shouldWrapItems?: boolean;
+
+  /**
+   * Determines wether the focus around list-items should be inset or outset
+   * This is needed for virtualized lists
+   */
+  shouldItemFocusBeInset?: boolean;
 }

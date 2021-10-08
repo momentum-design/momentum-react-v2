@@ -10,7 +10,7 @@ import { STYLE } from './List.constants';
 import { Props } from './List.types';
 import './List.style.scss';
 import ListBoxItem from '../ListBoxItem';
-import ListBoxSection from '../ListBoxSection';
+// import ListBoxSection from '../ListBoxSection';
 import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 import { Virtualizer, VirtualizerItem } from '@react-aria/virtualizer';
 import { ListLayout } from '@react-stately/layout';
@@ -35,7 +35,7 @@ export function useListBoxLayout<T>(state: ListState<T>, itemHeight: number): Li
  * The List component.
  */
 const List = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivElement>) => {
-  const { className, id, onScroll, itemHeight } = props;
+  const { className, style, id, onScroll, itemHeight } = props;
 
   const state = useListState(props);
 
@@ -58,18 +58,23 @@ const List = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
       keyboardDelegate: layout,
       isVirtualized: true,
       shouldUseVirtualFocus: false,
-      id,
     },
     state,
     ref
   );
 
+  const listBoxContextValue = {
+    state,
+    shouldWrapItems: false,
+    shouldVirtualizeItems: true,
+  };
+
   type View = ReusableView<Node<T>, unknown>;
   const renderWrapper = (
     parent: View,
-    reusableView: View,
-    children: View[],
-    renderChildren: (views: View[]) => ReactElement[]
+    reusableView: View
+    // children: View[],
+    // renderChildren: (views: View[]) => ReactElement[]
   ) => {
     // if (reusableView.viewType === 'section') {
     //   return (
@@ -87,8 +92,8 @@ const List = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   };
 
   return (
-    <ListBoxContext.Provider value={state}>
-      <div className={classnames(className, STYLE.wrapper)}>
+    <ListBoxContext.Provider value={listBoxContextValue}>
+      <div className={classnames(className, STYLE.wrapper)} style={style} id={id}>
         <Virtualizer
           ref={ref}
           {...listBoxProps}
@@ -106,7 +111,7 @@ const List = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
         >
           {(type, item: Node<T>) => {
             if (type === 'item') {
-              return <ListBoxItem wrapped={false} item={item} />;
+              return <ListBoxItem item={item} />;
             } else if (type === 'loader') {
               return (
                 <div

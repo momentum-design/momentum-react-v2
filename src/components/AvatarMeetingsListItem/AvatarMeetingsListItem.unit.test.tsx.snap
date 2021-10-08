@@ -10,10 +10,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -72,7 +75,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -112,10 +115,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -204,7 +210,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -239,10 +245,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="example-class md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -301,7 +310,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -340,10 +349,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -402,7 +414,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -501,10 +513,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -563,7 +578,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -666,10 +681,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -728,7 +746,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -827,10 +845,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -889,7 +910,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   >
                     firstLine
@@ -927,10 +948,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -990,7 +1014,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1025,10 +1049,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -1113,7 +1140,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1148,10 +1175,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -1236,7 +1266,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1271,10 +1301,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -1359,7 +1392,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1394,10 +1427,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -1482,7 +1518,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1517,10 +1553,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
     shape="isPilled"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -1579,7 +1618,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1587,7 +1626,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                   type="body-secondary"
                 >
                   <small
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-secondary"
                   >
                     secondLine
@@ -1633,10 +1672,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
       }
     }
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
@@ -1700,7 +1742,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
                   type="body-primary"
                 >
                   <p
-                    className="md-text-wrapper md-text-color"
+                    className="md-text-wrapper"
                     data-type="body-primary"
                   />
                 </Text>

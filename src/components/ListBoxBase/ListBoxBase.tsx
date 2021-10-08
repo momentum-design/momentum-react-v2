@@ -10,10 +10,25 @@ import { ListState } from '@react-stately/list';
 import { Node } from '@react-types/shared';
 import MenuListBackground from '../MenuListBackground';
 
-export const ListBoxContext = React.createContext<ListState<unknown>>(null);
+interface ListBoxContextValue {
+  state: ListState<unknown>;
+  shouldWrapItems?: boolean;
+  shouldVirtualizeItems?: boolean;
+  shouldItemFocusBeInset?: boolean;
+}
+
+export const ListBoxContext = React.createContext<ListBoxContextValue>(null);
 
 const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) => {
-  const { state, className, id, style } = props;
+  const {
+    state,
+    className,
+    id,
+    style,
+    shouldWrapItems = true,
+    shouldVirtualizeItems = false,
+    shouldItemFocusBeInset = false,
+  } = props;
 
   const mutatedProps = {
     ...props,
@@ -31,6 +46,13 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
     ref
   );
 
+  const listBoxContextValue = {
+    state,
+    shouldWrapItems,
+    shouldVirtualizeItems,
+    shouldItemFocusBeInset,
+  };
+
   const renderItems = () => {
     return Array.from(state.collection.getKeys()).map((key) => {
       const item = state.collection.getItem(key) as Node<T>;
@@ -43,7 +65,7 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
   };
 
   return (
-    <ListBoxContext.Provider value={state}>
+    <ListBoxContext.Provider value={listBoxContextValue}>
       <MenuListBackground
         {...listBoxProps}
         color={'primary'}

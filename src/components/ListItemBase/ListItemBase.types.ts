@@ -60,4 +60,10 @@ export interface Props extends PressEvents {
    * @default "listitem"
    */
   role?: string;
+
+  /**
+   * Determines wether the focus for this item should be inset or outset
+   * @default false
+   */
+  shouldItemFocusBeInset?: boolean;
 }

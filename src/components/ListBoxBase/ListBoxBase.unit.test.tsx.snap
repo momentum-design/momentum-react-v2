@@ -203,7 +203,6 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -213,12 +212,16 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -301,7 +304,6 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -311,12 +313,16 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -573,7 +579,6 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -583,12 +588,16 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -671,7 +680,6 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -681,12 +689,16 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -944,7 +956,6 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -954,12 +965,16 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -1042,7 +1057,6 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -1052,12 +1066,16 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -1314,7 +1332,6 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -1324,12 +1341,16 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -1412,7 +1433,6 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -1422,12 +1442,16 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -1840,7 +1864,6 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onDragStart={[Function]}
                       onFocus={[Function]}
                       onKeyDown={[Function]}
-                      onKeyUp={[Function]}
                       onMouseDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
@@ -1850,12 +1873,16 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
+                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -1938,7 +1965,6 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onDragStart={[Function]}
                       onFocus={[Function]}
                       onKeyDown={[Function]}
-                      onKeyUp={[Function]}
                       onMouseDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
@@ -1948,12 +1974,16 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
+                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -2075,7 +2105,6 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onDragStart={[Function]}
                       onFocus={[Function]}
                       onKeyDown={[Function]}
-                      onKeyUp={[Function]}
                       onMouseDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
@@ -2085,12 +2114,16 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
+                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -2368,7 +2401,6 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -2378,12 +2410,16 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}
@@ -2466,7 +2502,6 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 onDragStart={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
                 onMouseDown={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -2476,12 +2511,16 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
+                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
-                <FocusRing>
+                <FocusRing
+                  isInset={false}
+                >
                   <FocusRing
                     focusClass="md-focus-ring-wrapper children"
                     focusRingClass="md-focus-ring-wrapper children"
+                    isInset={false}
                   >
                     <li
                       aria-describedby={null}

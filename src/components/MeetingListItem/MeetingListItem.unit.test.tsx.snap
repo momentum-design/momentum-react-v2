@@ -6,10 +6,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
     className="md-meeting-list-item-wrapper"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
@@ -70,10 +73,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
     className="md-meeting-list-item-wrapper"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
@@ -151,10 +157,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
     className="example-class md-meeting-list-item-wrapper"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="example-class md-meeting-list-item-wrapper md-list-item-base-wrapper"
@@ -216,10 +225,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
     data-color="join"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
@@ -283,10 +295,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
     id="example-id"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
@@ -352,10 +367,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
     className="md-meeting-list-item-wrapper"
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
@@ -437,10 +455,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
     isDisabled={true}
     size={50}
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
@@ -510,10 +531,13 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"

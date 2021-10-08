@@ -12,9 +12,10 @@ import ListItemBase from '../ListItemBase';
 import { useKeyboard } from '@react-aria/interactions';
 
 function ListBoxItem<T>(props: Props<T>): ReactElement {
-  const { item, wrapped = true } = props;
+  const { item } = props;
   const ref = React.useRef<HTMLLIElement>(null);
-  const state = useContext(ListBoxContext);
+  const { state, shouldVirtualizeItems, shouldWrapItems, shouldItemFocusBeInset } =
+    useContext(ListBoxContext);
 
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.isSelected(item.key);
@@ -69,13 +70,13 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
       isSelected,
       shouldSelectOnPressUp: true,
       shouldFocusOnHover: false,
-      isVirtualized: true,
+      isVirtualized: shouldVirtualizeItems,
     },
     state,
     ref
   );
 
-  if (wrapped) {
+  if (shouldWrapItems) {
     return (
       <ListItemBase
         key={item.key}
@@ -83,6 +84,7 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
         {...optionProps}
         isDisabled={isDisabled}
         {...keyboardProps}
+        shouldItemFocusBeInset={shouldItemFocusBeInset}
       >
         <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
         {isSelected && (

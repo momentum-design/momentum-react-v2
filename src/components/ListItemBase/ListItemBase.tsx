@@ -20,6 +20,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
     isSelected,
+    shouldItemFocusBeInset = DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET,
     ...rest
   } = props;
 
@@ -65,7 +66,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   });
 
   return (
-    <FocusRing isInset={true}>
+    <FocusRing isInset={shouldItemFocusBeInset}>
       <li
         ref={ref}
         data-size={size}

@@ -18,6 +18,7 @@ const DEFAULTS = {
   IS_PADDED: false,
   SHAPE: SHAPES.rectangle,
   ROLE: 'listitem',
+  SHOULD_ITEM_FOCUS_BE_INSET: false,
 };
 
 const STYLE = {

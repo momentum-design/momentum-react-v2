@@ -142,7 +142,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
             type="body-primary"
           >
             <p
-              className="md-text-wrapper md-text-color"
+              className="md-text-wrapper"
               data-type="body-primary"
             >
               Example Text
