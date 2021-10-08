@@ -1,0 +1,15 @@
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import LegacyKitchenSink from './KitchenSink';
+import React from 'react';
+
+export default {
+  title: 'Legacy/{{componentName}}',
+  component: LegacyKitchenSink,
+  parameters: {
+    expanded: true,
+  },
+};
+
+const Legacy = () => <LegacyKitchenSink />
+
+export { Legacy };

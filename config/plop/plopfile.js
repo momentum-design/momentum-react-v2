@@ -54,4 +54,30 @@ module.exports = function (plop) {
       return actions;
     },
   });
+
+  plop.setGenerator('legacyStory', {
+    description: 'Add a story for a legacy component',
+    prompts: [
+      {
+        type: 'input',
+        name: 'componentName',
+        message: 'component name, please use appropriate uppercase (e.g. TextField)',
+        validate: (answer) => answer.length > 0,
+      },
+    ],
+    actions: function (data) {
+      let { componentName } = data;
+      let actions = [];
+
+      actions.push({
+        type: 'addMany',
+        templateFiles: 'plop-templates/legacy-component/**',
+        base: 'plop-templates/legacy-component',
+        destination: `src/legacy/${componentName}/examples`,
+        data: { componentName },
+      });
+
+      return actions;
+    },
+  });
 };

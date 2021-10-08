@@ -1,9 +1,12 @@
 const path = require('path');
-const { COMPONENTS_DIR, REPO_ROOT } = require('./constants');
+const { COMPONENTS_DIR, REPO_ROOT, LEGACY_COMPONENTS_DIR } = require('./constants');
 
 const generateMain = (dir) => {
   return {
-    stories: [path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)')],
+    stories: [
+      path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
+      path.join(REPO_ROOT, dir, LEGACY_COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
+    ],
     addons: [
       '@storybook/addon-docs',
       '@storybook/addon-links',
@@ -16,6 +19,7 @@ const generateMain = (dir) => {
     },
     webpackFinal: (config) => {
       config.resolve.alias['@momentum-ui/react'] = path.resolve(REPO_ROOT, dir, 'index');
+      config.resolve.alias['@momentum-ui/core/images'] = path.resolve(REPO_ROOT, 'images');
 
       // Add SVGR Loader
       // ========================================================

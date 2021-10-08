@@ -1,0 +1,1 @@
+import './LegacyComponentImporter.style.scss';
