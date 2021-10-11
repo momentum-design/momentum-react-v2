@@ -159,7 +159,7 @@ class Input extends React.Component {
           onClick={this.handleClear}
           ariaLabel={clearAriaLabel || 'clear input'}
           buttonClassName="md-input__icon-clear"
-          icon={<IconNext scale={18} name="cancel" />}
+          icon={<IconNext scale={18} strokeColor="transparent" name="cancel" weight="bold" />}
         />
       </InputSection>
     );
