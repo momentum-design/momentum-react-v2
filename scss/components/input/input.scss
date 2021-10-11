@@ -256,149 +256,41 @@
     // Outline
     @include input-color(
       $background-color: $input__background,
-      $background-color-css-var: --md-input-background-color,
+      $background-color-css-var: --textinput-background,
       $background-color-disabled: $input__background--disabled,
-      $background-color-disabled-css-var: --md-input-disabled,
+      $background-color-disabled-css-var: --textinput-background-disabled,
       $background-color-hover: $input__background--hover,
-      $background-color-hover-css-var: --md-input-background-hover,
+      $background-color-hover-css-var: --textinput-background-hovered,
       $border-color: $input__border-color,
-      $border-color-css-var: --md-input-outline-color,
+      $border-color-css-var: --textinput-border-color,
       $color: $input__font-color,
-      $color-css-var: --md-input-text-primary,
+      $color-css-var: --textinput-text,
       $color-clear: $input__clear-icon__color,
-      $color-clear-css-var: --md-input-text-secondary,
+      $color-clear-css-var: --theme-text-secondary-normal,
       $color-clear-hover: $input__clear-icon__color--hover,
-      $color-clear-hover-css-var: --md-input-text-secondary,
+      $color-clear-hover-css-var: --theme-text-secondary-normal,
       $color-disabled: $input__font-color--disabled,
-      $color-disabled-css-var: --md-input-text-disabled,
+      $color-disabled-css-var: --textinput-text-disabled,
       $color-help: $input__font-color--help,
-      $color-help-css-var: --md-textColor-secondary,
+      $color-help-css-var: --theme-text-secondary-normal,
       $color-placeholder: $input__font-color--placeholder,
-      $color-placeholder-css-var: --md-input-text-secondary,
+      $color-placeholder-css-var: --textinput-placeholder-text,
       $color-read-only: $input__font-color--read-only,
-      $color-read-only-css-var: --md-input-text-primary
+      $color-read-only-css-var: --textinput-text-disabled
     );
-
-    // Contrast
-    .#{$contrast-class} & {
-      @include input-color(
-        $background-color-disabled: $input__background--disabled--contrast,
-        $background-color-hover: $input__background--hover--contrast,
-        $border-color: $input__border-color--contrast,
-        $color-disabled: $input__font-color--disabled--contrast,
-        $color-help: $input__font-color--help--contrast,
-        $color-read-only: $input__font-color
-      )
-    }
-
-    // Dark
-    .#{$dark-class} & {
-      @include input-color(
-        $background-color: $input__background--dark,
-        $background-color-disabled: $input__background--disabled--dark,
-        $background-color-hover: $input__background--hover--dark,
-        $border-color: $input__border-color--dark,
-        $color: $input__font-color--dark,
-        $color-clear: $input__clear-icon__color--dark,
-        $color-clear-hover: $input__clear-icon__color--hover--dark,
-        $color-disabled: $input__font-color--disabled--dark,
-        $color-help: $input__font-color--help--dark,
-        $color-placeholder: $input__font-color--placeholder--dark,
-        $color-read-only: $input__font-color--read-only--dark
-      );
-
-      // Dark Contrast
-      .#{$contrast-class} & {
-        @include input-color(
-          $background-color-hover: $input__background--hover--dark--contrast,
-          $border-color: $input__border-color--dark--contrast,
-          $color-help: $input__font-color--help--dark--contrast
-        );
-      }
-    }
-
-    // Filled
-    &.#{$input__class}--filled {
-      @include input-color(
-        $background-color: $input__background--filled,
-        $background-color-css-var: --md-background-tertiary,
-        $background-color-disabled: $input__background--filled,
-        $background-color-hover: $input__background--filled--hover,
-        $background-color-hover-css-var: --md-background-quaternary,
-      );
-    }
-
-    //Filled Contrast
-    .#{$contrast-class} & {
-      &.#{$input__class}--filled {
-        @include input-color(
-          $background-color: $input__background--dark,
-          $background-color-disabled: $input__background--dark,
-          $background-color-hover: $input__background--hover--dark,
-          $color: $input__font-color--dark,
-          $color-clear: $input__clear-icon__color--dark,
-          $color-clear-hover: $input__clear-icon__color--hover--dark,
-          $color-disabled: $input__font-color--disabled--dark,
-          $color-placeholder: $input__font-color--placeholder--dark,
-          $color-read-only: $input__font-color--read-only--dark
-        );
-      }
-    }
-
-    // Filled Dark
-    .#{$dark-class} & {
-      &.#{$input__class}--filled {
-        @include input-color(
-          $background-color: $input__background--filled--dark,
-          $background-color-disabled: $input__background--filled--dark,
-          $background-color-hover: $input__background--filled--hover--dark,
-          $color-read-only: $input__font-color--read-only--filled--dark
-        );
-      }
-
-      // Filled Dark Contrast
-      .#{$contrast-class} &.#{$input__class}--filled {
-        @include input-color(
-          $background-color: $input__background,
-          $background-color-disabled: $input__background--disabled,
-          $background-color-hover: $input__background--hover,
-          $color: $input__font-color,
-          $color-clear: $input__clear-icon__color,
-          $color-clear-hover: $input__clear-icon__color--hover,
-          $color-disabled: $input__font-color--disabled,
-          $color-placeholder: $input__font-color--placeholder,
-          $color-read-only: $input__font-color--read-only
-        );
-      }
-    }
 
     // Error
     &.#{$prefix}-error {
       @include input-color(
         $background-color: $input__background--error,
-        $background-color-css-var: --md-alert-background-error,
+        $background-color-css-var: --textinput-error-background,
         $background-color-hover: $input__background--error--hover,
-        $background-color-hover-css-var: --md-alert-background-error,
+        $background-color-hover-css-var: --textinput-error-background-hovered,
         $border-color: $input__border-color--error,
+        $border-color-css-var: --textinput-error-border-color,
         $color-message: $input__message__font-color--error,
-        $color-message-css-var: --md-input-text-error
+        $color-message-css-var: --theme-text-error-normal
       );
-
-      .#{$contrast-class} & {
-        @include input-color(
-          $border-color: $input__border-color--error--contrast,
-          $color-message: $input__message__font-color--error--contrast
-        );
-      }
-
-      .#{$dark-class} & {
-        @include input-color(
-          $background-color: $input__background--error--dark,
-          $background-color-hover: $input__background--error--hover--dark,
-          $border-color: $input__border-color--error--dark,
-          $color-message: $input__message__font-color--error--dark
-        );
-      }
 
       .#{$input__class} {
         &__messages {
@@ -406,7 +298,7 @@
         }
         &__message {
           &:before {
-            @include icon-clear_16;
+            @include icon-warning_16;
           }
         }
       }
@@ -421,24 +313,8 @@
         $background-color-hover-css-var: --md-alert-background-warning,
         $border-color: $input__border-color--warning,
         $color-message: $input__message__font-color--warning,
-        $color-message-css-var: --md-input-text-error
+        $color-message-css-var: --theme-text-warning-normal
       );
-
-      .#{$contrast-class} & {
-        @include input-color(
-          $border-color: $input__border-color--warning--contrast,
-          $color-message: $input__message__font-color--warning--contrast
-        );
-      }
-
-      .#{$dark-class} & {
-        @include input-color(
-          $background-color: $input__background--warning--dark,
-          $background-color-hover: $input__background--warning--hover--dark,
-          $border-color: $input__border-color--warning--dark,
-          $color-message: $input__message__font-color--warning--dark
-        );
-      }
 
       .#{$input__class} {
         &__messages {
@@ -463,24 +339,6 @@
         $color-message: $input__message__font-color--success,
         $color-message-css-var: --md-input-text-error
       );
-
-      .#{$contrast-class} & {
-        @include input-color(
-          $background-color: $input__background--success,
-          $background-color-hover: $input__background--success--hover,
-          $border-color: $input__border-color--success--contrast,
-          $color-message: $input__message__font-color--success--contrast
-        );
-      }
-
-      .#{$dark-class} & {
-        @include input-color(
-          $background-color: $input__background--success--dark,
-          $background-color-hover: $input__background--success--hover--dark,
-          $border-color: $input__border-color--success--dark,
-          $color-message: $input__message__font-color--success--dark
-        );
-      }
 
       .#{$input__class} {
         &__messages {
