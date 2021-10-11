@@ -24,6 +24,7 @@ class Icon extends React.PureComponent {
       style,
       title,
       type,
+      getIcon,
       ...otherProps
     } = this.props;
 
@@ -67,19 +68,19 @@ class Icon extends React.PureComponent {
       if (sizeOverride) {
         iconName = name.split('_')[0] + `_${getSize()}`;
       }
-      return iconNames.includes(iconName) ? `icon-${iconName}` : consoleHandler('name-error', iconName);
+      return iconNames.includes(iconName)
+        ? `icon-${iconName}`
+        : consoleHandler('name-error', iconName);
     };
 
     const styles = {
       fontSize: getSize(),
-      ...color && { color: getColor() },
+      ...(color && { color: getColor() }),
       ...style,
     };
 
     const getAriaLabel = () => {
-      if (
-        ariaLabel
-      ) {
+      if (ariaLabel) {
         return ariaLabel;
       }
       if (!ariaLabel) {
@@ -90,7 +91,7 @@ class Icon extends React.PureComponent {
       return null;
     };
 
-    const getIcon = () => {
+    const getIconInternal = () => {
       return (
         <i
           className={
@@ -102,8 +103,8 @@ class Icon extends React.PureComponent {
           }
           aria-label={!onClick ? getAriaLabel() : null}
           style={styles}
-          {...(title && !onClick) && { title: title }}
-          {...!onClick && { ...otherProps }}
+          {...(title && !onClick && { title: title })}
+          {...(!onClick && { ...otherProps })}
         />
       );
     };
@@ -118,13 +119,15 @@ class Icon extends React.PureComponent {
         ariaLabel={getAriaLabel()}
         onClick={onClick}
         {...buttonProps}
-        {...title && { title: title }}
+        {...(title && { title: title })}
         {...otherProps}
       >
-        {getIcon()}
+        {getIcon ? getIcon() : getIconInternal()}
       </Button>
-    ) : (
+    ) : getIcon ? (
       getIcon()
+    ) : (
+      getIconInternal()
     );
   }
 }

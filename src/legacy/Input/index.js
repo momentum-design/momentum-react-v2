@@ -4,9 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import toLower from 'lodash/toLower';
-import { InputHelper, InputMessage, InputSection, Label } from '@momentum-ui/react';
+import { InputHelper, InputMessage, InputSection, Label, Icon } from '@momentum-ui/react';
 import IconNext from '../../components/Icon';
-import ButtonSimple from '../../components/ButtonSimple';
 
 const determineMessageType = (array) => {
   return array.reduce((agg, e) => {
@@ -156,20 +155,15 @@ class Input extends React.Component {
 
     const clearButton = clear && !disabled && value && (
       <InputSection position="after">
-        <ButtonSimple
-          className="md-input__icon-clear"
-          aria-label={clearAriaLabel || 'clear input'}
-          onPress={this.handleClear}
-        >
-          <IconNext scale={18} name="cancel" />
-        </ButtonSimple>
-        {/* <IconNext
-          name='cancel'
+        <Icon
+          name=""
           onClick={this.handleClear}
           ariaLabel={clearAriaLabel || 'clear input'}
-          buttonClassName='md-input__icon-clear'
-          scale={18}
-        /> */}
+          buttonClassName="md-input__icon-clear"
+          getIcon={() => {
+            return <IconNext scale={18} name="cancel" />;
+          }}
+        />
       </InputSection>
     );
 
