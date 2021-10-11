@@ -5,6 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Reaction, { ReactionProps } from './';
 import argTypes from './Reaction.stories.args';
 import Documentation from './Reaction.stories.docs.mdx';
+import { REACTION_NAMES } from './Reaction.constants';
 
 export default {
   title: 'Momentum UI/Reaction',
@@ -16,23 +17,16 @@ export default {
     },
   },
   args: {
-    // Args provided to all stories by default.
-    name: 'thumb-up-yellow', // Example of a default arg for all stories.
+    name: REACTION_NAMES.thumbUpYellow,
+    loop: 1,
+    autoPlay: true,
   },
 };
 
-/**
- * Primary story. This renders a single component with all external props.
- */
 const Example = Template<ReactionProps>(Reaction).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Inject additional stories here.
-
-/**
- * Common variants story. This renders multiple variants of a single component.
- */
 const Common = MultiTemplate<ReactionProps>(Reaction).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -40,20 +34,20 @@ delete Common.argTypes.children;
 
 Common.parameters = {
   variants: [
-    { name: 'popper' },
-    { name: 'heart' },
-    { name: 'thumb-up-yellow' },
-    { name: 'smile' },
-    { name: 'haha' },
-    { name: 'wow' },
-    { name: 'sad' },
-    { name: 'popper', size: 16 },
-    { name: 'heart', size: 16 },
-    { name: 'thumb-up-yellow', size: 16 },
-    { name: 'smile', size: 16 },
-    { name: 'haha', size: 16 },
-    { name: 'wow', size: 16 },
-    { name: 'sad', size: 16 },
+    { name: REACTION_NAMES.popper },
+    { name: REACTION_NAMES.heart },
+    { name: REACTION_NAMES.thumbUpYellow },
+    { name: REACTION_NAMES.smile },
+    { name: REACTION_NAMES.haha },
+    { name: REACTION_NAMES.wow },
+    { name: REACTION_NAMES.sad },
+    { name: REACTION_NAMES.popper, size: 16 },
+    { name: REACTION_NAMES.heart, size: 16 },
+    { name: REACTION_NAMES.thumbUpYellow, size: 16 },
+    { name: REACTION_NAMES.smile, size: 16 },
+    { name: REACTION_NAMES.haha, size: 16 },
+    { name: REACTION_NAMES.wow, size: 16 },
+    { name: REACTION_NAMES.sad, size: 16 },
   ],
 };
 

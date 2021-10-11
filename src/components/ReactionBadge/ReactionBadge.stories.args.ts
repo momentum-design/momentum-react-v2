@@ -17,18 +17,6 @@ export default {
       },
     },
   },
-  name: {
-    description: 'Name of the reaction emoji to render.',
-    control: { type: 'text' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'haha',
-      },
-    },
-  },
   reacted: {
     description: 'Whether to render the `<ReactionBadge />` as reacted.',
     options: [true, false],
@@ -39,6 +27,18 @@ export default {
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.DISABLED,
+      },
+    },
+  },
+  reaction: {
+    description: '`<Reaction />` for this `<ReactionBadge />`.',
+    control: { type: 'none' },
+    table: {
+      type: {
+        summary: 'Reaction',
+      },
+      defaultValue: {
+        summary: 'undefined',
       },
     },
   },
