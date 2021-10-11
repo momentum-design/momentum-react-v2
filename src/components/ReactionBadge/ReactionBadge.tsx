@@ -5,13 +5,10 @@ import { DEFAULTS, STYLE } from './ReactionBadge.constants';
 import { Props } from './ReactionBadge.types';
 import './ReactionBadge.style.scss';
 import ButtonPill from '../ButtonPill';
-import Reaction from '../Reaction';
 
 const ReactionBadge: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    // for now children is the native emoji until i make the emoji/reaction component we discussed during
-    // meeting today about mapping string -> SVG
-    const { children, className, count, id, reacted, style, ...otherProps } = props;
+    const { className, count, id, reacted, reaction, style, ...otherProps } = props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
 
@@ -26,7 +23,7 @@ const ReactionBadge: FC<Props> = forwardRef(
         style={style}
         {...otherProps}
       >
-        <Reaction name={name} />
+        {reaction}
         <span className="reaction-badge-count">{count}</span>
       </ButtonPill>
     );
