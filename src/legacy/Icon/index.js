@@ -24,7 +24,7 @@ class Icon extends React.PureComponent {
       style,
       title,
       type,
-      getIcon,
+      icon,
       ...otherProps
     } = this.props;
 
@@ -73,12 +73,6 @@ class Icon extends React.PureComponent {
         : consoleHandler('name-error', iconName);
     };
 
-    const styles = {
-      fontSize: getSize(),
-      ...(color && { color: getColor() }),
-      ...style,
-    };
-
     const getAriaLabel = () => {
       if (ariaLabel) {
         return ariaLabel;
@@ -91,7 +85,13 @@ class Icon extends React.PureComponent {
       return null;
     };
 
-    const getIconInternal = () => {
+    const getIcon = () => {
+      const styles = {
+        fontSize: getSize(),
+        ...(color && { color: getColor() }),
+        ...style,
+      };
+
       return (
         <i
           className={
@@ -122,12 +122,12 @@ class Icon extends React.PureComponent {
         {...(title && { title: title })}
         {...otherProps}
       >
-        {getIcon ? getIcon() : getIconInternal()}
+        {icon ? icon : getIcon()}
       </Button>
-    ) : getIcon ? (
-      getIcon()
+    ) : icon ? (
+      icon
     ) : (
-      getIconInternal()
+      getIcon()
     );
   }
 }
@@ -147,8 +147,10 @@ Icon.propTypes = {
   className: PropTypes.string,
   /** @prop Icon description text | '' */
   description: PropTypes.string,
-  /** @prop Required Icon name */
-  name: PropTypes.string.isRequired,
+  /** @prop Icon node to draw instead of supplying name */
+  icon: PropTypes.node,
+  /** @prop Legacy icon name */
+  name: PropTypes.string,
   /** @prop Handler invoked by click of the user | null */
   onClick: PropTypes.func,
   /** @prop Add margin to the right of Icon | null */

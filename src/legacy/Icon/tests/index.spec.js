@@ -239,6 +239,12 @@ describe('Tests for <Icon />', () => {
       mount(<Icon {...props} />);
       expect(global.console.warn).toHaveBeenCalledTimes(1);
     });
+
+    it('should render the icon prop instead of the icon when supplied', () => {
+      const container = mount(<Icon icon={<div data-test="test" />} />);
+      expect(container.find('[data-test="test"]').exists()).toBe(true);
+      expect(container.find('i').exists()).toBe(false);
+    });
   });
 
   describe('Test the accessibilty of <Icon />', () => {
@@ -278,7 +284,7 @@ describe('Tests for <Icon />', () => {
       const props = {
         name: 'accessibility_16',
         title,
-        onClick: jest.fn()
+        onClick: jest.fn(),
       };
       const container = mount(<Icon {...props} />);
       const iEle = container.find('i');
@@ -341,7 +347,7 @@ describe('Tests for <Icon />', () => {
   it('should allow other styles to be applied', () => {
     const props = {
       name: 'accessibility_16',
-      style: { display: 'none' }
+      style: { display: 'none' },
     };
 
     const container = mount(<Icon {...props} />);

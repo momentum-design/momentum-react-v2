@@ -156,13 +156,10 @@ class Input extends React.Component {
     const clearButton = clear && !disabled && value && (
       <InputSection position="after">
         <Icon
-          name=""
           onClick={this.handleClear}
           ariaLabel={clearAriaLabel || 'clear input'}
           buttonClassName="md-input__icon-clear"
-          getIcon={() => {
-            return <IconNext scale={18} name="cancel" />;
-          }}
+          icon={<IconNext scale={18} name="cancel" />}
         />
       </InputSection>
     );
