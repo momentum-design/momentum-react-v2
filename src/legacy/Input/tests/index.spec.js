@@ -1,58 +1,50 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Icon,
-  Input,
-  InputMessage,
-  InputHelper,
-  Label
-} from '@momentum-ui/react';
+import { act } from 'react-dom/test-utils';
+
+import { Icon, Input, InputMessage, InputHelper, Label } from '@momentum-ui/react';
 
 describe('tests for <Input />', () => {
   it('should match text SnapShot', () => {
-    const container = mount(
-      <Input htmlId="1" name="test" label="test" type="text" />
-    );
+    const container = mount(<Input htmlId="1" name="test" label="test" type="text" />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should change tag based on multiline prop', () => {
-    const container = shallow(
-      <Input htmlId='1' name='test' label='test' multiline/>
-    );
+    const container = shallow(<Input htmlId="1" name="test" label="test" multiline />);
 
     expect(container.find('textarea').length).toEqual(1);
   });
 
   it('should match number SnapShot', () => {
-    const container = mount(
-      <Input htmlId="1" name="test" label="test" type="number" />
-    );
+    const container = mount(<Input htmlId="1" name="test" label="test" type="number" />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should match password SnapShot', () => {
-    const container = mount(
-      <Input htmlId="1" name="test" label="test" type="password" />
-    );
+    const container = mount(<Input htmlId="1" name="test" label="test" type="password" />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should match aria SnapShot', () => {
     const container = mount(
-      <Input htmlId="1" name="test" label="test" ariaDescribedBy="ariaDescribedBy" ariaLabel="ariaLabel" />
+      <Input
+        htmlId="1"
+        name="test"
+        label="test"
+        ariaDescribedBy="ariaDescribedBy"
+        ariaLabel="ariaLabel"
+      />
     );
 
     expect(container).toMatchSnapshot();
   });
 
   it('should match clear SnapShot', () => {
-    const container = mount(
-      <Input htmlId="1" name="test" label="test" type="text" clear />
-    );
+    const container = mount(<Input htmlId="1" name="test" label="test" type="text" clear />);
 
     expect(container).toMatchSnapshot();
   });
@@ -64,21 +56,15 @@ describe('tests for <Input />', () => {
   });
 
   it('should render one Input and apply dirty class', () => {
-    const container = shallow(
-      <Input htmlId="1" name="test" label="test" value="test" />
-    );
+    const container = shallow(<Input htmlId="1" name="test" label="test" value="test" />);
 
     expect(container.find('.md-dirty').length).toEqual(1);
   });
 
   it('should render Label', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" />);
 
-    expect(
-      container.find('.md-input__label').exists()
-    ).toEqual(true);
+    expect(container.find('.md-input__label').exists()).toEqual(true);
   });
 
   it('should pass class based on containerSize prop', () => {
@@ -108,9 +94,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should pass className prop', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" className="test" />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" className="test" />);
 
     expect(container.find('.md-input-container').hasClass('test')).toEqual(true);
   });
@@ -124,49 +108,39 @@ describe('tests for <Input />', () => {
   });
 
   it('should pass isFilled prop', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" isFilled />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" isFilled />);
 
-    expect(container.find('.md-input-container').hasClass('md-input--filled')).toEqual(true);
+    // Filled is deprecated
+
+    expect(container.find('.md-input-container').hasClass('md-input--filled')).toEqual(false);
   });
 
   it('should pass shape prop', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" shape='pill' />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" shape="pill" />);
 
     expect(container.find('input').hasClass('md-input--pill')).toEqual(true);
   });
 
   it('should pass disabled attribute', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" disabled />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" disabled />);
 
     expect(container.find('input').props().disabled).toEqual(true);
   });
 
   it('should pass readOnly attribute', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" readOnly />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" readOnly />);
 
     expect(container.find('input').props().readOnly).toEqual(true);
   });
 
   it('should pass value attribute', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" value="testing" />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" value="testing" />);
 
     expect(container.find('input').props().value).toEqual('testing');
   });
 
   it('should update value attribute', () => {
-    const container = mount(
-      <Input htmlId="test123" name="test" label="test" value="" />
-    );
+    const container = mount(<Input htmlId="test123" name="test" label="test" value="" />);
 
     container.setProps({ value: 'testing' });
     container.update();
@@ -174,9 +148,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should pass class based on nesting', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" nestedLevel={1} />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" nestedLevel={1} />);
 
     expect(container.hasClass('md-input--nested-1')).toEqual(true);
   });
@@ -188,36 +160,23 @@ describe('tests for <Input />', () => {
 
     expect(
       container.contains(
-        <Label
-          className="md-input__secondary-label"
-          htmlFor="test123"
-          label="test"
-        />
+        <Label className="md-input__secondary-label" htmlFor="test123" label="test" />
       )
     ).toEqual(true);
   });
 
   it('should render Helper Text', () => {
-    const container = shallow(
-      <Input htmlId="test123" name="test" label="test" helpText="test" />
-    );
+    const container = shallow(<Input htmlId="test123" name="test" label="test" helpText="test" />);
 
     expect(container.contains(<InputHelper message="test" />)).toEqual(true);
   });
 
   it('should not render messages if incorrectly passed in', () => {
     const container = shallow(
-      <Input
-        htmlId="test123"
-        name="test"
-        label="test"
-        messageArr={[{ m: 'test', t: 'success' }]}
-      />
+      <Input htmlId="test123" name="test" label="test" messageArr={[{ m: 'test', t: 'success' }]} />
     );
 
-    expect(container.find('.md-input-container').hasClass('md-success')).toEqual(
-      false
-    );
+    expect(container.find('.md-input-container').hasClass('md-success')).toEqual(false);
   });
 
   it('should determine correct message class(success)', () => {
@@ -230,9 +189,7 @@ describe('tests for <Input />', () => {
       />
     );
 
-    expect(container.find('.md-input-container').hasClass('md-success')).toEqual(
-      true
-    );
+    expect(container.find('.md-input-container').hasClass('md-success')).toEqual(true);
   });
 
   it('should determine correct error class(warning)', () => {
@@ -245,9 +202,7 @@ describe('tests for <Input />', () => {
       />
     );
 
-    expect(container.find('.md-input-container').hasClass('md-warning')).toEqual(
-      true
-    );
+    expect(container.find('.md-input-container').hasClass('md-warning')).toEqual(true);
   });
 
   it('should determine correct error class(error)', () => {
@@ -296,12 +251,7 @@ describe('tests for <Input />', () => {
     class Container extends React.Component {
       render() {
         return (
-          <Input
-            htmlId="test123"
-            name="test"
-            label="test"
-            inputRef={ref => (this.input = ref)}
-          />
+          <Input htmlId="test123" name="test" label="test" inputRef={(ref) => (this.input = ref)} />
         );
       }
     }
@@ -323,9 +273,7 @@ describe('tests for <Input />', () => {
   it('should handle onChange event', () => {
     let count = 0;
     const countUp = () => count++;
-    const container = mount(
-      <Input htmlId="test" name="test" label="test" onChange={countUp} />
-    );
+    const container = mount(<Input htmlId="test" name="test" label="test" onChange={countUp} />);
 
     container.find('input').simulate('change', { target: { value: 'test' } });
     expect(count).toEqual(1);
@@ -375,19 +323,16 @@ describe('tests for <Input />', () => {
     );
 
     container.find('input').simulate('change', { target: { value: 'test' } });
-    container.find('input').simulate('blur', { which: 75, charCode: 75, key: 'k', type: 'test-fail' });
+    container
+      .find('input')
+      .simulate('blur', { which: 75, charCode: 75, key: 'k', type: 'test-fail' });
     expect(count).toEqual(0);
   });
 
   it('should handle mouse down event', () => {
     let count = 0;
     const container = mount(
-      <Input
-        htmlId="test"
-        name="test"
-        label="test"
-        onMouseDown={() => count++}
-      />
+      <Input htmlId="test" name="test" label="test" onMouseDown={() => count++} />
     );
 
     container.find('input').simulate('mousedown');
@@ -395,14 +340,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should handle null mouse down event', () => {
-    const container = mount(
-      <Input
-        htmlId="test"
-        name="test"
-        label="test"
-        onMouseDown={null}
-      />
-    );
+    const container = mount(<Input htmlId="test" name="test" label="test" onMouseDown={null} />);
 
     container.find('input').simulate('mousedown');
     expect(container.state().isEditing).toEqual(true);
@@ -412,13 +350,7 @@ describe('tests for <Input />', () => {
     const e = { stopPropagation: jest.fn() };
     let count = 0;
     const container = shallow(
-      <Input
-        htmlId="test"
-        name="test"
-        label="test"
-        onMouseDown={() => count++}
-        disabled
-      />
+      <Input htmlId="test" name="test" label="test" onMouseDown={() => count++} disabled />
     );
 
     container.find('input').simulate('mousedown', e);
@@ -437,14 +369,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should handle null onFocus event', () => {
-    const container = mount(
-      <Input
-        htmlId="test"
-        name="test"
-        label="test"
-        onFocus={null}
-      />
-    );
+    const container = mount(<Input htmlId="test" name="test" label="test" onFocus={null} />);
 
     container.find('input').simulate('focus');
     expect(container.state().isEditing).toEqual(true);
@@ -454,13 +379,7 @@ describe('tests for <Input />', () => {
     const e = { stopPropagation: jest.fn() };
     let count = 0;
     const container = shallow(
-      <Input
-        htmlId="test"
-        name="test"
-        label="test"
-        onFocus={() => count++}
-        disabled
-      />
+      <Input htmlId="test" name="test" label="test" onFocus={() => count++} disabled />
     );
 
     container.find('input').simulate('focus', e);
@@ -471,7 +390,7 @@ describe('tests for <Input />', () => {
   it('should handle onKeyDown event', () => {
     const onKeyDown = jest.fn();
     const container = shallow(
-        <Input htmlId="test" name="test" label="test" onKeyDown={onKeyDown} />
+      <Input htmlId="test" name="test" label="test" onKeyDown={onKeyDown} />
     );
 
     container.find('input').simulate('keyDown', { which: 39, charCode: 39, key: 'Down' });
@@ -485,19 +404,18 @@ describe('tests for <Input />', () => {
     expect(container.find('.md-button--icon').exists()).toBeFalsy();
   });
 
-  it('should render clear icon if prop is present', () => {
-    const container = mount(
-      <Input htmlId="test" name="test" label="test" clear />
-    );
+  it('should render clear icon if prop is present', async () => {
+    const container = mount(<Input htmlId="test" name="test" label="test" clear />);
 
-    container.find('input').simulate('change', { target: { value: 'test' } });
+    await act(async () => {
+      container.find('input').simulate('change', { target: { value: 'test' } });
+    });
+    container.update();
     expect(container.find('.md-button--icon').exists()).toEqual(true);
   });
 
   it('should clear value if clear icon is clicked', () => {
-    const container = mount(
-      <Input htmlId="test" name="test" label="test" value="test" clear />
-    );
+    const container = mount(<Input htmlId="test" name="test" label="test" value="test" clear />);
 
     expect(container.find('input').props().value).toEqual('test');
 
@@ -507,41 +425,36 @@ describe('tests for <Input />', () => {
   });
 
   it('should clear value if Enter is pressed on the keyboard', () => {
-    const container = mount(
-      <Input htmlId="test" name="test" label="test" value="test" clear />
-    );
+    const container = mount(<Input htmlId="test" name="test" label="test" value="test" clear />);
 
     expect(container.find('input').props().value).toEqual('test');
-    container.find('button.md-button--icon').simulate('keydown', { key: 'Enter', keyCode: 13, which: 13 });
+    container
+      .find('button.md-button--icon')
+      .simulate('keydown', { key: 'Enter', keyCode: 13, which: 13 });
     expect(container.find('input').props().value).toEqual('');
     expect(container.find('.md-button--icon').exists()).toBeFalsy();
   });
 
-
   it('should clear value if Space is pressed on the keyboard', () => {
-    const container = mount(
-      <Input htmlId="test" name="test" label="test" value="test" clear />
-    );
+    const container = mount(<Input htmlId="test" name="test" label="test" value="test" clear />);
 
     expect(container.find('input').props().value).toEqual('test');
-    container.find('button.md-button--icon').simulate('keydown', { key: 'Space', keyCode: 32, which: 32 });
+    container
+      .find('button.md-button--icon')
+      .simulate('keydown', { key: 'Space', keyCode: 32, which: 32 });
     expect(container.find('input').props().value).toEqual('');
     expect(container.find('.md-button--icon').exists()).toBeFalsy();
   });
 
   it('should focus on input when clear is triggered with htmlId', () => {
-    const container = mount(
-      <Input htmlId="test" label="test" value="test" clear />
-    );
+    const container = mount(<Input htmlId="test" label="test" value="test" clear />);
 
     container.find('button.md-button--icon').simulate('click');
     expect(container.find('input') === document.activeElement);
   });
 
   it('should focus on input when clear is triggered with id', () => {
-    const container = mount(
-      <Input id="test" label="test" value="test" clear />
-    );
+    const container = mount(<Input id="test" label="test" value="test" clear />);
 
     container.find('button.md-button--icon').simulate('click');
     expect(container.find('input') === document.activeElement);
@@ -553,12 +466,7 @@ describe('tests for <Input />', () => {
   });
 
   it('should render custom icon if inputBefore is present', () => {
-    const inputBefore = (
-      <Icon
-        name="icon-info_16"
-        ariaLabel={'custom icon'}
-      />
-    );
+    const inputBefore = <Icon name="icon-info_16" ariaLabel={'custom icon'} />;
 
     const container = mount(
       <Input id="test" label="test" value="test" inputBefore={inputBefore} />
@@ -568,16 +476,9 @@ describe('tests for <Input />', () => {
   });
 
   it('should render custom icon if inputAfter is present', () => {
-    const inputAfter = (
-      <Icon
-        name="icon-info_16"
-        ariaLabel={'custom icon'}
-      />
-    );
+    const inputAfter = <Icon name="icon-info_16" ariaLabel={'custom icon'} />;
 
-    const container = mount(
-      <Input id="test" label="test" value="test" inputAfter={inputAfter} />
-    );
+    const container = mount(<Input id="test" label="test" value="test" inputAfter={inputAfter} />);
 
     expect(container.find('.md-icon').exists()).toEqual(true);
   });
