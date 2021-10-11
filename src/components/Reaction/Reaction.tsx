@@ -10,7 +10,7 @@ import './Reaction.style.scss';
 
 const Reaction: FC<Props> = (props: Props) => {
   const { autoPlay, className, id, loop, name, size, style } = props;
-  const { animationData, loading, error } = useDynamicJSONImport(name);
+  const { animationData, error } = useDynamicJSONImport(name);
   const svgContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Reaction: FC<Props> = (props: Props) => {
         animationData: animationData,
       });
     }
-  });
+  }, [svgContainer, animationData]);
 
   if (error) {
     return <Icon name={'warning'} scale={16} />;
@@ -39,12 +39,9 @@ const Reaction: FC<Props> = (props: Props) => {
       />
     );
   }
-  if (loading) {
+  if (!animationData) {
     // TODO: spinner NYI
     return <Icon name={'spinner'} scale={16} />;
-  } else {
-    // im not sure how this can possibly happen, but maybe?
-    return <Icon name={'warning'} scale={16} />;
   }
 };
 

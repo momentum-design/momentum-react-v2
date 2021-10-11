@@ -5,11 +5,12 @@ import ReactionBadge, { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 import Reaction from '../Reaction';
 
 describe('<ReactionBadge name="haha" />', () => {
+  const reactionProp = <Reaction name="haha" />;
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ReactionBadge name="haha" />);
+      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -19,7 +20,9 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const className = 'example-class';
 
-      const container = await mountAndWait(<ReactionBadge name="haha" className={className} />);
+      const container = await mountAndWait(
+        <ReactionBadge reaction={reactionProp} className={className} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -29,7 +32,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<ReactionBadge name="haha" id={id} />);
+      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -39,7 +42,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<ReactionBadge name="haha" style={style} />);
+      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -47,7 +50,9 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot with reacted', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ReactionBadge name="haha" reacted={true} />);
+      const container = await mountAndWait(
+        <ReactionBadge reaction={reactionProp} reacted={true} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -55,7 +60,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot with count', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ReactionBadge name="haha" count={1} />);
+      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} count={1} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -65,7 +70,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<ReactionBadge name="haha" />);
+      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} />);
       const element = wrapper.find(ReactionBadge).getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -76,7 +81,9 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const className = 'example-class';
 
-      const wrapper = await mountAndWait(<ReactionBadge name="haha" className={className} />);
+      const wrapper = await mountAndWait(
+        <ReactionBadge reaction={reactionProp} className={className} />
+      );
       const element = wrapper.find(ReactionBadge).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -87,7 +94,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const id = 'example-id';
 
-      const wrapper = await mountAndWait(<ReactionBadge name="haha" id={id} />);
+      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} id={id} />);
       const element = wrapper.find(ReactionBadge).getDOMNode();
 
       expect(element.id).toBe(id);
@@ -99,7 +106,7 @@ describe('<ReactionBadge name="haha" />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const wrapper = await mountAndWait(<ReactionBadge name="haha" style={style} />);
+      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} style={style} />);
       const element = wrapper.find(ReactionBadge).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -110,7 +117,9 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const reacted = true;
 
-      const wrapper = await mountAndWait(<ReactionBadge name="haha" reacted={reacted} />);
+      const wrapper = await mountAndWait(
+        <ReactionBadge reaction={reactionProp} reacted={reacted} />
+      );
       const element = wrapper.find(ReactionBadge).getDOMNode();
 
       expect(element.getAttribute('data-reacted')).toBe(`${reacted}`);
@@ -121,7 +130,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const count = 1;
 
-      const wrapper = await mountAndWait(<ReactionBadge name="haha" count={count} />);
+      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} count={count} />);
       const element = wrapper.find(ReactionBadge).getDOMNode();
 
       expect(element.getAttribute('data-count')).toBe(`${count}`);
@@ -133,7 +142,7 @@ describe('<ReactionBadge name="haha" />', () => {
       const name = 'haha';
       const reactionName = 'haha';
 
-      const wrapper = await mountAndWait(<ReactionBadge name={name} />);
+      const wrapper = await mountAndWait(<ReactionBadge reaction={<Reaction name={name} />} />);
       const child = wrapper.find(Reaction);
 
       expect(child.props().name).toBe(reactionName);
@@ -146,7 +155,9 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const mockCallback = jest.fn();
 
-      const wrapper = await mountAndWait(<ReactionBadge name="haha" onPress={mockCallback} />);
+      const wrapper = await mountAndWait(
+        <ReactionBadge reaction={reactionProp} onPress={mockCallback} />
+      );
       const component = wrapper.find(ReactionBadge);
 
       component.props().onPress({

@@ -13,4 +13,14 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, SIZES, STYLE };
+const REACTION_NAMES = {
+  popper: 'popper',
+  heart: 'heart',
+  thumbUpYellow: 'thumb-up-yellow',
+  smile: 'smile',
+  haha: 'haha',
+  wow: 'wow',
+  sad: 'sad',
+};
+
+export { CLASS_PREFIX, DEFAULTS, REACTION_NAMES, SIZES, STYLE };
