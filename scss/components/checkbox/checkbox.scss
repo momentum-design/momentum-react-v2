@@ -12,19 +12,19 @@
   .#{$checkbox__class} {
     @include checkbox-color(
       $border-color: $input__border-color,
-      $border-color-css-var: --md-input-outline-color,
+      $border-color-css-var: --theme-outline-input-normal,
       $background-color: $input__background,
-      $background-color-css-var: --md-input-background-color,
+      $background-color-css-var: --theme-control-inactive-normal,
       $background-color--disabled: $form-control__background,
-      $background-color--disabled-css-var: --md-input-outline-color,
+      $background-color--disabled-css-var: --theme-control-inactive-hover,
       $background-color--hover: $input__background--hover,
-      $background-color--hover-css-var: --md-input-background-hover,
+      $background-color--hover-css-var: --theme-control-inactive-hover,
       $background-color--checked: $form-control__background--checked,
-      $background-color--checked-css-var: --md-input-background-theme-color,
+      $background-color--checked-css-var: --theme-control-active-normal,
       $background-color--checked-hover: $form-control__background--checked-hover,
-      $background-color--checked-hover-css-var: --md-input-background-theme-hover,
+      $background-color--checked-hover-css-var: --theme-control-active-hover,
       $label-color: $form-control__label,
-      $label-color-css-var: --md-input-text-primary
+      $label-color-css-var: --theme-text-primary-normal
     );
 
     .#{$checkbox__class}__input {
@@ -43,20 +43,35 @@
         + .#{$checkbox__class}__label {
           &:before {
             color: $form-control__content;
+            color: var(--theme-text-primary-inverted);
             cursor: pointer;
           }
         }
+
+        &:disabled {
+          + .#{$checkbox__class}__label {
+            color: var(--theme-text-primary-disabled);
+
+            &:before {
+              color: var(--theme-text-primary-normal);
+            }
+          }
+        }
+
       }
 
       &:disabled,
       &.disabled {
         + .#{$checkbox__class}__label {
           cursor: default;
-          opacity: $form-control__opacity--disabled;
+          color: var(--theme-text-primary-disabled) !important;
 
           &:before {
             cursor: default;
           }
+        }
+        ~ .#{$prefix}-input__help-text {
+          color: var(--theme-text-primary-disabled) !important;
         }
       }
 
@@ -78,7 +93,7 @@
 
       &:before {
         @include flex();
-        @include border-radius(4px);
+        @include border-radius(2px);
         @include icon-check_12;
 
         flex-shrink: 0;
@@ -114,52 +129,6 @@
     .#{$prefix}-input__help-text {
       @include input__help-text();
       @include vr-spacing(pl, 2);
-    }
-  }
-  // Dark
-  .#{$dark-class} {
-    .#{$checkbox__class} {
-      @include checkbox-color(
-        $border-color: $input__border-color--dark,
-        $background-color: $input__background,
-        $background-color--disabled: $form-control__background--dark,
-        $background-color--hover: $input__background--hover--dark,
-        $background-color--checked: $form-control__background--checked--dark,
-        $background-color--checked-hover: $form-control__background--checked-hover--dark,
-        $label-color: $form-control__label--dark
-      );
-    }
-  }
-  // Filled
-  .#{$input__class--filled},
-  .#{$client-class} {
-    .#{$checkbox__class} {
-      @include checkbox-color(
-        $border-color: $input__border-color--filled,
-        $background-color: $form-control__background,
-        $background-color--disabled: $form-control__background,
-        $background-color--hover: $form-control__background--hover,
-        $background-color--checked: $form-control__background--checked,
-        $background-color--checked-hover: $form-control__background--checked-hover,
-        $label-color: $form-control__label
-      );
-    }
-  }
-  // Filled - Dark
-  .#{$client-class}.#{$dark-class},
-  .#{$client-class} .#{$dark-class},
-  .#{$dark-class} .#{$input__class--filled},
-  .#{$dark-class}.#{$input__class--filled} {
-    .#{$checkbox__class} {
-      @include checkbox-color(
-        $border-color: $input__border-color--filled,
-        $background-color: $form-control__background--dark,
-        $background-color--disabled: $form-control__background--dark,
-        $background-color--hover: $form-control__background--hover--dark,
-        $background-color--checked: $form-control__background--checked--dark,
-        $background-color--checked-hover: $form-control__background--checked-hover--dark,
-        $label-color: $form-control__label--dark
-      );
     }
   }
 }
