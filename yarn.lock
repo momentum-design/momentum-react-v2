@@ -1795,15 +1795,15 @@
   resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.27.tgz#b437f4f8116cd776391897148558f31cb31faa51"
   integrity sha512-wJ9c9shK2iH4ec7sXO2qCSI7XFECeEbk1jlr49+E6sumdxJSvW6OQoJXFMeFERcKYcjC4iYJoelSucSND7kzxg==
 
-"@momentum-ui/icons-rebrand@^1.2.0":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons-rebrand/-/icons-rebrand-1.6.1.tgz#89378f80b9a8db90a77c04952f21645fff8c00ce"
-  integrity sha512-m2dDyUc22DKeZGH0J/nueWiTbb2gK+kVrs8PslxSuG3mvheXrakW1A8UCoHxbtqYM+WFI5IyQnA9sVkS1Cfw+Q==
+"@momentum-ui/icons-rebrand@^1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/icons-rebrand/-/icons-rebrand-1.13.0.tgz#aaf9efcba7339fb4b1e18ab386b0bbc9dcad7bce"
+  integrity sha1-qvnvy6czn7Sx4YqzhrC7ydyte84=
 
-"@momentum-ui/icons@8.22.2":
-  version "8.22.2"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-8.22.2.tgz#a9142febdb2fdaaddc18d6d470eea1af673cb91a"
-  integrity sha512-S3wjdgZ25Bo6OvxGVs/6X4ZChOyNLgrQpi1qUUyFn5QFmeppbQ12DPwYdTkwJEDKi38P0V2vrOHWnLrHBSxUXw==
+"@momentum-ui/icons@8.26.0":
+  version "8.26.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-8.26.0.tgz#6de5718f9e2939bc05016f004ac500032aa8ddbf"
+  integrity sha1-beVxj54pObwFAW8ASsUAAyqo3b8=
 
 "@momentum-ui/tokens@^1.7.1":
   version "1.7.1"
