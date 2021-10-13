@@ -149,10 +149,7 @@ ChatContentItem.propTypes = {
   gifIcon: PropTypes.string,
   isProtected: PropTypes.bool,
   loading: PropTypes.bool,
-  subtitle: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object
-  ]),
+  subtitle: PropTypes.node,
   onClick: PropTypes.func,
   style: PropTypes.object,
   title: PropTypes.string,
