@@ -13,6 +13,7 @@ const ChatContentItem = props => {
     gifIcon,
     isProtected,
     loading,
+    subtitle,
     onClick,
     style,
     title,
@@ -99,7 +100,7 @@ const ChatContentItem = props => {
         >
           <div className='md-content__hover-files'>
             <span title={title} className='md-content__hover-files--file-name'>{title}</span>
-            <span className='md-content__hover-files--file-size'>{fileSize}</span>
+            <span className='md-content__hover-files--file-size'>{subtitle}</span>      
           </div>
           {
             actionNode && !isProtected &&
@@ -122,6 +123,7 @@ ChatContentItem.defaultProps = {
   gifIcon:'',
   isProtected: null,
   loading: false,
+  subtitle:'',
   onClick: null,
   style: null,
   title: '',
@@ -147,6 +149,10 @@ ChatContentItem.propTypes = {
   gifIcon: PropTypes.string,
   isProtected: PropTypes.bool,
   loading: PropTypes.bool,
+  subtitle: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
   onClick: PropTypes.func,
   style: PropTypes.object,
   title: PropTypes.string,
