@@ -85,6 +85,7 @@ class ContentItem extends React.PureComponent {
             height={height}
             isProtected={isProtected}
             loading={loading}
+            subtitle={subtitle}
             style={style}
             title={title}
             type={type}
@@ -180,7 +181,10 @@ ContentItem.propTypes = {
   /** @prop Additional css styling applied to the button | null  */
   style: PropTypes.object,
   /** @prop Set the subtitle of the Content Item | '' */
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
   /** @prop Set the title of the Content Item | '' */
   title: PropTypes.string,
   /** @prop Set the type of Content Item to display */
