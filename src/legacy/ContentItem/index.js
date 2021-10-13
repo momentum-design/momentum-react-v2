@@ -181,10 +181,7 @@ ContentItem.propTypes = {
   /** @prop Additional css styling applied to the button | null  */
   style: PropTypes.object,
   /** @prop Set the subtitle of the Content Item | '' */
-  subtitle: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object
-  ]),
+  subtitle: PropTypes.node,
   /** @prop Set the title of the Content Item | '' */
   title: PropTypes.string,
   /** @prop Set the type of Content Item to display */
