@@ -141,7 +141,7 @@ FileContentItem.propTypes = {
   loadingText: PropTypes.string,
   onClick: PropTypes.func,
   style: PropTypes.object,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   title: PropTypes.string,
 };
 
