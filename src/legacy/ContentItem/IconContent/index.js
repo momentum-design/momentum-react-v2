@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '@momentum-ui/react';
 
-const IconContent = props => {
+const IconContent = (props) => {
   const {
     actionNode,
     className,
@@ -15,13 +15,8 @@ const IconContent = props => {
     ...otherProps
   } = props;
 
-  const handleKeyDown = e => {
-    if (
-      e.which === 32 ||
-      e.which === 13 ||
-      e.charCode === 32 ||
-      e.charCode === 13
-    ) {
+  const handleKeyDown = (e) => {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       onClick && onClick(e);
       e.preventDefault();
     }
@@ -40,17 +35,13 @@ const IconContent = props => {
         role="presentation"
         {...otherProps}
       >
-        {!isProtected && actionNode && (
-          <div className="md-content-file__icon">{actionNode}</div>
-        )}
+        {!isProtected && actionNode && <div className="md-content-file__icon">{actionNode}</div>}
         <span>
           <Icon name={icon} />
         </span>
       </div>
       <div className="md-content-file__info-container">
-        <span className="md-content-file__title">
-          {loading ? 'Loading' : title}
-        </span>
+        <span className="md-content-file__title">{loading ? 'Loading' : title}</span>
         <span className="md-content-file__subtitle"> {subtitle} </span>
       </div>
     </div>
@@ -75,7 +66,7 @@ IconContent.propTypes = {
   isProtected: PropTypes.bool,
   loading: PropTypes.bool,
   onClick: PropTypes.func,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   title: PropTypes.string,
 };
 

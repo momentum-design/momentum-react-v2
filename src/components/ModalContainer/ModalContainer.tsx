@@ -25,7 +25,7 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
         data-elevation={elevation || DEFAULTS.ELEVATION}
         data-horizontal-arrow={arrow === ARROWS.LEFT || arrow === ARROWS.RIGHT}
         data-vertical-arrow={arrow === ARROWS.BOTTOM || arrow === ARROWS.TOP}
-        data-padded={isPadded}
+        data-padded={isPadded || DEFAULTS.IS_PADDED}
         data-round={round || DEFAULTS.ROUND}
       >
         {children}

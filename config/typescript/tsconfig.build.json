@@ -2,7 +2,6 @@
   "exclude": [
     "../../src/**/*.stories.*",
     "../../src/**/*.test.*",
-    "../../src/**/examples",
     "../../src/**/tests"
   ],
   "extends": "./tsconfig.base.json",

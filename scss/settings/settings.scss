@@ -4823,10 +4823,11 @@ $input__border-width: rem-calc(1) !default;
 $input__font-family: $brand-font-regular !default;
 
 $input__font-size: rem-calc(16) !default;
-$input__height: rem-calc(36) !default;
+$input__height: rem-calc(32) !default;
 $input__padding-side: rem-calc(16) !default;
 $input__padding-side--icon: rem-calc(44) !default;
 $input__padding: 0 $input__padding-side;
+$global-radius: rem-calc(8);
 $input__border-radius: $global-radius;
 $input--pill__border-radius: $global-rounded;
 $input__line-height: $base-line-height-ratio !default;
@@ -5521,7 +5522,7 @@ $card-border-radius: 2px;
 
 $checkbox__class: '#{$prefix}-checkbox';
 
-$checkbox__size: rem-calc(20);
+$checkbox__size: rem-calc(16);
 $checkbox__icon-size: rem-calc(12);
 $checkbox__label-size: rem-calc(16);
 
@@ -5910,7 +5911,7 @@ $event-overlay__border-radius: 5px;
 
 $panel__class: '#{$prefix}-panel';
 
-$panel-input__height: rem-calc(40);
+$panel-input__height: rem-calc(32);
 
 $pagination-height: rem-calc(24) !default;
 $pagination-margin: rem-calc(-5) !default;

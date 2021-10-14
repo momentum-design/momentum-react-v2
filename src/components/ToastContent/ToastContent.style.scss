@@ -1,24 +1,24 @@
 .md-toast-content-wrapper {
   margin: 0 1rem 1rem 1rem;
-  max-width: 20.75rem;
+  max-width: 25rem;
 
   > .md-toast-content-scope {
     font-size: 0.875rem;
 
     > .md-toast-content-action {
-      &[data-color="cancel"] {
+      &[data-color='cancel'] {
         color: var(--theme-text-error-normal);
       }
 
-      &[data-color="join"] {
+      &[data-color='join'] {
         color: var(--theme-text-accent-normal);
       }
 
-      &[data-color="success"] {
+      &[data-color='success'] {
         color: var(--theme-text-success-normal);
       }
 
-      &[data-color="warning"] {
+      &[data-color='warning'] {
         color: var(--theme-text-warning-normal);
       }
     }

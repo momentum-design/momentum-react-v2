@@ -24,6 +24,7 @@ class Icon extends React.PureComponent {
       style,
       title,
       type,
+      icon,
       ...otherProps
     } = this.props;
 
@@ -67,19 +68,13 @@ class Icon extends React.PureComponent {
       if (sizeOverride) {
         iconName = name.split('_')[0] + `_${getSize()}`;
       }
-      return iconNames.includes(iconName) ? `icon-${iconName}` : consoleHandler('name-error', iconName);
-    };
-
-    const styles = {
-      fontSize: getSize(),
-      ...color && { color: getColor() },
-      ...style,
+      return iconNames.includes(iconName)
+        ? `icon-${iconName}`
+        : consoleHandler('name-error', iconName);
     };
 
     const getAriaLabel = () => {
-      if (
-        ariaLabel
-      ) {
+      if (ariaLabel) {
         return ariaLabel;
       }
       if (!ariaLabel) {
@@ -91,6 +86,12 @@ class Icon extends React.PureComponent {
     };
 
     const getIcon = () => {
+      const styles = {
+        fontSize: getSize(),
+        ...(color && { color: getColor() }),
+        ...style,
+      };
+
       return (
         <i
           className={
@@ -102,8 +103,8 @@ class Icon extends React.PureComponent {
           }
           aria-label={!onClick ? getAriaLabel() : null}
           style={styles}
-          {...(title && !onClick) && { title: title }}
-          {...!onClick && { ...otherProps }}
+          {...(title && !onClick && { title: title })}
+          {...(!onClick && { ...otherProps })}
         />
       );
     };
@@ -118,11 +119,13 @@ class Icon extends React.PureComponent {
         ariaLabel={getAriaLabel()}
         onClick={onClick}
         {...buttonProps}
-        {...title && { title: title }}
+        {...(title && { title: title })}
         {...otherProps}
       >
-        {getIcon()}
+        {icon ? icon : getIcon()}
       </Button>
+    ) : icon ? (
+      icon
     ) : (
       getIcon()
     );
@@ -144,8 +147,10 @@ Icon.propTypes = {
   className: PropTypes.string,
   /** @prop Icon description text | '' */
   description: PropTypes.string,
-  /** @prop Required Icon name */
-  name: PropTypes.string.isRequired,
+  /** @prop Icon node to draw instead of supplying name */
+  icon: PropTypes.node,
+  /** @prop Legacy icon name */
+  name: PropTypes.string,
   /** @prop Handler invoked by click of the user | null */
   onClick: PropTypes.func,
   /** @prop Add margin to the right of Icon | null */

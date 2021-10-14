@@ -41,6 +41,7 @@ const ROUNDS: Record<number, Round> = {
 const DEFAULTS = {
   COLOR: COLORS.PRIMARY,
   ELEVATION: ELEVATIONS[0],
+  IS_PADDED: false,
   ROUND: ROUNDS[0],
 };
 

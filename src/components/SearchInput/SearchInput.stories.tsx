@@ -5,7 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import SearchInput, { SearchInputProps, SearchInputSearchFilter } from '.';
 import argTypes from './SearchInput.stories.args';
 import Documentation from './SearchInput.stories.docs.mdx';
-import React, { useState, FC } from 'react';
+import React, { useState, FC, useRef } from 'react';
 
 export default {
   title: 'Momentum UI/SearchInput',
@@ -66,6 +66,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
   const [val, setVal] = useState(initialText);
   const [filters, setFilters] = useState(initialFilters);
   const [searching, setSearching] = useState(false);
+  const ref = useRef<HTMLInputElement>();
 
   const handleChange = (e: string) => {
     setSearching(true);
@@ -91,6 +92,10 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
     } else {
       setVal(e);
     }
+    if (ref.current) {
+      // eslint-disable-next-line no-console
+      console.log('ref value:', ref.current.value);
+    }
   };
 
   const handleFiltersChange = (filters) => {
@@ -99,6 +104,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
 
   return (
     <SearchInput
+      ref={ref}
       value={val}
       filters={filters}
       onFiltersChange={handleFiltersChange}

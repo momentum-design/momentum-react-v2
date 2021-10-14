@@ -21418,7 +21418,7 @@ button.md-close {
   flex-flow: row nowrap;
   width: 348px;
   height: 196px;
-  background-size: cover;
+  background-size: contain;
   border-radius: 4px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06); }
   .md-content:hover .md-content__hover {
@@ -21608,7 +21608,7 @@ button.md-close {
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.06), inset -1px 0 0 0 rgba(0, 0, 0, 0.06); }
@@ -21618,7 +21618,7 @@ button.md-close {
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.06), inset -1px 0 0 0 rgba(0, 0, 0, 0.06); }
@@ -21628,7 +21628,7 @@ button.md-close {
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.06), inset -1px 0 0 0 rgba(0, 0, 0, 0.06); }
@@ -21638,7 +21638,7 @@ button.md-close {
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.06), inset -1px 0 0 0 rgba(0, 0, 0, 0.06);
@@ -21650,7 +21650,7 @@ button.md-close {
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.06), inset -1px 0 0 0 rgba(0, 0, 0, 0.06); }

@@ -173,6 +173,20 @@ describe('<SearchInput />', () => {
       expect((label.getDOMNode() as HTMLLabelElement).htmlFor).toBe(realInputId);
       expect(label.text()).toBe('a label');
     });
+
+    it('should forward a ref if provided', async () => {
+      const ref = React.createRef<HTMLInputElement>();
+
+      await mountAndWait(<SearchInput ref={ref} aria-label="search" value="test" />);
+
+      expect(ref.current).toBeInstanceOf(HTMLInputElement);
+      expect(ref.current.value).toEqual('test');
+    });
+
+    it('should work with autofocus', async () => {
+      // eslint-disable-next-line jsx-a11y/no-autofocus
+      await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" />);
+    });
   });
 
   describe('actions', () => {
