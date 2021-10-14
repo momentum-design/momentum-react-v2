@@ -75,7 +75,7 @@ IconContent.propTypes = {
   isProtected: PropTypes.bool,
   loading: PropTypes.bool,
   onClick: PropTypes.func,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   title: PropTypes.string,
 };
 
