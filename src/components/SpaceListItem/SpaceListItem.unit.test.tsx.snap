@@ -36,6 +36,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -54,10 +55,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -120,6 +123,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -138,10 +142,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -204,6 +210,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -222,10 +229,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -284,6 +293,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -302,10 +312,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   >
                     firstLine
@@ -368,6 +380,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -386,10 +399,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -402,6 +417,117 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
             <div
               data-position="end"
             />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
+<SpaceListItem
+  isAlert={true}
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+          tabIndex={-1}
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  data-test="list-item-first-line"
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                fillColor="var(--listitem-icon)"
+                name="alert"
+                scale={14}
+                strokeColor="none"
+                weight="bold"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    data-test="alert"
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "var(--listitem-icon)",
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
           </ListItemBaseSection>
         </li>
       </FocusRing>
@@ -448,6 +574,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -466,10 +593,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -496,6 +625,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
                     className=""
                     data-autoscale={false}
                     data-scale={14}
+                    data-test="alert-muted"
                     height="100%"
                     style={
                       Object {
@@ -555,6 +685,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -573,10 +704,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -603,6 +736,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
                     className=""
                     data-autoscale={false}
                     data-scale={14}
+                    data-test="enter-room"
                     height="100%"
                     style={
                       Object {
@@ -662,6 +796,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -680,10 +815,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -710,6 +847,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
                     className=""
                     data-autoscale={false}
                     data-scale={14}
+                    data-test="priority-circle"
                     height="100%"
                     style={
                       Object {
@@ -769,6 +907,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -787,10 +926,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -817,6 +958,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
                     className=""
                     data-autoscale={false}
                     data-scale={14}
+                    data-test="mention"
                     height="100%"
                     style={
                       Object {
@@ -876,6 +1018,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -894,10 +1037,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -909,34 +1054,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
           >
             <div
               data-position="end"
-            >
-              <Icon
-                fillColor="var(--listitem-tick)"
-                name="unread"
-                scale={14}
-                strokeColor="none"
-                weight="bold"
-              >
-                <div
-                  className="md-icon-wrapper"
-                >
-                  <svg
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--listitem-tick)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </div>
+            />
           </ListItemBaseSection>
         </li>
       </FocusRing>
@@ -984,6 +1102,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -1002,10 +1121,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1018,6 +1139,117 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
             <div
               data-position="end"
             />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
+exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
+<SpaceListItem
+  isUnread={true}
+>
+  <ListItemBase
+    className="md-space-list-item-is-new-activity"
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          data-disabled={false}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+          tabIndex={-1}
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper"
+              data-position="middle"
+            >
+              <div>
+                <Text
+                  data-test="list-item-first-line"
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                fillColor="var(--listitem-tick)"
+                name="unread"
+                scale={14}
+                strokeColor="none"
+                weight="bold"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    data-test="unread"
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "var(--listitem-tick)",
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 32, 32"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
           </ListItemBaseSection>
         </li>
       </FocusRing>
@@ -1064,6 +1296,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -1080,16 +1313,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
               className="md-space-list-item-text-wrapper"
               data-position="middle"
             >
-              <div>
+              <div
+                className="text-column"
+              >
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
-                  />
+                  >
+                     
+                  </p>
                 </Text>
                 <Text
+                  data-test="list-item-second-line"
                   style={
                     Object {
                       "color": "var(--theme-text-team-default-normal)",
@@ -1099,6 +1339,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                 >
                   <small
                     className="md-text-wrapper"
+                    data-test="list-item-second-line"
                     data-type="body-secondary"
                     style={
                       Object {
@@ -1178,6 +1419,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
               "color": "pink",
             }
           }
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -1196,10 +1438,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>
@@ -1258,6 +1502,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={-1}
         >
           <ListItemBaseSection
             position="start"
@@ -1276,10 +1521,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
             >
               <div>
                 <Text
+                  data-test="list-item-first-line"
                   type="body-primary"
                 >
                   <p
                     className="md-text-wrapper"
+                    data-test="list-item-first-line"
                     data-type="body-primary"
                   />
                 </Text>

@@ -31,7 +31,6 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
   <ListItemBase
     isDisabled={false}
     key="$.0"
-    onKeyDown={[Function]}
   >
     <FocusRing
       isInset={false}
@@ -62,6 +61,7 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="fill"

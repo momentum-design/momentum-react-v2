@@ -2,11 +2,12 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import List, { LIST_CONSTANTS as CONSTANTS } from './';
-import { Item } from '@react-stately/collections';
+import ListItemBase from '../ListItemBase';
 
 describe('<List />', () => {
   const commonProps = {
     'aria-label': 'test',
+    listSize: 2,
   };
   describe('snapshot', () => {
     it('should match snapshot', () => {
@@ -14,8 +15,8 @@ describe('<List />', () => {
 
       const container = mount(
         <List {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       );
 
@@ -29,8 +30,8 @@ describe('<List />', () => {
 
       const container = mount(
         <List className={className} {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       );
 
@@ -44,8 +45,8 @@ describe('<List />', () => {
 
       const container = mount(
         <List id={id} {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       );
 
@@ -59,8 +60,8 @@ describe('<List />', () => {
 
       const container = mount(
         <List style={style} {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       );
 
@@ -76,8 +77,8 @@ describe('<List />', () => {
 
       const element = mount(
         <List {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       )
         .find(List)
@@ -93,8 +94,8 @@ describe('<List />', () => {
 
       const element = mount(
         <List className={className} {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       )
         .find(List)
@@ -110,8 +111,8 @@ describe('<List />', () => {
 
       const element = mount(
         <List id={id} {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       )
         .find(List)
@@ -128,8 +129,8 @@ describe('<List />', () => {
 
       const element = mount(
         <List style={style} {...commonProps}>
-          <Item key="1">Item 1</Item>
-          <Item key="2">Item 2</Item>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
       )
         .find(List)
@@ -137,11 +138,5 @@ describe('<List />', () => {
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
-
-    /* ...additional attribute tests... */
-  });
-
-  describe('actions', () => {
-    /* ...action tests... */
   });
 });

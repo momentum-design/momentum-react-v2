@@ -2,16 +2,39 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 export default {
   ...commonStyles,
-  // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
   children: {
-    description: 'Provides the child nodes for this element.', // NOTE: Description of this prop.
-    control: { type: 'text' }, // NOTE: Control type for this prop.
+    description: 'Provides the child nodes for this element.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'ReactNode', // NOTE: Explicit type of this prop.
+        summary: 'ReactNode',
       },
       defaultValue: {
-        summary: 'undefined', // NOTE: Default value for this prop.
+        summary: 'undefined',
+      },
+    },
+  },
+  listSize: {
+    description: 'Size of the list',
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  shouldFocusOnPres: {
+    description: 'Determines if the onPress handler should also focus the selected item',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
       },
     },
   },

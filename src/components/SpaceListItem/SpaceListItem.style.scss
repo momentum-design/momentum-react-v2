@@ -8,9 +8,30 @@
   display: flex;
   align-items: center;
 
+  .text-row {
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    p {
+      width: auto;
+    }
+
+    small {
+      margin-top: 0;
+      margin-left: 0.25rem;
+    }
+  }
+
+  .text-column {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
   div {
     display: flex;
-    flex-direction: column;
 
     p {
       margin: 0;
@@ -18,15 +39,17 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      max-width: 10rem; // I need help with this, I'd like to make this responsive but I didn't manage
+      max-width: 15rem;
     }
 
     small {
       margin: 0;
       color: var(--label-secondary-text);
       margin-top: -4px;
-      overflow: auto;
+      white-space: nowrap;
+      overflow: hidden;
       text-overflow: ellipsis;
+      max-width: 15rem;
     }
   }
 

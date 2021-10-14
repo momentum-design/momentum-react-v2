@@ -92,8 +92,8 @@ const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
       shape="isPilled"
       className={classnames(className, STYLE.wrapper)}
       id={id}
-      style={style}
       {...hoverProps}
+      style={style}
     >
       <ListItemBaseSection position="start">
         <Avatar size={32} {...avatarProps} />

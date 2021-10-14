@@ -4,6 +4,6 @@ import { Props } from './List.types';
 
 export { CONSTANTS as LIST_CONSTANTS };
 
-export type ListProps<T> = Props<T>;
+export type ListProps = Props;
 
 export default List;

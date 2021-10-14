@@ -39,6 +39,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -144,6 +145,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -180,6 +182,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                           className=""
                           data-autoscale={false}
                           data-scale={12}
+                          data-test="unread"
                           height="100%"
                           style={
                             Object {
@@ -274,6 +277,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -378,6 +382,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -474,6 +479,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                             className=""
                             data-autoscale={false}
                             data-scale={16}
+                            data-test="more"
                             fill="currentColor"
                             height="100%"
                             stroke="currentColor"
@@ -542,6 +548,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -640,6 +647,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                             className=""
                             data-autoscale={false}
                             data-scale={16}
+                            data-test="audio-microphone-on-green-colored"
                             fill="currentColor"
                             height="100%"
                             style={
@@ -710,6 +718,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -808,6 +817,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                             className=""
                             data-autoscale={false}
                             data-scale={16}
+                            data-test="microphone-muted"
                             height="100%"
                             style={
                               Object {
@@ -874,6 +884,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -978,6 +989,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -1078,6 +1090,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -1123,6 +1136,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-available"
                     height="100%"
                     style={
                       Object {
@@ -1204,6 +1218,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -1249,6 +1264,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-not-working-hours"
                     height="100%"
                     style={
                       Object {
@@ -1330,6 +1346,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -1375,6 +1392,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-unavailable"
                     height="100%"
                     style={
                       Object {
@@ -1456,6 +1474,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -1501,6 +1520,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-unknown"
                     height="100%"
                     style={
                       Object {
@@ -1582,6 +1602,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"
@@ -1706,6 +1727,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
               "color": "pink",
             }
           }
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="start"

@@ -6,7 +6,7 @@ import './Text.style.scss';
 import classnames from 'classnames';
 
 const Text: FC<Props> = (props: Props) => {
-  const { children, type = DEFAULTS.TYPE, className, id, style } = props;
+  const { children, type = DEFAULTS.TYPE, className, id, style, ...rest } = props;
 
   const getElement = () => {
     switch (type) {
@@ -20,11 +20,11 @@ const Text: FC<Props> = (props: Props) => {
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </h1>
         );
-        break;
 
       case TYPES.TITLE:
         return (
@@ -33,11 +33,11 @@ const Text: FC<Props> = (props: Props) => {
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </h2>
         );
-        break;
 
       case TYPES.HEADER_PRIMARY:
       case TYPES.HIGHLIGHT_PRIMARY:
@@ -51,11 +51,11 @@ const Text: FC<Props> = (props: Props) => {
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </h3>
         );
-        break;
 
       case TYPES.BODY_PRIMARY:
       case TYPES.HYPERLINK_PRIMARY:
@@ -65,11 +65,11 @@ const Text: FC<Props> = (props: Props) => {
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </p>
         );
-        break;
 
       case TYPES.BODY_SECONDARY:
       case TYPES.HYPERLINK_SECONDARY:
@@ -82,11 +82,11 @@ const Text: FC<Props> = (props: Props) => {
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </small>
         );
-        break;
 
       default:
         return (
@@ -95,6 +95,7 @@ const Text: FC<Props> = (props: Props) => {
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </p>

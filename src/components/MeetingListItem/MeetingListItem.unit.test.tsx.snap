@@ -35,6 +35,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"
@@ -102,6 +103,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"
@@ -186,6 +188,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"
@@ -255,6 +258,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"
@@ -325,6 +329,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"
@@ -396,6 +401,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"
@@ -419,6 +425,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                     className=""
                     data-autoscale={true}
                     data-scale={false}
+                    data-test="placeholder"
                     fill="currentColor"
                     height="100%"
                     stroke="currentColor"
@@ -484,6 +491,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"
@@ -565,6 +573,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
               "color": "pink",
             }
           }
+          tabIndex={0}
         >
           <ListItemBaseSection
             className="md-meeting-list-item-start-section"

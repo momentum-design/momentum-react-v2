@@ -53,6 +53,18 @@ export default {
       },
     },
   },
+  isUnread: {
+    description: 'Determines whether there is content inside the space that is not read.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
   isNewActivity: {
     description: 'Determines weather there is new activity in this space (text appears in bold).',
     control: { type: 'boolean' },
@@ -79,6 +91,18 @@ export default {
   },
   isEnterRoom: {
     description: ' Determines weather the user has just been invited to this space.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  isAlert: {
+    description: 'Determines weather alerts on this space are visible.',
     control: { type: 'boolean' },
     table: {
       type: {

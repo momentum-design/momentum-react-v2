@@ -1,8 +1,9 @@
 import { PressEvents } from '@react-types/shared';
 import { CSSProperties, ReactNode } from 'react';
+import { ContextMenu } from '../ListItemBase/ListItemBase.types';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
-export interface Props extends PressEvents {
+export interface Props extends PressEvents, ContextMenu {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -34,6 +35,11 @@ export interface Props extends PressEvents {
   secondLine?: string | string[];
 
   /**
+   * Determines whether there is content inside the space that is not read.
+   */
+  isUnread?: boolean;
+
+  /**
    * Determines whether there is new activity in this space (text appears in bold).
    */
   isNewActivity?: boolean;
@@ -59,6 +65,11 @@ export interface Props extends PressEvents {
   isAlertMuted?: boolean;
 
   /**
+   * Determines whether we should display an alert icon.
+   */
+  isAlert?: boolean;
+
+  /**
    * Determines if there's an error inside this space.
    */
   isError?: boolean;
@@ -77,4 +88,9 @@ export interface Props extends PressEvents {
    * Determines whether the list item is compact or not
    */
   isCompact?: boolean;
+
+  /**
+   * Used to manage focus when this is used inside a list.
+   */
+  itemIndex?: number;
 }

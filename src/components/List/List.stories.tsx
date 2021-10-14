@@ -1,4 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/no-multi-comp */
+/* eslint-disable react/display-name */
 import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -7,7 +8,6 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import List, { ListProps } from './';
 import argTypes from './List.stories.args';
 import Documentation from './List.stories.docs.mdx';
-import { Item } from '@react-stately/collections';
 import ListItemBase from '../ListItemBase';
 import SpaceListItem from '../SpaceListItem';
 import { PresenceType } from '../Avatar/Avatar.types';
@@ -18,6 +18,9 @@ import Flex from '../Flex';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
+import { action } from '@storybook/addon-actions';
+
+const TEST_LIST_SIZE = 30;
 
 export default {
   title: 'Momentum UI/List',
@@ -26,80 +29,79 @@ export default {
     expanded: true,
     docs: {
       page: DocumentationPage(Documentation, StyleDocs),
+      source: { type: 'code' },
     },
   },
 };
 
-const Example = Template<ListProps<any>>(List).bind({});
+const Example = Template<ListProps>(List).bind({});
 
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  selectionMode: 'single',
-  disabledKeys: ['1'],
-  defaultSelectedKeys: ['2'],
-  children: [
-    <Item key="1">
-      <ListItemBase isPadded>Red</ListItemBase>
-    </Item>,
-    <Item key="2">
-      <ListItemBase isPadded>Green</ListItemBase>
-    </Item>,
-    <Item key="3">
-      <ListItemBase isPadded>Blue</ListItemBase>
-    </Item>,
-    <Item key="4">
-      <ListItemBase isPadded>Yellow</ListItemBase>
-    </Item>,
-  ],
+  listSize: TEST_LIST_SIZE,
+  children: Array.from(Array(TEST_LIST_SIZE).keys()).map((index) => (
+    <ListItemBase itemIndex={index} key={index} isPadded>
+      Item {index}
+    </ListItemBase>
+  )),
 };
 
-const Common = MultiTemplate<ListProps<any>>(List).bind({});
+const Common = MultiTemplate<ListProps>(List).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
 Common.args = {
-  children: 'Example',
-  shouldFocusWrap: false,
+  listSize: TEST_LIST_SIZE,
 };
 
 Common.parameters = {
   variants: [
     {
-      children: Array.from(Array(100).keys()).map((i) => (
-        <Item key={i}>
-          <SpaceListItem
-            firstLine={`Daniel Webex - ${i}`}
-            teamColor="gold"
-            avatar={
-              <Avatar
-                title="D"
-                presence={PresenceType.Meet}
-                size={32}
-                color={TEAM_COLORS.gold as TeamColor}
+      children: (
+        <div>
+          {Array.from(Array(TEST_LIST_SIZE).keys()).map((index) => {
+            return (
+              <SpaceListItem
+                contextMenuActions={[
+                  { text: 'Action 1', action: action('Action') },
+                  { text: 'Action 2', action: action('Action 2') },
+                ]}
+                key={index}
+                itemIndex={index}
+                firstLine={`Daniel Webex - ${index}`}
+                teamColor="gold"
+                avatar={
+                  <Avatar
+                    title="D"
+                    presence={PresenceType.Meet}
+                    size={32}
+                    color={TEAM_COLORS.gold as TeamColor}
+                  />
+                }
+                action={
+                  <Flex alignItems="center" xgap="0.5rem">
+                    <Flex alignItems="center" xgap="0.125rem">
+                      <Text type="body-secondary">23</Text>
+                      <Icon name="participant-list" weight="bold" strokeColor="none" scale={16} />
+                    </Flex>
+                    <ButtonPill color="join" size={28}>
+                      00:00
+                    </ButtonPill>
+                    <ButtonPill color="join" size={28}>
+                      Button 2
+                    </ButtonPill>
+                    <ButtonPill disabled color="join" size={28}>
+                      Button 3
+                    </ButtonPill>
+                  </Flex>
+                }
               />
-            }
-            action={
-              <Flex alignItems="center" xgap="0.5rem">
-                <Flex alignItems="center" xgap="0.125rem">
-                  <Text type="body-secondary">23</Text>
-                  <Icon name="participant-list" weight="bold" strokeColor="none" scale={16} />
-                </Flex>
-                <ButtonPill color="join" size={28}>
-                  00:00
-                </ButtonPill>
-                <ButtonPill color="join" size={28}>
-                  Button 2
-                </ButtonPill>
-                <ButtonPill color="join" size={28}>
-                  Button 2
-                </ButtonPill>
-              </Flex>
-            }
-          />
-        </Item>
-      )),
+            );
+          })}
+        </div>
+      ),
     },
   ],
 };

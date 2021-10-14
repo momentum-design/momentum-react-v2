@@ -182,6 +182,7 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
                       className=""
                       data-autoscale={false}
                       data-scale={20}
+                      data-test="warning"
                       height="100%"
                       style={
                         Object {

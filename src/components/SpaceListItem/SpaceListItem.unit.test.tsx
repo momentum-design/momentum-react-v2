@@ -8,7 +8,16 @@ import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import ListItemBase from '../ListItemBase';
 
+import * as ListContext from '../List/List.utils';
+import { STYLE } from './SpaceListItem.constants';
+
 describe('<SpaceListItem />', () => {
+  beforeEach(() => {
+    jest
+      .spyOn(ListContext, 'useListContext')
+      .mockImplementation(() => ({ currentFocus: 0, shouldFocusOnPres: false }));
+  });
+
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
@@ -78,6 +87,16 @@ describe('<SpaceListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with isUnread', async () => {
+      expect.assertions(1);
+
+      const isUnread = true;
+
+      const container = await mountAndWait(<SpaceListItem isUnread={isUnread} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with teamColor', async () => {
       expect.assertions(1);
 
@@ -114,6 +133,16 @@ describe('<SpaceListItem />', () => {
       const isAlertMuted = true;
 
       const container = await mountAndWait(<SpaceListItem isAlertMuted={isAlertMuted} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with isAlert', async () => {
+      expect.assertions(1);
+
+      const isAlert = true;
+
+      const container = await mountAndWait(<SpaceListItem isAlert={isAlert} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -226,19 +255,31 @@ describe('<SpaceListItem />', () => {
       expect(element.textContent).toBe('one - two');
     });
 
-    it('should have provided isNewActivity when isNewActivity is provided', async () => {
+    it('should have provided isNewActivity class when isNewActivity is provided', async () => {
       expect.assertions(1);
 
       const isNewActivity = true;
 
-      const element = (await mountAndWait(<SpaceListItem isNewActivity={isNewActivity} />))
+      const element = (await mountAndWait(<SpaceListItem isNewActivity={isNewActivity} />)).find(
+        ListItemBase
+      );
+
+      expect(element.hasClass(STYLE.isNewActivity)).toBe(true);
+    });
+
+    it('should have provided unread when isUnread is provided', async () => {
+      expect.assertions(1);
+
+      const isUnread = true;
+
+      const element = (await mountAndWait(<SpaceListItem isUnread={isUnread} />))
         .find(Icon)
         .getDOMNode();
 
       expect(element).toBeDefined();
     });
 
-    it('should have provided isMention when isMention is provided', async () => {
+    it('should have provided mention icon when isMention is provided', async () => {
       expect.assertions(1);
 
       const isMention = true;
@@ -250,7 +291,7 @@ describe('<SpaceListItem />', () => {
       expect(element).toBeDefined();
     });
 
-    it('should have provided isEnterRoom when isEnterRoom is provided', async () => {
+    it('should have provided enter-room icon when isEnterRoom is provided', async () => {
       expect.assertions(1);
 
       const isEnterRoom = true;
@@ -262,7 +303,7 @@ describe('<SpaceListItem />', () => {
       expect(element).toBeDefined();
     });
 
-    it('should have provided isAlertMuted when isAlertMuted is provided', async () => {
+    it('should have provided alert-muted icon when isAlertMuted is provided', async () => {
       expect.assertions(1);
 
       const isAlertMuted = true;
@@ -274,7 +315,19 @@ describe('<SpaceListItem />', () => {
       expect(element).toBeDefined();
     });
 
-    it('should have provided isError when isError is provided', async () => {
+    it('should have provided alert icon when isAlert is provided', async () => {
+      expect.assertions(1);
+
+      const isAlert = true;
+
+      const element = (await mountAndWait(<SpaceListItem isAlert={isAlert} />))
+        .find(Icon)
+        .getDOMNode();
+
+      expect(element).toBeDefined();
+    });
+
+    it('should have provided error icon when isError is provided', async () => {
       expect.assertions(1);
 
       const isError = true;
@@ -286,7 +339,7 @@ describe('<SpaceListItem />', () => {
       expect(element).toBeDefined();
     });
 
-    it('should have provided isError when isError is provided', async () => {
+    it('should have provided action when action is provided', async () => {
       expect.assertions(1);
 
       const action = <p>action</p>;

@@ -1,8 +1,6 @@
-import { CSSProperties } from 'react';
-import { AriaListBoxProps } from '@react-types/listbox';
-import { AsyncLoadable } from '@react-types/shared';
+import { CSSProperties, ReactNode } from 'react';
 
-export interface Props<T> extends AriaListBoxProps<T>, AsyncLoadable {
+export interface Props {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -14,17 +12,27 @@ export interface Props<T> extends AriaListBoxProps<T>, AsyncLoadable {
   id?: string;
 
   /**
+   * Child components of this component.
+   */
+  children?: ReactNode;
+
+  /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
 
   /**
-   * Function called when the user is scrolling through the list
+   * Size of list
    */
-  onScroll?: () => void;
+  listSize: number;
 
   /**
-   * Height of the list item inside this list
+   * Determines if the onPress handler should also focus the selected item
    */
-  itemHeight?: number;
+  shouldFocusOnPres?: boolean;
+}
+
+export interface ListContextValue {
+  currentFocus?: number;
+  shouldFocusOnPres?: boolean;
 }
