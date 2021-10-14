@@ -177,12 +177,12 @@ describe('<MeetingListItem />', () => {
         <MeetingListItem
           buttonGroup={
             <ButtonGroup>
-              <ButtonPill className="button-pill" />
-              <ButtonCircle className="button-circle">
+              <ButtonPill key="1" className="button-pill" />
+              <ButtonCircle key="2" className="button-circle">
                 <Icon name="chat" />
               </ButtonCircle>
-              <Icon name="placeholder" />
-              <Avatar className="avatar" />
+              <Icon key="3" name="placeholder" />
+              <Avatar key="4" className="avatar" />
             </ButtonGroup>
           }
         />

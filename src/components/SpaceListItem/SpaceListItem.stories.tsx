@@ -51,6 +51,21 @@ Common.parameters = {
       avatar: <Avatar title="C" presence={PresenceType.Away} size={32} />,
       isNewActivity: true,
     },
+
+    {
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Meet}
+          size={32}
+          color={TEAM_COLORS.gold as TeamColor}
+        />
+      ),
+      isNewActivity: true,
+      isUnread: true,
+      teamColor: TEAM_COLORS.gold,
+    },
+
     {
       avatar: (
         <Avatar
@@ -113,6 +128,19 @@ Common.parameters = {
         />
       ),
       isError: true,
+      teamColor: TEAM_COLORS.slate,
+      secondLine: ['Test', 'Another Test'],
+    },
+    {
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Schedule}
+          size={32}
+          color={TEAM_COLORS.slate as TeamColor}
+        />
+      ),
+      isAlert: true,
       teamColor: TEAM_COLORS.slate,
       secondLine: ['Test', 'Another Test'],
     },

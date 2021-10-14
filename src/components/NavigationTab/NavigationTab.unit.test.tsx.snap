@@ -261,6 +261,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
                     className=""
                     data-autoscale={false}
                     data-scale={24}
+                    data-test="contacts"
                     fill="currentColor"
                     height="100%"
                     style={
@@ -538,6 +539,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                     className=""
                     data-autoscale={false}
                     data-scale={24}
+                    data-test="contacts"
                     fill="currentColor"
                     height="100%"
                     style={
@@ -618,6 +620,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                     className=""
                     data-autoscale={false}
                     data-scale={24}
+                    data-test="contacts"
                     fill="currentColor"
                     height="100%"
                     style={
