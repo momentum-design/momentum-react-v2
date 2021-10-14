@@ -1,10 +1,12 @@
+import { FontStyle } from './Text.types';
+
 const CLASS_PREFIX = 'md-text';
 
 const DEFAULTS = {
   TYPE: 'body-primary',
 };
 
-const TYPES = {
+const TYPES: Record<string, FontStyle> = {
   DISPLAY: 'display',
   BANNER_TERTIARY: 'banner-tertiary',
   BANNER_PRIMARY: 'banner-primary',
