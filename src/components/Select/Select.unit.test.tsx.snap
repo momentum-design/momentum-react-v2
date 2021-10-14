@@ -1202,7 +1202,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={0}
                     >
                       <FocusRing
@@ -1306,7 +1305,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -2621,7 +2619,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -2725,7 +2722,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -3715,7 +3711,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -3819,7 +3814,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -5203,7 +5197,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={0}
                     >
                       <FocusRing
@@ -5338,7 +5331,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing

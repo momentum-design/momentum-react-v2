@@ -2680,17 +2680,6 @@
     "@react-types/shared" "^3.9.0"
     clsx "^1.1.1"
 
-"@react-aria/virtualizer@^3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@react-aria/virtualizer/-/virtualizer-3.3.4.tgz#df124b5443bc63bf6aeda2b5c4d340ca42941833"
-  integrity sha512-kj4eH+8FfXT0c4snSbgd+vVoeW9pTBZoVh9v1R1sbXN4BB+O0AvrAUScDWIeyOeP4QnaIHa2pZmr4X5zjjV99A==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/i18n" "^3.3.2"
-    "@react-aria/utils" "^3.8.2"
-    "@react-stately/virtualizer" "^3.1.5"
-    "@react-types/shared" "^3.8.0"
-
 "@react-aria/visually-hidden@^3.2.3":
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/@react-aria/visually-hidden/-/visually-hidden-3.2.3.tgz#4779df0a468873550afb42a7f5fcb2411d82db8d"

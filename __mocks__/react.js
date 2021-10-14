@@ -6,9 +6,6 @@ window.addEventListener = () => {};
 window.requestAnimationFrame = () => {
   throw new Error('requestAnimationFrame is not supported in Node');
 };
-global.requestAnimationFrame = (cb) => {
-  cb();
-};
 
 global.MutationObserver = class {
   constructor(callback) {}

@@ -24,7 +24,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     role = DEFAULTS.ROLE,
     isSelected,
     style,
-    shouldItemFocusBeInset = DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET,
     itemIndex,
     contextMenuActions,
     ...rest
@@ -35,6 +34,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const listContext = useListContext();
   const focus = listContext?.currentFocus === itemIndex;
   const shouldFocusOnPres = listContext?.shouldFocusOnPres || false;
+  const shouldItemFocusBeInset =
+    listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
 
   const internalRef = useRef<HTMLLIElement>();
   const ref = providedRef || internalRef;

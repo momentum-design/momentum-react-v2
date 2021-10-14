@@ -213,7 +213,6 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -315,7 +314,6 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -591,7 +589,6 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -693,7 +690,6 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -970,7 +966,6 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -1072,7 +1067,6 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -1348,7 +1342,6 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -1450,7 +1443,6 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -1882,7 +1874,6 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -1984,7 +1975,6 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -2125,7 +2115,6 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
                       role="option"
-                      shouldItemFocusBeInset={false}
                       tabIndex={-1}
                     >
                       <FocusRing
@@ -2422,7 +2411,6 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing
@@ -2524,7 +2512,6 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="option"
-                shouldItemFocusBeInset={false}
                 tabIndex={-1}
               >
                 <FocusRing

@@ -35,7 +35,7 @@ describe('ListBoxItem', () => {
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      useContextMock.mockReturnValue({ state, shouldWrapItems: true });
+      useContextMock.mockReturnValue(state);
       const item = state.collection.getItem('$.0');
 
       const wrapper = mount(<ListBoxItem key={item.key} item={item} />);
@@ -46,7 +46,7 @@ describe('ListBoxItem', () => {
 
   describe('attributes', () => {
     it('should render the given item', () => {
-      useContextMock.mockReturnValue({ state, shouldWrapItems: true });
+      useContextMock.mockReturnValue(state);
       const item = state.collection.getItem('$.1');
 
       const wrapper = mount(<ListBoxItem key={item.key} item={item} />);

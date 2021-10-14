@@ -21,7 +21,7 @@ const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
     elementType: 'div',
   });
 
-  const { state } = useContext(ListBoxContext);
+  const state = useContext(ListBoxContext);
 
   // If the section is not the first, add a separator element.
   // The heading is rendered inside an <li> element, which contains

@@ -51,7 +51,6 @@ Common.parameters = {
       avatar: <Avatar title="C" presence={PresenceType.Away} size={32} />,
       isNewActivity: true,
     },
-
     {
       avatar: (
         <Avatar
@@ -65,7 +64,6 @@ Common.parameters = {
       isUnread: true,
       teamColor: TEAM_COLORS.gold,
     },
-
     {
       avatar: (
         <Avatar

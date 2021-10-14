@@ -44,14 +44,15 @@ const useRoveFocus = (ref: RefObject<HTMLUListElement>, size: number) => {
 };
 
 const List: FC<Props> = (props: Props) => {
-  const { className, id, style, children, shouldFocusOnPres, listSize } = props;
+  const { className, id, style, children, shouldFocusOnPres, listSize, shouldItemFocusBeInset } =
+    props;
 
   const ref = useRef<HTMLUListElement>();
 
   const { currentFocus } = useRoveFocus(ref, listSize);
 
   return (
-    <ListContext.Provider value={{ currentFocus, shouldFocusOnPres }}>
+    <ListContext.Provider value={{ currentFocus, shouldFocusOnPres, shouldItemFocusBeInset }}>
       <ul className={classnames(className, STYLE.wrapper)} ref={ref} style={style} id={id}>
         {children}
       </ul>
