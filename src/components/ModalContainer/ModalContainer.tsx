@@ -11,12 +11,29 @@ import './ModalContainer.style.scss';
  * The ModalContainer component.
  */
 const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
-  const { arrow, className, children, color, elevation, id, isPadded, round, style } = props;
+  const {
+    arrow,
+    className,
+    children,
+    color,
+    elevation,
+    id,
+    isPadded,
+    round,
+    style,
+    ...otherProps
+  } = props;
 
   const arrowComponent = arrow ? <ModalArrow color={color} side={arrow} /> : undefined;
 
   return (
-    <div className={classnames(className, STYLE.wrapper)} id={id} style={style} data-arrow={arrow}>
+    <div
+      className={classnames(className, STYLE.wrapper)}
+      id={id}
+      style={style}
+      data-arrow={arrow}
+      {...otherProps}
+    >
       {arrowComponent}
       <div
         ref={ref}
