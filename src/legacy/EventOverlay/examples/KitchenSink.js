@@ -58,12 +58,7 @@ class EventOverlayKitchenSink extends React.Component {
     } = this.state;
 
     const rowRenderer = ({ index, style }, ...args) => (
-      <ListItem
-        style={{ ...style }}
-        type={style.height}
-        key={index}
-        eventKey={`test-${index}`}
-      >
+      <ListItem style={{ ...style }} type={style.height} key={index} eventKey={`test-${index}`}>
         <ListItemSection position="left" />
         <ListItemSection position="center">
           {getPopover(h1600w1900, index, ...args)}
@@ -87,26 +82,27 @@ class EventOverlayKitchenSink extends React.Component {
         isContained={isContained}
         scrollParentID={scrollParentID}
         popoverTrigger="Click"
-        {...portalNode
-          && document.getElementById(portalNode)
-          && { portalNode: document.getElementById(portalNode) }
-        }
+        {...(portalNode &&
+          document.getElementById(portalNode) && {
+            portalNode: document.getElementById(portalNode),
+          })}
         showArrow={showArrow}
         targetOffset={targetOffset}
         {...other}
       >
-        <Button
-          color="blue"
-          ariaLabel={buttonLabel ? `${buttonLabel}` : 'Click'}
-        >
+        <Button color="blue" ariaLabel={buttonLabel ? `${buttonLabel}` : 'Click'}>
           {buttonLabel ? buttonLabel : 'Click'}
         </Button>
       </Popover>
     );
 
-    const loadingExample = loadingDiv
-      ? <div>Loading</div>
-      : <Button style={{ height: '500px' }} ariaLabel='Done Loading'>Done Loading</Button>;
+    const loadingExample = loadingDiv ? (
+      <div>Loading</div>
+    ) : (
+      <Button style={{ height: '500px' }} ariaLabel="Done Loading">
+        Done Loading
+      </Button>
+    );
 
     const simpleDiv = (
       <div>
@@ -202,16 +198,14 @@ class EventOverlayKitchenSink extends React.Component {
             checked={showPopoverExamples}
             label="Show Popover Examples"
             htmlId="testToggleSwitch4"
-            onChange={() =>
-              this.setState({ showPopoverExamples: !showPopoverExamples })
-            }
+            onChange={() => this.setState({ showPopoverExamples: !showPopoverExamples })}
           />
           <ToggleSwitch
             checked={!!targetOffset.horizontal}
             label="Add horizontal offset"
             htmlId="testToggleSwitch6"
             onChange={() =>
-              this.setState(state => ({
+              this.setState((state) => ({
                 ...state,
                 targetOffset: {
                   ...state.targetOffset.vertical,
@@ -225,7 +219,7 @@ class EventOverlayKitchenSink extends React.Component {
             label="Add vertical offset"
             htmlId="testToggleSwitch7"
             onChange={() =>
-              this.setState(state => ({
+              this.setState((state) => ({
                 targetOffset: {
                   ...state.targetOffset.horizontal,
                   vertical: 20,
@@ -235,63 +229,57 @@ class EventOverlayKitchenSink extends React.Component {
           />
           <div className="row" style={{ width: '100%' }}>
             <Input
-              name='setPortalNode'
-              label='Portal Node ID'
-              htmlId='setPortalNode'
-              className='medium-7 columns end'
-              placeholder='(optional) Portal Node ID'
+              name="setPortalNode"
+              label="Portal Node ID"
+              htmlId="setPortalNode"
+              className="medium-7 columns end"
+              placeholder="(optional) Portal Node ID"
               value={portalNode}
-              onChange={e => this.setState({ portalNode: e.target.value })}
+              onChange={(e) => this.setState({ portalNode: e.target.value })}
               clear
             />
             <Input
-              name='setBoundingID'
-              label='Container ID'
-              htmlId='setBoundingID'
-              className='medium-7 columns end'
-              placeholder='(optional) Bounding Parent ID'
+              name="setBoundingID"
+              label="Container ID"
+              htmlId="setBoundingID"
+              className="medium-7 columns end"
+              placeholder="(optional) Bounding Parent ID"
               value={boundingParentID}
-              onChange={e => this.setState({ boundingParentID: e.target.value })}
+              onChange={(e) => this.setState({ boundingParentID: e.target.value })}
               clear
             />
             <Input
-              name='setScrollParentID'
-              label='Scroll Parent ID'
-              htmlId='setScrollParentID'
-              className='medium-7 columns end'
-              placeholder='(optional) Scroll Parent ID'
+              name="setScrollParentID"
+              label="Scroll Parent ID"
+              htmlId="setScrollParentID"
+              className="medium-7 columns end"
+              placeholder="(optional) Scroll Parent ID"
               value={scrollParentID}
-              onChange={e => this.setState({ scrollParentID: e.target.value })}
+              onChange={(e) => this.setState({ scrollParentID: e.target.value })}
               clear
             />
-            <Label
-              className='medium-7 columns end'
-              htmlFor='is-contained-0'
-            >
+            <Label className="medium-7 columns end" htmlFor="is-contained-0">
               Is Contained
             </Label>
             <Select
-              className='medium-7 columns end'
+              className="medium-7 columns end"
               defaultValue={'False'}
-              id='is-contained-0'
-              onSelect={e => this.setState({ isContained: e[0].value })}
+              id="is-contained-0"
+              onSelect={(e) => this.setState({ isContained: e[0].value })}
             >
               <SelectOption value={'both'} label="True" />
               <SelectOption value={''} label="False" />
               <SelectOption value={'horizontal'} label="Horizontal" />
               <SelectOption value={'vertical'} label="Vertical" />
             </Select>
-            <Label
-              className='medium-7 columns end'
-              htmlFor='direction-0'
-            >
+            <Label className="medium-7 columns end" htmlFor="direction-0">
               Direction
             </Label>
             <Select
-              className='medium-7 columns end'
+              className="medium-7 columns end"
               defaultValue={'Top'}
-              id='direction-0'
-              onSelect={e => this.setState({ direction: e[0].value })}
+              id="direction-0"
+              onSelect={(e) => this.setState({ direction: e[0].value })}
             >
               <SelectOption value="top-center" label="Top" />
               <SelectOption value="bottom-center" label="Bottom" />
@@ -301,9 +289,7 @@ class EventOverlayKitchenSink extends React.Component {
           </div>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         {showPopoverExamples && (
           <React.Fragment>
@@ -350,38 +336,31 @@ class EventOverlayKitchenSink extends React.Component {
             isContained={isContained}
             scrollParentID={scrollParentID}
             popoverTrigger="Focus"
-            {...portalNode
-              && document.getElementById(portalNode)
-              && { portalNode: document.getElementById(portalNode) }
-            }
+            {...(portalNode &&
+              document.getElementById(portalNode) && {
+                portalNode: document.getElementById(portalNode),
+              })}
             showArrow={showArrow}
             targetOffset={targetOffset}
           >
             <Input
-              name='testPopover'
-              label='Popover surrounding Input'
-              htmlId='testPopover'
-              placeholder='Popover surrounding Input'
+              name="testPopover"
+              label="Popover surrounding Input"
+              htmlId="testPopover"
+              placeholder="Popover surrounding Input"
               clear
             />
           </Popover>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
-        <div
-          className="docs-example docs-example--spacing"
-          style={{ marginTop: '10px' }}
-        >
+        <div className="docs-example docs-example--spacing" style={{ marginTop: '10px' }}>
           <h5>List with Popovers, Overflow Auto</h5>
           <div style={{ width: '50%', height: '200px' }}>{varyingContent}</div>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>List using React Virtualized (checkOverflow should be false)</h5>
@@ -402,9 +381,7 @@ class EventOverlayKitchenSink extends React.Component {
           </div>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>List using React-Window (checkOverflow should be false)</h5>
@@ -418,7 +395,7 @@ class EventOverlayKitchenSink extends React.Component {
                   itemSize={52}
                   /* eslint-disable react/display-name, react/no-multi-comp */
                   outerElementType={forwardRef((props, ref) => (
-                    <div id='test-list-2' ref={ref} {...props} />
+                    <div id="test-list-2" ref={ref} {...props} />
                   ))}
                   /* eslint-enable react/display-name, react/no-multi-comp */
                 >
@@ -429,9 +406,7 @@ class EventOverlayKitchenSink extends React.Component {
           </div>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>Absolute Container, No Overflow</h5>
@@ -451,9 +426,7 @@ class EventOverlayKitchenSink extends React.Component {
           </div>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>Absolute Container, Overflow</h5>
@@ -474,18 +447,14 @@ class EventOverlayKitchenSink extends React.Component {
           </div>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>Various Popover Examples</h5>
           {popoverExamples}
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>Overflow Container</h5>
@@ -513,9 +482,7 @@ class EventOverlayKitchenSink extends React.Component {
           </div>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>Coachmark</h5>
@@ -535,27 +502,21 @@ class EventOverlayKitchenSink extends React.Component {
           >
             <Button
               ariaLabel="test"
-              onClick={() =>
-                this.setState({ isCoachmarkOpen: !isCoachmarkOpen })
-              }
+              onClick={() => this.setState({ isCoachmarkOpen: !isCoachmarkOpen })}
             >
               Coachmark Anchor
             </Button>
           </Coachmark>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>ComboBox</h5>
           <ComboBox options={['a', 'ab', 'abc']} />
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>DatePicker</h5>
@@ -564,9 +525,7 @@ class EventOverlayKitchenSink extends React.Component {
           </DatePicker>
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>ListItemMeeting</h5>
@@ -580,15 +539,11 @@ class EventOverlayKitchenSink extends React.Component {
           />
         </div>
 
-        <div
-          style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }}
-        />
+        <div style={{ width: '100%', border: '10px gray solid', margin: '20px 0' }} />
 
         <div className="docs-example docs-example--spacing">
           <h5>MenuOverlay</h5>
-          <MenuOverlay
-            menuTrigger={<Button ariaLabel="Show Menu">Show Menu</Button>}
-          >
+          <MenuOverlay menuTrigger={<Button ariaLabel="Show Menu">Show Menu</Button>}>
             <MenuContent>
               <EditableTextfield inputText="Content Area" />
             </MenuContent>
@@ -599,25 +554,11 @@ class EventOverlayKitchenSink extends React.Component {
                 keyboardKey="Status"
               >
                 <MenuItem isHeader label="Set Do Not Disturb:" />
-                <MenuItem
-                  disabled
-                  label="1 hour"
-                  onClick={this.onClick}
-                  value="1 hour"
-                />
-                <MenuItem
-                  keepMenuOpen
-                  label="5 hour"
-                  onClick={this.onClick}
-                  value="5 hour"
-                />
+                <MenuItem disabled label="1 hour" onClick={this.onClick} value="1 hour" />
+                <MenuItem keepMenuOpen label="5 hour" onClick={this.onClick} value="5 hour" />
                 <MenuItem keepMenuOpen label="8 hour" />
               </SubMenu>
-              <SubMenu
-                selectedValue="English"
-                label="Language"
-                keyboardKey="Language"
-              >
+              <SubMenu selectedValue="English" label="Language" keyboardKey="Language">
                 <MenuItem label="English" />
                 <MenuItem label="Spanish" />
               </SubMenu>

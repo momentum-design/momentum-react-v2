@@ -19,16 +19,12 @@ describe('tests for <DatePickerMonth />', () => {
   });
 
   it('should match month SnapShot', () => {
-    const container = shallow(
-      <DatePickerMonth day={day} />
-    );
+    const container = shallow(<DatePickerMonth day={day} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render all days of the month correctly', () => {
-    const container = mount(
-      <DatePickerMonth day={day} />
-    );
+    const container = mount(<DatePickerMonth day={day} />);
     expect(container.find('DatePickerWeek')).toHaveLength(5);
     expect(container.find('DatePickerDay')).toHaveLength(35);
   });

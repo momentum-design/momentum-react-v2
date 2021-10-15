@@ -14,9 +14,7 @@ export default class ListItemSections extends React.PureComponent {
             <ListItemSection position="center">Center</ListItemSection>
           </ListItem>
           <ListItem link="javascript:void(0)">
-            <ListItemSection position="center-align">
-              Center Align
-            </ListItemSection>
+            <ListItemSection position="center-align">Center Align</ListItemSection>
           </ListItem>
           <ListItem link="javascript:void(0)">
             <ListItemSection position="left">Left</ListItemSection>

@@ -7,12 +7,12 @@ export default class ContentItemIcon extends React.PureComponent {
       alert('file onClick');
     };
 
-    const folderClick = e => {
+    const folderClick = (e) => {
       alert('folder clicked');
       e.stopPropagation();
     };
 
-    const downloadClick = e => {
+    const downloadClick = (e) => {
       alert('download clicked');
       e.stopPropagation();
     };

@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  ToggleSwitchDefault,
-  ToggleSwitchFilled,
-} from './index';
+import { ToggleSwitchDefault, ToggleSwitchFilled } from './index';
 
 export default class ToggleSwitchKitchenSink extends React.Component {
   render() {

@@ -1,14 +1,16 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import {
-  Tab,
-  TabList,
-} from '@momentum-ui/react';
+import { Tab, TabList } from '@momentum-ui/react';
 
 describe('tests for <TabList />', () => {
   it('should match SnapShot', () => {
     const context = { focus: 0, onFocus: () => {}, onActivate: () => {} };
-    const container = mount(<TabList id="test"><Tab heading="one"/></TabList>, { context });
+    const container = mount(
+      <TabList id="test">
+        <Tab heading="one" />
+      </TabList>,
+      { context }
+    );
 
     expect(container).toMatchSnapshot();
   });
@@ -17,8 +19,9 @@ describe('tests for <TabList />', () => {
     const context = { focus: 0, onFocus: () => {}, onActivate: () => {} };
     const container = mount(
       <TabList>
-        <Tab heading="one"/>
-      </TabList>, { context }
+        <Tab heading="one" />
+      </TabList>,
+      { context }
     );
 
     expect(container.find('.md-tab__item').length).toEqual(1);

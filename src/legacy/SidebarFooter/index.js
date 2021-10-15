@@ -3,14 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SidebarFooter = props => {
+const SidebarFooter = (props) => {
   const { children, className, ...otherProps } = props;
   return (
     <div
-      className={
-        `md-sidebar__footer` +
-        `${(className && ` ${className}`) || ''}`
-      }
+      className={`md-sidebar__footer` + `${(className && ` ${className}`) || ''}`}
       {...otherProps}
     >
       {children}

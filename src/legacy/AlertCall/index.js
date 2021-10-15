@@ -4,13 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { UIDReset } from 'react-uid';
 import DeviceListCall from '../DeviceListCall';
-import {
-  Avatar,
-  Button,
-  Icon
-} from '@momentum-ui/react';
+import { Avatar, Button, Icon } from '@momentum-ui/react';
 
-const AlertCall = props => {
+const AlertCall = (props) => {
   const {
     avatar,
     avatarProps,
@@ -41,117 +37,94 @@ const AlertCall = props => {
     if (avatar) {
       return avatar;
     } else {
-      switch(caller.type) {
-        case 'number': 
-          return (
-            <Avatar
-              alt={caller.title}
-              size='xlarge'
-              title='#'
-              {...avatarProps}
-            />
-          );
+      switch (caller.type) {
+        case 'number':
+          return <Avatar alt={caller.title} size="xlarge" title="#" {...avatarProps} />;
         case 'device':
           return (
             <Avatar
               alt={caller.title}
-              icon={<Icon name='spark-board_32' />}
-              size='xlarge'
+              icon={<Icon name="spark-board_32" />}
+              size="xlarge"
               {...avatarProps}
             />
           );
-        default: 
-          return (
-            <Avatar
-              alt={caller.title}
-              size='xlarge'
-              title={caller.title}
-              {...avatarProps}
-            />
-          );
+        default:
+          return <Avatar alt={caller.title} size="xlarge" title={caller.title} {...avatarProps} />;
       }
     }
   };
 
   const getDeviceList = () => {
-    return devices.length > 0 && (
-      <DeviceListCall
-        defaultSelected={defaultSelectedDevice}
-        devices={devices}
-        header={deviceListHeader}
-        onSelect={onDeviceSelect}
-        {...deviceListProps}
-      />
+    return (
+      devices.length > 0 && (
+        <DeviceListCall
+          defaultSelected={defaultSelectedDevice}
+          devices={devices}
+          header={deviceListHeader}
+          onSelect={onDeviceSelect}
+          {...deviceListProps}
+        />
+      )
     );
   };
 
   return (
     show && (
-      <div 
-        className='md-alert md-alert--call'
-        {...otherProps}
-      >
-        <div className='md-alert__title'>
-          {title}
-        </div>
-        <div className='md-alert__caller'>
+      <div className="md-alert md-alert--call" {...otherProps}>
+        <div className="md-alert__title">{title}</div>
+        <div className="md-alert__caller">
           {getAvatar()}
-          <div className='md-alert__caller-title'>
-            {caller.title}
-          </div>
-          <div className='md-alert__caller-subtitle'>
-            {caller.alt}
-          </div>
+          <div className="md-alert__caller-title">{caller.title}</div>
+          <div className="md-alert__caller-subtitle">{caller.alt}</div>
         </div>
-        <UIDReset>
-          {getDeviceList()}
-        </UIDReset>
-        <div className='md-alert--call--buttons'>
-          {onAnswerShare &&
+        <UIDReset>{getDeviceList()}</UIDReset>
+        <div className="md-alert--call--buttons">
+          {onAnswerShare && (
             <Button
               ariaLabel={shareAriaLabel}
               circle
-              color='blue'
+              color="blue"
               onClick={onAnswerShare}
               size={44}
               {...shareBtnProps}
             >
-              <Icon name='share-screen_24'/>
+              <Icon name="share-screen_24" />
             </Button>
-          }
-          {onAnswerVideo &&
+          )}
+          {onAnswerVideo && (
             <Button
               ariaLabel={videoAriaLabel}
               circle
-              color='green'
+              color="green"
               onClick={onAnswerVideo}
               size={44}
               {...videoBtnProps}
             >
-              <Icon name='camera_24'/>
+              <Icon name="camera_24" />
             </Button>
-          }
-          {onAnswerVoice &&
+          )}
+          {onAnswerVoice && (
             <Button
               ariaLabel={voiceAriaLabel}
               circle
-              color='green'
+              color="green"
               onClick={onAnswerVoice}
               size={44}
               {...voiceBtnProps}
             >
-              <Icon name='handset_24'/>
+              <Icon name="handset_24" />
             </Button>
-          }
+          )}
           <Button
             ariaLabel={rejectAriaLabel}
             circle
-            color='red'
+            color="red"
             onClick={onReject}
             size={44}
             {...rejectBtnProps}
           >
-            <Icon name='cancel_24'/>
+            <Icon name="cancel_24" />
           </Button>
         </div>
       </div>

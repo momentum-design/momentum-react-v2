@@ -11,7 +11,7 @@ class SpaceListMeeting extends React.PureComponent {
     id: this.props.id || uniqueId('md-space-list-meeting-'),
   };
 
-  handleButtonClick = e => {
+  handleButtonClick = (e) => {
     const { buttonOnClick } = this.props;
 
     buttonOnClick && buttonOnClick(e);

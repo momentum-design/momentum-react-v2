@@ -4,9 +4,7 @@ import { ListItem, Select } from '@momentum-ui/react';
 
 describe('tests for <Select />', () => {
   it('should match normal SnapShot', () => {
-    const container = mount(
-      <Select />
-    );
+    const container = mount(<Select />);
 
     expect(container).toMatchSnapshot();
   });
@@ -14,7 +12,7 @@ describe('tests for <Select />', () => {
   it('should render children', () => {
     const container = shallow(
       <Select>
-        <div className='child' />
+        <div className="child" />
       </Select>
     );
     container.setState({ isOpen: true });
@@ -22,33 +20,33 @@ describe('tests for <Select />', () => {
   });
 
   it('should handle className prop', () => {
-    const container = mount(<Select className='testInput'/>);
+    const container = mount(<Select className="testInput" />);
 
     expect(container.find('.md-input-container').hasClass('testInput')).toEqual(true);
   });
 
   it('should handle buttonProps prop', () => {
-    const container = mount(<Select buttonProps={{ className: 'testInput' }}/>);
+    const container = mount(<Select buttonProps={{ className: 'testInput' }} />);
 
     expect(container.find('button').hasClass('testInput')).toEqual(true);
   });
 
   it('should handle listProps prop', () => {
-    const container = mount(<Select listProps={{ className: 'testInput' }}/>);
+    const container = mount(<Select listProps={{ className: 'testInput' }} />);
 
     container.find('button').simulate('click');
     expect(container.find('List').hasClass('testInput')).toEqual(true);
   });
 
   it('should handle overlayProps prop', () => {
-    const container = mount(<Select overlayProps={{ className: 'testInput' }}/>);
+    const container = mount(<Select overlayProps={{ className: 'testInput' }} />);
 
     container.find('button').simulate('click');
     expect(container.find('EventOverlay').hasClass('testInput')).toEqual(true);
   });
 
   it('should handle isDynamic prop', () => {
-    const container = mount(<Select className='testInput' isDynamic={false}/>);
+    const container = mount(<Select className="testInput" isDynamic={false} />);
 
     container.find('button').simulate('click');
     expect(container.state().isOpen).toEqual(true);
@@ -58,25 +56,25 @@ describe('tests for <Select />', () => {
   it('should close on select (non-multi)', () => {
     const container = mount(
       <Select>
-        <ListItem value='1' label='test1' />
-        <ListItem value='2' className='clickMe' label='test2'/>
-        <ListItem value='3' label='test3'/>
+        <ListItem value="1" label="test1" />
+        <ListItem value="2" className="clickMe" label="test2" />
+        <ListItem value="3" label="test3" />
       </Select>
     );
 
     container.find('button').simulate('click');
     expect(container.state().isOpen).toEqual(true);
     container.find('.clickMe').first().simulate('click');
-    expect(container.state().selected).toEqual([{label:'test2', value:'2'}]);
+    expect(container.state().selected).toEqual([{ label: 'test2', value: '2' }]);
     expect(container.state().isOpen).toEqual(false);
   });
 
   it('should allow on multi-select', () => {
     const container = mount(
       <Select isMulti>
-        <ListItem value='1' className='clickMe1'/>
-        <ListItem value='2' className='clickMe2'/>
-        <ListItem value='3'/>
+        <ListItem value="1" className="clickMe1" />
+        <ListItem value="2" className="clickMe2" />
+        <ListItem value="3" />
       </Select>
     );
 
@@ -84,19 +82,22 @@ describe('tests for <Select />', () => {
     container.find('button').simulate('click');
     expect(container.state().isOpen).toEqual(true);
     container.find('.clickMe1').first().simulate('click');
-    expect(container.state().selected).toEqual([{label:'',value:'1'}]);
+    expect(container.state().selected).toEqual([{ label: '', value: '1' }]);
     expect(container.state().isOpen).toEqual(true);
     container.find('.clickMe2').first().simulate('click');
-    expect(container.state().selected).toEqual([{'label':'', value:'1'},{'label':'', value:'2'}]);
+    expect(container.state().selected).toEqual([
+      { label: '', value: '1' },
+      { label: '', value: '2' },
+    ]);
     expect(container.state().isOpen).toEqual(true);
   });
 
   it('should unselect after selecting on multi-select', () => {
     const container = mount(
       <Select isMulti>
-        <ListItem value='1' className='clickMe1'/>
-        <ListItem value='2' className='clickMe2'/>
-        <ListItem value='3'/>
+        <ListItem value="1" className="clickMe1" />
+        <ListItem value="2" className="clickMe2" />
+        <ListItem value="3" />
       </Select>
     );
 
@@ -104,7 +105,7 @@ describe('tests for <Select />', () => {
     container.find('button').simulate('click');
     expect(container.state().isOpen).toEqual(true);
     container.find('.clickMe1').first().simulate('click');
-    expect(container.state().selected).toEqual([{label:'', value: '1'}]);
+    expect(container.state().selected).toEqual([{ label: '', value: '1' }]);
     expect(container.state().isOpen).toEqual(true);
     container.find('.clickMe1').first().simulate('click');
     expect(container.state().selected).toEqual([]);
@@ -112,9 +113,7 @@ describe('tests for <Select />', () => {
   });
 
   it('should pass defaultValue attribute', () => {
-    const container = mount(
-      <Select defaultValue='test' />
-    );
+    const container = mount(<Select defaultValue="test" />);
 
     expect(container.find('.md-select__label').text()).toEqual('test');
   });
@@ -122,9 +121,9 @@ describe('tests for <Select />', () => {
   it('should continue updating input value on select', () => {
     const container = mount(
       <Select isMulti>
-        <ListItem value='1' className='clickMe1'/>
-        <ListItem value='2' className='clickMe2'/>
-        <ListItem value='3'/>
+        <ListItem value="1" className="clickMe1" />
+        <ListItem value="2" className="clickMe2" />
+        <ListItem value="3" />
       </Select>
     );
 
@@ -142,9 +141,9 @@ describe('tests for <Select />', () => {
 
     const container = mount(
       <Select onSelect={onSelect}>
-        <ListItem value='1' className='clickMe1'/>
-        <ListItem value='2' className='clickMe2'/>
-        <ListItem value='3'/>
+        <ListItem value="1" className="clickMe1" />
+        <ListItem value="2" className="clickMe2" />
+        <ListItem value="3" />
       </Select>
     );
 
@@ -154,5 +153,4 @@ describe('tests for <Select />', () => {
     container.find('.clickMe1').first().simulate('click');
     expect(onSelect).toHaveBeenCalled();
   });
-
 });

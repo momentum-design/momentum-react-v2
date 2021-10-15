@@ -5,44 +5,32 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import uniqueId from 'lodash/uniqueId';
-import {
-  EventOverlay,
-  Icon,
-  Link,
-  ListItem,
-  ListItemSection
-} from '@momentum-ui/react';
+import { EventOverlay, Icon, Link, ListItem, ListItemSection } from '@momentum-ui/react';
 
 class ListItemMeeting extends React.PureComponent {
-
   state = {
     id: this.props.id || uniqueId('md-list-item__meeting-'),
     isOpen: false,
-    offset: -10
+    offset: -10,
   };
 
-  handleAnchorClick = e => {
+  handleAnchorClick = (e) => {
     const { anchorOnClick } = this.props;
 
     e.persist();
     anchorOnClick && anchorOnClick(e);
     e.stopPropagation();
-  }
+  };
 
-  handleAnchorKeyDown = e => {
-    if (
-      e.which === 32
-        || e.which === 13
-        || e.charCode === 32
-        || e.charCode === 13
-    ) {
+  handleAnchorKeyDown = (e) => {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       this.handleAnchorClick(e);
     } else {
       e.stopPropagation();
     }
-  }
+  };
 
-  handleClick = e => {
+  handleClick = (e) => {
     const { onClick, ratioOffset } = this.props;
     const { isOpen } = this.state;
 
@@ -50,15 +38,15 @@ class ListItemMeeting extends React.PureComponent {
       onClick && onClick(e);
 
       return {
-        offset: (ReactDOM.findDOMNode(this.container).getBoundingClientRect().width * ratioOffset),
-        isOpen: !isOpen
+        offset: ReactDOM.findDOMNode(this.container).getBoundingClientRect().width * ratioOffset,
+        isOpen: !isOpen,
       };
     });
-  }
+  };
 
   handleClickAway = () => {
     this.setState({ isOpen: false });
-  }
+  };
 
   render() {
     const {
@@ -83,89 +71,70 @@ class ListItemMeeting extends React.PureComponent {
       ...props
     } = this.props;
 
-    const {
-      id,
-      isOpen,
-      offset
-    } = this.state;
+    const { id, isOpen, offset } = this.state;
 
-    const otherProps = omit({...props}, [
-      'onClick',
-      'ratioOffset',
-    ]);
+    const otherProps = omit({ ...props }, ['onClick', 'ratioOffset']);
 
-    const getTitle =
-      !title
-        ? header
-        : title;
+    const getTitle = !title ? header : title;
 
     const getTime = () => {
-
       if (timeNode) {
         return timeNode;
       } else if (isAllDay) {
         return <span>All day</span>;
       } else if (includeDate && time.start) {
-        return (
-          [
-            <span key='date'>{date}</span>,
-            <span key='time'>{time.start + `${time.end ? ` - ${time.end}` : ''}`}</span>
-          ]
-        );
-      } else if (includeDate && date){
+        return [
+          <span key="date">{date}</span>,
+          <span key="time">{time.start + `${time.end ? ` - ${time.end}` : ''}`}</span>,
+        ];
+      } else if (includeDate && date) {
         return <span>{date}</span>;
       } else if (time.start) {
         return [
-          <span key='time-0'>{time.start}</span>,
-          time.end && <span key='time-1'>{time.end}</span>
+          <span key="time-0">{time.start}</span>,
+          time.end && <span key="time-1">{time.end}</span>,
         ];
       }
     };
 
     const children = [
-      <ListItemSection
-        key='child-0'
-        position='left'
-      >
-        {
-          (inProgress || type === 'chip')
-            && <span
-              style={{
-                ...statusColor && {backgroundColor: statusColor}
-              }}
-              className='md-list-item-meeting__progress-line'
-            />
-        }
+      <ListItemSection key="child-0" position="left">
+        {(inProgress || type === 'chip') && (
+          <span
+            style={{
+              ...(statusColor && { backgroundColor: statusColor }),
+            }}
+            className="md-list-item-meeting__progress-line"
+          />
+        )}
         {getTime()}
       </ListItemSection>,
-      <ListItemSection key='child-1' position='center'>
-        <div className='md-list-item__header'>
+      <ListItemSection key="child-1" position="center">
+        <div className="md-list-item__header">
           <span>{header}</span>
-          {isRecurring && <Icon name='recurring_12'/>}
+          {isRecurring && <Icon name="recurring_12" />}
         </div>
-        <div className='md-list-item__space-link'>
-          {
-            anchorLabel
-              && anchorOnClick
-              && <Link
-                tag='div'
-                onClick={this.handleAnchorClick}
-                onKeyDown={this.handleAnchorKeyDown}
-                role='button'
-                title={anchorLabel}
-              >
-                {anchorLabel}
-              </Link>
-          }
+        <div className="md-list-item__space-link">
+          {anchorLabel && anchorOnClick && (
+            <Link
+              tag="div"
+              onClick={this.handleAnchorClick}
+              onKeyDown={this.handleAnchorKeyDown}
+              role="button"
+              title={anchorLabel}
+            >
+              {anchorLabel}
+            </Link>
+          )}
         </div>
       </ListItemSection>,
-      <ListItemSection key='child-2' position='right'>
+      <ListItemSection key="child-2" position="right">
         {childrenRight}
       </ListItemSection>,
       isOpen && !!popoverContent && (
         <EventOverlay
-          key='child-3'
-          direction='right-center'
+          key="child-3"
+          direction="right-center"
           isDynamic
           close={this.handleClickAway}
           isOpen={isOpen}
@@ -176,20 +145,20 @@ class ListItemMeeting extends React.PureComponent {
           checkOverflow={false}
           {...eventOverlayProps}
         />
-      )
+      ),
     ];
     return (
       <ListItem
         className={
           'md-list-item-meeting' +
-          `${isCompleted && ' md-list-item-meeting--completed' || ''}` +
-          `${type  && ` md-list-item-meeting--${type}` || ''}` +
+          `${(isCompleted && ' md-list-item-meeting--completed') || ''}` +
+          `${(type && ` md-list-item-meeting--${type}`) || ''}` +
           `${(className && ` ${className}`) || ''}`
         }
         id={id}
         title={getTitle}
         type={60}
-        ref={ref => this.container = ref}
+        ref={(ref) => (this.container = ref)}
         onClick={this.handleClick}
         {...otherProps}
       >
@@ -237,7 +206,7 @@ ListItemMeeting.propTypes = {
   /** @prop Set the Time Object | { start: '', end: '' } */
   time: PropTypes.shape({
     start: PropTypes.string,
-    end: PropTypes.string
+    end: PropTypes.string,
   }),
   /** @prop Set the Time Node | null */
   timeNode: PropTypes.node,
@@ -263,11 +232,11 @@ ListItemMeeting.defaultProps = {
   isCompleted: false,
   onClick: null,
   popoverContent: null,
-  ratioOffset: -.4,
+  ratioOffset: -0.4,
   statusColor: null,
   time: {
     start: '',
-    end: ''
+    end: '',
   },
   timeNode: null,
   title: '',

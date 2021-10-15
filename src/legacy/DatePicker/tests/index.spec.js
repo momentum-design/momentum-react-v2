@@ -17,7 +17,7 @@ describe('tests for <DatePicker />', () => {
     moment.tz.setDefault();
   });
 
-  it("should show the calendar when focusing on the date input", () => {
+  it('should show the calendar when focusing on the date input', () => {
     const container = shallow(
       <DatePicker selectedDate={day.toDate()}>
         <div className="trigger">Select Date</div>
@@ -26,7 +26,7 @@ describe('tests for <DatePicker />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should focus/select the selectedDate day if passed", () => {
+  it('should focus/select the selectedDate day if passed', () => {
     const container = mount(
       <DatePicker selectedDate={day.toDate()}>
         <div className="trigger">Select Date</div>
@@ -34,11 +34,11 @@ describe('tests for <DatePicker />', () => {
     );
 
     container.find('.trigger').simulate('click');
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("1");
-    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual("1");
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('1');
+    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual('1');
   });
 
-  it("on press of enter should select the date", () => {
+  it('on press of enter should select the date', () => {
     const container = mount(
       <DatePicker selectedDate={day.toDate()} shouldCloseOnSelect={false}>
         <div className="trigger">Select Date</div>
@@ -46,10 +46,10 @@ describe('tests for <DatePicker />', () => {
     );
     container.find('.trigger').simulate('click');
     container.find('.md-button.md-datepicker__day--focus').simulate('click');
-    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual("1");
+    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual('1');
   });
 
-  it("when shouldCloseOnSelect is true should close the DatePicker", () => {
+  it('when shouldCloseOnSelect is true should close the DatePicker', () => {
     const container = mount(
       <DatePicker selectedDate={day.toDate()} shouldCloseOnSelect={true}>
         <div className="trigger">Select Date</div>
@@ -60,7 +60,7 @@ describe('tests for <DatePicker />', () => {
     expect(container.find('.md-event-overlay__children').length).toEqual(0);
   });
 
-  it("should handle keyBoard keys", () => {
+  it('should handle keyBoard keys', () => {
     const container = mount(
       <DatePicker selectedDate={day.toDate()} shouldCloseOnSelect={false}>
         <div className="trigger">Select Date</div>
@@ -69,32 +69,28 @@ describe('tests for <DatePicker />', () => {
     container.find('.trigger').simulate('click');
     // right
     container.find('.trigger').simulate('keydown', { which: 39 });
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("2");
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('2');
     // down
     container.find('.trigger').simulate('keydown', { which: 40 });
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("9");
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('9');
     // up
     container.find('.trigger').simulate('keydown', { which: 38 });
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("2");
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('2');
     // left
     container.find('.trigger').simulate('keydown', { which: 37 });
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("1");
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('1');
 
     container.find('.trigger').simulate('keydown', { which: 13 });
-    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual("1");
+    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual('1');
   });
 
-  it("onSelect/onChange callback should be called when a date is clicked", () => {
+  it('onSelect/onChange callback should be called when a date is clicked', () => {
     let selectedDate;
     let changedDate;
-    const onSelectFn = jest.fn((e, date) => selectedDate = date);
-    const onChangeFn = jest.fn((e, date) => changedDate = date);
+    const onSelectFn = jest.fn((e, date) => (selectedDate = date));
+    const onChangeFn = jest.fn((e, date) => (changedDate = date));
     const container = mount(
-      <DatePicker
-        selectedDate={day.toDate()}
-        onSelect={onSelectFn}
-        onChange={onChangeFn}
-      >
+      <DatePicker selectedDate={day.toDate()} onSelect={onSelectFn} onChange={onChangeFn}>
         <div className="trigger">Select Date</div>
       </DatePicker>
     );
@@ -107,9 +103,9 @@ describe('tests for <DatePicker />', () => {
     expect(changedDate).toEqual(day.toDate());
   });
 
-  it("onChange callback should be called when a focused date changes", () => {
+  it('onChange callback should be called when a focused date changes', () => {
     let changedDate;
-    const onChangeFn = jest.fn((e, date) => changedDate = date);
+    const onChangeFn = jest.fn((e, date) => (changedDate = date));
     const container = mount(
       <DatePicker selectedDate={day.toDate()} onChange={onChangeFn}>
         <div className="trigger">Select Date</div>
@@ -118,15 +114,15 @@ describe('tests for <DatePicker />', () => {
     container.find('.trigger').simulate('click');
     //right
     container.find('.trigger').simulate('keydown', { which: 39 });
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("2");
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('2');
 
     expect(onChangeFn).toHaveBeenCalled();
     expect(changedDate).toEqual(day.clone().add(1, 'day').toDate());
   });
 
-  it("onMonthChange callback should be called when a month switch happens", () => {
+  it('onMonthChange callback should be called when a month switch happens', () => {
     let changedDate;
-    const onMonthChangeFn = jest.fn((e, date) => changedDate = date);
+    const onMonthChangeFn = jest.fn((e, date) => (changedDate = date));
     const container = mount(
       <DatePicker selectedDate={day.toDate()} onMonthChange={onMonthChangeFn}>
         <div className="trigger">Select Date</div>
@@ -134,14 +130,12 @@ describe('tests for <DatePicker />', () => {
     );
     container.find('.trigger').simulate('click');
     //next month
-    container.find('.md-button.md-button--icon').at(1)
-      .simulate('click');
+    container.find('.md-button.md-button--icon').at(1).simulate('click');
     expect(changedDate).toEqual(day.clone().add(1, 'month').toDate());
     expect(onMonthChangeFn).toHaveBeenCalledTimes(1);
 
     //prev month
-    container.find('.md-button.md-button--icon').at(0)
-      .simulate('click');
+    container.find('.md-button.md-button--icon').at(0).simulate('click');
     expect(changedDate).toEqual(day.toDate());
     expect(onMonthChangeFn).toHaveBeenCalledTimes(2);
   });
@@ -156,8 +150,8 @@ describe('tests for <DatePicker />', () => {
     expect(container.find('.md-event-overlay')).toHaveLength(1);
 
     // Dispatch click outside Event
-    const evt = document.createEvent("HTMLEvents");
-    evt.initEvent("click", false, true);
+    const evt = document.createEvent('HTMLEvents');
+    evt.initEvent('click', false, true);
     document.dispatchEvent(evt);
 
     container.update();
@@ -168,7 +162,7 @@ describe('tests for <DatePicker />', () => {
     /* eslint-disable react/no-multi-comp */
     class Container extends React.Component {
       state = {
-        date: false
+        date: false,
       };
       render() {
         const { date } = this.state;
@@ -182,14 +176,12 @@ describe('tests for <DatePicker />', () => {
     /* eslint-enable react/no-multi-comp */
     const container = mount(<Container />);
     container.find('.trigger').simulate('click');
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("1");
-    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual("1");
-
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('1');
+    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual('1');
 
     container.setState({ date: day.clone().add(1, 'day').toDate() });
     container.update();
-    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual("2");
-    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual("2");
+    expect(container.find('.md-button.md-datepicker__day--focus').text()).toEqual('2');
+    expect(container.find('.md-button.md-datepicker__day--selected').text()).toEqual('2');
   });
-
 });

@@ -17,36 +17,21 @@ class DatePickerMonth extends React.Component {
     const { day, ...otherProps } = this.props;
 
     let i = 0;
-    let currentWeekStart = getStartOfWeek(
-      getStartOfMonth(day.clone())
-    );
+    let currentWeekStart = getStartOfWeek(getStartOfMonth(day.clone()));
 
     const weeks = [];
     const month = getMonth(day);
 
     do {
-      weeks.push(
-        <DatePickerWeek
-          key={i++}
-          day={currentWeekStart}
-          month={month}
-          {...otherProps}
-        />
-      );
+      weeks.push(<DatePickerWeek key={i++} day={currentWeekStart} month={month} {...otherProps} />);
       currentWeekStart = addWeeks(currentWeekStart.clone(), 1);
-
-    } while(isSameMonth(currentWeekStart, day));
+    } while (isSameMonth(currentWeekStart, day));
 
     return weeks;
   };
 
-
   render() {
-    return (
-      <div className='md-datepicker__month'>
-        {this.renderWeeks()}
-      </div>
-    );
+    return <div className="md-datepicker__month">{this.renderWeeks()}</div>;
   }
 }
 

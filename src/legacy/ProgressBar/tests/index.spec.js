@@ -29,25 +29,19 @@ describe('tests for <ProgressBar />', () => {
   });
 
   it('should render color prop', () => {
-    const container = mount(
-      <ProgressBar label="test" value={50} color="blue" />
-    );
+    const container = mount(<ProgressBar label="test" value={50} color="blue" />);
 
     expect(container.find('.progress').hasClass('blue')).toEqual(true);
   });
 
   it('should render based on dynamic prop', () => {
-    const container = mount(
-      <ProgressBar label="test" dynamic value={50} max={60} />
-    );
+    const container = mount(<ProgressBar label="test" dynamic value={50} max={60} />);
 
     expect(container.find('.progress').hasClass('danger')).toEqual(true);
   });
 
   it('should render based on display format prop (none)', () => {
-    const container = mount(
-      <ProgressBar label="test" displayFormat="none" value={50} max={100} />
-    );
+    const container = mount(<ProgressBar label="test" displayFormat="none" value={50} max={100} />);
 
     expect(container.find('.progressbar-progress').text()).toEqual('');
   });
@@ -62,12 +56,7 @@ describe('tests for <ProgressBar />', () => {
 
   it('should render based on display format prop (percentage)', () => {
     const container = mount(
-      <ProgressBar
-        label="test"
-        displayFormat="percentage"
-        value={50}
-        max={100}
-      />
+      <ProgressBar label="test" displayFormat="percentage" value={50} max={100} />
     );
 
     expect(container.find('.progressbar-progress').text()).toEqual('50%');

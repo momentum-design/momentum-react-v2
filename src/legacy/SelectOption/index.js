@@ -32,15 +32,15 @@ class SelectOption extends React.Component {
       );
     };
 
-    const keySource = isMulti => `data-md-${isMulti ? 'keyboard' : 'event'}-key`;
+    const keySource = (isMulti) => `data-md-${isMulti ? 'keyboard' : 'event'}-key`;
 
     return (
-      <UIDConsumer name={id => `md-select-option-${id}`}>
-        {id => (
+      <UIDConsumer name={(id) => `md-select-option-${id}`}>
+        {(id) => (
           <SelectContext.Consumer>
-            {isMulti => (
+            {(isMulti) => (
               <ListContext.Consumer>
-                {listContext => {
+                {(listContext) => {
                   const cxtActive =
                     active ||
                     (listContext &&

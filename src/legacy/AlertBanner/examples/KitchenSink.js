@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  AlertBannerDefault,
-  AlertBannerError,
-  AlertBannerWarning,
-} from './index';
+import { AlertBannerDefault, AlertBannerError, AlertBannerWarning } from './index';
 
 export default class AlertBannerKitchenSink extends React.Component {
   render() {

@@ -3,15 +3,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AccordionContent = props => {
+const AccordionContent = (props) => {
   const { children, className } = props;
   return (
-    <div
-      className={
-        `md-accordion__content` +
-        `${(className && ` ${className}`) || ''}`
-      }
-    >
+    <div className={`md-accordion__content` + `${(className && ` ${className}`) || ''}`}>
       {children}
     </div>
   );

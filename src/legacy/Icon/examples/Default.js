@@ -2,12 +2,12 @@ import React from 'react';
 import { Icon } from '@momentum-ui/react';
 export default class IconDefault extends React.PureComponent {
   render() {
-    return(
+    return (
       <div>
-        <Icon name='accessories_16' />
-        <Icon name='accessories_20' />
-        <Icon name='accessories_36' />
-        <Icon name='accessories_56' />
+        <Icon name="accessories_16" />
+        <Icon name="accessories_20" />
+        <Icon name="accessories_36" />
+        <Icon name="accessories_56" />
       </div>
     );
   }

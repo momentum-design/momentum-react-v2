@@ -3,29 +3,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Label = ({
-  children,
-  className,
-  htmlFor,
-  label,
-  theme,
-  ...props
-}) => {
+const Label = ({ children, className, htmlFor, label, theme, ...props }) => {
   return (
     <label
       className={
-        'md-label' +
-        `${className ? ` ${className}` : ''}` +
-        `${theme ? ` md-label--${theme}` : ''}`
+        'md-label' + `${className ? ` ${className}` : ''}` + `${theme ? ` md-label--${theme}` : ''}`
       }
       htmlFor={htmlFor}
       {...props}
     >
-      {
-        label 
-        ? <span>{label}</span>
-        : children
-      }
+      {label ? <span>{label}</span> : children}
     </label>
   );
 };

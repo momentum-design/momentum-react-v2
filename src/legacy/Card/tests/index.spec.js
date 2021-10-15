@@ -16,7 +16,7 @@ describe('tests for <Card />', () => {
   });
 
   it('should render one Clickable Card', () => {
-    const container = shallow(<Card onClick={()=>{}}/>);
+    const container = shallow(<Card onClick={() => {}} />);
 
     expect(container.find('.md-card--clickable').length).toEqual(1);
   });
@@ -26,14 +26,14 @@ describe('tests for <Card />', () => {
     const clicker = () => {
       clicked = true;
     };
-    const container = shallow(<Card onClick={clicker}/>);
+    const container = shallow(<Card onClick={clicker} />);
 
     container.find('.md-card--clickable').simulate('click');
     expect(clicked).toEqual(true);
   });
 
   it('should render a Card with the given classes', () => {
-    const container = shallow(<Card className="testing-class"/>);
+    const container = shallow(<Card className="testing-class" />);
 
     expect(container.find('.md-card').hasClass('testing-class')).toEqual(true);
   });

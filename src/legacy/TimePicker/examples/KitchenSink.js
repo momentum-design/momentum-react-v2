@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  TimePicker24Hour,
-  TimePicker30MinuteStep,
-  TimePickerDefault,
-} from './index';
+import { TimePicker24Hour, TimePicker30MinuteStep, TimePickerDefault } from './index';
 
 export default class TimePickerKitchenSink extends React.Component {
   render() {

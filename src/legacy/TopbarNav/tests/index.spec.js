@@ -17,7 +17,7 @@ describe('tests for <TopbarNav />', () => {
   });
 
   it('should add customized class name if className prop is set', () => {
-    const wrapper = shallow(<TopbarNav className='testClassName'/>);
+    const wrapper = shallow(<TopbarNav className="testClassName" />);
 
     expect(wrapper.find('.testClassName').exists()).toBeTruthy();
   });

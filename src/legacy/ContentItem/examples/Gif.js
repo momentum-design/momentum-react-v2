@@ -14,21 +14,11 @@ export default class GifContentItem extends React.PureComponent {
           <Icon name="chat_12" color="white" />
         </Button>
 
-        <Button
-          ariaLabel="Open in folder"
-          style={{ backgroundColor: 'black' }}
-          circle
-          size={32}
-        >
+        <Button ariaLabel="Open in folder" style={{ backgroundColor: 'black' }} circle size={32}>
           <Icon name="open-in-folder_12" color="white" />
         </Button>
 
-        <Button
-          ariaLabel="Download"
-          style={{ backgroundColor: 'black' }}
-          circle
-          size={32}
-        >
+        <Button ariaLabel="Download" style={{ backgroundColor: 'black' }} circle size={32}>
           <Icon name="icon-arrow-tail-down_12" color="white" />
         </Button>
       </div>

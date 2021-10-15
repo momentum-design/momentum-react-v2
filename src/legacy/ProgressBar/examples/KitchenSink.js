@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  ProgressBarDefault,
-} from './index';
+import { ProgressBarDefault } from './index';
 
 export default class ProgressBarKitchenSink extends React.Component {
   render() {

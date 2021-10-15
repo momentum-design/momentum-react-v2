@@ -10,8 +10,8 @@ import MenuContext from '../MenuContext';
 
 class MenuOverlay extends React.Component {
   state = {
-    isOpen: this.props.isOpen || false
-  }
+    isOpen: this.props.isOpen || false,
+  };
 
   componentDidMount() {
     this.props.isOpen && this.forceUpdate();
@@ -21,12 +21,11 @@ class MenuOverlay extends React.Component {
     const { focusFirstQuery } = this.props;
     const { isOpen } = this.state;
 
-    if(!prevState.isOpen && prevState !== isOpen && focusFirstQuery) {
+    if (!prevState.isOpen && prevState !== isOpen && focusFirstQuery) {
       const overlay = findDOMNode(this.menuOverlay);
       const focusElement = overlay && overlay.querySelector(focusFirstQuery);
 
-      focusElement
-        && focusElement.focus();
+      focusElement && focusElement.focus();
     }
   }
 
@@ -35,10 +34,8 @@ class MenuOverlay extends React.Component {
     const { eventKey, element } = opts;
     const { keepMenuOpen } = element.props;
 
-    onSelect && onSelect(e, {eventKey, element});
-    element.constructor.displayName !== 'SubMenu'
-      && !keepMenuOpen
-      && this.handleClose();
+    onSelect && onSelect(e, { eventKey, element });
+    element.constructor.displayName !== 'SubMenu' && !keepMenuOpen && this.handleClose();
   };
 
   handleClose = () => {
@@ -46,54 +43,37 @@ class MenuOverlay extends React.Component {
   };
 
   render() {
-    const {
-      children,
-      className,
-      menuTrigger,
-      showArrow,
-      ...props
-    } = this.props;
+    const { children, className, menuTrigger, showArrow, ...props } = this.props;
 
     const { isOpen } = this.state;
 
-    const otherProps = omit({...props}, [
-      'isOpen',
-      'focusFirstQuery',
-      'onSelect'
-    ]);
+    const otherProps = omit({ ...props }, ['isOpen', 'focusFirstQuery', 'onSelect']);
 
-    const setMenuTrigger = () => React.cloneElement(menuTrigger, {
-      onClick: () => this.setState({ isOpen: !isOpen }),
-      ref: ref => this.anchorNode = ref,
-    });
+    const setMenuTrigger = () =>
+      React.cloneElement(menuTrigger, {
+        onClick: () => this.setState({ isOpen: !isOpen }),
+        ref: (ref) => (this.anchorNode = ref),
+      });
 
     return (
-      <div
-        className={
-          'md-menu-overlay-wrapper' +
-          `${(className && ` ${className}`) || ''}`
-        }
-      >
+      <div className={'md-menu-overlay-wrapper' + `${(className && ` ${className}`) || ''}`}>
         {setMenuTrigger()}
-        {
-          isOpen &&
+        {isOpen && (
           <EventOverlay
             allowClickAway
             anchorNode={this.anchorNode}
-            className='md-menu-overlay'
+            className="md-menu-overlay"
             close={this.handleClose}
             isOpen={isOpen}
-            ref={ref => this.menuOverlay = ref}
+            ref={(ref) => (this.menuOverlay = ref)}
             showArrow={showArrow}
             {...otherProps}
           >
             <MenuContext.Provider value={{ parentOnSelect: this.onSelect }}>
-              <UIDReset>
-                {children}
-              </UIDReset>
+              <UIDReset>{children}</UIDReset>
             </MenuContext.Provider>
           </EventOverlay>
-        }
+        )}
       </div>
     );
   }

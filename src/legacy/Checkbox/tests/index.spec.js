@@ -1,10 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Checkbox,
-  Label,
-  InputHelper,
-} from '@momentum-ui/react';
+import { Checkbox, Label, InputHelper } from '@momentum-ui/react';
 
 describe('tests for <Checkbox />', () => {
   it('should match SnapShot', () => {
@@ -24,9 +20,7 @@ describe('tests for <Checkbox />', () => {
     const container = shallow(<Checkbox htmlId="test123" label="test" />);
 
     expect(
-      container.contains(
-        <Label className="md-checkbox__label" htmlFor="test123" label="test" />
-      )
+      container.contains(<Label className="md-checkbox__label" htmlFor="test123" label="test" />)
     ).toEqual(true);
   });
 
@@ -79,9 +73,7 @@ describe('tests for <Checkbox />', () => {
   it('should support input ref', () => {
     class Container extends React.Component {
       render() {
-        return (
-          <Checkbox htmlId="test123" inputRef={ref => (this.input = ref)} />
-        );
+        return <Checkbox htmlId="test123" inputRef={(ref) => (this.input = ref)} />;
       }
     }
     const instance = mount(<Container />).instance();

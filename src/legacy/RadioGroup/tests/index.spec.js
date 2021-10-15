@@ -1,9 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  RadioGroup,
-  Radio,
-} from '@momentum-ui/react';
+import { RadioGroup, Radio } from '@momentum-ui/react';
 
 describe('tests for <RadioGroup />', () => {
   it('should match SnapShot', () => {
@@ -22,12 +19,7 @@ describe('tests for <RadioGroup />', () => {
     const container = mount(
       <RadioGroup values={['me']}>
         <Radio value="me" label="me" htmlId="testRadio1" onChange={() => {}} />
-        <Radio
-          value="you"
-          label="you"
-          htmlId="testRadio2"
-          onChange={() => {}}
-        />
+        <Radio value="you" label="you" htmlId="testRadio2" onChange={() => {}} />
         <Radio value="us" label="us" htmlId="testRadio3" onChange={() => {}} />
       </RadioGroup>
     );
@@ -49,9 +41,7 @@ describe('tests for <RadioGroup />', () => {
       }
     }
     const instance = mount(<Container />);
-    instance
-      .find('#testRadio1')
-      .simulate('change', { target: { value: 'me' } });
+    instance.find('#testRadio1').simulate('change', { target: { value: 'me' } });
 
     expect(instance.find('#testRadio1').props().checked).toEqual(true);
     expect(instance.find('#testRadio2').props().checked).toEqual(false);

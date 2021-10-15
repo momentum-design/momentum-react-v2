@@ -9,7 +9,7 @@ describe('tests for <Popover />', () => {
   });
 
   it('should match SnapShot', () => {
-    const content = <span key='1'>Hello how are you doing</span>;
+    const content = <span key="1">Hello how are you doing</span>;
     const container = mount(
       <Popover content={content}>
         <button>Hello</button>
@@ -21,13 +21,13 @@ describe('tests for <Popover />', () => {
 
   it('should render one Popover on click', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'Click'}>
-        <button className='anchor'>Hello</button>
+        <button className="anchor">Hello</button>
       </Popover>
     );
 
@@ -45,13 +45,15 @@ describe('tests for <Popover />', () => {
   it('should fire onClose when closed', () => {
     const onClose = jest.fn();
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'Click'} onClose={onClose}>
-        <Button ariaLabel='test' className='anchor' >Hello</Button>
+        <Button ariaLabel="test" className="anchor">
+          Hello
+        </Button>
       </Popover>
     );
 
@@ -68,13 +70,15 @@ describe('tests for <Popover />', () => {
   it('should fire childs onClick event as well as Popover onClick', () => {
     const onClick = jest.fn();
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'Click'}>
-        <Button ariaLabel='test' className='anchor' onClick={onClick}>Hello</Button>
+        <Button ariaLabel="test" className="anchor" onClick={onClick}>
+          Hello
+        </Button>
       </Popover>
     );
 
@@ -88,13 +92,15 @@ describe('tests for <Popover />', () => {
   it('should fire childs onFocus event as well as Popover onFocus', () => {
     const onFocus = jest.fn();
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'Focus'}>
-        <Button ariaLabel='test' className='anchor' onFocus={onFocus}>Hello</Button>
+        <Button ariaLabel="test" className="anchor" onFocus={onFocus}>
+          Hello
+        </Button>
       </Popover>
     );
 
@@ -108,13 +114,15 @@ describe('tests for <Popover />', () => {
   it('should fire childs onMouseEnter event as well as Popover onMouseEnter', () => {
     const onMouseEnter = jest.fn();
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'MouseEnter'}>
-        <Button ariaLabel='test' className='anchor' onMouseEnter={onMouseEnter}>Hello</Button>
+        <Button ariaLabel="test" className="anchor" onMouseEnter={onMouseEnter}>
+          Hello
+        </Button>
       </Popover>
     );
 
@@ -127,13 +135,13 @@ describe('tests for <Popover />', () => {
 
   it('focus -> mouseEnter -> mouseLeave -> blur, when popover trigger is MouseEnter', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'MouseEnter'}>
-        <button tabIndex='0' className='anchor'>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -162,13 +170,13 @@ describe('tests for <Popover />', () => {
 
   it('focus -> mouseEnter -> blur -> mouseLeave, when popover trigger is MouseEnter', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'MouseEnter'}>
-        <button tabIndex='0' className='anchor'>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -197,13 +205,13 @@ describe('tests for <Popover />', () => {
 
   it('should render one Popover on mouseenter', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'MouseEnter'}>
-        <button tabIndex='0' className='anchor'>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -222,13 +230,13 @@ describe('tests for <Popover />', () => {
 
   it('should start open and close Popover', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'MouseEnter'} startOpen>
-        <button tabIndex='0' className='anchor'>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -246,14 +254,14 @@ describe('tests for <Popover />', () => {
 
   it('should render one Popover and not have Triggers', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
 
     const container = mount(
       <Popover content={content} popoverTrigger={'None'} startOpen>
-        <button tabIndex='0' className='anchor'>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -271,13 +279,13 @@ describe('tests for <Popover />', () => {
 
   it('should not render Popover with popoverTrigger(None)', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'None'}>
-        <button tabIndex='0' className='anchor'>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -301,18 +309,13 @@ describe('tests for <Popover />', () => {
 
   it('when show and hide with showDelay/hideDelay', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
-      <Popover
-        content={content}
-        popoverTrigger={'MouseEnter'}
-        showDelay={200}
-        hideDelay={100}
-      >
-        <button tabIndex='0' className='anchor'>
+      <Popover content={content} popoverTrigger={'MouseEnter'} showDelay={200} hideDelay={100}>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -331,13 +334,13 @@ describe('tests for <Popover />', () => {
 
   it('when show and hide with delay', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
       <Popover content={content} popoverTrigger={'MouseEnter'} delay={100}>
-        <button tabIndex='0' className='anchor'>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -360,16 +363,13 @@ describe('tests for <Popover />', () => {
 
   it('should remain open if mouse enters event overlay children prior to 500ms', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
-      <Popover
-        content={content}
-        popoverTrigger={'MouseEnter'}
-      >
-        <button tabIndex='0' className='anchor'>
+      <Popover content={content} popoverTrigger={'MouseEnter'}>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -393,16 +393,13 @@ describe('tests for <Popover />', () => {
 
   it('should close if mouse enters event overlay children after 500ms', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
-      <Popover
-        content={content}
-        popoverTrigger={'MouseEnter'}
-      >
-        <button tabIndex='0' className='anchor'>
+      <Popover content={content} popoverTrigger={'MouseEnter'}>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -421,17 +418,13 @@ describe('tests for <Popover />', () => {
 
   it('should close if mouse enters event overlay children after a custom hover delay', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing!
       </span>
     );
     const container = mount(
-      <Popover
-        content={content}
-        popoverTrigger={'MouseEnter'}
-        hoverDelay={200}
-      >
-        <button tabIndex='0' className='anchor'>
+      <Popover content={content} popoverTrigger={'MouseEnter'} hoverDelay={200}>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>
@@ -450,16 +443,13 @@ describe('tests for <Popover />', () => {
 
   it('should close if mouse leaves event overlay children after entering', () => {
     const content = (
-      <span className='popover-content' key='1'>
+      <span className="popover-content" key="1">
         Hello how are you doing
       </span>
     );
     const container = mount(
-      <Popover
-        content={content}
-        popoverTrigger={'MouseEnter'}
-      >
-        <button tabIndex='0' className='anchor'>
+      <Popover content={content} popoverTrigger={'MouseEnter'}>
+        <button tabIndex="0" className="anchor">
           Hello
         </button>
       </Popover>

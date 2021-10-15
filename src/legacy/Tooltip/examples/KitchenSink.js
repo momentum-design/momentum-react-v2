@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  TooltipContent,
-  TooltipDefault,
-  TooltipDelay,
-  TooltipDirection,
-} from './index';
+import { TooltipContent, TooltipDefault, TooltipDelay, TooltipDirection } from './index';
 
 export default class TooltipKitchenSink extends React.Component {
   render() {

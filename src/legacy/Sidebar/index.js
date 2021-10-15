@@ -18,34 +18,34 @@ class Sidebar extends React.Component {
         secondary: false,
         setContext: this.setSidebarContext,
         tertiary: false,
-      }
+      },
     };
   }
 
   componentDidUpdate(prevProps) {
-    this.props.expanded !== prevProps.expanded
-    && this.state.expanded !== this.props.expanded
-    && this.setExpanded();
+    this.props.expanded !== prevProps.expanded &&
+      this.state.expanded !== this.props.expanded &&
+      this.setExpanded();
   }
 
   handleNavToggle = () => {
     this.setState({
-      expanded: !this.state.expanded
+      expanded: !this.state.expanded,
     });
-  }
+  };
 
   setExpanded = () => {
     this.setState({ expanded: this.props.expanded });
-  }
+  };
 
-  setSidebarContext = property => {
-    this.setState(state => ({
+  setSidebarContext = (property) => {
+    this.setState((state) => ({
       sidebarContext: {
         ...state.sidebarContext,
         [property]: true,
-      }
+      },
     }));
-  }
+  };
 
   render() {
     const {
@@ -64,23 +64,17 @@ class Sidebar extends React.Component {
     } = this.props;
     const { expanded, sidebarContext } = this.state;
 
-    const otherProps = omit({...props}, [
-      'expanded'
-    ]);
+    const otherProps = omit({ ...props }, ['expanded']);
 
     const hasTiers = () => {
-      if(
-        sidebarContext.secondary
-        ||
-        sidebarContext.tertiary
-      ) {
+      if (sidebarContext.secondary || sidebarContext.tertiary) {
         return true;
       } else {
         return false;
       }
     };
 
-    const getCollapseClass = prefix => {
+    const getCollapseClass = (prefix) => {
       if ((collapsable || withToggle) && !expanded && !withIcons) {
         return ` ${prefix}--collapsed`;
       } else if ((collapsable || withToggle) && !expanded && withIcons) {
@@ -89,46 +83,37 @@ class Sidebar extends React.Component {
     };
 
     return (
-      <div className={
-        'md-sidebar__wrapper' +
-        `${isFixed && ` md-sidebar__wrapper--fixed` || ''}` +
-        `${wrapperClass && ` ${wrapperClass}` || ''}`
-      }>
+      <div
+        className={
+          'md-sidebar__wrapper' +
+          `${(isFixed && ` md-sidebar__wrapper--fixed`) || ''}` +
+          `${(wrapperClass && ` ${wrapperClass}`) || ''}`
+        }
+      >
         <div
           className={
             'md-sidebar' +
-            `${theme && ` md-sidebar--${theme}` || ''}` +
-            `${isFixed && ` md-sidebar--fixed` || ''}` +
-            `${!isPageLevel && ` md-sidebar--global` || ''}` +
-            `${withTopbar && ` md-sidebar--topbar` || ''}` +
-            `${withIcons && !isPageLevel && ` md-sidebar--indented` || '' }` +
-            `${hasTiers() && ` md-sidebar--nested` || ''}` +
+            `${(theme && ` md-sidebar--${theme}`) || ''}` +
+            `${(isFixed && ` md-sidebar--fixed`) || ''}` +
+            `${(!isPageLevel && ` md-sidebar--global`) || ''}` +
+            `${(withTopbar && ` md-sidebar--topbar`) || ''}` +
+            `${(withIcons && !isPageLevel && ` md-sidebar--indented`) || ''}` +
+            `${(hasTiers() && ` md-sidebar--nested`) || ''}` +
             `${getCollapseClass('md-sidebar')}` +
-            `${className && ` ${className}` || ''}`
+            `${(className && ` ${className}`) || ''}`
           }
           {...otherProps}
         >
           <SidebarContext.Provider value={sidebarContext}>
-            <UIDReset>
-              {children}
-            </UIDReset>
+            <UIDReset>{children}</UIDReset>
           </SidebarContext.Provider>
         </div>
 
-        {
-          withToggle &&
-          <div 
-            className={
-              'md-sidebar__toggle' +
-              `${getCollapseClass('md-sidebar__toggle')}`
-          }>
-            <CollapseButton 
-              collapse={!expanded}
-              onClick={this.handleNavToggle}
-              {...buttonProps}
-            />
+        {withToggle && (
+          <div className={'md-sidebar__toggle' + `${getCollapseClass('md-sidebar__toggle')}`}>
+            <CollapseButton collapse={!expanded} onClick={this.handleNavToggle} {...buttonProps} />
           </div>
-        }
+        )}
       </div>
     );
   }

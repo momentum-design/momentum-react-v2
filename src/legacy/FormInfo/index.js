@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
  * FormInfo is supplemental, organizational component used to help divide form
  **/
 
-const FormInfo = props => {
+const FormInfo = (props) => {
   const { title, description } = props;
 
   return (
@@ -22,12 +22,12 @@ FormInfo.propTypes = {
   /** @prop Optional FormInfo description text | '' */
   description: PropTypes.string,
   /** @prop Optional FormInfo title | '' */
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 FormInfo.defaultProps = {
   description: '',
-  title: ''
+  title: '',
 };
 
 FormInfo.displayName = 'FormInfo';

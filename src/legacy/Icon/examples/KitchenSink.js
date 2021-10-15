@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  ButtonIcon,
-  IconColor,
-  IconDefault,
-  IconWhite,
-} from './index';
+import { ButtonIcon, IconColor, IconDefault, IconWhite } from './index';
 
 export default class IconKitchenSink extends React.Component {
   render() {

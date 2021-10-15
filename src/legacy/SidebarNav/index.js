@@ -8,14 +8,7 @@ import SidebarNavContext from '../SidebarNavContext';
 
 class SidebarNav extends React.PureComponent {
   render() {
-    const {
-      children,
-      className,
-      focusQuery,
-      headerNode,
-      title,
-      ...props
-    } = this.props;
+    const { children, className, focusQuery, headerNode, title, ...props } = this.props;
 
     return (
       <UIDFork>
@@ -25,12 +18,9 @@ class SidebarNav extends React.PureComponent {
               `md-sidebar-nav` +
               `${(title && ` md-sidebar-nav--header`) || ''}` +
               `${(className && ` ${className}`) || ''}`
-            }>
-            {title ? (
-              <div className='md-sidebar-nav__header'>{title}</div>
-            ) : (
-              headerNode
-            )}
+            }
+          >
+            {title ? <div className="md-sidebar-nav__header">{title}</div> : headerNode}
             <List
               className={
                 'md-sidebar-nav__group' +
@@ -66,7 +56,7 @@ SidebarNav.propTypes = {
   /** @prop Optional header node to replace header element | ''  */
   headerNode: PropTypes.node,
   /** @prop Optional string to be used for Section Title | ''  */
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 SidebarNav.defaultProps = {
@@ -74,7 +64,7 @@ SidebarNav.defaultProps = {
   className: '',
   focusQuery: '',
   headerNode: null,
-  title: ''
+  title: '',
 };
 
 export default SidebarNav;
