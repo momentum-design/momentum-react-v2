@@ -174,6 +174,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
                           className=""
                           data-autoscale={false}
                           data-scale={12}
+                          data-test="unread"
                           height="100%"
                           style={
                             Object {
@@ -462,6 +463,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
                             className=""
                             data-autoscale={false}
                             data-scale={16}
+                            data-test="more"
                             fill="currentColor"
                             height="100%"
                             stroke="currentColor"
@@ -625,6 +627,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
                             className=""
                             data-autoscale={false}
                             data-scale={16}
+                            data-test="audio-microphone-on-green-colored"
                             fill="currentColor"
                             height="100%"
                             style={
@@ -790,6 +793,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
                             className=""
                             data-autoscale={false}
                             data-scale={16}
+                            data-test="microphone-muted"
                             height="100%"
                             style={
                               Object {
@@ -1096,6 +1100,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-available"
                     height="100%"
                     style={
                       Object {
@@ -1219,6 +1224,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-not-working-hours"
                     height="100%"
                     style={
                       Object {
@@ -1342,6 +1348,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-unavailable"
                     height="100%"
                     style={
                       Object {
@@ -1465,6 +1472,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                     className=""
                     data-autoscale={false}
                     data-scale={16}
+                    data-test="scheduler-unknown"
                     height="100%"
                     style={
                       Object {
