@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  ModalBodyDefault,
-} from './index';
+import { ModalBodyDefault } from './index';
 
 export default class ModalBodyKitchenSink extends React.Component {
   render() {

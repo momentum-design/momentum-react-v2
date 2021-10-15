@@ -5,23 +5,15 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import { Button, Icon } from '@momentum-ui/react';
 
-const ActivityButton = props => {
-  const {
-    ariaLabel,
-    className,
-    disabled,
-    onClick,
-    size,
-    type,
-    ...otherHTMLProps
-  } = props;
+const ActivityButton = (props) => {
+  const { ariaLabel, className, disabled, onClick, size, type, ...otherHTMLProps } = props;
 
   let icon = type.icon;
   if (!icon) {
     const buttonToIconSizeMapping = {
       56: '24',
       68: '28',
-      84: '36'
+      84: '36',
     };
     icon = <Icon name={`${type}_${buttonToIconSizeMapping[size]}`} />;
   }
@@ -32,7 +24,7 @@ const ActivityButton = props => {
       circle
       className={
         'md-activity' +
-        `${!type.icon && ` md-activity__${type}` || ''}` +
+        `${(!type.icon && ` md-activity__${type}`) || ''}` +
         `${(className && ` ${className}`) || ''}`
       }
       color={get(type, 'color')}
@@ -62,11 +54,20 @@ ActivityButton.propTypes = {
   size: PropTypes.oneOf([56, 68, 84]),
   /** @prop Sets the button's activity type */
   type: PropTypes.oneOfType([
-    PropTypes.oneOf(['chat', 'camera', 'contact-card', 'meetings', 'whiteboard', 'files', 'share-screen', 'tasks']),
+    PropTypes.oneOf([
+      'chat',
+      'camera',
+      'contact-card',
+      'meetings',
+      'whiteboard',
+      'files',
+      'share-screen',
+      'tasks',
+    ]),
     PropTypes.shape({
       color: PropTypes.string,
       icon: PropTypes.element.isRequired,
-    })
+    }),
   ]).isRequired,
 };
 

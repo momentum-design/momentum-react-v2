@@ -3,19 +3,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ModalBody = props => {
+const ModalBody = (props) => {
   const {
     className,
     ...other // all other standard html properties
   } = props;
 
   return (
-    <div className={
-      `md-modal__body` +
-      `${(className && ` ${className}`) || ''}`
-      }
-      {...other}
-    >
+    <div className={`md-modal__body` + `${(className && ` ${className}`) || ''}`} {...other}>
       {props.children}
     </div>
   );

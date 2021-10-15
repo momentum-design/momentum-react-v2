@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TabPane = props => {
+const TabPane = (props) => {
   const { children, active } = props;
 
   return (

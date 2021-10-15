@@ -1,46 +1,42 @@
 /** @component alert-meeting */
 
 import React from 'react';
-import {
-  Button,
-  AlertMeeting,
-  AlertContainer
-} from '@momentum-ui/react';
+import { Button, AlertMeeting, AlertContainer } from '@momentum-ui/react';
 
 export default class Default extends React.PureComponent {
   state = {
-    show: false
-  }
+    show: false,
+  };
 
   handleOnHide = () => {
-    this.setState({show: false});
-  }
-  
+    this.setState({ show: false });
+  };
+
   handleOnSnooze = () => {
-    this.setState({show: false});
-  }
+    this.setState({ show: false });
+  };
 
   render() {
     return (
       <section>
         <div>
-          <div className='row'>
+          <div className="row">
             <Button
-              ariaLabel='Click to Open'
-              onClick={() => this.setState({show: true})}
-              children='Multiple Attendees'
-              color='primary'
+              ariaLabel="Click to Open"
+              onClick={() => this.setState({ show: true })}
+              children="Multiple Attendees"
+              color="primary"
             />
           </div>
           <br />
           <AlertContainer>
             <AlertMeeting
-              title='Important Meeting'
-              status='In 5 mins.'
-              message='This is important'
+              title="Important Meeting"
+              status="In 5 mins."
+              message="This is important"
               onHide={this.handleOnHide}
               onSnooze={this.handleOnSnooze}
-              attendees={[{title: 'J $'}, {title: 'Jefe Guadelupe'}]}
+              attendees={[{ title: 'J $' }, { title: 'Jefe Guadelupe' }]}
               show={this.state.show}
             />
           </AlertContainer>

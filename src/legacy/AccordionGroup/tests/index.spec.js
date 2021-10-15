@@ -1,17 +1,13 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  AccordionGroup,
-  AccordionContent,
-  AccordionHeader,
-} from '@momentum-ui/react';
+import { AccordionGroup, AccordionContent, AccordionHeader } from '@momentum-ui/react';
 
 describe('tests for <AccordionGroup />', () => {
   it('should match SnapShot', () => {
     const container = mount(
       <AccordionGroup>
-        <AccordionHeader/>
-        <AccordionContent/>
+        <AccordionHeader />
+        <AccordionContent />
       </AccordionGroup>
     );
     expect(container).toMatchSnapshot();
@@ -20,8 +16,8 @@ describe('tests for <AccordionGroup />', () => {
   it('should render children', () => {
     const container = mount(
       <AccordionGroup isExpanded>
-        <AccordionHeader/>
-        <AccordionContent/>
+        <AccordionHeader />
+        <AccordionContent />
       </AccordionGroup>
     );
     const group = container.find('.md-accordion__group');
@@ -35,14 +31,9 @@ describe('tests for <AccordionGroup />', () => {
 
   it('should pass disabled, focus and showSeparator props to children', () => {
     const container = shallow(
-      <AccordionGroup
-        className="testClass"
-        disabled
-        focus
-        showSeparator={false}
-      >
-        <AccordionHeader/>
-        <AccordionContent/>
+      <AccordionGroup className="testClass" disabled focus showSeparator={false}>
+        <AccordionHeader />
+        <AccordionContent />
       </AccordionGroup>
     );
     const group = container.find('.md-accordion__group');
@@ -55,12 +46,11 @@ describe('tests for <AccordionGroup />', () => {
 
   it('should throw error if header and content are not present', () => {
     try {
-      shallow(
-        <AccordionGroup className="testClass" disabled focus/>
+      shallow(<AccordionGroup className="testClass" disabled focus />);
+    } catch (e) {
+      expect(e.message).toEqual(
+        'AccordionGroup should contain 2 children AccordionHeader and AccordionContent respectively.'
       );
-    } catch(e) {
-      expect(e.message).toEqual('AccordionGroup should contain 2 children AccordionHeader and AccordionContent respectively.');
     }
   });
-
 });

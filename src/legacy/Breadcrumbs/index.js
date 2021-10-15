@@ -10,18 +10,18 @@ class Breadcrumbs extends React.PureComponent {
     /** @prop Children nodes to render inside Breadcrumbs | null */
     children: PropTypes.node,
     /** @prop Optional css class string | '' */
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   static defaultProps = {
     children: null,
-    className: ''
+    className: '',
   };
 
   render() {
     const { className, children } = this.props;
 
-    const items  = React.Children.map(children, (child, idx) => {
+    const items = React.Children.map(children, (child, idx) => {
       if (children.length - 1 === idx || !children.length) {
         return React.cloneElement(child, { className: 'current' });
       }

@@ -16,32 +16,38 @@ describe('tests for <ListSeparator />', () => {
   });
 
   it('should render text prop', () => {
-    const container = shallow(<ListSeparator text='Today'/>);
+    const container = shallow(<ListSeparator text="Today" />);
 
     expect(container.find('.md-list-separator__text').length).toEqual(1);
     expect(container.find('.md-list-separator__text').text()).toEqual('Today');
   });
 
   it('should change the line color', () => {
-    const container = shallow(<ListSeparator lineColor='red'/>);
+    const container = shallow(<ListSeparator lineColor="red" />);
 
     expect(container.find('.md-list-separator').get(0).props.style).toHaveProperty('color', 'red');
   });
 
   it('should add padding to the text prop', () => {
-    const container = shallow(<ListSeparator text='Today' textPadding={'40px'}/>);
+    const container = shallow(<ListSeparator text="Today" textPadding={'40px'} />);
 
-    expect(container.find('.md-list-separator__text').get(0).props.style).toHaveProperty('padding', '40px');
+    expect(container.find('.md-list-separator__text').get(0).props.style).toHaveProperty(
+      'padding',
+      '40px'
+    );
   });
 
   it('should change the text color', () => {
-    const container = shallow(<ListSeparator text='Today' textColor='green'/>);
+    const container = shallow(<ListSeparator text="Today" textColor="green" />);
 
-    expect(container.find('.md-list-separator__text').get(0).props.style).toHaveProperty('color', 'green');
+    expect(container.find('.md-list-separator__text').get(0).props.style).toHaveProperty(
+      'color',
+      'green'
+    );
   });
 
   it('should handle className prop', () => {
-    const container = shallow(<ListSeparator className='right'/>);
+    const container = shallow(<ListSeparator className="right" />);
 
     expect(container.find('.right').length).toEqual(1);
   });

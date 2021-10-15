@@ -9,10 +9,10 @@ class Accordion extends React.Component {
   state = {
     activeIndices: this.props.initialActive || [],
     focus: false,
-  }
+  };
 
-  componentDidMount () {
-    if(!this.verifyChildren()) {
+  componentDidMount() {
+    if (!this.verifyChildren()) {
       throw new Error('Accordion should contain one or more AccordionGroup as children.');
     }
 
@@ -28,32 +28,31 @@ class Accordion extends React.Component {
     }, true);
 
     return children && childrenArr.length && status;
-  }
+  };
 
   determineInitialFocus = () => {
-    const nonDisabledIndex = React.Children.toArray(this.props.children).reduceRight((agg, child, idx) => {
-      return !child.props.disabled
-        ? idx
-        : agg;
-    }, null);
+    const nonDisabledIndex = React.Children.toArray(this.props.children).reduceRight(
+      (agg, child, idx) => {
+        return !child.props.disabled ? idx : agg;
+      },
+      null
+    );
 
     this.setFocus(nonDisabledIndex);
-  }
+  };
 
-  handleClick = index => {
-    return this.props.multipleVisible
-      ? this.setMultiple(index)
-      : this.setSelected(index);
-  }
+  handleClick = (index) => {
+    return this.props.multipleVisible ? this.setMultiple(index) : this.setSelected(index);
+  };
 
-  setMultiple = index => {
+  setMultiple = (index) => {
     let newValues;
     const { onSelect } = this.props;
     const { activeIndices } = this.state;
     const isActive = activeIndices.includes(index);
 
     if (isActive) {
-      newValues = activeIndices.filter(v => v !== index);
+      newValues = activeIndices.filter((v) => v !== index);
     } else {
       newValues = activeIndices.concat(index);
     }
@@ -63,14 +62,13 @@ class Accordion extends React.Component {
       onSelect && onSelect(newValues);
       return { activeIndices: newValues };
     });
-  }
+  };
 
-  setSelected = index => {
+  setSelected = (index) => {
     const { activeIndices } = this.state;
     const { children, onSelect } = this.props;
     // Don't do anything if index is the same or outside of the bounds
-    if (activeIndices.includes(index) || index < 0 || index >= children.length)
-      return;
+    if (activeIndices.includes(index) || index < 0 || index >= children.length) return;
 
     // Keep reference to last index for event handler
     const last = activeIndices[0];
@@ -80,10 +78,10 @@ class Accordion extends React.Component {
     this.setFocus(index);
 
     onSelect && onSelect(index, last);
-  }
+  };
 
   handleKeyPress = (e, idx, length, disabled) => {
-    if(disabled) {
+    if (disabled) {
       e.preventDefault();
       e.stopPropagation();
       return;
@@ -165,7 +163,7 @@ class Accordion extends React.Component {
     }
   };
 
-  setFocus = index => {
+  setFocus = (index) => {
     this.setState({ focus: index });
   };
 
@@ -178,19 +176,14 @@ class Accordion extends React.Component {
       return React.cloneElement(child, {
         isExpanded: !child.props.disabled && activeIndices.includes(idx),
         onClick: () => this.handleClick(idx),
-        onKeyDown: e => this.handleKeyPress(e, idx, children.length - 1 , child.props.disabled),
+        onKeyDown: (e) => this.handleKeyPress(e, idx, children.length - 1, child.props.disabled),
         focus: this.state.focus === idx,
         showSeparator,
       });
     });
 
     return (
-      <div
-        className={
-          'md-accordion' +
-          `${(className && ` ${className}`) || ''}`
-        }
-      >
+      <div className={'md-accordion' + `${(className && ` ${className}`) || ''}`}>
         {setAccordionGroups}
       </div>
     );

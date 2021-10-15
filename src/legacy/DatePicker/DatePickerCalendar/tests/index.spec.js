@@ -2,10 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import DatePickerCalendar from '../index';
 import DatePickerContext from '../../../DatePickerContext';
-import {
-  isSameDay,
-  now
-} from '../../../utils/dateUtils';
+import { isSameDay, now } from '../../../utils/dateUtils';
 import moment from 'moment-timezone';
 
 describe('tests for <DatePickerCalendar />', () => {
@@ -63,8 +60,8 @@ describe('tests for <DatePickerCalendar />', () => {
     expect(calendar.find('.md-datepicker__navigation--current-month').text()).toEqual('April 2018');
     expect(calendar.find('.md-button.md-button--icon').at(1).props().disabled).toEqual(false);
     expect(calendar.find('.md-button.md-button--icon').at(0).props().disabled).toEqual(false);
-    expect(calendar.find('.md-button.md-datepicker__day--selected').text()).toEqual("1");
-    expect(calendar.find('.md-button.md-datepicker__day--focus').text()).toEqual("1");
+    expect(calendar.find('.md-button.md-datepicker__day--selected').text()).toEqual('1');
+    expect(calendar.find('.md-button.md-datepicker__day--focus').text()).toEqual('1');
   });
 
   it('should next and previous buttons disabled when the other months are disabled', () => {
@@ -96,22 +93,13 @@ describe('tests for <DatePickerCalendar />', () => {
   it('should disable dates that are filtered', () => {
     const calendar = mount(
       <DatePickerContext.Provider value={{ selected: day }}>
-        <DatePickerCalendar
-          monthFormat={monthFormat}
-          filterDate={day => day.day() == '0'}
-        />
+        <DatePickerCalendar monthFormat={monthFormat} filterDate={(day) => day.day() == '0'} />
       </DatePickerContext.Provider>
     );
-    calendar.find('DatePickerWeek')
-    .forEach(week =>{
-        expect(
-          week.find('DatePickerDay')
-            .at(0)
-            .find('button.md-button')
-            .props().disabled
-        ).toEqual(true);
-      }
-    );
+    calendar.find('DatePickerWeek').forEach((week) => {
+      expect(week.find('DatePickerDay').at(0).find('button.md-button').props().disabled).toEqual(
+        true
+      );
+    });
   });
-
 });

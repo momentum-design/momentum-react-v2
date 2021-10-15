@@ -22,11 +22,9 @@ describe('tests for <CompositeAvatar />', () => {
           <Avatar title="test2" />
         </CompositeAvatar>
       );
-      expect(
-        container
-          .find('.md-composite-avatar')
-          .hasClass('md-composite-avatar--small')
-      ).toEqual(true);
+      expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--small')).toEqual(
+        true
+      );
       expect(container.find('.md-avatar').length).toEqual(2);
       container = mount(
         <CompositeAvatar size={28}>
@@ -34,11 +32,9 @@ describe('tests for <CompositeAvatar />', () => {
           <Avatar title="test2" />
         </CompositeAvatar>
       );
-      expect(
-        container
-          .find('.md-composite-avatar')
-          .hasClass('md-composite-avatar--28')
-      ).toEqual(true);
+      expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--28')).toEqual(
+        true
+      );
     });
 
     it('when size is medium/40', () => {
@@ -49,9 +45,7 @@ describe('tests for <CompositeAvatar />', () => {
         </CompositeAvatar>
       );
       expect(
-        container
-          .find('.md-composite-avatar')
-          .hasClass('md-composite-avatar--medium')
+        container.find('.md-composite-avatar').hasClass('md-composite-avatar--medium')
       ).toEqual(true);
       expect(container.find('.md-avatar').length).toEqual(2);
       container = mount(
@@ -60,11 +54,9 @@ describe('tests for <CompositeAvatar />', () => {
           <Avatar title="test2" />
         </CompositeAvatar>
       );
-      expect(
-        container
-          .find('.md-composite-avatar')
-          .hasClass('md-composite-avatar--40')
-      ).toEqual(true);
+      expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--40')).toEqual(
+        true
+      );
     });
 
     it('when size is 84', () => {
@@ -76,11 +68,9 @@ describe('tests for <CompositeAvatar />', () => {
       );
 
       expect(container.find('.md-avatar').length).toEqual(2);
-      expect(
-        container
-          .find('.md-composite-avatar')
-          .hasClass('md-composite-avatar--84')
-      ).toEqual(true);
+      expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--84')).toEqual(
+        true
+      );
     });
 
     it('when size is large/135', () => {
@@ -90,11 +80,9 @@ describe('tests for <CompositeAvatar />', () => {
           <Avatar title="test2" />
         </CompositeAvatar>
       );
-      expect(
-        container
-          .find('.md-composite-avatar')
-          .hasClass('md-composite-avatar--large')
-      ).toEqual(true);
+      expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--large')).toEqual(
+        true
+      );
       expect(container.find('.md-avatar').length).toEqual(2);
       container = mount(
         <CompositeAvatar size={135}>
@@ -102,11 +90,9 @@ describe('tests for <CompositeAvatar />', () => {
           <Avatar title="test2" />
         </CompositeAvatar>
       );
-      expect(
-        container
-          .find('.md-composite-avatar')
-          .hasClass('md-composite-avatar--135')
-      ).toEqual(true);
+      expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--135')).toEqual(
+        true
+      );
     });
   });
 
@@ -117,11 +103,9 @@ describe('tests for <CompositeAvatar />', () => {
       </CompositeAvatar>
     );
 
-    expect(
-      container
-        .find('.md-composite-avatar')
-        .hasClass('md-composite-avatar--large')
-    ).toEqual(true);
+    expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--large')).toEqual(
+      true
+    );
   });
 
   it('should allow Avatar components to be wrapped', () => {
@@ -133,10 +117,8 @@ describe('tests for <CompositeAvatar />', () => {
       </CompositeAvatar>
     );
 
-    expect(
-      container
-        .find('.md-composite-avatar')
-        .hasClass('md-composite-avatar--large')
-    ).toEqual(true);
+    expect(container.find('.md-composite-avatar').hasClass('md-composite-avatar--large')).toEqual(
+      true
+    );
   });
 });

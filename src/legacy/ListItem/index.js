@@ -14,12 +14,10 @@ class ListItem extends React.Component {
     const { focus, refName, focusOnLoad } = this.props;
     this.verifyStructure();
 
-    focusOnLoad && focus
-    && this[refName]
-    && this[refName].focus();
+    focusOnLoad && focus && this[refName] && this[refName].focus();
   }
 
-  checkElements = tag => {
+  checkElements = (tag) => {
     const children = Object.values(ReactDOM.findDOMNode(this).childNodes);
 
     return this.countDOMChildren(children, tag);
@@ -27,40 +25,31 @@ class ListItem extends React.Component {
 
   countDOMChildren = (children, tag) =>
     children.reduce(
-      (agg, child) => (
-        child.tagName === tag
-          ? { ...agg, count: (agg.count += 1) }
-          : agg
-      ), { count: 0, children: children.length }
+      (agg, child) => (child.tagName === tag ? { ...agg, count: (agg.count += 1) } : agg),
+      { count: 0, children: children.length }
     );
 
-  getChildrenElements = nameArr => {
+  getChildrenElements = (nameArr) => {
     const { children } = this.props;
     let elementCount = 0;
 
-    React.Children.forEach(children, child => {
-      if (child && (child.type && nameArr.includes(child.type.displayName))) {
+    React.Children.forEach(children, (child) => {
+      if (child && child.type && nameArr.includes(child.type.displayName)) {
         return elementCount++;
       }
     });
 
     return (
       elementCount && {
-        length: elementCount
+        length: elementCount,
       }
     );
   };
 
   handleClick = (e, eventKey) => {
-    const {
-      disabled,
-      label,
-      onClick,
-      parentOnSelect,
-      value,
-    } = this.props;
+    const { disabled, label, onClick, parentOnSelect, value } = this.props;
 
-    if(disabled) {
+    if (disabled) {
       e.preventDefault();
       e.stopPropagation();
     }
@@ -68,7 +57,7 @@ class ListItem extends React.Component {
     e.persist();
     onClick && onClick(e);
     parentOnSelect && parentOnSelect(e, { value, label, eventKey });
-  }
+  };
 
   changeTabIndex = (tabbableChildren, index) => {
     for (let i = 0; i < tabbableChildren.length; i++) {
@@ -76,16 +65,16 @@ class ListItem extends React.Component {
         tabbableChildren[i].tabIndex = index;
       }
     }
-  }
+  };
 
   handleKeyDown = (e, eventKey) => {
-    const { 
-      disabled, 
-      onKeyDown, 
-      parentKeyDown, 
-      value, 
-      label, 
-      focusLockTabbableChildren, 
+    const {
+      disabled,
+      onKeyDown,
+      parentKeyDown,
+      value,
+      label,
+      focusLockTabbableChildren,
       focusLockTabbableChildrenProps,
     } = this.props;
 
@@ -94,20 +83,22 @@ class ListItem extends React.Component {
       e.stopPropagation();
     }
 
-    const {tabbableChildrenQuery} = focusLockTabbableChildrenProps;
-    
+    const { tabbableChildrenQuery } = focusLockTabbableChildrenProps;
+
     if (focusLockTabbableChildren && e.target) {
       const currListItem = e.target.closest('.md-list-item');
 
-      if  (currListItem) {
+      if (currListItem) {
         const tabbableChildren = currListItem.querySelectorAll(tabbableChildrenQuery);
         if (tabbableChildren.length) {
-          if (e.keyCode === 9 && !e.shiftKey) { // TAB only
+          if (e.keyCode === 9 && !e.shiftKey) {
+            // TAB only
             // only allow focus of tabbable children if TAB on the current listitem
             if (e.target.classList.contains('md-list-item')) {
               this.changeTabIndex(tabbableChildren, 0);
             }
-          } else if (e.keyCode === 9 && e.shiftKey) { // SHIFT + TAB
+          } else if (e.keyCode === 9 && e.shiftKey) {
+            // SHIFT + TAB
             // If we are on one of the tabbable children
             if (e.target === tabbableChildren[0]) {
               e.preventDefault();
@@ -130,20 +121,13 @@ class ListItem extends React.Component {
     e.persist();
     onKeyDown && onKeyDown(e);
     parentKeyDown && parentKeyDown(e, { value, label, eventKey });
-  }
+  };
 
   handleBlur = (e) => {
-    const { 
-      onBlur, 
-      focusLockTabbableChildren, 
-      focusLockTabbableChildrenProps,
-    } = this.props;
+    const { onBlur, focusLockTabbableChildren, focusLockTabbableChildrenProps } = this.props;
 
-    const {
-      tabbableChildrenQuery, 
-      portalNodeQuery,
-      tabbableChildrenHasPopover,
-    } = focusLockTabbableChildrenProps;
+    const { tabbableChildrenQuery, portalNodeQuery, tabbableChildrenHasPopover } =
+      focusLockTabbableChildrenProps;
 
     // For when you click or navigate away from the current listitem
     // Cleans up tabindex="0" before you navigate away
@@ -156,10 +140,16 @@ class ListItem extends React.Component {
           if (isInThisList) {
             const relatedTargetListItem = e.relatedTarget.closest('.md-list-item'); // The new focus is a ListItem if not undefined
             const targetListItem = e.target.closest('.md-list-item'); // The current focus is a ListItem if not undefined
-            if (tabbableChildrenHasPopover && focusLockTabbableChildrenProps.tabbableChildSpawnedPopoverQuery) { // If the tabbable children in this ListItem has Popovers
-              const {tabbableChildSpawnedPopoverQuery} = focusLockTabbableChildrenProps;
+            if (
+              tabbableChildrenHasPopover &&
+              focusLockTabbableChildrenProps.tabbableChildSpawnedPopoverQuery
+            ) {
+              // If the tabbable children in this ListItem has Popovers
+              const { tabbableChildSpawnedPopoverQuery } = focusLockTabbableChildrenProps;
               const targetIsSpawnedPopover = e.target.closest(tabbableChildSpawnedPopoverQuery); // The current focus is a EventOverlay if not undefined
-              const relatedTargetIsSpawnedPopover = e.relatedTarget.closest(tabbableChildSpawnedPopoverQuery); // The new focus is a EventOverlay if not undefined
+              const relatedTargetIsSpawnedPopover = e.relatedTarget.closest(
+                tabbableChildSpawnedPopoverQuery
+              ); // The new focus is a EventOverlay if not undefined
               // from this ListItem or a EventOverlay spawned by one of the tabbable children in this ListItem
               if (targetListItem === listItemNode || targetIsSpawnedPopover) {
                 // If the new focus is not the same as this ListItem or not a spawned EventOverlay, we left the current ListItem
@@ -168,7 +158,8 @@ class ListItem extends React.Component {
                   this.changeTabIndex(tabbableChildren, -1);
                 }
               }
-            } else { // If the tabbable children in this ListItem has no Popovers
+            } else {
+              // If the tabbable children in this ListItem has no Popovers
               // If the new focus is not the same as this ListItem or the current focus is not the same as this ListItem, we left the current ListItem
               // Make tabindex="-1"
               if (targetListItem !== listItemNode && relatedTargetListItem !== listItemNode) {
@@ -183,7 +174,7 @@ class ListItem extends React.Component {
     }
 
     onBlur && onBlur(e);
-  }
+  };
 
   verifyStructure() {
     if (!this.props.children) return;
@@ -193,9 +184,7 @@ class ListItem extends React.Component {
     const checkSectionChildren = this.getChildrenElements(['ListItemSection']);
 
     if (anchorCount.count > 1) {
-      throw new Error(
-        'Only 1 primary child anchor tag may be used with ListItem component'
-      );
+      throw new Error('Only 1 primary child anchor tag may be used with ListItem component');
     } else if (anchorCount.count === 1 && anchorCount.children > 1) {
       throw new Error('Anchor tag can not have sibling');
     }
@@ -204,9 +193,7 @@ class ListItem extends React.Component {
       return;
     } else if (checkSectionChildren.length > 3) {
       throw new Error(
-        `Only 3 ListItemSection components can be used as children. You've used ${
-          checkSectionChildren.length
-        }`
+        `Only 3 ListItemSection components can be used as children. You've used ${checkSectionChildren.length}`
       );
     }
   }
@@ -236,7 +223,7 @@ class ListItem extends React.Component {
 
     const keyboardNavKey = makeKeyboardKey(keyboardKey || title || label);
 
-    const otherProps = omit({...props}, [
+    const otherProps = omit({ ...props }, [
       'focusLockTabbableChildren',
       'focusLockTabbableChildrenProps',
       'focusOnLoad',
@@ -250,7 +237,7 @@ class ListItem extends React.Component {
       'value',
     ]);
 
-    const setProps = cxtProps => ({
+    const setProps = (cxtProps) => ({
       className:
         'md-list-item' +
         `${(cxtProps.type && ` md-list-item--${cxtProps.type}`) || ''}` +
@@ -259,30 +246,38 @@ class ListItem extends React.Component {
         `${(isReadOnly && ` md-list-item--read-only`) || ''}` +
         `${(separator && ` md-list-item--separator`) || ''}` +
         `${(className && ` ${className}`) || ''}` +
-        `${(customAnchorNode && customAnchorNode.props.className && ` ${customAnchorNode.props.className}`) || ''}`,
+        `${
+          (customAnchorNode &&
+            customAnchorNode.props.className &&
+            ` ${customAnchorNode.props.className}`) ||
+          ''
+        }`,
       id: cxtProps.id,
       role: cxtProps.role,
-      ...!customAnchorNode && {
-        ref: ref => (this[refName] = ref),
-        ...link && { href: link }
-      },
-      ...customAnchorNode && customRefProp && {
-        [customRefProp]: ref => this[refName] = ref
-      },
-      ...!isReadOnly && {
-        onClick: e => this.handleClick(e, cxtProps.uniqueKey),
-        onKeyDown: e => this.handleKeyDown(e, cxtProps.uniqueKey),
-        onBlur: e => this.handleBlur(e),
-        tabIndex: (!disabled && cxtProps.focus) ? 0 : -1,
-      },
+      ...(!customAnchorNode && {
+        ref: (ref) => (this[refName] = ref),
+        ...(link && { href: link }),
+      }),
+      ...(customAnchorNode &&
+        customRefProp && {
+          [customRefProp]: (ref) => (this[refName] = ref),
+        }),
+      ...(!isReadOnly && {
+        onClick: (e) => this.handleClick(e, cxtProps.uniqueKey),
+        onKeyDown: (e) => this.handleKeyDown(e, cxtProps.uniqueKey),
+        onBlur: (e) => this.handleBlur(e),
+        tabIndex: !disabled && cxtProps.focus ? 0 : -1,
+      }),
       'data-md-event-key': cxtProps.uniqueKey,
-      ...!cxtProps?.ariaConfig?.disableAriaCurrent && {...cxtProps.focus && { 'aria-current': `${cxtProps.focus}` }},
-      ...keyboardNavKey && { 'data-md-keyboard-key': keyboardNavKey },
-      ...(title || label) && {title: title || label},
-      ...otherProps
+      ...(!cxtProps?.ariaConfig?.disableAriaCurrent && {
+        ...(cxtProps.focus && { 'aria-current': `${cxtProps.focus}` }),
+      }),
+      ...(keyboardNavKey && { 'data-md-keyboard-key': keyboardNavKey }),
+      ...((title || label) && { title: title || label }),
+      ...otherProps,
     });
 
-    const addRefToAnchor = cxtProps => {
+    const addRefToAnchor = (cxtProps) => {
       return React.cloneElement(
         customAnchorNode,
         setProps(cxtProps),
@@ -290,34 +285,30 @@ class ListItem extends React.Component {
       );
     };
 
-    const createElement = cxtProps => {
-      return React.createElement(
-        link ? 'a' : 'div',
-        setProps(cxtProps),
-        children || label
-      );
+    const createElement = (cxtProps) => {
+      return React.createElement(link ? 'a' : 'div', setProps(cxtProps), children || label);
     };
 
     return (
-      <UIDConsumer name={id => `md-list-item-${id}`}>
-        {id => (
+      <UIDConsumer name={(id) => `md-list-item-${id}`}>
+        {(id) => (
           <ListContext.Consumer>
-            {listContext => {
+            {(listContext) => {
               let contextProps = {};
 
               contextProps.id = this.props.id || id;
               contextProps.uniqueKey = eventKey || contextProps.id;
               contextProps.type = type || (listContext && listContext.type);
-              contextProps.focus = focus || (listContext && listContext.focus === contextProps.uniqueKey);
-              contextProps.active = active || (listContext && listContext.active === contextProps.uniqueKey);
-              contextProps.role = specifyRoleWithoutList ? role : (listContext && listContext.role) || role;
+              contextProps.focus =
+                focus || (listContext && listContext.focus === contextProps.uniqueKey);
+              contextProps.active =
+                active || (listContext && listContext.active === contextProps.uniqueKey);
+              contextProps.role = specifyRoleWithoutList
+                ? role
+                : (listContext && listContext.role) || role;
               contextProps.ariaConfig = listContext && listContext.ariaConfig;
 
-              return (
-                customAnchorNode
-                  ? addRefToAnchor(contextProps)
-                  : createElement(contextProps)
-              );
+              return customAnchorNode ? addRefToAnchor(contextProps) : createElement(contextProps);
             }}
           </ListContext.Consumer>
         )}
@@ -347,7 +338,7 @@ ListItem.propTypes = {
   focusLockTabbableChildren: PropTypes.bool,
   focusLockTabbableChildrenProps: PropTypes.shape({
     /** @prop Query for focusLockTabbableChildren | '' */
-    tabbableChildrenQuery: PropTypes.string.isRequired, 
+    tabbableChildrenQuery: PropTypes.string.isRequired,
     /** @prop Indicates whether this ListItem has tabbable children that spawn Popovers | false */
     tabbableChildrenHasPopover: PropTypes.bool.isRequired,
     /** @prop Only for when using tabbableChildrenHasPopover. Need to checkout the EventOverlay for blur purposes | '' */
@@ -397,7 +388,7 @@ ListItem.propTypes = {
     PropTypes.string,
     PropTypes.number,
     PropTypes.object,
-    PropTypes.array
+    PropTypes.array,
   ]),
 };
 
@@ -439,8 +430,4 @@ ListItem.defaultProps = {
 
 ListItem.displayName = 'ListItem';
 
-export default mapContextToProps(
-  SelectableContext,
-  context => context,
-  ListItem
-);
+export default mapContextToProps(SelectableContext, (context) => context, ListItem);

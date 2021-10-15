@@ -4,13 +4,13 @@ import { SidebarHeader } from '@momentum-ui/react';
 
 describe('<SidebarHeader />', () => {
   it('should render a SidebarHeader', () => {
-    const wrapper = mount(<SidebarHeader navSectionTitle='Overview' />);
+    const wrapper = mount(<SidebarHeader navSectionTitle="Overview" />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should add customized class name if className prop is set', () => {
-    const wrapper = shallow(<SidebarHeader className='testClassName'/>);
+    const wrapper = shallow(<SidebarHeader className="testClassName" />);
 
     expect(wrapper.find('.testClassName').exists()).toBeTruthy();
   });
@@ -18,7 +18,7 @@ describe('<SidebarHeader />', () => {
   it('should render children if children prop is set', () => {
     const wrapper = shallow(
       <SidebarHeader>
-        <div className='dummy-children'>Dummy Children</div>
+        <div className="dummy-children">Dummy Children</div>
       </SidebarHeader>
     );
 

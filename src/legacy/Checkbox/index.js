@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Label } from '@momentum-ui/react';
 
-const Checkbox = props => {
+const Checkbox = (props) => {
   const {
     checked,
     children,
@@ -32,10 +32,7 @@ const Checkbox = props => {
     >
       <input
         aria-checked={checked}
-        className={
-          `md-input md-checkbox__input` +
-          `${(indeterminate && ' indeterminate') || ''}`
-        }
+        className={`md-input md-checkbox__input` + `${(indeterminate && ' indeterminate') || ''}`}
         type="checkbox"
         ref={inputRef}
         disabled={disabled}
@@ -48,11 +45,7 @@ const Checkbox = props => {
         id={htmlId}
         {...otherProps}
       />
-      <Label
-        className="md-checkbox__label"
-        label={label}
-        htmlFor={htmlId}
-      />
+      <Label className="md-checkbox__label" label={label} htmlFor={htmlId} />
       {children}
     </div>
   );

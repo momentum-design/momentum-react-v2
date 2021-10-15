@@ -21,11 +21,7 @@ class Popover extends React.Component {
     const { isOpen } = this.state;
     const { autoFocusOnFirstElt } = this.props;
 
-    if (autoFocusOnFirstElt
-        && isOpen
-        && !prevState.isOpen
-        && this.overlay
-    ) {
+    if (autoFocusOnFirstElt && isOpen && !prevState.isOpen && this.overlay) {
       const eventOverlay = ReactDOM.findDOMNode(this.overlay);
 
       if (eventOverlay) {
@@ -41,7 +37,7 @@ class Popover extends React.Component {
     this.delayCheckHoverTimerId && clearTimeout(this.delayCheckHoverTimerId);
   }
 
-  delayedHide = e => {
+  delayedHide = (e) => {
     const { delay, hideDelay, onClose } = this.props;
     const { isHovering } = this.state;
     if (isHovering) return;
@@ -61,7 +57,7 @@ class Popover extends React.Component {
     e && e.stopPropagation();
   };
 
-  delayedShow = e => {
+  delayedShow = (e) => {
     const { delay, showDelay } = this.props;
 
     if (this.hideTimerId) {
@@ -79,27 +75,27 @@ class Popover extends React.Component {
     e && e.stopPropagation();
   };
 
-  handleClose = e => {
+  handleClose = (e) => {
     const { onClose } = this.props;
-    const {keyCode} = e;
+    const { keyCode } = e;
     //allow to copy text on popover
     if (!(keyCode === 17 || keyCode === 91 || keyCode === 67)) {
       this.setState({ isOpen: false }, onClose && onClose(e));
     }
   };
 
-  handleHide = e => {
+  handleHide = (e) => {
     this.setState({ isHovering: false }, () => this.delayedHide(e));
   };
 
-  handleMouseEnter = e => {
+  handleMouseEnter = (e) => {
     const { children } = this.props;
 
     children.props.onMouseEnter && children.props.onMouseEnter(e);
     return !this.showTimerId && !this.state.isOpen && this.delayedShow(e);
   };
 
-  delayCheckHover = e => {
+  delayCheckHover = (e) => {
     const { hoverDelay, popoverTrigger } = this.props;
     const delay = popoverTrigger === 'MouseEnter' ? hoverDelay : 0;
     e.persist();
@@ -110,7 +106,7 @@ class Popover extends React.Component {
     });
   };
 
-  handleMouseLeave = e => {
+  handleMouseLeave = (e) => {
     const { children } = this.props;
     if (this.hasFocus) {
       return false;
@@ -125,7 +121,7 @@ class Popover extends React.Component {
     return !this.hideTimerId && this.state.isOpen && this.delayCheckHover(e);
   };
 
-  handleBlur = e => {
+  handleBlur = (e) => {
     const { children } = this.props;
     this.hasFocus = false;
 
@@ -133,7 +129,7 @@ class Popover extends React.Component {
     this.handleMouseLeave(e);
   };
 
-  handleClick = e => {
+  handleClick = (e) => {
     const { children, doesAnchorToggle } = this.props;
     const { isOpen } = this.state;
 
@@ -146,7 +142,7 @@ class Popover extends React.Component {
     }
   };
 
-  handleFocus = e => {
+  handleFocus = (e) => {
     const { children } = this.props;
     const { isOpen } = this.state;
 
@@ -160,7 +156,7 @@ class Popover extends React.Component {
   };
 
   // Handle keydown for the trigger element
-  handleKeyDownTrigger = e => {
+  handleKeyDownTrigger = (e) => {
     switch (e.which) {
       case 13: // ENTER
         e.preventDefault();
@@ -185,7 +181,7 @@ class Popover extends React.Component {
     }
   };
 
-  handleKeyDownEventOverlay = e => {
+  handleKeyDownEventOverlay = (e) => {
     if (this.state.isOpen && this.overlay && this.anchorRef) {
       const eventOverlay = ReactDOM.findDOMNode(this.overlay);
       const trigger = ReactDOM.findDOMNode(this.anchorRef);
@@ -271,7 +267,7 @@ class Popover extends React.Component {
 
     const getTriggers = () => {
       const triggerProps = {};
-      triggerProps.ref = ele => (this.anchorRef = ele);
+      triggerProps.ref = (ele) => (this.anchorRef = ele);
       triggerProps.key = 'child-1';
 
       switch (popoverTrigger) {
@@ -281,7 +277,7 @@ class Popover extends React.Component {
 
           triggerProps.onFocus = includeFocusOnHover ? this.handleFocus : undefined;
           triggerProps.onBlur = includeFocusOnHover ? this.handleBlur : undefined;
-          if(!includeFocusOnHover) {
+          if (!includeFocusOnHover) {
             triggerProps.onKeyDown = this.handleKeyDownTrigger;
           }
 
@@ -329,14 +325,14 @@ class Popover extends React.Component {
             className={className}
             close={this.handleClose}
             isOpen={isOpen}
-            ref={ref => (this.overlay = ref)}
+            ref={(ref) => (this.overlay = ref)}
             showArrow={showArrow}
             style={{ overflow: overflowType }}
             {...(popoverTrigger === 'MouseEnter' && {
               onMouseEnter: () => {
                 this.setState({ isHovering: true, isOpen: true });
               },
-              onMouseLeave: e => {
+              onMouseLeave: (e) => {
                 e.persist();
                 this.handleHide(e);
               },

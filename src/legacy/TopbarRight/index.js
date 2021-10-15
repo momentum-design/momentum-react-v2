@@ -6,18 +6,11 @@ import { prefix } from '../utils/index';
 
 class TopbarRight extends React.PureComponent {
   render() {
-    const {
-      className,
-      children,
-      ...otherProps
-    } = this.props;
+    const { className, children, ...otherProps } = this.props;
 
     return (
       <div
-        className={
-          `${prefix}-top-bar__right` +
-          `${className && ` ${className}` || ''}`
-        }
+        className={`${prefix}-top-bar__right` + `${(className && ` ${className}`) || ''}`}
         {...otherProps}
       >
         {children}

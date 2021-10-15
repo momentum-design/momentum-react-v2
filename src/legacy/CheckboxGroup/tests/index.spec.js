@@ -18,24 +18,9 @@ describe('tests for <CheckboxGroup />', () => {
   it('should handle default true Values', () => {
     const container = mount(
       <CheckboxGroup values={['me']}>
-        <Checkbox
-          value="me"
-          label="me"
-          htmlId="testCheckbox1"
-          onChange={() => {}}
-        />
-        <Checkbox
-          value="you"
-          label="you"
-          htmlId="testCheckbox2"
-          onChange={() => {}}
-        />
-        <Checkbox
-          value="us"
-          label="us"
-          htmlId="testCheckbox3"
-          onChange={() => {}}
-        />
+        <Checkbox value="me" label="me" htmlId="testCheckbox1" onChange={() => {}} />
+        <Checkbox value="you" label="you" htmlId="testCheckbox2" onChange={() => {}} />
+        <Checkbox value="us" label="us" htmlId="testCheckbox3" onChange={() => {}} />
       </CheckboxGroup>
     );
 
@@ -56,9 +41,7 @@ describe('tests for <CheckboxGroup />', () => {
       }
     }
     const instance = mount(<Container />);
-    instance
-      .find('#testCheckbox1')
-      .simulate('change', { target: { value: 'me' } });
+    instance.find('#testCheckbox1').simulate('change', { target: { value: 'me' } });
 
     expect(instance.find('#testCheckbox1').props().checked).toEqual(true);
     expect(instance.find('#testCheckbox2').props().checked).toEqual(false);

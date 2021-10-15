@@ -17,18 +17,18 @@ class EditableTextfield extends React.Component {
     if (this.state.isEditing && this.editText) {
       this.editText.focus();
     }
-  }
+  };
 
   handleEnter = (e, value) => {
     const { allowEmpty, handleDoneEditing } = this.props;
     e.persist();
 
-    if(!allowEmpty && (!value || !value.replace(/\s/g, ''))) {
+    if (!allowEmpty && (!value || !value.replace(/\s/g, ''))) {
       this.setState(
         {
-          isEditing: false
+          isEditing: false,
         },
-        () => handleDoneEditing && handleDoneEditing(e, {value})
+        () => handleDoneEditing && handleDoneEditing(e, { value })
       );
     } else {
       this.setState(
@@ -36,23 +36,23 @@ class EditableTextfield extends React.Component {
           isEditing: false,
           inputText: value,
         },
-        () => handleDoneEditing && handleDoneEditing(e, {value})
+        () => handleDoneEditing && handleDoneEditing(e, { value })
       );
     }
 
     e.nativeEvent.stopImmediatePropagation();
-  }
+  };
 
   handleBlur = (e, value) => {
     const { allowEmpty, handleDoneEditing } = this.props;
     e.persist();
 
-    if(!allowEmpty && (!value || !value.replace(/\s/g, ''))) {
+    if (!allowEmpty && (!value || !value.replace(/\s/g, ''))) {
       this.setState(
         {
-          isEditing: false
+          isEditing: false,
         },
-        () => handleDoneEditing && handleDoneEditing(e, {value})
+        () => handleDoneEditing && handleDoneEditing(e, { value })
       );
     } else {
       this.setState(
@@ -60,99 +60,91 @@ class EditableTextfield extends React.Component {
           isEditing: false,
           inputText: value,
         },
-        () => handleDoneEditing && handleDoneEditing(e, {value})
+        () => handleDoneEditing && handleDoneEditing(e, { value })
       );
     }
-  }
+  };
 
-  handleEsc = e => {
+  handleEsc = (e) => {
     const { value } = e.target;
     const handleDoneEditing = this.props.handleDoneEditing;
     this.setState(
       {
-        isEditing: false
+        isEditing: false,
       },
-      () => handleDoneEditing && handleDoneEditing(e, {value})
+      () => handleDoneEditing && handleDoneEditing(e, { value })
     );
     e.nativeEvent.stopImmediatePropagation();
-  }
+  };
 
   handleClick = () => {
     const { disabled } = this.props;
 
-    if(disabled) {
+    if (disabled) {
       return;
     } else {
       this.setState({
         isEditing: true,
       });
     }
-  }
+  };
 
   handleKey = () => {
     const { disabled } = this.props;
 
-    if(disabled) {
+    if (disabled) {
       return;
     } else {
       this.setState({
-        isEditing: true
+        isEditing: true,
       });
     }
-  }
+  };
 
-  handleDoneKeyDown = e => {
+  handleDoneKeyDown = (e) => {
     if (e.keyCode === 27) {
       this.handleEsc(e);
-    } else if (e.keyCode === 13){
+    } else if (e.keyCode === 13) {
       this.handleEnter(e, e.target.value);
     }
-  }
+  };
 
   render() {
-    const {
-      alignment,
-      buttonClassName,
-      buttonProps,
-      className,
-      ...props
-    } = this.props;
+    const { alignment, buttonClassName, buttonProps, className, ...props } = this.props;
     const { isEditing, inputText } = this.state;
 
-    const inputProps = omit({...props}, [
+    const inputProps = omit({ ...props }, [
       'allowEmpty',
       'disabled',
       'handleDoneEditing',
       'inputText',
     ]);
 
-    return(
+    return (
       <span
         className={
-          'md-editable-textfield' +
-          `${alignment && ` md-editable-textfield--${alignment}` || ''}`
+          'md-editable-textfield' + `${(alignment && ` md-editable-textfield--${alignment}`) || ''}`
         }
       >
-        {isEditing &&
+        {isEditing && (
           <Input
-            className={
-              'md-editable-textfield__editing' +
-              `${className && ` ${className}` || ''}`
-            }
-            inputRef={(input) => { this.editText = input; }}
+            className={'md-editable-textfield__editing' + `${(className && ` ${className}`) || ''}`}
+            inputRef={(input) => {
+              this.editText = input;
+            }}
             onDoneEditing={this.handleBlur}
             onKeyDown={this.handleDoneKeyDown}
             value={inputText}
             {...inputProps}
           />
-        }
-        {!isEditing &&
+        )}
+        {!isEditing && (
           <div
-            role='button'
+            role="button"
             tabIndex={0}
             className={
               'md-editable-textfield__button' +
-              `${buttonClassName && ` ${buttonClassName}` || ''}`
+              `${(buttonClassName && ` ${buttonClassName}`) || ''}`
             }
             onClick={this.handleClick}
             onKeyPress={this.handleKey}
@@ -160,7 +152,7 @@ class EditableTextfield extends React.Component {
           >
             {inputText || '\u00a0'}
           </div>
-        }
+        )}
       </span>
     );
   }

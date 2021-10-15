@@ -5,40 +5,27 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 class ToggleSwitch extends React.PureComponent {
-
   state = {
-    isToggleOn: this.props.checked
+    isToggleOn: this.props.checked,
   };
 
-  handleClick = event => {
-    this.setState ({ isToggleOn: !this.state.isToggleOn });
+  handleClick = (event) => {
+    this.setState({ isToggleOn: !this.state.isToggleOn });
 
     if (this.props.onChange) {
       this.props.onChange(event);
     }
-  }
+  };
 
   render() {
-    const {
-      className,
-      disabled,
-      htmlId,
-      label,
-      name,
-      onChange,
-      value,
-      ...props
-    } = this.props;
+    const { className, disabled, htmlId, label, name, onChange, value, ...props } = this.props;
 
-    const otherProps = omit({...props}, [
-      'checked'
-    ]);
+    const otherProps = omit({ ...props }, ['checked']);
 
     return (
       <div
         className={
-          `md-input-container md-toggle-switch` +
-          `${(className && ` ${className}`) || ''}`
+          `md-input-container md-toggle-switch` + `${(className && ` ${className}`) || ''}`
         }
         {...otherProps}
       >
@@ -53,7 +40,7 @@ class ToggleSwitch extends React.PureComponent {
           id={htmlId}
           onChange={onChange}
           tabIndex={0}
-          onClick={event => this.handleClick(event)}
+          onClick={(event) => this.handleClick(event)}
         />
         <label className="md-toggle-switch__label" htmlFor={htmlId}>
           <span className="md-toggle-switch__label__container" />

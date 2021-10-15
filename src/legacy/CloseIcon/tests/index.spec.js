@@ -4,14 +4,14 @@ import { CloseIcon } from '@momentum-ui/react';
 
 describe('tests for <CloseIcon />', () => {
   it('should match SnapShot', () => {
-    const container = mount(<CloseIcon className='test' />);
+    const container = mount(<CloseIcon className="test" />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should call onClick on click of close', () => {
     const onClick = jest.fn();
-    const container = shallow(<CloseIcon className='test' onClick={onClick} aria-label='Close' />);
+    const container = shallow(<CloseIcon className="test" onClick={onClick} aria-label="Close" />);
     expect(container.find('.test').length).toEqual(1);
     expect(container.find('.test').props()['aria-label']).toEqual('Close');
 
@@ -19,5 +19,4 @@ describe('tests for <CloseIcon />', () => {
 
     expect(onClick).toHaveBeenCalled();
   });
-
 });

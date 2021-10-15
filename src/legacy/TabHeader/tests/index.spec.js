@@ -16,9 +16,7 @@ describe('tests for <TabHeader />', () => {
   });
 
   it('should render subheading', () => {
-    const container = shallow(
-      <TabHeader heading="test" subHeading="subtest" />
-    );
+    const container = shallow(<TabHeader heading="test" subHeading="subtest" />);
 
     expect(container.find('div').text()).toEqual('subtest');
   });

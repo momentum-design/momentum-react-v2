@@ -1,12 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Tab,
-  TabContent,
-  TabList,
-  TabPane,
-  Tabs,
-} from '@momentum-ui/react';
+import { Tab, TabContent, TabList, TabPane, Tabs } from '@momentum-ui/react';
 
 describe('tests for <Tabs />', () => {
   it('should match SnapShot', () => {
@@ -33,12 +27,10 @@ describe('tests for <Tabs />', () => {
     const container = mount(
       <Tabs>
         <TabList>
-          <Tab heading='First Tab'/>
+          <Tab heading="First Tab" />
         </TabList>
         <TabContent>
-          <TabPane>
-            First tab pane
-          </TabPane>
+          <TabPane>First tab pane</TabPane>
         </TabContent>
       </Tabs>
     );
@@ -50,12 +42,10 @@ describe('tests for <Tabs />', () => {
     const container = mount(
       <Tabs justified>
         <TabList>
-          <Tab heading='First Tab'/>
+          <Tab heading="First Tab" />
         </TabList>
         <TabContent>
-          <TabPane>
-            First tab pane
-          </TabPane>
+          <TabPane>First tab pane</TabPane>
         </TabContent>
       </Tabs>
     );
@@ -68,8 +58,8 @@ describe('tests for <Tabs />', () => {
     const container = mount(
       <Tabs onSelect={countUp}>
         <TabList>
-          <Tab className="clickMe" heading='test'/>
-          <Tab className="clickMee" heading='test'/>
+          <Tab className="clickMe" heading="test" />
+          <Tab className="clickMee" heading="test" />
         </TabList>
         <TabContent>
           <TabPane>Hi</TabPane>
@@ -88,10 +78,10 @@ describe('tests for <Tabs />', () => {
     const container = mount(
       <Tabs focus={1}>
         <TabList>
-          <Tab className="one" heading='test1'/>
-          <Tab className="two" heading='test2'/>
-          <Tab className="three" heading='test3'/>
-          <Tab className="four" disabled heading='test4'/>
+          <Tab className="one" heading="test1" />
+          <Tab className="two" heading="test2" />
+          <Tab className="three" heading="test3" />
+          <Tab className="four" disabled heading="test4" />
         </TabList>
         <TabContent>
           <TabPane>1</TabPane>
@@ -102,7 +92,9 @@ describe('tests for <Tabs />', () => {
       </Tabs>
     );
     expect(container.find('.two.active').length).toEqual(1);
-    container.find('.two.active > a').simulate('keyDown', { which: 40, charCode: 40, key: 'Right' });
+    container
+      .find('.two.active > a')
+      .simulate('keyDown', { which: 40, charCode: 40, key: 'Right' });
     expect(container.state().focus).toEqual(2);
     container.find('.three > a').simulate('keyDown', { which: 40, charCode: 40, key: 'Right' });
     expect(container.state().focus).toEqual(0);
@@ -112,7 +104,7 @@ describe('tests for <Tabs />', () => {
     const container = mount(
       <Tabs focus={0}>
         <TabList>
-          <Tab className="one" disabled heading='test'/>
+          <Tab className="one" disabled heading="test" />
         </TabList>
         <TabContent>
           <TabPane>Hi</TabPane>
@@ -122,5 +114,4 @@ describe('tests for <Tabs />', () => {
     expect(container.find('.active').length).toEqual(0);
     expect(container.state().focus).toEqual(null);
   });
-
 });

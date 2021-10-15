@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  BadgeDefault,
-  BadgeRound,
-} from './index';
+import { BadgeDefault, BadgeRound } from './index';
 
 export default class BadgeKitchenSink extends React.Component {
   render() {

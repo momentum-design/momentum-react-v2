@@ -3,17 +3,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SidebarBody = props => {
+const SidebarBody = (props) => {
   const { children, className } = props;
   return (
-    <div
-      className={
-        `md-sidebar__body` +
-        `${(className && ` ${className}`) || ''}`
-      }
-    >
-      {children}
-    </div>
+    <div className={`md-sidebar__body` + `${(className && ` ${className}`) || ''}`}>{children}</div>
   );
 };
 
