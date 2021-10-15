@@ -20,22 +20,21 @@ describe('<Chip />', () => {
   });
 
   it('should accept a custom class', () => {
-    const container = shallow(<Chip className="custom-recording-class" type="recording" title="Recording" />);
+    const container = shallow(
+      <Chip className="custom-recording-class" type="recording" title="Recording" />
+    );
     expect(container.find('.custom-recording-class').length).toEqual(1);
   });
 
   it('should render custom left content', () => {
-    const leftContent = <div className="custom-left"/>;
+    const leftContent = <div className="custom-left" />;
     const container = shallow(<Chip leftContent={leftContent} />);
     expect(container.find('.custom-left').length).toEqual(1);
   });
 
   it('should render custom right content', () => {
-    const rightContent = <div className="custom-right"/>;
+    const rightContent = <div className="custom-right" />;
     const container = shallow(<Chip rightContent={rightContent} />);
     expect(container.find('.custom-right').length).toEqual(1);
   });
-
-
-
 });

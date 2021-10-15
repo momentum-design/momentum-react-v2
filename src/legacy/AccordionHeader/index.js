@@ -8,7 +8,7 @@ class AccordionHeader extends React.Component {
 
   static contextTypes = {
     onClick: PropTypes.func,
-    onKeyDown: PropTypes.func
+    onKeyDown: PropTypes.func,
   };
 
   componentDidUpdate(prevProps) {
@@ -17,20 +17,14 @@ class AccordionHeader extends React.Component {
   }
 
   render() {
-    const {
-      children,
-      className,
-      disabled,
-      showSeparator,
-      height,
-    } = this.props;
+    const { children, className, disabled, showSeparator, height } = this.props;
 
     const { onClick, onKeyDown } = this.context;
 
     return (
       <div
-        role='button'
-        ref={ref => this.headerRef = ref}
+        role="button"
+        ref={(ref) => (this.headerRef = ref)}
         onClick={onClick}
         onKeyDown={onKeyDown}
         tabIndex={!disabled ? 0 : -1}
@@ -41,8 +35,8 @@ class AccordionHeader extends React.Component {
           `${(className && ` ${className}`) || ''}`
         }
       >
-          {children}
-          <span className="md-accordion__header-icon"/>
+        {children}
+        <span className="md-accordion__header-icon" />
       </div>
     );
   }

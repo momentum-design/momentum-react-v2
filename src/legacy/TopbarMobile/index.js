@@ -22,13 +22,8 @@ class TopbarMobile extends React.Component {
     });
   };
 
-  handleKeyDown = e => {
-    if (
-      e.which === 32
-        || e.which === 13
-        || e.charCode === 32
-        || e.charCode === 13
-      ) {
+  handleKeyDown = (e) => {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       this.handleClose();
       e.preventDefault();
     }
@@ -48,7 +43,7 @@ class TopbarMobile extends React.Component {
 
     const mobileButton = (
       <Icon
-        name='list-menu_20'
+        name="list-menu_20"
         buttonClassName={`${prefix}-top-bar__mobile-menu-button`}
         onClick={this.handleOpen}
         ariaLabel={openMenuAriaLabel}
@@ -56,9 +51,9 @@ class TopbarMobile extends React.Component {
       />
     );
 
-    const passClickHandlerToChildren = React.Children.map(children, child => {
+    const passClickHandlerToChildren = React.Children.map(children, (child) => {
       return React.cloneElement(child, {
-        onClick: this.handleClose
+        onClick: this.handleClose,
       });
     });
 
@@ -69,33 +64,35 @@ class TopbarMobile extends React.Component {
           className={
             `${prefix}-top-bar__mobile ${prefix}-tb-mobile` +
             `${isMobileOpen ? ' open' : ''}` +
-            `${className && ` ${className}` || ''}`
+            `${(className && ` ${className}`) || ''}`
           }
-          onClick={() => shouldCloseOnClick ? this.handleClose : null}
+          onClick={() => (shouldCloseOnClick ? this.handleClose : null)}
           onKeyDown={this.handleKeyDown}
-          role='menu'
+          role="menu"
           tabIndex={0}
           {...otherProps}
         >
           <Icon
-            name='cancel_20'
+            name="cancel_20"
             buttonClassName={`${prefix}-tb-mobile__close`}
             aria-pressed={isMobileOpen}
             onClick={this.handleClose}
             ariaLabel={closeMenuAriaLabel}
           />
           {/* eslint-disable jsx-a11y/no-static-element-interactions */}
-          <span onClick={this.handleClose} onKeyDown={this.handleKeyDown}>{brandNode}</span>
+          <span onClick={this.handleClose} onKeyDown={this.handleKeyDown}>
+            {brandNode}
+          </span>
           {/* eslint-enable jsx-a11y/no-static-element-interactions */}
           <ListSeparator />
           <nav className={`${prefix}-tb-mobile__nav`}>
-            {!shouldCloseOnClick && passClickHandlerToChildren || children}
+            {(!shouldCloseOnClick && passClickHandlerToChildren) || children}
           </nav>
         </div>
         <div
           className={`${prefix}-tb-mobile__mask` + `${isMobileOpen ? ' open' : ''}`}
           onClick={this.handleClose}
-          role='none'
+          role="none"
         />
       </div>
     );

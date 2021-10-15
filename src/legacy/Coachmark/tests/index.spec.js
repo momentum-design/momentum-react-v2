@@ -129,16 +129,14 @@ describe('tests for <Coachmark />', () => {
   });
 
   it('should show and hide with delay and allowClickAway', () => {
-
     class Container extends React.Component {
       state = {
-        coachmarkOpen: false
-      }
+        coachmarkOpen: false,
+      };
       render() {
-
         const content = (
           <span className="coachmark-content" key="1">
-          Hello how are you doing
+            Hello how are you doing
           </span>
         );
 
@@ -157,7 +155,7 @@ describe('tests for <Coachmark />', () => {
         );
       }
     }
-    const container = mount(<Container/>);
+    const container = mount(<Container />);
     expect(container.find('.coachmark-content').length).toEqual(0);
 
     container.setState({ coachmarkOpen: true });
@@ -167,8 +165,8 @@ describe('tests for <Coachmark />', () => {
     expect(container.find('.coachmark-content').length).toEqual(1);
 
     // Dispatch click outside Event
-    const evt = document.createEvent("HTMLEvents");
-    evt.initEvent("click", false, true);
+    const evt = document.createEvent('HTMLEvents');
+    evt.initEvent('click', false, true);
     document.dispatchEvent(evt);
 
     jest.runTimersToTime(200);
@@ -180,10 +178,9 @@ describe('tests for <Coachmark />', () => {
     /* eslint-disable react/no-multi-comp */
     class ContainerDefault extends React.Component {
       state = {
-        coachmarkOpen: false
-      }
+        coachmarkOpen: false,
+      };
       render() {
-
         const content = (
           <span className="coachmark-content" key="1">
             Hello how are you doing
@@ -191,11 +188,8 @@ describe('tests for <Coachmark />', () => {
         );
 
         return (
-          <div className='wrapper'>
-            <Coachmark
-              contentNode={content}
-              isOpen={this.state.coachmarkOpen}
-            >
+          <div className="wrapper">
+            <Coachmark contentNode={content} isOpen={this.state.coachmarkOpen}>
               <button tabIndex="0" className="anchor">
                 Hello
               </button>
@@ -205,17 +199,17 @@ describe('tests for <Coachmark />', () => {
       }
     }
     /* eslint-enable react/no-multi-comp */
-    const container = mount(<ContainerDefault/>);
+    const container = mount(<ContainerDefault />);
     container.setState({ coachmarkOpen: true });
 
     jest.runAllTimers();
     container.update();
     expect(container.find('.coachmark-content').length).toEqual(1);
 
-     // Dispatch click outside Event
-     const evt = document.createEvent("HTMLEvents");
-     evt.initEvent("click", false, true);
-     document.dispatchEvent(evt);
+    // Dispatch click outside Event
+    const evt = document.createEvent('HTMLEvents');
+    evt.initEvent('click', false, true);
+    document.dispatchEvent(evt);
 
     jest.runAllTimers();
     container.update();

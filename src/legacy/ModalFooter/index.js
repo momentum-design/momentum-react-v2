@@ -3,16 +3,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ModalFooter = props => {
+const ModalFooter = (props) => {
   const { className, children } = props;
   return (
-    <div className={
-      'md-modal__footer' +
-      `${(className && ` ${className}`) || ''}`
-      }
-    >
-      {children}
-    </div>
+    <div className={'md-modal__footer' + `${(className && ` ${className}`) || ''}`}>{children}</div>
   );
 };
 

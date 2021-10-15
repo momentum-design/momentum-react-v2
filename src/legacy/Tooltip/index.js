@@ -5,42 +5,24 @@ import PropTypes from 'prop-types';
 import { Popover } from '@momentum-ui/react';
 
 class Tooltip extends React.Component {
-
-  render () {
-    const {
-      children,
-      className,
-      popoverProps,
-      tooltip,
-      tooltipTrigger,
-      width,
-      ...otherProps
-    } = this.props;
+  render() {
+    const { children, className, popoverProps, tooltip, tooltipTrigger, width, ...otherProps } =
+      this.props;
 
     const content = (
-      <span
-        className='md-tooltip__text'
-        {
-          ...width
-           && { style: { width: `${width}px` }}
-        }
-      >
+      <span className="md-tooltip__text" {...(width && { style: { width: `${width}px` } })}>
         {tooltip}
       </span>
     );
 
-    const clonedChildren = () => (
+    const clonedChildren = () =>
       React.cloneElement(children, {
-        ...otherProps
-      })
-    );
+        ...otherProps,
+      });
 
     return (
       <Popover
-        className={
-          'md-tooltip' +
-          `${(className && ` ${className}`) || ''}`
-        }
+        className={'md-tooltip' + `${(className && ` ${className}`) || ''}`}
         content={content}
         popoverTrigger={tooltipTrigger}
         showArrow
@@ -57,14 +39,14 @@ Tooltip.propTypes = {
   children: PropTypes.element,
   /** @prop Optional CSS class string | '' */
   className: PropTypes.string,
-   /** @prop Optional object for Popover Component props | {} */
+  /** @prop Optional object for Popover Component props | {} */
   popoverProps: PropTypes.object,
   /** @prop Tooltip text | ''  */
   tooltip: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   /** @prop Set the action which triggers the Tooltip | 'MouseEnter' */
   tooltipTrigger: PropTypes.oneOf(['MouseEnter', 'Click', 'Focus']),
   /** @prop Set the Tooltip width | null */
-  width: PropTypes.number
+  width: PropTypes.number,
 };
 
 Tooltip.defaultProps = {
@@ -73,7 +55,7 @@ Tooltip.defaultProps = {
   popoverProps: {},
   tooltip: '',
   tooltipTrigger: 'MouseEnter',
-  width: null
+  width: null,
 };
 
 Tooltip.displayName = 'Tooltip';

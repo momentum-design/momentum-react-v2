@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  CardClickable,
-  CardContent,
-  CardContent2,
-  CardDefault
-} from './index';
+import { CardClickable, CardContent, CardContent2, CardDefault } from './index';
 
 export default class CardKitchenSink extends React.Component {
   render() {

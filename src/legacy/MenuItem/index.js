@@ -18,8 +18,8 @@ class MenuItem extends React.Component {
     this.state = {
       selectContext: {
         parentKeyDown: !props.isHeader ? this.handleKeyDown : null,
-        parentOnSelect: !props.isHeader ? this.handleClick : null
-      }
+        parentOnSelect: !props.isHeader ? this.handleClick : null,
+      },
     };
   }
 
@@ -27,44 +27,28 @@ class MenuItem extends React.Component {
     const { onClick, parentOnSelect } = this.props;
     const { eventKey, label, value } = opts;
 
-    onClick && onClick(e, {value, label});
+    onClick && onClick(e, { value, label });
     parentOnSelect && parentOnSelect(e, { eventKey, element: this });
-  }
+  };
 
   handleKeyDown = (e, opts) => {
-    const {
-      onClick,
-      parentKeyDown,
-      parentOnSelect
-    } = this.props;
+    const { onClick, parentKeyDown, parentOnSelect } = this.props;
     const { eventKey } = opts;
 
-    if (
-      e.which === 32
-      || e.which === 13
-      || e.charCode === 32
-      || e.charCode === 13
-    ) {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       onClick && onClick(e);
       parentOnSelect && parentOnSelect(e, { eventKey, element: this });
       e.preventDefault();
     } else {
       parentKeyDown && parentKeyDown(e, { eventKey, element: this });
     }
-  }
+  };
 
-  render () {
-    const {
-      children,
-      className,
-      isHeader,
-      isOpen,
-      itemClassName,
-      ...props
-    } = this.props;
+  render() {
+    const { children, className, isHeader, isOpen, itemClassName, ...props } = this.props;
     const { selectContext } = this.state;
 
-    const otherProps = omit({...props}, [
+    const otherProps = omit({ ...props }, [
       'keepMenuOpen',
       'onClick',
       'parentKeyDown',
@@ -72,42 +56,40 @@ class MenuItem extends React.Component {
     ]);
 
     return (
-      <UIDConsumer name={id => `${prefix}-menu-item-${id}`}>
-        {id => (
+      <UIDConsumer name={(id) => `${prefix}-menu-item-${id}`}>
+        {(id) => (
           <SelectableContext.Provider value={selectContext}>
             <ListContext.Consumer>
-              {listContext => {
-                const cxtActive = isOpen
-                  || listContext
-                  && listContext.active
-                  && ReactDOM.findDOMNode(this.anchorRef)
-                  && ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`]
-                  && ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`].value
-                  && listContext.active.includes(
-                    ReactDOM.findDOMNode(this.anchorRef)
-                    .attributes[`data-${prefix}-event-key`]
-                    .value
-                  );
+              {(listContext) => {
+                const cxtActive =
+                  isOpen ||
+                  (listContext &&
+                    listContext.active &&
+                    ReactDOM.findDOMNode(this.anchorRef) &&
+                    ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`] &&
+                    ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`]
+                      .value &&
+                    listContext.active.includes(
+                      ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`]
+                        .value
+                    ));
 
-                return(
+                return (
                   <div
-                    className={
-                      `${prefix}-menu-item` +
-                      `${className && ` ${className}` || ''}`
-                    }
+                    className={`${prefix}-menu-item` + `${(className && ` ${className}`) || ''}`}
                     aria-expanded={cxtActive}
                     aria-haspopup={!!children}
                   >
                     <ListItem
                       active={cxtActive}
                       className={
-                        `${isHeader && `md-menu-item__header` || ''}` +
-                        `${itemClassName && ` ${itemClassName}` || ''}`
+                        `${(isHeader && `md-menu-item__header`) || ''}` +
+                        `${(itemClassName && ` ${itemClassName}`) || ''}`
                       }
                       focusOnLoad
                       isReadOnly={isHeader}
                       id={id}
-                      ref={ref => this.anchorRef = ref}
+                      ref={(ref) => (this.anchorRef = ref)}
                       role="menuitem"
                       {...otherProps}
                     >
@@ -159,8 +141,4 @@ MenuItem.defaultProps = {
 
 MenuItem.displayName = 'MenuItem';
 
-export default mapContextToProps(
-  SelectableContext,
-  context => context,
-  MenuItem
-);
+export default mapContextToProps(SelectableContext, (context) => context, MenuItem);

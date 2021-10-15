@@ -4,7 +4,7 @@ import { Select, SelectOption } from '@momentum-ui/react';
 
 describe('tests for <SelectOption />', () => {
   it('should match SnapShot', () => {
-    const container = mount(<SelectOption/>);
+    const container = mount(<SelectOption />);
 
     expect(container).toMatchSnapshot();
   });
@@ -18,13 +18,13 @@ describe('tests for <SelectOption />', () => {
   });
 
   it('should handle className prop', () => {
-    const container = mount(<SelectOption className='menuItem'/>);
+    const container = mount(<SelectOption className="menuItem" />);
 
     expect(container.find('SelectOption').hasClass('menuItem')).toEqual(true);
   });
 
   it('should handle label prop', () => {
-    const container = mount(<SelectOption label='header' />);
+    const container = mount(<SelectOption label="header" />);
 
     expect(container.find('ListItemSection').first().text()).toEqual('header');
   });
@@ -41,11 +41,10 @@ describe('tests for <SelectOption />', () => {
   });
 
   it('should handle active prop without isMulti', () => {
-    const container = mount(<SelectOption active/>);
+    const container = mount(<SelectOption active />);
 
     expect(container.find('Icon').exists()).toEqual(true);
   });
-
 
   it('should handle active prop with isMulti in context', () => {
     const container = mount(
@@ -59,7 +58,7 @@ describe('tests for <SelectOption />', () => {
   });
 
   it('should pass props to ListItem', () => {
-    const customAnchorNode = <div className='custom-class' />;
+    const customAnchorNode = <div className="custom-class" />;
     const container = mount(<SelectOption customAnchorNode={customAnchorNode} />);
 
     expect(container.find('.custom-class').length).toEqual(1);
@@ -68,7 +67,7 @@ describe('tests for <SelectOption />', () => {
   it('should render children', () => {
     const container = mount(
       <SelectOption>
-        <span className='testChildren'>Test</span>
+        <span className="testChildren">Test</span>
       </SelectOption>
     );
 
@@ -77,28 +76,21 @@ describe('tests for <SelectOption />', () => {
 
   describe('tests for title Prop', () => {
     it('should not have title by default', () => {
-      const container = mount(
-        <SelectOption />
-      );
+      const container = mount(<SelectOption />);
 
       expect(container.find('.md-list-item').props().title).toEqual(undefined);
     });
 
     it('should handle title prop', () => {
-      const container = mount(
-        <SelectOption title='testTitle'/>
-      );
+      const container = mount(<SelectOption title="testTitle" />);
 
       expect(container.find('.md-list-item').props().title).toEqual('testTitle');
     });
 
     it('should handle title if label present', () => {
-      const container = mount(
-        <SelectOption label='testTitle'/>
-      );
+      const container = mount(<SelectOption label="testTitle" />);
 
       expect(container.find('.md-list-item').props().title).toEqual('testTitle');
     });
   });
 });
-

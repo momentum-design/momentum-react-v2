@@ -10,10 +10,7 @@ export default class DatePickerDefault extends React.PureComponent {
       <span>
         <h4 className="columns">Selected Date: {date && date.toDateString()}</h4>
         <DatePicker onSelect={(e, date) => this.setState({ date })}>
-          <Button
-            children='Pick a Date'
-            ariaLabel='DatePicker'
-          />
+          <Button children="Pick a Date" ariaLabel="DatePicker" />
         </DatePicker>
       </span>
     );

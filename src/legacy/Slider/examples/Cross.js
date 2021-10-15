@@ -2,8 +2,8 @@ import React from 'react';
 import { Slider } from '@momentum-ui/react';
 export default class SliderCross extends React.Component {
   state = {
-    slider1: {low: 100, high: 200},
-  }
+    slider1: { low: 100, high: 200 },
+  };
   render() {
     return (
       <div>
@@ -17,7 +17,7 @@ export default class SliderCross extends React.Component {
           value={this.state.slider1}
           step={1}
           canCross
-          onChange={value => this.setState({ slider1: value })}
+          onChange={(value) => this.setState({ slider1: value })}
         />
       </div>
     );

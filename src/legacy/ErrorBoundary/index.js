@@ -4,20 +4,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class ErrorBoundary extends React.Component {
-
-  state = { 
-    error: null, 
-    errorInfo: null
+  state = {
+    error: null,
+    errorInfo: null,
   };
 
   componentDidCatch(error, errorInfo) {
     this.setState({
       error: error,
-      errorInfo: errorInfo
+      errorInfo: errorInfo,
     });
 
     if (this.props.errorCallback) {
-
       this.props.errorCallback(error, errorInfo);
     }
   }
@@ -27,12 +25,12 @@ class ErrorBoundary extends React.Component {
     const { children, fallbackComponent } = this.props;
 
     const errorComponent = () =>
-      fallbackComponent
-      ? React.cloneElement(fallbackComponent, {
+      fallbackComponent ? (
+        React.cloneElement(fallbackComponent, {
           error: error,
-          errorInfo: errorInfo
+          errorInfo: errorInfo,
         })
-      : (
+      ) : (
         <div>
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
@@ -43,13 +41,7 @@ class ErrorBoundary extends React.Component {
         </div>
       );
 
-    return (
-      errorInfo
-        ?
-        errorComponent()
-        :
-        children
-    );
+    return errorInfo ? errorComponent() : children;
   }
 }
 
@@ -65,7 +57,7 @@ ErrorBoundary.propTypes = {
 ErrorBoundary.defaultProps = {
   children: null,
   errorCallback: null,
-  fallbackComponent: null
+  fallbackComponent: null,
 };
 
 ErrorBoundary.displayName = 'ErrorBoundary';

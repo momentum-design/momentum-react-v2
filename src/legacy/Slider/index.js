@@ -25,10 +25,11 @@ class Slider extends React.Component {
   }
 
   setScalePos = (scale, min, max) => {
-    this.ticksContainer && this.ticksContainer.childNodes.forEach((child, idx) => {
-      const leftValue = `${(scale[idx] - min) / max * 100}%`;
-      child.style.left = `calc(${leftValue} - ${(child.offsetWidth/2)}px)`;
-    });
+    this.ticksContainer &&
+      this.ticksContainer.childNodes.forEach((child, idx) => {
+        const leftValue = `${((scale[idx] - min) / max) * 100}%`;
+        child.style.left = `calc(${leftValue} - ${child.offsetWidth / 2}px)`;
+      });
   };
 
   getScale = () => {
@@ -37,7 +38,7 @@ class Slider extends React.Component {
       let value = max;
       let ticksArray = [max];
 
-      while (value > 0 && (value - tick) >= min) {
+      while (value > 0 && value - tick >= min) {
         value -= tick;
 
         ticksArray.unshift(Math.abs(Math.round(value / tick) * tick));
@@ -62,22 +63,30 @@ class Slider extends React.Component {
 
   getSteps = (position) => {
     if (position.isKeyBoard) return 1;
-    const diff = position.direction === 1 ? position.to - position.from : position.from - position.to;
+    const diff =
+      position.direction === 1 ? position.to - position.from : position.from - position.to;
     if (diff < 0) return 0;
     const steps = diff / this.getStepWidth();
     return steps - Math.floor(steps) >= 0.5 ? Math.ceil(steps) : Math.floor(steps);
   };
 
-
   getLimit = (pointerKey, direction) => {
     if (pointerKey === 'sliderLow') {
       return this.props.canCross
-      ? direction === 1 ? this.props.max : this.props.min
-      : direction === 1 ? this.state.sliderHigh : this.props.min;
+        ? direction === 1
+          ? this.props.max
+          : this.props.min
+        : direction === 1
+        ? this.state.sliderHigh
+        : this.props.min;
     } else if (pointerKey === 'sliderHigh') {
       return this.props.canCross
-      ? direction === 1 ? this.props.max : this.props.min
-      : direction === 1 ? this.props.max : this.state.sliderLow;
+        ? direction === 1
+          ? this.props.max
+          : this.props.min
+        : direction === 1
+        ? this.props.max
+        : this.state.sliderLow;
     }
   };
 
@@ -87,53 +96,59 @@ class Slider extends React.Component {
     if (this.props.onChange) {
       return this.props.onChange(
         typeof this.props.value === 'object'
-        ?
-        {
-          low: Math.min(this.state.sliderHigh, this.state.sliderLow),
-          high: Math.max(this.state.sliderHigh, this.state.sliderLow)
-        }
-        : this.state.sliderHigh
+          ? {
+              low: Math.min(this.state.sliderHigh, this.state.sliderLow),
+              high: Math.max(this.state.sliderHigh, this.state.sliderLow),
+            }
+          : this.state.sliderHigh
       );
     }
   };
 
   moveForward = (key, pixelMove, limit) => {
-    const newPosition = this.state[key] + pixelMove <= limit
-      ? this.state[key] + pixelMove
-      : limit;
+    const newPosition = this.state[key] + pixelMove <= limit ? this.state[key] + pixelMove : limit;
 
-    this.setState({
-      [key]: newPosition
-    }, () => this.returnCurrentValues());
+    this.setState(
+      {
+        [key]: newPosition,
+      },
+      () => this.returnCurrentValues()
+    );
   };
 
   moveBack = (key, pixelMove, limit) => {
-    const newPosition = this.state[key] - pixelMove >= limit
-      ? this.state[key] - pixelMove
-      : limit;
+    const newPosition = this.state[key] - pixelMove >= limit ? this.state[key] - pixelMove : limit;
 
-    this.setState({
-      [key]: newPosition
-    }, () => this.returnCurrentValues());
+    this.setState(
+      {
+        [key]: newPosition,
+      },
+      () => this.returnCurrentValues()
+    );
   };
-
 
   onSliderMove = (key, position) => {
     if (this.props.disabled) return;
     const limit = this.getLimit(key, position.direction);
     const pixelMove = this.getSteps(position) * this.props.step;
 
-    position.direction === 1 ? this.moveForward(key, pixelMove, limit) : this.moveBack(key, pixelMove, limit);
+    position.direction === 1
+      ? this.moveForward(key, pixelMove, limit)
+      : this.moveBack(key, pixelMove, limit);
   };
 
   getSelectionWidth = () => {
-    const baseValue = Number.isInteger(this.state.sliderLow) ? this.state.sliderLow : this.props.min;
+    const baseValue = Number.isInteger(this.state.sliderLow)
+      ? this.state.sliderLow
+      : this.props.min;
 
     this.setState({
       selectionWidth: {
         width: `${(Math.abs(this.state.sliderHigh - baseValue) / this.props.max) * 100}%`,
-        left: `${((Math.min(baseValue, this.state.sliderHigh) - this.props.min) / this.props.max) * 100}%`
-      }
+        left: `${
+          ((Math.min(baseValue, this.state.sliderHigh) - this.props.min) / this.props.max) * 100
+        }%`,
+      },
     });
   };
 
@@ -145,16 +160,12 @@ class Slider extends React.Component {
       const ticks = scale.map((tickValue, idx) => {
         const tickLabel = translateFn ? translateFn(tickValue) : tickValue;
         return (
-            <span key={`tick-${idx}`} className='md-slider__hashlabel'>
-              {tickLabel}
-            </span>
+          <span key={`tick-${idx}`} className="md-slider__hashlabel">
+            {tickLabel}
+          </span>
         );
       });
-      return (
-        <div ref={ref => this.ticksContainer = ref}>
-          {ticks}
-        </div>
-      );
+      return <div ref={(ref) => (this.ticksContainer = ref)}>{ticks}</div>;
     };
 
     return (
@@ -164,30 +175,27 @@ class Slider extends React.Component {
           `${(disabled && ` md-slider--disabled`) || ''}` +
           `${(className && ` ${className}`) || ''}`
         }
-        role='slider'
+        role="slider"
         aria-valuemin={min}
         aria-valuemax={max}
-        aria-valuenow={
-          typeof this.props.value !== 'object'
-          ?
-          sliderHigh : undefined
-        }
+        aria-valuenow={typeof this.props.value !== 'object' ? sliderHigh : undefined}
         aria-valuetext={
           typeof this.props.value === 'object'
-          ?
-          `Low is ${Math.min(sliderLow, sliderHigh)}, high is ${Math.max(sliderLow, sliderHigh)}` : undefined
+            ? `Low is ${Math.min(sliderLow, sliderHigh)}, high is ${Math.max(
+                sliderLow,
+                sliderHigh
+              )}`
+            : undefined
         }
       >
-        <span className='md-slider__bar' ref={ref => this.sliderBar = ref} />
-        <span className='md-slider__selection' style={selectionWidth} />
-        {
-          Number.isInteger(value.low)
-          &&
+        <span className="md-slider__bar" ref={(ref) => (this.sliderBar = ref)} />
+        <span className="md-slider__selection" style={selectionWidth} />
+        {Number.isInteger(value.low) && (
           <SliderPointer
             position={((sliderLow - min) / (max - min)) * 100}
             onMove={(b) => this.onSliderMove('sliderLow', b)}
           />
-        }
+        )}
         <SliderPointer
           position={((sliderHigh - min) / (max - min)) * 100}
           onMove={(b) => this.onSliderMove('sliderHigh', b)}
@@ -223,8 +231,8 @@ Slider.propTypes = {
       high: PropTypes.number.isRequired,
       low: PropTypes.number.isRequired,
     }),
-    PropTypes.number
-  ])
+    PropTypes.number,
+  ]),
 };
 
 Slider.defaultProps = {
@@ -236,7 +244,7 @@ Slider.defaultProps = {
   step: 1,
   tick: 0,
   translateFn: null,
-  value: 0
+  value: 0,
 };
 
 Slider.displayName = 'Slider';

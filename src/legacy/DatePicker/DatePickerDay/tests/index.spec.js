@@ -21,23 +21,21 @@ describe.only('tests for <DatePickerDay />', () => {
 
   it('should match selected day SnapShot', () => {
     const selected = moment(TEST_DATE);
-    const container = shallow(
-      <DatePickerDay day={day} month={3} selected={selected} />
-    );
+    const container = shallow(<DatePickerDay day={day} month={3} selected={selected} />);
     expect(container).toMatchSnapshot();
   });
 
   describe('should apply the right modifier classes', () => {
     it('should apply a modifier, when the date does not belong to current month', () => {
-      const container = mount(
-        <DatePickerDay day={day} month={10} />
+      const container = mount(<DatePickerDay day={day} month={10} />);
+      expect(container.find('.md-button').hasClass('md-datepicker__day--outside-month')).toEqual(
+        true
       );
-      expect(container.find('.md-button').hasClass('md-datepicker__day--outside-month')).toEqual(true);
     });
 
     it('should apply a modifier when the date is selected', () => {
       const container = mount(
-        <DatePickerContext.Provider value={{selected: day}}>
+        <DatePickerContext.Provider value={{ selected: day }}>
           <DatePickerDay day={day} month={4} />
         </DatePickerContext.Provider>
       );
@@ -45,15 +43,13 @@ describe.only('tests for <DatePickerDay />', () => {
     });
 
     it('should apply a modifier when the date is today`s date', () => {
-      const container = mount(
-        <DatePickerDay day={moment()} month={4} />
-      );
+      const container = mount(<DatePickerDay day={moment()} month={4} />);
       expect(container.find('.md-button').hasClass('md-datepicker__day--today')).toEqual(true);
     });
 
     it('should apply a modifier when the date is in focus', () => {
       const container = mount(
-        <DatePickerContext.Provider value={{focus: day}}>
+        <DatePickerContext.Provider value={{ focus: day }}>
           <DatePickerDay day={day} month={4} />
         </DatePickerContext.Provider>
       );
@@ -62,16 +58,14 @@ describe.only('tests for <DatePickerDay />', () => {
   });
 
   it('when Day the disabled, should set disabled prop on button', () => {
-    const container = mount(
-      <DatePickerDay day={day} month={4} filterDate={() => true} />
-    );
+    const container = mount(<DatePickerDay day={day} month={4} filterDate={() => true} />);
     expect(container.find('.md-button').props().disabled).toEqual(true);
   });
 
   it('onclick of Day should call the callback in context', () => {
     const onClickFn = jest.fn();
     const container = mount(
-      <DatePickerContext.Provider value={{handleDayClick: onClickFn}}>
+      <DatePickerContext.Provider value={{ handleDayClick: onClickFn }}>
         <DatePickerDay day={day} month={4} focus={day} />
       </DatePickerContext.Provider>
     );
@@ -82,7 +76,7 @@ describe.only('tests for <DatePickerDay />', () => {
   it('on press of enter/space key on Day, should call the callback in context', () => {
     const onClickFn = jest.fn();
     const container = mount(
-      <DatePickerContext.Provider value={{handleDayClick: onClickFn}}>
+      <DatePickerContext.Provider value={{ handleDayClick: onClickFn }}>
         <DatePickerDay day={day} month={4} focus={day} />
       </DatePickerContext.Provider>
     );
@@ -91,5 +85,4 @@ describe.only('tests for <DatePickerDay />', () => {
     container.find('.md-button').simulate('keyDown', { which: 32 });
     expect(onClickFn).toHaveBeenCalledTimes(2);
   });
-
 });

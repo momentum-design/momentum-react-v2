@@ -3,20 +3,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ListItemSection = props => {
-    const {
-      children,
-      className,
-      position,
-      ...otherProps
-    } = props;
+const ListItemSection = (props) => {
+  const { children, className, position, ...otherProps } = props;
 
   return (
     <div
-      className={
-        `md-list-item__${position}` +
-        `${(className && ` ${className}`) || ''}`
-      }
+      className={`md-list-item__${position}` + `${(className && ` ${className}`) || ''}`}
       {...otherProps}
     >
       {children}

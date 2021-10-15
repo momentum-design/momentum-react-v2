@@ -22,7 +22,7 @@ export default class PopoverKitchenSink extends React.Component {
         <PopoverDirection direction={'top-center'} />
         <PopoverDirection direction={'bottom-center'} />
         <PopoverDirection direction={'right-center'} isContained={true} />
-        <PopoverDirection direction={'left-center'} isContained={true}/>
+        <PopoverDirection direction={'left-center'} isContained={true} />
         <PopoverDirection direction={'top-center'} isContained={true} />
         <PopoverDirection direction={'bottom-center'} isContained={true} />
         <PopoverOffset />

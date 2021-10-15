@@ -16,13 +16,13 @@ describe('tests for <CardSection />', () => {
   });
 
   it('should render one full CardSection', () => {
-    const container = shallow(<CardSection full/>);
+    const container = shallow(<CardSection full />);
 
     expect(container.find('.md-card-section--full').length).toEqual(1);
   });
 
   it('should render a CardSection with the given classes', () => {
-    const container = shallow(<CardSection className="testing-class"/>);
+    const container = shallow(<CardSection className="testing-class" />);
 
     expect(container.find('.md-card-section').hasClass('testing-class')).toEqual(true);
   });

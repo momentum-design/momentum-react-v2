@@ -16,12 +16,14 @@ class AccordionGroup extends React.Component {
       onClick: this.props.onClick,
       onKeyDown: this.props.onKeyDown,
     };
-  }
+  };
 
-  componentDidMount () {
-    if(!this.verifyChildren()) {
-      throw new Error('AccordionGroup should contain 2 children ' +
-        'AccordionHeader and AccordionContent respectively.');
+  componentDidMount() {
+    if (!this.verifyChildren()) {
+      throw new Error(
+        'AccordionGroup should contain 2 children ' +
+          'AccordionHeader and AccordionContent respectively.'
+      );
     }
   }
 
@@ -34,7 +36,7 @@ class AccordionGroup extends React.Component {
       childrenArr[0].type.displayName === 'AccordionHeader' &&
       childrenArr[1].type.displayName === 'AccordionContent'
     );
-  }
+  };
 
   render() {
     const { children, className, isExpanded, disabled, focus, showSeparator } = this.props;
@@ -43,7 +45,7 @@ class AccordionGroup extends React.Component {
       return React.cloneElement(child, {
         disabled,
         focus,
-        showSeparator
+        showSeparator,
       });
     });
 

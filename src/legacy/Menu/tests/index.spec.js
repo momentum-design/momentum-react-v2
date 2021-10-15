@@ -30,9 +30,9 @@ describe('tests for <Menu />', () => {
   it('should not focus first if focusFirst={false}', () => {
     const wrapper = mount(
       <Menu focusFirst={false}>
-        <MenuItem label="one" eventKey="test-1"/>
-        <MenuItem label="two" eventKey="test-2"/>
-        <MenuItem label="three" eventKey="test-3"/>
+        <MenuItem label="one" eventKey="test-1" />
+        <MenuItem label="two" eventKey="test-2" />
+        <MenuItem label="three" eventKey="test-3" />
       </Menu>
     );
     const instance = wrapper.find('Menu').instance();
@@ -48,10 +48,11 @@ describe('tests for <Menu />', () => {
     document.body.append(focusContainer);
     const wrapper = mount(
       <Menu>
-        <MenuItem label="one" isHeader eventKey="test-1"/>
-        <MenuItem label="two" disabled eventKey="test-2"/>
-        <MenuItem label="three" eventKey="test-3"/>
-      </Menu>, {attachTo: focusContainer}
+        <MenuItem label="one" isHeader eventKey="test-1" />
+        <MenuItem label="two" disabled eventKey="test-2" />
+        <MenuItem label="three" eventKey="test-3" />
+      </Menu>,
+      { attachTo: focusContainer }
     );
     const instance = wrapper.find('Menu').instance();
 
@@ -68,8 +69,8 @@ describe('tests for <Menu />', () => {
         <SubMenu label="one" eventKey="test-1">
           <MenuItem label="one-one" key="0" eventKey="test-1-1" />
         </SubMenu>
-        <MenuItem label="two" eventKey="test-2"/>
-        <MenuItem label="three" eventKey="test-3"/>
+        <MenuItem label="two" eventKey="test-2" />
+        <MenuItem label="three" eventKey="test-3" />
       </Menu>
     );
     let menuItem = wrapper.find('SubMenu').at(0);
@@ -82,19 +83,12 @@ describe('tests for <Menu />', () => {
 
     // click on first subMenu Item
     menuItem = wrapper.find('.md-menu-item').at(0);
-    menuItem
-      .find('.md-event-overlay__children .md-list-item')
-      .simulate('click');
+    menuItem.find('.md-event-overlay__children .md-list-item').simulate('click');
 
     expect(selectedIndex).toEqual('test-1-1');
     expect(instance.state.listContext.active).toEqual(['test-1-1']);
 
-    expect(
-      wrapper
-        .find('SubMenu')
-        .at(0)
-        .props().isOpen
-    ).toEqual(false);
+    expect(wrapper.find('SubMenu').at(0).props().isOpen).toEqual(false);
   });
 
   it('should handle keyboard keys', () => {
@@ -103,37 +97,28 @@ describe('tests for <Menu />', () => {
     const wrapper = mount(
       <Menu onSelect={onSelect}>
         <SubMenu label="one" eventKey="test-1">
-          <MenuItem label="one-one" key="0" eventKey="test-1-1"/>
+          <MenuItem label="one-one" key="0" eventKey="test-1-1" />
         </SubMenu>
         <MenuItem label="two" eventKey="test-2" />
-        <MenuItem label="three" eventKey="test-3"/>
+        <MenuItem label="three" eventKey="test-3" />
       </Menu>
     );
     const instance = wrapper.find('Menu').instance();
 
     // press down arrow
-    let item = wrapper
-      .find('SubMenu')
-      .at(0)
-      .find('.md-list-item');
+    let item = wrapper.find('SubMenu').at(0).find('.md-list-item');
     item.simulate('keyDown', { which: 40 });
 
     expect(instance.state.listContext.focus).toEqual('test-2');
 
     // press up arrow
-    item = wrapper
-      .find('MenuItem')
-      .at(0)
-      .find('.md-list-item');
+    item = wrapper.find('MenuItem').at(0).find('.md-list-item');
     item.simulate('keyDown', { which: 38 });
 
     expect(instance.state.listContext.focus).toEqual('test-1');
 
     // press right arrow
-    item = wrapper
-      .find('SubMenu')
-      .at(0)
-      .find('.md-list-item');
+    item = wrapper.find('SubMenu').at(0).find('.md-list-item');
     item.simulate('keyDown', { which: 39 });
 
     expect(selectedIndex).toEqual('test-1');
@@ -147,7 +132,10 @@ describe('tests for <Menu />', () => {
     const stopImmediatePropagation = jest.fn();
 
     // press left arrow
-    subMenuItem.simulate('keyDown', { which: 37, nativeEvent: {stopImmediatePropagation: stopImmediatePropagation} });
+    subMenuItem.simulate('keyDown', {
+      which: 37,
+      nativeEvent: { stopImmediatePropagation: stopImmediatePropagation },
+    });
 
     expect(instance.state.listContext.focus).toEqual('test-1');
     expect(stopImmediatePropagation).toBeCalled();

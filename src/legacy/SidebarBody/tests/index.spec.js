@@ -10,7 +10,7 @@ describe('<SidebarBody />', () => {
   });
 
   it('should add customized class name if className prop is set', () => {
-    const wrapper = shallow(<SidebarBody className='testClassName'/>);
+    const wrapper = shallow(<SidebarBody className="testClassName" />);
 
     expect(wrapper.find('.testClassName').exists()).toBeTruthy();
   });
@@ -18,7 +18,7 @@ describe('<SidebarBody />', () => {
   it('should render children if children prop is set', () => {
     const wrapper = shallow(
       <SidebarBody>
-        <div className='dummy-children'>Dummy Children</div>
+        <div className="dummy-children">Dummy Children</div>
       </SidebarBody>
     );
 

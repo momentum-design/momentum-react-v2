@@ -2,14 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Avatar,
-  CompositeAvatar,
-  Button,
-  Icon
-} from '@momentum-ui/react';
+import { Avatar, CompositeAvatar, Button, Icon } from '@momentum-ui/react';
 
-const AlertMeeting = props => {
+const AlertMeeting = (props) => {
   const {
     attendees,
     avatar,
@@ -56,7 +51,7 @@ const AlertMeeting = props => {
             alt={attendees[0].alt}
             src={attendees[0].src}
             title={attendees[0].title}
-          {...attendees[0].props}
+            {...attendees[0].props}
           />
         );
       } else {
@@ -65,15 +60,10 @@ const AlertMeeting = props => {
     }
   };
 
-  const handleKeyDown = e => {
-    if (
-      e.which === 32
-      || e.which === 13
-      || e.charCode === 32
-      || e.charCode === 13
-      ) {
-        onClick && onClick(e);
-        e.preventDefault();
+  const handleKeyDown = (e) => {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
+      onClick && onClick(e);
+      e.preventDefault();
     }
 
     onKeyDown && onKeyDown(e);
@@ -82,46 +72,26 @@ const AlertMeeting = props => {
   return (
     show && (
       <div
-        className={
-          'md-alert md-alert--meeting' +
-          `${(className && ` ${className}`) || ''}`
-        }
-        {
-          ...onClick && { onClick }
-        }
-        {
-          ...(onClick || onKeyDown) && {
-            onKeyDown: e => handleKeyDown(e),
-            role: 'button'
-          }
-        }
+        className={'md-alert md-alert--meeting' + `${(className && ` ${className}`) || ''}`}
+        {...(onClick && { onClick })}
+        {...((onClick || onKeyDown) && {
+          onKeyDown: (e) => handleKeyDown(e),
+          role: 'button',
+        })}
         {...otherProps}
       >
         {renderAvatar()}
-        <div
-          className={
-            'md-alert__content' +
-            `${(onSnooze) ? '' : ' md-alert__content--wide'}`
-          }
-        >
-          <div
-            className='md-alert__title'
-            title={title}
-          >
+        <div className={'md-alert__content' + `${onSnooze ? '' : ' md-alert__content--wide'}`}>
+          <div className="md-alert__title" title={title}>
             {title}
           </div>
-          <div className='md-alert__status'>
-            {status}
-          </div>
-          <div
-            className='md-alert__message'
-            title={message}
-          >
+          <div className="md-alert__status">{status}</div>
+          <div className="md-alert__message" title={message}>
             {message}
           </div>
         </div>
-        {onSnooze &&
-          <div className='md-alert__button'>
+        {onSnooze && (
+          <div className="md-alert__button">
             <Button
               ariaLabel={remindAriaLabel}
               circle
@@ -129,19 +99,13 @@ const AlertMeeting = props => {
               size={44}
               {...snoozeBtnProps}
             >
-              <Icon name='alarm_16' />
+              <Icon name="alarm_16" />
             </Button>
           </div>
-        }
-        <div className='md-alert__button'>
-          <Button
-            ariaLabel={closeAriaLabel}
-            circle
-            onClick={onHide}
-            size={44}
-            {...closeBtnProps}
-          >
-            <Icon name='cancel_16' />
+        )}
+        <div className="md-alert__button">
+          <Button ariaLabel={closeAriaLabel} circle onClick={onHide} size={44} {...closeBtnProps}>
+            <Icon name="cancel_16" />
           </Button>
         </div>
       </div>

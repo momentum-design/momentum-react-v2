@@ -2,13 +2,15 @@ import React from 'react';
 import { Slider } from '@momentum-ui/react';
 export default class SliderStep extends React.Component {
   state = {
-    slider1: { low: 100, high: 200 }
-  }
+    slider1: { low: 100, high: 200 },
+  };
   render() {
     return (
       <React.Fragment>
         <div>
-          <h5>Low: {this.state.slider1.low} High: {this.state.slider1.high}</h5>
+          <h5>
+            Low: {this.state.slider1.low} High: {this.state.slider1.high}
+          </h5>
           <Slider
             min={0}
             max={500}
@@ -16,7 +18,7 @@ export default class SliderStep extends React.Component {
             value={this.state.slider1}
             step={20}
             canCross
-            onChange={value => this.setState({ slider1: value })}
+            onChange={(value) => this.setState({ slider1: value })}
           />
         </div>
       </React.Fragment>

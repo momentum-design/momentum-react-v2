@@ -6,7 +6,6 @@ describe('@momentum-ui/react', () => {
     cy.viewport(1001, 661);
   });
 
-
   it('snapshot of date picker', () => {
     cy.get('#default-1')
       .click()

@@ -7,7 +7,8 @@ describe('tests for <ButtonGroup />', () => {
     const container = mount(
       <ButtonGroup>
         <Button ariaLabel="test">1</Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
 
     expect(container).toMatchSnapshot();
   });
@@ -17,7 +18,8 @@ describe('tests for <ButtonGroup />', () => {
       <ButtonGroup>
         <Button ariaLabel="test">1</Button>
         <Button ariaLabel="test">2</Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
 
     expect(container.find('.md-button-group').hasClass('md-button-group--justified')).toEqual(true);
   });
@@ -27,7 +29,8 @@ describe('tests for <ButtonGroup />', () => {
       <ButtonGroup theme="dark">
         <Button ariaLabel="test">1</Button>
         <Button ariaLabel="test">2</Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
 
     expect(container.find('.md-button-group').hasClass('md-button-group--dark')).toEqual(true);
   });
@@ -37,7 +40,8 @@ describe('tests for <ButtonGroup />', () => {
       <ButtonGroup type="pill">
         <Button ariaLabel="test">1</Button>
         <Button ariaLabel="test">2</Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
 
     expect(container.find('.md-button-group').hasClass('md-button-group--pill')).toEqual(true);
   });
@@ -47,7 +51,8 @@ describe('tests for <ButtonGroup />', () => {
       <ButtonGroup highlightSelected={false}>
         <Button ariaLabel="test">1</Button>
         <Button ariaLabel="test">2</Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
 
     container.find('button').at(0).simulate('click');
     expect(container.find('button').at(0).hasClass('active')).toEqual(false);
@@ -57,20 +62,21 @@ describe('tests for <ButtonGroup />', () => {
     const container = mount(
       <ButtonGroup theme="dark">
         <Button ariaLabel="test">
-          <Icon name="icon-arrow-left_12"/>
+          <Icon name="icon-arrow-left_12" />
         </Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
 
     expect(container.find('button').at(0).hasClass('md-button--icon-group')).toEqual(true);
   });
-
 
   it('onClick should should mark the button as active', () => {
     const container = mount(
       <ButtonGroup>
         <Button ariaLabel="test">1</Button>
         <Button ariaLabel="test">2</Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
     container.find('button').at(1).simulate('click');
     expect(container.find('button').at(1).props().tabIndex).toEqual(0);
     expect(container.find('button').at(1).hasClass('active')).toEqual(true);
@@ -83,17 +89,27 @@ describe('tests for <ButtonGroup />', () => {
     document.body.append(focusContainer);
     mount(
       <ButtonGroup focusOnLoad>
-        <Button ariaLabel="test" id="one">1</Button>
-        <Button ariaLabel="test" id="two">2</Button>
-      </ButtonGroup>, {attachTo: focusContainer});
+        <Button ariaLabel="test" id="one">
+          1
+        </Button>
+        <Button ariaLabel="test" id="two">
+          2
+        </Button>
+      </ButtonGroup>,
+      { attachTo: focusContainer }
+    );
     expect(document.activeElement.id).toEqual('one');
   });
 
   it('when active prop is passed, the button should be selected', () => {
     const container = mount(
       <ButtonGroup active={'two'}>
-        <Button ariaLabel="test" id="one">1</Button>
-        <Button ariaLabel="test" id="two">2</Button>
+        <Button ariaLabel="test" id="one">
+          1
+        </Button>
+        <Button ariaLabel="test" id="two">
+          2
+        </Button>
       </ButtonGroup>
     );
     expect(container.find('button').at(1).hasClass('active')).toEqual(true);
@@ -104,7 +120,8 @@ describe('tests for <ButtonGroup />', () => {
       <ButtonGroup>
         <Button ariaLabel="test">one</Button>
         <Button ariaLabel="test">two</Button>
-      </ButtonGroup>);
+      </ButtonGroup>
+    );
     expect(container.find('button').at(0).props().tabIndex).toEqual(0);
     // right
     container.find('button').at(0).simulate('keydown', { keyCode: 39, which: 39 });
@@ -129,11 +146,10 @@ describe('tests for <ButtonGroup />', () => {
   it('should not throw error if child is not a Button', () => {
     const container = shallow(
       <ButtonGroup>
-        <div/>
+        <div />
       </ButtonGroup>
     );
 
     expect(container.find('.md-button-group').exists()).toEqual(true);
   });
-
 });

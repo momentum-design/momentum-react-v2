@@ -8,7 +8,7 @@ export default class CheckboxKitchenSink extends React.PureComponent {
     checkboxCheckedReadonly: true,
   };
   render() {
-    const checkboxes = value => (
+    const checkboxes = (value) => (
       <>
         <Checkbox
           name={`checkbox${value}`}

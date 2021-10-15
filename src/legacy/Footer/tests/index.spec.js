@@ -9,14 +9,14 @@ describe('tests for <Footer />', () => {
   });
 
   it('should render top section only if children props is passed', () => {
-    const container = shallow(<Footer children='dummy content' />);
+    const container = shallow(<Footer children="dummy content" />);
 
     expect(container.find('.md-footer__top').exists()).toBeTruthy();
     expect(container.find('.md-footer__bottom').exists()).toBeFalsy();
   });
 
   it('should render social section only if only social content is passed', () => {
-    const container = shallow(<Footer social='Cisco' />);
+    const container = shallow(<Footer social="Cisco" />);
 
     expect(container.find('.md-footer__bottom--position-right').exists()).toBeTruthy();
     expect(container.find('.md-footer__bottom--position-left').exists()).toBeFalsy();
@@ -24,7 +24,7 @@ describe('tests for <Footer />', () => {
   });
 
   it('should render logo section only if only logo content is passed', () => {
-    const container = shallow(<Footer logo='Cisco Webex' />);
+    const container = shallow(<Footer logo="Cisco Webex" />);
 
     expect(container.find('.md-footer__bottom--position-left').exists()).toBeTruthy();
     expect(container.find('.md-footer__bottom--position-right').exists()).toBeFalsy();
@@ -32,7 +32,7 @@ describe('tests for <Footer />', () => {
   });
 
   it('should render copyright section only if only copyright content is passed', () => {
-    const container = shallow(<Footer copyright='Cisco Webex' />);
+    const container = shallow(<Footer copyright="Cisco Webex" />);
 
     expect(container.find('.md-footer__bottom--position-left').exists()).toBeTruthy();
     expect(container.find('.md-footer__bottom--position-right').exists()).toBeFalsy();

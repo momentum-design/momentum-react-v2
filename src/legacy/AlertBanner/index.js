@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '@momentum-ui/react';
 
-const AlertBanner = props => {
+const AlertBanner = (props) => {
   const {
     className,
     closable,
@@ -17,13 +17,8 @@ const AlertBanner = props => {
     ...otherProps
   } = props;
 
-  const handleKeyDown = e => {
-    if (
-      e.which === 32 
-      || e.charCode === 32 
-      || e.which === 13
-      || e.charCode === 13
-      ) {
+  const handleKeyDown = (e) => {
+    if (e.which === 32 || e.charCode === 32 || e.which === 13 || e.charCode === 13) {
       onHide && onHide(e);
       e.preventDefault();
     }
@@ -33,7 +28,7 @@ const AlertBanner = props => {
 
   return (
     show && (
-      <div 
+      <div
         className={
           `md-alert-banner` +
           ` md-alert-banner--${type}` +
@@ -41,21 +36,19 @@ const AlertBanner = props => {
         }
         {...otherProps}
       >
-        <div className='md-alert-banner__text'>
-          {children}
-        </div>
+        <div className="md-alert-banner__text">{children}</div>
         {closable && (
           <div
-            className='md-alert-banner__close'
-            {...onHide && { onClick: e => onHide(e) }}
-            {...(onHide || onKeyDownClose) && {
-              onKeyDown: e => handleKeyDown(e),
+            className="md-alert-banner__close"
+            {...(onHide && { onClick: (e) => onHide(e) })}
+            {...((onHide || onKeyDownClose) && {
+              onKeyDown: (e) => handleKeyDown(e),
               role: 'button',
-              tabIndex: 0
-            }}
+              tabIndex: 0,
+            })}
             {...closeBtnProps}
           >
-            <Icon name='cancel_16'/>
+            <Icon name="cancel_16" />
           </div>
         )}
       </div>

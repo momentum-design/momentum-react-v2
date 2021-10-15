@@ -1,13 +1,10 @@
 import React from 'react';
-import {
-  Button,
-  Coachmark,
-} from '@momentum-ui/react';
+import { Button, Coachmark } from '@momentum-ui/react';
 
- export default class CoachmarkContent extends React.Component {
+export default class CoachmarkContent extends React.Component {
   state = {
-    isOpen: true
-  }
+    isOpen: true,
+  };
 
   render() {
     const { isOpen } = this.state;
@@ -16,10 +13,12 @@ import {
       <Coachmark
         isOpen={isOpen}
         contentNode={<div>contentNode prop(node)</div>}
-        direction='bottom-center'
-        ariaLabel='Open Coachmark'
+        direction="bottom-center"
+        ariaLabel="Open Coachmark"
       >
-        <Button ariaLabel='test' onClick={() => this.setState({ isOpen: !isOpen })}>Coachmark Anchor</Button>
+        <Button ariaLabel="test" onClick={() => this.setState({ isOpen: !isOpen })}>
+          Coachmark Anchor
+        </Button>
       </Coachmark>
     );
   }

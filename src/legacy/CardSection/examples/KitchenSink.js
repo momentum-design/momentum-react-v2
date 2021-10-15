@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  CardSectionDefault,
-  CardSectionFull,
-  CardSectionStyled,
-} from './index';
+import { CardSectionDefault, CardSectionFull, CardSectionStyled } from './index';
 
 export default class CardKitchenSink extends React.Component {
   render() {

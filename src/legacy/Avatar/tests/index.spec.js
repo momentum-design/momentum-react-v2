@@ -22,13 +22,13 @@ describe('tests for <Avatar />', () => {
   });
 
   it('should handle isDecrypting prop', () => {
-    const container = mount(<Avatar isDecrypting icon={<Icon name='handset_24' />} />);
+    const container = mount(<Avatar isDecrypting icon={<Icon name="handset_24" />} />);
 
     expect(container.find('.md-decrypting').length).toEqual(1);
   });
 
   it('should handle isOverview prop', () => {
-    const container = mount(<Avatar isOverview icon={<Icon name='handset_24' />} />);
+    const container = mount(<Avatar isOverview icon={<Icon name="handset_24" />} />);
 
     expect(container.find('.md-avatar__icon--overview').length).toEqual(1);
   });
@@ -59,7 +59,9 @@ describe('tests for <Avatar />', () => {
   });
 
   it('should override title for user when initials props present', () => {
-    const container = mount(<Avatar initials="WX" src="test.png" title="Francis Michael Lincoln" />);
+    const container = mount(
+      <Avatar initials="WX" src="test.png" title="Francis Michael Lincoln" />
+    );
     expect(container.find('.md-avatar__letter').text()).toEqual('WX');
   });
 
@@ -80,7 +82,6 @@ describe('tests for <Avatar />', () => {
   });
 
   describe('should apply respective classes for types', () => {
-
     it('when the type is group', () => {
       const container = mount(<Avatar src="test.png" title="Test Group" type="group" />);
       expect(container.find('.md-avatar--group').length).toEqual(1);
@@ -133,9 +134,8 @@ describe('tests for <Avatar />', () => {
     });
 
     describe('should for type self apply correct icon size', () => {
-
       it('when size is 36', () => {
-        const container = mount(<Avatar src="test.png" title="Test Group" size={36} type='self'/>);
+        const container = mount(<Avatar src="test.png" title="Test Group" size={36} type="self" />);
 
         expect(container.find('.md-icon').getDOMNode().style.fontSize).toEqual('16px');
         expect(container.find('.md-avatar__self').length).toEqual(1);
@@ -149,12 +149,11 @@ describe('tests for <Avatar />', () => {
       });
 
       it('when size is 40', () => {
-        const container = mount(<Avatar src="test.png" size={40} title="Test Group" type='self'/>);
+        const container = mount(<Avatar src="test.png" size={40} title="Test Group" type="self" />);
 
         expect(container.find('.md-icon').getDOMNode().style.fontSize).toEqual('18px');
         expect(container.find('.md-avatar__self').length).toEqual(1);
       });
-
     });
 
     it('when the failureBadge is true', () => {
@@ -166,11 +165,9 @@ describe('tests for <Avatar />', () => {
       const container = mount(<Avatar src="test.png" title="Test Group" hasNotification />);
       expect(container.find('.md-avatar__notification-badge').length).toEqual(1);
     });
-
   });
 
   describe('should apply respective classes for size', () => {
-
     it('when size is 18/xsmall', () => {
       let container = mount(<Avatar src="test.png" title="Test Group" size="xsmall" />);
       expect(container.find('.md-avatar--xsmall').length).toEqual(1);
@@ -198,7 +195,7 @@ describe('tests for <Avatar />', () => {
     it('when size is 40/medium(default)', () => {
       let container = mount(<Avatar src="test.png" title="Test Group" />);
       expect(container.find('.md-avatar--medium').length).toEqual(1);
-      container = mount(<Avatar src="test.png" size={40} title="Test Group"/>);
+      container = mount(<Avatar src="test.png" size={40} title="Test Group" />);
       expect(container.find('.md-avatar--40').length).toEqual(1);
     });
 
@@ -239,24 +236,14 @@ describe('tests for <Avatar />', () => {
 
   it('should apply clickable class when onClick prop is defined', () => {
     let container = mount(
-      <Avatar
-        src="test.png"
-        title="Test Group"
-        onClick={()=>{}}
-        ariaLabel='Test onClick'
-      />
+      <Avatar src="test.png" title="Test Group" onClick={() => {}} ariaLabel="Test onClick" />
     );
 
     expect(container.find('.md-avatar--clickable').length).toEqual(1);
   });
 
   it('should not apply clickable class when onClick prop is undefined', () => {
-    let container = mount(
-      <Avatar
-        src="test.png"
-        title="Test Group"
-      />
-    );
+    let container = mount(<Avatar src="test.png" title="Test Group" />);
 
     expect(container.find('.md-avatar--clickable').length).toEqual(0);
   });
@@ -274,7 +261,7 @@ describe('tests for <Avatar />', () => {
   it('should wrap in button', () => {
     const props = {
       name: 'accessibility_16',
-      onClick: ()=>{},
+      onClick: () => {},
       ariaLabel: 'Accesible',
     };
 
@@ -300,7 +287,7 @@ describe('tests for <Avatar />', () => {
   it('should pass other props to the avatar', () => {
     const props = {
       name: 'accessibility_16',
-      id: 'testId'
+      id: 'testId',
     };
 
     const container = mount(<Avatar {...props} />);
@@ -313,7 +300,7 @@ describe('tests for <Avatar />', () => {
       name: 'accessibility_16',
       id: 'testId',
       ariaLabel: 'Accesible',
-      onClick: ()=>{}
+      onClick: () => {},
     };
 
     const container = mount(<Avatar {...props} />);
@@ -325,5 +312,4 @@ describe('tests for <Avatar />', () => {
     const container = mount(<Avatar src="test.png" title="  " size={36} />);
     expect(container.find('.md-avatar__letter').length).toEqual(1);
   });
-
 });

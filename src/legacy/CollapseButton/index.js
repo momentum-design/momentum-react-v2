@@ -4,14 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Icon } from '@momentum-ui/react';
 
-const CollapseButton = props => {
-  const { 
-    alignment,
-    className,
-    collapse,
-    onClick,
-    ...otherProps
-  } = props;
+const CollapseButton = (props) => {
+  const { alignment, className, collapse, onClick, ...otherProps } = props;
 
   const handleClick = () => {
     onClick && onClick();
@@ -29,7 +23,7 @@ const CollapseButton = props => {
         ` md-collapse-button--${alignment}` +
         `${(className && ` ${className}`) || ''}`
       }
-      children={<Icon name={getIconName()}/>}
+      children={<Icon name={getIconName()} />}
       onClick={() => handleClick()}
       {...otherProps}
     />

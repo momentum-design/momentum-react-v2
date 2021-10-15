@@ -1,9 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import {
-  Button,
-  Tooltip,
-} from '@momentum-ui/react';
+import { Button, Tooltip } from '@momentum-ui/react';
 
 describe('tests for <Tooltip />', () => {
   beforeAll(() => {
@@ -68,7 +65,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (top)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "top-center" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'top-center' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -82,7 +79,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (top-left)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "top-left" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'top-left' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -96,7 +93,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (top-right)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "top-right" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'top-right' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -110,7 +107,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (bottom)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "bottom-center" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'bottom-center' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -124,7 +121,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (bottom-left)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "bottom-left" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'bottom-left' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -138,7 +135,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (bottom-right)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "bottom-right" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'bottom-right' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -152,7 +149,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (left)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "left-center" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'left-center' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -166,7 +163,7 @@ describe('tests for <Tooltip />', () => {
 
   it('should parse direction correctly (right)', () => {
     const container = mount(
-      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: "right-center" }}>
+      <Tooltip tooltip="test" tooltipTrigger="Click" popoverProps={{ direction: 'right-center' }}>
         <Button children="test button" ariaLabel="test" />
       </Tooltip>
     );
@@ -189,8 +186,6 @@ describe('tests for <Tooltip />', () => {
     jest.runAllTimers();
     container.update();
 
-    expect(container.find('.md-tooltip__text').prop('style').width).toEqual(
-      '100px'
-    );
+    expect(container.find('.md-tooltip__text').prop('style').width).toEqual('100px');
   });
 });
