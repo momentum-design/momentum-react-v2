@@ -16,13 +16,13 @@ describe('tests for <InputSection />', () => {
   });
 
   it('should render input section with position prop', () => {
-    const container = shallow(<InputSection position='after' />);
+    const container = shallow(<InputSection position="after" />);
 
     expect(container.find('.md-input__after').exists()).toEqual(true);
   });
 
   it('should render className if prop is passed', () => {
-    const container = shallow(<InputSection className='class-test' />);
+    const container = shallow(<InputSection className="class-test" />);
 
     expect(container.find('.class-test').exists()).toEqual(true);
   });
@@ -34,7 +34,7 @@ describe('tests for <InputSection />', () => {
   });
 
   it('should pass otherProps to container', () => {
-    const container = shallow(<InputSection id='testid' />);
+    const container = shallow(<InputSection id="testid" />);
 
     expect(container.find('#testid').exists()).toEqual(true);
   });

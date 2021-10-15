@@ -57,14 +57,10 @@ const Chip = ({
 
   return (
     <div className={'md-chip' + `${(className && ` ${className}`) || ''}`}>
-      <div className={'md-chip-left' + `${(type && ` ${type}`) || ''}`}>
-        {chipLeft}
-      </div>
+      <div className={'md-chip-left' + `${(type && ` ${type}`) || ''}`}>{chipLeft}</div>
       <div className="md-chip-center">
         {title && <div className="md-chip__title lead">{title}</div>}
-        {subTitle && (
-          <div className="md-chip__sub-title subheader">{subTitle}</div>
-        )}
+        {subTitle && <div className="md-chip__sub-title subheader">{subTitle}</div>}
       </div>
       {chipRight && <div className="md-chip-right">{chipRight}</div>}
     </div>

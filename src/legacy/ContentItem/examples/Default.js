@@ -5,21 +5,11 @@ export default class ChatContentItem extends React.PureComponent {
   render() {
     const actionNode = (
       <div>
-        <Button
-          ariaLabel="Open in folder"
-          style={{ backgroundColor: 'black' }}
-          circle
-          size={32}
-        >
+        <Button ariaLabel="Open in folder" style={{ backgroundColor: 'black' }} circle size={32}>
           <Icon name="open-in-folder_14" color="white" />
         </Button>
 
-        <Button
-          ariaLabel="Download"
-          style={{ backgroundColor: 'black' }}
-          circle
-          size={32}
-        >
+        <Button ariaLabel="Download" style={{ backgroundColor: 'black' }} circle size={32}>
           <Icon name="icon-arrow-tail-down_14" color="white" />
         </Button>
       </div>

@@ -5,11 +5,11 @@ export default function LoadingInputSearch() {
   return (
     <InputSearch
       clear
-      htmlId='loadingSearchInput'
-      containerSize='medium-6'
+      htmlId="loadingSearchInput"
+      containerSize="medium-6"
       isLoading
-      label='Loading Search Input'
-      name='loadingSearchInput'
+      label="Loading Search Input"
+      name="loadingSearchInput"
     />
   );
 }

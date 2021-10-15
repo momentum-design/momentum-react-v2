@@ -4,17 +4,17 @@ import { Input } from '@momentum-ui/react';
 export default function InputWarning() {
   return (
     <Input
-      name='inputWarning'
-      label='Warning Input'
-      htmlId='inputWarning'
-      containerSize='small-12 medium-6'
+      name="inputWarning"
+      label="Warning Input"
+      htmlId="inputWarning"
+      containerSize="small-12 medium-6"
       messageArr={[
         {
           message: 'This is where the warning message would be.',
           type: 'warning',
         },
       ]}
-      value='Warning Text'
+      value="Warning Text"
     />
   );
 }

@@ -1,9 +1,7 @@
 import moment from 'moment';
 
 export function newDateWithOffset(utcOffset) {
-  return moment()
-    .utc()
-    .utcOffset(utcOffset);
+  return moment().utc().utcOffset(utcOffset);
 }
 
 export function now(maybeFixedUtcOffset) {
@@ -43,11 +41,11 @@ export function addMonths(date, amount) {
 }
 
 export function subtractDays(date, amount) {
-  return date.subtract(amount, "days");
+  return date.subtract(amount, 'days');
 }
 
 export function subtractWeeks(date, amount) {
-  return date.subtract(amount, "weeks");
+  return date.subtract(amount, 'weeks');
 }
 
 export function subtractMonths(date, amount) {
@@ -82,10 +80,7 @@ export function isSameMonth(date1, date2) {
   }
 }
 
-export function isDayDisabled(
-  day,
-  { minDate, maxDate, filterDate } = {}
-) {
+export function isDayDisabled(day, { minDate, maxDate, filterDate } = {}) {
   return (
     (minDate && day.isBefore(moment(minDate), 'day')) ||
     (maxDate && day.isAfter(moment(maxDate), 'day')) ||
@@ -96,10 +91,10 @@ export function isDayDisabled(
 
 export function shouldPrevMonthDisable(day, minDate) {
   const firstDayOfCurrMonth = day.clone().startOf('month');
-  return (minDate && !moment(minDate).isBefore(firstDayOfCurrMonth));
+  return minDate && !moment(minDate).isBefore(firstDayOfCurrMonth);
 }
 
 export function shouldNextMonthDisable(day, maxDate) {
   const lastDayOfCurrMonth = day.clone().endOf('month');
-  return (maxDate && !moment(maxDate).isAfter(lastDayOfCurrMonth));
+  return maxDate && !moment(maxDate).isAfter(lastDayOfCurrMonth);
 }

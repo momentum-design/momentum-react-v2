@@ -10,11 +10,13 @@ describe('tests for <Lightbox />', () => {
         name="test"
         height={100}
         width={100}
-        pages={[{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
       />
     );
     expect(container).toMatchSnapshot();
@@ -28,11 +30,13 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         downloading
-        pages={[{
-          decrypting: false,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: false,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
       />
     );
     const downloadButton = container.find('.md-lightbox__download-button .icon-download_16');
@@ -49,11 +53,13 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         downloading={false}
-        pages={[{
-          decrypting: false,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: false,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
       />
     );
     const downloadButton = container.find('.md-lightbox__control-download');
@@ -63,7 +69,7 @@ describe('tests for <Lightbox />', () => {
   });
 
   it('appends className to image', () => {
-    const className = "new-class-name";
+    const className = 'new-class-name';
     const container = shallow(
       <Lightbox
         applicationId="app"
@@ -72,15 +78,17 @@ describe('tests for <Lightbox />', () => {
         imgClassName={className}
         width={100}
         info={{
-          sharedBy:"Shared by abcd",
-          sharedOn: "At 4/17/2018, 10:02 AM",
-          size: "34.4 KB"
+          sharedBy: 'Shared by abcd',
+          sharedOn: 'At 4/17/2018, 10:02 AM',
+          size: '34.4 KB',
         }}
-        pages={[{
-          decrypting: false,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: false,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
       />
     );
     const imageViewport = container.find('.md-lightbox__viewport-image');
@@ -96,15 +104,17 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         info={{
-          sharedBy:"Shared by abcd",
-          sharedOn: "At 4/17/2018, 10:02 AM",
-          size: "34.4 KB"
+          sharedBy: 'Shared by abcd',
+          sharedOn: 'At 4/17/2018, 10:02 AM',
+          size: '34.4 KB',
         }}
-        pages={[{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
       />
     );
     const sharedBy = container.find('.md-lightbox__header-sharer');
@@ -124,23 +134,27 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         info={{
-          sharedBy:"Shared by abcd",
-          sharedOn: "At 4/17/2018, 10:02 AM",
-          size: "34.4 KB"
+          sharedBy: 'Shared by abcd',
+          sharedOn: 'At 4/17/2018, 10:02 AM',
+          size: '34.4 KB',
         }}
-        pages={[{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        },{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        },{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
         index={1}
         onChange={onChangeFn}
       />
@@ -162,15 +176,17 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         info={{
-          sharedBy:"Shared by abcd",
-          sharedOn: "At 4/17/2018, 10:02 AM",
-          size: "34.4 KB"
+          sharedBy: 'Shared by abcd',
+          sharedOn: 'At 4/17/2018, 10:02 AM',
+          size: '34.4 KB',
         }}
-        pages={[{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
         onClose={onCloseFn}
       />
     );
@@ -187,15 +203,17 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         info={{
-          sharedBy:"Shared by abcd",
-          sharedOn: "At 4/17/2018, 10:02 AM",
-          size: "34.4 KB"
+          sharedBy: 'Shared by abcd',
+          sharedOn: 'At 4/17/2018, 10:02 AM',
+          size: '34.4 KB',
         }}
-        pages={[{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
       />
     );
     const zoomIn = container.find('.md-lightbox__viewer-controls .md-lightbox__control').at(1);
@@ -218,15 +236,17 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         info={{
-          sharedBy:"Shared by abcd",
-          sharedOn: "At 4/17/2018, 10:02 AM",
-          size: "34.4 KB"
+          sharedBy: 'Shared by abcd',
+          sharedOn: 'At 4/17/2018, 10:02 AM',
+          size: '34.4 KB',
         }}
-        pages={[{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
       />
     );
     const contentList = container.find('.md-lightbox__list');
@@ -242,15 +262,17 @@ describe('tests for <Lightbox />', () => {
         height={100}
         width={100}
         info={{
-          sharedBy:"Shared by abcd",
-          sharedOn: "At 4/17/2018, 10:02 AM",
-          size: "34.4 KB"
+          sharedBy: 'Shared by abcd',
+          sharedOn: 'At 4/17/2018, 10:02 AM',
+          size: '34.4 KB',
         }}
-        pages={[{
-          decrypting: true,
-          image: "testImage",
-          thumb: "testImage"
-        }]}
+        pages={[
+          {
+            decrypting: true,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
         onDownload={onDownloadFn}
       />
     );
@@ -258,5 +280,4 @@ describe('tests for <Lightbox />', () => {
     downloadIcon.simulate('click');
     expect(onDownloadFn).toHaveBeenCalled();
   });
-
 });

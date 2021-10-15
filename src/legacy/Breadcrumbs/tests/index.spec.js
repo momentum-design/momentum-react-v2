@@ -26,7 +26,7 @@ describe('tests for <Breadcrumbs />', () => {
   });
 
   it('should assign conditional outlined class name', () => {
-    const container = shallow(<Breadcrumbs className='test' />);
+    const container = shallow(<Breadcrumbs className="test" />);
 
     expect(container.find('ul').hasClass('test')).toEqual(true);
   });

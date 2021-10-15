@@ -4,13 +4,13 @@ import { ToggleSwitch } from '@momentum-ui/react';
 
 describe('tests for <ToggleSwitch />', () => {
   it('should match SnapShot', () => {
-    const container = mount(<ToggleSwitch htmlId="test123"/>);
+    const container = mount(<ToggleSwitch htmlId="test123" />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should render one ToggleSwitch', () => {
-    const container = shallow(<ToggleSwitch htmlId="test123"/>);
+    const container = shallow(<ToggleSwitch htmlId="test123" />);
 
     expect(container.find('input').length).toEqual(1);
   });
@@ -21,7 +21,6 @@ describe('tests for <ToggleSwitch />', () => {
     expect(container.find('label').length).toEqual(1);
     expect(container.find('label').children().length).toEqual(2);
   });
-
 
   it('should handle disabled state', () => {
     const container = shallow(<ToggleSwitch htmlId="test123" disabled />);

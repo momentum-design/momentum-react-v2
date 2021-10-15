@@ -16,13 +16,13 @@ describe('tests for <Alert />', () => {
   });
 
   it('should pass otherProps to container', () => {
-    const container = mount(<Alert show closable={false} id='testid' />);
+    const container = mount(<Alert show closable={false} id="testid" />);
 
     expect(container.find('#testid').exists()).toEqual(true);
   });
 
   it('should pass className prop', () => {
-    const container = mount(<Alert show className='testing' closable={false} />);
+    const container = mount(<Alert show className="testing" closable={false} />);
 
     expect(container.find('.testing').exists()).toEqual(true);
     expect(container.find('Alert').hasClass('testing')).toEqual(true);
@@ -73,7 +73,9 @@ describe('tests for <Alert />', () => {
   it('should handle onHide event', () => {
     let count = 0;
     const countUp = () => count++;
-    const container = mount(<Alert show dismissBtnProps={{ onClick: () => countUp(), ariaLabel: 'Close' }} />);
+    const container = mount(
+      <Alert show dismissBtnProps={{ onClick: () => countUp(), ariaLabel: 'Close' }} />
+    );
 
     container.find('.md-button').simulate('click');
     expect(count).toEqual(1);

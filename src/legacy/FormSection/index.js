@@ -2,12 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  FormInfo,
-  FormContent,
-} from '@momentum-ui/react';
+import { FormInfo, FormContent } from '@momentum-ui/react';
 
-const FormSection = props => {
+const FormSection = (props) => {
   const { title, description, children } = props;
 
   return (
@@ -24,7 +21,7 @@ FormSection.propTypes = {
   /** @prop Optional FormSection description | '' */
   description: PropTypes.string,
   /** @prop Optional FormSection title | null */
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 FormSection.defaultProps = {

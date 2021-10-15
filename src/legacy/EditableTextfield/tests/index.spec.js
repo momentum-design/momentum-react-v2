@@ -17,7 +17,7 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should click on Editable Textfield', () => {
-    const container = shallow(<EditableTextfield inputText='Hello World' />);
+    const container = shallow(<EditableTextfield inputText="Hello World" />);
     container.find('.md-editable-textfield__button').simulate('click');
 
     expect(container.find('.md-editable-textfield__button').length).toEqual(0);
@@ -25,14 +25,18 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should pass buttonClassName to button', () => {
-    const container = shallow(<EditableTextfield buttonClassName='buttonClass' className='inputClass' />);
+    const container = shallow(
+      <EditableTextfield buttonClassName="buttonClass" className="inputClass" />
+    );
 
     expect(container.find('.inputClass').exists()).toEqual(false);
     expect(container.find('.buttonClass').exists()).toEqual(true);
   });
 
   it('should pass className to Input', () => {
-    const container = shallow(<EditableTextfield buttonClassName='buttonClass' className='inputClass' />);
+    const container = shallow(
+      <EditableTextfield buttonClassName="buttonClass" className="inputClass" />
+    );
     container.find('.md-editable-textfield__button').simulate('click');
 
     expect(container.find('.buttonClass').exists()).toEqual(false);
@@ -40,7 +44,7 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should pass props to Input', () => {
-    const container = shallow(<EditableTextfield title='testProp' />);
+    const container = shallow(<EditableTextfield title="testProp" />);
     container.find('.md-editable-textfield__button').simulate('click');
 
     expect(container.find('Input').props().title).toEqual('testProp');
@@ -53,20 +57,20 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should pass alignment prop to container', () => {
-    const container = shallow(<EditableTextfield alignment='center' />);
+    const container = shallow(<EditableTextfield alignment="center" />);
 
     expect(container.find('.md-editable-textfield--center').exists()).toEqual(true);
   });
 
   it('should click on Editable Textfield, edit and save', () => {
-    const container = mount(<EditableTextfield inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "Hello World Tom" } });
+    container.find('.md-input').simulate('change', { target: { value: 'Hello World Tom' } });
     container.find('.md-input').simulate('keydown', {
       keyCode: 13,
       key: 'Enter',
-      nativeEvent: { stopImmediatePropagation: ()=>{} },
+      nativeEvent: { stopImmediatePropagation: () => {} },
     });
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('Hello World Tom');
@@ -75,14 +79,14 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should click on Editable Textfield, edit and exit(escape)', () => {
-    const container = mount(<EditableTextfield inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "Hello World Tom" } });
+    container.find('.md-input').simulate('change', { target: { value: 'Hello World Tom' } });
     container.find('.md-input').simulate('keydown', {
       keyCode: 27,
       key: 'Escape',
-      nativeEvent: { stopImmediatePropagation: ()=>{} },
+      nativeEvent: { stopImmediatePropagation: () => {} },
     });
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('Hello World');
@@ -91,10 +95,10 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should click on Editable Textfield, edit and blur', () => {
-    const container = mount(<EditableTextfield inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "Hello World Tom" } });
+    container.find('.md-input').simulate('change', { target: { value: 'Hello World Tom' } });
     container.find('.md-input').simulate('blur');
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('Hello World Tom');
@@ -103,14 +107,14 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should handle allowEmpty prop with enter key', () => {
-    const container = mount(<EditableTextfield allowEmpty={false} inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield allowEmpty={false} inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "" } });
+    container.find('.md-input').simulate('change', { target: { value: '' } });
     container.find('.md-input').simulate('keydown', {
       keyCode: 13,
       key: 'Enter',
-      nativeEvent: { stopImmediatePropagation: ()=>{} },
+      nativeEvent: { stopImmediatePropagation: () => {} },
     });
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('Hello World');
@@ -119,14 +123,14 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should handle allowEmpty prop with string of empty spaces', () => {
-    const container = mount(<EditableTextfield allowEmpty={false} inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield allowEmpty={false} inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "      " } });
+    container.find('.md-input').simulate('change', { target: { value: '      ' } });
     container.find('.md-input').simulate('keydown', {
       keyCode: 13,
       key: 'Enter',
-      nativeEvent: { stopImmediatePropagation: ()=>{} },
+      nativeEvent: { stopImmediatePropagation: () => {} },
     });
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('Hello World');
@@ -135,10 +139,10 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should handle allowEmpty prop with blur', () => {
-    const container = mount(<EditableTextfield allowEmpty={false} inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield allowEmpty={false} inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "" } });
+    container.find('.md-input').simulate('change', { target: { value: '' } });
     container.find('.md-input').simulate('blur');
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('Hello World');
@@ -147,10 +151,10 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should handle empty value with blur', () => {
-    const container = mount(<EditableTextfield inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "" } });
+    container.find('.md-input').simulate('change', { target: { value: '' } });
     container.find('.md-input').simulate('blur');
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('\u00a0');
@@ -159,14 +163,14 @@ describe('tests for <EditableTextfield />', () => {
   });
 
   it('should handle empty value with enter', () => {
-    const container = mount(<EditableTextfield inputText={'Hello World'}/>);
+    const container = mount(<EditableTextfield inputText={'Hello World'} />);
     container.find('.md-editable-textfield__button').simulate('click');
 
-    container.find('.md-input').simulate('change', { target: { value: "" } });
+    container.find('.md-input').simulate('change', { target: { value: '' } });
     container.find('.md-input').simulate('keydown', {
       keyCode: 13,
       key: 'Enter',
-      nativeEvent: { stopImmediatePropagation: ()=>{} },
+      nativeEvent: { stopImmediatePropagation: () => {} },
     });
 
     expect(container.find('.md-editable-textfield__button').text()).toEqual('\u00a0');

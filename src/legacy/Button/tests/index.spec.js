@@ -6,19 +6,19 @@ import SelectableContext from '../../SelectableContext';
 
 describe('tests for <Button />', () => {
   it('should match SnapShot', () => {
-    const container = mount(<Button children='test' ariaLabel='test' onClick={() => {}} />);
+    const container = mount(<Button children="test" ariaLabel="test" onClick={() => {}} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render one Button', () => {
-    const container = mount(<Button children='test' ariaLabel='test' />);
+    const container = mount(<Button children="test" ariaLabel="test" />);
 
     expect(container.find('button').length).toEqual(1);
   });
 
   it('should render one Child Div', () => {
     const container = mount(
-      <Button children='test' ariaLabel='test'>
+      <Button children="test" ariaLabel="test">
         <div>Test</div>
       </Button>
     );
@@ -27,80 +27,84 @@ describe('tests for <Button />', () => {
   });
 
   it('should render Loader Component if Loading', () => {
-    const container = mount(<Button children='test' loading ariaLabel='test' />);
+    const container = mount(<Button children="test" loading ariaLabel="test" />);
 
     expect(container.contains(<Loading />)).toEqual(true);
   });
 
   it('should not render Loader Component if loading prop absent', () => {
-    const container = mount(<Button children='test' color='none' ariaLabel='test' />);
+    const container = mount(<Button children="test" color="none" ariaLabel="test" />);
 
     expect(container.contains(<Loading />)).toEqual(false);
   });
 
   it('should remove Style with removeStyle prop', () => {
-    const container = mount(<Button children='test' removeStyle ariaLabel='test' />);
+    const container = mount(<Button children="test" removeStyle ariaLabel="test" />);
 
     expect(container.find('.md-button--none').exists()).toEqual(true);
   });
 
   it('should ignore color or size with removeStyle prop', () => {
-    const container = mount(<Button children='test' color='blue' size='52' removeStyle ariaLabel='test' />);
+    const container = mount(
+      <Button children="test" color="blue" size="52" removeStyle ariaLabel="test" />
+    );
 
     expect(container.find('.md-button--blue').exists()).toEqual(false);
     expect(container.find('.md-button--52').exists()).toEqual(false);
   });
 
   it('should apply correct class for color none', () => {
-    const container = mount(<Button children='test' ariaLabel='test' color='none' />);
+    const container = mount(<Button children="test" ariaLabel="test" color="none" />);
 
     expect(container.find('.md-button--color-none').exists()).toEqual(true);
   });
 
   it('should render wrapped button if label passed', () => {
-    const container = mount(<Button children='test' label='test' ariaLabel='test' />);
+    const container = mount(<Button children="test" label="test" ariaLabel="test" />);
 
     expect(container.find('.md-button__container--small').length).toEqual(1);
   });
 
   it('should render wrapped button in large container if label and containerLarge passed', () => {
-    const container = mount(<Button children='test' label='test' containerLarge ariaLabel='test' />);
+    const container = mount(
+      <Button children="test" label="test" containerLarge ariaLabel="test" />
+    );
 
     expect(container.find('.md-button__container').length).toEqual(1);
   });
 
   it('should be type button by default', () => {
-    const container = mount(<Button children='test' ariaLabel='test' />);
+    const container = mount(<Button children="test" ariaLabel="test" />);
 
     expect(container.find('Button').props().type).toEqual('button');
   });
 
   it('should show active class when passed active prop', () => {
-    const container = mount(<Button active children='test' ariaLabel='test' />);
+    const container = mount(<Button active children="test" ariaLabel="test" />);
 
     expect(container.find('.md-button').hasClass('active')).toEqual(true);
   });
 
   it('should show type if passed one', () => {
-    const container = mount(<Button children='test' type='submit' ariaLabel='test' />);
+    const container = mount(<Button children="test" type="submit" ariaLabel="test" />);
 
     expect(container.props().type).toEqual('submit');
   });
 
   it('should output anchor if passed tag a', () => {
-    const container = mount(<Button children='test' tag='a' ariaLabel='test' />);
+    const container = mount(<Button children="test" tag="a" ariaLabel="test" />);
 
     expect(container.find('a').length).toEqual(1);
   });
 
   it('should output input if passed tag input', () => {
-    const container = mount(<Button value='test' tag='input' ariaLabel='test' />);
+    const container = mount(<Button value="test" tag="input" ariaLabel="test" />);
 
     expect(container.find('input').length).toEqual(1);
   });
 
   it('should handle disabled state', () => {
-    const container = mount(<Button children='test' disabled ariaLabel='test' />);
+    const container = mount(<Button children="test" disabled ariaLabel="test" />);
 
     expect(container.props().disabled).toEqual(true);
   });
@@ -110,7 +114,7 @@ describe('tests for <Button />', () => {
     const onClick = jest.fn();
     const container = mount(
       <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
-        <Button children='test' onClick={onClick} ariaLabel='test' />
+        <Button children="test" onClick={onClick} ariaLabel="test" />
       </SelectableContext.Provider>
     );
 
@@ -125,7 +129,7 @@ describe('tests for <Button />', () => {
     const preventDefault = jest.fn();
     const container = mount(
       <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
-        <Button children='test' onClick={onClick} ariaLabel='test' />
+        <Button children="test" onClick={onClick} ariaLabel="test" />
       </SelectableContext.Provider>
     );
 
@@ -145,7 +149,12 @@ describe('tests for <Button />', () => {
     const preventDefault = jest.fn();
     const container = mount(
       <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
-        <Button children='test' onClick={onClick} ariaLabel='test' preventKeyboardDoubleClick={true} />
+        <Button
+          children="test"
+          onClick={onClick}
+          ariaLabel="test"
+          preventKeyboardDoubleClick={true}
+        />
       </SelectableContext.Provider>
     );
 
@@ -165,7 +174,7 @@ describe('tests for <Button />', () => {
     const preventDefault = jest.fn();
     const container = mount(
       <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
-        <Button children='test' onClick={onClick} ariaLabel='test' />
+        <Button children="test" onClick={onClick} ariaLabel="test" />
       </SelectableContext.Provider>
     );
 
@@ -183,7 +192,12 @@ describe('tests for <Button />', () => {
     const preventDefault = jest.fn();
     const container = mount(
       <SelectableContext.Provider value={{ parentOnSelect: handleClick }}>
-        <Button children='test' onClick={onClick} ariaLabel='test' preventKeyboardDoubleClick={true} />
+        <Button
+          children="test"
+          onClick={onClick}
+          ariaLabel="test"
+          preventKeyboardDoubleClick={true}
+        />
       </SelectableContext.Provider>
     );
 
@@ -199,13 +213,11 @@ describe('tests for <Button />', () => {
     const handleKeyDown = jest.fn();
     const container = mount(
       <SelectableContext.Provider value={{ parentKeyDown: handleKeyDown }}>
-        <Button children='test' ariaLabel='test' />
+        <Button children="test" ariaLabel="test" />
       </SelectableContext.Provider>
     );
 
-    container
-        .find('button')
-        .simulate('keyDown', { which: 39, charCode: 39, key: 'Right' });
+    container.find('button').simulate('keyDown', { which: 39, charCode: 39, key: 'Right' });
     expect(handleKeyDown).toHaveBeenCalledTimes(1);
   });
 
@@ -213,7 +225,7 @@ describe('tests for <Button />', () => {
     it('when the button is focused tabIndex should be zero', () => {
       const container = mount(
         <ButtonGroupContext.Provider value={{ focus: 'test', isButtonGroup: true }}>
-          <Button children='test' eventKey={'test'} ariaLabel='test' />
+          <Button children="test" eventKey={'test'} ariaLabel="test" />
         </ButtonGroupContext.Provider>
       );
 
@@ -223,7 +235,7 @@ describe('tests for <Button />', () => {
     it('when the button is not focused tabIndex should be -1', () => {
       const container = mount(
         <ButtonGroupContext.Provider value={{ focus: 'not-test', isButtonGroup: true }}>
-          <Button children='test' index={0} ariaLabel='test' />
+          <Button children="test" index={0} ariaLabel="test" />
         </ButtonGroupContext.Provider>
       );
 
@@ -231,7 +243,7 @@ describe('tests for <Button />', () => {
     });
 
     it('when the index prop is not defined the tabIndex should be 0', () => {
-      const container = mount(<Button children='test' ariaLabel='test' />);
+      const container = mount(<Button children="test" ariaLabel="test" />);
       expect(container.find('button').props().tabIndex).toEqual(0);
     });
   });
@@ -239,16 +251,16 @@ describe('tests for <Button />', () => {
   describe('test size Prop', () => {
     const props = {
       children: 'test',
-      ariaLabel: 'test'
+      ariaLabel: 'test',
     };
 
     const circleProps = {
       circle: true,
-      ...props
+      ...props,
     };
 
     it('should warn and apply base size class if size used does not exist', () => {
-      global.console = {warn: jest.fn()};
+      global.console = { warn: jest.fn() };
       const container = mount(<Button {...props} size={5000} />);
 
       expect(container.find('.md-button--36').exists()).toEqual(true);
@@ -256,7 +268,7 @@ describe('tests for <Button />', () => {
     });
 
     it('should warn and apply 52 size class if large prop is used', () => {
-      global.console = {warn: jest.fn()};
+      global.console = { warn: jest.fn() };
       const container = mount(<Button {...props} large />);
 
       expect(container.find('.md-button--52').exists()).toEqual(true);
@@ -264,7 +276,7 @@ describe('tests for <Button />', () => {
     });
 
     it('should warn and apply base size class if large props is used with circle', () => {
-      global.console = {warn: jest.fn()};
+      global.console = { warn: jest.fn() };
       const container = mount(<Button {...circleProps} large />);
 
       expect(container.find('.md-button--44').exists()).toEqual(true);
@@ -277,7 +289,7 @@ describe('tests for <Button />', () => {
     });
 
     it('should apply correct class for size none', () => {
-      const container = mount(<Button {...props} size='none' />);
+      const container = mount(<Button {...props} size="none" />);
       expect(container.find('.md-button--size-none').exists()).toEqual(true);
     });
 
@@ -330,6 +342,5 @@ describe('tests for <Button />', () => {
       const container = mount(<Button {...circleProps} size={84} />);
       expect(container.find('.md-button--84').exists()).toEqual(true);
     });
-
   });
 });

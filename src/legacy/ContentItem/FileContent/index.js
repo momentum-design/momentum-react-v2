@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { snakeCase } from '../../utils/snakeCase';
 import { Spinner } from '@momentum-ui/react';
 
-const FileContentItem = props => {
+const FileContentItem = (props) => {
   const {
     actionNode,
     aspect,
@@ -21,95 +21,87 @@ const FileContentItem = props => {
   } = props;
 
   const kebabify = (aspect) => {
-    if(aspect === 'wide'){
+    if (aspect === 'wide') {
       aspect = 'sixteenNine';
     }
-    if(aspect === 'tall'){
+    if (aspect === 'tall') {
       aspect = 'nineSixteen';
     }
     const kebab = snakeCase(aspect);
     return `md-content-file--${kebab}`;
   };
 
-  const handleKeyDown = e => {
-    if (
-      e.which === 32
-      || e.which === 13
-      || e.charCode === 32
-      || e.charCode === 13
-    ) {
+  const handleKeyDown = (e) => {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       onClick && onClick(e);
       e.preventDefault();
     }
   };
 
   return (
-    <div
-      className='md-content__container'
-      {...otherProps}
-    >
-    {
-      loading
-      ?
-      <div
-        className='md-content-file'
-        style={{backgroundImage:content && `url(${content})`}}
-      >
-        <div className={`${(content && ' md-content--opacity') || ''}`}>
-          <Spinner />
+    <div className="md-content__container" {...otherProps}>
+      {loading ? (
+        <div className="md-content-file" style={{ backgroundImage: content && `url(${content})` }}>
+          <div className={`${(content && ' md-content--opacity') || ''}`}>
+            <Spinner />
+          </div>
         </div>
-      </div>
-      :
-      <div
-        className={
-          'md-content-file__block' +
-          `${(aspect === 'oneOne' && ' content-file--no-border' || aspect === 'fourThree' && ' content-file--no-border') || ''}`
-        }
-      >
+      ) : (
         <div
           className={
-            `${(aspect && kebabify(aspect)) || ''}` +
-            `${(!aspect && ' md-content-file--full') || ''}` +
-            `${(onClick && ' md-content-file--clickable') || ''}` +
-            `${(className && ` ${className}`) || ''}`
+            'md-content-file__block' +
+            `${
+              (aspect === 'oneOne' && ' content-file--no-border') ||
+              (aspect === 'fourThree' && ' content-file--no-border') ||
+              ''
+            }`
           }
-          onKeyDown={handleKeyDown}
-          onClick={onClick}
-          role='presentation'
-          style={{
-            backgroundImage: content && `url(${content})`,
-            ...style
-          }}
-        />
-          {
-            !isProtected && actionNode &&
-            <div className='md-content-file__aspect'>
-              {actionNode}
-            </div>
-          }
-          {
-            gifIcon &&
-            <i className={
-              `${gifIcon} md-content__gif` +
-              `${(aspect === 'oneOne' && ' md-content__gif--oneOne' || aspect === 'fourThree' && ' md-content__gif--fourThree') || ''}`
+        >
+          <div
+            className={
+              `${(aspect && kebabify(aspect)) || ''}` +
+              `${(!aspect && ' md-content-file--full') || ''}` +
+              `${(onClick && ' md-content-file--clickable') || ''}` +
+              `${(className && ` ${className}`) || ''}`
+            }
+            onKeyDown={handleKeyDown}
+            onClick={onClick}
+            role="presentation"
+            style={{
+              backgroundImage: content && `url(${content})`,
+              ...style,
+            }}
+          />
+          {!isProtected && actionNode && (
+            <div className="md-content-file__aspect">{actionNode}</div>
+          )}
+          {gifIcon && (
+            <i
+              className={
+                `${gifIcon} md-content__gif` +
+                `${
+                  (aspect === 'oneOne' && ' md-content__gif--oneOne') ||
+                  (aspect === 'fourThree' && ' md-content__gif--fourThree') ||
+                  ''
+                }`
               }
             />
-          }
+          )}
+        </div>
+      )}
+      <div className="md-content-file__info-container">
+        {title && (
+          <span title={title} key="title" className="md-content-file__title">
+            {loading ? loadingText : title}
+          </span>
+        )}
+        {subtitle && (
+          <span key="subtitle" className="md-content-file__subtitle">
+            {subtitle}
+          </span>
+        )}
       </div>
-    }
-    <div className='md-content-file__info-container'>
-      {
-        title &&
-        <span title={title} key='title' className='md-content-file__title'>
-          {loading ? loadingText : title}
-        </span>
-      }
-      {
-        subtitle &&
-        <span key='subtitle' className='md-content-file__subtitle'>{subtitle}</span>
-      }
     </div>
-  </div>
   );
 };
 
@@ -131,7 +123,17 @@ FileContentItem.defaultProps = {
 
 FileContentItem.propTypes = {
   actionNode: PropTypes.node,
-  aspect: PropTypes.oneOf(['fourThree', 'nineSixteen', 'oneOne', 'sixteenNine', 'tall', 'threeFour', 'threeTwo', 'twoThree', 'wide']),
+  aspect: PropTypes.oneOf([
+    'fourThree',
+    'nineSixteen',
+    'oneOne',
+    'sixteenNine',
+    'tall',
+    'threeFour',
+    'threeTwo',
+    'twoThree',
+    'wide',
+  ]),
   className: PropTypes.string,
   content: PropTypes.string,
   gifIcon: PropTypes.string,

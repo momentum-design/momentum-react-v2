@@ -8,12 +8,7 @@ import uniqueId from 'lodash/uniqueId';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  Button,
-  EventOverlay,
-  Icon,
-  List,
-} from '@momentum-ui/react';
+import { Button, EventOverlay, Icon, List } from '@momentum-ui/react';
 import SelectContext from '../SelectContext';
 
 class Select extends React.Component {
@@ -23,18 +18,18 @@ class Select extends React.Component {
     selectedIndex: [],
     anchorNode: null,
     anchorWidth: null,
-    id: this.props.id || uniqueId('md-select-')
+    id: this.props.id || uniqueId('md-select-'),
   };
 
   componentDidUpdate(prevProps, prevState) {
-    prevState.selected !== this.state.selected
-      && this.props.onSelect
-      && this.props.onSelect(this.state.selected);
+    prevState.selected !== this.state.selected &&
+      this.props.onSelect &&
+      this.props.onSelect(this.state.selected);
   }
 
   hidePopover = () => {
     this.setState({
-      isOpen: false
+      isOpen: false,
     });
   };
 
@@ -43,7 +38,7 @@ class Select extends React.Component {
     const { selected, selectedIndex } = this.state;
     const { isMulti } = this.props;
     const { value, label, eventKey, keyboardKey } = opts;
-    const isActive = find(selected, {value, label});
+    const isActive = find(selected, { value, label });
 
     !isMulti && this.setState({ isOpen: false });
 
@@ -51,23 +46,21 @@ class Select extends React.Component {
 
     if (isActive && isMulti) {
       return this.setState({
-        selected: filter(selected, item =>
-          !isEqual(item, {value, label})
-        ),
-        selectedIndex: selectedIndex.filter(i => i !== keyboardKey)
+        selected: filter(selected, (item) => !isEqual(item, { value, label })),
+        selectedIndex: selectedIndex.filter((i) => i !== keyboardKey),
       });
     } else if (!isActive && !isMulti) {
       return this.setState({
-        selected: [{value, label}],
-        selectedIndex: [eventKey]
+        selected: [{ value, label }],
+        selectedIndex: [eventKey],
       });
     } else {
       return this.setState({
-        selected: [...selected, {value, label}],
-        selectedIndex: [...selectedIndex, keyboardKey]
+        selected: [...selected, { value, label }],
+        selectedIndex: [...selectedIndex, keyboardKey],
       });
     }
-  }
+  };
 
   choosePosition = () => {
     const { isOpen, anchorNode } = this.state;
@@ -76,13 +69,16 @@ class Select extends React.Component {
   };
 
   handleToggle = () => {
-    this.setState({
-      isOpen: !this.state.isOpen,
-      anchorNode: ReactDOM.findDOMNode(this.clickTextField).parentNode
-    }, () => this.choosePosition());
+    this.setState(
+      {
+        isOpen: !this.state.isOpen,
+        anchorNode: ReactDOM.findDOMNode(this.clickTextField).parentNode,
+      },
+      () => this.choosePosition()
+    );
   };
 
-  setAnchorWidth = elementAnchor => {
+  setAnchorWidth = (elementAnchor) => {
     const anchor = elementAnchor && elementAnchor.getBoundingClientRect();
 
     this.setState({ anchorWidth: anchor.width });
@@ -101,32 +97,22 @@ class Select extends React.Component {
       ...props
     } = this.props;
 
-    const {
-      anchorNode,
-      anchorWidth,
-      id,
-      isOpen,
-      selected,
-      selectedIndex,
-    } = this.state;
+    const { anchorNode, anchorWidth, id, isOpen, selected, selectedIndex } = this.state;
 
-    const otherProps = omit({...props}, [
-      'id',
-      'onSelect'
-    ]);
+    const otherProps = omit({ ...props }, ['id', 'onSelect']);
 
     const currentValue = () => {
-      if(!isMulti && selected.length) return selected[0].label;
+      if (!isMulti && selected.length) return selected[0].label;
 
-      if(selected.length === 1) {
+      if (selected.length === 1) {
         return `${selected.length} Item Selected`;
-      } else if(selected.length) {
+      } else if (selected.length) {
         return `${selected.length} Items Selected`;
       }
     };
 
     const label = (
-      <div className='md-select__label' id={`${id}__label`}>
+      <div className="md-select__label" id={`${id}__label`}>
         {currentValue() || defaultValue}
         <Icon name={`arrow-down_16`} />
       </div>
@@ -136,19 +122,18 @@ class Select extends React.Component {
       <Button
         active={isOpen}
         ariaLabelledBy={`${id}__label`}
-        aria-haspopup='listbox'
+        aria-haspopup="listbox"
         id={id}
         name={id}
         onClick={this.handleToggle}
-        ref={ref => this.clickTextField = ref}
+        ref={(ref) => (this.clickTextField = ref)}
         {...buttonProps}
       >
         {label}
       </Button>
     );
 
-    const dropdownElement = (
-      isOpen &&
+    const dropdownElement = isOpen && (
       <EventOverlay
         allowClickAway
         anchorNode={anchorNode}
@@ -160,9 +145,9 @@ class Select extends React.Component {
         <List
           onSelect={this.handleSelect}
           style={{ width: anchorWidth }}
-          ref={ref => this.list = ref}
-          role='listbox'
-          itemRole='option'
+          ref={(ref) => (this.list = ref)}
+          role="listbox"
+          itemRole="option"
           active={selectedIndex}
           aria-labelledby={`${id}__label`}
           aria-multiselectable={isMulti}
@@ -176,10 +161,7 @@ class Select extends React.Component {
     return (
       <SelectContext.Provider value={isMulti}>
         <div
-          className={
-            'md-input-container md-select' +
-            `${className && ` ${className}` || ''}`
-          }
+          className={'md-input-container md-select' + `${(className && ` ${className}`) || ''}`}
           {...otherProps}
         >
           {text}
@@ -228,4 +210,4 @@ Select.defaultProps = {
 
 Select.displayName = 'Select';
 
-export default Select;  
+export default Select;

@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@momentum-ui/react';
 import DatePickerContext from '../../DatePickerContext';
-import {
-  getDate,
-  getMonth,
-  isDayDisabled,
-  isSameDay,
-  now,
-} from '../../utils/dateUtils';
+import { getDate, getMonth, isDayDisabled, isSameDay, now } from '../../utils/dateUtils';
 import mapContextToProps from '@restart/context/mapContextToProps';
 import moment from 'moment';
 
@@ -22,14 +16,11 @@ class DatePickerDay extends React.Component {
     const { day, focus } = this.props;
 
     isSameDay(day, focus) && this.dayButton.current.button.focus();
-  }
+  };
 
-  handleClick = e => {
+  handleClick = (e) => {
     const { handleDayClick, day } = this.props;
-    return (
-      handleDayClick
-      && handleDayClick(e, day)
-    );
+    return handleDayClick && handleDayClick(e, day);
   };
 
   render() {
@@ -54,14 +45,12 @@ class DatePickerDay extends React.Component {
           `${(isOutsideMonth && ` md-datepicker__day--outside-month`) || ''}`
         }
         onClick={this.handleClick}
-        ariaLabel={`${day.format("D, dddd MMMM YYYY")}`}
+        ariaLabel={`${day.format('D, dddd MMMM YYYY')}`}
         aria-selected={isSelected}
         tabIndex={-1}
         ref={this.dayButton}
       >
-        <div aria-hidden="true">
-          {getDate(day)}
-        </div>
+        <div aria-hidden="true">{getDate(day)}</div>
       </Button>
     );
   }
@@ -82,8 +71,4 @@ DatePickerDay.propTypes = {
 
 DatePickerDay.displayName = 'DatePickerDay';
 
-export default mapContextToProps(
-  DatePickerContext,
-  context => context,
-  DatePickerDay
-);
+export default mapContextToProps(DatePickerContext, (context) => context, DatePickerDay);

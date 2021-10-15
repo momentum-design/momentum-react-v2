@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  SelectDefault,
-  SelectMultiSelect,
-} from './index';
+import { SelectDefault, SelectMultiSelect } from './index';
 
 export default class SelectKitchenSink extends React.Component {
   render() {

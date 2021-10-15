@@ -6,14 +6,12 @@ import SidebarNavContext from '../../SidebarNavContext';
 
 describe('tests for <SidebarNavItem />', () => {
   it('should render a SidebarNavItem', () => {
-    const wrapper = mount(
-      <SidebarNavItem label="one"/>
-    );
+    const wrapper = mount(<SidebarNavItem label="one" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should add customized class name if className prop is set', () => {
-    const wrapper = mount(<SidebarNavItem className='testClassName'/>);
+    const wrapper = mount(<SidebarNavItem className="testClassName" />);
 
     expect(wrapper.find('.testClassName').exists()).toBeTruthy();
   });
@@ -21,7 +19,7 @@ describe('tests for <SidebarNavItem />', () => {
   it('should render children if children prop is set', () => {
     const wrapper = mount(
       <SidebarNavItem>
-        <div className='dummy-children'>Dummy Children</div>
+        <div className="dummy-children">Dummy Children</div>
       </SidebarNavItem>
     );
 
@@ -31,7 +29,7 @@ describe('tests for <SidebarNavItem />', () => {
   it('should have expanded class if children present and expanded', () => {
     const wrapper = mount(
       <SidebarNavItem expanded>
-        <div className='dummy-children'>Dummy Children</div>
+        <div className="dummy-children">Dummy Children</div>
       </SidebarNavItem>
     );
 
@@ -41,7 +39,7 @@ describe('tests for <SidebarNavItem />', () => {
   it('should expand if children present and header list item is clicked', () => {
     const wrapper = mount(
       <SidebarNavItem>
-        <div className='dummy-children'>Dummy Children</div>
+        <div className="dummy-children">Dummy Children</div>
       </SidebarNavItem>
     );
 
@@ -54,9 +52,7 @@ describe('tests for <SidebarNavItem />', () => {
 
   it('should allow titleNode to be passed', () => {
     const wrapper = mount(
-      <SidebarNavItem titleNode={
-        <div className='dummy-title'>Dummy Title</div>
-      } />
+      <SidebarNavItem titleNode={<div className="dummy-title">Dummy Title</div>} />
     );
 
     expect(wrapper.find('.dummy-title').exists()).toBeTruthy();
@@ -64,10 +60,8 @@ describe('tests for <SidebarNavItem />', () => {
 
   it('should pass onClick to titleNode', () => {
     const wrapper = mount(
-      <SidebarNavItem titleNode={
-        <div className='dummy-title'>Dummy Title</div>
-      }>
-        <div className='dummy-children'>Dummy Children</div>
+      <SidebarNavItem titleNode={<div className="dummy-title">Dummy Title</div>}>
+        <div className="dummy-children">Dummy Children</div>
       </SidebarNavItem>
     );
 
@@ -79,24 +73,20 @@ describe('tests for <SidebarNavItem />', () => {
   });
 
   it('should allow icon to be passed as a string', () => {
-    const wrapper = mount(
-      <SidebarNavItem icon={'arrow-up'} />
-    );
+    const wrapper = mount(<SidebarNavItem icon={'arrow-up'} />);
 
     expect(wrapper.find('.icon-arrow-up_16').exists()).toBeTruthy();
   });
 
   it('should force icon to size 16 by default', () => {
-    const wrapper = mount(
-      <SidebarNavItem icon={'arrow-up_12'} />
-    );
+    const wrapper = mount(<SidebarNavItem icon={'arrow-up_12'} />);
 
     expect(wrapper.find('.icon-arrow-up_16').exists()).toBeTruthy();
   });
 
   it('should force icon to size 20 when secondary prop is present', () => {
     const wrapper = mount(
-      <SidebarContext.Provider value={{secondary: true}}>
+      <SidebarContext.Provider value={{ secondary: true }}>
         <SidebarNavItem icon={'arrow-up_12'} />
       </SidebarContext.Provider>
     );
@@ -105,17 +95,13 @@ describe('tests for <SidebarNavItem />', () => {
   });
 
   it('should allow icon as a node', () => {
-    const wrapper = mount(
-      <SidebarNavItem icon={<div className='dummy-icon'>Icon</div>} />
-    );
+    const wrapper = mount(<SidebarNavItem icon={<div className="dummy-icon">Icon</div>} />);
 
     expect(wrapper.find('.dummy-icon').exists()).toBeTruthy();
   });
 
   it('should handle title prop', () => {
-    const container = mount(
-      <SidebarNavItem title='testTitle'/>
-    );
+    const container = mount(<SidebarNavItem title="testTitle" />);
 
     expect(container.find('.md-list-item__center').props().children).toEqual('testTitle');
   });

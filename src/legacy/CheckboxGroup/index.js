@@ -6,22 +6,22 @@ import PropTypes from 'prop-types';
 class CheckboxGroup extends React.Component {
   static displayName = 'CheckboxGroup';
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      values: props.values || []
+      values: props.values || [],
     };
   }
 
-  handleToggle = value => {
+  handleToggle = (value) => {
     let newValues;
     const { onChange } = this.props;
     const { values } = this.state;
     const isActive = values.includes(value);
 
     if (isActive) {
-      newValues = values.filter(v => v !== value);
-      onChange(this.props.values.filter(n => n !== value));
+      newValues = values.filter((v) => v !== value);
+      onChange(this.props.values.filter((n) => n !== value));
     } else {
       newValues = values.concat(value);
       onChange([...this.props.values, value]);
@@ -30,14 +30,14 @@ class CheckboxGroup extends React.Component {
     this.setState({
       values: newValues,
     });
-  }
+  };
 
   render() {
     const { children, name } = this.props;
     const { values } = this.state;
 
     const addHandlersToChildren = () => {
-      return React.Children.map(children, child => {
+      return React.Children.map(children, (child) => {
         const { value } = child.props;
         return React.cloneElement(child, {
           name: name,

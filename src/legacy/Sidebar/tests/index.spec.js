@@ -1,10 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Sidebar,
-  SidebarNav,
-  SidebarNavItem,
-} from '@momentum-ui/react';
+import { Sidebar, SidebarNav, SidebarNavItem } from '@momentum-ui/react';
 
 describe('<Sidebar />', () => {
   it('should render a Sidebar', () => {
@@ -14,13 +10,13 @@ describe('<Sidebar />', () => {
   });
 
   it('should add customized class name if className prop is set', () => {
-    const wrapper = shallow(<Sidebar className='testClassName'/>);
+    const wrapper = shallow(<Sidebar className="testClassName" />);
 
     expect(wrapper.find('.testClassName').exists()).toBeTruthy();
   });
 
   it('should add customized wrapper class name if wrapperClass prop is set', () => {
-    const wrapper = shallow(<Sidebar wrapperClass='testClassName'/>);
+    const wrapper = shallow(<Sidebar wrapperClass="testClassName" />);
 
     expect(wrapper.find('.testClassName').exists()).toBeTruthy();
   });
@@ -28,7 +24,7 @@ describe('<Sidebar />', () => {
   it('should render children if children prop is set', () => {
     const wrapper = shallow(
       <Sidebar>
-        <div className='dummy-children'>Dummy Children</div>
+        <div className="dummy-children">Dummy Children</div>
       </Sidebar>
     );
 
@@ -36,7 +32,7 @@ describe('<Sidebar />', () => {
   });
 
   it('should add customized theme name if theme prop is set', () => {
-    const wrapper = shallow(<Sidebar theme='dark'/>);
+    const wrapper = shallow(<Sidebar theme="dark" />);
 
     expect(wrapper.find('.md-sidebar--dark').exists()).toBeTruthy();
   });
@@ -60,60 +56,60 @@ describe('<Sidebar />', () => {
   });
 
   it('should add fixed if isFixed prop is set', () => {
-    const wrapper = shallow(<Sidebar isFixed/>);
+    const wrapper = shallow(<Sidebar isFixed />);
 
     expect(wrapper.find('.md-sidebar__wrapper--fixed').exists()).toBeTruthy();
     expect(wrapper.find('.md-sidebar--fixed').exists()).toBeTruthy();
   });
 
   it('should not add nested class if it has icons and no tiers in children', () => {
-    const wrapper = shallow(<Sidebar isFixed/>);
+    const wrapper = shallow(<Sidebar isFixed />);
 
     expect(wrapper.find('.md-sidebar--nested').exists()).toBeFalsy();
   });
 
   it('should add nested class if it has icons and secondary tiers in children', () => {
-    const wrapper = shallow(<Sidebar isFixed/>);
+    const wrapper = shallow(<Sidebar isFixed />);
     wrapper.setState({
       sidebarContext: {
-        secondary: true
-      }
+        secondary: true,
+      },
     });
 
     expect(wrapper.find('.md-sidebar--nested').exists()).toBeTruthy();
   });
 
   it('should add nested class if it has icons and secondary tiers in children', () => {
-    const wrapper = shallow(<Sidebar isFixed/>);
+    const wrapper = shallow(<Sidebar isFixed />);
     wrapper.setState({
       sidebarContext: {
-        tertiary: true
-      }
+        tertiary: true,
+      },
     });
 
     expect(wrapper.find('.md-sidebar--nested').exists()).toBeTruthy();
   });
 
   it('should not have global class with isPageLevel true', () => {
-    const wrapper = shallow(<Sidebar isPageLevel/>);
+    const wrapper = shallow(<Sidebar isPageLevel />);
 
     expect(wrapper.find('.md-sidebar--global').exists()).toBeFalsy();
   });
 
   it('should add indented class if withIcons is true', () => {
-    const wrapper = shallow(<Sidebar withIcons/>);
+    const wrapper = shallow(<Sidebar withIcons />);
 
     expect(wrapper.find('.md-sidebar--indented').exists()).toBeTruthy();
   });
 
   it('should add indented class if withIcons=(true), isPageLevel=(true)', () => {
-    const wrapper = shallow(<Sidebar withIcons isPageLevel/>);
+    const wrapper = shallow(<Sidebar withIcons isPageLevel />);
 
     expect(wrapper.find('.md-sidebar--indented').exists()).toBeFalsy();
   });
 
   it('should add topbar class if withTopbar is true', () => {
-    const wrapper = shallow(<Sidebar withTopbar/>);
+    const wrapper = shallow(<Sidebar withTopbar />);
 
     expect(wrapper.find('.md-sidebar--topbar').exists()).toBeTruthy();
   });
@@ -145,19 +141,19 @@ describe('<Sidebar />', () => {
   });
 
   it('should add minimized toggle button if withIcons/withToggle/!expanded set', () => {
-    const wrapper = mount(<Sidebar withIcons withToggle expanded={false}/>);
+    const wrapper = mount(<Sidebar withIcons withToggle expanded={false} />);
 
     expect(wrapper.find('.md-sidebar__toggle--minimized').exists()).toBeTruthy();
   });
 
   it('should add collapsed toggle button if !withIcons/withToggle/!expanded set', () => {
-    const wrapper = mount(<Sidebar withIcons={false} withToggle expanded={false}/>);
+    const wrapper = mount(<Sidebar withIcons={false} withToggle expanded={false} />);
 
     expect(wrapper.find('.md-sidebar__toggle--collapsed').exists()).toBeTruthy();
   });
 
   it('should apply buttonProps to toggle button', () => {
-    const wrapper = mount(<Sidebar withToggle buttonProps={{ ariaLabel: 'test' }}/>);
+    const wrapper = mount(<Sidebar withToggle buttonProps={{ ariaLabel: 'test' }} />);
 
     expect(wrapper.find('.md-button').props()['aria-label']).toEqual('test');
   });

@@ -12,7 +12,7 @@ describe('tests for <AlertCallContainer />', () => {
 
   const caller2 = {
     title: '+1 972-555-1212',
-    type: 'number'
+    type: 'number',
   };
 
   /* eslint-disable react/no-multi-comp */
@@ -33,7 +33,7 @@ describe('tests for <AlertCallContainer />', () => {
     );
   }
 
- function renderCaller2() {
+  function renderCaller2() {
     const key = uniqueId('call_alert_');
     return (
       <AlertCall
@@ -52,31 +52,31 @@ describe('tests for <AlertCallContainer />', () => {
   /* eslint-enable react/no-multi-comp */
 
   it('should match SnapShot', () => {
-    const container = mount(<AlertCallContainer/>);
+    const container = mount(<AlertCallContainer />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should render a div', () => {
-    const container = shallow(<AlertCallContainer/>);
+    const container = shallow(<AlertCallContainer />);
 
     expect(container.find('.md-alert__container--call').length).toEqual(1);
   });
 
   it('should not render any call alerts if the alertList is empty', () => {
-    const container = mount(<AlertCallContainer/>);
+    const container = mount(<AlertCallContainer />);
     expect(container.find(AlertCall).length).toEqual(0);
   });
 
   it('should render no more than two call alerts at the same time', () => {
     const alertList = [renderCaller1(), renderCaller2()];
-    const container = mount(<AlertCallContainer children={alertList}/>);
+    const container = mount(<AlertCallContainer children={alertList} />);
 
     expect(container.find(AlertCall).length).toEqual(2);
   });
 
   it('should pass otherProps to container', () => {
-    const container = shallow(<AlertCallContainer id='testid'/>);
+    const container = shallow(<AlertCallContainer id="testid" />);
 
     expect(container.find('#testid').exists()).toEqual(true);
   });

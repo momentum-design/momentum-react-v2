@@ -41,27 +41,15 @@ describe('tests for <TimePicker />', () => {
     const dropdown = container.find('.inline-flex');
 
     // Test Up Arrow
-    dropdown
-      .find('.icon-arrow-up_24')
-      .at(0)
-      .simulate('click');
-    dropdown
-      .find('.icon-arrow-up_24')
-      .at(1)
-      .simulate('click');
+    dropdown.find('.icon-arrow-up_24').at(0).simulate('click');
+    dropdown.find('.icon-arrow-up_24').at(1).simulate('click');
     expect(container.state().selectedTime.format('HH')).toEqual('15');
     expect(container.state().selectedTime.format('mm')).toEqual('01');
     expect(onChange).toHaveBeenLastCalledWith(15, 1, 0);
 
     // Test Down Arrow
-    dropdown
-      .find('.icon-arrow-down_24')
-      .at(0)
-      .simulate('click');
-    dropdown
-      .find('.icon-arrow-down_24')
-      .at(1)
-      .simulate('click');
+    dropdown.find('.icon-arrow-down_24').at(0).simulate('click');
+    dropdown.find('.icon-arrow-down_24').at(1).simulate('click');
     expect(container.state().selectedTime.format('HH')).toEqual('14');
     expect(container.state().selectedTime.format('mm')).toEqual('00');
     expect(onChange).toHaveBeenLastCalledWith(14, 0, -1);
@@ -78,14 +66,8 @@ describe('tests for <TimePicker />', () => {
 
     container.find('.md-input').simulate('focus');
     const dropdown = container.find('.inline-flex');
-    const hourInput = dropdown
-      .find('input')
-      .at(0)
-      .simulate('focus');
-    const minuteInput = dropdown
-      .find('input')
-      .at(1)
-      .simulate('focus');
+    const hourInput = dropdown.find('input').at(0).simulate('focus');
+    const minuteInput = dropdown.find('input').at(1).simulate('focus');
 
     // Test Up Arrow KeyPress
     hourInput.simulate('keyup', { keyCode: 38 });
@@ -115,14 +97,8 @@ describe('tests for <TimePicker />', () => {
 
     container.find('.md-input').simulate('focus');
     const dropdown = container.find('.inline-flex');
-    const hourInput = dropdown
-      .find('input')
-      .at(0)
-      .simulate('focus');
-    const minuteInput = dropdown
-      .find('input')
-      .at(1)
-      .simulate('focus');
+    const hourInput = dropdown.find('input').at(0).simulate('focus');
+    const minuteInput = dropdown.find('input').at(1).simulate('focus');
 
     // Test Scroll Up
     hourInput.simulate('wheel', { deltaY: -5 });
@@ -152,19 +128,13 @@ describe('tests for <TimePicker />', () => {
 
     container.find('.md-input').simulate('focus');
     const dropdown = container.find('.inline-flex');
-    dropdown
-      .find('.icon-arrow-up_24')
-      .at(2)
-      .simulate('click');
+    dropdown.find('.icon-arrow-up_24').at(2).simulate('click');
     // Test Up Arrow
     expect(container.state().selectedTime.format('A')).toEqual('AM');
     expect(onChange).toHaveBeenLastCalledWith(2, 0, 0);
 
     // Test Down Arrow
-    dropdown
-      .find('.icon-arrow-down_24')
-      .at(2)
-      .simulate('click');
+    dropdown.find('.icon-arrow-down_24').at(2).simulate('click');
     expect(container.state().selectedTime.format('A')).toEqual('PM');
     expect(onChange).toHaveBeenLastCalledWith(14, 0, -1);
   });
@@ -180,10 +150,7 @@ describe('tests for <TimePicker />', () => {
 
     container.find('.md-input').simulate('focus');
     const dropdown = container.find('.inline-flex');
-    const meridianInput = dropdown
-      .find('input')
-      .at(2)
-      .simulate('focus');
+    const meridianInput = dropdown.find('input').at(2).simulate('focus');
 
     // Test Up Arrow KeyPress
     meridianInput.simulate('keyup', { keyCode: 38 });
@@ -207,18 +174,8 @@ describe('tests for <TimePicker />', () => {
     const dropdown = container.find('.inline-flex');
 
     expect(dropdown.find('input').at(2).length).toEqual(0);
-    expect(
-      dropdown
-        .find('input')
-        .at(0)
-        .props().value
-    ).toEqual('14');
-    expect(
-      dropdown
-        .find('input')
-        .at(1)
-        .props().value
-    ).toEqual('00');
+    expect(dropdown.find('input').at(0).props().value).toEqual('14');
+    expect(dropdown.find('input').at(1).props().value).toEqual('00');
   });
 
   it('allows minuteInterval prop to be passed', () => {
@@ -232,16 +189,10 @@ describe('tests for <TimePicker />', () => {
     container.find('.md-input').simulate('focus');
     const dropdown = container.find('.inline-flex');
     // Test Up Arrow
-    dropdown
-      .find('.icon-arrow-up_24')
-      .at(1)
-      .simulate('click');
+    dropdown.find('.icon-arrow-up_24').at(1).simulate('click');
     expect(container.state().selectedTime.format('mm')).toEqual('15');
     // Test Down Arrow
-    dropdown
-      .find('.icon-arrow-down_24')
-      .at(1)
-      .simulate('click');
+    dropdown.find('.icon-arrow-down_24').at(1).simulate('click');
     expect(container.state().selectedTime.format('mm')).toEqual('00');
   });
 
@@ -256,10 +207,7 @@ describe('tests for <TimePicker />', () => {
 
     container.find('.md-input').simulate('focus');
     const dropdown = container.find('.inline-flex');
-    const hourInput = dropdown
-      .childAt(0)
-      .children()
-      .childAt(1);
+    const hourInput = dropdown.childAt(0).children().childAt(1);
 
     hourInput.props().onChange({ currentTarget: { value: '08' } });
     hourInput.simulate('keyup', {

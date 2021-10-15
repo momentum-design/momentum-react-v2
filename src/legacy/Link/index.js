@@ -4,21 +4,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Link = ({ className, children, color, disabled, tag, theme, ...props }) => {
-  return (
-    React.createElement(
-      tag,
-      {
-        className:
-          'md-link' +
-          `${(color && ` md-link--${color}`) || ''}` +
-          `${(theme && ` md-link--${theme}`) || ''}` +
-          `${(className && ` ${className}`) || ''}`,
-        disabled: disabled,
-        ...!disabled && { tabIndex: 0 },
-        ...props
-      },
-      children
-    )
+  return React.createElement(
+    tag,
+    {
+      className:
+        'md-link' +
+        `${(color && ` md-link--${color}`) || ''}` +
+        `${(theme && ` md-link--${theme}`) || ''}` +
+        `${(className && ` ${className}`) || ''}`,
+      disabled: disabled,
+      ...(!disabled && { tabIndex: 0 }),
+      ...props,
+    },
+    children
   );
 };
 
@@ -43,7 +41,7 @@ Link.defaultProps = {
   color: 'blue',
   disabled: false,
   tag: 'a',
-  theme: ''
+  theme: '',
 };
 
 Link.displayName = 'Link';

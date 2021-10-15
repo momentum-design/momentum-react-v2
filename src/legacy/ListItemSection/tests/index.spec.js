@@ -16,19 +16,19 @@ describe('tests for <ListItemSection />', () => {
   });
 
   it('should handle position prop (left)', () => {
-    const container = shallow(<ListItemSection position='left'/>);
+    const container = shallow(<ListItemSection position="left" />);
 
     expect(container.find('.md-list-item__left').length).toEqual(1);
   });
 
   it('should handle position prop (right)', () => {
-    const container = shallow(<ListItemSection position='right'/>);
+    const container = shallow(<ListItemSection position="right" />);
 
     expect(container.find('.md-list-item__right').length).toEqual(1);
   });
 
   it('should handle className prop', () => {
-    const container = shallow(<ListItemSection className='right'/>);
+    const container = shallow(<ListItemSection className="right" />);
 
     expect(container.find('.right').length).toEqual(1);
   });

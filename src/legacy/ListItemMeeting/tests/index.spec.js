@@ -3,14 +3,13 @@ import { mount } from 'enzyme';
 import { ListItemMeeting } from '@momentum-ui/react';
 
 describe('tests for <ListItemMeeting />', () => {
-
   beforeEach(() => {
     jest.resetAllMocks();
     jest.useFakeTimers();
   });
 
   const props = {
-    header: 'testHeader'
+    header: 'testHeader',
   };
   const parentClick = jest.fn();
   const anchorClick = jest.fn();
@@ -22,27 +21,21 @@ describe('tests for <ListItemMeeting />', () => {
   });
 
   describe('tests for anchor section', () => {
-
     it('should not render anchor without label and click', () => {
-      const container = mount(
-        <ListItemMeeting {...props} anchorLabel='testLabel' />
-      );
+      const container = mount(<ListItemMeeting {...props} anchorLabel="testLabel" />);
 
       expect(container.find('Link').length).toEqual(0);
     });
 
     it('should not render anchor without label and click', () => {
-      const container = mount(
-        <ListItemMeeting {...props} anchorOnClick={anchorClick} />
-      );
+      const container = mount(<ListItemMeeting {...props} anchorOnClick={anchorClick} />);
 
       expect(container.find('Link').length).toEqual(0);
     });
 
     it('should render anchor with label and click', () => {
-
       const container = mount(
-        <ListItemMeeting {...props} anchorOnClick={anchorClick} anchorLabel='testLabel'/>
+        <ListItemMeeting {...props} anchorOnClick={anchorClick} anchorLabel="testLabel" />
       );
 
       expect(container.find('Link').length).toEqual(1);
@@ -51,7 +44,7 @@ describe('tests for <ListItemMeeting />', () => {
 
     it('should fire anchor with click', () => {
       const container = mount(
-        <ListItemMeeting {...props} anchorOnClick={anchorClick} anchorLabel='testLabel'/>
+        <ListItemMeeting {...props} anchorOnClick={anchorClick} anchorLabel="testLabel" />
       );
 
       container.find('Link').simulate('click');
@@ -60,7 +53,7 @@ describe('tests for <ListItemMeeting />', () => {
 
     it('should fire anchor with keyDown', () => {
       const container = mount(
-        <ListItemMeeting {...props} anchorOnClick={anchorClick} anchorLabel='testLabel'/>
+        <ListItemMeeting {...props} anchorOnClick={anchorClick} anchorLabel="testLabel" />
       );
 
       container.find('Link').simulate('keyDown', { which: 13, charCode: 13, key: 'Space' });
@@ -69,7 +62,12 @@ describe('tests for <ListItemMeeting />', () => {
 
     it('should not fire parent click when anchor clicked', () => {
       const container = mount(
-        <ListItemMeeting {...props} anchorOnClick={anchorClick} anchorLabel='testLabel' onClick={parentClick} />
+        <ListItemMeeting
+          {...props}
+          anchorOnClick={anchorClick}
+          anchorLabel="testLabel"
+          onClick={parentClick}
+        />
       );
 
       container.find('Link').simulate('click');
@@ -81,14 +79,14 @@ describe('tests for <ListItemMeeting />', () => {
 
   it('should render childrenRight', () => {
     const container = mount(
-      <ListItemMeeting {...props} childrenRight={<div className='test'>Test</div>}/>
+      <ListItemMeeting {...props} childrenRight={<div className="test">Test</div>} />
     );
 
     expect(container.find('.test').length).toEqual(1);
   });
 
   it('should handle className prop', () => {
-    const container = mount(<ListItemMeeting className='menuItem' {...props}/>);
+    const container = mount(<ListItemMeeting className="menuItem" {...props} />);
 
     expect(container.find('.md-list-item').hasClass('menuItem')).toEqual(true);
   });
@@ -100,15 +98,13 @@ describe('tests for <ListItemMeeting />', () => {
   });
 
   it('should handle id prop', () => {
-    const container = mount(<ListItemMeeting id='header' {...props} />);
+    const container = mount(<ListItemMeeting id="header" {...props} />);
 
     expect(container.find('.md-list-item').props().id).toMatch(/header/);
   });
 
   it('should handle inProgress prop', () => {
-    const container = mount(
-      <ListItemMeeting {...props} inProgress/>
-    );
+    const container = mount(<ListItemMeeting {...props} inProgress />);
 
     expect(container.find('.md-list-item-meeting__progress-line').exists()).toEqual(true);
   });
@@ -126,29 +122,26 @@ describe('tests for <ListItemMeeting />', () => {
   });
 
   describe('tests for onClick prop', () => {
-
     it('should fire onClick with click', () => {
-      const container = mount(
-        <ListItemMeeting {...props} onClick={parentClick} />
-      );
+      const container = mount(<ListItemMeeting {...props} onClick={parentClick} />);
 
       container.find('.md-list-item').simulate('click');
       expect(parentClick).toHaveBeenCalled();
     });
 
     it('should fire onClick with keyDown', () => {
-      const container = mount(
-        <ListItemMeeting {...props} onKeyDown={parentClick} />
-      );
+      const container = mount(<ListItemMeeting {...props} onKeyDown={parentClick} />);
 
-      container.find('.md-list-item').simulate('keyDown', { which: 13, charCode: 13, key: 'Space' });
+      container
+        .find('.md-list-item')
+        .simulate('keyDown', { which: 13, charCode: 13, key: 'Space' });
       expect(parentClick).toHaveBeenCalled();
     });
   });
 
   it('should render popoverContent', () => {
     const container = mount(
-      <ListItemMeeting {...props} popoverContent={<div className='test'>Test</div>}/>
+      <ListItemMeeting {...props} popoverContent={<div className="test">Test</div>} />
     );
 
     container.find('.md-list-item').simulate('click');
@@ -157,51 +150,40 @@ describe('tests for <ListItemMeeting />', () => {
   });
 
   it('should not render popoverContent if there is no popoverContent!', () => {
-    const container = mount(
-      <ListItemMeeting {...props} />
-    );
+    const container = mount(<ListItemMeeting {...props} />);
 
     container.find('.md-list-item').simulate('click');
     expect(container.find('.md-event-overlay').length).toEqual(0);
   });
 
   describe('tests for time/isALlDay prop', () => {
-
     it('should handle isAllDay true', () => {
-      const container = mount(
-        <ListItemMeeting isAllDay />
-      );
+      const container = mount(<ListItemMeeting isAllDay />);
 
       expect(container.find('.md-list-item__left').childAt(0).text()).toEqual('All day');
     });
 
     it('should prioritize isAllDay over time', () => {
-      const container = mount(
-        <ListItemMeeting isAllDay time={{ start: '4' }} />
-      );
+      const container = mount(<ListItemMeeting isAllDay time={{ start: '4' }} />);
 
       expect(container.find('.md-list-item__left').childAt(0).text()).toEqual('All day');
     });
 
     it('should handle start prop', () => {
-      const container = mount(
-        <ListItemMeeting time={{ start: '4' }} header='testHeader' />
-      );
+      const container = mount(<ListItemMeeting time={{ start: '4' }} header="testHeader" />);
 
       expect(container.find('.md-list-item__left').childAt(0).text()).toEqual('4');
     });
 
     it('should not render end without start', () => {
-      const container = mount(
-        <ListItemMeeting time={{ end: '4' }} header='testHeader' />
-      );
+      const container = mount(<ListItemMeeting time={{ end: '4' }} header="testHeader" />);
 
       expect(container.find('.md-list-item__left').childAt(1).exists()).toEqual(false);
     });
 
     it('should handle start & end prop', () => {
       const container = mount(
-        <ListItemMeeting time={{ start: '3', end: '4' }} header='testHeader' />
+        <ListItemMeeting time={{ start: '3', end: '4' }} header="testHeader" />
       );
 
       expect(container.find('.md-list-item__left').childAt(0).text()).toEqual('3');
@@ -210,17 +192,13 @@ describe('tests for <ListItemMeeting />', () => {
   });
 
   it('should handle title prop', () => {
-    const container = mount(
-      <ListItemMeeting {...props} title='testTitle'/>
-    );
+    const container = mount(<ListItemMeeting {...props} title="testTitle" />);
 
     expect(container.find('.md-list-item').props().title).toEqual('testTitle');
   });
 
   it('should handle type prop', () => {
-    const container = mount(
-      <ListItemMeeting {...props} type='chip'/>
-    );
+    const container = mount(<ListItemMeeting {...props} type="chip" />);
 
     expect(container.find('.md-list-item-meeting--chip').exists()).toEqual(true);
   });
@@ -241,4 +219,3 @@ describe('tests for <ListItemMeeting />', () => {
     expect(container.find('EventOverlay').props().showArrow).toEqual(false);
   });
 });
-

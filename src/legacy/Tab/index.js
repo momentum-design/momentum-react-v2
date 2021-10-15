@@ -9,38 +9,34 @@ class Tab extends React.PureComponent {
   }
 
   render() {
-    const {
-      heading,
-      active,
-      isType,
-      onPress,
-      onKeyDown,
-      role,
-      focus,
-      className,
-      disabled
-      } = this.props;
+    const { heading, active, isType, onPress, onKeyDown, role, focus, className, disabled } =
+      this.props;
 
     // Due to Momentum UI must keep anchor element instead of button eventhough accessibility would like the anchor element to be switched to a button.
     /* eslint-disable */
     return (
-      <li className={
-      'md-tab__item' +
-      `${(className && ` ${className}`) || ''}` +
-      `${active ? ' active' : ''}` +
-      `${(isType && ` md-type--${isType}`) || ''}` +
-      `${disabled ? ' disabled' : ''}`}
-        {...(!disabled ? {tabIndex: '-1'} : {})}
-        >
+      <li
+        className={
+          'md-tab__item' +
+          `${(className && ` ${className}`) || ''}` +
+          `${active ? ' active' : ''}` +
+          `${(isType && ` md-type--${isType}`) || ''}` +
+          `${disabled ? ' disabled' : ''}`
+        }
+        {...(!disabled ? { tabIndex: '-1' } : {})}
+      >
         <a
-          ref={ref => (this.tabLink = ref)}
+          ref={(ref) => (this.tabLink = ref)}
           role={role}
           onKeyDown={onKeyDown}
           href="#"
-          onClick={(e) => {e.preventDefault(); onPress(e)}}
+          onClick={(e) => {
+            e.preventDefault();
+            onPress(e);
+          }}
           tabIndex={focus ? 0 : -1}
           aria-current={active}
-          >
+        >
           {heading}
         </a>
       </li>

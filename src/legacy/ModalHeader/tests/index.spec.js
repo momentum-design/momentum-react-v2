@@ -22,7 +22,7 @@ describe('tests for <ModalHeader />', () => {
   });
 
   it('should apply closeBtnProps', () => {
-    const container = shallow(<ModalHeader closeBtnProps={{ className: 'test'}}/>);
+    const container = shallow(<ModalHeader closeBtnProps={{ className: 'test' }} />);
 
     expect(container.find('.test').length).toEqual(1);
   });
@@ -38,8 +38,8 @@ describe('tests for <ModalHeader />', () => {
 
     const container = mount(<ModalHeader />, {
       context: {
-        handleClose: onClose
-      }
+        handleClose: onClose,
+      },
     });
 
     container.find('button.md-modal__close').simulate('click');
@@ -47,18 +47,14 @@ describe('tests for <ModalHeader />', () => {
   });
 
   it('should render headerLabel', () => {
-    const container = shallow(
-      <ModalHeader headerLabel='test' />
-    );
+    const container = shallow(<ModalHeader headerLabel="test" />);
 
     expect(container.find('.md-modal__title').length).toEqual(1);
     expect(container.find('.md-modal__title').text()).toEqual('test');
   });
 
   it('should render message', () => {
-    const container = shallow(
-      <ModalHeader message='test' />
-    );
+    const container = shallow(<ModalHeader message="test" />);
 
     expect(container.find('.md-modal__message').length).toEqual(1);
     expect(container.find('.md-modal__message').text()).toEqual('test');
@@ -67,7 +63,7 @@ describe('tests for <ModalHeader />', () => {
   it('should render children', () => {
     const container = shallow(
       <ModalHeader>
-        <div className='test' />
+        <div className="test" />
       </ModalHeader>
     );
 
@@ -76,8 +72,8 @@ describe('tests for <ModalHeader />', () => {
 
   it('should only render if children & headerLabel', () => {
     const container = shallow(
-      <ModalHeader headerLabel='test'>
-        <div className='test' />
+      <ModalHeader headerLabel="test">
+        <div className="test" />
       </ModalHeader>
     );
 

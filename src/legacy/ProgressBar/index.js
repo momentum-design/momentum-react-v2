@@ -3,11 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ProgressBar = props => {
+const ProgressBar = (props) => {
   const { label, min, max, value, dynamic, displayFormat, color } = props;
 
   const adjustedValue = max - value < 0 ? max : value;
-  const valueFraction = adjustedValue / max * 100 || 0;
+  const valueFraction = (adjustedValue / max) * 100 || 0;
   const meterWidth = valueFraction + '%';
 
   const getDisplayFormat = () => {

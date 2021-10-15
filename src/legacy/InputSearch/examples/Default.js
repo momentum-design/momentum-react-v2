@@ -5,10 +5,10 @@ export default function DefaultInputSearch() {
   return (
     <InputSearch
       clear
-      label='Default Search Input'
-      name='defaultSearchInput'
-      htmlId='defaultSearchInput'
-      containerSize='medium-6'
+      label="Default Search Input"
+      name="defaultSearchInput"
+      htmlId="defaultSearchInput"
+      containerSize="medium-6"
     />
   );
 }
