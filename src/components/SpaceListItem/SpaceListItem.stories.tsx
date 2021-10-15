@@ -14,6 +14,7 @@ import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 import Icon from '../Icon';
 import Avatar from '../Avatar';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/SpaceListItem',
@@ -33,6 +34,7 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   firstLine: 'Cisco Webex',
   secondLine: 'Webex Teams',
+  onPress: action(`Space List Item Press`),
 };
 
 const Common = MultiTemplate<SpaceListItemProps>(SpaceListItem).bind({});
@@ -43,6 +45,7 @@ delete Common.argTypes.children;
 Common.args = {
   firstLine: 'Cisco Webex',
   secondLine: 'Webex Teams',
+  onPress: action(`Space List Item Press`),
 };
 
 Common.parameters = {

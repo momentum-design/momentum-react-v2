@@ -5,53 +5,46 @@ import { STYLE } from './List.constants';
 import { Props } from './List.types';
 import './List.style.scss';
 import { ListContext } from './List.utils';
+import { useKeyboard } from '@react-aria/interactions';
 
-const useRoveFocus = (ref: RefObject<HTMLUListElement>, size: number) => {
+const List: FC<Props> = (props: Props) => {
   const [currentFocus, setCurrentFocus] = useState<number>(0);
 
-  const handleKeyDown = useCallback(
-    (e) => {
+  const { keyboardProps } = useKeyboard({
+    onKeyDown: (e) => {
       switch (e.key) {
         case 'ArrowUp':
         case 'ArrowLeft':
           e.preventDefault();
-          setCurrentFocus((size + currentFocus - 1) % size);
+          setCurrentFocus((listSize + currentFocus - 1) % listSize);
           break;
 
         case 'ArrowDown':
         case 'ArrowRight':
           e.preventDefault();
-          setCurrentFocus((size + currentFocus + 1) % size);
+          setCurrentFocus((listSize + currentFocus + 1) % listSize);
           break;
 
         default:
           break;
       }
     },
-    [size, currentFocus, setCurrentFocus]
-  );
+  });
 
-  useEffect(() => {
-    ref.current.addEventListener('keydown', handleKeyDown, false);
-    return () => {
-      ref.current.removeEventListener('keydown', handleKeyDown, false);
-    };
-  }, [handleKeyDown]);
-
-  return { currentFocus, setCurrentFocus };
-};
-
-const List: FC<Props> = (props: Props) => {
-  const { className, id, style, children, shouldFocusOnPres, listSize, shouldItemFocusBeInset } =
+  const { className, id, style, children, shouldFocusOnPress, listSize, shouldItemFocusBeInset } =
     props;
 
   const ref = useRef<HTMLUListElement>();
 
-  const { currentFocus } = useRoveFocus(ref, listSize);
-
   return (
-    <ListContext.Provider value={{ currentFocus, shouldFocusOnPres, shouldItemFocusBeInset }}>
-      <ul className={classnames(className, STYLE.wrapper)} ref={ref} style={style} id={id}>
+    <ListContext.Provider value={{ currentFocus, shouldFocusOnPress, shouldItemFocusBeInset }}>
+      <ul
+        className={classnames(className, STYLE.wrapper)}
+        ref={ref}
+        style={style}
+        id={id}
+        {...keyboardProps}
+      >
         {children}
       </ul>
     </ListContext.Provider>

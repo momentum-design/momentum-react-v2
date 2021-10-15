@@ -7,6 +7,7 @@ exports[`<List /> snapshot should match snapshot 1`] = `
 >
   <ul
     className="md-list-wrapper"
+    onKeyDown={[Function]}
   >
     <ListItemBase
       key="1"
@@ -98,6 +99,7 @@ exports[`<List /> snapshot should match snapshot with className 1`] = `
 >
   <ul
     className="example-class md-list-wrapper"
+    onKeyDown={[Function]}
   >
     <ListItemBase
       key="1"
@@ -190,6 +192,7 @@ exports[`<List /> snapshot should match snapshot with id 1`] = `
   <ul
     className="md-list-wrapper"
     id="example-id"
+    onKeyDown={[Function]}
   >
     <ListItemBase
       key="1"
@@ -285,6 +288,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
 >
   <ul
     className="md-list-wrapper"
+    onKeyDown={[Function]}
     style={
       Object {
         "color": "pink",

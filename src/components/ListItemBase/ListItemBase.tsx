@@ -34,7 +34,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   const listContext = useListContext();
   const focus = listContext?.currentFocus === itemIndex;
-  const shouldFocusOnPres = listContext?.shouldFocusOnPres || false;
+  const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
 
@@ -83,7 +83,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   };
 
   const { pressProps, isPressed } = usePress({
-    preventFocusOnPress: !shouldFocusOnPres,
+    preventFocusOnPress: !shouldFocusOnPress,
     ...rest,
   });
 

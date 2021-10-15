@@ -10,7 +10,7 @@ export interface ContextMenuState {
 }
 
 type ContextMenuAction = {
-  text: string;
+  text?: string;
   action?: () => void;
 };
 

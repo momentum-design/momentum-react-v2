@@ -29,7 +29,7 @@ export interface Props {
   /**
    * Determines if the onPress handler should also focus the selected item
    */
-  shouldFocusOnPres?: boolean;
+  shouldFocusOnPress?: boolean;
 
   /**
    * Determines wether the focus around list-items should be inset or outset
@@ -40,6 +40,6 @@ export interface Props {
 
 export interface ListContextValue {
   currentFocus?: number;
-  shouldFocusOnPres?: boolean;
+  shouldFocusOnPress?: boolean;
   shouldItemFocusBeInset?: boolean;
 }

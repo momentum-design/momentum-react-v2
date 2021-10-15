@@ -73,6 +73,7 @@ Common.parameters = {
                 itemIndex={index}
                 firstLine={`Daniel Webex - ${index}`}
                 teamColor="gold"
+                onPress={action(`List Item Press ${index}`)}
                 avatar={
                   <Avatar
                     title="D"
