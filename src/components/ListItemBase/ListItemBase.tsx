@@ -124,6 +124,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         {contextMenuActions.map((item, index) => (
           <ButtonSimple
             key={index}
+            aria-label={item?.text}
             onPress={() => {
               toggleContextMenu();
               item?.action();
