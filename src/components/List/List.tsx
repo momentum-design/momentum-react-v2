@@ -14,16 +14,14 @@ const useRoveFocus = (ref: RefObject<HTMLUListElement>, size: number) => {
       switch (e.key) {
         case 'ArrowUp':
         case 'ArrowLeft':
-          // Up arrow
           e.preventDefault();
-          setCurrentFocus(currentFocus === 0 ? size - 1 : currentFocus - 1);
+          setCurrentFocus((size + currentFocus - 1) % size);
           break;
 
         case 'ArrowDown':
         case 'ArrowRight':
-          // Down arrow
           e.preventDefault();
-          setCurrentFocus(currentFocus === size - 1 ? 0 : currentFocus + 1);
+          setCurrentFocus((size + currentFocus + 1) % size);
           break;
 
         default:

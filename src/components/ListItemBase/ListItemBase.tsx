@@ -11,6 +11,7 @@ import { usePress } from '@react-aria/interactions';
 import ModalContainer from '../ModalContainer';
 import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
+import ButtonSimple from '../ButtonSimple';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
@@ -121,15 +122,15 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         ref={overlayRef}
       >
         {contextMenuActions.map((item, index) => (
-          <button
+          <ButtonSimple
             key={index}
-            onClick={() => {
+            onPress={() => {
               toggleContextMenu();
-              item.action();
+              item?.action();
             }}
           >
-            {item.text}
-          </button>
+            {item?.text}
+          </ButtonSimple>
         ))}
       </ModalContainer>
     );

@@ -11,7 +11,7 @@ export interface ContextMenuState {
 
 type ContextMenuAction = {
   text: string;
-  action: () => void;
+  action?: () => void;
 };
 
 export interface ContextMenu {

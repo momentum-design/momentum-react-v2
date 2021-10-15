@@ -32,10 +32,4 @@ export interface Props<T> {
    * Determines if the listbox allows for empty selection
    */
   disallowEmptySelection?: boolean;
-
-  /**
-   * Determines if the items inside the listbox are wrapped inside ListItemBase or not
-   * @default true
-   */
-  shouldWrapItems?: boolean;
 }
