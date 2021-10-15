@@ -1,3 +1,25 @@
+import { ArgTypes } from '@storybook/react';
+
+function extendArgTypes(
+  name: string,
+  argTypes: ArgTypes,
+  removeKeys: Array<string> = []
+): ArgTypes {
+  return Object.fromEntries(
+    Object.entries(argTypes).reduce((accumulation, [key, value]) => {
+      if (removeKeys.includes(key)) {
+        return accumulation;
+      }
+
+      value.table.category = `From <${name} />`;
+
+      accumulation.push([key, value]);
+
+      return accumulation;
+    }, [])
+  );
+}
+
 const commonAriaButton = {
   onPress: {
     action: 'onPress',
@@ -115,4 +137,4 @@ const commonStyles = {
   },
 };
 
-export { commonAriaButton, commonStyles };
+export { commonAriaButton, commonStyles, extendArgTypes };

@@ -103,6 +103,7 @@ export {
   AlertBadge,
   AlertBanner as AlertBannerNext,
   Badge as BadgeNext,
+  Banner,
   Avatar as AvatarNext,
   ButtonCircle,
   AvatarCompact as AvatarCompactNext,
