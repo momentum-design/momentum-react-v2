@@ -26,7 +26,7 @@
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "typings": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/momentum-design/momentum-ui.git"
