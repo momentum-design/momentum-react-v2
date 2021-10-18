@@ -103,6 +103,7 @@ packages
 **/build/
 **/dist/
 **/coverage/
+**/docs/
 **/downloads
 **/backup
 **/uploads

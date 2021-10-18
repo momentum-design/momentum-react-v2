@@ -11,6 +11,7 @@ const ReactionBadge: FC<Props> = forwardRef(
     const { className, count, id, reacted, reaction, style, ...otherProps } = props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
+
     return (
       <ButtonPill
         className={classnames(className, STYLE.wrapper)}

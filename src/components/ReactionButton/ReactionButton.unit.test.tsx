@@ -1,7 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+import { mountAndWait } from '../../../test/utils';
 import ReactionButton, { REACTION_BUTTON_CONSTANTS as CONSTANTS } from './';
+import Reaction from '../Reaction';
+import { REACTION_NAMES } from '../Reaction/Reaction.constants';
 
 describe('<ReactionButton />', () => {
   describe('snapshot', () => {
@@ -93,11 +96,32 @@ describe('<ReactionButton />', () => {
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
-
-    /* ...additional attribute tests... */
   });
 
   describe('actions', () => {
-    /* ...action tests... */
+    it('should handle mouse press events', async () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const wrapper = await mountAndWait(
+        <ReactionButton onPress={mockCallback}>
+          <Reaction name={REACTION_NAMES.haha} />
+        </ReactionButton>
+      );
+      const component = wrapper.find(ReactionButton);
+
+      component.props().onPress({
+        type: 'press',
+        pointerType: 'mouse',
+        altKey: false,
+        shiftKey: false,
+        ctrlKey: false,
+        metaKey: false,
+        target: component.getDOMNode(),
+      });
+
+      expect(mockCallback).toBeCalledTimes(1);
+    });
   });
 });

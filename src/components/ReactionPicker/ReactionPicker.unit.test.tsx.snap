@@ -2,9 +2,16 @@
 
 exports[`<ReactionPicker /> snapshot should match snapshot 1`] = `
 <ReactionPicker>
-  <div
+  <ButtonGroup
     className="md-reaction-picker-wrapper"
-  />
+    round={true}
+  >
+    <div
+      className="md-button-group-wrapper md-reaction-picker-wrapper"
+      data-round={true}
+      data-spaced={false}
+    />
+  </ButtonGroup>
 </ReactionPicker>
 `;
 
@@ -12,9 +19,16 @@ exports[`<ReactionPicker /> snapshot should match snapshot with className 1`] = 
 <ReactionPicker
   className="example-class"
 >
-  <div
+  <ButtonGroup
     className="example-class md-reaction-picker-wrapper"
-  />
+    round={true}
+  >
+    <div
+      className="md-button-group-wrapper example-class md-reaction-picker-wrapper"
+      data-round={true}
+      data-spaced={false}
+    />
+  </ButtonGroup>
 </ReactionPicker>
 `;
 
@@ -22,10 +36,18 @@ exports[`<ReactionPicker /> snapshot should match snapshot with id 1`] = `
 <ReactionPicker
   id="example-id"
 >
-  <div
+  <ButtonGroup
     className="md-reaction-picker-wrapper"
     id="example-id"
-  />
+    round={true}
+  >
+    <div
+      className="md-button-group-wrapper md-reaction-picker-wrapper"
+      data-round={true}
+      data-spaced={false}
+      id="example-id"
+    />
+  </ButtonGroup>
 </ReactionPicker>
 `;
 
@@ -37,13 +59,25 @@ exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <div
+  <ButtonGroup
     className="md-reaction-picker-wrapper"
+    round={true}
     style={
       Object {
         "color": "pink",
       }
     }
-  />
+  >
+    <div
+      className="md-button-group-wrapper md-reaction-picker-wrapper"
+      data-round={true}
+      data-spaced={false}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    />
+  </ButtonGroup>
 </ReactionPicker>
 `;

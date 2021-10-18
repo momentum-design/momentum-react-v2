@@ -98,11 +98,4 @@ describe('<Reaction/>', () => {
       expect(element.getAttribute('data-size')).toBe(`${size}`);
     });
   });
-
-  describe('actions', () => {
-    const wrapper = await mountAndWait(<Reaction name="haha" size={size} />);
-    const element = wrapper.find(Reaction).getDOMNode();
-
-    expect(element.getAttribute('data-size')).toBe(`${size}`);
-  });
 });

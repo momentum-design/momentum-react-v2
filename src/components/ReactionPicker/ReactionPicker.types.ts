@@ -1,10 +1,13 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 
+import { ReactionButtonProps } from '../ReactionButton';
+
+export type SupportedChildren = ReactionButtonProps;
 export interface Props {
   /**
-   * Child components of this ButtonPill.
+   * Child components of this ReactionPicker.
    */
-  children?: ReactNode;
+  children?: ReactElement<SupportedChildren> | Array<ReactElement<SupportedChildren>>;
 
   /**
    * Custom class for overriding this component's CSS.

@@ -21,7 +21,7 @@ export default {
     },
   },
   args: {
-    children: 'Example Text',
+    children: 'Krappa123',
     style: { margin: '0.5rem' },
   },
 };

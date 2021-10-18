@@ -4,6 +4,7 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import ReactionPicker, { ReactionPickerProps } from './';
+import Reaction from '../Reaction';
 import ReactionButton from '../ReactionButton';
 import argTypes from './ReactionPicker.stories.args';
 import Documentation from './ReactionPicker.stories.docs.mdx';
@@ -21,13 +22,27 @@ export default {
   args: {
     // Args provided to all stories by default.
     children: [
-      <ReactionButton name={'popper'} />,
-      <ReactionButton name={'heart'} />,
-      <ReactionButton name={'thumb-up-yellow'} />,
-      <ReactionButton name={'smile'} reacted />,
-      <ReactionButton name={'haha'} />,
-      <ReactionButton name={'wow'} />,
-      <ReactionButton name={'sad'} />,
+      <ReactionButton>
+        <Reaction name={'popper'} />
+      </ReactionButton>,
+      <ReactionButton>
+        <Reaction name={'heart'} />
+      </ReactionButton>,
+      <ReactionButton>
+        <Reaction name={'thumb-up-yellow'} />
+      </ReactionButton>,
+      <ReactionButton reacted>
+        <Reaction name={'smile'} />
+      </ReactionButton>,
+      <ReactionButton>
+        <Reaction name={'haha'} />
+      </ReactionButton>,
+      <ReactionButton>
+        <Reaction name={'wow'} />
+      </ReactionButton>,
+      <ReactionButton>
+        <Reaction name={'sad'} />
+      </ReactionButton>,
     ],
   },
 };
