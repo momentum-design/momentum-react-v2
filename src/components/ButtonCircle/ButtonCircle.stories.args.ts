@@ -2,9 +2,7 @@ import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.a
 
 import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from './';
 
-export default {
-  ...commonStyles,
-  ...commonAriaButton,
+const buttonCircleArgTypes = {
   /**
    * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
    */
@@ -87,4 +85,12 @@ export default {
       },
     },
   },
+};
+
+export { buttonCircleArgTypes };
+
+export default {
+  ...commonStyles,
+  ...commonAriaButton,
+  ...buttonCircleArgTypes,
 };

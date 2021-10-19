@@ -25,17 +25,7 @@ export interface Props {
    * Name of the specific emoji to render.
    * valid names: https://github.com/momentum-design/momentum-ui/tree/master/animations/lottie/reactions
    */
-  name:
-    | 'clap-yellow'
-    | 'haha'
-    | 'heart'
-    | 'popper'
-    | 'raise-hand-yellow'
-    | 'sad'
-    | 'smile'
-    | 'thumb-down-yellow'
-    | 'thumb-up-yellow'
-    | 'wow';
+  name: string;
 
   /**
    * Size index of this Reaction.

@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import ReactionPicker, { REACTION_PICKER_CONSTANTS as CONSTANTS } from './';
+import ReactionButton from '../ReactionButton';
 
 describe('<ReactionPicker />', () => {
   describe('snapshot', () => {
@@ -43,7 +44,15 @@ describe('<ReactionPicker />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    /* ...additional snapshot tests... */
+    it('should match snapshot with children', () => {
+      expect.assertions(1);
+
+      const children = <ReactionButton />;
+
+      const container = mount(<ReactionPicker>{children}</ReactionPicker>);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -93,11 +102,5 @@ describe('<ReactionPicker />', () => {
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
-
-    /* ...additional attribute tests... */
-  });
-
-  describe('actions', () => {
-    /* ...action tests... */
   });
 });
