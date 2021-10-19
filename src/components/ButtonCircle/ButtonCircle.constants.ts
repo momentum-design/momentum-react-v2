@@ -1,3 +1,5 @@
+import { Size } from './ButtonCircle.types';
+
 const CLASS_PREFIX = 'md-button-circle';
 
 const DEFAULTS = {
@@ -14,7 +16,7 @@ const COLORS = {
   MESSAGE: 'message',
 };
 
-const SIZES = {
+const SIZES: Record<number, Size> = {
   64: 64,
   52: 52,
   40: 40,

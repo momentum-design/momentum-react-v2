@@ -1,8 +1,9 @@
+import { SIZES } from '../ButtonCircle/ButtonCircle.constants';
 const CLASS_PREFIX = 'md-reaction-button';
 
 const DEFAULTS = {
   REACTED: false,
-  SIZE: 32,
+  SIZE: SIZES[32],
 };
 
 const STYLE = {

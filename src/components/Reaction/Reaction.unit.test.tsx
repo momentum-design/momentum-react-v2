@@ -92,6 +92,7 @@ describe('<Reaction/>', () => {
       expect.assertions(1);
 
       const size = 16;
+
       const wrapper = await mountAndWait(<Reaction name="haha" size={size} />);
       const element = wrapper.find(Reaction).getDOMNode();
 

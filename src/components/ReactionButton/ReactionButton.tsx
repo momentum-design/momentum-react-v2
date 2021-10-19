@@ -10,14 +10,12 @@ import './ReactionButton.style.scss';
  * Button within the ReactionPicker
  */
 const ReactionButton: FC<Props> = (props: Props) => {
-  const { className, children, id, reacted, style, ...otherProps } = props;
+  const { className, children, reacted, ...otherProps } = props;
   return (
     <ButtonCircle
       className={classnames(className, STYLE.wrapper)}
       data-reacted={reacted || DEFAULTS.REACTED}
-      id={id}
-      size={32}
-      style={style}
+      size={DEFAULTS.SIZE}
       {...otherProps}
     >
       {children}
