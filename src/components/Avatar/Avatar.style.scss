@@ -40,52 +40,52 @@
   }
 
   // Background Color
-  &[data-color=default] {
+  &[data-color='default'] {
     background-color: var(--avatar-color-avatar-background-default);
   }
 
-  &[data-color=gold] {
+  &[data-color='gold'] {
     background-color: var(--avatar-color-avatar-background-gold);
   }
 
-  &[data-color=orange] {
+  &[data-color='orange'] {
     background-color: var(--avatar-color-avatar-background-orange);
   }
 
-  &[data-color=lime] {
+  &[data-color='lime'] {
     background-color: var(--avatar-color-avatar-background-lime);
   }
 
-  &[data-color=mint] {
+  &[data-color='mint'] {
     background-color: var(--avatar-color-avatar-background-mint);
   }
 
-  &[data-color=cyan] {
+  &[data-color='cyan'] {
     background-color: var(--avatar-color-avatar-background-cyan);
   }
 
-  &[data-color=cobalt] {
+  &[data-color='cobalt'] {
     background-color: var(--avatar-color-avatar-background-cobalt);
   }
 
-  &[data-color=slate] {
+  &[data-color='slate'] {
     background-color: var(--avatar-color-avatar-background-slate);
   }
 
-  &[data-color=violet] {
+  &[data-color='violet'] {
     background-color: var(--avatar-color-avatar-background-violet);
   }
 
-  &[data-color=purple] {
+  &[data-color='purple'] {
     background-color: var(--avatar-color-avatar-background-purple);
   }
 
-  &[data-color=pink] {
+  &[data-color='pink'] {
     background-color: var(--avatar-color-avatar-background-pink);
   }
 
   // Sizes
-  &[data-size="24"] {
+  &[data-size='24'] {
     span {
       font-size: 0.75rem;
     }
@@ -99,7 +99,7 @@
     height: 1.5rem;
   }
 
-  &[data-size="32"] {
+  &[data-size='32'] {
     span {
       font-size: 0.875rem;
     }
@@ -113,7 +113,7 @@
     height: 2rem;
   }
 
-  &[data-size="48"] {
+  &[data-size='48'] {
     span {
       font-size: 1.125rem;
     }
@@ -127,7 +127,7 @@
     height: 3rem;
   }
 
-  &[data-size="72"] {
+  &[data-size='72'] {
     span {
       font-size: 1.625rem;
     }
@@ -141,7 +141,7 @@
     height: 4.5rem;
   }
 
-  &[data-size="88"] {
+  &[data-size='88'] {
     span {
       font-size: 1.625rem;
     }
@@ -155,7 +155,7 @@
     height: 5.5rem;
   }
 
-  &[data-size="124"] {
+  &[data-size='124'] {
     span {
       font-size: 2.5rem;
     }
@@ -170,3 +170,21 @@
   }
 }
 
+.md-avatar-button-wrapper {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.md-avatar-animation-wrapper {
+  width: 100%;
+  height: 100%;
+  background: var(--overlayFade-secondary-background);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vh;
+}

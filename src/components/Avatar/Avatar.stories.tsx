@@ -162,6 +162,32 @@ export default {
         },
       },
     },
+    isTyping: {
+      defaultValue: false,
+      description: 'Determines weather the user is typing.',
+      control: { type: 'boolean' },
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+    },
+    failureBadge: {
+      defaultValue: false,
+      description: 'Determines if there is an error in the Avatar component.',
+      control: { type: 'boolean' },
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+    },
   },
 };
 

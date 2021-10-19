@@ -1,3 +1,5 @@
+import { AriaButtonProps } from '@react-types/button';
+
 export enum PresenceType {
   Default = 'default',
   Active = 'active',
@@ -27,7 +29,7 @@ export type AvatarColor =
 
 export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
 
-export interface Props {
+export interface Props extends Omit<AriaButtonProps, 'type'> {
   /**
    * className prop description
    */
@@ -72,4 +74,19 @@ export interface Props {
    * The icon name to display instead of initials or image
    */
   icon?: string;
+
+  /**
+   * Set the visibility of Avatar's default tooltip
+   */
+  hideDefaultTooltip?: boolean;
+
+  /**
+   * Determines if the user is typing.
+   */
+  isTyping?: boolean;
+
+  /**
+   * Determines if there is an error in the Avatar component
+   */
+  failureBadge?: boolean;
 }

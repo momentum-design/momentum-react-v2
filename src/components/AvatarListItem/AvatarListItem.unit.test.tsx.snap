@@ -51,6 +51,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot 1`] = `
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -154,6 +155,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with avatarProps 1`] 
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="Cisco"
                 >
                   <span>
                     C
@@ -281,6 +283,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with className 1`] = 
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -382,6 +385,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMoreActio
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -544,6 +548,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -710,6 +715,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with displayMuteActio
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -872,6 +878,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with firstLine 1`] = 
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -973,6 +980,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with id 1`] = `
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -1070,6 +1078,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -1194,6 +1203,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -1318,6 +1328,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -1442,6 +1453,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with scheduler state 
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -1566,6 +1578,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with secondLine 1`] =
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
@@ -1687,6 +1700,7 @@ exports[`<AvatarListItem /> snapshot should match snapshot with style 1`] = `
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  title="C"
                 >
                   <span>
                     C
