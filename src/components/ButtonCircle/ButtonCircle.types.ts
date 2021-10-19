@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 
-export type Size = 64 | 52 | 40 | 32 | 28;
+export type Size = 64 | 52 | 40 | 32 | 28 | 20;
 export interface Props extends AriaButtonProps {
   /**
    * Child components of this ButtonCircle.
@@ -41,7 +41,7 @@ export interface Props extends AriaButtonProps {
   /**
    * Size index of this ButtonCircle.
    */
-  size?: 64 | 52 | 40 | 32 | 28;
+  size?: Size;
 
   /**
    * Custom style for overriding this component's CSS.

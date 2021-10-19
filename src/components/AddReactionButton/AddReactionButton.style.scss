@@ -1,0 +1,30 @@
+.md-add-reaction-button-wrapper {
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2); // IEFIX
+  border-color: var(--theme-outline-secondary-normal);
+  border-width: 0.0625rem;
+  margin: 0 0.125rem;
+
+  /* Colorization */
+  background-color: rgba(255, 255, 255, 0.11); // IEFIX
+  background-color: var(--reaction-badge-primary-background);
+  color: rgba(255, 255, 255, 0.95); // IEFIX
+  color: var(--reaction-badge-primary-unreacted-text);
+
+  .reaction-badge-count {
+    margin-left: 0.25rem;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2); // IEFIX
+    background-color: var(--reaction-badge-primary-background-hovered);
+    color: rgba(255, 255, 255, 0.95); // IEFIX
+    color: var(--button-secondary-text-hovered);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.3); // IEFIX
+    background-color: var(--reaction-badge-primary-background-pressed);
+    color: rgba(255, 255, 255, 0.95); // IEFIX
+    color: var(--button-secondary-text-pressed);
+  }
+}
