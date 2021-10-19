@@ -150,7 +150,7 @@ export default {
     },
     type: {
       defaultValue: DEFAULTS.TYPE,
-      description: 'Determines weather the avatar is for a person or a space.',
+      description: 'Determines whether the avatar is for a person or a space.',
       options: [undefined, ...Object.values(TYPES)],
       control: { type: 'select' },
       table: {
@@ -164,7 +164,7 @@ export default {
     },
     isTyping: {
       defaultValue: false,
-      description: 'Determines weather the user is typing.',
+      description: 'Determines whether the user is typing.',
       control: { type: 'boolean' },
       table: {
         type: {

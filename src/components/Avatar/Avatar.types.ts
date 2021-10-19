@@ -81,7 +81,7 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   hideDefaultTooltip?: boolean;
 
   /**
-   * Determines if the user is typing.
+   * Determines whether the user is typing.
    */
   isTyping?: boolean;
 
