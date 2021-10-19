@@ -35,3 +35,5 @@ export { default as SearchInput } from './SearchInput';
 export { default as Text } from './Text';
 export { default as MeetingListItem } from './MeetingListItem';
 export { default as TextInput } from './TextInput';
+export { default as Reaction } from './Reaction';
+export { default as ReactionBadge } from './ReactionBadge';

@@ -9,6 +9,7 @@ module.exports = {
   modulePathIgnorePatterns: ['<rootDir>/src/app/'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   snapshotResolver: '<rootDir>/config/jest/jest.snapshot-resolver.js',
+  setupFiles: ['jest-canvas-mock'],
   setupFilesAfterEnv: ['<rootDir>/src/helpers/enzyme_setup'],
   transform: {
     '^.+\\.(j|t)sx?$': 'ts-jest',
