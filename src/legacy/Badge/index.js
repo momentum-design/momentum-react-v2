@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Badge = props => {
+const Badge = (props) => {
   const { className, rounded, color, ...otherHTMLProps } = props;
 
   return (

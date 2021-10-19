@@ -1,9 +1,7 @@
 import React from 'react';
 import { Avatar } from '@momentum-ui/react';
- export default class AvatarNotification extends React.PureComponent {
+export default class AvatarNotification extends React.PureComponent {
   render() {
-    return (
-      <Avatar title="Tom Smith" hasNotification />
-    );
+    return <Avatar title="Tom Smith" hasNotification />;
   }
 }

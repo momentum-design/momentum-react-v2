@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 /** Child component to display the slider pointer */
 class SliderPointer extends React.PureComponent {
   state = {
-    previousPosition: null
-  }
+    previousPosition: null,
+  };
 
-  getDirections = currentPos => {
+  getDirections = (currentPos) => {
     const { previousPosition } = this.state;
     if (currentPos > previousPosition) {
       return 1;
@@ -17,7 +17,7 @@ class SliderPointer extends React.PureComponent {
 
   getPosition = (event, isTouch) => {
     return isTouch ? event.touches[0].clientX : event.clientX;
-  }
+  };
 
   onMouseDown = (event, isTouch = false) => {
     if (!isTouch) {
@@ -26,7 +26,7 @@ class SliderPointer extends React.PureComponent {
     }
 
     this.setState({
-      previousPosition: this.getPosition(event, isTouch)
+      previousPosition: this.getPosition(event, isTouch),
     });
   };
 
@@ -43,16 +43,16 @@ class SliderPointer extends React.PureComponent {
       from: this.sliderRef.getBoundingClientRect().x,
       to: xPos,
       direction,
-      isKeyBoard: false
+      isKeyBoard: false,
     });
   };
 
-  onKeyDown = event => {
+  onKeyDown = (event) => {
     const KEYS = {
       LEFT: 37,
       UP: 38,
       RIGHT: 39,
-      DOWN: 40
+      DOWN: 40,
     };
 
     switch (event.keyCode) {
@@ -60,7 +60,7 @@ class SliderPointer extends React.PureComponent {
       case KEYS.RIGHT:
         this.props.onMove({
           isKeyBoard: true,
-          direction: 1
+          direction: 1,
         });
         event.preventDefault();
         break;
@@ -69,30 +69,29 @@ class SliderPointer extends React.PureComponent {
       case KEYS.LEFT:
         this.props.onMove({
           isKeyBoard: true,
-          direction: -1
+          direction: -1,
         });
         event.preventDefault();
         break;
     }
   };
 
-
   render() {
     const { position } = this.props;
 
-    const pointerStyle = {left: `calc(${position}%`};
+    const pointerStyle = { left: `calc(${position}%` };
 
     return (
       <div
-        className='md-slider__pointer'
-        onMouseDown={e => this.onMouseDown(e)}
-        onTouchStart={e => this.onMouseDown(e, true)}
-        onTouchMove={e => this.onMouseMove(e, true)}
-        onKeyDown={e => this.onKeyDown(e)}
-        role='button'
+        className="md-slider__pointer"
+        onMouseDown={(e) => this.onMouseDown(e)}
+        onTouchStart={(e) => this.onMouseDown(e, true)}
+        onTouchMove={(e) => this.onMouseMove(e, true)}
+        onKeyDown={(e) => this.onKeyDown(e)}
+        role="button"
         tabIndex={0}
         style={pointerStyle}
-        ref={ref => this.sliderRef = ref}
+        ref={(ref) => (this.sliderRef = ref)}
       />
     );
   }

@@ -4,6 +4,7 @@ export { default as Avatar } from './Avatar';
 export { default as AvatarCompact } from './AvatarCompact';
 export { default as AvatarListItem } from './AvatarListItem';
 export { default as Badge } from './Badge';
+export { default as Banner } from './Banner';
 export { default as ButtonCircle } from './ButtonCircle';
 export { default as ButtonControl } from './ButtonControl';
 export { default as ButtonDialpad } from './ButtonDialpad';

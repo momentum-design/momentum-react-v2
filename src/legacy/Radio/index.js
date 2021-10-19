@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Label } from '@momentum-ui/react';
 
-const Radio = props => {
+const Radio = (props) => {
   const {
     checked,
     children,
@@ -42,7 +42,7 @@ const Radio = props => {
         onChange={onChange}
         tabIndex={tabIndex}
       />
-      <Label className='md-radio__label' label={label} htmlFor={htmlId} />
+      <Label className="md-radio__label" label={label} htmlFor={htmlId} />
       {children}
     </div>
   );

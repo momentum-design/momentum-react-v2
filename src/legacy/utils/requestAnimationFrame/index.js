@@ -16,8 +16,8 @@ export const raf =
   win.mozRequestAnimationFrame ||
   win.oRequestAnimationFrame ||
   win.msRequestAnimationFrame ||
-  function(callback) {
-    return (win).setTimeout(callback, 1000 / 60);
+  function (callback) {
+    return win.setTimeout(callback, 1000 / 60);
   };
 
 export const caf =
@@ -26,6 +26,6 @@ export const caf =
   win.mozCancelAnimationFrame ||
   win.oCancelAnimationFrame ||
   win.msCancelAnimationFrame ||
-  function(id) {
-    (win).clearTimeout(id);
+  function (id) {
+    win.clearTimeout(id);
   };

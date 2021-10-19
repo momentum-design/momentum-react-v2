@@ -4,14 +4,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class RadioGroup extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      values: props.values || []
+      values: props.values || [],
     };
   }
 
-  handleToggle = value => {
+  handleToggle = (value) => {
     let newValues;
     const { onChange } = this.props;
     const { values } = this.state;
@@ -27,14 +27,14 @@ class RadioGroup extends React.Component {
     this.setState({
       values: newValues,
     });
-  }
+  };
 
   render() {
     const { children, name } = this.props;
     const { values } = this.state;
 
     const addHandlersToChildren = () => {
-      return React.Children.map(children, child => {
+      return React.Children.map(children, (child) => {
         const { value } = child.props;
         return React.cloneElement(child, {
           name: name,

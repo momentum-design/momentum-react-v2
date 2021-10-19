@@ -296,6 +296,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="cancel"
                       fill="currentColor"
                       height="100%"
                       stroke="currentColor"
@@ -355,6 +356,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="alert-muted"
                       fill="currentColor"
                       height="100%"
                       stroke="currentColor"
@@ -415,6 +417,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="favorite"
                       height="100%"
                       style={
                         Object {
@@ -565,6 +568,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="cancel"
                       fill="currentColor"
                       height="100%"
                       stroke="currentColor"
@@ -624,6 +628,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="alert-muted"
                       fill="currentColor"
                       height="100%"
                       stroke="currentColor"
@@ -684,6 +689,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="favorite"
                       height="100%"
                       style={
                         Object {
@@ -801,6 +807,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="cancel"
                       fill="currentColor"
                       height="100%"
                       stroke="currentColor"
@@ -860,6 +867,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="alert-muted"
                       fill="currentColor"
                       height="100%"
                       stroke="currentColor"
@@ -920,6 +928,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                       className=""
                       data-autoscale={true}
                       data-scale={false}
+                      data-test="favorite"
                       height="100%"
                       style={
                         Object {

@@ -23,39 +23,29 @@ class CallControl extends React.PureComponent {
     const activeBlue = ['camera', 'participant-list', 'share-screen'];
 
     const getActiveColor = () => {
-      switch(true) {
-        case(activeRed.includes(type)):
+      switch (true) {
+        case activeRed.includes(type):
           return 'red';
-        case(activeBlue.includes(type)):
+        case activeBlue.includes(type):
           return 'blue';
         default:
           return 'dark-gray';
       }
     };
 
-    const getColor = () => (
-      active
-        ? getActiveColor()
-        : 'dark-gray'
-    );
+    const getColor = () => (active ? getActiveColor() : 'dark-gray');
 
     return (
       <Button
         ariaLabel={ariaLabel || type}
         circle
-        className={
-          'md-call-control' +
-          `${(className && ` ${className}`) || ''}`
-        }
+        className={'md-call-control' + `${(className && ` ${className}`) || ''}`}
         color={type === 'cancel' ? 'red' : getColor()}
         disabled={disabled}
         onClick={onClick}
         {...otherHTMLProps}
       >
-        <Icon
-          name={`${type}_${iconSize}`}
-          {...iconColor && { color: iconColor }}
-        />
+        <Icon name={`${type}_${iconSize}`} {...(iconColor && { color: iconColor })} />
       </Button>
     );
   }
@@ -79,7 +69,19 @@ CallControl.propTypes = {
   /** @prop Optional numeric size prop for CallControl button | 56 */
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** @prop Optional predefined CallControl prop type | '' */
-  type: PropTypes.oneOf(['activities', 'camera', 'camera-muted', 'cancel', 'handset', 'microphone-muted', 'more', 'participant-list', 'share-screen', 'speaker', 'view-list']),
+  type: PropTypes.oneOf([
+    'activities',
+    'camera',
+    'camera-muted',
+    'cancel',
+    'handset',
+    'microphone-muted',
+    'more',
+    'participant-list',
+    'share-screen',
+    'speaker',
+    'view-list',
+  ]),
 };
 
 CallControl.defaultProps = {

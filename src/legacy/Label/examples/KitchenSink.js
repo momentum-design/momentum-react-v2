@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  LabelDefault,
-} from './index';
+import { LabelDefault } from './index';
 
 export default class LabelKitchenSink extends React.Component {
   render() {

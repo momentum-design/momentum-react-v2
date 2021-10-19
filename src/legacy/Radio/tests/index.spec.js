@@ -28,9 +28,7 @@ describe('tests for <Radio />', () => {
     const container = shallow(<Radio htmlId="test123" label="test" />);
 
     expect(
-      container.contains(
-        <Label className="md-radio__label" htmlFor="test123" label="test" />
-      )
+      container.contains(<Label className="md-radio__label" htmlFor="test123" label="test" />)
     ).toEqual(true);
   });
 
@@ -68,7 +66,7 @@ describe('tests for <Radio />', () => {
   it('should support input ref', () => {
     class Container extends React.Component {
       render() {
-        return <Radio htmlId="test123" inputRef={ref => (this.input = ref)} />;
+        return <Radio htmlId="test123" inputRef={(ref) => (this.input = ref)} />;
       }
     }
     const instance = mount(<Container />).instance();

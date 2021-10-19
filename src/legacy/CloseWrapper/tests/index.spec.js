@@ -19,9 +19,7 @@ describe('tests for <CloseWrapper />', () => {
 
   it('should pass ariaLabel to Button', () => {
     const onClick = jest.fn();
-    const container = mount(
-      <CloseWrapper onClick={onClick} ariaLabel="NewClose" />
-    );
+    const container = mount(<CloseWrapper onClick={onClick} ariaLabel="NewClose" />);
 
     expect(container.find('Button').props().ariaLabel).toEqual('NewClose');
   });
@@ -47,9 +45,7 @@ describe('tests for <CloseWrapper />', () => {
   });
 
   it('should pass the classNames onto the wrapper', () => {
-    const container = mount(
-      <CloseWrapper className="class-test" />
-    );
+    const container = mount(<CloseWrapper className="class-test" />);
 
     expect(container.find('.md-close-wrapper').hasClass('class-test')).toEqual(true);
   });

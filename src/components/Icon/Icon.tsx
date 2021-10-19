@@ -66,6 +66,7 @@ const Icon: React.FC<Props> = (props: Props) => {
       <div className={classnames(STYLE.wrapper, className)} id={id} style={style}>
         <SvgIcon
           // coloured class is added to avoid theming the fixed colours inside coloured icons
+          data-test={name}
           className={classnames({ [STYLE.coloured]: isColoredIcon })}
           style={{ ...styleColors }}
           {...inheritedColors}

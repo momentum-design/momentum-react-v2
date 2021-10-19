@@ -9,7 +9,7 @@ class Coachmark extends React.Component {
   static displayName = 'Coachmark';
 
   state = {
-    isOpen: this.props.isOpen || false
+    isOpen: this.props.isOpen || false,
   };
 
   componentDidMount() {
@@ -17,12 +17,8 @@ class Coachmark extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (
-      prevProps.isOpen !== this.props.isOpen
-    ) {
-      return this.props.isOpen
-      ? this.delayedShow()
-      : this.delayedHide();
+    if (prevProps.isOpen !== this.props.isOpen) {
+      return this.props.isOpen ? this.delayedShow() : this.delayedHide();
     }
   }
 
@@ -31,7 +27,7 @@ class Coachmark extends React.Component {
     this.showTimerId && clearTimeout(this.showTimerId);
   }
 
-  delayedHide = e => {
+  delayedHide = (e) => {
     const { onClick, onClose } = this.props;
 
     if (this.showTimerId) {
@@ -39,9 +35,7 @@ class Coachmark extends React.Component {
       this.showTimerId = null;
     }
 
-    const delay = this.props.hideDelay
-      ? this.props.hideDelay
-      : this.props.delay;
+    const delay = this.props.hideDelay ? this.props.hideDelay : this.props.delay;
 
     this.hideTimerId = setTimeout(() => {
       this.hideTimerId = null;
@@ -51,7 +45,6 @@ class Coachmark extends React.Component {
         return { isOpen: false };
       });
     }, delay);
-
   };
 
   delayedShow = () => {
@@ -60,21 +53,19 @@ class Coachmark extends React.Component {
       this.hideTimerId = null;
     }
 
-    const delay = this.props.showDelay
-      ? this.props.showDelay
-      : this.props.delay;
+    const delay = this.props.showDelay ? this.props.showDelay : this.props.delay;
 
     this.showTimerId = setTimeout(() => {
       this.showTimerId = null;
       this.setState({ isOpen: true });
     }, delay);
-
   };
 
   handleClose = () => {
-    this.setState(() => ({
-      isOpen: false
-    }),
+    this.setState(
+      () => ({
+        isOpen: false,
+      }),
       this.delayedHide()
     );
   };
@@ -96,58 +87,54 @@ class Coachmark extends React.Component {
     } = this.props;
     const { isOpen } = this.state;
 
-    const otherProps = omit({...props}, [
-      'delay',
-      'hideDelay',
-      'isOpen',
-      'onClose',
-      'showDelay'
-    ]);
+    const otherProps = omit({ ...props }, ['delay', 'hideDelay', 'isOpen', 'onClose', 'showDelay']);
 
-    const anchorWithRef = () => (
-      children && React.cloneElement(children, {
-        ref: ele => this.anchorRef = ele,
-        ...otherProps
-      })
-    );
+    const anchorWithRef = () =>
+      children &&
+      React.cloneElement(children, {
+        ref: (ele) => (this.anchorRef = ele),
+        ...otherProps,
+      });
 
     const content = (
-      <div className='md-coachmark__container'>
-        {
-          contentNode
-            ? contentNode
-            : [
-                header && <div className='md-coachmark__header' key='content-0'>{header}</div>,
-                subheader && <div className='md-coachmark__subheader' key='content-1'>{subheader}</div>,
-                onClick && <Button onClick={this.delayedHide} {...buttonProps} key='content-2' />
-              ]
-            }
+      <div className="md-coachmark__container">
+        {contentNode
+          ? contentNode
+          : [
+              header && (
+                <div className="md-coachmark__header" key="content-0">
+                  {header}
+                </div>
+              ),
+              subheader && (
+                <div className="md-coachmark__subheader" key="content-1">
+                  {subheader}
+                </div>
+              ),
+              onClick && <Button onClick={this.delayedHide} {...buttonProps} key="content-2" />,
+            ]}
       </div>
     );
 
     return (
       <React.Fragment>
         {anchorWithRef()}
-        {
-          isOpen &&
+        {isOpen && (
           <EventOverlay
-            ref={ref => this.overlay = ref}
+            ref={(ref) => (this.overlay = ref)}
             allowClickAway={allowClickAway}
             anchorNode={this.anchorRef}
             isOpen={isOpen}
-            className={
-              'md-coachmark' +
-              `${(className && ` ${className}`) || ''}`
-            }
+            className={'md-coachmark' + `${(className && ` ${className}`) || ''}`}
             showArrow
             direction={direction}
             close={this.handleClose}
             closeOnClick={closeOnClick}
-            {...maxWidth && {maxWidth: maxWidth}}
+            {...(maxWidth && { maxWidth: maxWidth })}
           >
             {content}
           </EventOverlay>
-        }
+        )}
       </React.Fragment>
     );
   }
@@ -200,7 +187,7 @@ Coachmark.propTypes = {
     'bottom-right',
     'right-center',
     'right-top',
-    'right-bottom'
+    'right-bottom',
   ]),
   /** @prop Sets the header node of Coachmark | '' */
   header: PropTypes.node,

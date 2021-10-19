@@ -3,12 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CompositeAvatar = props => {
-  const {
-    children,
-    className,
-    size,
-  } = props;
+const CompositeAvatar = (props) => {
+  const { children, className, size } = props;
 
   return (
     <div

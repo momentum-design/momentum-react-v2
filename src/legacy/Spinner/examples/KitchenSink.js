@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  SpinnerCheck,
-  SpinnerDefault,
-  SpinnerDeterminate,
-  SpinnerPercentage,
-} from './index';
+import { SpinnerCheck, SpinnerDefault, SpinnerDeterminate, SpinnerPercentage } from './index';
 
 export default class SpinnerKitchenSink extends React.Component {
   render() {

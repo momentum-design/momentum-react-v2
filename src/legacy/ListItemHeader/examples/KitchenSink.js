@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  ListItemHeaderDefault,
-} from './index';
+import { ListItemHeaderDefault } from './index';
 
 export default class ListItemHeaderKitchenSink extends React.Component {
   render() {

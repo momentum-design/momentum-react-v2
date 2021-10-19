@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  ModalDefault,
-  ModalFull,
-  ModalLarge,
-  ModalSmall,
-} from './index';
+import { ModalDefault, ModalFull, ModalLarge, ModalSmall } from './index';
 
 export default class ModalKitchenSink extends React.Component {
   render() {

@@ -11,13 +11,11 @@ beforeEach(() => {
 describe('tests for <MenuItem />', () => {
   const context = {
     parentKeyDown: jest.fn(),
-    parentOnSelect: jest.fn()
+    parentOnSelect: jest.fn(),
   };
 
   it('should render a MenuItem', () => {
-    const wrapper = mount(
-      <MenuItem label="one"/>
-    );
+    const wrapper = mount(<MenuItem label="one" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -26,7 +24,7 @@ describe('tests for <MenuItem />', () => {
 
     const wrapper = mount(
       <SelectableContext.Provider value={context}>
-        <MenuItem onClick={onClick} label="one"/>
+        <MenuItem onClick={onClick} label="one" />
       </SelectableContext.Provider>
     );
 
@@ -41,14 +39,14 @@ describe('tests for <MenuItem />', () => {
 
     const wrapper = mount(
       <SelectableContext.Provider value={context}>
-        <MenuItem onClick={onClick} label="one" value="test"/>
+        <MenuItem onClick={onClick} label="one" value="test" />
       </SelectableContext.Provider>
     );
 
     const listItem = wrapper.find('ListItem').first();
     listItem.simulate('click');
     expect(context.parentOnSelect.mock.calls.length).toBe(1);
-    expect(onClick.mock.calls[0][1].value).toBe("test");
+    expect(onClick.mock.calls[0][1].value).toBe('test');
   });
 
   it('should call handleKeyDown function of context when keyDown is fired on ListItem', () => {
@@ -56,7 +54,7 @@ describe('tests for <MenuItem />', () => {
 
     const wrapper = mount(
       <SelectableContext.Provider value={context}>
-        <MenuItem onKeyDown={onKeyDown} label="one" value="test"/>
+        <MenuItem onKeyDown={onKeyDown} label="one" value="test" />
       </SelectableContext.Provider>
     );
 
@@ -67,26 +65,20 @@ describe('tests for <MenuItem />', () => {
   });
 
   it('should apply class for isHeader prop', () => {
-    const container = mount(
-      <MenuItem isHeader />
-    );
+    const container = mount(<MenuItem isHeader />);
 
     expect(container.find('.md-menu-item__header').exists()).toEqual(true);
   });
 
   describe('tests for title Prop', () => {
     it('should not have title by default', () => {
-      const container = mount(
-        <MenuItem />
-      );
+      const container = mount(<MenuItem />);
 
       expect(container.find('.md-list-item').props().title).toEqual(undefined);
     });
 
     it('should handle title prop', () => {
-      const container = mount(
-        <MenuItem title='testTitle'/>
-      );
+      const container = mount(<MenuItem title="testTitle" />);
 
       expect(container.find('.md-list-item').props().title).toEqual('testTitle');
     });

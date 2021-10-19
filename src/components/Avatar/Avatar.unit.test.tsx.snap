@@ -38,6 +38,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
           className=""
           data-autoscale={false}
           data-scale={16}
+          data-test="check"
           fill="currentColor"
           height="100%"
           stroke="currentColor"
@@ -113,6 +114,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="unread"
               height="100%"
               style={
                 Object {
@@ -157,6 +159,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="camera-presence"
               height="100%"
               style={
                 Object {
@@ -201,6 +204,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="meetings-presence"
               height="100%"
               style={
                 Object {
@@ -245,6 +249,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="dnd-presence"
               height="100%"
               style={
                 Object {
@@ -289,6 +294,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="share-screen"
               height="100%"
               style={
                 Object {
@@ -333,6 +339,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="quiet-hours-presence"
               height="100%"
               style={
                 Object {
@@ -377,6 +384,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="recents-presence"
               height="100%"
               style={
                 Object {
@@ -421,6 +429,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="pto-presence"
               height="100%"
               style={
                 Object {

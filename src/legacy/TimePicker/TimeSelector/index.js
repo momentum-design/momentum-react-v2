@@ -2,74 +2,64 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class TimeSelector extends React.Component {
-  
   state = {
     value: this.props.value,
-    isEditing: false
+    isEditing: false,
   };
-  
+
   componentDidUpdate = (prevProps, prevState) => {
     if (prevState.value !== this.props.value && !this.state.isEditing) {
       this.setState({ value: this.props.value });
     }
   };
-  
-  handleOnChange = e => {
+
+  handleOnChange = (e) => {
     const { unit, militaryTime } = this.props;
     let newValue = e.currentTarget.value;
-    
+
     if (/[a-zA-Z]/.test(e.currentTarget.value)) {
       e.stopPropagation();
       return false;
     } else if (unit === 'h') {
-      newValue =
-      militaryTime
-      ? (parseInt(newValue, 10) > 23 ? 23 : parseInt(newValue, 10)) || ''
-      : (parseInt(newValue, 10) > 12 ? 12 : parseInt(newValue, 10)) || '';
+      newValue = militaryTime
+        ? (parseInt(newValue, 10) > 23 ? 23 : parseInt(newValue, 10)) || ''
+        : (parseInt(newValue, 10) > 12 ? 12 : parseInt(newValue, 10)) || '';
     } else if (unit === 'm') {
-      newValue =
-      parseInt(newValue, 10) > 59 ? 59 : parseInt(newValue, 10) || '';
+      newValue = parseInt(newValue, 10) > 59 ? 59 : parseInt(newValue, 10) || '';
     }
-    
+
     this.setState({ value: newValue, isEditing: true });
   };
-  
-  submitChange = e => {
+
+  submitChange = (e) => {
     const { onKeyDown, unit } = this.props;
-    
+
     this.setState({ isEditing: false }, onKeyDown(unit, e));
   };
-  
-  handleKey = e => {
+
+  handleKey = (e) => {
     let newValue = e.currentTarget.value;
     const { onKeyDown, unit } = this.props;
-    
+
     if (e.keyCode === 38 || e.keyCode === 40) {
       this.setState({ isEditing: false }, onKeyDown(unit, e));
       e.stopPropagation();
     } else if (e.keyCode === 65 && unit === 'pre') {
       if (newValue.includes('A')) return;
-      
+
       this.setState({ isEditing: false }, onKeyDown(unit, e));
       e.stopPropagation();
     } else if (e.keyCode === 80 && unit === 'pre') {
       if (newValue.includes('P')) return;
-      
+
       this.setState({ isEditing: false }, onKeyDown(unit, e));
       e.stopPropagation();
     }
   };
-  
+
   render() {
-    const {
-      inputRef,
-      onDownClick,
-      onUpClick,
-      onWheel,
-      type,
-      unit
-    } = this.props;
-    
+    const { inputRef, onDownClick, onUpClick, onWheel, type, unit } = this.props;
+
     return (
       <div>
         <i
@@ -80,11 +70,11 @@ class TimeSelector extends React.Component {
           role="button"
         />
         <input
-          onWheel={e => onWheel(unit, e)}
+          onWheel={(e) => onWheel(unit, e)}
           type={type}
           minLength={2}
           maxLength={2}
-          onClick={e => e.currentTarget.focus()}
+          onClick={(e) => e.currentTarget.focus()}
           ref={inputRef}
           onChange={this.handleOnChange}
           tabIndex={0}

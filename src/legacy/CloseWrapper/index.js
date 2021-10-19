@@ -6,41 +6,25 @@ import { Icon } from '@momentum-ui/react';
 
 class CloseWrapper extends React.PureComponent {
   render() {
-    const {
-      ariaLabel,
-      children,
-      className,
-      actionNode,
-      onClick,
-      ...otherProps
-    } = this.props;
+    const { ariaLabel, children, className, actionNode, onClick, ...otherProps } = this.props;
 
-    const cloneChildren = () => (
-      React.Children.map(children, child =>
-        React.cloneElement(child, { ...otherProps})
-      )
-    );
+    const cloneChildren = () =>
+      React.Children.map(children, (child) => React.cloneElement(child, { ...otherProps }));
 
-    const getInteractionNode = () => (
-      actionNode
-      ? actionNode
-      : (
-          <Icon
-            ariaLabel={ariaLabel}
-            buttonClassName='md-close-wrapper__action'
-            name='clear-active_20'
-            onClick={onClick}
-          />
-        )
-    );
+    const getInteractionNode = () =>
+      actionNode ? (
+        actionNode
+      ) : (
+        <Icon
+          ariaLabel={ariaLabel}
+          buttonClassName="md-close-wrapper__action"
+          name="clear-active_20"
+          onClick={onClick}
+        />
+      );
 
     return (
-      <span
-        className={
-          `md-close-wrapper` +
-          `${(className && ` ${className}`) || ''}`
-          }
-      >
+      <span className={`md-close-wrapper` + `${(className && ` ${className}`) || ''}`}>
         {cloneChildren()}
         {getInteractionNode()}
       </span>

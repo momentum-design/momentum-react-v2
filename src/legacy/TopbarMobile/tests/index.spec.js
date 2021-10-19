@@ -17,7 +17,7 @@ describe('tests for <TopbarMobile />', () => {
   });
 
   it('should add customized class name if className prop is set', () => {
-    const wrapper = shallow(<TopbarMobile className='testClassName'/>);
+    const wrapper = shallow(<TopbarMobile className="testClassName" />);
 
     expect(wrapper.find('.testClassName').exists()).toBeTruthy();
   });
@@ -30,17 +30,12 @@ describe('tests for <TopbarMobile />', () => {
     );
 
     expect(
-      container
-        .at(0)
-        .find(`.${prefix}-tb-mobile__nav`)
-        .props().children.props.className
+      container.at(0).find(`.${prefix}-tb-mobile__nav`).props().children.props.className
     ).toEqual('testingforTbM');
   });
 
   it('should handle open', () => {
-    const container = mount(
-      <TopbarMobile />
-    );
+    const container = mount(<TopbarMobile />);
 
     expect(container.state().isMobileOpen).toEqual(false);
     container.find('button').first().simulate('click');
@@ -48,9 +43,7 @@ describe('tests for <TopbarMobile />', () => {
   });
 
   it('should handle close', () => {
-    const container = mount(
-      <TopbarMobile />
-    );
+    const container = mount(<TopbarMobile />);
 
     container.state().isMobileOpen = true;
     expect(container.state().isMobileOpen).toEqual(true);
@@ -59,9 +52,7 @@ describe('tests for <TopbarMobile />', () => {
   });
 
   it('should not handle keydown close if not space or enter', () => {
-    const container = mount(
-      <TopbarMobile />
-    );
+    const container = mount(<TopbarMobile />);
 
     container.state().isMobileOpen = true;
     expect(container.state().isMobileOpen).toEqual(true);
@@ -70,9 +61,7 @@ describe('tests for <TopbarMobile />', () => {
   });
 
   it('should handle keydown close on space or enter', () => {
-    const container = mount(
-      <TopbarMobile />
-    );
+    const container = mount(<TopbarMobile />);
 
     container.state().isMobileOpen = true;
     expect(container.state().isMobileOpen).toEqual(true);
@@ -88,7 +77,7 @@ describe('tests for <TopbarMobile />', () => {
   it('should pass down handleClose to children if shouldCloseOnClick is false', () => {
     const container = mount(
       <TopbarMobile shouldCloseOnClick={false}>
-        <button className='testButton'/>
+        <button className="testButton" />
       </TopbarMobile>
     );
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DatePickerContext from '../../DatePickerContext';
 import DatePickerMonth from '../DatePickerMonth';
-import { Icon }  from '@momentum-ui/react';
+import { Icon } from '@momentum-ui/react';
 import {
   addDays,
   addMonths,
@@ -29,17 +29,14 @@ class DatePickerCalendar extends React.Component {
     this.prevMonthRef = React.createRef();
   }
 
-  componentDidMount () {
+  componentDidMount() {
     const { focus, selected } = this.props;
     this.setDate(focus || selected || now());
   }
 
-  componentDidUpdate (prevProps) {
+  componentDidUpdate(prevProps) {
     const { focus, monthNavFocus } = prevProps;
-    if (
-      focus &&
-      !isSameDay(this.props.focus, focus)
-    ) {
+    if (focus && !isSameDay(this.props.focus, focus)) {
       this.setDate(focus);
     }
     if (monthNavFocus !== this.props.monthNavFocus) {
@@ -49,12 +46,15 @@ class DatePickerCalendar extends React.Component {
   }
 
   setDate = (date, cb) => {
-    this.setState({
-      date
-    }, cb);
+    this.setState(
+      {
+        date,
+      },
+      cb
+    );
   };
 
-  increaseMonth = event => {
+  increaseMonth = (event) => {
     const { handleMonthChange } = this.props;
     const { date } = this.state;
     this.setDate(
@@ -63,7 +63,7 @@ class DatePickerCalendar extends React.Component {
     );
   };
 
-  decreaseMonth = event => {
+  decreaseMonth = (event) => {
     const { handleMonthChange } = this.props;
     const { date } = this.state;
     this.setDate(
@@ -73,19 +73,12 @@ class DatePickerCalendar extends React.Component {
   };
 
   render() {
-
     const { date } = this.state;
-    const {
-      locale,
-      monthFormat,
-      nextArialLabel,
-      previousArialLabel,
-      ...otherProps
-    } = this.props;
+    const { locale, monthFormat, nextArialLabel, previousArialLabel, ...otherProps } = this.props;
 
     const renderMonthName = () => {
       return (
-        <div className='md-datepicker__navigation--current-month'>
+        <div className="md-datepicker__navigation--current-month">
           {localizeDate(date, locale).format(monthFormat)}
         </div>
       );
@@ -98,13 +91,13 @@ class DatePickerCalendar extends React.Component {
         <Icon
           ariaLabel={
             !previousArialLabel
-            ?
-            `previous month, ${subtractMonths(date.clone(), 1).format('MMMM')}` : previousArialLabel
+              ? `previous month, ${subtractMonths(date.clone(), 1).format('MMMM')}`
+              : previousArialLabel
           }
           disabled={allPrevDaysDisabled}
           onClick={this.decreaseMonth}
-          name='arrow-left_16'
-          buttonProps={{ref: ref => this.prevMonthRef = ref}}
+          name="arrow-left_16"
+          buttonProps={{ ref: (ref) => (this.prevMonthRef = ref) }}
           tabIndex={-1}
         />
       );
@@ -117,13 +110,13 @@ class DatePickerCalendar extends React.Component {
         <Icon
           ariaLabel={
             !nextArialLabel
-            ?
-            `next month, ${addMonths(date.clone(), 1).format('MMMM')}` : nextArialLabel
+              ? `next month, ${addMonths(date.clone(), 1).format('MMMM')}`
+              : nextArialLabel
           }
           disabled={allNextDaysDisabled}
           onClick={this.increaseMonth}
-          name='arrow-right_16'
-          buttonProps={{ref: ref => this.nextMonthRef = ref}}
+          name="arrow-right_16"
+          buttonProps={{ ref: (ref) => (this.nextMonthRef = ref) }}
           tabIndex={-1}
         />
       );
@@ -133,12 +126,12 @@ class DatePickerCalendar extends React.Component {
       const startOfWeek = getStartOfWeek(date.clone());
       const dayNames = [];
       return dayNames.concat(
-        [0, 1, 2, 3, 4, 5, 6].map(offset => {
+        [0, 1, 2, 3, 4, 5, 6].map((offset) => {
           const day = addDays(localizeDate(startOfWeek, locale), offset);
           const localeData = getLocaleData(day);
           const weekDayName = getWeekdayMinInLocale(localeData, day);
           return (
-            <div key={offset} className='md-datepicker__day--name'>
+            <div key={offset} className="md-datepicker__day--name">
               {weekDayName}
             </div>
           );
@@ -148,32 +141,23 @@ class DatePickerCalendar extends React.Component {
 
     const renderMonth = () => {
       return (
-        <div className='md-datepicker__month-container'>
-          <div className='md-datepicker__header'>
-            <div className='md-datepicker__navigation'>
+        <div className="md-datepicker__month-container">
+          <div className="md-datepicker__header">
+            <div className="md-datepicker__navigation">
               {renderMonthName()}
-              <div className='md-datepicker__navigation--buttons'>
+              <div className="md-datepicker__navigation--buttons">
                 {renderPreviousMonthButton()}
                 {renderNextMonthButton()}
               </div>
             </div>
-            <div className='md-datepicker__day--names'>
-              {header()}
-            </div>
+            <div className="md-datepicker__day--names">{header()}</div>
           </div>
-          <DatePickerMonth
-            day={date}
-            {...otherProps}
-          />
+          <DatePickerMonth day={date} {...otherProps} />
         </div>
       );
     };
 
-    return (
-      <div>
-        {date && renderMonth()}
-      </div>
-    );
+    return <div>{date && renderMonth()}</div>;
   }
 }
 
@@ -215,8 +199,4 @@ DatePickerCalendar.defaultProps = {
 
 DatePickerCalendar.displayName = 'DatePickerCalendar';
 
-export default mapContextToProps(
-  DatePickerContext,
-  context => context,
-  DatePickerCalendar
-);
+export default mapContextToProps(DatePickerContext, (context) => context, DatePickerCalendar);

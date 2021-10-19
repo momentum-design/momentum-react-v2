@@ -10,7 +10,7 @@ describe('tests for <AlertBanner />', () => {
   });
 
   it('should pass className prop', () => {
-    const container = mount(<AlertBanner show className='testing' />);
+    const container = mount(<AlertBanner show className="testing" />);
 
     expect(container.find('.testing').exists()).toEqual(true);
     expect(container.find('AlertBanner').hasClass('testing')).toEqual(true);
@@ -23,7 +23,7 @@ describe('tests for <AlertBanner />', () => {
   });
 
   it('should pass otherProps to container', () => {
-    const container = mount(<AlertBanner show id='testid' />);
+    const container = mount(<AlertBanner show id="testid" />);
 
     expect(container.find('#testid').exists()).toEqual(true);
   });
@@ -35,7 +35,7 @@ describe('tests for <AlertBanner />', () => {
   });
 
   it('should default to type "info"', () => {
-    const container = shallow(<AlertBanner show type="warning"/>);
+    const container = shallow(<AlertBanner show type="warning" />);
 
     expect(container.find('.md-alert-banner--warning').exists()).toEqual(true);
   });

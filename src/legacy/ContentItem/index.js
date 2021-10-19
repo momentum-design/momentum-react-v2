@@ -8,7 +8,6 @@ import IconContent from './IconContent';
 import omit from 'lodash/omit';
 
 class ContentItem extends React.PureComponent {
-
   render() {
     const {
       actionNode,
@@ -30,29 +29,25 @@ class ContentItem extends React.PureComponent {
       ...props
     } = this.props;
 
-    const otherProps = omit({...props}, ['gifIcon']);
+    const otherProps = omit({ ...props }, ['gifIcon']);
 
     const findAspect = (width, height) => {
-
-      if(width && height){
-
+      if (width && height) {
         const aspectRatioObj = {
-          1 : 'oneOne',
-          .75 : 'threeFour',
-          .66 : 'twoThree',
-          .4 : 'tall',
-          4.35 : 'wide',
-          1.33 : 'fourThree',
-          1.5 : 'threeTwo',
-          1.78 : 'sixteenNine'
+          1: 'oneOne',
+          0.75: 'threeFour',
+          0.66: 'twoThree',
+          0.4: 'tall',
+          4.35: 'wide',
+          1.33: 'fourThree',
+          1.5: 'threeTwo',
+          1.78: 'sixteenNine',
         };
 
-        const providedAspectRatio = width/height;
+        const providedAspectRatio = width / height;
 
         const closestAspectRatio = Object.keys(aspectRatioObj).reduce((prev, curr) =>
-          Math.abs(curr - providedAspectRatio) < Math.abs(prev - providedAspectRatio)
-          ? curr
-          : prev
+          Math.abs(curr - providedAspectRatio) < Math.abs(prev - providedAspectRatio) ? curr : prev
         );
 
         return aspectRatioObj[closestAspectRatio];
@@ -61,41 +56,41 @@ class ContentItem extends React.PureComponent {
     };
 
     const chosenItem = () => {
-
-      if(failedText && type==='chat') {
+      if (failedText && type === 'chat') {
         return (
-          <div className={
-            'md-content md-content--failed' +
-            `${(className && ` ${className}`) || ''}`
-          }>
-            <div className='md-content--failed-container'>
-              <i className='icon icon-warning_28 md-content--failed-warning'/>
-              <p className='md-content--failed-message'>{failedText}</p>
+          <div
+            className={'md-content md-content--failed' + `${(className && ` ${className}`) || ''}`}
+          >
+            <div className="md-content--failed-container">
+              <i className="icon icon-warning_28 md-content--failed-warning" />
+              <p className="md-content--failed-message">{failedText}</p>
             </div>
           </div>
         );
-      } else if (type==='chat'){
+      } else if (type === 'chat') {
         return (
           <ChatContentItem
             actionNode={actionNode}
-            aspect={aspect ? aspect : findAspect(width,height)}
+            aspect={aspect ? aspect : findAspect(width, height)}
             className={className}
             content={content}
             fileSize={fileSize}
             height={height}
             isProtected={isProtected}
             loading={loading}
+            subtitle={subtitle}
             style={style}
             title={title}
             type={type}
             width={width}
-            {...props} />
+            {...props}
+          />
         );
-      } else if (type==='file' && !icon){
+      } else if (type === 'file' && !icon) {
         return (
           <FileContentItem
             actionNode={actionNode}
-            aspect={aspect ? aspect : findAspect(width,height)}
+            aspect={aspect ? aspect : findAspect(width, height)}
             className={className}
             content={content}
             height={height}
@@ -107,9 +102,10 @@ class ContentItem extends React.PureComponent {
             title={title}
             type={type}
             width={width}
-            {...props} />
+            {...props}
+          />
         );
-      } else if (icon){
+      } else if (icon) {
         return (
           <IconContent
             actionNode={actionNode}
@@ -119,19 +115,15 @@ class ContentItem extends React.PureComponent {
             loading={loading}
             subtitle={subtitle}
             title={title}
-            {...otherProps} />
+            {...otherProps}
+          />
         );
       }
     };
 
-    return (
-      <div>
-        {chosenItem()}
-      </div>
-    );
+    return <div>{chosenItem()}</div>;
   }
 }
-
 
 ContentItem.displayName = 'ContentItem';
 
@@ -156,7 +148,17 @@ ContentItem.propTypes = {
   /** @prop Node to render buttons inside Content Item | null */
   actionNode: PropTypes.node,
   /** @prop Set the Content Item's aspect size | null */
-  aspect: PropTypes.oneOf(['fourThree', 'nineSixteen', 'oneOne', 'sixteenNine', 'tall', 'threeFour', 'threeTwo', 'twoThree', 'wide']),
+  aspect: PropTypes.oneOf([
+    'fourThree',
+    'nineSixteen',
+    'oneOne',
+    'sixteenNine',
+    'tall',
+    'threeFour',
+    'threeTwo',
+    'twoThree',
+    'wide',
+  ]),
   /** @prop Optional css class string | '' */
   className: PropTypes.string,
   /** @prop Set the image/gif of the Content Item | '' */
@@ -180,13 +182,13 @@ ContentItem.propTypes = {
   /** @prop Additional css styling applied to the button | null  */
   style: PropTypes.object,
   /** @prop Set the subtitle of the Content Item | '' */
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   /** @prop Set the title of the Content Item | '' */
   title: PropTypes.string,
   /** @prop Set the type of Content Item to display */
   type: PropTypes.oneOf(['chat', 'file']),
   /** @prop Width of the image in px */
-  width: PropTypes.number
+  width: PropTypes.number,
 };
 
 export default ContentItem;

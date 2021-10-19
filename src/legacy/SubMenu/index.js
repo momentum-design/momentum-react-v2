@@ -6,11 +6,7 @@ import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import mapContextToProps from '@restart/context/mapContextToProps';
 import { UIDConsumer, UIDFork } from 'react-uid';
-import {
-  EventOverlay,
-  Icon,
-  ListItem,
-} from '@momentum-ui/react';
+import { EventOverlay, Icon, ListItem } from '@momentum-ui/react';
 import ListContext from '../ListContext';
 import SelectableContext from '../SelectableContext';
 import { prefix } from '../utils/prefixer';
@@ -22,55 +18,45 @@ class SubMenu extends React.Component {
     this.state = {
       selectContext: {
         parentKeyDown: this.handleKeyDown,
-        parentOnSelect: this.handleClick
-      }
+        parentOnSelect: this.handleClick,
+      },
     };
   }
 
   handleClick = (e, opts) => {
     const { onClick, parentOnSelect } = this.props;
-    const {
-      eventKey,
-      label,
-      value,
-    } = opts;
+    const { eventKey, label, value } = opts;
 
-    onClick && onClick(e, {value, label});
-    parentOnSelect && parentOnSelect(e, {
-      eventKey,
-      element: this
-    });
-  }
+    onClick && onClick(e, { value, label });
+    parentOnSelect &&
+      parentOnSelect(e, {
+        eventKey,
+        element: this,
+      });
+  };
 
   handleKeyDown = (e, opts) => {
-    const {
-      onClick,
-      parentKeyDown,
-      parentOnSelect
-    } = this.props;
+    const { onClick, parentKeyDown, parentOnSelect } = this.props;
     const { eventKey } = opts;
 
-    if (
-      e.which === 32
-      || e.which === 13
-      || e.charCode === 32
-      || e.charCode === 13
-    ) {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       onClick && onClick(e);
-      parentOnSelect && parentOnSelect(e, {
-        eventKey,
-        element: this
-      });
+      parentOnSelect &&
+        parentOnSelect(e, {
+          eventKey,
+          element: this,
+        });
       e.preventDefault();
     } else {
-      parentKeyDown && parentKeyDown(e, {
-        eventKey,
-        element: this
-      });
+      parentKeyDown &&
+        parentKeyDown(e, {
+          eventKey,
+          element: this,
+        });
     }
-  }
+  };
 
-  render () {
+  render() {
     const {
       children,
       className,
@@ -83,11 +69,9 @@ class SubMenu extends React.Component {
       selectedValue,
       ...props
     } = this.props;
-    const {
-      selectContext
-    } = this.state;
+    const { selectContext } = this.state;
 
-    const otherProps = omit({...props}, [
+    const otherProps = omit({ ...props }, [
       'customNode',
       'index',
       'keepMenuOpen',
@@ -98,78 +82,77 @@ class SubMenu extends React.Component {
 
     return (
       <UIDFork>
-        <UIDConsumer name={id => `${prefix}-sub-menu-item-${id}`}>
-          {id => (
+        <UIDConsumer name={(id) => `${prefix}-sub-menu-item-${id}`}>
+          {(id) => (
             <ListContext.Consumer>
-              {listContext => {
-                const cxtActive = isOpen
-                  || listContext
-                  && listContext.active
-                  && this.anchorRef
-                  && ReactDOM.findDOMNode(this.anchorRef)
-                  && ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`]
-                  && ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`].value
-                  && listContext.active.includes(
-                    ReactDOM.findDOMNode(this.anchorRef)
-                      .attributes[`data-${prefix}-event-key`]
-                      .value
-                  );
+              {(listContext) => {
+                const cxtActive =
+                  isOpen ||
+                  (listContext &&
+                    listContext.active &&
+                    this.anchorRef &&
+                    ReactDOM.findDOMNode(this.anchorRef) &&
+                    ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`] &&
+                    ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`]
+                      .value &&
+                    listContext.active.includes(
+                      ReactDOM.findDOMNode(this.anchorRef).attributes[`data-${prefix}-event-key`]
+                        .value
+                    ));
 
-                  return (
-                    <div
-                      className={
-                        `${prefix}-menu-item` +
-                        `${(className && ` ${className}`) || ''}`
-                      }
-                      aria-expanded={cxtActive}
-                      aria-haspopup={!!children}
-                    >
+                return (
+                  <div
+                    className={`${prefix}-menu-item` + `${(className && ` ${className}`) || ''}`}
+                    aria-expanded={cxtActive}
+                    aria-haspopup={!!children}
+                  >
                     <SelectableContext.Provider value={selectContext}>
                       <ListItem
                         active={cxtActive}
                         focusOnLoad
                         id={id}
                         isReadOnly={isHeader}
-                        ref={ref => this.anchorRef = ref}
-                        role='menuitem'
+                        ref={(ref) => (this.anchorRef = ref)}
+                        role="menuitem"
                         {...otherProps}
                       >
-                        {
-                          customNode
-                            ? customNode
-                            : ([
-                              <div className={`${prefix}-menu-item__content`} key='content-0'>
-                                { content || label }
+                        {customNode
+                          ? customNode
+                          : [
+                              <div className={`${prefix}-menu-item__content`} key="content-0">
+                                {content || label}
                               </div>,
-                              <div className={`${prefix}-menu-item__selected-value`} title={selectedValue} key='content-1'>
+                              <div
+                                className={`${prefix}-menu-item__selected-value`}
+                                title={selectedValue}
+                                key="content-1"
+                              >
                                 {children && selectedValue}
                               </div>,
-                              <div className={`${prefix}-menu-item__arrow`} key='content-2'>
-                                {children && <Icon name='arrow-right_16'/>}
-                              </div>
-                            ])
-                        }
+                              <div className={`${prefix}-menu-item__arrow`} key="content-2">
+                                {children && <Icon name="arrow-right_16" />}
+                              </div>,
+                            ]}
                       </ListItem>
-                      </SelectableContext.Provider>
-                      {
-                        cxtActive &&
-                        <EventOverlay
-                          anchorNode={this.anchorRef}
-                          isOpen={cxtActive}
-                          direction='right-top'
-                          closeOnClick={false}
-                          isContained
-                          {...eventOverlayProps}
+                    </SelectableContext.Provider>
+                    {cxtActive && (
+                      <EventOverlay
+                        anchorNode={this.anchorRef}
+                        isOpen={cxtActive}
+                        direction="right-top"
+                        closeOnClick={false}
+                        isContained
+                        {...eventOverlayProps}
+                      >
+                        <div
+                          aria-label={label}
+                          role="menu"
+                          className={`${prefix}-menu-item-container`}
                         >
-                          <div
-                            aria-label={label}
-                            role='menu'
-                            className={`${prefix}-menu-item-container`}
-                          >
-                            {children}
-                          </div>
-                        </EventOverlay>
-                      }
+                          {children}
+                        </div>
+                      </EventOverlay>
+                    )}
                   </div>
                 );
               }}
@@ -231,8 +214,4 @@ SubMenu.defaultProps = {
 
 SubMenu.displayName = 'SubMenu';
 
-export default mapContextToProps(
-  SelectableContext,
-  context => context,
-  SubMenu
-);
+export default mapContextToProps(SelectableContext, (context) => context, SubMenu);

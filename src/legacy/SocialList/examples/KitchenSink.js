@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  SocialListDefault,
-} from './index';
+import { SocialListDefault } from './index';
 
 export default class SocialListKitchenSink extends React.Component {
   render() {
