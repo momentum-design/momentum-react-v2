@@ -18,34 +18,33 @@ class ModalHeader extends React.PureComponent {
       ariaLabel,
       ...props
     } = this.props;
-    const {
-      handleClose
-    } = this.context;
+    const { handleClose } = this.context;
 
     return (
-      <div
-        className={
-          'md-modal__header' +
-          `${(className && ` ${className}`) || ''}`
-        }
-        {...props}
-      >
-        {
-          children
+      <div className={'md-modal__header' + `${(className && ` ${className}`) || ''}`} {...props}>
+        {showCloseButton && (
+          <div className="md-modal__close-container">
+            <CloseIcon className="md-modal__close" onClick={handleClose} {...closeBtnProps} />
+          </div>
+        )}
+        {children
           ? children
           : [
-            <span key='title-0' className='md-modal__title' role={role} aria-level={ariaLevel} aria-label={ariaLabel}>{headerLabel}</span>,
-            message && <span key='title-1' className='md-modal__message'>{message}</span>
-          ]
-        }
-        {
-          showCloseButton &&
-          <CloseIcon
-            className='md-modal__close'
-            onClick={handleClose}
-            {...closeBtnProps}
-          />
-        }
+              <span
+                key="title-0"
+                className="md-modal__title"
+                role={role}
+                aria-level={ariaLevel}
+                aria-label={ariaLabel}
+              >
+                {headerLabel}
+              </span>,
+              message && (
+                <span key="title-1" className="md-modal__message">
+                  {message}
+                </span>
+              ),
+            ]}
       </div>
     );
   }
@@ -60,7 +59,7 @@ ModalHeader.propTypes = {
   closeBtnProps: PropTypes.object,
   /** @prop ModalHeader label text | '' */
   headerLabel: PropTypes.string,
-   /** @prop Modal message | '' */
+  /** @prop Modal message | '' */
   message: PropTypes.string,
   /** @prop show/hide close button | true */
   showCloseButton: PropTypes.bool,
