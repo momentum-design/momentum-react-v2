@@ -21,7 +21,6 @@ export default {
   },
   args: {
     children: <Reaction name={REACTION_NAMES.haha} />,
-    size: 32,
   },
 };
 
@@ -38,6 +37,7 @@ Common.parameters = {
   variants: [
     {
       children: <Reaction name={REACTION_NAMES.haha} />,
+      reacted: true,
     },
     {
       children: <Reaction name={REACTION_NAMES.wow} />,

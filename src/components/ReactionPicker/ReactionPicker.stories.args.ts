@@ -2,18 +2,15 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 export default {
   ...commonStyles,
-  /**
-   * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
-   */
   children: {
-    description: 'Provides the child nodes for this element.', // Description of this prop.
-    control: { type: 'text' }, // Control
+    description: 'Provides the child `<ReactionButton/>`s for this `<ReactionPicker/>`.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'ReactNode', // Explicit type of this prop.
+        summary: 'ReactNode',
       },
       defaultValue: {
-        summary: 'undefined', // Default value when rendering this component.
+        summary: 'undefined',
       },
     },
   },

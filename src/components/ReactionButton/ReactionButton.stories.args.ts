@@ -1,16 +1,31 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
+import { REACTION_BUTTON_CONSTANTS as CONSTANTS } from '.';
+
 export default {
   ...commonStyles,
   children: {
-    // description: '`<Reaction/>` for this `<ReactionButton/>`',
-    control: { type: 'none' },
+    description: 'Provides the child `<Reaction/>`s for this `<ReactionButton/>`.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'Reaction',
+        summary: 'ReactNode',
       },
       defaultValue: {
         summary: 'undefined',
+      },
+    },
+  },
+  reacted: {
+    description: 'Whether to render the `<ReactionBadge />` as reacted.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.DISABLED,
       },
     },
   },

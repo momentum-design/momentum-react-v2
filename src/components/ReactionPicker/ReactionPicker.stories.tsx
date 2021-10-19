@@ -9,6 +9,30 @@ import ReactionButton from '../ReactionButton';
 import argTypes from './ReactionPicker.stories.args';
 import Documentation from './ReactionPicker.stories.docs.mdx';
 
+const reactionChildren = [
+  <ReactionButton key="1">
+    <Reaction name={'popper'} />
+  </ReactionButton>,
+  <ReactionButton key="2">
+    <Reaction name={'heart'} />
+  </ReactionButton>,
+  <ReactionButton key="3">
+    <Reaction name={'thumb-up-yellow'} />
+  </ReactionButton>,
+  <ReactionButton reacted key="4">
+    <Reaction name={'smile'} />
+  </ReactionButton>,
+  <ReactionButton key="5">
+    <Reaction name={'haha'} />
+  </ReactionButton>,
+  <ReactionButton key="6">
+    <Reaction name={'wow'} />
+  </ReactionButton>,
+  <ReactionButton key="7">
+    <Reaction name={'sad'} />
+  </ReactionButton>,
+];
+
 export default {
   title: 'Momentum UI/ReactionPicker',
   component: ReactionPicker,
@@ -20,52 +44,25 @@ export default {
   },
   subComponents: { ReactionButton },
   args: {
-    // Args provided to all stories by default.
-    children: [
-      <ReactionButton>
-        <Reaction name={'popper'} />
-      </ReactionButton>,
-      <ReactionButton>
-        <Reaction name={'heart'} />
-      </ReactionButton>,
-      <ReactionButton>
-        <Reaction name={'thumb-up-yellow'} />
-      </ReactionButton>,
-      <ReactionButton reacted>
-        <Reaction name={'smile'} />
-      </ReactionButton>,
-      <ReactionButton>
-        <Reaction name={'haha'} />
-      </ReactionButton>,
-      <ReactionButton>
-        <Reaction name={'wow'} />
-      </ReactionButton>,
-      <ReactionButton>
-        <Reaction name={'sad'} />
-      </ReactionButton>,
-    ],
+    children: reactionChildren,
   },
 };
 
-/**
- * Primary story. This renders a single component with all external props.
- */
 const Example = Template<ReactionPickerProps>(ReactionPicker).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Inject additional stories here.
-
-/**
- * Common variants story. This renders multiple variants of a single component.
- */
 const Common = MultiTemplate<ReactionPickerProps>(ReactionPicker).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
 Common.parameters = {
-  variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
+  variants: [
+    { children: reactionChildren },
+    { children: reactionChildren },
+    { children: reactionChildren },
+  ],
 };
 
 export { Example, Common };

@@ -5,6 +5,7 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
   <ButtonCircle
     className="md-reaction-button-wrapper"
     data-reacted={false}
+    size={32}
   >
     <FocusRing>
       <FocusRing
@@ -19,7 +20,7 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
           data-multiple-children={false}
           data-outline={false}
           data-reacted={false}
-          data-size={40}
+          data-size={32}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -49,6 +50,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
   <ButtonCircle
     className="example-class md-reaction-button-wrapper"
     data-reacted={false}
+    size={32}
   >
     <FocusRing>
       <FocusRing
@@ -63,7 +65,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
           data-multiple-children={false}
           data-outline={false}
           data-reacted={false}
-          data-size={40}
+          data-size={32}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -94,6 +96,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
     className="md-reaction-button-wrapper"
     data-reacted={false}
     id="example-id"
+    size={32}
   >
     <FocusRing>
       <FocusRing
@@ -108,7 +111,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
           data-multiple-children={false}
           data-outline={false}
           data-reacted={false}
-          data-size={40}
+          data-size={32}
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -143,6 +146,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
   <ButtonCircle
     className="md-reaction-button-wrapper"
     data-reacted={false}
+    size={32}
     style={
       Object {
         "color": "pink",
@@ -162,7 +166,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
           data-multiple-children={false}
           data-outline={false}
           data-reacted={false}
-          data-size={40}
+          data-size={32}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}

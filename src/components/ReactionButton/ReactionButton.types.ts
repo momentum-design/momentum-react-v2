@@ -25,11 +25,6 @@ export interface Props extends AriaButtonProps {
   reacted?: boolean;
 
   /**
-   * Size index of this Reaction.
-   */
-  size?: 64 | 52 | 40 | 32 | 28;
-
-  /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
