@@ -5861,7 +5861,8 @@ $modal__radius: $global-radius !default;
 // Modal Dialog Settings
 $modal-dialog__top: rem-calc(100);
 $modal-dialog__padding: rem-calc(20);
-$modal-dialog__border: 1px solid $black-12;
+$modal-dialog__border: 1px solid var(--md-button-tertiary-outline-color, $md-gray-30);
+
 $modal-dialog__box-shadow: 0 8px 16px 0 $black-08;
 $modal-header__padding--dialog: 0 0 rem-calc(12) 0;
 
@@ -5907,7 +5908,7 @@ $event-overlay__border: inset 0 0 0 1px $event-overlay__border-color;
 $event-overlay__border-css-var: inset 0 0 0 1px var(--md-separator-primary, $event-overlay__border-color);
 $event-overlay-arrow__width: 20px;
 $event-overlay-arrow__height: 14px;
-$event-overlay__border-radius: 5px;
+$event-overlay__border-radius: 8px;
 
 $panel__class: '#{$prefix}-panel';
 
