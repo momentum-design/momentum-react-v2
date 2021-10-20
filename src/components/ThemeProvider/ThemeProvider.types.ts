@@ -21,6 +21,11 @@ export interface Props {
   children?: ReactNode;
 
   /**
+   * The id of this component.
+   */
+  id?: string;
+
+  /**
    * The theme name to provide styles from to all child components.
    */
   theme?: ThemeNames;

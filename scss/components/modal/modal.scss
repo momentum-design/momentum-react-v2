@@ -64,8 +64,8 @@
           $color: $modal__color,
           $color-css-var: --md-textColor-primary,
           $bg: $modal__background,
-          $bg-css-var: --md-background-primary,
-          $border-color-css-var: --md-button-tertiary-outline-color
+          $bg-css-var: --theme-background-solid-primary-normal,
+          $border-color-css-var: --theme-outline-secondary-normal
         );
       }
 
