@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useRef, useState, useCallback } from 'react';
 import classnames from 'classnames';
 
 import { STYLE } from './List.constants';
@@ -9,6 +9,18 @@ import { useKeyboard } from '@react-aria/interactions';
 
 const List: FC<Props> = (props: Props) => {
   const [currentFocus, setCurrentFocus] = useState<number>(0);
+
+  const setContext = useCallback(
+    (newFocus) => {
+      setCurrentFocus(newFocus);
+    },
+    [currentFocus, setCurrentFocus]
+  );
+
+  const getContext = useCallback(
+    () => ({ shouldFocusOnPress, shouldItemFocusBeInset, currentFocus, setContext }),
+    [currentFocus, setCurrentFocus]
+  );
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (e) => {
@@ -37,7 +49,7 @@ const List: FC<Props> = (props: Props) => {
   const ref = useRef<HTMLUListElement>();
 
   return (
-    <ListContext.Provider value={{ currentFocus, shouldFocusOnPress, shouldItemFocusBeInset }}>
+    <ListContext.Provider value={getContext()}>
       <ul
         className={classnames(className, STYLE.wrapper)}
         ref={ref}

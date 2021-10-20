@@ -33,10 +33,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
   const listContext = useListContext();
-  const focus = listContext?.currentFocus === itemIndex;
-  const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
-  const shouldItemFocusBeInset =
-    listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
 
   const internalRef = useRef<HTMLLIElement>();
   const ref = providedRef || internalRef;
@@ -72,20 +68,27 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     content = children;
   }
 
-  const [contextMenuState, setContextMenuState] = useState<ContextMenuState>({
-    isOpen: false,
-    x: 0,
-    y: 0,
-  });
-
-  const toggleContextMenu = () => {
-    setContextMenuState({ ...contextMenuState, isOpen: !contextMenuState.isOpen });
-  };
-
   const { pressProps, isPressed } = usePress({
-    preventFocusOnPress: !shouldFocusOnPress,
+    preventFocusOnPress: true, // we handle it ourselves
     ...rest,
   });
+
+  /**
+   * Focus management
+   */
+
+  const focus = listContext?.currentFocus === itemIndex;
+  const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
+  const shouldItemFocusBeInset =
+    listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
+
+  // makes sure that whenever an item is pressed, the list focus state gets updated as well
+  useEffect(() => {
+    if (listContext && listContext?.setContext && isPressed && shouldFocusOnPress) {
+      ref.current.focus();
+      listContext.setContext(itemIndex);
+    }
+  }, [isPressed]);
 
   function getKeyboardFocusableElements<T extends HTMLElement>(_ref: RefObject<T>) {
     const result = _ref.current.querySelectorAll(
@@ -95,6 +98,43 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
       (el) => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden')
     );
   }
+
+  /**
+   * Handle keyboard navigation for any focusable elements inside list items
+   * Make them focusable only when the current list-item is focusable, otherwise
+   * make them non-focusable.
+   */
+
+  useEffect(() => {
+    // TODO: Maybe this should be performed only once?
+    const focusableElements = getKeyboardFocusableElements(ref);
+
+    if (focus) {
+      ref.current.focus();
+
+      focusableElements.forEach((element) => {
+        element.setAttribute('tabindex', '0');
+      });
+    } else {
+      focusableElements.forEach((element) => {
+        element.setAttribute('tabindex', '-2');
+      });
+    }
+  }, [focus, ref.current]);
+
+  /**
+   * Context menu
+   */
+
+  const [contextMenuState, setContextMenuState] = useState<ContextMenuState>({
+    isOpen: false,
+    x: 0,
+    y: 0,
+  });
+
+  const toggleContextMenu = () => {
+    setContextMenuState({ ...contextMenuState, isOpen: !contextMenuState.isOpen });
+  };
 
   const overlayRef = useRef();
   const { overlayProps } = useOverlay(
@@ -156,29 +196,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
       ref.current.removeEventListener('contextmenu', handleOnContextMenu);
     };
   }, []);
-
-  /**
-   * Handle keyboard navigation for any focusable elements inside list items
-   * Make them focusable only when the current list-item is focusable, otherwise
-   * make them non-focusable.
-   */
-
-  useEffect(() => {
-    // TODO: Maybe this should be performed only once?
-    const focusableElements = getKeyboardFocusableElements(ref);
-
-    if (focus) {
-      ref.current.focus();
-
-      focusableElements.forEach((element) => {
-        element.setAttribute('tabindex', '0');
-      });
-    } else {
-      focusableElements.forEach((element) => {
-        element.setAttribute('tabindex', '-2');
-      });
-    }
-  }, [focus, ref.current]);
 
   return (
     <FocusRing isInset={shouldItemFocusBeInset}>

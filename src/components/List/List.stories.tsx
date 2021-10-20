@@ -55,6 +55,7 @@ delete Common.argTypes.children;
 Common.args = {
   listSize: TEST_LIST_SIZE,
   shouldItemFocusBeInset: true,
+  shouldFocusOnPress: true,
 };
 
 Common.parameters = {
