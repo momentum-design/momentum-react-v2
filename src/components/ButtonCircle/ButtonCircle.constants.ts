@@ -22,6 +22,7 @@ const SIZES: Record<number, Size> = {
   40: 40,
   32: 32,
   28: 28,
+  20: 20,
 };
 
 const STYLE = {
