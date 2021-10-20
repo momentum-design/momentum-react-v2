@@ -61,7 +61,7 @@ export interface Props {
   /**
    * Determines what actions will be displayed inside the list item.
    */
-  displayActions?: AvatarMeetingsListItemActions[];
+  displayActions?: Array<AvatarMeetingsListItemActions>;
 
   /**
    * Determines the style/color of the microphone icon button if present.

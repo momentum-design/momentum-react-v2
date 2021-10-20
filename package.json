@@ -139,8 +139,6 @@
     "react-focus-lock": "^1.19.1",
     "react-uid": "^2.2.0",
     "react-verification-input": "^2.0.1",
-    "react-virtualized-auto-sizer": "^1.0.6",
-    "react-window": "^1.8.6",
     "ts-loader": "^8.2.0",
     "typescript": "^4.3.5"
   },
@@ -231,6 +229,8 @@
     "react-router-dom": "^5.0.0",
     "react-test-renderer": "^16.8.0",
     "react-virtualized": "^9.21.0",
+    "react-virtualized-auto-sizer": "^1.0.2",
+    "react-window": "^1.8.1",
     "regenerator-runtime": "^0.13.1",
     "replace": "0.3.0",
     "rimraf": "^2.6.3",

@@ -3,9 +3,6 @@ import { SCHEDULER_STATES } from './AvatarMeetingsListItem.constants';
 
 export default {
   ...commonStyles,
-  /**
-   * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
-   */
   schedulerState: {
     description: 'Determines the state of the scheduler and will display an according icon.',
     control: { type: 'select' },
