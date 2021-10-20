@@ -150,7 +150,7 @@ export default {
     },
     type: {
       defaultValue: DEFAULTS.TYPE,
-      description: 'Determines weather the avatar is for a person or a space.',
+      description: 'Determines whether the avatar is for a person or a space.',
       options: [undefined, ...Object.values(TYPES)],
       control: { type: 'select' },
       table: {
@@ -159,6 +159,32 @@ export default {
         },
         defaultValue: {
           summary: DEFAULTS.TYPE,
+        },
+      },
+    },
+    isTyping: {
+      defaultValue: false,
+      description: 'Determines whether the user is typing.',
+      control: { type: 'boolean' },
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+    },
+    failureBadge: {
+      defaultValue: false,
+      description: 'Determines if there is an error in the Avatar component.',
+      control: { type: 'boolean' },
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: false,
         },
       },
     },

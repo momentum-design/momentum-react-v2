@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import ButtonCircle from '../ButtonCircle';
+import ButtonCircle, { ButtonCircleSize } from '../ButtonCircle';
 
 import { DEFAULTS, STYLE } from './ReactionButton.constants';
 import { Props } from './ReactionButton.types';
@@ -17,7 +17,7 @@ const ReactionButton: FC<Props> = (props: Props) => {
       className={classnames(className, STYLE.wrapper)}
       data-reacted={reacted || DEFAULTS.REACTED}
       id={id}
-      size={DEFAULTS.SIZE}
+      size={DEFAULTS.SIZE as ButtonCircleSize}
       style={style}
       {...otherProps}
     >

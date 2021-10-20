@@ -41,7 +41,7 @@ export interface Props extends AriaButtonProps {
   /**
    * Size index of this ButtonCircle.
    */
-  size?: 64 | 52 | 40 | 32 | 28;
+  size?: Size;
 
   /**
    * Custom style for overriding this component's CSS.
