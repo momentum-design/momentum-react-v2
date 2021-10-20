@@ -45,6 +45,8 @@ const STYLE = {
   iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
   imageHidden: `${CLASS_PREFIX}-image-hidden`,
   presenceIconWrapper: `${CLASS_PREFIX}-presence-icon-wrapper`,
+  buttonWrapper: `${CLASS_PREFIX}-button-wrapper`,
+  animationWrapper: `${CLASS_PREFIX}-animation-wrapper`,
 };
 
 const DEFAULTS = {
@@ -52,6 +54,7 @@ const DEFAULTS = {
   SIZE: SIZES[24],
   COLOR: TEAM_COLORS.default,
   TYPE: TYPES.person,
+  HIDE_DEFAULT_TOOLTIP: false,
 };
 
 export {

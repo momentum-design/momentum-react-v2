@@ -14,6 +14,8 @@ import {
 } from './Avatar.constants';
 import Icon from '../Icon';
 import { getInitials } from './Avatar.utils';
+import ButtonSimple from '../ButtonSimple';
+import Loading from '../../legacy/Loading';
 
 const Avatar: React.FC<Props> = (props: Props) => {
   const {
@@ -26,7 +28,12 @@ const Avatar: React.FC<Props> = (props: Props) => {
     color = DEFAULTS.COLOR,
     presence,
     type = DEFAULTS.TYPE,
+    hideDefaultTooltip = DEFAULTS.HIDE_DEFAULT_TOOLTIP,
     icon,
+    isTyping,
+    onPress,
+    failureBadge,
+    ...rest
   } = props;
 
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -51,46 +58,53 @@ const Avatar: React.FC<Props> = (props: Props) => {
   }, [src]);
 
   const renderPresence = (presenceType: PresenceType) => {
-    if (!presenceType) return;
-    if (presenceType === PresenceType.Default) return;
     let presenceIcon: string;
     let presenceColor: string;
 
-    switch (presenceType) {
-      case PresenceType.Active:
-        presenceIcon = 'unread';
-        presenceColor = 'var(--avatar-presence-icon-active)';
-        break;
-      case PresenceType.Meet:
-        presenceIcon = 'camera-presence';
-        presenceColor = 'var(--avatar-presence-icon-meeting)';
-        break;
-      case PresenceType.Schedule:
-        presenceIcon = 'meetings-presence';
-        presenceColor = 'var(--avatar-presence-icon-schedule)';
-        break;
-      case PresenceType.DND:
-        presenceIcon = 'dnd-presence';
-        presenceColor = 'var(--avatar-presence-icon-dnd)';
-        break;
-      case PresenceType.Presenting:
-        presenceIcon = 'share-screen';
-        presenceColor = 'var(--avatar-presence-icon-presenting)';
-        break;
-      case PresenceType.QuietHours:
-        presenceIcon = 'quiet-hours-presence';
-        presenceColor = 'var(--avatar-presence-icon-quiet-hours)';
-        break;
-      case PresenceType.Away:
-        presenceIcon = 'recents-presence';
-        presenceColor = 'var(--avatar-presence-icon-away)';
-        break;
-      case PresenceType.OOO:
-        presenceIcon = 'pto-presence';
-        presenceColor = 'var(--avatar-presence-icon-ooo)';
-        break;
-      default:
-        break;
+    //TODO: temporary fix until design gives proper design spec for failure badge
+    if (failureBadge) {
+      presenceIcon = 'warning';
+      presenceColor = 'var(--avatar-presence-icon-dnd)';
+    } else {
+      if (!presenceType) return;
+      if (presenceType === PresenceType.Default) return;
+
+      switch (presenceType) {
+        case PresenceType.Active:
+          presenceIcon = 'unread';
+          presenceColor = 'var(--avatar-presence-icon-active)';
+          break;
+        case PresenceType.Meet:
+          presenceIcon = 'camera-presence';
+          presenceColor = 'var(--avatar-presence-icon-meeting)';
+          break;
+        case PresenceType.Schedule:
+          presenceIcon = 'meetings-presence';
+          presenceColor = 'var(--avatar-presence-icon-schedule)';
+          break;
+        case PresenceType.DND:
+          presenceIcon = 'dnd-presence';
+          presenceColor = 'var(--avatar-presence-icon-dnd)';
+          break;
+        case PresenceType.Presenting:
+          presenceIcon = 'share-screen';
+          presenceColor = 'var(--avatar-presence-icon-presenting)';
+          break;
+        case PresenceType.QuietHours:
+          presenceIcon = 'quiet-hours-presence';
+          presenceColor = 'var(--avatar-presence-icon-quiet-hours)';
+          break;
+        case PresenceType.Away:
+          presenceIcon = 'recents-presence';
+          presenceColor = 'var(--avatar-presence-icon-away)';
+          break;
+        case PresenceType.OOO:
+          presenceIcon = 'pto-presence';
+          presenceColor = 'var(--avatar-presence-icon-ooo)';
+          break;
+        default:
+          break;
+      }
     }
 
     return (
@@ -179,13 +193,31 @@ const Avatar: React.FC<Props> = (props: Props) => {
     setImageLoadFailed(true);
   };
 
-  return (
-    <div className={classnames(STYLE.wrapper, className)} data-size={size} data-color={color}>
+  //TODO: Temporary fix for typing animation. This should be re-implemented
+  const renderTypingAnimation = () => {
+    return (
+      <span className={STYLE.animationWrapper}>
+        <div style={{ transform: 'scale(0.4)' }}>
+          <Loading />
+        </div>
+      </span>
+    );
+  };
+
+  const content = (
+    <div
+      className={classnames(STYLE.wrapper, className)}
+      data-size={size}
+      data-color={color}
+      title={!hideDefaultTooltip ? title : ''}
+      {...(!onPress && { ...rest })}
+    >
       {/*
         Renders by default with initials or title.
         Doesn't render if src has loaded successfully or icon is provided.
         It also renders if src has failed to load.
       */}
+      {isTyping && renderTypingAnimation()}
       {renderInitials()}
       {/* Renders if src is provided. */}
       {renderImage()}
@@ -195,6 +227,14 @@ const Avatar: React.FC<Props> = (props: Props) => {
       {renderPresence(presence)}
     </div>
   );
+
+  if (onPress) {
+    return (
+      <ButtonSimple aria-label={title} className={STYLE.buttonWrapper} onPress={onPress} {...rest}>
+        {content}
+      </ButtonSimple>
+    );
+  } else return content;
 };
 
 /**

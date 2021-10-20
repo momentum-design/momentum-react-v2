@@ -139,4 +139,6 @@ export {
   AvatarMeetingsListItem,
   SpaceListItem as SpaceListItemNext,
   List as ListNext,
+  Reaction,
+  ReactionBadge,
 } from './components';
