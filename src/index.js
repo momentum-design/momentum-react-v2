@@ -141,4 +141,5 @@ export {
   ReactionBadge,
   ReactionButton,
   ReactionPicker,
+  AddReactionButton,
 } from './components';

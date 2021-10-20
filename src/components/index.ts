@@ -39,3 +39,4 @@ export { default as Reaction } from './Reaction';
 export { default as ReactionBadge } from './ReactionBadge';
 export { default as ReactionButton } from './ReactionButton';
 export { default as ReactionPicker } from './ReactionPicker';
+export { default as AddReactionButton } from './AddReactionButton';

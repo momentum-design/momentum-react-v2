@@ -12,4 +12,10 @@
     background-color: rgba(255, 255, 255, 0.11);
     background-color: var(--theme-background-primary-active);
   }
+
+  .md-reaction-wrapper {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }

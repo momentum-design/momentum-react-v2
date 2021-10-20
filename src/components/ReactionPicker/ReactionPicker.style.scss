@@ -5,6 +5,7 @@
   border: 0.0625rem solid rgba(255, 255, 255, 0.2);
   border: 0.0625rem solid var(--theme-outline-secondary-normal);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.16), 0 0 0.0625rem rgba(0, 0, 0, 0.16);
+  overflow: hidden;
 
   .md-reaction-button-wrapper {
     margin: 0 0.125rem;
