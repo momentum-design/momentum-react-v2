@@ -17,32 +17,21 @@ export default {
   },
 };
 
-// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<AddReactionButtonProps>(AddReactionButton).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component.
-Example.args = {
-  children: 'Example',
-};
+Example.args = {};
 
-// TODO: Inject additional stories here.
-
-// NOTE: Common variants story. This renders multiple variants of a single component.
 const Common = MultiTemplate<AddReactionButtonProps>(AddReactionButton).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component for all variants.
-Common.args = {
-  children: 'Example',
-};
+Common.args = {};
 
 Common.parameters = {
-  variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
+  variants: [{}, {}, {}],
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example, Common };

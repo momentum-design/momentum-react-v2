@@ -1,10 +1,13 @@
-import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
+import {
+  commonAriaButton,
+  commonStyles,
+  extendArgTypes,
+} from '../../storybook/helper.stories.argtypes';
 
 import { buttonCircleArgTypes } from '../ButtonCircle/ButtonCircle.stories.args';
 import { REACTION_BUTTON_CONSTANTS as CONSTANTS } from '.';
 
 const reactionButtonArgTypes = {
-  ...commonStyles,
   children: {
     description: 'Provides the child `<Reaction/>`s for this `<ReactionButton/>`.',
     control: { type: 'text' },
@@ -35,7 +38,8 @@ const reactionButtonArgTypes = {
 export { reactionButtonArgTypes };
 
 export default {
-  ...commonStyles,
   ...reactionButtonArgTypes,
-  ...extendArgTypes('ButtonCircle', buttonCircleArgTypes, ['children', 'reacted', 'size']),
+  ...commonStyles,
+  ...commonAriaButton,
+  ...extendArgTypes('ButtonCircle', buttonCircleArgTypes, ['children', 'size']),
 };

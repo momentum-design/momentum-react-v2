@@ -1,11 +1,7 @@
-import { CSSProperties, ReactNode } from 'react';
+import { ButtonCircleProps } from './../ButtonCircle/index';
+import { CSSProperties } from 'react';
 
-export interface Props {
-  /**
-   * Child components of this AddReactionButton.
-   */
-  children?: ReactNode;
-
+export interface Props extends ButtonCircleProps {
   /**
    * Custom class for overriding this component's CSS.
    */
