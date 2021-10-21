@@ -3,7 +3,7 @@
 @include exports('md-modal') {
   .#{$modal__class} {
     @include modal-base;
-    @include modal-size($radius: false);
+    @include modal-size($radius: true);
 
     &:focus {
       box-shadow: none;
@@ -12,14 +12,16 @@
     .#{$modal__class} {
       &__header {
         flex-shrink: 0;
+        background-color: $modal__background;
+        background-color: var(--md-background-secondary, $modal__background);
 
         @include modal-header-size;
 
         .#{$modal__class}__title {
           width: 100%;
-          padding: rem-calc(16) 0;
+          padding: 0 rem-calc(32);
           overflow: hidden;
-          text-align: left;
+          text-align: center;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
@@ -36,13 +38,6 @@
             text-align: left;
             flex-flow: row wrap;
           }
-          justify-content: left;
-        }
-
-        .#{$modal__class}__close-container {
-          width: 100%;
-          @include flex;
-          justify-content: end;
         }
 
         .#{$modal__class}__close {
@@ -64,8 +59,8 @@
           $color: $modal__color,
           $color-css-var: --theme-text-primary-normal,
           $bg: $modal__background,
-          $bg-css-var: --theme-background-solid-primary-normal,
-          $border-color-css-var: --theme-outline-secondary-normal
+          $bg-css-var: --md-background-primary,
+          $border-color-css-var: --md-separator-primary
         );
       }
 
@@ -130,10 +125,6 @@
             $right-offset: rem-calc(24)
           );
         }
-
-        .#{$modal__class}__close-container {
-          height: rem-calc(20);
-        }
       }
 
       .#{$modal__class}__footer {
@@ -147,7 +138,7 @@
         $top-offset: $modal__top--large,
         $width: $modal__width--large,
         $min-height: $modal__height--large,
-        $radius: false
+        $radius: true
       );
 
       .#{$modal__class}__header {
@@ -172,10 +163,6 @@
             $right-offset: rem-calc(16)
           );
         }
-
-        .#{$modal__class}__close-container {
-          height: rem-calc(16);
-        }
       }
 
       @media #{$medium-only} {
@@ -191,7 +178,7 @@
           .#{$modal__class}__message {
             font-size: rem-calc(14);
             line-height: rem-calc(24);
-            text-align: left;
+            text-align: center;
           }
 
           .#{$modal__class}__close {
@@ -201,10 +188,6 @@
               $top-offset: rem-calc(12),
               $right-offset: rem-calc(12)
             );
-          }
-
-          .#{$modal__class}__close-container {
-            height: rem-calc(14);
           }
         }
       }
@@ -231,10 +214,6 @@
           $top-offset: rem-calc(12),
           $right-offset: rem-calc(12)
         );
-      }
-
-      .#{$modal__class}__close-container {
-        height: rem-calc(14);
       }
 
       @media #{$medium-only} {
@@ -268,10 +247,6 @@
         );
       }
 
-      .#{$modal__class}__close-container {
-        height: rem-calc(14);
-      }
-
       // Media Query for Tablet
       @media #{$medium-only} {
         @include modal-size(
@@ -285,12 +260,11 @@
     &.#{$modal__class}--dialog {
       @include modal-size(
         $width: 442px,
-        $radius: false,
+        $radius: true,
         $top-offset: $modal-dialog__top,
         $padding: $modal-dialog__padding
       );
 
-      .#{$modal__class}__close-container,
       .#{$modal__class}__close {
         display: none;
       }

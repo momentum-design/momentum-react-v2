@@ -34,6 +34,7 @@
   & > div[data-position='start'] {
     width: fit-content;
     margin-right: 0.75rem;
+    flex-shrink: 0;
   }
 
   & > div[data-position='fill'],
@@ -44,6 +45,7 @@
   & > div[data-position='end'] {
     width: auto;
     margin-left: 0.75rem;
+    flex-shrink: 0;
 
     & > button {
       margin: 0;
@@ -84,6 +86,28 @@
 
     &[data-size='50'] {
       padding: 0 0.75rem 0 0.5rem;
+    }
+  }
+}
+
+.md-list-item-base-context-menu-wrapper {
+  max-width: 20rem;
+  border-radius: 0.75rem;
+  z-index: 9999;
+
+  & button {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    border: var(--md-globals-border-clear);
+    text-align: left;
+    width: 100%;
+    background-color: var(--button-secondary-background);
+    color: var(--button-secondary-text);
+
+    &:hover {
+      background-color: var(--button-secondary-background-hovered);
+      color: var(--button-secondary-text-hovered);
     }
   }
 }

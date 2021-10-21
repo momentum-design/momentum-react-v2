@@ -1204,10 +1204,13 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       role="option"
                       tabIndex={0}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -1304,10 +1307,13 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -2615,10 +2621,13 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -2715,10 +2724,13 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -3701,10 +3713,13 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -3801,10 +3816,13 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -5181,10 +5199,13 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       role="option"
                       tabIndex={0}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -5312,10 +5333,13 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}

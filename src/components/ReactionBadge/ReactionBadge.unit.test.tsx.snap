@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
-<ReactionBadge>
+exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
+<ReactionBadge
+  reaction={
+    <Reaction
+      name="haha"
+    />
+  }
+>
   <ButtonPill
     className="md-reaction-badge-wrapper"
     data-count={1}
@@ -43,17 +49,17 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter>
-            <Text
-              type="body-primary"
-            >
-              <p
-                className="md-text-wrapper md-text-color"
-                data-type="body-primary"
-              />
-            </Text>
-          </PrimitiveConverter>
-          <span />
+          <Reaction
+            name="haha"
+          >
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
+            />
+          </Reaction>
+          <span
+            className="reaction-badge-count"
+          />
         </button>
       </FocusRing>
     </FocusRing>
@@ -61,9 +67,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot 1`] = `
 </ReactionBadge>
 `;
 
-exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
+exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with className 1`] = `
 <ReactionBadge
   className="example-class"
+  reaction={
+    <Reaction
+      name="haha"
+    />
+  }
 >
   <ButtonPill
     className="example-class md-reaction-badge-wrapper"
@@ -106,17 +117,17 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter>
-            <Text
-              type="body-primary"
-            >
-              <p
-                className="md-text-wrapper md-text-color"
-                data-type="body-primary"
-              />
-            </Text>
-          </PrimitiveConverter>
-          <span />
+          <Reaction
+            name="haha"
+          >
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
+            />
+          </Reaction>
+          <span
+            className="reaction-badge-count"
+          />
         </button>
       </FocusRing>
     </FocusRing>
@@ -124,9 +135,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with className 1`] = `
 </ReactionBadge>
 `;
 
-exports[`<ReactionBadge /> snapshot should match snapshot with count 1`] = `
+exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count 1`] = `
 <ReactionBadge
   count={1}
+  reaction={
+    <Reaction
+      name="haha"
+    />
+  }
 >
   <ButtonPill
     className="md-reaction-badge-wrapper"
@@ -169,17 +185,17 @@ exports[`<ReactionBadge /> snapshot should match snapshot with count 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter>
-            <Text
-              type="body-primary"
-            >
-              <p
-                className="md-text-wrapper md-text-color"
-                data-type="body-primary"
-              />
-            </Text>
-          </PrimitiveConverter>
-          <span>
+          <Reaction
+            name="haha"
+          >
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
+            />
+          </Reaction>
+          <span
+            className="reaction-badge-count"
+          >
             1
           </span>
         </button>
@@ -189,9 +205,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with count 1`] = `
 </ReactionBadge>
 `;
 
-exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
+exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`] = `
 <ReactionBadge
   id="example-id"
+  reaction={
+    <Reaction
+      name="haha"
+    />
+  }
 >
   <ButtonPill
     className="md-reaction-badge-wrapper"
@@ -236,17 +257,17 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter>
-            <Text
-              type="body-primary"
-            >
-              <p
-                className="md-text-wrapper md-text-color"
-                data-type="body-primary"
-              />
-            </Text>
-          </PrimitiveConverter>
-          <span />
+          <Reaction
+            name="haha"
+          >
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
+            />
+          </Reaction>
+          <span
+            className="reaction-badge-count"
+          />
         </button>
       </FocusRing>
     </FocusRing>
@@ -254,9 +275,14 @@ exports[`<ReactionBadge /> snapshot should match snapshot with id 1`] = `
 </ReactionBadge>
 `;
 
-exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
+exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with reacted 1`] = `
 <ReactionBadge
   reacted={true}
+  reaction={
+    <Reaction
+      name="haha"
+    />
+  }
 >
   <ButtonPill
     className="md-reaction-badge-wrapper"
@@ -299,17 +325,17 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <PrimitiveConverter>
-            <Text
-              type="body-primary"
-            >
-              <p
-                className="md-text-wrapper md-text-color"
-                data-type="body-primary"
-              />
-            </Text>
-          </PrimitiveConverter>
-          <span />
+          <Reaction
+            name="haha"
+          >
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
+            />
+          </Reaction>
+          <span
+            className="reaction-badge-count"
+          />
         </button>
       </FocusRing>
     </FocusRing>
@@ -317,8 +343,13 @@ exports[`<ReactionBadge /> snapshot should match snapshot with reacted 1`] = `
 </ReactionBadge>
 `;
 
-exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
+exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style 1`] = `
 <ReactionBadge
+  reaction={
+    <Reaction
+      name="haha"
+    />
+  }
   style={
     Object {
       "color": "pink",
@@ -376,17 +407,17 @@ exports[`<ReactionBadge /> snapshot should match snapshot with style 1`] = `
           }
           type="button"
         >
-          <PrimitiveConverter>
-            <Text
-              type="body-primary"
-            >
-              <p
-                className="md-text-wrapper md-text-color"
-                data-type="body-primary"
-              />
-            </Text>
-          </PrimitiveConverter>
-          <span />
+          <Reaction
+            name="haha"
+          >
+            <div
+              className="md-reaction-wrapper"
+              data-size={12}
+            />
+          </Reaction>
+          <span
+            className="reaction-badge-count"
+          />
         </button>
       </FocusRing>
     </FocusRing>

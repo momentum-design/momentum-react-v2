@@ -136,5 +136,9 @@ export {
   GlobalSearchInput,
   SearchInput,
   TextInput,
-  AvatarListItem,
+  AvatarMeetingsListItem,
+  SpaceListItem as SpaceListItemNext,
+  List as ListNext,
+  Reaction,
+  ReactionBadge,
 } from './components';

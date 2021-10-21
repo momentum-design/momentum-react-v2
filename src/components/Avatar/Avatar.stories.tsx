@@ -14,7 +14,8 @@ import {
 
 import Documentation from './Avatar.documentation.mdx';
 import { PresenceType } from './Avatar.types';
-import { COLORS, DEFAULTS, SIZES, TYPES } from './Avatar.constants';
+import { DEFAULTS, SIZES, TYPES } from './Avatar.constants';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 
 const DocsPage: FC = () => (
   <>
@@ -124,7 +125,7 @@ export default {
       defaultValue: DEFAULTS.COLOR,
       description:
         'In case `src` is not provided, we can provide a color for the avatar using this property.',
-      options: [undefined, ...Object.values(COLORS)],
+      options: [undefined, ...Object.values(TEAM_COLORS)],
       control: { type: 'select' },
       table: {
         type: {
@@ -150,7 +151,7 @@ export default {
     },
     type: {
       defaultValue: DEFAULTS.TYPE,
-      description: 'Determines weather the avatar is for a person or a space.',
+      description: 'Determines whether the avatar is for a person or a space.',
       options: [undefined, ...Object.values(TYPES)],
       control: { type: 'select' },
       table: {
@@ -159,6 +160,32 @@ export default {
         },
         defaultValue: {
           summary: DEFAULTS.TYPE,
+        },
+      },
+    },
+    isTyping: {
+      defaultValue: false,
+      description: 'Determines whether the user is typing.',
+      control: { type: 'boolean' },
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+    },
+    failureBadge: {
+      defaultValue: false,
+      description: 'Determines if there is an error in the Avatar component.',
+      control: { type: 'boolean' },
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: false,
         },
       },
     },
@@ -259,7 +286,7 @@ Color.args = {
 
 Color.parameters = {
   variants: [
-    ...Object.values(COLORS).map((color) => {
+    ...Object.values(TEAM_COLORS).map((color) => {
       return {
         color: color,
         label: `Color: ${color}`,

@@ -28,7 +28,6 @@ export default class ModalFull extends React.PureComponent {
             onHide={() => this.setState({ showModal7: false })}
             show={this.state.showModal7}
             ref={(modal7) => (this.modal7 = modal7)}
-            renderTo="theme-provider"
             htmlId="modal7"
             size="full"
           >
