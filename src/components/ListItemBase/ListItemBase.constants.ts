@@ -18,10 +18,12 @@ const DEFAULTS = {
   IS_PADDED: false,
   SHAPE: SHAPES.rectangle,
   ROLE: 'listitem',
+  SHOULD_ITEM_FOCUS_BE_INSET: false,
 };
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
+  contextMenuWrapper: `${CLASS_PREFIX}-context-menu-wrapper`,
 };
 
 export { DEFAULTS, STYLE, SIZES, SHAPES };

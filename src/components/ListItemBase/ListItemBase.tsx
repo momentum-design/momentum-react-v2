@@ -1,13 +1,17 @@
-import React, { RefObject, forwardRef, ReactNode, useRef } from 'react';
+import React, { RefObject, forwardRef, ReactNode, useRef, useEffect, useState } from 'react';
 import classnames from 'classnames';
 
 import './ListItemBase.style.scss';
-import { Props } from './ListItemBase.types';
+import { ContextMenuState, Props } from './ListItemBase.types';
 import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import FocusRing from '../FocusRing';
 import { usePress } from '@react-aria/interactions';
+import ModalContainer from '../ModalContainer';
+import { useOverlay } from '@react-aria/overlays';
+import { useListContext } from '../List/List.utils';
+import ButtonSimple from '../ButtonSimple';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
@@ -20,12 +24,17 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
     isSelected,
+    style,
+    itemIndex,
+    contextMenuActions,
     ...rest
   } = props;
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
-  const internalRef = useRef();
+  const listContext = useListContext();
+
+  const internalRef = useRef<HTMLLIElement>();
   const ref = providedRef || internalRef;
 
   if (shape === SHAPES.isPilled && (size === SIZES[40] || size === SIZES[70])) {
@@ -59,11 +68,140 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     content = children;
   }
 
-  const { pressProps, isPressed } = usePress({ preventFocusOnPress: true, ...rest });
+  const { pressProps, isPressed } = usePress({
+    preventFocusOnPress: true, // we handle it ourselves
+    ...rest,
+  });
+
+  /**
+   * Focus management
+   */
+
+  const focus = listContext?.currentFocus === itemIndex;
+  const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
+  const shouldItemFocusBeInset =
+    listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
+
+  // makes sure that whenever an item is pressed, the list focus state gets updated as well
+  useEffect(() => {
+    if (listContext && listContext?.setContext && isPressed && shouldFocusOnPress) {
+      ref.current.focus();
+      listContext.setContext(itemIndex);
+    }
+  }, [isPressed]);
+
+  function getKeyboardFocusableElements<T extends HTMLElement>(_ref: RefObject<T>) {
+    const result = _ref.current.querySelectorAll(
+      'a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
+    );
+    return Array.from(result).filter(
+      (el) => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden')
+    );
+  }
+
+  /**
+   * Handle keyboard navigation for any focusable elements inside list items
+   * Make them focusable only when the current list-item is focusable, otherwise
+   * make them non-focusable.
+   */
+
+  useEffect(() => {
+    // TODO: Maybe this should be performed only once?
+    const focusableElements = getKeyboardFocusableElements(ref);
+
+    if (focus) {
+      ref.current.focus();
+
+      focusableElements.forEach((element) => {
+        element.setAttribute('tabindex', '0');
+      });
+    } else {
+      focusableElements.forEach((element) => {
+        element.setAttribute('tabindex', '-2');
+      });
+    }
+  }, [focus, ref.current]);
+
+  /**
+   * Context menu
+   */
+
+  const [contextMenuState, setContextMenuState] = useState<ContextMenuState>({
+    isOpen: false,
+    x: 0,
+    y: 0,
+  });
+
+  const toggleContextMenu = () => {
+    setContextMenuState({ ...contextMenuState, isOpen: !contextMenuState.isOpen });
+  };
+
+  const overlayRef = useRef();
+  const { overlayProps } = useOverlay(
+    {
+      onClose: () => toggleContextMenu(),
+      shouldCloseOnBlur: true,
+      isOpen: contextMenuState.isOpen,
+      isDismissable: true,
+    },
+    overlayRef
+  );
+
+  const renderContextMenu = () => {
+    const { x, y } = contextMenuState;
+
+    return (
+      <ModalContainer
+        isPadded
+        round={75}
+        className={STYLE.contextMenuWrapper}
+        {...overlayProps}
+        id="list-item-context-menu"
+        color={'primary' as const}
+        style={{ position: 'fixed', left: `${x}px`, top: `${y}px` }}
+        ref={overlayRef}
+      >
+        {contextMenuActions.map((item, index) => (
+          <ButtonSimple
+            key={index}
+            aria-label={item?.text}
+            onPress={() => {
+              toggleContextMenu();
+              item?.action();
+            }}
+          >
+            {item?.text}
+          </ButtonSimple>
+        ))}
+      </ModalContainer>
+    );
+  };
+
+  const handleOnContextMenu = (event: MouseEvent) => {
+    event.preventDefault();
+    // Don't allow to open more context-menus at the same time
+    if (document.getElementById('list-item-context-menu')) {
+      return;
+    }
+
+    const { pageX, pageY } = event;
+    setContextMenuState({ x: pageX, y: pageY, isOpen: !contextMenuState.isOpen });
+  };
+
+  useEffect(() => {
+    if (contextMenuActions) {
+      ref.current.addEventListener('contextmenu', handleOnContextMenu);
+    }
+    () => {
+      ref.current.removeEventListener('contextmenu', handleOnContextMenu);
+    };
+  }, []);
 
   return (
-    <FocusRing>
+    <FocusRing isInset={shouldItemFocusBeInset}>
       <li
+        tabIndex={focus ? 0 : -1}
+        style={style}
         ref={ref}
         data-size={size}
         data-disabled={isDisabled}
@@ -74,6 +212,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         {...pressProps}
       >
         {content}
+        {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}
       </li>
     </FocusRing>
   );

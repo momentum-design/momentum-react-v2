@@ -27,3 +27,17 @@ const DEFAULTS = {
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE, THEME_CLASS_PREFIX, THEME_NAMES };
+
+export const TEAM_COLORS = {
+  default: 'default',
+  gold: 'gold',
+  orange: 'orange',
+  lime: 'lime',
+  mint: 'mint',
+  cyan: 'cyan',
+  cobalt: 'cobalt',
+  slate: 'slate',
+  violet: 'violet',
+  purple: 'purple',
+  pink: 'pink',
+};

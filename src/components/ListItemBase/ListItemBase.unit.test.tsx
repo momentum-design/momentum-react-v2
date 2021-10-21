@@ -2,11 +2,18 @@ import ListItemBase from '.';
 import { mount } from 'enzyme';
 import React from 'react';
 import { STYLE } from './ListItemBase.constants';
+import * as ListContext from '../List/List.utils';
 
 describe('ListItemBase', () => {
   let container;
 
   describe('snapshot', () => {
+    beforeEach(() => {
+      jest
+        .spyOn(ListContext, 'useListContext')
+        .mockImplementation(() => ({ currentFocus: 0, shouldFocusOnPres: false }));
+    });
+
     it('should match snapshot', () => {
       expect.assertions(1);
 

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
 
 import ModalArrow from '../ModalArrow';
@@ -10,7 +10,7 @@ import './ModalContainer.style.scss';
 /**
  * The ModalContainer component.
  */
-const ModalContainer: FC<Props> = (props: Props) => {
+const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   const {
     arrow,
     className,
@@ -36,6 +36,7 @@ const ModalContainer: FC<Props> = (props: Props) => {
     >
       {arrowComponent}
       <div
+        ref={ref}
         className={STYLE.content}
         data-color={color || DEFAULTS.COLOR}
         data-elevation={elevation || DEFAULTS.ELEVATION}
@@ -50,4 +51,7 @@ const ModalContainer: FC<Props> = (props: Props) => {
   );
 };
 
-export default ModalContainer;
+const _ModalContainer = forwardRef(ModalContainer);
+_ModalContainer.displayName = 'ModalContainer';
+
+export default _ModalContainer;

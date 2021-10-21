@@ -75,7 +75,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           >
             Title
@@ -86,7 +86,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           >
             Description
@@ -97,7 +97,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           >
             (Details)
@@ -256,7 +256,7 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -265,7 +265,7 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -274,7 +274,7 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -330,7 +330,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -339,7 +339,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -348,7 +348,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -507,7 +507,7 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -516,7 +516,7 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -525,7 +525,7 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -560,7 +560,7 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -569,7 +569,7 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           >
             Description
@@ -580,7 +580,7 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -615,7 +615,7 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -624,7 +624,7 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -633,7 +633,7 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           >
             Details
@@ -672,7 +672,7 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -681,7 +681,7 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -690,7 +690,7 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -742,7 +742,7 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -751,7 +751,7 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -760,7 +760,7 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -797,7 +797,7 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -806,7 +806,7 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -815,7 +815,7 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -852,7 +852,7 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -861,7 +861,7 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -870,7 +870,7 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -919,7 +919,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           />
         </Text>
@@ -928,7 +928,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -937,7 +937,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>
@@ -972,7 +972,7 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
           type="banner-primary"
         >
           <h1
-            className="md-text-wrapper md-text-color md-banner-title"
+            className="md-text-wrapper md-banner-title"
             data-type="banner-primary"
           >
             Title
@@ -983,7 +983,7 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-description"
+            className="md-text-wrapper md-banner-description"
             data-type="subheader-secondary"
           />
         </Text>
@@ -992,7 +992,7 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
           type="subheader-secondary"
         >
           <h3
-            className="md-text-wrapper md-text-color md-banner-details"
+            className="md-text-wrapper md-banner-details"
             data-type="subheader-secondary"
           />
         </Text>

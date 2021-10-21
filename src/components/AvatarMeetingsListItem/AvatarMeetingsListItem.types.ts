@@ -2,7 +2,7 @@ import { PressEvent } from '@react-types/shared';
 import { CSSProperties, ReactElement, ReactNode } from 'react';
 import { AvatarProps } from '../Avatar';
 
-export enum AvatarListItemActions {
+export enum AvatarMeetingsListItemActions {
   mute = 'mute',
   more = 'more',
   closeOnHover = 'close-on-hover',
@@ -61,7 +61,7 @@ export interface Props {
   /**
    * Determines what actions will be displayed inside the list item.
    */
-  displayActions?: AvatarListItemActions[];
+  displayActions?: Array<AvatarMeetingsListItemActions>;
 
   /**
    * Determines the style/color of the microphone icon button if present.

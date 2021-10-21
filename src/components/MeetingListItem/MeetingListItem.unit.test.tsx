@@ -79,12 +79,12 @@ describe('<MeetingListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with image', () => {
+    it('should match snapshot with image', async () => {
       expect.assertions(1);
 
       const image = <Icon name="placeholder" />;
 
-      const container = mount(<MeetingListItem image={image} />);
+      const container = await mountAndWait(<MeetingListItem image={image} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -177,12 +177,12 @@ describe('<MeetingListItem />', () => {
         <MeetingListItem
           buttonGroup={
             <ButtonGroup>
-              <ButtonPill className="button-pill" />
-              <ButtonCircle className="button-circle">
+              <ButtonPill key="1" className="button-pill" />
+              <ButtonCircle key="2" className="button-circle">
                 <Icon name="chat" />
               </ButtonCircle>
-              <Icon name="placeholder" />
-              <Avatar className="avatar" />
+              <Icon key="3" name="placeholder" />
+              <Avatar key="4" className="avatar" />
             </ButtonGroup>
           }
         />
