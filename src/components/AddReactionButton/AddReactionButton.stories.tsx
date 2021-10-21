@@ -31,7 +31,7 @@ delete Common.argTypes.children;
 Common.args = {};
 
 Common.parameters = {
-  variants: [{}, {}, {}],
+  variants: [{}, { disabled: true }, {}],
 };
 
 export { Example, Common };

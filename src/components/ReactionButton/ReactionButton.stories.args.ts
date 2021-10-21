@@ -41,5 +41,5 @@ export default {
   ...reactionButtonArgTypes,
   ...commonStyles,
   ...commonAriaButton,
-  ...extendArgTypes('ButtonCircle', buttonCircleArgTypes, ['children', 'size']),
+  ...extendArgTypes('ButtonCircle', buttonCircleArgTypes, ['children', 'reacted']),
 };
