@@ -45,7 +45,7 @@ const Example = Template((args) => (
             <ListItemBaseSection position="end">end</ListItemBaseSection>
           </>
         ),
-        onPress: () => action('onPress'),
+        onPress: action('onPress'),
       },
       {}
     )}

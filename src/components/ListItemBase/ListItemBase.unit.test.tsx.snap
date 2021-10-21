@@ -2,10 +2,13 @@
 
 exports[`ListItemBase snapshot should match snapshot 1`] = `
 <ListItemBase>
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper"
@@ -28,6 +31,7 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="listitem"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -40,10 +44,13 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
 <ListItemBase
   className="example-class"
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="example-class md-list-item-base-wrapper"
@@ -66,6 +73,7 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="listitem"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -78,10 +86,13 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
 <ListItemBase
   id="example-id"
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper"
@@ -105,6 +116,7 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="listitem"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -117,10 +129,13 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
 <ListItemBase
   isDisabled={true}
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper"
@@ -143,6 +158,7 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="listitem"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -155,10 +171,13 @@ exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
 <ListItemBase
   isSelected={true}
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper active"
@@ -181,6 +200,7 @@ exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="listitem"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -193,10 +213,13 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
 <ListItemBase
   role="role"
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper"
@@ -219,6 +242,7 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="role"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -231,10 +255,13 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
 <ListItemBase
   shape="isPilled"
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper"
@@ -257,6 +284,7 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="listitem"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -269,10 +297,13 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
 <ListItemBase
   size={40}
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper"
@@ -295,6 +326,7 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="listitem"
+        tabIndex={-1}
       >
         Test
       </li>
@@ -311,10 +343,13 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <FocusRing>
+  <FocusRing
+    isInset={false}
+  >
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
     >
       <li
         className="md-list-item-base-wrapper"
@@ -342,6 +377,7 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
             "color": "pink",
           }
         }
+        tabIndex={-1}
       >
         Test
       </li>

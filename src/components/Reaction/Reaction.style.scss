@@ -2,11 +2,11 @@
   height: 100%;
   display: flex;
 
-  &[data-size="12"] {
+  &[data-size='12'] {
     width: 0.75rem;
   }
 
-  &[data-size="16"] {
-    width: 1rem
+  &[data-size='16'] {
+    width: 1rem;
   }
 }

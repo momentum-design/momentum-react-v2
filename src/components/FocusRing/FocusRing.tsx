@@ -20,13 +20,19 @@ const FocusRing: FC<Props> = (props: Props) => {
   delete mutatedProps.focusClass;
   delete mutatedProps.focusRingClass;
 
+  const { isInset = false } = props;
+
   return (
     <AriaFocusRing
       focusClass={
-        props.disabled ? classnames(STYLE.disabled) : classnames(STYLE.wrapper, focusClass)
+        props.disabled
+          ? classnames(STYLE.disabled)
+          : classnames(STYLE.wrapper, focusClass, { [STYLE.inset]: isInset })
       }
       focusRingClass={
-        props.disabled ? classnames(STYLE.disabled) : classnames(STYLE.wrapper, focusRingClass)
+        props.disabled
+          ? classnames(STYLE.disabled)
+          : classnames(STYLE.wrapper, focusRingClass, { [STYLE.inset]: isInset })
       }
       {...mutatedProps}
     />
