@@ -49,6 +49,7 @@ class Modal extends React.Component {
       backdropClickExit,
       children,
       className,
+      ContentWrapper,
       escapeExits,
       focusDialog,
       htmlId,
@@ -58,11 +59,15 @@ class Modal extends React.Component {
       ...props
     } = this.props;
 
-    const modalContent = (
+    let modalContent = (
       <div className="md-modal__content">
         <div className="md-modal__flex-container">{children}</div>
       </div>
     );
+
+    if (ContentWrapper) {
+      modalContent = <ContentWrapper>{modalContent}</ContentWrapper>;
+    }
 
     const RenderModal = renderTo ? AriaModal.renderTo(`#${renderTo}`) : AriaModal;
 
@@ -109,6 +114,8 @@ Modal.propTypes = {
   children: PropTypes.node,
   /** @prop Optional css class names | '' */
   className: PropTypes.string,
+  /** @prop Optional component for wrapping content */
+  ContentWrapper: PropTypes.func,
   /** @prop To enable/disable escape to exit modal | true */
   escapeExits: PropTypes.bool,
   /** @prop To set focus to the entire modal rather than elements within modal | true */

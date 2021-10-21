@@ -60,6 +60,7 @@ export default class ModalSmall extends React.PureComponent {
             onHide={() => this.setState({ showModal4: false })}
             show={this.state.showModal4}
             ref={(modal4) => (this.modal4 = modal4)}
+            renderTo="theme-provider"
             size="small"
             htmlId="modal4"
           >
