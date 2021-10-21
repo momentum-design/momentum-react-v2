@@ -112,8 +112,9 @@ const Avatar: React.FC<Props> = (props: Props) => {
         <Icon
           name={presenceIcon}
           weight="filled"
-          color={presenceColor}
+          fillColor={presenceColor}
           scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
+          strokeColor="none"
         />
       </div>
     );
