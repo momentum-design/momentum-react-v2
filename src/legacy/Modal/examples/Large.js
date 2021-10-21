@@ -28,7 +28,6 @@ export default class ModalLarge extends React.PureComponent {
             onHide={() => this.setState({ showModal5: false })}
             show={this.state.showModal5}
             ref={(modal5) => (this.modal5 = modal5)}
-            renderTo="theme-provider"
             htmlId="modal5"
             size="large"
           >
