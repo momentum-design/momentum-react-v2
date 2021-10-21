@@ -131,7 +131,7 @@
 /* Global variables not available as tokens. */
 .md-theme-provider-globals {
   --md-globals-border-clear: 0rem solid rgba(0, 0, 0, 0);
-  --md-globals-focus-ring-box-shadow: 0 0 0 0.0625rem var(--theme-background-solid-primary-normal),
+  --md-globals-focus-ring-box-shadow: 0 0 0 0.25rem rgba(100, 180, 250, 0.3),
     0 0 0 0.125rem var(--theme-outline-focus-normal);
   --md-globals-focus-ring-box-shadow-inset: var(--md-globals-focus-ring-box-shadow) inset;
   --md-globals-elevation-0: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
@@ -157,6 +157,11 @@
     var(--theme-background-gradient-secondary-0) 0%,
     var(--theme-background-gradient-secondary-1) 100%
   );
+
+  &.md-theme-lightWebex {
+    --md-globals-focus-ring-box-shadow: 0 0 0 0.25rem rgba(17, 112, 207, 0.3),
+      0 0 0 0.125rem var(--theme-outline-focus-normal);
+  }
 }
 
 /* Scrollbar Theme */
