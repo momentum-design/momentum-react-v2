@@ -28,6 +28,7 @@ export default class ModalDefault extends React.PureComponent {
             onHide={() => this.setState({ showModal: false })}
             show={this.state.showModal}
             ref={(modal1) => (this.modal1 = modal1)}
+            renderTo="theme-provider"
             htmlId="modal1"
             backdropClickExit
           >
