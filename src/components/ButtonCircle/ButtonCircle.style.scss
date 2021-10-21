@@ -297,6 +297,13 @@
     width: 1.75rem;
   }
 
+  // this size is ONLY for AddReactionButton
+  &[data-size='20'] {
+    font-size: 0.7rem;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
   &[data-multiple-children='true'] {
     > *:not(:first-child) {
       margin-left: 0.1em;

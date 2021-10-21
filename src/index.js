@@ -141,4 +141,7 @@ export {
   List as ListNext,
   Reaction,
   ReactionBadge,
+  ReactionButton,
+  ReactionPicker,
+  AddReactionButton,
 } from './components';

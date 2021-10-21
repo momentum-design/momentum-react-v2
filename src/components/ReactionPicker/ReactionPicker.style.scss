@@ -1,0 +1,30 @@
+.md-reaction-picker-wrapper {
+  height: 2.25rem;
+  background-color: rgba(0, 0, 0, 1);
+  background-color: var(--theme-groupedbackground-primary-normal);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  border: 0.0625rem solid var(--theme-outline-secondary-normal);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.16), 0 0 0.0625rem rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+
+  .md-reaction-button-wrapper {
+    margin: 0 0.125rem;
+    border-radius: 100vh;
+  }
+
+  &[data-round='true'] {
+    border-radius: 100vh;
+
+    &[data-spaced='false'] {
+      > * {
+        &:first-child {
+          border-radius: 100vh;
+        }
+
+        &:last-child {
+          border-radius: 100vh;
+        }
+      }
+    }
+  }
+}

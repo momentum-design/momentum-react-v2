@@ -38,4 +38,7 @@ export { default as SpaceListItem } from './SpaceListItem';
 export { default as List } from './List';
 export { default as Reaction } from './Reaction';
 export { default as ReactionBadge } from './ReactionBadge';
-export { default as AvatarMeetingsListItem } from './ReactionBadge';
+export { default as ReactionButton } from './ReactionButton';
+export { default as ReactionPicker } from './ReactionPicker';
+export { default as AddReactionButton } from './AddReactionButton';
+export { default as AvatarMeetingsListItem } from './AvatarMeetingsListItem';
