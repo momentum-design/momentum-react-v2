@@ -16,19 +16,6 @@ exports[`tests for <ModalHeader /> should match SnapShot 1`] = `
     className="md-modal__header"
     id="test"
   >
-    <div
-      className="md-modal__close-container"
-    >
-      <CloseIcon
-        className="md-modal__close"
-        onClick={[Function]}
-      >
-        <button
-          className="md-close md-modal__close"
-          onClick={[Function]}
-        />
-      </CloseIcon>
-    </div>
     <span
       aria-label={null}
       aria-level={null}
@@ -36,6 +23,15 @@ exports[`tests for <ModalHeader /> should match SnapShot 1`] = `
       key="title-0"
       role={null}
     />
+    <CloseIcon
+      className="md-modal__close"
+      onClick={[Function]}
+    >
+      <button
+        className="md-close md-modal__close"
+        onClick={[Function]}
+      />
+    </CloseIcon>
   </div>
 </ModalHeader>
 `;
