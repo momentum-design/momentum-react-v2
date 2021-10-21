@@ -931,7 +931,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
       restoreFocus={true}
     >
       <span
-        data-focus-scope-start={true}
         hidden={true}
       />
       <div
@@ -1187,6 +1186,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       data-key="$.0"
                       id="test-ID-option-$.0"
                       isDisabled={false}
+                      isPadded={true}
                       key="$.0"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1220,7 +1220,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                             className="md-list-item-base-wrapper"
                             data-disabled={false}
                             data-key="$.0"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.0"
@@ -1290,6 +1290,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       data-key="$.1"
                       id="test-ID-option-$.1"
                       isDisabled={false}
+                      isPadded={true}
                       key="$.1"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1323,7 +1324,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                             className="md-list-item-base-wrapper"
                             data-disabled={false}
                             data-key="$.1"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.1"
@@ -1393,7 +1394,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
         </DismissButton>
       </div>
       <span
-        data-focus-scope-end={true}
         hidden={true}
       />
     </FocusScope>
@@ -2344,7 +2344,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       restoreFocus={true}
     >
       <span
-        data-focus-scope-start={true}
         hidden={true}
       />
       <div
@@ -2604,6 +2603,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       data-key="$.0"
                       id="test-ID-option-$.0"
                       isDisabled={true}
+                      isPadded={true}
                       key="$.0"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2637,7 +2637,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                             className="md-list-item-base-wrapper"
                             data-disabled={true}
                             data-key="$.0"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.0"
@@ -2707,6 +2707,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       data-key="$.1"
                       id="test-ID-option-$.1"
                       isDisabled={false}
+                      isPadded={true}
                       key="$.1"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2740,7 +2741,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                             className="md-list-item-base-wrapper"
                             data-disabled={false}
                             data-key="$.1"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.1"
@@ -2810,7 +2811,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         </DismissButton>
       </div>
       <span
-        data-focus-scope-end={true}
         hidden={true}
       />
     </FocusScope>
@@ -3440,7 +3440,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       restoreFocus={true}
     >
       <span
-        data-focus-scope-start={true}
         hidden={true}
       />
       <div
@@ -3696,6 +3695,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       data-key="$.0"
                       id="test-ID-option-$.0"
                       isDisabled={false}
+                      isPadded={true}
                       key="$.0"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3729,7 +3729,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                             className="md-list-item-base-wrapper"
                             data-disabled={false}
                             data-key="$.0"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.0"
@@ -3799,6 +3799,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       data-key="$.1"
                       id="test-ID-option-$.1"
                       isDisabled={false}
+                      isPadded={true}
                       key="$.1"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3832,7 +3833,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                             className="md-list-item-base-wrapper"
                             data-disabled={false}
                             data-key="$.1"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.1"
@@ -3902,7 +3903,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         </DismissButton>
       </div>
       <span
-        data-focus-scope-end={true}
         hidden={true}
       />
     </FocusScope>
@@ -4903,7 +4903,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       restoreFocus={true}
     >
       <span
-        data-focus-scope-start={true}
         hidden={true}
       />
       <div
@@ -5182,6 +5181,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       data-key="$.0"
                       id="test-ID-option-$.0"
                       isDisabled={false}
+                      isPadded={true}
                       key="$.0"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -5215,7 +5215,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                             className="md-list-item-base-wrapper"
                             data-disabled={false}
                             data-key="$.0"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.0"
@@ -5316,6 +5316,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       data-key="$.1"
                       id="test-ID-option-$.1"
                       isDisabled={false}
+                      isPadded={true}
                       key="$.1"
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -5349,7 +5350,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                             className="md-list-item-base-wrapper"
                             data-disabled={false}
                             data-key="$.1"
-                            data-padded={false}
+                            data-padded={true}
                             data-shape="rectangle"
                             data-size={40}
                             id="test-ID-option-$.1"
@@ -5419,7 +5420,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         </DismissButton>
       </div>
       <span
-        data-focus-scope-end={true}
         hidden={true}
       />
     </FocusScope>

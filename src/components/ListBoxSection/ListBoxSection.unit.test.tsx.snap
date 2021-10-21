@@ -64,6 +64,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
       >
         <ListItemBase
           isDisabled={false}
+          isPadded={true}
           key="$.0.0"
         >
           <FocusRing
@@ -77,7 +78,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
-                data-padded={false}
+                data-padded={true}
                 data-shape="rectangle"
                 data-size={40}
                 onBlur={[Function]}
@@ -141,6 +142,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
       >
         <ListItemBase
           isDisabled={false}
+          isPadded={true}
           key="$.0.1"
         >
           <FocusRing
@@ -154,7 +156,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
-                data-padded={false}
+                data-padded={true}
                 data-shape="rectangle"
                 data-size={40}
                 onBlur={[Function]}
