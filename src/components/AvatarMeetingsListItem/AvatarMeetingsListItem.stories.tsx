@@ -2,16 +2,16 @@ import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import AvatarListItem, { AvatarListItemProps } from './';
-import argTypes from './AvatarListItem.stories.args';
-import Documentation from './AvatarListItem.stories.docs.mdx';
+import AvatarMeetingsListItem, { AvatarMeetingsListItemProps } from '.';
+import argTypes from './AvatarMeetingsListItem.stories.args';
+import Documentation from './AvatarMeetingsListItem.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { SCHEDULER_STATES } from './AvatarListItem.constants';
-import { AvatarListItemActions } from './AvatarListItem.types';
+import { SCHEDULER_STATES } from './AvatarMeetingsListItem.constants';
+import { AvatarMeetingsListItemActions } from './AvatarMeetingsListItem.types';
 export default {
-  title: 'Momentum UI/AvatarListItem',
-  component: AvatarListItem,
+  title: 'Momentum UI/AvatarMeetingsListItem',
+  component: AvatarMeetingsListItem,
   parameters: {
     expanded: true,
     docs: {
@@ -20,7 +20,7 @@ export default {
   },
 };
 
-const Example = Template<AvatarListItemProps>(AvatarListItem).bind({});
+const Example = Template<AvatarMeetingsListItemProps>(AvatarMeetingsListItem).bind({});
 
 Example.args = {
   firstLine: 'This is a first line',
@@ -33,7 +33,9 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplateWithPseudoStates<AvatarListItemProps>(AvatarListItem).bind({});
+const Common = MultiTemplateWithPseudoStates<AvatarMeetingsListItemProps>(
+  AvatarMeetingsListItem
+).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
@@ -51,7 +53,7 @@ Common.parameters = {
       label: 'Long text',
       firstLine: 'This is a very long first line',
       schedulerState: SCHEDULER_STATES.available,
-      displayActions: [AvatarListItemActions.mute, AvatarListItemActions.more],
+      displayActions: [AvatarMeetingsListItemActions.mute, AvatarMeetingsListItemActions.more],
       onPressMuteAction: action('onPressMuteAction'),
     },
     {
@@ -59,7 +61,7 @@ Common.parameters = {
       firstLine: 'Example B',
       secondLine: 'Example second line',
       schedulerState: SCHEDULER_STATES.unavailable,
-      displayActions: [AvatarListItemActions.mute, AvatarListItemActions.more],
+      displayActions: [AvatarMeetingsListItemActions.mute, AvatarMeetingsListItemActions.more],
       onPressMuteAction: action('onPressMuteAction'),
       isMuted: false,
     },
@@ -67,7 +69,7 @@ Common.parameters = {
       label: 'Scheduler Unknown',
       firstLine: 'Example C',
       schedulerState: SCHEDULER_STATES.unknown,
-      displayActions: [AvatarListItemActions.mute],
+      displayActions: [AvatarMeetingsListItemActions.mute],
       onPressMuteAction: action('onPressMuteAction'),
     },
     {
@@ -80,7 +82,7 @@ Common.parameters = {
       firstLine: 'Example C',
       schedulerState: SCHEDULER_STATES.quietHours,
       onHoverActionCallback: action('onHoverActionCallback'),
-      displayActions: [AvatarListItemActions.closeOnHover],
+      displayActions: [AvatarMeetingsListItemActions.closeOnHover],
     },
   ],
 };

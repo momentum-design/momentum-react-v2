@@ -66,10 +66,13 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
           isDisabled={false}
           key="$.0.0"
         >
-          <FocusRing>
+          <FocusRing
+            isInset={false}
+          >
             <FocusRing
               focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
             >
               <li
                 className="md-list-item-base-wrapper"
@@ -92,6 +95,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="listitem"
+                tabIndex={0}
               >
                 <ListItemBaseSection
                   position="fill"
@@ -139,10 +143,13 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
           isDisabled={false}
           key="$.0.1"
         >
-          <FocusRing>
+          <FocusRing
+            isInset={false}
+          >
             <FocusRing
               focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
             >
               <li
                 className="md-list-item-base-wrapper"
@@ -165,6 +172,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="listitem"
+                tabIndex={0}
               >
                 <ListItemBaseSection
                   position="fill"

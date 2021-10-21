@@ -14,6 +14,19 @@ export type ThemeNames =
   | 'lightRose'
   | 'lightWebex';
 
+export type TeamColor =
+  | 'default'
+  | 'gold'
+  | 'orange'
+  | 'lime'
+  | 'mint'
+  | 'cyan'
+  | 'cobalt'
+  | 'slate'
+  | 'violet'
+  | 'purple'
+  | 'pink';
+
 export interface Props {
   /**
    * The child components of this component.

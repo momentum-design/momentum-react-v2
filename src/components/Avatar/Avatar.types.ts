@@ -1,3 +1,4 @@
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 import { AriaButtonProps } from '@react-types/button';
 
 export enum PresenceType {
@@ -13,19 +14,6 @@ export enum PresenceType {
   // Out of Office
   OOO = 'OOO',
 }
-
-export type AvatarColor =
-  | 'default'
-  | 'gold'
-  | 'orange'
-  | 'lime'
-  | 'mint'
-  | 'cyan'
-  | 'cobalt'
-  | 'slate'
-  | 'violet'
-  | 'purple'
-  | 'pink';
 
 export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
 
@@ -65,7 +53,7 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   /**
    * Background color for avatar
    */
-  color?: AvatarColor;
+  color?: TeamColor;
   /**
    * Determines if the avatar is for a space or person
    */

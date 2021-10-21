@@ -3,7 +3,7 @@
 exports[`Text should match snapshot 1`] = `
 <Text>
   <p
-    className="md-text-wrapper md-text-color"
+    className="md-text-wrapper"
     data-type="body-primary"
   >
     Hello
@@ -16,7 +16,7 @@ exports[`Text should match snapshot with className 1`] = `
   className="example-class"
 >
   <p
-    className="md-text-wrapper md-text-color example-class"
+    className="md-text-wrapper example-class"
     data-type="body-primary"
   />
 </Text>
@@ -27,7 +27,7 @@ exports[`Text should match snapshot with id 1`] = `
   id="example-id"
 >
   <p
-    className="md-text-wrapper md-text-color"
+    className="md-text-wrapper"
     data-type="body-primary"
     id="example-id"
   />
@@ -43,7 +43,7 @@ exports[`Text should match snapshot with style 1`] = `
   }
 >
   <p
-    className="md-text-wrapper md-text-color"
+    className="md-text-wrapper"
     data-type="body-primary"
     style={
       Object {
@@ -61,7 +61,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="display"
   >
     <h1
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="display"
     >
       Example Text
@@ -72,7 +72,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="banner-tertiary"
   >
     <h1
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="banner-tertiary"
     >
       Example Text
@@ -83,7 +83,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="banner-primary"
   >
     <h1
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="banner-primary"
     >
       Example Text
@@ -94,7 +94,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="banner-secondary"
   >
     <h1
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="banner-secondary"
     >
       Example Text
@@ -105,7 +105,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="title"
   >
     <h2
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="title"
     >
       Example Text
@@ -116,7 +116,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="header-primary"
   >
     <h3
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="header-primary"
     >
       Example Text
@@ -127,7 +127,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="highlight-primary"
   >
     <h3
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="highlight-primary"
     >
       Example Text
@@ -138,7 +138,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="subheader-primary"
   >
     <h3
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="subheader-primary"
     >
       Example Text
@@ -149,7 +149,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="body-primary"
   >
     <p
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="body-primary"
     >
       Example Text
@@ -160,7 +160,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="hyperlink-primary"
   >
     <p
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="hyperlink-primary"
     >
       Example Text
@@ -171,7 +171,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="subheader-secondary"
   >
     <h3
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="subheader-secondary"
     >
       Example Text
@@ -182,7 +182,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="highlight-secondary"
   >
     <h3
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="highlight-secondary"
     >
       Example Text
@@ -193,7 +193,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="header-secondary"
   >
     <h3
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="header-secondary"
     >
       Example Text
@@ -204,7 +204,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="body-secondary"
   >
     <small
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="body-secondary"
     >
       Example Text
@@ -215,7 +215,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="hyperlink-secondary"
   >
     <small
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="hyperlink-secondary"
     >
       Example Text
@@ -226,7 +226,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="highlight-compact"
   >
     <small
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="highlight-compact"
     >
       Example Text
@@ -237,7 +237,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="body-compact"
   >
     <small
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="body-compact"
     >
       Example Text
@@ -248,7 +248,7 @@ exports[`Text should match snapshot with type 1`] = `
     type="label-compact"
   >
     <small
-      className="md-text-wrapper md-text-color"
+      className="md-text-wrapper"
       data-type="label-compact"
     >
       Example Text
