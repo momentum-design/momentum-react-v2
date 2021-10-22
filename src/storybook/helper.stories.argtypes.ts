@@ -137,4 +137,21 @@ const commonStyles = {
   },
 };
 
-export { commonAriaButton, commonStyles, extendArgTypes };
+const commonHTMLAttributes = {
+  title: {
+    description:
+      "If present, this value will be this component's the rendered element's `title` attribute",
+    control: { type: 'text' },
+    table: {
+      category: 'HTML Global Attributes',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+};
+
+export { commonAriaButton, commonHTMLAttributes, commonStyles, extendArgTypes };

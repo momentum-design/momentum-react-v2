@@ -6,6 +6,7 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
+import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
 
 import ButtonPill, { ButtonPillProps } from './';
 import argTypes from './ButtonPill.stories.args';
@@ -17,7 +18,7 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocumentationPage(Documentation, StyleDocs, AriaButtonDocs),
+      page: DocumentationPage(Documentation, StyleDocs, HTMLGlobalAttributes, AriaButtonDocs),
     },
   },
   args: {

@@ -1,9 +1,14 @@
-import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
+import {
+  commonAriaButton,
+  commonHTMLAttributes,
+  commonStyles,
+} from '../../storybook/helper.stories.argtypes';
 
 import { BUTTON_DIALPAD_CONSTANTS as CONSTANTS } from './';
 
 export default {
   ...commonStyles,
+  ...commonHTMLAttributes,
   ...commonAriaButton,
   children: {
     description: 'Provides the child node for this element. This overrides the `primaryText` prop.',
