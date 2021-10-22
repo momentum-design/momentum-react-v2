@@ -20,6 +20,16 @@
     position: relative;
     display: flex;
     flex-grow: 1;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   label {
@@ -35,7 +45,7 @@
     color: var(--globalHeader-textfield-text);
     font-family: var(--md-globals-font-default);
     font-size: 0.875rem;
-    height: 1.75rem;
+    height: 100%;
     display: inline-block;
     flex: 1;
 
@@ -78,7 +88,7 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    height: 1.625rem;
+    height: 100%;
     padding-right: 0.25rem;
 
     p {
