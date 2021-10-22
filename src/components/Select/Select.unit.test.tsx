@@ -170,6 +170,21 @@ describe('Select', () => {
       await waitForComponentToPaint(container);
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with title', async () => {
+      expect.assertions(1);
+
+      const title = 'Example text';
+
+      container = await mountAndWait(
+        <Select title={title}>
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -260,6 +275,22 @@ describe('Select', () => {
       const svg = wrapper.find('li[data-key="$.0"] svg').getDOMNode();
 
       expect(svg).toBeDefined();
+    });
+
+    it('should have provided title when title is provided', async () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const wrapper = await mountAndWait(
+        <Select title={title}>
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const button = wrapper.find('.md-select-dropdown-input').getDOMNode();
+
+      expect(button.getAttribute('title')).toBe(title);
     });
   });
 });

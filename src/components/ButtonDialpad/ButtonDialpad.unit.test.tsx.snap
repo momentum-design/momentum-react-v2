@@ -351,3 +351,45 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
   </FocusRing>
 </ButtonDialpad>
 `;
+
+exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
+<ButtonDialpad
+  title="Example Text"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-button-dialpad-wrapper"
+        data-disabled={false}
+        data-size={64}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        title="Example Text"
+        type="button"
+      >
+        <div
+          className="md-button-dialpad-primary-text"
+        />
+        <div
+          className="md-button-dialpad-secondary-text"
+        />
+      </button>
+    </FocusRing>
+  </FocusRing>
+</ButtonDialpad>
+`;
