@@ -37,6 +37,7 @@ const ButtonPill: FC<Props> = forwardRef(
           data-disabled={disabled || DEFAULTS.DISABLED}
           id={id}
           style={style}
+          title={title}
         >
           {children}
         </button>

@@ -29,4 +29,9 @@ export interface Props<T> extends AriaSelectProps<T> {
    * @default bottom
    */
   direction?: SelectDirection;
+
+  /**
+   * title to use for this component.
+   */
+  title?: string;
 }

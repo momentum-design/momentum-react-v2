@@ -21,4 +21,9 @@ export interface Props extends AriaButtonProps {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * title to use for this component.
+   */
+  title?: string;
 }
