@@ -4,22 +4,29 @@ import { Modal } from '@momentum-ui/react';
 //Add test for Background once Portals are supported in Enzyme
 
 describe('tests for <Modal />', () => {
+  let wrapper;
+
+  afterEach(() => {
+    if (wrapper) {
+      wrapper.unmount();
+      wrapper = undefined;
+    }
+  });
+
   it('should render a Modal', () => {
-    const wrapper = mount(<Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />);
+    wrapper = mount(<Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a Modal', () => {
-    const wrapper = shallow(
-      <Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />
-    );
+    wrapper = shallow(<Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />);
 
     expect(wrapper.children().length).toEqual(1);
   });
 
   it('should not render without Show Prop equaling true', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show={false} htmlId="testModal" />
     );
 
@@ -27,16 +34,14 @@ describe('tests for <Modal />', () => {
   });
 
   it('should render based on size prop', () => {
-    const wrapper = shallow(
-      <Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />
-    );
+    wrapper = shallow(<Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />);
 
     expect(wrapper.find('.md-modal__content').length).toEqual(1);
     expect(wrapper.props().dialogClass).toContain('md-modal--default');
   });
 
   it('should render based on size prop (small)', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show size="small" htmlId="testModal" />
     );
 
@@ -45,7 +50,7 @@ describe('tests for <Modal />', () => {
   });
 
   it('should render based on size prop (medium)', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show size="medium" htmlId="testModal" />
     );
 
@@ -54,7 +59,7 @@ describe('tests for <Modal />', () => {
   });
 
   it('should render based on size prop (large)', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show size="large" htmlId="testModal" />
     );
 
@@ -63,15 +68,13 @@ describe('tests for <Modal />', () => {
   });
 
   it('should render based on background prop', () => {
-    const wrapper = shallow(
-      <Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />
-    );
+    wrapper = shallow(<Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />);
 
     expect(wrapper.find('.reveal-modal-bg').length).toEqual(0);
   });
 
   it('should render based on size prop (dialog)', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show size="dialog" htmlId="testModal" />
     );
 
@@ -97,7 +100,7 @@ describe('tests for <Modal />', () => {
   });
 
   it('should render based on size prop (full)', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show size="full" htmlId="testModal" />
     );
 
@@ -125,7 +128,7 @@ describe('tests for <Modal />', () => {
   });
 
   it('should render children', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show htmlId="testModal">
         <div className="testchild" />
       </Modal>
@@ -135,7 +138,7 @@ describe('tests for <Modal />', () => {
   });
 
   it('should not render Backdrop if prop pass in as false', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Modal onHide={() => {}} applicationId="test" show backdrop={false} htmlId="testModal" />
     );
 
@@ -148,7 +151,7 @@ describe('tests for <Modal />', () => {
       return <div className="test-wrapper">{children}</div>;
     };
 
-    const wrapper = mount(
+    wrapper = mount(
       <Modal
         onHide={() => {}}
         applicationId="test"
@@ -159,19 +162,22 @@ describe('tests for <Modal />', () => {
         <div className="testchild" />
       </Modal>
     );
-    expect(wrapper.find('.md-modal').children().at(0).find('.test-wrapper').exists()).toBe(true);
-    expect(wrapper.find('.test-wrapper').length).toEqual(1);
-    expect(wrapper.find('.test-wrapper').find('.testchild').length).toEqual(1);
+    const contentWrapper = wrapper.find('.test-wrapper');
+    expect(contentWrapper.length).toEqual(1);
+
+    const contentContainer = contentWrapper.find('.md-modal__content');
+    expect(contentContainer.length).toEqual(1);
+
+    const content = contentContainer.find('.testchild');
+    expect(content.length).toEqual(1);
   });
 
   it('should not render content wrapper if prop not provided', () => {
-    const wrapper = mount(
+    wrapper = mount(
       <Modal onHide={() => {}} applicationId="test" show htmlId="testModal">
         <div className="testchild" />
       </Modal>
     );
-    expect(wrapper.find('.md-modal').children().at(0).prop('className')).toEqual(
-      'md-modal__content'
-    );
+    expect(wrapper.find('.md-modal').children().at(0).hasClass('md-modal__content')).toBe(true);
   });
 });
