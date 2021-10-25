@@ -12,12 +12,13 @@ describe('tests for <ModalHeader />', () => {
   it('should render one ModalHeader', () => {
     const container = shallow(<ModalHeader />);
 
-    expect(container.find('div').hasClass('md-modal__header')).toEqual(true);
+    expect(container.find('div').at(0).hasClass('md-modal__header')).toEqual(true);
   });
 
   it('should display closable button by default', () => {
     const container = shallow(<ModalHeader />);
 
+    expect(container.find('.md-modal__close-container').length).toEqual(1);
     expect(container.find('.md-modal__close').length).toEqual(1);
   });
 
@@ -27,9 +28,10 @@ describe('tests for <ModalHeader />', () => {
     expect(container.find('.test').length).toEqual(1);
   });
 
-  it('should display not display closable button', () => {
+  it('should not display closable button', () => {
     const container = shallow(<ModalHeader showCloseButton={false} />);
 
+    expect(container.find('.md-modal__close-container').length).toEqual(0);
     expect(container.find('Icon').exists()).toEqual(false);
   });
 

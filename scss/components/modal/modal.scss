@@ -3,7 +3,7 @@
 @include exports('md-modal') {
   .#{$modal__class} {
     @include modal-base;
-    @include modal-size($radius: true);
+    @include modal-size($radius: false);
 
     &:focus {
       box-shadow: none;
@@ -12,16 +12,14 @@
     .#{$modal__class} {
       &__header {
         flex-shrink: 0;
-        background-color: $modal__background;
-        background-color: var(--md-background-secondary, $modal__background);
 
         @include modal-header-size;
 
         .#{$modal__class}__title {
           width: 100%;
-          padding: 0 rem-calc(32);
+          padding: rem-calc(16) 0;
           overflow: hidden;
-          text-align: center;
+          text-align: left;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
@@ -34,10 +32,17 @@
             $line-height: rem-calc(24)
           ) {
             color: $modal-message__color;
-            color: var(--md-textColor-secondary, $modal-message__color);
-            text-align: center;
+            color: var(--theme-text-secondary-normal, $modal-message__color);
+            text-align: left;
             flex-flow: row wrap;
           }
+          justify-content: left;
+        }
+
+        .#{$modal__class}__close-container {
+          width: 100%;
+          @include flex;
+          justify-content: end;
         }
 
         .#{$modal__class}__close {
@@ -53,14 +58,14 @@
         display: flex;
         flex-direction: column;
         background-color: $modal__background;
-        background-color: var(--md-background-primary, $modal__background);
+        background-color: var(--theme-background-solid-primary-normal, $modal__background);
 
         @include modal-color(
           $color: $modal__color,
-          $color-css-var: --md-textColor-primary,
+          $color-css-var: --theme-text-primary-normal,
           $bg: $modal__background,
-          $bg-css-var: --md-background-primary,
-          $border-color-css-var: --md-separator-primary
+          $bg-css-var: --theme-background-solid-primary-normal,
+          $border-color-css-var: --theme-outline-secondary-normal
         );
       }
 
@@ -125,6 +130,10 @@
             $right-offset: rem-calc(24)
           );
         }
+
+        .#{$modal__class}__close-container {
+          height: rem-calc(20);
+        }
       }
 
       .#{$modal__class}__footer {
@@ -138,7 +147,7 @@
         $top-offset: $modal__top--large,
         $width: $modal__width--large,
         $min-height: $modal__height--large,
-        $radius: true
+        $radius: false
       );
 
       .#{$modal__class}__header {
@@ -163,6 +172,10 @@
             $right-offset: rem-calc(16)
           );
         }
+
+        .#{$modal__class}__close-container {
+          height: rem-calc(16);
+        }
       }
 
       @media #{$medium-only} {
@@ -178,7 +191,7 @@
           .#{$modal__class}__message {
             font-size: rem-calc(14);
             line-height: rem-calc(24);
-            text-align: center;
+            text-align: left;
           }
 
           .#{$modal__class}__close {
@@ -188,6 +201,10 @@
               $top-offset: rem-calc(12),
               $right-offset: rem-calc(12)
             );
+          }
+
+          .#{$modal__class}__close-container {
+            height: rem-calc(14);
           }
         }
       }
@@ -214,6 +231,10 @@
           $top-offset: rem-calc(12),
           $right-offset: rem-calc(12)
         );
+      }
+
+      .#{$modal__class}__close-container {
+        height: rem-calc(14);
       }
 
       @media #{$medium-only} {
@@ -247,6 +268,10 @@
         );
       }
 
+      .#{$modal__class}__close-container {
+        height: rem-calc(14);
+      }
+
       // Media Query for Tablet
       @media #{$medium-only} {
         @include modal-size(
@@ -260,11 +285,12 @@
     &.#{$modal__class}--dialog {
       @include modal-size(
         $width: 442px,
-        $radius: true,
+        $radius: false,
         $top-offset: $modal-dialog__top,
         $padding: $modal-dialog__padding
       );
 
+      .#{$modal__class}__close-container,
       .#{$modal__class}__close {
         display: none;
       }
@@ -294,7 +320,7 @@
             font-size: 14px;
             line-height: 22px;
             color: $md-gray-70;
-            color: var(--md-textColor-secondary, $md-gray-70);
+            color: var(--theme-text-secondary-normal, $md-gray-70);
           }
         }
 
