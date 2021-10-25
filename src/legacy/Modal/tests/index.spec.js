@@ -141,4 +141,37 @@ describe('tests for <Modal />', () => {
 
     expect(wrapper.find('.reveal-modal-bg').exists()).toEqual(false);
   });
+
+  it('should render content wrapper if prop provided', () => {
+    // eslint-disable-next-line react/prop-types
+    const TestWrapper = ({ children }) => {
+      return <div className="test-wrapper">{children}</div>;
+    };
+
+    const wrapper = mount(
+      <Modal
+        onHide={() => {}}
+        applicationId="test"
+        show
+        htmlId="testModal"
+        ContentWrapper={TestWrapper}
+      >
+        <div className="testchild" />
+      </Modal>
+    );
+    expect(wrapper.find('.md-modal').children().at(0).find('.test-wrapper').exists()).toBe(true);
+    expect(wrapper.find('.test-wrapper').length).toEqual(1);
+    expect(wrapper.find('.test-wrapper').find('.testchild').length).toEqual(1);
+  });
+
+  it('should not render content wrapper if prop not provided', () => {
+    const wrapper = mount(
+      <Modal onHide={() => {}} applicationId="test" show htmlId="testModal">
+        <div className="testchild" />
+      </Modal>
+    );
+    expect(wrapper.find('.md-modal').children().at(0).prop('className')).toEqual(
+      'md-modal__content'
+    );
+  });
 });
