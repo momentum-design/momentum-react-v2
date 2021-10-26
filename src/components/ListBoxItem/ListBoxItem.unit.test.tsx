@@ -4,6 +4,7 @@ import React from 'react';
 import { useListState } from '@react-stately/list';
 import { renderHook } from '@testing-library/react-hooks';
 import { Item } from '@react-stately/collections';
+import ListItemBase from '../ListItemBase';
 
 jest.mock('@react-aria/listbox', () => {
   return {
@@ -53,6 +54,12 @@ describe('ListBoxItem', () => {
 
       const element = wrapper.find('li div').getDOMNode();
 
+      const base = wrapper.find(ListItemBase);
+      expect(base.props()).toEqual({
+        isPadded: true,
+        isDisabled: false,
+        children: expect.any(Object),
+      });
       expect(element.innerHTML).toBe(item.rendered);
     });
   });
