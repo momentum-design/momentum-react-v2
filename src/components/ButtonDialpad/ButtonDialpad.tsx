@@ -9,7 +9,7 @@ import classnames from 'classnames';
 
 const ButtonDialpad: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { className } = props;
+    const { className, title } = props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
 
@@ -32,6 +32,7 @@ const ButtonDialpad: FC<Props> = forwardRef(
           ref={ref}
           data-size={props.size || DEFAULTS.SIZE}
           data-disabled={props.disabled || DEFAULTS.DISABLED}
+          title={title}
         >
           <div className={STYLE.primaryText}>{children}</div>
           <div className={STYLE.secondaryText}>{props.secondaryText}</div>

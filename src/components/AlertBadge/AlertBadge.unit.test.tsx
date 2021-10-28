@@ -101,6 +101,16 @@ describe('<AlertBadge />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with title', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const container = mount(<AlertBadge title={title} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -161,6 +171,18 @@ describe('<AlertBadge />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-color')).toBe(color);
+    });
+
+    it('should have provided title when title is provided', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const element = mount(<AlertBadge title={title} />)
+        .find(AlertBadge)
+        .getDOMNode();
+
+      expect(element.getAttribute('title')).toBe(title);
     });
   });
 

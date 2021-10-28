@@ -1,4 +1,8 @@
-import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
+import {
+  commonAriaButton,
+  commonHTMLAttributes,
+  commonStyles,
+} from '../../storybook/helper.stories.argtypes';
 
 import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from './';
 
@@ -92,5 +96,6 @@ export { buttonCircleArgTypes };
 export default {
   ...commonStyles,
   ...commonAriaButton,
+  ...commonHTMLAttributes,
   ...buttonCircleArgTypes,
 };
