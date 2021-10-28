@@ -115,8 +115,7 @@
       bottom: 56px;
       width: 100%;
       height: 56px;
-      background-color: $white-70;
-      background-color: var(--md-background-quaternary, $white-70);
+      background-color: var(--theme-background-solid-quaternary-normal);
       border-radius: 0 0 4px 4px;
       visibility: hidden;
       align-self: flex-end;
@@ -188,7 +187,7 @@
       bottom: 56px;
       width: 204px;
       height: 56px;
-      background-color: $white-60;
+      background-color: var(--theme-background-solid-quaternary-normal);
       border-radius: 0 0 4px 4px;
       visibility: hidden;
       align-self: flex-end;
@@ -218,7 +217,6 @@
 
       &:hover .md-content-file__aspect {
         visibility: visible;
-        background-color: var(--theme-background-solid-quaternary-normal);
       }
     }
 
