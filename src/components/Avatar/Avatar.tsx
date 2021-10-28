@@ -145,15 +145,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
         );
     }
 
-    return (
-      <span>
-        {initials
-          ? initials
-          : title
-          ? getInitials(title, type)
-          : 'Please provide a title/initials.'}
-      </span>
-    );
+    return <span>{initials ? initials : title ? getInitials(title, type) : ''}</span>;
   };
 
   const renderIcon = () => {
