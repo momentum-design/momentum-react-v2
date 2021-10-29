@@ -1,26 +1,16 @@
 import { CSSProperties, ReactNode } from 'react';
-import { AriaButtonProps } from '@react-types/button';
+import { ButtonSimpleProps } from '../ButtonSimple';
 
-export interface Props extends AriaButtonProps {
+export interface Props extends ButtonSimpleProps {
   /**
    * Child components of this ButtonPill.
    */
   children?: ReactNode;
 
   /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
-
-  /**
    * Color for this component.
    */
   color?: 'error' | 'success' | 'theme' | 'warning';
-
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
 
   /**
    * Image to use for this component.
@@ -31,14 +21,4 @@ export interface Props extends AriaButtonProps {
    * Label to use for this component.
    */
   label?: ReactNode;
-
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
-
-  /**
-   * title to use for this component.
-   */
-  title?: string;
 }
