@@ -443,60 +443,72 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 ghost={true}
                 size={28}
               >
-                <FocusRing>
-                  <FocusRing
-                    focusClass="md-focus-ring-wrapper children"
-                    focusRingClass="md-focus-ring-wrapper children"
-                  >
-                    <button
-                      className="md-button-circle-wrapper"
-                      data-color="primary"
-                      data-disabled={false}
-                      data-ghost={true}
-                      data-multiple-children={false}
-                      data-outline={false}
-                      data-size={28}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDragStart={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      type="button"
+                <ButtonSimple
+                  className="md-button-circle-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={true}
+                  data-multiple-children={false}
+                  data-outline={false}
+                  data-size={28}
+                  ghost={true}
+                  size={28}
+                >
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
                     >
-                      <Icon
-                        name="more"
-                        scale={16}
-                        weight="bold"
+                      <button
+                        className="md-button-circle-wrapper"
+                        data-color="primary"
+                        data-disabled={false}
+                        data-ghost={true}
+                        data-multiple-children={false}
+                        data-outline={false}
+                        data-size={28}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
                       >
-                        <div
-                          className="md-icon-wrapper"
+                        <Icon
+                          name="more"
+                          scale={16}
+                          weight="bold"
                         >
-                          <svg
-                            className=""
-                            data-autoscale={false}
-                            data-scale={16}
-                            data-test="more"
-                            fill="currentColor"
-                            height="100%"
-                            stroke="currentColor"
-                            style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </button>
+                          <div
+                            className="md-icon-wrapper"
+                          >
+                            <svg
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="more"
+                              fill="currentColor"
+                              height="100%"
+                              stroke="currentColor"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </button>
+                    </FocusRing>
                   </FocusRing>
-                </FocusRing>
+                </ButtonSimple>
               </ButtonCircle>
             </div>
           </ListItemBaseSection>
@@ -610,65 +622,77 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 ghost={true}
                 size={28}
               >
-                <FocusRing>
-                  <FocusRing
-                    focusClass="md-focus-ring-wrapper children"
-                    focusRingClass="md-focus-ring-wrapper children"
-                  >
-                    <button
-                      className="md-button-circle-wrapper"
-                      data-color="primary"
-                      data-disabled={false}
-                      data-ghost={true}
-                      data-multiple-children={false}
-                      data-outline={false}
-                      data-size={28}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDragStart={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      type="button"
+                <ButtonSimple
+                  className="md-button-circle-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={true}
+                  data-multiple-children={false}
+                  data-outline={false}
+                  data-size={28}
+                  ghost={true}
+                  size={28}
+                >
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
                     >
-                      <Icon
-                        fillColor={false}
-                        name="audio-microphone-on-green-colored"
-                        scale={16}
-                        strokeColor="none"
-                        weight="bold"
+                      <button
+                        className="md-button-circle-wrapper"
+                        data-color="primary"
+                        data-disabled={false}
+                        data-ghost={true}
+                        data-multiple-children={false}
+                        data-outline={false}
+                        data-size={28}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
                       >
-                        <div
-                          className="md-icon-wrapper"
+                        <Icon
+                          fillColor={false}
+                          name="audio-microphone-on-green-colored"
+                          scale={16}
+                          strokeColor="none"
+                          weight="bold"
                         >
-                          <svg
-                            className=""
-                            data-autoscale={false}
-                            data-scale={16}
-                            data-test="audio-microphone-on-green-colored"
-                            fill="currentColor"
-                            height="100%"
-                            style={
-                              Object {
-                                "stroke": "none",
+                          <div
+                            className="md-icon-wrapper"
+                          >
+                            <svg
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="audio-microphone-on-green-colored"
+                              fill="currentColor"
+                              height="100%"
+                              style={
+                                Object {
+                                  "stroke": "none",
+                                }
                               }
-                            }
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </button>
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </button>
+                    </FocusRing>
                   </FocusRing>
-                </FocusRing>
+                </ButtonSimple>
               </ButtonCircle>
             </div>
           </ListItemBaseSection>
@@ -781,65 +805,77 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 ghost={true}
                 size={28}
               >
-                <FocusRing>
-                  <FocusRing
-                    focusClass="md-focus-ring-wrapper children"
-                    focusRingClass="md-focus-ring-wrapper children"
-                  >
-                    <button
-                      className="md-button-circle-wrapper"
-                      data-color="primary"
-                      data-disabled={false}
-                      data-ghost={true}
-                      data-multiple-children={false}
-                      data-outline={false}
-                      data-size={28}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDragStart={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      type="button"
+                <ButtonSimple
+                  className="md-button-circle-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={true}
+                  data-multiple-children={false}
+                  data-outline={false}
+                  data-size={28}
+                  ghost={true}
+                  size={28}
+                >
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
                     >
-                      <Icon
-                        fillColor="var(--label-error-text)"
-                        name="microphone-muted"
-                        scale={16}
-                        strokeColor="none"
-                        weight="bold"
+                      <button
+                        className="md-button-circle-wrapper"
+                        data-color="primary"
+                        data-disabled={false}
+                        data-ghost={true}
+                        data-multiple-children={false}
+                        data-outline={false}
+                        data-size={28}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
                       >
-                        <div
-                          className="md-icon-wrapper"
+                        <Icon
+                          fillColor="var(--label-error-text)"
+                          name="microphone-muted"
+                          scale={16}
+                          strokeColor="none"
+                          weight="bold"
                         >
-                          <svg
-                            className=""
-                            data-autoscale={false}
-                            data-scale={16}
-                            data-test="microphone-muted"
-                            height="100%"
-                            style={
-                              Object {
-                                "fill": "var(--label-error-text)",
-                                "stroke": "none",
+                          <div
+                            className="md-icon-wrapper"
+                          >
+                            <svg
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="microphone-muted"
+                              height="100%"
+                              style={
+                                Object {
+                                  "fill": "var(--label-error-text)",
+                                  "stroke": "none",
+                                }
                               }
-                            }
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </button>
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </button>
+                    </FocusRing>
                   </FocusRing>
-                </FocusRing>
+                </ButtonSimple>
               </ButtonCircle>
             </div>
           </ListItemBaseSection>

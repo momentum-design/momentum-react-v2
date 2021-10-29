@@ -114,116 +114,138 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
             <ButtonCircle
               color="join"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={false}
-                    data-size={40}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                color="join"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={false}
+                data-size={40}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="camera"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={false}
+                      data-size={40}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="camera"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="camera"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="camera"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonCircle
               color="cancel"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={false}
-                    data-size={40}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                color="cancel"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={false}
+                data-size={40}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="cancel"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={false}
+                      data-size={40}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="cancel"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="cancel"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
           </div>
         </ButtonGroup>
@@ -363,116 +385,138 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
             <ButtonCircle
               color="join"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={false}
-                    data-size={40}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                color="join"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={false}
+                data-size={40}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="camera"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={false}
+                      data-size={40}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="camera"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="camera"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="camera"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonCircle
               color="cancel"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={false}
-                    data-size={40}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                color="cancel"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={false}
+                data-size={40}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="cancel"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={false}
+                      data-size={40}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="cancel"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="cancel"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
           </div>
         </ButtonGroup>

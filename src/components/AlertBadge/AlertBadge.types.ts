@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { ButtonSimpleProps } from '../ButtonSimple';
 
 export interface Props extends ButtonSimpleProps {

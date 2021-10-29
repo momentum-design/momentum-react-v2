@@ -1,46 +1,38 @@
-import React, { forwardRef, useRef, FC, RefObject } from 'react';
-import { useButton } from '@react-aria/button';
-import FocusRing from '../FocusRing';
+import React, { forwardRef, RefObject } from 'react';
+import ButtonSimple from '../ButtonSimple';
 
 import { DEFAULTS, STYLE } from './ButtonDialpad.constants';
 import { Props } from './ButtonDialpad.types';
 import './ButtonDialpad.style.scss';
 import classnames from 'classnames';
 
-const ButtonDialpad: FC<Props> = forwardRef(
-  (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { className, title } = props;
-    const internalRef = useRef();
-    const ref = providedRef || internalRef;
+const ButtonDialpad = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+  const { className, disabled, title } = props;
 
-    const mutatedProps = {
-      ...props,
-      isDisabled: props.disabled,
-    };
+  const mutatedProps = {
+    ...props,
+    isDisabled: disabled,
+  };
 
-    delete mutatedProps.disabled;
-    delete mutatedProps.className;
+  delete mutatedProps.disabled;
+  delete mutatedProps.className;
 
-    const { buttonProps } = useButton(mutatedProps, ref);
-    const children = props.children || props.primaryText;
+  const children = props.children || props.primaryText;
 
-    return (
-      <FocusRing disabled={props.disabled}>
-        <button
-          className={classnames(STYLE.wrapper, className)}
-          {...buttonProps}
-          ref={ref}
-          data-size={props.size || DEFAULTS.SIZE}
-          data-disabled={props.disabled || DEFAULTS.DISABLED}
-          title={title}
-        >
-          <div className={STYLE.primaryText}>{children}</div>
-          <div className={STYLE.secondaryText}>{props.secondaryText}</div>
-        </button>
-      </FocusRing>
-    );
-  }
-);
+  return (
+    <ButtonSimple
+      className={classnames(STYLE.wrapper, className)}
+      {...mutatedProps}
+      ref={providedRef}
+      data-size={props.size || DEFAULTS.SIZE}
+      data-disabled={disabled || DEFAULTS.DISABLED}
+      title={title}
+    >
+      <div className={STYLE.primaryText}>{children}</div>
+      <div className={STYLE.secondaryText}>{props.secondaryText}</div>
+    </ButtonSimple>
+  );
+});
 
 ButtonDialpad.displayName = 'ButtonDialpad';
 
