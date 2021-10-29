@@ -6,6 +6,7 @@ import { FocusScope } from '@react-aria/focus';
 
 import ModalContainer from '../ModalContainer';
 
+import { DEFAULTS } from './Overlay.constants';
 import { Props } from './Overlay.types';
 
 /**
@@ -20,11 +21,25 @@ const Overlay: FC<Props> = (props: Props, providedRef: RefObject<HTMLDivElement>
   const { modalProps } = useModal(props);
   const { dialogProps } = useDialog(props, ref);
 
+  const mutatedProps = { ...props };
+
+  const {
+    autoFocus = DEFAULTS.autoFocus,
+    contain = DEFAULTS.contain,
+    restoreFocus = DEFAULTS.restoreFocus,
+  } = mutatedProps;
+
+  delete mutatedProps.autoFocus;
+  delete mutatedProps.contain;
+  delete mutatedProps.restoreFocus;
+
+  /* eslint-disable jsx-a11y/no-autofocus */
   return (
-    <FocusScope restoreFocus>
-      <ModalContainer {...mergeProps(overlayProps, dialogProps, props, modalProps)} />
+    <FocusScope autoFocus={autoFocus} contain={contain} restoreFocus={restoreFocus}>
+      <ModalContainer {...mergeProps(overlayProps, dialogProps, mutatedProps, modalProps)} />
     </FocusScope>
   );
+  /* eslint-enable jsx-a11y/no-autofocus */
 };
 
 export default Overlay;

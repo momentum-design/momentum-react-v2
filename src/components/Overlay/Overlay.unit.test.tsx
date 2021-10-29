@@ -5,7 +5,7 @@ import { FocusScope } from '@react-aria/focus';
 
 import ModalContainer from '../ModalContainer';
 
-import Overlay from './';
+import Overlay, { OVERLAY_CONSTANTS as CONSTANTS } from './';
 
 describe('<Overlay />', () => {
   const commonChildren = 'Children';
@@ -50,6 +50,20 @@ describe('<Overlay />', () => {
       const target = component.find(FocusScope);
 
       expect(target.exists()).toBe(true);
+    });
+
+    it('should pass focus scope props', () => {
+      expect.assertions(1);
+
+      const component = mount(
+        <OverlayProvider>
+          <Overlay>{commonChildren}</Overlay>
+        </OverlayProvider>
+      ).find(Overlay);
+
+      const target = component.find(FocusScope);
+
+      expect(target.props()).toMatchObject(CONSTANTS.DEFAULTS);
     });
   });
 });

@@ -1,5 +1,6 @@
 import {
   commonAriaDialog,
+  commonAriaFocusScope,
   commonAriaModal,
   commonAriaOverlay,
   commonStyles,
@@ -9,6 +10,7 @@ import { modalContainerArgTypes } from '../ModalContainer/ModalContainer.stories
 
 export default {
   ...commonAriaDialog,
+  ...commonAriaFocusScope,
   ...extendArgTypes('ModalContainer', modalContainerArgTypes),
   ...commonAriaModal,
   ...commonAriaOverlay,

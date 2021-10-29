@@ -10,7 +10,9 @@ exports[`<Overlay /> snapshot should match snapshot 1`] = `
       >
         <Overlay>
           <FocusScope
-            restoreFocus={true}
+            autoFocus={false}
+            contain={false}
+            restoreFocus={false}
           >
             <span
               data-focus-scope-start={true}

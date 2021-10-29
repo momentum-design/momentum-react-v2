@@ -1,4 +1,4 @@
-import { Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
@@ -27,4 +27,18 @@ Example.args = {
   isPadded: true,
 };
 
-export { Example };
+const Common = MultiTemplate<OverlayProps>(Overlay).bind({});
+
+Common.argTypes = { ...argTypes };
+
+Common.args = {
+  children: 'Children',
+  round: 50,
+  isPadded: true,
+};
+
+Common.parameters = {
+  variants: [{}, { contain: true }],
+};
+
+export { Example, Common };
