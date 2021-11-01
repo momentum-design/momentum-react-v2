@@ -10,7 +10,7 @@ import './ModalContainer.style.scss';
 /**
  * The ModalContainer component.
  */
-const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
+const ModalContainer = forwardRef((props: Props, ref: RefObject<HTMLDivElement>) => {
   const {
     arrow,
     className,
@@ -49,9 +49,8 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
       </div>
     </div>
   );
-};
+});
 
-const _ModalContainer = forwardRef(ModalContainer);
-_ModalContainer.displayName = 'ModalContainer';
+ModalContainer.displayName = 'ModalContainer';
 
-export default _ModalContainer;
+export default ModalContainer;

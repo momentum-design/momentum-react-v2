@@ -6,6 +6,17 @@ exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
 >
   <div
     className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex"
-  />
+  >
+    <OverlayProvider>
+      <ModalProvider>
+        <$c5f9596976ab8bd94c5879001549a3e$var$OverlayContainerDOM>
+          <div
+            aria-hidden={null}
+            data-overlay-container={true}
+          />
+        </$c5f9596976ab8bd94c5879001549a3e$var$OverlayContainerDOM>
+      </ModalProvider>
+    </OverlayProvider>
+  </div>
 </ThemeProvider>
 `;
