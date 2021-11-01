@@ -11,7 +11,7 @@ import './AlertBadge.style.scss';
 
 const AlertBadge: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { children, className, color, image, id, label, style } = props;
+    const { children, className, color, image, id, label, style, title } = props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
 
@@ -44,6 +44,7 @@ const AlertBadge: FC<Props> = forwardRef(
           data-color={color}
           id={id}
           style={style}
+          title={title}
         >
           {mutatedChildren}
         </button>

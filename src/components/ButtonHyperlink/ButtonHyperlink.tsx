@@ -9,7 +9,7 @@ import classnames from 'classnames';
 
 const ButtonHyperlink: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { className } = props;
+    const { className, title } = props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
 
@@ -30,6 +30,7 @@ const ButtonHyperlink: FC<Props> = forwardRef(
           {...buttonProps}
           ref={ref}
           data-disabled={props.disabled || DEFAULTS.DISABLED}
+          title={title}
         >
           {props.children}
         </button>

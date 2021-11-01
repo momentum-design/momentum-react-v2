@@ -29,4 +29,9 @@ export interface Props extends AriaButtonProps {
    * Size index of this ButtonPill.
    */
   size?: number;
+
+  /**
+   * title to use for this component.
+   */
+  title?: string;
 }
