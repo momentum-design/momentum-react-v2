@@ -26,10 +26,7 @@ function MultiTemplate<Props>(Component: FC): Story<Props> {
     const { variants } = parameters;
 
     const items = variants.map((variant, index: number) => (
-      <Flex key={index} direction="column" style={{ marginRight: '2rem' }}>
-        {variant.label && <div style={{ padding: '1rem 0' }}>{variant.label}</div>}
-        <Component key={index} {...args} {...variant} />
-      </Flex>
+      <Component key={index} {...args} {...variant} />
     ));
 
     return <>{items}</>;

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 
 import { STYLE } from './MenuSection.constants';
 import { Props } from './MenuSection.types';
@@ -17,6 +17,12 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
     'aria-label': item['aria-label'],
   });
 
+  const renderItems = useCallback(() => {
+    return Array.from(item.childNodes).map((node) => (
+      <MenuItem key={node.key} item={node} state={state} onAction={onAction} />
+    ));
+  }, [state]);
+
   return (
     <>
       {item.key !== state.collection.getFirstKey() && <ContentSeparator />}
@@ -27,9 +33,7 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
           </span>
         )}
         <ul {...groupProps} className={STYLE.wrapper}>
-          {Array.from(item.childNodes).map((node) => (
-            <MenuItem key={node.key} item={node} state={state} onAction={onAction} />
-          ))}
+          {renderItems()}
         </ul>
       </li>
     </>

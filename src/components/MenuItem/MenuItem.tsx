@@ -36,15 +36,22 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     ref
   );
 
+  // I think there is a bug in aria, where useMenuItem has default behavior to hover items on hover
+  // so deleting these event listeners
+  delete menuItemProps.onMouseEnter;
+  delete menuItemProps.onMouseLeave;
+  delete menuItemProps.onPointerEnter;
+  delete menuItemProps.onPointerLeave;
+
   return (
     <ListItemBase
       size={itemSize}
       shape={itemShape}
       className={STYLE.wrapper}
-      {...menuItemProps}
       ref={ref}
       isDisabled={isDisabled}
       isPadded={true}
+      {...menuItemProps}
     >
       <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
       {isSelected && (

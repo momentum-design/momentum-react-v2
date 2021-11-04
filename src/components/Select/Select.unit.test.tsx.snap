@@ -5761,12 +5761,20 @@ exports[`Select snapshot should match snapshot with style 1`] = `
 
 exports[`Select snapshot should match snapshot with title 1`] = `
 <Select
+  label="test"
   title="Example text"
 >
   <div
     className="md-select-wrapper"
   >
+    <label
+      id="test-ID"
+      onClick={[Function]}
+    >
+      test
+    </label>
     <HiddenSelect
+      label="test"
       state={
         Object {
           "close": [Function],
@@ -5909,7 +5917,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           "current": <button
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             title="Example text"
@@ -5971,6 +5979,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           type="text"
         />
         <label>
+          test
           <select
             onChange={[Function]}
             size={2}
@@ -6003,7 +6012,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           aria-controls={null}
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}

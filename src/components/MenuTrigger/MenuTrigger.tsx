@@ -38,7 +38,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   const menuRef = useRef<HTMLUListElement>();
   const overlayRef = useRef<HTMLDivElement>();
 
-  const { menuTriggerProps, menuProps } = useMenuTrigger({}, state, buttonRef);
+  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: 'menu' }, state, buttonRef);
 
   const { overlayProps } = useOverlay(
     {

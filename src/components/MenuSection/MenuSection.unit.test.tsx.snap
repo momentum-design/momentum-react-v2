@@ -429,8 +429,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
           onKeyDown={[Function]}
           onKeyUp={[Function]}
           onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
           onMouseUp={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
@@ -439,10 +437,13 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
           role="menuitem"
           tabIndex={-1}
         >
-          <FocusRing>
+          <FocusRing
+            isInset={false}
+          >
             <FocusRing
               focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
             >
               <li
                 aria-disabled={false}
@@ -700,8 +701,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
           onKeyDown={[Function]}
           onKeyUp={[Function]}
           onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
           onMouseUp={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
@@ -710,10 +709,13 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
           role="menuitem"
           tabIndex={-1}
         >
-          <FocusRing>
+          <FocusRing
+            isInset={false}
+          >
             <FocusRing
               focusClass="md-focus-ring-wrapper children"
               focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
             >
               <li
                 aria-disabled={false}

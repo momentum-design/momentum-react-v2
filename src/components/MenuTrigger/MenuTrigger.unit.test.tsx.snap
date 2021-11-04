@@ -193,6 +193,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
       >
         <div
           className="md-menu-trigger-overlay md-modal-container-wrapper"
+          onKeyDown={[Function]}
         >
           <div
             className="md-modal-container-content"
@@ -461,8 +462,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -471,10 +470,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -731,8 +733,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -741,10 +741,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -1001,8 +1004,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -1011,10 +1012,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -1297,8 +1301,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -1307,10 +1309,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -1567,8 +1572,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -1577,10 +1580,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -1837,8 +1843,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -1847,10 +1851,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -2009,6 +2016,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
       >
         <div
           className="md-menu-trigger-overlay md-modal-container-wrapper"
+          onKeyDown={[Function]}
         >
           <div
             className="md-modal-container-content"
@@ -2277,8 +2285,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -2287,10 +2293,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -2547,8 +2556,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -2557,10 +2564,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -2817,8 +2827,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -2827,10 +2835,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -3113,8 +3124,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -3123,10 +3132,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -3383,8 +3395,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -3393,10 +3403,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -3653,8 +3666,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -3663,10 +3674,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -3883,6 +3897,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
       >
         <div
           className="md-menu-trigger-overlay md-modal-container-wrapper"
+          onKeyDown={[Function]}
         >
           <div
             className="md-modal-container-content"
@@ -4151,8 +4166,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -4161,10 +4174,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -4421,8 +4437,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -4431,10 +4445,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -4691,8 +4708,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -4701,10 +4716,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -4987,8 +5005,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -4997,10 +5013,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -5257,8 +5276,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -5267,10 +5284,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -5527,8 +5547,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -5537,10 +5555,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -5698,6 +5719,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
       >
         <div
           className="md-menu-trigger-overlay md-modal-container-wrapper"
+          onKeyDown={[Function]}
         >
           <div
             className="md-modal-container-content"
@@ -5966,8 +5988,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -5976,10 +5996,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -6236,8 +6259,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -6246,10 +6267,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -6506,8 +6530,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -6516,10 +6538,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -6802,8 +6827,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -6812,10 +6835,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={0}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -7072,8 +7098,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -7082,10 +7106,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -7342,8 +7369,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -7352,10 +7377,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -7636,6 +7664,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
       >
         <div
           className="md-menu-trigger-overlay md-modal-container-wrapper"
+          onKeyDown={[Function]}
         >
           <div
             className="md-modal-container-content"
@@ -7904,8 +7933,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -7914,10 +7941,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -8174,8 +8204,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -8184,10 +8212,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -8444,8 +8475,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -8454,10 +8483,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     role="menuitemradio"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -8740,8 +8772,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -8750,10 +8780,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -9010,8 +9043,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -9020,10 +9051,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}
@@ -9280,8 +9314,6 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     onMouseUp={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
@@ -9290,10 +9322,13 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                     role="menuitemcheckbox"
                     tabIndex={-1}
                   >
-                    <FocusRing>
+                    <FocusRing
+                      isInset={false}
+                    >
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
+                        isInset={false}
                       >
                         <li
                           aria-checked={false}

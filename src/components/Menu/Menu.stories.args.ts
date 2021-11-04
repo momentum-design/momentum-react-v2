@@ -6,7 +6,7 @@ export default {
     description: 'Provides the items nodes for this menu element.',
     table: {
       type: {
-        summary: 'Item',
+        summary: '<Item />',
       },
       defaultValue: {
         summary: 'undefined',

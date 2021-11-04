@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { Node } from '@react-types/shared';
-import React, { forwardRef, ReactElement, RefObject, useContext, useRef } from 'react';
+import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCallback } from 'react';
 import classnames from 'classnames';
 
 import { STYLE } from './Menu.constants';
 import { MenuAppearanceContextValue, MenuContextValue, Props } from './Menu.types';
 import './Menu.style.scss';
 import { useMenu } from '@react-aria/menu';
-import { useTreeState } from '@react-stately/tree';
+import { useTreeState, TreeState } from '@react-stately/tree';
 import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
@@ -22,7 +22,7 @@ export const MenuAppearanceContext = React.createContext<MenuAppearanceContextVa
 
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLUListElement>) => {
   const { className, id, style, itemShape, itemSize } = props;
-  const contextProps = useContext(MenuContext);
+  const contextProps = useMenuContext();
 
   const _props = {
     ...mergeProps(contextProps, props),
@@ -35,6 +35,31 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
 
   const { menuProps } = useMenu(_props, state, ref);
 
+  const renderItem = useCallback(
+    <T extends object>(item: Node<T>, state: TreeState<T>) => {
+      if (item.type === 'section') {
+        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
+      } else {
+        // collection.getKeys() return all keys (including sub-keys of child elements)
+        // and we don't want to render items twice
+        if (item.parentKey !== null) {
+          return;
+        }
+
+        let menuItem = (
+          <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
+        );
+
+        if (item.wrapper) {
+          menuItem = item.wrapper(menuItem);
+        }
+
+        return menuItem;
+      }
+    },
+    [state]
+  );
+
   return (
     <MenuAppearanceContext.Provider value={{ itemShape, itemSize }}>
       <ul
@@ -46,27 +71,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
       >
         {Array.from(state.collection.getKeys()).map((key) => {
           const item = state.collection.getItem(key) as Node<T>;
-          if (item.type === 'section') {
-            return (
-              <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />
-            );
-          } else {
-            // collection.getKeys() return all keys (including sub-keys of child elements)
-            // and we don't want to render items twice
-            if (item.parentKey !== null) {
-              return;
-            }
-
-            let menuItem = (
-              <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
-            );
-
-            if (item.wrapper) {
-              menuItem = item.wrapper(menuItem);
-            }
-
-            return menuItem;
-          }
+          return renderItem(item, state);
         })}
       </ul>
     </MenuAppearanceContext.Provider>

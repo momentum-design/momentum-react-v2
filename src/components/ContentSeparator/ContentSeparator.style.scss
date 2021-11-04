@@ -2,17 +2,14 @@
   color: rgba(0, 0, 0, 0.6); // IEFIX
   color: var(--theme-text-secondary-normal);
   margin: 0.25rem 0;
+  display: flex;
+  flex-direction: row;
 
-  & {
-    display: flex;
-    flex-direction: row;
-
-    &:after {
-      content: '';
-      flex: 1 1;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.4); // IEFIX
-      border-bottom: 1px solid var(--theme-outline-primary-normal);
-      margin: auto;
-    }
+  &:after {
+    content: '';
+    flex: 1 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); // IEFIX
+    border-bottom: 1px solid var(--theme-outline-primary-normal);
+    margin: auto;
   }
 }

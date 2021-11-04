@@ -184,8 +184,6 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -194,10 +192,13 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -408,8 +409,6 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -418,10 +417,13 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -652,8 +654,6 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -662,10 +662,13 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -876,8 +879,6 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -886,10 +887,13 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -1121,8 +1125,6 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -1131,10 +1133,13 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -1345,8 +1350,6 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -1355,10 +1358,13 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -1589,8 +1595,6 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -1600,10 +1604,13 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         shape="isPilled"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -1814,8 +1821,6 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -1825,10 +1830,13 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         shape="isPilled"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -2059,8 +2067,6 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -2070,10 +2076,13 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         size={50}
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -2284,8 +2293,6 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -2295,10 +2302,13 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         size={50}
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -2538,8 +2548,6 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -2548,10 +2556,13 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
@@ -2762,8 +2773,6 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         onMouseUp={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
@@ -2772,10 +2781,13 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         role="menuitem"
         tabIndex={-1}
       >
-        <FocusRing>
+        <FocusRing
+          isInset={false}
+        >
           <FocusRing
             focusClass="md-focus-ring-wrapper children"
             focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
           >
             <li
               aria-disabled={false}
