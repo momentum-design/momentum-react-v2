@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  ActivityButtonDefault,
-  ActivityButtonLarge,
-  ActivityButtonSize56,
-} from './index';
+import { ActivityButtonDefault, ActivityButtonLarge, ActivityButtonSize56 } from './index';
 
 export default class ActivityButtonKitchenSink extends React.Component {
   render() {

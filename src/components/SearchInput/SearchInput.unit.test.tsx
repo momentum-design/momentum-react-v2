@@ -182,6 +182,11 @@ describe('<SearchInput />', () => {
       expect(ref.current).toBeInstanceOf(HTMLInputElement);
       expect(ref.current.value).toEqual('test');
     });
+
+    it('should work with autofocus', async () => {
+      // eslint-disable-next-line jsx-a11y/no-autofocus
+      await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" />);
+    });
   });
 
   describe('actions', () => {

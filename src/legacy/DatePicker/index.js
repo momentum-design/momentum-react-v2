@@ -30,30 +30,23 @@ class DatePicker extends React.Component {
 
   componentDidMount() {
     const selectedDate = moment(this.props.selectedDate);
-    const isValid =
-      selectedDate.isValid()
-      && !isDayDisabled(selectedDate, this.props);
+    const isValid = selectedDate.isValid() && !isDayDisabled(selectedDate, this.props);
 
     isValid && this.setPreSelection(selectedDate);
     isValid && this.setSelected(selectedDate);
   }
 
-  componentDidUpdate (prevProps) {
+  componentDidUpdate(prevProps) {
     const selectedDate = moment(this.props.selectedDate);
     const prevSelectedDate = moment(prevProps.selectedDate);
-    const isValid =
-      selectedDate.isValid()
-      && !isDayDisabled(selectedDate, this.props);
-    if(
-      isValid
-      && !isSameDay(prevSelectedDate, selectedDate)
-    ) {
+    const isValid = selectedDate.isValid() && !isDayDisabled(selectedDate, this.props);
+    if (isValid && !isSameDay(prevSelectedDate, selectedDate)) {
       this.setSelected(selectedDate);
       this.setPreSelection(selectedDate);
     }
   }
 
-  setOpen = open => {
+  setOpen = (open) => {
     this.setState({
       isOpen: open,
     });
@@ -69,19 +62,25 @@ class DatePicker extends React.Component {
   setSelected = (date, event) => {
     const { onSelect } = this.props;
 
-    !isDayDisabled(date, this.props)
-    && this.setState({
-      selected: date,
-    }, () => onSelect && onSelect(event, date.toDate()));
+    !isDayDisabled(date, this.props) &&
+      this.setState(
+        {
+          selected: date,
+        },
+        () => onSelect && onSelect(event, date.toDate())
+      );
   };
 
   setPreSelection = (date, event) => {
     const { onChange } = this.props;
 
-    !isDayDisabled(date, this.props)
-    && this.setState({
-      focus: date,
-    }, () => onChange && onChange(event, date.toDate()));
+    !isDayDisabled(date, this.props) &&
+      this.setState(
+        {
+          focus: date,
+        },
+        () => onChange && onChange(event, date.toDate())
+      );
   };
 
   setMonthNavFocus = () => {
@@ -92,18 +91,20 @@ class DatePicker extends React.Component {
     } else {
       this.setState({ monthNavFocus: 'prev' });
     }
-  }
+  };
 
   handleInputClick = () => {
     this.setOpen(true);
   };
 
-  handleInputKeyDown = event => {
+  handleInputKeyDown = (event) => {
     const { focus, isOpen } = this.state;
 
     let flag = false;
     const copy = moment(focus);
-    const datePickerDayHasFocus = document.activeElement.className.includes('md-datepicker__day--focus');
+    const datePickerDayHasFocus = document.activeElement.className.includes(
+      'md-datepicker__day--focus'
+    );
     const tabOverride = (event) => {
       this.setMonthNavFocus();
       event.preventDefault();
@@ -115,13 +116,9 @@ class DatePicker extends React.Component {
         break;
       case 32:
       case 13:
-        if(!isOpen) {
+        if (!isOpen) {
           this.handleInputClick();
-        } else if (
-          (moment.isMoment(focus) ||
-          moment.isDate(focus)) &&
-          datePickerDayHasFocus
-        ) {
+        } else if ((moment.isMoment(focus) || moment.isDate(focus)) && datePickerDayHasFocus) {
           this.handleSelect(event, copy);
         }
         flag = true;
@@ -134,7 +131,7 @@ class DatePicker extends React.Component {
         this.setPreSelection(subtractWeeks(copy, 1));
         flag = true;
         break;
-      case 37:// left
+      case 37: // left
         this.setPreSelection(subtractDays(copy, 1));
         flag = true;
         break;
@@ -169,15 +166,8 @@ class DatePicker extends React.Component {
   };
 
   render() {
-    const {
-      children,
-      className,
-      direction,
-      isDynamic,
-      onMonthChange,
-      showArrow,
-      ...props
-    } = this.props;
+    const { children, className, direction, isDynamic, onMonthChange, showArrow, ...props } =
+      this.props;
 
     const { selected, focus, anchorNode, isOpen, monthNavFocus } = this.state;
 
@@ -189,19 +179,21 @@ class DatePicker extends React.Component {
     };
 
     const trigger = React.cloneElement(children, {
-      ref: ref => !this.state.anchorNode && this.setState({ anchorNode: ref}),
+      ref: (ref) => !this.state.anchorNode && this.setState({ anchorNode: ref }),
       onClick: this.handleInputClick,
       onKeyDown: this.handleInputKeyDown,
     });
 
-    const otherProps = omit({...props}, ['onSelect', 'onChange', 'onMonthChange', 'shouldCloseOnSelect']);
+    const otherProps = omit({ ...props }, [
+      'onSelect',
+      'onChange',
+      'onMonthChange',
+      'shouldCloseOnSelect',
+    ]);
 
     const calendar = (
       <DatePickerContext.Provider value={dpContext}>
-        <DatePickerCalendar
-          monthNavFocus={monthNavFocus}
-          {...otherProps}
-        />
+        <DatePickerCalendar monthNavFocus={monthNavFocus} {...otherProps} />
       </DatePickerContext.Provider>
     );
 
@@ -221,19 +213,13 @@ class DatePicker extends React.Component {
     );
 
     return (
-      <div
-        className={
-          'md-datepicker-container' +
-          `${(className && ` ${className}`) || ''}`
-        }
-      >
+      <div className={'md-datepicker-container' + `${(className && ` ${className}`) || ''}`}>
         {trigger}
         {isOpen && content}
       </div>
     );
   }
 }
-
 
 DatePicker.propTypes = {
   /** @prop Children nodes to render inside DatePicker | null */

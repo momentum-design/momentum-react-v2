@@ -3,20 +3,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputSection = props => {
-    const {
-      children,
-      className,
-      position,
-      ...otherProps
-    } = props;
+const InputSection = (props) => {
+  const { children, className, position, ...otherProps } = props;
 
   return (
     <span
-      className={
-        `md-input__${position}` +
-        `${className && ` ${className}` || ''}`
-      }
+      className={`md-input__${position}` + `${(className && ` ${className}`) || ''}`}
       {...otherProps}
     >
       {children}

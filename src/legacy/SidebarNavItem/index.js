@@ -11,7 +11,7 @@ import { UIDConsumer, UIDFork } from 'react-uid';
 
 class SidebarNavItem extends React.Component {
   state = {
-    expanded: this.props.expanded
+    expanded: this.props.expanded,
   };
 
   componentDidMount() {
@@ -19,20 +19,20 @@ class SidebarNavItem extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    this.props.expanded !== prevProps.expanded
-    && this.state.expanded !== this.props.expanded
-    && this.setExpanded();
+    this.props.expanded !== prevProps.expanded &&
+      this.state.expanded !== this.props.expanded &&
+      this.setExpanded();
   }
 
   handleNavToggle = () => {
     this.setState({
-      expanded: !this.state.expanded
+      expanded: !this.state.expanded,
     });
-  }
+  };
 
   setExpanded = () => {
     this.setState({ expanded: this.props.expanded });
-  }
+  };
 
   getHeaderLevel = () => {
     const { level } = this.props;
@@ -44,31 +44,21 @@ class SidebarNavItem extends React.Component {
     } else if (level === 'secondary') {
       return 'tertiary';
     }
-  }
+  };
 
   setParentContext = () => {
     const { children, setContext } = this.props;
-    const nextLevel = children && this.getHeaderLevel() || 'primary';
+    const nextLevel = (children && this.getHeaderLevel()) || 'primary';
 
-    nextLevel
-    && setContext
-    && setContext(nextLevel);
-  }
+    nextLevel && setContext && setContext(nextLevel);
+  };
 
   render() {
-    const {
-      children,
-      className,
-      level,
-      icon,
-      keyboardKey,
-      title,
-      titleNode,
-      ...props
-    } = this.props;
+    const { children, className, level, icon, keyboardKey, title, titleNode, ...props } =
+      this.props;
     const { expanded } = this.state;
 
-    const otherProps = omit({...props}, [
+    const otherProps = omit({ ...props }, [
       'expanded',
       'primary',
       'secondary',
@@ -79,53 +69,38 @@ class SidebarNavItem extends React.Component {
     const getIcon = () => {
       const { secondary } = this.props;
 
-      if(typeof icon === 'string') {
-        return (
-          <Icon
-            name={icon}
-            sizeOverride
-            size={secondary ? 20 : 16}
-          />
-        );
+      if (typeof icon === 'string') {
+        return <Icon name={icon} sizeOverride size={secondary ? 20 : 16} />;
       } else return icon;
     };
 
-    const getSection = id => (
-      !titleNode
-        ? (
-          <ListItem
-            className={className}
-            id={id}
-            keyboardKey={keyboardKey || title}
-            onClick={() => {children ? this.handleNavToggle() : false;}}
-            {...otherProps}
-          >
-            {
-              icon &&
-              <ListItemSection position='left'>
-                {getIcon()}
-              </ListItemSection>
-            }
-            <ListItemSection position='center'>
-              {title}
+    const getSection = (id) =>
+      !titleNode ? (
+        <ListItem
+          className={className}
+          id={id}
+          keyboardKey={keyboardKey || title}
+          onClick={() => {
+            children ? this.handleNavToggle() : false;
+          }}
+          {...otherProps}
+        >
+          {icon && <ListItemSection position="left">{getIcon()}</ListItemSection>}
+          <ListItemSection position="center">{title}</ListItemSection>
+          {children && (
+            <ListItemSection position="right">
+              {expanded ? <Icon name="arrow-up_12" /> : <Icon name="arrow-down_12" />}
             </ListItemSection>
-            {
-              children &&
-              <ListItemSection position='right'>
-                {
-                  expanded
-                  ? <Icon name='arrow-up_12' />
-                  : <Icon name='arrow-down_12' />
-                }
-              </ListItemSection>
-            }
-          </ListItem>
-        )
-        : React.cloneElement(titleNode, {
-            id,
-            onClick : () => {children ? this.handleNavToggle() : false;}
+          )}
+        </ListItem>
+      ) : (
+        React.cloneElement(titleNode, {
+          id,
+          onClick: () => {
+            children ? this.handleNavToggle() : false;
+          },
         })
-    );
+      );
 
     const getHeaderLevel = () => {
       if (!level) {
@@ -140,25 +115,26 @@ class SidebarNavItem extends React.Component {
     const headerLevel = getHeaderLevel();
 
     return (
-      <UIDConsumer name={id => `md-sidebar__nav-item-${id}`}>
-        {id => {
+      <UIDConsumer name={(id) => `md-sidebar__nav-item-${id}`}>
+        {(id) => {
           return (
             <React.Fragment>
               {getSection(id)}
-              {
-                children &&
+              {children && (
                 <UIDFork>
-                  <div className={
-                    'md-sidebar-nav__group' +
-                    ` md-sidebar-nav__group--${headerLevel}` +
-                    ` md-sidebar-nav__group--${(!children || expanded) ? 'expanded' : 'collapsed'}`
-                  }>
+                  <div
+                    className={
+                      'md-sidebar-nav__group' +
+                      ` md-sidebar-nav__group--${headerLevel}` +
+                      ` md-sidebar-nav__group--${!children || expanded ? 'expanded' : 'collapsed'}`
+                    }
+                  >
                     <SidebarNavContext.Provider value={{ level: headerLevel }}>
                       {children}
                     </SidebarNavContext.Provider>
                   </div>
                 </UIDFork>
-              }
+              )}
             </React.Fragment>
           );
         }}
@@ -214,7 +190,7 @@ export default mapContextToProps(
   [SidebarContext, SidebarNavContext],
   (sidebarContext, sidebarNavContext) => ({
     ...sidebarContext,
-    ...sidebarNavContext
+    ...sidebarNavContext,
   }),
   SidebarNavItem
 );

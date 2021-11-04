@@ -4,12 +4,12 @@ import { Input } from '@momentum-ui/react';
 export default function InputHelpText() {
   return (
     <Input
-      name='inputHelpText'
-      label='Help Text Input'
-      htmlId='inputHelpText'
-      containerSize='medium-6'
-      helpText='This is help text for the input.'
-      placeholder='With Placeholder'
+      name="inputHelpText"
+      label="Help Text Input"
+      htmlId="inputHelpText"
+      containerSize="medium-6"
+      helpText="This is help text for the input."
+      placeholder="With Placeholder"
     />
   );
 }

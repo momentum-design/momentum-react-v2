@@ -48,5 +48,4 @@ describe('tests for <Badge />', () => {
 
     expect(container.find('span').hasClass('md-badge--blue')).toEqual(false);
   });
-
 });

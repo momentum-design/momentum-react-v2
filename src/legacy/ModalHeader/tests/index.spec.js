@@ -12,24 +12,26 @@ describe('tests for <ModalHeader />', () => {
   it('should render one ModalHeader', () => {
     const container = shallow(<ModalHeader />);
 
-    expect(container.find('div').hasClass('md-modal__header')).toEqual(true);
+    expect(container.find('div').at(0).hasClass('md-modal__header')).toEqual(true);
   });
 
   it('should display closable button by default', () => {
     const container = shallow(<ModalHeader />);
 
+    expect(container.find('.md-modal__close-container').length).toEqual(1);
     expect(container.find('.md-modal__close').length).toEqual(1);
   });
 
   it('should apply closeBtnProps', () => {
-    const container = shallow(<ModalHeader closeBtnProps={{ className: 'test'}}/>);
+    const container = shallow(<ModalHeader closeBtnProps={{ className: 'test' }} />);
 
     expect(container.find('.test').length).toEqual(1);
   });
 
-  it('should display not display closable button', () => {
+  it('should not display closable button', () => {
     const container = shallow(<ModalHeader showCloseButton={false} />);
 
+    expect(container.find('.md-modal__close-container').length).toEqual(0);
     expect(container.find('Icon').exists()).toEqual(false);
   });
 
@@ -38,8 +40,8 @@ describe('tests for <ModalHeader />', () => {
 
     const container = mount(<ModalHeader />, {
       context: {
-        handleClose: onClose
-      }
+        handleClose: onClose,
+      },
     });
 
     container.find('button.md-modal__close').simulate('click');
@@ -47,18 +49,14 @@ describe('tests for <ModalHeader />', () => {
   });
 
   it('should render headerLabel', () => {
-    const container = shallow(
-      <ModalHeader headerLabel='test' />
-    );
+    const container = shallow(<ModalHeader headerLabel="test" />);
 
     expect(container.find('.md-modal__title').length).toEqual(1);
     expect(container.find('.md-modal__title').text()).toEqual('test');
   });
 
   it('should render message', () => {
-    const container = shallow(
-      <ModalHeader message='test' />
-    );
+    const container = shallow(<ModalHeader message="test" />);
 
     expect(container.find('.md-modal__message').length).toEqual(1);
     expect(container.find('.md-modal__message').text()).toEqual('test');
@@ -67,7 +65,7 @@ describe('tests for <ModalHeader />', () => {
   it('should render children', () => {
     const container = shallow(
       <ModalHeader>
-        <div className='test' />
+        <div className="test" />
       </ModalHeader>
     );
 
@@ -76,8 +74,8 @@ describe('tests for <ModalHeader />', () => {
 
   it('should only render if children & headerLabel', () => {
     const container = shallow(
-      <ModalHeader headerLabel='test'>
-        <div className='test' />
+      <ModalHeader headerLabel="test">
+        <div className="test" />
       </ModalHeader>
     );
 

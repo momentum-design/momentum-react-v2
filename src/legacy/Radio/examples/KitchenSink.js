@@ -3,7 +3,7 @@ import { InputHelper, Radio, RadioGroup } from '@momentum-ui/react';
 
 export default class RadioKitchenSink extends React.PureComponent {
   render() {
-    const radios = value => (
+    const radios = (value) => (
       <>
         <RadioGroup name={`radioGroup${value}`} values={['one']}>
           <Radio

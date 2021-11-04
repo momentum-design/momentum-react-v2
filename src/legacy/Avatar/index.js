@@ -2,18 +2,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Button,
-  Loading,
-  Icon,
-} from '@momentum-ui/react';
+import { Button, Loading, Icon } from '@momentum-ui/react';
 
 class Avatar extends React.Component {
   static displayName = 'Avatar';
 
   state = {
     isImageLoaded: false,
-    isImageErrored: false
+    isImageErrored: false,
   };
 
   componentDidMount() {
@@ -24,7 +20,7 @@ class Avatar extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(prevProps.src !== this.props.src){
+    if (prevProps.src !== this.props.src) {
       this.handleImgChange();
     }
   }
@@ -32,21 +28,21 @@ class Avatar extends React.Component {
   handleImgChange = () => {
     this.setState({
       isImageLoaded: false,
-      isImageErrored: false
+      isImageErrored: false,
     });
-  }
+  };
 
   handleImgError = () => {
     this.setState({
-      isImageErrored: true
+      isImageErrored: true,
     });
-  }
+  };
 
   handleImgLoaded = () => {
     this.setState({
-      isImageLoaded: true
+      isImageLoaded: true,
     });
-  }
+  };
 
   render() {
     const {
@@ -70,21 +66,18 @@ class Avatar extends React.Component {
       type,
       ...otherProps
     } = this.props;
-    const {
-      isImageLoaded,
-      isImageErrored
-    } = this.state;
+    const { isImageLoaded, isImageErrored } = this.state;
 
     const getInitials = () => {
       if (initials) return initials;
       if (!title.replace(/\s/g, '').length) return '';
       let letters = [];
       const words = title.trim().split(/ +/);
-    
+
       letters.push(String.fromCodePoint(words[0].codePointAt(0)));
 
-      if(type !== 'group' && words.length > 1) {
-        letters.push(String.fromCodePoint(words[words.length-1].codePointAt(0)));
+      if (type !== 'group' && words.length > 1) {
+        letters.push(String.fromCodePoint(words[words.length - 1].codePointAt(0)));
       }
       return letters.join('');
     };
@@ -93,10 +86,7 @@ class Avatar extends React.Component {
       if (icon.type.displayName === 'Icon') {
         return (
           <span
-            className={
-              'md-avatar__icon' +
-              `${isOverview ? ' md-avatar__icon--overview' : ''}`
-            }
+            className={'md-avatar__icon' + `${isOverview ? ' md-avatar__icon--overview' : ''}`}
             style={{ backgroundColor, color }}
           >
             {icon}
@@ -109,12 +99,12 @@ class Avatar extends React.Component {
     const getLetter = () => {
       return (
         <span
-          key='letter'
+          key="letter"
           className={
             'md-avatar__letter' +
             `${(isDecrypting && ` md-decrypting`) || ''}` +
             `${(isImageLoaded && ` md-avatar__img--hidden`) || ''}`
-            }
+          }
           style={{ backgroundColor, color }}
         >
           {getInitials()}
@@ -123,36 +113,29 @@ class Avatar extends React.Component {
     };
 
     const getChildren = () => {
-      if(type === 'self') {
+      if (type === 'self') {
         return (
-          <span
-            key='self'
-            className='md-avatar__self'
-            style={{ backgroundColor, color }}
-          >
+          <span key="self" className="md-avatar__self" style={{ backgroundColor, color }}>
             <Icon name={size === 40 || size === 'medium' ? 'chat-active_18' : 'chat-active_16'} />
           </span>
         );
       } else if (src && !isImageErrored) {
-      // image src is present and image has not yet errored
+        // image src is present and image has not yet errored
         const imgChildren = [];
-         // image is not loaded and title is provided
+        // image is not loaded and title is provided
         if (title && !isImageLoaded) {
           imgChildren.push(getLetter());
         }
         imgChildren.push(
           <img
             alt={alt}
-            className={
-              `md-avatar__img` +
-              `${(!isImageLoaded && ` md-avatar__img--hidden`) || ''}`
-            }
+            className={`md-avatar__img` + `${(!isImageLoaded && ` md-avatar__img--hidden`) || ''}`}
             draggable={false}
             key={`image-${imgChildren.length}`}
             onError={this.handleImgError}
             onLoad={this.handleImgLoaded}
             src={src}
-            ref={ref => this.image = ref}
+            ref={(ref) => (this.image = ref)}
           />
         );
         return imgChildren;
@@ -176,28 +159,21 @@ class Avatar extends React.Component {
           `${(className && ` ${className}`) || ''}`
         }
         title={!hideDefaultTooltip ? title : ''}
-        {...!onClick && {...otherProps}}
+        {...(!onClick && { ...otherProps })}
       >
         {getChildren()}
-        {type === 'typing' && <Loading/>}
-        {failureBadge && <span className='md-avatar__failure-badge' />}
-        {hasNotification && <span className='md-avatar__notification-badge' />}
+        {type === 'typing' && <Loading />}
+        {failureBadge && <span className="md-avatar__failure-badge" />}
+        {hasNotification && <span className="md-avatar__notification-badge" />}
       </div>
     );
 
-    return (
-      onClick
-      ?
-      <Button
-        className={buttonClassName}
-        circle
-        onClick={onClick}
-        removeStyle
-        {...otherProps}
-      >
+    return onClick ? (
+      <Button className={buttonClassName} circle onClick={onClick} removeStyle {...otherProps}>
         {getAvatar()}
       </Button>
-      : getAvatar()
+    ) : (
+      getAvatar()
     );
   }
 }
@@ -230,7 +206,24 @@ Avatar.propTypes = {
   /** @prop Handler to be called when the user taps the Avatar | null */
   onClick: PropTypes.func,
   /** @prop Set the size of the Avatar from one of the preconfigured options | 'medium' */
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge', 18, 24, 28, 36, 40, 44, 52, 56, 72, 80, 84]),
+  size: PropTypes.oneOf([
+    'xsmall',
+    'small',
+    'medium',
+    'large',
+    'xlarge',
+    18,
+    24,
+    28,
+    36,
+    40,
+    44,
+    52,
+    56,
+    72,
+    80,
+    84,
+  ]),
   /** @prop Optional image source for the Avatar | null */
   src: PropTypes.string,
   /** @prop Optional Avatar color theme | null */
@@ -238,7 +231,20 @@ Avatar.propTypes = {
   /** @prop set Avatar title / user's name | null */
   title: PropTypes.string,
   /** @prop optional Avatar type | '' */
-  type: PropTypes.oneOf(['', 'active', 'bot', 'call', 'dnd', 'group', 'inactive', 'meeting', 'ooo', 'presenting', 'self', 'typing']),
+  type: PropTypes.oneOf([
+    '',
+    'active',
+    'bot',
+    'call',
+    'dnd',
+    'group',
+    'inactive',
+    'meeting',
+    'ooo',
+    'presenting',
+    'self',
+    'typing',
+  ]),
 };
 
 Avatar.defaultProps = {

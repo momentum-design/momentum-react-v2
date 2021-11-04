@@ -6,9 +6,8 @@ import PropTypes from 'prop-types';
 import AriaModal from 'react-aria-modal';
 
 class Modal extends React.Component {
-
   static childContextTypes = {
-    handleClose: PropTypes.func
+    handleClose: PropTypes.func,
   };
 
   state = {
@@ -17,14 +16,12 @@ class Modal extends React.Component {
 
   getChildContext = () => {
     return {
-      handleClose: e => this.closeModal(e)
+      handleClose: (e) => this.closeModal(e),
     };
   };
 
   componentDidUpdate(prevProps) {
-    prevProps.show !== this.props.show
-      && this.props.show
-      && this.setAnimationState(true);
+    prevProps.show !== this.props.show && this.props.show && this.setAnimationState(true);
   }
 
   componentWillUnmount() {
@@ -32,18 +29,18 @@ class Modal extends React.Component {
     this.hideTimerId = null;
   }
 
-  closeModal = e => {
+  closeModal = (e) => {
     this.setAnimationState();
 
     this.hideTimerId && clearTimeout(this.hideTimerId);
     this.hideTimerId = setTimeout(() => {
       this.props.onHide(e);
     }, 300);
-  }
+  };
 
-  setAnimationState = isOpen => {
+  setAnimationState = (isOpen) => {
     this.setState({ animationClass: isOpen ? 'in' : '' });
-  }
+  };
 
   render() {
     const {
@@ -52,6 +49,7 @@ class Modal extends React.Component {
       backdropClickExit,
       children,
       className,
+      ContentWrapper,
       escapeExits,
       focusDialog,
       htmlId,
@@ -61,49 +59,47 @@ class Modal extends React.Component {
       ...props
     } = this.props;
 
-    const modalContent = (
+    let modalContent = (
       <div className="md-modal__content">
-        <div className="md-modal__flex-container">
-          {children}
-        </div>
+        <div className="md-modal__flex-container">{children}</div>
       </div>
     );
 
-    const RenderModal = renderTo
-      ? AriaModal.renderTo(`#${renderTo}`)
-      : AriaModal;
+    if (ContentWrapper) {
+      modalContent = <ContentWrapper>{modalContent}</ContentWrapper>;
+    }
+
+    const RenderModal = renderTo ? AriaModal.renderTo(`#${renderTo}`) : AriaModal;
 
     const getModal = () => {
-      return show
-        &&
-        <RenderModal
-          onExit={this.closeModal}
-          getApplicationNode={() => document.querySelector(`#${applicationId}`)}
-          dialogClass={
-            `md-modal` +
-            ` md-modal--${size}` +
-            ` ${this.state.animationClass}` +
-            `${(className && ` ${className}`) || ''}`
-          }
-          includeDefaultStyles={false}
-          titleId={htmlId}
-          underlayClass={
-            backdrop
-              ? `md-modal__backdrop fade` + ` ${this.state.animationClass}`
-              : ''
-          }
-          underlayClickExits={backdropClickExit}
-          escapeExits={escapeExits}
-          focusDialog={focusDialog}
-          {...props}
-        >
-          {modalContent}
-        </RenderModal>;
-      };
+      return (
+        show && (
+          <RenderModal
+            onExit={this.closeModal}
+            getApplicationNode={() => document.querySelector(`#${applicationId}`)}
+            dialogClass={
+              `md-modal` +
+              ` md-modal--${size}` +
+              ` ${this.state.animationClass}` +
+              `${(className && ` ${className}`) || ''}`
+            }
+            includeDefaultStyles={false}
+            titleId={htmlId}
+            underlayClass={
+              backdrop ? `md-modal__backdrop fade` + ` ${this.state.animationClass}` : ''
+            }
+            underlayClickExits={backdropClickExit}
+            escapeExits={escapeExits}
+            focusDialog={focusDialog}
+            {...props}
+          >
+            {modalContent}
+          </RenderModal>
+        )
+      );
+    };
 
-    return (
-      getModal()
-    );
+    return getModal();
   }
 }
 
@@ -118,6 +114,8 @@ Modal.propTypes = {
   children: PropTypes.node,
   /** @prop Optional css class names | '' */
   className: PropTypes.string,
+  /** @prop Optional component for wrapping content */
+  ContentWrapper: PropTypes.func,
   /** @prop To enable/disable escape to exit modal | true */
   escapeExits: PropTypes.bool,
   /** @prop To set focus to the entire modal rather than elements within modal | true */

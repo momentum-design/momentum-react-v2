@@ -10,7 +10,7 @@ import { Props } from './ButtonSimple.types';
  */
 const ButtonSimple: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { children, className, isDisabled, id, style } = props;
+    const { children, className, isDisabled, id, style, title } = props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
 
@@ -26,7 +26,14 @@ const ButtonSimple: FC<Props> = forwardRef(
 
     return (
       <FocusRing disabled={isDisabled}>
-        <button className={classnames(className)} id={id} ref={ref} style={style} {...buttonProps}>
+        <button
+          className={classnames(className)}
+          id={id}
+          ref={ref}
+          style={style}
+          title={title}
+          {...buttonProps}
+        >
           {children}
         </button>
       </FocusRing>

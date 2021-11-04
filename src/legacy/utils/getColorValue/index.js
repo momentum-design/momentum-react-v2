@@ -1,8 +1,4 @@
-import {
-  startsWith,
-  trimStart,
-  isEmpty,
-} from 'lodash';
+import { startsWith, trimStart, isEmpty } from 'lodash';
 
 import colorTokens from '@momentum-ui/tokens/dist/colors.json';
 import legacyColors from '@momentum-ui/tokens/src/legacyColors.json';
@@ -14,7 +10,7 @@ export const getColorValue = (color, colorFormat) => {
   return colorValue;
 };
 
-const convertScssVariableToName = color => {
+const convertScssVariableToName = (color) => {
   switch (true) {
     case startsWith(color, '$md-'):
       return trimStart(color, '$md-');
@@ -27,7 +23,7 @@ const convertScssVariableToName = color => {
   }
 };
 
-const getColorObject = colorName => {
+const getColorObject = (colorName) => {
   const colorObject = getColorObjectFromTokens(colorName);
   if (isEmpty(colorObject)) {
     return getColorObjectFromTokens(getNewColorName(colorName));
@@ -39,12 +35,12 @@ const getColor = (name, value) => {
   return (colorTokens[name] && colorTokens[name][value]) || {};
 };
 
-const getColorObjectFromTokens = colorName => {
+const getColorObjectFromTokens = (colorName) => {
   const colorData = colorName.split('-');
   return getColor(colorData[0], colorData[1]);
 };
 
-const getNewColorName = colorName => {
+const getNewColorName = (colorName) => {
   const color = {
     oldName: colorName,
     newName: legacyColors[colorName],
@@ -73,9 +69,7 @@ const consoleHandler = (message, data) => {
   switch (message) {
     case 'new-colors-warn':
       console.warn(
-        `[@momentum-ui] Design system colors update: ${data.oldName} is now ${
-          data.newName
-        }. Refer to https://momentum.design/styles/color/style`
+        `[@momentum-ui] Design system colors update: ${data.oldName} is now ${data.newName}. Refer to https://momentum.design/styles/color/style`
       );
       break;
     case 'color-error':

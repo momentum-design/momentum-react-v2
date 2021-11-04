@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  SidebarDark,
-  SidebarDefault,
-  SidebarPageLevel,
-  SidebarWithIcons,
-} from './index';
+import { SidebarDark, SidebarDefault, SidebarPageLevel, SidebarWithIcons } from './index';
 
 export default class SidebarKitchenSink extends React.Component {
   render() {

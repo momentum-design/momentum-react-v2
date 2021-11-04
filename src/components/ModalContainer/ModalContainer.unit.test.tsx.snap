@@ -10,6 +10,7 @@ exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
       data-color="primary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={false}
     />
@@ -57,6 +58,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
       data-color="primary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={true}
     />
@@ -74,6 +76,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
       data-color="primary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={false}
     >
@@ -97,6 +100,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with className 1`] = 
       data-color="primary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={false}
     />
@@ -116,6 +120,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with color 1`] = `
       data-color="quaternary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={false}
     />
@@ -135,6 +140,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with elevation 1`] = 
       data-color="primary"
       data-elevation={8}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={false}
     />
@@ -155,6 +161,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
       data-color="primary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={false}
     />
@@ -194,6 +201,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
       data-color="primary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={150}
       data-vertical-arrow={false}
     />
@@ -222,6 +230,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
       data-color="primary"
       data-elevation={0}
       data-horizontal-arrow={false}
+      data-padded={false}
       data-round={0}
       data-vertical-arrow={false}
     />

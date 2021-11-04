@@ -15,7 +15,7 @@ const theme = (Story, { globals }) => {
       : {};
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider id="theme-provider" theme={theme}>
       <div
         style={{
           ...displayProperties,

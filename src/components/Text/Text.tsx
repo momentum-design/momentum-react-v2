@@ -6,7 +6,7 @@ import './Text.style.scss';
 import classnames from 'classnames';
 
 const Text: FC<Props> = (props: Props) => {
-  const { children, type = DEFAULTS.TYPE, className, id, style } = props;
+  const { children, type = DEFAULTS.TYPE, className, id, style, ...rest } = props;
 
   const getElement = () => {
     switch (type) {
@@ -16,28 +16,28 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.BANNER_PRIMARY:
         return (
           <h1
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </h1>
         );
-        break;
 
       case TYPES.TITLE:
         return (
           <h2
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </h2>
         );
-        break;
 
       case TYPES.HEADER_PRIMARY:
       case TYPES.HIGHLIGHT_PRIMARY:
@@ -47,29 +47,29 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.SUBHEADER_SECONDARY:
         return (
           <h3
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </h3>
         );
-        break;
 
       case TYPES.BODY_PRIMARY:
       case TYPES.HYPERLINK_PRIMARY:
         return (
           <p
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </p>
         );
-        break;
 
       case TYPES.BODY_SECONDARY:
       case TYPES.HYPERLINK_SECONDARY:
@@ -78,23 +78,24 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.LABEL_COMPACT:
         return (
           <small
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </small>
         );
-        break;
 
       default:
         return (
           <p
-            className={classnames(STYLE.wrapper, STYLE.color, className)}
+            className={classnames(STYLE.wrapper, className)}
             data-type={type}
             id={id}
             style={style}
+            {...rest}
           >
             {children}
           </p>

@@ -142,7 +142,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
             type="body-primary"
           >
             <p
-              className="md-text-wrapper md-text-color"
+              className="md-text-wrapper"
               data-type="body-primary"
             >
               Example Text
@@ -366,6 +366,39 @@ exports[`<AlertBadge /> snapshot should match snapshot with style 1`] = `
             "color": "pink",
           }
         }
+        type="button"
+      />
+    </FocusRing>
+  </FocusRing>
+</AlertBadge>
+`;
+
+exports[`<AlertBadge /> snapshot should match snapshot with title 1`] = `
+<AlertBadge
+  title="Example Text"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-alert-badge-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        title="Example Text"
         type="button"
       />
     </FocusRing>

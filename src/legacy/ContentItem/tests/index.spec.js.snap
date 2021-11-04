@@ -29,6 +29,7 @@ exports[`tests for <ContentItem /> should match SnapShot 1`] = `
       loading={false}
       onClick={null}
       style={null}
+      subtitle=""
       title=""
       type="chat"
     >

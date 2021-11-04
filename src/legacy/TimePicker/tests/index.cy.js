@@ -6,15 +6,12 @@ describe('@momentum-ui/react', () => {
   });
 
   afterEach(() => {
-    cy
-      .get('body')
-      .click()
-      .end();
+    cy.get('body').click().end();
   });
 
   it('snapshot of 24 hr time-picker', () => {
     cy.get('#24hour')
-      .click({force: true})
+      .click({ force: true })
       .get(`.${prefix}-timepicker-container`)
       .should('exist')
       .percySnapshot()
@@ -23,7 +20,7 @@ describe('@momentum-ui/react', () => {
 
   it('snapshot of 30 min time-picker', () => {
     cy.get('#30min')
-      .click({force: true})
+      .click({ force: true })
       .get(`.${prefix}-timepicker-container`)
       .should('exist')
       .percySnapshot()
@@ -32,7 +29,7 @@ describe('@momentum-ui/react', () => {
 
   it('snapshot of default time-picker', () => {
     cy.get('#default')
-      .click({force: true})
+      .click({ force: true })
       .get(`.${prefix}-timepicker-container`)
       .should('exist')
       .percySnapshot()

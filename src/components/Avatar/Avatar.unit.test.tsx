@@ -1,9 +1,11 @@
 import Avatar from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-import { COLORS, MAX_INITIALS_SPACE, SIZES, STYLE } from './Avatar.constants';
-import { AvatarColor, AvatarSize, PresenceType } from './Avatar.types';
+import { MAX_INITIALS_SPACE, SIZES, STYLE } from './Avatar.constants';
+import { AvatarSize, PresenceType } from './Avatar.types';
 import { mountAndWait } from '../../../test/utils';
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 
 describe('Avatar', () => {
   describe('snapshot', () => {
@@ -65,6 +67,52 @@ describe('Avatar', () => {
       expect.assertions(1);
 
       const container = await mountAndWait(<Avatar icon="check" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with onPress', async () => {
+      expect.assertions(1);
+
+      const onPress = () => {
+        return 'hi';
+      };
+
+      const container = await mountAndWait(<Avatar onPress={onPress} title="Cisco Webex" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with failureBadge', async () => {
+      expect.assertions(1);
+
+      const failureBadge = true;
+
+      const container = await mountAndWait(
+        <Avatar failureBadge={failureBadge} title="Cisco Webex" />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with isTyping', async () => {
+      expect.assertions(1);
+
+      const isTyping = true;
+
+      const container = await mountAndWait(<Avatar isTyping={isTyping} title="Cisco Webex" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with hideDefaultTooltip', async () => {
+      expect.assertions(1);
+
+      const hideDefaultTooltip = true;
+
+      const container = await mountAndWait(
+        <Avatar hideDefaultTooltip={hideDefaultTooltip} title="Cisco Webex" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -146,7 +194,7 @@ describe('Avatar', () => {
     it('should pass the color prop', () => {
       expect.assertions(1);
 
-      const color = COLORS.cyan as AvatarColor;
+      const color = TEAM_COLORS.cyan as TeamColor;
 
       const element = mount(<Avatar initials="CW" color={color} />)
         .find(`div.${STYLE.wrapper}`)
@@ -180,6 +228,56 @@ describe('Avatar', () => {
       const element = container.find('svg').getDOMNode();
 
       expect(element).toBeDefined();
+    });
+
+    it('should wrap inside button the onPress is provided', async () => {
+      expect.assertions(1);
+
+      const onPress = () => {
+        return 'hi';
+      };
+
+      const container = await mountAndWait(<Avatar onPress={onPress} title="Cisco Webex" />);
+      const element = container.find('button').getDOMNode();
+
+      expect(element).toBeDefined();
+    });
+
+    it('should pass warning icon when failureBadge is provided', async () => {
+      expect.assertions(1);
+
+      const failureBadge = true;
+
+      const container = await mountAndWait(
+        <Avatar failureBadge={failureBadge} title="Cisco Webex" />
+      );
+
+      const element = container.find('svg[data-test="warning"]').getDOMNode();
+      expect(element).toBeDefined();
+    });
+
+    it('should render Loading when isTyping is provided', async () => {
+      expect.assertions(1);
+
+      const isTyping = true;
+
+      const container = await mountAndWait(<Avatar isTyping={isTyping} title="Cisco Webex" />);
+      const element = container.find('.md-loading');
+      expect(element).toBeDefined();
+    });
+
+    it('should match snapshot with hideDefaultTooltip', async () => {
+      expect.assertions(1);
+
+      const hideDefaultTooltip = true;
+
+      const container = await mountAndWait(
+        <Avatar hideDefaultTooltip={hideDefaultTooltip} title="Cisco Webex" />
+      );
+
+      const title = container.getDOMNode().getAttribute('title');
+
+      expect(title).toBe('');
     });
   });
 });

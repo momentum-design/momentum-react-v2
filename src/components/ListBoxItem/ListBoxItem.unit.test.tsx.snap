@@ -33,10 +33,13 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
     isPadded={true}
     key="$.0"
   >
-    <FocusRing>
+    <FocusRing
+      isInset={false}
+    >
       <FocusRing
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
       >
         <li
           className="md-list-item-base-wrapper"
@@ -59,6 +62,7 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="listitem"
+          tabIndex={0}
         >
           <ListItemBaseSection
             position="fill"

@@ -3,21 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = props => {
-  const {
-    children,
-    className,
-    onClick,
-    ...otherProps
-  } = props;
+const Card = (props) => {
+  const { children, className, onClick, ...otherProps } = props;
 
-  const handleKeyDown = e => {
-    if (
-      e.which === 32
-      || e.which === 13
-      || e.charCode === 32
-      || e.charCode === 13
-    ) {
+  const handleKeyDown = (e) => {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       onClick && onClick(e);
       e.preventDefault();
     }
@@ -27,12 +17,12 @@ const Card = props => {
     <div
       className={
         `md-card` +
-        `${onClick && ` md-card--clickable` || ''}` +
-        `${className && ` ${className}` || ''}`
+        `${(onClick && ` md-card--clickable`) || ''}` +
+        `${(className && ` ${className}`) || ''}`
       }
       onClick={onClick}
       onKeyDown={handleKeyDown}
-      role='presentation'
+      role="presentation"
       {...otherProps}
     >
       {children}

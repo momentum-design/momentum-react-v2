@@ -1,10 +1,12 @@
-import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
+import {
+  commonAriaButton,
+  commonHTMLAttributes,
+  commonStyles,
+} from '../../storybook/helper.stories.argtypes';
 
 import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from './';
 
-export default {
-  ...commonStyles,
-  ...commonAriaButton,
+const buttonCircleArgTypes = {
   /**
    * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
    */
@@ -22,7 +24,7 @@ export default {
   },
   color: {
     description:
-      'Modifies the color of this `<ButtonCircle />`. Some colors do not include an outline variant.',
+      'Modifies the color of this component. Some colors do not include an outline variant.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -35,7 +37,7 @@ export default {
     },
   },
   disabled: {
-    description: 'Whether to render the `<ButtonCircle />` is disabled.',
+    description: 'Whether to render the component is disabled.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -49,7 +51,7 @@ export default {
   },
   ghost: {
     description:
-      'Whether this `<ButtonCircle />` is a ghost. This overrides the `color` and `outline` props.',
+      'Whether this component is a ghost. This overrides the `color` and `outline` props.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -62,7 +64,7 @@ export default {
     },
   },
   outline: {
-    description: 'Whether to render the outline variant of this `<ButtonCircle />`.',
+    description: 'Whether to render the outline variant of this component.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -75,7 +77,7 @@ export default {
     },
   },
   size: {
-    description: 'Modifies the size of this `<ButtonCircle />`.',
+    description: 'Modifies the size of this component.',
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     control: { type: 'select' },
     table: {
@@ -87,4 +89,13 @@ export default {
       },
     },
   },
+};
+
+export { buttonCircleArgTypes };
+
+export default {
+  ...commonStyles,
+  ...commonAriaButton,
+  ...commonHTMLAttributes,
+  ...buttonCircleArgTypes,
 };

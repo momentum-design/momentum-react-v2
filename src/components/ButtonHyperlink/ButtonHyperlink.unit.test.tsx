@@ -25,6 +25,16 @@ describe('ButtonHyperlink', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with title', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const container = mount(<ButtonHyperlink title={title} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -69,6 +79,18 @@ describe('ButtonHyperlink', () => {
         .getDOMNode();
 
       expect(element.innerHTML).toBe(child);
+    });
+
+    it('should have provided title when title is provided', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const element = mount(<ButtonHyperlink title={title} />)
+        .find(ButtonHyperlink)
+        .getDOMNode();
+
+      expect(element.getAttribute('title')).toBe(title);
     });
   });
 

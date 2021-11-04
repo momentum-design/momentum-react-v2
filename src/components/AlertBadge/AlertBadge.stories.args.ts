@@ -1,9 +1,14 @@
-import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
+import {
+  commonAriaButton,
+  commonHTMLAttributes,
+  commonStyles,
+} from '../../storybook/helper.stories.argtypes';
 
 import { ALERT_BADGE_CONSTANTS as CONSTANTS } from './';
 
 export default {
   ...commonAriaButton,
+  ...commonHTMLAttributes,
   ...commonStyles,
   children: {
     description: 'Provides the child nodes for this element. Overrides `image` and `label` props.',

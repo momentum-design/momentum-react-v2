@@ -2,12 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  EventOverlay,
-  Input,
-  ListItem,
-  InputSearch,
-} from '@momentum-ui/react';
+import { EventOverlay, Input, ListItem, InputSearch } from '@momentum-ui/react';
 import omit from 'lodash/omit';
 import uniqueId from 'lodash/uniqueId';
 
@@ -25,9 +20,7 @@ class ComboBox extends React.Component {
   componentDidMount() {
     const { children } = this.props;
 
-    this.options =
-      (children && React.Children.toArray(children))
-      || this.mapOptionsToListItem();
+    this.options = (children && React.Children.toArray(children)) || this.mapOptionsToListItem();
 
     this.setFilteredOptions();
   }
@@ -36,14 +29,8 @@ class ComboBox extends React.Component {
     const { options, children } = this.props;
     const { value } = this.state;
 
-    if (
-      (prevProps.options !== options)
-      || (prevProps.children !== children)
-    ) {
-
-      this.options =
-        (children && React.Children.toArray(children))
-        || this.mapOptionsToListItem();
+    if (prevProps.options !== options || prevProps.children !== children) {
+      this.options = (children && React.Children.toArray(children)) || this.mapOptionsToListItem();
 
       this.setFilteredOptions(value);
     }
@@ -52,56 +39,55 @@ class ComboBox extends React.Component {
   mapOptionsToListItem = () => {
     const { options } = this.props;
 
-    return options.map((option, i) =>
-      <ListItem key={i} label={option} />
-    );
-  }
+    return options.map((option, i) => <ListItem key={i} label={option} />);
+  };
 
-  setFilteredOptions = filter => {
-    const { onChange } =  this.props;
+  setFilteredOptions = (filter) => {
+    const { onChange } = this.props;
 
-    const filteredOptions = !onChange
-      ? this.applyFilter(filter)
-      : this.options;
+    const filteredOptions = !onChange ? this.applyFilter(filter) : this.options;
 
     this.setState({
       isOpen: !!filteredOptions.length,
       filteredOptions,
     });
-  }
+  };
 
   hidePopover = () => {
     this.setState({
-      isOpen: false
+      isOpen: false,
     });
   };
 
   handleToggle = () => {
     const { filteredOptions } = this.state;
 
-    filteredOptions.length
-    && this.setState({ isOpen: true });
+    filteredOptions.length && this.setState({ isOpen: true });
   };
 
-  applyFilter = value => {
+  applyFilter = (value) => {
     const { searchProp } = this.props;
-    const isSubString = string => value && string.toLowerCase().includes(value.toLowerCase());
+    const isSubString = (string) => value && string.toLowerCase().includes(value.toLowerCase());
 
-    return this.options.filter(option =>
-      (option.props[searchProp] && isSubString(option.props[searchProp]))
-        || ['ListItemHeader'].includes(option.type.displayName)
+    return this.options.filter(
+      (option) =>
+        (option.props[searchProp] && isSubString(option.props[searchProp])) ||
+        ['ListItemHeader'].includes(option.type.displayName)
     );
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { onChange } = this.props;
     const { focus } = this.state;
 
     this.setFilteredOptions(e.target.value);
-    this.setState({
-      value: e.target.value,
-      focus: !onChange ? -1 : focus,
-    }, () => onChange && onChange(e, e.target.value));
+    this.setState(
+      {
+        value: e.target.value,
+        focus: !onChange ? -1 : focus,
+      },
+      () => onChange && onChange(e, e.target.value)
+    );
   };
 
   handleClick = (e, selectedOption) => {
@@ -109,18 +95,21 @@ class ComboBox extends React.Component {
     const { onSelect } = this.props;
 
     this.setFilteredOptions(selectedOption.props[searchProp]);
-    this.setState({
-      value: selectedOption.props[searchProp],
-      isOpen: false,
-      focus: -1,
-    }, () => onSelect && onSelect(e, selectedOption));
+    this.setState(
+      {
+        value: selectedOption.props[searchProp],
+        isOpen: false,
+        focus: -1,
+      },
+      () => onSelect && onSelect(e, selectedOption)
+    );
   };
 
-  setFocus = index => {
+  setFocus = (index) => {
     this.setState({ focus: index });
   };
 
-  handleKeyDown = e => {
+  handleKeyDown = (e) => {
     let flag = false;
     let newIndex;
     const { filteredOptions, focus, isOpen } = this.state;
@@ -140,22 +129,19 @@ class ComboBox extends React.Component {
       const possibleIndex = getPossibleIndex();
       const potentialTarget = React.Children.toArray(filteredOptions)[possibleIndex];
 
-      return (potentialTarget.props.disabled || potentialTarget.props.isReadOnly)
+      return potentialTarget.props.disabled || potentialTarget.props.isReadOnly
         ? getNewIndex(possibleIndex, change)
         : possibleIndex;
     };
 
     switch (e.which) {
-
       case 13:
-        isOpen
-        && (focus !== -1)
-        && this.handleClick(e, filteredOptions[focus]);
+        isOpen && focus !== -1 && this.handleClick(e, filteredOptions[focus]);
         flag = true;
         break;
 
       case 38:
-        if(isOpen) {
+        if (isOpen) {
           newIndex = getNewIndex(focus, -1);
           this.setFocus(newIndex);
         }
@@ -163,7 +149,7 @@ class ComboBox extends React.Component {
         break;
 
       case 40:
-        if(isOpen) {
+        if (isOpen) {
           newIndex = getNewIndex(focus, 1);
           this.setFocus(newIndex);
         }
@@ -180,17 +166,10 @@ class ComboBox extends React.Component {
   };
 
   render() {
-    const {
-      className,
-      clear,
-      disabled,
-      hasSearchIcon,
-      inputProps,
-      placeholder,
-      ...props
-    } = this.props;
+    const { className, clear, disabled, hasSearchIcon, inputProps, placeholder, ...props } =
+      this.props;
 
-    const otherProps = omit({...props}, [
+    const otherProps = omit({ ...props }, [
       'children',
       'id',
       'onChange',
@@ -199,84 +178,70 @@ class ComboBox extends React.Component {
       'searchProp',
     ]);
 
-    const {
-      filteredOptions,
-      focus,
-      id,
-      isOpen,
-      value,
-    } = this.state;
+    const { filteredOptions, focus, id, isOpen, value } = this.state;
 
     const activeDescendant = this.activeChild && this.activeChild.id;
     const InputComp = hasSearchIcon ? InputSearch : Input;
 
     const input = (
       <InputComp
-        aria-autocomplete='list'
+        aria-autocomplete="list"
         clear={clear}
         disabled={disabled}
-        inputRef={ref => this.anchorNode = ref}
+        inputRef={(ref) => (this.anchorNode = ref)}
         onChange={this.handleChange}
         onClick={this.handleToggle}
         onKeyDown={this.handleKeyDown}
         placeholder={placeholder}
         value={value}
-        {...activeDescendant && { 'aria-activedescendant': activeDescendant }}
+        {...(activeDescendant && { 'aria-activedescendant': activeDescendant })}
         {...inputProps}
       />
     );
 
-    const renderFilteredOption = filteredOptions
-      && filteredOptions.map((option, i) =>
+    const renderFilteredOption =
+      filteredOptions &&
+      filteredOptions.map((option, i) =>
         React.cloneElement(option, {
           active: i === focus,
           key: i,
-          onClick: e => this.handleClick(e, option),
+          onClick: (e) => this.handleClick(e, option),
           refName: 'option',
           role: 'option',
-          ...focus === i && { ref: ref => this.activeChild = ref },
+          ...(focus === i && { ref: (ref) => (this.activeChild = ref) }),
         })
       );
 
-    const dropdownElement = (
-      this.anchorNode 
-      && isOpen 
-      && (
-        <EventOverlay
-          allowClickAway
-          anchorNode={this.anchorNode}
-          close={this.hidePopover}
-          isOpen={isOpen}
-          {...otherProps}
+    const dropdownElement = this.anchorNode && isOpen && (
+      <EventOverlay
+        allowClickAway
+        anchorNode={this.anchorNode}
+        close={this.hidePopover}
+        isOpen={isOpen}
+        {...otherProps}
+      >
+        <div
+          className="md-combo-box__options"
+          id={id}
+          role="listbox"
+          {...(this.anchorNode && {
+            style: {
+              width: this.anchorNode.getBoundingClientRect().width,
+            },
+          })}
         >
-          <div
-            className='md-combo-box__options'
-            id={id}
-            role='listbox'
-            {...this.anchorNode &&
-              {
-                style: {
-                  width: this.anchorNode.getBoundingClientRect().width
-                }
-              }
-            }
-          >
-            {renderFilteredOption}
-          </div>
-        </EventOverlay>
-      )
+          {renderFilteredOption}
+        </div>
+      </EventOverlay>
     );
 
     return (
       <div
         aria-controls={id}
-        aria-haspopup='listbox'
+        aria-haspopup="listbox"
         aria-expanded={isOpen}
-        className={
-          'md-combo-box' +
-          `${(className && ` ${className}`) || ''}`
-        }
-        role='combobox'
+        className={'md-combo-box' + `${(className && ` ${className}`) || ''}`}
+        role="combobox"
       >
         {input}
         {dropdownElement}

@@ -3,7 +3,7 @@ import { Icon, Input, InputSearch } from '@momentum-ui/react';
 
 export default class InputKitchenSink extends React.PureComponent {
   render() {
-    const inputs = value => (
+    const inputs = (value) => (
       <React.Fragment>
         <Input
           name={`inputSuccess${value}`}

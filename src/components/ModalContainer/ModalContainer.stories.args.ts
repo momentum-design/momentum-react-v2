@@ -2,10 +2,9 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from '.';
 
-export default {
-  ...commonStyles,
+const modalContainerArgTypes = {
   arrow: {
-    description: 'Where to render the `<ModalArrow />` for this `<ModalContainer />`.',
+    description: 'Where to render the `<ModalArrow />` for this component.',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.ARROWS)],
     table: {
@@ -18,7 +17,7 @@ export default {
     },
   },
   children: {
-    description: 'Provides the child nodes for this `<ModalContainer />`.',
+    description: 'Provides the child nodes for this component.',
     control: { type: 'text' },
     table: {
       type: {
@@ -30,7 +29,7 @@ export default {
     },
   },
   color: {
-    description: 'Provides the color of this `<ModalContainer />`.',
+    description: 'Provides the color of this component.',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     table: {
@@ -44,7 +43,7 @@ export default {
   },
   elevation: {
     description:
-      'Provides the elevation for this `<ModalContainer />`. This only applies to the box-shadow depth.',
+      'Provides the elevation for this component. This only applies to the box-shadow depth.',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
     table: {
@@ -57,9 +56,8 @@ export default {
     },
   },
   isPadded: {
-    description: 'Identifies if this `<ModalContainer />` should be rendered with padding.',
+    description: 'Identifies if this component should be rendered with padding.',
     control: { type: 'boolean' },
-    options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
     table: {
       type: {
         summary: 'boolean',
@@ -71,7 +69,7 @@ export default {
   },
   round: {
     description:
-      'Identifies if this `<ModalContainer />` should be rendered with round corners and to what degree.',
+      'Identifies if this component should be rendered with round corners and to what degree.',
     control: { type: 'select' },
     options: [undefined, ...Object.values(CONSTANTS.ROUNDS)],
     table: {
@@ -83,4 +81,11 @@ export default {
       },
     },
   },
+};
+
+export { modalContainerArgTypes };
+
+export default {
+  ...commonStyles,
+  ...modalContainerArgTypes,
 };

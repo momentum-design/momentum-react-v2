@@ -3,7 +3,22 @@ import { PressEvents } from '@react-types/shared';
 
 export type ListItemBaseSize = 32 | 40 | 50 | 70;
 
-export interface Props extends PressEvents {
+export interface ContextMenuState {
+  isOpen: boolean;
+  x: number;
+  y: number;
+}
+
+type ContextMenuAction = {
+  text?: string;
+  action?: () => void;
+};
+
+export interface ContextMenu {
+  contextMenuActions?: ContextMenuAction[];
+}
+
+export interface Props extends PressEvents, ContextMenu {
   /**
    * className prop description
    * Child components of this ButtonPill.
@@ -60,4 +75,15 @@ export interface Props extends PressEvents {
    * @default "listitem"
    */
   role?: string;
+
+  /**
+   * Determines wether the focus for this item should be inset or outset
+   * @default false
+   */
+  shouldItemFocusBeInset?: boolean;
+
+  /**
+   * Indicates wether this item is currently focusable
+   */
+  itemIndex?: number;
 }

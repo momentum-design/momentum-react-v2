@@ -4,47 +4,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { prefix } from '../utils/index';
 
-const ListSeparator = props => {
-  const {
-    children,
-    className,
-    lineColor,
-    margin,
-    textColor,
-    text,
-    textPadding,
-    ...otherProps
-  } = props;
+const ListSeparator = (props) => {
+  const { children, className, lineColor, margin, textColor, text, textPadding, ...otherProps } =
+    props;
 
   const lsClass = `${prefix}-list-separator`;
 
   return (
     <div
-      className={
-        `${lsClass}` +
-        `${className && ` ${className}` || ''}`
-      }
+      className={`${lsClass}` + `${(className && ` ${className}`) || ''}`}
       style={{
-        ...lineColor && {color: lineColor},
-        ...margin && {margin: margin},
+        ...(lineColor && { color: lineColor }),
+        ...(margin && { margin: margin }),
       }}
       {...otherProps}
     >
-
-    <span className={`${lsClass}__container`}>
-      {
-        children || text
-        &&
-          <span
-            className={`${lsClass}__text`}
-            style={{
-              ...textColor && {color: textColor},
-              ...textPadding && {padding: textPadding},
-            }}
-          >
-            {children ? children : text}
-          </span>
-      }
+      <span className={`${lsClass}__container`}>
+        {children ||
+          (text && (
+            <span
+              className={`${lsClass}__text`}
+              style={{
+                ...(textColor && { color: textColor }),
+                ...(textPadding && { padding: textPadding }),
+              }}
+            >
+              {children ? children : text}
+            </span>
+          ))}
       </span>
     </div>
   );
@@ -64,7 +51,7 @@ ListSeparator.propTypes = {
   /** @prop TextColor of the ListSeparator | null */
   textColor: PropTypes.string,
   /** @prop Padding around text of the ListSeparator | null */
-  textPadding:PropTypes.string,
+  textPadding: PropTypes.string,
 };
 
 ListSeparator.defaultProps = {

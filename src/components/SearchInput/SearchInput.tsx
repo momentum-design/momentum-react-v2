@@ -24,7 +24,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   const inputRef = ref || componentRef;
   const { focusProps, isFocused } = useFocusState(props);
 
-  const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, ref);
+  const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, inputRef);
 
   const handleClick = () => {
     if (inputRef.current) {

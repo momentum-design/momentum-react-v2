@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  CoachmarkContent,
-  CoachmarkDefault,
-} from './index';
+import { CoachmarkContent, CoachmarkDefault } from './index';
 
 export default class CoachmarkKitchenSink extends React.Component {
   render() {

@@ -15,39 +15,33 @@ export default class TopbarBlue extends React.Component {
   render() {
     return (
       <Topbar
-        color='blue'
-        title='test'
+        color="blue"
+        title="test"
         brandAnchorElement={
-          <a
-            href='javascript:void(0)'
-            title='Momentum UI'
-          >
-            <Icon name='cisco-logo' />
+          <a href="javascript:void(0)" title="Momentum UI">
+            <Icon name="cisco-logo" />
           </a>
         }
       >
-        <TopbarNav alignment='right'>
+        <TopbarNav alignment="right">
           <ListItem separator>Develop</ListItem>
           <ListItem>Styles</ListItem>
-          <ListSeparator direction='horizontal'/>
+          <ListSeparator direction="horizontal" />
           <ListItem>Layout</ListItem>
           <ListItem>Navigation</ListItem>
         </TopbarNav>
         <TopbarRight>
-          <div className='md-top-bar__user' />
-          <div className='md-top-bar__logged-out'>
-            <a href='javascript:void(0)'>Log In</a>
-            <Button color='blue' ariaLabel='myAriaLabel'>
+          <div className="md-top-bar__user" />
+          <div className="md-top-bar__logged-out">
+            <a href="javascript:void(0)">Log In</a>
+            <Button color="blue" ariaLabel="myAriaLabel">
               Button
             </Button>
           </div>
         </TopbarRight>
         <TopbarMobile shouldCloseOnClick={false}>
-          <a
-            href='javascript:void(0)'
-            title='Momentum UI'
-          >
-            <Icon name='cisco-logo' />
+          <a href="javascript:void(0)" title="Momentum UI">
+            <Icon name="cisco-logo" />
           </a>
           <ListItem>Develop</ListItem>
           <ListItem>Styles</ListItem>

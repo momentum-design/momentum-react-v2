@@ -5,15 +5,15 @@ import { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 export default {
   ...commonAriaButton,
   ...commonStyles,
-  children: {
-    description: 'Provides the child nodes for this element.',
-    control: { type: 'text' },
+  count: {
+    description: 'Number of reactions.',
+    control: { type: 'number' },
     table: {
       type: {
-        summary: 'ReactNode',
+        summary: 'number',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: 1,
       },
     },
   },
@@ -27,6 +27,18 @@ export default {
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.DISABLED,
+      },
+    },
+  },
+  reaction: {
+    description: '`<Reaction />` for this `<ReactionBadge />`.',
+    control: { type: 'none' },
+    table: {
+      type: {
+        summary: 'Reaction',
+      },
+      defaultValue: {
+        summary: 'undefined',
       },
     },
   },

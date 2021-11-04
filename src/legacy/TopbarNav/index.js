@@ -7,24 +7,20 @@ import { prefix } from '../utils/index';
 
 class TopbarNav extends React.Component {
   render() {
-    const {
-      alignment,
-      children,
-      className,
-      listProps,
-      ...otherProps
-    } = this.props;
+    const { alignment, children, className, listProps, ...otherProps } = this.props;
 
     return (
       <nav
         className={
           `${prefix}-top-bar__nav` +
           `${alignment ? ` ${prefix}-top-bar__nav--${alignment}` : ''}` +
-          `${className && ` ${className}` || ''}`
+          `${(className && ` ${className}`) || ''}`
         }
         {...otherProps}
       >
-        <List tabType='horizontal' {...listProps}>{children}</List>
+        <List tabType="horizontal" {...listProps}>
+          {children}
+        </List>
       </nav>
     );
   }

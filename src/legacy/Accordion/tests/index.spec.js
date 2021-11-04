@@ -1,11 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionGroup,
-  AccordionContent,
- } from '@momentum-ui/react';
+import { Accordion, AccordionHeader, AccordionGroup, AccordionContent } from '@momentum-ui/react';
 
 describe('tests for <Accordion />', () => {
   it('should match SnapShot', () => {
@@ -27,11 +22,7 @@ describe('tests for <Accordion />', () => {
   it('with multipleVisible as true, multiple AccordionGroups can be open', () => {
     const onSelect = jest.fn();
     const container = mount(
-      <Accordion
-        className="testClass"
-        multipleVisible
-        onSelect={onSelect}
-      >
+      <Accordion className="testClass" multipleVisible onSelect={onSelect}>
         <AccordionGroup>
           <AccordionHeader>
             <span>Hi</span>
@@ -63,18 +54,24 @@ describe('tests for <Accordion />', () => {
 
     const firstGroup = container.find('.md-accordion__header').at(0);
     firstGroup.simulate('click');
-    expect(container.find('.md-accordion__group').at(0).hasClass('md-accordion__group--active')).toEqual(true);
+    expect(
+      container.find('.md-accordion__group').at(0).hasClass('md-accordion__group--active')
+    ).toEqual(true);
     expect(onSelect).toHaveBeenCalledWith([0]);
     expect(container.find('AccordionHeader').at(0).props().focus).toEqual(true);
 
     const secondGroup = container.find('.md-accordion__header').at(1);
     secondGroup.simulate('click');
-    expect(container.find('.md-accordion__group').at(1).hasClass('md-accordion__group--active')).toEqual(true);
+    expect(
+      container.find('.md-accordion__group').at(1).hasClass('md-accordion__group--active')
+    ).toEqual(true);
     expect(onSelect).toHaveBeenCalledWith([0, 1]);
 
     const thirdGroup = container.find('.md-accordion__header').at(2);
     thirdGroup.simulate('click');
-    expect(container.find('.md-accordion__group').at(1).hasClass('md-accordion__group--active')).toEqual(true);
+    expect(
+      container.find('.md-accordion__group').at(1).hasClass('md-accordion__group--active')
+    ).toEqual(true);
   });
 
   it('with multipleVisible prop as false, only one AccordionGroup can be open', () => {
@@ -100,13 +97,19 @@ describe('tests for <Accordion />', () => {
         </AccordionGroup>
       </Accordion>
     );
-    expect(container.find('.md-accordion__group').at(0).hasClass('md-accordion__group--active')).toEqual(true);
+    expect(
+      container.find('.md-accordion__group').at(0).hasClass('md-accordion__group--active')
+    ).toEqual(true);
 
     const secondGroup = container.find('.md-accordion__header').at(1);
     secondGroup.simulate('click');
-    expect(container.find('.md-accordion__group').at(1).hasClass('md-accordion__group--active')).toEqual(true);
+    expect(
+      container.find('.md-accordion__group').at(1).hasClass('md-accordion__group--active')
+    ).toEqual(true);
     expect(onSelect).toHaveBeenCalledWith(1, 0);
-    expect(container.find('.md-accordion__group').at(0).hasClass('md-accordion__group--active')).toEqual(false);
+    expect(
+      container.find('.md-accordion__group').at(0).hasClass('md-accordion__group--active')
+    ).toEqual(false);
   });
 
   it('should clone children with props', () => {
@@ -122,7 +125,7 @@ describe('tests for <Accordion />', () => {
 
   it('should add custom class', () => {
     const container = shallow(
-      <Accordion className='testClass'>
+      <Accordion className="testClass">
         <AccordionGroup />
       </Accordion>
     );
@@ -133,10 +136,10 @@ describe('tests for <Accordion />', () => {
     try {
       shallow(
         <Accordion className="testClass" disabled focus>
-          <div/>
+          <div />
         </Accordion>
       );
-    } catch(e) {
+    } catch (e) {
       expect(e.message).toEqual('Accordion should contain one or more AccordionGroup as children.');
     }
   });
@@ -144,11 +147,7 @@ describe('tests for <Accordion />', () => {
   it('should handle keyboard keys', () => {
     const onSelect = jest.fn();
     const container = mount(
-      <Accordion
-        className="testClass"
-        multipleVisible
-        onSelect={onSelect}
-        >
+      <Accordion className="testClass" multipleVisible onSelect={onSelect}>
         <AccordionGroup disabled>
           <AccordionHeader>
             <span>Hi</span>
@@ -191,11 +190,8 @@ describe('tests for <Accordion />', () => {
     thirdHeader.simulate('keyDown', { which: 39, charCode: 39, key: 'Down' });
     expect(container.find('AccordionHeader').at(1).props().focus).toEqual(true);
 
-
     // press up and third element is in focus
     secondHeader.simulate('keyDown', { which: 38, charCode: 38, key: 'Up' });
     expect(container.find('AccordionHeader').at(2).props().focus).toEqual(true);
-
   });
-
 });

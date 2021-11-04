@@ -1,11 +1,10 @@
 import React from 'react';
- import {
-  Button,
-  Popover
-} from '@momentum-ui/react';
- export default function PopoverOverflow() {
+import { Button, Popover } from '@momentum-ui/react';
+export default function PopoverOverflow() {
   const tall = (
-    <span key="1" style={{ height: '3000px' }}>Popover(height: 3000px)</span>
+    <span key="1" style={{ height: '3000px' }}>
+      Popover(height: 3000px)
+    </span>
   );
   return (
     <div
@@ -15,7 +14,7 @@ import React from 'react';
         width: '100%',
         height: '500px',
         overflow: 'scroll',
-        padding: '125px'
+        padding: '125px',
       }}
     >
       <Popover
@@ -25,7 +24,7 @@ import React from 'react';
         direction={'bottom-center'}
         popoverTrigger={'Click'}
       >
-        <Button id='overflow' children='Tall' ariaLabel='Tall' />
+        <Button id="overflow" children="Tall" ariaLabel="Tall" />
       </Popover>
     </div>
   );

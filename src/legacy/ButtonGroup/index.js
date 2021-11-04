@@ -10,45 +10,42 @@ import SelectableContext from '../SelectableContext';
 
 class ButtonGroup extends React.Component {
   static getDerivedStateFromProps({ active }, state) {
-    return (
-      active
-        ? {
+    return active
+      ? {
           ...state,
           bgContext: {
             ...state.bgContext,
-            active
-          }
+            active,
+          },
         }
-        : state
-    );
+      : state;
   }
 
   constructor(props) {
     super(props);
 
     this.state = {
-      bgContext : {
+      bgContext: {
         active: props.type === 'pill' ? false : props.highlightSelected && props.active,
         focus: props.active || null,
         isButtonGroup: true,
-        ...props.pillWidth && {width: props.pillWidth},
+        ...(props.pillWidth && { width: props.pillWidth }),
       },
       selectContext: {
         parentOnSelect: this.handleSelect,
         parentKeyDown: this.handleKeyDown,
-      }
+      },
     };
   }
 
   componentDidMount() {
-    this.containerNode
-      && this.determineInitialFocus();
+    this.containerNode && this.determineInitialFocus();
   }
 
   componentDidUpdate(prevProps, prevState) {
     const { bgContext } = this.state;
     const { active } = this.props;
-    if ((prevProps.active !== active)) {
+    if (prevProps.active !== active) {
       this.setActiveAndFocus(active, focus);
     }
     if (!this._needsRefocus || !this.containerNode) return;
@@ -61,7 +58,10 @@ class ButtonGroup extends React.Component {
   determineInitialFocus = () => {
     const { bgContext } = this.state;
     const { focusFirstQuery, focusOnLoad } = this.props;
-    const items = qsa(this.containerNode, focusFirstQuery || `.md-button:not(.disabled):not(:disabled)`);
+    const items = qsa(
+      this.containerNode,
+      focusFirstQuery || `.md-button:not(.disabled):not(:disabled)`
+    );
 
     let focus = bgContext.focus;
     if (items.length) {
@@ -72,7 +72,7 @@ class ButtonGroup extends React.Component {
         this.containerNode.querySelector(`[data-md-event-key="${focus}"]`).focus();
       }
     }
-  }
+  };
 
   handleSelect = (e, opts) => {
     const { highlightSelected, onSelect, type } = this.props;
@@ -80,31 +80,28 @@ class ButtonGroup extends React.Component {
     const { eventKey } = opts;
 
     const items = this.getFocusableItems();
-    const index = items.indexOf(this.containerNode.querySelector(`[data-md-event-key="${eventKey}"]`));
+    const index = items.indexOf(
+      this.containerNode.querySelector(`[data-md-event-key="${eventKey}"]`)
+    );
 
     this.setFocus(items, index);
     // Don't do anything if onSelect Event Handler is present
     if (onSelect) {
       return onSelect(e, {
-        eventKey: this.getValue(items, index, 'event')
+        eventKey: this.getValue(items, index, 'event'),
       });
     }
     // Don't do anything if index is the same or outside of the bounds
-    if (
-      eventKey === active ||
-      index < 0 ||
-      index > items.length - 1
-    )
-    return;
+    if (eventKey === active || index < 0 || index > items.length - 1) return;
 
     // Call change event handler
-    this.setState(state => ({
+    this.setState((state) => ({
       bgContext: {
         ...state.bgContext,
-        active: type === 'pill' ? false : highlightSelected && this.getValue(items, index, 'event')
-      }
+        active: type === 'pill' ? false : highlightSelected && this.getValue(items, index, 'event'),
+      },
     }));
-  }
+  };
 
   getNextFocusedChild(items, current, offset) {
     if (!this.containerNode) return null;
@@ -120,103 +117,93 @@ class ButtonGroup extends React.Component {
       } else return possibleIndex;
     };
 
-    bgContext.focus !== this.getValue(items, getIndex(), 'event')
-      && this.setState({
-      bgContext: {
-        ...bgContext,
-        focus: this.getValue(items, getIndex(), 'event'),
-      }
-    });
+    bgContext.focus !== this.getValue(items, getIndex(), 'event') &&
+      this.setState({
+        bgContext: {
+          ...bgContext,
+          focus: this.getValue(items, getIndex(), 'event'),
+        },
+      });
 
     return this.getValue(items, getIndex(), 'event');
   }
 
-  getValue = (arr, index, attribute) => (
-    arr[index].attributes[`data-md-${attribute}-key`]
-      && arr[index].attributes[`data-md-${attribute}-key`].value
-  )
+  getValue = (arr, index, attribute) =>
+    arr[index].attributes[`data-md-${attribute}-key`] &&
+    arr[index].attributes[`data-md-${attribute}-key`].value;
 
-  getIncludesFirstCharacter = (str, char) =>
-    str
-      .charAt(0)
-      .toLowerCase()
-      .includes(char);
+  getIncludesFirstCharacter = (str, char) => str.charAt(0).toLowerCase().includes(char);
 
   setFocus = (items, index) => {
-    this.setState(state => ({
+    this.setState((state) => ({
       bgContext: {
         ...state.bgContext,
         focus: this.getValue(items, index, 'event'),
-      }
+      },
     }));
-  }
+  };
 
   setActiveAndFocus = (active, focus) => {
     const { type, highlightSelected } = this.props;
     this._needsRefocus = false;
-      this.setState(state => ({
-        bgContext: {
-          ...state.bgContext,
-          active: type === 'pill' ? false : highlightSelected && active,
-          focus: active || focus,
-        }
-      }));
-  }
+    this.setState((state) => ({
+      bgContext: {
+        ...state.bgContext,
+        active: type === 'pill' ? false : highlightSelected && active,
+        focus: active || focus,
+      },
+    }));
+  };
 
   setFocusByFirstCharacter = (char, focusIdx, items, length) => {
     const { bgContext } = this.state;
 
-    const newIndex = items
-      .reduce((agg, item, idx, arr) => {
+    const newIndex = items.reduce((agg, item, idx, arr) => {
+      const index =
+        focusIdx + idx + 1 > length ? Math.abs(focusIdx + idx - length) : focusIdx + idx + 1;
 
-        const index = focusIdx + idx + 1 > length
-          ? Math.abs(focusIdx + idx - length)
-          : focusIdx + idx + 1;
+      return !agg.length &&
+        this.getValue(arr, index, 'keyboard') &&
+        this.getIncludesFirstCharacter(this.getValue(arr, index, 'keyboard'), char)
+        ? agg.concat(this.getValue(arr, index, 'event'))
+        : agg;
+    }, []);
 
-        return (
-          !agg.length
-            && this.getValue(arr, index, 'keyboard')
-            && this.getIncludesFirstCharacter(this.getValue(arr, index, 'keyboard'), char)
-        )
-          ? agg.concat(this.getValue(arr, index, 'event'))
-          : agg;
-      },
-      []
-    );
-
-    typeof newIndex[0] === 'string'
-    && bgContext.focus !== newIndex[0]
-    && this.setState(state => ({
-      bgContext: {
-        ...state.bgContext,
-        focus: newIndex[0],
-      }
-    }));
-  }
+    typeof newIndex[0] === 'string' &&
+      bgContext.focus !== newIndex[0] &&
+      this.setState((state) => ({
+        bgContext: {
+          ...state.bgContext,
+          focus: newIndex[0],
+        },
+      }));
+  };
 
   getFocusableItems = () => {
     if (!this.containerNode) return null;
     const { focusQuery } = this.props;
 
     const defaultItems = qsa(this.containerNode, `.md-button:not(.disabled):not(:disabled)`);
-    const customItems = focusQuery && qsa(this.containerNode, focusQuery) || [];
+    const customItems = (focusQuery && qsa(this.containerNode, focusQuery)) || [];
 
     return customItems.length
-      ? customItems.filter(item => customItems.indexOf(item) >= 0)
+      ? customItems.filter((item) => customItems.indexOf(item) >= 0)
       : defaultItems;
-  }
+  };
 
-  handleKeyDown = e => {
+  handleKeyDown = (e) => {
     const { focus } = this.state.bgContext;
     let flag = false;
     const tgt = e.currentTarget;
     const char = e.key;
     const items = this.getFocusableItems();
-    const focusIdx = focus && items.indexOf(this.containerNode.querySelector(`[data-md-event-key="${focus}"]`)) || 0;
-    const length = items.length && items.length - 1 || 0;
+    const focusIdx =
+      (focus &&
+        items.indexOf(this.containerNode.querySelector(`[data-md-event-key="${focus}"]`))) ||
+      0;
+    const length = (items.length && items.length - 1) || 0;
 
-
-    const isPrintableCharacter = str => {
+    const isPrintableCharacter = (str) => {
       return str.length === 1 && str.match(/\S/);
     };
 
@@ -250,18 +237,10 @@ class ButtonGroup extends React.Component {
   };
 
   render() {
-    const {
-      ariaLabel,
-      children,
-      className,
-      justified,
-      theme,
-      type,
-      ...props
-     } = this.props;
+    const { ariaLabel, children, className, justified, theme, type, ...props } = this.props;
     const { bgContext, selectContext } = this.state;
 
-    const otherProps = omit({...props}, [
+    const otherProps = omit({ ...props }, [
       'active',
       'focusOnLoad',
       'focusFirstQuery',
@@ -279,17 +258,15 @@ class ButtonGroup extends React.Component {
             'md-button-group' +
             `${(theme && ` md-button-group--${theme}`) || ''}` +
             `${(justified && ` md-button-group--justified`) || ''}` +
-            `${(type && ` md-button-group--${type}` || '')}` +
+            `${(type && ` md-button-group--${type}`) || ''}` +
             `${(className && ` ${className}`) || ''}`
           }
           role="group"
-          ref={ref => this.containerNode = ref}
+          ref={(ref) => (this.containerNode = ref)}
           {...otherProps}
         >
           <UIDReset>
-            <ButtonGroupContext.Provider value={bgContext}>
-              {children}
-            </ButtonGroupContext.Provider>
+            <ButtonGroupContext.Provider value={bgContext}>{children}</ButtonGroupContext.Provider>
           </UIDReset>
         </div>
       </SelectableContext.Provider>
@@ -339,7 +316,7 @@ ButtonGroup.defaultProps = {
   onSelect: null,
   pillWidth: '60px',
   theme: '',
-  type:'',
+  type: '',
 };
 
 ButtonGroup.displayName = 'ButtonGroup';

@@ -97,15 +97,17 @@ const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInp
   };
 
   return (
-    <GlobalSearchInput
-      value={val}
-      filters={filters}
-      onFiltersChange={handleFiltersChange}
-      onChange={handleChange}
-      initialLabel={initialLabel}
-      {...mutatedProps}
-      searching={searching}
-    />
+    <div style={{ width: '40rem' }}>
+      <GlobalSearchInput
+        value={val}
+        filters={filters}
+        onFiltersChange={handleFiltersChange}
+        onChange={handleChange}
+        initialLabel={initialLabel}
+        {...mutatedProps}
+        searching={searching}
+      />
+    </div>
   );
 };
 
@@ -122,7 +124,7 @@ Example.argTypes = { ...argTypes };
 
 const PaddedExample: FC<GlobalSearchInputProps> = (props: GlobalSearchInputProps) => {
   return (
-    <div style={{ margin: '1rem' }}>
+    <div style={{ margin: '1rem', width: '20rem' }}>
       <GlobalSearchInput {...props} />
     </div>
   );
@@ -181,6 +183,22 @@ Common.parameters = {
             text: 'In: A Space',
             empty: 'Choose a space to filter by',
             nonempty: 'Filtering in a space',
+          },
+        },
+      ],
+    },
+    {
+      value: 'search term',
+      filters: [
+        {
+          term: 'in',
+          value: 'A really long filter name that is longer than the input width',
+          translations: {
+            filterAdded: 'In filter added',
+            filterRemoved: 'In filter removed',
+            text: 'In: A really long filter name that is longer than the input width',
+            empty: 'Choose a space to filter by',
+            nonempty: '',
           },
         },
       ],

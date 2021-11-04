@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Sidebar,
-  SidebarBody,
-  SidebarNav,
-  SidebarNavItem
-} from '@momentum-ui/react';
+import { Sidebar, SidebarBody, SidebarNav, SidebarNavItem } from '@momentum-ui/react';
 
 export default class DefaultSidebar extends React.PureComponent {
   render() {
@@ -12,28 +7,19 @@ export default class DefaultSidebar extends React.PureComponent {
       <Sidebar collapsable withToggle>
         <SidebarBody>
           <SidebarNav>
-            <SidebarNavItem
-              title='Level 1'
-              icon='record_20'
-            />
-            <SidebarNavItem
-              title='Level 1 + Sub'
-              icon='record_20'
-            >
-              <SidebarNavItem title='Level 2' />
-              <SidebarNavItem title='Level 2' />
-              <SidebarNavItem title='Level 2 + Sub'>
-                <SidebarNavItem title='Level 3' />
-                <SidebarNavItem title='Level 3' />
-                <SidebarNavItem title='Level 3' />
+            <SidebarNavItem title="Level 1" icon="record_20" />
+            <SidebarNavItem title="Level 1 + Sub" icon="record_20">
+              <SidebarNavItem title="Level 2" />
+              <SidebarNavItem title="Level 2" />
+              <SidebarNavItem title="Level 2 + Sub">
+                <SidebarNavItem title="Level 3" />
+                <SidebarNavItem title="Level 3" />
+                <SidebarNavItem title="Level 3" />
               </SidebarNavItem>
             </SidebarNavItem>
           </SidebarNav>
-          <SidebarNav title='section title'>
-            <SidebarNavItem
-              title='Level 1'
-              icon='record_20'
-            />
+          <SidebarNav title="section title">
+            <SidebarNavItem title="Level 1" icon="record_20" />
           </SidebarNav>
         </SidebarBody>
       </Sidebar>

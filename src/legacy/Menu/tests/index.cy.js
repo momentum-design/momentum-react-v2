@@ -6,28 +6,15 @@ describe('@momentum-ui/react', () => {
   });
 
   afterEach(() => {
-    cy
-      .get('body')
-      .click()
-      .end();
+    cy.get('body').click().end();
   });
 
   it('snapshot of custom menu', () => {
-      cy.get('#custom')
-        .click()
-        .get(`.${prefix}-menu`)
-        .should('exist')
-        .percySnapshot()
-        .end();
+    cy.get('#custom').click().get(`.${prefix}-menu`).should('exist').percySnapshot().end();
   });
 
   it('snapshot of default menu', () => {
-    cy.get('#default')
-      .click()
-      .get(`.${prefix}-menu`)
-      .should('exist')
-      .percySnapshot()
-      .end();
+    cy.get('#default').click().get(`.${prefix}-menu`).should('exist').percySnapshot().end();
   });
 
   it('snapshot of submenu menu', () => {

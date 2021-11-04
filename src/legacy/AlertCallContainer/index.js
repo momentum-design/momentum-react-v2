@@ -3,24 +3,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AlertCallContainer = props => {
-  const {
-    children,
-    ...otherProps
-  } = props;
+const AlertCallContainer = (props) => {
+  const { children, ...otherProps } = props;
 
   return (
-    <div 
-      className='md-alert__container md-alert__container--call'
-      {...otherProps}
-    >
+    <div className="md-alert__container md-alert__container--call" {...otherProps}>
       {children}
     </div>
   );
 };
 
 AlertCallContainer.defaultProps = {
-  children: null
+  children: null,
 };
 
 AlertCallContainer.propTypes = {

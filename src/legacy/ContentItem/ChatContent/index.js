@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { snakeCase } from '../../utils/snakeCase';
 import { Spinner } from '@momentum-ui/react';
 
-const ChatContentItem = props => {
+const ChatContentItem = (props) => {
   const {
     actionNode,
     aspect,
@@ -13,6 +13,7 @@ const ChatContentItem = props => {
     gifIcon,
     isProtected,
     loading,
+    subtitle,
     onClick,
     style,
     title,
@@ -20,32 +21,24 @@ const ChatContentItem = props => {
   } = props;
 
   const kebabify = (holder, aspect) => {
-
     const cases = ['fourThree', 'sixteenNine', 'threeTwo'];
     const kebab = snakeCase(aspect);
 
-      if(holder==='container'){
-        if(cases.includes(aspect)){
-          return ` md-content__chat-${kebab}`;
-        }
+    if (holder === 'container') {
+      if (cases.includes(aspect)) {
+        return ` md-content__chat-${kebab}`;
       }
-      else if(holder ==='inner'){
-        if(cases.includes(aspect)){
-          return ' md-content-file--full';
-        }
-        else{
-          return ` md-content-file--chat-${kebab}`;
-        }
+    } else if (holder === 'inner') {
+      if (cases.includes(aspect)) {
+        return ' md-content-file--full';
+      } else {
+        return ` md-content-file--chat-${kebab}`;
       }
+    }
   };
 
-  const handleKeyDown = e => {
-    if (
-      e.which === 32
-      || e.which === 13
-      || e.charCode === 32
-      || e.charCode === 13
-    ) {
+  const handleKeyDown = (e) => {
+    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       onClick && onClick(e);
       e.preventDefault();
     }
@@ -69,49 +62,39 @@ const ChatContentItem = props => {
         }
         onClick={onClick}
         onKeyDown={handleKeyDown}
-        role='presentation'
+        role="presentation"
         style={{
           backgroundImage: content && `url(${content})`,
-          ...style
+          ...style,
         }}
       >
-        {
-          loading
-          &&
-          <div className={`${(content ? ' md-content--opacity' : ' md-content--centered')}`}>
+        {loading && (
+          <div className={`${content ? ' md-content--opacity' : ' md-content--centered'}`}>
             <Spinner />
           </div>
-        }
-        {
-          gifIcon
-          &&
-          <i className={`${gifIcon} md-content__gif`} />
-        }
+        )}
+        {gifIcon && <i className={`${gifIcon} md-content__gif`} />}
       </div>
-      {
-        !loading
-        &&
+      {!loading && (
         <div
           className={
-            'md-content__hover' +
-            `${(aspect === 'wide' && ' md-content__hover--wide') || ''}`
+            'md-content__hover' + `${(aspect === 'wide' && ' md-content__hover--wide') || ''}`
           }
         >
-          <div className='md-content__hover-files'>
-            <span title={title} className='md-content__hover-files--file-name'>{title}</span>
-            <span className='md-content__hover-files--file-size'>{fileSize}</span>
+          <div className="md-content__hover-files">
+            <span title={title} className="md-content__hover-files--file-name">
+              {title}
+            </span>
+            <span className="md-content__hover-files--file-size">{subtitle}</span>
           </div>
-          {
-            actionNode && !isProtected &&
-            <div className='md-content__hover-icons'>
-              {actionNode}
-            </div>
-          }
+          {actionNode && !isProtected && (
+            <div className="md-content__hover-icons">{actionNode}</div>
+          )}
         </div>
-      }
+      )}
     </div>
-    );
-  };
+  );
+};
 
 ChatContentItem.defaultProps = {
   actionNode: null,
@@ -119,9 +102,10 @@ ChatContentItem.defaultProps = {
   className: '',
   content: '',
   fileSize: '',
-  gifIcon:'',
+  gifIcon: '',
   isProtected: null,
   loading: false,
+  subtitle: '',
   onClick: null,
   style: null,
   title: '',
@@ -139,7 +123,7 @@ ChatContentItem.propTypes = {
     'nineSixteen',
     'sixteenNine',
     'twoThree',
-    'threeTwo'
+    'threeTwo',
   ]),
   className: PropTypes.string,
   content: PropTypes.string,
@@ -147,6 +131,7 @@ ChatContentItem.propTypes = {
   gifIcon: PropTypes.string,
   isProtected: PropTypes.bool,
   loading: PropTypes.bool,
+  subtitle: PropTypes.node,
   onClick: PropTypes.func,
   style: PropTypes.object,
   title: PropTypes.string,

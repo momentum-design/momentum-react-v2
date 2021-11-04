@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FormSubSection = props => {
+const FormSubSection = (props) => {
   const { label, children, description } = props;
 
   return (
@@ -27,7 +27,7 @@ FormSubSection.propTypes = {
 FormSubSection.defaultProps = {
   children: null,
   description: '',
-  label: ''
+  label: '',
 };
 
 FormSubSection.displayName = 'FormSubSection';

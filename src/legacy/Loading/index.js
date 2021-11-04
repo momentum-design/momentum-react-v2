@@ -3,19 +3,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Loading = props => {
-  const {
-    small,
-  } = props;
+const Loading = (props) => {
+  const { small } = props;
 
   return (
-    <div className={
-      `md-loading` +
-      `${small ? ' md-loading--small' : ''}`
-    }>
-      <span className='md-loading__icon'/>
-      <span className='md-loading__icon'/>
-      <span className='md-loading__icon'/>
+    <div className={`md-loading` + `${small ? ' md-loading--small' : ''}`}>
+      <span className="md-loading__icon" />
+      <span className="md-loading__icon" />
+      <span className="md-loading__icon" />
     </div>
   );
 };

@@ -5,61 +5,61 @@ import PropTypes from 'prop-types';
 import isNumber from 'lodash/isNumber';
 import round from 'lodash/round';
 
-const Spinner = props => {
-  const {
-    className,
-    color,
-    showCheck,
-    percentage,
-    showPercentage,
-    size,
-    ...otherHTMLProps
-  } = props;
+const Spinner = (props) => {
+  const { className, color, showCheck, percentage, showPercentage, size, ...otherHTMLProps } =
+    props;
 
-  if(isNumber(percentage)) {
+  if (isNumber(percentage)) {
     if (size !== 36 && showPercentage) {
       /* eslint-disable no-console */
-      console.warn('[@momentum-ui/react] Spinner: Percentage will not be shown for sizes smaller than 36');
+      console.warn(
+        '[@momentum-ui/react] Spinner: Percentage will not be shown for sizes smaller than 36'
+      );
       /* eslint-enable no-console */
     }
     return (
-      <div className={
-        `md-spinner-progress` +
-        ` md-spinner-progress__percentage-${round(percentage)}` +
-        `${(size && ` md-spinner-progress--${size}`) || ''}` +
-        `${(color && ` md-spinner-progress--${color}`) || ''}` +
-        `${(className && ` ${className}`) || ''}`
+      <div
+        className={
+          `md-spinner-progress` +
+          ` md-spinner-progress__percentage-${round(percentage)}` +
+          `${(size && ` md-spinner-progress--${size}`) || ''}` +
+          `${(color && ` md-spinner-progress--${color}`) || ''}` +
+          `${(className && ` ${className}`) || ''}`
         }
         {...otherHTMLProps}
       >
         <div className="md-spinner-progress__circle">
           <div className="md-spinner-progress__mask md-spinner-progress__full">
-            <div className="md-spinner-progress__fill"/>
+            <div className="md-spinner-progress__fill" />
           </div>
           <div className="md-spinner-progress__mask md-spinner-progress__half">
-            <div className="md-spinner-progress__fill"/>
-            <div className="md-spinner-progress__fill md-spinner-progress__fix"/>
+            <div className="md-spinner-progress__fill" />
+            <div className="md-spinner-progress__fill md-spinner-progress__fix" />
           </div>
-          <div className={
-            `md-spinner-progress__inset-circle` +
-            `${showCheck && percentage === 100 && ' md-spinner-progress__inset-circle--check' || ''}`
+          <div
+            className={
+              `md-spinner-progress__inset-circle` +
+              `${
+                (showCheck && percentage === 100 && ' md-spinner-progress__inset-circle--check') ||
+                ''
+              }`
             }
           >
-            {
-              size === 36 && showPercentage && !showCheck
-              && <div className="md-spinner-progress__percentage">{round(percentage)}</div>
-            }
+            {size === 36 && showPercentage && !showCheck && (
+              <div className="md-spinner-progress__percentage">{round(percentage)}</div>
+            )}
           </div>
         </div>
       </div>
     );
   } else {
     return (
-      <i className={
-        `md-spinner` +
-        `${(size && ` md-spinner--${size}`) || ''}` +
-        `${(color && ` md-spinner--${color}`) || ''}` +
-        `${(className && ` ${className}`) || ''}`
+      <i
+        className={
+          `md-spinner` +
+          `${(size && ` md-spinner--${size}`) || ''}` +
+          `${(color && ` md-spinner--${color}`) || ''}` +
+          `${(className && ` ${className}`) || ''}`
         }
         {...otherHTMLProps}
       />

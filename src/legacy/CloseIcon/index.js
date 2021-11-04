@@ -3,15 +3,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CloseIcon = props => {
+const CloseIcon = (props) => {
   const { className, onClick, ...otherHTMLProps } = props;
 
   return (
     <button
-      className={
-      `md-close` +
-      `${(className && ` ${className}`) || ''}`
-      }
+      className={`md-close` + `${(className && ` ${className}`) || ''}`}
       onClick={onClick}
       {...otherHTMLProps}
     />
@@ -29,7 +26,6 @@ CloseIcon.propTypes = {
 
   /** @prop Optional css class string | '' */
   className: PropTypes.string,
-
 };
 
 CloseIcon.displayName = 'CloseIcon';

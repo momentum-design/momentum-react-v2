@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 export interface Props {
   /**
    * Custom class to be able to override the component's CSS
@@ -7,7 +7,7 @@ export interface Props {
   /**
    * the content of the text
    */
-  children?: string;
+  children?: ReactNode;
   /**
    * the token that defines the style (size, weight, line height) of the text
    */

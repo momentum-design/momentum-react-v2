@@ -7,19 +7,11 @@ describe('@momentum-ui/react', () => {
   });
 
   afterEach(() => {
-    cy
-      .get('body')
-      .click()
-      .end();
+    cy.get('body').click().end();
   });
 
   it('snapshot of arrow popover', () => {
-      cy.get('#arrow')
-        .focus()
-        .get(`.${prefix}-event-overlay`)
-        .should('exist')
-        .percySnapshot()
-        .end();
+    cy.get('#arrow').focus().get(`.${prefix}-event-overlay`).should('exist').percySnapshot().end();
   });
 
   it('snapshot of contained', () => {
@@ -76,12 +68,7 @@ describe('@momentum-ui/react', () => {
   });
 
   it('snapshot of offset popover', () => {
-      cy.get('#offset')
-        .focus()
-        .get(`.${prefix}-event-overlay`)
-        .should('exist')
-        .percySnapshot()
-        .end();
+    cy.get('#offset').focus().get(`.${prefix}-event-overlay`).should('exist').percySnapshot().end();
   });
 
   it('snapshot of overflow popover', () => {

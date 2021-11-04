@@ -4,7 +4,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class TabList extends React.Component {
-
   componentDidMount() {
     this.determineInitialFocus();
   }
@@ -24,13 +23,13 @@ class TabList extends React.Component {
     this.context.onActivate(focusIndex);
   };
 
-  setFocus = index => {
+  setFocus = (index) => {
     // Update state with selected index
     return this.context.onFocus(index);
   };
 
   handleClick = (event, index, disabled) => {
-    if(disabled) {
+    if (disabled) {
       event.preventDefault();
       event.stopPropagation();
     }
@@ -38,38 +37,29 @@ class TabList extends React.Component {
     return this.context.onActivate(index);
   };
 
-  getIncludesFirstCharacter = (str, char) =>
-    str
-      .charAt(0)
-      .toLowerCase()
-      .includes(char);
+  getIncludesFirstCharacter = (str, char) => str.charAt(0).toLowerCase().includes(char);
 
   setFocusByFirstCharacter = (char, currentIdx, length) => {
     const { children } = this.props;
 
-    const newIndex = React.Children.toArray(children).reduce(
-      (agg, child, idx, arr) => {
-        const index =
-          currentIdx + idx + 1 > length
-            ? Math.abs(currentIdx + idx - length)
-            : currentIdx + idx + 1;
-        const label =
-          arr[index].props.role === 'menuItem'
-            ? arr[index].props.label
-            : arr[index].props.heading;
+    const newIndex = React.Children.toArray(children).reduce((agg, child, idx, arr) => {
+      const index =
+        currentIdx + idx + 1 > length ? Math.abs(currentIdx + idx - length) : currentIdx + idx + 1;
+      const label =
+        arr[index].props.role === 'menuItem' ? arr[index].props.label : arr[index].props.heading;
 
-        return !agg.length && !arr[index].props.disabled && this.getIncludesFirstCharacter(label, char)
-          ? agg.concat(index)
-          : agg;
-      },
-      []
-    );
+      return !agg.length &&
+        !arr[index].props.disabled &&
+        this.getIncludesFirstCharacter(label, char)
+        ? agg.concat(index)
+        : agg;
+    }, []);
 
     this.setFocus(newIndex[0]);
   };
 
   handleListKeyPress = (e, idx, length, disabled) => {
-    if(disabled) {
+    if (disabled) {
       e.preventDefault();
       e.stopPropagation();
     }
@@ -95,7 +85,7 @@ class TabList extends React.Component {
         : possibleIndex;
     };
 
-    const isPrintableCharacter = str => {
+    const isPrintableCharacter = (str) => {
       return str.length === 1 && str.match(/\S/);
     };
     switch (e.which) {
@@ -170,17 +160,14 @@ class TabList extends React.Component {
           active: activeIndex === idx,
           focus: focus === idx,
           onPress: (e) => this.handleClick(e, idx, disabled),
-          onKeyDown: e => this.handleListKeyPress(e, idx, arrLength, disabled),
+          onKeyDown: (e) => this.handleListKeyPress(e, idx, arrLength, disabled),
           refName: 'navLink',
           isType: tabType,
         });
       });
 
     return (
-      <ul
-        className='md-tab__list'
-        role={role}
-        >
+      <ul className="md-tab__list" role={role}>
         {setTabs()}
       </ul>
     );
@@ -198,12 +185,12 @@ TabList.propTypes = {
    * the ARIA authoring practices for tabs:
    * https://www.w3.org/TR/2013/WD-wai-aria-practices-20130307/#tabpanel | 'TabList'
    */
-  role: PropTypes.string
+  role: PropTypes.string,
 };
 
 TabList.defaultProps = {
   children: null,
-  role: 'tablist'
+  role: 'tablist',
 };
 
 TabList.contextTypes = {

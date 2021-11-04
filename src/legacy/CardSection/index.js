@@ -3,19 +3,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CardSection = props => {
-  const {
-    children,
-    className,
-    full,
-    ...otherProps
-  } = props;
+const CardSection = (props) => {
+  const { children, className, full, ...otherProps } = props;
 
   return (
-    <div className={
-      `md-card-section` +
-      `${full && ` md-card-section--full` || ''}` +
-      `${className && ` ${className}` || ''}`
+    <div
+      className={
+        `md-card-section` +
+        `${(full && ` md-card-section--full`) || ''}` +
+        `${(className && ` ${className}`) || ''}`
       }
       {...otherProps}
     >

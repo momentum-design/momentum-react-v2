@@ -8,6 +8,73 @@ exports[`Avatar snapshot should match snapshot 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
+    title="Cisco Webex"
+  >
+    <span>
+      CW
+    </span>
+  </div>
+</Avatar>
+`;
+
+exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
+<Avatar
+  failureBadge={true}
+  title="Cisco Webex"
+>
+  <div
+    className="md-avatar-wrapper"
+    data-color="default"
+    data-size={24}
+    title="Cisco Webex"
+  >
+    <span>
+      CW
+    </span>
+    <div
+      className="md-avatar-presence-icon-wrapper"
+    >
+      <Icon
+        color="var(--avatar-presence-icon-dnd)"
+        name="warning"
+        scale={8}
+        weight="filled"
+      >
+        <div
+          className="md-icon-wrapper"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={8}
+            data-test="warning"
+            height="100%"
+            style={
+              Object {
+                "fill": "var(--avatar-presence-icon-dnd)",
+                "stroke": "var(--avatar-presence-icon-dnd)",
+              }
+            }
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+    </div>
+  </div>
+</Avatar>
+`;
+
+exports[`Avatar snapshot should match snapshot with hideDefaultTooltip 1`] = `
+<Avatar
+  hideDefaultTooltip={true}
+  title="Cisco Webex"
+>
+  <div
+    className="md-avatar-wrapper"
+    data-color="default"
+    data-size={24}
+    title=""
   >
     <span>
       CW
@@ -38,6 +105,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
           className=""
           data-autoscale={false}
           data-scale={16}
+          data-test="check"
           fill="currentColor"
           height="100%"
           stroke="currentColor"
@@ -67,6 +135,104 @@ exports[`Avatar snapshot should match snapshot with initials 1`] = `
 </Avatar>
 `;
 
+exports[`Avatar snapshot should match snapshot with isTyping 1`] = `
+<Avatar
+  isTyping={true}
+  title="Cisco Webex"
+>
+  <div
+    className="md-avatar-wrapper"
+    data-color="default"
+    data-size={24}
+    title="Cisco Webex"
+  >
+    <span
+      className="md-avatar-animation-wrapper"
+    >
+      <div
+        style={
+          Object {
+            "transform": "scale(0.4)",
+          }
+        }
+      >
+        <Loading
+          small={false}
+        >
+          <div
+            className="md-loading"
+          >
+            <span
+              className="md-loading__icon"
+            />
+            <span
+              className="md-loading__icon"
+            />
+            <span
+              className="md-loading__icon"
+            />
+          </div>
+        </Loading>
+      </div>
+    </span>
+    <span>
+      CW
+    </span>
+  </div>
+</Avatar>
+`;
+
+exports[`Avatar snapshot should match snapshot with onPress 1`] = `
+<Avatar
+  onPress={[Function]}
+  title="Cisco Webex"
+>
+  <ButtonSimple
+    aria-label="Cisco Webex"
+    className="md-avatar-button-wrapper"
+    onPress={[Function]}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-label="Cisco Webex"
+          className="md-avatar-button-wrapper"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <div
+            className="md-avatar-wrapper"
+            data-color="default"
+            data-size={24}
+            title="Cisco Webex"
+          >
+            <span>
+              CW
+            </span>
+          </div>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Avatar>
+`;
+
 exports[`Avatar snapshot should match snapshot with presence 1`] = `
 <div>
   <Avatar
@@ -78,6 +244,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -93,6 +260,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -113,6 +281,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="unread"
               height="100%"
               style={
                 Object {
@@ -137,6 +306,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -157,6 +327,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="camera-presence"
               height="100%"
               style={
                 Object {
@@ -181,6 +352,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -201,6 +373,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="meetings-presence"
               height="100%"
               style={
                 Object {
@@ -225,6 +398,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -245,6 +419,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="dnd-presence"
               height="100%"
               style={
                 Object {
@@ -269,6 +444,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -289,6 +465,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="share-screen"
               height="100%"
               style={
                 Object {
@@ -313,6 +490,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -333,6 +511,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="quiet-hours-presence"
               height="100%"
               style={
                 Object {
@@ -357,6 +536,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -377,6 +557,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="recents-presence"
               height="100%"
               style={
                 Object {
@@ -401,6 +582,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
+      title="Cisco Webex"
     >
       <span>
         CW
@@ -421,6 +603,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               className=""
               data-autoscale={false}
               data-scale={8}
+              data-test="pto-presence"
               height="100%"
               style={
                 Object {
@@ -448,6 +631,7 @@ exports[`Avatar snapshot should match snapshot with size 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={124}
+    title="CW"
   >
     <span>
       C
@@ -466,6 +650,7 @@ exports[`Avatar snapshot should match snapshot with src & alt 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
+    title="CW"
   >
     <span>
       C
@@ -490,6 +675,7 @@ exports[`Avatar snapshot should match snapshot with type 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
+    title="Cisco Webex"
   >
     <span>
       C

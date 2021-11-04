@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TabContent = props => {
+const TabContent = (props) => {
   const { children, activeIndex } = props;
 
   const setPanels = React.Children.map(children, (child, idx) => {

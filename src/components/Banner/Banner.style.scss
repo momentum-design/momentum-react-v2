@@ -1,0 +1,44 @@
+.md-banner-wrapper {
+  &[data-alert='true'] {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  > .md-modal-container-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 20rem;
+
+    > *:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    > .md-banner-actions {
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
+
+    > .md-banner-title {
+      color: var(--theme-text-primary-normal);
+    }
+
+    > .md-banner-description {
+      color: var(--theme-text-secondary-normal);
+    }
+
+    > .md-banner-details {
+      color: var(--theme-text-secondary-normal);
+    }
+  }
+
+  &[data-shape='square'] {
+    > .md-modal-container-content {
+      height: 20rem;
+    }
+  }
+}

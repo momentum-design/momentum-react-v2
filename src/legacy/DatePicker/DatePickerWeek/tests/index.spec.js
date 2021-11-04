@@ -19,24 +19,17 @@ describe('tests for <DatePickerWeek />', () => {
   });
 
   it('should match week SnapShot', () => {
-    const container = shallow(
-      <DatePickerWeek day={day} month={3} />
-    );
+    const container = shallow(<DatePickerWeek day={day} month={3} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render a div', () => {
-    const container = shallow(
-      <DatePickerWeek day={day} month={3} />
-    );
+    const container = shallow(<DatePickerWeek day={day} month={3} />);
     expect(container.find('.md-datepicker__week').length).toEqual(1);
   });
 
   it('should render 7 Day components', () => {
-    const container = mount(
-      <DatePickerWeek day={day} month={3} />
-    );
+    const container = mount(<DatePickerWeek day={day} month={3} />);
     expect(container.find('DatePickerDay')).toHaveLength(7);
   });
-
 });

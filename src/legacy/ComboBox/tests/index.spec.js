@@ -3,40 +3,29 @@ import { mount } from 'enzyme';
 import { ComboBox, ListItem, ListItemHeader } from '@momentum-ui/react';
 
 describe('tests for <ComboBox />', () => {
-
   it('should match SnapShot', () => {
-    const container = mount(
-      <ComboBox options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox options={['a', 'ab', 'abc']} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should apply className to ComboBox', () => {
-    const container = mount(
-      <ComboBox className='test' options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox className="test" options={['a', 'ab', 'abc']} />);
     expect(container.find('.md-combo-box').hasClass('test')).toEqual(true);
     expect(container.find('Input').length).toEqual(1);
   });
 
   it('should display search icon by default', () => {
-    const container = mount(
-      <ComboBox options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox options={['a', 'ab', 'abc']} />);
     expect(container.find('SearchInput').length).toEqual(1);
   });
 
   it('should not show searchIcon when hasSearchIcon is false', () => {
-    const container = mount(
-      <ComboBox hasSearchIcon={false} options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox hasSearchIcon={false} options={['a', 'ab', 'abc']} />);
     expect(container.find('Input').length).toEqual(1);
   });
 
   it('should show options when search string is does exists', () => {
-    const container = mount(
-      <ComboBox className='test' options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox className="test" options={['a', 'ab', 'abc']} />);
     container.find('.md-input').simulate('change', { target: { value: 'a' } });
     expect(container.find('ListItem').length).toEqual(3);
 
@@ -48,19 +37,14 @@ describe('tests for <ComboBox />', () => {
   });
 
   it('should not show any options when search string is does not exists', () => {
-    const container = mount(
-      <ComboBox className='test' options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox className="test" options={['a', 'ab', 'abc']} />);
     container.find('.md-input').simulate('change', { target: { value: 'xyz' } });
     expect(container.find('ListItem').length).toEqual(0);
-
   });
 
   it('should close the options list when an option is selected', () => {
     const onSelectFn = jest.fn();
-    const container = mount(
-      <ComboBox onSelect={onSelectFn} options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox onSelect={onSelectFn} options={['a', 'ab', 'abc']} />);
     container.find('.md-input').simulate('change', { target: { value: 'a' } });
     expect(container.find('ListItem').length).toEqual(3);
 
@@ -77,9 +61,7 @@ describe('tests for <ComboBox />', () => {
 
   it('should handle keyBoard events', () => {
     const onSelectFn = jest.fn();
-    const container = mount(
-      <ComboBox onSelect={onSelectFn} options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox onSelect={onSelectFn} options={['a', 'ab', 'abc']} />);
     container.find('.md-input').simulate('change', { target: { value: 'a' } });
     expect(container.find('ListItem').length).toEqual(3);
 
@@ -91,12 +73,10 @@ describe('tests for <ComboBox />', () => {
     container.find('.md-input').simulate('keyDown', { which: 40 });
     expect(container.find('.md-list-item').at(1).hasClass('active')).toEqual(true);
 
-
     container.find('.md-input').simulate('keyDown', { which: 13 });
     expect(container.find('.md-input').props().value).toEqual('ab');
     expect(container.find('ListItem').length).toEqual(0);
     expect(onSelectFn).toHaveBeenCalled();
-
   });
 
   it('should handle keyBoard events with few items disabled', () => {
@@ -119,24 +99,20 @@ describe('tests for <ComboBox />', () => {
     container.find('.md-input').simulate('keyDown', { which: 40 });
     expect(container.find('.md-list-item').at(2).hasClass('active')).toEqual(true);
 
-
     // focus on first option on down key
     container.find('.md-input').simulate('keyDown', { which: 40 });
     expect(container.find('.md-list-item').at(1).hasClass('active')).toEqual(true);
-
   });
 
   it('on click outside, should close the options list', () => {
-    const container = mount(
-      <ComboBox options={['a', 'ab', 'abc']} />
-    );
+    const container = mount(<ComboBox options={['a', 'ab', 'abc']} />);
 
     container.find('.md-input').simulate('change', { target: { value: 'a' } });
     expect(container.find('ListItem').length).toEqual(3);
 
     // Dispatch click outside Event
-    const evt = document.createEvent("HTMLEvents");
-    evt.initEvent("click", false, true);
+    const evt = document.createEvent('HTMLEvents');
+    evt.initEvent('click', false, true);
     document.dispatchEvent(evt);
 
     container.update();
@@ -147,29 +123,23 @@ describe('tests for <ComboBox />', () => {
     const onSelectFn = jest.fn();
     class ContainerDefault extends React.Component {
       state = {
-        options: []
+        options: [],
       };
 
       onChange = () => {
         this.setState({
-          options: ['a', 'ab']
+          options: ['a', 'ab'],
         });
       };
 
       render() {
         return (
-          <ComboBox
-            options={this.state.options}
-            onSelect={onSelectFn}
-            onChange={this.onChange}
-          />
+          <ComboBox options={this.state.options} onSelect={onSelectFn} onChange={this.onChange} />
         );
       }
     }
 
-    const container = mount(
-      <ContainerDefault />
-    );
+    const container = mount(<ContainerDefault />);
 
     container.find('.md-input').simulate('change', { target: { value: 'x' } });
     expect(container.find('ListItem').length).toEqual(2);
@@ -178,7 +148,6 @@ describe('tests for <ComboBox />', () => {
     expect(container.find('.md-input').props().value).toEqual('ab');
     expect(container.find('ListItem').length).toEqual(0);
     expect(onSelectFn).toHaveBeenCalled();
-
   });
 
   it('should render ListItem nodes as options if passed as ComboBox children', () => {
@@ -208,7 +177,7 @@ describe('tests for <ComboBox />', () => {
   it('should render ListItemHeader if passed as ComboBox children', () => {
     const container = mount(
       <ComboBox options={['a', 'ab']}>
-        <ListItemHeader header='test header' />
+        <ListItemHeader header="test header" />
         <ListItem label="x">
           <div className="content-1" />
         </ListItem>

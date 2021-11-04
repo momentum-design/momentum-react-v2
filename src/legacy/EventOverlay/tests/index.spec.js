@@ -1,13 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Button,
-  EventOverlay,
-  Popover
-} from '@momentum-ui/react';
+import { Button, EventOverlay, Popover } from '@momentum-ui/react';
 
 describe('tests for <EventOverlay />', () => {
-
   beforeAll(() => {
     jest.clearAllTimers();
     jest.useFakeTimers();
@@ -15,7 +10,7 @@ describe('tests for <EventOverlay />', () => {
 
   it('should match text SnapShot', () => {
     const props = {
-      anchorNode: <div />
+      anchorNode: <div />,
     };
 
     const container = shallow(
@@ -29,18 +24,17 @@ describe('tests for <EventOverlay />', () => {
 
   describe('should set classes for', () => {
     const content = (
-      <span className="popover-content" key="1">Hello how are you doing</span>
+      <span className="popover-content" key="1">
+        Hello how are you doing
+      </span>
     );
 
     it('top-center direction', () => {
       const container = mount(
-        <Popover
-          direction="top-center"
-          showArrow
-          content={content}
-          popoverTrigger={'MouseEnter'}
-        >
-          <button tabIndex={0} className="anchor">Hello</button>
+        <Popover direction="top-center" showArrow content={content} popoverTrigger={'MouseEnter'}>
+          <button tabIndex={0} className="anchor">
+            Hello
+          </button>
         </Popover>
       );
 
@@ -59,7 +53,9 @@ describe('tests for <EventOverlay />', () => {
           content={content}
           popoverTrigger={'MouseEnter'}
         >
-          <button tabIndex={0} className="anchor">Hello</button>
+          <button tabIndex={0} className="anchor">
+            Hello
+          </button>
         </Popover>
       );
 
@@ -71,13 +67,10 @@ describe('tests for <EventOverlay />', () => {
 
     it('left-center direction', () => {
       const container = mount(
-        <Popover
-          direction="left-center"
-          showArrow
-          content={content}
-          popoverTrigger={'MouseEnter'}
-        >
-          <button tabIndex={0} className="anchor">Hello</button>
+        <Popover direction="left-center" showArrow content={content} popoverTrigger={'MouseEnter'}>
+          <button tabIndex={0} className="anchor">
+            Hello
+          </button>
         </Popover>
       );
 
@@ -89,13 +82,10 @@ describe('tests for <EventOverlay />', () => {
 
     it('right-center direction', () => {
       const container = mount(
-        <Popover
-          direction="right-center"
-          showArrow
-          content={content}
-          popoverTrigger={'MouseEnter'}
-        >
-          <button tabIndex={0} className="anchor">Hello</button>
+        <Popover direction="right-center" showArrow content={content} popoverTrigger={'MouseEnter'}>
+          <button tabIndex={0} className="anchor">
+            Hello
+          </button>
         </Popover>
       );
 
@@ -108,7 +98,9 @@ describe('tests for <EventOverlay />', () => {
 
   it('on click outside, should close the popover', () => {
     const content = (
-      <span className="popover-content" key="1">Hello how are you doing</span>
+      <span className="popover-content" key="1">
+        Hello how are you doing
+      </span>
     );
 
     const container = mount(
@@ -120,7 +112,9 @@ describe('tests for <EventOverlay />', () => {
           content={content}
           popoverTrigger={'Click'}
         >
-          <button tabIndex={0} className="anchor">Hello</button>
+          <button tabIndex={0} className="anchor">
+            Hello
+          </button>
         </Popover>
       </div>
     );
@@ -139,7 +133,9 @@ describe('tests for <EventOverlay />', () => {
 
   it('on focus outside, should close the popover', () => {
     const content = (
-      <span className="popover-content" key="1">Hello how are you doing</span>
+      <span className="popover-content" key="1">
+        Hello how are you doing
+      </span>
     );
 
     const container = mount(
@@ -151,7 +147,9 @@ describe('tests for <EventOverlay />', () => {
           content={content}
           popoverTrigger={'Focus'}
         >
-          <button tabIndex={0} className="anchor">Hello</button>
+          <button tabIndex={0} className="anchor">
+            Hello
+          </button>
         </Popover>
       </div>
     );
@@ -176,7 +174,7 @@ describe('tests for <EventOverlay />', () => {
           content={'test'}
           popoverTrigger={'MouseEnter'}
         >
-          <Button ariaLabel='Hello'>Hello</Button>
+          <Button ariaLabel="Hello">Hello</Button>
         </Popover>
       </div>
     );
@@ -200,7 +198,7 @@ describe('tests for <EventOverlay />', () => {
           content={'test'}
           popoverTrigger={'Focus'}
         >
-          <Button ariaLabel='Hello'>Hello</Button>
+          <Button ariaLabel="Hello">Hello</Button>
         </Popover>
       </div>
     );
@@ -228,9 +226,10 @@ describe('tests for <EventOverlay />', () => {
           content={'test'}
           popoverTrigger={'Click'}
         >
-          <Button ariaLabel='Hello'>Hello</Button>
+          <Button ariaLabel="Hello">Hello</Button>
         </Popover>
-      </div>, { attachTo: focusContainer }
+      </div>,
+      { attachTo: focusContainer }
     );
 
     container.find('Button').simulate('click');
@@ -244,7 +243,9 @@ describe('tests for <EventOverlay />', () => {
 
   it('should handle maxHeight prop', () => {
     const content = (
-      <span className="popover-content" key="1">Hello how are you doing</span>
+      <span className="popover-content" key="1">
+        Hello how are you doing
+      </span>
     );
 
     const container = mount(
@@ -255,7 +256,9 @@ describe('tests for <EventOverlay />', () => {
         popoverTrigger={'MouseEnter'}
         maxHeight={300}
       >
-        <button tabIndex={0} className="anchor">Hello</button>
+        <button tabIndex={0} className="anchor">
+          Hello
+        </button>
       </Popover>
     );
 
@@ -263,12 +266,17 @@ describe('tests for <EventOverlay />', () => {
     jest.runAllTimers();
     container.update();
 
-    expect(container.find('.md-event-overlay__children').get(0).props.style).toHaveProperty('maxHeight', '300px');
+    expect(container.find('.md-event-overlay__children').get(0).props.style).toHaveProperty(
+      'maxHeight',
+      '300px'
+    );
   });
 
   it('should handle maxWidth prop', () => {
     const content = (
-      <span className="popover-content" key="1">Hello how are you doing</span>
+      <span className="popover-content" key="1">
+        Hello how are you doing
+      </span>
     );
 
     const container = mount(
@@ -279,7 +287,9 @@ describe('tests for <EventOverlay />', () => {
         popoverTrigger={'MouseEnter'}
         maxWidth={300}
       >
-        <button tabIndex={0} className="anchor">Hello</button>
+        <button tabIndex={0} className="anchor">
+          Hello
+        </button>
       </Popover>
     );
 
@@ -287,6 +297,9 @@ describe('tests for <EventOverlay />', () => {
     jest.runAllTimers();
     container.update();
 
-    expect(container.find('.md-event-overlay__children').get(0).props.style).toHaveProperty('maxWidth', '300px');
+    expect(container.find('.md-event-overlay__children').get(0).props.style).toHaveProperty(
+      'maxWidth',
+      '300px'
+    );
   });
 });

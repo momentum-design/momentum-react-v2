@@ -4,22 +4,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Tabs extends React.Component {
-
   state = {
     activeIndex: 0,
     focus: this.props.focus,
-    tabType: this.props.tabType
+    tabType: this.props.tabType,
   };
 
   getChildContext = () => {
     return {
       activeIndex: this.state.activeIndex,
-      onActivate: index => this.setSelected(index),
-      onFocus: index => this.setState({
-        focus: index
-      }),
+      onActivate: (index) => this.setSelected(index),
+      onFocus: (index) =>
+        this.setState({
+          focus: index,
+        }),
       focus: this.state.focus,
-      tabType: this.props.tabType
+      tabType: this.props.tabType,
     };
   };
 
@@ -34,28 +34,28 @@ class Tabs extends React.Component {
   }
 
   getMobileListItems = () => {
-    return React.Children.map(this.props.children, child => {
+    return React.Children.map(this.props.children, (child) => {
       if (child.type.displayName === 'TopbarNav') {
         return child.props.children;
       }
     });
   };
 
-  getChildrenElements = name => {
+  getChildrenElements = (name) => {
     let elementCount = 0;
 
-    React.Children.forEach(this.props.children, child => {
+    React.Children.forEach(this.props.children, (child) => {
       if (child.type.displayName === name) {
-        return child.props.children.length ?
-          (elementCount += child.props.children.length) :
-          elementCount++;
+        return child.props.children.length
+          ? (elementCount += child.props.children.length)
+          : elementCount++;
       }
     });
 
     return elementCount;
   };
 
-  setSelected = index => {
+  setSelected = (index) => {
     // Don't do anything if index is the same or outside of the bounds
     if (
       index === this.state.activeIndex ||
@@ -69,7 +69,7 @@ class Tabs extends React.Component {
 
     // Update state with selected index
     this.setState({
-      activeIndex: index
+      activeIndex: index,
     });
     // Call change event handler
     if (typeof this.props.onSelect === 'function') {
@@ -78,14 +78,9 @@ class Tabs extends React.Component {
   };
 
   render() {
-    const {
-      children,
-      className,
-      tabType,
-      justified
-    } = this.props;
+    const { children, className, tabType, justified } = this.props;
 
-    const cloneChildren = React.Children.map(children, child => {
+    const cloneChildren = React.Children.map(children, (child) => {
       if (child.type.displayName === 'TabContent') {
         return React.cloneElement(child, {
           activeIndex: this.state.activeIndex,
@@ -93,7 +88,7 @@ class Tabs extends React.Component {
       } else if (child.type.displayName === 'TabList') {
         return React.cloneElement(child, {
           role: 'tab',
-          isType: this.props.tabType
+          isType: this.props.tabType,
         });
       } else {
         return child;
@@ -101,17 +96,18 @@ class Tabs extends React.Component {
     });
 
     return (
-      <div className = {
-        'md-tab' +
-        `${(tabType && ` md-tab--${tabType}`) || ''}` +
-        `${(justified && ` md-tab--justified`) || ''}` +
-        (className && ` ${className}`) || ''
-      }
-      type = {
-        tabType
-      } > {
-        cloneChildren
-      } </div>
+      <div
+        className={
+          'md-tab' +
+            `${(tabType && ` md-tab--${tabType}`) || ''}` +
+            `${(justified && ` md-tab--justified`) || ''}` +
+            (className && ` ${className}`) || ''
+        }
+        type={tabType}
+      >
+        {' '}
+        {cloneChildren}{' '}
+      </div>
     );
   }
 }

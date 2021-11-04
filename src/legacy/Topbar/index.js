@@ -21,55 +21,48 @@ class Topbar extends React.Component {
 
     const topBarClass = `${prefix}-top-bar`;
     const brandClass = `${prefix}-brand`;
-    const addPadding = (image || icon ) && title;
+    const addPadding = (image || icon) && title;
 
-    const brandNodeChildren = ([
+    const brandNodeChildren = [
       <div
-        className={
-          `${brandClass}__logo` +
-          `${(addPadding && ` ${brandClass}__logo--pad`) || ''}`
-        }
+        className={`${brandClass}__logo` + `${(addPadding && ` ${brandClass}__logo--pad`) || ''}`}
         key={`${brandClass}__logo`}
       >
-        {
-          image
-            ? image
-            : <i className={`icon ${icon}`} />
-        }
+        {image ? image : <i className={`icon ${icon}`} />}
       </div>,
-      ...title && (
+      ...(title && (
         <div className={`${brandClass}__title`} key={`${brandClass}__title`}>
           {title}
         </div>
-      )
-    ]);
+      )),
+    ];
 
-    const getBrandAnchor = () => (
-      brandAnchorElement
-        ? React.cloneElement(
-            brandAnchorElement,
-            {
-              className:
-                `${brandClass}` +
-                `${(brandAnchorElement.props.className && ` ${brandAnchorElement.props.className}`) || ''}`,
-            },
-            brandNodeChildren
-          )
-        : <a className={brandClass} href={anchor}>
-            {brandNodeChildren}
-          </a>
-    );
+    const getBrandAnchor = () =>
+      brandAnchorElement ? (
+        React.cloneElement(
+          brandAnchorElement,
+          {
+            className:
+              `${brandClass}` +
+              `${
+                (brandAnchorElement.props.className && ` ${brandAnchorElement.props.className}`) ||
+                ''
+              }`,
+          },
+          brandNodeChildren
+        )
+      ) : (
+        <a className={brandClass} href={anchor}>
+          {brandNodeChildren}
+        </a>
+      );
 
-    const brandNode = (
-      <div className={`${topBarClass}__brand`}>
-        {getBrandAnchor()}
-      </div>
-    );
+    const brandNode = <div className={`${topBarClass}__brand`}>{getBrandAnchor()}</div>;
 
-    const injectChildren = React.Children.map(children, child => {
-      if (child && (child.type.displayName === 'TopbarMobile') && (!child.props.brandNode)) {
+    const injectChildren = React.Children.map(children, (child) => {
+      if (child && child.type.displayName === 'TopbarMobile' && !child.props.brandNode) {
         return React.cloneElement(child, {
-          brandNode
+          brandNode,
         });
       } else {
         return child;
@@ -80,11 +73,11 @@ class Topbar extends React.Component {
       <div
         className={
           `${topBarClass}` +
-          `${fixed && ` ${topBarClass}--fixed` || ''}` +
-          `${color && ` ${topBarClass}--${color}` || ''}` +
-          `${className && ` ${className}` || ''}`
+          `${(fixed && ` ${topBarClass}--fixed`) || ''}` +
+          `${(color && ` ${topBarClass}--${color}`) || ''}` +
+          `${(className && ` ${className}`) || ''}`
         }
-        role='navigation'
+        role="navigation"
         {...otherProps}
       >
         <div className={`${topBarClass}__container`}>

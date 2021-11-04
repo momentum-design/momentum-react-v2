@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TabHeader = props => {
+const TabHeader = (props) => {
   const { heading, subHeading } = props;
 
   return (

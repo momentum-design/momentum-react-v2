@@ -179,6 +179,7 @@ exports[`Select snapshot should match snapshot 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -291,6 +292,7 @@ exports[`Select snapshot should match snapshot 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -487,6 +489,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -599,6 +602,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -796,6 +800,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -908,6 +913,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -1199,10 +1205,13 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       role="option"
                       tabIndex={0}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -1300,10 +1309,13 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -1571,6 +1583,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -1683,6 +1696,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -1880,6 +1894,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -1992,6 +2007,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -2199,6 +2215,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -2311,6 +2328,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -2606,10 +2624,13 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -2707,10 +2728,13 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -2977,6 +3001,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -3089,6 +3114,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -3287,6 +3313,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -3399,6 +3426,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -3690,10 +3718,13 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -3791,10 +3822,13 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -4064,6 +4098,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -4178,6 +4213,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -4400,6 +4436,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -4514,6 +4551,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -4738,6 +4776,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -4852,6 +4891,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -5166,10 +5206,13 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       role="option"
                       tabIndex={0}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -5229,6 +5272,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                       className=""
                                       data-autoscale={false}
                                       data-scale={16}
+                                      data-test="check"
                                       fill="currentColor"
                                       height="100%"
                                       style={
@@ -5301,10 +5345,13 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       role="option"
                       tabIndex={-1}
                     >
-                      <FocusRing>
+                      <FocusRing
+                        isInset={false}
+                      >
                         <FocusRing
                           focusClass="md-focus-ring-wrapper children"
                           focusRingClass="md-focus-ring-wrapper children"
+                          isInset={false}
                         >
                           <li
                             aria-describedby={null}
@@ -5581,6 +5628,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"
@@ -5693,6 +5741,309 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
+                  data-test="arrow-down"
+                  fill="currentColor"
+                  height="100%"
+                  stroke="currentColor"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
+          </span>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </div>
+</Select>
+`;
+
+exports[`Select snapshot should match snapshot with title 1`] = `
+<Select
+  title="Example text"
+>
+  <div
+    className="md-select-wrapper"
+  >
+    <HiddenSelect
+      state={
+        Object {
+          "close": [Function],
+          "collection": ListCollection {
+            "firstKey": "$.0",
+            "iterable": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "keyMap": Map {
+              "$.0" => Object {
+                "aria-label": undefined,
+                "childNodes": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "hasChildNodes": false,
+                "index": 0,
+                "key": "$.0",
+                "level": 0,
+                "nextKey": "$.1",
+                "parentKey": null,
+                "prevKey": undefined,
+                "props": Object {
+                  "children": "Item 1",
+                },
+                "rendered": "Item 1",
+                "shouldInvalidate": undefined,
+                "textValue": "Item 1",
+                "type": "item",
+                "value": undefined,
+                "wrapper": undefined,
+              },
+              "$.1" => Object {
+                "aria-label": undefined,
+                "childNodes": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "hasChildNodes": false,
+                "index": 1,
+                "key": "$.1",
+                "level": 0,
+                "nextKey": undefined,
+                "parentKey": null,
+                "prevKey": "$.0",
+                "props": Object {
+                  "children": "Item 2",
+                },
+                "rendered": "Item 2",
+                "shouldInvalidate": undefined,
+                "textValue": "Item 2",
+                "type": "item",
+                "value": undefined,
+                "wrapper": undefined,
+              },
+            },
+            "lastKey": "$.1",
+          },
+          "disabledKeys": Set {},
+          "focusStrategy": null,
+          "isFocused": false,
+          "isOpen": false,
+          "open": [Function],
+          "selectedItem": null,
+          "selectedKey": null,
+          "selectionManager": SelectionManager {
+            "_isSelectAll": null,
+            "allowsCellSelection": false,
+            "collection": ListCollection {
+              "firstKey": "$.0",
+              "iterable": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "keyMap": Map {
+                "$.0" => Object {
+                  "aria-label": undefined,
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 0,
+                  "key": "$.0",
+                  "level": 0,
+                  "nextKey": "$.1",
+                  "parentKey": null,
+                  "prevKey": undefined,
+                  "props": Object {
+                    "children": "Item 1",
+                  },
+                  "rendered": "Item 1",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Item 1",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+                "$.1" => Object {
+                  "aria-label": undefined,
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 1,
+                  "key": "$.1",
+                  "level": 0,
+                  "nextKey": undefined,
+                  "parentKey": null,
+                  "prevKey": "$.0",
+                  "props": Object {
+                    "children": "Item 2",
+                  },
+                  "rendered": "Item 2",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Item 2",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+              },
+              "lastKey": "$.1",
+            },
+            "state": Object {
+              "childFocusStrategy": null,
+              "disabledKeys": Set {},
+              "disallowEmptySelection": true,
+              "focusedKey": null,
+              "isFocused": false,
+              "selectedKeys": Set {},
+              "selectionMode": "single",
+              "setFocused": [Function],
+              "setFocusedKey": [Function],
+              "setSelectedKeys": [Function],
+            },
+          },
+          "setFocused": [Function],
+          "setSelectedKey": [Function],
+          "toggle": [Function],
+        }
+      }
+      triggerRef={
+        Object {
+          "current": <button
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="test-ID"
+            class="md-select-dropdown-input"
+            id="test-ID"
+            title="Example text"
+            type="button"
+          >
+            <span
+              class="md-select-selected-item-wrapper"
+              id="test-ID"
+            />
+            <span
+              aria-hidden="true"
+              class="md-select-icon-wrapper"
+            >
+              <div
+                class="md-icon-wrapper"
+              >
+                <svg
+                  class=""
+                  data-autoscale="false"
+                  data-scale="16"
+                  data-test="arrow-down"
+                  fill="currentColor"
+                  height="100%"
+                  stroke="currentColor"
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </span>
+          </button>,
+        }
+      }
+    >
+      <div
+        aria-hidden={true}
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          onFocus={[Function]}
+          style={
+            Object {
+              "fontSize": 16,
+            }
+          }
+          tabIndex={-1}
+          type="text"
+        />
+        <label>
+          <select
+            onChange={[Function]}
+            size={2}
+            tabIndex={-1}
+            value=""
+          >
+            <option />
+            <option
+              key="$.0"
+              value="$.0"
+            >
+              Item 1
+            </option>
+            <option
+              key="$.1"
+              value="$.1"
+            >
+              Item 2
+            </option>
+          </select>
+        </label>
+      </div>
+    </HiddenSelect>
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-controls={null}
+          aria-expanded={false}
+          aria-haspopup="listbox"
+          aria-labelledby="test-ID"
+          className="md-select-dropdown-input"
+          id="test-ID"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          title="Example text"
+          type="button"
+        >
+          <span
+            className="md-select-selected-item-wrapper"
+            id="test-ID"
+          />
+          <span
+            aria-hidden="true"
+            className="md-select-icon-wrapper"
+          >
+            <Icon
+              name="arrow-down"
+              scale={16}
+              weight="bold"
+            >
+              <div
+                className="md-icon-wrapper"
+              >
+                <svg
+                  className=""
+                  data-autoscale={false}
+                  data-scale={16}
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   stroke="currentColor"

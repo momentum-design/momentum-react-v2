@@ -1,9 +1,6 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import {
-  Button,
-  DatePicker,
-} from '@momentum-ui/react';
+import { Button, DatePicker } from '@momentum-ui/react';
 
 export default class DatePickerKitchenSink extends React.Component {
   render() {
@@ -15,11 +12,7 @@ export default class DatePickerKitchenSink extends React.Component {
     return (
       <React.Fragment>
         <DatePicker selectedDate={date().toDate()}>
-          <Button
-            children='Pick a Date'
-            ariaLabel='DatePicker'
-            id='default-1'
-          />
+          <Button children="Pick a Date" ariaLabel="DatePicker" id="default-1" />
         </DatePicker>
       </React.Fragment>
     );

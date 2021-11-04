@@ -1,27 +1,20 @@
 import React from 'react';
-import {
-  Button,
-  Menu,
-  MenuItem,
-  MenuOverlay,
-  SubMenu
-} from '@momentum-ui/react';
+import { Button, Menu, MenuItem, MenuOverlay, SubMenu } from '@momentum-ui/react';
 export default class MenuOverlaySubMenu extends React.PureComponent {
   onClick(event, value) {
     alert(`${value} clicked`);
   }
   render() {
-    return(
+    return (
       <MenuOverlay
         menuTrigger={
-          <Button id='submenu' ariaLabel='Show Menu'>Show Menu</Button>
+          <Button id="submenu" ariaLabel="Show Menu">
+            Show Menu
+          </Button>
         }
       >
         <Menu>
-          <SubMenu
-            selectedValue="English"
-            label="Language"
-          >
+          <SubMenu selectedValue="English" label="Language">
             <MenuItem label="English" />
             <MenuItem label="Spanish" />
           </SubMenu>

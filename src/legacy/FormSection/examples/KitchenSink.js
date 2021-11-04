@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  FormSectionDefault,
-} from './index';
+import { FormSectionDefault } from './index';
 
 export default class FormSectionKitchenSink extends React.Component {
   render() {

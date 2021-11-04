@@ -6,7 +6,7 @@ describe('tests for <Link />', () => {
   it('should match SnapShot', () => {
     const container = mount(
       <Link>
-        <div className='child' />
+        <div className="child" />
       </Link>
     );
 
@@ -15,19 +15,18 @@ describe('tests for <Link />', () => {
 
   it('should render className if prop is passed', () => {
     const container = shallow(
-      <Link className='dark'>
-        <div className='child' />
+      <Link className="dark">
+        <div className="child" />
       </Link>
     );
 
     expect(container.find('.dark').exists()).toBeTruthy();
   });
 
-
   it('should render color if prop is passed', () => {
     const container = shallow(
-      <Link color='green'>
-        <div className='child' />
+      <Link color="green">
+        <div className="child" />
       </Link>
     );
 
@@ -36,8 +35,8 @@ describe('tests for <Link />', () => {
 
   it('should render theme if prop is passed', () => {
     const container = shallow(
-      <Link theme='dark'>
-        <div className='child' />
+      <Link theme="dark">
+        <div className="child" />
       </Link>
     );
 
@@ -47,18 +46,17 @@ describe('tests for <Link />', () => {
   it('should render disabled if prop is passed', () => {
     const container = shallow(
       <Link disabled>
-        <div className='child' />
+        <div className="child" />
       </Link>
     );
 
     expect(container.find('[disabled=true]').exists()).toBeTruthy();
   });
 
-
   it('should render children', () => {
     const container = shallow(
       <Link>
-        <div className='child' />
+        <div className="child" />
       </Link>
     );
 
