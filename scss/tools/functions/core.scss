@@ -7,7 +7,6 @@
 @mixin exports($name) {
   // Check if a module is already on the list
   $module_index: index($modules, $name);
-  @debug $modules;
 
   @if (($module_index == null) or ($module_index == false)) {
     $modules: append($modules, $name) !global;
