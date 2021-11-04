@@ -31,6 +31,32 @@ export default {
       },
     },
   },
+  fillColor: {
+    defaultValue: undefined,
+    description: 'Fill color for the icon.',
+    control: { type: 'color' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  strokeColor: {
+    defaultValue: undefined,
+    description: 'Stroke color for the icon.',
+    control: { type: 'color' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   name: {
     defaultValue: 'accessibility',
     description: 'Name of the icon.',

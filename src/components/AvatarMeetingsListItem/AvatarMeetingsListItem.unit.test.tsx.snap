@@ -172,9 +172,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                     className="md-avatar-presence-icon-wrapper"
                   >
                     <Icon
-                      color="var(--avatar-presence-icon-active)"
+                      fillColor="var(--avatar-presence-icon-active)"
                       name="unread"
                       scale={12}
+                      strokeColor="none"
                       weight="filled"
                     >
                       <div
@@ -189,7 +190,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                           style={
                             Object {
                               "fill": "var(--avatar-presence-icon-active)",
-                              "stroke": "var(--avatar-presence-icon-active)",
+                              "stroke": "none",
                             }
                           }
                           viewBox="0, 0, 32, 32"
