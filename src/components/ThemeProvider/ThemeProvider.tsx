@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { OverlayProvider } from '@react-aria/overlays';
 
 import '@momentum-ui/design-tokens/dist/index.css';
 
@@ -14,7 +15,7 @@ const ThemeProvider: FC<Props> = ({ children, id, theme }: Props) => (
     className={`${STYLE.wrapper} ${STYLE.globals} ${THEME_CLASS_PREFIX}-${theme || DEFAULTS.THEME}`}
     id={id}
   >
-    {children}
+    <OverlayProvider>{children}</OverlayProvider>
   </div>
 );
 

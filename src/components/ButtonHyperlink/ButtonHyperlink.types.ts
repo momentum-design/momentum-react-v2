@@ -15,4 +15,9 @@ export interface Props extends AriaButtonProps {
    * Whether or not this ButtonDialpad is disabled.
    */
   disabled?: boolean;
+
+  /**
+   * title to use for this component.
+   */
+  title?: string;
 }

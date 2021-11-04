@@ -24,6 +24,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     name,
     placeholder,
     direction = DEFAULTS.DIRECTION,
+    title,
   } = props;
   const state = useSelectState(props);
 
@@ -119,6 +120,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
             { [STYLE.open]: state.isOpen }
           )}
           ref={selectRef}
+          title={title}
         >
           <span {...valueProps} className={STYLE.selectedItemWrapper}>
             {state.selectedItem ? state.selectedItem.rendered : placeholder}

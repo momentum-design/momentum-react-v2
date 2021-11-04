@@ -53,7 +53,15 @@ describe('<ButtonSimple />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    /* ...additional snapshot tests... */
+    it('should match snapshot with title', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const container = mount(<ButtonSimple title={title} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -94,7 +102,17 @@ describe('<ButtonSimple />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    /* ...additional attribute tests... */
+    it('should have provided title when title is provided', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const element = mount(<ButtonSimple title={title} />)
+        .find(ButtonSimple)
+        .getDOMNode();
+
+      expect(element.getAttribute('title')).toBe(title);
+    });
   });
 
   describe('actions', () => {

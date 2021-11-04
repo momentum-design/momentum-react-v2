@@ -79,6 +79,16 @@ describe('<ButtonPill />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with title', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const container = mount(<ButtonDialpad title={title} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -177,6 +187,18 @@ describe('<ButtonPill />', () => {
 
       expect(target.innerHTML).toBe(child);
       expect(target.innerHTML).not.toBe(primaryText);
+    });
+
+    it('should have provided title when title is provided', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const element = mount(<ButtonDialpad title={title} />)
+        .find(ButtonDialpad)
+        .getDOMNode();
+
+      expect(element.getAttribute('title')).toBe(title);
     });
   });
 

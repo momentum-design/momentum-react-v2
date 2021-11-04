@@ -71,3 +71,37 @@ exports[`ButtonHyperlink snapshot should match snapshot when disabled 1`] = `
   </FocusRing>
 </ButtonHyperlink>
 `;
+
+exports[`ButtonHyperlink snapshot should match snapshot with title 1`] = `
+<ButtonHyperlink
+  title="Example Text"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        className="md-button-hyperlink-wrapper"
+        data-disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        title="Example Text"
+        type="button"
+      />
+    </FocusRing>
+  </FocusRing>
+</ButtonHyperlink>
+`;
