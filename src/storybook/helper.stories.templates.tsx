@@ -3,7 +3,6 @@
 
 import React, { FC, ReactElement } from 'react';
 import { Story } from '@storybook/react';
-import Flex from '../components/Flex';
 
 /**
  * Generate a Story Template with the provided component. See the [Storybook Documentation]{@link https://storybook.js.org/docs/react/writing-stories/introduction#using-args}.
