@@ -35,9 +35,10 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
       className="md-avatar-presence-icon-wrapper"
     >
       <Icon
-        color="var(--avatar-presence-icon-dnd)"
+        fillColor="var(--avatar-presence-icon-dnd)"
         name="warning"
         scale={8}
+        strokeColor="none"
         weight="filled"
       >
         <div
@@ -52,7 +53,7 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
             style={
               Object {
                 "fill": "var(--avatar-presence-icon-dnd)",
-                "stroke": "var(--avatar-presence-icon-dnd)",
+                "stroke": "none",
               }
             }
             viewBox="0, 0, 32, 32"
@@ -269,9 +270,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-active)"
+          fillColor="var(--avatar-presence-icon-active)"
           name="unread"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -286,7 +288,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-active)",
-                  "stroke": "var(--avatar-presence-icon-active)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -315,9 +317,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-meeting)"
+          fillColor="var(--avatar-presence-icon-meeting)"
           name="camera-presence"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -332,7 +335,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-meeting)",
-                  "stroke": "var(--avatar-presence-icon-meeting)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -361,9 +364,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-schedule)"
+          fillColor="var(--avatar-presence-icon-schedule)"
           name="meetings-presence"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -378,7 +382,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-schedule)",
-                  "stroke": "var(--avatar-presence-icon-schedule)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -407,9 +411,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-dnd)"
+          fillColor="var(--avatar-presence-icon-dnd)"
           name="dnd-presence"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -424,7 +429,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-dnd)",
-                  "stroke": "var(--avatar-presence-icon-dnd)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -453,9 +458,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-presenting)"
+          fillColor="var(--avatar-presence-icon-presenting)"
           name="share-screen"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -470,7 +476,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-presenting)",
-                  "stroke": "var(--avatar-presence-icon-presenting)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -499,9 +505,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-quiet-hours)"
+          fillColor="var(--avatar-presence-icon-quiet-hours)"
           name="quiet-hours-presence"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -516,7 +523,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-quiet-hours)",
-                  "stroke": "var(--avatar-presence-icon-quiet-hours)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -545,9 +552,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-away)"
+          fillColor="var(--avatar-presence-icon-away)"
           name="recents-presence"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -562,7 +570,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-away)",
-                  "stroke": "var(--avatar-presence-icon-away)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -591,9 +599,10 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
         className="md-avatar-presence-icon-wrapper"
       >
         <Icon
-          color="var(--avatar-presence-icon-ooo)"
+          fillColor="var(--avatar-presence-icon-ooo)"
           name="pto-presence"
           scale={8}
+          strokeColor="none"
           weight="filled"
         >
           <div
@@ -608,7 +617,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
               style={
                 Object {
                   "fill": "var(--avatar-presence-icon-ooo)",
-                  "stroke": "var(--avatar-presence-icon-ooo)",
+                  "stroke": "none",
                 }
               }
               viewBox="0, 0, 32, 32"
