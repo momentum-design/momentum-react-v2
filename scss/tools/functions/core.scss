@@ -4,18 +4,21 @@
   @return unquote('"\\e#{$iso-char}"');
 }
 
-$modules: () !default;
-
 @mixin exports($name) {
-  // Import from global scope
-  $modules: $modules;
   // Check if a module is already on the list
   $module_index: index($modules, $name);
 
   @if (($module_index == null) or ($module_index == false)) {
-    $modules: append($modules, $name);
+    $modules: append($modules, $name) !global;
 
     @content;
+  }
+}
+
+@mixin md-remove($name) {
+  // Can be used to prevent import of "modules" that have been exported via exports mixin
+  // Must be used before the import of the "module"
+  @include exports($name) {
   }
 }
 
@@ -109,8 +112,8 @@ $modules: () !default;
 @function text-inputs($types: all, $selector: input) {
   $return: ();
 
-  $all-text-input-types: text password date datetime datetime-local month week
-    email number search tel time url color textarea;
+  $all-text-input-types: text password date datetime datetime-local month week email number search
+    tel time url color textarea;
 
   @if $types == all {
     $types: $all-text-input-types;
@@ -155,10 +158,7 @@ $modules: () !default;
   $remValues: ();
 
   @for $i from 1 through $max {
-    $remValues: append(
-      $remValues,
-      convert-to-rem(nth($values, $i), $base-value)
-    );
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
   }
 
   @return $remValues;
