@@ -1,6 +1,6 @@
 {
   "name": "@momentumreact/momentum-react-v2",
-  "version": "25.0.38",
+  "version": "25.0.39",
   "description": "Cisco Momentum UI framework for ReactJs applications",
   "author": "Cisco Systems, Inc.",
   "contributors": [
@@ -107,8 +107,8 @@
     "@momentum-ui/tokens": "^1.7.1",
     "@react-aria/button": "3.2.2",
     "@react-aria/focus": "^3.4.0",
-    "@react-aria/menu": "^3.2.3",
     "@react-aria/interactions": "^3.5.1",
+    "@react-aria/menu": "^3.2.3",
     "@react-aria/overlays": "^3.7.2",
     "@react-aria/select": "^3.4.1",
     "@react-aria/textfield": "^3.4.0",
