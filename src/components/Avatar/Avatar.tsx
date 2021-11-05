@@ -112,7 +112,8 @@ const Avatar: React.FC<Props> = (props: Props) => {
         <Icon
           name={presenceIcon}
           weight="filled"
-          color={presenceColor}
+          fillColor={presenceColor}
+          strokeColor="none"
           scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
         />
       </div>
@@ -145,15 +146,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
         );
     }
 
-    return (
-      <span>
-        {initials
-          ? initials
-          : title
-          ? getInitials(title, type)
-          : 'Please provide a title/initials.'}
-      </span>
-    );
+    return <span>{initials ? initials : title ? getInitials(title, type) : ''}</span>;
   };
 
   const renderIcon = () => {

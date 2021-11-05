@@ -1,7 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { OverlayProvider } from '@react-aria/overlays';
-
 import { ThemeProvider } from '@momentum-ui/react';
 
 import { STYLE, THEME_CLASS_PREFIX, THEME_NAMES } from './ThemeProvider.constants';
@@ -54,25 +52,16 @@ describe('<ThemeProvider />', () => {
       expect(element.classList.contains(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
     });
 
-    it('should have an overlay provider', () => {
-      expect.assertions(1);
-
-      const component = mount(<ThemeProvider />);
-      const target = component.find(OverlayProvider);
-
-      expect(target.exists()).toBe(true);
-    });
-
     it('should pass child props', () => {
       expect.assertions(1);
 
       const children = [<div key="0" />, <div key="1" />, <div key="2" />];
 
-      const component = mount(<ThemeProvider>{children}</ThemeProvider>);
+      const component = mount(<ThemeProvider>{children}</ThemeProvider>)
+        .find(ThemeProvider)
+        .getDOMNode();
 
-      const element = component.find(OverlayProvider).getDOMNode();
-
-      expect(element.childNodes.length).toBe(children.length);
+      expect(component.childNodes.length).toBe(children.length);
     });
   });
 });
