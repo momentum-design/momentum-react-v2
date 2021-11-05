@@ -116,7 +116,6 @@ export {
   CodeInput,
   FocusRing,
   NavigationTab,
-  Overlay,
   InputMessage as InputMessageNew,
   ExampleComponent,
   Icon as IconNext,

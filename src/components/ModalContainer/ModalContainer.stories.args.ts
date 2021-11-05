@@ -58,6 +58,7 @@ const modalContainerArgTypes = {
   isPadded: {
     description: 'Identifies if this component should be rendered with padding.',
     control: { type: 'boolean' },
+    options: [undefined, ...Object.values(CONSTANTS.ELEVATIONS)],
     table: {
       type: {
         summary: 'boolean',
