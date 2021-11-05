@@ -4,14 +4,19 @@ import classnames from 'classnames';
 import './ContentSeparator.style.scss';
 import { Props } from './ContentSeparator.types';
 import { STYLE } from './ContentSeparator.constants';
+import { useSeparator } from '@react-aria/separator';
 
 const ContentSeparator: React.FC<Props> = (props: Props) => {
   const { className, children } = props;
 
+  const { separatorProps } = useSeparator({
+    elementType: 'li',
+  });
+
   return (
-    <div className={STYLE.wrapper}>
-      <div className={classnames(className)}>{children}</div>
-    </div>
+    <li {...separatorProps} className={classnames(className, STYLE.wrapper)}>
+      {children}
+    </li>
   );
 };
 

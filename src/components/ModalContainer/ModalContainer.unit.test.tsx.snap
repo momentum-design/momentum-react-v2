@@ -189,7 +189,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
 </ModalContainer>
 `;
 
-exports[`<ModalContainer /> snapshot should match snapshot with isRounded 1`] = `
+exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
 <ModalContainer
   round={150}
 >

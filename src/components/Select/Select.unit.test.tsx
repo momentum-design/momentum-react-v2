@@ -177,7 +177,7 @@ describe('Select', () => {
       const title = 'Example text';
 
       container = await mountAndWait(
-        <Select title={title}>
+        <Select title={title} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -283,7 +283,7 @@ describe('Select', () => {
       const title = 'Example Text';
 
       const wrapper = await mountAndWait(
-        <Select title={title}>
+        <Select title={title} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>

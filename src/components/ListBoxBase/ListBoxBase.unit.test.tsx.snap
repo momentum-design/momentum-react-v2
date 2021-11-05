@@ -2065,10 +2065,12 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 }
               }
             >
-              <div
-                className="md-list-box-section-separator"
-                role="separator"
-              />
+              <ContentSeparator>
+                <li
+                  className="md-content-separator-wrapper"
+                  role="separator"
+                />
+              </ContentSeparator>
               <li
                 role="presentation"
               >

@@ -20,6 +20,110 @@ function extendArgTypes(
   );
 }
 
+const commonAriaOverlay = {
+  isOpen: {
+    control: { type: 'boolean' },
+    description: 'Whether the overlay is currently open.',
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onClose: {
+    action: 'onClose',
+    description: 'Handler that is called when the overlay should close.',
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: '() => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  isDismissable: {
+    control: { type: 'boolean' },
+    description: 'Whether to close the overlay when the user interacts outside it.',
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  shouldCloseOnBlur: {
+    control: { type: 'boolean' },
+    description: 'Whether the overlay should close when focus is lost or moves outside it.',
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  isKeyboardDismissDisabled: {
+    control: { type: 'boolean' },
+    description: 'Whether pressing the escape key to close the overlay should be disabled.',
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  shouldCloseOnInteractOutside: {
+    description:
+      'When user interacts with the argument element outside of the overlay ref, return true if onClose should be called. This gives you a chance to filter out interaction with elements that should not dismiss the overlay. By default, onClose will always be called on interaction outside the overlay ref.',
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: '(element: HTMLElement) => boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  defaultOpen: {
+    description: 'Whether the overlay is open by default (uncontrolled)',
+    control: { type: 'boolean' },
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  onOpenChange: {
+    action: 'onOpenChange',
+    description: "Handler that is called when the overlay's open state changes.",
+    table: {
+      category: 'React Aria - Overlay',
+      type: {
+        summary: '(isOpen: boolean) => void',
+      },
+    },
+  },
+};
+
 const commonAriaButton = {
   onPress: {
     action: 'onPress',
@@ -154,4 +258,4 @@ const commonHTMLAttributes = {
   },
 };
 
-export { commonAriaButton, commonHTMLAttributes, commonStyles, extendArgTypes };
+export { commonAriaButton, commonHTMLAttributes, commonStyles, commonAriaOverlay, extendArgTypes };

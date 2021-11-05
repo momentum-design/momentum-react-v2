@@ -106,6 +106,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
    */
 
   useEffect(() => {
+    if (!listContext) return;
     // TODO: Maybe this should be performed only once?
     const focusableElements = getKeyboardFocusableElements(ref);
 
@@ -200,7 +201,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   return (
     <FocusRing isInset={shouldItemFocusBeInset}>
       <li
-        tabIndex={focus ? 0 : -1}
+        tabIndex={listContext ? (focus ? 0 : -1) : 0}
         style={style}
         ref={ref}
         data-size={size}

@@ -78,7 +78,7 @@ const modalContainerArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: 'false',
+        summary: '0',
       },
     },
   },

@@ -1,0 +1,58 @@
+The `<Menu />` component. Implemented using [useMenu](https://react-spectrum.adobe.com/react-aria/useMenu.html) from React-Aria.
+
+## Content
+
+The `<Menu />` element follows the [Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from the `@react-stately` library, accepting both static and dynamic collections. `<Menu />` accepts `<Item />` elements as children, each with a key prop. Basic usage of `<Menu />`, seen in the example below, shows multiple options populated with a string.
+Simple element with simple options as text.
+
+## Simple example
+
+Usually used in `<MenuTrigger />`;
+
+```js
+<Menu selectionMode="single">
+  <Item key="one">One</Item>
+  <Item key="two">Two</Item>
+  <Item key="three">Three</Item>
+</Menu>
+```
+
+## Dynamic Content
+
+An iterable list of options is can be passed to the `<Menu />` using the items prop. Each item accepts a key prop, which is passed to the `onSelectionChange` or `onAction` handler to identify the selected item. Alternatively, if the item objects contain an `id` property like in the example below, then this is used automatically and a key prop is not required.
+
+```js
+import { Item } from '@react-stately/collections';
+
+const options = [
+  { id: 1, value: 'One' },
+  { id: 2, value: 'Two' },
+  { id: 3, value: 'Three' },
+  { id: 4, value: 'Four' },
+]
+
+<Menu onAction={(key) => console.log} items={options}>
+  {(item) => <Item>{item.value}</Item>}
+</Menu>
+```
+
+## Sections
+
+`<Menu />` supports sections in order to group options. Sections can be used by wrapping groups of items in a `<Section />` element. Each `<Section />` takes a title and key prop.
+
+```js
+import { Item, Section } from '@react-stately/collections';
+
+<Menu onAction={(key) => console.log}>
+  <Section title="Colors">
+    <Item>Red</Item>
+    <Item>Blue</Item>
+    <Item>Green</Item>
+    <Item>Yellow</Item>
+  </Section>
+  <Section title="Animals">
+    <Item>Dog</Item>
+    <Item>Cat</Item>
+  </Section>
+</Menu>;
+```

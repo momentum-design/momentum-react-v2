@@ -1,8 +1,10 @@
 $brand-font-folder: '../fonts';
 $icon-font-path: '~@momentum-ui/icons/fonts';
 $images-path: '../../images';
+
 @import '../../scss/momentum-ui';
 $side-nav-width: 240px;
+
 body {
   background: $md-white-100;
 }
@@ -13,9 +15,11 @@ body {
     grid-template-columns: $side-nav-width minmax(0, 1fr);
     grid-template-areas: 'sidenav content';
   }
+
   &__side-nav {
     grid-area: sidenav;
   }
+
   &__content {
     grid-area: content;
   }
@@ -24,6 +28,7 @@ body {
 .kitchen-sink {
   &__section {
     margin-bottom: 2rem;
+
     h3 {
       margin-bottom: 2rem;
     }
@@ -33,36 +38,45 @@ body {
 .paint {
   &-chips {
     color: $md-white-100;
+
     &__name {
       text-transform: capitalize;
       color: $md-white-100;
       padding: 1rem;
     }
+
     &--light {
       color: $md-black-100;
+
       .paint-chips__name {
         color: $md-black-100;
       }
     }
+
     &--opacity {
       background: url('#{$images-path}/opacity-bkgd.jpg');
+
       .paint-chip {
         border-bottom: $md-white-100 1px solid;
+
         &--light {
           border-color: $md-gray-70;
         }
       }
     }
   }
+
   &-chip {
     color: $md-white-100;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+
     &--light,
     &--light {
       color: $md-black-100;
     }
+
     &-group {
       margin-bottom: 1rem;
     }

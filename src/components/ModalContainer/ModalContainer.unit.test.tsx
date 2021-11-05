@@ -71,7 +71,7 @@ describe('<ModalContainer />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isRounded', () => {
+    it('should match snapshot with radius', () => {
       expect.assertions(1);
 
       const round = Object.values(CONSTANTS.ROUNDS).pop();
