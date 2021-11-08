@@ -27,7 +27,7 @@
   align-items: center;
   border-radius: 0.5rem;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-  outline: none;
+  outline: none !important;
   cursor: pointer;
 
   &:hover {

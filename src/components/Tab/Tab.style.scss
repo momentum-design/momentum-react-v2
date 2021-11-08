@@ -4,7 +4,7 @@
   cursor: pointer;
   font-family: CiscoSansTT; // IEFIX
   font-family: var(--md-globals-font-default);
-  outline: none;
+  outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
   /* Colorization */

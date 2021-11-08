@@ -12,7 +12,7 @@
   font-size: 0.875rem;
   height: 1.5rem;
   margin: 0.125rem;
-  outline: none;
+  outline: none !important;
   padding: 0 0.5rem;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   width: fit-content;
@@ -29,7 +29,7 @@
     background-color: var(--theme-background-alert-default-active);
   }
 
-  &[data-color="theme"] {
+  &[data-color='theme'] {
     color: rgba(3, 83, 168, 1); // IEFIX
     color: var(--theme-text-accent-normal);
     background-color: rgba(219, 240, 255, 1); // IEFIX
@@ -48,7 +48,7 @@
     }
   }
 
-  &[data-color="success"] {
+  &[data-color='success'] {
     color: rgba(24, 94, 70, 1); // IEFIX
     color: var(--theme-text-success-normal);
     background-color: rgba(206, 245, 235, 1); // IEFIX
@@ -67,7 +67,7 @@
     }
   }
 
-  &[data-color="warning"] {
+  &[data-color='warning'] {
     color: rgba(125, 71, 5, 1); // IEFIX
     color: var(--theme-text-warning-normal);
     background-color: rgba(255, 235, 194, 1); // IEFIX
@@ -86,7 +86,7 @@
     }
   }
 
-  &[data-color="error"] {
+  &[data-color='error'] {
     color: rgba(171, 10, 21, 1); // IEFIX
     color: var(--theme-text-error-normal);
     background-color: rgba(255, 232, 234, 1); // IEFIX
@@ -104,7 +104,7 @@
       background-color: var(--theme-background-alert-error-active);
     }
   }
-  
+
   > *:not(:last-child) {
     margin-right: 0.5rem;
   }
