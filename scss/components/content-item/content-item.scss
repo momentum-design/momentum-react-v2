@@ -200,7 +200,7 @@
       bottom: 0px;
       width: 204px;
       height: 56px;
-      background-color: $white-60;
+      background-color: var(--theme-background-solid-quaternary-normal);;
       border-radius: 0 0 4px 4px;
       visibility: hidden;
     }
