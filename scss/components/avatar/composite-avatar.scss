@@ -5,13 +5,13 @@
     position: relative;
     display: inline-block;
 
-    .#{$avatar__class}:nth-child(1) {
+    .#{$avatar__class}-wrapper:nth-child(1) {
       position: absolute;
       top: 0;
       left: 0;
     }
 
-    .#{$avatar__class}:nth-child(2) {
+    .#{$avatar__class}-wrapper:nth-child(2) {
       position: absolute;
       right: 0;
       bottom: 0;
