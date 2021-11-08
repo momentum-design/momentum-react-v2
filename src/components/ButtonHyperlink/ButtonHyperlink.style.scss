@@ -4,7 +4,7 @@
   color: var(--theme-text-accent-normal);
   cursor: pointer;
   font-family: var(--md-globals-font-default);
-  outline: none;
+  outline: none !important;
   padding: 0;
   text-decoration: underline;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;

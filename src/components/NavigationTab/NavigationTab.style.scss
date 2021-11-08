@@ -7,7 +7,7 @@
 
   // Circle/Pill //
   border-radius: 6rem;
-  outline: none;
+  outline: none !important;
   border-color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0); // IEFIX
   background-color: var(--navigationtab-background);
