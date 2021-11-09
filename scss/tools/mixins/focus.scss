@@ -5,7 +5,7 @@
     border-color: $border-color;
   }
 
-  outline: none;
+  outline: none !important;
   box-shadow: var(--md-globals-focus-ring-box-shadow);
 
   @if $focus-visible-only {
