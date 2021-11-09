@@ -458,18 +458,20 @@ class Lightbox extends React.Component {
             </Tooltip>
           </div>
           {pageControl}
-          <div className="md-lightbox__controls" style={controlStyle}>
-            <span className="md-lightbox__control-value">{info.size}</span>
-            <Tooltip tooltip={downloading ? tooltips.downloading : tooltips.download}>
-              {downloading ? (
-                <div className="md-lightbox__control md-lightbox__control-spinner">
-                  <Spinner size={28} />
-                </div>
-              ) : (
-                downloadButton
-              )}
-            </Tooltip>
-          </div>
+          {this.props.onDownload && (
+            <div className="md-lightbox__controls" style={controlStyle}>
+              <span className="md-lightbox__control-value">{info.size}</span>
+              <Tooltip tooltip={downloading ? tooltips.downloading : tooltips.download}>
+                {downloading ? (
+                  <div className="md-lightbox__control md-lightbox__control-spinner">
+                    <Spinner size={28} />
+                  </div>
+                ) : (
+                  downloadButton
+                )}
+              </Tooltip>
+            </div>
+          )}
         </div>
       );
     };
