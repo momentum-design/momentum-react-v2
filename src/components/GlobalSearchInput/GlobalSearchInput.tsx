@@ -71,7 +71,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       }
       const filterToRemove = filters[filters.length - 1];
       onFiltersChange && filters.length && onFiltersChange(filters.slice(0, filters.length - 1));
-      setAriaAlert(filterToRemove.translations.filterRemoved);
+      filterToRemove && setAriaAlert(filterToRemove.translations.filterRemoved);
     } else {
       if (onKeyDown) {
         onKeyDown(e as BaseEvent<React.KeyboardEvent<HTMLInputElement>>);
