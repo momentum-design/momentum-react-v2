@@ -1,6 +1,8 @@
 import React, { FC, ReactNode } from 'react';
-import { ButtonCircle, ButtonHyperlink, ButtonPill } from '../../src/components';
-import ButtonSimple from '../../src/components/ButtonSimple';
+import ButtonSimple from '../components/ButtonSimple';
+import ButtonCircle from '../components/ButtonCircle';
+import ButtonHyperlink from '../components/ButtonHyperlink';
+import ButtonPill from '../components/ButtonPill';
 
 /**
  * Returns true if all children are the correct type, false otherwise
