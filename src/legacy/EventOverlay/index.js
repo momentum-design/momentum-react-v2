@@ -226,7 +226,12 @@ class EventOverlay extends React.Component {
       (anchorNode.props ? anchorNode.props.onClick : false) &&
       ReactDOM.findDOMNode(anchorNode);
 
-    domAnchorNode && domAnchorNode.focus();
+    if (domAnchorNode) {
+      domAnchorNode.focus();
+    } else {
+      // handle fallback for MRv2 trigger elements (functional components)
+      anchorNode && anchorNode.focus();
+    }
   };
 
   getAnchorPosition = (node) => {

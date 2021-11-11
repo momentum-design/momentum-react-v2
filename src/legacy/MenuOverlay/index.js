@@ -7,6 +7,7 @@ import omit from 'lodash/omit';
 import { UIDReset } from 'react-uid';
 import { EventOverlay } from '@momentum-ui/react';
 import MenuContext from '../MenuContext';
+import { isMRv2Button } from '../../helpers/verifyTypes';
 
 class MenuOverlay extends React.Component {
   state = {
@@ -49,11 +50,15 @@ class MenuOverlay extends React.Component {
 
     const otherProps = omit({ ...props }, ['isOpen', 'focusFirstQuery', 'onSelect']);
 
-    const setMenuTrigger = () =>
-      React.cloneElement(menuTrigger, {
-        onClick: () => this.setState({ isOpen: !isOpen }),
+    const setMenuTrigger = () => {
+      const props = isMRv2Button(menuTrigger)
+        ? { onPress: () => this.setState({ isOpen: !isOpen }) }
+        : { onClick: () => this.setState({ isOpen: !isOpen }) };
+      return React.cloneElement(menuTrigger, {
         ref: (ref) => (this.anchorNode = ref),
+        ...props,
       });
+    };
 
     return (
       <div className={'md-menu-overlay-wrapper' + `${(className && ` ${className}`) || ''}`}>
