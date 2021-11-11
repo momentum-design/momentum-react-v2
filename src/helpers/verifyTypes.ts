@@ -13,7 +13,11 @@ export const verifyTypes = <T extends unknown>(children: ReactNode, type: FC<T>)
 
   let flag = true;
   React.Children.forEach(children, (child) => {
-    if (!verifyType(child, type)) {
+    if (
+      React.isValidElement(child) &&
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (child as React.ReactElement<any>).type !== type
+    ) {
       flag = false;
     }
   });

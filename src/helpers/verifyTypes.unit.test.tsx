@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItemBase from '../components/ListItemBase';
 import ButtonPill from '../components/ButtonPill';
-import { verifyTypes, isMRv2Button } from './verifyTypes';
+import { verifyTypes, verifyType, isMRv2Button } from './verifyTypes';
 
 describe('verifyTypes', () => {
   it('returns true if types are correct', () => {
@@ -38,5 +38,14 @@ describe('isMRv2Button', () => {
   });
   it('returns false if type is incorrect', () => {
     expect(isMRv2Button(<ListItemBase key="1">test</ListItemBase>)).toBe(false);
+  });
+});
+
+describe('verifyType', () => {
+  it('returns true if type is correct', () => {
+    expect(verifyType(<ButtonPill key="1">test</ButtonPill>, ButtonPill)).toBe(true);
+  });
+  it('returns false if type is incorrect', () => {
+    expect(verifyType(<ListItemBase key="1">test</ListItemBase>, ButtonPill)).toBe(false);
   });
 });
