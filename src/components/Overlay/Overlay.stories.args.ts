@@ -1,7 +1,6 @@
 import {
   commonAriaDialog,
   commonAriaFocusScope,
-  commonAriaModal,
   commonAriaOverlay,
   commonStyles,
   extendArgTypes,
@@ -12,7 +11,6 @@ export default {
   ...commonAriaDialog,
   ...commonAriaFocusScope,
   ...extendArgTypes('ModalContainer', modalContainerArgTypes),
-  ...commonAriaModal,
   ...commonAriaOverlay,
   ...commonStyles,
 };

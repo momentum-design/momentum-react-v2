@@ -1,5 +1,5 @@
 import React, { forwardRef, RefObject, useRef } from 'react';
-import { useModal, useOverlay } from '@react-aria/overlays';
+import { useOverlay } from '@react-aria/overlays';
 import { useDialog } from '@react-aria/dialog';
 import { mergeProps } from '@react-aria/utils';
 import { FocusScope } from '@react-aria/focus';
@@ -18,7 +18,6 @@ const Overlay = forwardRef((props: Props, providedRef: RefObject<HTMLDivElement>
   const ref = providedRef || internalRef;
 
   const { overlayProps } = useOverlay(props, ref);
-  const { modalProps } = useModal(props);
   const { dialogProps } = useDialog(props, ref);
 
   const mutatedProps = { ...props };
@@ -36,10 +35,7 @@ const Overlay = forwardRef((props: Props, providedRef: RefObject<HTMLDivElement>
   /* eslint-disable jsx-a11y/no-autofocus */
   return (
     <FocusScope autoFocus={autoFocus} contain={contain} restoreFocus={restoreFocus}>
-      <ModalContainer
-        {...mergeProps(overlayProps, dialogProps, mutatedProps, modalProps)}
-        ref={ref}
-      />
+      <ModalContainer {...mergeProps(overlayProps, dialogProps, mutatedProps)} ref={ref} />
     </FocusScope>
   );
   /* eslint-enable jsx-a11y/no-autofocus */

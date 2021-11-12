@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { OverlayProvider } from '@react-aria/overlays';
 import { FocusScope } from '@react-aria/focus';
 
 import ModalContainer from '../ModalContainer';
@@ -14,11 +13,7 @@ describe('<Overlay />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(
-        <OverlayProvider>
-          <Overlay>{commonChildren}</Overlay>
-        </OverlayProvider>
-      );
+      const container = mount(<Overlay>{commonChildren}</Overlay>);
 
       expect(container).toMatchSnapshot();
     });
@@ -28,11 +23,7 @@ describe('<Overlay />', () => {
     it('should extend <ModalContainer />', () => {
       expect.assertions(1);
 
-      const component = mount(
-        <OverlayProvider>
-          <Overlay>{commonChildren}</Overlay>
-        </OverlayProvider>
-      ).find(Overlay);
+      const component = mount(<Overlay>{commonChildren}</Overlay>).find(Overlay);
       const target = component.find(ModalContainer);
 
       expect(component.props().children).toBe(target.props().children);
@@ -41,11 +32,7 @@ describe('<Overlay />', () => {
     it('should contain a focus scope', () => {
       expect.assertions(1);
 
-      const component = mount(
-        <OverlayProvider>
-          <Overlay>{commonChildren}</Overlay>
-        </OverlayProvider>
-      ).find(Overlay);
+      const component = mount(<Overlay>{commonChildren}</Overlay>).find(Overlay);
 
       const target = component.find(FocusScope);
 
@@ -55,11 +42,7 @@ describe('<Overlay />', () => {
     it('should pass focus scope props', () => {
       expect.assertions(1);
 
-      const component = mount(
-        <OverlayProvider>
-          <Overlay>{commonChildren}</Overlay>
-        </OverlayProvider>
-      ).find(Overlay);
+      const component = mount(<Overlay>{commonChildren}</Overlay>).find(Overlay);
 
       const target = component.find(FocusScope);
 
