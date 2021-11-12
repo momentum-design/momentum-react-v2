@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Overlay /> snapshot should match snapshot 1`] = `
+<Overlay>
+  <FocusScope
+    autoFocus={false}
+    contain={false}
+    restoreFocus={false}
+  >
+    <span
+      data-focus-scope-start={true}
+      hidden={true}
+    />
+    <ModalContainer
+      aria-labelledby={null}
+      onKeyDown={[Function]}
+      role="dialog"
+      tabIndex={-1}
+    >
+      <div
+        aria-labelledby={null}
+        className="md-modal-container-wrapper"
+        onKeyDown={[Function]}
+        role="dialog"
+        tabIndex={-1}
+      >
+        <div
+          className="md-modal-container-content"
+          data-color="primary"
+          data-elevation={0}
+          data-horizontal-arrow={false}
+          data-padded={false}
+          data-round={0}
+          data-vertical-arrow={false}
+        >
+          Children
+        </div>
+      </div>
+    </ModalContainer>
+    <span
+      data-focus-scope-end={true}
+      hidden={true}
+    />
+  </FocusScope>
+</Overlay>
+`;
