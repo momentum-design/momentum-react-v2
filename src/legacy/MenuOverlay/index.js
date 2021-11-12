@@ -51,12 +51,10 @@ class MenuOverlay extends React.Component {
     const otherProps = omit({ ...props }, ['isOpen', 'focusFirstQuery', 'onSelect']);
 
     const setMenuTrigger = () => {
-      const props = isMRv2Button(menuTrigger)
-        ? { onPress: () => this.setState({ isOpen: !isOpen }) }
-        : { onClick: () => this.setState({ isOpen: !isOpen }) };
       return React.cloneElement(menuTrigger, {
+        [isMRv2Button(menuTrigger) ? 'onPress' : 'onClick']: () =>
+          this.setState({ isOpen: !isOpen }),
         ref: (ref) => (this.anchorNode = ref),
-        ...props,
       });
     };
 

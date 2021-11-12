@@ -227,11 +227,9 @@ class EventOverlay extends React.Component {
 
       if (domAnchorNode) {
         domAnchorNode.focus();
-      } else {
+      } else if (anchorNode.focus) {
         // handle fallback for MRv2 trigger elements (functional components)
-        if (anchorNode.focus) {
-          anchorNode.focus();
-        }
+        anchorNode.focus();
       }
     }
   };
