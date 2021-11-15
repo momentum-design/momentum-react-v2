@@ -256,13 +256,16 @@ describe('tests for <EventOverlay />', () => {
           content={'test'}
           popoverTrigger={'Click'}
         >
-          <ButtonPill ariaLabel="Hello">Hello</ButtonPill>
+          <ButtonPill aria-label="Hello">Hello</ButtonPill>
         </Popover>
       </div>,
       { attachTo: focusContainer }
     );
 
-    container.find('ButtonPill').simulate('click');
+    const trigger = container.find('ButtonPill');
+
+    expect(trigger.prop('onPress')).toEqual(expect.any(Function));
+    trigger.prop('onPress')();
     jest.runAllTimers();
     container.update();
 

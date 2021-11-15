@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Button, Popover } from '@momentum-ui/react';
+import { ButtonPill } from '../../../components';
 
 describe('tests for <Popover />', () => {
   beforeAll(() => {
@@ -474,5 +475,35 @@ describe('tests for <Popover />', () => {
     jest.runTimersToTime(100);
     container.update();
     expect(container.find('.popover-content').length).toEqual(0);
+  });
+
+  it('should add onPress handler to trigger if isMRv2Button used & if popover trigger is click', () => {
+    const container = mount(
+      <Popover content={<h1>hi</h1>} popoverTrigger={'Click'}>
+        <ButtonPill tabIndex="0" className="anchor">
+          Hello
+        </ButtonPill>
+      </Popover>
+    );
+
+    const trigger = container.find('ButtonPill');
+
+    expect(trigger.prop('onPress')).toEqual(expect.any(Function));
+    expect(trigger.prop('onClick')).toBeUndefined();
+  });
+
+  it('should add onClick event handler to trigger if non isMRv2Button used & if popover trigger is click', () => {
+    const container = mount(
+      <Popover content={<h1>hi</h1>} popoverTrigger={'Click'}>
+        <Button tabIndex="0" className="anchor">
+          Hello
+        </Button>
+      </Popover>
+    );
+
+    const trigger = container.find('Button');
+
+    expect(trigger.prop('onClick')).toEqual(expect.any(Function));
+    expect(trigger.prop('onPress')).toBeUndefined();
   });
 });
