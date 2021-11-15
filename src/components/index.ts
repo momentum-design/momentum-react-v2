@@ -16,6 +16,7 @@ export { default as NavigationTab } from './NavigationTab';
 export { default as Tab } from './Tab';
 export { default as ModalArrow } from './ModalArrow';
 export { default as ModalContainer } from './ModalContainer';
+export { default as Overlay } from './Overlay';
 export { default as ThemeProvider } from './ThemeProvider';
 export { default as Toast } from './Toast';
 export { default as ToastContent } from './ToastContent';
