@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Menu, MenuContent, MenuItem, MenuOverlay } from '@momentum-ui/react';
-
+import { Menu, MenuContent, MenuItem, MenuOverlay, Button, EventOverlay } from '@momentum-ui/react';
+import { ButtonPill } from '../../../components';
+import { triggerPress } from '../../../../test/utils';
 describe('tests for <MenuOverlay />', () => {
   it('should render a MenuOverlay', () => {
     const wrapper = mount(
@@ -71,6 +72,32 @@ describe('tests for <MenuOverlay />', () => {
     wrapper.find('.trigger').simulate('click');
     expect(wrapper.find('.md-menu').length).toEqual(0);
     expect(wrapper.find('.md-menu-content').length).toEqual(0);
+  });
+
+  it('should close the menu on click outside and focus on the trigger with new momentum button trigger', async () => {
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
+    const wrapper = mount(
+      <MenuOverlay menuTrigger={<ButtonPill className="trigger">Trigger</ButtonPill>}>
+        <MenuContent>test</MenuContent>
+        <Menu>
+          <MenuItem label="one" />
+        </Menu>
+      </MenuOverlay>,
+      { attachTo: focusContainer }
+    );
+
+    const trigger = wrapper.find('.trigger').at(0);
+    triggerPress(trigger);
+    expect(wrapper.find('.md-menu').length).toEqual(1);
+    expect(wrapper.find('.md-menu-content').length).toEqual(1);
+    wrapper.find(EventOverlay).instance().handleClickAway({});
+
+    wrapper.update();
+
+    expect(wrapper.find('.md-menu').length).toEqual(0);
+    expect(wrapper.find('.md-menu-content').length).toEqual(0);
+    expect(document.activeElement.textContent).toEqual(trigger.text());
   });
 
   it('when keepMenuOpen is set to true on MenuItem the MenuOverlay should not close', () => {
@@ -160,5 +187,33 @@ describe('tests for <MenuOverlay />', () => {
     } catch (e) {
       expect(e.message).toEqual('MenuOverlay should only contain Menu or MenuContent as children');
     }
+  });
+
+  it('should pass down onPress prop when isMRv2Button used', () => {
+    const wrapper = mount(
+      <MenuOverlay menuTrigger={<ButtonPill className="trigger">Trigger</ButtonPill>}>
+        <MenuContent>test</MenuContent>
+        <Menu>
+          <MenuItem label="one" />
+        </Menu>
+      </MenuOverlay>
+    );
+    const trigger = wrapper.find('.trigger').at(0);
+    expect(trigger.prop('onPress')).toEqual(expect.any(Function));
+    expect(trigger.prop('onClick')).toBeUndefined();
+  });
+
+  it('should pass down onClick prop when legacy button / non MRv2 button is used', () => {
+    const wrapper = mount(
+      <MenuOverlay menuTrigger={<Button className="trigger">Trigger</Button>}>
+        <MenuContent>test</MenuContent>
+        <Menu>
+          <MenuItem label="one" />
+        </Menu>
+      </MenuOverlay>
+    );
+    const trigger = wrapper.find('.trigger').at(0);
+    expect(trigger.prop('onClick')).toEqual(expect.any(Function));
+    expect(trigger.prop('onPress')).toBeUndefined();
   });
 });

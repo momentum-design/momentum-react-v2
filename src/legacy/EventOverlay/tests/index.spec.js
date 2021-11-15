@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { Button, EventOverlay, Popover } from '@momentum-ui/react';
+import { ButtonPill } from '../../../components';
 
 describe('tests for <EventOverlay />', () => {
   beforeAll(() => {
@@ -233,6 +234,38 @@ describe('tests for <EventOverlay />', () => {
     );
 
     container.find('Button').simulate('click');
+    jest.runAllTimers();
+    container.update();
+
+    // when tabbed out of the Overlay
+    container.childAt(0).childAt(1).instance().handleAllowClickAway({});
+    expect('button').toEqual(document.activeElement.type);
+  });
+
+  it('on closing the popover, show focus back on the trigger if onPress present (isMRv2Button used as trigger)', () => {
+    // focus was being transferred to component outside the dom
+    // see https://github.com/jsdom/jsdom/issues/2924
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
+    const container = mount(
+      <div className="wrapper">
+        <Popover
+          allowClickAway
+          direction="top-center"
+          showArrow
+          content={'test'}
+          popoverTrigger={'Click'}
+        >
+          <ButtonPill aria-label="Hello">Hello</ButtonPill>
+        </Popover>
+      </div>,
+      { attachTo: focusContainer }
+    );
+
+    const trigger = container.find('ButtonPill');
+
+    expect(trigger.prop('onPress')).toEqual(expect.any(Function));
+    trigger.prop('onPress')();
     jest.runAllTimers();
     container.update();
 

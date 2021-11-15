@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { EventOverlay } from '@momentum-ui/react';
 import omit from 'lodash/omit';
+import { isMRv2Button } from '../../helpers/verifyTypes';
 
 class Popover extends React.Component {
   state = {
@@ -284,7 +285,11 @@ class Popover extends React.Component {
           break;
 
         case 'Click':
-          triggerProps.onClick = this.handleClick;
+          if (isMRv2Button(children)) {
+            triggerProps.onPress = this.handleClick;
+          } else {
+            triggerProps.onClick = this.handleClick;
+          }
 
           triggerProps.onBlur = null;
           triggerProps.onFocus = null;
