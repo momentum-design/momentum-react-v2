@@ -34,7 +34,7 @@ describe('verifyTypes', () => {
 });
 
 describe('isMRv2Button', () => {
-  test.each([
+  it.each([
     { input: <ButtonPill key="1">test</ButtonPill>, expected: true },
     { input: <ButtonCircle key="1">test</ButtonCircle>, expected: true },
     { input: <ButtonSimple key="1">test</ButtonSimple>, expected: true },

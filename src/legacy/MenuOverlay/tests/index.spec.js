@@ -75,6 +75,8 @@ describe('tests for <MenuOverlay />', () => {
   });
 
   it('should close the menu on click outside and focus on the trigger with new momentum button trigger', async () => {
+    const focusContainer = document.createElement('div');
+    document.body.append(focusContainer);
     const wrapper = mount(
       <MenuOverlay menuTrigger={<ButtonPill className="trigger">Trigger</ButtonPill>}>
         <MenuContent>test</MenuContent>
@@ -82,7 +84,7 @@ describe('tests for <MenuOverlay />', () => {
           <MenuItem label="one" />
         </Menu>
       </MenuOverlay>,
-      { attachTo: document.body }
+      { attachTo: focusContainer }
     );
 
     const trigger = wrapper.find('.trigger').at(0);
@@ -197,7 +199,7 @@ describe('tests for <MenuOverlay />', () => {
       </MenuOverlay>
     );
     const trigger = wrapper.find('.trigger').at(0);
-    expect(trigger.prop('onPress')).toBeDefined();
+    expect(trigger.prop('onPress')).toEqual(expect.any(Function));
     expect(trigger.prop('onClick')).toBeUndefined();
   });
 
@@ -211,7 +213,7 @@ describe('tests for <MenuOverlay />', () => {
       </MenuOverlay>
     );
     const trigger = wrapper.find('.trigger').at(0);
-    expect(trigger.prop('onClick')).toBeDefined();
+    expect(trigger.prop('onClick')).toEqual(expect.any(Function));
     expect(trigger.prop('onPress')).toBeUndefined();
   });
 });
