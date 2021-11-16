@@ -255,6 +255,37 @@ describe('<GlobalSearchInput />', () => {
       expect(onFiltersChange).toBeCalledWith([]);
     });
 
+    it('pressing backspace should not update alert if no filters', async () => {
+      expect.assertions(3);
+
+      const onChange = jest.fn();
+      const onFiltersChange = jest.fn();
+
+      const wrapper = await mountAndWait(
+        <GlobalSearchInput
+          onChange={onChange}
+          onFiltersChange={onFiltersChange}
+          aria-label="global search"
+          value=""
+          filters={[]}
+        />
+      );
+      const inputElement = wrapper.find('input');
+
+      const domNode = inputElement.getDOMNode() as HTMLInputElement;
+
+      domNode.setSelectionRange(0, 0);
+
+      await act(async () => {
+        inputElement.simulate('keydown', { key: 'Backspace' });
+      });
+
+      wrapper.update();
+      expect(wrapper.find('.aria-alert').exists()).toEqual(false);
+      expect(onChange).not.toHaveBeenCalled();
+      expect(onFiltersChange).not.toHaveBeenCalled();
+    });
+
     it('pressing backspace should not delete a filter if the cursor is not at the beginning', async () => {
       expect.assertions(2);
 
