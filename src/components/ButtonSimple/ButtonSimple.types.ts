@@ -1,7 +1,8 @@
 import { CSSProperties, ReactNode } from 'react';
 import { AriaButtonProps } from '@react-types/button';
+import { HoverProps } from '@react-aria/interactions';
 
-export interface Props extends AriaButtonProps {
+export interface Props extends AriaButtonProps, HoverProps {
   /**
    * Child components of this ButtonPill.
    */

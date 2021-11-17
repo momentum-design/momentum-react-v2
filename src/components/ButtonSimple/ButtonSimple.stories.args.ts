@@ -1,13 +1,11 @@
 import {
   commonAriaButton,
+  commonAriaHover,
   commonHTMLAttributes,
   commonStyles,
 } from '../../storybook/helper.stories.argtypes';
 
-export default {
-  ...commonStyles,
-  ...commonHTMLAttributes,
-  ...commonAriaButton,
+const buttonSimpleArgTypes = {
   children: {
     description: 'Provides the child nodes for this element.',
     control: { type: 'text' },
@@ -20,4 +18,14 @@ export default {
       },
     },
   },
+};
+
+export { buttonSimpleArgTypes };
+
+export default {
+  ...commonStyles,
+  ...commonHTMLAttributes,
+  ...commonAriaHover,
+  ...commonAriaButton,
+  ...buttonSimpleArgTypes,
 };

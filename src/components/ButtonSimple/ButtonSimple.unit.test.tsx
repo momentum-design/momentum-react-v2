@@ -135,5 +135,37 @@ describe('<ButtonSimple />', () => {
 
       expect(mockCallback).toBeCalledTimes(1);
     });
+
+    it('should handle hover start events', () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const component = mount(<ButtonSimple onHoverStart={mockCallback} />).find(ButtonSimple);
+
+      component.props().onHoverStart({
+        type: 'hoverstart',
+        pointerType: 'mouse',
+        target: component.getDOMNode(),
+      });
+
+      expect(mockCallback).toBeCalledTimes(1);
+    });
+
+    it('should handle hover end events', () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const component = mount(<ButtonSimple onHoverEnd={mockCallback} />).find(ButtonSimple);
+
+      component.props().onHoverEnd({
+        type: 'hoverstart',
+        pointerType: 'mouse',
+        target: component.getDOMNode(),
+      });
+
+      expect(mockCallback).toBeCalledTimes(1);
+    });
   });
 });
