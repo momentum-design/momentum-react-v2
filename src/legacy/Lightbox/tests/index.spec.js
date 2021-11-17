@@ -17,6 +17,7 @@ describe('tests for <Lightbox />', () => {
             thumb: 'testImage',
           },
         ]}
+        onDownload={jest.fn()}
       />
     );
     expect(container).toMatchSnapshot();
@@ -37,6 +38,7 @@ describe('tests for <Lightbox />', () => {
             thumb: 'testImage',
           },
         ]}
+        onDownload={jest.fn()}
       />
     );
     const downloadButton = container.find('.md-lightbox__download-button .icon-download_16');
@@ -60,6 +62,7 @@ describe('tests for <Lightbox />', () => {
             thumb: 'testImage',
           },
         ]}
+        onDownload={jest.fn()}
       />
     );
     const downloadButton = container.find('.md-lightbox__control-download');
@@ -89,6 +92,7 @@ describe('tests for <Lightbox />', () => {
             thumb: 'testImage',
           },
         ]}
+        onDownload={jest.fn()}
       />
     );
     const imageViewport = container.find('.md-lightbox__viewport-image');
@@ -115,6 +119,7 @@ describe('tests for <Lightbox />', () => {
             thumb: 'testImage',
           },
         ]}
+        onDownload={jest.fn()}
       />
     );
     const sharedBy = container.find('.md-lightbox__header-sharer');
@@ -157,6 +162,7 @@ describe('tests for <Lightbox />', () => {
         ]}
         index={1}
         onChange={onChangeFn}
+        onDownload={jest.fn()}
       />
     );
     const rightControl = container.find('.md-lightbox__page-controls--right');
@@ -188,6 +194,7 @@ describe('tests for <Lightbox />', () => {
           },
         ]}
         onClose={onCloseFn}
+        onDownload={jest.fn()}
       />
     );
     const closeIcon = container.find('.md-lightbox__header-item--right .md-lightbox__control');
@@ -214,6 +221,7 @@ describe('tests for <Lightbox />', () => {
             thumb: 'testImage',
           },
         ]}
+        onDownload={jest.fn()}
       />
     );
     const zoomIn = container.find('.md-lightbox__viewer-controls .md-lightbox__control').at(1);
@@ -247,6 +255,7 @@ describe('tests for <Lightbox />', () => {
             thumb: 'testImage',
           },
         ]}
+        onDownload={jest.fn()}
       />
     );
     const contentList = container.find('.md-lightbox__list');
@@ -279,5 +288,28 @@ describe('tests for <Lightbox />', () => {
     const downloadIcon = container.find('.md-lightbox__control-download');
     downloadIcon.simulate('click');
     expect(onDownloadFn).toHaveBeenCalled();
+  });
+
+  it('when onDownload is undefined download button should not render', () => {
+    const container = shallow(
+      <Lightbox
+        applicationId="app"
+        name="test"
+        height={100}
+        width={100}
+        downloading
+        pages={[
+          {
+            decrypting: false,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
+      />
+    );
+    const downloadButton = container.find('.md-lightbox__download-button .icon-download_16');
+    expect(downloadButton.length).toEqual(0);
+    const spinner = container.find('Spinner');
+    expect(spinner.length).toEqual(0);
   });
 });
