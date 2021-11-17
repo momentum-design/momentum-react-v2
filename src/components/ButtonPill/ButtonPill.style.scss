@@ -53,6 +53,21 @@
       color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--button-secondary-text-pressed);
     }
+
+    &[data-solid='true'] {
+      background-color: rgba(0, 0, 0, 0); // IEFIX
+      background-color: var(--theme-button-inverted-normal);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.07); // IEFIX
+        background-color: var(--theme-button-inverted-hover);
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0.2); // IEFIX
+        background-color: var(--theme-button-inverted-pressed);
+      }
+    }
   }
 
   &[data-color='join'] {
