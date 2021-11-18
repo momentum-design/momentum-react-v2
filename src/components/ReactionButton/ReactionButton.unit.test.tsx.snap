@@ -16,7 +16,6 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
       data-outline={false}
       data-reacted={false}
       data-size={32}
-      size={32}
     >
       <FocusRing>
         <FocusRing
@@ -82,7 +81,6 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
       data-outline={false}
       data-reacted={false}
       data-size={32}
-      size={32}
     >
       <FocusRing>
         <FocusRing
@@ -150,7 +148,6 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
       data-reacted={false}
       data-size={32}
       id="example-id"
-      size={32}
     >
       <FocusRing>
         <FocusRing
@@ -217,7 +214,6 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
       data-outline={false}
       data-reacted={true}
       data-size={32}
-      size={32}
     >
       <FocusRing>
         <FocusRing
@@ -292,7 +288,6 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
       data-outline={false}
       data-reacted={false}
       data-size={32}
-      size={32}
       style={
         Object {
           "color": "pink",

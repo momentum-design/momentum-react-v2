@@ -7,26 +7,18 @@ import './ButtonDialpad.style.scss';
 import classnames from 'classnames';
 
 const ButtonDialpad = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { className, disabled, title } = props;
-
-  const mutatedProps = {
-    ...props,
-    isDisabled: disabled,
-  };
-
-  delete mutatedProps.disabled;
-  delete mutatedProps.className;
+  const { className, disabled, size, ...otherProps } = props;
 
   const children = props.children || props.primaryText;
 
   return (
     <ButtonSimple
       className={classnames(STYLE.wrapper, className)}
-      {...mutatedProps}
       ref={providedRef}
-      data-size={props.size || DEFAULTS.SIZE}
+      data-size={size || DEFAULTS.SIZE}
       data-disabled={disabled || DEFAULTS.DISABLED}
-      title={title}
+      isDisabled={disabled}
+      {...otherProps}
     >
       <div className={STYLE.primaryText}>{children}</div>
       <div className={STYLE.secondaryText}>{props.secondaryText}</div>

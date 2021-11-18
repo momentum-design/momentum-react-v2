@@ -57,7 +57,6 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
     data-ghost={true}
     data-outline={false}
     data-size={40}
-    ghost={true}
   >
     <FocusRing>
       <FocusRing
@@ -107,7 +106,6 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled
     data-ghost={true}
     data-outline={false}
     data-size={40}
-    ghost={true}
     isDisabled={true}
   >
     <FocusRing
@@ -161,7 +159,6 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
     data-ghost={false}
     data-outline={true}
     data-size={40}
-    outline={true}
   >
     <FocusRing>
       <FocusRing
@@ -304,7 +301,6 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
 >
   <ButtonSimple
     className="md-button-pill-wrapper"
-    color="message"
     data-color="message"
     data-disabled={false}
     data-ghost={false}
@@ -406,7 +402,6 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
     data-ghost={false}
     data-outline={false}
     data-size={40}
-    size={40}
   >
     <FocusRing>
       <FocusRing

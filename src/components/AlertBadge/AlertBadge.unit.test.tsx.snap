@@ -49,16 +49,6 @@ exports[`<AlertBadge /> snapshot should match snapshot with children, image and 
 >
   <ButtonSimple
     className="md-alert-badge-wrapper"
-    image={
-      <div>
-        A
-      </div>
-    }
-    label={
-      <div>
-        Example Label
-      </div>
-    }
   >
     <FocusRing>
       <FocusRing
@@ -137,7 +127,6 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
 >
   <ButtonSimple
     className="md-alert-badge-wrapper"
-    color="warning"
     data-color="warning"
   >
     <FocusRing>
@@ -231,11 +220,6 @@ exports[`<AlertBadge /> snapshot should match snapshot with image 1`] = `
 >
   <ButtonSimple
     className="md-alert-badge-wrapper"
-    image={
-      <div>
-        A
-      </div>
-    }
   >
     <FocusRing>
       <FocusRing
@@ -289,16 +273,6 @@ exports[`<AlertBadge /> snapshot should match snapshot with image and label 1`] 
 >
   <ButtonSimple
     className="md-alert-badge-wrapper"
-    image={
-      <div>
-        A
-      </div>
-    }
-    label={
-      <div>
-        Example Label
-      </div>
-    }
   >
     <FocusRing>
       <FocusRing
@@ -354,11 +328,6 @@ exports[`<AlertBadge /> snapshot should match snapshot with label 1`] = `
 >
   <ButtonSimple
     className="md-alert-badge-wrapper"
-    label={
-      <div>
-        Example Text
-      </div>
-    }
   >
     <FocusRing>
       <FocusRing

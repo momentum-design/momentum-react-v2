@@ -58,7 +58,6 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
     data-multiple-children={false}
     data-outline={false}
     data-size={40}
-    ghost={true}
   >
     <FocusRing>
       <FocusRing
@@ -110,7 +109,6 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
     data-multiple-children={false}
     data-outline={false}
     data-size={40}
-    ghost={true}
     isDisabled={true}
   >
     <FocusRing
@@ -166,7 +164,6 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
     data-multiple-children={false}
     data-outline={true}
     data-size={40}
-    outline={true}
   >
     <FocusRing>
       <FocusRing
@@ -314,7 +311,6 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
 >
   <ButtonSimple
     className="md-button-circle-wrapper"
-    color="message"
     data-color="message"
     data-disabled={false}
     data-ghost={false}
@@ -474,7 +470,6 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
     data-multiple-children={false}
     data-outline={false}
     data-size={64}
-    size={64}
   >
     <FocusRing>
       <FocusRing

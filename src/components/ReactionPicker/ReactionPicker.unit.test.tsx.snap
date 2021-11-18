@@ -41,7 +41,6 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
             data-outline={false}
             data-reacted={false}
             data-size={32}
-            size={32}
           >
             <FocusRing>
               <FocusRing

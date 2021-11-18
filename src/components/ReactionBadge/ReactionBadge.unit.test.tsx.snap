@@ -23,7 +23,6 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
       data-outline={false}
       data-reacted={false}
       data-size={20}
-      size={20}
     >
       <FocusRing>
         <FocusRing
@@ -98,7 +97,6 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
       data-outline={false}
       data-reacted={false}
       data-size={20}
-      size={20}
     >
       <FocusRing>
         <FocusRing
@@ -173,7 +171,6 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
       data-outline={false}
       data-reacted={false}
       data-size={20}
-      size={20}
     >
       <FocusRing>
         <FocusRing
@@ -252,7 +249,6 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
       data-reacted={false}
       data-size={20}
       id="example-id"
-      size={20}
     >
       <FocusRing>
         <FocusRing
@@ -328,7 +324,6 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
       data-outline={false}
       data-reacted={true}
       data-size={20}
-      size={20}
     >
       <FocusRing>
         <FocusRing
@@ -412,7 +407,6 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
       data-outline={false}
       data-reacted={false}
       data-size={20}
-      size={20}
       style={
         Object {
           "color": "pink",

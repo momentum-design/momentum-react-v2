@@ -451,8 +451,6 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-multiple-children={false}
                   data-outline={false}
                   data-size={28}
-                  ghost={true}
-                  size={28}
                 >
                   <FocusRing>
                     <FocusRing
@@ -630,8 +628,6 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-multiple-children={false}
                   data-outline={false}
                   data-size={28}
-                  ghost={true}
-                  size={28}
                 >
                   <FocusRing>
                     <FocusRing
@@ -813,8 +809,6 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-multiple-children={false}
                   data-outline={false}
                   data-size={28}
-                  ghost={true}
-                  size={28}
                 >
                   <FocusRing>
                     <FocusRing

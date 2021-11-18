@@ -367,7 +367,6 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
     className="md-button-dialpad-wrapper"
     data-disabled={false}
     data-size={64}
-    size={64}
   >
     <FocusRing>
       <FocusRing

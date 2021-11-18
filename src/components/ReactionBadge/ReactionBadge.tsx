@@ -7,7 +7,7 @@ import './ReactionBadge.style.scss';
 import ButtonPill from '../ButtonPill';
 
 const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { className, count, id, reacted, reaction, style, ...otherProps } = props;
+  const { className, count, reacted, reaction, ...otherProps } = props;
 
   return (
     <ButtonPill
@@ -15,9 +15,7 @@ const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButto
       data-count={count || DEFAULTS.COUNT}
       data-reacted={reacted || DEFAULTS.REACTED}
       ref={providedRef}
-      id={id}
       size={20}
-      style={style}
       {...otherProps}
     >
       {reaction}

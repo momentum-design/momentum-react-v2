@@ -408,8 +408,6 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -473,13 +471,11 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -521,13 +517,11 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -569,13 +563,11 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1028,8 +1020,6 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1093,13 +1083,11 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1141,13 +1129,11 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1189,13 +1175,11 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1605,8 +1589,6 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1670,13 +1652,11 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1718,13 +1698,11 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -1766,13 +1744,11 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2169,8 +2145,6 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2234,13 +2208,11 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2282,13 +2254,11 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2330,13 +2300,11 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2775,8 +2743,6 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2840,13 +2806,11 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2888,13 +2852,11 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -2936,13 +2898,11 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -3396,8 +3356,6 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -3461,13 +3419,11 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -3509,13 +3465,11 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -3557,13 +3511,11 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4025,8 +3977,6 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4090,13 +4040,11 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4138,13 +4086,11 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4186,13 +4132,11 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4632,8 +4576,6 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 data-multiple-children={false}
                 data-outline={true}
                 data-size={28}
-                outline={true}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4697,13 +4639,11 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="message"
                 data-color="message"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4745,13 +4685,11 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="cancel"
                 data-color="cancel"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing
@@ -4793,13 +4731,11 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
             >
               <ButtonSimple
                 className="md-button-pill-wrapper"
-                color="join"
                 data-color="join"
                 data-disabled={false}
                 data-ghost={false}
                 data-outline={false}
                 data-size={28}
-                size={28}
               >
                 <FocusRing>
                   <FocusRing

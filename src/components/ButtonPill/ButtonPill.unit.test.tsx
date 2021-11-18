@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import ButtonPill, { BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
+import ButtonSimple from '../ButtonSimple';
 
 const { COLORS, DEFAULTS, SIZES, STYLE } = CONSTANTS;
 
@@ -241,6 +242,14 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
+    });
+
+    it('should render ButtonSimple', () => {
+      expect.assertions(1);
+
+      container = mount(<ButtonPill>Example Text</ButtonPill>);
+
+      expect(container.find(ButtonSimple).exists()).toBe(true);
     });
   });
 
