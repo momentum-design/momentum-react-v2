@@ -9,7 +9,8 @@ import './ButtonPill.style.scss';
 
 const ButtonPill: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { children, className, color, disabled, ghost, id, outline, size, style, title } = props;
+    const { children, className, color, disabled, ghost, id, outline, size, solid, style, title } =
+      props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
 
@@ -35,6 +36,7 @@ const ButtonPill: FC<Props> = forwardRef(
           data-outline={outline || DEFAULTS.OUTLINE}
           data-size={size || DEFAULTS.SIZE}
           data-disabled={disabled || DEFAULTS.DISABLED}
+          data-solid={solid || DEFAULTS.SOLID}
           id={id}
           style={style}
           title={title}

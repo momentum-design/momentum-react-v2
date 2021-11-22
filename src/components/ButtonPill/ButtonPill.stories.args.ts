@@ -76,6 +76,20 @@ export default {
       },
     },
   },
+  solid: {
+    description:
+      'Whether to use the solid background variant of this `<ButtonPill />`. Only available with outline currently. Does not support `color`',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SOLID,
+      },
+    },
+  },
   size: {
     description: 'Modifies the size of this `<ButtonPill />`.',
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],

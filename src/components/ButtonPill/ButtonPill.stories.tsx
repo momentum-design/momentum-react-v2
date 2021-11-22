@@ -48,6 +48,7 @@ Outline.parameters = {
     { color: 'join', outline: true },
     { color: 'cancel', outline: true },
     { color: 'message', outline: true },
+    { solid: true, outline: true },
   ],
 };
 
