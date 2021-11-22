@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { simulateMouseEnter, simulateMouseLeave } from '../../../test/utils';
 
 import ButtonSimple from './';
 
@@ -143,11 +144,7 @@ describe('<ButtonSimple />', () => {
 
       const component = mount(<ButtonSimple onHoverStart={mockCallback} />).find(ButtonSimple);
 
-      component.props().onHoverStart({
-        type: 'hoverstart',
-        pointerType: 'mouse',
-        target: component.getDOMNode(),
-      });
+      simulateMouseEnter(component);
 
       expect(mockCallback).toBeCalledTimes(1);
     });
@@ -159,13 +156,26 @@ describe('<ButtonSimple />', () => {
 
       const component = mount(<ButtonSimple onHoverEnd={mockCallback} />).find(ButtonSimple);
 
-      component.props().onHoverEnd({
-        type: 'hoverstart',
-        pointerType: 'mouse',
-        target: component.getDOMNode(),
-      });
+      simulateMouseEnter(component);
+      simulateMouseLeave(component);
 
       expect(mockCallback).toBeCalledTimes(1);
+    });
+
+    it('should handle hover change events', () => {
+      expect.assertions(2);
+
+      const mockCallkback = jest.fn();
+
+      const component = mount(<ButtonSimple onHoverChange={mockCallkback} />).find(ButtonSimple);
+
+      simulateMouseEnter(component);
+
+      expect(mockCallkback).toBeCalledWith(true);
+
+      simulateMouseLeave(component);
+
+      expect(mockCallkback).toBeCalledWith(false);
     });
   });
 });

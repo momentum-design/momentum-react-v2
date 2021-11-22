@@ -18,6 +18,19 @@ const buttonSimpleArgTypes = {
       },
     },
   },
+  // Override commonAriaButton, commonAriaHover
+  isDisabled: {
+    description: 'Disables all events on this component.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'Boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { buttonSimpleArgTypes };

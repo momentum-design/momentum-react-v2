@@ -1,4 +1,4 @@
-import React, { forwardRef, FC, RefObject, useRef } from 'react';
+import React, { forwardRef, RefObject, useRef } from 'react';
 import classnames from 'classnames';
 import { useButton } from '@react-aria/button';
 import { useHover } from '@react-aria/interactions';
