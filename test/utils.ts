@@ -37,3 +37,22 @@ export const triggerPress = (button: ReactWrapper): void => {
     stopPropagation: () => {},
   });
 };
+
+export const simulateMouseEnter = (component: ReactWrapper): void => {
+  component.simulate('mouseenter', {
+    pointerType: 'mouse',
+    target: component.getDOMNode(),
+    isHovered: false,
+    type: 'hoverstart',
+  });
+};
+
+export const simulateMouseLeave = (component: ReactWrapper): void => {
+  component.simulate('mouseleave', {
+    currentTarget: component.getDOMNode(),
+    pointerType: 'mouse',
+    target: component.getDOMNode(),
+    isHovered: true,
+    type: 'hoverstart',
+  });
+};

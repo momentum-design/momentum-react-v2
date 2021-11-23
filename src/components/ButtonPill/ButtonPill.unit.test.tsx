@@ -113,6 +113,21 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when color is outlined and solid is set', () => {
+      expect.assertions(1);
+
+      const outline = !DEFAULTS.OUTLINE;
+      const solid = !DEFAULTS.SOLID;
+
+      container = mount(
+        <ButtonPill outline={outline} solid={solid}>
+          Example Text
+        </ButtonPill>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with title', () => {
       expect.assertions(1);
 
@@ -206,6 +221,18 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
+    });
+
+    it('should pass solid prop', () => {
+      expect.assertions(1);
+
+      const solid = !DEFAULTS.SOLID;
+
+      const element = mount(<ButtonPill solid={solid} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-solid')).toBe(`${solid}`);
     });
 
     it('should pass size prop', () => {

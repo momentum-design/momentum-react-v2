@@ -28,6 +28,11 @@ export interface Props extends ButtonSimpleProps {
   outline?: boolean;
 
   /**
+   * Whether to use the solid background variant of this ButtonPill. Only available with outline currently.
+   */
+  solid?: boolean;
+
+  /**
    * Size index of this ButtonPill.
    */
   size?: number;

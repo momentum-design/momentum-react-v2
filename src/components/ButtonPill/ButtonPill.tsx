@@ -7,17 +7,18 @@ import { Props } from './ButtonPill.types';
 import './ButtonPill.style.scss';
 
 const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { className, color, disabled, ghost, outline, size, ...otherProps } = props;
+  const { className, color, disabled, ghost, outline, size, solid, ...otherProps } = props;
 
   return (
     <ButtonSimple
       className={classnames(STYLE.wrapper, className)}
       ref={providedRef}
       data-color={color || DEFAULTS.COLOR}
+      data-disabled={disabled || DEFAULTS.DISABLED}
       data-ghost={ghost || DEFAULTS.GHOST}
       data-outline={outline || DEFAULTS.OUTLINE}
       data-size={size || DEFAULTS.SIZE}
-      data-disabled={disabled || DEFAULTS.DISABLED}
+      data-solid={solid || DEFAULTS.SOLID}
       isDisabled={disabled}
       {...otherProps}
     />

@@ -1,6 +1,7 @@
 import React, { forwardRef, RefObject, useRef } from 'react';
 import classnames from 'classnames';
 import { useButton } from '@react-aria/button';
+import { useHover } from '@react-aria/interactions';
 import FocusRing from '../FocusRing';
 
 import { Props } from './ButtonSimple.types';
@@ -13,15 +14,8 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
   const internalRef = useRef();
   const ref = providedRef || internalRef;
 
-  const mutatedProps = {
-    ...props,
-  };
-
-  delete mutatedProps.className;
-  delete mutatedProps.id;
-  delete mutatedProps.style;
-
-  const { buttonProps } = useButton(mutatedProps, ref);
+  const { buttonProps } = useButton(props, ref);
+  const { hoverProps } = useHover(props);
 
   return (
     <FocusRing disabled={isDisabled}>
@@ -32,6 +26,7 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
         style={style}
         title={title}
         {...buttonProps}
+        {...hoverProps}
       >
         {children}
       </button>

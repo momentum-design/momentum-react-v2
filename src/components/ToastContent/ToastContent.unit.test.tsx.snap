@@ -170,6 +170,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
             data-ghost={false}
             data-outline={false}
             data-size={40}
+            data-solid={false}
           >
             <FocusRing>
               <FocusRing
@@ -183,6 +184,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
                   data-ghost={false}
                   data-outline={false}
                   data-size={40}
+                  data-solid={false}
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragStart={[Function]}

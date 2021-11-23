@@ -17,6 +17,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
         data-ghost={false}
         data-outline={false}
         data-size={40}
+        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -30,6 +31,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
               data-ghost={false}
               data-outline={false}
               data-size={40}
+              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -122,6 +124,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
         data-ghost={false}
         data-outline={false}
         data-size={40}
+        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -135,6 +138,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
               data-ghost={false}
               data-outline={false}
               data-size={40}
+              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -325,6 +329,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
         data-ghost={false}
         data-outline={false}
         data-size={40}
+        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -338,6 +343,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
               data-ghost={false}
               data-outline={false}
               data-size={40}
+              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
