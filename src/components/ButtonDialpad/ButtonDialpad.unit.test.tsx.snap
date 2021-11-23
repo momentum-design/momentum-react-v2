@@ -2,42 +2,48 @@
 
 exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
 <ButtonDialpad>
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          1
-        </div>
-        <div
-          className="md-button-dialpad-secondary-text"
-        />
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          >
+            1
+          </div>
+          <div
+            className="md-button-dialpad-secondary-text"
+          />
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -45,46 +51,53 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
 <ButtonDialpad
   disabled={true}
 >
-  <FocusRing
-    disabled={true}
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={true}
+    data-size={64}
+    isDisabled={true}
   >
     <FocusRing
       disabled={true}
-      focusClass="md-focus-ring-wrapper-disabled"
-      focusRingClass="md-focus-ring-wrapper-disabled"
     >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={true}
-        data-size={64}
+      <FocusRing
         disabled={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+        focusClass="md-focus-ring-wrapper-disabled"
+        focusRingClass="md-focus-ring-wrapper-disabled"
       >
-        <div
-          className="md-button-dialpad-primary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={true}
+          data-size={64}
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          Example Text
-        </div>
-        <div
-          className="md-button-dialpad-secondary-text"
-        />
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          >
+            Example Text
+          </div>
+          <div
+            className="md-button-dialpad-secondary-text"
+          />
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -92,42 +105,49 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText 1`] = `
 <ButtonDialpad
   primaryText="1"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+    primaryText="1"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          1
-        </div>
-        <div
-          className="md-button-dialpad-secondary-text"
-        />
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          >
+            1
+          </div>
+          <div
+            className="md-button-dialpad-secondary-text"
+          />
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -135,42 +155,49 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText and chil
 <ButtonDialpad
   primaryText="1"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+    primaryText="1"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          2
-        </div>
-        <div
-          className="md-button-dialpad-secondary-text"
-        />
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          >
+            2
+          </div>
+          <div
+            className="md-button-dialpad-secondary-text"
+          />
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -179,44 +206,52 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText and seco
   primaryText="1"
   secondaryText="ABC"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+    primaryText="1"
+    secondaryText="ABC"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          1
-        </div>
-        <div
-          className="md-button-dialpad-secondary-text"
-        >
-          ABC
-        </div>
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          >
+            1
+          </div>
+          <div
+            className="md-button-dialpad-secondary-text"
+          >
+            ABC
+          </div>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -225,44 +260,52 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText, seconda
   primaryText="1"
   secondaryText="ABC"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+    primaryText="1"
+    secondaryText="ABC"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          2
-        </div>
-        <div
-          className="md-button-dialpad-secondary-text"
-        >
-          ABC
-        </div>
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          >
+            2
+          </div>
+          <div
+            className="md-button-dialpad-secondary-text"
+          >
+            ABC
+          </div>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -270,42 +313,49 @@ exports[`<ButtonPill /> snapshot should match snapshot with secondaryText 1`] = 
 <ButtonDialpad
   secondaryText="ABC"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+    secondaryText="ABC"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
-        />
-        <div
-          className="md-button-dialpad-secondary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          ABC
-        </div>
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          />
+          <div
+            className="md-button-dialpad-secondary-text"
+          >
+            ABC
+          </div>
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -313,42 +363,48 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
 <ButtonDialpad
   size={64}
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
         >
-          Example Text
-        </div>
-        <div
-          className="md-button-dialpad-secondary-text"
-        />
-      </button>
+          <div
+            className="md-button-dialpad-primary-text"
+          >
+            Example Text
+          </div>
+          <div
+            className="md-button-dialpad-secondary-text"
+          />
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;
 
@@ -356,40 +412,47 @@ exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
 <ButtonDialpad
   title="Example Text"
 >
-  <FocusRing>
-    <FocusRing
-      focusClass="md-focus-ring-wrapper children"
-      focusRingClass="md-focus-ring-wrapper children"
-    >
-      <button
-        className="md-button-dialpad-wrapper"
-        data-disabled={false}
-        data-size={64}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        title="Example Text"
-        type="button"
+  <ButtonSimple
+    className="md-button-dialpad-wrapper"
+    data-disabled={false}
+    data-size={64}
+    title="Example Text"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
       >
-        <div
-          className="md-button-dialpad-primary-text"
-        />
-        <div
-          className="md-button-dialpad-secondary-text"
-        />
-      </button>
+        <button
+          className="md-button-dialpad-wrapper"
+          data-disabled={false}
+          data-size={64}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          title="Example Text"
+          type="button"
+        >
+          <div
+            className="md-button-dialpad-primary-text"
+          />
+          <div
+            className="md-button-dialpad-secondary-text"
+          />
+        </button>
+      </FocusRing>
     </FocusRing>
-  </FocusRing>
+  </ButtonSimple>
 </ButtonDialpad>
 `;

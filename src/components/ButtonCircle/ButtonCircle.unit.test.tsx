@@ -3,6 +3,8 @@ import { mount } from 'enzyme';
 
 import ButtonCircle, { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from './';
 
+import ButtonSimple from '../ButtonSimple';
+
 const { COLORS, DEFAULTS, SIZES, STYLE } = CONSTANTS;
 
 describe('<ButtonCircle />', () => {
@@ -252,6 +254,14 @@ describe('<ButtonCircle />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
+    });
+
+    it('should render ButtonSimple', () => {
+      expect.assertions(1);
+
+      const container = mount(<ButtonCircle />);
+
+      expect(container.find(ButtonSimple).exists()).toBe(true);
     });
   });
 

@@ -1,11 +1,7 @@
 import { ReactNode } from 'react';
-import { AriaButtonProps } from '@react-types/button';
+import { ButtonSimpleProps } from '../ButtonSimple';
 
-export interface Props extends AriaButtonProps {
-  /**
-   * Custom class to be able to override the component's CSS
-   */
-  className?: string;
+export interface Props extends ButtonSimpleProps {
   /**
    * Child components of this ButtonDialpad. This prop replaces primaryText.
    */
@@ -29,9 +25,4 @@ export interface Props extends AriaButtonProps {
    * Size index of this ButtonPill.
    */
   size?: number;
-
-  /**
-   * title to use for this component.
-   */
-  title?: string;
 }

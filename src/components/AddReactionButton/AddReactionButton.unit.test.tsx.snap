@@ -6,59 +6,69 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
     className="md-add-reaction-button-wrapper"
     size={20}
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-circle-wrapper md-add-reaction-button-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-multiple-children={false}
-          data-outline={false}
-          data-size={20}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
+    <ButtonSimple
+      className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-size={20}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
         >
-          <Icon
-            name="reactions"
-            scale={12}
+          <button
+            className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-multiple-children={false}
+            data-outline={false}
+            data-size={20}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
           >
-            <div
-              className="md-icon-wrapper"
+            <Icon
+              name="reactions"
+              scale={12}
             >
-              <svg
-                className=""
-                data-autoscale={false}
-                data-scale={12}
-                data-test="reactions"
-                fill="currentColor"
-                height="100%"
-                stroke="currentColor"
-                style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
-              />
-            </div>
-          </Icon>
-        </button>
+              <div
+                className="md-icon-wrapper"
+              >
+                <svg
+                  className=""
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="reactions"
+                  fill="currentColor"
+                  height="100%"
+                  stroke="currentColor"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
+          </button>
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
+    </ButtonSimple>
   </ButtonCircle>
 </AddReactionButton>
 `;
@@ -71,59 +81,69 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
     className="example-class md-add-reaction-button-wrapper"
     size={20}
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-circle-wrapper example-class md-add-reaction-button-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-multiple-children={false}
-          data-outline={false}
-          data-size={20}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
+    <ButtonSimple
+      className="md-button-circle-wrapper example-class md-add-reaction-button-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-size={20}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
         >
-          <Icon
-            name="reactions"
-            scale={12}
+          <button
+            className="md-button-circle-wrapper example-class md-add-reaction-button-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-multiple-children={false}
+            data-outline={false}
+            data-size={20}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
           >
-            <div
-              className="md-icon-wrapper"
+            <Icon
+              name="reactions"
+              scale={12}
             >
-              <svg
-                className=""
-                data-autoscale={false}
-                data-scale={12}
-                data-test="reactions"
-                fill="currentColor"
-                height="100%"
-                stroke="currentColor"
-                style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
-              />
-            </div>
-          </Icon>
-        </button>
+              <div
+                className="md-icon-wrapper"
+              >
+                <svg
+                  className=""
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="reactions"
+                  fill="currentColor"
+                  height="100%"
+                  stroke="currentColor"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
+          </button>
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
+    </ButtonSimple>
   </ButtonCircle>
 </AddReactionButton>
 `;
@@ -137,60 +157,71 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
     id="example-id"
     size={20}
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-circle-wrapper md-add-reaction-button-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-multiple-children={false}
-          data-outline={false}
-          data-size={20}
-          id="example-id"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
+    <ButtonSimple
+      className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-size={20}
+      id="example-id"
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
         >
-          <Icon
-            name="reactions"
-            scale={12}
+          <button
+            className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-multiple-children={false}
+            data-outline={false}
+            data-size={20}
+            id="example-id"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
           >
-            <div
-              className="md-icon-wrapper"
+            <Icon
+              name="reactions"
+              scale={12}
             >
-              <svg
-                className=""
-                data-autoscale={false}
-                data-scale={12}
-                data-test="reactions"
-                fill="currentColor"
-                height="100%"
-                stroke="currentColor"
-                style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
-              />
-            </div>
-          </Icon>
-        </button>
+              <div
+                className="md-icon-wrapper"
+              >
+                <svg
+                  className=""
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="reactions"
+                  fill="currentColor"
+                  height="100%"
+                  stroke="currentColor"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
+          </button>
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
+    </ButtonSimple>
   </ButtonCircle>
 </AddReactionButton>
 `;
@@ -212,64 +243,79 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-circle-wrapper md-add-reaction-button-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-multiple-children={false}
-          data-outline={false}
-          data-size={20}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          style={
-            Object {
-              "color": "pink",
-            }
-          }
-          type="button"
+    <ButtonSimple
+      className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-size={20}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
         >
-          <Icon
-            name="reactions"
-            scale={12}
+          <button
+            className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-multiple-children={false}
+            data-outline={false}
+            data-size={20}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "color": "pink",
+              }
+            }
+            type="button"
           >
-            <div
-              className="md-icon-wrapper"
+            <Icon
+              name="reactions"
+              scale={12}
             >
-              <svg
-                className=""
-                data-autoscale={false}
-                data-scale={12}
-                data-test="reactions"
-                fill="currentColor"
-                height="100%"
-                stroke="currentColor"
-                style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
-              />
-            </div>
-          </Icon>
-        </button>
+              <div
+                className="md-icon-wrapper"
+              >
+                <svg
+                  className=""
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="reactions"
+                  fill="currentColor"
+                  height="100%"
+                  stroke="currentColor"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
+          </button>
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
+    </ButtonSimple>
   </ButtonCircle>
 </AddReactionButton>
 `;

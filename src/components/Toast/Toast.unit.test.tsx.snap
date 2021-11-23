@@ -400,174 +400,214 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>
@@ -978,174 +1018,214 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>
@@ -1513,174 +1593,214 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>
@@ -2035,174 +2155,214 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>
@@ -2599,174 +2759,214 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>
@@ -3178,174 +3378,214 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>
@@ -3765,174 +4005,214 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>
@@ -4330,174 +4610,214 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
               outline={true}
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-multiple-children={false}
-                    data-outline={true}
-                    data-size={28}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-multiple-children={false}
+                data-outline={true}
+                data-size={28}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      autoScale={125}
-                      name="alarm"
-                      weight="bold"
+                    <button
+                      className="md-button-circle-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-multiple-children={false}
+                      data-outline={true}
+                      data-size={28}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        className="md-icon-wrapper"
+                      <Icon
+                        autoScale={125}
+                        name="alarm"
+                        weight="bold"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={125}
-                          data-scale={false}
-                          data-test="alarm"
-                          fill="currentColor"
-                          height="100%"
-                          stroke="currentColor"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                        <div
+                          className="md-icon-wrapper"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={125}
+                            data-scale={false}
+                            data-test="alarm"
+                            fill="currentColor"
+                            height="100%"
+                            stroke="currentColor"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonCircle>
             <ButtonPill
               color="message"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="message"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="message"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Message
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="message"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Message
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="cancel"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="cancel"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="cancel"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Cancel
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="cancel"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
             <ButtonPill
               color="join"
               size={28}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    className="md-button-pill-wrapper"
-                    data-color="join"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-outline={false}
-                    data-size={28}
-                    data-solid={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="join"
+                data-disabled={false}
+                data-ghost={false}
+                data-outline={false}
+                data-size={28}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    Join
-                  </button>
+                    <button
+                      className="md-button-pill-wrapper"
+                      data-color="join"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-outline={false}
+                      data-size={28}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      Join
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
+              </ButtonSimple>
             </ButtonPill>
           </div>
         </ButtonGroup>

@@ -163,39 +163,49 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
         data-spaced={true}
       >
         <ButtonPill>
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
-            >
-              <button
-                className="md-button-pill-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={false}
-                data-outline={false}
-                data-size={40}
-                data-solid={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+          <ButtonSimple
+            className="md-button-pill-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-outline={false}
+            data-size={40}
+            data-solid={false}
+          >
+            <FocusRing>
+              <FocusRing
+                focusClass="md-focus-ring-wrapper children"
+                focusRingClass="md-focus-ring-wrapper children"
               >
-                Button
-              </button>
+                <button
+                  className="md-button-pill-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={false}
+                  data-outline={false}
+                  data-size={40}
+                  data-solid={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  type="button"
+                >
+                  Button
+                </button>
+              </FocusRing>
             </FocusRing>
-          </FocusRing>
+          </ButtonSimple>
         </ButtonPill>
       </div>
     </ButtonGroup>
