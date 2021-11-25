@@ -12,6 +12,7 @@ import ModalContainer from '../ModalContainer';
 import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
+import Text from '../Text';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
@@ -59,6 +60,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
             {end}
           </>
         );
+      } else if (verifyTypes(children, Text)) {
+        content = children;
       } else {
         console.warn(
           'ListItemBase: this component can only receive ListItemBaseSection as children.'
