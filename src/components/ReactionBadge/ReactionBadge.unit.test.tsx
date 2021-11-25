@@ -3,6 +3,7 @@ import { mountAndWait } from '../../../test/utils';
 
 import ReactionBadge, { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 import Reaction from '../Reaction';
+import ButtonSimple from '../ButtonSimple';
 
 describe('<ReactionBadge name="haha" />', () => {
   const reactionProp = <Reaction name="haha" />;
@@ -146,6 +147,14 @@ describe('<ReactionBadge name="haha" />', () => {
       const child = wrapper.find(Reaction);
 
       expect(child.props().name).toBe(reactionName);
+    });
+
+    it('should render ButtonSimple', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} />);
+
+      expect(container.find(ButtonSimple).exists()).toBe(true);
     });
   });
 

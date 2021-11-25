@@ -53,25 +53,40 @@
       color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--button-secondary-text-pressed);
     }
+
+    &[data-solid='true'] {
+      background-color: rgba(255, 255, 255, 1); // IEFIX
+      background-color: var(--theme-button-inverted-normal);
+
+      &:hover {
+        background-color: rgba(237, 237, 237, 1); // IEFIX
+        background-color: var(--theme-button-inverted-hover);
+      }
+
+      &:active {
+        background-color: rgba(222, 222, 222, 1); // IEFIX
+        background-color: var(--theme-button-inverted-pressed);
+      }
+    }
   }
 
   &[data-color='join'] {
     background-color: rgba(29, 128, 95, 1); // IEFIX
     background-color: var(--button-join-fill-background);
-    color: rgba(255, 255, 255, 1); // IEFIX
+    color: rgba(255, 255, 255, 0.95); // IEFIX
     color: var(--button-join-fill-text);
 
     &:hover {
       background-color: rgba(24, 94, 70, 1); // IEFIX
       background-color: var(--button-join-fill-background-hovered);
-      color: rgba(255, 255, 255, 1); // IEFIX
+      color: rgba(255, 255, 255, 0.95); // IEFIX
       color: var(--button-join-fill-text-hovered);
     }
 
     &:active {
       background-color: rgba(19, 66, 49, 1); // IEFIX
       background-color: var(--button-join-fill-background-pressed);
-      color: rgba(255, 255, 255, 1); // IEFIX
+      color: rgba(255, 255, 255, 0.95); // IEFIX
       color: var(--button-join-fill-text-pressed);
     }
 
@@ -87,7 +102,7 @@
         background-color: rgba(24, 94, 70, 1); // IEFIX
         background-color: var(--button-join-outline-background-hovered);
         border-color: rgba(0, 0, 0, 0);
-        color: rgba(255, 255, 255, 1); // IEFIX
+        color: rgba(255, 255, 255, 0.95); // IEFIX
         color: var(--button-join-outline-text-hovered);
       }
 
@@ -95,7 +110,7 @@
         background-color: rgba(19, 66, 49, 1); // IEFIX
         background-color: var(--button-join-outline-background-pressed);
         border-color: rgba(0, 0, 0, 0);
-        color: rgba(255, 255, 255, 1); // IEFIX
+        color: rgba(255, 255, 255, 0.95); // IEFIX
         color: var(--button-join-outline-text-pressed);
       }
 
@@ -113,20 +128,20 @@
   &[data-color='cancel'] {
     background-color: rgba(219, 31, 46, 1); // IEFIX
     background-color: var(--button-cancel-fill-background);
-    color: rgba(255, 255, 255, 1); // IEFIX
+    color: rgba(255, 255, 255, 0.95); // IEFIX
     color: var(--button-cancel-fill-text);
 
     &:hover {
       background-color: rgba(171, 10, 21, 1); // IEFIX
       background-color: var(--button-cancel-fill-background-hovered);
-      color: rgba(255, 255, 255, 1); // IEFIX
+      color: rgba(255, 255, 255, 0.95); // IEFIX
       color: var(--button-cancel-fill-text-hovered);
     }
 
     &:active {
       background-color: rgba(120, 13, 19, 1); // IEFIX
       background-color: var(--button-cancel-fill-background-pressed);
-      color: rgba(255, 255, 255, 1); // IEFIX
+      color: rgba(255, 255, 255, 0.95); // IEFIX
       color: var(--button-cancel-fill-text-pressed);
     }
 
@@ -142,7 +157,7 @@
         background-color: rgba(171, 10, 21, 1); // IEFIX
         background-color: var(--button-cancel-outline-background-hovered);
         border-color: rgba(0, 0, 0, 0);
-        color: rgba(255, 255, 255, 1); // IEFIX
+        color: rgba(255, 255, 255, 0.95); // IEFIX
         color: var(--button-cancel-outline-text-hovered);
       }
 
@@ -150,7 +165,7 @@
         background-color: rgba(120, 13, 19, 1); // IEFIX
         background-color: var(--button-cancel-outline-background-pressed);
         border-color: rgba(0, 0, 0, 0);
-        color: rgba(255, 255, 255, 1); // IEFIX
+        color: rgba(255, 255, 255, 0.95); // IEFIX
         color: var(--button-cancel-outline-text-pressed);
       }
     }
@@ -159,20 +174,20 @@
   &[data-color='message'] {
     background-color: rgba(17, 112, 207, 1); // IEFIX
     background-color: var(--button-message-fill-background);
-    color: rgba(255, 255, 255, 1); // IEFIX
+    color: rgba(255, 255, 255, 0.95); // IEFIX
     color: var(--button-message-fill-text);
 
     &:hover {
       background-color: rgba(3, 83, 168, 1); // IEFIX
       background-color: var(--button-message-fill-background-hovered);
-      color: rgba(255, 255, 255, 1); // IEFIX
+      color: rgba(255, 255, 255, 0.95); // IEFIX
       color: var(--button-message-fill-text-hovered);
     }
 
     &:active {
       background-color: rgba(6, 58, 117, 1); // IEFIX
       background-color: var(--button-message-fill-background-pressed);
-      color: rgba(255, 255, 255, 1); // IEFIX
+      color: rgba(255, 255, 255, 0.95); // IEFIX
       color: var(--button-message-fill-text-pressed);
     }
 
@@ -203,25 +218,31 @@
     }
 
     &[data-color='cancel'][data-disabled='false'] {
+      color: rgba(171, 10, 21, 1); // IEFIX
       color: var(--button-cancel-ghost-text);
 
       &:hover {
+        color: rgba(171, 10, 21, 1); // IEFIX
         color: var(--button-cancel-ghost-text-hovered);
       }
 
       &:active {
+        color: rgba(171, 10, 21, 1); // IEFIX
         color: var(--button-cancel-ghost-text-pressed);
       }
     }
 
     &[data-color='message'][data-disabled='false'] {
+      color: rgba(3, 83, 168, 1); // IEFIX
       color: var(--button-message-ghost-text);
 
       &:hover {
+        color: rgba(3, 83, 168, 1); // IEFIX
         color: var(--button-message-ghost-text-hovered);
       }
 
       &:active {
+        color: rgba(3, 83, 168, 1); // IEFIX
         color: var(--button-message-ghost-text-pressed);
       }
     }

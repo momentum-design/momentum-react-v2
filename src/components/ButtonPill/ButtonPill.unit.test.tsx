@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import ButtonPill, { BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
+import ButtonSimple from '../ButtonSimple';
 
 const { COLORS, DEFAULTS, SIZES, STYLE } = CONSTANTS;
 
@@ -112,6 +113,21 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when color is outlined and solid is set', () => {
+      expect.assertions(1);
+
+      const outline = !DEFAULTS.OUTLINE;
+      const solid = !DEFAULTS.SOLID;
+
+      container = mount(
+        <ButtonPill outline={outline} solid={solid}>
+          Example Text
+        </ButtonPill>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with title', () => {
       expect.assertions(1);
 
@@ -207,6 +223,18 @@ describe('<ButtonPill />', () => {
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
     });
 
+    it('should pass solid prop', () => {
+      expect.assertions(1);
+
+      const solid = !DEFAULTS.SOLID;
+
+      const element = mount(<ButtonPill solid={solid} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-solid')).toBe(`${solid}`);
+    });
+
     it('should pass size prop', () => {
       expect.assertions(1);
 
@@ -241,6 +269,14 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
+    });
+
+    it('should render ButtonSimple', () => {
+      expect.assertions(1);
+
+      container = mount(<ButtonPill>Example Text</ButtonPill>);
+
+      expect(container.find(ButtonSimple).exists()).toBe(true);
     });
   });
 

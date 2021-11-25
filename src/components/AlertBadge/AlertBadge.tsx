@@ -1,7 +1,6 @@
-import React, { FC, forwardRef, useRef, RefObject } from 'react';
+import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import { useButton } from '@react-aria/button';
-import FocusRing from '../FocusRing';
+import ButtonSimple from '../ButtonSimple';
 
 import { PrimitiveConverter } from '../../utils';
 
@@ -9,49 +8,29 @@ import { STYLE } from './AlertBadge.constants';
 import { Props } from './AlertBadge.types';
 import './AlertBadge.style.scss';
 
-const AlertBadge: FC<Props> = forwardRef(
-  (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-    const { children, className, color, image, id, label, style, title } = props;
-    const internalRef = useRef();
-    const ref = providedRef || internalRef;
+const AlertBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+  const { children, className, color, image, label, ...otherProps } = props;
 
-    const mutatedChildren = children ? (
-      <PrimitiveConverter>{children}</PrimitiveConverter>
-    ) : (
-      [
-        image ? <PrimitiveConverter key={0}>{image}</PrimitiveConverter> : null,
-        label ? <PrimitiveConverter key={1}>{label}</PrimitiveConverter> : null,
-      ]
-    );
+  const mutatedChildren = children ? (
+    <PrimitiveConverter>{children}</PrimitiveConverter>
+  ) : (
+    [
+      image ? <PrimitiveConverter key={0}>{image}</PrimitiveConverter> : null,
+      label ? <PrimitiveConverter key={1}>{label}</PrimitiveConverter> : null,
+    ]
+  );
 
-    const mutatedProps = {
-      ...props,
-      children: mutatedChildren,
-    };
-
-    delete mutatedProps.className;
-    delete mutatedProps.id;
-    delete mutatedProps.style;
-
-    const { buttonProps } = useButton(mutatedProps, ref);
-
-    return (
-      <FocusRing>
-        <button
-          className={classnames(className, STYLE.wrapper)}
-          {...buttonProps}
-          ref={ref}
-          data-color={color}
-          id={id}
-          style={style}
-          title={title}
-        >
-          {mutatedChildren}
-        </button>
-      </FocusRing>
-    );
-  }
-);
+  return (
+    <ButtonSimple
+      ref={providedRef}
+      className={classnames(className, STYLE.wrapper)}
+      data-color={color}
+      {...otherProps}
+    >
+      {mutatedChildren}
+    </ButtonSimple>
+  );
+});
 
 AlertBadge.displayName = 'AlertBadge';
 

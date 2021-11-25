@@ -13,7 +13,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
   name="test"
   onChange={null}
   onClose={null}
-  onDownload={null}
+  onDownload={[MockFunction]}
   pages={
     Array [
       Object {

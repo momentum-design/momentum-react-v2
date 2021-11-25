@@ -3,6 +3,8 @@ import { mount } from 'enzyme';
 
 import AlertBadge, { ALERT_BADGE_CONSTANTS as CONSTANTS } from './';
 
+import ButtonSimple from '../ButtonSimple';
+
 const { COLORS } = CONSTANTS;
 
 describe('<AlertBadge />', () => {
@@ -183,6 +185,14 @@ describe('<AlertBadge />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
+    });
+
+    it('should render ButtonSimple', () => {
+      expect.assertions(1);
+
+      const container = mount(<AlertBadge />);
+
+      expect(container.find(ButtonSimple).exists()).toBe(true);
     });
   });
 

@@ -4,6 +4,8 @@ import { ButtonDialpad } from '@momentum-ui/react';
 
 import { DEFAULTS, SIZES, STYLE } from './ButtonDialpad.constants';
 
+import ButtonSimple from '../ButtonSimple';
+
 describe('<ButtonPill />', () => {
   let container;
 
@@ -199,6 +201,14 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
+    });
+
+    it('should render ButtonSimple', () => {
+      expect.assertions(1);
+
+      const container = mount(<ButtonDialpad />);
+
+      expect(container.find(ButtonSimple).exists()).toBe(true);
     });
   });
 

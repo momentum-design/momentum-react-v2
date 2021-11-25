@@ -1,17 +1,11 @@
-import { CSSProperties, ReactNode } from 'react';
-import { AriaButtonProps } from '@react-types/button';
-
+import { ReactNode } from 'react';
+import { ButtonSimpleProps } from '../ButtonSimple';
 export type Size = 64 | 52 | 40 | 32 | 28 | 20;
-export interface Props extends AriaButtonProps {
+export interface Props extends ButtonSimpleProps {
   /**
    * Child components of this ButtonCircle.
    */
   children?: ReactNode;
-
-  /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
 
   /**
    * Color profile to use with this ButtonCircle.
@@ -29,11 +23,6 @@ export interface Props extends AriaButtonProps {
   ghost?: boolean;
 
   /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
-
-  /**
    * Whether to use the outline variant of this ButtonCircle if available.
    */
   outline?: boolean;
@@ -42,14 +31,4 @@ export interface Props extends AriaButtonProps {
    * Size index of this ButtonCircle.
    */
   size?: Size;
-
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
-
-  /**
-   * title to use for this component.
-   */
-  title?: string;
 }
