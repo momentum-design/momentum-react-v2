@@ -232,6 +232,23 @@ const commonAriaModal = {
   },
 };
 
+const commonAriaPressProps = {
+  onPress: {
+    action: 'onPress',
+    description:
+      'From [PressResult](https://react-spectrum.adobe.com/react-aria/usePress.html). Handler that is called when the press is released over the target.',
+    table: {
+      category: 'React Aria - Press',
+      type: {
+        summary: '(e: PressEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+};
+
 const commonAriaButton = {
   onPress: {
     action: 'onPress',
@@ -375,4 +392,5 @@ export {
   commonHTMLAttributes,
   commonStyles,
   extendArgTypes,
+  commonAriaPressProps,
 };

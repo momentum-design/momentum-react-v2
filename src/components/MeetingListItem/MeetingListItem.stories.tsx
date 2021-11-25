@@ -8,7 +8,7 @@ import {
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import MeetingListItem, { MeetingListItemProps } from './';
+import MeetingListItem, { MeetingListItemProps, MeetingMarker } from './';
 import argTypes from './MeetingListItem.stories.args';
 import Documentation from './MeetingListItem.stories.docs.mdx';
 import Icon from '../Icon';
@@ -17,6 +17,7 @@ import ButtonHyperlink from '../ButtonHyperlink';
 import ButtonPill from '../ButtonPill';
 import ButtonGroup from '../ButtonGroup';
 import ButtonCircle from '../ButtonCircle';
+import Text from '../Text';
 
 export default {
   title: 'Momentum UI/MeetingListItem',
@@ -28,14 +29,10 @@ export default {
     },
   },
   args: {
-    // Args provided to all stories by default.
-    children: 'A', // Example of a default arg for all stories.
+    children: 'A',
   },
 };
 
-/**
- * Primary story. This renders a single component with all external props.
- */
 const Example = Template((args) => (
   <>
     {getComponentStates(
@@ -44,8 +41,12 @@ const Example = Template((args) => (
         ...args,
         children: (
           <>
-            <div key="child1">Date</div>
-            <div key="child2">Normal</div>
+            <Text type="body-primary" key="child1">
+              Date
+            </Text>
+            <Text type="body-secondary" key="child2">
+              Normal
+            </Text>
           </>
         ),
       },
@@ -59,19 +60,27 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   buttonGroup: (
     <ButtonGroup spaced>
-      <ButtonHyperlink>Link</ButtonHyperlink>
-      <div style={{ paddingRight: 0 }}>17</div>
-      <Icon name="participant-list" />
-      <ButtonPill color="join">Join</ButtonPill>
+      <ButtonHyperlink key="link">Link</ButtonHyperlink>
+      <div key="participants-list" style={{ paddingRight: 0 }}>
+        17
+      </div>
+      <Icon key="participants-icon" name="participant-list" scale={16} />
+      <ButtonPill key="join-button" color="join">
+        Join
+      </ButtonPill>
     </ButtonGroup>
   ),
   children: (
     <>
-      <div key="child1">Date</div>
-      <div key="child2">Normal</div>
+      <Text type="body-primary" key="child1">
+        Date
+      </Text>
+      <Text type="body-secondary" key="child2">
+        Normal
+      </Text>
     </>
   ),
-  color: 'join',
+  color: MeetingMarker.AcceptedActive,
   image: <Avatar initials="TU" />,
 };
 
@@ -89,26 +98,30 @@ Common.parameters = {
       label: 'Recording with buttons',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonCircle ghost={true}>
+          <ButtonCircle key="btn-info" ghost={true}>
             <Icon name="info-circle" />
           </ButtonCircle>
-          <ButtonCircle ghost={true}>
+          <ButtonCircle key="btn-share" ghost={true}>
             <Icon name="share-c-native-iph" />
           </ButtonCircle>
-          <ButtonCircle ghost={true}>
+          <ButtonCircle key="btn-chat" ghost={true}>
             <Icon name="chat" />
           </ButtonCircle>
         </ButtonGroup>
       ),
       children: (
         <>
-          <div>Today</div>
-          <div>11:00 - 12:00</div>
+          <Text type="header-primary" key="first-line">
+            Today
+          </Text>
+          <Text type="body-secondary" key="second-line">
+            11:00 - 12:00
+          </Text>
         </>
       ),
       image: (
         <ButtonCircle>
-          <Icon name="play" />
+          <Icon key="play-icon" name="play" />
         </ButtonCircle>
       ),
     },
@@ -116,24 +129,28 @@ Common.parameters = {
       label: 'Recording with buttons and link',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink>hyperlink</ButtonHyperlink>
-          <ButtonCircle ghost={true}>
+          <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
+          <ButtonCircle key="btn-info" ghost={true}>
             <Icon name="info-circle" />
           </ButtonCircle>
-          <ButtonCircle ghost={true}>
+          <ButtonCircle key="btn-chat" ghost={true}>
             <Icon name="chat" />
           </ButtonCircle>
         </ButtonGroup>
       ),
       children: (
         <>
-          <div>Today</div>
-          <div>11:00 - 12:00</div>
+          <Text type="header-primary" key="first-line">
+            Today
+          </Text>
+          <Text type="body-secondary" key="second-line">
+            11:00 - 12:00
+          </Text>
         </>
       ),
       image: (
         <ButtonCircle>
-          <Icon name="play" />
+          <Icon key="play-icon" name="play" />
         </ButtonCircle>
       ),
     },
@@ -141,97 +158,129 @@ Common.parameters = {
       label: 'Active meeting with participant count',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-          <div style={{ paddingRight: 0, marginRight: 0 }}>17</div>
-          <Icon name="participant-list" />
-          <ButtonPill color="join">Join</ButtonPill>
+          <ButtonHyperlink key="link">Link</ButtonHyperlink>
+          <div key="participant-list" style={{ paddingRight: 0, marginRight: 0 }}>
+            17
+          </div>
+          <Icon key="participant-list-icon" name="participant-list" scale={16} />
+          <ButtonPill key="join-button" color="join">
+            Join
+          </ButtonPill>
         </ButtonGroup>
       ),
       children: (
         <>
-          <div key="child1">Date</div>
-          <div key="child2">Normal</div>
+          <Text type="header-primary" key="child1">
+            Date
+          </Text>
+          <Text type="body-secondary" key="child2">
+            Normal
+          </Text>
         </>
       ),
-      color: 'join',
+      color: MeetingMarker.AcceptedActive,
       image: <Avatar initials="TU" />,
     },
     {
       label: 'Inactive meeting',
       buttonGroup: (
         <ButtonGroup spaced>
-          <Icon name="recurring" />
-          <Icon name="calendar-empty" />
+          <Icon key="recurring-icon" name="recurring" />
+          <Icon key="calendar-icon" name="calendar-empty" />
         </ButtonGroup>
       ),
       children: (
         <>
-          <div key="child1">Date</div>
-          <div key="child2">Normal</div>
+          <Text type="body-primary" key="child1">
+            Date
+          </Text>
+          <Text type="body-secondary" key="child2">
+            Normal
+          </Text>
         </>
       ),
-      color: 'inactive',
+      color: MeetingMarker.AcceptedInactive,
       image: <Avatar initials="TU" />,
     },
     {
       label: 'Active meeting without join button',
       buttonGroup: (
         <ButtonGroup spaced>
-          <Icon name="recurring" />
-          <Icon name="calendar-empty" />
+          <Icon key="icon-recurring" name="recurring" />
+          <Icon key="icon-calendar" name="calendar-empty" />
         </ButtonGroup>
       ),
       children: (
         <>
-          <div key="child1">Date</div>
-          <div key="child2">Normal</div>
+          <Text type="body-primary" key="child1">
+            Date
+          </Text>
+          <Text type="body-secondary" key="child2">
+            Normal
+          </Text>
         </>
       ),
-      color: 'activeNoJoin',
+      color: MeetingMarker.AcceptedInactive,
       image: <Avatar initials="TU" />,
     },
     {
       label: 'No meetings scheduled',
       children: 'No meetings scheduled',
-      color: 'empty',
+      color: MeetingMarker.Empty,
     },
     {
       label: 'Scheduled meeting',
       children: (
-        <div style={{ display: 'flex' }}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div>Date</div>
-            <div>Time - Time</div>
+        <div key="child-1" style={{ display: 'flex' }}>
+          <div key="first-line-group" style={{ display: 'flex', flexDirection: 'column' }}>
+            <Text key="first-line" type="body-primary">
+              Date
+            </Text>
+            <Text key="second-line" type="body-secondary">
+              Time - Time
+            </Text>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px' }}>
-            <div style={{ marginRight: '5px' }}>Normal</div> <Icon name="recurring" />
+          <div
+            key="third-line"
+            style={{ display: 'flex', alignItems: 'center', marginLeft: '10px' }}
+          >
+            <div key="third-line-text" style={{ marginRight: '5px' }}>
+              Normal
+            </div>
+            <Icon key="recurring-icon" name="recurring" />
           </div>
         </div>
       ),
       buttonGroup: <Avatar initials="TU" />,
-      color: 'scheduled',
+      color: MeetingMarker.Empty,
     },
     {
       label: 'Three-line item',
       children: (
         <>
-          <div>Primary</div>
-          <div>Name</div>
-          <div>Date</div>
+          <Text type="body-primary" key="first-line">
+            Primary
+          </Text>
+          <Text type="body-secondary" key="second-line">
+            Name
+          </Text>
+          <Text type="body-secondary" key="third-line">
+            Date
+          </Text>
         </>
       ),
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink>hyperlink</ButtonHyperlink>
-          <ButtonCircle ghost={true}>
+          <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
+          <ButtonCircle key="button-copy" ghost={true}>
             <Icon name="copy" />
           </ButtonCircle>
-          <ButtonCircle ghost={true}>
+          <ButtonCircle key="button-chat" ghost={true}>
             <Icon name="chat" />
           </ButtonCircle>
         </ButtonGroup>
       ),
-      image: <Icon name="placeholder" />,
+      image: <Icon key="placeholder-icon" name="placeholder" />,
       large: true,
     },
   ],
@@ -250,8 +299,8 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <div>Join</div>,
-      color: 'join',
+      children: <Text type="body-primary">{MeetingMarker.AcceptedActive}</Text>,
+      color: MeetingMarker.AcceptedActive,
       image: <Avatar initials="TU" />,
     },
     {
@@ -260,8 +309,8 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <div>Inactive</div>,
-      color: 'inactive',
+      children: <Text type="body-primary">{MeetingMarker.AcceptedInactive}</Text>,
+      color: MeetingMarker.AcceptedInactive,
       image: <Avatar initials="TU" />,
     },
     {
@@ -270,8 +319,8 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <div>Active No Join</div>,
-      color: 'activeNoJoin',
+      children: <Text type="body-primary">{MeetingMarker.TentativeActive}</Text>,
+      color: MeetingMarker.TentativeActive,
       image: <Avatar initials="TU" />,
     },
     {
@@ -280,8 +329,18 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <div>Active No Join</div>,
-      color: 'scheduled',
+      children: <Text type="body-primary">{MeetingMarker.TentativeInactive}</Text>,
+      color: MeetingMarker.TentativeInactive,
+      image: <Avatar initials="TU" />,
+    },
+    {
+      buttonGroup: (
+        <ButtonGroup spaced>
+          <ButtonHyperlink>Link</ButtonHyperlink>
+        </ButtonGroup>
+      ),
+      children: <Text type="body-primary">{MeetingMarker.Empty}</Text>,
+      color: MeetingMarker.Empty,
       image: <Avatar initials="TU" />,
     },
   ],
@@ -297,17 +356,27 @@ Sizes.parameters = {
     {
       children: (
         <>
-          <div>Normal</div>
-          <div>Size</div>
+          <Text type="body-primary" key="first-line">
+            Normal
+          </Text>
+          <Text type="body-secondary" key="second-line">
+            Size
+          </Text>
         </>
       ),
     },
     {
       children: (
         <>
-          <div>Large</div>
-          <div>Size</div>
-          <div>Item</div>
+          <Text type="body-primary" key="first-line">
+            Large
+          </Text>
+          <Text type="body-secondary" key="second-line">
+            Size
+          </Text>
+          <Text type="body-secondary" key="third-line">
+            Item
+          </Text>
         </>
       ),
       large: true,

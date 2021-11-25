@@ -1,6 +1,14 @@
 import { CSSProperties, ReactNode } from 'react';
+import { PressEvents } from '@react-types/shared';
 
-export interface Props {
+export enum MeetingMarker {
+  AcceptedActive = 'AcceptedActive', // green
+  AcceptedInactive = 'AcceptedInactive', //gray
+  TentativeActive = 'TentativeActive', // green stripe
+  TentativeInactive = 'TentativeInactive', //gray stripe
+  Empty = 'Empty',
+}
+export interface Props extends PressEvents {
   /**
    * Buttons or icons for end of item
    */
@@ -19,7 +27,7 @@ export interface Props {
   /**
    * Color status
    */
-  color?: 'join' | 'inactive' | 'activeNoJoin' | 'empty' | 'scheduled';
+  color?: MeetingMarker;
 
   /**
    * Custom id for overriding this component's CSS.
@@ -46,4 +54,9 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * Used to manage focus when this is used inside a list.
+   */
+  itemIndex?: number;
 }

@@ -145,4 +145,6 @@ export {
   ReactionButton,
   ReactionPicker,
   AddReactionButton,
+  Menu as MenuNext,
+  MenuTrigger,
 } from './components';

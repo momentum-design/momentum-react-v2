@@ -27,6 +27,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     style,
     itemIndex,
     contextMenuActions,
+    interactive = DEFAULTS.INTERACTIVE,
     ...rest
   } = props;
 
@@ -70,6 +71,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   const { pressProps, isPressed } = usePress({
     preventFocusOnPress: true, // we handle it ourselves
+    isDisabled: !interactive,
     ...rest,
   });
 
@@ -208,6 +210,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         data-disabled={isDisabled}
         data-padded={isPadded}
         data-shape={shape}
+        data-interactive={interactive}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         role={role}
         {...pressProps}

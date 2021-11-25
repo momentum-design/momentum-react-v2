@@ -19,6 +19,10 @@ import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
 import { action } from '@storybook/addon-actions';
+import MeetingListItem from '../MeetingListItem';
+import { MeetingMarker } from '../MeetingListItem/MeetingListItem.types';
+import ButtonGroup from '../ButtonGroup';
+import ButtonHyperlink from '../ButtonHyperlink';
 
 const TEST_LIST_SIZE = 30;
 
@@ -42,7 +46,7 @@ Example.args = {
   listSize: TEST_LIST_SIZE,
   children: Array.from(Array(TEST_LIST_SIZE).keys()).map((index) => (
     <ListItemBase itemIndex={index} key={index} isPadded>
-      Item {index}
+      {`Item ${index}`}
     </ListItemBase>
   )),
 };
@@ -109,4 +113,51 @@ Common.parameters = {
   ],
 };
 
-export { Example, Common };
+const CalendarList = MultiTemplate<ListProps>(List).bind({});
+
+CalendarList.argTypes = { ...argTypes };
+delete CalendarList.argTypes.children;
+
+CalendarList.args = {
+  listSize: TEST_LIST_SIZE,
+  shouldItemFocusBeInset: false,
+  shouldFocusOnPress: true,
+};
+
+CalendarList.parameters = {
+  variants: [
+    {
+      children: (
+        <div>
+          {Array.from(Array(TEST_LIST_SIZE).keys()).map((index) => {
+            return (
+              <>
+                {(index % 3 === 0 || index % 7 == 0) && (
+                  <ListItemBase isPadded interactive={false}>
+                    <Text type="header-primary">This is a header</Text>
+                  </ListItemBase>
+                )}
+                <MeetingListItem
+                  key={index}
+                  itemIndex={index}
+                  image={<Avatar initials="TU" />}
+                  color={MeetingMarker.AcceptedActive}
+                  buttonGroup={
+                    <ButtonGroup spaced>
+                      <ButtonHyperlink>Link</ButtonHyperlink>
+                    </ButtonGroup>
+                  }
+                >
+                  <Text type="header-primary">This is a meeting</Text>
+                  <Text type="body-secondary">10:00 - 11:00</Text>
+                </MeetingListItem>
+              </>
+            );
+          })}
+        </div>
+      ),
+    },
+  ],
+};
+
+export { Example, Common, CalendarList };

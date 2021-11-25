@@ -4,6 +4,8 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
 <MeetingListItem>
   <ListItemBase
     className="md-meeting-list-item-wrapper"
+    data-color="Empty"
+    isPadded={true}
     size={50}
   >
     <FocusRing
@@ -16,8 +18,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="Empty"
           data-disabled={false}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           onBlur={[Function]}
@@ -38,24 +42,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -72,6 +63,8 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
+    data-color="Empty"
+    isPadded={true}
     size={50}
   >
     <FocusRing
@@ -84,8 +77,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="Empty"
           data-disabled={false}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           onBlur={[Function]}
@@ -106,24 +101,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -157,6 +139,8 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
 >
   <ListItemBase
     className="example-class md-meeting-list-item-wrapper"
+    data-color="Empty"
+    isPadded={true}
     size={50}
   >
     <FocusRing
@@ -169,8 +153,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
       >
         <li
           className="example-class md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="Empty"
           data-disabled={false}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           onBlur={[Function]}
@@ -191,24 +177,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -221,11 +194,12 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
 
 exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
 <MeetingListItem
-  color="join"
+  color="AcceptedActive"
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
-    data-color="join"
+    data-color="AcceptedActive"
+    isPadded={true}
     size={50}
   >
     <FocusRing
@@ -238,9 +212,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="join"
+          data-color="AcceptedActive"
           data-disabled={false}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           onBlur={[Function]}
@@ -261,25 +236,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-                data-color="join"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-join"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-AcceptedActive"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-join"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-AcceptedActive"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -296,7 +257,9 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
+    data-color="Empty"
     id="example-id"
+    isPadded={true}
     size={50}
   >
     <FocusRing
@@ -309,8 +272,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="Empty"
           data-disabled={false}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           id="example-id"
@@ -332,24 +297,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -370,6 +322,8 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
+    data-color="Empty"
+    isPadded={true}
     size={50}
   >
     <FocusRing
@@ -382,8 +336,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="Empty"
           data-disabled={false}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           onBlur={[Function]}
@@ -413,23 +369,29 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
             >
               <div
                 className="md-meeting-list-item-border"
+                data-color="Empty"
               />
               <Icon
-                autoScale={true}
                 name="placeholder"
+                scale={12}
+                strokeColor="none"
+                weight="bold"
               >
                 <div
                   className="md-icon-wrapper"
                 >
                   <svg
                     className=""
-                    data-autoscale={true}
-                    data-scale={false}
+                    data-autoscale={false}
+                    data-scale={12}
                     data-test="placeholder"
                     fill="currentColor"
                     height="100%"
-                    stroke="currentColor"
-                    style={Object {}}
+                    style={
+                      Object {
+                        "stroke": "none",
+                      }
+                    }
                     viewBox="0, 0, 32, 32"
                     width="100%"
                   />
@@ -438,11 +400,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -459,7 +421,9 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
+    data-color="Empty"
     isDisabled={true}
+    isPadded={true}
     size={50}
   >
     <FocusRing
@@ -472,8 +436,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="Empty"
           data-disabled={true}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           onBlur={[Function]}
@@ -494,24 +460,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -532,6 +485,8 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
+    data-color="Empty"
+    isPadded={true}
     size={50}
     style={
       Object {
@@ -549,8 +504,10 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-color="Empty"
           data-disabled={false}
-          data-padded={false}
+          data-interactive={true}
+          data-padded={true}
           data-shape="rectangle"
           data-size={50}
           onBlur={[Function]}
@@ -576,24 +533,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
               data-position="middle"
             />
           </ListItemBaseSection>

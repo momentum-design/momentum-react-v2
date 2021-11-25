@@ -484,6 +484,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="one"
                           data-padded={true}
                           data-shape="rectangle"
@@ -755,6 +756,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="two"
                           data-padded={true}
                           data-shape="rectangle"
@@ -1026,6 +1028,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="three"
                           data-padded={true}
                           data-shape="rectangle"
@@ -1323,6 +1326,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="asd"
                           data-padded={true}
                           data-shape="rectangle"
@@ -1594,6 +1598,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="ff"
                           data-padded={true}
                           data-shape="rectangle"
@@ -1865,6 +1870,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="d"
                           data-padded={true}
                           data-shape="rectangle"
@@ -2307,6 +2313,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="one"
                           data-padded={true}
                           data-shape="rectangle"
@@ -2578,6 +2585,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="two"
                           data-padded={true}
                           data-shape="rectangle"
@@ -2849,6 +2857,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="three"
                           data-padded={true}
                           data-shape="rectangle"
@@ -3146,6 +3155,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="asd"
                           data-padded={true}
                           data-shape="rectangle"
@@ -3417,6 +3427,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="ff"
                           data-padded={true}
                           data-shape="rectangle"
@@ -3688,6 +3699,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="d"
                           data-padded={true}
                           data-shape="rectangle"
@@ -4188,6 +4200,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="one"
                           data-padded={true}
                           data-shape="rectangle"
@@ -4459,6 +4472,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="two"
                           data-padded={true}
                           data-shape="rectangle"
@@ -4730,6 +4744,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="three"
                           data-padded={true}
                           data-shape="rectangle"
@@ -5027,6 +5042,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="asd"
                           data-padded={true}
                           data-shape="rectangle"
@@ -5298,6 +5314,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="ff"
                           data-padded={true}
                           data-shape="rectangle"
@@ -5569,6 +5586,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="d"
                           data-padded={true}
                           data-shape="rectangle"
@@ -6010,6 +6028,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="one"
                           data-padded={true}
                           data-shape="rectangle"
@@ -6281,6 +6300,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="two"
                           data-padded={true}
                           data-shape="rectangle"
@@ -6552,6 +6572,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="three"
                           data-padded={true}
                           data-shape="rectangle"
@@ -6849,6 +6870,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="asd"
                           data-padded={true}
                           data-shape="rectangle"
@@ -7120,6 +7142,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="ff"
                           data-padded={true}
                           data-shape="rectangle"
@@ -7391,6 +7414,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="d"
                           data-padded={true}
                           data-shape="rectangle"
@@ -7955,6 +7979,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="one"
                           data-padded={true}
                           data-shape="rectangle"
@@ -8226,6 +8251,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="two"
                           data-padded={true}
                           data-shape="rectangle"
@@ -8497,6 +8523,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="three"
                           data-padded={true}
                           data-shape="rectangle"
@@ -8794,6 +8821,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="asd"
                           data-padded={true}
                           data-shape="rectangle"
@@ -9065,6 +9093,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="ff"
                           data-padded={true}
                           data-shape="rectangle"
@@ -9336,6 +9365,7 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                           aria-labelledby={null}
                           className="md-menu-item-wrapper md-list-item-base-wrapper"
                           data-disabled={false}
+                          data-interactive={true}
                           data-key="d"
                           data-padded={true}
                           data-shape="rectangle"

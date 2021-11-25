@@ -197,6 +197,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           aria-labelledby={null}
           className="md-menu-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
+          data-interactive={true}
           data-key="$.0"
           data-padded={true}
           data-shape="rectangle"

@@ -1,7 +1,9 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonAriaPressProps, commonStyles } from '../../storybook/helper.stories.argtypes';
+import { MeetingMarker } from './MeetingListItem.types';
 
 export default {
   ...commonStyles,
+  ...commonAriaPressProps,
   children: {
     description: 'Provides the child nodes for this element.', // Description of this prop.
     control: { type: 'none' }, // Control
@@ -44,9 +46,10 @@ export default {
     defaultValue: undefined,
     description: 'Provides the color status of this item',
     control: { type: 'select' },
+    options: [...Object.keys(MeetingMarker)],
     table: {
       type: {
-        summary: "'join' | 'inactive' | 'activeNoJoin' | 'empty'",
+        summary: 'MeetingMarker',
       },
       defaultValue: {
         summary: undefined,

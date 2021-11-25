@@ -19,6 +19,7 @@ const DEFAULTS = {
   SHAPE: SHAPES.rectangle,
   ROLE: 'listitem',
   SHOULD_ITEM_FOCUS_BE_INSET: false,
+  INTERACTIVE: true,
 };
 
 const STYLE = {
