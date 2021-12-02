@@ -1,0 +1,558 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OverlayTrigger /> snapshot should match snapshot 1`] = `
+<OverlayTrigger
+  hoverOverlay={
+    <Overlay>
+      <div>
+        Hover Overlay
+      </div>
+    </Overlay>
+  }
+  pressOverlay={
+    <Overlay>
+      <div>
+        Press Overlay
+      </div>
+    </Overlay>
+  }
+  trigger={
+    <ButtonSimple>
+      Trigger
+    </ButtonSimple>
+  }
+>
+  <ButtonSimple
+    aria-controls={null}
+    aria-expanded={false}
+    onHoverEnd={[Function]}
+    onHoverStart={[Function]}
+    onPress={[Function]}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-controls={null}
+          aria-expanded={false}
+          className=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          Trigger
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+  <Overlay
+    id="test-ID"
+    isOpen={false}
+  />
+  <Overlay
+    id="test-ID"
+    isDismissable={true}
+    isOpen={false}
+    onClose={[Function]}
+  />
+</OverlayTrigger>
+`;
+
+exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = `
+<OverlayTrigger
+  hoverOverlay={
+    <Overlay>
+      <div>
+        Hover Overlay
+      </div>
+    </Overlay>
+  }
+  pressOverlay={
+    <Overlay>
+      <div>
+        Press Overlay
+      </div>
+    </Overlay>
+  }
+  trigger={
+    <ButtonSimple>
+      Trigger
+    </ButtonSimple>
+  }
+>
+  <ButtonSimple
+    aria-controls={null}
+    aria-expanded={false}
+    onHoverEnd={[Function]}
+    onHoverStart={[Function]}
+    onPress={[Function]}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-controls={null}
+          aria-expanded={false}
+          className=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          Trigger
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+  <Overlay
+    id="test-ID"
+    isOpen={true}
+  >
+    <FocusScope
+      autoFocus={false}
+      contain={false}
+      restoreFocus={false}
+    >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
+      <ModalContainer
+        aria-labelledby={null}
+        id="test-ID"
+        onKeyDown={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex={-1}
+      >
+        <div
+          aria-labelledby={null}
+          className="md-modal-container-wrapper"
+          id="test-ID"
+          onKeyDown={[Function]}
+          role="dialog"
+          style={Object {}}
+          tabIndex={-1}
+        >
+          <div
+            className="md-modal-container-content"
+            data-color="primary"
+            data-elevation={0}
+            data-horizontal-arrow={false}
+            data-padded={false}
+            data-round={0}
+            data-vertical-arrow={false}
+          >
+            <div>
+              Hover Overlay
+            </div>
+          </div>
+        </div>
+      </ModalContainer>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
+  </Overlay>
+  <Overlay
+    id="test-ID"
+    isDismissable={true}
+    isOpen={false}
+    onClose={[Function]}
+  />
+</OverlayTrigger>
+`;
+
+exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and leave 1`] = `
+<OverlayTrigger
+  hoverOverlay={
+    <Overlay>
+      <div>
+        Hover Overlay
+      </div>
+    </Overlay>
+  }
+  pressOverlay={
+    <Overlay>
+      <div>
+        Press Overlay
+      </div>
+    </Overlay>
+  }
+  trigger={
+    <ButtonSimple>
+      Trigger
+    </ButtonSimple>
+  }
+>
+  <ButtonSimple
+    aria-controls={null}
+    aria-expanded={false}
+    onHoverEnd={[Function]}
+    onHoverStart={[Function]}
+    onPress={[Function]}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-controls={null}
+          aria-expanded={false}
+          className=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          Trigger
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+  <Overlay
+    id="test-ID"
+    isOpen={false}
+  />
+  <Overlay
+    id="test-ID"
+    isDismissable={true}
+    isOpen={false}
+    onClose={[Function]}
+  />
+</OverlayTrigger>
+`;
+
+exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and press 1`] = `
+<OverlayTrigger
+  hoverOverlay={
+    <Overlay>
+      <div>
+        Hover Overlay
+      </div>
+    </Overlay>
+  }
+  pressOverlay={
+    <Overlay>
+      <div>
+        Press Overlay
+      </div>
+    </Overlay>
+  }
+  trigger={
+    <ButtonSimple>
+      Trigger
+    </ButtonSimple>
+  }
+>
+  <ButtonSimple
+    aria-controls="test-ID"
+    aria-expanded={true}
+    onHoverEnd={[Function]}
+    onHoverStart={[Function]}
+    onPress={[Function]}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-controls="test-ID"
+          aria-expanded={true}
+          className=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          Trigger
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+  <Overlay
+    id="test-ID"
+    isOpen={false}
+  />
+  <Overlay
+    id="test-ID"
+    isDismissable={true}
+    isOpen={true}
+    onClose={[Function]}
+  >
+    <FocusScope
+      autoFocus={false}
+      contain={false}
+      restoreFocus={false}
+    >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
+      <ModalContainer
+        aria-labelledby={null}
+        id="test-ID"
+        onKeyDown={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex={-1}
+      >
+        <div
+          aria-labelledby={null}
+          className="md-modal-container-wrapper"
+          id="test-ID"
+          onKeyDown={[Function]}
+          role="dialog"
+          style={Object {}}
+          tabIndex={-1}
+        >
+          <div
+            className="md-modal-container-content"
+            data-color="primary"
+            data-elevation={0}
+            data-horizontal-arrow={false}
+            data-padded={false}
+            data-round={0}
+            data-vertical-arrow={false}
+          >
+            <div>
+              Press Overlay
+            </div>
+            <DismissButton
+              onDismiss={[Function]}
+            >
+              <VisuallyHidden>
+                <div
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": 1,
+                      "margin": "0 -1px -1px 0",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": 1,
+                    }
+                  }
+                >
+                  <button
+                    aria-label="Dismiss"
+                    onClick={[Function]}
+                    tabIndex={-1}
+                  />
+                </div>
+              </VisuallyHidden>
+            </DismissButton>
+          </div>
+        </div>
+      </ModalContainer>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
+  </Overlay>
+</OverlayTrigger>
+`;
+
+exports[`<OverlayTrigger /> snapshot should match snapshot on press 1`] = `
+<OverlayTrigger
+  hoverOverlay={
+    <Overlay>
+      <div>
+        Hover Overlay
+      </div>
+    </Overlay>
+  }
+  pressOverlay={
+    <Overlay>
+      <div>
+        Press Overlay
+      </div>
+    </Overlay>
+  }
+  trigger={
+    <ButtonSimple>
+      Trigger
+    </ButtonSimple>
+  }
+>
+  <ButtonSimple
+    aria-controls="test-ID"
+    aria-expanded={true}
+    onHoverEnd={[Function]}
+    onHoverStart={[Function]}
+    onPress={[Function]}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-controls="test-ID"
+          aria-expanded={true}
+          className=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          Trigger
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+  <Overlay
+    id="test-ID"
+    isOpen={false}
+  />
+  <Overlay
+    id="test-ID"
+    isDismissable={true}
+    isOpen={true}
+    onClose={[Function]}
+  >
+    <FocusScope
+      autoFocus={false}
+      contain={false}
+      restoreFocus={false}
+    >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
+      <ModalContainer
+        aria-labelledby={null}
+        id="test-ID"
+        onKeyDown={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex={-1}
+      >
+        <div
+          aria-labelledby={null}
+          className="md-modal-container-wrapper"
+          id="test-ID"
+          onKeyDown={[Function]}
+          role="dialog"
+          style={Object {}}
+          tabIndex={-1}
+        >
+          <div
+            className="md-modal-container-content"
+            data-color="primary"
+            data-elevation={0}
+            data-horizontal-arrow={false}
+            data-padded={false}
+            data-round={0}
+            data-vertical-arrow={false}
+          >
+            <div>
+              Press Overlay
+            </div>
+            <DismissButton
+              onDismiss={[Function]}
+            >
+              <VisuallyHidden>
+                <div
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": 1,
+                      "margin": "0 -1px -1px 0",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": 1,
+                    }
+                  }
+                >
+                  <button
+                    aria-label="Dismiss"
+                    onClick={[Function]}
+                    tabIndex={-1}
+                  />
+                </div>
+              </VisuallyHidden>
+            </DismissButton>
+          </div>
+        </div>
+      </ModalContainer>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
+  </Overlay>
+</OverlayTrigger>
+`;
