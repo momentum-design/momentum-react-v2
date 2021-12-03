@@ -1,8 +1,10 @@
-# Momentum UI React
+# Momentum UI - React Collaboration
 
 [![license](https://img.shields.io/github/license/momentum-design/momentum-ui.svg?color=blueviolet)](https://github.com/momentum-design/momentum-ui/blob/master/react/LICENSE) ![state](https://img.shields.io/badge/state-alpha-blue)
 
 **Momentum React V2** is a reusable [React](https://reactjs.org/) component library for Cisco's Webex web applications derived from Cisco's [Momentum Design](https://momentum.design/).
+
+**Currently, this project is closed to any external contributions. Any pull request made against this project from external sources will likely be closed. If you would like to make changes to this project, please fork this project.**
 
 ## Overview
 

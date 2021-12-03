@@ -1,3 +1,7 @@
+# IMPORTANT
+
+**Currently, this project is closed to any external contributions. Any pull request made against this project from external sources will likely be closed. If you would like to make changes to this project, please fork this project.**
+
 # Guide
 
 **This "Help" section can be deleted before submitting this pull request.**
