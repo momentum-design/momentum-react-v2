@@ -113,6 +113,16 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when width is grown', () => {
+      expect.assertions(1);
+
+      const grown = !DEFAULTS.GROWN;
+
+      container = mount(<ButtonPill grown={grown}>Example Text</ButtonPill>);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot when color is outlined and solid is set', () => {
       expect.assertions(1);
 
@@ -221,6 +231,18 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
+    });
+
+    it('should pass grown prop', () => {
+      expect.assertions(1);
+
+      const grown = !DEFAULTS.GROWN;
+
+      const element = mount(<ButtonPill grown={grown} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-grown')).toBe(`${grown}`);
     });
 
     it('should pass solid prop', () => {

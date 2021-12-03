@@ -23,6 +23,11 @@ export interface Props extends ButtonSimpleProps {
   ghost?: boolean;
 
   /**
+   * If this component show grow its width to the parent container.
+   */
+  grown?: boolean;
+
+  /**
    * Whether to use the outline variant of this ButtonPill if available.
    */
   outline?: boolean;
