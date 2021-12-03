@@ -168,6 +168,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
+            data-grown={false}
             data-outline={false}
             data-size={40}
             data-solid={false}
@@ -182,6 +183,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={false}
+                  data-grown={false}
                   data-outline={false}
                   data-size={40}
                   data-solid={false}

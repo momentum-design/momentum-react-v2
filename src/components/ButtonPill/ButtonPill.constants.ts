@@ -4,6 +4,7 @@ const DEFAULTS = {
   COLOR: 'primary',
   DISABLED: false,
   GHOST: false,
+  GROWN: false,
   OUTLINE: false,
   SIZE: 40,
   SOLID: false,

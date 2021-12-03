@@ -1,1 +1,10 @@
-The `<ButtonPill />` component.
+The `<ButtonPill />` component. This component accepts multiple scopes of child-like props:
+
+* `children` - Any element that can live inside the button component, like Text or Icon.
+* `color` - The particular color given to the component. Can be 'join' (green), 'cancel' (red) or 'message' (blue). If undefined, the black/white colors are given to the button. 
+* `disabled` - Whether the button is disabled or not. 
+* `ghost` - Whether the button is ghost (no outline) or not.
+* `grown` - Whether the button's width follows the width of its container or not.
+* `outline` - Whether the button has an outline/border around it.
+* `solid` - Whether to use the solid background variant of this ButtonPill. Only available with outline currently.
+* `size` - Size index of this ButtonPill. Can be 40, 32, 28, 24, or 20.
