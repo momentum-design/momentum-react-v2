@@ -11,8 +11,8 @@ export interface TargetPosition {
     x: number;
     y: number;
   };
-  horizontalRadius: number;
-  verticalRadius: number;
+  horizontalEdgeOffset: number;
+  verticalEdgeOffset: number;
 }
 
 export interface Props extends AriaDialogProps, FocusScopeProps, ModalContainerProps, ModalProps {

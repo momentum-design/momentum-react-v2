@@ -13,8 +13,8 @@ describe('<Overlay />', () => {
       x: 100,
       y: 100,
     },
-    horizontalRadius: 50,
-    verticalRadius: 50,
+    horizontalEdgeOffset: 50,
+    verticalEdgeOffset: 50,
   };
 
   describe('snapshot', () => {

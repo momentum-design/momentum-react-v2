@@ -6,6 +6,9 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import ButtonSimple from '../ButtonSimple';
 import ButtonPill from '../ButtonPill';
+import List from '../List';
+import ListItemBase from '../ListItemBase';
+import ListItemBaseSection from '../ListItemBaseSection';
 import Overlay from '../Overlay';
 
 import OverlayTrigger, { OverlayTriggerProps } from './';
@@ -37,6 +40,32 @@ Example.args = {
   pressOverlay: (
     <Overlay positioning="right" arrow="left" isPadded round={50}>
       <div>Press Overlay</div>
+    </Overlay>
+  ),
+  pressPositioning: 'relative',
+  trigger: <ButtonSimple>Button</ButtonSimple>,
+};
+
+const ComplexChildren = Template<OverlayTriggerProps>(OverlayTrigger).bind({});
+
+ComplexChildren.argTypes = { ...argTypes };
+
+ComplexChildren.args = {
+  hoverOverlay: (
+    <Overlay positioning="right" arrow="left" isPadded round={50}>
+      <div>Hover Overlay - Informational</div>
+    </Overlay>
+  ),
+  hoverPositioning: 'relative',
+  pressOverlay: (
+    <Overlay positioning="bottom" arrow="top" isPadded round={50}>
+      <List listSize={5}>
+        {Array.from(Array(5).keys()).map((index) => (
+          <ListItemBase itemIndex={index} key={index} isPadded>
+            <ListItemBaseSection>Press Item {index}</ListItemBaseSection>
+          </ListItemBase>
+        ))}
+      </List>
     </Overlay>
   ),
   pressPositioning: 'relative',
@@ -133,4 +162,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Common };
+export { Example, ComplexChildren, Common };

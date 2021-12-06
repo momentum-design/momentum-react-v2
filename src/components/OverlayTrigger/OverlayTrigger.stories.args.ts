@@ -19,7 +19,9 @@ const overlayTriggerArgTypes = {
     options: [undefined, ...Object.values(CONSTANTS.TYPES)],
     table: {
       type: {
-        summary: '"dialog" | "grid" | "listbox" | "menu" | "tree"',
+        summary: Object.values(CONSTANTS.TYPES)
+          .map((value) => `"${value}"`)
+          .join(' | '),
       },
       defaultValue: {
         summary: `"${CONSTANTS.TYPES.DIALOG}"`,
@@ -33,7 +35,9 @@ const overlayTriggerArgTypes = {
     options: [undefined, ...Object.values(CONSTANTS.POSITIONINGS)],
     table: {
       type: {
-        summary: '"none" | "relative"',
+        summary: Object.values(CONSTANTS.POSITIONINGS)
+          .map((value) => `"${value}"`)
+          .join(' | '),
       },
       defaultValue: {
         summary: '"none"',
@@ -42,7 +46,7 @@ const overlayTriggerArgTypes = {
   },
   preserveHoverOnPress: {
     control: { type: 'boolean' },
-    description: 'Whether whether to auto-dismiss the `hoverOverlay` on press events',
+    description: 'Whether to auto-dismiss the `hoverOverlay` on press events',
     table: {
       type: {
         summary: 'boolean',
@@ -70,7 +74,9 @@ const overlayTriggerArgTypes = {
     options: [undefined, ...Object.values(CONSTANTS.TYPES)],
     table: {
       type: {
-        summary: '"dialog" | "grid" | "listbox" | "menu" | "tree"',
+        summary: Object.values(CONSTANTS.TYPES)
+          .map((value) => `"${value}"`)
+          .join(' | '),
       },
       defaultValue: {
         summary: `"${CONSTANTS.TYPES.DIALOG}"`,
@@ -84,7 +90,9 @@ const overlayTriggerArgTypes = {
     options: [undefined, ...Object.values(CONSTANTS.POSITIONINGS)],
     table: {
       type: {
-        summary: '"none" | "relative"',
+        summary: Object.values(CONSTANTS.POSITIONINGS)
+          .map((value) => `"${value}"`)
+          .join(' | '),
       },
       defaultValue: {
         summary: '"none"',

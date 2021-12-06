@@ -210,8 +210,8 @@ describe('<OverlayTrigger />', () => {
           x: NaN,
           y: NaN,
         },
-        horizontalRadius: 0,
-        verticalRadius: 0,
+        horizontalEdgeOffset: 0,
+        verticalEdgeOffset: 0,
       };
 
       expect(wrapper.find(Overlay).props().targetPosition).toMatchObject(expected);
@@ -255,8 +255,8 @@ describe('<OverlayTrigger />', () => {
           x: NaN,
           y: NaN,
         },
-        horizontalRadius: 0,
-        verticalRadius: 0,
+        horizontalEdgeOffset: 0,
+        verticalEdgeOffset: 0,
       };
 
       expect(wrapper.find(Overlay).props().targetPosition).toMatchObject(expected);

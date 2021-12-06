@@ -34,8 +34,8 @@ const OverlayTrigger: FC<Props> = (props: Props) => {
       x: 0,
       y: 0,
     },
-    horizontalRadius: 0,
-    verticalRadius: 0,
+    horizontalEdgeOffset: 0,
+    verticalEdgeOffset: 0,
   });
 
   const updateModalPositions = () => {
@@ -47,8 +47,8 @@ const OverlayTrigger: FC<Props> = (props: Props) => {
           x: x + width / 2,
           y: y + height / 2,
         },
-        horizontalRadius: width / 2,
-        verticalRadius: height / 2,
+        horizontalEdgeOffset: width / 2,
+        verticalEdgeOffset: height / 2,
       });
     }
   };

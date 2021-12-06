@@ -44,20 +44,20 @@ const Overlay = forwardRef((props: Props, providedRef: RefObject<HTMLDivElement>
       switch (positioning) {
         case POSITIONINGS.BOTTOM:
           position.left = `${targetPosition.center?.x}px`;
-          position.top = `${targetPosition.center?.y + targetPosition.verticalRadius}px`;
+          position.top = `${targetPosition.center?.y + targetPosition.verticalEdgeOffset}px`;
           position.transform = 'translate(-50%, 0)';
           break;
 
         case POSITIONINGS.LEFT:
           position.right = `calc(100vw - ${
-            targetPosition.center?.x - targetPosition.horizontalRadius
+            targetPosition.center?.x - targetPosition.horizontalEdgeOffset
           }px)`;
           position.top = `${targetPosition.center?.y}px`;
           position.transform = 'translate(0, -50%)';
           break;
 
         case POSITIONINGS.RIGHT:
-          position.left = `${targetPosition.center?.x + targetPosition.horizontalRadius}px`;
+          position.left = `${targetPosition.center?.x + targetPosition.horizontalEdgeOffset}px`;
           position.top = `${targetPosition.center?.y}px`;
           position.transform = 'translate(0, -50%)';
           break;
@@ -65,7 +65,7 @@ const Overlay = forwardRef((props: Props, providedRef: RefObject<HTMLDivElement>
         case POSITIONINGS.TOP:
           position.left = `${targetPosition.center?.x}px`;
           position.bottom = `calc(100vh - ${
-            targetPosition.center?.y - targetPosition.verticalRadius
+            targetPosition.center?.y - targetPosition.verticalEdgeOffset
           }px`;
           position.transform = 'translate(-50%, 0)';
           break;

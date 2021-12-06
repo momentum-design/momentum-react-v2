@@ -29,7 +29,9 @@ const overlayArgTypes = {
     options: [undefined, ...Object.values(CONSTANTS.POSITIONINGS)],
     table: {
       type: {
-        summary: '"bottom" | "left" | "right" | "top"',
+        summary: Object.values(CONSTANTS.POSITIONINGS)
+          .map((value) => `"${value}"`)
+          .join(' | '),
       },
       defaultValue: {
         summary: 'undefined',
@@ -43,7 +45,7 @@ const overlayArgTypes = {
     table: {
       type: {
         summary:
-          '{ center: { x: number, y: number }, horizontalRadius: number, verticalRadius: number }',
+          '{ center: { x: number, y: number }, horizontalEdgeOffset: number, verticalEdgeOffset: number }',
       },
       defaultValue: {
         summary: 'undefined',
