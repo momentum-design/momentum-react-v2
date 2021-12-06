@@ -1,5 +1,7 @@
 # Contributing
 
+**Currently, this project is closed to any external contributions. Any pull request made against this project from external sources will likely be closed. If you would like to make changes to this project, please fork this project.**
+
 - [How to Contribute](#how-to-contribute)
 - [Requirements](#requirements)
 - [Project Structure](#project-structure)
