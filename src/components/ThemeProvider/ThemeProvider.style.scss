@@ -109,6 +109,43 @@
   font-style: italic;
 }
 
+// Sagoe UI
+
+@font-face {
+  font-family: 'Sagoe';
+  src: url('../../fonts/segoeui.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sagoe';
+  src: url('../../fonts/segoeuib.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sagoe';
+  src: url('../../fonts/seguisb.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sagoe';
+  src: url('../../fonts/segoeuil.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sagoe';
+  src: url('../../fonts/segoeuisl.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 .md-theme-provider-wrapper {
   border: 0;
   height: 100%;
@@ -144,7 +181,7 @@
   --md-globals-elevation-7: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-elevation-8: 0 2rem 4rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-focus-ring-outline: none;
-  --md-globals-font-default: 'CiscoSansTT';
+  --md-globals-font-default: 'Sagoe';
 
   // Gradient backgrounds
   --md-globals-gradient-primary: linear-gradient(
