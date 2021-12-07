@@ -1,5 +1,6 @@
 import React, { cloneElement, FC, ReactElement, useEffect, useRef, useState } from 'react';
 import { useOverlayTriggerState } from '@react-stately/overlays';
+import { useHover } from '@react-aria/interactions';
 import { useOverlayTrigger } from '@react-aria/overlays';
 
 import { Props } from './OverlayTrigger.types';
@@ -12,6 +13,7 @@ import { DEFAULTS, POSITIONINGS } from './OverlayTrigger.constants';
  */
 const OverlayTrigger: FC<Props> = (props: Props) => {
   const {
+    hoverDelay = DEFAULTS.HOVER_DELAY,
     hoverOverlay,
     hoverOverlayType = DEFAULTS.TYPE,
     hoverPositioning = DEFAULTS.HOVER_POSITIONING,
@@ -37,6 +39,9 @@ const OverlayTrigger: FC<Props> = (props: Props) => {
     horizontalEdgeOffset: 0,
     verticalEdgeOffset: 0,
   });
+
+  const [hoverEndTimer, setHoverEndTimer] = useState<NodeJS.Timeout>();
+  const [hoverStartTimer, setHoverStartTimer] = useState<NodeJS.Timeout>();
 
   const updateModalPositions = () => {
     if (triggerRef.current) {
@@ -71,13 +76,61 @@ const OverlayTrigger: FC<Props> = (props: Props) => {
 
     triggerEvents.onHoverStart = () => {
       updateModalPositions();
-      hoverState.open();
+
+      if (hoverDelay <= 0) {
+        hoverState.open();
+
+        return;
+      }
+
+      if (hoverEndTimer) {
+        clearTimeout(hoverEndTimer);
+        setHoverEndTimer(undefined);
+      }
+
+      if (!hoverStartTimer && !hoverState.isOpen) {
+        setHoverStartTimer(
+          setTimeout(() => {
+            hoverState.open();
+
+            clearTimeout(hoverStartTimer);
+            setHoverStartTimer(undefined);
+          }, hoverDelay)
+        );
+      }
     };
 
     triggerEvents.onHoverEnd = () => {
       updateModalPositions();
-      hoverState.close();
+
+      if (hoverDelay <= 0) {
+        hoverState.close();
+
+        return;
+      }
+
+      if (hoverStartTimer) {
+        clearTimeout(hoverStartTimer);
+        setHoverStartTimer(undefined);
+      }
+
+      if (!hoverEndTimer && hoverState.isOpen) {
+        setHoverEndTimer(
+          setTimeout(() => {
+            hoverState.close();
+
+            clearTimeout(hoverEndTimer);
+            setHoverEndTimer(undefined);
+          }, hoverDelay)
+        );
+      }
     };
+
+    const { hoverProps } = useHover({
+      isDisabled: trigger.props.isDisabled,
+      onHoverEnd: triggerEvents.onHoverEnd,
+      onHoverStart: triggerEvents.onHoverStart,
+    });
 
     triggerProps = { ...triggerProps, ...hoverTriggerProps };
 
@@ -85,6 +138,7 @@ const OverlayTrigger: FC<Props> = (props: Props) => {
 
     mutatedHoverOverlay = cloneElement(hoverOverlay as ReactElement, {
       ...hoverOverlayProps,
+      ...hoverProps,
       isOpen: hoverState.isOpen,
       ref: hoverOverlayRef,
       ...position,

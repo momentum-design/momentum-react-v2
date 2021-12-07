@@ -10,6 +10,7 @@ import ButtonSimple from '../ButtonSimple';
 import OverlayTrigger, { OVERLAY_TRIGGER_CONSTANTS as CONSTANTS } from './';
 
 describe('<OverlayTrigger />', () => {
+  const hoverDelay = 0;
   let hoverOverlay;
   let pressOverlay;
   let trigger;
@@ -35,7 +36,12 @@ describe('<OverlayTrigger />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <OverlayTrigger hoverOverlay={hoverOverlay} pressOverlay={pressOverlay} trigger={trigger} />
+        <OverlayTrigger
+          hoverDelay={hoverDelay}
+          hoverOverlay={hoverOverlay}
+          pressOverlay={pressOverlay}
+          trigger={trigger}
+        />
       );
 
       expect(container).toMatchSnapshot();
@@ -45,7 +51,12 @@ describe('<OverlayTrigger />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <OverlayTrigger hoverOverlay={hoverOverlay} pressOverlay={pressOverlay} trigger={trigger} />
+        <OverlayTrigger
+          hoverDelay={hoverDelay}
+          hoverOverlay={hoverOverlay}
+          pressOverlay={pressOverlay}
+          trigger={trigger}
+        />
       );
 
       triggerPress(container.find(ButtonSimple));
@@ -57,7 +68,12 @@ describe('<OverlayTrigger />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <OverlayTrigger hoverOverlay={hoverOverlay} pressOverlay={pressOverlay} trigger={trigger} />
+        <OverlayTrigger
+          hoverDelay={hoverDelay}
+          hoverOverlay={hoverOverlay}
+          pressOverlay={pressOverlay}
+          trigger={trigger}
+        />
       );
 
       simulateMouseEnter(container.find(ButtonSimple));
@@ -69,7 +85,12 @@ describe('<OverlayTrigger />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <OverlayTrigger hoverOverlay={hoverOverlay} pressOverlay={pressOverlay} trigger={trigger} />
+        <OverlayTrigger
+          hoverDelay={hoverDelay}
+          hoverOverlay={hoverOverlay}
+          pressOverlay={pressOverlay}
+          trigger={trigger}
+        />
       );
 
       simulateMouseEnter(container.find(ButtonSimple));
@@ -83,7 +104,12 @@ describe('<OverlayTrigger />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <OverlayTrigger hoverOverlay={hoverOverlay} pressOverlay={pressOverlay} trigger={trigger} />
+        <OverlayTrigger
+          hoverDelay={hoverDelay}
+          hoverOverlay={hoverOverlay}
+          pressOverlay={pressOverlay}
+          trigger={trigger}
+        />
       );
 
       simulateMouseEnter(container.find(ButtonSimple));
@@ -100,7 +126,7 @@ describe('<OverlayTrigger />', () => {
 
       const wrapper = mount(
         <div>
-          <OverlayTrigger pressOverlay={pressOverlay} trigger={trigger} />
+          <OverlayTrigger hoverDelay={hoverDelay} pressOverlay={pressOverlay} trigger={trigger} />
         </div>
       );
 
@@ -116,7 +142,7 @@ describe('<OverlayTrigger />', () => {
 
       const wrapper = mount(
         <div>
-          <OverlayTrigger hoverOverlay={hoverOverlay} trigger={trigger} />
+          <OverlayTrigger hoverDelay={hoverDelay} hoverOverlay={hoverOverlay} trigger={trigger} />
         </div>
       );
 
@@ -132,7 +158,7 @@ describe('<OverlayTrigger />', () => {
 
       const wrapper = mount(
         <div>
-          <OverlayTrigger hoverOverlay={hoverOverlay} trigger={trigger} />
+          <OverlayTrigger hoverDelay={hoverDelay} hoverOverlay={hoverOverlay} trigger={trigger} />
         </div>
       );
 
@@ -151,6 +177,7 @@ describe('<OverlayTrigger />', () => {
       const wrapper = mount(
         <div>
           <OverlayTrigger
+            hoverDelay={hoverDelay}
             hoverOverlay={hoverOverlay}
             preserveHoverOnPress
             pressOverlay={pressOverlay}
@@ -174,6 +201,7 @@ describe('<OverlayTrigger />', () => {
       const wrapper = mount(
         <div>
           <OverlayTrigger
+            hoverDelay={hoverDelay}
             hoverOverlay={hoverOverlay}
             pressOverlay={pressOverlay}
             trigger={trigger}
@@ -196,6 +224,7 @@ describe('<OverlayTrigger />', () => {
       const wrapper = mount(
         <div>
           <OverlayTrigger
+            hoverDelay={hoverDelay}
             pressOverlay={pressOverlay}
             pressPositioning={CONSTANTS.POSITIONINGS.RELATIVE}
             trigger={trigger}
@@ -223,6 +252,7 @@ describe('<OverlayTrigger />', () => {
       const wrapper = mount(
         <div>
           <OverlayTrigger
+            hoverDelay={hoverDelay}
             pressOverlay={pressOverlay}
             pressPositioning={CONSTANTS.POSITIONINGS.NONE}
             trigger={trigger}
@@ -241,6 +271,7 @@ describe('<OverlayTrigger />', () => {
       const wrapper = mount(
         <div>
           <OverlayTrigger
+            hoverDelay={hoverDelay}
             hoverOverlay={hoverOverlay}
             hoverPositioning={CONSTANTS.POSITIONINGS.RELATIVE}
             trigger={trigger}
@@ -268,6 +299,7 @@ describe('<OverlayTrigger />', () => {
       const wrapper = mount(
         <div>
           <OverlayTrigger
+            hoverDelay={hoverDelay}
             hoverOverlay={hoverOverlay}
             hoverPositioning={CONSTANTS.POSITIONINGS.NONE}
             trigger={trigger}
@@ -278,6 +310,27 @@ describe('<OverlayTrigger />', () => {
       simulateMouseEnter(wrapper.find(ButtonSimple));
 
       expect(wrapper.find(Overlay).props().targetPosition).toBeUndefined();
+    });
+
+    it('should persist hover overlay on mouse enter overlay', () => {
+      expect.assertions(1);
+
+      const wrapper = mount(
+        <div>
+          <OverlayTrigger
+            hoverDelay={hoverDelay}
+            hoverOverlay={hoverOverlay}
+            hoverPositioning={CONSTANTS.POSITIONINGS.NONE}
+            trigger={trigger}
+          />
+        </div>
+      );
+
+      simulateMouseEnter(wrapper.find(ButtonSimple));
+
+      simulateMouseEnter(wrapper.find(ModalContainer));
+
+      expect(wrapper.find(ModalContainer).exists()).toBe(true);
     });
   });
 });

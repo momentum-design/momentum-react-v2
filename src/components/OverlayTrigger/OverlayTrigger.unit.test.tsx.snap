@@ -2,6 +2,7 @@
 
 exports[`<OverlayTrigger /> snapshot should match snapshot 1`] = `
 <OverlayTrigger
+  hoverDelay={0}
   hoverOverlay={
     <Overlay>
       <div>
@@ -62,6 +63,9 @@ exports[`<OverlayTrigger /> snapshot should match snapshot 1`] = `
   <Overlay
     id="test-ID"
     isOpen={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchStart={[Function]}
   />
   <Overlay
     id="test-ID"
@@ -74,6 +78,7 @@ exports[`<OverlayTrigger /> snapshot should match snapshot 1`] = `
 
 exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = `
 <OverlayTrigger
+  hoverDelay={0}
   hoverOverlay={
     <Overlay>
       <div>
@@ -134,6 +139,9 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = 
   <Overlay
     id="test-ID"
     isOpen={true}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchStart={[Function]}
   >
     <FocusScope
       autoFocus={false}
@@ -148,6 +156,9 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = 
         aria-labelledby={null}
         id="test-ID"
         onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
         role="dialog"
         style={Object {}}
         tabIndex={-1}
@@ -157,6 +168,9 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = 
           className="md-modal-container-wrapper"
           id="test-ID"
           onKeyDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onTouchStart={[Function]}
           role="dialog"
           style={Object {}}
           tabIndex={-1}
@@ -193,6 +207,7 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = 
 
 exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and leave 1`] = `
 <OverlayTrigger
+  hoverDelay={0}
   hoverOverlay={
     <Overlay>
       <div>
@@ -253,6 +268,9 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and le
   <Overlay
     id="test-ID"
     isOpen={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchStart={[Function]}
   />
   <Overlay
     id="test-ID"
@@ -265,6 +283,7 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and le
 
 exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and press 1`] = `
 <OverlayTrigger
+  hoverDelay={0}
   hoverOverlay={
     <Overlay>
       <div>
@@ -325,6 +344,9 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and pr
   <Overlay
     id="test-ID"
     isOpen={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchStart={[Function]}
   />
   <Overlay
     id="test-ID"
@@ -412,6 +434,7 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and pr
 
 exports[`<OverlayTrigger /> snapshot should match snapshot on press 1`] = `
 <OverlayTrigger
+  hoverDelay={0}
   hoverOverlay={
     <Overlay>
       <div>
@@ -472,6 +495,9 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on press 1`] = `
   <Overlay
     id="test-ID"
     isOpen={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchStart={[Function]}
   />
   <Overlay
     id="test-ID"

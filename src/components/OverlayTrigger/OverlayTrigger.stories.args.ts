@@ -1,6 +1,18 @@
 import { OVERLAY_TRIGGER_CONSTANTS as CONSTANTS } from '../OverlayTrigger';
 
 const overlayTriggerArgTypes = {
+  hoverDelay: {
+    description: 'The delay before opening/closing the `hoverOverlay` component.',
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.HOVER_DELAY,
+      },
+    },
+  },
   hoverOverlay: {
     description: 'The `<Overlay />` component to trigger on hover events',
     control: { type: 'none' },

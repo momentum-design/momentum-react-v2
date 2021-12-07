@@ -13,6 +13,11 @@ export type Type = 'dialog' | 'grid' | 'listbox' | 'menu' | 'tree';
 
 export interface Props {
   /**
+   * The delay used when triggering the hover overlay.
+   */
+  hoverDelay?: number;
+
+  /**
    * The overlay that appears on hover.
    */
   hoverOverlay?: ReactElement<SupportedOverlay>;
