@@ -15,6 +15,7 @@ exports[`<Overlay /> snapshot should match snapshot 1`] = `
       aria-labelledby={null}
       onKeyDown={[Function]}
       role="dialog"
+      style={Object {}}
       tabIndex={-1}
     >
       <div
@@ -22,6 +23,7 @@ exports[`<Overlay /> snapshot should match snapshot 1`] = `
         className="md-modal-container-wrapper"
         onKeyDown={[Function]}
         role="dialog"
+        style={Object {}}
         tabIndex={-1}
       >
         <div
@@ -33,7 +35,9 @@ exports[`<Overlay /> snapshot should match snapshot 1`] = `
           data-round={0}
           data-vertical-arrow={false}
         >
-          Children
+          <div>
+            children
+          </div>
         </div>
       </div>
     </ModalContainer>
