@@ -103,7 +103,7 @@
     "@momentum-ui/animations": "^1.3.0",
     "@momentum-ui/design-tokens": "^0.0.28",
     "@momentum-ui/icons": "8.27.0",
-    "@momentum-ui/icons-rebrand": "^1.16.2",
+    "@momentum-ui/icons-rebrand": "^1.19.1",
     "@momentum-ui/tokens": "^1.7.1",
     "@react-aria/button": "3.2.2",
     "@react-aria/focus": "^3.4.0",

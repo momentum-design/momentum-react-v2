@@ -16,6 +16,7 @@ const Icon: React.FC<Props> = (props: Props) => {
   const isColoredIcon = name.indexOf('coloured') > 0;
 
   if (error) {
+    console.warn('Icon load failed:', error);
     return (
       <div className={STYLE.wrapper} id={id} style={style}>
         <div

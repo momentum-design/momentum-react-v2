@@ -1,14 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import MeetingListItem, { MEETING_LIST_ITEM_CONSTANTS as CONSTANTS } from './';
+import MeetingListItem, { MEETING_LIST_ITEM_CONSTANTS as CONSTANTS, MeetingMarker } from './';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
 import Avatar from '../Avatar';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 import { mountAndWait } from '../../../test/utils';
-import { MeetingMarker } from './MeetingListItem.types';
 
 describe('<MeetingListItem />', () => {
   describe('snapshot', () => {
@@ -161,8 +160,8 @@ describe('<MeetingListItem />', () => {
           isDisabled={isDisabled}
           buttonGroup={
             <ButtonGroup>
-              <ButtonCircle>Test</ButtonCircle>
-              <ButtonPill>Test</ButtonPill>
+              <ButtonCircle key="1">Test</ButtonCircle>
+              <ButtonPill key="2">Test</ButtonPill>
             </ButtonGroup>
           }
         >

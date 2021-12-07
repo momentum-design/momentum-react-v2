@@ -47,7 +47,7 @@ const MeetingListItem: FC<Props> = forwardRef(
         sizeProps['disabled'] = isDisabled;
       } else if (verifyTypes(element, Icon)) {
         // Because this constraints get applied recursively to the children,
-        // I still want to be able to override some of the props.
+        // I still want to be able to override some of the props (like scale).
         if (!element.props.scale) {
           sizeProps['scale'] = 12;
           sizeProps['strokeColor'] = 'none';

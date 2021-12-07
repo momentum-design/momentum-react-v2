@@ -121,6 +121,7 @@ export {
   Icon as IconNext,
   Tab as TabNext,
   MeetingListItem,
+  MeetingMarker,
   ModalArrow,
   ModalContainer,
   Overlay,
