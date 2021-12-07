@@ -56,6 +56,64 @@ Outline.argTypes = { ...argTypes };
 delete Outline.argTypes.color;
 delete Outline.argTypes.outline;
 
+const Grown = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
+
+Grown.parameters = {
+  variants: [
+    {
+      children: [
+        <Icon key={0} name="open-pages" autoScale={125} />,
+        <div key={1}>Example Text</div>,
+      ],
+      grown: true,
+    },
+    {
+      children: [
+        <Icon key={0} name="open-pages" autoScale={125} />,
+        <div key={1}>Example Text</div>,
+      ],
+      outline: true,
+      grown: true,
+    },
+    {
+      children: [
+        <Icon key={0} name="open-pages" autoScale={125} />,
+        <div key={1}>Example Text</div>,
+      ],
+      color: 'join',
+      grown: true,
+    },
+    {
+      children: [
+        <Icon key={0} name="open-pages" autoScale={125} />,
+        <div key={1}>Example Text</div>,
+      ],
+      color: 'cancel',
+      grown: true,
+    },
+    {
+      children: [
+        <Icon key={0} name="open-pages" autoScale={125} />,
+        <div key={1}>Example Text</div>,
+      ],
+      color: 'message',
+      grown: true,
+    },
+    {
+      children: [
+        <Icon key={0} name="open-pages" autoScale={125} />,
+        <div key={1}>Example Text</div>,
+      ],
+      solid: true,
+      grown: true,
+    },
+  ],
+};
+
+Grown.argTypes = { ...argTypes };
+delete Grown.argTypes.color;
+delete Grown.argTypes.grown;
+
 const States = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
 States.parameters = {
@@ -102,4 +160,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Colors, Outline, States, Sizes, Common };
+export { Example, Colors, Outline, Grown, States, Sizes, Common };

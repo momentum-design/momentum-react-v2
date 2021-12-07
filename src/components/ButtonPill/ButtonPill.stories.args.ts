@@ -63,6 +63,19 @@ export default {
       },
     },
   },
+  isGrown: {
+    description: 'If this component should grow its width to the parent container.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.GROWN,
+      },
+    },
+  },
   outline: {
     description: 'Whether to render the outline variant of this `<ButtonPill />`.',
     options: [true, false],

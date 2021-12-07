@@ -57,12 +57,11 @@ jobs:
       - name: Build Source
         run: yarn ci:build
 
-    # NOTE: enable this step once we are ready to begin deploying the build artifact.
-    # - name: Cache Dist
-    #   uses: actions/cache@v2
-    #   with:
-    #     path: dist/
-    #     key: dist-${{ runner.os }}-${{ env.rid }}
+    - name: Cache Dist
+      uses: actions/cache@v2
+      with:
+        path: dist/
+        key: dist-${{ runner.os }}-${{ env.rid }}
 
       - name: Cache Docs
         uses: actions/cache@v2
@@ -70,34 +69,32 @@ jobs:
           path: docs/
           key: docs-${{ runner.os }}-${{ env.rid }}
 
-  # deploy-documentation:
-  #   name: Deploy - Documentation
-  #   needs: build-source
-  #   runs-on: ubuntu-20.04
-  #   if: github.event.pull_request.merged == true
-  #   steps:
-  #     - name: Checkout Project
-  #       uses: actions/checkout@v2
+  deploy-documentation:
+    name: Deploy - Documentation
+    needs: build-source
+    runs-on: ubuntu-20.04
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
 
-  #     - name: Setup Environment
-  #       uses: actions/setup-node@v2
-  #       with:
-  #         node-version: 14.x
-  #         check-latest: true
+      - name: Setup Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          check-latest: true
 
-  #     - name: Uncache Docs
-  #       uses: actions/cache@v2
-  #       with:
-  #         path: docs/
-  #         key: docs-${{ runner.os }}-${{ env.rid }}
+      - name: Uncache Docs
+        uses: actions/cache@v2
+        with:
+          path: docs/
+          key: docs-${{ runner.os }}-${{ env.rid }}
 
-  #     - name: Deploy Documentation
-  #       run: |
-  #         git config --global user.name "Automation"
-  #         git config --global user.email "automation@no-reply.webex.com"
-  #         git add ./docs
-  #         git commit -m "ci(docs): deploy documentation"
-  #         git push
+      - name: Deploy Documentation
+        run: |
+          git add -f ./docs
+          git commit -m "ci(docs): deploy documentation"
+          git push
 
 # NOTE: enable and update this workflow once we are ready to begin deploying the build artifact.
 # deploy-distributable:

@@ -1,14 +1,18 @@
 # Getting Started
 
-This project is currently not published to any artifactory. To use it within another project, it must be initialized, built, and linked locally via a package manager.
+**Currently, this project is closed to any external contributions. Any pull request made against this project from external sources will likely be closed. If you would like to make changes to this project, please fork this project.**
 
-If you would like to contribute to this project, please review our [contributing guide](./CONTRIBUTING.md).
+For internal developers, if you would like to contribute to this project, please review our [contributing guide](./CONTRIBUTING.md).
 
 ## Cloning
 
 In order to begin utilizing this project, it must be cloned locally. This can be done using multiple methods, but the preferred method would be to utilize [git](https://git-scm.com/). Once [git](https://git-scm.com/) is installed and operational on your platform, navigate to the folder you would like this project to reside in and run the following command:
 
 ```bash
+# External Developers
+git clone git@github.com:{YOUR_FORK}/momentum-react-v2.git
+
+# Internal Developers
 git clone git@github.com:momentum-design/momentum-react-v2.git
 ```
 
@@ -68,7 +72,7 @@ import { Button } from '@momentum-ui/react';
 
 const Component = () => (
   <div>
-    <Button name="primary" size="large">Welcome to Momentum UI React</Button>
+    <Button name="primary" size="large">Welcome to Momentum UI - React Collaboration</Button>
   </div>
 );
 
