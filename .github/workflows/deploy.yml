@@ -57,11 +57,11 @@ jobs:
       - name: Build Source
         run: yarn ci:build
 
-    - name: Cache Dist
-      uses: actions/cache@v2
-      with:
-        path: dist/
-        key: dist-${{ runner.os }}-${{ env.rid }}
+      - name: Cache Dist
+        uses: actions/cache@v2
+        with:
+          path: dist/
+          key: dist-${{ runner.os }}-${{ env.rid }}
 
       - name: Cache Docs
         uses: actions/cache@v2
