@@ -97,12 +97,13 @@ const MeetingListItem: FC<Props> = forwardRef(
         size={large ? 70 : 50}
         {...rest}
       >
-        {image && (
-          <ListItemBaseSection className={STYLE.startSection} position="start">
-            <div className={STYLE.border} data-color={color} />
-            {React.isValidElement(image) ? getSizedElement(image) : image}
-          </ListItemBaseSection>
-        )}
+        <ListItemBaseSection
+          className={classnames(STYLE.startSection, { [STYLE.startSectionNoImage]: !image })}
+          position="start"
+        >
+          <div className={STYLE.border} data-color={color} />
+          {React.isValidElement(image) ? getSizedElement(image) : image}
+        </ListItemBaseSection>
 
         <ListItemBaseSection
           className={`${STYLE.middleSection}${middleSectionColorClass}`}

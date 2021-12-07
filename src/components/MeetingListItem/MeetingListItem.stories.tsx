@@ -339,8 +339,18 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.Empty}</Text>,
-      color: MeetingMarker.Empty,
+      children: <Text type="body-primary">{MeetingMarker.Transparent}</Text>,
+      color: MeetingMarker.Transparent,
+      image: <Avatar initials="TU" />,
+    },
+    {
+      buttonGroup: (
+        <ButtonGroup spaced>
+          <ButtonHyperlink>Link</ButtonHyperlink>
+        </ButtonGroup>
+      ),
+      children: <Text type="body-primary">{MeetingMarker.Gray}</Text>,
+      color: MeetingMarker.Gray,
       image: <Avatar initials="TU" />,
     },
   ],

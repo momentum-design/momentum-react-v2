@@ -2,11 +2,12 @@ import { CSSProperties, ReactNode } from 'react';
 import { PressEvents } from '@react-types/shared';
 
 export enum MeetingMarker {
-  AcceptedActive = 'AcceptedActive', // green
-  AcceptedInactive = 'AcceptedInactive', //gray
-  TentativeActive = 'TentativeActive', // green stripe
-  TentativeInactive = 'TentativeInactive', //gray stripe
-  Empty = 'Empty',
+  AcceptedActive = 'AcceptedActive', // green border
+  AcceptedInactive = 'AcceptedInactive', //gray border
+  TentativeActive = 'TentativeActive', // green stripe border
+  TentativeInactive = 'TentativeInactive', //gray stripe border
+  Transparent = 'Transparent', // transparent no border
+  Gray = 'Gray', // gray no border
 }
 export interface Props extends PressEvents {
   /**

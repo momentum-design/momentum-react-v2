@@ -4,7 +4,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
 <MeetingListItem>
   <ListItemBase
     className="md-meeting-list-item-wrapper"
-    data-color="Empty"
+    data-color="Transparent"
     isPadded={true}
     size={50}
   >
@@ -18,7 +18,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="Empty"
+          data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
           data-padded={true}
@@ -42,11 +42,25 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="Transparent"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -63,7 +77,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
-    data-color="Empty"
+    data-color="Transparent"
     isPadded={true}
     size={50}
   >
@@ -77,7 +91,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="Empty"
+          data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
           data-padded={true}
@@ -101,11 +115,25 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="Transparent"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -139,7 +167,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
 >
   <ListItemBase
     className="example-class md-meeting-list-item-wrapper"
-    data-color="Empty"
+    data-color="Transparent"
     isPadded={true}
     size={50}
   >
@@ -153,7 +181,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
       >
         <li
           className="example-class md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="Empty"
+          data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
           data-padded={true}
@@ -177,11 +205,25 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="Transparent"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -236,6 +278,20 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
+            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="AcceptedActive"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
             className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-AcceptedActive"
             position="middle"
           >
@@ -257,7 +313,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
-    data-color="Empty"
+    data-color="Transparent"
     id="example-id"
     isPadded={true}
     size={50}
@@ -272,7 +328,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="Empty"
+          data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
           data-padded={true}
@@ -297,11 +353,25 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="Transparent"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -322,7 +392,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
-    data-color="Empty"
+    data-color="Transparent"
     isPadded={true}
     size={50}
   >
@@ -336,7 +406,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="Empty"
+          data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
           data-padded={true}
@@ -369,7 +439,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
             >
               <div
                 className="md-meeting-list-item-border"
-                data-color="Empty"
+                data-color="Transparent"
               />
               <Icon
                 name="placeholder"
@@ -400,11 +470,11 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -421,7 +491,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
-    data-color="Empty"
+    data-color="Transparent"
     isDisabled={true}
     isPadded={true}
     size={50}
@@ -436,7 +506,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="Empty"
+          data-color="Transparent"
           data-disabled={true}
           data-interactive={true}
           data-padded={true}
@@ -460,11 +530,25 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="Transparent"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
               data-position="middle"
             />
           </ListItemBaseSection>
@@ -485,7 +569,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
 >
   <ListItemBase
     className="md-meeting-list-item-wrapper"
-    data-color="Empty"
+    data-color="Transparent"
     isPadded={true}
     size={50}
     style={
@@ -504,7 +588,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
-          data-color="Empty"
+          data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
           data-padded={true}
@@ -533,11 +617,25 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
           tabIndex={0}
         >
           <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+            position="start"
+          >
+            <div
+              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
+              data-position="start"
+            >
+              <div
+                className="md-meeting-list-item-border"
+                data-color="Transparent"
+              />
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
             position="middle"
           >
             <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Empty"
+              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
               data-position="middle"
             />
           </ListItemBaseSection>

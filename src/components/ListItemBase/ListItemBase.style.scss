@@ -5,13 +5,14 @@
   align-items: center;
   font-size: 1rem;
   line-height: 1.5rem;
-  cursor: pointer;
   color: var(--theme-text-primary-normal);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
   outline: none;
 
   &[data-interactive='true'] {
+    cursor: pointer;
+
     &:hover,
     &.hover {
       background-color: var(--theme-background-primary-hover);

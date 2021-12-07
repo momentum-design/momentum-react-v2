@@ -3,7 +3,7 @@
   margin: 0.25rem 0;
   overflow: hidden;
 
-  &:not([data-color='Empty']) {
+  &:not([data-color='Transparent']) {
     background-color: var(--theme-background-secondary-normal);
 
     &:hover,
@@ -26,11 +26,15 @@
     display: flex;
     align-items: center;
 
+    &.md-meeting-list-item-start-section-no-image {
+      margin-right: 0;
+    }
+
     .md-meeting-list-item-border {
       position: absolute;
       left: 0;
       top: 0;
-      height: 3.125rem;
+      height: 100%;
       width: 0.3rem;
       border-radius: 0.5rem 0 0 0.5rem;
       margin-right: 0.5rem;

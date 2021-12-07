@@ -3,7 +3,7 @@ import { MeetingMarker } from './MeetingListItem.types';
 const CLASS_PREFIX = 'md-meeting-list-item';
 
 const DEFAULTS = {
-  color: MeetingMarker.Empty,
+  color: MeetingMarker.Transparent,
 };
 
 const STYLE = {
@@ -12,6 +12,7 @@ const STYLE = {
   border: `${CLASS_PREFIX}-border`,
   middleSection: `${CLASS_PREFIX}-middle-section`,
   endSection: `${CLASS_PREFIX}-end-section`,
+  startSectionNoImage: `${CLASS_PREFIX}-start-section-no-image`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };
