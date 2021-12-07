@@ -226,7 +226,7 @@ Common.parameters = {
     {
       label: 'No meetings scheduled',
       children: 'No meetings scheduled',
-      color: MeetingMarker.Empty,
+      color: MeetingMarker.Transparent,
     },
     {
       label: 'Scheduled meeting',
@@ -252,7 +252,7 @@ Common.parameters = {
         </div>
       ),
       buttonGroup: <Avatar initials="TU" />,
-      color: MeetingMarker.Empty,
+      color: MeetingMarker.Transparent,
     },
     {
       label: 'Three-line item',
