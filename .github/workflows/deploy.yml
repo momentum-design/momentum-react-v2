@@ -92,6 +92,8 @@ jobs:
 
       - name: Deploy Documentation
         run: |
+          git config --global user.name "Automation"
+          git config --global user.email "automation@no-reply.webex.com"
           git add -f ./docs
           git commit -m "ci(docs): deploy documentation"
           git push
