@@ -1,12 +1,8 @@
 {
-  "name": "@momentumreact/momentum-react-v2",
-  "version": "25.0.44",
-  "description": "Cisco Momentum UI framework for ReactJs applications",
+  "name": "@momentum-ui/react-collaboration",
+  "version": "0.0.0-development",
+  "description": "Cisco Momentum UI Framework for React Collaboration Applications",
   "author": "Cisco Systems, Inc.",
-  "contributors": [
-    "Paul Jeter <pauljeter@gmail.com>",
-    "Ben Biggs <bebiggs@cisco.com>"
-  ],
   "homepage": "http://momentum.design",
   "engines": {
     "node": "14.x.x"
@@ -15,6 +11,7 @@
     "Cisco",
     "Cisco Spark",
     "Momentum UI",
+    "React",
     "ReactJS",
     "Spark UI",
     "Webex",
@@ -26,23 +23,17 @@
   "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/momentum-design/momentum-ui.git"
+    "url": "https://github.com/momentum-design/momentum-react-v2.git"
   },
   "scripts": {
     "build": "yarn source:build && yarn docs:build",
-    "lint": "yarn lint:src && yarn lint:config",
-    "lint:watch": "yarn lint:src --watch",
-    "test": "yarn source:test",
-    "test:watch": "yarn source:test --watch",
-    "start": "yarn storybook:start",
-    "start:components": "yarn storybook:start",
-    "start:examples": "yarn examples:start:src",
-    "start:watch": "run-p lint:watch test:watch start",
     "ci:build": "yarn source:build && yarn source:build:stories && yarn source:copy:images && yarn source:build:documentation && yarn docs:build",
+    "ci:publish": "semantic-release --branches master",
     "ci:test:examples": "run-p --race examples:start:esm examples:test",
     "ci:test:lint": "yarn lint:src",
     "ci:test:src": "yarn source:test --maxWorkers=2 --bail",
     "ci:test:storybook": "yarn storybook:test",
+    "cypress:verify": "cypress verify",
     "docs:clean": "rimraf ./docs",
     "docs:build": "yarn examples:build && yarn storybook:build",
     "examples:build": "yarn examples:clean && node ./config/webpack/build.js",
@@ -54,8 +45,12 @@
     "examples:test": "wait-on http://127.0.0.1:4300 && percy exec -t 350 -- cypress run",
     "generate:component": "plop component --cwd ./config/plop --dest .",
     "generate:legacyStory": "plop legacyStory --cwd ./config/plop --dest .",
+    "lint": "yarn lint:src && yarn lint:config",
     "lint:config": "esw \"./config/**/*.{js,jsx,ts,tsx}\"",
     "lint:src": "esw \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:watch": "yarn lint:src --watch",
+    "prepublishOnly": "yarn build",
+    "prepare": "husky install",
     "source:build": "yarn source:build:clean && yarn source:build:compile && yarn source:build:fonts && yarn source:build:styles",
     "source:build:styles": "copyfiles -u 1 \"./src/**/*.style.*\" ./dist/esm && copyfiles -u 1 \"./src/**/*.style.*\" ./dist/cjs",
     "source:build:fonts": "copyfiles -u 1 \"./src/fonts/*\" ./dist/esm && copyfiles -u 1 \"./src/fonts/*\" ./dist/cjs",
@@ -77,6 +72,10 @@
     "storybook:start:docs": "serve ./docs/storybook",
     "storybook:start:src": "start-storybook -c ./config/storybook/src -p 6006",
     "storybook:test": "percy storybook ./docs/storybook",
+    "start": "yarn storybook:start",
+    "start:components": "yarn storybook:start",
+    "start:examples": "yarn examples:start:src",
+    "start:watch": "run-p lint:watch test:watch start",
     "styles:build": "yarn styles:build:tokens && yarn styles:build:settings",
     "styles:build:css": "node-sass -i templates/momentum-ui.scss -o css/ --importer=./node_modules/node-sass-tilde-importer",
     "styles:build:settings": "node ./tools/generateSettingsScss.js",
@@ -84,9 +83,8 @@
     "styles:makeIECompatible": "node ./src/helpers/cssCompatibility.js add",
     "styles:makeIEIncompatible": "node ./src/helpers/cssCompatibility.js remove",
     "styles:tokenCheck": "node ./src/helpers/cssTokenCheck.js",
-    "cypress:verify": "cypress verify",
-    "prepublishOnly": "yarn build",
-    "prepare": "husky install"
+    "test": "yarn source:test",
+    "test:watch": "yarn source:test --watch"
   },
   "watch": {
     "build:lib": "src/lib/**/*.js"
@@ -234,6 +232,7 @@
     "replace": "0.3.0",
     "rimraf": "^2.6.3",
     "sass-loader": "6.0.6",
+    "semantic-release": "^18.0.1",
     "serve": "^12.0.0",
     "style-loader": "^0.19.1",
     "stylelint": "^13.13.1",
@@ -248,9 +247,6 @@
     "webpack-hot-middleware": "^2.22.2",
     "webpack-md5-hash": "0.0.6",
     "yarn": "^1.12.1"
-  },
-  "publishConfig": {
-    "registry": "https://engci-maven-master.cisco.com/artifactory/api/npm/webex-web-app-npm/"
   },
   "commitlint": {
     "extends": [
