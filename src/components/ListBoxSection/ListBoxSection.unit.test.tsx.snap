@@ -78,6 +78,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
+                data-interactive={true}
                 data-padded={true}
                 data-shape="rectangle"
                 data-size={40}
@@ -156,6 +157,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
               <li
                 className="md-list-item-base-wrapper"
                 data-disabled={false}
+                data-interactive={true}
                 data-padded={true}
                 data-shape="rectangle"
                 data-size={40}

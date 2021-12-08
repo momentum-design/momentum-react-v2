@@ -220,6 +220,18 @@ describe('ListItemBase', () => {
 
       expect(element.classList.contains('active')).toBe(true);
     });
+
+    it('should have provided data-interactive when interactive is provided', () => {
+      expect.assertions(1);
+
+      const interactive = false;
+
+      container = mount(<ListItemBase interactive={interactive}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase).getDOMNode();
+
+      expect(element.getAttribute('data-interactive')).toBe(`${interactive}`);
+    });
   });
 
   describe('actions', () => {

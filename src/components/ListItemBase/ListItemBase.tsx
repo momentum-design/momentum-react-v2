@@ -12,6 +12,7 @@ import ModalContainer from '../ModalContainer';
 import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
+import Text from '../Text';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
@@ -27,6 +28,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     style,
     itemIndex,
     contextMenuActions,
+    interactive = DEFAULTS.INTERACTIVE,
     ...rest
   } = props;
 
@@ -58,6 +60,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
             {end}
           </>
         );
+      } else if (verifyTypes(children, Text)) {
+        content = children;
       } else {
         console.warn(
           'ListItemBase: this component can only receive ListItemBaseSection as children.'
@@ -70,6 +74,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   const { pressProps, isPressed } = usePress({
     preventFocusOnPress: true, // we handle it ourselves
+    isDisabled: !interactive,
     ...rest,
   });
 
@@ -208,6 +213,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         data-disabled={isDisabled}
         data-padded={isPadded}
         data-shape={shape}
+        data-interactive={interactive}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         role={role}
         {...pressProps}

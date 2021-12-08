@@ -5,26 +5,33 @@
   align-items: center;
   font-size: 1rem;
   line-height: 1.5rem;
-  cursor: pointer;
   color: var(--theme-text-primary-normal);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
   outline: none;
 
-  &:hover,
-  &.hover {
-    background-color: var(--theme-background-primary-hover);
-  }
+  &[data-interactive='true'] {
+    cursor: pointer;
 
-  &:active,
-  &.active {
-    background-color: var(--theme-background-primary-active);
+    &:hover,
+    &.hover {
+      background-color: var(--theme-background-primary-hover);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--theme-background-primary-active);
+    }
   }
 
   &[data-disabled='true'],
   &.disable {
     background-color: var(--listitem-background-disabled);
-    color: var(--listitem-textprimary-disabled);
+
+    &,
+    .md-text-wrapper {
+      color: var(--listitem-textprimary-disabled);
+    }
 
     svg {
       fill: var(--listitem-tick-disabled);

@@ -121,6 +121,7 @@ export {
   Icon as IconNext,
   Tab as TabNext,
   MeetingListItem,
+  MeetingMarker,
   ModalArrow,
   ModalContainer,
   Overlay,
@@ -146,4 +147,6 @@ export {
   ReactionButton,
   ReactionPicker,
   AddReactionButton,
+  Menu as MenuNext,
+  MenuTrigger,
 } from './components';

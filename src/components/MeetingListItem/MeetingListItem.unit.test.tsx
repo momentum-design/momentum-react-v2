@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import MeetingListItem, { MEETING_LIST_ITEM_CONSTANTS as CONSTANTS } from './';
+import MeetingListItem, { MEETING_LIST_ITEM_CONSTANTS as CONSTANTS, MeetingMarker } from './';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
 import Avatar from '../Avatar';
@@ -72,7 +72,7 @@ describe('<MeetingListItem />', () => {
     it('should match snapshot with color', () => {
       expect.assertions(1);
 
-      const color = 'join';
+      const color = MeetingMarker.AcceptedActive;
 
       const container = mount(<MeetingListItem color={color} />);
 
@@ -150,6 +150,34 @@ describe('<MeetingListItem />', () => {
       expect(element.getAttribute('data-disabled')).toBe('true');
     });
 
+    it('should have disable buttons inside if isDisabled is provided', () => {
+      expect.assertions(3);
+
+      const isDisabled = true;
+
+      const container = mount(
+        <MeetingListItem
+          isDisabled={isDisabled}
+          buttonGroup={
+            <ButtonGroup>
+              <ButtonCircle key="1">Test</ButtonCircle>
+              <ButtonPill key="2">Test</ButtonPill>
+            </ButtonGroup>
+          }
+        >
+          Test
+        </MeetingListItem>
+      );
+
+      const element = container.find(MeetingListItem).getDOMNode();
+      const buttonCircle = container.find(ButtonCircle).getDOMNode();
+      const buttonPill = container.find(ButtonPill).getDOMNode();
+
+      expect(element.getAttribute('data-disabled')).toBe('true');
+      expect(buttonCircle.getAttribute('data-disabled')).toBe('true');
+      expect(buttonPill.getAttribute('data-disabled')).toBe('true');
+    });
+
     it('should have provided data-size', () => {
       expect.assertions(1);
 
@@ -194,8 +222,8 @@ describe('<MeetingListItem />', () => {
       expect(element.getElementsByClassName('button-circle')[0].getAttribute('data-size')).toBe(
         '32'
       );
-      expect(element.getElementsByTagName('svg')[0].getAttribute('data-autoscale')).toBe('true');
-      expect(element.getElementsByTagName('svg')[1].getAttribute('data-autoscale')).toBe('true');
+      expect(element.getElementsByTagName('svg')[0].getAttribute('data-scale')).toBe('12');
+      expect(element.getElementsByTagName('svg')[1].getAttribute('data-scale')).toBe('12');
       expect(element.getElementsByClassName('avatar')[0].getAttribute('data-size')).toBe('32');
     });
   });

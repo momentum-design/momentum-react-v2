@@ -86,4 +86,10 @@ export interface Props extends PressEvents, ContextMenu {
    * Indicates wether this item is currently focusable
    */
   itemIndex?: number;
+
+  /**
+   * Determines if the list item is interactive (usually used as a header when false)
+   * @default true
+   */
+  interactive?: boolean;
 }
