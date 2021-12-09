@@ -113,6 +113,12 @@ jobs:
           node-version: 14.x
           check-latest: true
 
+      - name: Uncache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules/
+          key: node-modules-${{ runner.os }}-${{ env.rid }}
+
       - name: Uncache Dist
         uses: actions/cache@v2
         with:
