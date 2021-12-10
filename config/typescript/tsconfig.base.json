@@ -9,7 +9,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "paths": {
-      "@momentum-ui/react": ["../../src"]
+      "@momentum-ui/react-collaboration": ["../../src"]
     },
     "preserveConstEnums": true,
     "removeComments": false,

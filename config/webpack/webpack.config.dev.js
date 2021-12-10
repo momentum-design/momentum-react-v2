@@ -150,7 +150,7 @@ exports.config = {
     extensions: ['*', '.js', '.jsx', '.json', '.ts', '.tsx'],
     alias: {
       'react-native': 'react-native-web',
-      '@momentum-ui/react': path.resolve(repoRoot, 'src', 'index.ts'),
+      '@momentum-ui/react-collaboration': path.resolve(repoRoot, 'src', 'index.ts'),
       'react-dom': '@hot-loader/react-dom',
     },
   },
