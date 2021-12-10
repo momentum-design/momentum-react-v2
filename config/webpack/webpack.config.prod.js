@@ -98,7 +98,7 @@ exports.config = [
     resolve: {
       extensions: ['*', '.js', '.json'],
       alias: {
-        '@momentum-ui/react': path.resolve(repoRoot, 'dist/esm', 'index.js'),
+        '@momentum-ui/react-collaboration': path.resolve(repoRoot, 'dist/esm', 'index.js'),
       },
     },
   },
