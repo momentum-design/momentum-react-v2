@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { FormInfo } from '@momentum-ui/react';
+import { FormInfo } from '@momentum-ui/react-collaboration';
 
 describe('tests for <FormInfo />', () => {
   it('should match SnapShot', () => {

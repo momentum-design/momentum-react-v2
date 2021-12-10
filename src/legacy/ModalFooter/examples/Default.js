@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ModalFooter } from '@momentum-ui/react';
+import { Button, ModalFooter } from '@momentum-ui/react-collaboration';
 
 export default function ModalFooterDefault() {
   return (

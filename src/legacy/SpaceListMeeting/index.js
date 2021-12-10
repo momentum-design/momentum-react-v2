@@ -2,7 +2,15 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Avatar, Icon, List, ListItem, ListItemSection, Button, Popover } from '@momentum-ui/react';
+import {
+  Avatar,
+  Icon,
+  List,
+  ListItem,
+  ListItemSection,
+  Button,
+  Popover,
+} from '@momentum-ui/react-collaboration';
 import omit from 'lodash/omit';
 import uniqueId from 'lodash/uniqueId';
 

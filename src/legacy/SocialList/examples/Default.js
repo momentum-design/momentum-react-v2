@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem, SocialList } from '@momentum-ui/react';
+import { List, ListItem, SocialList } from '@momentum-ui/react-collaboration';
 
 export default class SocialListDefault extends React.PureComponent {
   render() {

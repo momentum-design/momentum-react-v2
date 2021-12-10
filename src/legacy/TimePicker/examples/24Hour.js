@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimePicker } from '@momentum-ui/react';
+import { TimePicker } from '@momentum-ui/react-collaboration';
 export default class TimePicker24Hr extends React.PureComponent {
   render() {
     return (

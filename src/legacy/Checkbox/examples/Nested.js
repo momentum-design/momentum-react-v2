@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox } from '@momentum-ui/react';
+import { Checkbox } from '@momentum-ui/react-collaboration';
 export default class CheckboxNested extends React.PureComponent {
   state = {
     parent: false,

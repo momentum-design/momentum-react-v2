@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, List, ListItemMeeting } from '@momentum-ui/react';
+import { Avatar, List, ListItemMeeting } from '@momentum-ui/react-collaboration';
 
 export default class ListItemDefault extends React.PureComponent {
   render() {

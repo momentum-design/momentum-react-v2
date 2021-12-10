@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Slider } from '@momentum-ui/react';
+import { Slider } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Slider />', () => {
   it('should match SnapShot', () => {

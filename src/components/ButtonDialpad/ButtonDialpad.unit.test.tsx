@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ButtonDialpad } from '@momentum-ui/react';
+import { ButtonDialpad } from '@momentum-ui/react-collaboration';
 
 import { DEFAULTS, SIZES, STYLE } from './ButtonDialpad.constants';
 

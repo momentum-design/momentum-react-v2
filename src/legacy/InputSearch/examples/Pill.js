@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputSearch } from '@momentum-ui/react';
+import { InputSearch } from '@momentum-ui/react-collaboration';
 
 export default function PillInputSearch() {
   return (

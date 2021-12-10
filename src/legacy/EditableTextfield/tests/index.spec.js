@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { EditableTextfield } from '@momentum-ui/react';
+import { EditableTextfield } from '@momentum-ui/react-collaboration';
 
 describe('tests for <EditableTextfield />', () => {
   it('should render an Editable Textfield', () => {

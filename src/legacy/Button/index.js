@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Loading } from '@momentum-ui/react';
+import { Loading } from '@momentum-ui/react-collaboration';
 import omit from 'lodash/omit';
 import { UIDConsumer } from 'react-uid';
 import ButtonGroupContext from '../ButtonGroupContext';
@@ -116,13 +116,13 @@ class Button extends React.Component {
 
       if (!circle && !validButtonSize) {
         console.warn(
-          '[@momentum-ui/react] Button: selected size is not supported for non-circular button. Size will default to 36'
+          '[@momentum-ui/react-collaboration] Button: selected size is not supported for non-circular button. Size will default to 36'
         );
 
         return '36';
       } else if (large) {
         console.warn(
-          '[@momentum-ui/react] Button: large prop is deprecated and will be removed. Please use size prop.'
+          '[@momentum-ui/react-collaboration] Button: large prop is deprecated and will be removed. Please use size prop.'
         );
 
         return !circle ? '52' : '44';

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
-import { Checkbox, List, ListItem } from '@momentum-ui/react';
+import { Checkbox, List, ListItem } from '@momentum-ui/react-collaboration';
 
 export default class ListWithEventBubbling extends React.PureComponent {
   state = {

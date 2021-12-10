@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { SocialList } from '@momentum-ui/react';
+import { SocialList } from '@momentum-ui/react-collaboration';
 
 describe('<SocialList />', () => {
   it('should render a SocialList', () => {

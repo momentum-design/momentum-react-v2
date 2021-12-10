@@ -1,5 +1,12 @@
 import React from 'react';
-import { Button, Icon, List, ListItem, ListItemSection, Popover } from '@momentum-ui/react';
+import {
+  Button,
+  Icon,
+  List,
+  ListItem,
+  ListItemSection,
+  Popover,
+} from '@momentum-ui/react-collaboration';
 export default function ContentDefault() {
   const content = (
     <List>

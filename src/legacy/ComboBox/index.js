@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { EventOverlay, Input, ListItem, InputSearch } from '@momentum-ui/react';
+import { EventOverlay, Input, ListItem, InputSearch } from '@momentum-ui/react-collaboration';
 import omit from 'lodash/omit';
 import uniqueId from 'lodash/uniqueId';
 

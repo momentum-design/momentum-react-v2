@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ButtonHyperlink } from '@momentum-ui/react';
+import { ButtonHyperlink } from '@momentum-ui/react-collaboration';
 
 import { DEFAULTS, STYLE } from './ButtonHyperlink.constants';
 

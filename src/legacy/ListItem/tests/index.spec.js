@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { List, ListItem, ListItemSection } from '@momentum-ui/react';
+import { List, ListItem, ListItemSection } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ListItem />', () => {
   it('should match SnapShot', () => {

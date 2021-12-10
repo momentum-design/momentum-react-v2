@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Input, InputSearch } from '@momentum-ui/react';
+import { Icon, Input, InputSearch } from '@momentum-ui/react-collaboration';
 
 export default class InputKitchenSink extends React.PureComponent {
   render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab, TabContent, TabList, TabPane, Tabs } from '@momentum-ui/react';
+import { Tab, TabContent, TabList, TabPane, Tabs } from '@momentum-ui/react-collaboration';
 export default function TabsJustified() {
   return (
     <Tabs justified>

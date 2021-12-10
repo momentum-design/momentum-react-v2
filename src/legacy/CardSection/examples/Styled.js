@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, CardSection, Link } from '@momentum-ui/react';
+import { Button, CardSection, Link } from '@momentum-ui/react-collaboration';
 
 export default function CardSectionStyled() {
   return (

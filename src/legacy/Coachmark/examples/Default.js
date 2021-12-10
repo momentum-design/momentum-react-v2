@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Coachmark } from '@momentum-ui/react';
+import { Button, Coachmark } from '@momentum-ui/react-collaboration';
 
 export default class CoachmarkDefault extends React.Component {
   state = {

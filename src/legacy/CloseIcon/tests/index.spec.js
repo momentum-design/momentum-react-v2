@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { CloseIcon } from '@momentum-ui/react';
+import { CloseIcon } from '@momentum-ui/react-collaboration';
 
 describe('tests for <CloseIcon />', () => {
   it('should match SnapShot', () => {

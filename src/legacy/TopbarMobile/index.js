@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, ListSeparator } from '@momentum-ui/react';
+import { Icon, ListSeparator } from '@momentum-ui/react-collaboration';
 import { prefix } from '../utils/index';
 
 class TopbarMobile extends React.Component {

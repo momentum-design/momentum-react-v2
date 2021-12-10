@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Popover } from '@momentum-ui/react';
+import { Popover } from '@momentum-ui/react-collaboration';
 
 class Tooltip extends React.Component {
   render() {

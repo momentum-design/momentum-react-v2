@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { RadioGroup, Radio } from '@momentum-ui/react';
+import { RadioGroup, Radio } from '@momentum-ui/react-collaboration';
 
 describe('tests for <RadioGroup />', () => {
   it('should match SnapShot', () => {

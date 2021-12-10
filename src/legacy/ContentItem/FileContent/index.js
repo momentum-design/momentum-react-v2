@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from '../../utils/snakeCase';
-import { Spinner } from '@momentum-ui/react';
+import { Spinner } from '@momentum-ui/react-collaboration';
 
 const FileContentItem = (props) => {
   const {

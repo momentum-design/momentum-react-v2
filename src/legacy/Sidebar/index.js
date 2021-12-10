@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import SidebarContext from '../SidebarContext';
 import { UIDReset } from 'react-uid';
-import { CollapseButton } from '@momentum-ui/react';
+import { CollapseButton } from '@momentum-ui/react-collaboration';
 
 class Sidebar extends React.Component {
   constructor(props) {

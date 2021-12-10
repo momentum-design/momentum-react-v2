@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ListItemMeeting } from '@momentum-ui/react';
+import { ListItemMeeting } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ListItemMeeting />', () => {
   beforeEach(() => {

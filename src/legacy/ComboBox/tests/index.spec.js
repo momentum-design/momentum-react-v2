@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ComboBox, ListItem, ListItemHeader } from '@momentum-ui/react';
+import { ComboBox, ListItem, ListItemHeader } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ComboBox />', () => {
   it('should match SnapShot', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loading } from '@momentum-ui/react';
+import { Loading } from '@momentum-ui/react-collaboration';
 
 export default function LoaderSpinnerDefault() {
   return (

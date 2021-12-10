@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { FormSection } from '@momentum-ui/react';
+import { FormSection } from '@momentum-ui/react-collaboration';
 
 describe('tests for <FormSection />', () => {
   it('should match SnapShot', () => {

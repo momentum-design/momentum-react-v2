@@ -1,5 +1,5 @@
 import React from 'react';
-import { CallControl } from '@momentum-ui/react';
+import { CallControl } from '@momentum-ui/react-collaboration';
 export default function CallControlDefault() {
   return (
     <div className="row">

@@ -1,6 +1,6 @@
 import { mount, shallow } from 'enzyme';
 import React from 'react';
-import { ListItem, Select } from '@momentum-ui/react';
+import { ListItem, Select } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Select />', () => {
   it('should match normal SnapShot', () => {

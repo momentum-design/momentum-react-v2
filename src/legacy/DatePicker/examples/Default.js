@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, DatePicker } from '@momentum-ui/react';
+import { Button, DatePicker } from '@momentum-ui/react-collaboration';
 export default class DatePickerDefault extends React.PureComponent {
   state = {
     date: null,

@@ -1,6 +1,6 @@
 import { prefix } from '../../utils/index';
 
-describe('@momentum-ui/react', () => {
+describe('@momentum-ui/react-collaboration', () => {
   it('snapshot of collapse button', () => {
     cy.visit(`${Cypress.env('BASE_URL')}/collapse-button`)
       .get(`.${prefix}-collapse-button`)

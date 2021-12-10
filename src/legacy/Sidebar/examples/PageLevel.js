@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar, SidebarBody, SidebarNav, SidebarNavItem } from '@momentum-ui/react';
+import { Sidebar, SidebarBody, SidebarNav, SidebarNavItem } from '@momentum-ui/react-collaboration';
 
 export default class PageLevelSidebar extends React.PureComponent {
   render() {

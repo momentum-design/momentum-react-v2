@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Link } from '@momentum-ui/react';
+import { Link } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Link />', () => {
   it('should match SnapShot', () => {

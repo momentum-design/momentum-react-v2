@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Breadcrumbs } from '@momentum-ui/react';
+import { Breadcrumbs } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Breadcrumbs />', () => {
   it('should match SnapShot', () => {

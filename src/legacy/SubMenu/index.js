@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import mapContextToProps from '@restart/context/mapContextToProps';
 import { UIDConsumer, UIDFork } from 'react-uid';
-import { EventOverlay, Icon, ListItem } from '@momentum-ui/react';
+import { EventOverlay, Icon, ListItem } from '@momentum-ui/react-collaboration';
 import ListContext from '../ListContext';
 import SelectableContext from '../SelectableContext';
 import { prefix } from '../utils/prefixer';

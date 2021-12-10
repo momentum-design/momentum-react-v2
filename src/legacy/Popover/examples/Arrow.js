@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Popover } from '@momentum-ui/react';
+import { Button, Popover } from '@momentum-ui/react-collaboration';
 export default function PopoverArrow() {
   const contentArrow = (
     <span key="1" style={{ padding: '10px' }}>

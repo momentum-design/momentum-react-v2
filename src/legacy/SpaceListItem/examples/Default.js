@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, List, ListItemHeader, SpaceListItem } from '@momentum-ui/react';
+import { Icon, List, ListItemHeader, SpaceListItem } from '@momentum-ui/react-collaboration';
 export default class ListItemDefault extends React.PureComponent {
   render() {
     return (

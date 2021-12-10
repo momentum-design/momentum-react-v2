@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CloseIcon } from '@momentum-ui/react';
+import { CloseIcon } from '@momentum-ui/react-collaboration';
 
 class ModalHeader extends React.PureComponent {
   render() {

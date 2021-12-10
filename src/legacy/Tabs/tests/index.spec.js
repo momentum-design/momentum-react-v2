@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Tab, TabContent, TabList, TabPane, Tabs } from '@momentum-ui/react';
+import { Tab, TabContent, TabList, TabPane, Tabs } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Tabs />', () => {
   it('should match SnapShot', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Icon } from '@momentum-ui/react';
+import { Icon } from '@momentum-ui/react-collaboration';
 
 describe('Tests for <Icon />', () => {
   it('should match SnapShot', () => {

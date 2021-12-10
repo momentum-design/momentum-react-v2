@@ -1,6 +1,6 @@
 import { prefix } from '../../utils/index';
 
-describe('@momentum-ui/react', () => {
+describe('@momentum-ui/react-collaboration', () => {
   it('snapshot of combo box', () => {
     cy.visit(`${Cypress.env('BASE_URL')}/combo-box`)
       .get(`.${prefix}-combo-box`)

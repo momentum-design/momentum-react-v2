@@ -1,6 +1,6 @@
 import { prefix } from '../../utils/index';
 
-describe('@momentum-ui/react', () => {
+describe('@momentum-ui/react-collaboration', () => {
   before(() => {
     cy.visit(`${Cypress.env('BASE_URL')}/topbar`);
     cy.viewport(1200, 660);

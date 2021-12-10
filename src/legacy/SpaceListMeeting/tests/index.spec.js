@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { SpaceListMeeting } from '@momentum-ui/react';
+import { SpaceListMeeting } from '@momentum-ui/react-collaboration';
 
 describe('tests for <SpaceListMeeting />', () => {
   beforeAll(() => {

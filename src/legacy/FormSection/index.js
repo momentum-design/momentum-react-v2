@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormInfo, FormContent } from '@momentum-ui/react';
+import { FormInfo, FormContent } from '@momentum-ui/react-collaboration';
 
 const FormSection = (props) => {
   const { title, description, children } = props;

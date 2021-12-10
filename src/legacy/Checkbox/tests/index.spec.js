@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Checkbox, Label, InputHelper } from '@momentum-ui/react';
+import { Checkbox, Label, InputHelper } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Checkbox />', () => {
   it('should match SnapShot', () => {

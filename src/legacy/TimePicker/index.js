@@ -7,7 +7,7 @@ import moment from 'moment';
 import uniqueId from 'lodash/uniqueId';
 import TimePickerDropdown from './TimePickerDropdown';
 import TimeSelector from './TimeSelector';
-import { Input, EventOverlay } from '@momentum-ui/react';
+import { Input, EventOverlay } from '@momentum-ui/react-collaboration';
 
 class TimePicker extends React.Component {
   state = {

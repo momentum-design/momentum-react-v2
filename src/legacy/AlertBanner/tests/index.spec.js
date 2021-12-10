@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { AlertBanner } from '@momentum-ui/react';
+import { AlertBanner } from '@momentum-ui/react-collaboration';
 
 describe('tests for <AlertBanner />', () => {
   it('should match SnapShot', () => {

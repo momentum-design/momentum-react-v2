@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import { UIDConsumer } from 'react-uid';
-import { Icon, List, ListItem, ListItemHeader, ListItemSection } from '@momentum-ui/react';
+import {
+  Icon,
+  List,
+  ListItem,
+  ListItemHeader,
+  ListItemSection,
+} from '@momentum-ui/react-collaboration';
 
 class DeviceListCall extends React.PureComponent {
   state = {

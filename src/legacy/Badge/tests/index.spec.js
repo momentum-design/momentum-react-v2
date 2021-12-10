@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Badge } from '@momentum-ui/react';
+import { Badge } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Badge />', () => {
   it('should match SnapShot', () => {

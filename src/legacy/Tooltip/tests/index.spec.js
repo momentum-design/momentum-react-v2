@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Button, Tooltip } from '@momentum-ui/react';
+import { Button, Tooltip } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Tooltip />', () => {
   beforeAll(() => {

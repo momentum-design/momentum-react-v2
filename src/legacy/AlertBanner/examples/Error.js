@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertBanner, Button } from '@momentum-ui/react';
+import { AlertBanner, Button } from '@momentum-ui/react-collaboration';
 export default class AlertBannerError extends React.PureComponent {
   state = {
     showAlert1: true,

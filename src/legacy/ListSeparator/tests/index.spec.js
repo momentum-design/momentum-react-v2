@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { ListSeparator } from '@momentum-ui/react';
+import { ListSeparator } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ListSeparator />', () => {
   it('should match SnapShot', () => {

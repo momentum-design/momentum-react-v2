@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertMeeting, AlertContainer } from '@momentum-ui/react';
+import { AlertMeeting, AlertContainer } from '@momentum-ui/react-collaboration';
 
 export default class AlertMeetingKitchenSink extends React.Component {
   render() {

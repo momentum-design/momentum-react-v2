@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Input, Spinner } from '@momentum-ui/react';
+import { Icon, Input, Spinner } from '@momentum-ui/react-collaboration';
 
 const SearchInput = (props) => {
   const { isLoading, ...otherProps } = props;

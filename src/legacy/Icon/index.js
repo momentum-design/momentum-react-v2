@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import iconNames from '@momentum-ui/icons/data/momentumUiIconsNames.json';
-import { Button } from '@momentum-ui/react';
+import { Button } from '@momentum-ui/react-collaboration';
 import { getColorValue } from '../utils';
 
 class Icon extends React.PureComponent {
@@ -33,13 +33,13 @@ class Icon extends React.PureComponent {
       switch (message) {
         case 'color-warn':
           console.warn(
-            `[@momentum-ui/react] Icon: ${data} may not exist in the design system,` +
+            `[@momentum-ui/react-collaboration] Icon: ${data} may not exist in the design system,` +
               ` please use a color name from https://momentum.design/styles/color/style`
           );
           break;
         case 'name-error':
           console.warn(
-            `[@momentum-ui/react] Icon: Icon ${data} does not exist in the design system.` +
+            `[@momentum-ui/react-collaboration] Icon: Icon ${data} does not exist in the design system.` +
               ` Visit https://momentum.design/styles/icons/library for a list of available icons or to request a new icon.`
           );
           break;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityButton } from '@momentum-ui/react';
+import { ActivityButton } from '@momentum-ui/react-collaboration';
 export default function ActivityButtonSize56() {
   return (
     <div>

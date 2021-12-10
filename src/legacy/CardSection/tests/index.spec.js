@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { CardSection } from '@momentum-ui/react';
+import { CardSection } from '@momentum-ui/react-collaboration';
 
 describe('tests for <CardSection />', () => {
   it('should match SnapShot', () => {
