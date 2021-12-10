@@ -8,7 +8,7 @@ module.exports = {
     },
     'import/resolver': {
       alias: {
-        map: [['@momentum-ui/react', path.resolve(__dirname, 'src')]],
+        map: [['@momentum-ui/react-collaboration', path.resolve(__dirname, 'src')]],
       },
       node: {
         extensions: ['.js', '.jsx', '.json', '.tsx', '.ts'],

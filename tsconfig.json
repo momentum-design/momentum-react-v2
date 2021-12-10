@@ -11,7 +11,7 @@
     "outDir": "./dist/esm",
     "baseUrl": ".",
     "paths": {
-      "@momentum-ui/react": [
+      "@momentum-ui/react-collaboration": [
         "./src"
       ]
     },
