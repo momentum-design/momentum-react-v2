@@ -55,7 +55,7 @@ In the case of [npm](https://www.npmjs.com/) or [yarn](https://classic.yarnpkg.c
   /* ...other package definitions... */
   "dependencies": {
     /* ...other package dependencies... */
-    "@momentum-ui/react": "link:./path/to/this/project",
+    "@momentum-ui/react-collaboration": "link:./path/to/this/project",
   }
 }
 ```
@@ -68,7 +68,7 @@ Once the package is properly linked, the components can be imported for usage wi
 
 ```jsx
 /* ...other imports... */
-import { Button } from '@momentum-ui/react';
+import { Button } from '@momentum-ui/react-collaboration';
 
 const Component = () => (
   <div>
