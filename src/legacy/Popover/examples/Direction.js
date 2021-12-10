@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Popover } from '@momentum-ui/react';
+import { Button, Popover } from '@momentum-ui/react-collaboration';
 export default function PopOverDirection({ direction, isContained }) {
   const testCase = `This is a really long popover ${direction} - isContained: ${
     isContained ? 'true' : 'false'

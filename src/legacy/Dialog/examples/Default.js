@@ -1,5 +1,12 @@
 import React from 'react';
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Icon } from '@momentum-ui/react';
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  Icon,
+} from '@momentum-ui/react-collaboration';
 export default class Dialog extends React.PureComponent {
   state = {
     showDialog: false,

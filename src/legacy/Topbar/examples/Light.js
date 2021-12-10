@@ -8,7 +8,7 @@ import {
   TopbarMobile,
   TopbarNav,
   TopbarRight,
-} from '@momentum-ui/react';
+} from '@momentum-ui/react-collaboration';
 
 export default class TopbarLight extends React.Component {
   render() {

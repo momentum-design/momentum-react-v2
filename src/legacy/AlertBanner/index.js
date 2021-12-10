@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from '@momentum-ui/react';
+import { Icon } from '@momentum-ui/react-collaboration';
 
 const AlertBanner = (props) => {
   const {

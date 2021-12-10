@@ -1,6 +1,10 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { AccordionGroup, AccordionContent, AccordionHeader } from '@momentum-ui/react';
+import {
+  AccordionGroup,
+  AccordionContent,
+  AccordionHeader,
+} from '@momentum-ui/react-collaboration';
 
 describe('tests for <AccordionGroup />', () => {
   it('should match SnapShot', () => {

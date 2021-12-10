@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { MenuContent } from '@momentum-ui/react';
+import { MenuContent } from '@momentum-ui/react-collaboration';
 
 describe('tests for <MenuContent />', () => {
   it('should render a MenuContent', () => {

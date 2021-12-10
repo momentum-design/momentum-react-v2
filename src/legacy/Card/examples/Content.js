@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Button, Card, CardSection, Link } from '@momentum-ui/react';
+import { Avatar, Button, Card, CardSection, Link } from '@momentum-ui/react-collaboration';
 export default function CardContent() {
   return (
     <Card className="small-3 columns">

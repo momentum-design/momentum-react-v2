@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Checkbox, CheckboxGroup } from '@momentum-ui/react';
+import { Checkbox, CheckboxGroup } from '@momentum-ui/react-collaboration';
 
 describe('tests for <CheckboxGroup />', () => {
   it('should match SnapShot', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ContentItem, Icon } from '@momentum-ui/react';
+import { Button, ContentItem, Icon } from '@momentum-ui/react-collaboration';
 
 export default class GifContentItem extends React.PureComponent {
   render() {

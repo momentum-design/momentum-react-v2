@@ -22,7 +22,7 @@ import {
   SelectOption,
   SubMenu,
   ToggleSwitch,
-} from '@momentum-ui/react';
+} from '@momentum-ui/react-collaboration';
 import { AutoSizer as CAutoSizer, List as Clist } from 'react-virtualized';
 import { FixedSizeList } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';

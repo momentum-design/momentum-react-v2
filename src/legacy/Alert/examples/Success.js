@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, AlertContainer, Button } from '@momentum-ui/react';
+import { Alert, AlertContainer, Button } from '@momentum-ui/react-collaboration';
 export default class AlertDefault extends React.PureComponent {
   state = {
     show: false,

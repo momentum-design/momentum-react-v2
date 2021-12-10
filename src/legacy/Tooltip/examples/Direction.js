@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Tooltip } from '@momentum-ui/react';
+import { Button, Tooltip } from '@momentum-ui/react-collaboration';
 
 export default function TooltipDirection() {
   return (

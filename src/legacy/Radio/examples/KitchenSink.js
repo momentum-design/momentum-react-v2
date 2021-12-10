@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputHelper, Radio, RadioGroup } from '@momentum-ui/react';
+import { InputHelper, Radio, RadioGroup } from '@momentum-ui/react-collaboration';
 
 export default class RadioKitchenSink extends React.PureComponent {
   render() {

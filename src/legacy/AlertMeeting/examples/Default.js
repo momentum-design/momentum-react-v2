@@ -1,7 +1,7 @@
 /** @component alert-meeting */
 
 import React from 'react';
-import { Button, AlertMeeting, AlertContainer } from '@momentum-ui/react';
+import { Button, AlertMeeting, AlertContainer } from '@momentum-ui/react-collaboration';
 
 export default class Default extends React.PureComponent {
   state = {

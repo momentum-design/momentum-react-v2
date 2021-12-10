@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Radio from '../index';
-import { InputHelper, Label } from '@momentum-ui/react';
+import { InputHelper, Label } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Radio />', () => {
   it('should match SnapShot', () => {

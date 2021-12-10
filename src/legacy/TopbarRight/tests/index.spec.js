@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { TopbarRight } from '@momentum-ui/react';
+import { TopbarRight } from '@momentum-ui/react-collaboration';
 import { prefix } from '../../utils/index';
 
 describe('tests for <TopbarRight />', () => {

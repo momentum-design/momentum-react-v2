@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { TopbarMobile } from '@momentum-ui/react';
+import { TopbarMobile } from '@momentum-ui/react-collaboration';
 import { prefix } from '../../utils/index';
 
 describe('tests for <TopbarMobile />', () => {

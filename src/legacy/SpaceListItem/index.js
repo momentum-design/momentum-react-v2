@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
-import { Avatar, Icon, ListItem, ListItemSection } from '@momentum-ui/react';
+import { Avatar, Icon, ListItem, ListItemSection } from '@momentum-ui/react-collaboration';
 
 class SpaceListItem extends React.PureComponent {
   state = {

@@ -8,7 +8,7 @@ import uniqueId from 'lodash/uniqueId';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, EventOverlay, Icon, List } from '@momentum-ui/react';
+import { Button, EventOverlay, Icon, List } from '@momentum-ui/react-collaboration';
 import SelectContext from '../SelectContext';
 
 class Select extends React.Component {

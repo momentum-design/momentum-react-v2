@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { List } from '@momentum-ui/react';
+import { List } from '@momentum-ui/react-collaboration';
 import { prefix } from '../utils/index';
 
 class TopbarNav extends React.Component {

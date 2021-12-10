@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Modal } from '@momentum-ui/react';
+import { Modal } from '@momentum-ui/react-collaboration';
 //Add test for Background once Portals are supported in Enzyme
 
 describe('tests for <Modal />', () => {

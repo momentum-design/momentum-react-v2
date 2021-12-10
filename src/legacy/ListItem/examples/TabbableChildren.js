@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem, ListItemSection, Button, Popover } from '@momentum-ui/react';
+import { List, ListItem, ListItemSection, Button, Popover } from '@momentum-ui/react-collaboration';
 
 export default class TabbableChildren extends React.PureComponent {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { CloseWrapper } from '@momentum-ui/react';
+import { CloseWrapper } from '@momentum-ui/react-collaboration';
 
 describe('tests for <CloseWrapper />', () => {
   it('should match SnapShot', () => {

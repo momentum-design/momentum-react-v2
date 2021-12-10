@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardSection } from '@momentum-ui/react';
+import { CardSection } from '@momentum-ui/react-collaboration';
 
 export default function CardSectionFull() {
   return (

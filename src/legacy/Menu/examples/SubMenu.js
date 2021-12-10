@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Menu, MenuItem, MenuOverlay, SubMenu } from '@momentum-ui/react';
+import { Button, Menu, MenuItem, MenuOverlay, SubMenu } from '@momentum-ui/react-collaboration';
 export default class MenuOverlaySubMenu extends React.PureComponent {
   onClick(event, value) {
     alert(`${value} clicked`);

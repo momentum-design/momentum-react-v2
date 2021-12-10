@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Button, Loading } from '@momentum-ui/react'; // eslint-disable-line import/named
+import { Button, Loading } from '@momentum-ui/react-collaboration'; // eslint-disable-line import/named
 import ButtonGroupContext from '../../ButtonGroupContext';
 import SelectableContext from '../../SelectableContext';
 

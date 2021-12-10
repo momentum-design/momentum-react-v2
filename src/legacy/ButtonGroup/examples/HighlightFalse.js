@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Icon } from '@momentum-ui/react';
+import { Button, ButtonGroup, Icon } from '@momentum-ui/react-collaboration';
 export default class ButtonGroupHiglightFalse extends React.PureComponent {
   render() {
     return (

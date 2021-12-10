@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 
-import { Icon, Input, InputMessage, InputHelper, Label } from '@momentum-ui/react';
+import { Icon, Input, InputMessage, InputHelper, Label } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Input />', () => {
   it('should match text SnapShot', () => {

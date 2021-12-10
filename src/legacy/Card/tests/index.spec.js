@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Card } from '@momentum-ui/react';
+import { Card } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Card />', () => {
   it('should match SnapShot', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Label } from '@momentum-ui/react';
+import { Label } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Label />', () => {
   it('should match text SnapShot', () => {

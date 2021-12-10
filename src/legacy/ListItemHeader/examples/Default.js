@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItemHeader } from '@momentum-ui/react';
+import { List, ListItemHeader } from '@momentum-ui/react-collaboration';
 import { NavLink } from 'react-router-dom';
 
 export default class ListItemHeaderExample extends React.PureComponent {

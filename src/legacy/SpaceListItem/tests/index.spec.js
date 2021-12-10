@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { SpaceListItem } from '@momentum-ui/react';
+import { SpaceListItem } from '@momentum-ui/react-collaboration';
 
 describe('tests for <SpaceListItem />', () => {
   it('should match SnapShot', () => {

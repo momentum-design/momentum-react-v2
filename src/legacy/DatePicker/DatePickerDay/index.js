@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '@momentum-ui/react';
+import { Button } from '@momentum-ui/react-collaboration';
 import DatePickerContext from '../../DatePickerContext';
 import { getDate, getMonth, isDayDisabled, isSameDay, now } from '../../utils/dateUtils';
 import mapContextToProps from '@restart/context/mapContextToProps';

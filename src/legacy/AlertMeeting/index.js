@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Avatar, CompositeAvatar, Button, Icon } from '@momentum-ui/react';
+import { Avatar, CompositeAvatar, Button, Icon } from '@momentum-ui/react-collaboration';
 
 const AlertMeeting = (props) => {
   const {

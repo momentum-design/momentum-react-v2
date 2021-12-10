@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, AlertCall, AlertCallContainer } from '@momentum-ui/react';
+import { Button, AlertCall, AlertCallContainer } from '@momentum-ui/react-collaboration';
 import uniqueId from 'lodash/uniqueId';
 import reject from 'lodash/reject';
 export default class AlertCallDeviceList extends React.PureComponent {

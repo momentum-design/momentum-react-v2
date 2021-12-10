@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentItem } from '@momentum-ui/react';
+import { ContentItem } from '@momentum-ui/react-collaboration';
 
 export default class ContentItemLoading extends React.PureComponent {
   render() {

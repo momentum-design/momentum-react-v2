@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import AlertMeeting from '../index';
-import { Avatar, CompositeAvatar } from '@momentum-ui/react';
+import { Avatar, CompositeAvatar } from '@momentum-ui/react-collaboration';
 
 describe('tests for <AlertMeeting />', () => {
   const attendeeOne = { title: 'J $', props: { id: 'testid' } };

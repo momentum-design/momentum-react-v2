@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slider } from '@momentum-ui/react';
+import { Slider } from '@momentum-ui/react-collaboration';
 export default class DefaultSlider extends React.Component {
   state = {
     value: 200,

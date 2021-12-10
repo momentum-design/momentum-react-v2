@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Button, Icon, Topbar, TopbarMobile, TopbarRight } from '@momentum-ui/react';
+import { Button, Icon, Topbar, TopbarMobile, TopbarRight } from '@momentum-ui/react-collaboration';
 
 export default class TopbarNoMiddle extends React.Component {
   render() {

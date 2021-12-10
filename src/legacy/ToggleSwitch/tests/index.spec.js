@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { ToggleSwitch } from '@momentum-ui/react';
+import { ToggleSwitch } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ToggleSwitch />', () => {
   it('should match SnapShot', () => {

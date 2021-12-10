@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Spinner } from '@momentum-ui/react';
+import { Spinner } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Spinner />', () => {
   it('should render a Spinner', () => {

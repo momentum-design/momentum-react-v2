@@ -1,6 +1,6 @@
 import React from 'react';
 import { SliderCross, SliderDefault, SliderTwoHandles, SliderStep } from './index';
-import { Slider } from '@momentum-ui/react';
+import { Slider } from '@momentum-ui/react-collaboration';
 export default class SliderKitchenSink extends React.Component {
   render() {
     return (

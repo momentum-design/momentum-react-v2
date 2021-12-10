@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { InputSection } from '@momentum-ui/react';
+import { InputSection } from '@momentum-ui/react-collaboration';
 
 describe('tests for <InputSection />', () => {
   it('should match text SnapShot', () => {

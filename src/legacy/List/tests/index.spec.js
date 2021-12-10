@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { List, ListItem, SelectOption, SpaceListItem } from '@momentum-ui/react';
+import { List, ListItem, SelectOption, SpaceListItem } from '@momentum-ui/react-collaboration';
 
 describe('tests for <List />', () => {
   beforeEach(() => {

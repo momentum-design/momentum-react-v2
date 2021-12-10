@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Button, Card, CardSection, Link } from '@momentum-ui/react';
+import { Avatar, Button, Card, CardSection, Link } from '@momentum-ui/react-collaboration';
 export default function CardClickable() {
   return (
     <Card onClick={() => {}} style={{ width: '300px' }}>

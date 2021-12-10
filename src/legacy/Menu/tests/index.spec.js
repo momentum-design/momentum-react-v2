@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Menu, MenuItem, SubMenu } from '@momentum-ui/react';
+import { Menu, MenuItem, SubMenu } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Menu />', () => {
   beforeEach(() => {
@@ -150,7 +150,7 @@ describe('tests for <Menu />', () => {
       );
     } catch (e) {
       expect(e.message).toEqual(
-        '[@momentum-ui/react] Menu: children of Menu should be of type MenuItem or SubMenu'
+        '[@momentum-ui/react-collaboration] Menu: children of Menu should be of type MenuItem or SubMenu'
       );
     }
     try {
@@ -161,7 +161,7 @@ describe('tests for <Menu />', () => {
       );
     } catch (e) {
       expect(e.message).toEqual(
-        '[@momentum-ui/react] Menu: children of Menu should be of type MenuItem or SubMenu'
+        '[@momentum-ui/react-collaboration] Menu: children of Menu should be of type MenuItem or SubMenu'
       );
     }
   });

@@ -9,7 +9,7 @@ import {
   TopbarMobile,
   TopbarNav,
   TopbarRight,
-} from '@momentum-ui/react';
+} from '@momentum-ui/react-collaboration';
 
 export default class TopbarBlue extends React.Component {
   render() {

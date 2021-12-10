@@ -13,7 +13,7 @@ const Spinner = (props) => {
     if (size !== 36 && showPercentage) {
       /* eslint-disable no-console */
       console.warn(
-        '[@momentum-ui/react] Spinner: Percentage will not be shown for sizes smaller than 36'
+        '[@momentum-ui/react-collaboration] Spinner: Percentage will not be shown for sizes smaller than 36'
       );
       /* eslint-enable no-console */
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox, InputHelper } from '@momentum-ui/react';
+import { Checkbox, InputHelper } from '@momentum-ui/react-collaboration';
 
 export default function InputHelperDefault() {
   return (

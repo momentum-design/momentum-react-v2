@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { EventOverlay } from '@momentum-ui/react';
+import { EventOverlay } from '@momentum-ui/react-collaboration';
 import DatePickerCalendar from './DatePickerCalendar';
 import DatePickerContext from '../DatePickerContext';
 import {

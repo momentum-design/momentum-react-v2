@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Footer } from '@momentum-ui/react';
+import { Footer } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Footer />', () => {
   it('should match SnapShot', () => {

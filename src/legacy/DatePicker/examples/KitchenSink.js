@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import { Button, DatePicker } from '@momentum-ui/react';
+import { Button, DatePicker } from '@momentum-ui/react-collaboration';
 
 export default class DatePickerKitchenSink extends React.Component {
   render() {

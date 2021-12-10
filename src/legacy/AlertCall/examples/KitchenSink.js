@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertCall, AlertCallContainer } from '@momentum-ui/react';
+import { AlertCall, AlertCallContainer } from '@momentum-ui/react-collaboration';
 
 export default class AlertCallKitchenSink extends React.Component {
   state = {

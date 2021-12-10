@@ -5,7 +5,7 @@ import { findDOMNode } from 'react-dom';
 import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import { UIDReset } from 'react-uid';
-import { EventOverlay } from '@momentum-ui/react';
+import { EventOverlay } from '@momentum-ui/react-collaboration';
 import MenuContext from '../MenuContext';
 import { isMRv2Button } from '../../helpers/verifyTypes';
 

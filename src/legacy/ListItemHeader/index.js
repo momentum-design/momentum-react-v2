@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
-import { ListItem, ListItemSection } from '@momentum-ui/react';
+import { ListItem, ListItemSection } from '@momentum-ui/react-collaboration';
 
 class ListItemHeader extends React.PureComponent {
   state = {

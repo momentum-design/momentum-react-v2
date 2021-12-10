@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '@momentum-ui/react';
+import { Icon } from '@momentum-ui/react-collaboration';
 export default class IconColor extends React.PureComponent {
   render() {
     return (

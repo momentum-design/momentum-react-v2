@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from '@momentum-ui/react';
+import { Badge } from '@momentum-ui/react-collaboration';
 export default function BadgeDefault() {
   return (
     <div className="row">

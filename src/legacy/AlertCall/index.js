@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { UIDReset } from 'react-uid';
 import DeviceListCall from '../DeviceListCall';
-import { Avatar, Button, Icon } from '@momentum-ui/react';
+import { Avatar, Button, Icon } from '@momentum-ui/react-collaboration';
 
 const AlertCall = (props) => {
   const {

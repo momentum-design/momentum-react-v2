@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@momentum-ui/react';
+import { Link } from '@momentum-ui/react-collaboration';
 
 export default function LinkColored() {
   return (

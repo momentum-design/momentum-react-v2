@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Loading, Icon } from '@momentum-ui/react';
+import { Button, Loading, Icon } from '@momentum-ui/react-collaboration';
 
 class Avatar extends React.Component {
   static displayName = 'Avatar';

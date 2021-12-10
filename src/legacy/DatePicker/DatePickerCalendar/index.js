@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DatePickerContext from '../../DatePickerContext';
 import DatePickerMonth from '../DatePickerMonth';
-import { Icon } from '@momentum-ui/react';
+import { Icon } from '@momentum-ui/react-collaboration';
 import {
   addDays,
   addMonths,

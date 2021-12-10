@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { CallControl } from '@momentum-ui/react';
+import { CallControl } from '@momentum-ui/react-collaboration';
 
 describe('tests for <CallControl />', () => {
   it('should match SnapShot', () => {

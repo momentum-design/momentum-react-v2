@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Lightbox } from '@momentum-ui/react';
+import { Button, Lightbox } from '@momentum-ui/react-collaboration';
 import reactIcon from './momentum.jpg';
 export default class LightboxDefault extends React.Component {
   state = {

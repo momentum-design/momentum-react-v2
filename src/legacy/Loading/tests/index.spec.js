@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Loading } from '@momentum-ui/react';
+import { Loading } from '@momentum-ui/react-collaboration';
 
 describe('tests for <Loading />', () => {
   it('should render a Loading', () => {

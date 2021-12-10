@@ -1,6 +1,6 @@
 import { prefix } from '../../utils/index';
 
-describe('@momentum-ui/react', () => {
+describe('@momentum-ui/react-collaboration', () => {
   it('snapshot of list-item-meeting', () => {
     cy.visit(`${Cypress.env('BASE_URL')}/list-item-meeting`)
       .get(`.${prefix}-list-item-meeting`)

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Icon } from '@momentum-ui/react';
+import { Button, Icon } from '@momentum-ui/react-collaboration';
 
 const CollapseButton = (props) => {
   const { alignment, className, collapse, onClick, ...otherProps } = props;

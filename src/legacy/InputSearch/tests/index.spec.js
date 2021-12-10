@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { InputSearch } from '@momentum-ui/react';
+import { InputSearch } from '@momentum-ui/react-collaboration';
 
 describe('tests for <InputSearch />', () => {
   it('should match normal SnapShot', () => {

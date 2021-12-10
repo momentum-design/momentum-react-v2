@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ContentItem } from '@momentum-ui/react';
+import { ContentItem } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ContentItem />', () => {
   const type = 'chat';

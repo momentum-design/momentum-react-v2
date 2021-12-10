@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Button, EventOverlay, Popover } from '@momentum-ui/react';
+import { Button, EventOverlay, Popover } from '@momentum-ui/react-collaboration';
 import { ButtonPill } from '../../../components';
 
 describe('tests for <EventOverlay />', () => {

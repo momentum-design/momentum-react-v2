@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ActivityButton } from '@momentum-ui/react';
+import { ActivityButton } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ActivityButton />', () => {
   it('should match SnapShot', () => {

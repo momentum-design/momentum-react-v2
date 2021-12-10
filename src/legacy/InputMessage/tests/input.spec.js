@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { InputMessage } from '@momentum-ui/react';
+import { InputMessage } from '@momentum-ui/react-collaboration';
 
 describe('tests for <InputMessage />', () => {
   it('should match text SnapShot', () => {

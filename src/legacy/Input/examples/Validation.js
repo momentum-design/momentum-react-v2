@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input } from '@momentum-ui/react';
+import { Input } from '@momentum-ui/react-collaboration';
 
 export default class InputValidation extends React.PureComponent {
   state = {

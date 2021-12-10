@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { ModalBody } from '@momentum-ui/react';
+import { ModalBody } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ModalBody />', () => {
   it('should match SnapShot', () => {

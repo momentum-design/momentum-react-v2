@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { Checkbox, Icon, ListItem, ListItemSection } from '@momentum-ui/react';
+import { Checkbox, Icon, ListItem, ListItemSection } from '@momentum-ui/react-collaboration';
 import SelectContext from '../SelectContext';
 import ListContext from '../ListContext';
 import { UIDConsumer } from 'react-uid';

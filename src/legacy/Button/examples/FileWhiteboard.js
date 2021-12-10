@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup } from '@momentum-ui/react';
+import { Button, ButtonGroup } from '@momentum-ui/react-collaboration';
 export default function ButtonFileWhiteboard() {
   return (
     <ButtonGroup type="unstyled">
