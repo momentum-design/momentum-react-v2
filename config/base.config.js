@@ -16,7 +16,7 @@ const baseConfig = {
     extensions: ['*', '.js', '.jsx', '.json', '.ts', '.tsx'],
     alias: {
       'react-native': 'react-native-web',
-      '@momentum-ui/react': path.resolve(codePath, 'src', 'index.ts'),
+      '@momentum-ui/react-collaboration': path.resolve(codePath, 'src', 'index.ts'),
     },
   },
 
