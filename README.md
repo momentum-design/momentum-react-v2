@@ -20,6 +20,8 @@ The components in this project are built to meet the following project goals:
 
 Please review our [getting started guide](./GETTING_STARTED.md) for details on how to prepare this project for downstream consumption.
 
+Documentation for this project is available via our [published Storybook](https://momentum-design.github.io/momentum-react-v2).
+
 ## Contribution
 
 Want to contribute? Be sure to review the [contribution guide](./CONTRIBUTING.md).
