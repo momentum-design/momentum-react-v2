@@ -123,7 +123,6 @@ class Input extends React.Component {
       clearAriaLabel,
       containerSize,
       disabled,
-      isFilled,
       messageArr,
       htmlId,
       id,
@@ -140,6 +139,9 @@ class Input extends React.Component {
       type,
       ...props
     } = this.props;
+
+    delete props.isFilled;
+
     const { isEditing, value } = this.state;
 
     const otherProps = omit({ ...props }, [

@@ -9,7 +9,6 @@ const ChatContentItem = (props) => {
     aspect,
     className,
     content,
-    fileSize,
     gifIcon,
     isProtected,
     loading,
@@ -19,6 +18,8 @@ const ChatContentItem = (props) => {
     title,
     ...otherProps
   } = props;
+
+  delete otherProps.fileSize;
 
   const kebabify = (holder, aspect) => {
     const cases = ['fourThree', 'sixteenNine', 'threeTwo'];
