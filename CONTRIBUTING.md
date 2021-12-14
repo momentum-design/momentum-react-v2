@@ -268,12 +268,12 @@ source:test # Runs unit and integration tests within './src'.
 
 ```bash
 storybook:build # Cleans the built storybook and builds a storybook from './dist/esm'.
-storybook:build:cjs # Builds a storybook to './docs/storybook' from './dist/cjs'.
-storybook:build:esm # Builds a storybook to './docs/storybook' from './dist/esm'.
-storybook:build:src # Builds a storybook to './docs/storybook' from './src'.
-storybook:clean # Removes the './docs/storybook' folder and its contents.
+storybook:build:cjs # Builds a storybook to './docs' from './dist/cjs'.
+storybook:build:esm # Builds a storybook to './docs' from './dist/esm'.
+storybook:build:src # Builds a storybook to './docs' from './src'.
+storybook:clean # Removes the './docs' folder and its contents.
 storybook:start # Starts the storybook examples from './src'.
-storybook:start:docs # Starts the storybook examples from './docs/storybook'.
+storybook:start:docs # Starts the storybook examples from './docs'.
 storybook:start:src # Starts the storybook examples from './src'.
 storybook:test # Performs visual tests of the built storybook.
 ```
