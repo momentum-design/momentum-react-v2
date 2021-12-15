@@ -62,6 +62,16 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   const { inheritedColors, styleColors } = getColors();
 
+  const viewBoxDefault = '0, 0, 32, 32';
+  const viewBoxSmall = '0, 0, 14, 14';
+  //This exception list is added for Icons with scale 14, so that view box can setup properly
+  const exceptionIconsList = [
+    'check-circle-badge',
+    'error-legacy-badge',
+    'info-badge',
+    'priority-badge',
+  ];
+
   if (SvgIcon) {
     return (
       <div className={classnames(STYLE.wrapper, className)} id={id} style={style}>
@@ -71,7 +81,7 @@ const Icon: React.FC<Props> = (props: Props) => {
           className={classnames({ [STYLE.coloured]: isColoredIcon })}
           style={{ ...styleColors }}
           {...inheritedColors}
-          viewBox="0, 0, 32, 32"
+          viewBox={exceptionIconsList.includes(name) ? viewBoxSmall : viewBoxDefault}
           width="100%"
           height="100%"
           data-scale={!autoScale && (scale || DEFAULTS.SCALE)}
