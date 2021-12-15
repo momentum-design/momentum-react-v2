@@ -266,4 +266,23 @@ describe('<Icon />', () => {
       await mountAndWait(<Component />);
     });
   });
+
+  describe('exception case for small icons', () => {
+    const exceptionIconsList = [
+      'check-circle-badge',
+      'error-legacy-badge',
+      'info-badge',
+      'priority-badge',
+    ];
+    const scale = 14;
+    const viewBoxSmall = '0, 0, 14, 14';
+    exceptionIconsList.forEach((name) => {
+      it(`check if icon ${name} receive right viewBox size`, async () => {
+        const wrapper = await mountAndWait(<Icon name={name} scale={scale} />);
+        const icon = wrapper.find('svg').getDOMNode();
+
+        expect(icon.getAttribute('viewBox')).toBe(viewBoxSmall);
+      });
+    });
+  });
 });
