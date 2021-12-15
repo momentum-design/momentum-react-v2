@@ -1,6 +1,7 @@
 .md-space-list-item-is-new-activity {
   p {
     font-weight: bold !important;
+    color: var(--listitem-textprimary) !important;
   }
 }
 
@@ -44,7 +45,7 @@
 
     small {
       margin: 0;
-      color: var(--label-secondary-text);
+      color: var(--listitem-textsecondary);
       margin-top: -4px;
       white-space: nowrap;
       overflow: hidden;
