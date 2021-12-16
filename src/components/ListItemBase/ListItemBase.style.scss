@@ -65,6 +65,7 @@
   }
 
   &[data-size='32'] {
+    // All immediate children and any deep .md-text-wrapper child
     & > *,
     .md-text-wrapper {
       font-weight: 500;
