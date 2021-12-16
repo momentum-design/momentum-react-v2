@@ -255,6 +255,22 @@ describe('<Icon />', () => {
 
       expect(icon.getAttribute('style')).toBe(null);
     });
+
+    EXCEPTION_ICONS_LIST.forEach((name) => {
+      it(`check if icon ${name} receive right viewBox size`, async () => {
+        const wrapper = await mountAndWait(<Icon name={name} scale={14} />);
+        const icon = wrapper.find('svg').getDOMNode();
+
+        expect(icon.getAttribute('viewBox')).toBe(VIEW_BOX_SPECS.SMALL);
+      });
+    });
+
+    it(`check if icon receive default viewBox size`, async () => {
+      const wrapper = await mountAndWait(<Icon name="accessibility" scale={32} />);
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('viewBox')).toBe(VIEW_BOX_SPECS.NORMAL);
+    });
   });
 
   describe('clean up', () => {
@@ -272,26 +288,6 @@ describe('<Icon />', () => {
       };
 
       await mountAndWait(<Component />);
-    });
-  });
-
-  describe('exception case for small icons', () => {
-    EXCEPTION_ICONS_LIST.forEach((name) => {
-      it(`check if icon ${name} receive right viewBox size`, async () => {
-        const wrapper = await mountAndWait(<Icon name={name} scale={14} />);
-        const icon = wrapper.find('svg').getDOMNode();
-
-        expect(icon.getAttribute('viewBox')).toBe(VIEW_BOX_SPECS.SMALL);
-      });
-    });
-  });
-
-  describe('case for regular default icons', () => {
-    it(`check if icon receive default viewBox size`, async () => {
-      const wrapper = await mountAndWait(<Icon name="accessibility" scale={32} />);
-      const icon = wrapper.find('svg').getDOMNode();
-
-      expect(icon.getAttribute('viewBox')).toBe(VIEW_BOX_SPECS.NORMAL);
     });
   });
 });
