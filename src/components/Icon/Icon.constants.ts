@@ -42,11 +42,24 @@ const SIZES: Record<number, number> = {
   124: 124,
 };
 
+const VIEW_BOX_SPECS = {
+  NORMAL: '0, 0, 32, 32',
+  SMALL: '0, 0, 14, 14',
+};
+
 const DEFAULTS = {
   WEIGHT: WEIGHTS.regular,
   SCALE: SIZES[32],
   AUTO_SCALE: false,
+  VIEW_BOX_SPEC: VIEW_BOX_SPECS.NORMAL,
 };
+
+const EXCEPTION_ICONS_LIST = [
+  'check-circle-badge',
+  'error-legacy-badge',
+  'info-badge',
+  'priority-badge',
+];
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
@@ -54,4 +67,15 @@ const STYLE = {
   coloured: `${CLASS_PREFIX}-coloured`,
 };
 
-export { CLASS_PREFIX, COLOR_INHERIT, DEFAULTS, GLYPH_NOT_FOUND, SCALES, SIZES, STYLE, WEIGHTS };
+export {
+  CLASS_PREFIX,
+  COLOR_INHERIT,
+  DEFAULTS,
+  EXCEPTION_ICONS_LIST,
+  GLYPH_NOT_FOUND,
+  SCALES,
+  SIZES,
+  STYLE,
+  VIEW_BOX_SPECS,
+  WEIGHTS,
+};

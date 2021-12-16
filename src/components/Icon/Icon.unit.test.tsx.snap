@@ -216,6 +216,30 @@ exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> snapshot should match snapshot with small icons 1`] = `
+<Icon
+  name="info-badge"
+  scale={14}
+>
+  <div
+    className="md-icon-wrapper"
+  >
+    <svg
+      className=""
+      data-autoscale={false}
+      data-scale={14}
+      data-test="info-badge"
+      fill="currentColor"
+      height="100%"
+      stroke="currentColor"
+      style={Object {}}
+      viewBox="0, 0, 14, 14"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
 exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
 <Icon
   name="accessibility"
