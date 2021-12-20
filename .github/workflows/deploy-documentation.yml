@@ -73,8 +73,7 @@ jobs:
 
       - name: Clean Documentation
         run: |
-          rm -rf ./*
-          rm -rf ./.*
+          rm -rf ./docs
 
       - name: Uncache Documentation
         uses: actions/cache@v2
@@ -86,6 +85,6 @@ jobs:
         run: |
           git config --global user.name "Automation"
           git config --global user.email "automation@no-reply.webex.com"
-          git add ./
+          git add ./docs
           git commit -m "ci(docs): deploy documentation [skip ci] [skip release]"
           git push origin documentation
