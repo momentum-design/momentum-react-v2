@@ -74,11 +74,12 @@ jobs:
       - name: Clean Documentation
         run: |
           rm -rf ./*
+          rm -rf ./.*
 
       - name: Uncache Documentation
         uses: actions/cache@v2
         with:
-          path: ./
+          path: docs/
           key: docs-${{ runner.os }}-${{ env.rid }}
 
       - name: Deploy Documentation
