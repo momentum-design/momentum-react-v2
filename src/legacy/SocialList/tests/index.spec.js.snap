@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<SocialList /> should render a SocialList 1`] = `
-<SocialList>
-  <span
-    className="md-social__list"
-  />
-</SocialList>
-`;
