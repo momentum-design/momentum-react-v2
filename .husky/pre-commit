@@ -1,6 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-yarn styles:tokenCheck
-
-yarn run lint-staged -v
