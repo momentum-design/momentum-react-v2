@@ -86,5 +86,13 @@ jobs:
           git config --global user.name "Automation"
           git config --global user.email "automation@no-reply.webex.com"
           git add ./docs
-          git commit -m "ci(docs): deploy documentation [skip ci] [skip release]"
-          git push origin documentation
+          FILE_COUNT=$(git status -s | wc -l | xargs)
+          if [[ $FILE_COUNT != '0' ]]
+          then
+            echo "Found $FILE_COUNT changed documentation files."
+            git commit -m "ci(docs): deploy documentation [skip ci] [skip release]"
+            git push origin documentation
+          else
+            echo "Documentation files have not changed."
+            echo "Documentation will not be published."
+          fi
