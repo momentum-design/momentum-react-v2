@@ -5,19 +5,27 @@ import classnames from 'classnames';
 import { STYLE } from './Popover.constants';
 import { Props } from './Popover.types';
 import './Popover.style.scss';
-import { ModalArrow, ModalContainer } from '..';
+import { ModalContainer } from '..';
 
 // TODO: Update JSDOC for this component.
 /**
  * The Popover component.
  */
 const Popover: FC<Props> = (props: Props) => {
-  const { children, triggerComponent, placement = 'bottom', className, id, style } = props;
+  const {
+    children,
+    triggerComponent,
+    containerProps,
+    placement = 'bottom',
+    className,
+    id,
+    style,
+  } = props;
 
   return (
     <Tippy
       content={
-        <ModalContainer arrow="left" isPadded round={100}>
+        <ModalContainer isPadded {...containerProps}>
           {children}
         </ModalContainer>
       }
