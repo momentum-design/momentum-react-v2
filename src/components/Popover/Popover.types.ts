@@ -1,5 +1,6 @@
 import { CSSProperties, ReactElement, ReactNode } from 'react';
 import { TippyProps } from '@tippyjs/react';
+import { ModalContainerProps } from '../ModalContainer';
 
 export type PlacementType = TippyProps['placement'];
 
@@ -8,6 +9,10 @@ export interface Props {
    * Child components of this Popover.
    */
   children: ReactNode;
+  /**
+   * containerProps
+   */
+  containerProps: Pick<ModalContainerProps, 'color' | 'round' | 'style'>;
   /**
    * The component which triggers the Popover
    */

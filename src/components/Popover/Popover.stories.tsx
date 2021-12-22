@@ -23,15 +23,14 @@ const Example = Template<PopoverProps>(Popover).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component.
 Example.args = {
   children: <p>Content</p>,
-  triggerComponent: (
-    <div>
-      <p>Click Me</p>
-    </div>
-  ),
+  triggerComponent: <button>Click me!</button>,
   placement: 'bottom',
+  containerProps: {
+    isPadded: true,
+    round: 100,
+  },
 };
 
 // TODO: Inject additional stories here.

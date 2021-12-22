@@ -43,6 +43,8 @@ export interface Props {
 
   /**
    * If this ModalContainer is round and to what degree.
+   *
+   * Can be 0 | 25 | 50 | 75 | 100 | 125 | 150
    */
   round?: Round;
 
