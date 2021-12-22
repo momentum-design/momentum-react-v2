@@ -27,6 +27,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
   ],
   plugins: ['react', 'jsx-a11y', 'cypress', '@typescript-eslint', 'prettier'],
   ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],

@@ -15,6 +15,7 @@ const generateMain = (dir) => {
       '@storybook/addon-essentials',
       '@storybook/preset-scss',
       '@storybook/addon-ie11',
+      '@storybook/addon-a11y',
     ],
     typescript: {
       reactDocgen: 'none',
