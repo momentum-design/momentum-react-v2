@@ -47,25 +47,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -135,25 +133,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -223,25 +219,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -307,27 +301,25 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
+                  data-type="body-primary"
                 >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  >
-                    firstLine
-                  </p>
-                </Text>
-              </div>
+                  firstLine
+                </p>
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -395,25 +387,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -479,25 +469,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -591,25 +579,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -703,25 +689,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -815,25 +799,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -927,25 +909,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -1039,25 +1019,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -1124,25 +1102,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -1208,25 +1184,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -1320,51 +1294,45 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div
-                className="text-column"
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
               >
-                <Text
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  >
-                     
-                  </p>
-                </Text>
-                <Text
+                  data-type="body-primary"
+                />
+              </Text>
+              <Text
+                data-test="list-item-second-line"
+                style={
+                  Object {
+                    "color": "var(--theme-text-team-default-normal)",
+                  }
+                }
+                type="body-secondary"
+              >
+                <small
+                  className="md-text-wrapper"
                   data-test="list-item-second-line"
+                  data-type="body-secondary"
                   style={
                     Object {
                       "color": "var(--theme-text-team-default-normal)",
                     }
                   }
-                  type="body-secondary"
                 >
-                  <small
-                    className="md-text-wrapper"
-                    data-test="list-item-second-line"
-                    data-type="body-secondary"
-                    style={
-                      Object {
-                        "color": "var(--theme-text-team-default-normal)",
-                      }
-                    }
-                  >
-                    secondLine
-                  </small>
-                </Text>
-              </div>
+                  secondLine
+                </small>
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -1444,25 +1412,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection
@@ -1528,25 +1494,23 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
             />
           </ListItemBaseSection>
           <ListItemBaseSection
-            className="md-space-list-item-text-wrapper"
+            className="md-space-list-item-text-wrapper text-column"
             position="middle"
           >
             <div
-              className="md-space-list-item-text-wrapper"
+              className="md-space-list-item-text-wrapper text-column"
               data-position="middle"
             >
-              <div>
-                <Text
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
                   data-test="list-item-first-line"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper"
-                    data-test="list-item-first-line"
-                    data-type="body-primary"
-                  />
-                </Text>
-              </div>
+                  data-type="body-primary"
+                />
+              </Text>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection

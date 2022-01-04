@@ -8,50 +8,49 @@
 .md-space-list-item-text-wrapper {
   display: flex;
   align-items: center;
+  min-width: 0;
+  max-width: 100%;
+  flex-grow: 1;
 
-  .text-row {
+  &.text-row {
     overflow: hidden;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 
-    p {
-      width: auto;
-    }
-
     small {
       margin-top: 0;
-      margin-left: 0.25rem;
+      width: unset;
     }
-  }
-
-  .text-column {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  div {
-    display: flex;
 
     p {
-      margin: 0;
-      float: left;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      max-width: 15rem;
+      width: unset;
     }
+  }
 
-    small {
-      margin: 0;
-      color: var(--listitem-textsecondary);
-      margin-top: -4px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 15rem;
-    }
+  &.text-column {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  p {
+    margin: 0;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  small {
+    margin: 0;
+    color: var(--listitem-textsecondary);
+    margin-top: -4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
   }
 
   svg {

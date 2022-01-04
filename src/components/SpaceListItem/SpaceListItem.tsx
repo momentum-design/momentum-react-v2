@@ -42,10 +42,12 @@ const SpaceListItem: FC<Props> = forwardRef(
 
       if (secondLine) {
         return (
-          <div className={isCompact ? 'text-row' : 'text-column'}>
+          <>
             <Text type="body-primary" data-test="list-item-first-line">
-              {firstLine} {isCompact && ' - '}
+              {firstLine}
             </Text>
+            {/* //TODO: change with dot divider when available */}
+            {isCompact && <span className={STYLE.dotDivider}> - </span>}
             <Text
               style={{ color: `var(--theme-text-team-${teamColor}-normal)` }}
               type="body-secondary"
@@ -54,15 +56,13 @@ const SpaceListItem: FC<Props> = forwardRef(
               {/* //TODO: change with dot divider when available */}
               {_secondLineArray.join(' - ')}
             </Text>
-          </div>
+          </>
         );
       } else {
         return (
-          <div>
-            <Text data-test="list-item-first-line" type="body-primary">
-              {firstLine}
-            </Text>
-          </div>
+          <Text data-test="list-item-first-line" type="body-primary">
+            {firstLine}
+          </Text>
         );
       }
     };
@@ -115,7 +115,10 @@ const SpaceListItem: FC<Props> = forwardRef(
         itemIndex={itemIndex}
       >
         <ListItemBaseSection position="start">{avatar}</ListItemBaseSection>
-        <ListItemBaseSection position="middle" className={STYLE.textWrapper}>
+        <ListItemBaseSection
+          position="middle"
+          className={classnames(STYLE.textWrapper, isCompact ? 'text-row' : 'text-column')}
+        >
           {renderText()}
         </ListItemBaseSection>
         <ListItemBaseSection position="end">{renderRightSection()}</ListItemBaseSection>
