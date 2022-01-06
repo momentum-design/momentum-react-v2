@@ -8,7 +8,11 @@ describe('<Popover />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<Popover />);
+      const container = mount(
+        <Popover triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -18,7 +22,11 @@ describe('<Popover />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<Popover className={className} />);
+      const container = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} className={className}>
+          <p>Content</p>
+        </Popover>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -28,7 +36,11 @@ describe('<Popover />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<Popover id={id} />);
+      const container = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} id={id}>
+          <p>Content</p>
+        </Popover>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -38,7 +50,11 @@ describe('<Popover />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<Popover style={style} />);
+      const container = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} style={style}>
+          <p>Content</p>
+        </Popover>
+      );
 
       expect(container).toMatchSnapshot();
     });
