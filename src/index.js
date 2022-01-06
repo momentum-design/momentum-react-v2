@@ -105,6 +105,7 @@ export {
   Badge as BadgeNext,
   Banner,
   Avatar as AvatarNext,
+  PresenceType,
   ButtonCircle,
   AvatarCompact as AvatarCompactNext,
   ButtonControl,
