@@ -1,6 +1,9 @@
 import { default as Avatar } from './Avatar';
-import { Props } from './Avatar.types';
+import * as CONSTANTS from './Avatar.constants';
 
+import { Props, PresenceType } from './Avatar.types';
+
+export { CONSTANTS as AVATAR_CONSTANTS, PresenceType };
 export type AvatarProps = Props;
 
 export default Avatar;
