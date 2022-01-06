@@ -56,7 +56,7 @@ const Popover: FC<Props> = (props: Props) => {
         ],
       }}
       // offset + 11px (size of arrow standing out of popover), default offset = 5px
-      offset={[0, (containerProps.offset ?? 5) + 11]}
+      offset={[0, (containerProps?.offset ?? 5) + 11]}
       animation={false}
     >
       {triggerComponent}
