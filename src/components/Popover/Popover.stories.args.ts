@@ -1,17 +1,37 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { COLORS, PLACEMENTS } from './Arrow.constants';
 
 export default {
   ...commonStyles,
-  // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
   children: {
-    description: 'Provides the child nodes for this element.', // NOTE: Description of this prop.
-    control: { type: 'text' }, // NOTE: Control type for this prop.
+    description: 'Provides the child nodes for this element.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'ReactNode', // NOTE: Explicit type of this prop.
+        summary: 'ReactNode',
+      },
+    },
+  },
+  placement: {
+    description: 'Placement of the popover relative to the trigger component',
+    options: [...Object.values(PLACEMENTS as Record<string, string>)],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  color: {
+    description: 'What color to render this `<Popover />` as.',
+    control: { type: 'select' },
+    options: [...Object.values(COLORS)],
+    table: {
+      type: {
+        summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined', // NOTE: Default value for this prop.
+        summary: 'undefined',
       },
     },
   },

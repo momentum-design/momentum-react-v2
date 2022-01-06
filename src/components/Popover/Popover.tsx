@@ -1,22 +1,26 @@
 import React, { FC } from 'react';
 import Tippy from '@tippyjs/react';
-import classnames from 'classnames';
-
-import { STYLE } from './Popover.constants';
-import { Props } from './Popover.types';
+import ContentContainer from './ContentContainer';
 import './Popover.style.scss';
-import { ModalContainer } from '..';
+import type { Props } from './Popover.types';
 
-// TODO: Update JSDOC for this component.
 /**
- * The Popover component.
+ * The Popover component allows adding a Popover to whatever provided
+ * `triggerComponent`. It will show the Popover after a specific event, which is
+ * defined by the provided `trigger` prop.
+ *
+ * Popover uses @tippyjs/react under the hood - possible attributes for future modification
+ * can be found here: https://atomiks.github.io/tippyjs/v6/all-props/
  */
 const Popover: FC<Props> = (props: Props) => {
   const {
     children,
+    trigger = 'click',
     triggerComponent,
     containerProps,
     placement = 'bottom',
+    interactive,
+    color,
     className,
     id,
     style,
@@ -24,16 +28,36 @@ const Popover: FC<Props> = (props: Props) => {
 
   return (
     <Tippy
-      content={
-        <ModalContainer isPadded {...containerProps}>
+      render={(attrs) => (
+        <ContentContainer
+          attrs={attrs}
+          id={id}
+          style={style}
+          containerProps={containerProps}
+          color={color}
+          className={className}
+        >
           {children}
-        </ModalContainer>
-      }
+        </ContentContainer>
+      )}
       placement={placement}
-      trigger="click hover"
+      trigger={trigger}
+      interactive={interactive}
       appendTo="parent"
-      offset={[0, 0]}
-      arrow
+      popperOptions={{
+        modifiers: [
+          {
+            name: 'arrow',
+            options: {
+              element: '#arrow', // css selector to point to arrow div
+              padding: 5,
+            },
+          },
+        ],
+      }}
+      // offset + 11px (size of arrow standing out of popover), default offset = 5px
+      offset={[0, (containerProps.offset ?? 5) + 11]}
+      animation={false}
     >
       {triggerComponent}
     </Tippy>
