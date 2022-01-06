@@ -66,7 +66,11 @@ describe('<Popover />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<Popover />)
+      const element = mount(
+        <Popover triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      )
         .find(Popover)
         .getDOMNode();
 
@@ -78,7 +82,11 @@ describe('<Popover />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<Popover className={className} />)
+      const element = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} className={className}>
+          <p>Content</p>
+        </Popover>
+      )
         .find(Popover)
         .getDOMNode();
 
@@ -90,7 +98,11 @@ describe('<Popover />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<Popover id={id} />)
+      const element = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} id={id}>
+          <p>Content</p>
+        </Popover>
+      )
         .find(Popover)
         .getDOMNode();
 
@@ -103,7 +115,11 @@ describe('<Popover />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<Popover style={style} />)
+      const element = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} style={style}>
+          <p>Content</p>
+        </Popover>
+      )
         .find(Popover)
         .getDOMNode();
 

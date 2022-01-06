@@ -28,8 +28,8 @@ const ContentContainer: FC<ContentContainerProps> = (props: ContentContainerProp
   return (
     <div
       id={id}
-      data-padded={containerProps.isPadded || DEFAULTS.IS_PADDED}
-      data-round={containerProps.round || DEFAULTS.ROUND}
+      data-padded={containerProps?.isPadded || DEFAULTS.IS_PADDED}
+      data-round={containerProps?.round || DEFAULTS.ROUND}
       data-color={color || DEFAULTS.COLOR}
       style={style}
       className={classnames(STYLE.wrapper, className)}
