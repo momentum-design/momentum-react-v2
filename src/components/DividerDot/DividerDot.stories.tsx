@@ -21,8 +21,4 @@ const Example = Template<DividerDotProps>(DividerDot).bind({});
 
 Example.argTypes = { ...argTypes };
 
-Example.args = {
-  children: 'Example',
-};
-
 export { Example };
