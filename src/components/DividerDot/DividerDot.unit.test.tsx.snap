@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DividerDot /> snapshot should match snapshot 1`] = `
+<DividerDot>
+  <div
+    className="md-divider-dot-wrapper"
+  />
+</DividerDot>
+`;
+
+exports[`<DividerDot /> snapshot should match snapshot with className 1`] = `
+<DividerDot
+  className="example-class"
+>
+  <div
+    className="example-class md-divider-dot-wrapper"
+  />
+</DividerDot>
+`;
+
+exports[`<DividerDot /> snapshot should match snapshot with id 1`] = `
+<DividerDot
+  id="example-id"
+>
+  <div
+    className="md-divider-dot-wrapper"
+    id="example-id"
+  />
+</DividerDot>
+`;
+
+exports[`<DividerDot /> snapshot should match snapshot with style 1`] = `
+<DividerDot
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-divider-dot-wrapper"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  />
+</DividerDot>
+`;
