@@ -9,10 +9,11 @@ import './ThemeProvider.style.scss';
 /**
  * Provides a collection of CSSVariables based on a ThemeToken to all child elements.
  */
-const ThemeProvider: FC<Props> = ({ children, id, theme }: Props) => (
+const ThemeProvider: FC<Props> = ({ children, id, style, theme }: Props) => (
   <div
     className={`${STYLE.wrapper} ${STYLE.globals} ${THEME_CLASS_PREFIX}-${theme || DEFAULTS.THEME}`}
     id={id}
+    style={style}
   >
     {children}
   </div>

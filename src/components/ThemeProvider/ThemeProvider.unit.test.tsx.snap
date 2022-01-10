@@ -9,3 +9,22 @@ exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
   />
 </ThemeProvider>
 `;
+
+exports[`<ThemeProvider /> snapshot should match snapshot with style 1`] = `
+<ThemeProvider
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  />
+</ThemeProvider>
+`;
