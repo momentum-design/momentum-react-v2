@@ -14,6 +14,7 @@ import type { Props } from './Popover.types';
  */
 const Popover: FC<Props> = (props: Props) => {
   const {
+    visible,
     children,
     trigger = 'click',
     triggerComponent,
@@ -40,6 +41,7 @@ const Popover: FC<Props> = (props: Props) => {
           {children}
         </ContentContainer>
       )}
+      visible={visible}
       placement={placement}
       trigger={trigger}
       interactive={interactive}

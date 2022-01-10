@@ -59,7 +59,17 @@ describe('<Popover />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    /* ...additional snapshot tests... */
+    it('should match snapshot with color', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} color={CONSTANTS.COLORS.TERTIARY}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

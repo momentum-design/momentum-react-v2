@@ -1,8 +1,5 @@
-import type { TippyProps } from '@tippyjs/react';
+import type { Color, PlacementType } from './Popover.types';
 import type { CSSProperties } from 'react';
-
-export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-export type Placement = TippyProps['placement'];
 
 export interface Props {
   /**
@@ -23,7 +20,7 @@ export interface Props {
   /**
    * The placement of the arrow.
    */
-  placement: Placement;
+  placement: PlacementType;
 
   /**
    * Custom style for overriding this component's CSS.

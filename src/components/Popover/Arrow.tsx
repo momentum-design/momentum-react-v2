@@ -1,6 +1,7 @@
 import React, { RefObject } from 'react';
 import classnames from 'classnames';
-import { DEFAULTS, PLACEMENTS, STYLE } from './Arrow.constants';
+import { PLACEMENTS } from './Popover.constants';
+import { DEFAULTS, STYLE } from './Arrow.constants';
 import './Popover.style.scss';
 import type { Props } from './Arrow.types';
 
