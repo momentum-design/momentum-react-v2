@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 export type ThemeNames =
   | 'darkBronze'
@@ -37,6 +37,11 @@ export interface Props {
    * The id of this component.
    */
   id?: string;
+
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
 
   /**
    * The theme name to provide styles from to all child components.
