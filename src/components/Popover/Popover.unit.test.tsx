@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import Popover, { POPOVER_CONSTANTS as CONSTANTS } from './';
+import ContentContainer from './ContentContainer';
 
 describe('<Popover />', () => {
   describe('snapshot', () => {
@@ -81,7 +82,7 @@ describe('<Popover />', () => {
           <p>Content</p>
         </Popover>
       )
-        .find(Popover)
+        .find(ContentContainer)
         .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -97,7 +98,7 @@ describe('<Popover />', () => {
           <p>Content</p>
         </Popover>
       )
-        .find(Popover)
+        .find(ContentContainer)
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -113,7 +114,7 @@ describe('<Popover />', () => {
           <p>Content</p>
         </Popover>
       )
-        .find(Popover)
+        .find(ContentContainer)
         .getDOMNode();
 
       expect(element.id).toBe(id);
@@ -130,16 +131,68 @@ describe('<Popover />', () => {
           <p>Content</p>
         </Popover>
       )
-        .find(Popover)
+        .find(ContentContainer)
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    /* ...additional attribute tests... */
+    it('should have provided color when color is provided', () => {
+      expect.assertions(1);
+
+      const element = mount(
+        <Popover triggerComponent={<button>Click Me!</button>} color={CONSTANTS.COLORS.TERTIARY}>
+          <p>Content</p>
+        </Popover>
+      )
+        .find(ContentContainer)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-color')).toBe(CONSTANTS.COLORS.TERTIARY);
+    });
   });
 
   describe('actions', () => {
-    /* ...action tests... */
+    it('should render Popover on click', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <Popover triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      container.find('button').simulate('click');
+      container.update();
+      expect(container.find(ContentContainer).length).toEqual(1);
+    });
+
+    it('should render Popover on mouseenter', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <Popover triggerComponent={<button>Hover Me!</button>} trigger="mouseenter">
+          <p>Content</p>
+        </Popover>
+      );
+
+      container.find('button').simulate('mouseenter');
+      container.update();
+      expect(container.find(ContentContainer).length).toEqual(1);
+    });
+
+    it('should render Popover on focusin', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <Popover triggerComponent={<button>Focus Me!</button>} trigger="focusin">
+          <p>Content</p>
+        </Popover>
+      );
+
+      container.find('button').simulate('focusin');
+      container.update();
+      expect(container.find(ContentContainer).length).toEqual(1);
+    });
   });
 });

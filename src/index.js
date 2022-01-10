@@ -142,6 +142,7 @@ export {
   AvatarMeetingsListItem,
   SpaceListItem as SpaceListItemNext,
   List as ListNext,
+  Popover as PopoverNext,
   Reaction,
   ReactionBadge,
   ReactionButton,

@@ -28,6 +28,12 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
               "padding": 5,
             },
           },
+          Object {
+            "name": "preventOverflow",
+            "options": Object {
+              "altAxis": true,
+            },
+          },
         ],
       }
     }
@@ -54,6 +60,12 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
                 "padding": 5,
               },
             },
+            Object {
+              "name": "preventOverflow",
+              "options": Object {
+                "altAxis": true,
+              },
+            },
           ],
         }
       }
@@ -73,6 +85,7 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
             <div
               class="md-popover-wrapper"
               data-color="primary"
+              data-elevation="0"
               data-padded="true"
               data-round="0"
             >
@@ -117,10 +130,12 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
               "data-placement": undefined,
             }
           }
+          showArrow={true}
         >
           <div
             className="md-popover-wrapper"
             data-color="primary"
+            data-elevation={0}
             data-padded={true}
             data-round={0}
           >
@@ -194,6 +209,12 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
               "padding": 5,
             },
           },
+          Object {
+            "name": "preventOverflow",
+            "options": Object {
+              "altAxis": true,
+            },
+          },
         ],
       }
     }
@@ -220,6 +241,12 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
                 "padding": 5,
               },
             },
+            Object {
+              "name": "preventOverflow",
+              "options": Object {
+                "altAxis": true,
+              },
+            },
           ],
         }
       }
@@ -239,6 +266,7 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
             <div
               class="md-popover-wrapper example-class"
               data-color="primary"
+              data-elevation="0"
               data-padded="true"
               data-round="0"
             >
@@ -284,10 +312,12 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
             }
           }
           className="example-class"
+          showArrow={true}
         >
           <div
             className="md-popover-wrapper example-class"
             data-color="primary"
+            data-elevation={0}
             data-padded={true}
             data-round={0}
           >
@@ -361,6 +391,12 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
               "padding": 5,
             },
           },
+          Object {
+            "name": "preventOverflow",
+            "options": Object {
+              "altAxis": true,
+            },
+          },
         ],
       }
     }
@@ -387,6 +423,12 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
                 "padding": 5,
               },
             },
+            Object {
+              "name": "preventOverflow",
+              "options": Object {
+                "altAxis": true,
+              },
+            },
           ],
         }
       }
@@ -406,6 +448,7 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
             <div
               class="md-popover-wrapper"
               data-color="tertiary"
+              data-elevation="0"
               data-padded="true"
               data-round="0"
             >
@@ -451,10 +494,12 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
             }
           }
           color="tertiary"
+          showArrow={true}
         >
           <div
             className="md-popover-wrapper"
             data-color="tertiary"
+            data-elevation={0}
             data-padded={true}
             data-round={0}
           >
@@ -530,6 +575,12 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
               "padding": 5,
             },
           },
+          Object {
+            "name": "preventOverflow",
+            "options": Object {
+              "altAxis": true,
+            },
+          },
         ],
       }
     }
@@ -556,6 +607,12 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
                 "padding": 5,
               },
             },
+            Object {
+              "name": "preventOverflow",
+              "options": Object {
+                "altAxis": true,
+              },
+            },
           ],
         }
       }
@@ -575,6 +632,7 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
             <div
               class="md-popover-wrapper"
               data-color="primary"
+              data-elevation="0"
               data-padded="true"
               data-round="0"
               id="example-id"
@@ -621,10 +679,12 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
             }
           }
           id="example-id"
+          showArrow={true}
         >
           <div
             className="md-popover-wrapper"
             data-color="primary"
+            data-elevation={0}
             data-padded={true}
             data-round={0}
             id="example-id"
@@ -703,6 +763,12 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
               "padding": 5,
             },
           },
+          Object {
+            "name": "preventOverflow",
+            "options": Object {
+              "altAxis": true,
+            },
+          },
         ],
       }
     }
@@ -729,6 +795,12 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
                 "padding": 5,
               },
             },
+            Object {
+              "name": "preventOverflow",
+              "options": Object {
+                "altAxis": true,
+              },
+            },
           ],
         }
       }
@@ -748,6 +820,7 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
             <div
               class="md-popover-wrapper"
               data-color="primary"
+              data-elevation="0"
               data-padded="true"
               data-round="0"
               style="color: pink;"
@@ -793,6 +866,7 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
               "data-placement": undefined,
             }
           }
+          showArrow={true}
           style={
             Object {
               "color": "pink",
@@ -802,6 +876,7 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
           <div
             className="md-popover-wrapper"
             data-color="primary"
+            data-elevation={0}
             data-padded={true}
             data-round={0}
             style={
