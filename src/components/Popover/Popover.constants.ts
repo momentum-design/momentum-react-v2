@@ -1,4 +1,4 @@
-import type { Round, Color, PlacementType } from './Popover.types';
+import type { Round, Color, PlacementType, Elevation } from './Popover.types';
 
 const CLASS_PREFIX = 'md-popover';
 
@@ -39,9 +39,22 @@ const ROUNDS: Record<number, Round> = {
   150: 150,
 };
 
+const ELEVATIONS: Record<number, Elevation> = {
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+};
+
 const DEFAULTS = {
   IS_PADDED: true,
   ROUND: ROUNDS[0],
+  ELEVATION: ELEVATIONS[0],
   COLOR: 'primary',
 };
 
@@ -50,4 +63,4 @@ const STYLE = {
   arrowWrapper: `${CLASS_PREFIX}-arrow-wrapper`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE, COLORS, PLACEMENTS };
+export { CLASS_PREFIX, DEFAULTS, STYLE, COLORS, PLACEMENTS, ELEVATIONS };

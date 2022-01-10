@@ -14,13 +14,13 @@ import type { Props } from './Popover.types';
  */
 const Popover: FC<Props> = (props: Props) => {
   const {
-    visible,
     children,
     trigger = 'click',
     triggerComponent,
     containerProps,
     placement = 'bottom',
     interactive,
+    showArrow = true,
     color,
     className,
     id,
@@ -36,30 +36,36 @@ const Popover: FC<Props> = (props: Props) => {
           style={style}
           containerProps={containerProps}
           color={color}
+          showArrow={showArrow}
           className={className}
         >
           {children}
         </ContentContainer>
       )}
-      visible={visible}
       placement={placement}
       trigger={trigger}
       interactive={interactive}
       appendTo="parent"
       popperOptions={{
         modifiers: [
-          {
+          showArrow && {
             name: 'arrow',
             options: {
               element: '#arrow', // css selector to point to arrow div
               padding: 5,
             },
           },
+          {
+            name: 'preventOverflow',
+            options: {
+              altAxis: true,
+            },
+          },
         ],
       }}
-      // offset + 11px (size of arrow standing out of popover), default offset = 5px
-      offset={[0, (containerProps?.offset ?? 5) + 11]}
       animation={false}
+      // default offset of 5px + 11px (size of arrow standing out of popover)
+      offset={[0, showArrow ? 16 : 5]}
     >
       {triggerComponent}
     </Tippy>
