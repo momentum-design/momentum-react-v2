@@ -7,7 +7,15 @@
   "fixturesFolder": "test/fixtures",
   "chromeWebSecurity": false,
   "env": {
-    "BASE_URL": "http://127.0.0.1:4300"
+    "BASE_URL": "http://127.0.0.1:4300",
+    "visualRegressionTracker": {
+      "apiUrl": "http://localhost:4200",
+      "project": "Mrv2",
+      "apiKey": "CG3KQ5VPBAM2BXP9Q86JMFMF0GK9",
+      "branchName": "master",
+      "enableSoftAssert": true,
+      "ciBuildId": "SOME_UNIQUE_ID"
+    }
   },
   "video": false
 }

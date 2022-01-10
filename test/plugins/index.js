@@ -1,6 +1,10 @@
 const webpack = require('@cypress/webpack-preprocessor');
 const babelConfig = require('../../.babelrc');
 const path = require('path');
+const {
+  addVisualRegressionTrackerPlugin,
+} = require('@visual-regression-tracker/agent-cypress/dist/plugin');
+const { config } = require('process');
 
 const codePath = path.resolve(__dirname, '..');
 // ***********************************************************
@@ -16,7 +20,8 @@ const codePath = path.resolve(__dirname, '..');
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-module.exports = (on) => {
+module.exports = (on, config) => {
+  addVisualRegressionTrackerPlugin(on, config);
   on(
     'file:preprocessor',
     webpack({
@@ -25,7 +30,7 @@ module.exports = (on) => {
           extensions: ['*', '.js', '.jsx', '.json', '.ts', '.tsx'],
         },
         target: 'web',
-        node: { fs: 'empty'},
+        node: { fs: 'empty' },
         module: {
           rules: [
             {
@@ -41,6 +46,7 @@ module.exports = (on) => {
           ],
         },
       },
-    }),
+    })
   );
+  return config;
 };
