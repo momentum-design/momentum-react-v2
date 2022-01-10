@@ -2,8 +2,7 @@ import React, { FC } from 'react';
 import classnames from 'classnames';
 import Arrow from './Arrow';
 import { DEFAULTS, STYLE } from './Popover.constants';
-import type { Props } from './Popover.types';
-import type { Placement } from './Arrow.types';
+import type { Props, PlacementType } from './Popover.types';
 
 interface ContentContainerProps
   extends Pick<Props, 'containerProps' | 'color' | 'className' | 'children' | 'id' | 'style'> {
@@ -11,7 +10,7 @@ interface ContentContainerProps
    * attrs - Tippy attributes passed in
    */
   attrs: {
-    'data-placement': Placement;
+    'data-placement': PlacementType;
     'data-reference-hidden'?: string;
     'data-escaped'?: string;
   };
