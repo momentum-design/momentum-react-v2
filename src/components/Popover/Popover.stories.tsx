@@ -3,11 +3,12 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Documentation from './Popover.stories.docs.mdx';
+import { Item } from '@react-stately/collections';
 
 import Popover, { PopoverProps } from './';
-import List from '../List';
-import ListItemBase from '../ListItemBase';
-import ListItemBaseSection from '../ListItemBaseSection';
+import ButtonPill from '../ButtonPill';
+import Icon from '../Icon';
+import Menu from '../Menu';
 import { COLORS } from './Popover.constants';
 import argTypes from './Popover.stories.args';
 
@@ -35,7 +36,7 @@ Example.args = {
   containerProps: {
     isPadded: true,
     round: 25,
-    offset: 5,
+    elevation: 0,
   },
   color: COLORS.TERTIARY,
 };
@@ -46,13 +47,14 @@ InteractiveContent.argTypes = { ...argTypes };
 
 InteractiveContent.args = {
   children: (
-    <List listSize={5}>
-      {Array.from(Array(5).keys()).map((index) => (
-        <ListItemBase itemIndex={index} key={index} isPadded>
-          <ListItemBaseSection>Press Item {index}</ListItemBaseSection>
-        </ListItemBase>
-      ))}
-    </List>
+    <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
+      <Item key="one">One</Item>
+      <Item key="two">Two</Item>
+      <Item key="three">Three</Item>
+      <Item key="four">Four</Item>
+      <Item key="five">Five</Item>
+      <Item key="six">Six</Item>
+    </Menu>
   ),
   trigger: 'click',
   triggerComponent: <button style={{ height: '50px', width: '100px' }}>Click me!</button>,
@@ -61,7 +63,7 @@ InteractiveContent.args = {
   containerProps: {
     isPadded: true,
     round: 25,
-    offset: 5,
+    elevation: 0,
   },
   color: COLORS.TERTIARY,
 };
@@ -74,7 +76,7 @@ Common.args = {};
 Common.parameters = {
   variants: [
     {
-      children: <p>Non-interactive Content on TERTIARY color, round 25, offset 5px</p>,
+      children: <p>Non-interactive Content on TERTIARY color, round 25, elevation 1</p>,
       trigger: 'click',
       triggerComponent: (
         <button style={{ height: '50px', width: '100px', marginRight: '10px' }}>Click me!</button>
@@ -84,12 +86,14 @@ Common.parameters = {
       containerProps: {
         isPadded: true,
         round: 25,
-        offset: 5,
+        elevation: 1,
       },
       color: COLORS.TERTIARY,
     },
     {
-      children: <p>Non-interactive Content on PRIMARY color, round 100, offset 15px</p>,
+      children: (
+        <p>Non-interactive Content on PRIMARY color, round 100, elevation 2, without arrow</p>
+      ),
       trigger: 'mouseenter',
       triggerComponent: (
         <button style={{ height: '50px', width: '100px', marginRight: '10px' }}>Hover me!</button>
@@ -99,24 +103,25 @@ Common.parameters = {
       containerProps: {
         isPadded: true,
         round: 100,
-        offset: 15,
+        elevation: 2,
       },
       color: COLORS.PRIMARY,
+      showArrow: false,
     },
     {
-      children: <p>Interactive Content on SECONDARY color, round 0, offset 25px</p>,
+      children: <p>Interactive Content on SECONDARY color, round 0, elevation 3</p>,
       trigger: 'click mouseenter',
       triggerComponent: (
-        <button style={{ height: '50px', width: '175px', marginRight: '10px' }}>
-          Click or hover me!
-        </button>
+        <ButtonPill key="1">
+          <div>Click or hover me!</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+        </ButtonPill>
       ),
       placement: 'left-start',
       interactive: true,
       containerProps: {
         isPadded: true,
         round: 0,
-        offset: 25,
+        elevation: 3,
       },
       color: COLORS.SECONDARY,
     },

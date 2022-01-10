@@ -6,6 +6,7 @@ export type TriggerType = TippyProps['trigger'];
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Round = 0 | 25 | 50 | 75 | 100 | 125 | 150;
+export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
 export type ContainerPropsType = {
   /**
@@ -13,30 +14,22 @@ export type ContainerPropsType = {
    *
    * Default: true
    */
-  isPadded: boolean;
+  isPadded?: boolean;
   /**
    * borderRadius of the Container - each value corresponds to rem percentage (e.g. value 25 = 0.25rem)
    *
    * Possible values: 0 | 25 | 50 | 75 | 100 | 125 | 150
    */
-  round: Round;
-
+  round?: Round;
   /**
-   * Offset between triggerComponent and Popover Container
+   * elevation of the Container - each value corresponds to a box shadow applied to the container
    *
-   * Default: 5px
+   * Possible values: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
    */
-  offset: number;
+  elevation?: Elevation;
 };
 
 export interface Props {
-  /**
-   * Visible - to fully control the Popover from outside
-   * Possible values: true (show popover), false (hide popover), undefined (popover opens through trigger events)
-   *
-   * Default: undefined
-   */
-  visible?: boolean;
   /**
    * Child components of this Popover (what will be shown within the Popover)
    */
@@ -78,6 +71,12 @@ export interface Props {
    * Color of the Container
    */
   color?: Color;
+  /**
+   * Whether the arrow should be shown
+   *
+   * Default: true
+   */
+  showArrow?: boolean;
   /**
    * Custom class for overriding this component's CSS.
    */
