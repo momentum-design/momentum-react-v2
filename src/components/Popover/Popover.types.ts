@@ -31,6 +31,13 @@ export type ContainerPropsType = {
 
 export interface Props {
   /**
+   * Visible - to fully control the Popover from outside
+   * Possible values: true (show popover), false (hide popover), undefined (popover opens through trigger events)
+   *
+   * Default: undefined
+   */
+  visible?: boolean;
+  /**
    * Child components of this Popover (what will be shown within the Popover)
    */
   children: ReactNode;

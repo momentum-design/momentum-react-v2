@@ -8,7 +8,7 @@ import Popover, { PopoverProps } from './';
 import List from '../List';
 import ListItemBase from '../ListItemBase';
 import ListItemBaseSection from '../ListItemBaseSection';
-import { COLORS } from './Arrow.constants';
+import { COLORS } from './Popover.constants';
 import argTypes from './Popover.stories.args';
 
 export default {
