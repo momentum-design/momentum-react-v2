@@ -49,38 +49,4 @@ Example.args = {
   ),
 };
 
-// const Template: Story<Props> = (args) => {
-//   const { children } = args;
-//   const mutatedArgs = { ...args };
-
-//   return (
-//     <ThemeProvider {...mutatedArgs}>
-//       <div
-//         style={{
-//           backgroundColor: 'var(--theme-background-solid-primary-normal)',
-//           padding: '2rem',
-//         }}
-//       >
-//         <div
-//           style={{
-//             alignItems: 'center',
-//             backgroundColor: 'var(--button-primary-background)',
-//             color: 'var(--button-primary-text)',
-//             display: 'flex',
-//             height: '4rem',
-//             justifyContent: 'center',
-//             width: '16rem',
-//           }}
-//         >
-//           {children}
-//         </div>
-//       </div>
-//     </ThemeProvider>
-//   );
-// };
-
-// const Example = Template.bind({});
-
-// Example.args = {};
-
 export { Example };

@@ -18,7 +18,6 @@ const themeProviderArgTypes = {
     },
   },
   children: {
-    defaultValue: 'Example Text',
     description:
       'Provides the child nodes for this element. The child nodes of this element are themed by the assigned theme.',
     control: { type: 'text' },
