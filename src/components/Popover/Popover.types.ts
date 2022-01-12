@@ -8,6 +8,11 @@ export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Round = 0 | 25 | 50 | 75 | 100 | 125 | 150;
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
+export type PopoverInstance = {
+  show: () => void;
+  hide: () => void;
+};
+
 export type ContainerPropsType = {
   /**
    * Whether padding should be applied
@@ -77,6 +82,15 @@ export interface Props {
    * Default: true
    */
   showArrow?: boolean;
+  /**
+   * setInstance - this function should be passed in when the instance
+   * of the popover should be available on the parent of the Popover.
+   *
+   * With the instance of the popover the parent component can `show()` or `hide()` the Popover programmatically.
+   *
+   * setInstance is the setter function of a useState hook
+   */
+  setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance>>;
   /**
    * Custom class for overriding this component's CSS.
    */

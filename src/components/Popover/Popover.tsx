@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import Tippy from '@tippyjs/react';
 import ContentContainer from './ContentContainer';
 import './Popover.style.scss';
 import type { Props } from './Popover.types';
+import { LazyTippy } from './LazyTippy';
+import Tippy from '@tippyjs/react';
 
 /**
  * The Popover component allows adding a Popover to whatever provided
@@ -22,13 +23,23 @@ const Popover: FC<Props> = (props: Props) => {
     interactive,
     showArrow = true,
     color,
+    setInstance,
     className,
     id,
     style,
   } = props;
 
+  const tippyRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (tippyRef?.current?._tippy) {
+      setInstance?.(tippyRef.current._tippy);
+    }
+  }, [tippyRef, setInstance]);
+
   return (
-    <Tippy
+    <LazyTippy
+      ref={tippyRef}
       render={(attrs) => (
         <ContentContainer
           attrs={attrs}
@@ -68,7 +79,7 @@ const Popover: FC<Props> = (props: Props) => {
       offset={[0, showArrow ? 16 : 5]}
     >
       {triggerComponent}
-    </Tippy>
+    </LazyTippy>
   );
 };
 

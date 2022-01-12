@@ -1,8 +1,16 @@
 import React from 'react';
 import { mount } from 'enzyme';
+// import { render, screen } from '@testing-library/react';
+// import userEvent from '@testing-library/user-event';
+import { act } from 'react-dom/test-utils';
+import '@testing-library/jest-dom';
 
 import Popover, { POPOVER_CONSTANTS as CONSTANTS } from './';
 import ContentContainer from './ContentContainer';
+import { PopoverInstance } from './Popover.types';
+import { triggerPress, waitForComponentToPaint } from '../../../test/utils';
+
+jest.useFakeTimers();
 
 describe('<Popover />', () => {
   describe('snapshot', () => {
@@ -153,18 +161,36 @@ describe('<Popover />', () => {
   });
 
   describe('actions', () => {
-    it('should render Popover on click', () => {
-      expect.assertions(1);
+    it.only('should render Popover on click', async () => {
+      expect.assertions(2);
 
       const container = mount(
-        <Popover triggerComponent={<button>Click Me!</button>}>
-          <p>Content</p>
-        </Popover>
+        <div>
+          <Popover triggerComponent={<button>Click Me!</button>}>
+            <p>Content</p>
+          </Popover>
+        </div>
       );
 
-      container.find('button').simulate('click');
-      container.update();
+      expect(container.find(ContentContainer).length).toEqual(0);
+
+      await act(async () => {
+        triggerPress(container);
+      });
+      jest.runAllTimers();
+      await waitForComponentToPaint(container);
+
       expect(container.find(ContentContainer).length).toEqual(1);
+
+      // render(
+      //   <Popover triggerComponent={<button>Click Me!</button>}>
+      //     <p>Content</p>
+      //   </Popover>
+      // );
+
+      // userEvent.click(screen.getByRole('button', { name: /click me!/i }));
+      // const content = await screen.findByText('Content');
+      // expect(content).toBeVisible();
     });
 
     it('should render Popover on mouseenter', () => {
@@ -191,6 +217,47 @@ describe('<Popover />', () => {
       );
 
       container.find('button').simulate('focusin');
+      container.update();
+      expect(container.find(ContentContainer).length).toEqual(1);
+    });
+
+    it('should show/hide Popover when triggered through instance', () => {
+      expect.assertions(1);
+
+      const ParentComponent = () => {
+        const [instance, setInstance] = React.useState<PopoverInstance>();
+
+        const handleShow = React.useCallback(() => {
+          instance.show();
+        }, [instance]);
+
+        const handleHide = React.useCallback(() => {
+          instance.hide();
+        }, [instance]);
+
+        return (
+          <>
+            <Popover
+              triggerComponent={<button>Focus Me!</button>}
+              trigger="focusin"
+              setInstance={setInstance}
+            >
+              <p>Content</p>
+            </Popover>
+            <button id="show" onClick={handleShow}>
+              Show
+            </button>
+            <button id="hide" onClick={handleHide}>
+              Hide
+            </button>
+          </>
+        );
+      };
+
+      const container = mount(<ParentComponent />);
+
+      expect(container.find(ContentContainer).length).toEqual(0);
+      container.find('#show').simulate('click');
       container.update();
       expect(container.find(ContentContainer).length).toEqual(1);
     });
