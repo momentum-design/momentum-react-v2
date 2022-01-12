@@ -115,6 +115,7 @@ export {
   ButtonPill,
   ButtonSimple,
   CodeInput,
+  DividerDot,
   FocusRing,
   NavigationTab,
   InputMessage as InputMessageNew,
