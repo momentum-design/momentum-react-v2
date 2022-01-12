@@ -8,7 +8,7 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
     </button>
   }
 >
-  <ForwardRef(TippyWrapper)
+  <LazyTippy
     animation={false}
     appendTo="parent"
     offset={
@@ -40,7 +40,7 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
     render={[Function]}
     trigger="click"
   >
-    <Tippy
+    <ForwardRef(TippyWrapper)
       animation={false}
       appendTo="parent"
       offset={
@@ -50,6 +50,13 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
         ]
       }
       placement="bottom"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -72,111 +79,62 @@ exports[`<Popover /> snapshot should match snapshot 1`] = `
       render={[Function]}
       trigger="click"
     >
-      <button>
-        Click Me!
-      </button>
-      <Portal
-        containerInfo={
-          <div
-            data-tippy-root=""
-            id="tippy-1"
-            style="pointer-events: none; z-index: 9999;"
-          >
-            <div
-              class="md-popover-wrapper"
-              data-color="primary"
-              data-elevation="0"
-              data-padded="true"
-              data-round="0"
-            >
-              <p>
-                Content
-              </p>
-              <div
-                class="md-popover-arrow-wrapper"
-                id="arrow"
-              >
-                <svg
-                  class="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height="12"
-                  viewBox="0 0 24 12"
-                  width="24"
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clippath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clippath>
-                  </defs>
-                  <path
-                    clip-path="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+      <Tippy
+        animation={false}
+        appendTo="parent"
+        offset={
+          Array [
+            0,
+            16,
+          ]
         }
-      >
-        <ContentContainer
-          attrs={
+        placement="bottom"
+        plugins={
+          Array [
             Object {
-              "data-placement": undefined,
-            }
+              "fn": [Function],
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                },
+              },
+            ],
           }
-          showArrow={true}
-        >
-          <div
-            className="md-popover-wrapper"
-            data-color="primary"
-            data-elevation={0}
-            data-padded={true}
-            data-round={0}
-          >
-            <p>
-              Content
-            </p>
+        }
+        render={[Function]}
+        trigger="click"
+      >
+        <button>
+          Click Me!
+        </button>
+        <Portal
+          containerInfo={
             <div
-              className="md-popover-arrow-wrapper"
-              id="arrow"
+              data-tippy-root=""
+              id="tippy-1"
+              style="pointer-events: none; z-index: 9999;"
             >
-              <Arrow>
-                <svg
-                  className="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height={12}
-                  viewBox="0 0 24 12"
-                  width={24}
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clipPath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clipPath>
-                  </defs>
-                  <path
-                    clipPath="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </Arrow>
+              
             </div>
-          </div>
-        </ContentContainer>
-      </Portal>
-    </Tippy>
-  </ForwardRef(TippyWrapper)>
+          }
+        />
+      </Tippy>
+    </ForwardRef(TippyWrapper)>
+  </LazyTippy>
 </Popover>
 `;
 
@@ -189,7 +147,7 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
     </button>
   }
 >
-  <ForwardRef(TippyWrapper)
+  <LazyTippy
     animation={false}
     appendTo="parent"
     offset={
@@ -221,7 +179,7 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
     render={[Function]}
     trigger="click"
   >
-    <Tippy
+    <ForwardRef(TippyWrapper)
       animation={false}
       appendTo="parent"
       offset={
@@ -231,6 +189,13 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
         ]
       }
       placement="bottom"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -253,112 +218,62 @@ exports[`<Popover /> snapshot should match snapshot with className 1`] = `
       render={[Function]}
       trigger="click"
     >
-      <button>
-        Click Me!
-      </button>
-      <Portal
-        containerInfo={
-          <div
-            data-tippy-root=""
-            id="tippy-2"
-            style="pointer-events: none; z-index: 9999;"
-          >
-            <div
-              class="md-popover-wrapper example-class"
-              data-color="primary"
-              data-elevation="0"
-              data-padded="true"
-              data-round="0"
-            >
-              <p>
-                Content
-              </p>
-              <div
-                class="md-popover-arrow-wrapper"
-                id="arrow"
-              >
-                <svg
-                  class="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height="12"
-                  viewBox="0 0 24 12"
-                  width="24"
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clippath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clippath>
-                  </defs>
-                  <path
-                    clip-path="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+      <Tippy
+        animation={false}
+        appendTo="parent"
+        offset={
+          Array [
+            0,
+            16,
+          ]
         }
-      >
-        <ContentContainer
-          attrs={
+        placement="bottom"
+        plugins={
+          Array [
             Object {
-              "data-placement": undefined,
-            }
+              "fn": [Function],
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                },
+              },
+            ],
           }
-          className="example-class"
-          showArrow={true}
-        >
-          <div
-            className="md-popover-wrapper example-class"
-            data-color="primary"
-            data-elevation={0}
-            data-padded={true}
-            data-round={0}
-          >
-            <p>
-              Content
-            </p>
+        }
+        render={[Function]}
+        trigger="click"
+      >
+        <button>
+          Click Me!
+        </button>
+        <Portal
+          containerInfo={
             <div
-              className="md-popover-arrow-wrapper"
-              id="arrow"
+              data-tippy-root=""
+              id="tippy-2"
+              style="pointer-events: none; z-index: 9999;"
             >
-              <Arrow>
-                <svg
-                  className="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height={12}
-                  viewBox="0 0 24 12"
-                  width={24}
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clipPath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clipPath>
-                  </defs>
-                  <path
-                    clipPath="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </Arrow>
+              
             </div>
-          </div>
-        </ContentContainer>
-      </Portal>
-    </Tippy>
-  </ForwardRef(TippyWrapper)>
+          }
+        />
+      </Tippy>
+    </ForwardRef(TippyWrapper)>
+  </LazyTippy>
 </Popover>
 `;
 
@@ -371,7 +286,7 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
     </button>
   }
 >
-  <ForwardRef(TippyWrapper)
+  <LazyTippy
     animation={false}
     appendTo="parent"
     offset={
@@ -403,7 +318,7 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
     render={[Function]}
     trigger="click"
   >
-    <Tippy
+    <ForwardRef(TippyWrapper)
       animation={false}
       appendTo="parent"
       offset={
@@ -413,6 +328,13 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
         ]
       }
       placement="bottom"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -435,114 +357,62 @@ exports[`<Popover /> snapshot should match snapshot with color 1`] = `
       render={[Function]}
       trigger="click"
     >
-      <button>
-        Click Me!
-      </button>
-      <Portal
-        containerInfo={
-          <div
-            data-tippy-root=""
-            id="tippy-5"
-            style="pointer-events: none; z-index: 9999;"
-          >
-            <div
-              class="md-popover-wrapper"
-              data-color="tertiary"
-              data-elevation="0"
-              data-padded="true"
-              data-round="0"
-            >
-              <p>
-                Content
-              </p>
-              <div
-                class="md-popover-arrow-wrapper"
-                id="arrow"
-              >
-                <svg
-                  class="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height="12"
-                  viewBox="0 0 24 12"
-                  width="24"
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clippath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clippath>
-                  </defs>
-                  <path
-                    clip-path="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="tertiary"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+      <Tippy
+        animation={false}
+        appendTo="parent"
+        offset={
+          Array [
+            0,
+            16,
+          ]
         }
-      >
-        <ContentContainer
-          attrs={
+        placement="bottom"
+        plugins={
+          Array [
             Object {
-              "data-placement": undefined,
-            }
+              "fn": [Function],
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                },
+              },
+            ],
           }
-          color="tertiary"
-          showArrow={true}
-        >
-          <div
-            className="md-popover-wrapper"
-            data-color="tertiary"
-            data-elevation={0}
-            data-padded={true}
-            data-round={0}
-          >
-            <p>
-              Content
-            </p>
+        }
+        render={[Function]}
+        trigger="click"
+      >
+        <button>
+          Click Me!
+        </button>
+        <Portal
+          containerInfo={
             <div
-              className="md-popover-arrow-wrapper"
-              id="arrow"
+              data-tippy-root=""
+              id="tippy-5"
+              style="pointer-events: none; z-index: 9999;"
             >
-              <Arrow
-                color="tertiary"
-              >
-                <svg
-                  className="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height={12}
-                  viewBox="0 0 24 12"
-                  width={24}
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clipPath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clipPath>
-                  </defs>
-                  <path
-                    clipPath="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="tertiary"
-                  />
-                </svg>
-              </Arrow>
+              
             </div>
-          </div>
-        </ContentContainer>
-      </Portal>
-    </Tippy>
-  </ForwardRef(TippyWrapper)>
+          }
+        />
+      </Tippy>
+    </ForwardRef(TippyWrapper)>
+  </LazyTippy>
 </Popover>
 `;
 
@@ -555,7 +425,7 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
     </button>
   }
 >
-  <ForwardRef(TippyWrapper)
+  <LazyTippy
     animation={false}
     appendTo="parent"
     offset={
@@ -587,7 +457,7 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
     render={[Function]}
     trigger="click"
   >
-    <Tippy
+    <ForwardRef(TippyWrapper)
       animation={false}
       appendTo="parent"
       offset={
@@ -597,6 +467,13 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
         ]
       }
       placement="bottom"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -619,114 +496,62 @@ exports[`<Popover /> snapshot should match snapshot with id 1`] = `
       render={[Function]}
       trigger="click"
     >
-      <button>
-        Click Me!
-      </button>
-      <Portal
-        containerInfo={
-          <div
-            data-tippy-root=""
-            id="tippy-3"
-            style="pointer-events: none; z-index: 9999;"
-          >
-            <div
-              class="md-popover-wrapper"
-              data-color="primary"
-              data-elevation="0"
-              data-padded="true"
-              data-round="0"
-              id="example-id"
-            >
-              <p>
-                Content
-              </p>
-              <div
-                class="md-popover-arrow-wrapper"
-                id="arrow"
-              >
-                <svg
-                  class="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height="12"
-                  viewBox="0 0 24 12"
-                  width="24"
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clippath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clippath>
-                  </defs>
-                  <path
-                    clip-path="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+      <Tippy
+        animation={false}
+        appendTo="parent"
+        offset={
+          Array [
+            0,
+            16,
+          ]
         }
-      >
-        <ContentContainer
-          attrs={
+        placement="bottom"
+        plugins={
+          Array [
             Object {
-              "data-placement": undefined,
-            }
+              "fn": [Function],
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                },
+              },
+            ],
           }
-          id="example-id"
-          showArrow={true}
-        >
-          <div
-            className="md-popover-wrapper"
-            data-color="primary"
-            data-elevation={0}
-            data-padded={true}
-            data-round={0}
-            id="example-id"
-          >
-            <p>
-              Content
-            </p>
+        }
+        render={[Function]}
+        trigger="click"
+      >
+        <button>
+          Click Me!
+        </button>
+        <Portal
+          containerInfo={
             <div
-              className="md-popover-arrow-wrapper"
-              id="arrow"
+              data-tippy-root=""
+              id="tippy-3"
+              style="pointer-events: none; z-index: 9999;"
             >
-              <Arrow>
-                <svg
-                  className="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height={12}
-                  viewBox="0 0 24 12"
-                  width={24}
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clipPath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clipPath>
-                  </defs>
-                  <path
-                    clipPath="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </Arrow>
+              
             </div>
-          </div>
-        </ContentContainer>
-      </Portal>
-    </Tippy>
-  </ForwardRef(TippyWrapper)>
+          }
+        />
+      </Tippy>
+    </ForwardRef(TippyWrapper)>
+  </LazyTippy>
 </Popover>
 `;
 
@@ -743,7 +568,7 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
     </button>
   }
 >
-  <ForwardRef(TippyWrapper)
+  <LazyTippy
     animation={false}
     appendTo="parent"
     offset={
@@ -775,7 +600,7 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
     render={[Function]}
     trigger="click"
   >
-    <Tippy
+    <ForwardRef(TippyWrapper)
       animation={false}
       appendTo="parent"
       offset={
@@ -785,6 +610,13 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
         ]
       }
       placement="bottom"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -807,121 +639,61 @@ exports[`<Popover /> snapshot should match snapshot with style 1`] = `
       render={[Function]}
       trigger="click"
     >
-      <button>
-        Click Me!
-      </button>
-      <Portal
-        containerInfo={
-          <div
-            data-tippy-root=""
-            id="tippy-4"
-            style="pointer-events: none; z-index: 9999;"
-          >
-            <div
-              class="md-popover-wrapper"
-              data-color="primary"
-              data-elevation="0"
-              data-padded="true"
-              data-round="0"
-              style="color: pink;"
-            >
-              <p>
-                Content
-              </p>
-              <div
-                class="md-popover-arrow-wrapper"
-                id="arrow"
-              >
-                <svg
-                  class="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height="12"
-                  viewBox="0 0 24 12"
-                  width="24"
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clippath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clippath>
-                  </defs>
-                  <path
-                    clip-path="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+      <Tippy
+        animation={false}
+        appendTo="parent"
+        offset={
+          Array [
+            0,
+            16,
+          ]
         }
-      >
-        <ContentContainer
-          attrs={
+        placement="bottom"
+        plugins={
+          Array [
             Object {
-              "data-placement": undefined,
-            }
-          }
-          showArrow={true}
-          style={
-            Object {
-              "color": "pink",
-            }
-          }
-        >
-          <div
-            className="md-popover-wrapper"
-            data-color="primary"
-            data-elevation={0}
-            data-padded={true}
-            data-round={0}
-            style={
+              "fn": [Function],
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
               Object {
-                "color": "pink",
-              }
-            }
-          >
-            <p>
-              Content
-            </p>
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                },
+              },
+            ],
+          }
+        }
+        render={[Function]}
+        trigger="click"
+      >
+        <button>
+          Click Me!
+        </button>
+        <Portal
+          containerInfo={
             <div
-              className="md-popover-arrow-wrapper"
-              id="arrow"
+              data-tippy-root=""
+              id="tippy-4"
+              style="pointer-events: none; z-index: 9999;"
             >
-              <Arrow>
-                <svg
-                  className="md-popover-arrow-svg"
-                  data-side="bottom"
-                  height={12}
-                  viewBox="0 0 24 12"
-                  width={24}
-                  xmlns="http://www.w3.org/svg/2000"
-                >
-                  <defs>
-                    <clipPath
-                      id="popover-arrow-cut-stroke-bottom"
-                    >
-                      <path
-                        d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                      />
-                    </clipPath>
-                  </defs>
-                  <path
-                    clipPath="url(#popover-arrow-cut-stroke-bottom)"
-                    d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-                    data-color="primary"
-                  />
-                </svg>
-              </Arrow>
+              
             </div>
-          </div>
-        </ContentContainer>
-      </Portal>
-    </Tippy>
-  </ForwardRef(TippyWrapper)>
+          }
+        />
+      </Tippy>
+    </ForwardRef(TippyWrapper)>
+  </LazyTippy>
 </Popover>
 `;
