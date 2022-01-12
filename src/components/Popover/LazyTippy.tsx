@@ -4,6 +4,12 @@ import Tippy, { TippyProps } from '@tippyjs/react';
 
 export type LazyTippyProps = TippyProps;
 
+/**
+ * The LazyTippy component is used to "lazify" the Popover.
+ * By default the `tippy.js` library mounts the content of the Popover in the DOM (hidden through styling), before it is shown
+ * (which means that it could, if its used a lot, polute the DOM tree). Therefore the Popover will only be mounted
+ * to the DOM, whenever it is triggered to do so.
+ */
 export const LazyTippy: FC<LazyTippyProps> = React.forwardRef((props: LazyTippyProps, ref) => {
   const [mounted, setMounted] = React.useState(false);
 
