@@ -9,7 +9,7 @@ import Popover, { PopoverProps } from './';
 import ButtonPill from '../ButtonPill';
 import ButtonSimple from '../ButtonSimple';
 import Menu from '../Menu';
-import { COLORS } from './Popover.constants';
+import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Popover.stories.args';
 
 export default {

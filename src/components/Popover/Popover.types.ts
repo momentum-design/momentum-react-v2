@@ -1,12 +1,9 @@
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
 import type { TippyProps } from '@tippyjs/react';
+import type { Elevation, Round, Color } from '../ModalContainer/ModalContainer.types';
 
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
-
-export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-export type Round = 0 | 25 | 50 | 75 | 100 | 125 | 150;
-export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
 export type PopoverInstance = {
   show: () => void;

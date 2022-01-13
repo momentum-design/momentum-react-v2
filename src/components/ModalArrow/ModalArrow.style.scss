@@ -1,26 +1,21 @@
 .md-modal-arrow-svg {
   path {
-    stroke: rgba(0, 0, 0, 0.2); // IEFIX
     stroke: var(--modal-primary-border-color);
     stroke-width: 0.125rem;
 
     &[data-color='primary'] {
-      fill: rgba(255, 255, 255, 1); // IEFIX
       fill: var(--theme-background-solid-primary-normal);
     }
 
     &[data-color='secondary'] {
-      fill: rgba(247, 247, 247, 1); // IEFIX
       fill: var(--theme-background-solid-secondary-normal);
     }
 
     &[data-color='tertiary'] {
-      fill: rgba(237, 237, 237, 1); // IEFIX
       fill: var(--theme-background-solid-tertiary-normal);
     }
 
     &[data-color='quaternary'] {
-      fill: rgba(255, 255, 255, 1); // IEFIX
       fill: var(--theme-background-solid-quaternary-normal);
     }
   }

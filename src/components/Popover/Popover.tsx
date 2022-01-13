@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './Popover.style.scss';
+import ModalContainer from '../ModalContainer';
 import { LazyTippy } from './LazyTippy';
-import { ModalContainer } from '..';
 import { ARROW_ID } from '../ModalContainer/ModalContainer.constants';
 import { DEFAULTS, OFFSET } from './Popover.constants';
 import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
@@ -60,7 +60,8 @@ const Popover: FC<Props> = (props: Props) => {
         </ModalContainer>
       )}
       placement={placement as PlacementType}
-      trigger={trigger}
+      /* add focusin automatically if only mouseenter is passed in as a trigger - this is for accessibility reasons */
+      trigger={trigger === 'mouseenter' ? 'mouseenter focusin' : trigger}
       interactive={interactive}
       appendTo="parent"
       popperOptions={{

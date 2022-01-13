@@ -1,6 +1,6 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
-import { COLORS } from './Popover.constants';
+import { COLORS } from '../ModalContainer/ModalContainer.constants';
 
 export default {
   ...commonStyles,
