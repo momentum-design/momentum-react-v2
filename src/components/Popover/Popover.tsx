@@ -2,8 +2,11 @@ import React, { FC } from 'react';
 import './Popover.style.scss';
 import { LazyTippy } from './LazyTippy';
 import { ModalContainer } from '..';
-import type { Props } from './Popover.types';
 import { ARROW_ID } from '../ModalContainer/ModalContainer.constants';
+import { DEFAULTS, OFFSET } from './Popover.constants';
+import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
+import type { Props } from './Popover.types';
+import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 /**
  * The Popover component allows adding a Popover to whatever provided
@@ -16,12 +19,12 @@ import { ARROW_ID } from '../ModalContainer/ModalContainer.constants';
 const Popover: FC<Props> = (props: Props) => {
   const {
     children,
-    trigger = 'click',
+    trigger = DEFAULTS.TRIGGER,
     triggerComponent,
     containerProps,
-    placement = 'bottom',
+    placement = DEFAULTS.PLACEMENT,
     interactive,
-    showArrow = true,
+    showArrow = DEFAULTS.SHOW_ARROW,
     color,
     delay,
     setInstance,
@@ -46,15 +49,17 @@ const Popover: FC<Props> = (props: Props) => {
           id={id}
           showArrow={showArrow}
           placement={attrs['data-placement']}
+          isPadded={containerProps?.isPadded || DEFAULTS.IS_PADDED}
+          round={containerProps?.round || DEFAULTS.ROUND}
+          elevation={containerProps?.elevation || DEFAULTS.ELEVATION}
           style={style}
           color={color}
           className={className}
-          {...containerProps}
         >
           {children}
         </ModalContainer>
       )}
-      placement={placement}
+      placement={placement as PlacementType}
       trigger={trigger}
       interactive={interactive}
       appendTo="parent"
@@ -78,8 +83,8 @@ const Popover: FC<Props> = (props: Props) => {
       }}
       animation={false}
       delay={delay}
-      // default offset of 5px + 11px (size of arrow standing out of popover)
-      offset={[0, showArrow ? 16 : 5]}
+      // add arrow height to default offset if arrow is shown:
+      offset={[0, showArrow ? ARROW_HEIGHT + OFFSET : OFFSET]}
     >
       {triggerComponent}
     </LazyTippy>

@@ -38,4 +38,8 @@ const STYLE = {
   svg: `${CLASS_PREFIX}-svg`,
 };
 
-export { CLASS_PREFIX, COLORS, DEFAULTS, PLACEMENTS, STYLE };
+// arrow height as a constant - is not adjustable at the moment. could become flexible
+// by applying styling logic to ModalArrow svg creation
+const ARROW_HEIGHT = 12;
+
+export { CLASS_PREFIX, COLORS, DEFAULTS, PLACEMENTS, STYLE, ARROW_HEIGHT };
