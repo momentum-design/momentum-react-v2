@@ -1,6 +1,6 @@
 import { default as ModalContainer } from './ModalContainer';
 import * as CONSTANTS from './ModalContainer.constants';
-import { Props } from './ModalContainer.types';
+import type { Props } from './ModalContainer.types';
 
 export { CONSTANTS as MODAL_CONTAINER_CONSTANTS };
 

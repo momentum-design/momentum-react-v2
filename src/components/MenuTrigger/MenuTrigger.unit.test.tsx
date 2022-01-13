@@ -6,6 +6,7 @@ import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { mountAndWait, triggerPress } from '../../../test/utils';
 import { act } from 'react-dom/test-utils';
+import { ModalContainer } from '..';
 
 describe('<MenuTrigger />', () => {
   const defaultProps = {
@@ -174,7 +175,7 @@ describe('<MenuTrigger />', () => {
           <MenuTrigger defaultOpen={true} {...defaultProps} overlayRadius={overlayRadius} />
         )
       )
-        .find('.md-modal-container-content')
+        .find(ModalContainer)
         .getDOMNode();
 
       expect(element.getAttribute('data-round')).toBe(`${overlayRadius}`);

@@ -166,6 +166,10 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = 
         <div
           aria-labelledby={null}
           className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
           id="test-ID"
           onKeyDown={[Function]}
           onMouseEnter={[Function]}
@@ -175,18 +179,8 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter 1`] = 
           style={Object {}}
           tabIndex={-1}
         >
-          <div
-            className="md-modal-container-content"
-            data-color="primary"
-            data-elevation={0}
-            data-horizontal-arrow={false}
-            data-padded={false}
-            data-round={0}
-            data-vertical-arrow={false}
-          >
-            <div>
-              Hover Overlay
-            </div>
+          <div>
+            Hover Overlay
           </div>
         </div>
       </ModalContainer>
@@ -374,53 +368,47 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on mouse enter and pr
         <div
           aria-labelledby={null}
           className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
           id="test-ID"
           onKeyDown={[Function]}
           role="dialog"
           style={Object {}}
           tabIndex={-1}
         >
-          <div
-            className="md-modal-container-content"
-            data-color="primary"
-            data-elevation={0}
-            data-horizontal-arrow={false}
-            data-padded={false}
-            data-round={0}
-            data-vertical-arrow={false}
-          >
-            <div>
-              Press Overlay
-            </div>
-            <DismissButton
-              onDismiss={[Function]}
-            >
-              <VisuallyHidden>
-                <div
-                  style={
-                    Object {
-                      "border": 0,
-                      "clip": "rect(0 0 0 0)",
-                      "clipPath": "inset(50%)",
-                      "height": 1,
-                      "margin": "0 -1px -1px 0",
-                      "overflow": "hidden",
-                      "padding": 0,
-                      "position": "absolute",
-                      "whiteSpace": "nowrap",
-                      "width": 1,
-                    }
-                  }
-                >
-                  <button
-                    aria-label="Dismiss"
-                    onClick={[Function]}
-                    tabIndex={-1}
-                  />
-                </div>
-              </VisuallyHidden>
-            </DismissButton>
+          <div>
+            Press Overlay
           </div>
+          <DismissButton
+            onDismiss={[Function]}
+          >
+            <VisuallyHidden>
+              <div
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": 1,
+                    "margin": "0 -1px -1px 0",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <button
+                  aria-label="Dismiss"
+                  onClick={[Function]}
+                  tabIndex={-1}
+                />
+              </div>
+            </VisuallyHidden>
+          </DismissButton>
         </div>
       </ModalContainer>
       <span
@@ -525,53 +513,47 @@ exports[`<OverlayTrigger /> snapshot should match snapshot on press 1`] = `
         <div
           aria-labelledby={null}
           className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
           id="test-ID"
           onKeyDown={[Function]}
           role="dialog"
           style={Object {}}
           tabIndex={-1}
         >
-          <div
-            className="md-modal-container-content"
-            data-color="primary"
-            data-elevation={0}
-            data-horizontal-arrow={false}
-            data-padded={false}
-            data-round={0}
-            data-vertical-arrow={false}
-          >
-            <div>
-              Press Overlay
-            </div>
-            <DismissButton
-              onDismiss={[Function]}
-            >
-              <VisuallyHidden>
-                <div
-                  style={
-                    Object {
-                      "border": 0,
-                      "clip": "rect(0 0 0 0)",
-                      "clipPath": "inset(50%)",
-                      "height": 1,
-                      "margin": "0 -1px -1px 0",
-                      "overflow": "hidden",
-                      "padding": 0,
-                      "position": "absolute",
-                      "whiteSpace": "nowrap",
-                      "width": 1,
-                    }
-                  }
-                >
-                  <button
-                    aria-label="Dismiss"
-                    onClick={[Function]}
-                    tabIndex={-1}
-                  />
-                </div>
-              </VisuallyHidden>
-            </DismissButton>
+          <div>
+            Press Overlay
           </div>
+          <DismissButton
+            onDismiss={[Function]}
+          >
+            <VisuallyHidden>
+              <div
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": 1,
+                    "margin": "0 -1px -1px 0",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <button
+                  aria-label="Dismiss"
+                  onClick={[Function]}
+                  tabIndex={-1}
+                />
+              </div>
+            </VisuallyHidden>
+          </DismissButton>
         </div>
       </ModalContainer>
       <span
