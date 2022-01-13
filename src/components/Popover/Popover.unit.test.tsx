@@ -1,23 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
-// import { render, screen } from '@testing-library/react';
-// import userEvent from '@testing-library/user-event';
-import { act } from 'react-dom/test-utils';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
 import Popover, { POPOVER_CONSTANTS as CONSTANTS } from './';
-import ContentContainer from './ContentContainer';
 import { PopoverInstance } from './Popover.types';
-import { triggerPress, waitForComponentToPaint } from '../../../test/utils';
-
-jest.useFakeTimers();
 
 describe('<Popover />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(
+      const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>}>
           <p>Content</p>
         </Popover>
@@ -31,7 +25,7 @@ describe('<Popover />', () => {
 
       const className = 'example-class';
 
-      const container = mount(
+      const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>} className={className}>
           <p>Content</p>
         </Popover>
@@ -45,7 +39,7 @@ describe('<Popover />', () => {
 
       const id = 'example-id';
 
-      const container = mount(
+      const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>} id={id}>
           <p>Content</p>
         </Popover>
@@ -59,7 +53,7 @@ describe('<Popover />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(
+      const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>} style={style}>
           <p>Content</p>
         </Popover>
@@ -71,7 +65,7 @@ describe('<Popover />', () => {
     it('should match snapshot with color', () => {
       expect.assertions(1);
 
-      const container = mount(
+      const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>} color={CONSTANTS.COLORS.TERTIARY}>
           <p>Content</p>
         </Popover>
@@ -82,147 +76,130 @@ describe('<Popover />', () => {
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
-      expect.assertions(1);
-
-      const element = mount(
-        <Popover triggerComponent={<button>Click Me!</button>}>
-          <p>Content</p>
-        </Popover>
-      )
-        .find(ContentContainer)
-        .getDOMNode();
-
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
-    });
-
-    it('should have provided class when className is provided', () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const element = mount(
-        <Popover triggerComponent={<button>Click Me!</button>} className={className}>
-          <p>Content</p>
-        </Popover>
-      )
-        .find(ContentContainer)
-        .getDOMNode();
-
-      expect(element.classList.contains(className)).toBe(true);
-    });
-
-    it('should have provided id when id is provided', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const element = mount(
-        <Popover triggerComponent={<button>Click Me!</button>} id={id}>
-          <p>Content</p>
-        </Popover>
-      )
-        .find(ContentContainer)
-        .getDOMNode();
-
-      expect(element.id).toBe(id);
-    });
-
-    it('should have provided style when style is provided', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-      const styleString = 'color: pink;';
-
-      const element = mount(
-        <Popover triggerComponent={<button>Click Me!</button>} style={style}>
-          <p>Content</p>
-        </Popover>
-      )
-        .find(ContentContainer)
-        .getDOMNode();
-
-      expect(element.getAttribute('style')).toBe(styleString);
-    });
-
-    it('should have provided color when color is provided', () => {
-      expect.assertions(1);
-
-      const element = mount(
-        <Popover triggerComponent={<button>Click Me!</button>} color={CONSTANTS.COLORS.TERTIARY}>
-          <p>Content</p>
-        </Popover>
-      )
-        .find(ContentContainer)
-        .getDOMNode();
-
-      expect(element.getAttribute('data-color')).toBe(CONSTANTS.COLORS.TERTIARY);
-    });
+    // it('should have its wrapper class', () => {
+    //   expect.assertions(1);
+    //   const element = render(
+    //     <Popover triggerComponent={<button>Click Me!</button>}>
+    //       <p>Content</p>
+    //     </Popover>
+    //   )
+    //     .find(ContentContainer)
+    //     .getDOMNode();
+    //   expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
+    // });
+    // it('should have provided class when className is provided', () => {
+    //   expect.assertions(1);
+    //   const className = 'example-class';
+    //   const element = render(
+    //     <Popover triggerComponent={<button>Click Me!</button>} className={className}>
+    //       <p>Content</p>
+    //     </Popover>
+    //   )
+    //     .find(ContentContainer)
+    //     .getDOMNode();
+    //   expect(element.classList.contains(className)).toBe(true);
+    // });
+    // it('should have provided id when id is provided', () => {
+    //   expect.assertions(1);
+    //   const id = 'example-id';
+    //   const element = render(
+    //     <Popover triggerComponent={<button>Click Me!</button>} id={id}>
+    //       <p>Content</p>
+    //     </Popover>
+    //   )
+    //     .find(ContentContainer)
+    //     .getDOMNode();
+    //   expect(element.id).toBe(id);
+    // });
+    // it('should have provided style when style is provided', () => {
+    //   expect.assertions(1);
+    //   const style = { color: 'pink' };
+    //   const styleString = 'color: pink;';
+    //   const element = render(
+    //     <Popover triggerComponent={<button>Click Me!</button>} style={style}>
+    //       <p>Content</p>
+    //     </Popover>
+    //   )
+    //     .find(ContentContainer)
+    //     .getDOMNode();
+    //   expect(element.getAttribute('style')).toBe(styleString);
+    // });
+    // it('should have provided color when color is provided', () => {
+    //   expect.assertions(1);
+    //   const element = render(
+    //     <Popover triggerComponent={<button>Click Me!</button>} color={CONSTANTS.COLORS.TERTIARY}>
+    //       <p>Content</p>
+    //     </Popover>
+    //   )
+    //     .find(ContentContainer)
+    //     .getDOMNode();
+    //   expect(element.getAttribute('data-color')).toBe(CONSTANTS.COLORS.TERTIARY);
+    // });
   });
 
   describe('actions', () => {
-    it.only('should render Popover on click', async () => {
-      expect.assertions(2);
-
-      const container = mount(
-        <div>
-          <Popover triggerComponent={<button>Click Me!</button>}>
-            <p>Content</p>
-          </Popover>
-        </div>
+    it('should show/hide Popover on click', async () => {
+      render(
+        <Popover triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
       );
 
-      expect(container.find(ContentContainer).length).toEqual(0);
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
 
-      await act(async () => {
-        triggerPress(container);
-      });
-      jest.runAllTimers();
-      await waitForComponentToPaint(container);
+      // after click, popover should be shown
+      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
+      const content = await screen.findByText('Content');
+      expect(content).toBeVisible();
 
-      expect(container.find(ContentContainer).length).toEqual(1);
+      // TODO: fix hiding tests once clarified in https://github.com/atomiks/tippyjs-react/issues/252
 
-      // render(
-      //   <Popover triggerComponent={<button>Click Me!</button>}>
-      //     <p>Content</p>
-      //   </Popover>
-      // );
-
+      // after another click, popover should be hidden again
       // userEvent.click(screen.getByRole('button', { name: /click me!/i }));
-      // const content = await screen.findByText('Content');
-      // expect(content).toBeVisible();
+      // await waitFor(() => {
+      //   expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      // });
     });
 
-    it('should render Popover on mouseenter', () => {
-      expect.assertions(1);
+    it('should show Popover on mouseenter', async () => {
+      expect.assertions(2);
 
-      const container = mount(
+      render(
         <Popover triggerComponent={<button>Hover Me!</button>} trigger="mouseenter">
           <p>Content</p>
         </Popover>
       );
 
-      container.find('button').simulate('mouseenter');
-      container.update();
-      expect(container.find(ContentContainer).length).toEqual(1);
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      userEvent.hover(screen.getByRole('button', { name: /hover me!/i }));
+      const content = await screen.findByText('Content');
+      expect(content).toBeVisible();
     });
 
-    it('should render Popover on focusin', () => {
-      expect.assertions(1);
+    it('should show Popover on focusin', async () => {
+      expect.assertions(2);
 
-      const container = mount(
+      render(
         <Popover triggerComponent={<button>Focus Me!</button>} trigger="focusin">
           <p>Content</p>
         </Popover>
       );
 
-      container.find('button').simulate('focusin');
-      container.update();
-      expect(container.find(ContentContainer).length).toEqual(1);
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      userEvent.tab();
+
+      const content = await screen.findByText('Content');
+      expect(content).toBeVisible();
     });
 
-    it('should show/hide Popover when triggered through instance', () => {
-      expect.assertions(1);
+    it('should show/hide Popover when triggered through instance', async () => {
+      expect.assertions(2);
 
       const ParentComponent = () => {
         const [instance, setInstance] = React.useState<PopoverInstance>();
@@ -254,12 +231,18 @@ describe('<Popover />', () => {
         );
       };
 
-      const container = mount(<ParentComponent />);
+      render(<ParentComponent />);
 
-      expect(container.find(ContentContainer).length).toEqual(0);
-      container.find('#show').simulate('click');
-      container.update();
-      expect(container.find(ContentContainer).length).toEqual(1);
+      // show popover from the parent component
+      userEvent.click(screen.getByRole('button', { name: /show/i }));
+      const content = await screen.findByText('Content');
+      expect(content).toBeVisible();
+
+      // hide popover from the parent component
+      userEvent.click(screen.getByRole('button', { name: /hide/i }));
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
     });
   });
 });
