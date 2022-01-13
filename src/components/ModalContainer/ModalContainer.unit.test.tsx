@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import ModalContainer, { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from './';
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 
 describe('<ModalContainer />', () => {
   describe('snapshot', () => {
@@ -84,9 +85,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with arrow', () => {
       expect.assertions(1);
 
-      const arrow = Object.values(CONSTANTS.ARROWS).pop();
-
-      const container = mount(<ModalContainer arrow={arrow} />);
+      const container = mount(<ModalContainer showArrow />);
 
       expect(container).toMatchSnapshot();
     });
@@ -157,8 +156,7 @@ describe('<ModalContainer />', () => {
 
       const element = mount(<ModalContainer color={color} />)
         .find(ModalContainer)
-        .getDOMNode()
-        .getElementsByTagName('div')[0];
+        .getDOMNode();
 
       expect(element.getAttribute('data-color')).toBe(color);
     });
@@ -170,8 +168,7 @@ describe('<ModalContainer />', () => {
 
       const element = mount(<ModalContainer elevation={elevation} />)
         .find(ModalContainer)
-        .getDOMNode()
-        .getElementsByTagName('div')[0];
+        .getDOMNode();
 
       expect(element.getAttribute('data-elevation')).toBe(`${elevation}`);
     });
@@ -183,8 +180,7 @@ describe('<ModalContainer />', () => {
 
       const element = mount(<ModalContainer isPadded={isPadded} />)
         .find(ModalContainer)
-        .getDOMNode()
-        .getElementsByTagName('div')[0];
+        .getDOMNode();
 
       expect(element.getAttribute('data-padded')).toBe(`${isPadded}`);
     });
@@ -196,48 +192,45 @@ describe('<ModalContainer />', () => {
 
       const element = mount(<ModalContainer round={round} />)
         .find(ModalContainer)
-        .getDOMNode()
-        .getElementsByTagName('div')[0];
+        .getDOMNode();
 
       expect(element.getAttribute('data-round')).toBe(`${round}`);
     });
 
-    it('should have provided data-arrow when arrow is provided', () => {
+    it('should have provided data-placement when placement is provided', () => {
       expect.assertions(1);
 
-      const arrow = Object.values(CONSTANTS.ARROWS).pop();
+      const placement = Object.values(PLACEMENTS).pop();
 
-      const element = mount(<ModalContainer arrow={arrow} />)
+      const element = mount(<ModalContainer placement={placement} />)
         .find(ModalContainer)
         .getDOMNode();
 
-      expect(element.getAttribute('data-arrow')).toBe(arrow);
+      expect(element.getAttribute('data-placement')).toBe(`${placement}`);
     });
 
-    it('should have provided data-horizontal-arrow when a horizontal arrow is provided', () => {
+    it('should have provided data-arrow-orientation when a vertical placement is provided', () => {
       expect.assertions(1);
 
-      const arrow = CONSTANTS.ARROWS.LEFT;
+      const placement = PLACEMENTS.BOTTOM_START;
 
-      const element = mount(<ModalContainer arrow={arrow} />)
+      const element = mount(<ModalContainer placement={placement} />)
         .find(ModalContainer)
-        .getDOMNode()
-        .getElementsByTagName('div')[0];
+        .getDOMNode();
 
-      expect(element.getAttribute('data-horizontal-arrow')).toBe('true');
+      expect(element.getAttribute('data-arrow-orientation')).toBe('vertical');
     });
 
-    it('should have provided data-vertical-arrow when a vertical arrow is provided', () => {
+    it('should have provided data-arrow-orientation when a horizontal placement is provided', () => {
       expect.assertions(1);
 
-      const arrow = CONSTANTS.ARROWS.TOP;
+      const placement = PLACEMENTS.LEFT_END;
 
-      const element = mount(<ModalContainer arrow={arrow} />)
+      const element = mount(<ModalContainer placement={placement} />)
         .find(ModalContainer)
-        .getDOMNode()
-        .getElementsByTagName('div')[0];
+        .getDOMNode();
 
-      expect(element.getAttribute('data-vertical-arrow')).toBe('true');
+      expect(element.getAttribute('data-arrow-orientation')).toBe('horizontal');
     });
   });
 });

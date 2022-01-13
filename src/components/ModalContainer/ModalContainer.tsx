@@ -3,50 +3,63 @@ import classnames from 'classnames';
 
 import ModalArrow from '../ModalArrow';
 
-import { ARROWS, DEFAULTS, STYLE } from './ModalContainer.constants';
-import { Props } from './ModalContainer.types';
+import { ARROW_ID, DEFAULTS, STYLE } from './ModalContainer.constants';
+import type { Props } from './ModalContainer.types';
 import './ModalContainer.style.scss';
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
+import { getArrowOrientation } from './ModalContainer.utils';
 
 /**
- * The ModalContainer component.
+ * The `<ModalContainer/>` component, which is used by the Popover for example to wrap
+ * the content of a Popover properly.
+ *
+ * The `showArrow` and `placement` prop of this `<ModalContainer/>` together are only necessary
+ * for the Popover component, where the Arrow and the positioning are highly important.
+ * Using the `<ModalContainer/>` component standalone with the `placement` and `showArrow` props
+ * will just paint, but not position the arrow correctly (done through Popover component).
+ *
+ * Nevertheless this component could be used on its own as well.
  */
 const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   const {
-    arrow,
-    className,
+    showArrow = DEFAULTS.SHOW_ARROW,
+    placement,
     children,
-    color,
-    elevation,
+    elevation = DEFAULTS.ELEVATION,
+    isPadded = DEFAULTS.IS_PADDED,
+    round = DEFAULTS.ROUND,
+    color = DEFAULTS.COLOR,
     id,
-    isPadded,
-    round,
+    className,
     style,
     ...otherProps
   } = props;
 
-  const arrowComponent = arrow ? <ModalArrow color={color} side={arrow} /> : undefined;
+  const arrowOrientation = getArrowOrientation(placement);
 
   return (
     <div
+      ref={ref}
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}
-      data-arrow={arrow}
+      data-placement={placement}
+      data-arrow-orientation={arrowOrientation}
+      data-color={color}
+      data-elevation={elevation}
+      data-padded={isPadded}
+      data-round={round}
       {...otherProps}
     >
-      {arrowComponent}
-      <div
-        ref={ref}
-        className={STYLE.content}
-        data-color={color || DEFAULTS.COLOR}
-        data-elevation={elevation || DEFAULTS.ELEVATION}
-        data-horizontal-arrow={arrow === ARROWS.LEFT || arrow === ARROWS.RIGHT}
-        data-vertical-arrow={arrow === ARROWS.BOTTOM || arrow === ARROWS.TOP}
-        data-padded={isPadded || DEFAULTS.IS_PADDED}
-        data-round={round || DEFAULTS.ROUND}
-      >
-        {children}
-      </div>
+      {children}
+      {
+        /*arrow has to be wrapped in HTML element to allow Popover to style it*/
+        showArrow && (
+          <div id={ARROW_ID} data-popper-arrow className={classnames(STYLE.arrowWrapper)}>
+            <ModalArrow placement={placement} color={color} />
+          </div>
+        )
+      }
     </div>
   );
 };

@@ -21,23 +21,17 @@ exports[`<Overlay /> snapshot should match snapshot 1`] = `
       <div
         aria-labelledby={null}
         className="md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-padded={false}
+        data-round={0}
         onKeyDown={[Function]}
         role="dialog"
         style={Object {}}
         tabIndex={-1}
       >
-        <div
-          className="md-modal-container-content"
-          data-color="primary"
-          data-elevation={0}
-          data-horizontal-arrow={false}
-          data-padded={false}
-          data-round={0}
-          data-vertical-arrow={false}
-        >
-          <div>
-            children
-          </div>
+        <div>
+          children
         </div>
       </div>
     </ModalContainer>

@@ -45,209 +45,203 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
       data-alert={true}
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
       data-shape="square"
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Avatar
+        initials="CW"
+        size={88}
       >
-        <Avatar
-          initials="CW"
-          size={88}
+        <div
+          className="md-avatar-wrapper"
+          data-color="default"
+          data-size={88}
         >
-          <div
-            className="md-avatar-wrapper"
-            data-color="default"
-            data-size={88}
-          >
-            <span>
-              CW
-            </span>
-          </div>
-        </Avatar>
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
+          <span>
+            CW
+          </span>
+        </div>
+      </Avatar>
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
+      >
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
         >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          >
-            Title
-          </h1>
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
+          Title
+        </h1>
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
         >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          >
-            Description
-          </h3>
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
+          Description
+        </h3>
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
         >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          >
-            (Details)
-          </h3>
-        </Text>
-        <ButtonGroup
-          spaced={true}
+          (Details)
+        </h3>
+      </Text>
+      <ButtonGroup
+        spaced={true}
+      >
+        <div
+          className="md-button-group-wrapper"
+          data-round={false}
+          data-spaced={true}
         >
-          <div
-            className="md-button-group-wrapper"
-            data-round={false}
-            data-spaced={true}
+          <ButtonCircle
+            color="join"
           >
-            <ButtonCircle
-              color="join"
+            <ButtonSimple
+              className="md-button-circle-wrapper"
+              data-color="join"
+              data-disabled={false}
+              data-ghost={false}
+              data-multiple-children={false}
+              data-outline={false}
+              data-size={40}
             >
-              <ButtonSimple
-                className="md-button-circle-wrapper"
-                data-color="join"
-                data-disabled={false}
-                data-ghost={false}
-                data-multiple-children={false}
-                data-outline={false}
-                data-size={40}
-              >
-                <FocusRing>
-                  <FocusRing
-                    focusClass="md-focus-ring-wrapper children"
-                    focusRingClass="md-focus-ring-wrapper children"
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
+                >
+                  <button
+                    className="md-button-circle-wrapper"
+                    data-color="join"
+                    data-disabled={false}
+                    data-ghost={false}
+                    data-multiple-children={false}
+                    data-outline={false}
+                    data-size={40}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
                   >
-                    <button
-                      className="md-button-circle-wrapper"
-                      data-color="join"
-                      data-disabled={false}
-                      data-ghost={false}
-                      data-multiple-children={false}
-                      data-outline={false}
-                      data-size={40}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDragStart={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      type="button"
+                    <Icon
+                      autoScale={125}
+                      name="camera"
                     >
-                      <Icon
-                        autoScale={125}
-                        name="camera"
+                      <div
+                        className="md-icon-wrapper"
                       >
-                        <div
-                          className="md-icon-wrapper"
-                        >
-                          <svg
-                            className=""
-                            data-autoscale={125}
-                            data-scale={false}
-                            data-test="camera"
-                            fill="currentColor"
-                            height="100%"
-                            stroke="currentColor"
-                            style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </button>
-                  </FocusRing>
+                        <svg
+                          className=""
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="camera"
+                          fill="currentColor"
+                          height="100%"
+                          stroke="currentColor"
+                          style={Object {}}
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </Icon>
+                  </button>
                 </FocusRing>
-              </ButtonSimple>
-            </ButtonCircle>
-            <ButtonCircle
-              color="cancel"
+              </FocusRing>
+            </ButtonSimple>
+          </ButtonCircle>
+          <ButtonCircle
+            color="cancel"
+          >
+            <ButtonSimple
+              className="md-button-circle-wrapper"
+              data-color="cancel"
+              data-disabled={false}
+              data-ghost={false}
+              data-multiple-children={false}
+              data-outline={false}
+              data-size={40}
             >
-              <ButtonSimple
-                className="md-button-circle-wrapper"
-                data-color="cancel"
-                data-disabled={false}
-                data-ghost={false}
-                data-multiple-children={false}
-                data-outline={false}
-                data-size={40}
-              >
-                <FocusRing>
-                  <FocusRing
-                    focusClass="md-focus-ring-wrapper children"
-                    focusRingClass="md-focus-ring-wrapper children"
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
+                >
+                  <button
+                    className="md-button-circle-wrapper"
+                    data-color="cancel"
+                    data-disabled={false}
+                    data-ghost={false}
+                    data-multiple-children={false}
+                    data-outline={false}
+                    data-size={40}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
                   >
-                    <button
-                      className="md-button-circle-wrapper"
-                      data-color="cancel"
-                      data-disabled={false}
-                      data-ghost={false}
-                      data-multiple-children={false}
-                      data-outline={false}
-                      data-size={40}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDragStart={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      type="button"
+                    <Icon
+                      autoScale={125}
+                      name="cancel"
                     >
-                      <Icon
-                        autoScale={125}
-                        name="cancel"
+                      <div
+                        className="md-icon-wrapper"
                       >
-                        <div
-                          className="md-icon-wrapper"
-                        >
-                          <svg
-                            className=""
-                            data-autoscale={125}
-                            data-scale={false}
-                            data-test="cancel"
-                            fill="currentColor"
-                            height="100%"
-                            stroke="currentColor"
-                            style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </button>
-                  </FocusRing>
+                        <svg
+                          className=""
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          stroke="currentColor"
+                          style={Object {}}
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </Icon>
+                  </button>
                 </FocusRing>
-              </ButtonSimple>
-            </ButtonCircle>
-          </div>
-        </ButtonGroup>
-      </div>
+              </FocusRing>
+            </ButtonSimple>
+          </ButtonCircle>
+        </div>
+      </ButtonGroup>
     </div>
   </ModalContainer>
 </Banner>
@@ -261,44 +255,38 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
-        >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -335,188 +323,182 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <ButtonGroup
+        spaced={true}
+      >
+        <div
+          className="md-button-group-wrapper"
+          data-round={false}
+          data-spaced={true}
         >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <ButtonGroup
-          spaced={true}
-        >
-          <div
-            className="md-button-group-wrapper"
-            data-round={false}
-            data-spaced={true}
+          <ButtonCircle
+            color="join"
           >
-            <ButtonCircle
-              color="join"
+            <ButtonSimple
+              className="md-button-circle-wrapper"
+              data-color="join"
+              data-disabled={false}
+              data-ghost={false}
+              data-multiple-children={false}
+              data-outline={false}
+              data-size={40}
             >
-              <ButtonSimple
-                className="md-button-circle-wrapper"
-                data-color="join"
-                data-disabled={false}
-                data-ghost={false}
-                data-multiple-children={false}
-                data-outline={false}
-                data-size={40}
-              >
-                <FocusRing>
-                  <FocusRing
-                    focusClass="md-focus-ring-wrapper children"
-                    focusRingClass="md-focus-ring-wrapper children"
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
+                >
+                  <button
+                    className="md-button-circle-wrapper"
+                    data-color="join"
+                    data-disabled={false}
+                    data-ghost={false}
+                    data-multiple-children={false}
+                    data-outline={false}
+                    data-size={40}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
                   >
-                    <button
-                      className="md-button-circle-wrapper"
-                      data-color="join"
-                      data-disabled={false}
-                      data-ghost={false}
-                      data-multiple-children={false}
-                      data-outline={false}
-                      data-size={40}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDragStart={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      type="button"
+                    <Icon
+                      autoScale={125}
+                      name="camera"
                     >
-                      <Icon
-                        autoScale={125}
-                        name="camera"
+                      <div
+                        className="md-icon-wrapper"
                       >
-                        <div
-                          className="md-icon-wrapper"
-                        >
-                          <svg
-                            className=""
-                            data-autoscale={125}
-                            data-scale={false}
-                            data-test="camera"
-                            fill="currentColor"
-                            height="100%"
-                            stroke="currentColor"
-                            style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </button>
-                  </FocusRing>
+                        <svg
+                          className=""
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="camera"
+                          fill="currentColor"
+                          height="100%"
+                          stroke="currentColor"
+                          style={Object {}}
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </Icon>
+                  </button>
                 </FocusRing>
-              </ButtonSimple>
-            </ButtonCircle>
-            <ButtonCircle
-              color="cancel"
+              </FocusRing>
+            </ButtonSimple>
+          </ButtonCircle>
+          <ButtonCircle
+            color="cancel"
+          >
+            <ButtonSimple
+              className="md-button-circle-wrapper"
+              data-color="cancel"
+              data-disabled={false}
+              data-ghost={false}
+              data-multiple-children={false}
+              data-outline={false}
+              data-size={40}
             >
-              <ButtonSimple
-                className="md-button-circle-wrapper"
-                data-color="cancel"
-                data-disabled={false}
-                data-ghost={false}
-                data-multiple-children={false}
-                data-outline={false}
-                data-size={40}
-              >
-                <FocusRing>
-                  <FocusRing
-                    focusClass="md-focus-ring-wrapper children"
-                    focusRingClass="md-focus-ring-wrapper children"
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
+                >
+                  <button
+                    className="md-button-circle-wrapper"
+                    data-color="cancel"
+                    data-disabled={false}
+                    data-ghost={false}
+                    data-multiple-children={false}
+                    data-outline={false}
+                    data-size={40}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
                   >
-                    <button
-                      className="md-button-circle-wrapper"
-                      data-color="cancel"
-                      data-disabled={false}
-                      data-ghost={false}
-                      data-multiple-children={false}
-                      data-outline={false}
-                      data-size={40}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onDragStart={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      type="button"
+                    <Icon
+                      autoScale={125}
+                      name="cancel"
                     >
-                      <Icon
-                        autoScale={125}
-                        name="cancel"
+                      <div
+                        className="md-icon-wrapper"
                       >
-                        <div
-                          className="md-icon-wrapper"
-                        >
-                          <svg
-                            className=""
-                            data-autoscale={125}
-                            data-scale={false}
-                            data-test="cancel"
-                            fill="currentColor"
-                            height="100%"
-                            stroke="currentColor"
-                            style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
-                          />
-                        </div>
-                      </Icon>
-                    </button>
-                  </FocusRing>
+                        <svg
+                          className=""
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          stroke="currentColor"
+                          style={Object {}}
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </Icon>
+                  </button>
                 </FocusRing>
-              </ButtonSimple>
-            </ButtonCircle>
-          </div>
-        </ButtonGroup>
-      </div>
+              </FocusRing>
+            </ButtonSimple>
+          </ButtonCircle>
+        </div>
+      </ButtonGroup>
     </div>
   </ModalContainer>
 </Banner>
@@ -532,44 +514,38 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
   >
     <div
       className="example-class md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
-        >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -585,46 +561,40 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
         >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          >
-            Description
-          </h3>
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+          Description
+        </h3>
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -640,46 +610,40 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
         >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          >
-            Details
-          </h3>
-        </Text>
-      </div>
+          Details
+        </h3>
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -696,45 +660,39 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
       id="example-id"
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
-        >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -754,57 +712,51 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Avatar
+        initials="CW"
       >
-        <Avatar
-          initials="CW"
+        <div
+          className="md-avatar-wrapper"
+          data-color="default"
+          data-size={24}
         >
-          <div
-            className="md-avatar-wrapper"
-            data-color="default"
-            data-size={24}
-          >
-            <span>
-              CW
-            </span>
-          </div>
-        </Avatar>
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
-        >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+          <span>
+            CW
+          </span>
+        </div>
+      </Avatar>
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
+      >
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -822,44 +774,38 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
       data-alert={true}
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
-        >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -876,45 +822,39 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
       data-shape="square"
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
-        >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -939,49 +879,43 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
       style={
         Object {
           "color": "pink",
         }
       }
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
-        >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          />
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
+        />
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>
@@ -997,46 +931,40 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
   >
     <div
       className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={75}
     >
-      <div
-        className="md-modal-container-content"
-        data-color="primary"
-        data-elevation={0}
-        data-horizontal-arrow={false}
-        data-padded={false}
-        data-round={75}
-        data-vertical-arrow={false}
+      <Text
+        className="md-banner-title"
+        type="banner-primary"
       >
-        <Text
-          className="md-banner-title"
-          type="banner-primary"
+        <h1
+          className="md-text-wrapper md-banner-title"
+          data-type="banner-primary"
         >
-          <h1
-            className="md-text-wrapper md-banner-title"
-            data-type="banner-primary"
-          >
-            Title
-          </h1>
-        </Text>
-        <Text
-          className="md-banner-description"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-description"
-            data-type="subheader-secondary"
-          />
-        </Text>
-        <Text
-          className="md-banner-details"
-          type="subheader-secondary"
-        >
-          <h3
-            className="md-text-wrapper md-banner-details"
-            data-type="subheader-secondary"
-          />
-        </Text>
-      </div>
+          Title
+        </h1>
+      </Text>
+      <Text
+        className="md-banner-description"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-description"
+          data-type="subheader-secondary"
+        />
+      </Text>
+      <Text
+        className="md-banner-details"
+        type="subheader-secondary"
+      >
+        <h3
+          className="md-text-wrapper md-banner-details"
+          data-type="subheader-secondary"
+        />
+      </Text>
     </div>
   </ModalContainer>
 </Banner>

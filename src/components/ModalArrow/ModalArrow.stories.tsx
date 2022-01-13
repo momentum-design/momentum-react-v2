@@ -23,7 +23,7 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   color: CONSTANTS.COLORS.TERTIARY,
-  side: CONSTANTS.SIDES.BOTTOM,
+  placement: CONSTANTS.PLACEMENTS.BOTTOM,
 };
 
 const Colors = MultiTemplate<ModalArrowProps>(ModalArrow).bind({});
@@ -32,7 +32,7 @@ Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.color;
 
 Colors.args = {
-  side: CONSTANTS.SIDES.BOTTOM,
+  placement: CONSTANTS.PLACEMENTS.BOTTOM,
 };
 
 Colors.parameters = {
@@ -41,18 +41,21 @@ Colors.parameters = {
   ],
 };
 
-const Sides = MultiTemplate<ModalArrowProps>(ModalArrow).bind({});
+const Placements = MultiTemplate<ModalArrowProps>(ModalArrow).bind({});
 
-Sides.argTypes = { ...argTypes };
-delete Sides.argTypes.side;
+Placements.argTypes = { ...argTypes };
+delete Placements.argTypes.placement;
 
-Sides.args = {
+Placements.args = {
   color: CONSTANTS.COLORS.TERTIARY,
 };
 
-Sides.parameters = {
+Placements.parameters = {
   variants: [
-    ...Object.values(CONSTANTS.SIDES).map((side) => ({ side, style: { margin: '1rem' } })),
+    ...Object.values(CONSTANTS.PLACEMENTS).map((placement) => ({
+      placement,
+      style: { margin: '1rem' },
+    })),
   ],
 };
 
@@ -60,18 +63,18 @@ const Common = MultiTemplate<ModalArrowProps>(ModalArrow).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.color;
-delete Common.argTypes.side;
+delete Common.argTypes.placement;
 
 Common.parameters = {
   variants: [
-    ...Object.values(CONSTANTS.SIDES).map((side) =>
+    ...Object.values(CONSTANTS.PLACEMENTS).map((placement) =>
       Object.values(CONSTANTS.COLORS).map((color) => ({
         color,
-        side,
+        placement,
         style: { margin: '1rem' },
       }))
     ),
   ].flat(),
 };
 
-export { Example, Colors, Sides, Common };
+export { Example, Colors, Placements, Common };

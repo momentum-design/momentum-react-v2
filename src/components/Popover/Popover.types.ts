@@ -35,6 +35,7 @@ export type ContainerPropsType = {
 };
 
 export interface Props {
+  visible?: boolean;
   /**
    * Child components of this Popover (what will be shown within the Popover)
    */
