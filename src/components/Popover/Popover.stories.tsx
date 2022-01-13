@@ -7,7 +7,7 @@ import { Item } from '@react-stately/collections';
 
 import Popover, { PopoverProps } from './';
 import ButtonPill from '../ButtonPill';
-import Icon from '../Icon';
+import ButtonSimple from '../ButtonSimple';
 import Menu from '../Menu';
 import { COLORS } from './Popover.constants';
 import argTypes from './Popover.stories.args';
@@ -28,10 +28,9 @@ const Example = Template<PopoverProps>(Popover).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  children: <p>Content Text Content Text</p>,
   trigger: 'click',
-  triggerComponent: <button style={{ height: '250px', width: '250px' }}>Click me!</button>,
   placement: 'bottom',
+  showArrow: true,
   interactive: false,
   containerProps: {
     isPadded: true,
@@ -39,6 +38,9 @@ Example.args = {
     elevation: 0,
   },
   color: COLORS.TERTIARY,
+  delay: [0, 0],
+  children: <p>Content Text Content Text</p>,
+  triggerComponent: <ButtonSimple>Click me!</ButtonSimple>,
 };
 
 const InteractiveContent = Template<PopoverProps>(Popover).bind({});
@@ -46,6 +48,18 @@ const InteractiveContent = Template<PopoverProps>(Popover).bind({});
 InteractiveContent.argTypes = { ...argTypes };
 
 InteractiveContent.args = {
+  trigger: 'click',
+  placement: 'bottom',
+  showArrow: true,
+  interactive: true,
+  containerProps: {
+    isPadded: true,
+    round: 25,
+    elevation: 0,
+  },
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: <ButtonPill>Click me!</ButtonPill>,
   children: (
     <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
       <Item key="one">One</Item>
@@ -56,16 +70,6 @@ InteractiveContent.args = {
       <Item key="six">Six</Item>
     </Menu>
   ),
-  trigger: 'click',
-  triggerComponent: <button style={{ height: '50px', width: '100px' }}>Click me!</button>,
-  placement: 'bottom',
-  interactive: true,
-  containerProps: {
-    isPadded: true,
-    round: 25,
-    elevation: 0,
-  },
-  color: COLORS.TERTIARY,
 };
 
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
@@ -79,7 +83,9 @@ Common.parameters = {
       children: <p>Non-interactive Content on TERTIARY color, round 25, elevation 1</p>,
       trigger: 'click',
       triggerComponent: (
-        <button style={{ height: '50px', width: '100px', marginRight: '10px' }}>Click me!</button>
+        <ButtonSimple style={{ height: '50px', width: '100px', marginRight: '10px' }}>
+          Click me!
+        </ButtonSimple>
       ),
       placement: 'right',
       interactive: false,
@@ -96,7 +102,9 @@ Common.parameters = {
       ),
       trigger: 'mouseenter',
       triggerComponent: (
-        <button style={{ height: '50px', width: '100px', marginRight: '10px' }}>Hover me!</button>
+        <ButtonSimple style={{ height: '50px', width: '100px', marginRight: '10px' }}>
+          Hover me!
+        </ButtonSimple>
       ),
       placement: 'bottom-start',
       interactive: false,
@@ -109,15 +117,16 @@ Common.parameters = {
       showArrow: false,
     },
     {
-      children: <p>Interactive Content on SECONDARY color, round 0, elevation 3</p>,
+      children: (
+        <p>Interactive Content on SECONDARY color, round 0, elevation 3, showDelay 500ms</p>
+      ),
       trigger: 'click mouseenter',
       triggerComponent: (
-        <ButtonPill key="1">
-          <div>Click or hover me!</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
-        </ButtonPill>
+        <ButtonSimple style={{ height: '50px', width: '200px' }}>Click or hover me!</ButtonSimple>
       ),
       placement: 'left-start',
       interactive: true,
+      delay: [500],
       containerProps: {
         isPadded: true,
         round: 0,

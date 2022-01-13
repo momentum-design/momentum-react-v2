@@ -23,6 +23,7 @@ const Popover: FC<Props> = (props: Props) => {
     interactive,
     showArrow = true,
     color,
+    delay,
     setInstance,
     className,
     id,
@@ -59,8 +60,9 @@ const Popover: FC<Props> = (props: Props) => {
       appendTo="parent"
       popperOptions={{
         modifiers: [
-          showArrow && {
+          {
             name: 'arrow',
+            enabled: showArrow,
             options: {
               element: '#arrow', // css selector to point to arrow div
               padding: 5,
@@ -75,6 +77,7 @@ const Popover: FC<Props> = (props: Props) => {
         ],
       }}
       animation={false}
+      delay={delay}
       // default offset of 5px + 11px (size of arrow standing out of popover)
       offset={[0, showArrow ? 16 : 5]}
     >

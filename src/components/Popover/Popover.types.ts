@@ -17,7 +17,7 @@ export type ContainerPropsType = {
   /**
    * Whether padding should be applied
    *
-   * Default: true
+   * @default true
    */
   isPadded?: boolean;
   /**
@@ -49,7 +49,7 @@ export interface Props {
    *
    * Possible event names: `click`, `mouseenter`, `focusin`, `manual` (to programmatically trigger the popover)
    *
-   * Default: `click`
+   * @default `click`
    */
   trigger?: TriggerType;
   /**
@@ -62,14 +62,14 @@ export interface Props {
    * Possible values: `top`, `top-start`, `top-end`, `right`, `right-start`, `right-end`, `bottom`, `bottom-start`, `bottom-end`,
    * `left`, `left-start`, `left-end`, `auto`, `auto-start`, `auto-end`
    *
-   * Default: `bottom`
+   * @default `bottom`
    */
   placement?: PlacementType;
   /**
    * Determines if the Popover has interactive content inside of it,
    * so that it can be hovered over and clicked inside without hiding.
    *
-   * Default: false
+   * @default false
    */
   interactive?: boolean;
   /**
@@ -79,9 +79,17 @@ export interface Props {
   /**
    * Whether the arrow should be shown
    *
-   * Default: true
+   * @default true
    */
   showArrow?: boolean;
+  /**
+   * Delay in ms once a trigger event is fired before the Popover shows or hides.
+   *
+   * [`showDelay`, `hideDelay`]
+   *
+   * @default 0
+   */
+  delay?: [number, number];
   /**
    * setInstance - this function should be passed in when the instance
    * of the popover should be available on the parent of the Popover.
