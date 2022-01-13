@@ -6,7 +6,6 @@ import ModalArrow from '../ModalArrow';
 import { ARROW_ID, DEFAULTS, STYLE } from './ModalContainer.constants';
 import type { Props } from './ModalContainer.types';
 import './ModalContainer.style.scss';
-import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { getArrowOrientation } from './ModalContainer.utils';
 
 /**
