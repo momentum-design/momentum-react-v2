@@ -1,4 +1,4 @@
-import { Color, Side } from './ModalArrow.types';
+import type { Color, PlacementType } from './ModalArrow.types';
 
 const CLASS_PREFIX = 'md-modal-arrow';
 
@@ -9,19 +9,33 @@ const COLORS: Record<string, Color> = {
   QUATERNARY: 'quaternary',
 };
 
-const SIDES: Record<string, Side> = {
-  BOTTOM: 'bottom',
-  LEFT: 'left',
-  RIGHT: 'right',
+const PLACEMENTS: Record<string, PlacementType> = {
   TOP: 'top',
+  TOP_START: 'top-start',
+  TOP_END: 'top-end',
+  RIGHT: 'right',
+  RIGHT_START: 'right-start',
+  RIGHT_END: 'right-end',
+  BOTTOM: 'bottom',
+  BOTTOM_START: 'bottom-start',
+  BOTTOM_END: 'bottom-end',
+  LEFT: 'left',
+  LEFT_START: 'left-start',
+  LEFT_END: 'left-end',
+
+  // choose the side with most space:
+  AUTO: 'auto',
+  AUTO_START: 'auto-start',
+  AUTO_END: 'auto-end',
 };
 
 const DEFAULTS = {
   COLOR: COLORS.PRIMARY,
+  PLACEMENT: PLACEMENTS.BOTTOM as string,
 };
 
 const STYLE = {
-  wrapper: `${CLASS_PREFIX}-wrapper`,
+  svg: `${CLASS_PREFIX}-svg`,
 };
 
-export { CLASS_PREFIX, COLORS, DEFAULTS, SIDES, STYLE };
+export { CLASS_PREFIX, COLORS, DEFAULTS, PLACEMENTS, STYLE };

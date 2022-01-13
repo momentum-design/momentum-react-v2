@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import ContentContainer from './ContentContainer';
 import './Popover.style.scss';
-import type { Props } from './Popover.types';
 import { LazyTippy } from './LazyTippy';
-import Tippy from '@tippyjs/react';
+import { ModalContainer } from '..';
+import type { Props } from './Popover.types';
+import { ARROW_ID } from '../ModalContainer/ModalContainer.constants';
 
 /**
  * The Popover component allows adding a Popover to whatever provided
@@ -42,17 +42,17 @@ const Popover: FC<Props> = (props: Props) => {
     <LazyTippy
       ref={tippyRef}
       render={(attrs) => (
-        <ContentContainer
-          attrs={attrs}
+        <ModalContainer
           id={id}
-          style={style}
-          containerProps={containerProps}
-          color={color}
           showArrow={showArrow}
+          placement={attrs['data-placement']}
+          style={style}
+          color={color}
           className={className}
+          {...containerProps}
         >
           {children}
-        </ContentContainer>
+        </ModalContainer>
       )}
       placement={placement}
       trigger={trigger}
@@ -64,7 +64,7 @@ const Popover: FC<Props> = (props: Props) => {
             name: 'arrow',
             enabled: showArrow,
             options: {
-              element: '#arrow', // css selector to point to arrow div
+              element: `#${ARROW_ID}`, // use arrow div id from Modal container
               padding: 5,
             },
           },

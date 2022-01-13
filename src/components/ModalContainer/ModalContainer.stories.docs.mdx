@@ -1,5 +1,8 @@
-The `<ModalContainer />` component. This component is primarily used as a wrapper for other components. When styling this component downstream, be sure to follow these rules:
+The `<ModalContainer />` component. This component is primarily used as a wrapper for other components. 
 
-* When styling the wrapper component for positioning, use the `.md-modal-container-wrapper` selector
-* When styling the content component for look and feel, use the `.md-modal-container-wrapper > .md-modal-container-content` selector
-* The `style` prop applies to the wrapper only. This is used  for positioning on-the-fly.
+The `showArrow` and `placement` prop of this `<ModalContainer/>` together are only necessary
+for the Popover component, where the Arrow and the positioning are highly important.
+Using the `<ModalContainer/>` component standalone with the `placement` and `showArrow` props
+will just paint, but not position the arrow correctly (done through Popover component).
+
+Nevertheless this component could be used on its own as well.

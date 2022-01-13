@@ -4,64 +4,58 @@ exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
 <ModalContainer>
   <div
     className="md-modal-container-wrapper"
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={false}
-    />
-  </div>
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
+  />
 </ModalContainer>
 `;
 
 exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
 <ModalContainer
-  arrow="top"
+  showArrow={true}
 >
   <div
     className="md-modal-container-wrapper"
-    data-arrow="top"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
   >
-    <ModalArrow
-      side="top"
-    >
-      <svg
-        className="md-modal-arrow-wrapper"
-        data-side="top"
-        height={12}
-        viewBox="0 0 24 12"
-        width={24}
-        xmlns="http://www.w3.org/svg/2000"
-      >
-        <defs>
-          <clipPath
-            id="modal-arrow-cut-stroke-top"
-          >
-            <path
-              d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-            />
-          </clipPath>
-        </defs>
-        <path
-          clipPath="url(#modal-arrow-cut-stroke-top)"
-          d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
-          data-color="primary"
-        />
-      </svg>
-    </ModalArrow>
     <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={true}
-    />
+      className="md-modal-container-arrow-wrapper"
+      data-popper-arrow={true}
+      id="arrow"
+    >
+      <ModalArrow
+        color="primary"
+      >
+        <svg
+          className="md-modal-arrow-svg"
+          data-placement="bottom"
+          height={12}
+          viewBox="0 0 24 12"
+          width={24}
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clipPath
+              id="modal-arrow-cut-stroke-bottom"
+            >
+              <path
+                d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
+              />
+            </clipPath>
+          </defs>
+          <path
+            clipPath="url(#modal-arrow-cut-stroke-bottom)"
+            d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
+            data-color="primary"
+          />
+        </svg>
+      </ModalArrow>
+    </div>
   </div>
 </ModalContainer>
 `;
@@ -70,19 +64,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
 <ModalContainer>
   <div
     className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
   >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={false}
-    >
-      <div>
-        Example Text
-      </div>
+    <div>
+      Example Text
     </div>
   </div>
 </ModalContainer>
@@ -94,17 +82,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with className 1`] = 
 >
   <div
     className="example-class md-modal-container-wrapper"
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={false}
-    />
-  </div>
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
+  />
 </ModalContainer>
 `;
 
@@ -114,17 +96,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with color 1`] = `
 >
   <div
     className="md-modal-container-wrapper"
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="quaternary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={false}
-    />
-  </div>
+    data-color="quaternary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
+  />
 </ModalContainer>
 `;
 
@@ -134,17 +110,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with elevation 1`] = 
 >
   <div
     className="md-modal-container-wrapper"
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={8}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={false}
-    />
-  </div>
+    data-color="primary"
+    data-elevation={8}
+    data-padded={false}
+    data-round={0}
+  />
 </ModalContainer>
 `;
 
@@ -154,18 +124,12 @@ exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
 >
   <div
     className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
     id="example-id"
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={false}
-    />
-  </div>
+  />
 </ModalContainer>
 `;
 
@@ -175,17 +139,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
 >
   <div
     className="md-modal-container-wrapper"
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={true}
-      data-round={0}
-      data-vertical-arrow={false}
-    />
-  </div>
+    data-color="primary"
+    data-elevation={0}
+    data-padded={true}
+    data-round={0}
+  />
 </ModalContainer>
 `;
 
@@ -195,17 +153,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
 >
   <div
     className="md-modal-container-wrapper"
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={150}
-      data-vertical-arrow={false}
-    />
-  </div>
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={150}
+  />
 </ModalContainer>
 `;
 
@@ -219,21 +171,15 @@ exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
 >
   <div
     className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
     style={
       Object {
         "color": "pink",
       }
     }
-  >
-    <div
-      className="md-modal-container-content"
-      data-color="primary"
-      data-elevation={0}
-      data-horizontal-arrow={false}
-      data-padded={false}
-      data-round={0}
-      data-vertical-arrow={false}
-    />
-  </div>
+  />
 </ModalContainer>
 `;
