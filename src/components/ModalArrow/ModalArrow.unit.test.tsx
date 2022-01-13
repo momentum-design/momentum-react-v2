@@ -4,11 +4,7 @@ import { mount } from 'enzyme';
 import ModalArrow, { MODAL_ARROW_CONSTANTS as CONSTANTS } from './';
 
 describe('<ModalArrow />', () => {
-  let placement;
-
-  beforeEach(() => {
-    placement = CONSTANTS.PLACEMENTS.BOTTOM;
-  });
+  const placement = CONSTANTS.PLACEMENTS.BOTTOM;
 
   describe('snapshot', () => {
     it('should match snapshot', () => {

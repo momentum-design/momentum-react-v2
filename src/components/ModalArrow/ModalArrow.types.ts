@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import type { TippyProps } from '@tippyjs/react';
+import type { Color } from '../ModalContainer/ModalContainer.types';
 
-export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type PlacementType = TippyProps['placement'];
 
 export interface Props {

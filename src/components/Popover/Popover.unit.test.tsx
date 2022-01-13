@@ -3,7 +3,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import Popover, { POPOVER_CONSTANTS as CONSTANTS } from './';
+import Popover from './';
+import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import { PopoverInstance } from './Popover.types';
 
 describe('<Popover />', () => {
@@ -66,7 +67,7 @@ describe('<Popover />', () => {
       expect.assertions(1);
 
       const { container } = render(
-        <Popover triggerComponent={<button>Click Me!</button>} color={CONSTANTS.COLORS.TERTIARY}>
+        <Popover triggerComponent={<button>Click Me!</button>} color={COLORS.TERTIARY}>
           <p>Content</p>
         </Popover>
       );
