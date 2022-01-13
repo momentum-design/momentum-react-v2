@@ -10,7 +10,7 @@ module.exports = {
   snapshotSerializers: ['enzyme-to-json/serializer'],
   snapshotResolver: '<rootDir>/config/jest/jest.snapshot-resolver.js',
   setupFiles: ['jest-canvas-mock'],
-  setupFilesAfterEnv: ['<rootDir>/src/helpers/enzyme_setup'],
+  setupFilesAfterEnv: ['<rootDir>/src/helpers/enzyme_setup', '<rootDir>/jest-setup.ts'],
   transform: {
     '^.+\\.(j|t)sx?$': 'ts-jest',
   },
