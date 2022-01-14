@@ -1,6 +1,9 @@
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
 import type { TippyProps } from '@tippyjs/react';
-import type { Elevation, Round, Color } from '../ModalContainer/ModalContainer.types';
+import type { Color } from '../ModalContainer/ModalContainer.types';
+
+// variant - based on Figma mockups:
+export type VariantType = 'small' | 'medium';
 
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
@@ -10,37 +13,19 @@ export type PopoverInstance = {
   hide: () => void;
 };
 
-export type ContainerPropsType = {
-  /**
-   * Whether padding should be applied
-   *
-   * @default true
-   */
-  isPadded?: boolean;
-  /**
-   * borderRadius of the Container - each value corresponds to rem percentage (e.g. value 25 = 0.25rem)
-   *
-   * Possible values: 0 | 25 | 50 | 75 | 100 | 125 | 150
-   */
-  round?: Round;
-  /**
-   * elevation of the Container - each value corresponds to a box shadow applied to the container
-   *
-   * Possible values: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
-   */
-  elevation?: Elevation;
-};
-
 export interface Props {
-  visible?: boolean;
   /**
    * Child components of this Popover (what will be shown within the Popover)
    */
   children: ReactNode;
+
   /**
-   * Props to modify the Container around the content (=children)
+   * Variant of the Popover - can be either small or medium
+   *
+   * @default `small`
    */
-  containerProps?: ContainerPropsType;
+  variant?: VariantType;
+
   /**
    * Determines the events that cause the Popover to show. Multiple event names should be separated by spaces.
    * For example to allow both click and hover, use `click mouseenter` as the trigger.
@@ -50,10 +35,12 @@ export interface Props {
    * @default `click`
    */
   trigger?: TriggerType;
+
   /**
    * The component which triggers the Popover
    */
   triggerComponent: ReactElement;
+
   /**
    * Placement of the Popover
    *
@@ -63,6 +50,7 @@ export interface Props {
    * @default `bottom`
    */
   placement?: PlacementType;
+
   /**
    * Determines if the Popover has interactive content inside of it,
    * so that it can be hovered over and clicked inside without hiding.
@@ -70,16 +58,19 @@ export interface Props {
    * @default false
    */
   interactive?: boolean;
+
   /**
    * Color of the Container
    */
   color?: Color;
+
   /**
    * Whether the arrow should be shown
    *
    * @default true
    */
   showArrow?: boolean;
+
   /**
    * Delay in ms once a trigger event is fired before the Popover shows or hides.
    *
@@ -88,6 +79,7 @@ export interface Props {
    * @default 0
    */
   delay?: [number, number];
+
   /**
    * setInstance - this function should be passed in when the instance
    * of the popover should be available on the parent of the Popover.
@@ -97,14 +89,17 @@ export interface Props {
    * setInstance is the setter function of a useState hook
    */
   setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance>>;
+
   /**
    * Custom class for overriding this component's CSS.
    */
   className?: string;
+
   /**
    * Custom id for overriding this component's CSS.
    */
   id?: string;
+
   /**
    * Custom style for overriding this component's CSS.
    */

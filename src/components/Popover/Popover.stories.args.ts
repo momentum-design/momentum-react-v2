@@ -1,50 +1,72 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
+import { DEFAULTS } from './Popover.constants';
 
 export default {
   ...commonStyles,
   trigger: {
-    description: `Determines the events that cause the Popover to show. <br/><br/>
+    description: `Determines the events that cause the Popover to show.
     Multiple event names should be separated by spaces. For example to allow both click and hover, use \`click mouseenter\` as the trigger.
-    <br/><br/>Possible event names: \`click\`, \`mouseenter\`, \`focusin\`, \`manual\` (to programmatically trigger the popover)
-    <br/>default: \`click\``,
+    Possible event names: \`click\`, \`mouseenter\`, \`focusin\`, \`manual\` (to programmatically trigger the popover)`,
     control: { type: 'text' },
     table: {
       type: {
         summary: 'string',
       },
+      defaultValue: {
+        summary: DEFAULTS.TRIGGER,
+      },
     },
   },
   placement: {
-    description: `Placement of the Popover relative to the trigger component
-    <br/><br/>default \`bottom\``,
+    description: `Placement of the Popover relative to the trigger component`,
     options: [...Object.values(PLACEMENTS as Record<string, string>)],
     control: { type: 'select' },
     table: {
       type: {
         summary: 'string',
       },
+      defaultValue: {
+        summary: DEFAULTS.PLACEMENT,
+      },
     },
   },
   showArrow: {
-    description: `Whether the arrow should be shown
-    <br/><br/>default \`true\``,
+    description: `Whether the arrow should be shown`,
     control: { type: 'boolean' },
     table: {
       type: {
         summary: 'boolean',
       },
+      defaultValue: {
+        summary: DEFAULTS.SHOW_ARROW,
+      },
+    },
+  },
+  variant: {
+    description: `Variant of the Popover - can be either small or medium`,
+    options: ['small', 'medium'],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.VARIANT,
+      },
     },
   },
   interactive: {
     description: `Determines if the Popover has interactive content inside of it,
-    so that it can be hovered over and clicked inside without hiding.
-    <br/><br/>default \`false\``,
+    so that it can be hovered over and clicked inside without hiding.`,
     control: { type: 'boolean' },
     table: {
       type: {
         summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.INTERACTIVE,
       },
     },
   },
@@ -66,7 +88,7 @@ export default {
         summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: DEFAULTS.COLOR,
       },
     },
   },

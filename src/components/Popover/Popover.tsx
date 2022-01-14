@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import { LazyTippy } from './LazyTippy';
-import { ARROW_ID } from '../ModalContainer/ModalContainer.constants';
-import { DEFAULTS, OFFSET } from './Popover.constants';
+import { ARROW_ID, ELEVATIONS, ROUNDS } from '../ModalContainer/ModalContainer.constants';
+import { ARROW_PADDING, DEFAULTS, OFFSET } from './Popover.constants';
 import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
 import type { Props } from './Popover.types';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
@@ -21,9 +21,9 @@ const Popover: FC<Props> = (props: Props) => {
     children,
     trigger = DEFAULTS.TRIGGER,
     triggerComponent,
-    containerProps,
+    variant = DEFAULTS.VARIANT,
     placement = DEFAULTS.PLACEMENT,
-    interactive,
+    interactive = DEFAULTS.INTERACTIVE,
     showArrow = DEFAULTS.SHOW_ARROW,
     color,
     delay,
@@ -37,6 +37,8 @@ const Popover: FC<Props> = (props: Props) => {
 
   React.useEffect(() => {
     if (tippyRef?.current?._tippy) {
+      // will set the instance of the Popover to the _tippy object of the Popover,
+      // which will allow showing & hiding from a parent component
       setInstance?.(tippyRef.current._tippy);
     }
   }, [tippyRef, setInstance]);
@@ -49,9 +51,9 @@ const Popover: FC<Props> = (props: Props) => {
           id={id}
           showArrow={showArrow}
           placement={attrs['data-placement']}
-          isPadded={containerProps?.isPadded || DEFAULTS.IS_PADDED}
-          round={containerProps?.round || DEFAULTS.ROUND}
-          elevation={containerProps?.elevation || DEFAULTS.ELEVATION}
+          isPadded
+          round={variant === 'medium' ? ROUNDS[75] : ROUNDS[50]}
+          elevation={ELEVATIONS[3]}
           style={style}
           color={color}
           className={className}
@@ -71,7 +73,7 @@ const Popover: FC<Props> = (props: Props) => {
             enabled: showArrow,
             options: {
               element: `#${ARROW_ID}`, // use arrow div id from Modal container
-              padding: 5,
+              padding: ARROW_PADDING,
             },
           },
           {

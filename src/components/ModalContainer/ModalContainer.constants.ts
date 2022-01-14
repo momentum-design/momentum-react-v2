@@ -38,7 +38,7 @@ const DEFAULTS = {
   IS_PADDED: false,
   ROUND: ROUNDS[0],
   SHOW_ARROW: false,
-  PLACEMENT: PLACEMENTS.BOTTOM as string,
+  PLACEMENT: PLACEMENTS.AUTO as string,
 };
 
 const STYLE = {

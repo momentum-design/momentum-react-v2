@@ -10,8 +10,7 @@ const modalContainerArgTypes = {
     <br/><br/>
     NOTE: showing the arrow and using the placement prop will not position it correctly - positioning of the arrow
     correctly will only be through the Popover component. Whenever there's the use case
-    to show ModalContainer with a arrow, pls use the Popover component instead.
-    <br/><br/>default \`true\``,
+    to show ModalContainer with a arrow, please use the Popover component instead.`,
     control: { type: 'boolean' },
     table: {
       type: {
@@ -27,7 +26,7 @@ const modalContainerArgTypes = {
       <br/><br/>
     NOTE: showing the arrow and using the placement prop will not position it correctly - positioning of the arrow
     correctly will only be through the Popover component. Whenever there's the use case
-    to show ModalContainer with a arrow, pls use the Popover component instead.`,
+    to show ModalContainer with a arrow, please use the Popover component instead.`,
     control: { type: 'select' },
     options: [undefined, ...Object.values(PLACEMENTS as Record<string, string>)],
     table: {
@@ -60,7 +59,7 @@ const modalContainerArgTypes = {
         summary: 'string',
       },
       defaultValue: {
-        summary: 'primary',
+        summary: DEFAULTS.COLOR,
       },
     },
   },
@@ -74,7 +73,7 @@ const modalContainerArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: '0',
+        summary: DEFAULTS.ELEVATION,
       },
     },
   },
@@ -86,7 +85,7 @@ const modalContainerArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: 'false',
+        summary: DEFAULTS.IS_PADDED,
       },
     },
   },
@@ -100,7 +99,7 @@ const modalContainerArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: '0',
+        summary: DEFAULTS.ROUND,
       },
     },
   },
