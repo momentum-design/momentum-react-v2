@@ -2,10 +2,13 @@ import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import { mount } from 'enzyme';
 
 import Popover from './';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import { PopoverInstance } from './Popover.types';
+import { ModalContainer } from '..';
+import { triggerPress, waitForComponentToPaint } from '../../../test/utils';
 
 describe('<Popover />', () => {
   describe('snapshot', () => {
@@ -139,6 +142,22 @@ describe('<Popover />', () => {
   });
 
   describe('actions', () => {
+    // for Marcin - this test is failing:
+    it('should show Popover on click', async () => {
+      expect.assertions(2);
+
+      const container = mount(
+        <Popover triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container.find(ModalContainer).length).toEqual(0);
+      triggerPress(container.find('button'));
+      await waitForComponentToPaint(container);
+      expect(container.find(ModalContainer).length).toEqual(1);
+    });
+
     it('should show/hide Popover on click', async () => {
       render(
         <Popover triggerComponent={<button>Click Me!</button>}>
@@ -155,13 +174,11 @@ describe('<Popover />', () => {
       const content = await screen.findByText('Content');
       expect(content).toBeVisible();
 
-      // TODO: fix hiding tests once clarified in https://github.com/atomiks/tippyjs-react/issues/252
-
       // after another click, popover should be hidden again
-      // userEvent.click(screen.getByRole('button', { name: /click me!/i }));
-      // await waitFor(() => {
-      //   expect(screen.queryByText('Content')).not.toBeInTheDocument();
-      // });
+      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
     });
 
     it('should show Popover on mouseenter', async () => {
