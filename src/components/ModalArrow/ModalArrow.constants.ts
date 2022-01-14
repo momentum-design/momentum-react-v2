@@ -32,7 +32,7 @@ const PLACEMENTS: Record<string, PlacementType> = {
 
 const DEFAULTS = {
   COLOR: COLORS.PRIMARY,
-  PLACEMENT: PLACEMENTS.BOTTOM as string,
+  PLACEMENT: PLACEMENTS.AUTO as string,
 };
 
 const STYLE = {

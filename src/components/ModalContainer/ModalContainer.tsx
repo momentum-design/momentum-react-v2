@@ -8,17 +8,6 @@ import type { Props } from './ModalContainer.types';
 import './ModalContainer.style.scss';
 import { getArrowOrientation } from './ModalContainer.utils';
 
-/**
- * The `<ModalContainer/>` component, which is used by the Popover for example to wrap
- * the content of a Popover properly.
- *
- * The `showArrow` and `placement` prop of this `<ModalContainer/>` together are only necessary
- * for the Popover component, where the Arrow and the positioning are highly important.
- * Using the `<ModalContainer/>` component standalone with the `placement` and `showArrow` props
- * will just paint, but not position the arrow correctly (done through Popover component).
- *
- * Nevertheless this component could be used on its own as well.
- */
 const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   const {
     showArrow = DEFAULTS.SHOW_ARROW,

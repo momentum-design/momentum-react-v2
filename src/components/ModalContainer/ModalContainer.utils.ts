@@ -7,9 +7,8 @@ type Orientation = 'horizontal' | 'vertical' | undefined;
  * This function detects based on the placement arg if an the arrow
  * is horizontal (left or right) or vertical (top or bottom)
  *
- * `undefined` if placement is `undefined`
  * @param placement
- * @returns
+ * @returns orientation based on placement, `undefined` if placement is `undefined`
  */
 export const getArrowOrientation = (placement: PlacementType): Orientation => {
   if (placement) {

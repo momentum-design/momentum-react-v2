@@ -1,16 +1,15 @@
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
-import { ELEVATIONS, ROUNDS } from '../ModalContainer/ModalContainer.constants';
+import { COLORS } from '../ModalContainer/ModalContainer.constants';
 
 const CLASS_PREFIX = 'md-popover';
 
 const DEFAULTS = {
-  IS_PADDED: true,
-  ROUND: ROUNDS[0],
-  ELEVATION: ELEVATIONS[0],
-  COLOR: 'primary',
+  VARIANT: 'small',
   TRIGGER: 'click',
-  PLACEMENT: PLACEMENTS.BOTTOM as string,
+  PLACEMENT: PLACEMENTS.AUTO as string,
   SHOW_ARROW: true,
+  INTERACTIVE: false,
+  COLOR: COLORS.PRIMARY,
 };
 
 const STYLE = {
@@ -21,4 +20,7 @@ const STYLE = {
 // default offset between popover and trigger component:
 const OFFSET = 5;
 
-export { CLASS_PREFIX, DEFAULTS, STYLE, OFFSET };
+// padding between the edge of the popover and the arrow, to ensure the arrow doesn't get pushed outside
+const ARROW_PADDING = 5;
+
+export { CLASS_PREFIX, DEFAULTS, STYLE, OFFSET, ARROW_PADDING };

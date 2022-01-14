@@ -33,24 +33,24 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
       >
         <svg
           className="md-modal-arrow-svg"
-          data-placement="bottom"
-          height={12}
-          viewBox="0 0 24 12"
-          width={24}
+          data-placement="auto"
+          height={24}
+          viewBox="0 0 12 24"
+          width={12}
           xmlns="http://www.w3.org/svg/2000"
         >
           <defs>
             <clipPath
-              id="modal-arrow-cut-stroke-bottom"
+              id="modal-arrow-cut-stroke-auto"
             >
               <path
-                d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
+                d="m  l  q   l "
               />
             </clipPath>
           </defs>
           <path
-            clipPath="url(#modal-arrow-cut-stroke-bottom)"
-            d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
+            clipPath="url(#modal-arrow-cut-stroke-auto)"
+            d="m  l  q   l "
             data-color="primary"
           />
         </svg>
