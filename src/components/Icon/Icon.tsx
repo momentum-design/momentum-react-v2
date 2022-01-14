@@ -2,7 +2,14 @@ import React from 'react';
 import './Icon.style.scss';
 import { Props } from './Icon.types';
 import { useDynamicSVGImport } from '../../hooks/useDynamicSVGImport';
-import { COLOR_INHERIT, DEFAULTS, GLYPH_NOT_FOUND, STYLE } from './Icon.constants';
+import {
+  COLOR_INHERIT,
+  DEFAULTS,
+  EXCEPTION_ICONS_LIST,
+  GLYPH_NOT_FOUND,
+  STYLE,
+  VIEW_BOX_SPECS,
+} from './Icon.constants';
 import classnames from 'classnames';
 
 /**
@@ -71,7 +78,9 @@ const Icon: React.FC<Props> = (props: Props) => {
           className={classnames({ [STYLE.coloured]: isColoredIcon })}
           style={{ ...styleColors }}
           {...inheritedColors}
-          viewBox="0, 0, 32, 32"
+          viewBox={
+            EXCEPTION_ICONS_LIST.includes(name) ? VIEW_BOX_SPECS.SMALL : VIEW_BOX_SPECS.NORMAL
+          }
           width="100%"
           height="100%"
           data-scale={!autoScale && (scale || DEFAULTS.SCALE)}

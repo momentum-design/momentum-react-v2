@@ -1,6 +1,6 @@
 export { default as AlertBadge } from './AlertBadge';
 export { default as AlertBanner } from './AlertBanner';
-export { default as Avatar } from './Avatar';
+export { default as Avatar, PresenceType } from './Avatar';
 export { default as AvatarCompact } from './AvatarCompact';
 export { default as Badge } from './Badge';
 export { default as Banner } from './Banner';
@@ -47,3 +47,5 @@ export { default as AvatarMeetingsListItem } from './AvatarMeetingsListItem';
 export { default as MenuTrigger } from './MenuTrigger';
 export { default as Menu } from './Menu';
 export { default as Popover } from './Popover';
+export { default as DividerDot } from './DividerDot';
+

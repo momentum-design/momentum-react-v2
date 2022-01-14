@@ -1,6 +1,6 @@
 import Icon from '.';
 import React, { useEffect, useState } from 'react';
-import { STYLE } from './Icon.constants';
+import { STYLE, EXCEPTION_ICONS_LIST, VIEW_BOX_SPECS } from './Icon.constants';
 
 import { mountAndWait } from '../../../test/utils';
 
@@ -110,6 +110,14 @@ describe('<Icon />', () => {
 
       expect(container).toMatchSnapshot();
       jest.dontMock('@momentum-ui/icons-rebrand/svg/invalid_icon_name.svg');
+    });
+
+    it('should match snapshot with small icons', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(<Icon name="info-badge" scale={14} />);
+
+      expect(container).toMatchSnapshot();
     });
   });
 
@@ -246,6 +254,22 @@ describe('<Icon />', () => {
       const icon = wrapper.find('svg').getDOMNode();
 
       expect(icon.getAttribute('style')).toBe(null);
+    });
+
+    EXCEPTION_ICONS_LIST.forEach((name) => {
+      it(`check if icon ${name} receive right viewBox size`, async () => {
+        const wrapper = await mountAndWait(<Icon name={name} scale={14} />);
+        const icon = wrapper.find('svg').getDOMNode();
+
+        expect(icon.getAttribute('viewBox')).toBe(VIEW_BOX_SPECS.SMALL);
+      });
+    });
+
+    it(`check if icon receive default viewBox size`, async () => {
+      const wrapper = await mountAndWait(<Icon name="accessibility" scale={32} />);
+      const icon = wrapper.find('svg').getDOMNode();
+
+      expect(icon.getAttribute('viewBox')).toBe(VIEW_BOX_SPECS.NORMAL);
     });
   });
 

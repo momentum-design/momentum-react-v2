@@ -1,20 +1,49 @@
 name: Pull Request CI
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - master
+    types: [opened, labeled, reopened, synchronize]
 
 env:
   rid: ${{ github.run_id }}-${{ github.run_number }}
 
 jobs:
+  check-validation:
+    name: Check - Validation
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check Validation
+        run: |
+          HEAD_REPO=${{ github.event.pull_request.head.repo.full_name }}
+          BASE_REPO=${{ github.event.pull_request.base.repo.full_name }}
+          FROM_BASE=0; [ "$HEAD_REPO" == "$BASE_REPO" ] && FROM_BASE=1
+
+          HAS_VALIDATED_LABEL=${{ contains(github.event.pull_request.labels.*.name, 'validated') }}
+          VALIDATED=0; [ "$HAS_VALIDATED_LABEL" == "true" ] && VALIDATED=1
+
+          echo from base $FROM_BASE
+          echo validated $VALIDATED
+
+          if [[ $FROM_BASE == 1 || $VALIDATED == 1 ]]
+          then
+            echo 'pull request is validated, running tests'
+            exit 0
+          else
+            echo 'pull request is not validated, exiting'
+            exit 1
+          fi
+
   initialize:
     name: Initialize
+    needs: check-validation
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Setup Environment
         uses: actions/setup-node@v2
@@ -55,6 +84,8 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Setup Environment
         uses: actions/setup-node@v2
@@ -78,6 +109,8 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Setup Environment
         uses: actions/setup-node@v2
@@ -101,6 +134,8 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       
       - name: Setup Environment
         uses: actions/setup-node@v2
@@ -142,6 +177,8 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Setup Environment
         uses: actions/setup-node@v2

@@ -5,7 +5,7 @@
   align-items: center;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--theme-text-primary-normal);
+  color: var(--listitem-textsecondary);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
   outline: none;
@@ -20,7 +20,12 @@
 
     &:active,
     &.active {
+      color: var(--listitem-textprimary);
       background-color: var(--theme-background-primary-active);
+    }
+
+    &.focus {
+      color: var(--listitem-textprimary);
     }
   }
 
@@ -60,8 +65,14 @@
   }
 
   &[data-size='32'] {
+    // All immediate children and any deep .md-text-wrapper child
+    & > *,
+    .md-text-wrapper {
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+
     height: 2rem;
-    font-size: 0.75rem;
   }
 
   &[data-size='40'] {

@@ -1,79 +1,52 @@
 import React from 'react';
-import { Story } from '@storybook/react';
 
-import ThemeProvider, {
-  ThemeProviderProps as Props,
-  THEME_PROVIDER_CONSTANTS as CONSTANTS,
-} from './';
+import { Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+
+import ThemeProvider, { THEME_PROVIDER_CONSTANTS as CONSTANTS, ThemeProviderProps } from './';
+import argTypes from './ThemeProvider.stories.args';
+import Documentation from './ThemeProvider.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/ThemeProvider',
   component: ThemeProvider,
-  argTypes: {
-    theme: {
-      defaultValue: CONSTANTS.DEFAULTS.THEME,
-      description:
-        'The name of the target theme to apply to all child nodes of this `<ThemeProvider />`.',
-      options: [...Object.values(CONSTANTS.THEME_NAMES)],
-      control: { type: 'select' },
-      table: {
-        type: {
-          sumary: 'string',
-        },
-        defaultValue: {
-          summary: CONSTANTS.DEFAULTS.THEME,
-        },
-      },
-    },
-    children: {
-      defaultValue: 'Example Text',
-      description:
-        'Provides the child nodes for this element. The child nodes of this element are themed by the assigned theme.',
-      control: { type: 'text' },
-      table: {
-        type: {
-          summary: 'ReactNode',
-        },
-        defaultValue: {
-          summary: 'undefined',
-        },
-      },
+  parameters: {
+    expanded: true,
+    docs: {
+      page: DocumentationPage(Documentation, StyleDocs),
     },
   },
 };
 
-const Template: Story<Props> = (args) => {
-  const { children } = args;
-  const mutatedArgs = { ...args };
+const Example = Template<ThemeProviderProps>(ThemeProvider).bind({});
 
-  return (
-    <ThemeProvider {...mutatedArgs}>
+Example.argTypes = { ...argTypes };
+
+Example.args = {
+  theme: CONSTANTS.DEFAULTS.THEME,
+  children: (
+    <div
+      style={{
+        backgroundColor: 'var(--theme-background-solid-primary-normal)',
+        padding: '2rem',
+      }}
+    >
       <div
         style={{
-          backgroundColor: 'var(--theme-background-solid-primary-normal)',
-          padding: '2rem',
+          alignItems: 'center',
+          backgroundColor: 'var(--button-primary-background)',
+          color: 'var(--button-primary-text)',
+          display: 'flex',
+          height: '4rem',
+          justifyContent: 'center',
+          width: '16rem',
         }}
       >
-        <div
-          style={{
-            alignItems: 'center',
-            backgroundColor: 'var(--button-primary-background)',
-            color: 'var(--button-primary-text)',
-            display: 'flex',
-            height: '4rem',
-            justifyContent: 'center',
-            width: '16rem',
-          }}
-        >
-          {children}
-        </div>
+        Example Text
       </div>
-    </ThemeProvider>
-  );
+    </div>
+  ),
 };
-
-const Example = Template.bind({});
-
-Example.args = {};
 
 export { Example };
