@@ -28,12 +28,27 @@ export default {
     },
   },
   showArrow: {
-    description: `Whether the arrow should be shown
-    <br/><br/>default \`true\``,
+    description: `Whether the arrow should be shown`,
     control: { type: 'boolean' },
     table: {
       type: {
         summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'true',
+      },
+    },
+  },
+  variant: {
+    description: `Variant of the Popover - can be either small or medium`,
+    options: ['small', 'medium'],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'small',
       },
     },
   },

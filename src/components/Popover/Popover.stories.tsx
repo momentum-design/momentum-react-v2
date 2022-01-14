@@ -32,12 +32,8 @@ Example.args = {
   placement: 'bottom',
   showArrow: true,
   interactive: false,
-  containerProps: {
-    isPadded: true,
-    round: 25,
-    elevation: 0,
-  },
-  color: COLORS.TERTIARY,
+  variant: 'small',
+  color: COLORS.PRIMARY,
   delay: [0, 0],
   children: <p>Content Text Content Text</p>,
   triggerComponent: <ButtonSimple>Click me!</ButtonSimple>,
@@ -52,11 +48,7 @@ InteractiveContent.args = {
   placement: 'bottom',
   showArrow: true,
   interactive: true,
-  containerProps: {
-    isPadded: true,
-    round: 25,
-    elevation: 0,
-  },
+  variant: 'small',
   color: COLORS.TERTIARY,
   delay: [0, 0],
   triggerComponent: <ButtonPill>Click me!</ButtonPill>,
@@ -80,7 +72,7 @@ Common.args = {};
 Common.parameters = {
   variants: [
     {
-      children: <p>Non-interactive Content on TERTIARY color, round 25, elevation 1</p>,
+      children: <p>Non-interactive Content on TERTIARY color, variant medium</p>,
       trigger: 'click',
       triggerComponent: (
         <ButtonSimple style={{ height: '50px', width: '100px', marginRight: '10px' }}>
@@ -89,17 +81,11 @@ Common.parameters = {
       ),
       placement: 'right',
       interactive: false,
-      containerProps: {
-        isPadded: true,
-        round: 25,
-        elevation: 1,
-      },
+      variant: 'medium',
       color: COLORS.TERTIARY,
     },
     {
-      children: (
-        <p>Non-interactive Content on PRIMARY color, round 100, elevation 2, without arrow</p>
-      ),
+      children: <p>Non-interactive Content on PRIMARY color, variant small, without arrow</p>,
       trigger: 'mouseenter',
       triggerComponent: (
         <ButtonSimple style={{ height: '50px', width: '100px', marginRight: '10px' }}>
@@ -108,18 +94,12 @@ Common.parameters = {
       ),
       placement: 'bottom-start',
       interactive: false,
-      containerProps: {
-        isPadded: true,
-        round: 100,
-        elevation: 2,
-      },
+      variant: 'small',
       color: COLORS.PRIMARY,
       showArrow: false,
     },
     {
-      children: (
-        <p>Interactive Content on SECONDARY color, round 0, elevation 3, showDelay 500ms</p>
-      ),
+      children: <p>Interactive Content on SECONDARY color, variant medium, showDelay 500ms</p>,
       trigger: 'click mouseenter',
       triggerComponent: (
         <ButtonSimple style={{ height: '50px', width: '200px' }}>Click or hover me!</ButtonSimple>
@@ -127,15 +107,10 @@ Common.parameters = {
       placement: 'left-start',
       interactive: true,
       delay: [500],
-      containerProps: {
-        isPadded: true,
-        round: 0,
-        elevation: 3,
-      },
+      variant: 'medium',
       color: COLORS.SECONDARY,
     },
   ],
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example, InteractiveContent, Common };

@@ -1,6 +1,9 @@
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
 import type { TippyProps } from '@tippyjs/react';
-import type { Elevation, Round, Color } from '../ModalContainer/ModalContainer.types';
+import type { Color } from '../ModalContainer/ModalContainer.types';
+
+// variant - based on Figma mockups:
+export type VariantType = 'small' | 'medium';
 
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
@@ -10,27 +13,6 @@ export type PopoverInstance = {
   hide: () => void;
 };
 
-export type ContainerPropsType = {
-  /**
-   * Whether padding should be applied
-   *
-   * @default true
-   */
-  isPadded?: boolean;
-  /**
-   * borderRadius of the Container - each value corresponds to rem percentage (e.g. value 25 = 0.25rem)
-   *
-   * Possible values: 0 | 25 | 50 | 75 | 100 | 125 | 150
-   */
-  round?: Round;
-  /**
-   * elevation of the Container - each value corresponds to a box shadow applied to the container
-   *
-   * Possible values: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
-   */
-  elevation?: Elevation;
-};
-
 export interface Props {
   visible?: boolean;
   /**
@@ -38,9 +20,11 @@ export interface Props {
    */
   children: ReactNode;
   /**
-   * Props to modify the Container around the content (=children)
+   * Variant of the Popover - can be either small or medium
+   *
+   * @default `small`
    */
-  containerProps?: ContainerPropsType;
+  variant?: VariantType;
   /**
    * Determines the events that cause the Popover to show. Multiple event names should be separated by spaces.
    * For example to allow both click and hover, use `click mouseenter` as the trigger.
