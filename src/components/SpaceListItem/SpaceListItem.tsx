@@ -8,6 +8,7 @@ import ListItemBase from '../ListItemBase';
 import ListItemBaseSection from '../ListItemBaseSection';
 import Text from '../Text';
 import Icon from '../Icon';
+import DividerDot from '../DividerDot';
 
 //TODO: support 2-line labels for right/position-end section.
 /**
@@ -46,8 +47,7 @@ const SpaceListItem: FC<Props> = forwardRef(
             <Text type="body-primary" data-test="list-item-first-line">
               {firstLine}
             </Text>
-            {/* //TODO: change with dot divider when available */}
-            {isCompact && <span className={STYLE.dotDivider}> - </span>}
+            {isCompact && <DividerDot data-test="compact-mode-divider-dot" />}
             <Text
               style={{ color: `var(--theme-text-team-${teamColor}-normal)` }}
               type="body-secondary"

@@ -7,7 +7,7 @@ import Avatar from '../Avatar';
 import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import ListItemBase from '../ListItemBase';
-
+import DividerDot from '../DividerDot';
 import * as ListContext from '../List/List.utils';
 import { STYLE } from './SpaceListItem.constants';
 
@@ -253,6 +253,18 @@ describe('<SpaceListItem />', () => {
         .getDOMNode();
 
       expect(element.textContent).toBe('one - two');
+    });
+
+    it('should have provided dot in compact mode', async () => {
+      expect.assertions(1);
+
+      const secondLine = 'testteam';
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+      );
+
+      expect(container.find("[data-test='compact-mode-divider-dot']").exists()).toBe(true);
     });
 
     it('should have provided isNewActivity class when isNewActivity is provided', async () => {
