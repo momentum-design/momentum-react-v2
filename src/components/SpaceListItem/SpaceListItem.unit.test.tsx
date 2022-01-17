@@ -7,7 +7,6 @@ import Avatar from '../Avatar';
 import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import ListItemBase from '../ListItemBase';
-import DividerDot from '../DividerDot';
 import * as ListContext from '../List/List.utils';
 import { STYLE } from './SpaceListItem.constants';
 
