@@ -1,38 +1,35 @@
-import { ReactElement } from 'react';
-import { AriaDialogProps } from '@react-types/dialog';
-import { FocusScopeProps } from '@react-aria/focus';
-import { ModalProps } from '@react-types/overlays';
+import { CSSProperties, ReactNode } from 'react';
 
-import { ModalContainerProps } from '../ModalContainer';
+export type Color = 'primary' | 'secondary';
 
-export type Positioning = 'bottom' | 'left' | 'right' | 'top';
-export interface TargetPosition {
-  center: {
-    x: number;
-    y: number;
-  };
-  horizontalEdgeOffset: number;
-  verticalEdgeOffset: number;
-}
-
-export interface Props extends AriaDialogProps, FocusScopeProps, ModalContainerProps, ModalProps {
+export interface Props {
   /**
-   * Child components of this component. This is now a required prop.
+   * Child components of this Overlay.
    */
-  children: ReactElement;
+  children?: ReactNode;
 
   /**
-   * Whether this component is currently open.
+   * Custom class for overriding this component's CSS.
    */
-  isOpen?: boolean;
+  className?: string;
 
   /**
-   * Position to place this element in correlation to the target position.
+   * Color for this component.
    */
-  positioning?: Positioning;
+  color?: Color;
 
   /**
-   * Target element positioning in the event of a trigger.
+   * If this component covers the full view port.
    */
-  targetPosition?: TargetPosition;
+  fullscreen?: boolean;
+
+  /**
+   * Custom id for overriding this component's CSS.
+   */
+  id?: string;
+
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
 }

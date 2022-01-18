@@ -1,17 +1,19 @@
-import { Positioning } from './Overlay.types';
+import { Color } from './Overlay.types';
 
-const POSITIONINGS: Record<string, Positioning> = {
-  BOTTOM: 'bottom',
-  LEFT: 'left',
-  RIGHT: 'right',
-  TOP: 'top',
+const CLASS_PREFIX = 'md-overlay';
+
+const COLORS: Record<string, Color> = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
 };
 
 const DEFAULTS = {
-  AUTO_FOCUS: false,
-  CONTAIN: false,
-  IS_OPEN: true,
-  RESTORE_FOCUS: false,
+  COLOR: COLORS.PRIMARY,
+  FULLSCREEN: false,
 };
 
-export { DEFAULTS, POSITIONINGS };
+const STYLE = {
+  wrapper: `${CLASS_PREFIX}-wrapper`,
+};
+
+export { CLASS_PREFIX, COLORS, DEFAULTS, STYLE };
