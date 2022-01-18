@@ -8,6 +8,7 @@ export enum MeetingMarker {
   TentativeInactive = 'TentativeInactive', //gray stripe border
   Transparent = 'Transparent', // transparent no border
   Gray = 'Gray', // gray no border
+  GrayStatic = 'GrayStatic', // gray no border and non-interactive
 }
 export interface Props extends PressEvents {
   /**
