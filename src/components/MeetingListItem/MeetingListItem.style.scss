@@ -22,6 +22,17 @@
     }
   }
 
+  &[data-color='GrayStatic'] {
+    background-color: var(--theme-background-secondary-normal);
+
+    &.hover,
+    &:hover,
+    &.active,
+    &:active {
+      background-color: var(--theme-background-secondary-normal);
+    }
+  }
+
   .md-meeting-list-item-start-section {
     display: flex;
     align-items: center;

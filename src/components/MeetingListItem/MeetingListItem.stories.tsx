@@ -18,6 +18,7 @@ import ButtonPill from '../ButtonPill';
 import ButtonGroup from '../ButtonGroup';
 import ButtonCircle from '../ButtonCircle';
 import Text from '../Text';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/MeetingListItem',
@@ -39,6 +40,7 @@ const Example = Template((args) => (
       MeetingListItem,
       {
         ...args,
+        onPress: action('onPress'),
         children: (
           <>
             <Text type="body-primary" key="child1">
@@ -351,6 +353,16 @@ Colors.parameters = {
       ),
       children: <Text type="body-primary">{MeetingMarker.Gray}</Text>,
       color: MeetingMarker.Gray,
+      image: <Avatar initials="TU" />,
+    },
+    {
+      buttonGroup: (
+        <ButtonGroup spaced>
+          <ButtonHyperlink>Link</ButtonHyperlink>
+        </ButtonGroup>
+      ),
+      children: <Text type="body-primary">{MeetingMarker.GrayStatic}</Text>,
+      color: MeetingMarker.GrayStatic,
       image: <Avatar initials="TU" />,
     },
   ],
