@@ -2,43 +2,80 @@
 
 exports[`<Overlay /> snapshot should match snapshot 1`] = `
 <Overlay>
-  <FocusScope
-    autoFocus={false}
-    contain={false}
-    restoreFocus={false}
-  >
-    <span
-      data-focus-scope-start={true}
-      hidden={true}
-    />
-    <ModalContainer
-      aria-labelledby={null}
-      onKeyDown={[Function]}
-      role="dialog"
-      style={Object {}}
-      tabIndex={-1}
-    >
-      <div
-        aria-labelledby={null}
-        className="md-modal-container-wrapper"
-        data-color="primary"
-        data-elevation={0}
-        data-padded={false}
-        data-round={0}
-        onKeyDown={[Function]}
-        role="dialog"
-        style={Object {}}
-        tabIndex={-1}
-      >
-        <div>
-          children
-        </div>
-      </div>
-    </ModalContainer>
-    <span
-      data-focus-scope-end={true}
-      hidden={true}
-    />
-  </FocusScope>
+  <div
+    className="md-overlay-wrapper"
+    data-color="primary"
+    data-fullscreen={false}
+  />
+</Overlay>
+`;
+
+exports[`<Overlay /> snapshot should match snapshot with className 1`] = `
+<Overlay
+  className="example-class"
+>
+  <div
+    className="example-class md-overlay-wrapper"
+    data-color="primary"
+    data-fullscreen={false}
+  />
+</Overlay>
+`;
+
+exports[`<Overlay /> snapshot should match snapshot with color 1`] = `
+<Overlay
+  color="secondary"
+>
+  <div
+    className="md-overlay-wrapper"
+    data-color="secondary"
+    data-fullscreen={false}
+  />
+</Overlay>
+`;
+
+exports[`<Overlay /> snapshot should match snapshot with fullscreen 1`] = `
+<Overlay
+  fullscreen={true}
+>
+  <div
+    className="md-overlay-wrapper"
+    data-color="primary"
+    data-fullscreen={true}
+  />
+</Overlay>
+`;
+
+exports[`<Overlay /> snapshot should match snapshot with id 1`] = `
+<Overlay
+  id="example-id"
+>
+  <div
+    className="md-overlay-wrapper"
+    data-color="primary"
+    data-fullscreen={false}
+    id="example-id"
+  />
+</Overlay>
+`;
+
+exports[`<Overlay /> snapshot should match snapshot with style 1`] = `
+<Overlay
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-overlay-wrapper"
+    data-color="primary"
+    data-fullscreen={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  />
 </Overlay>
 `;

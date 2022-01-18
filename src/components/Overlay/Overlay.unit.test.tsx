@@ -1,177 +1,137 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { FocusScope } from '@react-aria/focus';
-
-import ModalContainer from '../ModalContainer';
 
 import Overlay, { OVERLAY_CONSTANTS as CONSTANTS } from './';
 
 describe('<Overlay />', () => {
-  const commonChildren = <div>children</div>;
-  const commonTargetPosition = {
-    center: {
-      x: 100,
-      y: 100,
-    },
-    horizontalEdgeOffset: 50,
-    verticalEdgeOffset: 50,
-  };
-
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<Overlay>{commonChildren}</Overlay>);
+      const container = mount(<Overlay />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with className', () => {
+      expect.assertions(1);
+
+      const className = 'example-class';
+
+      const container = mount(<Overlay className={className} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with id', () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const container = mount(<Overlay id={id} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with style', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      const container = mount(<Overlay style={style} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with color', () => {
+      expect.assertions(1);
+
+      const color = Object.values(CONSTANTS.COLORS).pop();
+
+      const container = mount(<Overlay color={color} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with fullscreen', () => {
+      expect.assertions(1);
+
+      const container = mount(<Overlay fullscreen />);
 
       expect(container).toMatchSnapshot();
     });
   });
 
   describe('attributes', () => {
-    it('should extend <ModalContainer />', () => {
+    it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const component = mount(<Overlay>{commonChildren}</Overlay>).find(Overlay);
-      const target = component.find(ModalContainer);
+      const element = mount(<Overlay />)
+        .find(Overlay)
+        .getDOMNode();
 
-      expect(target.exists()).toBe(true);
+      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
 
-    it('should render when isOpen is true', () => {
+    it('should have provided class when className is provided', () => {
       expect.assertions(1);
 
-      const isOpen = true;
+      const className = 'example-class';
 
-      const component = mount(<Overlay isOpen={isOpen}>{commonChildren}</Overlay>).find(
-        ModalContainer
-      );
+      const element = mount(<Overlay className={className} />)
+        .find(Overlay)
+        .getDOMNode();
 
-      expect(component.exists()).toBe(true);
+      expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should not render when isOpen is false', () => {
+    it('should have provided id when id is provided', () => {
       expect.assertions(1);
 
-      const isOpen = false;
+      const id = 'example-id';
 
-      const component = mount(<Overlay isOpen={isOpen}>{commonChildren}</Overlay>).find(
-        ModalContainer
-      );
+      const element = mount(<Overlay id={id} />)
+        .find(Overlay)
+        .getDOMNode();
 
-      expect(component.exists()).toBe(false);
+      expect(element.id).toBe(id);
     });
 
-    it("should ammend a top style when positioning is 'bottom'", () => {
+    it('should have provided style when style is provided', () => {
       expect.assertions(1);
 
-      const positioning = CONSTANTS.POSITIONINGS.BOTTOM;
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
 
-      const component = mount(
-        <Overlay positioning={positioning} targetPosition={commonTargetPosition}>
-          {commonChildren}
-        </Overlay>
-      ).find(Overlay);
+      const element = mount(<Overlay style={style} />)
+        .find(Overlay)
+        .getDOMNode();
 
-      const target = component.find(ModalContainer);
-
-      const expected = 'position: fixed; left: 100px; top: 150px; transform: translate(-50%, 0);';
-
-      expect(target.getDOMNode().getAttribute('style')).toBe(expected);
+      expect(element.getAttribute('style').includes(styleString)).toBe(true);
     });
 
-    it("should ammend a top style when positioning is 'left'", () => {
+    it('should have provided data-color when color is provided', () => {
       expect.assertions(1);
 
-      const positioning = CONSTANTS.POSITIONINGS.LEFT;
+      const color = Object.values(CONSTANTS.COLORS).pop();
 
-      const component = mount(
-        <Overlay positioning={positioning} targetPosition={commonTargetPosition}>
-          {commonChildren}
-        </Overlay>
-      ).find(Overlay);
+      const element = mount(<Overlay color={color} />)
+        .find(Overlay)
+        .getDOMNode();
 
-      const target = component.find(ModalContainer);
-
-      const expected =
-        'position: fixed; right: calc(100vw - 50px); top: 100px; transform: translate(0, -50%);';
-
-      expect(target.getDOMNode().getAttribute('style')).toBe(expected);
+      expect(element.getAttribute('data-color')).toBe(color);
     });
 
-    it("should ammend a top style when positioning is 'right'", () => {
+    it('should have provided data-fullscreen when fullscreen is provided', () => {
       expect.assertions(1);
 
-      const positioning = CONSTANTS.POSITIONINGS.RIGHT;
+      const fullscreen = true;
 
-      const component = mount(
-        <Overlay positioning={positioning} targetPosition={commonTargetPosition}>
-          {commonChildren}
-        </Overlay>
-      ).find(Overlay);
+      const element = mount(<Overlay fullscreen={fullscreen} />)
+        .find(Overlay)
+        .getDOMNode();
 
-      const target = component.find(ModalContainer);
-
-      const expected = 'position: fixed; left: 150px; top: 100px; transform: translate(0, -50%);';
-
-      expect(target.getDOMNode().getAttribute('style')).toBe(expected);
-    });
-
-    it("should ammend a top style when positioning is 'top'", () => {
-      expect.assertions(1);
-
-      const positioning = CONSTANTS.POSITIONINGS.TOP;
-
-      const component = mount(
-        <Overlay positioning={positioning} targetPosition={commonTargetPosition}>
-          {commonChildren}
-        </Overlay>
-      ).find(Overlay);
-
-      const target = component.find(ModalContainer);
-
-      const expected = 'position: fixed; left: 100px; transform: translate(-50%, 0);';
-
-      expect(target.getDOMNode().getAttribute('style')).toBe(expected);
-    });
-
-    it('should not set style when targetPosition is not supplied with position', () => {
-      expect.assertions(1);
-
-      const positioning = Object.values(CONSTANTS.POSITIONINGS).pop();
-
-      const component = mount(<Overlay positioning={positioning}>{commonChildren}</Overlay>).find(
-        Overlay
-      );
-
-      const target = component.find(ModalContainer);
-
-      expect(target.getDOMNode().getAttribute('style')).toBeNull();
-    });
-
-    it('should contain a focus scope', () => {
-      expect.assertions(1);
-
-      const component = mount(<Overlay>{commonChildren}</Overlay>).find(Overlay);
-
-      const target = component.find(FocusScope);
-
-      expect(target.exists()).toBe(true);
-    });
-
-    it('should pass focus scope props', () => {
-      expect.assertions(1);
-
-      const component = mount(<Overlay>{commonChildren}</Overlay>).find(Overlay);
-
-      const target = component.find(FocusScope);
-
-      const expected = {
-        autoFocus: CONSTANTS.DEFAULTS.AUTO_FOCUS,
-        contain: CONSTANTS.DEFAULTS.CONTAIN,
-        restoreFocus: CONSTANTS.DEFAULTS.RESTORE_FOCUS,
-      };
-
-      expect(target.props()).toMatchObject(expected);
+      expect(element.getAttribute('data-fullscreen')).toBe(`${fullscreen}`);
     });
   });
 });

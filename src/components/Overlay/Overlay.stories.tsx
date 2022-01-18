@@ -1,6 +1,10 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import React, { useState } from 'react';
+import { Story } from '@storybook/react';
+
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
+
+import ModalContainer from '../ModalContainer';
 
 import Overlay, { OverlayProps } from './';
 import argTypes from './Overlay.stories.args';
@@ -17,28 +21,41 @@ export default {
   },
 };
 
-const Example = Template<OverlayProps>(Overlay).bind({});
+const Example: Story<OverlayProps> = (args: OverlayProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div
+      style={{
+        alignItems: 'center',
+        backgroundColor: 'var(--theme-background-solid-primary-normal)',
+        border: '1px var(--modal-primary-border-style) var(--modal-primary-border-color)',
+        display: 'flex',
+        padding: '4rem',
+        position: 'relative',
+        width: '80%',
+      }}
+    >
+      {isOpen && (
+        <Overlay {...args}>
+          <ModalContainer color="tertiary" elevation={2} round={50} isPadded>
+            <div style={{ marginRight: '1rem' }}>Foreground Container</div>
+            <button onClick={toggleOpen}>Close Overlay</button>
+          </ModalContainer>
+        </Overlay>
+      )}
+      <ModalContainer color="tertiary" elevation={2} round={50} isPadded>
+        <div style={{ marginRight: '1rem' }}>Background Container</div>
+        <button onClick={toggleOpen}>Open Overlay</button>
+      </ModalContainer>
+    </div>
+  );
+};
 
 Example.argTypes = { ...argTypes };
 
-Example.args = {
-  children: 'Children',
-  round: 50,
-  isPadded: true,
-};
-
-const Common = MultiTemplate<OverlayProps>(Overlay).bind({});
-
-Common.argTypes = { ...argTypes };
-
-Common.args = {
-  children: 'Children',
-  round: 50,
-  isPadded: true,
-};
-
-Common.parameters = {
-  variants: [{}, { contain: true }],
-};
-
-export { Example, Common };
+export { Example };

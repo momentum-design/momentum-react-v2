@@ -1,3 +1,28 @@
-The `<Overlay />` component. This component fully extends `<ModalContainer />`, but adds a dynamic interactive layer for accessibility. This is abstracted from `<ModalContainer />` to help improve performance when rendering `<ModalContainer />`s.
+The `<Overlay />` component is used to bring attention to any provided children of itself by placing a colored element over its parent component or the entire viewport.
 
-For additional information on how the WAI-ARIA in this component operates, view this [React-Aria documentation](https://react-spectrum.adobe.com/react-aria/useDialog.html).
+Note that the render state of this component must be managed manually from within its child components. This includes any action that is used to remove/deconstruct the `<Overlay />` component.
+
+The default `z-index` for this component is `1000`.
+
+Example:
+
+```jsx
+const App = () => {
+  const [overlayOpen, setOverlayOpen] = useState(false);
+
+  const toggleState = () => {
+    setOverlayOpen(!overlayOpen);
+  };
+
+  return (
+    <div id="app">
+      <button onClick={toggleState}>Open</button>
+      {overlayOpen && (
+        <Overlay fullscreen>
+          <button onClick={toggleState}>Close</button>
+        </Overlay>
+      )}
+    </div>
+  )
+}
+```
