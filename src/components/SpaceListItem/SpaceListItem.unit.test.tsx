@@ -9,6 +9,7 @@ import { mountAndWait } from '../../../test/utils';
 import ListItemBase from '../ListItemBase';
 import * as ListContext from '../List/List.utils';
 import { STYLE } from './SpaceListItem.constants';
+import DividerDot from '../DividerDot';
 
 describe('<SpaceListItem />', () => {
   beforeEach(() => {
@@ -255,7 +256,7 @@ describe('<SpaceListItem />', () => {
     });
 
     it('should have provided dot in compact mode', async () => {
-      expect.assertions(1);
+      expect.hasAssertions();
 
       const secondLine = 'testteam';
 
@@ -263,7 +264,21 @@ describe('<SpaceListItem />', () => {
         <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
       );
 
-      expect(container.find("[data-test='compact-mode-divider-dot']").exists()).toBe(true);
+      expect(
+        container.find(DividerDot).filter("[data-test='compact-mode-divider-dot']").props()
+      ).toEqual({ 'data-test': 'compact-mode-divider-dot' });
+    });
+
+    it('checks divider dot position', async () => {
+      expect.hasAssertions();
+
+      const secondLine = 'testteam';
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+      );
+
+      expect(container).toMatchSnapshot();
     });
 
     it('should have provided isNewActivity class when isNewActivity is provided', async () => {

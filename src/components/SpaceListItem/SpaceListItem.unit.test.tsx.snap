@@ -1,5 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SpaceListItem /> attributes checks divider dot position 1`] = `
+<SpaceListItem
+  firstLine="firstLine"
+  isCompact={true}
+  secondLine="testteam"
+>
+  <ListItemBase
+    className=""
+    shape="isPilled"
+    size={32}
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          className="md-list-item-base-wrapper"
+          data-disabled={false}
+          data-interactive={true}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={32}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+          tabIndex={-1}
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper text-row"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper text-row"
+              data-position="middle"
+            >
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
+                  data-test="list-item-first-line"
+                  data-type="body-primary"
+                >
+                  firstLine
+                </p>
+              </Text>
+              <DividerDot
+                data-test="compact-mode-divider-dot"
+              >
+                <div
+                  className="md-divider-dot-wrapper"
+                />
+              </DividerDot>
+              <Text
+                data-test="list-item-second-line"
+                style={
+                  Object {
+                    "color": "var(--theme-text-team-default-normal)",
+                  }
+                }
+                type="body-secondary"
+              >
+                <small
+                  className="md-text-wrapper"
+                  data-test="list-item-second-line"
+                  data-type="body-secondary"
+                  style={
+                    Object {
+                      "color": "var(--theme-text-team-default-normal)",
+                    }
+                  }
+                >
+                  testteam
+                </small>
+              </Text>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
 exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
 <SpaceListItem>
   <ListItemBase
