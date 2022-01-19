@@ -15,17 +15,19 @@ const theme = (Story, { globals }) => {
       : {};
 
   return (
-    <ThemeProvider id="theme-provider" theme={theme}>
-      <div
-        style={{
-          ...displayProperties,
-          backgroundColor: 'var(--theme-background-solid-primary-normal)',
-          color: 'var(--theme-text-primary-normal)',
-          padding: '2rem',
-        }}
-      >
-        <Story />
-      </div>
+    <ThemeProvider
+      id="theme-provider"
+      theme={theme}
+      style={{
+        backgroundColor: 'var(--theme-background-solid-primary-normal)',
+        color: 'var(--theme-text-primary-normal)',
+        height: '100vh',
+        overflowY: 'scroll',
+        padding: '2rem',
+        ...displayProperties,
+      }}
+    >
+      <Story />
     </ThemeProvider>
   );
 };

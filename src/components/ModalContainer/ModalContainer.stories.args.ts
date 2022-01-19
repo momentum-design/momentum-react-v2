@@ -1,18 +1,40 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from '.';
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
+import { DEFAULTS } from './ModalContainer.constants';
 
 const modalContainerArgTypes = {
-  arrow: {
-    description: 'Where to render the `<ModalArrow />` for this component.',
+  showArrow: {
+    description: `Whether the arrow should be shown
+    <br/><br/>
+    NOTE: showing the arrow and using the placement prop will not position it correctly - positioning of the arrow
+    correctly will only be through the Popover component. Whenever there's the use case
+    to show ModalContainer with a arrow, please use the Popover component instead.`,
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.SHOW_ARROW,
+      },
+    },
+  },
+  placement: {
+    description: `Placement of the Modal relative to the trigger component. 
+      <br/><br/>
+    NOTE: showing the arrow and using the placement prop will not position it correctly - positioning of the arrow
+    correctly will only be through the Popover component. Whenever there's the use case
+    to show ModalContainer with a arrow, please use the Popover component instead.`,
     control: { type: 'select' },
-    options: [undefined, ...Object.values(CONSTANTS.ARROWS)],
+    options: [undefined, ...Object.values(PLACEMENTS as Record<string, string>)],
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: DEFAULTS.PLACEMENT,
       },
     },
   },
@@ -37,7 +59,7 @@ const modalContainerArgTypes = {
         summary: 'string',
       },
       defaultValue: {
-        summary: 'primary',
+        summary: DEFAULTS.COLOR,
       },
     },
   },
@@ -51,7 +73,7 @@ const modalContainerArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: '0',
+        summary: DEFAULTS.ELEVATION,
       },
     },
   },
@@ -63,7 +85,7 @@ const modalContainerArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: 'false',
+        summary: DEFAULTS.IS_PADDED,
       },
     },
   },
@@ -77,7 +99,7 @@ const modalContainerArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: '0',
+        summary: DEFAULTS.ROUND,
       },
     },
   },

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Popover /> snapshot should match snapshot 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+</div>
+`;
+
+exports[`<Popover /> snapshot should match snapshot with className 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+</div>
+`;
+
+exports[`<Popover /> snapshot should match snapshot with color 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+</div>
+`;
+
+exports[`<Popover /> snapshot should match snapshot with id 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+</div>
+`;
+
+exports[`<Popover /> snapshot should match snapshot with style 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+</div>
+`;

@@ -29,23 +29,6 @@ Example.args = {
   isPadded: true,
 };
 
-const Arrows = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
-
-Arrows.argTypes = { ...argTypes };
-delete Arrows.argTypes.arrow;
-
-Arrows.parameters = {
-  variants: [undefined, ...Object.values(CONSTANTS.ARROWS)].map((arrow) => ({
-    arrow,
-    children: `arrow === '${arrow}'`,
-  })),
-};
-
-Arrows.args = {
-  color: 'tertiary',
-  isPadded: true,
-};
-
 const Colors = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
 
 Colors.argTypes = { ...argTypes };
@@ -146,4 +129,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Arrows, Colors, Elevations, Padding, Rounding, Common };
+export { Example, Colors, Elevations, Padding, Rounding, Common };

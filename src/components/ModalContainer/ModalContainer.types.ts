@@ -1,15 +1,28 @@
 import { CSSProperties, ReactNode } from 'react';
+import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
-export type Arrow = 'bottom' | 'left' | 'right' | 'top';
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 export type Round = 0 | 25 | 50 | 75 | 100 | 125 | 150;
 
 export interface Props {
   /**
-   * Where to render the ModalArrow component.
+   * Whether the arrow should be shown
+   *
+   * @default false
    */
-  arrow?: Arrow;
+  showArrow?: boolean;
+
+  /**
+   * Placement of the Modal relative to the trigger component. The
+   * arrow will be placed accordingly.
+   *
+   * Possible values: `top`, `top-start`, `top-end`, `right`, `right-start`, `right-end`, `bottom`, `bottom-start`, `bottom-end`,
+   * `left`, `left-start`, `left-end`, `auto`, `auto-start`, `auto-end`
+   *
+   * @default `bottom`
+   */
+  placement?: PlacementType;
 
   /**
    * Child components of this ModalContainer.
@@ -43,6 +56,8 @@ export interface Props {
 
   /**
    * If this ModalContainer is round and to what degree.
+   *
+   * Can be 0 | 25 | 50 | 75 | 100 | 125 | 150
    */
   round?: Round;
 

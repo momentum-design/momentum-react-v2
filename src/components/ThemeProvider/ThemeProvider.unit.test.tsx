@@ -17,6 +17,16 @@ describe('<ThemeProvider />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with style', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      const container = mount(<ThemeProvider style={style} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -50,6 +60,19 @@ describe('<ThemeProvider />', () => {
         .getDOMNode();
 
       expect(element.classList.contains(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
+    });
+
+    it('should have provided style when style is provided', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
+
+      const element = mount(<ThemeProvider style={style} />)
+        .find(ThemeProvider)
+        .getDOMNode();
+
+      expect(element.getAttribute('style')).toBe(styleString);
     });
 
     it('should pass child props', () => {
