@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SpaceListItem /> attributes checks divider dot position 1`] = `
+exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 1`] = `
 <SpaceListItem
   firstLine="firstLine"
   isCompact={true}
