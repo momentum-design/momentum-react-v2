@@ -176,6 +176,18 @@ describe('<SpaceListItem />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('checks divider dot position in compact mode', async () => {
+      expect.assertions(1);
+
+      const secondLine = 'testteam';
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -256,7 +268,7 @@ describe('<SpaceListItem />', () => {
     });
 
     it('should have provided dot in compact mode', async () => {
-      expect.hasAssertions();
+      expect.assertions(1);
 
       const secondLine = 'testteam';
 
@@ -267,18 +279,6 @@ describe('<SpaceListItem />', () => {
       expect(
         container.find(DividerDot).filter("[data-test='compact-mode-divider-dot']").props()
       ).toEqual({ 'data-test': 'compact-mode-divider-dot' });
-    });
-
-    it('checks divider dot position', async () => {
-      expect.hasAssertions();
-
-      const secondLine = 'testteam';
-
-      const container = await mountAndWait(
-        <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
-      );
-
-      expect(container).toMatchSnapshot();
     });
 
     it('should have provided isNewActivity class when isNewActivity is provided', async () => {
