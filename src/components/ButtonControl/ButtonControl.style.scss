@@ -1,14 +1,10 @@
 .md-button-control-wrapper {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0); // IEFIX
   background-color: var(--button-ghost-background);
-  border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
   border: var(--md-globals-border-clear);
-  color: rgba(0, 0, 0, 0.95); // IEFIX
   color: var(--button-ghost-text);
   cursor: pointer;
   display: flex;
-  font-family: CiscoSansTT; // IEFIX
   font-family: var(--md-globals-font-default);
   height: 2rem;
   justify-content: center;
@@ -19,17 +15,29 @@
   width: 2rem;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.07); // IEFIX
     background-color: var(--button-ghost-background-hovered);
-    color: rgba(0, 0, 0, 0.95); // IEFIX
     color: var(--button-ghost-text-hovered);
   }
 
   &:active {
-    background-color: rgba(0, 0, 0, 0.2); // IEFIX
     background-color: var(--button-secondary-background-pressed);
-    color: rgba(0, 0, 0, 0.95); // IEFIX
     color: var(--button-secondary-text-pressed);
+  }
+
+  &[data-disabled='true'] {
+    background-color: var(--button-ghost-background);
+    color: var(--button-primary-text-disabled);
+    cursor: auto;
+
+    &:hover {
+      background-color: var(--button-ghost-background);
+      color: var(--button-primary-text-disabled);
+    }
+
+    &:active {
+      background-color: var(--button-ghost-background);
+      color: var(--button-primary-text-disabled);
+    }
   }
 
   &[data-circular='true'] {

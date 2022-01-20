@@ -52,6 +52,14 @@ describe('<ButtonControl />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with isDisabled', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(<ButtonControl control="close" isDisabled />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -117,6 +125,17 @@ describe('<ButtonControl />', () => {
       const element = wrapper.find(ButtonControl).getDOMNode();
 
       expect(element.getAttribute('data-circular')).toBe('true');
+    });
+
+    it('should have provided data-disabled when isDisabled is provided', async () => {
+      expect.assertions(1);
+
+      const isDisabled = true;
+
+      const wrapper = await mountAndWait(<ButtonControl control="close" isDisabled={isDisabled} />);
+      const element = wrapper.find(ButtonControl).getDOMNode();
+
+      expect(element.getAttribute('data-disabled')).toBe(`${isDisabled}`);
     });
   });
 
