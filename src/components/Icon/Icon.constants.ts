@@ -1,7 +1,9 @@
+import type { IconWeight } from './Icon.types';
+
 const CLASS_PREFIX = 'md-icon';
 const COLOR_INHERIT = 'currentColor';
 
-const WEIGHTS: Record<string, string> = {
+const WEIGHTS: Record<string, IconWeight> = {
   light: 'light',
   regular: 'regular',
   bold: 'bold',
