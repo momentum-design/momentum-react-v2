@@ -32,7 +32,7 @@ Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
 Common.parameters = {
-  variants: [...Object.values(CONSTANTS.CONTROLS).map((control) => ({ control }))],
+  variants: [...Object.values(CONSTANTS.CONTROLS).map((control, key) => ({ control, key }))],
 };
 
 export { Example, Common };

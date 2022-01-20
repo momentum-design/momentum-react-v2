@@ -6,10 +6,7 @@ import {
 
 import { BUTTON_CONTROL_CONSTANTS as CONSTANTS } from './';
 
-export default {
-  ...commonStyles,
-  ...commonHTMLAttributes,
-  ...commonAriaButton,
+const buttonControlArgTypes = {
   control: {
     description: 'Control type',
     control: { type: 'select' },
@@ -35,4 +32,13 @@ export default {
       },
     },
   },
+};
+
+export { buttonControlArgTypes };
+
+export default {
+  ...commonStyles,
+  ...commonHTMLAttributes,
+  ...commonAriaButton,
+  ...buttonControlArgTypes,
 };
