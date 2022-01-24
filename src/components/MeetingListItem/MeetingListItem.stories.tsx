@@ -31,6 +31,7 @@ export default {
   },
   args: {
     children: 'A',
+    onPress: action('onPress'),
   },
 };
 
@@ -40,7 +41,6 @@ const Example = Template((args) => (
       MeetingListItem,
       {
         ...args,
-        onPress: action('onPress'),
         children: (
           <>
             <Text type="body-primary" key="child1">
