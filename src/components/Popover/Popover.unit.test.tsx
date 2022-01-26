@@ -6,6 +6,7 @@ import '@testing-library/jest-dom';
 import Popover from './';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import { PopoverInstance } from './Popover.types';
+import { ButtonSimple } from '..';
 
 describe('<Popover />', () => {
   describe('snapshot', () => {
@@ -181,6 +182,29 @@ describe('<Popover />', () => {
 
       // after another click, popover should be hidden again
       userEvent.click(screen.getByRole('button', { name: /click me!/i }));
+      await waitForElementToBeRemoved(() => screen.queryByText('Content'));
+    });
+
+    it('should show/hide Popover on tab + enter', async () => {
+      expect.assertions(2);
+      render(
+        <Popover triggerComponent={<ButtonSimple useNativeKeyDown>Click Me!</ButtonSimple>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after tab and enter, popover should be shown
+      userEvent.tab();
+      userEvent.keyboard('{enter}');
+      const content = await screen.findByText('Content');
+      expect(content).toBeVisible();
+
+      // after hitting space, popover should be hidden again
+      userEvent.keyboard('{space}');
       await waitForElementToBeRemoved(() => screen.queryByText('Content'));
     });
 

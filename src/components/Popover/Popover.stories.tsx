@@ -37,7 +37,7 @@ Example.args = {
   color: COLORS.PRIMARY,
   delay: [0, 0],
   children: <p>Content Text Content Text</p>,
-  triggerComponent: <ButtonSimple>Click me!</ButtonSimple>,
+  triggerComponent: <ButtonSimple useNativeKeyDown>Click me!</ButtonSimple>,
 };
 
 const InteractiveContent = Template<PopoverProps>(Popover).bind({});
