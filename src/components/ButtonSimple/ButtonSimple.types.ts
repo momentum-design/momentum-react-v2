@@ -27,4 +27,11 @@ export interface Props extends AriaButtonProps, HoverProps {
    * title to use for this component.
    */
   title?: string;
+
+  /**
+   * Use the native onKeyDown event handler to allow `enter` & `space` keypress events fire a onClick (like a native HTML button does)
+   *
+   * This is necessary since `react-aria` supress that behaviour by design.
+   */
+  useNativeKeyDown?: boolean;
 }

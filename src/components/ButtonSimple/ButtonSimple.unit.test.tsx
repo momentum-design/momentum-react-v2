@@ -117,6 +117,8 @@ describe('<ButtonSimple />', () => {
   });
 
   describe('actions', () => {
+    // TODO: add proper unit tests for the button, preferably with React Testing Library
+    // note: the onPress() call in line 129 doesn't ensure that it actually works on the screen
     it('should handle mouse press events', () => {
       expect.assertions(1);
 
