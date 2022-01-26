@@ -8,7 +8,7 @@ export default {
   trigger: {
     description: `Determines the events that cause the Popover to show.
     Multiple event names should be separated by spaces. For example to allow both click and hover, use \`click mouseenter\` as the trigger.
-    Possible event names: \`click\`, \`mouseenter\`, \`focusin\`, \`manual\` (to programmatically trigger the popover)`,
+    Possible event names: \`click\`, \`mouseenter\`, \`focusin\`, \`manual\` (to programmatically trigger the popover, this disables the popover-close events on DOM focus change)`,
     control: { type: 'text' },
     table: {
       type: {

@@ -46,6 +46,8 @@ const Popover: FC<Props> = (props: Props) => {
   return (
     <LazyTippy
       ref={tippyRef}
+      /* needed to prevent the popover from closing when the focus is changed via click events */
+      hideOnClick={!trigger.includes('manual')}
       render={(attrs) => (
         <ModalContainer
           id={id}

@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { Instance } from 'tippy.js';
 import type { TippyProps } from '@tippyjs/react';
 import type { Color } from '../ModalContainer/ModalContainer.types';
 
@@ -8,10 +9,10 @@ export type VariantType = 'small' | 'medium';
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
 
-export type PopoverInstance = {
-  show: () => void;
-  hide: () => void;
-};
+/**
+ * Popover instance interface abstracted from Tippy.js
+ */
+export type PopoverInstance = Instance;
 
 export interface Props {
   /**

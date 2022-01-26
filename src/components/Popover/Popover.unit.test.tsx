@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
@@ -103,6 +103,61 @@ describe('<Popover />', () => {
       expect(content.parentElement.getAttribute('style')).toBe(styleString);
       expect(content.parentElement.getAttribute('data-color')).toBe(COLORS.TERTIARY);
       expect(content.parentElement.id).toBe(id);
+    });
+
+    it('should not automatically disappear on focus-change when trigger is manual', async () => {
+      expect.assertions(3);
+
+      // Local globals.
+      const trigger = 'manual';
+      const identifiers = {
+        other: 'other-element',
+        popover: 'popover-element',
+        trigger: 'trigger-element',
+      };
+
+      // Set up a test component for local state management via hooks.
+      const TestComponent: FC = () => {
+        const [instance, setInstance] = useState<PopoverInstance>(undefined);
+
+        const toggle = useCallback(() => {
+          if (!instance.state.isVisible) {
+            instance.show();
+          } else {
+            instance.hide();
+          }
+        }, [instance]);
+
+        return (
+          <>
+            <div data-testid={identifiers.other}>Other Element</div>
+            <button data-testid={identifiers.trigger} onClick={toggle}>
+              Trigger Element
+            </button>
+            <Popover setInstance={setInstance} triggerComponent={<div />} trigger={trigger}>
+              <div data-testid={identifiers.popover}>Popover Element</div>
+            </Popover>
+          </>
+        );
+      };
+
+      // Test the expected component flow.
+      render(<TestComponent />);
+
+      let popover: HTMLElement;
+
+      popover = screen.queryByTestId(identifiers.popover);
+      expect(popover).not.toBeInTheDocument();
+
+      userEvent.click(screen.getByTestId(identifiers.trigger));
+
+      popover = await screen.findByTestId(identifiers.popover);
+      expect(popover).toBeVisible();
+
+      userEvent.click(screen.getByTestId(identifiers.other));
+
+      popover = await screen.findByTestId(identifiers.popover);
+      expect(popover).toBeVisible();
     });
   });
 
