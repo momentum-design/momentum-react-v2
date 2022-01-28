@@ -31,6 +31,19 @@ const buttonSimpleArgTypes = {
       },
     },
   },
+  useNativeKeyDown: {
+    description:
+      'Use the native onKeyDown event handler to allow `enter` & `space` keypress events fire a onClick (like a native HTML button does). This is necessary since `react-aria` supress that behaviour by design.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'Boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { buttonSimpleArgTypes };
