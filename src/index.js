@@ -114,6 +114,7 @@ export {
   ButtonHyperlink,
   ButtonPill,
   ButtonSimple,
+  Coachmark as CoachmarkNext,
   CodeInput,
   DividerDot,
   FocusRing,
