@@ -1,0 +1,55 @@
+.md-coachmark-wrapper {
+  display: block;
+  width: 19.125rem;
+
+  > .md-coachmark-container {
+    margin: 0.25rem;
+
+    &[data-header='true'] {
+      > :not(:first-child) {
+        margin-top: 0.75rem;
+      }
+
+      > .md-coachmark-header {
+        align-items: center;
+        display: flex;
+        width: 100%;
+
+        > .md-icon-wrapper {
+          height: 2rem;
+          width: 2rem;
+        }
+
+        > .md-coachmark-title {
+          flex-grow: 1;
+        }
+      }
+
+      img {
+        border-radius: 0.5rem;
+        min-height: 4rem;
+        width: 17.625rem;
+      }
+    }
+
+    &[data-header='false'] {
+      > div:first-child {
+        flex-grow: 1;
+        overflow-wrap: break-word;
+
+        > .md-coachmark-content {
+          margin-bottom: 0.5rem;
+          overflow-wrap: break-word;
+        }
+      }
+
+      display: flex;
+      flex-grow: 1;
+
+      > .md-coachmark-controls {
+        justify-self: flex-end;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
