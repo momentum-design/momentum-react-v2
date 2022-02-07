@@ -3,8 +3,7 @@ import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import { DEFAULTS } from './Popover.constants';
 
-export default {
-  ...commonStyles,
+const popoverArgTypes = {
   trigger: {
     description: `Determines the events that cause the Popover to show.
     Multiple event names should be separated by spaces. For example to allow both click and hover, use \`click mouseenter\` as the trigger.
@@ -92,4 +91,11 @@ export default {
       },
     },
   },
+};
+
+export { popoverArgTypes };
+
+export default {
+  ...commonStyles,
+  ...popoverArgTypes,
 };
