@@ -3,10 +3,11 @@ import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-lib
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
+import ButtonSimple from '../ButtonSimple';
+
 import Popover from './';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import { PopoverInstance } from './Popover.types';
-import { ButtonSimple } from '..';
 
 describe('<Popover />', () => {
   describe('snapshot', () => {
@@ -109,14 +110,6 @@ describe('<Popover />', () => {
     it('should not automatically disappear on focus-change when trigger is manual', async () => {
       expect.assertions(3);
 
-      // Local globals.
-      const trigger = 'manual';
-      const identifiers = {
-        other: 'other-element',
-        popover: 'popover-element',
-        trigger: 'trigger-element',
-      };
-
       // Set up a test component for local state management via hooks.
       const TestComponent: FC = () => {
         const [instance, setInstance] = useState<PopoverInstance>(undefined);
@@ -131,12 +124,10 @@ describe('<Popover />', () => {
 
         return (
           <>
-            <div data-testid={identifiers.other}>Other Element</div>
-            <button data-testid={identifiers.trigger} onClick={toggle}>
-              Trigger Element
-            </button>
-            <Popover setInstance={setInstance} triggerComponent={<div />} trigger={trigger}>
-              <div data-testid={identifiers.popover}>Popover Element</div>
+            <div>Other Element</div>
+            <button onClick={toggle}>Trigger Element</button>
+            <Popover setInstance={setInstance} triggerComponent={<div />} trigger="manual">
+              <div>Popover Element</div>
             </Popover>
           </>
         );
@@ -147,17 +138,17 @@ describe('<Popover />', () => {
 
       let popover: HTMLElement;
 
-      popover = screen.queryByTestId(identifiers.popover);
+      popover = screen.queryByText('Popover Element');
       expect(popover).not.toBeInTheDocument();
 
-      userEvent.click(screen.getByTestId(identifiers.trigger));
+      userEvent.click(screen.getByRole('button', { name: 'Trigger Element' }));
 
-      popover = await screen.findByTestId(identifiers.popover);
+      popover = await screen.findByText('Popover Element');
       expect(popover).toBeVisible();
 
-      userEvent.click(screen.getByTestId(identifiers.other));
+      userEvent.click(screen.getByText('Other Element'));
 
-      popover = await screen.findByTestId(identifiers.popover);
+      popover = await screen.findByText('Popover Element');
       expect(popover).toBeVisible();
     });
   });
