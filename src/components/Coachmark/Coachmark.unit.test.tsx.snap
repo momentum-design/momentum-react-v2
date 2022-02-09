@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
+<div>
+  <div
+    aria-expanded="true"
+  />
+  <div
+    data-tippy-root=""
+    id="tippy-2"
+    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      class="md-coachmark-wrapper md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+    >
+      <div
+        class="md-coachmark-container"
+        data-header="true"
+      >
+        <div
+          class="md-coachmark-header"
+        >
+          <div
+            class="md-icon-wrapper"
+          >
+            <svg
+              class=""
+              data-autoscale="false"
+              data-scale="18"
+              data-test="placeholder"
+              data-testid="placeholder"
+              fill="currentColor"
+              height="100%"
+              stroke="currentColor"
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+          <h3
+            class="md-text-wrapper md-coachmark-title"
+            data-type="header-primary"
+          >
+            Title
+          </h3>
+          <div
+            class="md-button-group-wrapper"
+            data-round="true"
+            data-spaced="false"
+          >
+            <button
+              aria-label="dismiss"
+              class="md-button-control-wrapper"
+              type="button"
+            >
+              <div
+                class="md-icon-wrapper"
+              >
+                <svg
+                  class=""
+                  data-autoscale="true"
+                  data-scale="false"
+                  data-test="cancel"
+                  fill="currentColor"
+                  height="100%"
+                  stroke="currentColor"
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="md-coachmark-image"
+        >
+          <img
+            alt="example"
+            src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
+          />
+        </div>
+        <div
+          class="md-coachmark-content"
+        >
+          Children
+        </div>
+        <div
+          class="md-button-group-wrapper"
+          data-round="true"
+          data-spaced="true"
+        >
+          <button
+            class="md-button-pill-wrapper"
+            data-color="primary"
+            data-disabled="false"
+            data-ghost="false"
+            data-grown="false"
+            data-outline="false"
+            data-size="40"
+            data-solid="false"
+            type="button"
+          >
+            Button A
+          </button>
+          <button
+            class="md-button-pill-wrapper"
+            data-color="primary"
+            data-disabled="false"
+            data-ghost="false"
+            data-grown="false"
+            data-outline="false"
+            data-size="40"
+            data-solid="false"
+            type="button"
+          >
+            Button B
+          </button>
+        </div>
+      </div>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
+<div>
+  <div
+    aria-expanded="true"
+  />
+  <div
+    data-tippy-root=""
+    id="tippy-1"
+    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      class="md-coachmark-wrapper md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+    >
+      <div
+        class="md-coachmark-container"
+        data-header="false"
+      >
+        <div>
+          <div
+            class="md-coachmark-content"
+          >
+            Children
+          </div>
+          <div
+            class="md-button-group-wrapper"
+            data-round="true"
+            data-spaced="true"
+          >
+            <button
+              class="md-button-pill-wrapper"
+              data-color="primary"
+              data-disabled="false"
+              data-ghost="false"
+              data-grown="false"
+              data-outline="false"
+              data-size="40"
+              data-solid="false"
+              type="button"
+            >
+              Button A
+            </button>
+            <button
+              class="md-button-pill-wrapper"
+              data-color="primary"
+              data-disabled="false"
+              data-ghost="false"
+              data-grown="false"
+              data-outline="false"
+              data-size="40"
+              data-solid="false"
+              type="button"
+            >
+              Button B
+            </button>
+          </div>
+        </div>
+        <div
+          class="md-button-group-wrapper md-coachmark-controls"
+          data-round="true"
+          data-spaced="false"
+        >
+          <button
+            aria-label="dismiss"
+            class="md-button-control-wrapper"
+            type="button"
+          >
+            <div
+              class="md-icon-wrapper"
+            >
+              <svg
+                class=""
+                data-autoscale="true"
+                data-scale="false"
+                data-test="cancel"
+                fill="currentColor"
+                height="100%"
+                stroke="currentColor"
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
