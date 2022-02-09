@@ -24,12 +24,10 @@ export default {
 
 const Template: Story<CoachmarkProps> = (args: CoachmarkProps) => {
   return (
-    <>
-      <Coachmark
-        triggerComponent={<div style={{ width: 'fit-content' }}>Target Element</div>}
-        {...args}
-      />
-    </>
+    <Coachmark
+      triggerComponent={<div style={{ width: 'fit-content' }}>Target Element</div>}
+      {...args}
+    />
   );
 };
 
