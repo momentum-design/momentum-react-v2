@@ -31,11 +31,13 @@
     &[data-spaced='false'] {
       > * {
         &:first-child {
-          border-radius: 100vh 0 0 100vh;
+          border-top-left-radius: 100vh;
+          border-bottom-left-radius: 100vh;
         }
 
         &:last-child {
-          border-radius: 0 100vh 100vh 0;
+          border-top-right-radius: 100vh;
+          border-bottom-right-radius: 100vh;
         }
       }
     }
