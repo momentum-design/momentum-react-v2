@@ -16,8 +16,19 @@ import classnames from 'classnames';
  * Icon component that can dynamically display SVG icons with a valid name.
  */
 const Icon: React.FC<Props> = (props: Props) => {
-  const { autoScale, className, color, fillColor, id, name, scale, strokeColor, style, weight } =
-    props;
+  const {
+    autoScale,
+    className,
+    color,
+    fillColor,
+    id,
+    name,
+    scale,
+    strokeColor,
+    style,
+    weight,
+    ...otherProps
+  } = props;
   const { SvgIcon, error } = useDynamicSVGImport(`${name}-${weight || DEFAULTS.WEIGHT}`);
 
   const isColoredIcon = name.indexOf('coloured') > 0;
@@ -85,6 +96,7 @@ const Icon: React.FC<Props> = (props: Props) => {
           height="100%"
           data-scale={!autoScale && (scale || DEFAULTS.SCALE)}
           data-autoscale={autoScale || DEFAULTS.AUTO_SCALE}
+          {...otherProps}
         />
       </div>
     );
