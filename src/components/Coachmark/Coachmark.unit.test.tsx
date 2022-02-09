@@ -8,6 +8,9 @@ import ButtonPill from '../ButtonPill';
 import Coachmark from './';
 
 describe('<Coachmark />', () => {
+  const iconName = 'placeholder';
+  const children = 'Children';
+
   describe('snapshot', () => {
     it('should match snapshot without header', async () => {
       expect.assertions(1);
@@ -21,11 +24,11 @@ describe('<Coachmark />', () => {
           isVisible
           triggerComponent={<div />}
         >
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
       expect(container).toMatchSnapshot();
     });
@@ -39,7 +42,7 @@ describe('<Coachmark />', () => {
             <ButtonPill key={0}>Button A</ButtonPill>,
             <ButtonPill key={1}>Button B</ButtonPill>,
           ]}
-          icon="placeholder"
+          icon={iconName}
           image={
             <img
               alt="example"
@@ -50,11 +53,11 @@ describe('<Coachmark />', () => {
           title="Title"
           triggerComponent={<div />}
         >
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
       expect(container).toMatchSnapshot();
     });
@@ -76,11 +79,11 @@ describe('<Coachmark />', () => {
           isVisible
           triggerComponent={<div />}
         >
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
       const button = screen.getByRole('button', { name: 'Button A' });
 
@@ -95,14 +98,14 @@ describe('<Coachmark />', () => {
       expect.assertions(1);
 
       render(
-        <Coachmark isVisible icon="placeholder" triggerComponent={<div />}>
-          Children
+        <Coachmark isVisible icon={iconName} triggerComponent={<div />}>
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
-      const icon = screen.getByTestId('placeholder');
+      const icon = screen.getByTestId(iconName);
 
       expect(icon).toBeVisible();
     });
@@ -116,11 +119,11 @@ describe('<Coachmark />', () => {
 
       render(
         <Coachmark isVisible image={<img alt={alt} src={src} />} triggerComponent={<div />}>
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
       const image = screen.getByAltText<HTMLImageElement>(alt);
 
@@ -135,11 +138,11 @@ describe('<Coachmark />', () => {
 
       render(
         <Coachmark isVisible onDismiss={mockDismiss} triggerComponent={<div />}>
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
       const dismissButton = screen.getByRole('button', { name: 'dismiss' });
 
@@ -149,7 +152,7 @@ describe('<Coachmark />', () => {
       userEvent.keyboard('{enter}');
 
       await waitFor(() => {
-        expect(screen.queryByText('Children')).not.toBeInTheDocument();
+        expect(screen.queryByText(children)).not.toBeInTheDocument();
       });
 
       expect(mockDismiss).toHaveBeenCalledTimes(1);
@@ -162,11 +165,11 @@ describe('<Coachmark />', () => {
 
       render(
         <Coachmark isVisible onDismiss={mockDismiss} triggerComponent={<div />}>
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
       const dismissButton = screen.getByRole('button', { name: 'dismiss' });
 
@@ -175,7 +178,7 @@ describe('<Coachmark />', () => {
       userEvent.click(dismissButton);
 
       await waitFor(() => {
-        expect(screen.queryByText('Children')).not.toBeInTheDocument();
+        expect(screen.queryByText(children)).not.toBeInTheDocument();
       });
 
       expect(mockDismiss).toHaveBeenCalledTimes(1);
@@ -186,29 +189,29 @@ describe('<Coachmark />', () => {
 
       const { rerender } = render(
         <Coachmark isVisible triggerComponent={<div />}>
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
-      expect(screen.getByText('Children')).toBeVisible();
+      expect(screen.getByText(children)).toBeVisible();
 
-      rerender(<Coachmark triggerComponent={<div />}>Children</Coachmark>);
+      rerender(<Coachmark triggerComponent={<div />}>{children}</Coachmark>);
 
       await waitFor(() => {
-        expect(screen.queryByText('Children')).not.toBeInTheDocument();
+        expect(screen.queryByText(children)).not.toBeInTheDocument();
       });
 
       rerender(
         <Coachmark isVisible triggerComponent={<div />}>
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
-      expect(screen.getByText('Children')).toBeVisible();
+      expect(screen.getByText(children)).toBeVisible();
     });
 
     it('should allow title', async () => {
@@ -218,11 +221,11 @@ describe('<Coachmark />', () => {
 
       render(
         <Coachmark isVisible title={title} triggerComponent={<div />}>
-          Children
+          {children}
         </Coachmark>
       );
 
-      await screen.findByText('Children');
+      await screen.findByText(children);
 
       expect(screen.getByText(title)).toBeVisible();
     });

@@ -21,9 +21,7 @@ const Coachmark: FC<Props> = (props: Props) => {
   const handleDismiss = useCallback(() => {
     if (instance?.state?.isVisible) {
       instance.hide();
-      if (onDismiss) {
-        onDismiss();
-      }
+      onDismiss?.();
     }
   }, [instance]);
 
