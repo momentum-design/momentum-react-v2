@@ -1,1 +1,39 @@
-The `<List />` component.
+The `<List />` (exported as `<ListNext />`) component acts as a wrapper **only** for `ListItemBase` items (and any other components which are based on `ListItemBase` like `SpaceListItem` or `MeetingListItem`). The container is mainly providing accessibility.
+
+Keyboard accessibility supported:
+- up ↑ and down ↓ arrows
+- left ← and right → arrows (which map to up/down as follows: left = up, right = down)
+
+The container can be used with virtualised lists (see Cantina code), static lists and dynamic (changing) lists as well.
+
+## Simple Static List
+To create a simple sattic List your code should look like this.
+```javascript
+
+<List listSize={5}>
+  <ListItemBase itemIndex={0}>Item 1</ListItemBase>
+  <ListItemBase itemIndex={1}>Item 2</ListItemBase>
+  <ListItemBase itemIndex={2}>Item 3</ListItemBase>
+  <ListItemBase itemIndex={3}>Item 4</ListItemBase>
+  <ListItemBase itemIndex={4}>Item 5</ListItemBase>
+<List/>
+
+```
+First, it's important you provide `listSize` prop to the List, to make sure the list knows how many ==**interactive**== elements there are in the list (interactive/focusable).
+A list can have non-interactive elements as well (for example list headers), but those are not focusable and this is why the list needs keep track only of the ones the user can interact with.
+Second, it's important to provide the interactive elements with an index. This is the order in which they will be focused while pressing up/down/left/right arrows (according to accessibility rules mentioned above).
+A good example for lists with headers (which are not interactive) see the CalendarList story under the List component.
+
+## Dynamic List
+In this case, the index of the `data` array can be used as `itemIndex` for the elements.
+```javascript
+const data = [
+  {key: uuid(), data: 1},
+  {key: uuid(), data: 2},
+  {key: uuid(), data: 3},
+]
+<List listSize={data.length}>
+  {data.map((item, index) => (
+    <ListItemBase key={item.key} itemIndex={index}>{item.data}</ListItemBase>
+  )})}
+<List/>

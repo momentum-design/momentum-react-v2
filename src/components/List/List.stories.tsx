@@ -1,10 +1,10 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
-
+import { v4 as uuid } from 'uuid';
 import List, { ListProps } from './';
 import argTypes from './List.stories.args';
 import Documentation from './List.stories.docs.mdx';
@@ -23,6 +23,7 @@ import MeetingListItem from '../MeetingListItem';
 import { MeetingMarker } from '../MeetingListItem/MeetingListItem.types';
 import ButtonGroup from '../ButtonGroup';
 import ButtonHyperlink from '../ButtonHyperlink';
+import Badge from '../Badge';
 
 const TEST_LIST_SIZE = 30;
 
@@ -160,4 +161,62 @@ CalendarList.parameters = {
   ],
 };
 
-export { Example, Common, CalendarList };
+/**
+ * Example illustrating List works well with lists
+ * that change dynamically and preserves keyboard navigation
+ */
+
+const DynamicListWrapper = () => {
+  const data = [
+    { key: uuid(), data: 0 },
+    { key: uuid(), data: 1 },
+    { key: uuid(), data: 2 },
+  ];
+  const INTERVAL_COUNT = 5;
+  const [list, setList] = useState(data);
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime((oldTime) => (oldTime + 1) % INTERVAL_COUNT);
+    }, 1000);
+
+    const interval = setInterval(() => {
+      setList((oldList) => {
+        if (oldList.length % 2 === 0) {
+          return [...oldList, { key: uuid(), data: oldList.length + 1 }];
+        } else {
+          if (oldList.length > 0) {
+            return oldList.slice(0, -1);
+          }
+          return oldList;
+        }
+      });
+    }, INTERVAL_COUNT * 1000);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(timer);
+    };
+  }, []);
+
+  return (
+    <>
+      <Text type="body-primary">
+        List will update in:
+        <Badge size={18} style={{ display: 'inline' }}>{`${INTERVAL_COUNT - time}`}</Badge>
+      </Text>
+      <List listSize={list.length}>
+        {list.map((item, index) => (
+          <ListItemBase itemIndex={index} key={item.key} isPadded>
+            {`Item ${item.data}`}
+          </ListItemBase>
+        ))}
+      </List>
+    </>
+  );
+};
+
+const DynamicList = Template<unknown>(DynamicListWrapper).bind({});
+
+export { Example, Common, CalendarList, DynamicList };
