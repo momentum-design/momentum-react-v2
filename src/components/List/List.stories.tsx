@@ -165,7 +165,6 @@ CalendarList.parameters = {
  * Example illustrating List works well with lists
  * that change dynamically and preserves keyboard navigation
  */
-
 const DynamicListWrapper = () => {
   const data = [
     { key: uuid(), data: 0 },
