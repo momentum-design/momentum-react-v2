@@ -1,0 +1,18 @@
+.md-combo-box-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  button {
+    border-radius: 0;
+  }
+
+  .md-select-overlay {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    top: 3rem;
+  }
+}

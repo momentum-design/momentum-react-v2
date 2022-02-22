@@ -35,4 +35,5 @@ export interface Props extends Omit<AriaTextFieldProps, 'errorMessage'> {
    * Array of Messages with message and type to display below the input
    */
   messageArr?: Message[];
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }

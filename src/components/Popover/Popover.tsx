@@ -31,6 +31,7 @@ const Popover: FC<Props> = (props: Props) => {
     className,
     id,
     style,
+    containerRef,
   } = props;
 
   const tippyRef = React.useRef(null);
@@ -59,6 +60,7 @@ const Popover: FC<Props> = (props: Props) => {
           style={style}
           color={color}
           className={className}
+          ref={containerRef}
         >
           {children}
         </ModalContainer>

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import React, { RefObject, ReactElement, forwardRef } from 'react';
+import React, { RefObject, ReactElement, forwardRef, useRef } from 'react';
 
 import { Props } from './ListBoxBase.types';
 import ListBoxSection from '../ListBoxSection';
@@ -12,7 +12,12 @@ import MenuListBackground from '../MenuListBackground';
 
 export const ListBoxContext = React.createContext<ListState<unknown>>(null);
 
-const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUListElement>) => {
+const ListBoxBase = <T extends object>(
+  props: Props<T>,
+  providedRef: RefObject<HTMLUListElement>
+) => {
+  const internalRef = useRef<HTMLUListElement>();
+  const ref = providedRef || internalRef;
   const { state, className, id, style } = props;
 
   const mutatedProps = {

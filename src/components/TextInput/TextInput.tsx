@@ -22,6 +22,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     inputClassName,
     isDisabled,
     style,
+    inputProps,
     id,
   } = props;
 
@@ -31,10 +32,12 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const [messageType, messages] = getFilteredMessages(messageArr);
   const errorMessage = messageType === 'error' ? messages[0] : undefined;
 
-  const { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(
-    { ...props, errorMessage },
-    inputRef
-  );
+  const {
+    labelProps,
+    inputProps: useTextFieldInputProps,
+    descriptionProps,
+    errorMessageProps,
+  } = useTextField({ ...props, errorMessage }, inputRef);
 
   const { isFocused, focusProps } = useFocusState(props);
   const state = useSearchFieldState(props);
@@ -69,7 +72,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       )}
       <div className={STYLE.container}>
         <input
-          {...(inputProps as InputHTMLAttributes<HTMLInputElement>)}
+          {...(inputProps ? inputProps : useTextFieldInputProps)}
           {...focusProps}
           className={inputClassName}
           ref={inputRef}

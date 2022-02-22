@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { CSSProperties, ReactElement, ReactNode, RefObject } from 'react';
 import type { Instance } from 'tippy.js';
 import type { TippyProps } from '@tippyjs/react';
 import type { Color } from '../ModalContainer/ModalContainer.types';
@@ -105,4 +105,6 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  containerRef?: RefObject<HTMLDivElement>;
 }

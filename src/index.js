@@ -128,7 +128,6 @@ export {
   ModalArrow,
   ModalContainer,
   Overlay,
-  OverlayTrigger,
   Toast,
   ToastDetails,
   ToastContent,

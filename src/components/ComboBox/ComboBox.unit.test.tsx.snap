@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ComboBox /> snapshot should match snapshot 1`] = `
+<ComboBox>
+  <div
+    className="md-combo-box-wrapper"
+  />
+</ComboBox>
+`;
+
+exports[`<ComboBox /> snapshot should match snapshot with className 1`] = `
+<ComboBox
+  className="example-class"
+>
+  <div
+    className="example-class md-combo-box-wrapper"
+  />
+</ComboBox>
+`;
+
+exports[`<ComboBox /> snapshot should match snapshot with id 1`] = `
+<ComboBox
+  id="example-id"
+>
+  <div
+    className="md-combo-box-wrapper"
+    id="example-id"
+  />
+</ComboBox>
+`;
+
+exports[`<ComboBox /> snapshot should match snapshot with style 1`] = `
+<ComboBox
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-combo-box-wrapper"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  />
+</ComboBox>
+`;
