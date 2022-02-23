@@ -30,6 +30,7 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   'aria-label': 'Menu component',
   onAction: action('onAction'),
+  selectionMode: 'single',
   children: [
     <Item key="one">One</Item>,
     <Item key="two">Two</Item>,
@@ -50,6 +51,7 @@ Common.args = {
 Common.parameters = {
   variants: [
     {
+      selectionMode: 'single',
       children: [
         <Section key="0" title="Colors">
           <Item>Red</Item>
@@ -63,6 +65,7 @@ Common.parameters = {
       ],
     },
     {
+      selectionMode: 'single',
       disabledKeys: ['$.0.0', '$.0.1'],
       children: [
         // If key is not provided the elements get generated ones
@@ -80,6 +83,7 @@ Common.parameters = {
     },
 
     {
+      selectionMode: 'single',
       itemShape: 'isPilled',
       itemSize: 50,
       children: [

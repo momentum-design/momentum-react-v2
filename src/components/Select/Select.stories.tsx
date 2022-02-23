@@ -48,7 +48,7 @@ Example.args = {
   placeholder: 'Select an option',
   onSelectionChange: action('onSelectionChange'),
   children: [
-    <Item key="1">Red</Item>,
+    <Item key="1">This is a very long option and should trim.</Item>,
     <Item key="2">Blue</Item>,
     <Item key="3">Green</Item>,
     <Item key="4">Yellow</Item>,
