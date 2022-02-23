@@ -31,14 +31,14 @@ const Example = Template<MenuTriggerProps>(MenuTrigger).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  closeOnSelect: true,
+  closeOnSelect: false,
   'aria-label': 'Menu trigger',
   children: [
     <ButtonPill key="1">
       <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
     </ButtonPill>,
     <Menu selectionMode="single" key="2">
-      <Item key="one">One</Item>
+      <Item key="one">This is a longer text and should trim nicely...</Item>
       <Item key="two">Two</Item>
       <Item key="three">Three</Item>
       <Item key="four">Four</Item>
@@ -83,7 +83,7 @@ Common.parameters = {
           <Item key="one" textValue="Apps">
             <Flex alignItems="center" xgap="0.875rem">
               <Icon name="accessories" scale={18} weight="bold" />
-              <span>Apps</span>
+              <span>This is a very long option name and should trim.</span>
             </Flex>
           </Item>
           <Item key="two" textValue="Accessories">

@@ -71,4 +71,17 @@ export default {
       },
     },
   },
+  isPadded: {
+    defaultValue: false,
+    description: 'Determines if the list item is padded (has default padding).',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
 };
