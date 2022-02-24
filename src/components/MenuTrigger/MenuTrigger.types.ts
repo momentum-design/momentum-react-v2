@@ -23,4 +23,9 @@ export interface Props extends Omit<MenuTriggerProps, 'align' | 'direction' | 's
    * Radius of the modal container where menus are wrapped in.
    */
   overlayRadius?: Round;
+
+  /**
+   * The component which triggers the Menu Overlay
+   */
+  triggerComponent: ReactElement;
 }
