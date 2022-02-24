@@ -55,17 +55,20 @@
     }
 
     &[data-solid='true'] {
-      background-color: rgba(255, 255, 255, 1); // IEFIX
-      background-color: var(--theme-button-inverted-normal);
+      background-color: var(--videoSupport-controls-button-background);
+      border-color: var(--videoSupport-controls-button-border-color);
+      color: var(--videoSupport-controls-button-text);
 
       &:hover {
-        background-color: rgba(237, 237, 237, 1); // IEFIX
-        background-color: var(--theme-button-inverted-hover);
+        background-color: var(--videoSupport-controls-button-background-hovered);
+        border-color: var(--videoSupport-controls-button-border-color-hovered);
+        color: var(--videoSupport-controls-button-text-hovered);
       }
 
       &:active {
-        background-color: rgba(222, 222, 222, 1); // IEFIX
-        background-color: var(--theme-button-inverted-pressed);
+        background-color: var(--videoSupport-controls-button-background-pressed);
+        border-color: var(--videoSupport-controls-button-border-color-pressed);
+        color: var(--videoSupport-controls-button-text-pressed);
       }
     }
   }
@@ -316,6 +319,24 @@
         border-color: var(--button-secondary-border-color-disabled);
         color: rgba(0, 0, 0, 0.4); // IEFIX
         color: var(--button-secondary-text-disabled);
+      }
+
+      &[data-solid='true'] {
+        background-color: var(--videoSupport-controls-button-background-disabled);
+        border-color: var(--videoSupport-controls-button-border-color-disabled);
+        color: var(--videoSupport-controls-button-text-disabled);
+
+        &:hover {
+          background-color: var(--videoSupport-controls-button-background-disabled);
+          border-color: var(--videoSupport-controls-button-border-color-disabled);
+          color: var(--videoSupport-controls-button-text-disabled);
+        }
+
+        &:active {
+          background-color: var(--videoSupport-controls-button-background-disabled);
+          border-color: var(--videoSupport-controls-button-border-color-disabled);
+          color: var(--videoSupport-controls-button-text-disabled);
+        }
       }
     }
   }
