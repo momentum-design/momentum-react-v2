@@ -91,7 +91,7 @@ const Popover: FC<Props> = (props: Props) => {
       // add arrow height to default offset if arrow is shown:
       offset={[0, showArrow ? ARROW_HEIGHT + OFFSET : OFFSET]}
     >
-      {triggerComponent}
+      {React.cloneElement(triggerComponent, { useNativeKeyDown: true })}
     </LazyTippy>
   );
 };
