@@ -1,0 +1,17 @@
+The `<ListHeader />` component inherits the structure of the [`ListItemBase`](/docs/momentum-ui-listitembase--example) component. This list header component only implements the non-interactive variant.
+Separate component will be created for the Collapsible/Interactive list header.
+
+Please refer to the [`ListItemBase`](/docs/momentum-ui-listitembase--example) docs if you're not sure how to use it.
+
+## Simple example
+
+```js
+<ListItemHeader outline="true" outlinePosition="top">
+  <ListItemBaseSection position="start">
+    <Icon name="speaker" scale={16} weight="bold" strokeColor="none" />
+  </ListItemBaseSection>
+  <ListItemBaseSection position="fill">
+    <Text type="body-secondary">Label</Text>
+  </ListItemBaseSection>
+</ListItemHeader>
+```
