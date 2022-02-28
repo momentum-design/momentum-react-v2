@@ -1,0 +1,41 @@
+.md-list-header-wrapper {
+  // Override margin between start section and middle/fill sections
+  div[data-position='start'] {
+    margin-right: 0.5rem;
+  }
+
+  // ListItemBase with size 32 is preventing text to be bold (by design).
+  // We need to revert this in the ListHeader component. (see bold prop).
+  &[data-bold='true'] {
+    &[data-position='fill'],
+    &[data-position='middle'] > *,
+    .md-text-wrapper {
+      font-weight: bold;
+    }
+  }
+
+  &[data-outline='true'] {
+    border-radius: 0;
+    background-clip: padding-box;
+
+    &[data-outline-position='bottom'] {
+      &[data-outline-color='primary'] {
+        border-bottom: 1px solid var(--list-header-outline-primary);
+      }
+
+      &[data-outline-color='secondary'] {
+        border-bottom: 1px solid var(--list-header-outline-secondary);
+      }
+    }
+
+    &[data-outline-position='top'] {
+      &[data-outline-color='primary'] {
+        border-top: 1px solid var(--list-header-outline-primary);
+      }
+
+      &[data-outline-color='secondary'] {
+        border-top: 1px solid var(--list-header-outline-secondary);
+      }
+    }
+  }
+}
