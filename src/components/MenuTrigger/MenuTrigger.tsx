@@ -7,9 +7,11 @@ import './MenuTrigger.style.scss';
 import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
 import Menu, { MenuContext } from '../Menu';
-import { DismissButton } from '@react-aria/overlays';
+import { DismissButton, useOverlay } from '@react-aria/overlays';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import { FocusScope } from '@react-aria/focus';
+import { useKeyboard } from '@react-aria/interactions';
+import { FocusStrategy } from '@react-types/shared';
 import ContentSeparator from '../ContentSeparator';
 import Popover from '../Popover';
 import { PopoverInstance } from '../Popover/Popover.types';
@@ -28,7 +30,12 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   const state = useMenuTriggerState(props);
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
 
+  const buttonRef = useRef<HTMLButtonElement>();
+  const menuRef = useRef<HTMLUListElement>();
+
   const [...menus] = Children.toArray(children);
+
+  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: 'menu' }, state, buttonRef);
 
   if (!verifyTypes(menus, Menu)) {
     console.warn(
@@ -36,18 +43,32 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     );
   }
 
-  const buttonRef = useRef<HTMLButtonElement>();
-  const menuRef = useRef<HTMLUListElement>();
-
-  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: 'menu' }, state, buttonRef);
-
   const menuContext = {
     ...menuProps,
     onClose: state.close,
     closeOnSelect,
     ref: menuRef,
-    autoFocus: state.focusStrategy,
+    autoFocus: 'first' as FocusStrategy,
   };
+
+  useEffect(() => {
+    if (!state.isOpen && popoverInstance?.state.isVisible) {
+      popoverInstance.hide();
+    }
+  }, [state.isOpen, popoverInstance]);
+
+  const { keyboardProps } = useKeyboard({
+    onKeyDown: (event) => {
+      if (event.key === 'Escape') {
+        state.close();
+      }
+      if (state.isOpen && event.key === 'Tab' && menus.length === 1) {
+        state.close();
+      }
+    },
+  });
+
+  delete keyboardProps.color;
 
   return (
     <Popover
@@ -61,6 +82,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       showArrow={false}
       variant="medium"
       setInstance={setPopoverInstance}
+      {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
       <FocusScope restoreFocus contain>
         <DismissButton onDismiss={state.close} />
