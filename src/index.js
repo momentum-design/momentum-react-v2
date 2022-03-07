@@ -152,4 +152,5 @@ export {
   AddReactionButton,
   Menu as MenuNext,
   MenuTrigger,
+  ListHeader,
 } from './components';
