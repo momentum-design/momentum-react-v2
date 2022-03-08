@@ -182,14 +182,11 @@ const DynamicListWrapper = () => {
 
     const interval = setInterval(() => {
       setList((oldList) => {
-        if (oldList.length % 2 === 0) {
-          return [...oldList, { key: uuid(), data: oldList.length + 1 }];
-        } else {
-          if (oldList.length > 0) {
-            return oldList.slice(0, -1);
-          }
-          return oldList;
-        }
+        const newList = [...oldList];
+        const poppedItem = newList.pop();
+        newList.unshift(poppedItem);
+
+        return newList;
       });
     }, INTERVAL_COUNT * 1000);
 
