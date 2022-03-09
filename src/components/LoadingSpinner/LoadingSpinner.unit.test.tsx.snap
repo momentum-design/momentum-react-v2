@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
+<LoadingSpinner>
+  <div
+    className="md-loading-spinner-wrapper"
+  />
+</LoadingSpinner>
+`;
+
+exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = `
+<LoadingSpinner
+  className="example-class"
+>
+  <div
+    className="example-class md-loading-spinner-wrapper"
+  />
+</LoadingSpinner>
+`;
+
+exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
+<LoadingSpinner
+  id="example-id"
+>
+  <div
+    className="md-loading-spinner-wrapper"
+    id="example-id"
+  />
+</LoadingSpinner>
+`;
+
+exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
+<LoadingSpinner
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-loading-spinner-wrapper"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  />
+</LoadingSpinner>
+`;
