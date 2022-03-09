@@ -14,6 +14,7 @@ import Icon from '../Icon';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/MenuTrigger',
@@ -31,8 +32,9 @@ const Example = Template<MenuTriggerProps>(MenuTrigger).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  closeOnSelect: false,
   'aria-label': 'Menu trigger',
+  closeOnSelect: true,
+  onOpenChange: action('onOpenChange'),
   triggerComponent: (
     <ButtonPill key="1">
       <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />

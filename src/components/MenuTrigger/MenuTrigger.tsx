@@ -1,20 +1,21 @@
 import React, { FC, ReactElement, useRef, Children, Fragment, useState, useEffect } from 'react';
 import classnames from 'classnames';
 
-import { DEFAULTS, STYLE } from './MenuTrigger.constants';
+import { STYLE, DEFAULTS } from './MenuTrigger.constants';
 import { Props } from './MenuTrigger.types';
 import './MenuTrigger.style.scss';
 import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
 import Menu, { MenuContext } from '../Menu';
-import { DismissButton, useOverlay } from '@react-aria/overlays';
+import { DismissButton } from '@react-aria/overlays';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import { FocusScope } from '@react-aria/focus';
 import { useKeyboard } from '@react-aria/interactions';
 import { FocusStrategy } from '@react-types/shared';
 import ContentSeparator from '../ContentSeparator';
 import Popover from '../Popover';
-import { PopoverInstance } from '../Popover/Popover.types';
+import { PopoverInstance, VariantType } from '../Popover/Popover.types';
+import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 const MenuTrigger: FC<Props> = (props: Props) => {
   const {
@@ -23,7 +24,13 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     style,
     closeOnSelect,
     children,
-    overlayRadius = DEFAULTS.OVERLAY_RADIUS,
+    defaultOpen,
+    isOpen,
+    delay,
+    variant = DEFAULTS.VARIANT,
+    color = DEFAULTS.COLOR,
+    showArrow = DEFAULTS.SHOW_ARROW,
+    placement = DEFAULTS.PLACEMENT,
     triggerComponent,
   } = props;
 
@@ -43,6 +50,14 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     );
   }
 
+  /**
+   * For some reason restoreFocus prop on <FocusScope> doesn't
+   * work. We focus back to trigger manually.
+   */
+  const handleFocusBackOnTrigger = () => {
+    buttonRef.current?.focus();
+  };
+
   const menuContext = {
     ...menuProps,
     onClose: state.close,
@@ -51,12 +66,42 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     autoFocus: 'first' as FocusStrategy,
   };
 
+  /**
+   * Handle closeOnSelect from @react-aria manually
+   */
   useEffect(() => {
     if (!state.isOpen && popoverInstance?.state.isVisible) {
       popoverInstance.hide();
+      handleFocusBackOnTrigger();
     }
   }, [state.isOpen, popoverInstance]);
 
+  /**
+   * Handle defaultOpen from @react-aria manually
+   */
+  useEffect(() => {
+    if (defaultOpen && popoverInstance) {
+      popoverInstance.show();
+    }
+  }, [popoverInstance]);
+
+  /**
+   * Handle isOpen from @react-aria manually
+   */
+  useEffect(() => {
+    if (popoverInstance) {
+      if (isOpen) {
+        popoverInstance.show();
+      } else {
+        popoverInstance.hide();
+      }
+    }
+  }, [isOpen, popoverInstance]);
+
+  /**
+   * Add manual keyboard accessibility because our Popover component
+   * doesn't work well with @react-aria
+   */
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
       if (event.key === 'Escape') {
@@ -68,19 +113,29 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     },
   });
 
+  // delete color prop which is passed down and used in the ModalContainer
+  // because it conflicts with the HTML color property
   delete keyboardProps.color;
+  // delete the onKeyDown provided by Aria because Popover component will add
+  // appropriate keyboard accessibility instead.
+  delete menuTriggerProps.onKeyDown;
 
   return (
     <Popover
-      triggerComponent={React.cloneElement(triggerComponent, { ...menuTriggerProps })}
+      triggerComponent={React.cloneElement(triggerComponent, {
+        ...menuTriggerProps,
+        ref: buttonRef,
+      })}
       className={classnames(className, STYLE.wrapper)}
+      trigger="click"
       id={id}
       style={style}
-      placement="bottom-start"
+      placement={placement as PlacementType}
       interactive={true}
-      trigger="click"
-      showArrow={false}
-      variant="medium"
+      showArrow={showArrow}
+      variant={variant as VariantType}
+      delay={delay}
+      color={color}
       setInstance={setPopoverInstance}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
@@ -99,9 +154,5 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     </Popover>
   );
 };
-
-/**
- * The MenuTrigger component.
- */
 
 export default MenuTrigger;
