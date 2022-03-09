@@ -1,6 +1,7 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { SIZES as ICON_SIZES } from '../Icon/Icon.constants';
 import { DEFAULTS } from './LoadingSpinner.constants';
+
 const loadingSpinnerArgTypes = {
   scale: {
     defaultValue: DEFAULTS.SCALE,
