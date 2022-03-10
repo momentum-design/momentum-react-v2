@@ -3,7 +3,7 @@ import { Node } from '@react-types/shared';
 import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCallback } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './Menu.constants';
+import { STYLE, DEFAULTS } from './Menu.constants';
 import { MenuAppearanceContextValue, MenuContextValue, Props } from './Menu.types';
 import './Menu.style.scss';
 import { useMenu } from '@react-aria/menu';
@@ -21,7 +21,14 @@ export function useMenuContext(): MenuContextValue {
 export const MenuAppearanceContext = React.createContext<MenuAppearanceContextValue>({});
 
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLUListElement>) => {
-  const { className, id, style, itemShape, itemSize } = props;
+  const {
+    className,
+    id,
+    style,
+    isTickOnLeftSide = DEFAULTS.IS_TICK_ON_LEFT_SIDE,
+    itemShape = DEFAULTS.ITEM_SHAPE,
+    itemSize = DEFAULTS.ITEM_SIZE,
+  } = props;
   const contextProps = useMenuContext();
 
   const _props = {
@@ -61,7 +68,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   );
 
   return (
-    <MenuAppearanceContext.Provider value={{ itemShape, itemSize }}>
+    <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
       <ul
         className={classnames(className, STYLE.wrapper)}
         id={id}

@@ -20,7 +20,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
 
   const { onClose, closeOnSelect } = useContext(MenuContext);
-  const { itemShape, itemSize } = useContext(MenuAppearanceContext);
+  const { itemShape, itemSize, isTickOnLeftSide } = useContext(MenuAppearanceContext);
 
   const { menuItemProps } = useMenuItem(
     {
@@ -43,6 +43,28 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   delete menuItemProps.onPointerEnter;
   delete menuItemProps.onPointerLeave;
 
+  const tickIcon = (
+    <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} strokeColor="none" />
+  );
+
+  const renderSections = () => {
+    if (isTickOnLeftSide) {
+      return (
+        <>
+          {isSelected && <ListItemBaseSection position="start">{tickIcon}</ListItemBaseSection>}
+          <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
+          {isSelected && <ListItemBaseSection position="end">{tickIcon}</ListItemBaseSection>}
+        </>
+      );
+    }
+  };
+
   return (
     <ListItemBase
       size={itemSize}
@@ -53,18 +75,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
       isPadded={true}
       {...menuItemProps}
     >
-      <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
-      {isSelected && (
-        <ListItemBaseSection position="end">
-          <Icon
-            className={STYLE.tickIcon}
-            name="check"
-            weight="bold"
-            scale={16}
-            strokeColor="none"
-          />
-        </ListItemBaseSection>
-      )}
+      {renderSections()}
     </ListItemBase>
   );
 };
