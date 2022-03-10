@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useRef, Children, useState, useEffect } from 'react';
+import React, { FC, ReactElement, useRef, Children, useState, useEffect, useCallback } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './MenuTrigger.constants';
@@ -11,10 +11,10 @@ import { DismissButton } from '@react-aria/overlays';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import { FocusScope } from '@react-aria/focus';
 import { useKeyboard } from '@react-aria/interactions';
-import { FocusStrategy } from '@react-types/shared';
 import ContentSeparator from '../ContentSeparator';
 import Popover from '../Popover';
-import { PopoverInstance, VariantType } from '../Popover/Popover.types';
+import type { PopoverInstance, VariantType } from '../Popover/Popover.types';
+import type { FocusStrategy } from '@react-types/shared';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 const MenuTrigger: FC<Props> = (props: Props) => {
@@ -44,18 +44,16 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   const { menuTriggerProps, menuProps } = useMenuTrigger({ type: 'menu' }, state, buttonRef);
 
   if (!verifyTypes(menus, Menu)) {
-    console.warn(
-      'MenuTrigger: All children (with the exception of 1st child) must be a Menu component.'
-    );
+    console.warn('MenuTrigger: All children must be a Menu component.');
   }
 
   /**
    * For some reason restoreFocus prop on <FocusScope> doesn't
    * work. We focus back to trigger manually.
    */
-  const handleFocusBackOnTrigger = () => {
+  const handleFocusBackOnTrigger = useCallback(() => {
     buttonRef.current?.focus();
-  };
+  }, []);
 
   const menuContext = {
     ...menuProps,
@@ -96,6 +94,8 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       if (event.key === 'Escape') {
         state.close();
       }
+      // When there are more than one menus inside the menu trigger, we should not close the overlay
+      // according to W-ARIA
       if (state.isOpen && event.key === 'Tab' && menus.length === 1) {
         state.close();
       }
@@ -139,7 +139,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
                 // trigger will have the first focus, which is wrong
                 index === 0 ? { ...menuContext, autoFocus: 'first' as FocusStrategy } : menuContext
               }
-              key={`{fragment-${index}}`}
+              key={`{context-${index}}`}
             >
               {menu}
               {index !== menus.length - 1 && <ContentSeparator key={`separator-${index}`} />}
