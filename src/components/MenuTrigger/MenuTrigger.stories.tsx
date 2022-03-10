@@ -36,7 +36,7 @@ Example.args = {
   closeOnSelect: true,
   onOpenChange: action('onOpenChange'),
   triggerComponent: (
-    <ButtonPill key="1">
+    <ButtonPill>
       <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
     </ButtonPill>
   ),

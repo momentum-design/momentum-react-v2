@@ -3,16 +3,12 @@ import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
-const MENU_TRIGGER_PLACEMENTS: Record<string, PlacementType> = PLACEMENTS;
-delete MENU_TRIGGER_PLACEMENTS.LEFT;
-delete MENU_TRIGGER_PLACEMENTS.LEFT_START;
-delete MENU_TRIGGER_PLACEMENTS.LEFT_END;
-delete MENU_TRIGGER_PLACEMENTS.RIGHT;
-delete MENU_TRIGGER_PLACEMENTS.RIGHT_START;
-delete MENU_TRIGGER_PLACEMENTS.RIGHT_END;
-delete MENU_TRIGGER_PLACEMENTS.AUTO;
-delete MENU_TRIGGER_PLACEMENTS.AUTO_START;
-delete MENU_TRIGGER_PLACEMENTS.AUTO_END;
+const MENU_TRIGGER_PLACEMENTS: Record<string, PlacementType> = Object.entries(PLACEMENTS)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  .filter(([_, value]) => value.startsWith('top') || value.startsWith('bottom'))
+  .reduce((obj, [key, placement]) => {
+    return Object.assign(obj, { [key]: placement });
+  }, {});
 
 const DEFAULTS = {
   VARIANT: 'medium',

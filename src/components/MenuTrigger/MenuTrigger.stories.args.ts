@@ -29,7 +29,8 @@ export default {
     },
   },
   isOpen: {
-    description: 'Whether the overlay is open by default (controlled).',
+    description:
+      'This props should be provided if the overlay state is being controlled outside of this component.',
     control: { type: 'boolean' },
     table: {
       type: {

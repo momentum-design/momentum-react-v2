@@ -157,7 +157,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -2337,7 +2336,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -4517,7 +4515,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -6698,7 +6695,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -8881,7 +8877,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -11061,7 +11056,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -13314,7 +13308,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -15505,7 +15498,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
-            key="1"
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}

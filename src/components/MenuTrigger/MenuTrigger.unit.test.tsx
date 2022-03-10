@@ -15,7 +15,7 @@ import '@testing-library/jest-dom';
 describe('<MenuTrigger /> - Enzyme', () => {
   const defaultProps = {
     isOpen: true,
-    triggerComponent: <ButtonPill key="1">Hello world</ButtonPill>,
+    triggerComponent: <ButtonPill>Hello world</ButtonPill>,
     children: [
       <Menu selectionMode="single" key="2">
         <Item key="one">One</Item>
@@ -215,11 +215,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
 describe('<MenuTrigger /> - React Testing Library', () => {
   const defaultProps = {
     'aria-label': 'Label',
-    triggerComponent: (
-      <ButtonPill aria-label="Open Menu" key="1">
-        Open Menu
-      </ButtonPill>
-    ),
+    triggerComponent: <ButtonPill aria-label="Open Menu">Open Menu</ButtonPill>,
     children: [
       <Menu selectionMode="single" key="2" aria-label="Single Menu">
         <Item key="one">One</Item>
