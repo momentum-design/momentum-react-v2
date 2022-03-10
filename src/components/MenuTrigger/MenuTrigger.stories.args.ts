@@ -40,18 +40,6 @@ export default {
       },
     },
   },
-  defaultOpen: {
-    description: 'Whether the overlay is open by default (uncontrolled).',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
   onOpenChange: {
     description: "Handler that is called when the popover's open state changes.",
     table: {

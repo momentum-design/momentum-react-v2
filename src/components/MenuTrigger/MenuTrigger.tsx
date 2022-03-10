@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useRef, Children, Fragment, useState, useEffect } from 'react';
+import React, { FC, ReactElement, useRef, Children, useState, useEffect } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './MenuTrigger.constants';
@@ -24,7 +24,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     style,
     closeOnSelect,
     children,
-    defaultOpen,
     isOpen,
     delay,
     variant = DEFAULTS.VARIANT,
@@ -63,7 +62,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     onClose: state.close,
     closeOnSelect,
     ref: menuRef,
-    autoFocus: 'first' as FocusStrategy,
   };
 
   /**
@@ -75,15 +73,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       handleFocusBackOnTrigger();
     }
   }, [state.isOpen, popoverInstance]);
-
-  /**
-   * Handle defaultOpen from @react-aria manually
-   */
-  useEffect(() => {
-    if (defaultOpen && popoverInstance) {
-      popoverInstance.show();
-    }
-  }, [popoverInstance]);
 
   /**
    * Handle isOpen from @react-aria manually
@@ -141,14 +130,22 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     >
       <FocusScope restoreFocus contain>
         <DismissButton onDismiss={state.close} />
-        <MenuContext.Provider value={menuContext}>
-          {menus.map((menu: ReactElement, index) => (
-            <Fragment key={`{fragment-${index}}`}>
+        {menus.map((menu: ReactElement, index) => {
+          return (
+            <MenuContext.Provider
+              value={
+                // when we have multiple menus inside the menu trigger, we want only the first menu
+                // to autoFocus on open. If we add autoFocus for all Menus, the last menu in the menu
+                // trigger will have the first focus, which is wrong
+                index === 0 ? { ...menuContext, autoFocus: 'first' as FocusStrategy } : menuContext
+              }
+              key={`{fragment-${index}}`}
+            >
               {menu}
               {index !== menus.length - 1 && <ContentSeparator key={`separator-${index}`} />}
-            </Fragment>
-          ))}
-        </MenuContext.Provider>
+            </MenuContext.Provider>
+          );
+        })}
         <DismissButton onDismiss={state.close} />
       </FocusScope>
     </Popover>

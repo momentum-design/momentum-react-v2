@@ -71,6 +71,11 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     [state]
   );
 
+  // needs to be removed because when used in Menu Trigger, it will
+  // label it by the triggerComponent's id, and that doesn't really make
+  // sense especially when there are multiple menus inside.
+  delete menuProps['aria-labelledby'];
+
   return (
     <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
       <ul
