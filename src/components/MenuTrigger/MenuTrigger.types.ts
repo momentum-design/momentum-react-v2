@@ -3,7 +3,7 @@ import { MenuTriggerProps } from '@react-types/menu';
 import type { PopoverCommonStyleProps, PlacementType } from '../Popover/Popover.types';
 
 export interface Props
-  extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip'>,
+  extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip' | 'defaultOpen'>,
     Omit<PopoverCommonStyleProps, 'placement'> {
   /**
    * Child components of this Popover (what will be shown within the Popover)
