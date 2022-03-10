@@ -30,6 +30,12 @@ export interface Props<T> extends AriaMenuProps<T> {
    * @default "rectangle"
    */
   itemShape?: 'rectangle' | 'isPilled';
+
+  /**
+   * Wether we should display the tick on the left side.
+   * @default false
+   */
+  isTickOnLeftSide?: boolean;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
@@ -43,4 +49,5 @@ export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
 export interface MenuAppearanceContextValue {
   itemShape?: 'rectangle' | 'isPilled';
   itemSize?: ListItemBaseSize;
+  isTickOnLeftSide?: boolean;
 }

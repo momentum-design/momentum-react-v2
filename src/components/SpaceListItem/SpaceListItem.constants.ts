@@ -7,6 +7,7 @@ const DEFAULTS = {
 };
 
 const STYLE = {
+  wrapper: `${CLASS_PREFIX}-wrapper`,
   textWrapper: `${CLASS_PREFIX}-text-wrapper`,
   isNewActivity: `${CLASS_PREFIX}-is-new-activity`,
   dotDivider: `${CLASS_PREFIX}-dot-divider`,

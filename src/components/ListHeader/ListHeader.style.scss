@@ -1,4 +1,6 @@
 .md-list-header-wrapper {
+  color: var(--listitem-textsecondary);
+  font-size: 0.875rem;
   // Override margin between start section and middle/fill sections
   div[data-position='start'] {
     margin-right: 0.5rem;

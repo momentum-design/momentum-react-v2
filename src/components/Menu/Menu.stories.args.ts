@@ -1,4 +1,6 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import * as LIST_ITEM_BASE_CONSTANTS from '../ListItemBase/ListItemBase.constants';
+import { DEFAULTS } from '../Menu/Menu.constants';
 
 export default {
   ...commonStyles,
@@ -68,6 +70,47 @@ export default {
       },
       defaultValue: {
         summary: [],
+      },
+    },
+  },
+  itemSize: {
+    defaultValue: DEFAULTS.ITEM_SIZE,
+    description: 'Size of the list item base',
+    control: { type: 'select' },
+    options: [undefined, ...Object.values(LIST_ITEM_BASE_CONSTANTS.SIZES)],
+    table: {
+      type: {
+        summary: 'ListItemBaseSize',
+      },
+      defaultValue: {
+        summary: DEFAULTS.ITEM_SIZE,
+      },
+    },
+  },
+  itemShape: {
+    defaultValue: DEFAULTS.ITEM_SHAPE,
+    description: 'The shape of the list item base container',
+    control: { type: 'select' },
+    options: [undefined, ...Object.values(LIST_ITEM_BASE_CONSTANTS.SHAPES)],
+    table: {
+      type: {
+        summary: "'rectangle' | 'isPilled'",
+      },
+      defaultValue: {
+        summary: DEFAULTS.ITEM_SHAPE,
+      },
+    },
+  },
+  isTickOnLeftSide: {
+    defaultValue: false,
+    description: 'Wether we should display the tick on the left side.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
       },
     },
   },

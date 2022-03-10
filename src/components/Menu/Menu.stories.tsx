@@ -11,6 +11,7 @@ import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
+import { ListHeader, ListItemBaseSection, Icon } from '..';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -35,6 +36,58 @@ Example.args = {
     <Item key="one">One</Item>,
     <Item key="two">Two</Item>,
     <Item key="three">Three</Item>,
+  ],
+};
+const Sections = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
+
+Sections.argTypes = { ...argTypes };
+delete Sections.argTypes.children;
+delete Sections.argTypes.isTickOnLeftSide;
+delete Sections.argTypes.itemSize;
+
+Sections.args = {
+  'aria-label': 'Menu component',
+  onAction: action('onAction'),
+};
+
+Sections.parameters = {
+  variants: [
+    {
+      selectionMode: 'single',
+      itemSize: 32,
+      isTickOnLeftSide: true,
+      children: [
+        <Section
+          key="0"
+          title={
+            <ListHeader outline={false}>
+              <ListItemBaseSection position="start">
+                <Icon scale={16} name="speaker" strokeColor="none" />
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Speaker</ListItemBaseSection>
+            </ListHeader>
+          }
+        >
+          <Item>Use system setting (internal speakers)</Item>
+          <Item>Internal speaker</Item>
+          <Item>Bose Headset 100</Item>
+        </Section>,
+        <Section
+          key="1"
+          title={
+            <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
+              <ListItemBaseSection position="start">
+                <Icon scale={16} name="microphone" strokeColor="none" />
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Microphone</ListItemBaseSection>
+            </ListHeader>
+          }
+        >
+          <Item>Use system setting (internal microphone)</Item>
+          <Item>Bose Headset 100</Item>
+        </Section>,
+      ],
+    },
   ],
 };
 
@@ -111,4 +164,4 @@ Common.parameters = {
 delete Common.argTypes.onAction;
 delete Common.argTypes.disabledKeys;
 
-export { Example, Common };
+export { Example, Sections, Common };
