@@ -49,6 +49,10 @@
     flex-shrink: 0;
   }
 
+  &[data-size='32'] > div[data-position='start'] {
+    margin-right: 0.5rem;
+  }
+
   & > div[data-position='fill'],
   *[data-position='middle'] {
     width: 100%;

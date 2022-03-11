@@ -23,17 +23,9 @@ describe('<MenuSection />', () => {
   );
 
   const state = result.current;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let useContextMock: jest.Mock<any, any>;
-
-  beforeEach(() => {
-    useContextMock = React.useContext = jest.fn();
-  });
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      useContextMock.mockReturnValue(state);
-
       const item = state.collection.getItem('$.0');
       const wrapper = mount(<MenuSection state={state} key={item.key} item={item} />);
 
@@ -43,8 +35,6 @@ describe('<MenuSection />', () => {
 
   describe('attributes', () => {
     it('should render the items inside the section', () => {
-      useContextMock.mockReturnValue(state);
-
       const item = state.collection.getItem('$.0');
       const numberOfItems = [...item.childNodes].length;
 
