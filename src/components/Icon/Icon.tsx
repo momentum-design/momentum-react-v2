@@ -24,7 +24,7 @@ const Icon: React.FC<Props> = (props: Props) => {
     id,
     name,
     scale,
-    strokeColor = DEFAULTS.STROKE_COLOR,
+    strokeColor,
     style,
     weight,
     ...otherProps
