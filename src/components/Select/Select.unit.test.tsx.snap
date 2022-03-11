@@ -182,7 +182,6 @@ exports[`Select snapshot should match snapshot 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -295,7 +294,6 @@ exports[`Select snapshot should match snapshot 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -492,7 +490,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -605,7 +602,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -803,7 +799,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -916,7 +911,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -1588,7 +1582,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -1701,7 +1694,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -1899,7 +1891,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -2012,7 +2003,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -2220,7 +2210,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -2333,7 +2322,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -3008,7 +2996,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -3121,7 +3108,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -3320,7 +3306,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -3433,7 +3418,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -4107,7 +4091,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -4222,7 +4205,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -4445,7 +4427,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -4560,7 +4541,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -4785,7 +4765,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -4900,7 +4879,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   data-test="arrow-up"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -5639,7 +5617,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -5752,7 +5729,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
@@ -5949,7 +5925,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -6063,7 +6038,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                   data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
