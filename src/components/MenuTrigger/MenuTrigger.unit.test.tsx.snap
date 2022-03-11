@@ -523,6 +523,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -795,6 +797,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -1067,6 +1071,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -1365,6 +1371,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -1637,6 +1645,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -1909,6 +1919,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -2366,6 +2378,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -2638,6 +2652,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -2910,6 +2926,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -3208,6 +3226,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -3480,6 +3500,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -3752,6 +3774,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -4287,6 +4311,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -4559,6 +4585,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -4831,6 +4859,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -5129,6 +5159,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -5401,6 +5433,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -5673,6 +5707,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -6129,6 +6165,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -6401,6 +6439,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -6673,6 +6713,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -6971,6 +7013,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={0}
                 >
                   <FocusRing
@@ -7243,6 +7287,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -7515,6 +7561,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot correctly when closeOnSe
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -8134,6 +8182,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -8406,6 +8456,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -8678,6 +8730,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemradio"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -8976,6 +9030,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -9248,6 +9304,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing
@@ -9520,6 +9578,8 @@ exports[`<MenuTrigger /> snapshot should match snapshot with overlayRadius 1`] =
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
                   role="menuitemcheckbox"
+                  shape="rectangle"
+                  size={40}
                   tabIndex={-1}
                 >
                   <FocusRing

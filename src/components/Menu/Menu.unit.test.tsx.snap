@@ -190,6 +190,8 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing
@@ -416,6 +418,8 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing
@@ -662,6 +666,8 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing
@@ -888,6 +894,8 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing
@@ -1135,6 +1143,8 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing
@@ -1361,6 +1371,8 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing
@@ -1420,6 +1432,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
 <_Menu
   aria-label="Menu component"
   itemShape="isPilled"
+  itemSize={50}
 >
   <ul
     aria-label="Menu component"
@@ -1608,6 +1621,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         onTouchStart={[Function]}
         role="menuitem"
         shape="isPilled"
+        size={50}
         tabIndex={-1}
       >
         <FocusRing
@@ -1835,6 +1849,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         onTouchStart={[Function]}
         role="menuitem"
         shape="isPilled"
+        size={50}
         tabIndex={-1}
       >
         <FocusRing
@@ -2081,6 +2096,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
         size={50}
         tabIndex={-1}
       >
@@ -2308,6 +2324,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
         size={50}
         tabIndex={-1}
       >
@@ -2564,6 +2581,8 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing
@@ -2790,6 +2809,8 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role="menuitem"
+        shape="rectangle"
+        size={40}
         tabIndex={-1}
       >
         <FocusRing

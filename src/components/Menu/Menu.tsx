@@ -20,6 +20,10 @@ export function useMenuContext(): MenuContextValue {
 
 export const MenuAppearanceContext = React.createContext<MenuAppearanceContextValue>({});
 
+export function useMenuAppearanceContext(): MenuAppearanceContextValue {
+  return useContext(MenuAppearanceContext);
+}
+
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLUListElement>) => {
   const {
     className,
