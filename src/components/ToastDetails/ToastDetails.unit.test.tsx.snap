@@ -299,7 +299,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                       data-test="cancel"
                       fill="currentColor"
                       height="100%"
-                      stroke="currentColor"
                       style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
@@ -359,7 +358,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                       data-test="alert-muted"
                       fill="currentColor"
                       height="100%"
-                      stroke="currentColor"
                       style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
@@ -571,7 +569,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                       data-test="cancel"
                       fill="currentColor"
                       height="100%"
-                      stroke="currentColor"
                       style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
@@ -631,7 +628,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                       data-test="alert-muted"
                       fill="currentColor"
                       height="100%"
-                      stroke="currentColor"
                       style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
@@ -810,7 +806,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                       data-test="cancel"
                       fill="currentColor"
                       height="100%"
-                      stroke="currentColor"
                       style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
@@ -870,7 +865,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                       data-test="alert-muted"
                       fill="currentColor"
                       height="100%"
-                      stroke="currentColor"
                       style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"

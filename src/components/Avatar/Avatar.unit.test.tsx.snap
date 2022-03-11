@@ -109,7 +109,6 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
           data-test="check"
           fill="currentColor"
           height="100%"
-          stroke="currentColor"
           style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"

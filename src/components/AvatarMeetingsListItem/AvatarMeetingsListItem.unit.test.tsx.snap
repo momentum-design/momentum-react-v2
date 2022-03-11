@@ -500,7 +500,6 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                               data-test="more"
                               fill="currentColor"
                               height="100%"
-                              stroke="currentColor"
                               style={Object {}}
                               viewBox="0, 0, 32, 32"
                               width="100%"
