@@ -1,5 +1,7 @@
 /** @component typography */
 
+@use "sass:math";
+
 @include exports('type-bem') {
   * {
     -webkit-font-smoothing: antialiased;
@@ -271,8 +273,7 @@
       $fontSize: map-get($fontSizes, $type);
 
       @if map-has-key($lineHeights, $type) {
-        $lineHeight: map-get($lineHeights, $type) /
-          (map-get($lineHeights, $type) * 0 + 1);
+        $lineHeight: math.div(map-get($lineHeights, $type), map-get($lineHeights, $type) * 0 + 1);
       }
 
       .#{$type},
