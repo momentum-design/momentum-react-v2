@@ -1,4 +1,6 @@
 // Background color for the top bar
+@use "sass:math";
+
 $topbar-bg-color: $md-gray-90;
 $topbar-bg: $md-white-100;
 // Height and margin
@@ -23,7 +25,7 @@ $topbar-link-bg-active: $md-theme-50;
 $topbar-link-bg-active-hover: scale-color($md-theme-50, $lightness: -14%);
 $topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: none;
-$topbar-link-padding: $topbar-height / 3;
+$topbar-link-padding: math.div($topbar-height, 3);
 $topbar-back-link-size: rem-calc(18);
 $topbar-link-dropdown-padding: rem-calc(20);
 $topbar-button-font-size: 0.75rem;
