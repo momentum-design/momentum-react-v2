@@ -283,7 +283,6 @@ storybook:test # Performs visual tests of the built storybook.
 `styles` scripts perform actions against style files within the `./scss` folder.
 
 ```bash
-styles:build:css # Builds './scss' files into a bundled css file.
 styles:build:settings # Generates scss files from settings within the './scss' directory.
 styles:build:tokens: # Generates scss files from tokens within the './scss' directory.
 styles:makeIECompatible: # Makes a single scss file IE compatibile w.r.t. css vars
