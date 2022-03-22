@@ -1,4 +1,4 @@
-import { Message } from '../InputMessage/InputMessage.types';
+import { Message } from 'components/InputMessage/InputMessage.types';
 
 export interface Props {
   /**

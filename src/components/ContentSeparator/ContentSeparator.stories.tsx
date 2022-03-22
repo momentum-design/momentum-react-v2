@@ -1,9 +1,9 @@
-import React from 'react';
 import { Story } from '@storybook/react';
+import React from 'react';
+
+import Icon from 'components/Icon';
 
 import ContentSeparator, { ContentSeparatorProps } from './';
-
-import Icon from '../Icon';
 
 const childrenOptions = {
   'Some separator text': 'Some separator text',

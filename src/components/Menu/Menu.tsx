@@ -1,16 +1,19 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import { Node } from '@react-types/shared';
-import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCallback } from 'react';
+
 import classnames from 'classnames';
+import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCallback } from 'react';
+
+import { useMenu } from '@react-aria/menu';
+import { mergeProps } from '@react-aria/utils';
+import { useTreeState, TreeState } from '@react-stately/tree';
+import { Node } from '@react-types/shared';
+
+import MenuItem from 'components/MenuItem';
+import MenuSection from 'components/MenuSection';
 
 import { STYLE, DEFAULTS } from './Menu.constants';
 import { MenuAppearanceContextValue, MenuContextValue, Props } from './Menu.types';
 import './Menu.style.scss';
-import { useMenu } from '@react-aria/menu';
-import { useTreeState, TreeState } from '@react-stately/tree';
-import MenuItem from '../MenuItem';
-import { mergeProps } from '@react-aria/utils';
-import MenuSection from '../MenuSection';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 

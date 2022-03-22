@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { Template } from 'storybook/helper.stories.templates';
 
-import ThemeProvider, { THEME_PROVIDER_CONSTANTS as CONSTANTS, ThemeProviderProps } from './';
 import argTypes from './ThemeProvider.stories.args';
 import Documentation from './ThemeProvider.stories.docs.mdx';
+
+import ThemeProvider, { THEME_PROVIDER_CONSTANTS as CONSTANTS, ThemeProviderProps } from './';
 
 export default {
   title: 'Momentum UI/ThemeProvider',

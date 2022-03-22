@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
 
 import { DEFAULTS, PLACEMENTS, STYLE } from './ModalArrow.constants';
+
 import type { Props } from './ModalArrow.types';
 import './ModalArrow.style.scss';
 

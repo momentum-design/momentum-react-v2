@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
 
 import { DEFAULTS, STYLE } from './Overlay.constants';
 import { Props } from './Overlay.types';

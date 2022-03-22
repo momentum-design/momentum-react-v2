@@ -1,11 +1,12 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
+import AriaButtonDocs from 'storybook/docs.stories.aria-button.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import ButtonControl, { ButtonControlProps, BUTTON_CONTROL_CONSTANTS as CONSTANTS } from './';
 import argTypes from './ButtonControl.stories.args';
 import Documentation from './ButtonControl.stories.docs.mdx';
+
+import ButtonControl, { ButtonControlProps, BUTTON_CONTROL_CONSTANTS as CONSTANTS } from './';
 
 export default {
   title: 'Momentum UI/ButtonControl',

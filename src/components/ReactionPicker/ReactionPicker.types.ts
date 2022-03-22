@@ -1,6 +1,6 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { ReactionButtonProps } from '../ReactionButton';
+import { ReactionButtonProps } from 'components/ReactionButton';
 
 export type SupportedChildren = ReactionButtonProps;
 export interface Props {

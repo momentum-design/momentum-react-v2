@@ -2,7 +2,7 @@ import {
   commonAriaButton,
   commonHTMLAttributes,
   commonStyles,
-} from '../../storybook/helper.stories.argtypes';
+} from 'storybook/helper.stories.argtypes';
 
 import { ALERT_BADGE_CONSTANTS as CONSTANTS } from './';
 

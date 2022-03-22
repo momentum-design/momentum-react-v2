@@ -1,6 +1,7 @@
-import React from 'react';
 import { mount } from 'enzyme';
-import { ExampleComponent } from '@momentum-ui/react-collaboration';
+import React from 'react';
+
+import ExampleComponent from 'components/ExampleComponent';
 
 describe('tests for <ExampleComponent />', () => {
   it('should match SnapShot', () => {

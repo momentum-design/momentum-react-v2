@@ -1,6 +1,5 @@
-import React, { FC } from 'react';
-
 import Tippy, { TippyProps } from '@tippyjs/react';
+import React, { FC } from 'react';
 
 export type LazyTippyProps = TippyProps;
 

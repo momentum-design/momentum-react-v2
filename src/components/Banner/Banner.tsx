@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
 
-import ModalContainer from '../ModalContainer';
-import Text, { TEXT_CONSTANTS } from '../Text';
+import ModalContainer from 'components/ModalContainer';
+import Text, { TEXT_CONSTANTS } from 'components/Text';
 
 import { STYLE } from './Banner.constants';
 import { Props } from './Banner.types';

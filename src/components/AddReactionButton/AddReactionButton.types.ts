@@ -1,3 +1,3 @@
-import { ButtonCircleProps } from './../ButtonCircle/index';
+import { ButtonCircleProps } from 'components/ButtonCircle';
 
 export type Props = ButtonCircleProps;

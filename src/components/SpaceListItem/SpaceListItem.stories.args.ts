@@ -1,5 +1,6 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
-import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
+import { commonStyles } from 'storybook/helper.stories.argtypes';
+
+import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
 
 export default {
   ...commonStyles,

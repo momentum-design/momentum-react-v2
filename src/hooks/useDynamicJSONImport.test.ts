@@ -1,5 +1,6 @@
-import { useDynamicJSONImport } from './useDynamicJSONImport';
 import { renderHook } from '@testing-library/react-hooks';
+
+import { useDynamicJSONImport } from './useDynamicJSONImport';
 
 describe('SVG', () => {
   beforeEach(() => jest.resetModules());

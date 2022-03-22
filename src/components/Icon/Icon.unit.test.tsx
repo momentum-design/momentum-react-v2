@@ -1,8 +1,10 @@
-import Icon from '.';
 import React, { useEffect, useState } from 'react';
-import { STYLE, EXCEPTION_ICONS_LIST, VIEW_BOX_SPECS } from './Icon.constants';
 
 import { mountAndWait } from '../../../test/utils';
+
+import { STYLE, EXCEPTION_ICONS_LIST, VIEW_BOX_SPECS } from './Icon.constants';
+
+import Icon from '.';
 
 describe('<Icon />', () => {
   let container;

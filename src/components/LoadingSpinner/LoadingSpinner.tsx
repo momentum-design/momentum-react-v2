@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
+
+import Icon from 'components/Icon';
 
 import { DEFAULTS, STYLE } from './LoadingSpinner.constants';
 import { Props } from './LoadingSpinner.types';
+
 import './LoadingSpinner.style.scss';
-import Icon from '../Icon';
 
 const LoadingSpinner: FC<Props> = (props: Props) => {
   const { className, id, style, scale = DEFAULTS.SCALE, ...rest } = props;

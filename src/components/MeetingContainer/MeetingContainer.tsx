@@ -1,12 +1,15 @@
-import React, { FC, cloneElement } from 'react';
 import classnames from 'classnames';
-import Card, { CARD_CONSTANTS } from '../Card';
+import React, { FC, cloneElement } from 'react';
+
+import ButtonGroup from 'components/ButtonGroup';
+import Card, { CARD_CONSTANTS } from 'components/Card';
+import DividerDot from 'components/DividerDot';
+import Text, { TEXT_CONSTANTS } from 'components/Text';
+
 import { STYLE, DEFAULTS } from './MeetingContainer.constants';
 import { Props } from './MeetingContainer.types';
+
 import './MeetingContainer.style.scss';
-import Text, { TEXT_CONSTANTS } from '../Text';
-import DividerDot from '../DividerDot';
-import ButtonGroup from '../ButtonGroup';
 
 /**
  * The MeetingContainer component.

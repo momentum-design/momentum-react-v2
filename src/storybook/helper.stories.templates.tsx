@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
-import React, { FC, ReactElement } from 'react';
 import { Story } from '@storybook/react';
+import React, { FC, ReactElement } from 'react';
 
 /**
  * Generate a Story Template with the provided component. See the [Storybook Documentation]{@link https://storybook.js.org/docs/react/writing-stories/introduction#using-args}.

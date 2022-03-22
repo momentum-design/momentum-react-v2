@@ -1,6 +1,7 @@
-import React from 'react';
 import { mount } from 'enzyme';
-import { ThemeProvider } from '@momentum-ui/react-collaboration';
+import React from 'react';
+
+import ThemeProvider from 'components/ThemeProvider';
 
 import { STYLE, THEME_CLASS_PREFIX, THEME_NAMES } from './ThemeProvider.constants';
 

@@ -1,9 +1,9 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
+
+import ButtonSimple from 'components/ButtonSimple';
 
 import AlertBadge, { ALERT_BADGE_CONSTANTS as CONSTANTS } from './';
-
-import ButtonSimple from '../ButtonSimple';
 
 const { COLORS } = CONSTANTS;
 

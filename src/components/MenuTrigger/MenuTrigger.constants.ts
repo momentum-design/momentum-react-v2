@@ -1,6 +1,7 @@
 const CLASS_PREFIX = 'md-menu-trigger';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
+
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 const MENU_TRIGGER_PLACEMENTS: Record<string, PlacementType> = Object.entries(PLACEMENTS)

@@ -1,6 +1,7 @@
 const autoprefixer = require('autoprefixer');
-const path = require('path');
 const webpack = require('webpack');
+
+const path = require('path');
 
 const { baseConfig } = require('./base.config');
 const { repoRoot } = require('./constants');

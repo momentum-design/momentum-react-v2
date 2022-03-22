@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/ban-types */
+
 import React, { RefObject, ReactElement, forwardRef } from 'react';
 
-import { Props } from './ListBoxBase.types';
-import ListBoxSection from '../ListBoxSection';
-import ListBoxItem from '../ListBoxItem';
 import { useListBox } from '@react-aria/listbox';
 import { ListState } from '@react-stately/list';
-
 import { Node } from '@react-types/shared';
-import MenuListBackground from '../MenuListBackground';
+
+import ListBoxItem from 'components/ListBoxItem';
+import ListBoxSection from 'components/ListBoxSection';
+import MenuListBackground from 'components/MenuListBackground';
+
+import { Props } from './ListBoxBase.types';
 
 export const ListBoxContext = React.createContext<ListState<unknown>>(null);
 

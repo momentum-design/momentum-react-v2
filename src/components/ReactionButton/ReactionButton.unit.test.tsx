@@ -1,9 +1,11 @@
 import React, { ReactElement } from 'react';
 
+import Reaction, { ReactionProps } from 'components/Reaction';
+import { REACTION_NAMES } from 'components/Reaction/Reaction.constants';
+
 import { mountAndWait } from '../../../test/utils';
+
 import ReactionButton, { REACTION_BUTTON_CONSTANTS as CONSTANTS } from './';
-import Reaction, { ReactionProps } from '../Reaction';
-import { REACTION_NAMES } from '../Reaction/Reaction.constants';
 
 describe('<ReactionButton />', () => {
   let children: ReactElement<ReactionProps>;

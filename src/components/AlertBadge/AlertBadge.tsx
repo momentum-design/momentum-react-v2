@@ -1,12 +1,12 @@
-import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import ButtonSimple from '../ButtonSimple';
+import React, { forwardRef, RefObject } from 'react';
 
-import { PrimitiveConverter } from '../../utils';
+import ButtonSimple from 'components/ButtonSimple';
+import './AlertBadge.style.scss';
+import { PrimitiveConverter } from 'utils';
 
 import { STYLE } from './AlertBadge.constants';
 import { Props } from './AlertBadge.types';
-import './AlertBadge.style.scss';
 
 const AlertBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { children, className, color, image, label, ...otherProps } = props;

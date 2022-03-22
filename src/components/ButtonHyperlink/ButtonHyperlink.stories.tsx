@@ -1,12 +1,13 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
-import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
+import AriaButtonDocs from 'storybook/docs.stories.aria-button.mdx';
+import HTMLGlobalAttributes from 'storybook/docs.stories.common-html-attributes.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import ButtonHyperlink, { ButtonHyperlinkProps } from './';
 import argTypes from './ButtonHyperlink.stories.args';
 import Documentation from './ButtonHyperlink.stories.docs.mdx';
+
+import ButtonHyperlink, { ButtonHyperlinkProps } from './';
 
 export default {
   title: 'Momentum UI/ButtonHyperlink',

@@ -1,15 +1,18 @@
 import React from 'react';
 
-import SpaceListItem from './';
-import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
-import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
-import Avatar from '../Avatar';
-import Icon from '../Icon';
+import Avatar from 'components/Avatar';
+import DividerDot from 'components/DividerDot';
+import Icon from 'components/Icon';
+import * as ListContext from 'components/List/List.utils';
+import ListItemBase from 'components/ListItemBase';
+import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
+import { TeamColor } from 'components/ThemeProvider/ThemeProvider.types';
+
 import { mountAndWait } from '../../../test/utils';
-import ListItemBase from '../ListItemBase';
-import * as ListContext from '../List/List.utils';
+
 import { STYLE } from './SpaceListItem.constants';
-import DividerDot from '../DividerDot';
+
+import SpaceListItem from './';
 
 describe('<SpaceListItem />', () => {
   beforeEach(() => {

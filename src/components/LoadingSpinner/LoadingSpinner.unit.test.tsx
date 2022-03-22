@@ -1,7 +1,8 @@
 import React from 'react';
 
-import LoadingSpinner, { LOADING_SPINNER_CONSTANTS as CONSTANTS } from './';
 import { mountAndWait } from '../../../test/utils';
+
+import LoadingSpinner, { LOADING_SPINNER_CONSTANTS as CONSTANTS } from './';
 
 describe('<LoadingSpinner />', () => {
   describe('snapshot', () => {

@@ -1,5 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
-import type { PlacementType } from '../ModalArrow/ModalArrow.types';
+
+import type { PlacementType } from 'components/ModalArrow/ModalArrow.types';
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;

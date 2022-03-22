@@ -1,8 +1,9 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
+
+import { OUTLINE_COLOR, OUTLINE_POSITION } from './ListHeader.constants';
 
 import ListHeader, { LIST_HEADER_CONSTANTS as CONSTANTS } from './';
-import { OUTLINE_COLOR, OUTLINE_POSITION } from './ListHeader.constants';
 
 describe('<ListHeader />', () => {
   describe('snapshot', () => {

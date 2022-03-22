@@ -1,17 +1,19 @@
-import React, { ReactElement, RefObject, useRef, forwardRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
+import React, { ReactElement, RefObject, useRef, forwardRef, useState, useEffect } from 'react';
 
 import './Select.style.scss';
-import { Props } from './Select.types';
-import { DEFAULTS, SELECT_HEIGHT_ADJUST_BORDER, STYLE } from './Select.constants';
-import { useSelectState } from '@react-stately/select';
 import { useButton } from '@react-aria/button';
-import { DismissButton, useOverlay } from '@react-aria/overlays';
 import { FocusScope } from '@react-aria/focus';
+import { DismissButton, useOverlay } from '@react-aria/overlays';
 import { useSelect, HiddenSelect } from '@react-aria/select';
-import Icon from '../Icon';
-import ListBoxBase from '../ListBoxBase';
-import FocusRing from '../FocusRing';
+import { useSelectState } from '@react-stately/select';
+
+import FocusRing from 'components/FocusRing';
+import Icon from 'components/Icon';
+import ListBoxBase from 'components/ListBoxBase';
+
+import { DEFAULTS, SELECT_HEIGHT_ADJUST_BORDER, STYLE } from './Select.constants';
+import { Props } from './Select.types';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {

@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
+
+import ButtonGroup from 'components/ButtonGroup';
 
 import { STYLE } from './ReactionPicker.constants';
-import { Props } from './ReactionPicker.types';
 import './ReactionPicker.style.scss';
-import ButtonGroup from '../ButtonGroup';
+
+import type { Props } from './ReactionPicker.types';
 
 const ReactionPicker: FC<Props> = (props: Props) => {
   const { children, className, id, style } = props;

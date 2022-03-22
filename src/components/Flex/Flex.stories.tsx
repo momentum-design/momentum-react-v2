@@ -1,12 +1,13 @@
-import React from 'react';
 import { Story } from '@storybook/react';
+import React from 'react';
 
-import Flex, { FlexProps } from '.';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
 
 import Documentation from './Flex.documentation.mdx';
 import argTypes from './Flex.stories.args';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+
+import Flex, { FlexProps } from '.';
 
 export default {
   title: 'Momentum UI/Flex',

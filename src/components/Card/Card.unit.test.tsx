@@ -1,11 +1,12 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+import React from 'react';
 import '@testing-library/jest-dom';
 
 import { BUTTON_SIMPLE_CONSTANTS } from '../ButtonSimple';
 
-import Card, { CARD_CONSTANTS as CONSTANTS } from './';
 import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
+
+import Card, { CARD_CONSTANTS as CONSTANTS } from './';
 
 describe('<Card />', () => {
   describe('snapshot', () => {

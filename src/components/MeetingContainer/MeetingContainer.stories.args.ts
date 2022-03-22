@@ -1,8 +1,10 @@
 import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
-import { MEETING_CONTAINER_CONSTANTS as CONSTANTS } from './';
-import { TEXT_CONSTANTS } from '../Text';
-import { cardArgTypes } from '../Card/Card.stories.args';
 import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args';
+import { cardArgTypes } from '../Card/Card.stories.args';
+import { TEXT_CONSTANTS } from '../Text';
+
+import { MEETING_CONTAINER_CONSTANTS as CONSTANTS } from './';
+
 const meetingContainerArgTypes = {
   children: {
     description: 'The title of the meeting. It is overwritten by the `meetingTitle` prop',

@@ -1,9 +1,11 @@
 import React from 'react';
+
+import ButtonSimple from 'components/ButtonSimple';
+import Reaction from 'components/Reaction';
+
 import { mountAndWait } from '../../../test/utils';
 
 import ReactionBadge, { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
-import Reaction from '../Reaction';
-import ButtonSimple from '../ButtonSimple';
 
 describe('<ReactionBadge name="haha" />', () => {
   const reactionProp = <Reaction name="haha" />;

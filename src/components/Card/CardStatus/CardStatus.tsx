@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
 
 import { STYLE } from './CardStatus.constants';
+
 import type { Props } from './CardStatus.types';
 import './CardStatus.style.scss';
 

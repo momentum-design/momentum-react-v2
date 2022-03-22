@@ -1,4 +1,5 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+
 import { CHIP_CONSTANTS } from '.';
 
 const chipArgTypes = {

@@ -1,8 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
+import React, { useRef, useState, useEffect } from 'react';
 
 import './Avatar.style.scss';
-import { PresenceType, Props } from './Avatar.types';
+import ButtonSimple from 'components/ButtonSimple';
+import Icon from 'components/Icon';
+
+import Loading from '../../legacy/Loading';
+
 import {
   STYLE,
   DEFAULTS,
@@ -12,10 +16,8 @@ import {
   AVATAR_PRESENCE_ICON_SIZE_MAPPING,
   AVATAR_ICON_SIZE_MAPPING,
 } from './Avatar.constants';
-import Icon from '../Icon';
+import { PresenceType, Props } from './Avatar.types';
 import { getInitials } from './Avatar.utils';
-import ButtonSimple from '../ButtonSimple';
-import Loading from '../../legacy/Loading';
 
 const Avatar: React.FC<Props> = (props: Props) => {
   const {

@@ -1,24 +1,27 @@
+import { action } from '@storybook/addon-actions';
 import React from 'react';
+
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
 import {
   getComponentStates,
   MultiTemplate,
   MultiTemplateWithPseudoStates,
   Template,
-} from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+} from 'storybook/helper.stories.templates';
 
-import MeetingListItem, { MeetingListItemProps, MeetingMarker } from './';
+import Avatar from 'components/Avatar';
+import ButtonCircle from 'components/ButtonCircle';
+import ButtonGroup from 'components/ButtonGroup';
+import ButtonHyperlink from 'components/ButtonHyperlink';
+import ButtonPill from 'components/ButtonPill';
+import Icon from 'components/Icon';
+import Text from 'components/Text';
+
 import argTypes from './MeetingListItem.stories.args';
 import Documentation from './MeetingListItem.stories.docs.mdx';
-import Icon from '../Icon';
-import Avatar from '../Avatar';
-import ButtonHyperlink from '../ButtonHyperlink';
-import ButtonPill from '../ButtonPill';
-import ButtonGroup from '../ButtonGroup';
-import ButtonCircle from '../ButtonCircle';
-import Text from '../Text';
-import { action } from '@storybook/addon-actions';
+
+import MeetingListItem, { MeetingListItemProps, MeetingMarker } from './';
 
 export default {
   title: 'Momentum UI/MeetingListItem',

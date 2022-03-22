@@ -1,7 +1,9 @@
-import { PressEvents } from '@react-types/shared';
 import { CSSProperties, ReactNode } from 'react';
-import { ContextMenu } from '../ListItemBase/ListItemBase.types';
-import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+
+import { PressEvents } from '@react-types/shared';
+
+import { ContextMenu } from 'components/ListItemBase/ListItemBase.types';
+import { TeamColor } from 'components/ThemeProvider/ThemeProvider.types';
 
 export interface Props extends PressEvents, ContextMenu {
   /**

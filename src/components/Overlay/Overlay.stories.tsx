@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
 import { Story } from '@storybook/react';
+import React, { useState } from 'react';
 
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
 
-import ModalContainer from '../ModalContainer';
+import ModalContainer from 'components/ModalContainer';
 
-import Overlay, { OverlayProps } from './';
 import argTypes from './Overlay.stories.args';
 import Documentation from './Overlay.stories.docs.mdx';
+
+import Overlay, { OverlayProps } from './';
 
 export default {
   title: 'Momentum UI/Overlay',

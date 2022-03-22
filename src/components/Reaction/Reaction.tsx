@@ -1,9 +1,10 @@
-import React, { FC, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import lottie from 'lottie-web';
-import { useDynamicJSONImport } from '../../hooks/useDynamicJSONImport';
+import React, { FC, useRef, useEffect } from 'react';
 
-import Icon from '../Icon';
+import Icon from 'components/Icon';
+import { useDynamicJSONImport } from 'hooks/useDynamicJSONImport';
+
 import { DEFAULTS, STYLE } from './Reaction.constants';
 import { Props } from './Reaction.types';
 import './Reaction.style.scss';

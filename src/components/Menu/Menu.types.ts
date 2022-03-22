@@ -1,7 +1,9 @@
 import { CSSProperties, HTMLAttributes, MutableRefObject } from 'react';
+
 import { AriaMenuProps } from '@react-types/menu';
 import { FocusStrategy } from '@react-types/shared';
-import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+
+import { ListItemBaseSize } from 'components/ListItemBase/ListItemBase.types';
 
 export interface Props<T> extends AriaMenuProps<T> {
   /**

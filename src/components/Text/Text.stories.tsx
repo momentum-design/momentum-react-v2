@@ -1,11 +1,12 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import Text, { TextProps } from './';
+import { TYPES } from './Text.constants';
 import argTypes from './Text.stories.args';
 import Documentation from './Text.stories.docs.mdx';
-import { TYPES } from './Text.constants';
+
+import Text, { TextProps } from './';
 
 export default {
   title: 'Momentum UI/Text',

@@ -1,10 +1,13 @@
-import ListBoxBase, { ListBoxBaseProps } from '.';
 import { mount } from 'enzyme';
 import React, { useRef } from 'react';
-import { useListState } from '@react-stately/list';
+
 import { Item, Section } from '@react-stately/collections';
+import { useListState } from '@react-stately/list';
 import { CollectionChildren } from '@react-types/shared';
-import MenuListBackground from '../MenuListBackground';
+
+import MenuListBackground from 'components/MenuListBackground';
+
+import ListBoxBase, { ListBoxBaseProps } from '.';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 const WrappedComponent = <T extends object>(

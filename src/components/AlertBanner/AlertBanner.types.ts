@@ -1,6 +1,7 @@
 import { CSSProperties, ReactElement } from 'react';
-import { ButtonSimpleProps } from '../ButtonSimple';
-import { IconProps } from '../Icon';
+
+import { ButtonSimpleProps } from 'components/ButtonSimple';
+import { IconProps } from 'components/Icon';
 
 export type SupportedButtons = ButtonSimpleProps;
 export type SupportedImages = IconProps;

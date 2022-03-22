@@ -1,7 +1,7 @@
-import type { CSSProperties, ReactNode } from 'react';
 import { ButtonSimpleProps } from '../ButtonSimple';
 
 import type { CardStatusColor } from './CardStatus';
+import type { CSSProperties, ReactNode } from 'react';
 
 export type Color = 'inactive' | 'success' | 'transparent';
 export type Height = 'auto' | 'large' | 'medium' | 'small' | 'tiny';

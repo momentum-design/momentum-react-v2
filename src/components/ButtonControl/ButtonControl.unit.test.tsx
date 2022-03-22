@@ -1,7 +1,8 @@
 import React from 'react';
-import { mountAndWait } from '../../../test/utils';
 
-import Icon from '../Icon';
+import Icon from 'components/Icon';
+
+import { mountAndWait } from '../../../test/utils';
 
 import ButtonControl, { BUTTON_CONTROL_CONSTANTS as CONSTANTS } from './';
 

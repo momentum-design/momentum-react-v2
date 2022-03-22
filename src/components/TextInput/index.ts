@@ -1,6 +1,6 @@
 import { default as TextInput } from './TextInput';
-import { Props } from './TextInput.types';
 import * as CONSTANTS from './TextInput.constants';
+import { Props } from './TextInput.types';
 
 export { CONSTANTS as TEXT_INPUT_CONSTANTS };
 

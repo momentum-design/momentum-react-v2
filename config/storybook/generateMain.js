@@ -1,4 +1,7 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 const path = require('path');
+
 const { COMPONENTS_DIR, LEGACY_COMPONENTS_DIR } = require('./constants');
 
 const REPO_ROOT = path.resolve(__dirname, '../../');
@@ -28,6 +31,13 @@ const generateMain = (dir) => {
       );
       config.resolve.alias['@momentum-ui/core/images'] = path.resolve(REPO_ROOT, 'images');
       config.resolve.alias['legacystyles'] = path.resolve(REPO_ROOT, 'scss');
+
+      config.resolve.plugins = [
+        ...(config.resolve.plugins || []),
+        new TsconfigPathsPlugin({
+          extensions: config.resolve.extensions,
+        }),
+      ];
 
       // Add SVGR Loader
       // ========================================================

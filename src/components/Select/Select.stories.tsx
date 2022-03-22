@@ -1,20 +1,21 @@
 /* eslint-disable react/display-name */
 /* eslint-disable @typescript-eslint/ban-types */
-import React, { ReactElement } from 'react';
-import { Item, Section } from '@react-stately/collections';
 import { action } from '@storybook/addon-actions';
-import Select from '.';
+import React, { ReactElement } from 'react';
 
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import { Item, Section } from '@react-stately/collections';
+
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+
+import Flex from 'components/Flex';
+import Icon from 'components/Icon';
 
 import Documentation from './Select.documentation.mdx';
-import Icon from '../Icon';
-import Flex from '../Flex';
-
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import argTypes from './Select.stories.args';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import Select from '.';
 
 export default {
   title: 'Momentum UI/Select',
