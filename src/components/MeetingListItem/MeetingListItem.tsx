@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React, {
   Children,
   cloneElement,
@@ -7,18 +8,19 @@ import React, {
   useRef,
   RefObject,
 } from 'react';
-import classnames from 'classnames';
+
+import './MeetingListItem.style.scss';
+import Avatar from 'components/Avatar';
+import ButtonCircle from 'components/ButtonCircle';
+import ButtonPill from 'components/ButtonPill';
+import Icon from 'components/Icon';
+import ListItemBase from 'components/ListItemBase';
+import ListItemBaseSection from 'components/ListItemBaseSection';
+
+import { verifyTypes } from '../../helpers/verifyTypes';
 
 import { STYLE, DEFAULTS } from './MeetingListItem.constants';
 import { Props } from './MeetingListItem.types';
-import './MeetingListItem.style.scss';
-import ListItemBase from '../ListItemBase';
-import ListItemBaseSection from '../ListItemBaseSection';
-import { verifyTypes } from '../../helpers/verifyTypes';
-import ButtonPill from '../ButtonPill';
-import ButtonCircle from '../ButtonCircle';
-import Avatar from '../Avatar';
-import Icon from '../Icon';
 
 const MeetingListItem: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLLIElement>) => {

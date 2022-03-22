@@ -1,4 +1,4 @@
-import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
+import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
 
 const CLASS_PREFIX = 'md-space-list-item';
 

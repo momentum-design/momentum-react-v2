@@ -1,7 +1,3 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
-
-import AvatarCompact, { AvatarCompactProps } from './';
 import {
   Title,
   Subtitle,
@@ -10,8 +6,12 @@ import {
   ArgsTable,
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
+import { Story } from '@storybook/react';
+import React, { FC } from 'react';
 
 import Documentation from './AvatarCompact.documentation.mdx';
+
+import AvatarCompact, { AvatarCompactProps } from './';
 
 const DocsPage: FC = () => (
   <>

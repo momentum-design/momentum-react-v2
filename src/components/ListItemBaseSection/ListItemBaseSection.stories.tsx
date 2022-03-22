@@ -1,14 +1,15 @@
 import React from 'react';
 
-import ListItemBaseSection from '.';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+
+import ListItemBase from 'components/ListItemBase';
 
 import Documentation from './ListItemBaseSection.documentation.mdx';
-import ListItemBase from '../ListItemBase';
 import argTypes from './ListItemBaseSection.stories.args';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import ListItemBaseSection from '.';
 
 export default {
   title: 'Momentum UI/ListItemBaseSection',

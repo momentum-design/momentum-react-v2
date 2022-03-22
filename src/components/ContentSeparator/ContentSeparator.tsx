@@ -1,10 +1,11 @@
-import React from 'react';
 import classnames from 'classnames';
+import React from 'react';
 
-import './ContentSeparator.style.scss';
-import { Props } from './ContentSeparator.types';
-import { STYLE } from './ContentSeparator.constants';
 import { useSeparator } from '@react-aria/separator';
+
+import { STYLE } from './ContentSeparator.constants';
+import { Props } from './ContentSeparator.types';
+import './ContentSeparator.style.scss';
 
 const ContentSeparator: React.FC<Props> = (props: Props) => {
   const { className, children } = props;

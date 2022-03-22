@@ -1,7 +1,7 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { AvatarProps } from '../Avatar';
-import { ButtonControlProps } from '../ButtonControl';
+import { AvatarProps } from 'components/Avatar';
+import { ButtonControlProps } from 'components/ButtonControl';
 
 export type SupportedControlButtons = ButtonControlProps;
 export type SupportedImages = AvatarProps;

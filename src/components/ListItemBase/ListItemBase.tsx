@@ -1,18 +1,21 @@
-import React, { RefObject, forwardRef, ReactNode, useRef, useEffect, useState } from 'react';
 import classnames from 'classnames';
+import React, { RefObject, forwardRef, ReactNode, useRef, useEffect, useState } from 'react';
 
 import './ListItemBase.style.scss';
-import { ContextMenuState, Props } from './ListItemBase.types';
-import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
-import ListItemBaseSection from '../ListItemBaseSection';
-import { verifyTypes } from '../../helpers/verifyTypes';
-import FocusRing from '../FocusRing';
 import { usePress } from '@react-aria/interactions';
-import ModalContainer from '../ModalContainer';
 import { useOverlay } from '@react-aria/overlays';
-import { useListContext } from '../List/List.utils';
-import ButtonSimple from '../ButtonSimple';
-import Text from '../Text';
+
+import ButtonSimple from 'components/ButtonSimple';
+import FocusRing from 'components/FocusRing';
+import { useListContext } from 'components/List/List.utils';
+import ListItemBaseSection from 'components/ListItemBaseSection';
+import ModalContainer from 'components/ModalContainer';
+import Text from 'components/Text';
+
+import { verifyTypes } from '../../helpers/verifyTypes';
+
+import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
+import { ContextMenuState, Props } from './ListItemBase.types';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {

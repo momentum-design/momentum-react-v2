@@ -1,6 +1,6 @@
 import { default as ListBoxSection } from './ListBoxSection';
-import { Props } from './ListBoxSection.types';
 import * as CONSTANTS from './ListBoxSection.constants';
+import { Props } from './ListBoxSection.types';
 
 export { CONSTANTS as LIST_BOX_SECTION_CONSTANTS };
 

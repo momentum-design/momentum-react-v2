@@ -1,4 +1,5 @@
 const WebpackMd5Hash = require('webpack-md5-hash');
+
 const path = require('path');
 
 const codePath = path.resolve(__dirname, '..');

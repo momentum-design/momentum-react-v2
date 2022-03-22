@@ -1,4 +1,4 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonStyles } from 'storybook/helper.stories.argtypes';
 
 import { TOAST_CONTENT_CONSTANTS as CONSTANTS } from './';
 

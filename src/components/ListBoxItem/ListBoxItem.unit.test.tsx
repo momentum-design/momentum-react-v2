@@ -1,10 +1,13 @@
-import ListBoxItem from '.';
+import { renderHook } from '@testing-library/react-hooks';
 import { mount } from 'enzyme';
 import React from 'react';
-import { useListState } from '@react-stately/list';
-import { renderHook } from '@testing-library/react-hooks';
+
 import { Item } from '@react-stately/collections';
-import ListItemBase from '../ListItemBase';
+import { useListState } from '@react-stately/list';
+
+import ListItemBase from 'components/ListItemBase';
+
+import ListBoxItem from '.';
 
 jest.mock('@react-aria/listbox', () => {
   return {

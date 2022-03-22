@@ -1,16 +1,19 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
+
+import { useHover } from '@react-aria/interactions';
+
+import Avatar from 'components/Avatar';
+import ButtonCircle from 'components/ButtonCircle';
+import Icon, { IconWeight, IconScale } from 'components/Icon';
+import ListItemBase from 'components/ListItemBase';
+import ListItemBaseSection from 'components/ListItemBaseSection';
+import Text from 'components/Text';
 
 import { DEFAULTS, SCHEDULER_STATES, STYLE } from './AvatarMeetingsListItem.constants';
 import { AvatarMeetingsListItemActions, Props } from './AvatarMeetingsListItem.types';
+
 import './AvatarMeetingsListItem.style.scss';
-import ListItemBase from '../ListItemBase';
-import ListItemBaseSection from '../ListItemBaseSection';
-import Avatar from '../Avatar';
-import Text from '../Text';
-import Icon, { IconWeight, IconScale } from '../Icon';
-import ButtonCircle from '../ButtonCircle';
-import { useHover } from '@react-aria/interactions';
 
 /**
  * Avatar Meetings List Item component used in in-meeting experience participants lists.

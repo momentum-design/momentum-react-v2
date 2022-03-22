@@ -1,6 +1,8 @@
 import { CSSProperties, ReactElement } from 'react';
+
 import { AriaButtonProps } from '@react-types/button';
-import { ReactionProps } from '../Reaction';
+
+import { ReactionProps } from 'components/Reaction';
 
 export type SupportedReactions = ReactionProps;
 

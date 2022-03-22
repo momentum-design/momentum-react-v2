@@ -1,7 +1,7 @@
-import type { ReactElement, ReactNode } from 'react';
+import { ButtonSimpleProps } from 'components/ButtonSimple';
+import { PopoverProps } from 'components/Popover';
 
-import { ButtonSimpleProps } from '../ButtonSimple';
-import { PopoverProps } from '../Popover';
+import type { ReactElement, ReactNode } from 'react';
 
 export interface CoachmarkWithoutHeaderProps {
   /**

@@ -1,6 +1,7 @@
-import React, { Children, forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import ButtonSimple from '../ButtonSimple';
+import React, { Children, forwardRef, RefObject } from 'react';
+
+import ButtonSimple from 'components/ButtonSimple';
 
 import { DEFAULTS, STYLE } from './ButtonCircle.constants';
 import { Props } from './ButtonCircle.types';

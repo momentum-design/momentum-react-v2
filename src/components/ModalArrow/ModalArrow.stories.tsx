@@ -1,10 +1,11 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import ModalArrow, { ModalArrowProps, MODAL_ARROW_CONSTANTS as CONSTANTS } from './';
 import argTypes from './ModalArrow.stories.args';
 import Documentation from './ModalArrow.stories.docs.mdx';
+
+import ModalArrow, { ModalArrowProps, MODAL_ARROW_CONSTANTS as CONSTANTS } from './';
 
 export default {
   title: 'Momentum UI/ModalArrow',

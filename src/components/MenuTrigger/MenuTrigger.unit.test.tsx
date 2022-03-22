@@ -1,15 +1,18 @@
-import React from 'react';
-import { Item } from '@react-stately/collections';
-
-import MenuTrigger, { MENU_TRIGGER_CONSTANTS as CONSTANTS } from './';
-import ButtonPill from '../ButtonPill';
-import Menu from '../Menu';
-import { mountAndWait } from '../../../test/utils';
-import { ModalContainer } from '..';
-import { ROUNDS } from '../ModalContainer/ModalContainer.constants';
-
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
+
+import { Item } from '@react-stately/collections';
+
+import ButtonPill from 'components/ButtonPill';
+import Menu from 'components/Menu';
+import { ROUNDS } from 'components/ModalContainer/ModalContainer.constants';
+
+import { ModalContainer } from '..';
+import { mountAndWait } from '../../../test/utils';
+
+import MenuTrigger, { MENU_TRIGGER_CONSTANTS as CONSTANTS } from './';
+
 import '@testing-library/jest-dom';
 
 describe('<MenuTrigger /> - Enzyme', () => {

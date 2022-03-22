@@ -1,10 +1,9 @@
-import React from 'react';
 import { mount } from 'enzyme';
-import {
-  ButtonCircle,
-  ButtonGroupNext as ButtonGroup,
-  ButtonPill,
-} from '@momentum-ui/react-collaboration';
+import React from 'react';
+
+import ButtonCircle from 'components/ButtonCircle';
+import ButtonGroup from 'components/ButtonGroup';
+import ButtonPill from 'components/ButtonPill';
 
 import { DEFAULTS, STYLE } from './ButtonGroup.constants';
 

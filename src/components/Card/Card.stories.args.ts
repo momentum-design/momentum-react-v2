@@ -1,8 +1,9 @@
 import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
+import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args';
+
+import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
 
 import { CARD_CONSTANTS as CONSTANTS } from './';
-import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
-import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args';
 
 const cardArgTypes = {
   children: {

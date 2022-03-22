@@ -1,6 +1,6 @@
 import { default as Select } from './Select';
-import { Props, SelectDirection as _SelectDirection } from './Select.types';
 import * as CONSTANTS from './Select.constants';
+import { Props, SelectDirection as _SelectDirection } from './Select.types';
 
 export { CONSTANTS as SELECT_CONSTANTS };
 

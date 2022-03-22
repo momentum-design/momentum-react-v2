@@ -1,8 +1,8 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { ButtonControlProps } from '../ButtonControl';
-import { ToastContentProps } from '../ToastContent';
-import { ToastDetailsProps } from '../ToastDetails';
+import { ButtonControlProps } from 'components/ButtonControl';
+import { ToastContentProps } from 'components/ToastContent';
+import { ToastDetailsProps } from 'components/ToastDetails';
 
 export type SupportedChildren = ToastContentProps | ToastDetailsProps;
 export type SupportedControlButtons = ButtonControlProps;

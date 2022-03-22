@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 
-import Card, { CardProps, CARD_CONSTANTS as CONSTANTS } from './';
-import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
 import argTypes from './Card.stories.args';
 import Documentation from './Card.stories.docs.mdx';
+import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
+
+import Card, { CardProps, CARD_CONSTANTS as CONSTANTS } from './';
 
 export default {
   title: 'Momentum UI/Card',

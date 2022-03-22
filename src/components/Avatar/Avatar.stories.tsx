@@ -1,8 +1,3 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
-
-import Avatar, { AvatarProps } from './';
-
 import {
   Title,
   Subtitle,
@@ -11,11 +6,16 @@ import {
   ArgsTable,
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
+import { Story } from '@storybook/react';
+import React, { FC } from 'react';
 
+import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
+
+import { DEFAULTS, SIZES, TYPES } from './Avatar.constants';
 import Documentation from './Avatar.documentation.mdx';
 import { PresenceType } from './Avatar.types';
-import { DEFAULTS, SIZES, TYPES } from './Avatar.constants';
-import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
+
+import Avatar, { AvatarProps } from './';
 
 const DocsPage: FC = () => (
   <>

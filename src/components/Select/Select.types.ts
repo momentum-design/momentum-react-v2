@@ -1,5 +1,6 @@
-import type { AriaSelectProps } from '@react-types/select';
 import { CSSProperties } from 'react';
+
+import type { AriaSelectProps } from '@react-types/select';
 
 export type SelectDirection = 'top' | 'bottom';
 

@@ -1,10 +1,11 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import NavigationTab, { NavigationTabProps } from './';
 import argTypes from './NavigationTab.stories.args';
 import Documentation from './NavigationTab.stories.docs.mdx';
+
+import NavigationTab, { NavigationTabProps } from './';
 
 export default {
   title: 'Momentum UI/NavigationTab',

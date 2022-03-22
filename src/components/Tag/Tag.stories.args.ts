@@ -1,5 +1,4 @@
 import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
-
 import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args';
 
 import { TAG_CONSTANTS as CONSTANTS } from './';

@@ -1,9 +1,9 @@
-import React from 'react';
 import { Story } from '@storybook/react';
+import React from 'react';
+
+import ThemeProvider from 'components/ThemeProvider';
 
 import InputMessage, { InputMessageProps, INPUT_MESSAGE_CONSTANTS } from './';
-
-import ThemeProvider from '../ThemeProvider';
 
 export default {
   title: 'Momentum UI/InputMessage',

@@ -1,11 +1,13 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
+
+import ButtonSimple from 'components/ButtonSimple';
+import { PrimitiveConverter } from 'utils/component-conversions';
 
 import { DEFAULTS, STYLE } from './Tab.constants';
-import { Props } from './Tab.types';
 import './Tab.style.scss';
-import ButtonSimple from '../ButtonSimple';
-import { PrimitiveConverter } from '../../utils/component-conversions';
+
+import type { Props } from './Tab.types';
 
 const Tab: FC<Props> = (props: Props) => {
   const { children, className, active, disabled, ...otherProps } = props;

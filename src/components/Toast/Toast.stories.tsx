@@ -1,21 +1,22 @@
 import React from 'react';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import Avatar from '../Avatar';
-import ButtonCircle from '../ButtonCircle';
-import ButtonControl from '../ButtonControl';
-import ButtonGroup from '../ButtonGroup';
-import ButtonPill from '../ButtonPill';
-import Icon from '../Icon';
-import ToastContent from '../ToastContent';
-import ToastDetails from '../ToastDetails';
+import Avatar from 'components/Avatar';
+import ButtonCircle from 'components/ButtonCircle';
+import ButtonControl from 'components/ButtonControl';
+import ButtonGroup from 'components/ButtonGroup';
+import ButtonPill from 'components/ButtonPill';
+import Icon from 'components/Icon';
+import ToastContent from 'components/ToastContent';
+import ToastDetails from 'components/ToastDetails';
 
-import Toast, { ToastProps } from './';
 import argTypes from './Toast.stories.args';
 import Documentation from './Toast.stories.docs.mdx';
+
+import Toast, { ToastProps } from './';
 
 export default {
   title: 'Momentum UI/Toast',

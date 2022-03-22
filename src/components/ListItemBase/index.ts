@@ -1,6 +1,6 @@
 import { default as ListItemBase } from './ListItemBase';
-import { Props } from './ListItemBase.types';
 import * as CONSTANTS from './ListItemBase.constants';
+import { Props } from './ListItemBase.types';
 
 export { CONSTANTS as LIST_ITEM_BASE_CONSTANTS };
 

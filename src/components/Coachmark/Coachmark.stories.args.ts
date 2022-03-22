@@ -1,6 +1,6 @@
-import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
+import { commonStyles, extendArgTypes } from 'storybook/helper.stories.argtypes';
 
-import { popoverArgTypes } from '../Popover/Popover.stories.args';
+import { popoverArgTypes } from 'components/Popover/Popover.stories.args';
 
 const coachmarkArgTypes = {
   actions: {

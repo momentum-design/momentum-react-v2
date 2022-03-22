@@ -1,11 +1,13 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
-import ButtonCircle, { ButtonCircleSize } from '../ButtonCircle';
+import React, { FC } from 'react';
+
+import ButtonCircle, { ButtonCircleSize } from 'components/ButtonCircle';
+import Icon, { IconScale } from 'components/Icon';
 
 import { DEFAULTS, STYLE } from './AddReactionButton.constants';
 import { Props } from './AddReactionButton.types';
+
 import './AddReactionButton.style.scss';
-import Icon, { IconScale } from '../Icon';
 
 const AddReactionButton: FC<Props> = (props: Props) => {
   const { className, id, style, ...otherProps } = props;

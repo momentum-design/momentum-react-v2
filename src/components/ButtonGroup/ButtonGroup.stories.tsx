@@ -1,19 +1,21 @@
 import React from 'react';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-
-import MenuTrigger from '../MenuTrigger';
-import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
-import ButtonPill from '../ButtonPill';
-import ButtonCircle from '../ButtonCircle';
-import Icon from '../Icon';
 
-import ButtonGroup, { ButtonGroupProps } from './';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+
+import ButtonCircle from 'components/ButtonCircle';
+import ButtonPill from 'components/ButtonPill';
+import Icon from 'components/Icon';
+import Menu from 'components/Menu';
+import MenuTrigger from 'components/MenuTrigger';
+
 import argTypes from './ButtonGroup.stories.args';
 import Documentation from './ButtonGroup.stories.docs.mdx';
+
+import ButtonGroup, { ButtonGroupProps } from './';
 
 export default {
   title: 'Momentum UI/ButtonGroup',

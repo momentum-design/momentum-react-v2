@@ -1,16 +1,17 @@
 import React from 'react';
 
-import Icon from '../Icon';
+import AriaButtonDocs from 'storybook/docs.stories.aria-button.mdx';
+import HTMLGlobalAttributes from 'storybook/docs.stories.common-html-attributes.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
-import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
+import Icon from 'components/Icon';
 
-import ButtonPill, { ButtonPillProps } from './';
 import argTypes from './ButtonPill.stories.args';
 import Documentation from './ButtonPill.stories.docs.mdx';
+
+import ButtonPill, { ButtonPillProps } from './';
 
 export default {
   title: 'Momentum UI/ButtonPill',

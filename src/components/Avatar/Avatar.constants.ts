@@ -1,5 +1,6 @@
-import { IconScale, IconWeight } from '../Icon/Icon.types';
-import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
+import { IconScale, IconWeight } from 'components/Icon/Icon.types';
+import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
+
 import { PresenceType } from './Avatar.types';
 
 const CLASS_PREFIX = 'md-avatar';

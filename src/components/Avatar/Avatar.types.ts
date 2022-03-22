@@ -1,5 +1,6 @@
-import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 import { AriaButtonProps } from '@react-types/button';
+
+import { TeamColor } from 'components/ThemeProvider/ThemeProvider.types';
 
 export enum PresenceType {
   Default = 'default',

@@ -1,5 +1,3 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
 import {
   Title,
   Subtitle,
@@ -8,9 +6,12 @@ import {
   ArgsTable,
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
+import { Story } from '@storybook/react';
+import React, { FC } from 'react';
+
+import Documentation from './Badge.documentation.mdx';
 
 import Badge, { BadgeProps, BADGE_CONSTANTS as CONSTANTS } from './';
-import Documentation from './Badge.documentation.mdx';
 
 const DocsPage: FC = () => (
   <>

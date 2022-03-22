@@ -1,8 +1,9 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
+
+import { PLACEMENTS } from 'components/ModalArrow/ModalArrow.constants';
 
 import ModalContainer, { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from './';
-import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 
 describe('<ModalContainer />', () => {
   describe('snapshot', () => {

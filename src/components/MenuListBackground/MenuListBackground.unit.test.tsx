@@ -1,5 +1,5 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 
 import MenuListBackground, { MENU_LIST_BACKGROUND_CONSTANTS as CONSTANTS } from './';
 

@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
 
-import ButtonSimple from '../ButtonSimple';
-import Icon, { ICON_CONSTANTS, IconProps } from '../Icon';
+import ButtonSimple from 'components/ButtonSimple';
+import Icon, { ICON_CONSTANTS, IconProps } from 'components/Icon';
 
 import { ICONS, STYLE } from './ButtonControl.constants';
 import { Props } from './ButtonControl.types';

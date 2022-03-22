@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
+
+import ListItemBase from 'components/ListItemBase';
 
 import { STYLE, DEFAULTS } from './ListHeader.constants';
 import { Props } from './ListHeader.types';
 import './ListHeader.style.scss';
-import ListItemBase from '../ListItemBase';
 
 /**
  * The ListHeader component.

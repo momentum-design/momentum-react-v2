@@ -1,6 +1,7 @@
 import { Key } from 'react';
-import { Node } from '@react-types/shared';
+
 import { TreeState } from '@react-stately/tree';
+import { Node } from '@react-types/shared';
 
 export interface Props<T> {
   /**

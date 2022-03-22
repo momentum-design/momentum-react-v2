@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
 
 import './Flex.style.scss';
-import { Props } from './Flex.types';
 import { CLASS_PREFIX, DEFAULTS, STYLE } from './Flex.constants';
+import { Props } from './Flex.types';
 
 const Flex: FC<Props> = (props: Props) => {
   const {

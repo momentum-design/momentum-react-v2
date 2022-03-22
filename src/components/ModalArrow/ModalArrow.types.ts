@@ -1,6 +1,7 @@
-import type { CSSProperties } from 'react';
+import type { Color } from 'components/ModalContainer/ModalContainer.types';
+
 import type { TippyProps } from '@tippyjs/react';
-import type { Color } from '../ModalContainer/ModalContainer.types';
+import type { CSSProperties } from 'react';
 
 export type PlacementType = TippyProps['placement'];
 

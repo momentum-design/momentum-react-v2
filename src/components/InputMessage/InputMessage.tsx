@@ -1,12 +1,13 @@
+import classnames from 'classnames';
 import React, { ReactElement } from 'react';
 
 import './InputMessage.style.scss';
+
+import Icon from 'components/Icon';
+import Text from 'components/Text';
+
 import { STYLE } from './InputMessage.constants';
 import { Props, MessageLevel, Message } from './InputMessage.types';
-
-import Icon from '../Icon';
-import Text from '../Text';
-import classnames from 'classnames';
 
 const messagePriority = {
   none: 0,

@@ -1,7 +1,9 @@
-import AvatarCompact from '.';
 import { mount } from 'enzyme';
 import React from 'react';
+
 import { STYLE } from './AvatarCompact.constants';
+
+import AvatarCompact from '.';
 
 describe('AvatarCompact', () => {
   describe('snapshot', () => {

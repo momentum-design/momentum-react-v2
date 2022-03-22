@@ -1,11 +1,12 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import StyleDocs from 'storybook/docs.stories.style.mdx';
+import { DocumentationPage } from 'storybook/helper.stories.docs';
+import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
 
-import Reaction, { ReactionProps } from './';
+import { REACTION_NAMES } from './Reaction.constants';
 import argTypes from './Reaction.stories.args';
 import Documentation from './Reaction.stories.docs.mdx';
-import { REACTION_NAMES } from './Reaction.constants';
+
+import Reaction, { ReactionProps } from './';
 
 export default {
   title: 'Momentum UI/Reaction',

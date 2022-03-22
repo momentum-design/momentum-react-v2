@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
-import ButtonCircle, { ButtonCircleSize } from '../ButtonCircle';
+import React, { FC } from 'react';
+
+import ButtonCircle, { ButtonCircleSize } from 'components/ButtonCircle';
 
 import { DEFAULTS, STYLE } from './ReactionButton.constants';
 import { Props } from './ReactionButton.types';

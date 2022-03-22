@@ -1,12 +1,14 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
+
+import Badge from 'components/Badge';
+import Icon from 'components/Icon';
+import Text from 'components/Text';
+
+import { mountAndWait } from '../../../test/utils';
 
 import Tab, { TAB_CONSTANTS as CONSTANTS } from './';
 const { DEFAULTS } = CONSTANTS;
-import { mountAndWait } from '../../../test/utils';
-import Icon from '../Icon';
-import Text from '../Text';
-import Badge from '../Badge';
 
 describe('<Tab />', () => {
   describe('snapshot', () => {

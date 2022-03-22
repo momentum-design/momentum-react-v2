@@ -1,10 +1,12 @@
-import React, { RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
+import React, { RefObject, forwardRef } from 'react';
+
+import FocusRing from 'components/FocusRing';
 
 import { DEFAULTS, STYLE } from './MenuListBackground.constants';
 import { Props } from './MenuListBackground.types';
+
 import './MenuListBackground.style.scss';
-import FocusRing from '../FocusRing';
 
 /**
  * Menu List Background used in Menu Lists and Select dropdown

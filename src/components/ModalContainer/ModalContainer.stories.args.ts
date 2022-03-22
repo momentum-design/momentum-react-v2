@@ -1,8 +1,10 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonStyles } from 'storybook/helper.stories.argtypes';
+
+import { PLACEMENTS } from 'components/ModalArrow/ModalArrow.constants';
+
+import { DEFAULTS } from './ModalContainer.constants';
 
 import { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from '.';
-import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
-import { DEFAULTS } from './ModalContainer.constants';
 
 const modalContainerArgTypes = {
   showArrow: {

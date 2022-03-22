@@ -1,6 +1,7 @@
-import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import ButtonSimple from '../ButtonSimple';
+import React, { forwardRef, RefObject } from 'react';
+
+import ButtonSimple from 'components/ButtonSimple';
 
 import { DEFAULTS, STYLE } from './ButtonPill.constants';
 import { Props } from './ButtonPill.types';

@@ -1,7 +1,8 @@
-import InputMessage from '.';
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import { act } from 'react-dom/test-utils';
+
+import InputMessage from '.';
 
 describe('InputMessage', () => {
   const mountAndWait = async (component) => {

@@ -1,5 +1,7 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
-import { popoverArgTypes } from '../Popover/Popover.stories.args';
+import { commonStyles } from 'storybook/helper.stories.argtypes';
+
+import { popoverArgTypes } from 'components/Popover/Popover.stories.args';
+
 import { MENU_TRIGGER_PLACEMENTS } from './MenuTrigger.constants';
 
 export default {

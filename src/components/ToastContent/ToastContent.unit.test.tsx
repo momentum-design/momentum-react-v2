@@ -1,8 +1,8 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 
-import ButtonGroup from '../ButtonGroup';
-import ButtonPill from '../ButtonPill';
+import ButtonGroup from 'components/ButtonGroup';
+import ButtonPill from 'components/ButtonPill';
 
 import ToastContent, { TOAST_CONTENT_CONSTANTS as CONSTANTS, ToastContentProps } from './';
 

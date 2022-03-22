@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-import ButtonControl, { BUTTON_CONTROL_CONSTANTS } from '../ButtonControl';
-import ButtonGroup from '../ButtonGroup';
-import Icon, { ICON_CONSTANTS } from '../Icon';
-import Text, { TEXT_CONSTANTS } from '../Text';
+import ButtonControl, { BUTTON_CONTROL_CONSTANTS } from 'components/ButtonControl';
+import ButtonGroup from 'components/ButtonGroup';
+import Icon, { ICON_CONSTANTS } from 'components/Icon';
+import Text, { TEXT_CONSTANTS } from 'components/Text';
 
 import { STYLE } from './Coachmark.constants';
 import { CoachmarkWithHeaderProps } from './Coachmark.types';

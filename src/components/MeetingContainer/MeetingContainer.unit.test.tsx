@@ -1,13 +1,14 @@
-import React from 'react';
 import { mount } from 'enzyme';
-import Tag from '../Tag';
-import ButtonPill from '../ButtonPill';
-import Text, { TEXT_CONSTANTS } from '../Text';
+import React from 'react';
+
 import Avatar from '../Avatar';
 import ButtonCircle from '../ButtonCircle';
 import ButtonHyperlink from '../ButtonHyperlink';
+import ButtonPill from '../ButtonPill';
 import { BUTTON_SIMPLE_CONSTANTS } from '../ButtonSimple';
 import { CARD_CONSTANTS } from '../Card';
+import Tag from '../Tag';
+import Text, { TEXT_CONSTANTS } from '../Text';
 
 import MeetingContainer, { MEETING_CONTAINER_CONSTANTS as CONSTANTS } from './';
 
