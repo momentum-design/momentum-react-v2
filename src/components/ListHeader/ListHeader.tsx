@@ -29,11 +29,13 @@ const ListHeader: FC<Props> = (props: Props) => {
       data-outline={outline}
       data-outline-position={outlinePosition}
       data-outline-color={outlineColor}
+      data-outline-only={!children}
       data-bold={bold}
       id={id}
       isPadded={true}
       size={32}
       style={style}
+      role="separator"
     >
       {children}
     </ListItemBase>

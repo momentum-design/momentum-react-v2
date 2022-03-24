@@ -68,9 +68,9 @@ Sections.parameters = {
             </ListHeader>
           }
         >
-          <Item>Use system setting (internal speakers)</Item>
-          <Item>Internal speaker</Item>
-          <Item>Bose Headset 100</Item>
+          <Item key="00">Use system setting (internal speakers)</Item>
+          <Item key="01">Internal speaker</Item>
+          <Item key="02">Bose Headset 100</Item>
         </Section>,
         <Section
           key="1"
@@ -83,8 +83,14 @@ Sections.parameters = {
             </ListHeader>
           }
         >
-          <Item>Use system setting (internal microphone)</Item>
-          <Item>Bose Headset 100</Item>
+          <Item key="10">Use system setting (internal microphone)</Item>
+          <Item key="11">Bose Headset 100</Item>
+        </Section>,
+        <Section title={<ListHeader outline outlineColor="secondary" />} key="2">
+          <Item key="20">No title in the section</Item>
+        </Section>,
+        <Section title={<ListHeader outline outlineColor="secondary" />} key="3">
+          <Item key="30">No title in the section</Item>
         </Section>,
       ],
     },
