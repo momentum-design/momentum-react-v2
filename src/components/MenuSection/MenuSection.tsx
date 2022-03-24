@@ -23,20 +23,18 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   }, [state]);
 
   return (
-    <>
-      <li {...itemProps}>
-        {item.rendered && typeof item.rendered === 'string' ? (
-          <span className={STYLE.header} {...headingProps}>
-            {item.rendered}
-          </span>
-        ) : (
-          React.cloneElement(item.rendered as ReactElement, { ...headingProps })
-        )}
-        <ul {...groupProps} className={STYLE.wrapper}>
-          {renderItems()}
-        </ul>
-      </li>
-    </>
+    <ul {...itemProps}>
+      {!React.isValidElement(item.rendered) && item.rendered ? (
+        <span className={STYLE.header} {...headingProps}>
+          {item.rendered}
+        </span>
+      ) : (
+        item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
+      )}
+      <ul {...groupProps} className={STYLE.wrapper}>
+        {renderItems()}
+      </ul>
+    </ul>
   );
 };
 
