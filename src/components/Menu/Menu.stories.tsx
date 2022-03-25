@@ -48,6 +48,7 @@ delete Sections.argTypes.itemSize;
 Sections.args = {
   'aria-label': 'Menu component',
   onAction: action('onAction'),
+  onSelectionChange: action('onSelectionChange'),
 };
 
 Sections.parameters = {
