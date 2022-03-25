@@ -14,51 +14,13 @@ export type TriggerType = TippyProps['trigger'];
  */
 export type PopoverInstance = Instance;
 
-export interface Props {
-  /**
-   * Child components of this Popover (what will be shown within the Popover)
-   */
-  children: ReactNode;
-
+export type PopoverCommonStyleProps = {
   /**
    * Variant of the Popover - can be either small or medium
    *
    * @default `small`
    */
   variant?: VariantType;
-
-  /**
-   * Determines the events that cause the Popover to show. Multiple event names should be separated by spaces.
-   * For example to allow both click and hover, use `click mouseenter` as the trigger.
-   *
-   * Possible event names: `click`, `mouseenter`, `focusin`, `manual` (to programmatically trigger the popover)
-   *
-   * @default `click`
-   */
-  trigger?: TriggerType;
-
-  /**
-   * The component which triggers the Popover
-   */
-  triggerComponent: ReactElement;
-
-  /**
-   * Placement of the Popover
-   *
-   * Possible values: `top`, `top-start`, `top-end`, `right`, `right-start`, `right-end`, `bottom`, `bottom-start`, `bottom-end`,
-   * `left`, `left-start`, `left-end`, `auto`, `auto-start`, `auto-end`
-   *
-   * @default `bottom`
-   */
-  placement?: PlacementType;
-
-  /**
-   * Determines if the Popover has interactive content inside of it,
-   * so that it can be hovered over and clicked inside without hiding.
-   *
-   * @default false
-   */
-  interactive?: boolean;
 
   /**
    * Color of the Container
@@ -80,6 +42,46 @@ export interface Props {
    * @default 0
    */
   delay?: [number, number];
+
+  /**
+   * Placement of the Popover
+   *
+   * Possible values: `top`, `top-start`, `top-end`, `right`, `right-start`, `right-end`, `bottom`, `bottom-start`, `bottom-end`,
+   * `left`, `left-start`, `left-end`, `auto`, `auto-start`, `auto-end`
+   *
+   * @default `bottom`
+   */
+  placement?: PlacementType;
+};
+
+export interface Props extends PopoverCommonStyleProps {
+  /**
+   * Child components of this Popover (what will be shown within the Popover)
+   */
+  children: ReactNode;
+
+  /**
+   * Determines the events that cause the Popover to show. Multiple event names should be separated by spaces.
+   * For example to allow both click and hover, use `click mouseenter` as the trigger.
+   *
+   * Possible event names: `click`, `mouseenter`, `focusin`, `manual` (to programmatically trigger the popover)
+   *
+   * @default `click`
+   */
+  trigger?: TriggerType;
+
+  /**
+   * The component which triggers the Popover
+   */
+  triggerComponent: ReactElement;
+
+  /**
+   * Determines if the Popover has interactive content inside of it,
+   * so that it can be hovered over and clicked inside without hiding.
+   *
+   * @default false
+   */
+  interactive?: boolean;
 
   /**
    * setInstance - this function should be passed in when the instance
