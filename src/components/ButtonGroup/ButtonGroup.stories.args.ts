@@ -33,6 +33,20 @@ export default {
       },
     },
   },
+  compressed: {
+    defaultValue: CONSTANTS.DEFAULTS.SPACED,
+    description: 'Whether to compress horizontal space and remove inner borders around ChildNodes.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SPACED,
+      },
+    },
+  },
   round: {
     defaultValue: CONSTANTS.DEFAULTS.ROUND,
     description: 'Whether this `<ButtonGroup />` is rounded.',

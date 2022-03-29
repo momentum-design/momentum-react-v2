@@ -390,6 +390,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
@@ -1010,6 +1011,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
@@ -1587,6 +1589,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
@@ -2151,6 +2154,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
@@ -2757,6 +2761,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
@@ -3378,6 +3383,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
@@ -4007,6 +4013,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
@@ -4614,6 +4621,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
         >
           <div
             className="md-button-group-wrapper md-toast-content-actions"
+            data-compressed={false}
             data-round={false}
             data-spaced={true}
           >
