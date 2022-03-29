@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CalendarCard /> snapshot should match snapshot 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with children 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+    <div>
+      example child
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with class name 1`] = `
+<div>
+  <div
+    class="example-class md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with color 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="transparent"
+    data-height="small"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with height 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="tiny"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with id 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+    id="example-id"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with outline 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-outline="true"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with rounding 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with statusColor 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+      data-color="success"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with statusStriped 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+      data-striped="true"
+    />
+  </div>
+</div>
+`;
+
+exports[`<CalendarCard /> snapshot should match snapshot with style 1`] = `
+<div>
+  <div
+    class="md-calendar-card-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+    style="color: pink;"
+  >
+    <div
+      class="md-calendar-card-status-wrapper"
+    />
+  </div>
+</div>
+`;

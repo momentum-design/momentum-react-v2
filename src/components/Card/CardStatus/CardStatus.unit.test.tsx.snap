@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CalendarCardStatus /> snapshot should match snapshot 1`] = `
+<div>
+  <div
+    class="md-calendar-card-status-wrapper"
+  />
+</div>
+`;
+
+exports[`<CalendarCardStatus /> snapshot should match snapshot with class name 1`] = `
+<div>
+  <div
+    class="example-class md-calendar-card-status-wrapper"
+  />
+</div>
+`;
+
+exports[`<CalendarCardStatus /> snapshot should match snapshot with color 1`] = `
+<div>
+  <div
+    class="md-calendar-card-status-wrapper"
+    data-color="success"
+  />
+</div>
+`;
+
+exports[`<CalendarCardStatus /> snapshot should match snapshot with id 1`] = `
+<div>
+  <div
+    class="md-calendar-card-status-wrapper"
+    id="example-id"
+  />
+</div>
+`;
+
+exports[`<CalendarCardStatus /> snapshot should match snapshot with striped 1`] = `
+<div>
+  <div
+    class="md-calendar-card-status-wrapper"
+    data-striped="true"
+  />
+</div>
+`;
+
+exports[`<CalendarCardStatus /> snapshot should match snapshot with style 1`] = `
+<div>
+  <div
+    class="md-calendar-card-status-wrapper"
+    style="color: pink;"
+  />
+</div>
+`;
