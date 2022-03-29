@@ -1,0 +1,28 @@
+.md-meeting-card-container-status-wrapper {
+  --local-background-color: transparent;
+
+  margin-right: 0.25rem;
+  width: 0.25rem;
+
+  &[data-color='inactive'] {
+    --local-background-color: var(--meetingmarker-inactive-background);
+  }
+
+  &[data-color='success'] {
+    --local-background-color: var(--meetingmarker-active-background);
+  }
+
+  &:not([data-striped='true']) {
+    background-color: var(--local-background-color);
+  }
+
+  &[data-striped='true'] {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 0.15rem,
+      var(--local-background-color) 0.15rem,
+      var(--local-background-color) 0.3rem
+    );
+  }
+}
