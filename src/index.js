@@ -118,6 +118,7 @@ export {
   CodeInput,
   DividerDot,
   FocusRing,
+  Card as CardNext,
   NavigationTab,
   InputMessage as InputMessageNew,
   ExampleComponent,

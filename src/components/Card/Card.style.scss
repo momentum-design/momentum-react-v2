@@ -1,0 +1,71 @@
+.md-card-wrapper {
+  --local-normal-background-color: var(--card-inactive-background);
+  --local-hover-background-color: var(--card-inactive-background-hovered);
+  --local-active-background-color: var(--card-inactive-background-active);
+  --local-border-color: transparent;
+
+  cursor: pointer;
+  display: flex;
+  margin: 0.25rem;
+  overflow: hidden;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  &[data-color='success'] {
+    --local-normal-background-color: var(--card-success-background);
+    --local-hover-background-color: var(--card-success-background-hovered);
+    --local-active-background-color: var(--card-success-background-active);
+  }
+
+  &[data-color='transparent'] {
+    --local-normal-background-color: var(--card-transparent-background);
+    --local-hover-background-color: var(--card-transparent-background-hovered);
+    --local-active-background-color: var(--card-transparent-background-active);
+  }
+
+  &:not([data-outline='true']) {
+    --local-border-color: transparent;
+  }
+
+  &[data-outline='true'] {
+    --local-border-color: var(--theme-outline-disabled-normal);
+  }
+
+  box-shadow: inset 0 0 0 0.125rem var(--local-border-color);
+  background-color: var(--local-normal-background-color);
+
+  &:hover {
+    background-color: var(--local-hover-background-color);
+  }
+
+  &:active {
+    background-color: var(--local-active-background-color);
+  }
+
+  &[data-height='auto'] {
+    height: fit-content;
+  }
+
+  &[data-height='tiny'] {
+    height: 1.875rem;
+  }
+
+  &[data-height='small'] {
+    height: 3.125rem;
+  }
+
+  &[data-height='medium'] {
+    height: 4.875rem;
+  }
+
+  &[data-height='large'] {
+    height: 8.375rem;
+  }
+
+  &[data-rounding='1'] {
+    border-radius: 0.25rem;
+  }
+
+  &[data-rounding='2'] {
+    border-radius: 0.5rem;
+  }
+}
