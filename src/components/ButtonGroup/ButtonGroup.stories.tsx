@@ -97,7 +97,6 @@ const compressedVariant = (size) => {
       </ButtonCircle>,
     ],
     compressed: true,
-
     style: {
       backgroundColor: 'var(--button-message-fill-background)',
     },

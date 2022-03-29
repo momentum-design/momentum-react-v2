@@ -34,7 +34,7 @@ export default {
     },
   },
   compressed: {
-    defaultValue: CONSTANTS.DEFAULTS.SPACED,
+    defaultValue: CONSTANTS.DEFAULTS.COMPRESSED,
     description: 'Whether to compress horizontal space and remove inner borders around ChildNodes.',
     options: [true, false],
     control: { type: 'boolean' },
