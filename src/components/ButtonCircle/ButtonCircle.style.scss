@@ -367,3 +367,32 @@
     }
   }
 }
+
+[data-compressed='true'] {
+  > .md-button-circle-wrapper {
+    &[data-size='64'] {
+      width: 3.2rem;
+    }
+
+    &[data-size='52'] {
+      width: 2.6rem;
+    }
+
+    &[data-size='40'] {
+      width: 1.875rem;
+    }
+
+    &[data-size='32'] {
+      width: 1.5rem;
+    }
+
+    &[data-size='28'] {
+      width: 1.31rem;
+    }
+
+    // this size is ONLY for AddReactionButton
+    &[data-size='20'] {
+      width: 1.2rem;
+    }
+  }
+}

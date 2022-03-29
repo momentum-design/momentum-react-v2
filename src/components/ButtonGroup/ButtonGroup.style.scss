@@ -40,6 +40,41 @@
           border-bottom-right-radius: 100vh;
         }
       }
+
+      &[data-compressed='true'] {
+        > * {
+          &:not(:first-child) {
+            border-left: none;
+            padding-left: 0.2rem;
+          }
+
+          &:not(:last-child) {
+            border-right: none;
+            padding-right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-round='false'] {
+    &[data-compressed='true'] {
+      > * {
+        &:not(:first-child) {
+          border-left: none;
+        }
+
+        &:not(:last-child) {
+          border-right: none;
+        }
+      }
+
+      &[data-spaced='false'] {
+        > * {
+          padding-left: 0.2rem;
+          padding-right: 0.2rem;
+        }
+      }
     }
   }
 }

@@ -2,8 +2,8 @@ const CLASS_PREFIX = 'md-button-group';
 
 const DEFAULTS = {
   ROUND: false,
-  SEPARATION: 'none',
   SPACED: false,
+  COMPRESSED: false,
 };
 
 const STYLE = {

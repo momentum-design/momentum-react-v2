@@ -32,6 +32,11 @@ export interface Props {
   spaced?: boolean;
 
   /**
+   * Whether to compress horizontal space and remove inner borders between <SupportedComponents />.
+   */
+  compressed?: boolean;
+
+  /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;

@@ -4,6 +4,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
 <ButtonGroup>
   <div
     className="md-button-group-wrapper"
+    data-compressed={false}
     data-round={false}
     data-spaced={false}
   >
@@ -113,6 +114,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
 >
   <div
     className="md-button-group-wrapper"
+    data-compressed={false}
     data-round={false}
     data-spaced={true}
   >
@@ -320,6 +322,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
 >
   <div
     className="md-button-group-wrapper"
+    data-compressed={false}
     data-round={true}
     data-spaced={false}
   >
