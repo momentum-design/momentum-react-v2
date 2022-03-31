@@ -4,7 +4,51 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
 <LoadingSpinner>
   <div
     className="md-loading-spinner-wrapper"
-  />
+  >
+    <Icon
+      name="spinner"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+    <Icon
+      className="md-loading-spinner-arch"
+      name="spinner-partial"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper md-loading-spinner-arch"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner-partial"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+  </div>
 </LoadingSpinner>
 `;
 
@@ -14,7 +58,51 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
 >
   <div
     className="example-class md-loading-spinner-wrapper"
-  />
+  >
+    <Icon
+      name="spinner"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+    <Icon
+      className="md-loading-spinner-arch"
+      name="spinner-partial"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper md-loading-spinner-arch"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner-partial"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+  </div>
 </LoadingSpinner>
 `;
 
@@ -25,7 +113,105 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
   <div
     className="md-loading-spinner-wrapper"
     id="example-id"
-  />
+  >
+    <Icon
+      name="spinner"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+    <Icon
+      className="md-loading-spinner-arch"
+      name="spinner-partial"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper md-loading-spinner-arch"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner-partial"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+  </div>
+</LoadingSpinner>
+`;
+
+exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
+<LoadingSpinner
+  scale={32}
+>
+  <div
+    className="md-loading-spinner-wrapper"
+  >
+    <Icon
+      name="spinner"
+      scale={32}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={32}
+          data-test="spinner"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+    <Icon
+      className="md-loading-spinner-arch"
+      name="spinner-partial"
+      scale={32}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper md-loading-spinner-arch"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={32}
+          data-test="spinner-partial"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+  </div>
 </LoadingSpinner>
 `;
 
@@ -44,6 +230,50 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
         "color": "pink",
       }
     }
-  />
+  >
+    <Icon
+      name="spinner"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+    <Icon
+      className="md-loading-spinner-arch"
+      name="spinner-partial"
+      scale={24}
+      weight="regular"
+    >
+      <div
+        className="md-icon-wrapper md-loading-spinner-arch"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={24}
+          data-test="spinner-partial"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+  </div>
 </LoadingSpinner>
 `;

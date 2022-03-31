@@ -1,21 +1,24 @@
 .md-loading-spinner-wrapper {
   position: relative;
-  fill: var(--spinner-loading-track);
 
-  @keyframes rotate {
+  svg {
+    fill: var(--spinner-loading-track);
+  }
+
+  @keyframes spin-animation {
     from {
       transform: rotate(0deg);
     }
 
     from {
-      transform: rotate(360deg);
+      transform: rotate(-360deg);
     }
   }
 
   .md-loading-spinner-arch {
     position: absolute;
     top: 0;
-    animation-name: rotate;
+    animation-name: spin-animation;
     animation-duration: 0.75s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;

@@ -1,16 +1,18 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
-
+import { SIZES as ICON_SIZES } from '../Icon/Icon.constants';
+import { DEFAULTS } from './LoadingSpinner.constants';
 const loadingSpinnerArgTypes = {
-  // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
-  children: {
-    description: 'Provides the child nodes for this element.', // NOTE: Description of this prop.
-    control: { type: 'text' }, // NOTE: Control type for this prop.
+  scale: {
+    defaultValue: DEFAULTS.SCALE,
+    description: 'Size of the loading spinner (same as IconScale).',
+    options: [undefined, ...Object.values(ICON_SIZES)],
+    control: { type: 'select' },
     table: {
       type: {
-        summary: 'ReactNode', // NOTE: Explicit type of this prop.
+        summary: 'IconScale',
       },
       defaultValue: {
-        summary: 'undefined', // NOTE: Default value for this prop.
+        summary: DEFAULTS.SCALE,
       },
     },
   },
