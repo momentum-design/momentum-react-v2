@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @each $type in map-keys($fontSizes) {
   $fontFace: '' !default;
   $lineHeight: '' !default;
@@ -8,8 +10,7 @@
   $fontSize: map-get($fontSizes, $type);
 
   @if map-has-key($lineHeights, $type) {
-    $lineHeight: map-get($lineHeights, $type) /
-      (map-get($lineHeights, $type) * 0 + 1);
+    $lineHeight: math.div(map-get($lineHeights, $type), map-get($lineHeights, $type) * 0 + 1);
   }
 
   %#{$type} {
@@ -27,7 +28,7 @@
       $fs: map-get($fontSizes, $tp);
 
       @if map-has-key($lineHeights, $tp) {
-        $lh: map-get($lineHeights, $tp) / (map-get($lineHeights, $tp) * 0 + 1);
+        $lh: math.div(map-get($lineHeights, $tp), map-get($lineHeights, $tp) * 0 + 1);
       }
 
       @if $type !=$tp and $fs <=$fontSize {
