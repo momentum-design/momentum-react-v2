@@ -1,103 +1,113 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import LoadingSpinner, { LOADING_SPINNER_CONSTANTS as CONSTANTS } from './';
+import { mountAndWait } from '../../../test/utils';
 
 describe('<LoadingSpinner />', () => {
   describe('snapshot', () => {
-    it('should match snapshot', () => {
+    it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = mount(<LoadingSpinner />);
+      const container = await mountAndWait(<LoadingSpinner />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with className', () => {
+    it('should match snapshot with className', async () => {
       expect.assertions(1);
 
       const className = 'example-class';
 
-      const container = mount(<LoadingSpinner className={className} />);
+      const container = await mountAndWait(<LoadingSpinner className={className} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with id', () => {
+    it('should match snapshot with id', async () => {
       expect.assertions(1);
 
       const id = 'example-id';
 
-      const container = mount(<LoadingSpinner id={id} />);
+      const container = await mountAndWait(<LoadingSpinner id={id} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with style', () => {
+    it('should match snapshot with style', async () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
 
-      const container = mount(<LoadingSpinner style={style} />);
+      const container = await mountAndWait(<LoadingSpinner style={style} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    /* ...additional snapshot tests... */
+    it('should match snapshot with scale', async () => {
+      expect.assertions(1);
+
+      const scale = 32 as const;
+
+      const container = await mountAndWait(<LoadingSpinner scale={scale} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
+    it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = mount(<LoadingSpinner />)
-        .find(LoadingSpinner)
-        .getDOMNode();
+      const element = (await mountAndWait(<LoadingSpinner />)).find(LoadingSpinner).getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
 
-    it('should have provided class when className is provided', () => {
+    it('should have provided class when className is provided', async () => {
       expect.assertions(1);
 
       const className = 'example-class';
 
-      const element = mount(<LoadingSpinner className={className} />)
+      const element = (await mountAndWait(<LoadingSpinner className={className} />))
         .find(LoadingSpinner)
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should have provided id when id is provided', () => {
+    it('should have provided id when id is provided', async () => {
       expect.assertions(1);
 
       const id = 'example-id';
 
-      const element = mount(<LoadingSpinner id={id} />)
+      const element = (await mountAndWait(<LoadingSpinner id={id} />))
         .find(LoadingSpinner)
         .getDOMNode();
 
       expect(element.id).toBe(id);
     });
 
-    it('should have provided style when style is provided', () => {
+    it('should have provided style when style is provided', async () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<LoadingSpinner style={style} />)
+      const element = (await mountAndWait(<LoadingSpinner style={style} />))
         .find(LoadingSpinner)
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    /* ...additional attribute tests... */
-  });
+    it('should have provided correct icons scale when scale is provided', async () => {
+      expect.assertions(2);
 
-  describe('actions', () => {
-    /* ...action tests... */
+      const scale = 32 as const;
+
+      (await mountAndWait(<LoadingSpinner scale={scale} />)).find('svg').forEach((icon) => {
+        expect(icon.getDOMNode().getAttribute('data-scale')).toBe(`${scale}`);
+      });
+    });
   });
 });

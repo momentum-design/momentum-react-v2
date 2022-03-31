@@ -5,6 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import LoadingSpinner, { LoadingSpinnerProps } from './';
 import argTypes from './LoadingSpinner.stories.args';
 import Documentation from './LoadingSpinner.stories.docs.mdx';
+import { SIZES } from '../Icon/Icon.constants';
 
 export default {
   title: 'Momentum UI/LoadingSpinner',
@@ -17,32 +18,17 @@ export default {
   },
 };
 
-// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<LoadingSpinnerProps>(LoadingSpinner).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component.
-Example.args = {
-  children: 'Example',
-};
-
-// TODO: Inject additional stories here.
-
-// NOTE: Common variants story. This renders multiple variants of a single component.
 const Common = MultiTemplate<LoadingSpinnerProps>(LoadingSpinner).bind({});
 
 Common.argTypes = { ...argTypes };
-delete Common.argTypes.children;
-
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component for all variants.
-Common.args = {
-  children: 'Example',
-};
+delete Common.argTypes.scale;
 
 Common.parameters = {
-  variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
+  variants: [...Object.values(SIZES).map((scale) => ({ scale }))],
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example, Common };

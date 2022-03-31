@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from 'react';
+import { IconScale } from '../Icon';
 
 export interface Props {
   /**
@@ -20,4 +21,10 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * Size of the loading spinner (same as IconScale).
+   * @default 24
+   */
+  scale?: IconScale;
 }
