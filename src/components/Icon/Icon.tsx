@@ -71,10 +71,6 @@ const Icon: React.FC<Props> = (props: Props) => {
       inheritedColors.fill = COLOR_INHERIT;
     }
 
-    if (!styleColors.stroke) {
-      inheritedColors.stroke = COLOR_INHERIT;
-    }
-
     return { inheritedColors, styleColors };
   };
 

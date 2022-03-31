@@ -7,9 +7,11 @@ exports[`<ListHeader /> snapshot should match snapshot 1`] = `
     data-bold={false}
     data-outline={false}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -27,6 +29,7 @@ exports[`<ListHeader /> snapshot should match snapshot 1`] = `
           data-interactive={false}
           data-outline={false}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -45,7 +48,7 @@ exports[`<ListHeader /> snapshot should match snapshot 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -64,9 +67,11 @@ exports[`<ListHeader /> snapshot should match snapshot with bold 1`] = `
     data-bold={true}
     data-outline={true}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -84,6 +89,7 @@ exports[`<ListHeader /> snapshot should match snapshot with bold 1`] = `
           data-interactive={false}
           data-outline={true}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -102,7 +108,7 @@ exports[`<ListHeader /> snapshot should match snapshot with bold 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -120,9 +126,11 @@ exports[`<ListHeader /> snapshot should match snapshot with className 1`] = `
     data-bold={false}
     data-outline={false}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -140,6 +148,7 @@ exports[`<ListHeader /> snapshot should match snapshot with className 1`] = `
           data-interactive={false}
           data-outline={false}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -158,7 +167,7 @@ exports[`<ListHeader /> snapshot should match snapshot with className 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -176,10 +185,12 @@ exports[`<ListHeader /> snapshot should match snapshot with id 1`] = `
     data-bold={false}
     data-outline={false}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     id="example-id"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -197,6 +208,7 @@ exports[`<ListHeader /> snapshot should match snapshot with id 1`] = `
           data-interactive={false}
           data-outline={false}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -216,7 +228,7 @@ exports[`<ListHeader /> snapshot should match snapshot with id 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -234,9 +246,11 @@ exports[`<ListHeader /> snapshot should match snapshot with outline 1`] = `
     data-bold={false}
     data-outline={true}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -254,6 +268,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outline 1`] = `
           data-interactive={false}
           data-outline={true}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -272,7 +287,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outline 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -291,9 +306,11 @@ exports[`<ListHeader /> snapshot should match snapshot with outlineColor 1`] = `
     data-bold={false}
     data-outline={true}
     data-outline-color="secondary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -311,6 +328,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlineColor 1`] = `
           data-interactive={false}
           data-outline={true}
           data-outline-color="secondary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -329,7 +347,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlineColor 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -348,9 +366,11 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 1`] 
     data-bold={false}
     data-outline={true}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -368,6 +388,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 1`] 
           data-interactive={false}
           data-outline={true}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -386,7 +407,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 1`] 
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -405,9 +426,11 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 2`] 
     data-bold={false}
     data-outline={true}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
   >
     <FocusRing
@@ -425,6 +448,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 2`] 
           data-interactive={false}
           data-outline={true}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -443,7 +467,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 2`] 
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           tabIndex={0}
         />
       </FocusRing>
@@ -465,9 +489,11 @@ exports[`<ListHeader /> snapshot should match snapshot with style 1`] = `
     data-bold={false}
     data-outline={false}
     data-outline-color="primary"
+    data-outline-only={true}
     data-outline-position="bottom"
     interactive={false}
     isPadded={true}
+    role="separator"
     size={32}
     style={
       Object {
@@ -490,6 +516,7 @@ exports[`<ListHeader /> snapshot should match snapshot with style 1`] = `
           data-interactive={false}
           data-outline={false}
           data-outline-color="primary"
+          data-outline-only={true}
           data-outline-position="bottom"
           data-padded={true}
           data-shape="rectangle"
@@ -508,7 +535,7 @@ exports[`<ListHeader /> snapshot should match snapshot with style 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="listitem"
+          role="separator"
           style={
             Object {
               "color": "pink",

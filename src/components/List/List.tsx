@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect, useRef, useState, useCallback } from 'react';
+import React, { FC, useRef, useState, useCallback } from 'react';
 import classnames from 'classnames';
 
 import { STYLE } from './List.constants';
@@ -9,19 +9,10 @@ import { useKeyboard } from '@react-aria/interactions';
 
 const List: FC<Props> = (props: Props) => {
   const [currentFocus, setCurrentFocus] = useState<number>(0);
-  const [currentFocusChild, setCurrentFocusChild] = useState<ReactNode>(
-    React.Children.toArray(props.children)[currentFocus]
-  );
-
-  useEffect(() => {
-    const newChildIndex = React.Children.toArray(props.children).indexOf(currentFocusChild);
-    setCurrentFocus(newChildIndex);
-  }, [props.children]);
 
   const setContext = useCallback(
     (newFocus) => {
       setCurrentFocus(newFocus);
-      setCurrentFocusChild(React.Children.toArray(props.children)[newFocus]);
     },
     [currentFocus, setCurrentFocus]
   );
@@ -38,14 +29,12 @@ const List: FC<Props> = (props: Props) => {
         case 'ArrowLeft':
           e.preventDefault();
           setCurrentFocus((listSize + currentFocus - 1) % listSize);
-          setCurrentFocusChild((listSize + currentFocus - 1) % listSize);
           break;
 
         case 'ArrowDown':
         case 'ArrowRight':
           e.preventDefault();
           setCurrentFocus((listSize + currentFocus + 1) % listSize);
-          setCurrentFocusChild((listSize + currentFocus - 1) % listSize);
           break;
 
         default:

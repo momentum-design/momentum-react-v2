@@ -104,15 +104,11 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     );
   }
 
-  /**
-   * Handle keyboard navigation for any focusable elements inside list items
-   * Make them focusable only when the current list-item is focusable, otherwise
-   * make them non-focusable.
-   */
-
   useEffect(() => {
-    if (!listContext) return;
-    // TODO: Maybe this should be performed only once?
+    if (!listContext?.currentFocus) {
+      return;
+    }
+
     const focusableElements = getKeyboardFocusableElements(ref);
 
     if (focus) {
@@ -126,7 +122,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         element.setAttribute('tabindex', '-2');
       });
     }
-  }, [focus, ref.current]);
+  }, [listContext?.currentFocus]);
 
   /**
    * Context menu

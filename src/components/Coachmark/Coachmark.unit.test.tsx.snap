@@ -37,7 +37,6 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
               data-testid="placeholder"
               fill="currentColor"
               height="100%"
-              stroke="currentColor"
               viewBox="0, 0, 32, 32"
               width="100%"
             />
@@ -68,7 +67,6 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
                   data-test="cancel"
                   fill="currentColor"
                   height="100%"
-                  stroke="currentColor"
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -239,7 +237,6 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
                 data-test="cancel"
                 fill="currentColor"
                 height="100%"
-                stroke="currentColor"
                 viewBox="0, 0, 32, 32"
                 width="100%"
               />

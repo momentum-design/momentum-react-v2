@@ -1,18 +1,21 @@
-import React, { FC, ReactElement, useRef, Children, Fragment } from 'react';
+import React, { FC, ReactElement, useRef, Children, useState, useEffect, useCallback } from 'react';
 import classnames from 'classnames';
 
-import { DEFAULTS, STYLE } from './MenuTrigger.constants';
+import { STYLE, DEFAULTS } from './MenuTrigger.constants';
 import { Props } from './MenuTrigger.types';
 import './MenuTrigger.style.scss';
 import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
 import Menu, { MenuContext } from '../Menu';
-import { DismissButton, useOverlay } from '@react-aria/overlays';
+import { DismissButton } from '@react-aria/overlays';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import { FocusScope } from '@react-aria/focus';
-import ModalContainer from '../ModalContainer';
-import ContentSeparator from '../ContentSeparator';
 import { useKeyboard } from '@react-aria/interactions';
+import ContentSeparator from '../ContentSeparator';
+import Popover from '../Popover';
+import type { PopoverInstance, VariantType } from '../Popover/Popover.types';
+import type { FocusStrategy } from '@react-types/shared';
+import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 const MenuTrigger: FC<Props> = (props: Props) => {
   const {
@@ -21,98 +24,132 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     style,
     closeOnSelect,
     children,
-    overlayRadius = DEFAULTS.OVERLAY_RADIUS,
+    isOpen,
+    delay,
+    variant = DEFAULTS.VARIANT,
+    color = DEFAULTS.COLOR,
+    showArrow = DEFAULTS.SHOW_ARROW,
+    placement = DEFAULTS.PLACEMENT,
+    triggerComponent,
   } = props;
 
   const state = useMenuTriggerState(props);
-
-  const [menuTrigger, ...menus] = Children.toArray(children);
-
-  if (!verifyTypes(menus, Menu)) {
-    console.warn(
-      'MenuTrigger: All children (with the exception of 1st child) must be a Menu component.'
-    );
-  }
+  const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
 
   const buttonRef = useRef<HTMLButtonElement>();
   const menuRef = useRef<HTMLUListElement>();
-  const overlayRef = useRef<HTMLDivElement>();
+
+  const [...menus] = Children.toArray(children);
 
   const { menuTriggerProps, menuProps } = useMenuTrigger({ type: 'menu' }, state, buttonRef);
 
-  const { overlayProps } = useOverlay(
-    {
-      onClose: () => state.close(),
-      shouldCloseOnBlur: false,
-      isOpen: state.isOpen,
-      isDismissable: state.isOpen,
-      isKeyboardDismissDisabled: false,
-    },
-    overlayRef
-  );
+  if (!verifyTypes(menus, Menu)) {
+    console.warn('MenuTrigger: All children must be a Menu component.');
+  }
+
+  /**
+   * For some reason restoreFocus prop on <FocusScope> doesn't
+   * work. We focus back to trigger manually.
+   */
+  const handleFocusBackOnTrigger = useCallback(() => {
+    buttonRef.current?.focus();
+  }, []);
 
   const menuContext = {
     ...menuProps,
     onClose: state.close,
     closeOnSelect,
     ref: menuRef,
-    autoFocus: state.focusStrategy,
   };
 
-  // This should work out of the box, but for some reason it doesn't
-  // Added a temporary fix until I get the time to look deeper
+  /**
+   * Handle closeOnSelect from @react-aria manually
+   */
+  useEffect(() => {
+    if (!state.isOpen && popoverInstance?.state.isVisible) {
+      popoverInstance.hide();
+      handleFocusBackOnTrigger();
+    }
+  }, [state.isOpen, popoverInstance]);
+
+  /**
+   * Handle isOpen from @react-aria manually
+   */
+  useEffect(() => {
+    if (popoverInstance) {
+      if (isOpen) {
+        popoverInstance.show();
+      } else {
+        popoverInstance.hide();
+      }
+    }
+  }, [isOpen, popoverInstance]);
+
+  /**
+   * Add manual keyboard accessibility because our Popover component
+   * doesn't work well with @react-aria
+   */
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
       if (event.key === 'Escape') {
         state.close();
       }
-      if (state.isOpen && event.key === 'Tab') {
+      // When there are more than one menus inside the menu trigger, we should not close the overlay
+      // according to W-ARIA
+      if (state.isOpen && event.key === 'Tab' && menus.length === 1) {
         state.close();
       }
     },
   });
 
-  // BUG:
-  // There is a current bug where if there are more than one menus inside the menu
-  // trigger, the focus goes on the first element of the last menu component
-  // instead of focusing the very first.
+  // delete color prop which is passed down and used in the ModalContainer
+  // because it conflicts with the HTML color property
+  delete keyboardProps.color;
+  // delete the onKeyDown provided by Aria because Popover component will add
+  // appropriate keyboard accessibility instead.
+  delete menuTriggerProps.onKeyDown;
 
   return (
-    <div {...keyboardProps} className={classnames(className, STYLE.wrapper)} id={id} style={style}>
-      {React.cloneElement(menuTrigger as ReactElement, {
+    <Popover
+      triggerComponent={React.cloneElement(triggerComponent, {
         ...menuTriggerProps,
         ref: buttonRef,
       })}
-      {state.isOpen && (
-        <FocusScope restoreFocus contain>
-          <ModalContainer
-            isPadded
-            round={overlayRadius}
-            className={STYLE.overlay}
-            {...overlayProps}
-            color={DEFAULTS.BACKGROUND}
-            elevation={4}
-            ref={overlayRef}
-          >
-            <DismissButton onDismiss={state.close} />
-            <MenuContext.Provider value={menuContext}>
-              {menus.map((menu: ReactElement, index) => (
-                <Fragment key={`{fragment-${index}}`}>
-                  {menu}
-                  {index !== menus.length - 1 && <ContentSeparator key={`separator-${index}`} />}
-                </Fragment>
-              ))}
+      className={classnames(className, STYLE.wrapper)}
+      trigger="click"
+      id={id}
+      style={style}
+      placement={placement as PlacementType}
+      interactive={true}
+      showArrow={showArrow}
+      variant={variant as VariantType}
+      delay={delay}
+      color={color}
+      setInstance={setPopoverInstance}
+      {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
+    >
+      <FocusScope restoreFocus contain>
+        <DismissButton onDismiss={state.close} />
+        {menus.map((menu: ReactElement, index) => {
+          return (
+            <MenuContext.Provider
+              value={
+                // when we have multiple menus inside the menu trigger, we want only the first menu
+                // to autoFocus on open. If we add autoFocus for all Menus, the last menu in the menu
+                // trigger will have the first focus, which is wrong
+                index === 0 ? { ...menuContext, autoFocus: 'first' as FocusStrategy } : menuContext
+              }
+              key={`{context-${index}}`}
+            >
+              {menu}
+              {index !== menus.length - 1 && <ContentSeparator key={`separator-${index}`} />}
             </MenuContext.Provider>
-            <DismissButton onDismiss={state.close} />
-          </ModalContainer>
-        </FocusScope>
-      )}
-    </div>
+          );
+        })}
+        <DismissButton onDismiss={state.close} />
+      </FocusScope>
+    </Popover>
   );
 };
-
-/**
- * The MenuTrigger component.
- */
 
 export default MenuTrigger;

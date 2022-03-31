@@ -7,7 +7,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
   secondLine="testteam"
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={32}
   >
@@ -20,7 +20,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -118,7 +118,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
 exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
 <SpaceListItem>
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -131,7 +131,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -204,7 +204,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
   }
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -217,7 +217,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -290,7 +290,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
   className="example-class"
 >
   <ListItemBase
-    className="example-class"
+    className="example-class md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -303,7 +303,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
         isInset={false}
       >
         <li
-          className="example-class md-list-item-base-wrapper"
+          className="example-class md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -372,7 +372,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
   firstLine="firstLine"
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -385,7 +385,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -456,7 +456,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
   id="example-id"
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     id="example-id"
     shape="isPilled"
     size={50}
@@ -470,7 +470,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -540,7 +540,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
   isAlert={true}
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -553,7 +553,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -650,7 +650,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
   isAlertMuted={true}
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -663,7 +663,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -760,7 +760,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
   isEnterRoom={true}
 >
   <ListItemBase
-    className="md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
     shape="isPilled"
     size={50}
   >
@@ -773,7 +773,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
         isInset={false}
       >
         <li
-          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -870,7 +870,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
   isError={true}
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -883,7 +883,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -980,7 +980,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
   isMention={true}
 >
   <ListItemBase
-    className="md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
     shape="isPilled"
     size={50}
   >
@@ -993,7 +993,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
         isInset={false}
       >
         <li
-          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -1090,7 +1090,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
   isNewActivity={true}
 >
   <ListItemBase
-    className="md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
     shape="isPilled"
     size={50}
   >
@@ -1103,7 +1103,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
         isInset={false}
       >
         <li
-          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -1172,7 +1172,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
   isSelected={true}
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     isSelected={true}
     shape="isPilled"
     size={50}
@@ -1186,7 +1186,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper active"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper active"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -1255,7 +1255,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
   isUnread={true}
 >
   <ListItemBase
-    className="md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
     shape="isPilled"
     size={50}
   >
@@ -1268,7 +1268,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
         isInset={false}
       >
         <li
-          className="md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -1365,7 +1365,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
   secondLine="secondLine"
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -1378,7 +1378,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -1473,7 +1473,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
     style={
@@ -1491,7 +1491,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}
@@ -1565,7 +1565,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
   teamColor="cobalt"
 >
   <ListItemBase
-    className=""
+    className="md-space-list-item-wrapper"
     shape="isPilled"
     size={50}
   >
@@ -1578,7 +1578,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
         isInset={false}
       >
         <li
-          className="md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-disabled={false}
           data-interactive={true}
           data-padded={false}

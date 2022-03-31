@@ -105,7 +105,7 @@ const SpaceListItem: FC<Props> = forwardRef(
         ref={ref}
         size={isCompact ? 32 : 50}
         shape="isPilled"
-        className={classnames(className, {
+        className={classnames(className, STYLE.wrapper, {
           [STYLE.isNewActivity]: isNewActivity || isMention || isEnterRoom || isUnread,
         })}
         id={id}

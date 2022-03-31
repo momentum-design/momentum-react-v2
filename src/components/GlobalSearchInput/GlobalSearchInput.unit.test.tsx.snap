@@ -212,7 +212,6 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
                     data-test="cancel"
                     fill="currentColor"
                     height="100%"
-                    stroke="currentColor"
                     style={Object {}}
                     viewBox="0, 0, 32, 32"
                     width="100%"

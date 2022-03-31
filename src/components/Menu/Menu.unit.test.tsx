@@ -66,7 +66,7 @@ describe('<Menu />', () => {
 
       const itemShape = 'isPilled';
 
-      const container = mount(<Menu {...defaultProps} itemShape={itemShape} />);
+      const container = mount(<Menu {...defaultProps} itemSize={50} itemShape={itemShape} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -138,7 +138,7 @@ describe('<Menu />', () => {
 
       const itemShape = 'isPilled';
 
-      const element = mount(<Menu {...defaultProps} itemShape={itemShape} />)
+      const element = mount(<Menu {...defaultProps} itemSize={50} itemShape={itemShape} />)
         .find(ListItemBase)
         .at(0)
         .getDOMNode();

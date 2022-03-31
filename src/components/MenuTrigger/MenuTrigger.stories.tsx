@@ -14,6 +14,7 @@ import Icon from '../Icon';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/MenuTrigger',
@@ -31,12 +32,15 @@ const Example = Template<MenuTriggerProps>(MenuTrigger).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  closeOnSelect: false,
   'aria-label': 'Menu trigger',
-  children: [
-    <ButtonPill key="1">
+  closeOnSelect: true,
+  onOpenChange: action('onOpenChange'),
+  triggerComponent: (
+    <ButtonPill>
       <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
-    </ButtonPill>,
+    </ButtonPill>
+  ),
+  children: [
     <Menu selectionMode="single" key="2">
       <Item key="one">This is a longer text and should trim nicely...</Item>
       <Item key="two">Two</Item>
@@ -61,10 +65,12 @@ Common.parameters = {
   variants: [
     {
       label: 'Circle Button Trigger',
-      children: [
+      triggerComponent: (
         <ButtonCircle key="1">
           <Icon name="favorite" weight="filled" autoScale={150} />
-        </ButtonCircle>,
+        </ButtonCircle>
+      ),
+      children: [
         <Menu selectionMode="single" key="2">
           <Item key="one">One</Item>
           <Item key="two">Two</Item>
@@ -74,11 +80,13 @@ Common.parameters = {
     },
     {
       label: 'Complex Menu Items',
-      children: [
+      triggerComponent: (
         <ButtonPill key="1">
           <div>Special Menu</div>
           <Icon name="arrow-down" weight="bold" autoScale={100} />
-        </ButtonPill>,
+        </ButtonPill>
+      ),
+      children: [
         <Menu selectionMode="single" key="2">
           <Item key="one" textValue="Apps">
             <Flex alignItems="center" xgap="0.875rem">
@@ -104,11 +112,13 @@ Common.parameters = {
     {
       label: 'Menu with 2 selection modes',
       closeOnSelect: false,
-      children: [
+      triggerComponent: (
         <ButtonPill color="join" key="1">
           <div>Combined Menu</div>
           <Icon name="arrow-down" weight="bold" autoScale={100} />
-        </ButtonPill>,
+        </ButtonPill>
+      ),
+      children: [
         <Menu selectionMode="single" key="2">
           <Section title="Select single">
             <Item key="one" textValue="Apps">
@@ -157,10 +167,12 @@ Common.parameters = {
     },
     {
       label: 'Default selected Keys',
-      children: [
+      triggerComponent: (
         <ButtonCircle key="1" color="message">
           <Icon name="chat" weight="filled" autoScale={150} />
-        </ButtonCircle>,
+        </ButtonCircle>
+      ),
+      children: [
         <Menu selectionMode="multiple" defaultSelectedKeys={['one', 'two']} key="2">
           <Item key="one">One</Item>
           <Item key="two">Two</Item>
@@ -171,10 +183,12 @@ Common.parameters = {
     {
       label: 'With People',
       overlayRadius: 24,
-      children: [
+      triggerComponent: (
         <ButtonCircle key="1" color="join">
           <Icon name="chat" weight="filled" autoScale={150} />
-        </ButtonCircle>,
+        </ButtonCircle>
+      ),
+      children: [
         <Menu
           itemShape="isPilled"
           itemSize={50}

@@ -1,9 +1,15 @@
 import { CSSProperties, ReactElement } from 'react';
 import { MenuTriggerProps } from '@react-types/menu';
-import { Round } from '../ModalContainer/ModalContainer.types';
+import type { PopoverCommonStyleProps, PlacementType } from '../Popover/Popover.types';
 
-export interface Props extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip'> {
+export interface Props
+  extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip' | 'defaultOpen'>,
+    Omit<PopoverCommonStyleProps, 'placement'> {
+  /**
+   * Child components of this Popover (what will be shown within the Popover)
+   */
   children: ReactElement[];
+
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -20,7 +26,27 @@ export interface Props extends Omit<MenuTriggerProps, 'align' | 'direction' | 's
   style?: CSSProperties;
 
   /**
-   * Radius of the modal container where menus are wrapped in.
+   * The component which triggers the Menu Overlay
    */
-  overlayRadius?: Round;
+  triggerComponent: ReactElement;
+
+  /**
+   * Placement of the popover triggered by MenuTrigger
+   *
+   * Possible values: `top`, `top-start`, `top-end`, `bottom`, `bottom-start`, `bottom-end`,
+   *
+   * @default `bottom`
+   */
+  placement?: Omit<
+    PlacementType,
+    | 'auto'
+    | 'auto-start'
+    | 'auto-end'
+    | 'left'
+    | 'left-start'
+    | 'left-end'
+    | 'right'
+    | 'right-start'
+    | 'right-end'
+  >;
 }

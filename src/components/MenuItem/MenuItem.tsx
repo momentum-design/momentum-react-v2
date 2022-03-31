@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
-import React, { ReactElement, useContext } from 'react';
+import React, { ReactElement } from 'react';
 
 import { STYLE } from './MenuItem.constants';
 import { Props } from './MenuItem.types';
@@ -9,8 +9,7 @@ import ListItemBase from '../ListItemBase';
 import { useMenuItem } from '@react-aria/menu';
 import ListItemBaseSection from '../ListItemBaseSection';
 import Icon from '../Icon';
-import { MenuContext } from '../Menu';
-import { MenuAppearanceContext } from '../Menu/Menu';
+import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction } = props;
@@ -19,8 +18,8 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
 
-  const { onClose, closeOnSelect } = useContext(MenuContext);
-  const { itemShape, itemSize } = useContext(MenuAppearanceContext);
+  const { onClose, closeOnSelect } = useMenuContext();
+  const { itemShape, itemSize, isTickOnLeftSide } = useMenuAppearanceContext();
 
   const { menuItemProps } = useMenuItem(
     {
@@ -43,6 +42,30 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   delete menuItemProps.onPointerEnter;
   delete menuItemProps.onPointerLeave;
 
+  const tickIcon = (
+    <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} strokeColor="none" />
+  );
+
+  const renderSections = () => {
+    if (isTickOnLeftSide) {
+      return (
+        <>
+          <ListItemBaseSection position="start">
+            {isSelected ? tickIcon : <div className={STYLE.tickPlaceholder} />}
+          </ListItemBaseSection>
+          <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
+          {isSelected && <ListItemBaseSection position="end">{tickIcon}</ListItemBaseSection>}
+        </>
+      );
+    }
+  };
+
   return (
     <ListItemBase
       size={itemSize}
@@ -53,18 +76,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
       isPadded={true}
       {...menuItemProps}
     >
-      <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
-      {isSelected && (
-        <ListItemBaseSection position="end">
-          <Icon
-            className={STYLE.tickIcon}
-            name="check"
-            weight="bold"
-            scale={16}
-            strokeColor="none"
-          />
-        </ListItemBaseSection>
-      )}
+      {renderSections()}
     </ListItemBase>
   );
 };

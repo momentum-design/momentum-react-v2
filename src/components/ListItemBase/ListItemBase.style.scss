@@ -5,7 +5,7 @@
   align-items: center;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--listitem-textsecondary);
+  color: var(--listitem-textprimary);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
   outline: none;
@@ -49,6 +49,10 @@
     flex-shrink: 0;
   }
 
+  &[data-size='32'] > div[data-position='start'] {
+    margin-right: 0.5rem;
+  }
+
   & > div[data-position='fill'],
   *[data-position='middle'] {
     width: 100%;
@@ -74,13 +78,6 @@
   }
 
   &[data-size='32'] {
-    // All immediate children and any deep .md-text-wrapper child
-    & > *,
-    .md-text-wrapper {
-      font-weight: 500;
-      font-size: 0.75rem;
-    }
-
     height: 2rem;
   }
 

@@ -7,7 +7,6 @@ import { Props } from './MenuSection.types';
 import './MenuSection.style.scss';
 import MenuItem from '../MenuItem';
 import { useMenuSection } from '@react-aria/menu';
-import ContentSeparator from '../ContentSeparator';
 
 const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction } = props;
@@ -24,19 +23,18 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   }, [state]);
 
   return (
-    <>
-      {item.key !== state.collection.getFirstKey() && <ContentSeparator />}
-      <li {...itemProps}>
-        {item.rendered && (
-          <span {...headingProps} className={STYLE.header}>
-            {item.rendered}
-          </span>
-        )}
-        <ul {...groupProps} className={STYLE.wrapper}>
-          {renderItems()}
-        </ul>
-      </li>
-    </>
+    <ul {...itemProps}>
+      {!React.isValidElement(item.rendered) && item.rendered ? (
+        <span className={STYLE.header} {...headingProps}>
+          {item.rendered}
+        </span>
+      ) : (
+        item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
+      )}
+      <ul {...groupProps} className={STYLE.wrapper}>
+        {renderItems()}
+      </ul>
+    </ul>
   );
 };
 
