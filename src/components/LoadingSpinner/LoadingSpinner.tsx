@@ -7,10 +7,10 @@ import './LoadingSpinner.style.scss';
 import Icon from '../Icon';
 
 const LoadingSpinner: FC<Props> = (props: Props) => {
-  const { className, id, style, scale = DEFAULTS.SCALE } = props;
+  const { className, id, style, scale = DEFAULTS.SCALE, ...rest } = props;
 
   return (
-    <div className={classnames(className, STYLE.wrapper)} id={id} style={style}>
+    <div className={classnames(className, STYLE.wrapper)} id={id} style={style} {...rest}>
       <Icon scale={scale} name="spinner" weight="regular" />
       <Icon scale={scale} className={STYLE.arch} name="spinner-partial" weight="regular" />
     </div>
