@@ -153,4 +153,5 @@ export {
   Menu as MenuNext,
   MenuTrigger,
   ListHeader,
+  LoadingSpinner,
 } from './components';
