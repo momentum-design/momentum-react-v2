@@ -34,8 +34,6 @@ const commonChildren = [
   </ButtonCircle>,
 ];
 
-// Example
-
 const Example = Template<ButtonGroupProps>(ButtonGroup).bind({});
 
 Example.args = {
@@ -43,8 +41,6 @@ Example.args = {
 };
 
 Example.argTypes = { ...argTypes };
-
-// Rounding
 
 const Rounding = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 
@@ -59,8 +55,6 @@ Rounding.parameters = {
 Rounding.argTypes = { ...argTypes };
 delete Rounding.argTypes.round;
 
-// Spacing
-
 const Spacing = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 
 Spacing.args = {
@@ -73,60 +67,6 @@ Spacing.parameters = {
 
 Spacing.argTypes = { ...argTypes };
 delete Spacing.argTypes.spaced;
-
-// Compressed
-
-const Compressed = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
-Compressed.argTypes = { ...argTypes };
-delete Compressed.argTypes.compressed;
-
-const compressedVariant = (size) => {
-  return {
-    children: [
-      <ButtonCircle key="0" ghost size={size}>
-        <Icon name="camera-presence" autoScale={150} />
-      </ButtonCircle>,
-      <ButtonCircle key="1" ghost size={size}>
-        <Icon name="meetings-presence" autoScale={150} />
-      </ButtonCircle>,
-      <ButtonCircle key="2" ghost size={size}>
-        <Icon name="arrow-down-optical" autoScale={100} />
-      </ButtonCircle>,
-      <ButtonCircle key="3" ghost size={size}>
-        <Icon name="pto-presence" autoScale={150} />
-      </ButtonCircle>,
-    ],
-    compressed: true,
-    style: {
-      backgroundColor: 'var(--button-message-fill-background)',
-    },
-  };
-};
-
-Compressed.parameters = {
-  variants: [
-    compressedVariant(20),
-    compressedVariant(28),
-    compressedVariant(32),
-    compressedVariant(40),
-    compressedVariant(52),
-    compressedVariant(64),
-    {
-      children: [
-        <ButtonPill outline key="0" size={40}>
-          <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
-          <div key="1">Start Video</div>
-        </ButtonPill>,
-        <ButtonCircle outline key="1" size={40}>
-          <Icon name="arrow-down-optical" autoScale={100} />
-        </ButtonCircle>,
-      ],
-      compressed: true,
-    },
-  ],
-};
-
-// Audio Video Controls
 
 const AudioVideoControls = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 AudioVideoControls.argTypes = { ...argTypes };
@@ -220,8 +160,6 @@ AudioVideoControls.parameters = {
     },
   ],
 };
-
-// Common
 
 const Common = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 
@@ -328,4 +266,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Spacing, Compressed, AudioVideoControls, Common };
+export { Example, Spacing, AudioVideoControls, Common };
