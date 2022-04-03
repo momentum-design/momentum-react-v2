@@ -1822,10 +1822,10 @@
   resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.35.tgz#f0adfeb289c983027aa9da8edd389c7ea4bb9086"
   integrity sha512-mo/8H1Nw1OyIZj0tPuWRcfvl9KZWYz34daCG7jgQGQst+1TkzLQ4PbWPyau/m3lXg8b45XQTHTPzzGqJRb23ig==
 
-"@momentum-ui/icons-rebrand@^1.22.0":
-  version "1.22.0"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons-rebrand/-/icons-rebrand-1.22.0.tgz#82539539d10a9aa44d154f18bd3a7791571a674e"
-  integrity sha512-j0eXwOJTaY7VlzX+FVet2GbClo/8WNkBuy/Kd0gNsXgIJxb7o7/loVxYRslNaUYBlpkFtk7eK3KQ3aA9J6ynBA==
+"@momentum-ui/icons-rebrand@^1.30.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/icons-rebrand/-/icons-rebrand-1.30.0.tgz#33b4138a6b72fe9c1a03ff915d182b85dd88ec3c"
+  integrity sha512-0IXBIug2XO5ZQ3WEZFrfzpX8/GDbN9NhnaLEwzNslEbVB5Dosgq8Xu/emZfvGm02vPjrEII9xfw0R+NvOiOotw==
 
 "@momentum-ui/icons@8.27.0":
   version "8.27.0"
