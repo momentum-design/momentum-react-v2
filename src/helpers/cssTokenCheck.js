@@ -6,7 +6,7 @@ const colors = getTokenCssVars();
 
 const getColor = function (cssVar) {
   // exclude locally defined css vars
-  if (cssVar.match('--md-globals')) {
+  if (cssVar.match('--md-globals') || cssVar.match('--local')) {
     return;
   }
   if (!colors[cssVar]) {
