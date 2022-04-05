@@ -7,6 +7,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
+import Text from '../Text';
 
 import ButtonGroup, { ButtonGroupProps } from './';
 import argTypes from './ButtonGroup.stories.args';
@@ -85,9 +86,9 @@ AudioVideoControls.parameters = {
             autoScale={125}
             style={{ marginLeft: 'auto' }}
           />
-          <div key="1" style={{ marginRight: 'auto' }}>
+          <Text type="subheader-primary" key="1" style={{ marginRight: 'auto' }}>
             Mute
-          </div>
+          </Text>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
           <Icon name="arrow-down-optical" autoScale={100} />
@@ -106,9 +107,9 @@ AudioVideoControls.parameters = {
             autoScale={125}
             style={{ marginLeft: 'auto' }}
           />
-          <div key="1" style={{ marginRight: 'auto' }}>
+          <Text type="subheader-primary" key="1" style={{ marginRight: 'auto' }}>
             Unmute
-          </div>
+          </Text>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
           <Icon name="arrow-down-optical" autoScale={100} />
@@ -121,9 +122,9 @@ AudioVideoControls.parameters = {
       children: [
         <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
           <Icon key="0" name="camera-on-colored" autoScale={125} style={{ marginLeft: 'auto' }} />
-          <div key="1" style={{ marginRight: 'auto' }}>
+          <Text type="subheader-primary" key="1" style={{ marginRight: 'auto' }}>
             Stop Video
-          </div>
+          </Text>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
           <Icon name="arrow-down-optical" autoScale={100} />
@@ -136,7 +137,9 @@ AudioVideoControls.parameters = {
       children: [
         <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
           <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
-          <div key="1">Start Video</div>
+          <Text type="subheader-primary" key="1">
+            Start Video
+          </Text>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
           <Icon name="arrow-down-optical" autoScale={100} />
@@ -149,7 +152,9 @@ AudioVideoControls.parameters = {
       children: [
         <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
           <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
-          <div key="1">Long Label Possibly German</div>
+          <Text type="subheader-primary" key="1">
+            Long Label Possibly German
+          </Text>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
           <Icon name="arrow-down-optical" autoScale={100} />
