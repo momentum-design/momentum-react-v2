@@ -4,6 +4,9 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
+import MenuTrigger from '../MenuTrigger';
+import Menu from '../Menu';
+import { Item } from '@react-stately/collections';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
@@ -89,9 +92,21 @@ AudioVideoControls.parameters = {
             Mute
           </div>
         </ButtonPill>,
-        <ButtonCircle outline ghost key="1" size={40}>
-          <Icon name="arrow-down-optical" autoScale={100} />
-        </ButtonCircle>,
+        <MenuTrigger
+          key="2"
+          placement="top-end"
+          triggerComponent={
+            <ButtonCircle outline ghost key="1" size={40}>
+              <Icon name="arrow-down-optical" autoScale={100} />
+            </ButtonCircle>
+          }
+          children={[
+            <Menu key="0" selectionMode="single">
+              <Item>Item 1</Item>
+              <Item>Item 2</Item>
+            </Menu>,
+          ]}
+        />,
       ],
       round: true,
       compressed: true,
