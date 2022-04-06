@@ -1250,6 +1250,117 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
 </SpaceListItem>
 `;
 
+exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and draft 1`] = `
+<SpaceListItem
+  draft="Test Message"
+  isSelected={false}
+>
+  <ListItemBase
+    className="md-space-list-item-wrapper"
+    isSelected={false}
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-interactive={true}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+          tabIndex={-1}
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper text-column"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper text-column"
+              data-position="middle"
+            >
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
+                  data-test="list-item-first-line"
+                  data-type="body-primary"
+                />
+              </Text>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                name="draft-indicator-small"
+                scale={14}
+                strokeColor="none"
+                weight="filled"
+              >
+                <div
+                  className="md-icon-wrapper"
+                >
+                  <svg
+                    className=""
+                    data-autoscale={false}
+                    data-scale={14}
+                    data-test="draft-indicator-small"
+                    fill="currentColor"
+                    height="100%"
+                    style={
+                      Object {
+                        "stroke": "none",
+                      }
+                    }
+                    viewBox="0, 0, 14, 14"
+                    width="100%"
+                  />
+                </div>
+              </Icon>
+            </div>
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
 exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
 <SpaceListItem
   isUnread={true}

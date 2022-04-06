@@ -53,6 +53,17 @@ export default {
       },
     },
   },
+  draft: {
+    description: 'Draft Message',
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: '',
+      },
+    },
+  },
   isUnread: {
     description: 'Determines whether there is content inside the space that is not read.',
     control: { type: 'boolean' },

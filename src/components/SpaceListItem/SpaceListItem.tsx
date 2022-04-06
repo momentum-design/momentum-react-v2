@@ -18,6 +18,7 @@ const SpaceListItem: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     const {
       className,
+      draft,
       id,
       style,
       avatar,
@@ -81,6 +82,8 @@ const SpaceListItem: FC<Props> = forwardRef(
         return <Icon fillColor={'var(--listitem-icon)'} name="alert-muted" {...iconProps} />;
       } else if (isAlert) {
         return <Icon fillColor={'var(--listitem-icon)'} name="alert" {...iconProps} />;
+      } else if (!isSelected && draft) {
+        return <Icon name="draft-indicator-small" {...iconProps} weight="filled" />;
       } else if (isError) {
         return (
           <Icon

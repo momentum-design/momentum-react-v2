@@ -147,6 +147,17 @@ describe('<SpaceListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with isSelected and draft', async () => {
+      expect.assertions(1);
+
+      const isSelected = false;
+      const draft = 'Test Message';
+
+      const container = await mountAndWait(<SpaceListItem draft={draft} isSelected={isSelected} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with isError', async () => {
       expect.assertions(1);
 
