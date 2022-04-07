@@ -151,9 +151,11 @@ describe('<SpaceListItem />', () => {
       expect.assertions(1);
 
       const isSelected = false;
-      const draft = 'Test Message';
+      const hasDraft = true;
 
-      const container = await mountAndWait(<SpaceListItem draft={draft} isSelected={isSelected} />);
+      const container = await mountAndWait(
+        <SpaceListItem hasDraft={hasDraft} isSelected={isSelected} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -358,6 +360,21 @@ describe('<SpaceListItem />', () => {
       const isAlert = true;
 
       const element = (await mountAndWait(<SpaceListItem isAlert={isAlert} />))
+        .find(Icon)
+        .getDOMNode();
+
+      expect(element).toBeDefined();
+    });
+
+    it('should have provided draft icon when hasDraft is provided', async () => {
+      expect.assertions(1);
+
+      const isSelected = false;
+      const hasDraft = true;
+
+      const element = (
+        await mountAndWait(<SpaceListItem hasDraft={hasDraft} isSelected={isSelected} />)
+      )
         .find(Icon)
         .getDOMNode();
 

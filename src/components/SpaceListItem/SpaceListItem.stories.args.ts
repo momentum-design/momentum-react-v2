@@ -53,14 +53,15 @@ export default {
       },
     },
   },
-  draft: {
-    description: 'Draft Message',
+  hasDraft: {
+    description:
+      'Determines whether there is a message draft inside the space that has not been sent',
     table: {
       type: {
-        summary: 'string',
+        summary: 'boolean',
       },
       defaultValue: {
-        summary: '',
+        summary: 'undefined',
       },
     },
   },

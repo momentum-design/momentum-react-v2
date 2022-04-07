@@ -1252,7 +1252,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
 
 exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and draft 1`] = `
 <SpaceListItem
-  draft="Test Message"
+  hasDraft={true}
   isSelected={false}
 >
   <ListItemBase
