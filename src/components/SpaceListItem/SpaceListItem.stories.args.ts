@@ -53,7 +53,7 @@ export default {
       },
     },
   },
-  hasDraft: {
+  isDraft: {
     description:
       'Determines whether there is a message draft inside the space that has not been sent',
     table: {
