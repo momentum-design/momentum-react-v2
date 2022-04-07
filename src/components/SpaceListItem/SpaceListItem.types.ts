@@ -12,7 +12,7 @@ export interface Props extends PressEvents, ContextMenu {
   /**
    * Draft text inside conversation.
    */
-  draft?: string;
+  hasDraft?: boolean;
 
   /**
    * Custom id for overriding this component's CSS.
