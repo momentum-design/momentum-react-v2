@@ -151,10 +151,10 @@ describe('<SpaceListItem />', () => {
       expect.assertions(1);
 
       const isSelected = false;
-      const hasDraft = true;
+      const isDraft = true;
 
       const container = await mountAndWait(
-        <SpaceListItem hasDraft={hasDraft} isSelected={isSelected} />
+        <SpaceListItem isDraft={isDraft} isSelected={isSelected} />
       );
 
       expect(container).toMatchSnapshot();
@@ -366,16 +366,17 @@ describe('<SpaceListItem />', () => {
       expect(element).toBeDefined();
     });
 
-    it('should have provided draft icon when hasDraft is provided', async () => {
+    it('should have provided draft icon when isDraft is provided', async () => {
       expect.assertions(1);
 
       const isSelected = false;
-      const hasDraft = true;
+      const isDraft = true;
 
       const element = (
-        await mountAndWait(<SpaceListItem hasDraft={hasDraft} isSelected={isSelected} />)
+        await mountAndWait(<SpaceListItem isDraft={isDraft} isSelected={isSelected} />)
       )
         .find(Icon)
+        .find('svg[data-test="draft-indicator-small"]')
         .getDOMNode();
 
       expect(element).toBeDefined();
