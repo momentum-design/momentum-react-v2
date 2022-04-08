@@ -152,10 +152,9 @@ describe('<SpaceListItem />', () => {
 
       const isSelected = false;
       const isDraft = true;
-      const isFileStaged = true;
 
       const container = await mountAndWait(
-        <SpaceListItem isDraft={isDraft} isFileStaged={isFileStaged} isSelected={isSelected} />
+        <SpaceListItem isDraft={isDraft} isSelected={isSelected} />
       );
 
       expect(container).toMatchSnapshot();
@@ -372,12 +371,9 @@ describe('<SpaceListItem />', () => {
 
       const isSelected = false;
       const isDraft = true;
-      const isFileStaged = true;
 
       const element = (
-        await mountAndWait(
-          <SpaceListItem isDraft={isDraft} isFileStaged={isFileStaged} isSelected={isSelected} />
-        )
+        await mountAndWait(<SpaceListItem isDraft={isDraft} isSelected={isSelected} />)
       )
         .find(Icon)
         .find('svg[data-test="draft-indicator-small"]')

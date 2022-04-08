@@ -65,18 +65,6 @@ export default {
       },
     },
   },
-  isFileStaged: {
-    description:
-      'Determines whether there is a staged files inside the space that has not been sent',
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
   isUnread: {
     description: 'Determines whether there is content inside the space that is not read.',
     control: { type: 'boolean' },
