@@ -15,6 +15,11 @@ export interface Props extends PressEvents, ContextMenu {
   isDraft?: boolean;
 
   /**
+   * Staged file inside conversation.
+   */
+  isFileStaged?: boolean;
+
+  /**
    * Custom id for overriding this component's CSS.
    */
   id?: string;
