@@ -19,6 +19,7 @@ const SpaceListItem: FC<Props> = forwardRef(
     const {
       className,
       isDraft,
+      isFileStaged,
       id,
       style,
       avatar,
@@ -82,7 +83,7 @@ const SpaceListItem: FC<Props> = forwardRef(
         return <Icon fillColor={'var(--listitem-icon)'} name="alert-muted" {...iconProps} />;
       } else if (isAlert) {
         return <Icon fillColor={'var(--listitem-icon)'} name="alert" {...iconProps} />;
-      } else if (!isSelected && isDraft) {
+      } else if (!isSelected && (isDraft || isFileStaged)) {
         return <Icon name="draft-indicator-small" {...iconProps} weight="filled" />;
       } else if (isError) {
         return (
