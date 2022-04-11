@@ -51,3 +51,4 @@ export { default as DividerDot } from './DividerDot';
 export { default as Popover } from './Popover';
 export { default as ListHeader } from './ListHeader';
 export { default as LoadingSpinner } from './LoadingSpinner';
+export { default as Tag } from './Tag';
