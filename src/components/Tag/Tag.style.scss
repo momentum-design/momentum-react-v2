@@ -1,0 +1,123 @@
+.md-tag-wrapper {
+  /* unchanged variables */
+  --local-border-style: var(--tags-primary-border-style);
+
+  /* default color */
+  --local-background-normal: var(--tags-primary-background);
+  --local-background-hover: var(--tags-primary-background-hovered);
+  --local-background-active: var(--tags-primary-background-pressed);
+  --local-border-color: var(--tags-primary-border-color);
+  --local-text-color: var(--tags-primary-text);
+
+  align-items: center;
+  border-radius: 0.25rem;
+  display: flex;
+  height: 1.5rem;
+  margin: 0.25rem;
+  padding: 0 0.5rem;
+  transition: background-color 0.2s;
+  width: fit-content;
+
+  &:not([isDisabled='true']) {
+    &[data-color='cobalt'] {
+      --local-background-normal: var(--tags-cobalt-background);
+      --local-background-hover: var(--tags-cobalt-background-hovered);
+      --local-background-active: var(--tags-cobalt-background-pressed);
+      --local-border-color: var(--tags-cobalt-border-color);
+      --local-text-color: var(--tags-cobalt-text);
+    }
+
+    &[data-color='lime'] {
+      --local-background-normal: var(--tags-lime-background);
+      --local-background-hover: var(--tags-lime-background-hovered);
+      --local-background-active: var(--tags-lime-background-pressed);
+      --local-border-color: var(--tags-lime-border-color);
+      --local-text-color: var(--tags-lime-text);
+    }
+
+    &[data-color='mint'] {
+      --local-background-normal: var(--tags-mint-background);
+      --local-background-hover: var(--tags-mint-background-hovered);
+      --local-background-active: var(--tags-mint-background-pressed);
+      --local-border-color: var(--tags-mint-border-color);
+      --local-text-color: var(--tags-mint-text);
+    }
+
+    &[data-color='slate'] {
+      --local-background-normal: var(--tags-slate-background);
+      --local-background-hover: var(--tags-slate-background-hovered);
+      --local-background-active: var(--tags-slate-background-pressed);
+      --local-border-color: var(--tags-slate-border-color);
+      --local-text-color: var(--tags-slate-text);
+    }
+
+    &[data-color='violet'] {
+      --local-background-normal: var(--tags-violet-background);
+      --local-background-hover: var(--tags-violet-background-hovered);
+      --local-background-active: var(--tags-violet-background-pressed);
+      --local-border-color: var(--tags-violet-border-color);
+      --local-text-color: var(--tags-violet-text);
+    }
+
+    &[data-color='purple'] {
+      --local-background-normal: var(--tags-purple-background);
+      --local-background-hover: var(--tags-purple-background-hovered);
+      --local-background-active: var(--tags-purple-background-pressed);
+      --local-border-color: var(--tags-purple-border-color);
+      --local-text-color: var(--tags-purple-text);
+    }
+
+    &[data-color='orange'] {
+      --local-background-normal: var(--tags-orange-background);
+      --local-background-hover: var(--tags-orange-background-hovered);
+      --local-background-active: var(--tags-orange-background-pressed);
+      --local-border-color: var(--tags-orange-border-color);
+      --local-text-color: var(--tags-orange-text);
+    }
+
+    &[data-color='gold'] {
+      --local-background-normal: var(--tags-gold-background);
+      --local-background-hover: var(--tags-gold-background-hovered);
+      --local-background-active: var(--tags-gold-background-pressed);
+      --local-border-color: var(--tags-gold-border-color);
+      --local-text-color: var(--tags-gold-text);
+    }
+  }
+
+  &[data-format='error'] {
+    --local-background-normal: var(--tags-error-background);
+    --local-background-hover: var(--tags-error-background);
+    --local-background-active: var(--tags-error-background);
+    --local-border-color: var(--tags-error-border-color);
+    --local-text-color: var(--tags-error-text);
+  }
+
+  &[data-format='overlay'] {
+    --local-background-normal: var(--tags-overlay-background);
+    --local-background-hover: var(--tags-overlay-background);
+    --local-background-active: var(--tags-overlay-background);
+    --local-border-color: var(--tags-overlay-border-color);
+    --local-text-color: var(--tags-overlay-text);
+  }
+
+  &[data-format='static'] {
+    --local-background-normal: var(--tags-static-background);
+    --local-background-hover: var(--tags-static-background);
+    --local-background-active: var(--tags-static-background);
+    --local-border-color: var(--tags-static-border-color);
+    --local-text-color: var(--tags-static-text);
+  }
+
+  background-color: var(--local-background-normal);
+  border-style: var(--local-border-style);
+  border-color: var(--local-border-color);
+  color: var(--local-text-color);
+
+  &:hover {
+    background-color: var(--local-background-hover);
+  }
+
+  &:active {
+    background-color: var(--local-background-active);
+  }
+}

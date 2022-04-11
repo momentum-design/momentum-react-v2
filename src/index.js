@@ -155,4 +155,5 @@ export {
   MenuTrigger,
   ListHeader,
   LoadingSpinner,
+  Tag,
 } from './components';
