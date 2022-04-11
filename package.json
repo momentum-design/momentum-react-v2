@@ -100,7 +100,7 @@
     "@babel/runtime": "^7.0.0",
     "@momentum-ui/animations": "^1.3.0",
     "@momentum-ui/design-tokens": "^0.0.37",
-    "@momentum-ui/icons": "8.27.0",
+    "@momentum-ui/icons": "8.28.4",
     "@momentum-ui/icons-rebrand": "^1.30.0",
     "@momentum-ui/tokens": "^1.7.1",
     "@react-aria/button": "3.2.2",
