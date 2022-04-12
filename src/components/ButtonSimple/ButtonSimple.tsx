@@ -4,7 +4,8 @@ import { useButton } from '@react-aria/button';
 import { useHover } from '@react-aria/interactions';
 import FocusRing from '../FocusRing';
 
-import { Props } from './ButtonSimple.types';
+import { STYLE } from './ButtonSimple.constants';
+import type { Props } from './ButtonSimple.types';
 
 /**
  * A simple button component without overhead styling. This is used as an injectable button component for other sibling components.
@@ -20,7 +21,7 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
   return (
     <FocusRing disabled={isDisabled}>
       <button
-        className={classnames(className)}
+        className={classnames(className, STYLE.wrapper)}
         id={id}
         ref={ref}
         style={style}

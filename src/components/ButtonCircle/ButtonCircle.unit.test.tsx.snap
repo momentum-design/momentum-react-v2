@@ -17,7 +17,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
@@ -65,7 +65,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -120,7 +120,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
         focusRingClass="md-focus-ring-wrapper-disabled"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={true}
           data-ghost={true}
@@ -171,7 +171,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
@@ -225,7 +225,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
         focusRingClass="md-focus-ring-wrapper-disabled"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={true}
           data-ghost={false}
@@ -276,7 +276,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper example-class"
+          className="md-button-circle-wrapper example-class md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
@@ -324,7 +324,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="message"
           data-disabled={false}
           data-ghost={false}
@@ -375,7 +375,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
@@ -422,7 +422,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
@@ -477,7 +477,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
@@ -536,7 +536,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
@@ -590,7 +590,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-circle-wrapper"
+          className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
           data-ghost={false}

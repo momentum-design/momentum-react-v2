@@ -13,7 +13,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}
@@ -66,7 +66,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
         focusRingClass="md-focus-ring-wrapper-disabled"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={true}
           data-size={64}
           disabled={true}
@@ -117,7 +117,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}
@@ -167,7 +167,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText and chil
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}
@@ -219,7 +219,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText and seco
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}
@@ -273,7 +273,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with primaryText, seconda
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}
@@ -325,7 +325,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with secondaryText 1`] = 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}
@@ -374,7 +374,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}
@@ -424,7 +424,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-dialpad-wrapper"
+          className="md-button-dialpad-wrapper md-button-simple-wrapper"
           data-disabled={false}
           data-size={64}
           onBlur={[Function]}

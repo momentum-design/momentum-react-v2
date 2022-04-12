@@ -180,7 +180,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
                 focusRingClass="md-focus-ring-wrapper children"
               >
                 <button
-                  className="md-button-pill-wrapper"
+                  className="md-button-pill-wrapper md-button-simple-wrapper"
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={false}

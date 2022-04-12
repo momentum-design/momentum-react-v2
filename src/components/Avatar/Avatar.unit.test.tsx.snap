@@ -199,7 +199,7 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
       >
         <button
           aria-label="Cisco Webex"
-          className="md-avatar-button-wrapper"
+          className="md-avatar-button-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}

@@ -462,7 +462,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
-                        className="md-button-circle-wrapper"
+                        className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
@@ -639,7 +639,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
-                        className="md-button-circle-wrapper"
+                        className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
@@ -821,7 +821,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
-                        className="md-button-circle-wrapper"
+                        className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}

@@ -11,7 +11,7 @@ exports[`<AlertBadge /> snapshot should match snapshot 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -56,7 +56,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with children, image and 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -98,7 +98,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with className 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="example-class md-alert-badge-wrapper"
+          className="example-class md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -135,7 +135,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           data-color="warning"
           onBlur={[Function]}
           onClick={[Function]}
@@ -186,7 +186,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with id 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -227,7 +227,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with image 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -280,7 +280,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with image and label 1`] 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -335,7 +335,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with label 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -388,7 +388,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with style 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -430,7 +430,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with title 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-alert-badge-wrapper"
+          className="md-alert-badge-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}

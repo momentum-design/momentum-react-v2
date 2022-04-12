@@ -160,7 +160,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
-              className="md-search-input-clear"
+              className="md-search-input-clear md-button-simple-wrapper"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}

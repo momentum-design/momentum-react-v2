@@ -266,7 +266,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -325,7 +325,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -384,7 +384,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -536,7 +536,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -595,7 +595,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -654,7 +654,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -773,7 +773,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -832,7 +832,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -891,7 +891,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-control-wrapper"
+                className="md-button-control-wrapper md-button-simple-wrapper"
                 data-circular={true}
                 onBlur={[Function]}
                 onClick={[Function]}
