@@ -21,7 +21,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+            className="md-button-circle-wrapper md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
@@ -95,7 +95,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-circle-wrapper example-class md-add-reaction-button-wrapper"
+            className="md-button-circle-wrapper example-class md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
@@ -171,7 +171,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+            className="md-button-circle-wrapper md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
@@ -260,7 +260,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-circle-wrapper md-add-reaction-button-wrapper"
+            className="md-button-circle-wrapper md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}

@@ -32,7 +32,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-pill-wrapper md-reaction-badge-wrapper"
+            className="md-button-pill-wrapper md-reaction-badge-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-count={1}
             data-disabled={false}
@@ -110,7 +110,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-pill-wrapper example-class md-reaction-badge-wrapper"
+            className="md-button-pill-wrapper example-class md-reaction-badge-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-count={1}
             data-disabled={false}
@@ -188,7 +188,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-pill-wrapper md-reaction-badge-wrapper"
+            className="md-button-pill-wrapper md-reaction-badge-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-count={1}
             data-disabled={false}
@@ -270,7 +270,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-pill-wrapper md-reaction-badge-wrapper"
+            className="md-button-pill-wrapper md-reaction-badge-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-count={1}
             data-disabled={false}
@@ -349,7 +349,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-pill-wrapper md-reaction-badge-wrapper"
+            className="md-button-pill-wrapper md-reaction-badge-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-count={1}
             data-disabled={false}
@@ -441,7 +441,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
-            className="md-button-pill-wrapper md-reaction-badge-wrapper"
+            className="md-button-pill-wrapper md-reaction-badge-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-count={1}
             data-disabled={false}

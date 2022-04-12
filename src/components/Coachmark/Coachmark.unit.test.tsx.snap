@@ -55,7 +55,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           >
             <button
               aria-label="dismiss"
-              class="md-button-control-wrapper"
+              class="md-button-control-wrapper md-button-simple-wrapper"
               type="button"
             >
               <div
@@ -95,7 +95,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           data-spaced="true"
         >
           <button
-            class="md-button-pill-wrapper"
+            class="md-button-pill-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled="false"
             data-ghost="false"
@@ -108,7 +108,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
             Button A
           </button>
           <button
-            class="md-button-pill-wrapper"
+            class="md-button-pill-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled="false"
             data-ghost="false"
@@ -193,7 +193,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
             data-spaced="true"
           >
             <button
-              class="md-button-pill-wrapper"
+              class="md-button-pill-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled="false"
               data-ghost="false"
@@ -206,7 +206,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
               Button A
             </button>
             <button
-              class="md-button-pill-wrapper"
+              class="md-button-pill-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled="false"
               data-ghost="false"
@@ -228,7 +228,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
         >
           <button
             aria-label="dismiss"
-            class="md-button-control-wrapper"
+            class="md-button-control-wrapper md-button-simple-wrapper"
             type="button"
           >
             <div

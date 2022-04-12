@@ -50,7 +50,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
                 focusRingClass="md-focus-ring-wrapper children"
               >
                 <button
-                  className="md-button-circle-wrapper md-reaction-button-wrapper"
+                  className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={false}

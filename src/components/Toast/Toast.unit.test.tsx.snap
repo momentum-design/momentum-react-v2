@@ -156,7 +156,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -215,7 +215,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -274,7 +274,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -413,7 +413,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -482,7 +482,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -532,7 +532,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -582,7 +582,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}
@@ -777,7 +777,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -836,7 +836,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -895,7 +895,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -1034,7 +1034,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -1103,7 +1103,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -1153,7 +1153,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -1203,7 +1203,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}
@@ -1354,7 +1354,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -1413,7 +1413,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -1472,7 +1472,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -1612,7 +1612,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -1681,7 +1681,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -1731,7 +1731,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -1781,7 +1781,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}
@@ -1919,7 +1919,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -1978,7 +1978,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -2037,7 +2037,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -2177,7 +2177,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -2246,7 +2246,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -2296,7 +2296,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -2346,7 +2346,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}
@@ -2527,7 +2527,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -2586,7 +2586,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -2645,7 +2645,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -2784,7 +2784,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -2853,7 +2853,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -2903,7 +2903,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -2953,7 +2953,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}
@@ -3149,7 +3149,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -3208,7 +3208,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -3267,7 +3267,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -3406,7 +3406,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -3475,7 +3475,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -3525,7 +3525,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -3575,7 +3575,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}
@@ -3779,7 +3779,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -3838,7 +3838,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -3897,7 +3897,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
-                    className="md-button-control-wrapper"
+                    className="md-button-control-wrapper md-button-simple-wrapper"
                     data-circular={true}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -4036,7 +4036,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -4105,7 +4105,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -4155,7 +4155,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -4205,7 +4205,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}
@@ -4344,7 +4344,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 focusRingClass="md-focus-ring-wrapper children"
               >
                 <button
-                  className="md-button-control-wrapper"
+                  className="md-button-control-wrapper md-button-simple-wrapper"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragStart={[Function]}
@@ -4400,7 +4400,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 focusRingClass="md-focus-ring-wrapper children"
               >
                 <button
-                  className="md-button-control-wrapper"
+                  className="md-button-control-wrapper md-button-simple-wrapper"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragStart={[Function]}
@@ -4456,7 +4456,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 focusRingClass="md-focus-ring-wrapper children"
               >
                 <button
-                  className="md-button-control-wrapper"
+                  className="md-button-control-wrapper md-button-simple-wrapper"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragStart={[Function]}
@@ -4644,7 +4644,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-circle-wrapper"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
@@ -4713,7 +4713,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="message"
                       data-disabled={false}
                       data-ghost={false}
@@ -4763,7 +4763,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="cancel"
                       data-disabled={false}
                       data-ghost={false}
@@ -4813,7 +4813,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
-                      className="md-button-pill-wrapper"
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
                       data-color="join"
                       data-disabled={false}
                       data-ghost={false}

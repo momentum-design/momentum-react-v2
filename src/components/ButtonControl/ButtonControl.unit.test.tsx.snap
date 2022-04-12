@@ -13,7 +13,7 @@ exports[`<ButtonControl /> snapshot should match snapshot 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-control-wrapper"
+          className="md-button-control-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -72,7 +72,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with className 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-control-wrapper example-class"
+          className="md-button-control-wrapper example-class md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -132,7 +132,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with id 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-control-wrapper"
+          className="md-button-control-wrapper md-button-simple-wrapper"
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -193,7 +193,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with isCircular 1`] = 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-control-wrapper"
+          className="md-button-control-wrapper md-button-simple-wrapper"
           data-circular={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -258,7 +258,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with isDisabled 1`] = 
         focusRingClass="md-focus-ring-wrapper-disabled"
       >
         <button
-          className="md-button-control-wrapper"
+          className="md-button-control-wrapper md-button-simple-wrapper"
           data-disabled={true}
           disabled={true}
           onBlur={[Function]}
@@ -328,7 +328,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with style 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          className="md-button-control-wrapper"
+          className="md-button-control-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
