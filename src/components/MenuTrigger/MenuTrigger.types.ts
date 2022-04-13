@@ -1,5 +1,5 @@
-import { CSSProperties, ReactElement, ReactNode } from 'react';
-import { MenuTriggerProps } from '@react-types/menu';
+import type { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { MenuTriggerProps } from '@react-types/menu';
 import type { PopoverCommonStyleProps, PlacementType } from '../Popover/Popover.types';
 
 export interface Props
