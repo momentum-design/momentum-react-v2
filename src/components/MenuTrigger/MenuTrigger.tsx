@@ -76,7 +76,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
         popoverInstance.show();
       } else {
         popoverInstance.hide();
-        state.close();
       }
     }
   }, [isOpen, popoverInstance]);
