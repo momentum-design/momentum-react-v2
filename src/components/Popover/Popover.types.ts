@@ -107,4 +107,9 @@ export interface Props extends PopoverCommonStyleProps {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * Callback when user clicks outside the target.
+   */
+  onClickOutside?: (instance: Instance, event: Event) => void;
 }

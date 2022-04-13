@@ -14,6 +14,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
     className="md-menu-trigger-wrapper"
     color="primary"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
     setInstance={[Function]}
@@ -44,6 +45,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           5,
         ]
       }
+      onClickOutside={[Function]}
       placement="bottom-start"
       popperOptions={
         Object {
@@ -79,6 +81,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             5,
           ]
         }
+        onClickOutside={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -121,6 +124,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               5,
             ]
           }
+          onClickOutside={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -2193,6 +2197,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
     className="example-class md-menu-trigger-wrapper"
     color="primary"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
     setInstance={[Function]}
@@ -2223,6 +2228,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           5,
         ]
       }
+      onClickOutside={[Function]}
       placement="bottom-start"
       popperOptions={
         Object {
@@ -2258,6 +2264,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             5,
           ]
         }
+        onClickOutside={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -2300,6 +2307,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               5,
             ]
           }
+          onClickOutside={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -4372,6 +4380,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
     className="md-menu-trigger-wrapper"
     color="secondary"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
     setInstance={[Function]}
@@ -4402,6 +4411,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           5,
         ]
       }
+      onClickOutside={[Function]}
       placement="bottom-start"
       popperOptions={
         Object {
@@ -4437,6 +4447,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             5,
           ]
         }
+        onClickOutside={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -4479,6 +4490,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               5,
             ]
           }
+          onClickOutside={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -6552,6 +6564,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
     color="primary"
     id="example-id"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
     setInstance={[Function]}
@@ -6582,6 +6595,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           5,
         ]
       }
+      onClickOutside={[Function]}
       placement="bottom-start"
       popperOptions={
         Object {
@@ -6617,6 +6631,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             5,
           ]
         }
+        onClickOutside={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -6659,6 +6674,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               5,
             ]
           }
+          onClickOutside={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -8734,6 +8750,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
     className="md-menu-trigger-wrapper"
     color="primary"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="top"
     setInstance={[Function]}
@@ -8764,6 +8781,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           5,
         ]
       }
+      onClickOutside={[Function]}
       placement="top"
       popperOptions={
         Object {
@@ -8799,6 +8817,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             5,
           ]
         }
+        onClickOutside={[Function]}
         placement="top"
         plugins={
           Array [
@@ -8841,6 +8860,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               5,
             ]
           }
+          onClickOutside={[Function]}
           placement="top"
           plugins={
             Array [
@@ -10913,6 +10933,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
     className="md-menu-trigger-wrapper"
     color="primary"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
     setInstance={[Function]}
@@ -10943,6 +10964,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           17,
         ]
       }
+      onClickOutside={[Function]}
       placement="bottom-start"
       popperOptions={
         Object {
@@ -10978,6 +11000,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             17,
           ]
         }
+        onClickOutside={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -11020,6 +11043,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               17,
             ]
           }
+          onClickOutside={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -13160,6 +13184,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
     className="md-menu-trigger-wrapper"
     color="primary"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
     setInstance={[Function]}
@@ -13195,6 +13220,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           5,
         ]
       }
+      onClickOutside={[Function]}
       placement="bottom-start"
       popperOptions={
         Object {
@@ -13230,6 +13256,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             5,
           ]
         }
+        onClickOutside={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -13272,6 +13299,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               5,
             ]
           }
+          onClickOutside={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -15355,6 +15383,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
     className="md-menu-trigger-wrapper"
     color="primary"
     interactive={true}
+    onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
     setInstance={[Function]}
@@ -15385,6 +15414,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           5,
         ]
       }
+      onClickOutside={[Function]}
       placement="bottom-start"
       popperOptions={
         Object {
@@ -15420,6 +15450,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             5,
           ]
         }
+        onClickOutside={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -15462,6 +15493,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               5,
             ]
           }
+          onClickOutside={[Function]}
           placement="bottom-start"
           plugins={
             Array [

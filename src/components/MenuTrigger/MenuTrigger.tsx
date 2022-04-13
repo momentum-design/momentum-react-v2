@@ -6,9 +6,8 @@ import { Props } from './MenuTrigger.types';
 import './MenuTrigger.style.scss';
 import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
-import Menu, { MenuContext } from '../Menu';
+import { MenuContext } from '../Menu';
 import { DismissButton } from '@react-aria/overlays';
-import { verifyTypes } from '../../helpers/verifyTypes';
 import { FocusScope } from '@react-aria/focus';
 import { useKeyboard } from '@react-aria/interactions';
 import ContentSeparator from '../ContentSeparator';
@@ -42,10 +41,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   const [...menus] = Children.toArray(children);
 
   const { menuTriggerProps, menuProps } = useMenuTrigger({ type: 'menu' }, state, buttonRef);
-
-  if (!verifyTypes(menus, Menu)) {
-    console.warn('MenuTrigger: All children must be a Menu component.');
-  }
 
   /**
    * For some reason restoreFocus prop on <FocusScope> doesn't
@@ -81,6 +76,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
         popoverInstance.show();
       } else {
         popoverInstance.hide();
+        state.close();
       }
     }
   }, [isOpen, popoverInstance]);
@@ -125,6 +121,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       variant={variant as VariantType}
       delay={delay}
       color={color}
+      onClickOutside={state.close}
       setInstance={setPopoverInstance}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
