@@ -31,6 +31,7 @@ const Popover: FC<Props> = (props: Props) => {
     className,
     id,
     style,
+    onClickOutside,
     ...rest
   } = props;
 
@@ -70,6 +71,7 @@ const Popover: FC<Props> = (props: Props) => {
       trigger={trigger === 'mouseenter' ? 'mouseenter focusin' : trigger}
       interactive={interactive}
       appendTo="parent"
+      onClickOutside={onClickOutside}
       popperOptions={{
         modifiers: [
           {

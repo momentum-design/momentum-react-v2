@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from 'react';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
 import { MenuTriggerProps } from '@react-types/menu';
 import type { PopoverCommonStyleProps, PlacementType } from '../Popover/Popover.types';
 
@@ -8,7 +8,7 @@ export interface Props
   /**
    * Child components of this Popover (what will be shown within the Popover)
    */
-  children: ReactElement[];
+  children: ReactNode;
 
   /**
    * Custom class for overriding this component's CSS.
