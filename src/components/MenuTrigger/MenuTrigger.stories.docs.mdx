@@ -5,11 +5,61 @@ The `<MenuTrigger />` component. Implemented using [useMenuTrigger](https://reac
 The `<Menu />` element follows the [Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from the `@react-stately` library, accepting both static and dynamic collections. `<Menu />` accepts `<Item />` elements as children, each with a key prop. Basic usage of `<Menu />`, seen in the example below, shows multiple options populated with a string.
 Simple element with simple options as text.
 
+## Important!
+
+The `<Menu />` components provided to the `<MenuTrigger />` need to be separated and not grouped together!
+For example, if you have a wrapper component that groups together 2 Menus related to each other, and you render
+that component inside the `<MenuTrigger />` as one single child, the MenuTrigger will not identify the Menus
+correctly and will break accessibility.
+
+Therefore you need to pass 2 children (one per `<Menu />`).
+
+### Don't
+
+```js
+const Menus = (<Menu key="1"/><Menu  key="2"/><Menu  key="3"/>);
+...
+return (
+  <MenuTrigger>
+   <Menus/> // donn't do this!
+  </MenuTrigger>
+);
+```
+
+### Do
+
+```js
+return (
+  <MenuTrigger>
+    <Menu key="1" /> // do this
+    <Menu key="2" />
+    <Menu key="3" />
+  </MenuTrigger>
+);
+```
+
+The type of each child doesn't necessarily need to be `Menu`, as long as the leaf component of the child resolves to `Menu`.
+Exmaple
+
+```js
+const WrappedSettingsMenu = (
+  <WrappedSettingsContainer>
+    <Menu/>
+  </WrappedSettingsContainer>
+);
+const WrappeedShareMenu = (<Menu/>);
+...
+return (
+  <MenuTrigger>
+    <WrappedSettingsMenu/>
+    <WrappeedShareMenu />
+  </MenuTrigger>
+);
+```
+
 ## Children Structure
 
 ```
-+-------------------------+
-| Target Button Component |
 +-------------------------+
 | Menu Component 1        |
 +-------------------------+
@@ -22,10 +72,14 @@ Simple element with simple options as text.
 ## Simple example
 
 ```js
-<MenuTrigger closeOnSelect={true}>
-  <ButtonPill key="1">
-    <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
-  </ButtonPill>
+<MenuTrigger
+  closeOnSelect={true}
+  triggerComponent={
+    <ButtonPill key="1">
+      <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+    </ButtonPill>
+  }
+>
   <Menu selectionMode="single" key="2">
     <Item key="one">One</Item>
     <Item key="two">Two</Item>
@@ -42,10 +96,14 @@ Simple element with simple options as text.
 This is a more complex example showing how to build a menu trigger with multiple selection modes
 
 ```js
-<MenuTrigger closeOnSelect={false}>
-  <ButtonPill key="1">
-    <div>Mixed Selection</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
-  </ButtonPill>
+<MenuTrigger
+  closeOnSelect={false}
+  triggerComponent={
+    <ButtonPill key="1">
+      <div>Mixed Selection</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+    </ButtonPill>
+  }
+>
   <Menu selectionMode="single" key="2">
     <Item key="one">One</Item>
     <Item key="two">Two</Item>
