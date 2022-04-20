@@ -83,7 +83,7 @@ const SpaceListItem: FC<Props> = forwardRef(
       } else if (isAlert) {
         return <Icon fillColor={'var(--listitem-icon)'} name="alert" {...iconProps} />;
       } else if (!isSelected && isDraft) {
-        return <Icon name="draft-indicator-small" {...iconProps} weight="filled" />;
+        return <Icon name="draft-indicator" {...iconProps} />;
       } else if (isError) {
         return (
           <Icon

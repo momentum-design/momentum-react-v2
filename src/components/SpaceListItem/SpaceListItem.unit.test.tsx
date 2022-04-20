@@ -376,7 +376,7 @@ describe('<SpaceListItem />', () => {
         await mountAndWait(<SpaceListItem isDraft={isDraft} isSelected={isSelected} />)
       )
         .find(Icon)
-        .find('svg[data-test="draft-indicator-small"]')
+        .find('svg[data-test="draft-indicator"]')
         .getDOMNode();
 
       expect(element).toBeDefined();

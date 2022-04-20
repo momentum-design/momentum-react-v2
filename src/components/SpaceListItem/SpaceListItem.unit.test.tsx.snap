@@ -1327,10 +1327,10 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
               data-position="end"
             >
               <Icon
-                name="draft-indicator-small"
+                name="draft-indicator"
                 scale={14}
                 strokeColor="none"
-                weight="filled"
+                weight="bold"
               >
                 <div
                   className="md-icon-wrapper"
@@ -1339,7 +1339,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
                     className=""
                     data-autoscale={false}
                     data-scale={14}
-                    data-test="draft-indicator-small"
+                    data-test="draft-indicator"
                     fill="currentColor"
                     height="100%"
                     style={
@@ -1347,7 +1347,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
                         "stroke": "none",
                       }
                     }
-                    viewBox="0, 0, 14, 14"
+                    viewBox="0, 0, 32, 32"
                     width="100%"
                   />
                 </div>
