@@ -38,7 +38,6 @@ describe('isMRv2Button', () => {
     { input: <ButtonPill key="1">test</ButtonPill>, expected: true },
     { input: <ButtonCircle key="1">test</ButtonCircle>, expected: true },
     { input: <ButtonSimple key="1">test</ButtonSimple>, expected: true },
-    { input: <ButtonHyperlink key="1">test</ButtonHyperlink>, expected: true },
     { input: <Button key="1">test</Button>, expected: false },
   ])('isMRv2Button(%s)', ({ input, expected }) => {
     expect(isMRv2Button(input)).toBe(expected);
