@@ -5,6 +5,7 @@ import { STYLE } from './InputMessage.constants';
 import { Props, MessageLevel, Message } from './InputMessage.types';
 
 import Icon from '../Icon';
+import Text from '../Text';
 import classnames from 'classnames';
 
 const messagePriority = {
@@ -44,13 +45,14 @@ const InputMessage = (props: Props): ReactElement => {
             <Icon
               name="warning"
               weight="bold"
-              scale={20}
+              scale={16}
               fillColor={`var(--theme-text-${level}-normal)`}
-              strokeColor={`var(--theme-text-${level}-normal)`}
             />
           </div>
         )}
-        <div className={STYLE.text}>{message}</div>
+        <Text type="body-secondary" className={STYLE.text}>
+          {message}
+        </Text>
       </div>
     </div>
   );

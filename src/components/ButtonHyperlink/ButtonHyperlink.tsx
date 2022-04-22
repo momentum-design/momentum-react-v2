@@ -8,7 +8,7 @@ import './ButtonHyperlink.style.scss';
 import classnames from 'classnames';
 
 const ButtonHyperlink: FC<Props> = forwardRef(
-  (props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+  (props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
     const { className, title } = props;
     const internalRef = useRef();
     const ref = providedRef || internalRef;
@@ -21,11 +21,11 @@ const ButtonHyperlink: FC<Props> = forwardRef(
     delete mutatedProps.disabled;
     delete mutatedProps.className;
 
-    const { buttonProps } = useButton(mutatedProps, ref);
+    const { buttonProps } = useButton({ ...mutatedProps, elementType: 'a' }, ref);
 
     return (
       <FocusRing disabled={props.disabled}>
-        <button
+        <a
           className={classnames(STYLE.wrapper, className)}
           {...buttonProps}
           ref={ref}
@@ -33,7 +33,7 @@ const ButtonHyperlink: FC<Props> = forwardRef(
           title={title}
         >
           {props.children}
-        </button>
+        </a>
       </FocusRing>
     );
   }

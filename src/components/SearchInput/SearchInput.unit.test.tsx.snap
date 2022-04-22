@@ -59,9 +59,15 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
             message-level="none"
             role="alert"
           >
-            <div
+            <Text
               className="md-input-message--text"
-            />
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
           </div>
         </div>
       </InputMessage>
@@ -211,9 +217,15 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
             message-level="none"
             role="alert"
           >
-            <div
+            <Text
               className="md-input-message--text"
-            />
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
           </div>
         </div>
       </InputMessage>
@@ -282,9 +294,15 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
             message-level="none"
             role="alert"
           >
-            <div
+            <Text
               className="md-input-message--text"
-            />
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
           </div>
         </div>
       </InputMessage>
@@ -360,9 +378,15 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
             message-level="none"
             role="alert"
           >
-            <div
+            <Text
               className="md-input-message--text"
-            />
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
           </div>
         </div>
       </InputMessage>
@@ -431,9 +455,15 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
             message-level="none"
             role="alert"
           >
-            <div
+            <Text
               className="md-input-message--text"
-            />
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
           </div>
         </div>
       </InputMessage>
@@ -503,9 +533,15 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
             message-level="none"
             role="alert"
           >
-            <div
+            <Text
               className="md-input-message--text"
-            />
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
           </div>
         </div>
       </InputMessage>
@@ -583,9 +619,15 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
             message-level="none"
             role="alert"
           >
-            <div
+            <Text
               className="md-input-message--text"
-            />
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
           </div>
         </div>
       </InputMessage>

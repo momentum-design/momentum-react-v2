@@ -7,7 +7,7 @@ exports[`ButtonHyperlink snapshot should match snapshot 1`] = `
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
-      <button
+      <a
         className="md-button-hyperlink-wrapper"
         data-disabled={false}
         onBlur={[Function]}
@@ -24,10 +24,11 @@ exports[`ButtonHyperlink snapshot should match snapshot 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        type="button"
+        role="button"
+        tabIndex={0}
       >
         Hyperlink
-      </button>
+      </a>
     </FocusRing>
   </FocusRing>
 </ButtonHyperlink>
@@ -45,10 +46,10 @@ exports[`ButtonHyperlink snapshot should match snapshot when disabled 1`] = `
       focusClass="md-focus-ring-wrapper-disabled"
       focusRingClass="md-focus-ring-wrapper-disabled"
     >
-      <button
+      <a
+        aria-disabled={true}
         className="md-button-hyperlink-wrapper"
         data-disabled={true}
-        disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -63,10 +64,10 @@ exports[`ButtonHyperlink snapshot should match snapshot when disabled 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        type="button"
+        role="button"
       >
         Hyperlink
-      </button>
+      </a>
     </FocusRing>
   </FocusRing>
 </ButtonHyperlink>
@@ -81,7 +82,7 @@ exports[`ButtonHyperlink snapshot should match snapshot with title 1`] = `
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
-      <button
+      <a
         className="md-button-hyperlink-wrapper"
         data-disabled={false}
         onBlur={[Function]}
@@ -98,8 +99,9 @@ exports[`ButtonHyperlink snapshot should match snapshot with title 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
         title="Example Text"
-        type="button"
       />
     </FocusRing>
   </FocusRing>
