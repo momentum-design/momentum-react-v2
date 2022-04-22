@@ -9,6 +9,10 @@
   text-decoration: underline;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
+  &:focus {
+    color: var(--theme-text-accent-normal);
+  }
+
   &:hover {
     color: var(--theme-text-accent-hover);
   }

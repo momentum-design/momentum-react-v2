@@ -5,9 +5,9 @@ import TextInput, { TextInputProps } from './';
 
 const messageArrOptions = {
   empty: [],
-  error: [{ message: 'Error message', type: 'error' }],
-  success: [{ message: 'Success message', type: 'success' }],
-  warning: [{ message: 'Warning message', type: 'warning' }],
+  error: [{ message: 'Error message', level: 'error' }],
+  success: [{ message: 'Success message', level: 'success' }],
+  warning: [{ message: 'Warning message', level: 'warning' }],
 };
 
 export default {
@@ -108,7 +108,7 @@ Common.parameters = {
       label: 'Label',
       value: 'test',
       description: 'This is help text for the input.',
-      messageArr: [{ type: 'error', message: 'Error message' }],
+      messageArr: [{ level: 'error', message: 'Error message' }],
     },
   ],
 };

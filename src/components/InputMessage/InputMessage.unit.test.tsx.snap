@@ -19,8 +19,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
         <Icon
           fillColor="var(--theme-text-error-normal)"
           name="warning"
-          scale={20}
-          strokeColor="var(--theme-text-error-normal)"
+          scale={16}
           weight="bold"
         >
           <div
@@ -29,13 +28,12 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
             <svg
               className=""
               data-autoscale={false}
-              data-scale={20}
+              data-scale={16}
               data-test="warning"
               height="100%"
               style={
                 Object {
                   "fill": "var(--theme-text-error-normal)",
-                  "stroke": "var(--theme-text-error-normal)",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -44,11 +42,17 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
           </div>
         </Icon>
       </div>
-      <div
+      <Text
         className="md-input-message--text"
+        type="body-secondary"
       >
-        some message
-      </div>
+        <small
+          className="md-text-wrapper md-input-message--text"
+          data-type="body-secondary"
+        >
+          some message
+        </small>
+      </Text>
     </div>
   </div>
 </InputMessage>
