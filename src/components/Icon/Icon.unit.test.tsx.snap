@@ -291,6 +291,30 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> snapshot should match snapshot with title 1`] = `
+<Icon
+  name="draft-indicator-bold"
+  title="You have a draft message"
+>
+  <div
+    className="md-icon-wrapper"
+    title="You have a draft message"
+  >
+    <svg
+      className=""
+      data-autoscale={false}
+      data-scale={32}
+      data-test="draft-indicator-bold"
+      fill="currentColor"
+      height="100%"
+      style={Object {}}
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
 exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
 <Icon
   name="accessibility"

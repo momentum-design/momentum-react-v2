@@ -98,4 +98,9 @@ export interface Props extends PressEvents, ContextMenu {
    * Used to manage focus when this is used inside a list.
    */
   itemIndex?: number;
+
+  /**
+   * Right icon tooltip shown on hover
+   */
+  rightIconTooltip?: string;
 }

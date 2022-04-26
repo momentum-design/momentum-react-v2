@@ -46,6 +46,16 @@ describe('<Icon />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with title', async () => {
+      expect.assertions(1);
+
+      const title = 'You have a draft message';
+
+      container = await mountAndWait(<Icon name="draft-indicator-bold" title={title} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with scale', async () => {
       expect.assertions(1);
 
@@ -161,6 +171,17 @@ describe('<Icon />', () => {
       const element = wrapper.find(Icon).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should have provided title when title is provided', async () => {
+      expect.assertions(1);
+
+      const title = 'You have a draft message';
+
+      const wrapper = await mountAndWait(<Icon name="draft-indicator-bold" title={title} />);
+      const element = wrapper.find(Icon).getDOMNode();
+
+      expect(element.getAttribute('title')).toBe(title);
     });
 
     it('should pass scale prop', async () => {
