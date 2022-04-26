@@ -76,6 +76,11 @@ export interface Props {
   style?: CSSProperties;
 
   /**
+   * Custom title string on the icon hover.
+   */
+  title?: string;
+
+  /**
    * Represents the style of the icon.
    *
    * @remarks

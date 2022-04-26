@@ -26,6 +26,7 @@ const Icon: React.FC<Props> = (props: Props) => {
     scale,
     strokeColor,
     style,
+    title,
     weight,
     ...otherProps
   } = props;
@@ -78,7 +79,7 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   if (SvgIcon) {
     return (
-      <div className={classnames(STYLE.wrapper, className)} id={id} style={style}>
+      <div className={classnames(STYLE.wrapper, className)} id={id} style={style} title={title}>
         <SvgIcon
           // coloured class is added to avoid theming the fixed colours inside coloured icons
           data-test={name}
