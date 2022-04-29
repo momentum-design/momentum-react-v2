@@ -81,7 +81,6 @@ Common.parameters = {
       scheduleInfoFirstColor: 'success',
       scheduleInfoSecond: '0:23',
       scheduleInfoSecondColor: 'success',
-      disabled: false,
     },
     {
       meetingTitle: 'Test Meeting 2',
@@ -90,7 +89,6 @@ Common.parameters = {
       avatar: avatar,
       scheduleInfoFirst: '10:00am - 11:00am',
       scheduleInfoSecond: 'Mon, Jan 1, 2023',
-      disabled: false,
     },
     {
       meetingTitle: 'Test Meeting 3',
@@ -101,7 +99,6 @@ Common.parameters = {
       scheduleInfoFirstColor: 'success',
       scheduleInfoSecond: '0:23',
       scheduleInfoSecondColor: 'success',
-      disabled: false,
     },
     {
       meetingTitle: 'Test Meeting 4',
@@ -112,7 +109,6 @@ Common.parameters = {
       scheduleInfoFirst: '10:00am - 11:00am',
       scheduleInfoSecond: 'In 5 minutes',
       scheduleInfoSecondColor: 'success',
-      disabled: false,
     },
 
     {
@@ -121,7 +117,6 @@ Common.parameters = {
       scheduleInfoFirst: '10:00am - 11:00am',
       scheduleInfoSecond: 'In 5 minutes',
       scheduleInfoSecondColor: 'success',
-      disabled: false,
       isStatic: true,
       color: CARD_CONSTANTS.COLORS.TRANSPARENT,
     },
