@@ -16,6 +16,18 @@ const meetingContainerArgTypes = {
       },
     },
   },
+  meetingTitle: {
+    description: 'The title of the meeting. Overwrites the `children` prop',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   titleType: {
     description: 'The Text type assigned to `meetingTitle` prop',
     control: { type: 'select' },
