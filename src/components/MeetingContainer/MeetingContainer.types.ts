@@ -5,12 +5,13 @@ import type { ButtonPillProps } from '../ButtonPill';
 import type { TagProps } from '../Tag';
 import type { AvatarProps } from '../Avatar';
 import type { ButtonHyperlinkProps } from '../ButtonHyperlink';
+import type { FontStyle } from '../Text/Text.types';
 
 export type SupportedActionButton = ReactElement<ButtonPillProps | ButtonCircleProps>;
 export type SupportedTag = ReactElement<TagProps>;
 export type SupportedAvatar = ReactElement<AvatarProps>;
 export type SupportedButtonHyperlink = ReactElement<ButtonHyperlinkProps | ButtonPillProps>;
-export type ScheduleInfoColor = 'secondary' | 'success';
+export type ScheduleInfoColor = 'secondary' | 'success' | 'primary';
 
 export interface Props extends CardProps {
   /**
@@ -72,4 +73,9 @@ export interface Props extends CardProps {
    * Determines if container is disabled
    */
   disabled?: boolean;
+
+  /**
+   * Takes title type
+   */
+  titleType?: FontStyle;
 }

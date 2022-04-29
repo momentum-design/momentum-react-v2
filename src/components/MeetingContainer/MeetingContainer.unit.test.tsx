@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Tag from '../Tag';
 import ButtonPill from '../ButtonPill';
-import Text from '../Text';
+import Text, { TEXT_CONSTANTS } from '../Text';
 import Avatar from '../Avatar';
 import ButtonCircle from '../ButtonCircle';
 import ButtonHyperlink from '../ButtonHyperlink';
@@ -461,6 +461,16 @@ describe('attributes', () => {
       .props().disabled;
 
     expect(element).toBe(true);
+  });
+  it('should use titleType when provided', () => {
+    const element = mount(
+      <MeetingContainer meetingTitle={meetingTitle} titleType={TEXT_CONSTANTS.TYPES.TITLE} />
+    )
+      .find(Text)
+      .at(0)
+      .getDOMNode();
+
+    expect(element.getAttribute('data-type')).toBe(TEXT_CONSTANTS.TYPES.TITLE);
   });
   /* ...additional attribute tests... */
 

@@ -1,5 +1,6 @@
 import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
 import { MEETING_CONTAINER_CONSTANTS as CONSTANTS } from './';
+import { TEXT_CONSTANTS } from '../Text';
 import { cardArgTypes } from '../Card/Card.stories.args';
 import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args';
 const meetingContainerArgTypes = {
@@ -9,6 +10,21 @@ const meetingContainerArgTypes = {
     table: {
       type: {
         summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  titleType: {
+    description: 'The Text type assigned to `meetingTitle` prop',
+    control: { type: 'select' },
+    options: [undefined, ...Object.values(TEXT_CONSTANTS.TYPES)],
+    table: {
+      type: {
+        summary: Object.values(TEXT_CONSTANTS.TYPES)
+          .map((value) => `${value}`)
+          .join('|'),
       },
       defaultValue: {
         summary: 'undefined',
