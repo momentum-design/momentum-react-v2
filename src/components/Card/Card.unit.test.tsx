@@ -6,7 +6,6 @@ import { BUTTON_SIMPLE_CONSTANTS } from '../ButtonSimple';
 
 import Card, { CARD_CONSTANTS as CONSTANTS } from './';
 import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 describe('<Card />', () => {
   describe('snapshot', () => {
