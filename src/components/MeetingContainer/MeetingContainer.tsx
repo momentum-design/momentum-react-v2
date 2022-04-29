@@ -11,11 +11,6 @@ import { action } from '@storybook/addon-actions';
 
 /**
  * The MeetingContainer component.
- *
- * Will render avatar/tags/action buttons if provided.
- *
- * Depends on consumer for schedule info strings/statusColor
- *
  */
 const MeetingContainer: FC<Props> = (props: Props) => {
   const {

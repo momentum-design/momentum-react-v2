@@ -19,21 +19,10 @@ const DEFAULTS = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  header: `${CLASS_PREFIX}-header`,
   actions: `${CLASS_PREFIX}-actions`,
   tags: `${CLASS_PREFIX}-tags`,
   details: `${CLASS_PREFIX}-details`,
-  upper: `${CLASS_PREFIX}-upper`,
-  lower: `${CLASS_PREFIX}-lower`,
-  left: `${CLASS_PREFIX}-left`,
-  right: `${CLASS_PREFIX}-right`,
-  padding: `${CLASS_PREFIX}-padding`,
-  title: `${CLASS_PREFIX}-title`,
-  spaceLink: `${CLASS_PREFIX}-spaceLink`,
-  date: `${CLASS_PREFIX}-date`,
-  convo: `${CLASS_PREFIX}-convo`,
   avatar: `${CLASS_PREFIX}-avatar`,
-  now: `${CLASS_PREFIX}-now`,
   container: `${CLASS_PREFIX}-container`,
 };
 
