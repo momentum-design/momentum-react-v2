@@ -6,7 +6,6 @@ import MeetingContainer, { MeetingContainerProps } from './';
 import argTypes from './MeetingContainer.stories.args';
 import Documentation from './MeetingContainer.stories.docs.mdx';
 import React from 'react';
-import ButtonCircle from '../ButtonCircle';
 import ButtonPill from '../ButtonPill';
 import Icon from '../Icon';
 import Avatar from '../Avatar';
@@ -38,18 +37,6 @@ const pillButtons = [
   <ButtonPill key={1} color="join" size={28}>
     <Text>Join</Text>
   </ButtonPill>,
-];
-
-const circleButtons = [
-  <ButtonCircle key={0} outline ghost={true} color="join" size={28}>
-    <Icon name="chat" autoScale={100} />
-  </ButtonCircle>,
-  <ButtonCircle key={1} outline ghost={true} color="join" size={28}>
-    <Icon name="info-circle" autoScale={100} />
-  </ButtonCircle>,
-  <ButtonCircle key={2} outline ghost={true} color="join" size={28}>
-    <Icon name="invited-user" autoScale={100} />
-  </ButtonCircle>,
 ];
 
 const spaceLink = <ButtonHyperlink>Example Link</ButtonHyperlink>;
