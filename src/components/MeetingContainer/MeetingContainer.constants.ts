@@ -1,9 +1,13 @@
+import { TEXT_CONSTANTS } from '../Text';
+
 import type { ScheduleInfoColor } from './MeetingContainer.types';
+
 const CLASS_PREFIX = 'md-meeting-container';
 
 const SCHEDULE_INFO_COLORS: Record<string, ScheduleInfoColor> = {
   SUCCESS: 'success',
   SECONDARY: 'secondary',
+  PRIMARY: 'primary',
 };
 
 const ANCHORS = {
@@ -15,6 +19,7 @@ const DEFAULTS = {
   ANCHOR: ANCHORS.TOP,
   IS_DISABLED: false,
   SCHEDULE_INFO_COLOR: SCHEDULE_INFO_COLORS.SECONDARY,
+  TITLE_TYPE: TEXT_CONSTANTS.TYPES.HEADER_PRIMARY,
 };
 
 const STYLE = {

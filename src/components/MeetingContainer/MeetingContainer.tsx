@@ -7,7 +7,6 @@ import './MeetingContainer.style.scss';
 import Text, { TEXT_CONSTANTS } from '../Text';
 import DividerDot from '../DividerDot';
 import ButtonGroup from '../ButtonGroup';
-import { action } from '@storybook/addon-actions';
 
 /**
  * The MeetingContainer component.
@@ -28,6 +27,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
     scheduleInfoSecondColor = DEFAULTS.SCHEDULE_INFO_COLOR,
     isDisabled,
     statusColor,
+    titleType = DEFAULTS.TITLE_TYPE,
     ...otherProps
   } = props;
   const title = meetingTitle || children;
@@ -64,7 +64,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
         )}
         <div className={STYLE.details}>
           <div>
-            <Text type={TEXT_CONSTANTS.TYPES.HEADER_PRIMARY} data-disabled={isDisabled}>
+            <Text type={titleType} data-disabled={isDisabled}>
               {title}
             </Text>
             {changedSpaceLink && <DividerDot />}
