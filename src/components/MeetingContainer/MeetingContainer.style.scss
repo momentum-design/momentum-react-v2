@@ -1,0 +1,64 @@
+/** @component MeetingContainer */
+
+.md-meeting-container-wrapper {
+  > .md-meeting-container-container {
+    margin: 0.25rem 0.5rem 0.25rem 0.25rem;
+    display: flex;
+    flex-grow: 1;
+
+    > .md-meeting-container-actions {
+      display: flex;
+      align-items: center;
+
+      &[data-anchor='top'] {
+        align-items: flex-start;
+      }
+    }
+
+    > .md-meeting-container-details {
+      flex-grow: 1;
+      margin: 0 0.5rem;
+
+      > *:first-child {
+        > *:first-child {
+          &[data-disabled='true'] {
+            color: var(--theme-text-primary-disabled);
+          }
+        }
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+
+        > *[data-color='success'] {
+          color: var(--theme-text-success-normal);
+        }
+
+        > *[data-color='secondary'] {
+          color: var(--theme-text-secondary-normal);
+        }
+
+        > .md-divider-dot-wrapper {
+          margin: 0 0.5rem;
+        }
+      }
+
+      > .md-meeting-container-tags {
+        > :first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    > .md-meeting-container-avatar {
+      display: flex;
+      align-items: center;
+
+      &[data-anchor='top'] {
+        align-items: flex-start;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

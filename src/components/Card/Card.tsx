@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
+import ButtonSimple from '../ButtonSimple';
+
 import CardStatus from './CardStatus';
 
 import { DEFAULTS, STYLE } from './Card.constants';
 import type { Props } from './Card.types';
 import './Card.style.scss';
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 /**
  * The Card component.
@@ -22,23 +25,28 @@ const Card: FC<Props> = (props: Props) => {
     statusColor,
     statusStriped,
     style,
+    isStatic,
+    isDisabled,
     ...otherProps
   } = props;
 
   return (
-    <div
+    <ButtonSimple
       className={classnames(className, STYLE.wrapper)}
       data-color={color}
       data-height={height}
       data-outline={outline}
       data-rounding={rounding}
+      data-static={isStatic}
+      data-disabled={isDisabled}
+      isDisabled={isStatic || isDisabled}
       id={id}
       style={style}
       {...otherProps}
     >
       <CardStatus color={statusColor} striped={statusStriped} />
       {children}
-    </div>
+    </ButtonSimple>
   );
 };
 

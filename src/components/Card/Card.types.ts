@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
+import { ButtonSimpleProps } from '../ButtonSimple';
 
 import type { CardStatusColor } from './CardStatus';
 
@@ -6,7 +7,7 @@ export type Color = 'inactive' | 'success' | 'transparent';
 export type Height = 'auto' | 'large' | 'medium' | 'small' | 'tiny';
 export type Rounding = 0 | 1 | 2;
 
-export interface Props {
+export interface Props extends ButtonSimpleProps {
   /**
    * Child components of this Card.
    */
@@ -31,6 +32,11 @@ export interface Props {
    * Custom id for overriding this component's CSS.
    */
   id?: string;
+
+  /**
+   * Turns off hover and active styling for the component.
+   */
+  isStatic?: boolean;
 
   /**
    * Whether to use an outline for this component.
