@@ -2,26 +2,28 @@
 
 exports[`<Card /> snapshot should match snapshot 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with children 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
@@ -29,146 +31,191 @@ exports[`<Card /> snapshot should match snapshot with children 1`] = `
     <div>
       example child
     </div>
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with class name 1`] = `
 <div>
-  <div
-    class="example-class md-card-wrapper"
+  <button
+    class="example-class md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with color 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="transparent"
     data-height="small"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with height 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="tiny"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with id 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
     id="example-id"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
+</div>
+`;
+
+exports[`<Card /> snapshot should match snapshot with isDisabled 1`] = `
+<div>
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
+    data-color="inactive"
+    data-disabled="true"
+    data-height="small"
+    data-rounding="2"
+    disabled=""
+    type="button"
+  >
+    <div
+      class="md-card-status-wrapper"
+    />
+  </button>
+</div>
+`;
+
+exports[`<Card /> snapshot should match snapshot with isStatic 1`] = `
+<div>
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
+    data-color="inactive"
+    data-height="small"
+    data-rounding="2"
+    data-static="true"
+    disabled=""
+    type="button"
+  >
+    <div
+      class="md-card-status-wrapper"
+    />
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with outline 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-outline="true"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with rounding 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with statusColor 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
       data-color="success"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with statusStriped 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
       data-striped="true"
     />
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Card /> snapshot should match snapshot with style 1`] = `
 <div>
-  <div
-    class="md-card-wrapper"
+  <button
+    class="md-card-wrapper md-button-simple-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
     style="color: pink;"
+    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </div>
+  </button>
 </div>
 `;

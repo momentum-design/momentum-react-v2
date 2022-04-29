@@ -2,8 +2,11 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+import { BUTTON_SIMPLE_CONSTANTS } from '../ButtonSimple';
+
 import Card, { CARD_CONSTANTS as CONSTANTS } from './';
 import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 describe('<Card />', () => {
   describe('snapshot', () => {
@@ -111,6 +114,24 @@ describe('<Card />', () => {
       const statusStriped = true;
 
       const { container } = render(<Card statusStriped={statusStriped} />);
+
+      expect(container).toMatchSnapshot();
+    });
+    it('should match snapshot with isDisabled', () => {
+      expect.assertions(1);
+
+      const isDisabled = true;
+
+      const { container } = render(<Card isDisabled={isDisabled} />);
+
+      expect(container).toMatchSnapshot();
+    });
+    it('should match snapshot with isStatic', () => {
+      expect.assertions(1);
+
+      const isStatic = true;
+
+      const { container } = render(<Card isStatic={isStatic} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -247,6 +268,41 @@ describe('<Card />', () => {
       const target = component.firstElementChild;
 
       expect(target.getAttribute(attribute)).toBe(`${statusStriped}`);
+    });
+
+    it('should have data-static when isStatic prop is provided', async () => {
+      expect.assertions(1);
+
+      const attribute = 'data-static';
+      const isStatic = true;
+
+      render(<Card isStatic={isStatic} data-testid={testid} />);
+
+      const component = await screen.findByTestId(testid);
+
+      expect(component.getAttribute(attribute)).toBe(`${isStatic}`);
+    });
+    it('should have data-disabled when isDisabled prop is provided', async () => {
+      expect.assertions(1);
+
+      const attribute = 'data-disabled';
+      const isDisabled = true;
+
+      render(<Card isDisabled={isDisabled} data-testid={testid} />);
+
+      const component = await screen.findByTestId(testid);
+
+      expect(component.getAttribute(attribute)).toBe(`${isDisabled}`);
+    });
+
+    it('should extend ButtonSimple', async () => {
+      expect.assertions(1);
+
+      render(<Card data-testid={testid} />);
+
+      const component = await screen.findByTestId(testid);
+
+      expect(component.classList.contains(BUTTON_SIMPLE_CONSTANTS.STYLE.wrapper)).toBe(true);
     });
   });
 });

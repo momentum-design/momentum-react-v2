@@ -264,7 +264,7 @@ describe('attributes', () => {
   });
   // make sure ButtonSimple exists
   it('should extend ButtonSimple', () => {
-    const element = mount(<MeetingContainer meetingTitle="Hello World" />)
+    const element = mount(<MeetingContainer meetingTitle={meetingTitle} />)
       .find(MeetingContainer)
       .getDOMNode();
 
@@ -273,7 +273,7 @@ describe('attributes', () => {
 
   // make sure Card exists
   it('should extend Card', () => {
-    const element = mount(<MeetingContainer meetingTitle="Hello World" />)
+    const element = mount(<MeetingContainer meetingTitle={meetingTitle} />)
       .find(MeetingContainer)
       .getDOMNode();
 
@@ -281,7 +281,7 @@ describe('attributes', () => {
   });
   // check for tags
   it('should have tags when they are provided', () => {
-    const element = mount(<MeetingContainer tags={tags} meetingTitle="Meeting" />)
+    const element = mount(<MeetingContainer tags={tags} meetingTitle={meetingTitle} />)
       .find(Tag)
       .exists();
 
@@ -291,7 +291,7 @@ describe('attributes', () => {
   //data-anchor should be set correctly when tags provided
   it('should set data-anchor when tags are provided', () => {
     const element = mount(
-      <MeetingContainer tags={tags} actionButtons={pillButtons} meetingTitle="Meeting" />
+      <MeetingContainer tags={tags} actionButtons={pillButtons} meetingTitle={meetingTitle} />
     )
       .find(`div.${CONSTANTS.STYLE.actions}`)
       .getDOMNode();
@@ -317,7 +317,9 @@ describe('attributes', () => {
 
   // it should have action buttons when action buttons provided
   it('should have tags when they are provided', () => {
-    const element = mount(<MeetingContainer actionButtons={pillButtons} meetingTitle="Meeting" />)
+    const element = mount(
+      <MeetingContainer actionButtons={pillButtons} meetingTitle={meetingTitle} />
+    )
       .find(ButtonPill)
       .exists();
 
@@ -341,7 +343,7 @@ describe('attributes', () => {
   });
   //it should have avatar when avatar provided
   it('should have tags when they are provided', () => {
-    const element = mount(<MeetingContainer avatar={avatar} meetingTitle="Meeting" />)
+    const element = mount(<MeetingContainer avatar={avatar} meetingTitle={meetingTitle} />)
       .find(Avatar)
       .exists();
 
