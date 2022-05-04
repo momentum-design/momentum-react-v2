@@ -59,7 +59,7 @@ export type PopoverCommonStyleProps = {
    *
    * Possible values: `scrollParent`, `viewport`, `window`, or any `HTMLElement`
    *
-   * @default `parent`
+   * @default `scollParent`
    */
   boundary?: BoundaryType;
 };
