@@ -74,64 +74,29 @@ const SpaceListItem: FC<Props> = forwardRef(
         weight: 'bold' as const,
         scale: 14 as const,
         strokeColor: 'none',
+        title: rightIconTooltip,
       };
       if (isMention) {
-        return (
-          <Icon
-            fillColor={'var(--listitem-tick)'}
-            name="mention"
-            {...iconProps}
-            title={rightIconTooltip}
-          />
-        );
+        return <Icon fillColor={'var(--listitem-tick)'} name="mention" {...iconProps} />;
       } else if (isEnterRoom) {
-        return (
-          <Icon
-            fillColor={'var(--listitem-tick)'}
-            name="enter-room"
-            {...iconProps}
-            title={rightIconTooltip}
-          />
-        );
+        return <Icon fillColor={'var(--listitem-tick)'} name="enter-room" {...iconProps} />;
       } else if (isAlertMuted) {
-        return (
-          <Icon
-            fillColor={'var(--listitem-icon)'}
-            name="alert-muted"
-            {...iconProps}
-            title={rightIconTooltip}
-          />
-        );
+        return <Icon fillColor={'var(--listitem-icon)'} name="alert-muted" {...iconProps} />;
       } else if (isAlert) {
-        return (
-          <Icon
-            fillColor={'var(--listitem-icon)'}
-            name="alert"
-            {...iconProps}
-            title={rightIconTooltip}
-          />
-        );
+        return <Icon fillColor={'var(--listitem-icon)'} name="alert" {...iconProps} />;
       } else if (!isSelected && isDraft) {
-        return <Icon name="draft-indicator" {...iconProps} title={rightIconTooltip} />;
+        return <Icon name="draft-indicator" {...iconProps} />;
       } else if (isError) {
         return (
           <Icon
             fillColor={'var(--label-error-text)'}
             name="priority-circle"
-            title={rightIconTooltip}
             {...iconProps}
             weight="filled"
           />
         );
       } else if (isUnread) {
-        return (
-          <Icon
-            name="unread"
-            fillColor={'var(--listitem-tick)'}
-            title={rightIconTooltip}
-            {...iconProps}
-          />
-        );
+        return <Icon name="unread" fillColor={'var(--listitem-tick)'} {...iconProps} />;
       } else if (action) {
         return <>{action}</>;
       } else return null;
