@@ -32,7 +32,7 @@ const Popover: FC<Props> = (props: Props) => {
     id,
     style,
     onClickOutside,
-    boundary,
+    boundary = DEFAULTS.BOUNDARY,
     ...rest
   } = props;
 
