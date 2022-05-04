@@ -100,7 +100,7 @@ export interface Props extends PressEvents, ContextMenu {
   itemIndex?: number;
 
   /**
-   * Right icon tooltip shown on hover
+   * Right icon tooltip shown on hover.
    */
   rightIconTooltip?: string;
 }

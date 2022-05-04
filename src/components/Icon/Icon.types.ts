@@ -76,7 +76,7 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * Custom title string on the icon hover.
+   * Provides accessibility label when icon is hovered
    */
   title?: string;
 
