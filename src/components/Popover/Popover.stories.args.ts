@@ -1,7 +1,7 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
-import { DEFAULTS } from './Popover.constants';
+import { DEFAULTS, BOUNDARIES } from './Popover.constants';
 
 const popoverArgTypes = {
   trigger: {
@@ -88,6 +88,19 @@ const popoverArgTypes = {
       },
       defaultValue: {
         summary: DEFAULTS.COLOR,
+      },
+    },
+  },
+  boundary: {
+    description: 'The overflow boundary of the popover element.',
+    control: { type: 'select' },
+    options: [...Object.values(BOUNDARIES)],
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.BOUNDARY,
       },
     },
   },
