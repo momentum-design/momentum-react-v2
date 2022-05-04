@@ -6,7 +6,7 @@ const CLASS_PREFIX = 'md-popover';
 const BOUNDARIES = {
   VIEWPORT: 'viewport',
   WINDOW: 'window',
-  PARENT: 'parent',
+  PARENT: 'scrollParent',
 };
 
 const DEFAULTS = {

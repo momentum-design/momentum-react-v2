@@ -57,7 +57,7 @@ export type PopoverCommonStyleProps = {
   /**
    * overflow Boundary of Popover
    *
-   * Possible values: `parent`, `viewport`, `window`, or any `HTMLElement`
+   * Possible values: `scrollParent`, `viewport`, `window`, or any `HTMLElement`
    *
    * @default `parent`
    */
