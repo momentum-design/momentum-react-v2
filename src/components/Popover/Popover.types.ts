@@ -55,7 +55,7 @@ export type PopoverCommonStyleProps = {
   placement?: PlacementType;
 
   /**
-   * overflow Boundary of Popover
+   * Overflow Boundary of Popover
    *
    * Possible values: `scrollParent`, `viewport`, `window`, or any `HTMLElement`
    *
