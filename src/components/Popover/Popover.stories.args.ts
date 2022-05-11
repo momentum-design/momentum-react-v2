@@ -94,7 +94,7 @@ const popoverArgTypes = {
   boundary: {
     description: 'The overflow boundary of the popover element.',
     control: { type: 'select' },
-    options: [...Object.values(BOUNDARIES)],
+    options: [undefined, ...Object.values(BOUNDARIES)],
     table: {
       type: {
         summary: 'string',
