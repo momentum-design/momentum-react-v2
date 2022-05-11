@@ -10,7 +10,7 @@ export interface Props extends PressEvents, ContextMenu {
   className?: string;
 
   /**
-   * Draft text inside conversation.
+   * Draft text inside conversation (Can be also a staged file).
    */
   isDraft?: boolean;
 
