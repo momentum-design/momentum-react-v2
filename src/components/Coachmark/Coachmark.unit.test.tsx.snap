@@ -105,7 +105,9 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
             data-solid="false"
             type="button"
           >
-            Button A
+            <span>
+              Button A
+            </span>
           </button>
           <button
             class="md-button-pill-wrapper md-button-simple-wrapper"
@@ -118,7 +120,9 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
             data-solid="false"
             type="button"
           >
-            Button B
+            <span>
+              Button B
+            </span>
           </button>
         </div>
       </div>
@@ -203,7 +207,9 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
               data-solid="false"
               type="button"
             >
-              Button A
+              <span>
+                Button A
+              </span>
             </button>
             <button
               class="md-button-pill-wrapper md-button-simple-wrapper"
@@ -216,7 +222,9 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
               data-solid="false"
               type="button"
             >
-              Button B
+              <span>
+                Button B
+              </span>
             </button>
           </div>
         </div>

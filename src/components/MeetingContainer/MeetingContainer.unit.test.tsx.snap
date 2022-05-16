@@ -520,7 +520,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               onTouchStart={[Function]}
                               type="button"
                             >
-                              T
+                              <span>
+                                T
+                              </span>
                             </button>
                           </FocusRing>
                         </FocusRing>
@@ -571,7 +573,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               onTouchStart={[Function]}
                               type="button"
                             >
-                              T
+                              <span>
+                                T
+                              </span>
                             </button>
                           </FocusRing>
                         </FocusRing>
@@ -622,7 +626,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               onTouchStart={[Function]}
                               type="button"
                             >
-                              T
+                              <span>
+                                T
+                              </span>
                             </button>
                           </FocusRing>
                         </FocusRing>

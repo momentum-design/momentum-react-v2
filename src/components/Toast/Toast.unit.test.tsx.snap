@@ -506,7 +506,9 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -556,7 +558,9 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -606,7 +610,9 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -1127,7 +1133,9 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -1177,7 +1185,9 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -1227,7 +1237,9 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -1705,7 +1717,9 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -1755,7 +1769,9 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -1805,7 +1821,9 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -2270,7 +2288,9 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -2320,7 +2340,9 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -2370,7 +2392,9 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -2877,7 +2901,9 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -2927,7 +2953,9 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -2977,7 +3005,9 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -3499,7 +3529,9 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -3549,7 +3581,9 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -3599,7 +3633,9 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -4129,7 +4165,9 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -4179,7 +4217,9 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -4229,7 +4269,9 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -4737,7 +4779,9 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Message
+                      <span>
+                        Message
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -4787,7 +4831,9 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Cancel
+                      <span>
+                        Cancel
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
@@ -4837,7 +4883,9 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                       onTouchStart={[Function]}
                       type="button"
                     >
-                      Join
+                      <span>
+                        Join
+                      </span>
                     </button>
                   </FocusRing>
                 </FocusRing>
