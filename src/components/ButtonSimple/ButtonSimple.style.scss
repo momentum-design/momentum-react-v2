@@ -1,0 +1,8 @@
+.md-button-simple-wrapper {
+  > span,
+  .md-text-wrapper {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

@@ -88,7 +88,9 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          X
+          <span>
+            X
+          </span>
         </button>
       </FocusRing>
     </FocusRing>
@@ -144,7 +146,9 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
           onTouchStart={[Function]}
           type="button"
         >
-          X
+          <span>
+            X
+          </span>
         </button>
       </FocusRing>
     </FocusRing>
@@ -194,7 +198,9 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
           onTouchStart={[Function]}
           type="button"
         >
-          X
+          <span>
+            X
+          </span>
         </button>
       </FocusRing>
     </FocusRing>
@@ -249,7 +255,9 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          X
+          <span>
+            X
+          </span>
         </button>
       </FocusRing>
     </FocusRing>
@@ -347,7 +355,9 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          X
+          <span>
+            X
+          </span>
         </button>
       </FocusRing>
     </FocusRing>
@@ -500,7 +510,9 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          X
+          <span>
+            X
+          </span>
         </button>
       </FocusRing>
     </FocusRing>

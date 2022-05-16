@@ -55,7 +55,9 @@ exports[`<ButtonSimple /> snapshot should match snapshot with children 1`] = `
         onTouchStart={[Function]}
         type="button"
       >
-        example
+        <span>
+          example
+        </span>
       </button>
     </FocusRing>
   </FocusRing>
