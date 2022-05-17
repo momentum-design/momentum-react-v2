@@ -31,6 +31,18 @@ const Example = Template<ButtonPillProps>(ButtonPill).bind({});
 
 Example.argTypes = { ...argTypes };
 
+const Overflow = Template<ButtonPillProps>(ButtonPill).bind({});
+
+Overflow.args = {
+  children: 'This is a very long label',
+  title: 'This is a very long label',
+  style: { width: '12rem' },
+};
+
+Overflow.argTypes = {
+  ...argTypes,
+};
+
 const Colors = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
 Colors.parameters = {
@@ -160,4 +172,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Colors, Outline, Grown, States, Sizes, Common };
+export { Example, Overflow, Colors, Outline, Grown, States, Sizes, Common };
