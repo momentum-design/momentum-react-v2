@@ -1,7 +1,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+import Icon from '../Icon';
+import Avatar from '../Avatar';
+
 import Chip, { CHIP_CONSTANTS as CONSTANTS } from './';
+
+const text = 'Some chip text';
+const exampleIcon = <Icon name="placeholder" scale={16} />;
+const exampleAvatar = <Avatar>AA</Avatar>;
 
 describe('<Chip />', () => {
   describe('snapshot', () => {
@@ -43,6 +50,47 @@ describe('<Chip />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with text', () => {
+      const container = mount(<Chip text={text} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with left icon', () => {
+      const container = mount(<Chip leftIcon={exampleIcon} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with right icon', () => {
+      const container = mount(<Chip rightIcon={exampleIcon} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with avatar', () => {
+      const container = mount(<Chip avatar={exampleAvatar} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('it should match snapshot with outline', () => {
+      const container = mount(<Chip outline={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('it should match snapshot with disabled', () => {
+      const container = mount(<Chip disabled={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('it should match snapshot with error', () => {
+      const container = mount(<Chip error={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
     /* ...additional snapshot tests... */
   });
 
@@ -92,6 +140,59 @@ describe('<Chip />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should have text when provided', () => {
+      const element = mount(<Chip text={text} />)
+        .find(Chip)
+        .props().text;
+
+      expect(element).toBe(text);
+    });
+
+    it('should have rightIcon when provided', () => {
+      const element = mount(<Chip rightIcon={exampleIcon} />)
+        .find(Chip)
+        .props().rightIcon;
+      expect(element).toBe(exampleIcon);
+    });
+
+    it('should have leftIcon when provided', () => {
+      const element = mount(<Chip leftIcon={exampleIcon} />)
+        .find(Chip)
+        .props().leftIcon;
+      expect(element).toBe(exampleIcon);
+    });
+
+    it('should have avatar when provided', () => {
+      const element = mount(<Chip avatar={exampleAvatar} />)
+        .find(Chip)
+        .props().avatar;
+
+      expect(element).toBe(exampleAvatar);
+    });
+
+    it('should have outline set when provided', () => {
+      const element = mount(<Chip outline={true} />)
+        .find(Chip)
+        .props().outline;
+
+      expect(element).toBe(true);
+    });
+
+    it('should have disabled set when provided', () => {
+      const element = mount(<Chip disabled={true} />)
+        .find(Chip)
+        .props().disabled;
+      expect(element).toBe(true);
+    });
+
+    it('should have error set when provided', () => {
+      const element = mount(<Chip error={true} />)
+        .find(Chip)
+        .props().error;
+
+      expect(element).toBe(true);
     });
 
     /* ...additional attribute tests... */

@@ -1,0 +1,883 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
+<Chip
+  disabled={true}
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    disabled={true}
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={true}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+      isDisabled={true}
+    >
+      <FocusRing
+        disabled={true}
+      >
+        <FocusRing
+          disabled={true}
+          focusClass="md-focus-ring-wrapper-disabled"
+          focusRingClass="md-focus-ring-wrapper-disabled"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={true}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            disabled={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
+<Chip
+  error={true}
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={true}
+    error={true}
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={true}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+      error={true}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={true}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
+<Chip
+  outline={true}
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    outline={true}
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={true}
+      data-size={28}
+      data-solid={false}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={true}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot 1`] = `
+<Chip>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
+<Chip
+  avatar={
+    <Avatar>
+      AA
+    </Avatar>
+  }
+>
+  <ButtonPill
+    avatar={
+      <Avatar>
+        AA
+      </Avatar>
+    }
+    className="md-chip-wrapper"
+    data-avatar={true}
+    data-error={false}
+    size={28}
+  >
+    <ButtonSimple
+      avatar={
+        <Avatar>
+          AA
+        </Avatar>
+      }
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={true}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={true}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <div
+              className="md-chip-left"
+              data-avatar={true}
+            >
+              <Avatar>
+                <div
+                  className="md-avatar-wrapper"
+                  data-color="default"
+                  data-size={24}
+                >
+                  <span />
+                </div>
+              </Avatar>
+            </div>
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot with className 1`] = `
+<Chip
+  className="example-class"
+>
+  <ButtonPill
+    className="example-class"
+    data-avatar={false}
+    data-error={false}
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper example-class"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper example-class md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot with id 1`] = `
+<Chip
+  id="example-id"
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    id="example-id"
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+      id="example-id"
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            id="example-id"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
+<Chip
+  leftIcon={
+    <Icon
+      name="placeholder"
+      scale={16}
+    />
+  }
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    leftIcon={
+      <Icon
+        name="placeholder"
+        scale={16}
+      />
+    }
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+      leftIcon={
+        <Icon
+          name="placeholder"
+          scale={16}
+        />
+      }
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <div
+              className="md-chip-left"
+              data-avatar={false}
+            >
+              <Icon
+                name="placeholder"
+                scale={16}
+              />
+            </div>
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
+<Chip
+  rightIcon={
+    <Icon
+      name="placeholder"
+      scale={16}
+    />
+  }
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    rightIcon={
+      <Icon
+        name="placeholder"
+        scale={16}
+      />
+    }
+    size={28}
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+      rightIcon={
+        <Icon
+          name="placeholder"
+          scale={16}
+        />
+      }
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+            <div
+              className="md-chip-right"
+            >
+              <Icon
+                name="placeholder"
+                scale={16}
+              />
+            </div>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot with style 1`] = `
+<Chip
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    size={28}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "color": "pink",
+              }
+            }
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              />
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
+
+exports[`<Chip /> snapshot should match snapshot with text 1`] = `
+<Chip
+  text="Some chip text"
+>
+  <ButtonPill
+    className="md-chip-wrapper"
+    data-avatar={false}
+    data-error={false}
+    size={28}
+    text="Some chip text"
+  >
+    <ButtonSimple
+      className="md-button-pill-wrapper md-chip-wrapper"
+      data-avatar={false}
+      data-color="primary"
+      data-disabled={false}
+      data-error={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-size={28}
+      data-solid={false}
+      text="Some chip text"
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
+            data-avatar={false}
+            data-color="primary"
+            data-disabled={false}
+            data-error={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <Text
+              className="md-chip-center"
+            >
+              <p
+                className="md-text-wrapper md-chip-center"
+                data-type="body-primary"
+              >
+                Some chip text
+              </p>
+            </Text>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</Chip>
+`;
