@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement, ReactNode } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 import { AvatarProps } from '../Avatar';
 import { IconProps } from '../Icon';
 

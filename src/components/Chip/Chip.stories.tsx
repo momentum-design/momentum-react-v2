@@ -5,7 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Chip, { ChipProps } from './';
 import argTypes from './Chip.stories.args';
 import Documentation from './Chip.stories.docs.mdx';
-import Icon, { IconProps } from '../Icon';
+import Icon from '../Icon';
 import React from 'react';
 import Avatar from '../Avatar';
 
