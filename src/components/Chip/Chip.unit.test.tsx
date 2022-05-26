@@ -20,6 +20,10 @@ const multiline = !CHIP_CONSTANTS.DEFAULTS.MULTILINE;
 const search = !CHIP_CONSTANTS.DEFAULTS.SEARCH;
 const size = CHIP_CONSTANTS.DEFAULTS.SIZE;
 
+const text = 'Some chip text';
+const exampleIcon = <Icon name="placeholder" scale={16} />;
+const exampleAvatar = <Avatar>AA</Avatar>;
+
 describe('<Chip />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
