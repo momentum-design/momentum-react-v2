@@ -1,4 +1,4 @@
-import React, { cloneElement, FC } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Chip.constants';
