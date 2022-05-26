@@ -5,6 +5,9 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Chip, { ChipProps } from './';
 import argTypes from './Chip.stories.args';
 import Documentation from './Chip.stories.docs.mdx';
+import Icon, { IconProps } from '../Icon';
+import React from 'react';
+import Avatar from '../Avatar';
 
 export default {
   title: 'Momentum UI/Chip',
@@ -25,23 +28,67 @@ Example.argTypes = { ...argTypes };
 // TODO: Provide default arguments for this story here. These populate into the argument table for this component.
 Example.args = {
   children: 'Example',
+  text: 'Hello World',
 };
 
-// TODO: Inject additional stories here.
+const exampleIcon = <Icon name="placeholder" scale={16} />;
 
-// NOTE: Common variants story. This renders multiple variants of a single component.
+const exampleRightIcon = <Icon name="cancel" scale={16} />;
+
+const exampleAvatar = <Avatar size={24}>AA</Avatar>;
+
 const Common = MultiTemplate<ChipProps>(Chip).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component for all variants.
 Common.args = {
   children: 'Example',
 };
 
 Common.parameters = {
-  variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
+  variants: [
+    { children: 'Example A', isDisabled: true },
+    { children: 'Example B', leftIcon: exampleIcon },
+    { children: 'Example C', leftIcon: exampleIcon, rightIcon: exampleRightIcon },
+    {
+      children: 'Example D',
+      leftIcon: exampleIcon,
+      rightIcon: exampleRightIcon,
+      outline: true,
+    },
+    {
+      children: 'Example E',
+      leftIcon: exampleIcon,
+      rightIcon: exampleRightIcon,
+      disabled: true,
+    },
+    {
+      children: 'Example F',
+      leftIcon: exampleIcon,
+      rightIcon: exampleRightIcon,
+      error: true,
+    },
+    {
+      children: 'Example G',
+      leftIcon: exampleIcon,
+      rightIcon: exampleRightIcon,
+      outline: true,
+      error: true,
+    },
+    {
+      children: 'Example H',
+      avatar: exampleAvatar,
+      leftIcon: exampleIcon,
+      rightIcon: exampleRightIcon,
+    },
+    {
+      children: 'Example I',
+      avatar: exampleAvatar,
+      outline: true,
+      error: true,
+    },
+  ],
 };
 
 // NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
