@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "ES6",
+    "module": "es2020",
     "outDir": "../../dist/esm",
   },
   "extends": "./tsconfig.build.json"

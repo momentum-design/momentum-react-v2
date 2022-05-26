@@ -38,7 +38,7 @@ function useDynamicSVGImport(
       try {
         setError(undefined);
         ImportedIconRef.current = (
-          await require(`@momentum-ui/icons-rebrand/svg/${name}.svg`)
+          await import(`@momentum-ui/icons-rebrand/svg/${name}.svg?svgr`)
         ).ReactComponent;
         if (isMounted()) {
           onCompleted?.(name, ImportedIconRef.current);

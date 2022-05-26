@@ -38,8 +38,9 @@ function useDynamicJSONImport(
       try {
         setError(undefined);
         setError(undefined);
-        ImportedJSONRef.current =
-          await require(`@momentum-ui/animations/lottie/reactions/${name}.json`);
+        ImportedJSONRef.current = (
+          await import(`@momentum-ui/animations/lottie/reactions/${name}.json?lottie`)
+        ).default;
         if (isMounted()) {
           onCompleted?.(name, ImportedJSONRef.current);
         }

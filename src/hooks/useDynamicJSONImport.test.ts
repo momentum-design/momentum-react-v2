@@ -10,7 +10,7 @@ describe('SVG', () => {
     const onErrorMock = jest.fn();
     const mockSVG = 'JSON_CONTENT';
     jest.mock(
-      '@momentum-ui/animations/lottie/reactions/test_json-regular.json',
+      '@momentum-ui/animations/lottie/reactions/test_json-regular.json?lottie',
       () => {
         return mockSVG;
       },
@@ -39,11 +39,12 @@ describe('SVG', () => {
     const name = 'bad_icon';
     const onCompleteMock = jest.fn();
     const onErrorMock = jest.fn();
+    const expectedError = new Error('error');
 
     jest.mock(
-      '@momentum-ui/animations/lottie/reactions/test_json-regular.json',
+      '@momentum-ui/animations/lottie/reactions/bad_icon.json?lottie',
       () => {
-        return undefined;
+        throw expectedError;
       },
       { virtual: true }
     );
@@ -55,9 +56,12 @@ describe('SVG', () => {
       })
     );
 
+    await hook.waitForNextUpdate();
+
     expect(onCompleteMock).not.toBeCalled();
 
     expect(onErrorMock).toBeCalled();
+    expect(onErrorMock).toBeCalledWith(expectedError);
     expect(hook.result.current.animationData).toEqual(undefined);
     expect(hook.result.current.error).toBeTruthy();
     expect(hook.result.current.loading).toBe(false);

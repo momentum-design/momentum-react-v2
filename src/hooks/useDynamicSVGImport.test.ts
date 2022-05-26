@@ -9,9 +9,13 @@ describe('Icon', () => {
     const onCompleteMock = jest.fn();
     const onErrorMock = jest.fn();
     const mockSVG = 'SVG_CONTENT';
-    jest.mock('@momentum-ui/icons-rebrand/svg/test_icon-regular.svg', () => {
-      return { ReactComponent: mockSVG };
-    });
+    jest.mock(
+      '@momentum-ui/icons-rebrand/svg/test_icon-regular.svg?svgr',
+      () => {
+        return { ReactComponent: mockSVG };
+      },
+      { virtual: true }
+    );
 
     const hook = renderHook(() =>
       useDynamicSVGImport(name, {
@@ -35,9 +39,15 @@ describe('Icon', () => {
     const name = 'bad_icon';
     const onCompleteMock = jest.fn();
     const onErrorMock = jest.fn();
-    const expectedError = new TypeError("Cannot read property 'ReactComponent' of undefined");
+    const expectedError = new Error('error');
 
-    jest.setMock('@momentum-ui/icons-rebrand/svg/bad_icon-regular.svg', undefined);
+    jest.mock(
+      '@momentum-ui/icons-rebrand/svg/bad_icon.svg?svgr',
+      () => {
+        throw expectedError;
+      },
+      { virtual: true }
+    );
 
     const hook = renderHook(() =>
       useDynamicSVGImport(name, {
