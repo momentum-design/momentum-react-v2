@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { cloneElement, FC } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Chip.constants';
@@ -7,7 +7,6 @@ import './Chip.style.scss';
 
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
-
 /**
  * The Chip component.
  */
