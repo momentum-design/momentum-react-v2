@@ -18,7 +18,8 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/tools/assetsTransformer.js',
     '\\.(scss|css|less)$': '<rootDir>/tools/assetsTransformer.js',
-    '\\.svg$': '<rootDir>/tools/svgMock.js',
+    '\\.svg\\?svgr$': '<rootDir>/tools/svgMock.js',
+    '\\/reactions/.*\\.json\\?lottie$': '<rootDir>/tools/reactionMock.js',
     ...moduleMaps,
   },
 };

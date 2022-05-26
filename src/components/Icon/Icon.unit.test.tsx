@@ -114,12 +114,18 @@ describe('<Icon />', () => {
 
     it('should match snapshot with invalid name', async () => {
       expect.assertions(1);
-      jest.setMock('@momentum-ui/icons-rebrand/svg/invalid_icon_name.svg', undefined);
+      jest.mock(
+        '@momentum-ui/icons-rebrand/svg/invalid_icon_name.svg?svgr',
+        () => {
+          throw new Error('error');
+        },
+        { virtual: true }
+      );
 
       container = await mountAndWait(<Icon name="invalid_icon_name" />);
 
       expect(container).toMatchSnapshot();
-      jest.dontMock('@momentum-ui/icons-rebrand/svg/invalid_icon_name.svg');
+      jest.dontMock('@momentum-ui/icons-rebrand/svg/invalid_icon_name.svg?svgr');
     });
 
     it('should match snapshot with small icons', async () => {

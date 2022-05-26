@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "module": "ES2020",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,

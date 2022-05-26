@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "es2020",
     "outDir": "../../dist/cjs",
   },
   "extends": "./tsconfig.build.json"
