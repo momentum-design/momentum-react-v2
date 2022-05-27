@@ -11,9 +11,9 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   disabled: `${CLASS_PREFIX}-disabled`,
   error: `${CLASS_PREFIX}-error`,
-  rightSection: `${CLASS_PREFIX}-right`,
-  leftSection: `${CLASS_PREFIX}-left`,
-  centerSection: `${CLASS_PREFIX}-center`,
+  rightSection: `${CLASS_PREFIX}-rightSection`,
+  leftSection: `${CLASS_PREFIX}-leftSection`,
+  centerSection: `${CLASS_PREFIX}-centerSection`,
   avatar: `${CLASS_PREFIX}-avatar`,
 };
 

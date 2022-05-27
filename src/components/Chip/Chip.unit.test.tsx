@@ -10,6 +10,7 @@ import { BUTTON_PILL_CONSTANTS } from '../ButtonPill';
 
 const text = 'Some chip text';
 const exampleIcon = <Icon name="placeholder" scale={16} />;
+const exampleRightIcon = <Icon name="cancel" scale={16} />;
 const exampleAvatar = <Avatar>AA</Avatar>;
 const outline = !CHIP_CONSTANTS.DEFAULTS.OUTLINE;
 const disabled = !CHIP_CONSTANTS.DEFAULTS.DISABLED;
@@ -168,6 +169,15 @@ describe('<Chip />', () => {
         .find(Icon)
         .exists();
       expect(element).toBe(true);
+    });
+    it('should have both icons when provided', () => {
+      const element = mount(
+        <Chip text={text} leftIcon={exampleIcon} rightIcon={exampleRightIcon} />
+      );
+      const iconLeft = element.find(Icon).at(0).exists();
+      const iconRight = element.find(Icon).at(1).exists();
+      expect(iconLeft).toBe(true);
+      expect(iconRight).toBe(true);
     });
 
     it('should have avatar when provided', () => {
