@@ -7,6 +7,7 @@ import './Chip.style.scss';
 
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
+
 /**
  * The Chip component.
  */
