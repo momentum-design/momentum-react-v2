@@ -9,6 +9,7 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
   &[data-error='true'] {
     background-color: var(--theme-background-alert-error-normal);
     color: var(--theme-text-error-normal);
+    pointer-events: none;
 
     &[data-outline='true'] {
       border: 1px solid;
@@ -25,13 +26,13 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
     }
   }
 
-  > .md-chip-rightSection {
+  > .md-chip-right-section {
     margin-left: 0.25rem;
     margin-right: 0.5rem;
     padding: 0rem;
   }
 
-  > .md-chip-leftSection {
+  > .md-chip-left-section {
     margin-right: 0.25rem;
     margin-left: 0.5rem;
     padding: 0rem;
@@ -42,20 +43,20 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
     }
   }
 
-  > .md-chip-centerSection {
+  > .md-chip-center-section {
     margin: 0rem;
     padding: 0rem;
   }
 
-  > .md-chip-centerSection:first-child:last-child {
+  > .md-chip-center-section:first-child:last-child {
     padding: 0em 0.625rem;
   }
 
-  > .md-chip-centerSection:first-child {
+  > .md-chip-center-section:first-child {
     padding-left: 0.625rem;
   }
 
-  > .md-chip-centerSection:last-child {
+  > .md-chip-center-section:last-child {
     padding-right: 0.625rem;
   }
 }
