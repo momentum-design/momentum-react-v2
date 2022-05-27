@@ -20,23 +20,18 @@ export default {
   },
 };
 
-// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<ChipProps>(Chip).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component.
 Example.args = {
   children: 'Example',
   text: 'Hello World',
 };
 
 const exampleIcon = <Icon name="placeholder" scale={16} />;
-
 const exampleRightIcon = <Icon name="cancel" scale={16} />;
-
-const exampleAvatar = <Avatar size={24}>AA</Avatar>;
-
+const exampleAvatar = <Avatar initials="AA" size={24} />;
 const Common = MultiTemplate<ChipProps>(Chip).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -44,6 +39,7 @@ delete Common.argTypes.children;
 
 Common.args = {
   children: 'Example',
+  style: { margin: '1rem' },
 };
 
 Common.parameters = {
@@ -58,7 +54,7 @@ Common.parameters = {
       outline: true,
     },
     {
-      children: 'Example E',
+      children: 'Lonnnnnnnnnnnnnnng Example E',
       leftIcon: exampleIcon,
       rightIcon: exampleRightIcon,
       disabled: true,
@@ -91,5 +87,4 @@ Common.parameters = {
   ],
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example, Common };

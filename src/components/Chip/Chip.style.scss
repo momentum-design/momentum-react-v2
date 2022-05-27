@@ -1,16 +1,10 @@
-button {
-  padding: 0em 0.25em 0em 0.25em !important;
-
-  &[data-avatar='true'] {
-    padding: 0em 0.25em 0em 0em !important;
-  }
+button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
+  padding: 0rem;
 }
 
 .md-chip-wrapper {
   align-items: center;
   display: flex;
-  height: fit-content;
-  width: fit-content;
 
   &[data-error='true'] {
     background-color: var(--theme-background-alert-error-normal);
@@ -18,7 +12,7 @@ button {
 
     &[data-outline='true'] {
       border: 1px solid;
-      border-radius: 16px;
+      border-radius: 1rem;
       border-color: var(--theme-outline-cancel-normal);
     }
   }
@@ -26,43 +20,43 @@ button {
   &[data-error='false'] {
     &[data-outline='true'] {
       border: 1px solid;
-      border-radius: 16px;
+      border-radius: 1rem;
       border-color: var(--theme-outline-primary-normal);
     }
   }
 
   > .md-chip-right {
-    margin-left: 0.438em;
-    margin-right: 0.243em;
-    padding: 0em;
+    margin-left: 0.438rem;
+    margin-right: 0.688rem;
+    padding: 0rem;
   }
 
   > .md-chip-left {
-    margin-right: 0.313em;
-    margin-left: 0.215em;
-    padding: 0em;
+    margin-right: 0.25rem;
+    margin-left: 0.5rem;
+    padding: 0rem;
 
     &[data-avatar='true'] {
-      margin-right: 0.25em;
-      margin-left: 0.125em;
+      margin-right: 0.25rem;
+      margin-left: 0.125rem;
     }
   }
 
   > .md-chip-center {
     white-space: nowrap;
-    margin: 0em;
-    padding: 0em;
+    margin: 0rem;
+    padding: 0rem;
   }
 
   > .md-chip-center:first-child:last-child {
-    padding: 0em 0.625em;
+    padding: 0em 0.625rem;
   }
 
   > .md-chip-center:first-child {
-    padding-left: 0.625em;
+    padding-left: 0.625rem;
   }
 
   > .md-chip-center:last-child {
-    padding-right: 0.625em;
+    padding-right: 0.625rem;
   }
 }
