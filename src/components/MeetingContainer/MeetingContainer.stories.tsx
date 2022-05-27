@@ -120,6 +120,13 @@ Common.parameters = {
       isStatic: true,
       color: CARD_CONSTANTS.COLORS.TRANSPARENT,
     },
+    {
+      meetingTitle: 'This is a very very annoyingly long title which does not make sense.',
+      spaceLink: continueConversation,
+      scheduleInfoFirst: '10:00am - 11:00am or maybe later idk',
+      scheduleInfoSecond: 'In 5 minutes I will come back and check that this is still truncated.',
+      scheduleInfoSecondColor: 'success',
+    },
   ],
 };
 
