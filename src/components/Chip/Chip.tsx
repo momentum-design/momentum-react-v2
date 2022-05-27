@@ -1,33 +1,31 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './Chip.constants';
+import { STYLE, DEFAULTS } from './Chip.constants';
 import { Props } from './Chip.types';
 import './Chip.style.scss';
 
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
+
 /**
  * The Chip component.
  */
 const Chip: FC<Props> = (props: Props) => {
   const {
     text,
-    avatar = undefined,
+    avatar = DEFAULTS.AVATAR,
     leftIcon,
     rightIcon,
     className,
     id,
     style,
     children,
-    error = false,
+    error = DEFAULTS.ERROR,
   } = props;
 
   const leftContent = avatar ? avatar : leftIcon;
-
   const changedText = text ? text : children;
-
-  //const changedStyle = style ? style : { padding: '.25em' };
 
   return (
     <ButtonPill
@@ -35,17 +33,16 @@ const Chip: FC<Props> = (props: Props) => {
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}
-      data-avatar={!!avatar}
       data-error={error}
       {...props}
     >
       {leftContent && (
-        <div data-avatar={!!avatar} className={STYLE.left}>
+        <div data-avatar={!!avatar} className={STYLE.leftSection}>
           {leftContent}
         </div>
       )}
-      <Text className={STYLE.center}>{changedText}</Text>
-      {rightIcon && <div className={STYLE.right}>{rightIcon}</div>}
+      <Text className={STYLE.centerSection}>{changedText}</Text>
+      {rightIcon && <div className={STYLE.rightSection}>{rightIcon}</div>}
     </ButtonPill>
   );
 };

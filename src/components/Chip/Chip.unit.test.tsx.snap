@@ -6,14 +6,12 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     disabled={true}
     size={28}
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={true}
       data-error={false}
@@ -34,7 +32,6 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={true}
             data-error={false}
@@ -82,14 +79,12 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={true}
     error={true}
     size={28}
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={true}
@@ -107,7 +102,6 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={true}
@@ -154,14 +148,12 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     outline={true}
     size={28}
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -178,7 +170,6 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -223,13 +214,11 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
 <Chip>
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     size={28}
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -246,7 +235,6 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -302,7 +290,6 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
       </Avatar>
     }
     className="md-chip-wrapper"
-    data-avatar={true}
     data-error={false}
     size={28}
   >
@@ -313,7 +300,6 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
         </Avatar>
       }
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={true}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -330,7 +316,6 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={true}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -391,13 +376,11 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
 >
   <ButtonPill
     className="example-class"
-    data-avatar={false}
     data-error={false}
     size={28}
   >
     <ButtonSimple
       className="md-button-pill-wrapper example-class"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -414,7 +397,6 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
         >
           <button
             className="md-button-pill-wrapper example-class md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -461,14 +443,12 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     id="example-id"
     size={28}
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -486,7 +466,6 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -539,7 +518,6 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     leftIcon={
       <Icon
@@ -551,7 +529,6 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -574,7 +551,6 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -635,7 +611,6 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     rightIcon={
       <Icon
@@ -647,7 +622,6 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -670,7 +644,6 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -729,7 +702,6 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     size={28}
     style={
@@ -740,7 +712,6 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -762,7 +733,6 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}
@@ -814,14 +784,12 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
 >
   <ButtonPill
     className="md-chip-wrapper"
-    data-avatar={false}
     data-error={false}
     size={28}
     text="Some chip text"
   >
     <ButtonSimple
       className="md-button-pill-wrapper md-chip-wrapper"
-      data-avatar={false}
       data-color="primary"
       data-disabled={false}
       data-error={false}
@@ -839,7 +807,6 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
         >
           <button
             className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-avatar={false}
             data-color="primary"
             data-disabled={false}
             data-error={false}

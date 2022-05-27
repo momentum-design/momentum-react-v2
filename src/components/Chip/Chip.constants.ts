@@ -2,17 +2,18 @@ const CLASS_PREFIX = 'md-chip';
 
 const DEFAULTS = {
   DISABLED: false,
-  OUTLINE: false,
   ERROR: false,
+  AVATAR: undefined,
+  OUTLINE: false,
 };
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   disabled: `${CLASS_PREFIX}-disabled`,
   error: `${CLASS_PREFIX}-error`,
-  right: `${CLASS_PREFIX}-right`,
-  left: `${CLASS_PREFIX}-left`,
-  center: `${CLASS_PREFIX}-center`,
+  rightSection: `${CLASS_PREFIX}-right`,
+  leftSection: `${CLASS_PREFIX}-left`,
+  centerSection: `${CLASS_PREFIX}-center`,
   avatar: `${CLASS_PREFIX}-avatar`,
 };
 

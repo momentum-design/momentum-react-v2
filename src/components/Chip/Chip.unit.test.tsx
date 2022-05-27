@@ -3,12 +3,17 @@ import { mount } from 'enzyme';
 
 import Icon from '../Icon';
 import Avatar from '../Avatar';
+import Text from '../Text';
 
-import Chip, { CHIP_CONSTANTS as CONSTANTS } from './';
+import Chip, { CHIP_CONSTANTS, CHIP_CONSTANTS as CONSTANTS } from './';
+import { BUTTON_PILL_CONSTANTS } from '../ButtonPill';
 
 const text = 'Some chip text';
 const exampleIcon = <Icon name="placeholder" scale={16} />;
 const exampleAvatar = <Avatar>AA</Avatar>;
+const outline = !CHIP_CONSTANTS.DEFAULTS.OUTLINE;
+const disabled = !CHIP_CONSTANTS.DEFAULTS.DISABLED;
+const error = !CHIP_CONSTANTS.DEFAULTS.ERROR;
 
 describe('<Chip />', () => {
   describe('snapshot', () => {
@@ -91,7 +96,6 @@ describe('<Chip />', () => {
 
       expect(container).toMatchSnapshot();
     });
-    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
@@ -144,61 +148,65 @@ describe('<Chip />', () => {
 
     it('should have text when provided', () => {
       const element = mount(<Chip text={text} />)
-        .find(Chip)
-        .props().text;
+        .find(Text)
+        .at(0)
+        .getDOMNode();
 
-      expect(element).toBe(text);
+      expect(element.innerHTML).toBe(text);
     });
 
     it('should have rightIcon when provided', () => {
       const element = mount(<Chip rightIcon={exampleIcon} />)
-        .find(Chip)
-        .props().rightIcon;
-      expect(element).toBe(exampleIcon);
+        .find(Icon)
+        .exists();
+
+      expect(element).toBe(true);
     });
 
     it('should have leftIcon when provided', () => {
       const element = mount(<Chip leftIcon={exampleIcon} />)
-        .find(Chip)
-        .props().leftIcon;
-      expect(element).toBe(exampleIcon);
+        .find(Icon)
+        .exists();
+      expect(element).toBe(true);
     });
 
     it('should have avatar when provided', () => {
       const element = mount(<Chip avatar={exampleAvatar} />)
-        .find(Chip)
-        .props().avatar;
+        .find(Avatar)
+        .exists();
 
-      expect(element).toBe(exampleAvatar);
+      expect(element).toBe(true);
     });
 
     it('should have outline set when provided', () => {
-      const element = mount(<Chip outline={true} />)
+      const element = mount(<Chip outline={outline} />)
         .find(Chip)
-        .props().outline;
+        .getDOMNode();
 
-      expect(element).toBe(true);
+      expect(element.getAttribute('data-outline')).toBe(String(outline));
     });
 
     it('should have disabled set when provided', () => {
-      const element = mount(<Chip disabled={true} />)
+      const element = mount(<Chip disabled={disabled} />)
         .find(Chip)
-        .props().disabled;
-      expect(element).toBe(true);
+        .getDOMNode();
+
+      expect(element.getAttribute('data-disabled')).toBe(String(disabled));
     });
 
     it('should have error set when provided', () => {
-      const element = mount(<Chip error={true} />)
+      const element = mount(<Chip error={error} />)
         .find(Chip)
-        .props().error;
+        .getDOMNode();
 
-      expect(element).toBe(true);
+      expect(element.getAttribute('data-error')).toBe(String(error));
     });
+    it('should extend ButtonPill', () => {
+      const element = mount(<Chip text={text} />)
+        .find(Chip)
+        .getDOMNode();
 
-    /* ...additional attribute tests... */
-  });
-
-  describe('actions', () => {
-    /* ...action tests... */
+      expect(element.classList.contains(BUTTON_PILL_CONSTANTS.STYLE.wrapper));
+    });
   });
 });
