@@ -11,6 +11,7 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
   &[data-error='true']:active {
     background-color: var(--theme-background-alert-error-normal);
     color: var(--theme-text-error-normal);
+    pointer-events: none;
 
     &[data-outline='true'] {
       border: 1px solid;
