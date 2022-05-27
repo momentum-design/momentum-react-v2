@@ -860,14 +860,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                       className="md-divider-dot-wrapper"
                     />
                   </DividerDot>
-                  <ButtonHyperlink>
+                  <ButtonHyperlink
+                    className="md-meeting-container-space-link"
+                  >
                     <FocusRing>
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
                       >
                         <a
-                          className="md-button-hyperlink-wrapper"
+                          className="md-button-hyperlink-wrapper md-meeting-container-space-link"
                           data-disabled={false}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -2061,14 +2063,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                       className="md-divider-dot-wrapper"
                     />
                   </DividerDot>
-                  <ButtonHyperlink>
+                  <ButtonHyperlink
+                    className="md-meeting-container-space-link"
+                  >
                     <FocusRing>
                       <FocusRing
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
                       >
                         <a
-                          className="md-button-hyperlink-wrapper"
+                          className="md-button-hyperlink-wrapper md-meeting-container-space-link"
                           data-disabled={false}
                           onBlur={[Function]}
                           onClick={[Function]}
