@@ -32,6 +32,7 @@ const Popover: FC<Props> = (props: Props) => {
     id,
     style,
     onClickOutside,
+    boundary = DEFAULTS.BOUNDARY,
     ...rest
   } = props;
 
@@ -86,6 +87,7 @@ const Popover: FC<Props> = (props: Props) => {
             name: 'preventOverflow',
             options: {
               altAxis: true,
+              boundariesElement: boundary,
             },
           },
         ],

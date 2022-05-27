@@ -62,6 +62,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -105,6 +106,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -148,6 +150,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -215,7 +218,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -2245,6 +2250,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -2288,6 +2294,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -2331,6 +2338,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -2398,7 +2406,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -4428,6 +4438,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -4471,6 +4482,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -4514,6 +4526,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -4581,7 +4594,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -6612,6 +6627,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -6655,6 +6671,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -6698,6 +6715,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -6765,7 +6783,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -8798,6 +8818,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -8841,6 +8862,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -8884,6 +8906,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -8951,7 +8974,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -10981,6 +11006,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -11024,6 +11050,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -11067,6 +11094,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -11134,7 +11162,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -13237,6 +13267,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -13280,6 +13311,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -13323,6 +13355,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -13390,7 +13423,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -15431,6 +15466,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               "name": "preventOverflow",
               "options": Object {
                 "altAxis": true,
+                "boundariesElement": "scrollParent",
               },
             },
           ],
@@ -15474,6 +15510,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 "name": "preventOverflow",
                 "options": Object {
                   "altAxis": true,
+                  "boundariesElement": "scrollParent",
                 },
               },
             ],
@@ -15517,6 +15554,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   "name": "preventOverflow",
                   "options": Object {
                     "altAxis": true,
+                    "boundariesElement": "scrollParent",
                   },
                 },
               ],
@@ -15584,7 +15622,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    Hello world
+                    <span>
+                      Hello world
+                    </span>
                   </button>
                 </FocusRing>
               </FocusRing>

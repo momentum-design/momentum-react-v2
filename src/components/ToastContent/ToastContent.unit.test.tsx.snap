@@ -204,7 +204,9 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
                   onTouchStart={[Function]}
                   type="button"
                 >
-                  Button
+                  <span>
+                    Button
+                  </span>
                 </button>
               </FocusRing>
             </FocusRing>

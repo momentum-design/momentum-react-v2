@@ -5,6 +5,7 @@ import type { Color } from '../ModalContainer/ModalContainer.types';
 
 // variant - based on Figma mockups:
 export type VariantType = 'small' | 'medium';
+export type BoundaryType = 'parent' | 'viewport' | 'window' | HTMLElement;
 
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
@@ -52,6 +53,15 @@ export type PopoverCommonStyleProps = {
    * @default `bottom`
    */
   placement?: PlacementType;
+
+  /**
+   * Overflow Boundary of Popover
+   *
+   * Possible values: `scrollParent`, `viewport`, `window`, or any `HTMLElement`
+   *
+   * @default `scollParent`
+   */
+  boundary?: BoundaryType;
 };
 
 export interface Props extends PopoverCommonStyleProps {

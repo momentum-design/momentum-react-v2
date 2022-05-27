@@ -3,6 +3,12 @@ import { COLORS } from '../ModalContainer/ModalContainer.constants';
 
 const CLASS_PREFIX = 'md-popover';
 
+const BOUNDARIES = {
+  VIEWPORT: 'viewport',
+  WINDOW: 'window',
+  PARENT: 'scrollParent',
+};
+
 const DEFAULTS = {
   VARIANT: 'small',
   TRIGGER: 'click',
@@ -10,6 +16,7 @@ const DEFAULTS = {
   SHOW_ARROW: true,
   INTERACTIVE: false,
   COLOR: COLORS.PRIMARY,
+  BOUNDARY: BOUNDARIES.PARENT,
 };
 
 const STYLE = {
@@ -23,4 +30,4 @@ const OFFSET = 5;
 // padding between the edge of the popover and the arrow, to ensure the arrow doesn't get pushed outside
 const ARROW_PADDING = 5;
 
-export { CLASS_PREFIX, DEFAULTS, STYLE, OFFSET, ARROW_PADDING };
+export { CLASS_PREFIX, DEFAULTS, STYLE, OFFSET, ARROW_PADDING, BOUNDARIES };

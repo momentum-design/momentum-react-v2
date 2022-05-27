@@ -6,10 +6,14 @@ import FocusRing from '../FocusRing';
 
 import { STYLE } from './ButtonSimple.constants';
 import type { Props } from './ButtonSimple.types';
+import './ButtonSimple.style.scss';
 
 /**
- * A simple button component without overhead styling. This is used as an injectable button component for other sibling components.
+ * A simple button component without overhead styling.
+ * This is used as an injectable button component for other sibling components.
+ * @internal use only. Should not be consumed from any external parties.
  */
+
 const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { children, className, isDisabled, id, style, title, useNativeKeyDown } = props;
   const internalRef = useRef();
@@ -28,10 +32,10 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
         title={title}
         {...buttonProps}
         {...hoverProps}
-        // override of onKeyDown to ensure the standard html button behaviour (on enter => onClick) happens
+        // override of onKeyDown to ensure the standard html button behavior (on enter => onClick) happens
         onKeyDown={useNativeKeyDown ? props.onKeyDown : buttonProps.onKeyDown}
       >
-        {children}
+        {typeof children === 'string' ? <span>{children}</span> : children}
       </button>
     </FocusRing>
   );
