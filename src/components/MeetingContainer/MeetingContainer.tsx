@@ -45,7 +45,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
       : tags;
 
   const changedSpaceLink =
-    !!spaceLink && isDisabled ? cloneElement(spaceLink, { disabled: true }) : spaceLink;
+    !!spaceLink && cloneElement(spaceLink, { disabled: isDisabled, className: STYLE.spaceLink });
 
   return (
     <Card

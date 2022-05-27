@@ -29,6 +29,7 @@ const STYLE = {
   details: `${CLASS_PREFIX}-details`,
   avatar: `${CLASS_PREFIX}-avatar`,
   container: `${CLASS_PREFIX}-container`,
+  spaceLink: `${CLASS_PREFIX}-space-link`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE, SCHEDULE_INFO_COLORS, ANCHORS };

@@ -5,6 +5,7 @@
     margin: 0.25rem 0.5rem 0.25rem 0.25rem;
     display: flex;
     flex-grow: 1;
+    min-width: 0;
 
     > .md-meeting-container-actions {
       display: flex;
@@ -18,6 +19,11 @@
     > .md-meeting-container-details {
       flex-grow: 1;
       margin: 0 0.5rem;
+      min-width: 0;
+
+      .md-meeting-container-space-link {
+        white-space: nowrap;
+      }
 
       > *:first-child {
         > *:first-child {
@@ -41,6 +47,7 @@
 
         > .md-divider-dot-wrapper {
           margin: 0 0.5rem;
+          flex-shrink: 0;
         }
       }
 
