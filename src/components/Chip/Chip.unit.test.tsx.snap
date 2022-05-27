@@ -58,10 +58,10 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -127,10 +127,10 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -195,10 +195,10 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -260,10 +260,10 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -341,7 +341,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
             type="button"
           >
             <div
-              className="md-chip-left"
+              className="md-chip-leftSection"
               data-avatar={true}
             >
               <Avatar>
@@ -355,10 +355,10 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
               </Avatar>
             </div>
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -422,10 +422,10 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -492,10 +492,10 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -576,7 +576,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
             type="button"
           >
             <div
-              className="md-chip-left"
+              className="md-chip-leftSection"
               data-avatar={false}
             >
               <Icon
@@ -585,10 +585,10 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
               />
             </div>
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -669,15 +669,15 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
             <div
-              className="md-chip-right"
+              className="md-chip-rightSection"
             >
               <Icon
                 name="placeholder"
@@ -763,10 +763,10 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               />
             </Text>
@@ -832,10 +832,10 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
             type="button"
           >
             <Text
-              className="md-chip-center"
+              className="md-chip-centerSection"
             >
               <p
-                className="md-text-wrapper md-chip-center"
+                className="md-text-wrapper md-chip-centerSection"
                 data-type="body-primary"
               >
                 Some chip text
