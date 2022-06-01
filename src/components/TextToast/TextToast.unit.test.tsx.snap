@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextToast /> snapshot should match snapshot 1`] = `
+<TextToast
+  text="Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte."
+>
+  <div
+    className="md-text-toast-wrapper"
+  >
+    <Text
+      className="md-text-toast-text"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      type="body-secondary"
+    >
+      <small
+        className="md-text-wrapper md-text-toast-text"
+        data-type="body-secondary"
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+      </small>
+    </Text>
+  </div>
+</TextToast>
+`;
+
+exports[`<TextToast /> snapshot should match snapshot with className 1`] = `
+<TextToast
+  className="example-class"
+  text="Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte."
+>
+  <div
+    className="example-class md-text-toast-wrapper"
+  >
+    <Text
+      className="example-class md-text-toast-text"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      type="body-secondary"
+    >
+      <small
+        className="md-text-wrapper example-class md-text-toast-text"
+        data-type="body-secondary"
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+      </small>
+    </Text>
+  </div>
+</TextToast>
+`;
+
+exports[`<TextToast /> snapshot should match snapshot with id 1`] = `
+<TextToast
+  id="example-id"
+  text="Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte."
+>
+  <div
+    className="md-text-toast-wrapper"
+    id="example-id"
+  >
+    <Text
+      className="md-text-toast-text"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      type="body-secondary"
+    >
+      <small
+        className="md-text-wrapper md-text-toast-text"
+        data-type="body-secondary"
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+      </small>
+    </Text>
+  </div>
+</TextToast>
+`;
+
+exports[`<TextToast /> snapshot should match snapshot with style 1`] = `
+<TextToast
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+  text="Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte."
+>
+  <div
+    className="md-text-toast-wrapper"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <Text
+      className="md-text-toast-text"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      type="body-secondary"
+    >
+      <small
+        className="md-text-wrapper md-text-toast-text"
+        data-type="body-secondary"
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+      </small>
+    </Text>
+  </div>
+</TextToast>
+`;
+
+exports[`<TextToast /> snapshot should match snapshot with textAlignment \`left\` 1`] = `
+<TextToast
+  text="Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte."
+  textAlignment="left"
+>
+  <div
+    className="md-text-toast-wrapper"
+  >
+    <Text
+      className="md-text-toast-text"
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
+      type="body-secondary"
+    >
+      <small
+        className="md-text-wrapper md-text-toast-text"
+        data-type="body-secondary"
+        style={
+          Object {
+            "textAlign": "left",
+          }
+        }
+      >
+        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+      </small>
+    </Text>
+  </div>
+</TextToast>
+`;
