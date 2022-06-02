@@ -6,8 +6,13 @@
   border-radius: 0.5rem;
   background-color: var(--textToast-background);
   box-shadow: var(--md-globals-elevation-2);
+  align-items: center;
+
+  > .md-icon-wrapper {
+    margin-right: 12px;
+  }
 }
 
 .md-text-toast-text {
-  color: var(--theme-text-primary-normal);
+  color: var(--textToast-text);
 }
