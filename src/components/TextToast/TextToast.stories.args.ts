@@ -1,4 +1,5 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { ALIGNMENTS } from './TextToast.constants';
 
 const textToastArgTypes = {
   text: {
@@ -15,10 +16,12 @@ const textToastArgTypes = {
   },
   textAlignment: {
     description: 'Alignment of the Text in the TextToast component.',
-    control: { type: 'select', options: ['left', 'center'] },
+    control: { type: 'select', options: [undefined, ...Object.values(ALIGNMENTS)] },
     table: {
       type: {
-        summary: "'left' or 'center'",
+        summary: Object.values(ALIGNMENTS)
+          .map((value) => `"${value}"`)
+          .join(' | '),
       },
       defaultValue: {
         summary: 'center',
