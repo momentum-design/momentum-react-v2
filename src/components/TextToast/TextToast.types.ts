@@ -12,7 +12,7 @@ export interface Props {
   /**
    * Alignment of the Text in the TextToast component.
    *
-   * Default: `center`
+   * @default center
    */
   textAlignment?: TextToastTextAlign;
 
@@ -21,7 +21,7 @@ export interface Props {
    * be shown on the left-hand side of the text. At least the `name` property
    * should be passed in through the object, otherwise the Icon will not be shown.
    *
-   * Default: `undefined`
+   * @default undefined
    */
   iconProps?: IconProps;
 

@@ -6,12 +6,7 @@ exports[`<TextToast /> snapshot should match snapshot 1`] = `
 >
   <div
     className="md-text-toast-wrapper"
-    style={
-      Object {
-        "justifyContent": "center",
-        "textAlign": "center",
-      }
-    }
+    data-text-alignment="center"
   >
     <Text
       className="md-text-toast-text"
@@ -35,12 +30,7 @@ exports[`<TextToast /> snapshot should match snapshot with className 1`] = `
 >
   <div
     className="example-class md-text-toast-wrapper"
-    style={
-      Object {
-        "justifyContent": "center",
-        "textAlign": "center",
-      }
-    }
+    data-text-alignment="center"
   >
     <Text
       className="example-class md-text-toast-text"
@@ -68,12 +58,7 @@ exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
 >
   <div
     className="md-text-toast-wrapper"
-    style={
-      Object {
-        "justifyContent": "center",
-        "textAlign": "center",
-      }
-    }
+    data-text-alignment="center"
   >
     <Icon
       name="noise-removal"
@@ -116,13 +101,8 @@ exports[`<TextToast /> snapshot should match snapshot with id 1`] = `
 >
   <div
     className="md-text-toast-wrapper"
+    data-text-alignment="center"
     id="example-id"
-    style={
-      Object {
-        "justifyContent": "center",
-        "textAlign": "center",
-      }
-    }
   >
     <Text
       className="md-text-toast-text"
@@ -150,11 +130,10 @@ exports[`<TextToast /> snapshot should match snapshot with style 1`] = `
 >
   <div
     className="md-text-toast-wrapper"
+    data-text-alignment="center"
     style={
       Object {
         "color": "pink",
-        "justifyContent": "center",
-        "textAlign": "center",
       }
     }
   >
@@ -180,12 +159,7 @@ exports[`<TextToast /> snapshot should match snapshot with textAlignment \`left\
 >
   <div
     className="md-text-toast-wrapper"
-    style={
-      Object {
-        "justifyContent": "flex-start",
-        "textAlign": "left",
-      }
-    }
+    data-text-alignment="left"
   >
     <Text
       className="md-text-toast-text"
