@@ -25,6 +25,20 @@ const textToastArgTypes = {
       },
     },
   },
+  iconProps: {
+    description: `IconProps to be passed in - allows defining the icon which should
+    be shown on the left-hand side of the text. At least the \`name\` property
+    should be passed in through the object, otherwise the Icon will not be shown.`,
+    control: { type: 'object' },
+    table: {
+      type: {
+        summary: 'object',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { textToastArgTypes };

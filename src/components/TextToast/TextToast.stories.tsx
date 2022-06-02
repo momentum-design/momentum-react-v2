@@ -24,6 +24,7 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   text: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.',
   textAlignment: 'center',
+  iconProps: undefined,
 };
 
 const Common = MultiTemplate<TextToastProps>(TextToast).bind({});
@@ -34,10 +35,24 @@ delete Common.argTypes.children;
 Common.args = {
   text: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.',
   textAlignment: 'center',
+  iconProps: undefined,
 };
 
 Common.parameters = {
-  variants: [{ textAlignment: 'left' }, { textAlignment: 'center' }],
+  variants: [
+    { textAlignment: 'left' },
+    { textAlignment: 'center' },
+    {
+      text: "You're temporarily unmuted",
+      textAlignment: 'center',
+      iconProps: {
+        name: 'noise-removal',
+        weight: 'bold',
+        fillColor: 'var(--banner-success-text)',
+        autoScale: true,
+      },
+    },
+  ],
 };
 
 export { Example, Common };

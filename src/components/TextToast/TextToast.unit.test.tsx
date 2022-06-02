@@ -3,9 +3,14 @@ import { mount } from 'enzyme';
 
 import TextToast, { TEXT_TOAST_CONSTANTS as CONSTANTS } from './';
 import Text from '../Text/Text';
+import { mountAndWait } from '../../../test/utils';
+import Icon from '../Icon';
 
 const textMock =
   'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.';
+const iconPropsMock = {
+  name: 'noise-removal',
+};
 
 describe('<TextToast />', () => {
   describe('snapshot', () => {
@@ -54,6 +59,14 @@ describe('<TextToast />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with icon', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(<TextToast text={textMock} iconProps={iconPropsMock} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -95,7 +108,7 @@ describe('<TextToast />', () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
-      const styleString = 'color: pink;';
+      const styleString = 'text-align: center; justify-content: center; color: pink;';
 
       const element = mount(<TextToast text={textMock} style={style} />)
         .find(TextToast)
@@ -124,24 +137,35 @@ describe('<TextToast />', () => {
       expect(element.textContent).toBe(textMock);
     });
 
-    it('should have default text alignment `center` when no textAlignment is provided', () => {
-      expect.assertions(1);
+    it('should have correct style when no textAlignment is provided', () => {
+      expect.assertions(2);
 
       const element = mount(<TextToast text={textMock} />)
-        .find(Text)
+        .find(TextToast)
         .getDOMNode();
 
-      expect(element.getAttribute('style')).toBe('text-align: center;');
+      expect(element.getAttribute('style')).toContain('text-align: center;');
+      expect(element.getAttribute('style')).toContain('justify-content: center;');
     });
 
-    it('should have provided text alignment when textAlignment is provided', () => {
-      expect.assertions(1);
+    it('should have correct style when textAlignment = `left` is provided', () => {
+      expect.assertions(2);
 
       const element = mount(<TextToast text={textMock} textAlignment="left" />)
-        .find(Text)
+        .find(TextToast)
         .getDOMNode();
 
-      expect(element.getAttribute('style')).toBe('text-align: left;');
+      expect(element.getAttribute('style')).toContain('text-align: left;');
+      expect(element.getAttribute('style')).toContain('justify-content: flex-start;');
+    });
+
+    it('should show icon when iconProps are provided', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(<TextToast text={textMock} iconProps={iconPropsMock} />);
+      const reactElement = wrapper.find(Icon);
+
+      expect(reactElement.props()).toEqual(iconPropsMock);
     });
   });
 });

@@ -6,24 +6,20 @@ exports[`<TextToast /> snapshot should match snapshot 1`] = `
 >
   <div
     className="md-text-toast-wrapper"
+    style={
+      Object {
+        "justifyContent": "center",
+        "textAlign": "center",
+      }
+    }
   >
     <Text
       className="md-text-toast-text"
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
       type="body-secondary"
     >
       <small
         className="md-text-wrapper md-text-toast-text"
         data-type="body-secondary"
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
       >
         Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
       </small>
@@ -39,24 +35,72 @@ exports[`<TextToast /> snapshot should match snapshot with className 1`] = `
 >
   <div
     className="example-class md-text-toast-wrapper"
+    style={
+      Object {
+        "justifyContent": "center",
+        "textAlign": "center",
+      }
+    }
   >
     <Text
       className="example-class md-text-toast-text"
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
       type="body-secondary"
     >
       <small
         className="md-text-wrapper example-class md-text-toast-text"
         data-type="body-secondary"
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
+      >
+        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+      </small>
+    </Text>
+  </div>
+</TextToast>
+`;
+
+exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
+<TextToast
+  iconProps={
+    Object {
+      "name": "noise-removal",
+    }
+  }
+  text="Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte."
+>
+  <div
+    className="md-text-toast-wrapper"
+    style={
+      Object {
+        "justifyContent": "center",
+        "textAlign": "center",
+      }
+    }
+  >
+    <Icon
+      name="noise-removal"
+    >
+      <div
+        className="md-icon-wrapper"
+      >
+        <svg
+          className=""
+          data-autoscale={false}
+          data-scale={32}
+          data-test="noise-removal"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    </Icon>
+    <Text
+      className="md-text-toast-text"
+      type="body-secondary"
+    >
+      <small
+        className="md-text-wrapper md-text-toast-text"
+        data-type="body-secondary"
       >
         Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
       </small>
@@ -73,24 +117,20 @@ exports[`<TextToast /> snapshot should match snapshot with id 1`] = `
   <div
     className="md-text-toast-wrapper"
     id="example-id"
+    style={
+      Object {
+        "justifyContent": "center",
+        "textAlign": "center",
+      }
+    }
   >
     <Text
       className="md-text-toast-text"
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
       type="body-secondary"
     >
       <small
         className="md-text-wrapper md-text-toast-text"
         data-type="body-secondary"
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
       >
         Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
       </small>
@@ -113,26 +153,18 @@ exports[`<TextToast /> snapshot should match snapshot with style 1`] = `
     style={
       Object {
         "color": "pink",
+        "justifyContent": "center",
+        "textAlign": "center",
       }
     }
   >
     <Text
       className="md-text-toast-text"
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
       type="body-secondary"
     >
       <small
         className="md-text-wrapper md-text-toast-text"
         data-type="body-secondary"
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
       >
         Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
       </small>
@@ -148,24 +180,20 @@ exports[`<TextToast /> snapshot should match snapshot with textAlignment \`left\
 >
   <div
     className="md-text-toast-wrapper"
+    style={
+      Object {
+        "justifyContent": "flex-start",
+        "textAlign": "left",
+      }
+    }
   >
     <Text
       className="md-text-toast-text"
-      style={
-        Object {
-          "textAlign": "left",
-        }
-      }
       type="body-secondary"
     >
       <small
         className="md-text-wrapper md-text-toast-text"
         data-type="body-secondary"
-        style={
-          Object {
-            "textAlign": "left",
-          }
-        }
       >
         Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
       </small>
