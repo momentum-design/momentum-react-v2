@@ -8,8 +8,18 @@
   box-shadow: var(--md-globals-elevation-2);
   align-items: center;
 
+  &[data-text-alignment='center'] {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &[data-text-alignment='left'] {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
   > .md-icon-wrapper {
-    margin-right: 12px;
+    margin-right: 0.75rem;
   }
 }
 

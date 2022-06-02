@@ -21,11 +21,8 @@ const TextToast: FC<Props> = (props: Props) => {
         <div
           className={classnames(className, STYLE.wrapper)}
           id={id}
-          style={{
-            textAlign: textAlignment,
-            justifyContent: textAlignment === 'center' ? 'center' : 'flex-start',
-            ...style,
-          }}
+          data-text-alignment={textAlignment}
+          style={style}
         >
           {iconProps && iconProps.name && <Icon {...iconProps} />}
           <Text type="body-secondary" className={classnames(className, STYLE.text)}>
