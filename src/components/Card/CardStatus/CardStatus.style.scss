@@ -1,6 +1,8 @@
 .md-card-status-wrapper {
   --local-background-color: transparent;
 
+  align-self: stretch;
+  flex-shrink: 0;
   margin-right: 0.25rem;
   width: 0.25rem;
 

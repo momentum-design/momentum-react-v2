@@ -12,7 +12,8 @@
   cursor: pointer;
   display: flex;
   margin: 0.25rem;
-  overflow: hidden;
+  overflow: hidden !important;
+  padding: 0;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
   &[data-color='success'] {
