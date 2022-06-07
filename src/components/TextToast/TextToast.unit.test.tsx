@@ -1,10 +1,12 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
+
+import Icon from 'components/Icon';
+import Text from 'components/Text';
+
+import { mountAndWait } from '../../../test/utils';
 
 import TextToast, { TEXT_TOAST_CONSTANTS as CONSTANTS } from './';
-import Text from '../Text/Text';
-import { mountAndWait } from '../../../test/utils';
-import Icon from '../Icon';
 
 const textMock =
   'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.';

@@ -1,4 +1,5 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonStyles } from 'storybook/helper.stories.argtypes';
+
 import { ALIGNMENTS } from './TextToast.constants';
 
 const textToastArgTypes = {
