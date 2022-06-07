@@ -1,5 +1,6 @@
 import { CSSProperties } from 'react';
-import { IconProps } from '../Icon';
+
+import { IconProps } from 'components/Icon';
 
 export type TextToastTextAlign = 'left' | 'center';
 
