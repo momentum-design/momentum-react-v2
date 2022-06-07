@@ -1,8 +1,8 @@
 import classnames from 'classnames';
 import React, { FC } from 'react';
 
-import ButtonSimple from '../ButtonSimple';
-import Text, { TEXT_CONSTANTS } from '../Text';
+import ButtonSimple from 'components/ButtonSimple';
+import Text, { TEXT_CONSTANTS } from 'components/Text';
 
 import { DEFAULTS, STYLE, FORMATS_DISABLED } from './Tag.constants';
 import { Props } from './Tag.types';

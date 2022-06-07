@@ -11,8 +11,7 @@ import { useListContext } from 'components/List/List.utils';
 import ListItemBaseSection from 'components/ListItemBaseSection';
 import ModalContainer from 'components/ModalContainer';
 import Text from 'components/Text';
-
-import { verifyTypes } from '../../helpers/verifyTypes';
+import { verifyTypes } from 'helpers/verifyTypes';
 
 import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
 import { ContextMenuState, Props } from './ListItemBase.types';

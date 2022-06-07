@@ -1,10 +1,10 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import Avatar from '../Avatar';
-import { BUTTON_PILL_CONSTANTS } from '../ButtonPill';
-import Icon from '../Icon';
-import Text from '../Text';
+import Avatar from 'components/Avatar';
+import { BUTTON_PILL_CONSTANTS } from 'components/ButtonPill';
+import Icon from 'components/Icon';
+import Text from 'components/Text';
 
 import Chip, { CHIP_CONSTANTS, CHIP_CONSTANTS as CONSTANTS } from './';
 

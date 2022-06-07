@@ -1,4 +1,4 @@
-import { ButtonSimpleProps } from '../ButtonSimple';
+import { ButtonSimpleProps } from 'components/ButtonSimple';
 
 import type { CardStatusColor } from './CardStatus';
 import type { CSSProperties, ReactNode } from 'react';

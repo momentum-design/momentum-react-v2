@@ -4,8 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Avatar.style.scss';
 import ButtonSimple from 'components/ButtonSimple';
 import Icon from 'components/Icon';
-
-import Loading from '../../legacy/Loading';
+import Loading from 'legacy/Loading';
 
 import {
   STYLE,

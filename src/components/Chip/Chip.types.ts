@@ -1,7 +1,7 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { AvatarProps } from '../Avatar';
-import { IconProps } from '../Icon';
+import { AvatarProps } from 'components/Avatar';
+import { IconProps } from 'components/Icon';
 
 export type SupportedAvatar = ReactElement<AvatarProps>;
 export type SupportedIcon = ReactElement<IconProps>;
