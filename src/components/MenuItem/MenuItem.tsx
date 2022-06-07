@@ -11,15 +11,6 @@ import ListItemBase from 'components/ListItemBase';
 import ListItemBaseSection from 'components/ListItemBaseSection';
 import { useMenuContext, useMenuAppearanceContext } from 'components/Menu/Menu';
 
-import { useMenuItem } from '@react-aria/menu';
-
-import './MenuItem.style.scss';
-
-import Icon from 'components/Icon';
-import ListItemBase from 'components/ListItemBase';
-import ListItemBaseSection from 'components/ListItemBaseSection';
-import { MenuContext, MenuAppearanceContext } from 'components/Menu';
-
 import { STYLE } from './MenuItem.constants';
 import { Props } from './MenuItem.types';
 
