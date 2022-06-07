@@ -1,11 +1,12 @@
-import React, { FC } from 'react';
 import classnames from 'classnames';
+import React, { FC } from 'react';
+
+import './TextToast.style.scss';
+import Icon from 'components/Icon';
+import Text from 'components/Text';
 
 import { DEFAULTS, STYLE } from './TextToast.constants';
 import { Props } from './TextToast.types';
-import './TextToast.style.scss';
-import Text from '../Text/Text';
-import Icon from '../Icon';
 
 /**
  * The `<TextToast />` component. This component is designed to retrieve props like the `text` to display and the `textAlignment`, which can be `center` or `left` at the moment.
