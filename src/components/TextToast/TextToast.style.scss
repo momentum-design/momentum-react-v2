@@ -7,6 +7,7 @@
   background-color: var(--textToast-background);
   box-shadow: var(--md-globals-elevation-2);
   align-items: center;
+  box-sizing: content-box !important;
 
   &[data-text-alignment='center'] {
     justify-content: center;
@@ -19,7 +20,7 @@
   }
 
   > .md-icon-wrapper {
-    margin-right: 0.75rem;
+    margin-right: 0.3125rem;
   }
 }
 

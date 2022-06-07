@@ -43,14 +43,14 @@ Common.parameters = {
     { textAlignment: 'left' },
     { textAlignment: 'center' },
     {
-      text: "You're temporarily unmuted",
+      text: "You're temporarily unmuted asdf",
       textAlignment: 'center',
       iconProps: {
-        name: 'noise-removal',
-        weight: 'bold',
+        name: 'sound-default',
         fillColor: 'var(--banner-success-text)',
         autoScale: true,
       },
+      style: { width: '217px' },
     },
   ],
 };
