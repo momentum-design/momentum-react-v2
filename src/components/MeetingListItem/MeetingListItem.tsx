@@ -16,8 +16,7 @@ import ButtonPill from 'components/ButtonPill';
 import Icon from 'components/Icon';
 import ListItemBase from 'components/ListItemBase';
 import ListItemBaseSection from 'components/ListItemBaseSection';
-
-import { verifyTypes } from '../../helpers/verifyTypes';
+import { verifyTypes } from 'helpers/verifyTypes';
 
 import { STYLE, DEFAULTS } from './MeetingListItem.constants';
 import { Props } from './MeetingListItem.types';

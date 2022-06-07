@@ -1,4 +1,4 @@
-import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+import { ListItemBaseSize } from 'components/ListItemBase/ListItemBase.types';
 
 const CLASS_PREFIX = 'md-menu';
 

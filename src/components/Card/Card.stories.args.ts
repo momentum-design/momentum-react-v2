@@ -1,5 +1,6 @@
-import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
-import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args';
+import { commonStyles, extendArgTypes } from 'storybook/helper.stories.argtypes';
+
+import { buttonSimpleArgTypes } from 'components/ButtonSimple/ButtonSimple.stories.args';
 
 import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
 

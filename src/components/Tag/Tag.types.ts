@@ -1,4 +1,4 @@
-import type { ButtonSimpleProps } from '../ButtonSimple';
+import type { ButtonSimpleProps } from 'components/ButtonSimple';
 
 export type Color =
   | 'cobalt'

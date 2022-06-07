@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React, { FC } from 'react';
 
-import ButtonSimple from '../ButtonSimple';
+import ButtonSimple from 'components/ButtonSimple';
 
 import { DEFAULTS, STYLE } from './Card.constants';
 import CardStatus from './CardStatus';
