@@ -50,7 +50,7 @@ Common.parameters = {
         fillColor: 'var(--banner-success-text)',
         autoScale: true,
       },
-      style: { display: 'inline-flex', width: 'unset' },
+      style: { width: 'fit-content' },
     },
   ],
 };

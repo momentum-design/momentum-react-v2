@@ -5,6 +5,21 @@ export type TextToastTextAlign = 'left' | 'center';
 
 export interface Props {
   /**
+   * Custom class for overriding this component's CSS.
+   */
+  className?: string;
+
+  /**
+   * Custom id for overriding this component's CSS.
+   */
+  id?: string;
+
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
+
+  /**
    * Text to be displayed in TextToast component
    */
   text: string;
@@ -24,19 +39,4 @@ export interface Props {
    * @default undefined
    */
   iconProps?: IconProps;
-
-  /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
-
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
-
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
 }
