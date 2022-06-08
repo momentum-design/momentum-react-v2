@@ -21,6 +21,7 @@ const Chip: FC<Props> = (props: Props) => {
     id,
     style,
     children,
+    chipColor = DEFAULTS.COLOR,
     error = DEFAULTS.ERROR,
   } = props;
 
@@ -34,6 +35,7 @@ const Chip: FC<Props> = (props: Props) => {
       id={id}
       style={style}
       data-error={error}
+      data-color={chipColor}
       {...props}
     >
       {leftContent && (

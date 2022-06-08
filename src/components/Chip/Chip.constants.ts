@@ -5,6 +5,7 @@ const DEFAULTS = {
   ERROR: false,
   AVATAR: undefined,
   OUTLINE: false,
+  COLOR: undefined,
 };
 
 const STYLE = {
