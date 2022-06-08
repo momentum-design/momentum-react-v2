@@ -1,9 +1,12 @@
 import { CSSProperties, ReactElement } from 'react';
+import DefaultSidebar from 'src/legacy/Sidebar/examples/Default';
 import { AvatarProps } from '../Avatar';
 import { IconProps } from '../Icon';
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
 export type SupportedAvatar = ReactElement<AvatarProps>;
 export type SupportedIcon = ReactElement<IconProps>;
+export type SupportedColor = 'join' | 'cancel' | 'message' | TeamColor;
 
 export interface Props {
   /**
@@ -60,4 +63,9 @@ export interface Props {
    * Boolean to describe if the chip is in the error state.
    */
   error?: boolean;
+
+  /**
+   * String to describe the color.
+   */
+  chipColor?: SupportedColor;
 }
