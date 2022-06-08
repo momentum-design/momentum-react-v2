@@ -1,0 +1,83 @@
+.md-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  font-family: CiscoSansTT; // IEFIX
+  font-family: var(--md-globals-font-default);
+
+  > .md-checkbox-selected,
+  .md-checkbox-notSelected {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 0.125rem;
+    margin-right: 0.5rem;
+    outline: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &[data-disabled='false'] {
+    > .md-checkbox-label {
+      color: var(--checkbox-unchecked-text);
+    }
+
+    > .md-checkbox-selected {
+      background-color: var(--checkbox-checked-background);
+    }
+
+    > .md-checkbox-notSelected {
+      background-color: var(--checkbox-unchecked-background);
+      border-style: solid;
+      border-color: var(--checkbox-unchecked-border-color);
+      border-width: 0.0625rem;
+    }
+
+    &:hover {
+      > .md-checkbox-label {
+        color: var(--checkbox-unchecked-text-hovered);
+      }
+
+      > .md-checkbox-selected {
+        background-color: var(--checkbox-checked-background);
+      }
+
+      > .md-checkbox-notSelected {
+        background-color: var(--checkbox-unchecked-background);
+        border-style: solid;
+        border: var(--checkbox-unchecked-border-color);
+        border-width: 0.0625rem;
+      }
+    }
+
+    &:active {
+      > .md-checkbox-label {
+        color: var(--checkbox-unchecked-text-pressed);
+      }
+
+      > .md-checkbox-selected {
+        background-color: var(--checkbox-checked-background-pressed);
+      }
+
+      > .md-checkbox-notSelected {
+        background-color: var(--checkbox-unchecked-background-pressed);
+        border-style: solid;
+        border: var(--checkbox-unchecked-border-color-pressed);
+        border-width: 0.0625rem;
+      }
+    }
+  }
+
+  &[data-disabled='true'] {
+    > .md-checkbox-label {
+      color: var(--checkbox-unchecked-text-disabled);
+    }
+
+    > .md-checkbox-selected {
+      background-color: var(--checkbox-checked-background-disabled);
+    }
+
+    > .md-checkbox-notSelected {
+      background-color: var(--checkbox-unchecked-background-disabled);
+    }
+  }
+}

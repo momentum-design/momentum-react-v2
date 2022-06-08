@@ -104,6 +104,7 @@
     "@momentum-ui/icons-rebrand": "^1.31.1",
     "@momentum-ui/tokens": "^1.7.1",
     "@react-aria/button": "3.4.3",
+    "@react-aria/checkbox": "^3.4.0",
     "@react-aria/focus": "^3.4.0",
     "@react-aria/interactions": "^3.5.1",
     "@react-aria/menu": "^3.2.3",
