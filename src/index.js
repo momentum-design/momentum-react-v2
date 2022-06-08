@@ -114,6 +114,7 @@ export {
   ButtonHyperlink,
   ButtonPill,
   ButtonSimple,
+  Checkbox as CheckboxNext,
   Coachmark as CoachmarkNext,
   CodeInput,
   DividerDot,

@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> snapshot should match snapshot 1`] = `
+<Checkbox>
+  <label
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <input
+      aria-checked={false}
+      checked={false}
+      disabled={false}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="checkbox"
+    />
+  </label>
+</Checkbox>
+`;
+
+exports[`<Checkbox /> snapshot should match snapshot with className 1`] = `
+<Checkbox
+  className="example-class"
+>
+  <label
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <input
+      aria-checked={false}
+      checked={false}
+      disabled={false}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="checkbox"
+    />
+  </label>
+</Checkbox>
+`;
+
+exports[`<Checkbox /> snapshot should match snapshot with id 1`] = `
+<Checkbox
+  id="example-id"
+>
+  <label
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <input
+      aria-checked={false}
+      checked={false}
+      disabled={false}
+      id="example-id"
+      onChange={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="checkbox"
+    />
+  </label>
+</Checkbox>
+`;
+
+exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
+<Checkbox
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <label
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <input
+      aria-checked={false}
+      checked={false}
+      disabled={false}
+      onChange={[Function]}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="checkbox"
+    />
+  </label>
+</Checkbox>
+`;
