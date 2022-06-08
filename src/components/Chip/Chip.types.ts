@@ -1,5 +1,4 @@
 import { CSSProperties, ReactElement } from 'react';
-import DefaultSidebar from 'src/legacy/Sidebar/examples/Default';
 import { AvatarProps } from '../Avatar';
 import { IconProps } from '../Icon';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
@@ -7,6 +6,8 @@ import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 export type SupportedAvatar = ReactElement<AvatarProps>;
 export type SupportedIcon = ReactElement<IconProps>;
 export type SupportedColor = 'join' | 'cancel' | 'message' | TeamColor;
+export type SupportedModifier = 'none' | 'search' | 'multiline';
+export type SupportedSize = 28 | 32;
 
 export interface Props {
   /**
@@ -68,4 +69,14 @@ export interface Props {
    * String to describe the color.
    */
   chipColor?: SupportedColor;
+
+  /**
+   * String to describe the modifier.
+   */
+  modifier?: SupportedModifier;
+
+  /**
+   * Number to describe the size of component.
+   */
+  size?: SupportedSize;
 }

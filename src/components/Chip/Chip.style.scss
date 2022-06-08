@@ -27,69 +27,6 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
     }
   }
 
-  // &:not([disabled='true']){
-  //   &[data-color='cyan']{
-  //     --local-background-normal: var(--chips-filled-background-cyan-normal);
-  //     --local-background-pressed: var(--chips-filled-background-cyan-pressed);
-  //     --local-background-hover: var(--chips-filled-background-cyan-hovered);
-  //   }
-
-  //   &[data-color='lime']{
-  //     --local-background-normal: var(--chips-filled-background-lime-normal);
-  //     --local-background-pressed: var(--chips-filled-background-lime-pressed);
-  //     --local-background-hover: var(--chips-filled-background-lime-hovered);
-  //   }
-
-  //   &[data-color='mint']{
-  //     --local-background-normal: var(--chips-filled-background-mint-normal);
-  //     --local-background-pressed: var(--chips-filled-background-mint-pressed);
-  //     --local-background-hover: var(--chips-filled-background-mint-hovered);
-  //   }
-
-  //   &[data-color='slate']{
-  //     --local-background-normal: var(--chips-filled-background-slate-normal);
-  //     --local-background-pressed: var(--chips-filled-background-slate-pressed);
-  //     --local-background-hover: var(--chips-filled-background-slate-hovered);
-  //   }
-
-  //   &[data-color='violet']{
-  //     --local-background-normal: var(--chips-filled-background-violet-normal);
-  //     --local-background-pressed: var(--chips-filled-background-violet-pressed);
-  //     --local-background-hover: var(--chips-filled-background-violet-hovered);
-  //   }
-
-  //   &[data-color='purple']{
-  //     --local-background-normal: var(--chips-filled-background-purple-normal);
-  //     --local-background-pressed: var(--chips-filled-background-purple-pressed);
-  //     --local-background-hover: var(--chips-filled-background-purple-hovered);
-  //   }
-
-  //   &[data-color='orange']{
-  //     --local-background-normal: var(--chips-filled-background-orange-normal);
-  //     --local-background-pressed: var(--chips-filled-background-orange-pressed);
-  //     --local-background-hover: var(--chips-filled-background-orange-hovered);
-  //   }
-
-  //   &[data-color='gold']{
-  //     --local-background-normal: var(--chips-filled-background-gold-normal);
-  //     --local-background-pressed: var(--chips-filled-background-gold-pressed);
-  //     --local-background-hover: var(--chips-filled-background-gold-hovered);
-  //   }
-
-  //   &[data-color='pink']{
-  //     --local-background-normal: var(--chips-filled-background-pink-normal);
-  //     --local-background-pressed: var(--chips-filled-background-pink-pressed);
-  //     --local-background-hover: var(--chips-filled-background-pink-hovered);
-  //   }
-
-  //   &[data-color='cobalt']{
-  //     --local-background-normal: var(--chips-filled-background-cobalt-normal);
-  //     --local-background-pressed: var(--chips-filled-background-cobalt-pressed);
-  //     --local-background-hover: var(--chips-filled-background-cobalt-hovered);
-  //   }
-
-  // }
-
   > .md-chip-right-section {
     margin-left: 0.25rem;
     margin-right: 0.5rem;
@@ -114,6 +51,20 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
 
   > .md-chip-center-section:first-child:last-child {
     padding: 0em 0.625rem;
+
+    &[data-modifier='search'] {
+      &[data-size='28'] {
+        padding: 0.063rem 0.5rem 0.063rem 0.5rem;
+      }
+
+      &[data-size='32'] {
+        padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+      }
+    }
+
+    &[data-modifier='multiline'] {
+      padding: 0rem 0.469rem 0rem 0.469rem;
+    }
   }
 
   > .md-chip-center-section:first-child {
