@@ -6,6 +6,8 @@ const DEFAULTS = {
   AVATAR: undefined,
   OUTLINE: false,
   COLOR: undefined,
+  MODIFIER: 'none',
+  SIZE: 28,
 };
 
 const STYLE = {

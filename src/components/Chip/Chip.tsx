@@ -21,8 +21,10 @@ const Chip: FC<Props> = (props: Props) => {
     id,
     style,
     children,
+    size = DEFAULTS.SIZE,
     chipColor = DEFAULTS.COLOR,
     error = DEFAULTS.ERROR,
+    modifier = DEFAULTS.MODIFIER,
   } = props;
 
   const leftContent = avatar ? avatar : leftIcon;
@@ -30,12 +32,13 @@ const Chip: FC<Props> = (props: Props) => {
 
   return (
     <ButtonPill
-      size={28}
+      size={size}
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}
       data-error={error}
       data-color={chipColor}
+      data-modifier={modifier}
       {...props}
     >
       {leftContent && (
