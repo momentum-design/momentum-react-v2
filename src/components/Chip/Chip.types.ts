@@ -1,5 +1,4 @@
 import { CSSProperties, ReactElement } from 'react';
-import DefaultSidebar from 'src/legacy/Sidebar/examples/Default';
 import { AvatarProps } from '../Avatar';
 import { IconProps } from '../Icon';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
