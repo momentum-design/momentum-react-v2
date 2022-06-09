@@ -1,13 +1,10 @@
 import React from 'react';
-import { act } from 'react-dom/test-utils';
-
 import { SSRProvider } from '@react-aria/ssr';
 
-import Icon from 'components/Icon';
-
 import { mountAndWait } from '../../../test/utils';
-
+import Icon from '../Icon';
 import SearchInput, { SEARCH_INPUT_CONSTANTS as CONSTANTS } from '.';
+import { act } from 'react-dom/test-utils';
 
 const testTranslations = {
   empty: 'empty',

@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import argTypes from './FocusRing.stories.args';
-import Documentation from './FocusRing.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
 
 import FocusRing, { FocusRingProps } from './';
+import argTypes from './FocusRing.stories.args';
+import Documentation from './FocusRing.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/FocusRing',

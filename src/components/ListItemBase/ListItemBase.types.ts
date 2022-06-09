@@ -1,5 +1,4 @@
 import { CSSProperties, ReactNode } from 'react';
-
 import { PressEvents } from '@react-types/shared';
 
 export type ListItemBaseSize = 32 | 40 | 50 | 70;

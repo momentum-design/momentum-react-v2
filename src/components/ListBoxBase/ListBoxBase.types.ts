@@ -1,7 +1,6 @@
-import { CSSProperties } from 'react';
-
-import { ListState } from '@react-stately/list';
 import { FocusStrategy } from '@react-types/shared';
+import { ListState } from '@react-stately/list';
+import { CSSProperties } from 'react';
 
 export interface Props<T> {
   /**

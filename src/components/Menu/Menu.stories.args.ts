@@ -1,7 +1,6 @@
-import { commonStyles } from 'storybook/helper.stories.argtypes';
-
-import * as LIST_ITEM_BASE_CONSTANTS from 'components/ListItemBase/ListItemBase.constants';
-import { DEFAULTS } from 'components/Menu/Menu.constants';
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import * as LIST_ITEM_BASE_CONSTANTS from '../ListItemBase/ListItemBase.constants';
+import { DEFAULTS } from '../Menu/Menu.constants';
 
 export default {
   ...commonStyles,

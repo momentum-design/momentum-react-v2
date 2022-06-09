@@ -2,7 +2,7 @@ import {
   commonAriaButton,
   commonHTMLAttributes,
   commonStyles,
-} from 'storybook/helper.stories.argtypes';
+} from '../../storybook/helper.stories.argtypes';
 
 import { BUTTON_DIALPAD_CONSTANTS as CONSTANTS } from './';
 

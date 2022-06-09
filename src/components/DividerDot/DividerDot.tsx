@@ -1,5 +1,5 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
+import classnames from 'classnames';
 
 import { STYLE } from './DividerDot.constants';
 import { Props } from './DividerDot.types';

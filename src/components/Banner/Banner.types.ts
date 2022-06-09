@@ -1,8 +1,8 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { AvatarProps } from 'components/Avatar';
-import { ButtonGroupProps } from 'components/ButtonGroup';
-import { ModalContainerProps } from 'components/ModalContainer';
+import { AvatarProps } from '../Avatar';
+import { ButtonGroupProps } from '../ButtonGroup';
+import { ModalContainerProps } from '../ModalContainer';
 
 export type Shape = 'rectangle' | 'square';
 

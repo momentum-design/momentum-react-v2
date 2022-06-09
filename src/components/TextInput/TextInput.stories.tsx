@@ -1,6 +1,5 @@
 import React, { useState, FC, useRef } from 'react';
-
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 
 import TextInput, { TextInputProps } from './';
 

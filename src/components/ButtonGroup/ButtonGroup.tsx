@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import React, { FC } from 'react';
+import classNames from 'classnames';
 
 import { DEFAULTS, STYLE } from './ButtonGroup.constants';
 import { Props } from './ButtonGroup.types';

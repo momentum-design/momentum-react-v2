@@ -1,12 +1,10 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import { mountAndWait } from '../../../test/utils';
-
-import { STYLE, SIZES } from './NavigationTab.constants';
-import { NavTabSize } from './NavigationTab.types';
+import { mount } from 'enzyme';
 
 import NavigationTab, { NAVIGATION_TAB_CONSTANTS as CONSTANTS } from './';
+import { STYLE, SIZES } from './NavigationTab.constants';
+import { NavTabSize } from './NavigationTab.types';
+import { mountAndWait } from '../../../test/utils';
 
 describe('<NavigationTab />', () => {
   describe('snapshot', () => {

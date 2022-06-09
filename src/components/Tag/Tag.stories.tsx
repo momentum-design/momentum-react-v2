@@ -1,11 +1,10 @@
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-
-import argTypes from './Tag.stories.args';
-import Documentation from './Tag.stories.docs.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import Tag, { TagProps, TAG_CONSTANTS as CONSTANTS } from './';
+import argTypes from './Tag.stories.args';
+import Documentation from './Tag.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/Tag',

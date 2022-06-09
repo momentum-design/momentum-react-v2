@@ -1,8 +1,7 @@
+import CodeInput from '.';
 import { mount } from 'enzyme';
 import React, { useState } from 'react';
 import { act } from 'react-dom/test-utils';
-
-import CodeInput from '.';
 
 // TODO: swap for test util when available
 const waitForAsync = (wrapper) =>

@@ -1,9 +1,8 @@
 import React from 'react';
-
-import { ButtonCircle, ButtonSimple, ButtonPill, ListItemBase } from 'components';
-import Button from 'legacy/Button';
-
+import ListItemBase from '../components/ListItemBase';
 import { verifyTypes, verifyType, isMRv2Button } from './verifyTypes';
+import { ButtonCircle, ButtonSimple, ButtonPill } from '../components';
+import { Button } from '@momentum-ui/react-collaboration';
 
 describe('verifyTypes', () => {
   it('returns true if types are correct', () => {

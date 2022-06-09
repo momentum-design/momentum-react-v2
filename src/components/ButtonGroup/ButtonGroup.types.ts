@@ -1,7 +1,7 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { ButtonCircleProps } from 'components/ButtonCircle';
-import { ButtonPillProps } from 'components/ButtonPill';
+import { ButtonCircleProps } from '../ButtonCircle';
+import { ButtonPillProps } from '../ButtonPill';
 
 export type SupportedComponents = ButtonCircleProps | ButtonPillProps;
 

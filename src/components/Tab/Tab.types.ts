@@ -1,10 +1,8 @@
 import { CSSProperties, ReactElement } from 'react';
-
+import { BadgeProps } from '../Badge';
+import { IconProps } from '../Icon';
+import { TextProps } from '../Text';
 import { AriaButtonProps } from '@react-types/button';
-
-import { BadgeProps } from 'components/Badge';
-import { IconProps } from 'components/Icon';
-import { TextProps } from 'components/Text';
 
 export interface Props extends AriaButtonProps {
   /**

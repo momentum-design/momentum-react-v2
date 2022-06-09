@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
-
-import { ButtonSimpleProps } from 'components/ButtonSimple';
+import { ButtonSimpleProps } from '../ButtonSimple';
 export type Size = 64 | 52 | 40 | 32 | 28 | 20;
 export interface Props extends ButtonSimpleProps {
   /**

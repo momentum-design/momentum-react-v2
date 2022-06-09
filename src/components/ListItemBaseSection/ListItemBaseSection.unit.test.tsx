@@ -1,7 +1,6 @@
+import ListItemBaseSection from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-
-import ListItemBaseSection from '.';
 
 describe('ListItemBaseSection', () => {
   let container;

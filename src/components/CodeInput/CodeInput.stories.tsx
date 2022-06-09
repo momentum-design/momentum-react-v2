@@ -1,9 +1,8 @@
-import { Story } from '@storybook/react';
 import React, { useState } from 'react';
-
-import { Message } from 'components/InputMessage/InputMessage.types';
+import { Story } from '@storybook/react';
 
 import CodeInput, { CodeInputProps } from './';
+import { Message } from '../InputMessage/InputMessage.types';
 
 const messageArrOptions = {
   empty: [],

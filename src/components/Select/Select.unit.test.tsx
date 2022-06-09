@@ -1,14 +1,9 @@
-import React from 'react';
-
-import { Item } from '@react-stately/collections';
-
-import ListBoxBase from 'components/ListBoxBase';
-
-import { mountAndWait, triggerPress, waitForComponentToPaint } from '../../../test/utils';
-
-import { DIRECTIONS, STYLE } from './Select.constants';
-
 import Select from '.';
+import React from 'react';
+import { Item } from '@react-stately/collections';
+import { DIRECTIONS, STYLE } from './Select.constants';
+import { mountAndWait, triggerPress, waitForComponentToPaint } from '../../../test/utils';
+import ListBoxBase from '../ListBoxBase';
 
 jest.mock('@react-aria/utils');
 

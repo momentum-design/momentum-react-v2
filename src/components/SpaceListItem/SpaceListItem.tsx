@@ -1,16 +1,14 @@
-import classnames from 'classnames';
 import React, { FC, forwardRef, RefObject, useRef } from 'react';
-
-import DividerDot from 'components/DividerDot';
-import Icon from 'components/Icon';
-import ListItemBase from 'components/ListItemBase';
-import ListItemBaseSection from 'components/ListItemBaseSection';
-import Text from 'components/Text';
+import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './SpaceListItem.constants';
+import { Props } from './SpaceListItem.types';
 import './SpaceListItem.style.scss';
-
-import type { Props } from './SpaceListItem.types';
+import ListItemBase from '../ListItemBase';
+import ListItemBaseSection from '../ListItemBaseSection';
+import Text from '../Text';
+import Icon from '../Icon';
+import DividerDot from '../DividerDot';
 
 //TODO: support 2-line labels for right/position-end section.
 /**

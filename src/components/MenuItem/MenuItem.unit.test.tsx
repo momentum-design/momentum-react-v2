@@ -1,17 +1,13 @@
-import { renderHook } from '@testing-library/react-hooks';
-import { mount } from 'enzyme';
 import React from 'react';
-
+import { mount } from 'enzyme';
 import { Item } from '@react-stately/collections';
+import { renderHook } from '@testing-library/react-hooks';
+
+import MenuItem from './';
 import { useTreeState } from '@react-stately/tree';
-
 import { triggerPress } from '../../../test/utils';
-import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
 import * as menu from '../Menu/Menu';
-
-import MenuItem from './';
-
-import MenuItem from './';
+import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
 
 describe('<MenuItem />', () => {
   const { result } = renderHook(() =>

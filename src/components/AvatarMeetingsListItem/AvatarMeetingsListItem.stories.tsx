@@ -1,17 +1,14 @@
-import { action } from '@storybook/addon-actions';
-
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplateWithPseudoStates, Template } from 'storybook/helper.stories.templates';
-
-import { PresenceType } from 'components/Avatar/Avatar.types';
-
-import { SCHEDULER_STATES } from './AvatarMeetingsListItem.constants';
-import argTypes from './AvatarMeetingsListItem.stories.args';
-import Documentation from './AvatarMeetingsListItem.stories.docs.mdx';
-import { AvatarMeetingsListItemActions } from './AvatarMeetingsListItem.types';
+import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import AvatarMeetingsListItem, { AvatarMeetingsListItemProps } from '.';
+import argTypes from './AvatarMeetingsListItem.stories.args';
+import Documentation from './AvatarMeetingsListItem.stories.docs.mdx';
+import { action } from '@storybook/addon-actions';
+import { PresenceType } from '../Avatar/Avatar.types';
+import { SCHEDULER_STATES } from './AvatarMeetingsListItem.constants';
+import { AvatarMeetingsListItemActions } from './AvatarMeetingsListItem.types';
 export default {
   title: 'Momentum UI/AvatarMeetingsListItem',
   component: AvatarMeetingsListItem,

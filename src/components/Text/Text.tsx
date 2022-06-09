@@ -1,10 +1,9 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
 
 import { DEFAULTS, STYLE, TYPES } from './Text.constants';
+import { Props } from './Text.types';
 import './Text.style.scss';
-
-import type { Props } from './Text.types';
+import classnames from 'classnames';
 
 const Text: FC<Props> = (props: Props) => {
   const { children, type = DEFAULTS.TYPE, className, id, style, ...rest } = props;

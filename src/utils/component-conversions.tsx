@@ -1,6 +1,5 @@
-import classNames from 'classnames';
 import React, { FC, isValidElement } from 'react';
-
+import classNames from 'classnames';
 import Text from '../components/Text';
 import { FontStyle } from '../components/Text/Text.types';
 

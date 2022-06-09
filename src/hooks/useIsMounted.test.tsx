@@ -1,8 +1,7 @@
-import { mount } from 'enzyme';
 import React, { useState } from 'react';
-import { act } from 'react-dom/test-utils';
-
 import { useIsMounted } from './useIsMounted';
+import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 
 describe('useIsMountedTests', () => {
   it('is mounted when mounted', async () => {

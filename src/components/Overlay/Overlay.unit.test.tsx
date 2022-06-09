@@ -1,5 +1,5 @@
-import { mount } from 'enzyme';
 import React from 'react';
+import { mount } from 'enzyme';
 
 import Overlay, { OVERLAY_CONSTANTS as CONSTANTS } from './';
 

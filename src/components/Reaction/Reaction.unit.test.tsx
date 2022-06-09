@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { mountAndWait } from '../../../test/utils';
 
 import Reaction, { REACTION_CONSTANTS as CONSTANTS } from './';

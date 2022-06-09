@@ -1,15 +1,12 @@
 import React, { FC } from 'react';
-
 import './Popover.style.scss';
-import { ARROW_HEIGHT } from 'components/ModalArrow/ModalArrow.constants';
-import type { PlacementType } from 'components/ModalArrow/ModalArrow.types';
-import ModalContainer from 'components/ModalContainer';
-import { ARROW_ID, ELEVATIONS, ROUNDS } from 'components/ModalContainer/ModalContainer.constants';
-
+import ModalContainer from '../ModalContainer';
 import { LazyTippy } from './LazyTippy';
+import { ARROW_ID, ELEVATIONS, ROUNDS } from '../ModalContainer/ModalContainer.constants';
 import { ARROW_PADDING, DEFAULTS, OFFSET } from './Popover.constants';
-
+import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
 import type { Props } from './Popover.types';
+import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 /**
  * The Popover component allows adding a Popover to whatever provided

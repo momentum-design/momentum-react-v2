@@ -1,11 +1,8 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import { mountAndWait } from '../../../test/utils';
-
-import { SIZES, STYLE } from './Badge.constants';
-
+import { mount } from 'enzyme';
 import Badge from '.';
+import { mountAndWait } from '../../../test/utils';
+import { SIZES, STYLE } from './Badge.constants';
 
 describe('Badge', () => {
   let container;

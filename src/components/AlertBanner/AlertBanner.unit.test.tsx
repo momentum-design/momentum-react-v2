@@ -1,5 +1,5 @@
-import { mount } from 'enzyme';
 import React from 'react';
+import { mount } from 'enzyme';
 
 import AlertBanner, { ALERT_BANNER_CONSTANTS as CONSTANTS } from './';
 

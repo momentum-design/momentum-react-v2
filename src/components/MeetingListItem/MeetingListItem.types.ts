@@ -1,5 +1,4 @@
 import { CSSProperties, ReactNode } from 'react';
-
 import { PressEvents } from '@react-types/shared';
 
 export enum MeetingMarker {

@@ -1,9 +1,7 @@
-import classnames from 'classnames';
 import React from 'react';
-
 import './Icon.style.scss';
-import { useDynamicSVGImport } from 'hooks/useDynamicSVGImport';
-
+import { Props } from './Icon.types';
+import { useDynamicSVGImport } from '../../hooks/useDynamicSVGImport';
 import {
   COLOR_INHERIT,
   DEFAULTS,
@@ -12,7 +10,7 @@ import {
   STYLE,
   VIEW_BOX_SPECS,
 } from './Icon.constants';
-import { Props } from './Icon.types';
+import classnames from 'classnames';
 
 /**
  * Icon component that can dynamically display SVG icons with a valid name.

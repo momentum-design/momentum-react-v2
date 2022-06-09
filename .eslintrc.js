@@ -11,7 +11,6 @@ module.exports = {
         map: [['@momentum-ui/react-collaboration', path.resolve(__dirname, 'src')]],
       },
       node: {
-        paths: ['src'],
         extensions: ['.js', '.jsx', '.json', '.tsx', '.ts'],
       },
       typescript: {
@@ -26,7 +25,6 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:jsx-a11y/recommended',
-    'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:storybook/recommended',
@@ -68,7 +66,6 @@ module.exports = {
       rules: {
         'prettier/prettier': 0,
         quotes: 0,
-        'import/order': 0,
       },
     },
   ],
@@ -148,48 +145,6 @@ module.exports = {
       {},
       {
         usePrettierrc: true,
-      },
-    ],
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'external',
-          'unknown',
-          'builtin',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-          'object',
-          'type',
-        ],
-        pathGroups: [
-          {
-            pattern: '**/components/**',
-            group: 'internal',
-          },
-          {
-            pattern: '**/storybook/**',
-            group: 'builtin',
-            position: 'after',
-          },
-          {
-            pattern: '@react-aria/**',
-            group: 'unknown',
-          },
-          {
-            pattern: '@react-stately/**',
-            group: 'unknown',
-          },
-          {
-            pattern: '@react-types/**',
-            group: 'unknown',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['builtin', 'parent'],
-        'newlines-between': 'always',
-        alphabetize: { order: 'asc' },
       },
     ],
   },

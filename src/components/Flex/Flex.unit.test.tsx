@@ -1,9 +1,7 @@
+import Flex from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-
 import { STYLE } from './Flex.constants';
-
-import Flex from '.';
 
 describe('Flex', () => {
   let container;

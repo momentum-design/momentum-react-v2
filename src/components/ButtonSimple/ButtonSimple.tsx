@@ -1,13 +1,10 @@
-import classnames from 'classnames';
 import React, { forwardRef, RefObject, useRef } from 'react';
-
+import classnames from 'classnames';
 import { useButton } from '@react-aria/button';
 import { useHover } from '@react-aria/interactions';
-
-import FocusRing from 'components/FocusRing';
+import FocusRing from '../FocusRing';
 
 import { STYLE } from './ButtonSimple.constants';
-
 import type { Props } from './ButtonSimple.types';
 import './ButtonSimple.style.scss';
 

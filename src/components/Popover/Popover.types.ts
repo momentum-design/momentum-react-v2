@@ -1,8 +1,7 @@
-import type { Color } from 'components/ModalContainer/ModalContainer.types';
-
-import type { TippyProps } from '@tippyjs/react';
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
 import type { Instance } from 'tippy.js';
+import type { TippyProps } from '@tippyjs/react';
+import type { Color } from '../ModalContainer/ModalContainer.types';
 
 // variant - based on Figma mockups:
 export type VariantType = 'small' | 'medium';

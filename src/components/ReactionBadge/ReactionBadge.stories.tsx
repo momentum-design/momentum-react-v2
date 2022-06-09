@@ -1,17 +1,15 @@
 import React from 'react';
-
-import AriaButtonDocs from 'storybook/docs.stories.aria-button.mdx';
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Reaction from 'components/Reaction';
-import { REACTION_NAMES } from 'components/Reaction/Reaction.constants';
-
-import argTypes from './ReactionBadge.stories.args';
-import Documentation from './ReactionBadge.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
 
 import ReactionBadge, { ReactionBadgeProps } from './';
+import argTypes from './ReactionBadge.stories.args';
+import Documentation from './ReactionBadge.stories.docs.mdx';
+import { REACTION_NAMES } from '../Reaction/Reaction.constants';
+
+import Reaction from '../Reaction';
 
 export default {
   title: 'Momentum UI/ReactionBadge',

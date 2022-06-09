@@ -1,6 +1,6 @@
 import { default as Text } from './Text';
-import * as CONSTANTS from './Text.constants';
 import { Props } from './Text.types';
+import * as CONSTANTS from './Text.constants';
 
 export { CONSTANTS as TEXT_CONSTANTS };
 

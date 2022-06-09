@@ -1,12 +1,12 @@
-import { mount } from 'enzyme';
 import React from 'react';
+import { mount } from 'enzyme';
 
-import Avatar from '../Avatar';
-import { BUTTON_PILL_CONSTANTS } from '../ButtonPill';
 import Icon from '../Icon';
+import Avatar from '../Avatar';
 import Text from '../Text';
 
 import Chip, { CHIP_CONSTANTS, CHIP_CONSTANTS as CONSTANTS } from './';
+import { BUTTON_PILL_CONSTANTS } from '../ButtonPill';
 
 const text = 'Some chip text';
 const exampleIcon = <Icon name="placeholder" scale={16} />;

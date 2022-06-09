@@ -1,4 +1,4 @@
-import type { ButtonSimpleProps } from 'components/ButtonSimple';
+import type { ButtonSimpleProps } from '../ButtonSimple';
 
 export type ButtonControlControl = 'close' | 'favorite' | 'maximize' | 'minimize' | 'mute';
 

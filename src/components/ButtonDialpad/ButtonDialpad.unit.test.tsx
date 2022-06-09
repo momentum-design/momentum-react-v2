@@ -1,10 +1,10 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import ButtonDialpad from 'components/ButtonDialpad';
-import ButtonSimple from 'components/ButtonSimple';
+import { mount } from 'enzyme';
+import { ButtonDialpad } from '@momentum-ui/react-collaboration';
 
 import { DEFAULTS, SIZES, STYLE } from './ButtonDialpad.constants';
+
+import ButtonSimple from '../ButtonSimple';
 
 describe('<ButtonPill />', () => {
   let container;

@@ -1,12 +1,11 @@
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import { SIZES } from '../Icon/Icon.constants';
-
-import argTypes from './LoadingSpinner.stories.args';
-import Documentation from './LoadingSpinner.stories.docs.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import LoadingSpinner, { LoadingSpinnerProps } from './';
+import argTypes from './LoadingSpinner.stories.args';
+import Documentation from './LoadingSpinner.stories.docs.mdx';
+import { SIZES } from '../Icon/Icon.constants';
 
 export default {
   title: 'Momentum UI/LoadingSpinner',

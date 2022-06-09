@@ -6,7 +6,7 @@
   ],
   "extends": "./tsconfig.base.json",
   "include": [
-    "../../src/index.js",
+    "../../src/index.ts",
     "../../src/legacy/**/*.*",
     "../../src/components/**/*.*",
     "../../src/utils/**/*.*"

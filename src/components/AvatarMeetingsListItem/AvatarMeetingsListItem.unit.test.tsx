@@ -1,13 +1,9 @@
 import React from 'react';
-
-import { PresenceType } from 'components/Avatar/Avatar.types';
-import ButtonCircle from 'components/ButtonCircle';
-
 import { mountAndWait } from '../../../test/utils';
-
-import { AvatarMeetingsListItemActions } from './AvatarMeetingsListItem.types';
-
+import { PresenceType } from '../Avatar/Avatar.types';
 import AvatarMeetingsListItem, { AVATAR_MEETINGS_LIST_ITEM_CONSTANTS as CONSTANTS } from '.';
+import ButtonCircle from '../ButtonCircle';
+import { AvatarMeetingsListItemActions } from './AvatarMeetingsListItem.types';
 
 describe('<AvatarMeetingsListItem />', () => {
   describe('snapshot', () => {

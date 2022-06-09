@@ -1,15 +1,13 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React, { ReactElement, useContext } from 'react';
 
-import { useListBoxSection } from '@react-aria/listbox';
-
-import ContentSeparator from 'components/ContentSeparator';
-import { ListBoxContext } from 'components/ListBoxBase/ListBoxBase';
-import ListBoxItem from 'components/ListBoxItem';
-
-import { STYLE } from './ListBoxSection.constants';
-import { Props } from './ListBoxSection.types';
 import './ListBoxSection.style.scss';
+import { Props } from './ListBoxSection.types';
+import { STYLE } from './ListBoxSection.constants';
+import { useListBoxSection } from '@react-aria/listbox';
+import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
+import ListBoxItem from '../ListBoxItem';
+import ContentSeparator from '../ContentSeparator';
 
 const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
   const { section } = props;

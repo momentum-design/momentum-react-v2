@@ -1,27 +1,25 @@
 /* eslint-disable react/display-name */
-
-import { action } from '@storybook/addon-actions';
 import React from 'react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
+import ListItemBase from '.';
+
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import Documentation from './ListItemBase.documentation.mdx';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import {
   getComponentStates,
   MultiTemplateWithPseudoStates,
   Template,
-} from 'storybook/helper.stories.templates';
+} from '../../storybook/helper.stories.templates';
 
-import Avatar from 'components/Avatar';
-import { PresenceType } from 'components/Avatar/Avatar.types';
-import ButtonPill from 'components/ButtonPill';
-import Icon from 'components/Icon';
-import ListItemBaseSection from 'components/ListItemBaseSection';
-
+import ListItemBaseSection from '../ListItemBaseSection';
 import { SHAPES, SIZES } from './ListItemBase.constants';
-import Documentation from './ListItemBase.documentation.mdx';
+import { action } from '@storybook/addon-actions';
+import Icon from '../Icon';
+import ButtonPill from '../ButtonPill';
+import Avatar from '../Avatar';
+import { PresenceType } from '../Avatar/Avatar.types';
 import argTypes from './ListItemBase.stories.args';
-
-import ListItemBase from '.';
 
 export default {
   title: 'Momentum UI/ListItemBase',

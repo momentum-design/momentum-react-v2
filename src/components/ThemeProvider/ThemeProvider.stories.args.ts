@@ -1,4 +1,4 @@
-import { commonStyles } from 'storybook/helper.stories.argtypes';
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { THEME_PROVIDER_CONSTANTS as CONSTANTS } from './';
 

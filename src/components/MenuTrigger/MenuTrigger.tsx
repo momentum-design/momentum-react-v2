@@ -1,21 +1,20 @@
-import classnames from 'classnames';
 import React, { FC, ReactElement, useRef, Children, useState, useEffect, useCallback } from 'react';
-
-import { FocusScope } from '@react-aria/focus';
-import { useKeyboard } from '@react-aria/interactions';
-import { useMenuTrigger } from '@react-aria/menu';
-import { DismissButton } from '@react-aria/overlays';
-import { useMenuTriggerState } from '@react-stately/menu';
-import { FocusStrategy } from '@react-types/shared';
-
-import ContentSeparator from 'components/ContentSeparator';
-import { MenuContext } from 'components/Menu';
-import Popover, { PopoverInstance, PlacementType, VariantType } from 'components/Popover';
+import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './MenuTrigger.constants';
 import { Props } from './MenuTrigger.types';
-
 import './MenuTrigger.style.scss';
+import { useMenuTriggerState } from '@react-stately/menu';
+import { useMenuTrigger } from '@react-aria/menu';
+import { MenuContext } from '../Menu';
+import { DismissButton } from '@react-aria/overlays';
+import { FocusScope } from '@react-aria/focus';
+import { useKeyboard } from '@react-aria/interactions';
+import ContentSeparator from '../ContentSeparator';
+import Popover from '../Popover';
+import type { PopoverInstance, VariantType } from '../Popover/Popover.types';
+import type { FocusStrategy } from '@react-types/shared';
+import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 const MenuTrigger: FC<Props> = (props: Props) => {
   const {

@@ -1,18 +1,17 @@
 import React from 'react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import Avatar from 'components/Avatar';
-import ButtonCircle from 'components/ButtonCircle';
-import ButtonGroup from 'components/ButtonGroup';
-import Icon from 'components/Icon';
-
-import argTypes from './Banner.stories.args';
-import Documentation from './Banner.stories.docs.mdx';
+import Avatar from '../Avatar';
+import ButtonCircle from '../ButtonCircle';
+import ButtonGroup from '../ButtonGroup';
+import Icon from '../Icon';
 
 import Banner, { BannerProps, BANNER_CONSTANTS as CONSTANTS } from './';
+import argTypes from './Banner.stories.args';
+import Documentation from './Banner.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/Banner',

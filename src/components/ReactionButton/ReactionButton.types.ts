@@ -1,7 +1,6 @@
+import { ButtonCircleProps } from './../ButtonCircle/index';
 import { ReactElement } from 'react';
-
-import { ButtonCircleProps } from 'components/ButtonCircle/index';
-import { ReactionProps } from 'components/Reaction';
+import { ReactionProps } from '../Reaction';
 
 export type SupportedChildren = ReactionProps;
 

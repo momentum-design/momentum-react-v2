@@ -1,14 +1,13 @@
+import React, { FC, useCallback, useState } from 'react';
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React, { FC, useCallback, useState } from 'react';
 import '@testing-library/jest-dom';
 
-import ButtonSimple from 'components/ButtonSimple';
-import { COLORS, STYLE } from 'components/ModalContainer/ModalContainer.constants';
-
-import { PopoverInstance } from './Popover.types';
+import ButtonSimple from '../ButtonSimple';
 
 import Popover from './';
+import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
+import { PopoverInstance } from './Popover.types';
 
 describe('<Popover />', () => {
   describe('snapshot', () => {

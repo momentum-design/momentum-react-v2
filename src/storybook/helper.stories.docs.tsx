@@ -1,3 +1,4 @@
+import React, { FC } from 'react';
 import {
   Title,
   Subtitle,
@@ -6,7 +7,6 @@ import {
   ArgsTable,
   PRIMARY_STORY,
 } from '@storybook/addon-docs';
-import React, { FC } from 'react';
 
 /**
  * Generate the documentation page within a story.

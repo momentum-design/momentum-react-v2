@@ -1,12 +1,11 @@
-import classnames from 'classnames';
 import React, { FC, useRef, useState, useCallback } from 'react';
-
-import { useKeyboard } from '@react-aria/interactions';
+import classnames from 'classnames';
 
 import { STYLE } from './List.constants';
 import { Props } from './List.types';
-import { ListContext } from './List.utils';
 import './List.style.scss';
+import { ListContext } from './List.utils';
+import { useKeyboard } from '@react-aria/interactions';
 
 const List: FC<Props> = (props: Props) => {
   const [currentFocus, setCurrentFocus] = useState<number>(0);

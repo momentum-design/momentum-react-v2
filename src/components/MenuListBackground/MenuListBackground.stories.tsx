@@ -1,15 +1,12 @@
 import React from 'react';
-
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Flex from 'components/Flex';
-
-import argTypes from './MenuListBackground.stories.args';
-import Documentation from './MenuListBackground.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import MenuListBackground, { MenuListBackgroundProps } from './';
+import argTypes from './MenuListBackground.stories.args';
+import Documentation from './MenuListBackground.stories.docs.mdx';
+import Flex from '../Flex';
 
 export default {
   title: 'Momentum UI/MenuListBackground',

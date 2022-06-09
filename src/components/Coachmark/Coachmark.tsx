@@ -1,12 +1,12 @@
-import classnames from 'classnames';
 import React, { FC, useCallback, useEffect, useState } from 'react';
+import classnames from 'classnames';
 
-import Popover, { PopoverInstance } from 'components/Popover';
+import Popover, { PopoverInstance } from '../Popover';
 
-import { STYLE } from './Coachmark.constants';
-import { Props } from './Coachmark.types';
 import WithHeader from './WithHeader';
 import WithoutHeader from './WithoutHeader';
+import { STYLE } from './Coachmark.constants';
+import { Props } from './Coachmark.types';
 import './Coachmark.style.scss';
 
 /**

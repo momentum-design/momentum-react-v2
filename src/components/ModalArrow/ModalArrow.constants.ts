@@ -1,5 +1,4 @@
-import type { Color } from 'components/ModalContainer/ModalContainer.types';
-
+import type { Color } from '../ModalContainer/ModalContainer.types';
 import type { PlacementType } from './ModalArrow.types';
 
 const CLASS_PREFIX = 'md-modal-arrow';

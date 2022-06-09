@@ -8,7 +8,6 @@
     "isolatedModules": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "baseUrl": "../../src",
     "paths": {
       "@momentum-ui/react-collaboration": ["../../src"]
     },
