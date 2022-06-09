@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
 
-import { BUTTON_SIMPLE_CONSTANTS } from 'components/ButtonSimple';
+import { BUTTON_SIMPLE_CONSTANTS } from '../ButtonSimple';
 
 import Tag, { TAG_CONSTANTS as CONSTANTS } from './';
 

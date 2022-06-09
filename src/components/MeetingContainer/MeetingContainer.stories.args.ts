@@ -1,8 +1,7 @@
-import { commonStyles, extendArgTypes } from 'storybook/helper.stories.argtypes';
-
-import { buttonSimpleArgTypes } from 'components/ButtonSimple/ButtonSimple.stories.args';
-import { cardArgTypes } from 'components/Card/Card.stories.args';
-import { TEXT_CONSTANTS } from 'components/Text';
+import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
+import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args';
+import { cardArgTypes } from '../Card/Card.stories.args';
+import { TEXT_CONSTANTS } from '../Text';
 
 import { MEETING_CONTAINER_CONSTANTS as CONSTANTS } from './';
 

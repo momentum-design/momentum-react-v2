@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 import '@testing-library/jest-dom';
 
-import { BUTTON_SIMPLE_CONSTANTS } from 'components/ButtonSimple';
+import { BUTTON_SIMPLE_CONSTANTS } from '../ButtonSimple';
 
 import { CARD_STATUS_CONSTANTS as STATUS_CONSTANTS } from './CardStatus';
 

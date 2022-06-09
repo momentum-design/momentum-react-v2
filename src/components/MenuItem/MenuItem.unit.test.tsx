@@ -5,10 +5,9 @@ import React from 'react';
 import { Item } from '@react-stately/collections';
 import { useTreeState } from '@react-stately/tree';
 
-import { ListItemBaseSize } from 'components/ListItemBase/ListItemBase.types';
-import * as menu from 'components/Menu/Menu';
-
 import { triggerPress } from '../../../test/utils';
+import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+import * as menu from '../Menu/Menu';
 
 import MenuItem from './';
 

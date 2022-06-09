@@ -1,16 +1,15 @@
 import React from 'react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Avatar from 'components/Avatar';
-import ButtonHyperlink from 'components/ButtonHyperlink';
-import ButtonPill from 'components/ButtonPill';
-import { CARD_CONSTANTS } from 'components/Card';
-import Icon from 'components/Icon';
-import Tag from 'components/Tag';
-import Text from 'components/Text';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import Avatar from '../Avatar';
+import ButtonHyperlink from '../ButtonHyperlink';
+import ButtonPill from '../ButtonPill';
+import { CARD_CONSTANTS } from '../Card';
+import Icon from '../Icon';
+import Tag from '../Tag';
+import Text from '../Text';
 
 import argTypes from './MeetingContainer.stories.args';
 import Documentation from './MeetingContainer.stories.docs.mdx';
