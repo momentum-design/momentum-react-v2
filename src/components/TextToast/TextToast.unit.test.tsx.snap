@@ -33,11 +33,11 @@ exports[`<TextToast /> snapshot should match snapshot with className 1`] = `
     data-text-alignment="center"
   >
     <Text
-      className="example-class md-text-toast-text"
+      className="md-text-toast-text"
       type="body-secondary"
     >
       <small
-        className="md-text-wrapper example-class md-text-toast-text"
+        className="md-text-wrapper md-text-toast-text"
         data-type="body-secondary"
       >
         Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
