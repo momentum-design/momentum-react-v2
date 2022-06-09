@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import ButtonControl, { BUTTON_CONTROL_CONSTANTS } from 'components/ButtonControl';
-import ButtonGroup from 'components/ButtonGroup';
+import ButtonControl, { BUTTON_CONTROL_CONSTANTS } from '../ButtonControl';
+import ButtonGroup from '../ButtonGroup';
 
 import { STYLE } from './Coachmark.constants';
 import { CoachmarkWithoutHeaderProps } from './Coachmark.types';

@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
-
-import { ButtonSimpleProps } from 'components/ButtonSimple';
+import { ButtonSimpleProps } from '../ButtonSimple';
 
 export interface Props extends ButtonSimpleProps {
   /**

@@ -1,7 +1,7 @@
-import classnames from 'classnames';
 import React, { Children, cloneElement, FC, ReactElement } from 'react';
+import classnames from 'classnames';
 
-import { ButtonControlProps } from 'components/ButtonControl';
+import { ButtonControlProps } from '../ButtonControl';
 
 import { STYLE } from './ToastDetails.constants';
 import { Props } from './ToastDetails.types';

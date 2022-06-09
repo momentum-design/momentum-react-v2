@@ -1,8 +1,6 @@
-import { CSSProperties, ReactElement, ReactNode } from 'react';
-
 import { PressEvent } from '@react-types/shared';
-
-import { AvatarProps } from 'components/Avatar';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
+import { AvatarProps } from '../Avatar';
 
 export enum AvatarMeetingsListItemActions {
   mute = 'mute',

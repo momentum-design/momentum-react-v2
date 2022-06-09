@@ -1,4 +1,4 @@
-import { commonAriaButton, commonStyles } from 'storybook/helper.stories.argtypes';
+import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 

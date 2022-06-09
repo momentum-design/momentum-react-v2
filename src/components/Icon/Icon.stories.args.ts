@@ -1,6 +1,5 @@
-import { commonStyles } from 'storybook/helper.stories.argtypes';
-
 import { ICON_CONSTANTS as CONSTANTS } from './';
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 export default {
   ...commonStyles,

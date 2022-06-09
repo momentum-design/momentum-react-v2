@@ -1,8 +1,6 @@
-import type { MenuTriggerProps } from '@react-types/menu';
-
-import type { PopoverCommonStyleProps, PlacementType } from 'components/Popover/Popover.types';
-
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { MenuTriggerProps } from '@react-types/menu';
+import type { PopoverCommonStyleProps, PlacementType } from '../Popover/Popover.types';
 
 export interface Props
   extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip' | 'defaultOpen'>,

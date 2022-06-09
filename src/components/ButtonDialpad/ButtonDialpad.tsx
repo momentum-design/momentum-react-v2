@@ -1,12 +1,10 @@
-import classnames from 'classnames';
 import React, { forwardRef, RefObject } from 'react';
-
-import ButtonSimple from 'components/ButtonSimple';
+import ButtonSimple from '../ButtonSimple';
 
 import { DEFAULTS, STYLE } from './ButtonDialpad.constants';
 import { Props } from './ButtonDialpad.types';
-
 import './ButtonDialpad.style.scss';
+import classnames from 'classnames';
 
 const ButtonDialpad = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, disabled, size, ...otherProps } = props;

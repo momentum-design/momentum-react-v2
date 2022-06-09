@@ -1,5 +1,5 @@
-import classnames from 'classnames';
 import React, { Children, cloneElement, FC } from 'react';
+import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './AlertBanner.constants';
 import { Props } from './AlertBanner.types';

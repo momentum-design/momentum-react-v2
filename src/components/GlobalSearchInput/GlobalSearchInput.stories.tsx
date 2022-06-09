@@ -1,13 +1,11 @@
-import React, { useState, FC } from 'react';
-
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import argTypes from './GlobalSearchInput.stories.args';
-import Documentation from './GlobalSearchInput.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import GlobalSearchInput, { GlobalSearchInputProps, GlobalSearchInputSearchFilter } from './';
+import argTypes from './GlobalSearchInput.stories.args';
+import Documentation from './GlobalSearchInput.stories.docs.mdx';
+import React, { useState, FC } from 'react';
 
 export default {
   title: 'Momentum UI/GlobalSearchInput',

@@ -1,11 +1,8 @@
+import ListItemBase from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-
-import * as ListContext from 'components/List/List.utils';
-
 import { STYLE } from './ListItemBase.constants';
-
-import ListItemBase from '.';
+import * as ListContext from '../List/List.utils';
 
 describe('ListItemBase', () => {
   let container;

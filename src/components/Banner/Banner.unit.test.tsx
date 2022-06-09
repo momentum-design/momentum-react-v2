@@ -1,12 +1,11 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import Avatar from 'components/Avatar';
-import ButtonCircle from 'components/ButtonCircle';
-import ButtonGroup from 'components/ButtonGroup';
-import Icon from 'components/Icon';
-
+import { mount } from 'enzyme';
 import { mountAndWait } from '../../../test/utils';
+
+import Avatar from '../Avatar';
+import ButtonCircle from '../ButtonCircle';
+import ButtonGroup from '../ButtonGroup';
+import Icon from '../Icon';
 
 import Banner, { BANNER_CONSTANTS as CONSTANTS } from './';
 

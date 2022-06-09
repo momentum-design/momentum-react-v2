@@ -1,9 +1,9 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
+import classnames from 'classnames';
 
 import './AvatarCompact.style.scss';
-import { STYLE, K_THRESHOLD } from './AvatarCompact.constants';
 import { Props } from './AvatarCompact.types';
+import { STYLE, K_THRESHOLD } from './AvatarCompact.constants';
 
 const AvatarCompact: FC<Props> = (props: Props) => {
   const { className, count } = props;

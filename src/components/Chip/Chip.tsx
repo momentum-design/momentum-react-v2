@@ -1,12 +1,12 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
-
-import ButtonPill from 'components/ButtonPill';
-import Text from 'components/Text';
+import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Chip.constants';
 import { Props } from './Chip.types';
 import './Chip.style.scss';
+
+import ButtonPill from '../ButtonPill';
+import Text from '../Text';
 
 /**
  * The Chip component.

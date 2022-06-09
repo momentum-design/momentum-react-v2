@@ -1,5 +1,5 @@
-import { PLACEMENTS } from 'components/ModalArrow/ModalArrow.constants';
-import { COLORS } from 'components/ModalContainer/ModalContainer.constants';
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
+import { COLORS } from '../ModalContainer/ModalContainer.constants';
 
 const CLASS_PREFIX = 'md-popover';
 

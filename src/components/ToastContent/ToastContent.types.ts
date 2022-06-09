@@ -1,6 +1,6 @@
 import { CSSProperties, ReactElement } from 'react';
 
-import { ButtonGroupProps } from 'components/ButtonGroup';
+import { ButtonGroupProps } from '../ButtonGroup';
 
 export type SupportedActionsButtons = ButtonGroupProps;
 

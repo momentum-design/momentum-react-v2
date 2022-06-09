@@ -1,12 +1,11 @@
-import classnames from 'classnames';
 import React, { ReactElement, useState, useEffect, useRef } from 'react';
 import VerificationInput from 'react-verification-input';
 
-import InputMessage, { getFilteredMessages } from 'components/InputMessage';
-
-import { STYLE } from './CodeInput.constants';
-import { Props } from './CodeInput.types';
 import './CodeInput.style.scss';
+import { Props } from './CodeInput.types';
+import InputMessage, { getFilteredMessages } from '../InputMessage';
+import classnames from 'classnames';
+import { STYLE } from './CodeInput.constants';
 
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const {

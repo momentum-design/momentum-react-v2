@@ -1,13 +1,12 @@
-import classnames from 'classnames';
 import React, { forwardRef, RefObject } from 'react';
+import classnames from 'classnames';
 
-import ModalArrow from 'components/ModalArrow';
+import ModalArrow from '../ModalArrow';
 
 import { ARROW_ID, DEFAULTS, STYLE } from './ModalContainer.constants';
-import { getArrowOrientation } from './ModalContainer.utils';
-import './ModalContainer.style.scss';
-
 import type { Props } from './ModalContainer.types';
+import './ModalContainer.style.scss';
+import { getArrowOrientation } from './ModalContainer.utils';
 
 const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   const {

@@ -1,33 +1,29 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import { action } from '@storybook/addon-actions';
 import React, { useEffect, useState } from 'react';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import { v4 as uuid } from 'uuid';
-
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Avatar from 'components/Avatar';
-import { PresenceType } from 'components/Avatar/Avatar.types';
-import Badge from 'components/Badge';
-import ButtonGroup from 'components/ButtonGroup';
-import ButtonHyperlink from 'components/ButtonHyperlink';
-import ButtonPill from 'components/ButtonPill';
-import Flex from 'components/Flex';
-import Icon from 'components/Icon';
-import ListItemBase from 'components/ListItemBase';
-import MeetingListItem from 'components/MeetingListItem';
-import { MeetingMarker } from 'components/MeetingListItem/MeetingListItem.types';
-import SpaceListItem from 'components/SpaceListItem';
-import Text from 'components/Text';
-import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
-import { TeamColor } from 'components/ThemeProvider/ThemeProvider.types';
-
+import List, { ListProps } from './';
 import argTypes from './List.stories.args';
 import Documentation from './List.stories.docs.mdx';
-
-import List, { ListProps } from './';
+import ListItemBase from '../ListItemBase';
+import SpaceListItem from '../SpaceListItem';
+import { PresenceType } from '../Avatar/Avatar.types';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+import Avatar from '../Avatar';
+import Flex from '../Flex';
+import Icon from '../Icon';
+import ButtonPill from '../ButtonPill';
+import Text from '../Text';
+import { action } from '@storybook/addon-actions';
+import MeetingListItem from '../MeetingListItem';
+import { MeetingMarker } from '../MeetingListItem/MeetingListItem.types';
+import ButtonGroup from '../ButtonGroup';
+import ButtonHyperlink from '../ButtonHyperlink';
+import Badge from '../Badge';
 
 const TEST_LIST_SIZE = 30;
 

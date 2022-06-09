@@ -1,5 +1,5 @@
-import { PLACEMENTS } from 'components/ModalArrow/ModalArrow.constants';
-import { PlacementType } from 'components/ModalArrow/ModalArrow.types';
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
+import { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 type Orientation = 'horizontal' | 'vertical' | undefined;
 

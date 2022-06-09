@@ -1,7 +1,6 @@
+import ContentSeparator from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-
-import ContentSeparator from '.';
 
 describe('ContentSeparator', () => {
   describe('snapshot', () => {

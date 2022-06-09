@@ -1,16 +1,13 @@
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import React from 'react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import { Icon, ListItemBaseSection, Text } from '..';
-
-import { OUTLINE_COLOR, OUTLINE_POSITION } from './ListHeader.constants';
+import ListHeader, { ListHeaderProps } from './';
 import argTypes from './ListHeader.stories.args';
 import Documentation from './ListHeader.stories.docs.mdx';
-
-import ListHeader, { ListHeaderProps } from './';
+import { Icon, ListItemBaseSection, Text } from '..';
+import { OUTLINE_COLOR, OUTLINE_POSITION } from './ListHeader.constants';
 
 export default {
   title: 'Momentum UI/ListHeader',

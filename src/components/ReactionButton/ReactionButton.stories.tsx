@@ -1,16 +1,14 @@
 import React from 'react';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Reaction from 'components/Reaction';
-import { REACTION_NAMES } from 'components/Reaction/Reaction.constants';
-
+import ReactionButton, { ReactionButtonProps } from './';
 import argTypes from './ReactionButton.stories.args';
 import Documentation from './ReactionButton.stories.docs.mdx';
 
-import ReactionButton, { ReactionButtonProps } from './';
+import Reaction from '../Reaction';
+import { REACTION_NAMES } from '../Reaction/Reaction.constants';
 
 export default {
   title: 'Momentum UI/ReactionButton',

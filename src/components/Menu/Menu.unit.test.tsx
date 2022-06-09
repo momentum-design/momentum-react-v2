@@ -1,13 +1,10 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
+import { mount } from 'enzyme';
 import { Item } from '@react-stately/collections';
 
-import ListItemBase from 'components/ListItemBase';
-
-import { triggerPress } from '../../../test/utils';
-
 import Menu, { MENU_CONSTANTS as CONSTANTS } from './';
+import { triggerPress } from '../../../test/utils';
+import ListItemBase from '../ListItemBase';
 
 describe('<Menu />', () => {
   const defaultProps = {

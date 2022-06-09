@@ -1,16 +1,15 @@
 import React from 'react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import ButtonSimple from 'components/ButtonSimple';
-import Icon from 'components/Icon';
-
-import argTypes from './AlertBanner.stories.args';
-import Documentation from './AlertBanner.stories.docs.mdx';
+import ButtonSimple from '../ButtonSimple';
+import Icon from '../Icon';
 
 import AlertBanner, { AlertBannerProps } from './';
+import argTypes from './AlertBanner.stories.args';
+import Documentation from './AlertBanner.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/AlertBanner',

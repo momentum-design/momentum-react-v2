@@ -1,13 +1,12 @@
 import React from 'react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import argTypes from './ModalContainer.stories.args';
-import Documentation from './ModalContainer.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import ModalContainer, { ModalContainerProps, MODAL_CONTAINER_CONSTANTS as CONSTANTS } from './';
+import argTypes from './ModalContainer.stories.args';
+import Documentation from './ModalContainer.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/ModalContainer',

@@ -2,15 +2,13 @@
 import React, { ReactElement, useContext } from 'react';
 
 import './ListBoxItem.style.scss';
-import { useOption } from '@react-aria/listbox';
-
-import Icon from 'components/Icon';
-import { ListBoxContext } from 'components/ListBoxBase/ListBoxBase';
-import ListItemBase from 'components/ListItemBase';
-import ListItemBaseSection from 'components/ListItemBaseSection';
-
-import { STYLE } from './ListBoxItem.constants';
 import { Props } from './ListBoxItem.types';
+import { STYLE } from './ListBoxItem.constants';
+import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
+import { useOption } from '@react-aria/listbox';
+import Icon from '../Icon';
+import ListItemBaseSection from '../ListItemBaseSection';
+import ListItemBase from '../ListItemBase';
 
 function ListBoxItem<T>(props: Props<T>): ReactElement {
   const { item } = props;

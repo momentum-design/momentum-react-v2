@@ -1,5 +1,4 @@
-import { commonStyles } from 'storybook/helper.stories.argtypes';
-
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { SCHEDULER_STATES } from './AvatarMeetingsListItem.constants';
 
 export default {

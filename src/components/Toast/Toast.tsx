@@ -1,8 +1,8 @@
-import classnames from 'classnames';
 import React, { Children, cloneElement, FC, ReactElement } from 'react';
+import classnames from 'classnames';
 
-import ToastContent, { ToastContentProps } from 'components/ToastContent';
-import ToastDetails, { ToastDetailsProps } from 'components/ToastDetails';
+import ToastContent, { ToastContentProps } from '../ToastContent';
+import ToastDetails, { ToastDetailsProps } from '../ToastDetails';
 
 import { STYLE } from './Toast.constants';
 import { Props } from './Toast.types';

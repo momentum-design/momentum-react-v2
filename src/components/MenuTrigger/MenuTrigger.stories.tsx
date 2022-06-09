@@ -1,24 +1,20 @@
-import { action } from '@storybook/addon-actions';
 import React from 'react';
-
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import { Item, Section } from '@react-stately/collections';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Avatar from 'components/Avatar';
-import { PresenceType } from 'components/Avatar/Avatar.types';
-import ButtonCircle from 'components/ButtonCircle';
-import ButtonPill from 'components/ButtonPill';
-import Flex from 'components/Flex';
-import Icon from 'components/Icon';
-import Menu from 'components/Menu';
-
+import MenuTrigger, { MenuTriggerProps } from './';
 import argTypes from './MenuTrigger.stories.args';
 import Documentation from './MenuTrigger.stories.docs.mdx';
-
-import MenuTrigger, { MenuTriggerProps } from './';
+import ButtonPill from '../ButtonPill';
+import ButtonCircle from '../ButtonCircle';
+import Menu from '../Menu';
+import Icon from '../Icon';
+import Flex from '../Flex';
+import Avatar from '../Avatar';
+import { PresenceType } from '../Avatar/Avatar.types';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/MenuTrigger',

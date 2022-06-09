@@ -1,11 +1,10 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const { repoRoot } = require('./constants');
 const { baseConfig } = require('./webpack.config.base');
+const { repoRoot } = require('./constants');
 
 baseConfig.plugins.push(
   new webpack.DefinePlugin({

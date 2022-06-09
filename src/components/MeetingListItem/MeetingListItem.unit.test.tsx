@@ -1,15 +1,13 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import Avatar from 'components/Avatar';
-import ButtonCircle from 'components/ButtonCircle';
-import ButtonGroup from 'components/ButtonGroup';
-import ButtonPill from 'components/ButtonPill';
-import Icon from 'components/Icon';
-
-import { mountAndWait } from '../../../test/utils';
+import { mount } from 'enzyme';
 
 import MeetingListItem, { MEETING_LIST_ITEM_CONSTANTS as CONSTANTS, MeetingMarker } from './';
+import ButtonGroup from '../ButtonGroup';
+import Icon from '../Icon';
+import Avatar from '../Avatar';
+import ButtonPill from '../ButtonPill';
+import ButtonCircle from '../ButtonCircle';
+import { mountAndWait } from '../../../test/utils';
 
 describe('<MeetingListItem />', () => {
   describe('snapshot', () => {

@@ -1,5 +1,4 @@
-import { commonAriaPressProps, commonStyles } from 'storybook/helper.stories.argtypes';
-
+import { commonAriaPressProps, commonStyles } from '../../storybook/helper.stories.argtypes';
 import { MeetingMarker } from './MeetingListItem.types';
 
 export default {

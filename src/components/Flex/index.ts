@@ -1,6 +1,6 @@
 import { default as Flex } from './Flex';
-import * as CONSTANTS from './Flex.constants';
 import { Props } from './Flex.types';
+import * as CONSTANTS from './Flex.constants';
 
 export { CONSTANTS as FLEX_CONSTANTS };
 

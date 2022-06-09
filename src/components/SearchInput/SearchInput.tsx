@@ -1,20 +1,18 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import classnames from 'classnames';
 import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
+import classnames from 'classnames';
 
+import ButtonSimple from '../ButtonSimple';
+import { STYLE } from './SearchInput.constants';
+import { Props } from './SearchInput.types';
+import './SearchInput.style.scss';
 import { useSearchField } from '@react-aria/searchfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
+import InputMessage from '../InputMessage';
+import { useFocusState } from '../../hooks/useFocusState';
 
-import ButtonSimple from 'components/ButtonSimple';
-import Icon from 'components/Icon';
-import InputMessage from 'components/InputMessage';
-import { useFocusState } from 'hooks/useFocusState';
-
-import { STYLE } from './SearchInput.constants';
-import './SearchInput.style.scss';
-
-import type { Props } from './SearchInput.types';
+import Icon from '../Icon';
 
 /**
  *  Search input

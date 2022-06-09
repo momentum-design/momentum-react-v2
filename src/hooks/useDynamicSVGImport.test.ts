@@ -1,6 +1,5 @@
-import { renderHook } from '@testing-library/react-hooks';
-
 import { useDynamicSVGImport } from './useDynamicSVGImport';
+import { renderHook } from '@testing-library/react-hooks';
 
 describe('Icon', () => {
   beforeEach(() => jest.resetModules());

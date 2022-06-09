@@ -1,11 +1,10 @@
-import { renderHook } from '@testing-library/react-hooks';
-import { mount } from 'enzyme';
 import React from 'react';
-
+import { mount } from 'enzyme';
 import { Item, Section } from '@react-stately/collections';
-import { useTreeState } from '@react-stately/tree';
 
 import MenuSection from './';
+import { renderHook } from '@testing-library/react-hooks';
+import { useTreeState } from '@react-stately/tree';
 
 describe('<MenuSection />', () => {
   const { result } = renderHook(() =>

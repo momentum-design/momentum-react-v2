@@ -1,5 +1,4 @@
 import { CSSProperties } from 'react';
-
 import { AriaSearchFieldProps } from '@react-types/searchfield';
 
 export interface SearchFilterTranslations {

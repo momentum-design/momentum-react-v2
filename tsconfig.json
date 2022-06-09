@@ -10,7 +10,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "outDir": "./dist/esm",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
       "@momentum-ui/react-collaboration": [
         "./src"

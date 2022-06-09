@@ -1,6 +1,5 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
+import { mount } from 'enzyme';
 import { simulateMouseEnter, simulateMouseLeave } from '../../../test/utils';
 
 import ButtonSimple from './';

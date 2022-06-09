@@ -1,5 +1,4 @@
-import { PLACEMENTS } from 'components/ModalArrow/ModalArrow.constants';
-
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import type { Color, Elevation, Round } from './ModalContainer.types';
 
 const CLASS_PREFIX = 'md-modal-container';

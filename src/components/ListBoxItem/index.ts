@@ -1,6 +1,6 @@
 import { default as ListBoxItem } from './ListBoxItem';
-import * as CONSTANTS from './ListBoxItem.constants';
 import { Props } from './ListBoxItem.types';
+import * as CONSTANTS from './ListBoxItem.constants';
 
 export { CONSTANTS as LIST_BOX_ITEM_CONSTANTS };
 

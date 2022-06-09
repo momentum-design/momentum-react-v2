@@ -1,16 +1,13 @@
 import React from 'react';
-
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Reaction from 'components/Reaction';
-import ReactionButton from 'components/ReactionButton';
-
-import argTypes from './ReactionPicker.stories.args';
-import Documentation from './ReactionPicker.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import ReactionPicker, { ReactionPickerProps } from './';
+import Reaction from '../Reaction';
+import ReactionButton from '../ReactionButton';
+import argTypes from './ReactionPicker.stories.args';
+import Documentation from './ReactionPicker.stories.docs.mdx';
 
 const reactionChildren = [
   <ReactionButton key="1">

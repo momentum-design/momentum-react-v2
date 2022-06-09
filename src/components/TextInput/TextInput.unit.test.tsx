@@ -1,13 +1,10 @@
 import React from 'react';
-import { act } from 'react-dom/test-utils';
-
 import { SSRProvider } from '@react-aria/ssr';
 
-import { Message } from 'components/InputMessage/InputMessage.types';
-
 import { mountAndWait } from '../../../test/utils';
-
 import TextInput, { TEXT_INPUT_CONSTANTS as CONSTANTS } from './';
+import { act } from 'react-dom/test-utils';
+import { Message } from '../InputMessage/InputMessage.types';
 
 describe('<TextInput/>', () => {
   describe('snapshot', () => {

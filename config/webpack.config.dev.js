@@ -1,10 +1,9 @@
 const autoprefixer = require('autoprefixer');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 const { baseConfig } = require('./base.config');
 const { repoRoot } = require('./constants');

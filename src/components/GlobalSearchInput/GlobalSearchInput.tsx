@@ -1,22 +1,19 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import classnames from 'classnames';
-import { difference } from 'lodash';
 import React, { FC, useRef, useState, useEffect } from 'react';
+import classnames from 'classnames';
 
-import { useSearchField } from '@react-aria/searchfield';
-import { useSearchFieldState } from '@react-stately/searchfield';
-import { BaseEvent } from '@react-types/shared';
-
-import ButtonSimple from 'components/ButtonSimple';
-import Icon from 'components/Icon';
-import { useFocusState } from 'hooks/useFocusState';
-
+import ButtonSimple from '../ButtonSimple';
 import { STYLE } from './GlobalSearchInput.constants';
 import { Props } from './GlobalSearchInput.types';
-
 import './GlobalSearchInput.style.scss';
+import { useSearchField } from '@react-aria/searchfield';
+import { useSearchFieldState } from '@react-stately/searchfield';
+import { difference } from 'lodash';
 
+import Icon from '../Icon';
+import { BaseEvent } from '@react-types/shared';
+import { useFocusState } from '../../hooks/useFocusState';
 /**
  * Global search input. Used for global search only
  */

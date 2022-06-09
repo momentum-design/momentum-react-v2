@@ -1,8 +1,6 @@
-import { CSSProperties } from 'react';
-
 import type { AriaTextFieldProps } from '@react-types/textfield';
-
-import type { Message } from 'components/InputMessage/InputMessage.types';
+import { CSSProperties } from 'react';
+import type { Message } from '../InputMessage/InputMessage.types';
 
 export interface Props extends Omit<AriaTextFieldProps, 'errorMessage'> {
   /**

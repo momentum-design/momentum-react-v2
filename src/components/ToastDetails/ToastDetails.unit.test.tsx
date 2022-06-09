@@ -1,9 +1,8 @@
 import React from 'react';
-
-import Avatar from 'components/Avatar';
-import ButtonControl from 'components/ButtonControl';
-
 import { mountAndWait } from '../../../test/utils';
+
+import Avatar from '../Avatar';
+import ButtonControl from '../ButtonControl';
 
 import ToastDetails, { TOAST_DETAILS_CONSTANTS as CONSTANTS, ToastDetailsProps } from './';
 

@@ -1,6 +1,6 @@
-import { commonStyles, extendArgTypes } from 'storybook/helper.stories.argtypes';
+import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
 
-import { modalContainerArgTypes } from 'components/ModalContainer/ModalContainer.stories.args';
+import { modalContainerArgTypes } from '../ModalContainer/ModalContainer.stories.args';
 
 import { BANNER_CONSTANTS as CONSTANTS } from '.';
 

@@ -1,9 +1,8 @@
 // Taken from here: https://github.com/adobe/react-spectrum/blob/main/plop-actions/renameMany.js
-const globby = require('globby');
-
-const fs = require('fs');
 const path = require('path');
 const util = require('util');
+const fs = require('fs');
+const globby = require('globby');
 
 const renameAsync = util.promisify(fs.rename);
 

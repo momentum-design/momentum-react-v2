@@ -1,12 +1,12 @@
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+import Icon, { IconProps } from './';
 
-import { SIZES, WEIGHTS } from './Icon.constants';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+
 import argTypes from './Icon.stories.args';
 import Documentation from './Icon.stories.docs.mdx';
-
-import Icon, { IconProps } from './';
+import { SIZES, WEIGHTS } from './Icon.constants';
 
 export default {
   title: 'Momentum UI/Icon',

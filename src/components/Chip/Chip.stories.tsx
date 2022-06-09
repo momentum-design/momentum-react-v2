@@ -1,15 +1,13 @@
-import React from 'react';
-
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import Avatar from '../Avatar';
-import Icon from '../Icon';
-
-import argTypes from './Chip.stories.args';
-import Documentation from './Chip.stories.docs.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import Chip, { ChipProps } from './';
+import argTypes from './Chip.stories.args';
+import Documentation from './Chip.stories.docs.mdx';
+import Icon from '../Icon';
+import React from 'react';
+import Avatar from '../Avatar';
 
 export default {
   title: 'Momentum UI/Chip',

@@ -1,5 +1,4 @@
-import { commonStyles } from 'storybook/helper.stories.argtypes';
-
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { MENU_LIST_BACKGROUND_CONSTANTS as CONSTANTS } from './';
 
 export default {

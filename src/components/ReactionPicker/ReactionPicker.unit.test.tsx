@@ -1,9 +1,8 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import ReactionButton from 'components/ReactionButton';
+import { mount } from 'enzyme';
 
 import ReactionPicker, { REACTION_PICKER_CONSTANTS as CONSTANTS } from './';
+import ReactionButton from '../ReactionButton';
 
 describe('<ReactionPicker />', () => {
   describe('snapshot', () => {

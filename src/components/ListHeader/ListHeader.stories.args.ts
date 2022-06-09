@@ -1,5 +1,4 @@
-import { commonStyles } from 'storybook/helper.stories.argtypes';
-
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import * as CONSTANTS from './ListHeader.constants';
 const listHeaderArgTypes = {
   children: {

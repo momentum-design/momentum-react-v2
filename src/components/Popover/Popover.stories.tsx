@@ -1,21 +1,17 @@
 import React from 'react';
-
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import Documentation from './Popover.stories.docs.mdx';
 import { Item } from '@react-stately/collections';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import ButtonPill from 'components/ButtonPill';
-import ButtonSimple from 'components/ButtonSimple';
-import Menu from 'components/Menu';
-import { PLACEMENTS } from 'components/ModalArrow/ModalArrow.constants';
-import { COLORS } from 'components/ModalContainer/ModalContainer.constants';
-
-import argTypes from './Popover.stories.args';
-import Documentation from './Popover.stories.docs.mdx';
-
 import Popover, { PopoverProps } from './';
+import ButtonPill from '../ButtonPill';
+import ButtonSimple from '../ButtonSimple';
+import Menu from '../Menu';
+import { COLORS } from '../ModalContainer/ModalContainer.constants';
+import argTypes from './Popover.stories.args';
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 
 export default {
   title: 'Momentum UI/Popover',

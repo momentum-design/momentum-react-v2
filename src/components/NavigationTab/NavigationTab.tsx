@@ -1,11 +1,11 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
+import classnames from 'classnames';
+import FocusRing from '../FocusRing';
 
-import Badge from 'components/Badge';
-import ButtonSimple from 'components/ButtonSimple';
-import FocusRing from 'components/FocusRing';
-import Icon from 'components/Icon';
-import Text from 'components/Text';
+import Icon from '../Icon';
+import Badge from '../Badge';
+import Text from '../Text';
+import ButtonSimple from '../ButtonSimple';
 
 import { DEFAULTS, STYLE } from './NavigationTab.constants';
 import { Props } from './NavigationTab.types';

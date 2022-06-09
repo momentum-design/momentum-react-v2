@@ -1,17 +1,16 @@
 import React from 'react';
 
-import AriaButtonDocs from 'storybook/docs.stories.aria-button.mdx';
-import HTMLGlobalAttributes from 'storybook/docs.stories.common-html-attributes.mdx';
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
+import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
 
-import Icon from 'components/Icon';
-
-import argTypes from './AlertBadge.stories.args';
-import Documentation from './AlertBadge.stories.docs.mdx';
+import Icon from '../Icon';
 
 import AlertBadge, { AlertBadgeProps } from './';
+import argTypes from './AlertBadge.stories.args';
+import Documentation from './AlertBadge.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/AlertBadge',

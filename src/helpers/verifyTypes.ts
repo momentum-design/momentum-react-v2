@@ -1,8 +1,7 @@
 import React, { FC, ReactNode } from 'react';
-
-import ButtonCircle from 'components/ButtonCircle';
-import ButtonPill from 'components/ButtonPill';
-import ButtonSimple from 'components/ButtonSimple';
+import ButtonSimple from '../components/ButtonSimple';
+import ButtonCircle from '../components/ButtonCircle';
+import ButtonPill from '../components/ButtonPill';
 
 export const MRv2Buttons = [ButtonPill, ButtonCircle, ButtonSimple];
 

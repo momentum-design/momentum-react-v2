@@ -1,20 +1,18 @@
-import React from 'react';
-
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
-import Avatar from '../Avatar';
-import ButtonHyperlink from '../ButtonHyperlink';
-import ButtonPill from '../ButtonPill';
-import { CARD_CONSTANTS } from '../Card';
-import Icon from '../Icon';
-import Tag from '../Tag';
-import Text from '../Text';
-
-import argTypes from './MeetingContainer.stories.args';
-import Documentation from './MeetingContainer.stories.docs.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import MeetingContainer, { MeetingContainerProps } from './';
+import argTypes from './MeetingContainer.stories.args';
+import Documentation from './MeetingContainer.stories.docs.mdx';
+import React from 'react';
+import ButtonPill from '../ButtonPill';
+import Icon from '../Icon';
+import Avatar from '../Avatar';
+import Tag from '../Tag';
+import Text from '../Text';
+import ButtonHyperlink from '../ButtonHyperlink';
+import { CARD_CONSTANTS } from '../Card';
 
 export default {
   title: 'Momentum UI/MeetingContainer',

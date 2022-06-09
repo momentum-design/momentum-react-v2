@@ -1,17 +1,15 @@
-import { Story } from '@storybook/react';
 import React, { useState } from 'react';
+import { Story } from '@storybook/react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-
-import ButtonHyperlink from 'components/ButtonHyperlink';
-import ButtonPill from 'components/ButtonPill';
-import ButtonSimple from 'components/ButtonSimple';
-
-import argTypes from './Coachmark.stories.args';
-import Documentation from './Coachmark.stories.docs.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import Coachmark, { CoachmarkProps } from './';
+import ButtonSimple from '../ButtonSimple';
+import ButtonHyperlink from '../ButtonHyperlink';
+import ButtonPill from '../ButtonPill';
+import argTypes from './Coachmark.stories.args';
+import Documentation from './Coachmark.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/Coachmark',

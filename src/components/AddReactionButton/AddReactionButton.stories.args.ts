@@ -1,6 +1,9 @@
-import { commonAriaButton, commonStyles, extendArgTypes } from 'storybook/helper.stories.argtypes';
-
-import { buttonCircleArgTypes } from 'components/ButtonCircle/ButtonCircle.stories.args';
+import {
+  commonAriaButton,
+  commonStyles,
+  extendArgTypes,
+} from '../../storybook/helper.stories.argtypes';
+import { buttonCircleArgTypes } from '../ButtonCircle/ButtonCircle.stories.args';
 
 const addReactionButtonArgTypes = {};
 

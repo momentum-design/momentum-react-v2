@@ -1,23 +1,20 @@
-import { action } from '@storybook/addon-actions';
 import React from 'react';
-
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import Avatar from 'components/Avatar';
-import { PresenceType } from 'components/Avatar/Avatar.types';
-import ButtonPill from 'components/ButtonPill';
-import Flex from 'components/Flex';
-import Icon from 'components/Icon';
-import Text from 'components/Text';
-import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
-import { TeamColor } from 'components/ThemeProvider/ThemeProvider.types';
-
-import argTypes from './SpaceListItem.stories.args';
-import Documentation from './SpaceListItem.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import SpaceListItem, { SpaceListItemProps } from './';
+import argTypes from './SpaceListItem.stories.args';
+import Documentation from './SpaceListItem.stories.docs.mdx';
+import { PresenceType } from '../Avatar/Avatar.types';
+import ButtonPill from '../ButtonPill';
+import Flex from '../Flex';
+import Text from '../Text';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
+import Icon from '../Icon';
+import Avatar from '../Avatar';
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/SpaceListItem',

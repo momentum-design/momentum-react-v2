@@ -1,12 +1,10 @@
-import classnames from 'classnames';
 import React, { forwardRef, RefObject } from 'react';
-
-import ButtonPill from 'components/ButtonPill';
+import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './ReactionBadge.constants';
+import { Props } from './ReactionBadge.types';
 import './ReactionBadge.style.scss';
-
-import type { Props } from './ReactionBadge.types';
+import ButtonPill from '../ButtonPill';
 
 const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, count, reacted, reaction, ...otherProps } = props;

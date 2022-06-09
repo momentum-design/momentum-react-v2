@@ -1,11 +1,11 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
+import classnames from 'classnames';
 
 import './Badge.style.scss';
-import Icon from 'components/Icon/Icon';
-
-import { DEFAULTS, STYLE } from './Badge.constants';
 import { Props } from './Badge.types';
+import { DEFAULTS, STYLE } from './Badge.constants';
+
+import Icon from '../Icon/Icon';
 
 const Badge: FC<Props> = (props: Props) => {
   const { className, id, size, style } = props;

@@ -1,10 +1,9 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import { TYPES, STYLE } from './Text.constants';
+import { mount } from 'enzyme';
+import Text from '.';
 import { FontStyle } from './Text.types';
 
-import Text from '.';
+import { TYPES, STYLE } from './Text.constants';
 
 describe('Text', () => {
   let container;

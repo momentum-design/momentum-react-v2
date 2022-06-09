@@ -1,6 +1,5 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
-
+import classnames from 'classnames';
 import { FocusRing as AriaFocusRing } from '@react-aria/focus';
 
 import { STYLE } from './FocusRing.constants';

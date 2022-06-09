@@ -1,9 +1,8 @@
-import { mount } from 'enzyme';
 import React from 'react';
-
-import ListItemBase from 'components/ListItemBase';
+import { mount } from 'enzyme';
 
 import List, { LIST_CONSTANTS as CONSTANTS } from './';
+import ListItemBase from '../ListItemBase';
 
 describe('<List />', () => {
   const commonProps = {

@@ -1,5 +1,5 @@
-import classnames from 'classnames';
 import React, { FC } from 'react';
+import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
 import Text, { TEXT_CONSTANTS } from '../Text';

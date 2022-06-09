@@ -1,6 +1,6 @@
 import { default as AvatarCompact } from './AvatarCompact';
-import * as CONSTANTS from './AvatarCompact.constants';
 import { Props } from './AvatarCompact.types';
+import * as CONSTANTS from './AvatarCompact.constants';
 
 export { CONSTANTS as AVATAR_COMPACT_CONSTANTS };
 

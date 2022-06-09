@@ -3,7 +3,6 @@
 
 const browserSync = require('browser-sync');
 const historyApiFallback = require('connect-history-api-fallback');
-
 const { chalkProcessing } = require('./chalkConfig');
 
 /* eslint-disable no-console */

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { mountAndWait } from '../../../test/utils';
 
 import AddReactionButton, { ADD_REACTION_BUTTON_CONSTANTS as CONSTANTS } from './';

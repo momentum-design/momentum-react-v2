@@ -3,7 +3,7 @@ import {
   commonAriaHover,
   commonHTMLAttributes,
   commonStyles,
-} from 'storybook/helper.stories.argtypes';
+} from '../../storybook/helper.stories.argtypes';
 
 const buttonSimpleArgTypes = {
   children: {

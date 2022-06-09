@@ -1,5 +1,5 @@
-import classnames from 'classnames';
 import React, { cloneElement, FC } from 'react';
+import classnames from 'classnames';
 
 import { STYLE } from './ToastContent.constants';
 import { Props } from './ToastContent.types';

@@ -1,9 +1,7 @@
 import React from 'react';
-import { act } from 'react-dom/test-utils';
-
-import { mountAndWait } from '../../test/utils';
-
 import { useFocusState } from './useFocusState';
+import { act } from 'react-dom/test-utils';
+import { mountAndWait } from '../../test/utils';
 
 describe('useFocusStateTests', () => {
   it('focus and blur update state and call original event handlers', async () => {

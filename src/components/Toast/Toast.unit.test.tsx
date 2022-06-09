@@ -1,15 +1,14 @@
 import React, { ReactElement } from 'react';
-
-import Avatar from 'components/Avatar';
-import ButtonCircle from 'components/ButtonCircle';
-import ButtonControl, { ButtonControlProps } from 'components/ButtonControl';
-import ButtonGroup, { ButtonGroupProps } from 'components/ButtonGroup';
-import ButtonPill from 'components/ButtonPill';
-import Icon from 'components/Icon';
-import ToastContent, { ToastContentProps } from 'components/ToastContent';
-import ToastDetails, { ToastDetailsProps, TOAST_DETAILS_CONSTANTS } from 'components/ToastDetails';
-
 import { mountAndWait } from '../../../test/utils';
+
+import Avatar from '../Avatar';
+import ButtonCircle from '../ButtonCircle';
+import ButtonControl, { ButtonControlProps } from '../ButtonControl';
+import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup';
+import ButtonPill from '../ButtonPill';
+import Icon from '../Icon';
+import ToastContent, { ToastContentProps } from '../ToastContent';
+import ToastDetails, { ToastDetailsProps, TOAST_DETAILS_CONSTANTS } from '../ToastDetails';
 
 import Toast, { TOAST_CONSTANTS as CONSTANTS } from './';
 

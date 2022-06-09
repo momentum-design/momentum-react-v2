@@ -1,15 +1,11 @@
+import Avatar from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-
-import { TEAM_COLORS } from 'components/ThemeProvider/ThemeProvider.constants';
-import { TeamColor } from 'components/ThemeProvider/ThemeProvider.types';
-
-import { mountAndWait } from '../../../test/utils';
-
 import { MAX_INITIALS_SPACE, SIZES, STYLE } from './Avatar.constants';
 import { AvatarSize, PresenceType } from './Avatar.types';
-
-import Avatar from '.';
+import { mountAndWait } from '../../../test/utils';
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 
 describe('Avatar', () => {
   describe('snapshot', () => {
