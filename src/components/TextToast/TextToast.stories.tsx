@@ -1,11 +1,10 @@
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import argTypes from './TextToast.stories.args';
-import Documentation from './TextToast.stories.docs.mdx';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import TextToast, { TextToastProps } from './';
+import argTypes from './TextToast.stories.args';
+import Documentation from './TextToast.stories.docs.mdx';
 
 export default {
   title: 'Momentum UI/TextToast',
