@@ -26,7 +26,7 @@ const TextToast: FC<Props> = (props: Props) => {
           style={style}
         >
           {iconProps && iconProps.name && <Icon {...iconProps} />}
-          <Text type="body-secondary" className={classnames(className, STYLE.text)}>
+          <Text type="body-secondary" className={classnames(STYLE.text)}>
             {text}
           </Text>
         </div>
