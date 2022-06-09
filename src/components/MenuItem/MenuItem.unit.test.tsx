@@ -11,8 +11,6 @@ import * as menu from '../Menu/Menu';
 
 import MenuItem from './';
 
-import MenuItem from './';
-
 describe('<MenuItem />', () => {
   const { result } = renderHook(() =>
     useTreeState({
