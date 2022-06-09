@@ -1,8 +1,8 @@
 const CLASS_PREFIX = 'md-menu-trigger';
+import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
+import { COLORS } from '../ModalContainer/ModalContainer.constants';
 
-import { PLACEMENTS } from 'components/ModalArrow/ModalArrow.constants';
-import type { PlacementType } from 'components/ModalArrow/ModalArrow.types';
-import { COLORS } from 'components/ModalContainer/ModalContainer.constants';
+import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
 const MENU_TRIGGER_PLACEMENTS: Record<string, PlacementType> = Object.entries(PLACEMENTS)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

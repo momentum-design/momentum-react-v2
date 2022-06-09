@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-import { IconScale } from 'components/Icon';
+import { IconScale } from '../Icon';
 
 export interface Props {
   /**

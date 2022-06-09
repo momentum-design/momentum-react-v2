@@ -1,12 +1,12 @@
 import { ReactElement } from 'react';
 
-import type { AvatarProps } from 'components/Avatar';
-import type { ButtonCircleProps } from 'components/ButtonCircle';
-import type { ButtonHyperlinkProps } from 'components/ButtonHyperlink';
-import type { ButtonPillProps } from 'components/ButtonPill';
-import type { CardProps } from 'components/Card';
-import type { TagProps } from 'components/Tag';
-import type { FontStyle } from 'components/Text/Text.types';
+import type { AvatarProps } from '../Avatar';
+import type { ButtonCircleProps } from '../ButtonCircle';
+import type { ButtonHyperlinkProps } from '../ButtonHyperlink';
+import type { ButtonPillProps } from '../ButtonPill';
+import type { CardProps } from '../Card';
+import type { TagProps } from '../Tag';
+import type { FontStyle } from '../Text/Text.types';
 
 export type SupportedActionButton = ReactElement<ButtonPillProps | ButtonCircleProps>;
 export type SupportedTag = ReactElement<TagProps>;
