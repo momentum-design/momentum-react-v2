@@ -1,8 +1,7 @@
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
-
-import { SIZES } from 'components/Icon/Icon.constants';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { SIZES } from '../Icon/Icon.constants';
 
 import argTypes from './LoadingSpinner.stories.args';
 import Documentation from './LoadingSpinner.stories.docs.mdx';

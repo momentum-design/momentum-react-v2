@@ -1,4 +1,4 @@
-import { TEXT_CONSTANTS } from 'components/Text';
+import { TEXT_CONSTANTS } from '../Text';
 
 import type { ScheduleInfoColor } from './MeetingContainer.types';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import StyleDocs from 'storybook/docs.stories.style.mdx';
-import { DocumentationPage } from 'storybook/helper.stories.docs';
-import { MultiTemplate, Template } from 'storybook/helper.stories.templates';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 
 import argTypes from './Card.stories.args';
 import Documentation from './Card.stories.docs.mdx';
