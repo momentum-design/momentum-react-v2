@@ -53,4 +53,4 @@ Common.parameters = {
 };
 
 // NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
-export { Common, Example };
+export { Example, Common };
