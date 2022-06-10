@@ -30,7 +30,7 @@ const Toggle: FC<Props> = (props: Props) => {
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}
-      data-disabled={isDisabled}
+      data-disabled={!!isDisabled}
       data-selected={state.isSelected}
     >
       <VisuallyHidden>
