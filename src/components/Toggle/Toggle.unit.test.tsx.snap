@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> snapshot should match snapshot 1`] = `
+<Toggle
+  aria-label="toggle"
+>
+  <label
+    className="md-toggle-wrapper"
+    data-disabled={false}
+    data-selected={false}
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={false}
+          aria-label="toggle"
+          checked={false}
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="switch"
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-toggle-switch md-toggle-off"
+    />
+  </label>
+</Toggle>
+`;
+
+exports[`<Toggle /> snapshot should match snapshot with className 1`] = `
+<Toggle
+  aria-label="toggle"
+  className="example-class"
+>
+  <label
+    className="example-class md-toggle-wrapper"
+    data-disabled={false}
+    data-selected={false}
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={false}
+          aria-label="toggle"
+          checked={false}
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="switch"
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-toggle-switch md-toggle-off"
+    />
+  </label>
+</Toggle>
+`;
+
+exports[`<Toggle /> snapshot should match snapshot with disabled 1`] = `
+<Toggle
+  aria-label="toggle"
+  isDisabled={true}
+>
+  <label
+    className="md-toggle-wrapper"
+    data-disabled={true}
+    data-selected={false}
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={false}
+          aria-label="toggle"
+          checked={false}
+          disabled={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="switch"
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-toggle-switch md-toggle-off md-toggle-disabled"
+    />
+  </label>
+</Toggle>
+`;
+
+exports[`<Toggle /> snapshot should match snapshot with id 1`] = `
+<Toggle
+  aria-label="toggle"
+  id="example-id"
+>
+  <label
+    className="md-toggle-wrapper"
+    data-disabled={false}
+    data-selected={false}
+    id="example-id"
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={false}
+          aria-label="toggle"
+          checked={false}
+          disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="switch"
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-toggle-switch md-toggle-off"
+    />
+  </label>
+</Toggle>
+`;
+
+exports[`<Toggle /> snapshot should match snapshot with selected 1`] = `
+<Toggle
+  aria-label="toggle"
+  isSelected={true}
+>
+  <label
+    className="md-toggle-wrapper"
+    data-disabled={false}
+    data-selected={true}
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={true}
+          aria-label="toggle"
+          checked={true}
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="switch"
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-toggle-switch md-toggle-on"
+    />
+  </label>
+</Toggle>
+`;
+
+exports[`<Toggle /> snapshot should match snapshot with style 1`] = `
+<Toggle
+  aria-label="toggle"
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <label
+    className="md-toggle-wrapper"
+    data-disabled={false}
+    data-selected={false}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={false}
+          aria-label="toggle"
+          checked={false}
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="switch"
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-toggle-switch md-toggle-off"
+    />
+  </label>
+</Toggle>
+`;

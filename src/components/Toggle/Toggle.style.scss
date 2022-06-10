@@ -1,0 +1,119 @@
+@use "sass:math";
+
+.md-toggle-wrapper {
+  $switch-width: 2.75rem;
+  $switch-height: math.div($switch-width, 2);
+  $thumb-size: 0.635rem;
+  $thumb-margin: math.div($switch-height - $thumb-size, 2);
+  $transition-time: 350ms;
+
+  display: flex;
+  align-items: center;
+  font-family: CiscoSansTT;
+  font-family: var(--md-globals-font-default);
+  width: fit-content;
+
+  .md-toggle-switch {
+    width: $switch-width;
+    height: $switch-height;
+    border-radius: math.div($switch-height, 2);
+    transition: background $transition-time;
+    margin-right: 0.5rem;
+
+    &:after {
+      content: '';
+      width: $thumb-size;
+      height: $thumb-size;
+      border-radius: math.div($thumb-size, 2);
+      margin: $thumb-margin;
+      display: block;
+      transition: transform $transition-time;
+    }
+
+    &.md-toggle-on:after {
+      transform: translateX($switch-width - $switch-height);
+    }
+
+    &.md-toggle-focused {
+      box-shadow: var(--md-globals-focus-ring-box-shadow);
+    }
+
+    // Base
+    &.md-toggle-off {
+      background-color: var(--togglemomentumstyle-untoggled-background);
+
+      &:after {
+        background-color: var(--togglemomentumstyle-untoggled-thumb-tint);
+      }
+    }
+
+    &.md-toggle-on {
+      background-color: var(--togglemomentumstyle-toggled-background);
+
+      &:after {
+        background-color: var(--togglemomentumstyle-toggled-thumb-tint);
+        transform: translateX($switch-width - $switch-height);
+      }
+    }
+
+    // Hovered
+    &:hover {
+      &.md-toggle-off {
+        background-color: var(--togglemomentumstyle-untoggled-background-hovered);
+
+        &:after {
+          background-color: var(--togglemomentumstyle-untoggled-thumb-tint-hovered);
+        }
+      }
+
+      &.md-toggle-on {
+        background-color: var(--togglemomentumstyle-toggled-background-hovered);
+
+        &:after {
+          background-color: var(--togglemomentumstyle-toggled-thumb-tint-hovered);
+          transform: translateX($switch-width - $switch-height);
+        }
+      }
+    }
+
+    // Pressed
+    &:active {
+      &.md-toggle-off {
+        background-color: var(--togglemomentumstyle-untoggled-background-pressed);
+
+        &:after {
+          background-color: var(--togglemomentumstyle-untoggled-thumb-tint-pressed);
+        }
+      }
+
+      &.md-toggle-on {
+        background-color: var(--togglemomentumstyle-toggled-background-pressed);
+
+        &:after {
+          background-color: var(--togglemomentumstyle-toggled-thumb-tint-pressed);
+          transform: translateX($switch-width - $switch-height);
+        }
+      }
+    }
+
+    // Disabled
+    &.md-toggle-disabled {
+      &.md-toggle-off {
+        background-color: var(--togglemomentumstyle-untoggled-background-disabled);
+
+        &:after {
+          background-color: var(--togglemomentumstyle-untoggled-thumb-tint-disabled);
+        }
+      }
+
+      &.md-toggle-on {
+        background-color: var(--togglemomentumstyle-toggled-background-disabled);
+
+        &:after {
+          background-color: var(--togglemomentumstyle-toggled-thumb-tint-disabled);
+          transform: translateX($switch-width - $switch-height);
+        }
+      }
+    }
+  }
+}
