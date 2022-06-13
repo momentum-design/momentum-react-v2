@@ -21,4 +21,17 @@ const STYLE = {
   avatar: `${CLASS_PREFIX}-avatar`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE };
+const COLORS = {
+  MULTILINE: {
+    MINT: 'mint',
+    COBALT: 'cobalt',
+    ORANGE: 'orange',
+    PINK: 'pink',
+    LIME: 'lime',
+    CYAN: 'cyan',
+    PURPLE: 'purple',
+    VIOLET: 'violet',
+  },
+};
+
+export { CLASS_PREFIX, DEFAULTS, STYLE, COLORS };
