@@ -89,7 +89,7 @@ const chipArgTypes = {
   chipColor: {
     description: 'Sets the chip color',
     control: { type: 'select' },
-    options: [undefined, ...Object.values(CHIP_CONSTANTS.COLORS.MULTILINE)],
+    options: [undefined, ...Object.values(CHIP_CONSTANTS.MULTILINE_COLORS)],
     table: {
       type: {
         summary: 'TeamColor',

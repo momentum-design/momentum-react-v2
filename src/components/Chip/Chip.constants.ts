@@ -1,3 +1,5 @@
+import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+
 const CLASS_PREFIX = 'md-chip';
 
 const DEFAULTS = {
@@ -21,17 +23,15 @@ const STYLE = {
   avatar: `${CLASS_PREFIX}-avatar`,
 };
 
-const COLORS = {
-  MULTILINE: {
-    MINT: 'mint',
-    COBALT: 'cobalt',
-    ORANGE: 'orange',
-    PINK: 'pink',
-    LIME: 'lime',
-    CYAN: 'cyan',
-    PURPLE: 'purple',
-    VIOLET: 'violet',
-  },
+const MULTILINE_COLORS: Record<string, TeamColor> = {
+  MINT: 'mint',
+  COBALT: 'cobalt',
+  ORANGE: 'orange',
+  PINK: 'pink',
+  LIME: 'lime',
+  CYAN: 'cyan',
+  PURPLE: 'purple',
+  VIOLET: 'violet',
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE, COLORS };
+export { CLASS_PREFIX, DEFAULTS, STYLE, MULTILINE_COLORS };
