@@ -1,5 +1,6 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { CHIP_CONSTANTS } from '.';
+import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 
 const chipArgTypes = {
   children: {
