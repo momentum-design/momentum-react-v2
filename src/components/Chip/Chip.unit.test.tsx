@@ -15,6 +15,9 @@ const exampleAvatar = <Avatar>AA</Avatar>;
 const outline = !CHIP_CONSTANTS.DEFAULTS.OUTLINE;
 const disabled = !CHIP_CONSTANTS.DEFAULTS.DISABLED;
 const error = !CHIP_CONSTANTS.DEFAULTS.ERROR;
+const color = CHIP_CONSTANTS.MULTILINE_COLORS.COBALT;
+const multiline = !CHIP_CONSTANTS.DEFAULTS.MULTILINE;
+const search = !CHIP_CONSTANTS.DEFAULTS.SEARCH;
 
 describe('<Chip />', () => {
   describe('snapshot', () => {
@@ -94,6 +97,21 @@ describe('<Chip />', () => {
 
     it('it should match snapshot with error', () => {
       const container = mount(<Chip error={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
+    it('it should match snapshot with search', () => {
+      const container = mount(<Chip search={search} />);
+
+      expect(container).toMatchSnapshot();
+    });
+    it('it should match snapshot with multiline', () => {
+      const container = mount(<Chip multiline={multiline} />);
+
+      expect(container).toMatchSnapshot();
+    });
+    it('it should match snapshot with mulitline color', () => {
+      const container = mount(<Chip multiline={multiline} chipColor={color} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -217,6 +235,27 @@ describe('<Chip />', () => {
         .getDOMNode();
 
       expect(element.classList.contains(BUTTON_PILL_CONSTANTS.STYLE.wrapper));
+    });
+    it('should have search when provided', () => {
+      const element = mount(<Chip search={search} />)
+        .find(Chip)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-search')).toBe(String(search));
+    });
+    it('should have mutliline when provided', () => {
+      const element = mount(<Chip multiline={multiline} />)
+        .find(Chip)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-multiline')).toBe(String(multiline));
+    });
+    it('should have color when provided', () => {
+      const element = mount(<Chip chipColor={color} />)
+        .find(Chip)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-modifier-color')).toBe(color);
     });
   });
 });
