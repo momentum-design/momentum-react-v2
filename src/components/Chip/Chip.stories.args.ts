@@ -1,6 +1,5 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { CHIP_CONSTANTS } from '.';
-import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 
 const chipArgTypes = {
   children: {
@@ -90,7 +89,7 @@ const chipArgTypes = {
   chipColor: {
     description: 'Sets the chip color',
     control: { type: 'select' },
-    options: [undefined, ...Object.values(TEAM_COLORS)],
+    options: [undefined, ...Object.values(CHIP_CONSTANTS.COLORS.MULTILINE)],
     table: {
       type: {
         summary: 'TeamColor',
@@ -125,9 +124,10 @@ const chipArgTypes = {
     },
   },
   size: {
-    description: 'Sets the chip size',
+    description:
+      'Sets the chip size. `28` is default, `28` and `24` are expected to be used for the `search` modifier, `16` is expected used for the `multiline` modifier.',
     control: { type: 'select' },
-    options: [undefined, 28, 32],
+    options: [undefined, 16, 24, 28],
     table: {
       type: {
         summary: 'number',

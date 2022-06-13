@@ -30,53 +30,44 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
   &[data-multiline='true'] {
     border-radius: 0.875rem;
 
-    &[data-modifier-color='gold'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
-    }
-
     &[data-modifier-color='orange'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
+      border-color: var(--chips-outline-multiline-text-orange);
+      color: var(--chips-outline-multiline-text-orange);
     }
 
     &[data-modifier-color='lime'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
+      border-color: var(--chips-outline-multiline-text-lime);
+      color: var(--chips-outline-multiline-text-lime);
     }
 
     &[data-modifier-color='mint'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
+      border-color: var(--chips-outline-multiline-text-mint);
+      color: var(--chips-outline-multiline-text-mint);
     }
 
     &[data-modifier-color='cyan'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
+      border-color: var(--chips-outline-multiline-text-cyan);
+      color: var(--chips-outline-multiline-text-cyan);
     }
 
     &[data-modifier-color='cobalt'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
-    }
-
-    &[data-modifier-color='slate'] {
-      border-color: var(--theme-outline-cancel-normal);
+      border-color: var(--chips-outline-multiline-text-cobalt);
+      color: var(--chips-outline-multiline-text-cobalt);
     }
 
     &[data-modifier-color='violet'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
+      border-color: var(--chips-outline-multiline-text-violet);
+      color: var(--chips-outline-multiline-text-violet);
     }
 
     &[data-modifier-color='purple'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
+      border-color: var(--chips-outline-multiline-text-purple);
+      color: var(--chips-outline-multiline-text-purple);
     }
 
     &[data-modifier-color='pink'] {
-      border-color: var(--theme-outline-cancel-normal);
-      color: var(--theme-text-error-normal);
+      border-color: var(--chips-outline-multiline-text-pink);
+      color: var(--chips-outline-multiline-text-pink);
     }
   }
 
