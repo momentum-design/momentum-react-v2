@@ -6,7 +6,8 @@ const DEFAULTS = {
   AVATAR: undefined,
   OUTLINE: false,
   COLOR: undefined,
-  MODIFIER: 'none',
+  MULTILINE: false,
+  SEARCH: false,
   SIZE: 28,
 };
 

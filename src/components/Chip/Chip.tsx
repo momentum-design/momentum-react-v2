@@ -24,21 +24,25 @@ const Chip: FC<Props> = (props: Props) => {
     size = DEFAULTS.SIZE,
     chipColor = DEFAULTS.COLOR,
     error = DEFAULTS.ERROR,
-    modifier = DEFAULTS.MODIFIER,
+    multiline = DEFAULTS.MULTILINE,
+    search = DEFAULTS.SEARCH,
   } = props;
 
   const leftContent = avatar ? avatar : leftIcon;
   const changedText = text ? text : children;
+  const textStyle = search && size === 24 ? { fontSize: '.875rem', fontWeight: 600 } : undefined;
 
   return (
     <ButtonPill
       size={size}
+      data-size={size}
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}
       data-error={error}
-      data-color={chipColor}
-      data-modifier={modifier}
+      data-modifier-color={chipColor}
+      data-multiline={multiline}
+      data-search={search}
       {...props}
     >
       {leftContent && (
@@ -46,7 +50,14 @@ const Chip: FC<Props> = (props: Props) => {
           {leftContent}
         </div>
       )}
-      <Text className={STYLE.centerSection}>{changedText}</Text>
+      <Text
+        style={textStyle}
+        data-search={search}
+        data-multiline={multiline}
+        className={STYLE.centerSection}
+      >
+        {changedText}
+      </Text>
       {rightIcon && <div className={STYLE.rightSection}>{rightIcon}</div>}
     </ButtonPill>
   );
