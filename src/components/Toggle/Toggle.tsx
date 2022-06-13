@@ -4,7 +4,6 @@ import { VisuallyHidden } from 'react-aria';
 import { useSwitch } from '@react-aria/switch';
 import { useToggleState } from '@react-stately/toggle';
 import { useFocusRing } from '@react-aria/focus';
-import Text from '../Text';
 
 import { STYLE } from './Toggle.constants';
 import { Props } from './Toggle.types';
@@ -18,7 +17,7 @@ const Toggle: FC<Props> = (props: Props) => {
 
   const ref = React.useRef();
 
-  const children = label && <Text className={STYLE.label}>{label}</Text>;
+  const children = label && <span className={STYLE.label}>{label}</span>;
   const ariaProps = { ...props, children };
 
   const state = useToggleState(ariaProps);

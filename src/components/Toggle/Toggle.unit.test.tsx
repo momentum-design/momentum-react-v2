@@ -13,6 +13,14 @@ describe('<Toggle />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with label', () => {
+      expect.assertions(1);
+
+      const container = mount(<Toggle aria-label={'toggle'} label={'Hello toggle'} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with className', () => {
       expect.assertions(1);
 

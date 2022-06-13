@@ -237,6 +237,70 @@ exports[`<Toggle /> snapshot should match snapshot with id 1`] = `
 </Toggle>
 `;
 
+exports[`<Toggle /> snapshot should match snapshot with label 1`] = `
+<Toggle
+  aria-label="toggle"
+  label="Hello toggle"
+>
+  <label
+    className="md-toggle-wrapper"
+    data-disabled={false}
+    data-selected={false}
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={false}
+          aria-label="toggle"
+          checked={false}
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="switch"
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-toggle-switch md-toggle-off"
+    />
+    <span
+      className="md-toggle-label"
+    >
+      Hello toggle
+    </span>
+  </label>
+</Toggle>
+`;
+
 exports[`<Toggle /> snapshot should match snapshot with selected 1`] = `
 <Toggle
   aria-label="toggle"
