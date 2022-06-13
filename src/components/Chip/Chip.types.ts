@@ -5,9 +5,8 @@ import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
 export type SupportedAvatar = ReactElement<AvatarProps>;
 export type SupportedIcon = ReactElement<IconProps>;
-export type SupportedColor = 'join' | 'cancel' | 'message' | TeamColor;
-export type SupportedModifier = 'none' | 'search' | 'multiline';
-export type SupportedSize = 28 | 32;
+export type SupportedColor = TeamColor;
+export type SupportedSize = 16 | 24 | 28 | 32;
 
 export interface Props {
   /**
@@ -71,9 +70,14 @@ export interface Props {
   chipColor?: SupportedColor;
 
   /**
-   * String to describe the modifier.
+   * Boolean to describe if a chip should be multiline style.
    */
-  modifier?: SupportedModifier;
+  multiline?: boolean;
+
+  /**
+   * Boolean to describe if a chip should be search style.
+   */
+  search?: boolean;
 
   /**
    * Number to describe the size of component.
