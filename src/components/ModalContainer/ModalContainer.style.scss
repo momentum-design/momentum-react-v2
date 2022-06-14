@@ -11,7 +11,7 @@
 
   /* Arrow placement (svg arrow size is 12px, that's why the following offsets are set like that) */
   &[data-placement^='top'] > .md-modal-container-arrow-wrapper {
-    top: 12px;
+    top: 40px;
   }
 
   &[data-placement^='right'] > .md-modal-container-arrow-wrapper {

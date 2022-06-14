@@ -37,7 +37,11 @@ Example.args = {
   color: COLORS.PRIMARY,
   delay: [0, 0],
   children: <p>Content Text Content Text</p>,
-  triggerComponent: <ButtonSimple useNativeKeyDown>Click me!</ButtonSimple>,
+  triggerComponent: (
+    <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }} useNativeKeyDown>
+      Click me!
+    </ButtonSimple>
+  ),
 };
 
 const InteractiveContent = Template<PopoverProps>(Popover).bind({});
@@ -52,7 +56,9 @@ InteractiveContent.args = {
   variant: 'small',
   color: COLORS.TERTIARY,
   delay: [0, 0],
-  triggerComponent: <ButtonPill>Click me!</ButtonPill>,
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
+  ),
   children: (
     <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
       <Item key="one">One</Item>
@@ -76,7 +82,9 @@ Common.parameters = {
       children: <p>Non-interactive Content on TERTIARY color, variant medium</p>,
       trigger: 'click',
       triggerComponent: (
-        <ButtonSimple style={{ height: '50px', width: '100px', marginRight: '10px' }}>
+        <ButtonSimple
+          style={{ height: '50px', width: '100px', margin: '10rem auto', display: 'flex' }}
+        >
           Click me!
         </ButtonSimple>
       ),
@@ -89,7 +97,9 @@ Common.parameters = {
       children: <p>Non-interactive Content on PRIMARY color, variant small, without arrow</p>,
       trigger: 'mouseenter',
       triggerComponent: (
-        <ButtonSimple style={{ height: '50px', width: '100px', marginRight: '10px' }}>
+        <ButtonSimple
+          style={{ height: '50px', width: '100px', margin: '10rem auto', display: 'flex' }}
+        >
           Hover me!
         </ButtonSimple>
       ),
