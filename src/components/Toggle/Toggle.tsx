@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import { VisuallyHidden } from 'react-aria';
+import { VisuallyHidden } from '@react-aria/visually-hidden';
 import { useSwitch } from '@react-aria/switch';
 import { useToggleState } from '@react-stately/toggle';
 import { useFocusRing } from '@react-aria/focus';

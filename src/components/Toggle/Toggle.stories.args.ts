@@ -40,4 +40,5 @@ export { toggleArgTypes };
 export default {
   ...commonStyles,
   ...toggleArgTypes,
+  onChange: { action: 'selected' },
 };

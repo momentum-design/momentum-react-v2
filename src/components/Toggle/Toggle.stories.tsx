@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -20,7 +20,14 @@ export default {
 
 const InteractiveExample: FC<ToggleProps> = (props: ToggleProps) => {
   const [isSelected, setIsSelected] = useState(props.isSelected);
-  return <Toggle {...props} isSelected={isSelected} onChange={setIsSelected} />;
+  const onChangeHandler = useCallback(
+    (value) => {
+      props.onChange(value);
+      setIsSelected(value);
+    },
+    [props.onChange, setIsSelected]
+  );
+  return <Toggle {...props} isSelected={isSelected} onChange={onChangeHandler} />;
 };
 
 // NOTE: Primary story. This renders a single component with all external props.
@@ -41,6 +48,7 @@ Common.argTypes = { ...argTypes };
 delete Common.argTypes.isSelected;
 delete Common.argTypes.isDisabled;
 delete Common.argTypes.label;
+delete Common.argTypes.onChange;
 
 Common.args = {};
 Common.parameters = {
