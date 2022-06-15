@@ -52,7 +52,7 @@ exports[`<Toggle /> snapshot should match snapshot 1`] = `
       </div>
     </VisuallyHidden>
     <div
-      className="md-toggle-switch md-toggle-off"
+      className="md-toggle-switch md-toggle--off"
     />
   </label>
 </Toggle>
@@ -111,7 +111,7 @@ exports[`<Toggle /> snapshot should match snapshot with className 1`] = `
       </div>
     </VisuallyHidden>
     <div
-      className="md-toggle-switch md-toggle-off"
+      className="md-toggle-switch md-toggle--off"
     />
   </label>
 </Toggle>
@@ -170,7 +170,7 @@ exports[`<Toggle /> snapshot should match snapshot with disabled 1`] = `
       </div>
     </VisuallyHidden>
     <div
-      className="md-toggle-switch md-toggle-off md-toggle-disabled"
+      className="md-toggle-switch md-toggle--off md-toggle--disabled"
     />
   </label>
 </Toggle>
@@ -231,7 +231,7 @@ exports[`<Toggle /> snapshot should match snapshot with id 1`] = `
       </div>
     </VisuallyHidden>
     <div
-      className="md-toggle-switch md-toggle-off"
+      className="md-toggle-switch md-toggle--off"
     />
   </label>
 </Toggle>
@@ -290,7 +290,7 @@ exports[`<Toggle /> snapshot should match snapshot with label 1`] = `
       </div>
     </VisuallyHidden>
     <div
-      className="md-toggle-switch md-toggle-off"
+      className="md-toggle-switch md-toggle--off"
     />
     <span
       className="md-toggle-label"
@@ -354,7 +354,7 @@ exports[`<Toggle /> snapshot should match snapshot with selected 1`] = `
       </div>
     </VisuallyHidden>
     <div
-      className="md-toggle-switch md-toggle-on"
+      className="md-toggle-switch md-toggle--on"
     />
   </label>
 </Toggle>
@@ -422,7 +422,7 @@ exports[`<Toggle /> snapshot should match snapshot with style 1`] = `
       </div>
     </VisuallyHidden>
     <div
-      className="md-toggle-switch md-toggle-off"
+      className="md-toggle-switch md-toggle--off"
     />
   </label>
 </Toggle>
