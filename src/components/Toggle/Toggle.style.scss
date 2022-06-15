@@ -30,16 +30,16 @@
       transition: transform $transition-time;
     }
 
-    &.md-toggle-on:after {
+    &.md-toggle--on:after {
       transform: translateX($switch-width - $switch-height);
     }
 
-    &.md-toggle-focused {
+    &.md-toggle--focused {
       box-shadow: var(--md-globals-focus-ring-box-shadow);
     }
 
     // Base
-    &.md-toggle-off {
+    &.md-toggle--off {
       background-color: var(--togglemomentumstyle-untoggled-background);
 
       &:after {
@@ -47,7 +47,7 @@
       }
     }
 
-    &.md-toggle-on {
+    &.md-toggle--on {
       background-color: var(--togglemomentumstyle-toggled-background);
 
       &:after {
@@ -58,7 +58,7 @@
 
     // Hovered
     &:hover {
-      &.md-toggle-off {
+      &.md-toggle--off {
         background-color: var(--togglemomentumstyle-untoggled-background-hovered);
 
         &:after {
@@ -66,7 +66,7 @@
         }
       }
 
-      &.md-toggle-on {
+      &.md-toggle--on {
         background-color: var(--togglemomentumstyle-toggled-background-hovered);
 
         &:after {
@@ -78,7 +78,7 @@
 
     // Pressed
     &:active {
-      &.md-toggle-off {
+      &.md-toggle--off {
         background-color: var(--togglemomentumstyle-untoggled-background-pressed);
 
         &:after {
@@ -86,7 +86,7 @@
         }
       }
 
-      &.md-toggle-on {
+      &.md-toggle--on {
         background-color: var(--togglemomentumstyle-toggled-background-pressed);
 
         &:after {
@@ -97,8 +97,8 @@
     }
 
     // Disabled
-    &.md-toggle-disabled {
-      &.md-toggle-off {
+    &.md-toggle--disabled {
+      &.md-toggle--off {
         background-color: var(--togglemomentumstyle-untoggled-background-disabled);
 
         &:after {
@@ -106,7 +106,7 @@
         }
       }
 
-      &.md-toggle-on {
+      &.md-toggle--on {
         background-color: var(--togglemomentumstyle-toggled-background-disabled);
 
         &:after {
