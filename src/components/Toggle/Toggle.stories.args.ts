@@ -3,7 +3,7 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { TOGGLE_CONSTANTS as CONSTANTS } from '.';
 
 const toggleArgTypes = {
-  isSelected: {
+  defaultSelected: {
     description: 'Whether the toggle is on or off',
     control: { type: 'boolean' },
     table: {
