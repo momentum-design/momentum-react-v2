@@ -304,7 +304,7 @@ exports[`<Toggle /> snapshot should match snapshot with label 1`] = `
 exports[`<Toggle /> snapshot should match snapshot with selected 1`] = `
 <Toggle
   aria-label="toggle"
-  isSelected={true}
+  defaultSelected={true}
 >
   <label
     className="md-toggle-wrapper"

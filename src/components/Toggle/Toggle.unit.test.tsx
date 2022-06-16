@@ -150,15 +150,16 @@ describe('<Toggle />', () => {
 
       const mockCallback = jest.fn();
 
-      const inputElement = mount(
+      const { getByRole } = render(
         <Toggle defaultSelected={false} onChange={mockCallback} aria-label={'toggle'} />
-      ).find('input');
+      );
+      const input = getByRole('switch');
 
-      inputElement.simulate('change', { target: { checked: true } });
+      userEvent.click(input);
       expect(mockCallback).toBeCalledTimes(1);
       expect(mockCallback).toBeCalledWith(true);
 
-      inputElement.simulate('change', { target: { checked: false } });
+      userEvent.click(input);
       expect(mockCallback).toBeCalledTimes(2);
       expect(mockCallback).toBeCalledWith(false);
     });
@@ -171,12 +172,12 @@ describe('<Toggle />', () => {
       const { getByRole } = render(
         <Toggle onChange={mockCallback} aria-label={'toggle'} label={'Toggle'} />
       );
-      const checkbox = getByRole('switch');
+      const input = getByRole('switch');
 
-      userEvent.type(checkbox, '{Space}');
+      userEvent.type(input, '{Space}');
 
       expect(mockCallback).toBeCalledWith(true);
-      expect(checkbox).toBeChecked();
+      expect(input).toBeChecked();
     });
   });
 });
