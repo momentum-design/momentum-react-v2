@@ -10,9 +10,9 @@ const DEFAULTS = {
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   selected: `${CLASS_PREFIX}-selected`,
-  notSelected: `${CLASS_PREFIX}-notSelected`,
+  notSelected: `${CLASS_PREFIX}-not-selected`,
+  focus: `${CLASS_PREFIX}-focus`,
   icon: `${CLASS_PREFIX}-icon`,
-  label: `${CLASS_PREFIX}-label`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };
