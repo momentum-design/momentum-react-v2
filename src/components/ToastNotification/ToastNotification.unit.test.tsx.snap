@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
+<ToastNotification>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+      />
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with button group 1`] = `
+<ToastNotification
+  buttonGroup={
+    <React.Fragment>
+      <ButtonPill
+        size={28}
+      >
+        Button
+      </ButtonPill>
+      <ButtonPill
+        outline={true}
+        size={28}
+      >
+        Button
+      </ButtonPill>
+    </React.Fragment>
+  }
+  text="Example text"
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <Text
+          className="md-toast-notification-text"
+          type="body-primary"
+        >
+          <p
+            className="md-text-wrapper md-toast-notification-text"
+            data-type="body-primary"
+          >
+            Example text
+          </p>
+        </Text>
+      </div>
+      <div
+        className="md-toast-notification-button-group"
+      >
+        <ButtonPill
+          size={28}
+        >
+          <ButtonSimple
+            className="md-button-pill-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-size={28}
+            data-solid={false}
+          >
+            <FocusRing>
+              <FocusRing
+                focusClass="md-focus-ring-wrapper children"
+                focusRingClass="md-focus-ring-wrapper children"
+              >
+                <button
+                  className="md-button-pill-wrapper md-button-simple-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={false}
+                  data-grown={false}
+                  data-outline={false}
+                  data-size={28}
+                  data-solid={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Button
+                  </span>
+                </button>
+              </FocusRing>
+            </FocusRing>
+          </ButtonSimple>
+        </ButtonPill>
+        <ButtonPill
+          outline={true}
+          size={28}
+        >
+          <ButtonSimple
+            className="md-button-pill-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={true}
+            data-size={28}
+            data-solid={false}
+          >
+            <FocusRing>
+              <FocusRing
+                focusClass="md-focus-ring-wrapper children"
+                focusRingClass="md-focus-ring-wrapper children"
+              >
+                <button
+                  className="md-button-pill-wrapper md-button-simple-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={false}
+                  data-grown={false}
+                  data-outline={true}
+                  data-size={28}
+                  data-solid={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Button
+                  </span>
+                </button>
+              </FocusRing>
+            </FocusRing>
+          </ButtonSimple>
+        </ButtonPill>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with className 1`] = `
+<ToastNotification
+  className="example-class"
+>
+  <ModalContainer
+    className="example-class md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="example-class md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+      />
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
+<ToastNotification
+  id="example-id"
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    id="example-id"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+      id="example-id"
+    >
+      <div
+        className="md-toast-notification-body"
+      />
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with leading visual 1`] = `
+<ToastNotification
+  leadingVisual={
+    <Icon
+      name="help-circle"
+      scale={24}
+      weight="bold"
+    />
+  }
+  text="Example text"
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <div
+          className="md-toast-notification-leading-visual"
+        >
+          <Icon
+            name="help-circle"
+            scale={24}
+            weight="bold"
+          >
+            <div
+              className="md-icon-wrapper"
+            >
+              <svg
+                className=""
+                data-autoscale={false}
+                data-scale={24}
+                data-test="help-circle"
+                fill="currentColor"
+                height="100%"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </Icon>
+        </div>
+        <Text
+          className="md-toast-notification-text"
+          type="body-primary"
+        >
+          <p
+            className="md-text-wrapper md-toast-notification-text"
+            data-type="body-primary"
+          >
+            Example text
+          </p>
+        </Text>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
+<ToastNotification
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    >
+      <div
+        className="md-toast-notification-body"
+      />
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with text 1`] = `
+<ToastNotification
+  text="Example text"
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <Text
+          className="md-toast-notification-text"
+          type="body-primary"
+        >
+          <p
+            className="md-text-wrapper md-toast-notification-text"
+            data-type="body-primary"
+          >
+            Example text
+          </p>
+        </Text>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
