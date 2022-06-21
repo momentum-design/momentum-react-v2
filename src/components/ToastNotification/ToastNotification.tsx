@@ -13,7 +13,7 @@ import './ToastNotification.style.scss';
  * The ToastNotification component.
  */
 const ToastNotification: FC<Props> = (props: Props) => {
-  const { onClose, className, id, style, text, leadingVisual, buttonGroup } = props;
+  const { className, id, style, text, leadingVisual, buttonGroup, onClose } = props;
 
   return (
     <ModalContainer
