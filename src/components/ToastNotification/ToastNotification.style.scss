@@ -1,0 +1,43 @@
+.md-toast-notification-wrapper {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .md-toast-notification-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    .md-toast-notification-leading-visual {
+      align-self: flex-start;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      padding-left: 0.25rem;
+    }
+
+    .md-toast-notification-text {
+      flex-grow: 10;
+      color: var(--label-primary-text);
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      padding-left: 0.75rem;
+    }
+
+    .md-toast-notification-close-button {
+      align-self: stretch;
+      padding-left: 0.75rem;
+    }
+  }
+
+  .md-toast-notification-button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-right: 0.1rem;
+  }
+}

@@ -133,6 +133,7 @@ export {
   Toast,
   ToastDetails,
   ToastContent,
+  ToastNotification,
   ThemeProvider,
   Text,
   Flex,
