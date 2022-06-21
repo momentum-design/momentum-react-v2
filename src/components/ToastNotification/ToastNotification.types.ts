@@ -1,5 +1,5 @@
 import { PressEvent } from '@react-types/shared';
-import { CSSProperties, ReactNode, ReactElement } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 
 import { AvatarProps } from '../Avatar';
 import { IconProps } from '../Icon';
