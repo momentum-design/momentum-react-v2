@@ -9,6 +9,7 @@ import ToastNotification, { TOAST_NOTIFICATION_CONSTANTS as CONSTANTS } from './
 describe('<ToastNotification />', () => {
   let leadingVisual: ReactElement<IconProps>;
   let buttonGroup: ReactElement<ButtonPillProps>;
+  let onClose;
 
   beforeEach(() => {
     leadingVisual = <Icon name="help-circle" scale={24} weight="bold" />;
@@ -20,6 +21,9 @@ describe('<ToastNotification />', () => {
         </ButtonPill>
       </>
     );
+    onClose = () => {
+      alert('Hello');
+    };
   });
 
   describe('snapshot', () => {
@@ -134,6 +138,35 @@ describe('<ToastNotification />', () => {
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should wrap the onClose inside when onClose is provided', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(<ToastNotification onClose={onClose} />);
+      const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
+
+      expect(element).toBeDefined();
+    });
+
+    it('should wrap Icon inside leadingVisual when Icon is provided', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(<ToastNotification leadingVisual={leadingVisual} />);
+      const element = wrapper.find(Icon).getDOMNode();
+
+      expect(element).toBeDefined();
+    });
+
+    it('should wrap Buttons inside button group when buttons are provided', async () => {
+      expect.assertions(2);
+
+      const wrapper = await mountAndWait(<ToastNotification buttonGroup={buttonGroup} />);
+      const element1 = wrapper.find(ButtonPill).at(0).getDOMNode();
+      const element2 = wrapper.find(ButtonPill).at(1).getDOMNode();
+
+      expect(element1).toBeDefined();
+      expect(element2).toBeDefined();
     });
   });
 
