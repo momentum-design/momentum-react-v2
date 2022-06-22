@@ -32,17 +32,14 @@ States.parameters = {
   variants: [
     {
       label: 'Checked',
-      children: 'Checked',
       isSelected: true,
     },
     {
       label: 'Unchecked',
-      children: 'Checked',
       isSelected: false,
     },
     {
       label: 'Indeterminate',
-      children: 'Checked',
       isIndeterminate: true,
     },
   ],

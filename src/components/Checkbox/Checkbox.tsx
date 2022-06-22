@@ -17,7 +17,7 @@ import Icon from '../Icon';
  * The Checkbox component.
  */
 const Checkbox: FC<Props> = (props: Props) => {
-  const { children, className, isSelected, disabled, isIndeterminate, ...rest } = props;
+  const { children, className, disabled, label, isIndeterminate, isSelected, ...rest } = props;
 
   const state = useToggleState(props);
   const ref = React.useRef();
@@ -70,7 +70,7 @@ const Checkbox: FC<Props> = (props: Props) => {
         <input {...inputProps} {...focusProps} ref={ref} />
       </VisuallyHidden>
       {checkbox}
-      {children}
+      {label}
     </label>
   );
 };

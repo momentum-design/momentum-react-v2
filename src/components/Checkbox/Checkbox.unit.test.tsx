@@ -43,6 +43,16 @@ describe('<Checkbox />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with labelled checkbox', async () => {
+      expect.assertions(1);
+
+      const label = 'Example text';
+
+      const container = await mountAndWait(<Checkbox label={label} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with not selected checkbox', async () => {
       expect.assertions(1);
 
