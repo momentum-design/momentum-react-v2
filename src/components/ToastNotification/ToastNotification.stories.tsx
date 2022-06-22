@@ -24,60 +24,39 @@ export default {
 
 const Example = Template<ToastNotificationProps>(ToastNotification).bind({});
 
-Example.argTypes = { ...argTypes };
+Example.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
 Example.args = {
   text: 'Example text',
-  onClose: () => {
-    alert('hello');
-  },
 };
 
 const LeadingVisual = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
 
-LeadingVisual.argTypes = { ...argTypes };
+LeadingVisual.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
 LeadingVisual.parameters = {
   variants: [
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Example text',
       leadingVisual: <Avatar initials="CW" size={32} />,
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Avatar initials="CW" size={32} />,
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Example text',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Example text',
       leadingVisual: <Icon name="info-circle" scale={14} weight="filled" fillColor="yellow" />,
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Icon name="info-circle" scale={14} weight="filled" fillColor="yellow" />,
     },
@@ -86,14 +65,11 @@ LeadingVisual.parameters = {
 
 const ButtonGroup = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
 
-ButtonGroup.argTypes = { ...argTypes };
+ButtonGroup.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
 ButtonGroup.parameters = {
   variants: [
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Example text',
       buttonGroup: (
         <ButtonPill outline size={28}>
@@ -102,9 +78,6 @@ ButtonGroup.parameters = {
       ),
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       buttonGroup: (
         <ButtonPill outline size={28}>
@@ -113,9 +86,6 @@ ButtonGroup.parameters = {
       ),
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Example text',
       buttonGroup: (
         <>
@@ -127,9 +97,6 @@ ButtonGroup.parameters = {
       ),
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       buttonGroup: (
         <>
@@ -145,14 +112,11 @@ ButtonGroup.parameters = {
 
 const Common = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
 
-Common.argTypes = { ...argTypes };
+Common.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
 Common.parameters = {
   variants: [
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Example text',
       leadingVisual: <Avatar initials="CW" size={32} />,
       buttonGroup: (
@@ -162,9 +126,6 @@ Common.parameters = {
       ),
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Avatar initials="CW" size={32} />,
       buttonGroup: (
@@ -174,9 +135,6 @@ Common.parameters = {
       ),
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Example text',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
       buttonGroup: (
@@ -189,9 +147,6 @@ Common.parameters = {
       ),
     },
     {
-      onClose: () => {
-        alert('hello');
-      },
       text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
       buttonGroup: (
