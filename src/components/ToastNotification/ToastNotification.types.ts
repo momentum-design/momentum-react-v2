@@ -14,7 +14,7 @@ export interface Props {
   /**
    * The text that appears inside the Notification toast.
    */
-  text?: string;
+  text: string;
   /**
    * Leading visual of this notification toast. It can be an Icon, Avatar or Badge.
    */
