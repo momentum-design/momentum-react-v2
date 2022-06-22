@@ -5,6 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Checkbox, { CheckboxProps } from './';
 import argTypes from './Checkbox.stories.args';
 import Documentation from './Checkbox.stories.docs.mdx';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/Checkbox',
@@ -14,6 +15,9 @@ export default {
     docs: {
       page: DocumentationPage(Documentation, StyleDocs),
     },
+  },
+  args: {
+    onChange: action('onChange'),
   },
 };
 
@@ -25,7 +29,7 @@ const States = MultiTemplateWithPseudoStates(Checkbox).bind({});
 
 States.argTypes = { ...argTypes };
 delete States.argTypes.isSelected;
-delete States.argTypes.disabled;
+delete States.argTypes.isDisabled;
 delete States.argTypes.isIndeterminate;
 
 States.parameters = {

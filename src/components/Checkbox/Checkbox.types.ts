@@ -1,11 +1,12 @@
-import { ToggleButtonProps } from '@react-types/button';
-import { CSSProperties, ReactNode } from 'react';
+import { CheckboxProps } from '@react-types/checkbox';
+import { CSSProperties } from 'react';
 
-export interface Props extends ToggleButtonProps {
+export interface Props extends CheckboxProps {
   /**
    * String that displays the label of this checkbox.
    */
   label?: string;
+
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -20,19 +21,4 @@ export interface Props extends ToggleButtonProps {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
-
-  /**
-   * Boolean to describe if checkbox is selected.
-   */
-  isSelected?: boolean;
-
-  /**
-   * Boolean to describe if checkbox is disabled.
-   */
-  disabled?: boolean;
-
-  /**
-   * Boolean to describe if checkbox is indeterminate.
-   */
-  isIndeterminate?: boolean;
 }

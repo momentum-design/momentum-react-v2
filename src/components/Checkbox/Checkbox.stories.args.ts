@@ -23,14 +23,14 @@ const checkboxArgTypes = {
       defaultValue: CONSTANTS.DEFAULTS.IS_SELECTED,
     },
   },
-  disabled: {
+  isDisabled: {
     description: 'Whether the checkbox is disabled or not',
     control: { type: 'boolean' },
     table: {
       type: {
         summary: 'boolean',
       },
-      defaultValue: CONSTANTS.DEFAULTS.DISABLED,
+      defaultValue: CONSTANTS.DEFAULTS.IS_DISABLED,
     },
   },
   isIndeterminate: {

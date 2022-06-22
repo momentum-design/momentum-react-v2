@@ -5,18 +5,6 @@ exports[`<Checkbox /> snapshot should match snapshot 1`] = `
   <label
     className="md-checkbox-wrapper"
     data-disabled={false}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
   >
     <VisuallyHidden>
       <div
@@ -72,18 +60,6 @@ exports[`<Checkbox /> snapshot should match snapshot with className 1`] = `
   <label
     className="md-checkbox-wrapper example-class"
     data-disabled={false}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
   >
     <VisuallyHidden>
       <div
@@ -134,23 +110,11 @@ exports[`<Checkbox /> snapshot should match snapshot with className 1`] = `
 
 exports[`<Checkbox /> snapshot should match snapshot with disabled checkbox 1`] = `
 <Checkbox
-  disabled={true}
+  isDisabled={true}
 >
   <label
     className="md-checkbox-wrapper"
     data-disabled={true}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
   >
     <VisuallyHidden>
       <div
@@ -172,7 +136,7 @@ exports[`<Checkbox /> snapshot should match snapshot with disabled checkbox 1`] 
         <input
           aria-checked={false}
           checked={false}
-          disabled={false}
+          disabled={true}
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -207,18 +171,6 @@ exports[`<Checkbox /> snapshot should match snapshot with id 1`] = `
     className="md-checkbox-wrapper"
     data-disabled={false}
     id="example-id"
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
   >
     <VisuallyHidden>
       <div
@@ -275,18 +227,6 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
   <label
     className="md-checkbox-wrapper"
     data-disabled={false}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
   >
     <VisuallyHidden>
       <div
@@ -331,30 +271,28 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
     <div
       className="md-checkbox-selected checkbox"
     >
-      <div>
-        <Icon
-          className="md-checkbox-icon"
-          name="minus"
-          scale={12}
-          weight="bold"
+      <Icon
+        className="md-checkbox-icon"
+        name="minus"
+        scale={12}
+        weight="bold"
+      >
+        <div
+          className="md-icon-wrapper md-checkbox-icon"
         >
-          <div
-            className="md-icon-wrapper md-checkbox-icon"
-          >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={12}
-              data-test="minus"
-              fill="currentColor"
-              height="100%"
-              style={Object {}}
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
-        </Icon>
-      </div>
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={12}
+            data-test="minus"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
     </div>
   </label>
 </Checkbox>
@@ -367,18 +305,6 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox 1`] 
   <label
     className="md-checkbox-wrapper"
     data-disabled={false}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
   >
     <VisuallyHidden>
       <div
@@ -399,6 +325,7 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox 1`] 
       >
         <input
           aria-checked={false}
+          aria-label="Example text"
           checked={false}
           disabled={false}
           onBlur={[Function]}
@@ -435,18 +362,6 @@ exports[`<Checkbox /> snapshot should match snapshot with not selected checkbox 
   <label
     className="md-checkbox-wrapper"
     data-disabled={false}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
   >
     <VisuallyHidden>
       <div
@@ -495,6 +410,84 @@ exports[`<Checkbox /> snapshot should match snapshot with not selected checkbox 
 </Checkbox>
 `;
 
+exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] = `
+<Checkbox
+  isSelected={true}
+>
+  <label
+    className="md-checkbox-wrapper"
+    data-disabled={false}
+  >
+    <VisuallyHidden>
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "clipPath": "inset(50%)",
+            "height": 1,
+            "margin": "0 -1px -1px 0",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": 1,
+          }
+        }
+      >
+        <input
+          aria-checked={true}
+          checked={true}
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="checkbox"
+        />
+      </div>
+    </VisuallyHidden>
+    <div
+      className="md-checkbox-selected checkbox"
+    >
+      <Icon
+        className="md-checkbox-icon"
+        name="check"
+        scale={12}
+        weight="bold"
+      >
+        <div
+          className="md-icon-wrapper md-checkbox-icon"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={12}
+            data-test="check"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+    </div>
+  </label>
+</Checkbox>
+`;
+
 exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
 <Checkbox
   style={
@@ -506,18 +499,6 @@ exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
   <label
     className="md-checkbox-wrapper"
     data-disabled={false}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
     style={
       Object {
         "color": "pink",
