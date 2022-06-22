@@ -1,4 +1,4 @@
-import { Template, MultiTemplate } from '../../storybook/helper.stories.templates';
+import { Template, MultiTemplateWithPseudoStates } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
@@ -21,7 +21,7 @@ const Example = Template<CheckboxProps>(Checkbox).bind({});
 
 Example.argTypes = { ...argTypes };
 
-const States = MultiTemplate<CheckboxProps>(Checkbox).bind({});
+const States = MultiTemplateWithPseudoStates(Checkbox).bind({});
 
 States.argTypes = { ...argTypes };
 delete States.argTypes.isSelected;
@@ -30,16 +30,21 @@ delete States.argTypes.isIndeterminate;
 
 States.parameters = {
   variants: [
-    { isSelected: true, disabled: false, isIndeterminate: false, label: 'Selected normal' },
     {
-      className: ':hover',
+      label: 'Checked',
+      children: 'Checked',
       isSelected: true,
-      disabled: false,
-      isIndeterminate: false,
-      label: 'Selected hover',
     },
-    { isSelected: false, disabled: false, isIndeterminate: false, label: 'Not selected' },
-    { isSelected: true, disabled: false, isIndeterminate: true, label: 'Indeterminate' },
+    {
+      label: 'Unchecked',
+      children: 'Checked',
+      isSelected: false,
+    },
+    {
+      label: 'Indeterminate',
+      children: 'Checked',
+      isIndeterminate: true,
+    },
   ],
 };
 

@@ -29,7 +29,6 @@ const Checkbox: FC<Props> = (props: Props) => {
   const isDisabled = disabled || DEFAULTS.DISABLED;
 
   const { pressProps } = usePress({
-    preventFocusOnPress: true, // we handle it ourselves
     isDisabled,
     ...rest,
   });
@@ -48,11 +47,14 @@ const Checkbox: FC<Props> = (props: Props) => {
   const filled = selected || indeterminate;
   const checkbox = (
     <div
-      className={classnames({
-        [STYLE.selected]: filled,
-        [STYLE.notSelected]: !filled,
-        [STYLE.focus]: isFocusVisible,
-      })}
+      className={classnames(
+        {
+          [STYLE.selected]: filled,
+          [STYLE.notSelected]: !filled,
+          [STYLE.focus]: isFocusVisible,
+        },
+        'checkbox'
+      )}
     >
       {filled && icon}
     </div>
