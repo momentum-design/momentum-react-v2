@@ -2,7 +2,7 @@ const CLASS_PREFIX = 'md-toggle';
 
 const DEFAULTS = {
   IS_DISABLED: false,
-  IS_SELECTED: false,
+  DEFAULT_SELECTION: false,
   LABEL: undefined,
 };
 

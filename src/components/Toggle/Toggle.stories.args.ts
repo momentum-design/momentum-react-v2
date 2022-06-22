@@ -10,7 +10,7 @@ const toggleArgTypes = {
       type: {
         summary: 'boolean',
       },
-      defaultValue: CONSTANTS.DEFAULTS.IS_SELECTED,
+      defaultValue: CONSTANTS.DEFAULTS.DEFAULT_SELECTION,
     },
   },
   isDisabled: {
