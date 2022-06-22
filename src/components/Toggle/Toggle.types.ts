@@ -18,11 +18,6 @@ export interface Props extends Omit<AriaSwitchBase, 'children'> {
   style?: CSSProperties;
 
   /**
-   * Boolean to describe when toggle is on/off
-   */
-  isSelected?: boolean;
-
-  /**
    * String that displays the label of this toggle.
    */
   label?: string;

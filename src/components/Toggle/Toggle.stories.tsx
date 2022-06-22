@@ -17,18 +17,16 @@ export default {
   },
 };
 
-// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<ToggleProps>(Toggle).bind({});
 
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  defaultSelected: TOGGLE_CONSTANTS.DEFAULTS.IS_SELECTED,
+  defaultSelected: TOGGLE_CONSTANTS.DEFAULTS.DEFAULT_SELECTION,
   isDisabled: TOGGLE_CONSTANTS.DEFAULTS.IS_DISABLED,
   label: 'Example text',
 };
 
-// NOTE: Common variants story. This renders multiple variants of a single component.
 const Common = MultiTemplate<ToggleProps>(Toggle).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -47,5 +45,4 @@ Common.parameters = {
   ],
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example, Common };

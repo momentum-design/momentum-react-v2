@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
 import { VisuallyHidden } from '@react-aria/visually-hidden';
 import { useSwitch } from '@react-aria/switch';
@@ -12,10 +12,11 @@ import './Toggle.style.scss';
 /**
  * The Toggle component. Also known as Switch.
  */
-const Toggle: FC<Props> = (props: Props) => {
+const Toggle = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
   const { id, className, style, isDisabled, label } = props;
 
-  const ref = React.useRef();
+  const internalRef = React.useRef<HTMLInputElement>();
+  const ref = providedRef || internalRef;
 
   const children = label && <span className={STYLE.label}>{label}</span>;
   const ariaProps = { ...props, children };
@@ -48,4 +49,7 @@ const Toggle: FC<Props> = (props: Props) => {
   );
 };
 
-export default Toggle;
+const ToggleWithRef = forwardRef(Toggle) as FC<Props>;
+ToggleWithRef.displayName = 'Toggle';
+
+export default ToggleWithRef;
