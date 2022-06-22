@@ -12,22 +12,22 @@
 
     .md-toast-notification-leading-visual {
       align-self: flex-start;
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-      padding-left: 0.25rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.5rem;
     }
 
     .md-toast-notification-text {
       flex-grow: 10;
       color: var(--notificationToast-text);
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
       padding-left: 0.75rem;
     }
 
     .md-toast-notification-close-button {
       align-self: stretch;
-      padding-left: 0.75rem;
+      padding-left: 0.5rem;
     }
   }
 
@@ -37,6 +37,6 @@
     justify-content: flex-end;
     gap: 0.5rem;
     padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
   }
 }
