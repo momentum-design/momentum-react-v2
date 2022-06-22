@@ -3,7 +3,7 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { CHECKBOX_CONSTANTS as CONSTANTS } from '.';
 
 const checkboxArgTypes = {
-  children: {
+  label: {
     description: 'The label that the checkbox should have.',
     control: { type: 'text' },
     table: {

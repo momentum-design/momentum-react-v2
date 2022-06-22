@@ -3,9 +3,9 @@ import { CSSProperties, ReactNode } from 'react';
 
 export interface Props extends ToggleButtonProps {
   /**
-   * Child components of this Checkbox. If free text, it becomes the label of the Checkbox.
+   * String that displays the label of this checkbox.
    */
-  children?: ReactNode;
+  label?: string;
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -35,9 +35,4 @@ export interface Props extends ToggleButtonProps {
    * Boolean to describe if checkbox is indeterminate.
    */
   isIndeterminate?: boolean;
-
-  /**
-   * String that displays the label of this checkbox.
-   */
-  label?: string;
 }
