@@ -2,6 +2,9 @@ import React from 'react';
 
 import Checkbox, { CHECKBOX_CONSTANTS as CONSTANTS } from './';
 import { mountAndWait } from '../../../test/utils';
+import '@testing-library/jest-dom';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('<Checkbox />', () => {
   describe('snapshot', () => {
@@ -61,10 +64,18 @@ describe('<Checkbox />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with selected checkbox', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(<Checkbox isSelected={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with disabled checkbox', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<Checkbox disabled={true} />);
+      const container = await mountAndWait(<Checkbox isDisabled={true} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -127,7 +138,7 @@ describe('<Checkbox />', () => {
 
       const disabled = true;
 
-      const wrapper = await mountAndWait(<Checkbox disabled={disabled} />);
+      const wrapper = await mountAndWait(<Checkbox isDisabled={disabled} />);
       const element = wrapper.find(Checkbox).getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe(disabled.toString());
@@ -136,24 +147,35 @@ describe('<Checkbox />', () => {
 
   describe('actions', () => {
     it('should handle mouse press events', async () => {
-      expect.assertions(1);
+      expect.assertions(4);
 
       const mockCallback = jest.fn();
 
-      const wrapper = await mountAndWait(<Checkbox onPress={mockCallback} />);
-      const component = wrapper.find(Checkbox);
+      const { getByRole } = render(<Checkbox label="Click me" onChange={mockCallback} />);
 
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-        altKey: false,
-      });
+      const input = getByRole('checkbox');
 
+      userEvent.click(input);
       expect(mockCallback).toBeCalledTimes(1);
+      expect(mockCallback).toBeCalledWith(true);
+
+      userEvent.click(input);
+      expect(mockCallback).toBeCalledTimes(2);
+      expect(mockCallback).toBeCalledWith(false);
+    });
+
+    it('should handle press space key', async () => {
+      expect.assertions(2);
+
+      const mockCallback = jest.fn();
+
+      const { getByRole } = render(<Checkbox label="Click me" onChange={mockCallback} />);
+
+      const input = getByRole('checkbox');
+
+      userEvent.type(input, '{Space}');
+      expect(mockCallback).toBeCalledWith(true);
+      expect(input).toBeChecked();
     });
   });
 });

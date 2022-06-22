@@ -2,7 +2,7 @@ const CLASS_PREFIX = 'md-checkbox';
 
 const DEFAULTS = {
   IS_SELECTED: false,
-  DISABLED: false,
+  IS_DISABLED: false,
   IS_INDETERMINATE: false,
   LABEL: undefined,
 };
