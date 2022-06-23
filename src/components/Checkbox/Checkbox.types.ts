@@ -1,7 +1,7 @@
 import { CheckboxProps } from '@react-types/checkbox';
 import { CSSProperties } from 'react';
 
-export interface Props extends CheckboxProps {
+export interface Props extends Omit<CheckboxProps, 'children'> {
   /**
    * String that displays the label of this checkbox.
    */

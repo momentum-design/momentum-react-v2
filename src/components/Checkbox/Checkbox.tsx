@@ -1,4 +1,4 @@
-import React, { RefObject, useRef, FC, forwardRef } from 'react';
+import React, { RefObject, useRef, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import { VisuallyHidden } from '@react-aria/visually-hidden';
@@ -16,7 +16,7 @@ import Icon from '../Icon';
  * The Checkbox component.
  */
 const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
-  const { className, isDisabled, label, isIndeterminate, isSelected, id, style } = props;
+  const { className, isDisabled, label, isIndeterminate, id, style } = props;
 
   const state = useToggleState(props);
   const internalRef = useRef<HTMLInputElement>();
@@ -24,7 +24,6 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
   const { inputProps } = useCheckbox(props, state, ref);
   const { isFocusVisible, focusProps } = useFocusRing();
 
-  const selected = isSelected || state.isSelected || DEFAULTS.IS_SELECTED;
   const indeterminate = isIndeterminate || DEFAULTS.IS_INDETERMINATE;
   const disabled = isDisabled || DEFAULTS.IS_DISABLED;
 
@@ -37,7 +36,7 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
     />
   );
 
-  const filled = selected || indeterminate;
+  const filled = state.isSelected || indeterminate;
   const checkbox = (
     <div
       className={classnames(
