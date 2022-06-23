@@ -1,4 +1,4 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
@@ -27,22 +27,36 @@ Example.args = {
   label: 'Example text',
 };
 
-const Common = MultiTemplate<ToggleProps>(Toggle).bind({});
+const componentStateToProps = (state) => {
+  switch (state) {
+    case 'hover':
+      return { className: 'hover' };
+    case 'active':
+      return { className: 'active' };
+    case 'focus':
+      return { className: 'focused' };
+    case 'disable':
+      return { isDisabled: true };
+    default:
+      return undefined;
+  }
+};
 
-Common.argTypes = { ...argTypes };
-delete Common.argTypes.defaultSelected;
-delete Common.argTypes.isDisabled;
-delete Common.argTypes.label;
-delete Common.argTypes.onChange;
+const States = MultiTemplateWithPseudoStates<ToggleProps>(Toggle, componentStateToProps).bind({});
 
-Common.args = {};
-Common.parameters = {
+States.argTypes = { ...argTypes };
+delete States.argTypes.defaultSelected;
+delete States.argTypes.isDisabled;
+delete States.argTypes.label;
+delete States.argTypes.onChange;
+
+States.args = {};
+
+States.parameters = {
   variants: [
-    { defaultSelected: true, isDisabled: false, label: 'Selected' },
-    { defaultSelected: true, isDisabled: true, label: 'Selected + Disabled' },
-    { defaultSelected: false, isDisabled: false, label: 'Not selected' },
-    { defaultSelected: false, isDisabled: true, label: 'Not selected + Disabled' },
+    { isSelected: false, label: 'Off' },
+    { isSelected: true, label: 'On' },
   ],
 };
 
-export { Example, Common };
+export { Example, States };
