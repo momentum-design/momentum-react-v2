@@ -7,7 +7,7 @@ import { useFocusRing } from '@react-aria/focus';
 import { Props } from './Checkbox.types';
 import { STYLE, DEFAULTS } from './Checkbox.constants';
 import './Checkbox.style.scss';
-import { useCheckbox } from 'react-aria';
+import { useCheckbox } from '@react-aria/checkbox';
 import { useToggleState } from '@react-stately/toggle';
 
 import Icon from '../Icon';
