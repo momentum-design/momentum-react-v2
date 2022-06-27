@@ -84,6 +84,22 @@ Common.parameters = {
       outline: true,
       error: true,
     },
+    {
+      children: 'With:',
+      size: 28,
+      search: true,
+    },
+    {
+      children: 'With:',
+      size: 24,
+      search: true,
+    },
+    {
+      children: 'L2',
+      multiline: true,
+      size: 16,
+      chipColor: 'cyan',
+    },
   ],
 };
 

@@ -30,7 +30,7 @@ const Chip: FC<Props> = (props: Props) => {
 
   const leftContent = avatar ? avatar : leftIcon;
   const changedText = text ? text : children;
-  const textStyle = search && size === 24 ? { fontSize: '.875rem', fontWeight: 600 } : undefined;
+  const secondaryStyle = multiline || (size === 24 && search);
 
   return (
     <ButtonPill
@@ -51,7 +51,7 @@ const Chip: FC<Props> = (props: Props) => {
         </div>
       )}
       <Text
-        style={textStyle}
+        type={secondaryStyle ? 'subheader-secondary' : 'body-primary'}
         data-search={search}
         data-multiline={multiline}
         className={STYLE.centerSection}
