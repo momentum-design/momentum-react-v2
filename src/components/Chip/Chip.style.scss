@@ -10,25 +10,26 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
   &[data-error='true'],
   &[data-error='true']:hover,
   &[data-error='true']:active {
-    background-color: var(--theme-background-alert-error-normal);
-    color: var(--theme-text-error-normal);
+    background-color: var(--chips-background-error);
+    color: var(--chips-text-error);
 
     &[data-outline='true'] {
-      border: 0.063rem solid;
-      border-color: var(--theme-outline-cancel-normal);
+      border: 0.0625rem solid;
+      border-color: var(--chips-outline-error);
     }
   }
 
   &[data-error='false'] {
     &[data-outline='true'] {
-      border: 0.063rem solid;
+      border: 0.0625rem solid;
       border-radius: 1rem;
-      border-color: var(--theme-outline-primary-normal);
+      border-color: var(--chips-outline-normal);
     }
   }
 
   &[data-multiline='true'] {
     border-radius: 0.875rem;
+    background-color: var(--chips-outline-multiline-background);
 
     &[data-modifier-color='orange'] {
       border-color: var(--chips-outline-multiline-text-orange);
@@ -98,14 +99,11 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
   }
 
   > .md-chip-center-section:first-child:last-child {
-    padding: 0em 0.625rem;
+    padding: 0rem 0.625rem;
 
     &[data-search='true'] {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 0rem 0.438rem;
-
       &[data-size='24'] {
-        padding: 0.063rem 0.5rem;
+        padding: 0.0625rem 0.5rem;
       }
 
       &[data-size='28'] {
@@ -114,10 +112,9 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
     }
 
     &[data-multiline='true'] {
-      padding: 0rem 0.406rem;
+      padding: 0rem 0.40625rem;
       font-size: 0.875rem;
       font-weight: 600;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.125rem;
     }
   }

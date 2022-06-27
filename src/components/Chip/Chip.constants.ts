@@ -2,17 +2,6 @@ import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
 const CLASS_PREFIX = 'md-chip';
 
-const DEFAULTS = {
-  DISABLED: false,
-  ERROR: false,
-  AVATAR: undefined,
-  OUTLINE: false,
-  COLOR: undefined,
-  MULTILINE: false,
-  SEARCH: false,
-  SIZE: 28,
-};
-
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   disabled: `${CLASS_PREFIX}-disabled`,
@@ -32,6 +21,17 @@ const MULTILINE_COLORS: Record<string, TeamColor> = {
   CYAN: 'cyan',
   PURPLE: 'purple',
   VIOLET: 'violet',
+};
+
+const DEFAULTS = {
+  DISABLED: false,
+  ERROR: false,
+  AVATAR: undefined,
+  OUTLINE: false,
+  COLOR: MULTILINE_COLORS.MINT,
+  MULTILINE: false,
+  SEARCH: false,
+  SIZE: 28,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE, MULTILINE_COLORS };
