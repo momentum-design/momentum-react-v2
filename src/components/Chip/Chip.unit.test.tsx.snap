@@ -7,10 +7,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -24,10 +21,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -50,10 +44,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -80,10 +71,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -107,10 +95,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={true}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -124,10 +109,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
       data-error={true}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -147,10 +129,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
             data-error={true}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -176,184 +155,12 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
                 data-multiline={false}
                 data-search={false}
-<<<<<<< HEAD
-=======
-                data-type="body-primary"
-              />
-            </Text>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-  </ButtonPill>
-</Chip>
-`;
-
-exports[`<Chip /> snapshot it should match snapshot with mulitline color 1`] = `
-<Chip
-  chipColor="cobalt"
-  multiline={true}
->
-  <ButtonPill
-    chipColor="cobalt"
-    className="md-chip-wrapper"
-    data-error={false}
-    data-modifier-color="cobalt"
-    data-multiline={true}
-    data-search={false}
-    data-size={28}
-    multiline={true}
-    size={28}
-  >
-    <ButtonSimple
-      chipColor="cobalt"
-      className="md-button-pill-wrapper md-chip-wrapper"
-      data-color="primary"
-      data-disabled={false}
-      data-error={false}
-      data-ghost={false}
-      data-grown={false}
-      data-modifier-color="cobalt"
-      data-multiline={true}
-      data-outline={false}
-      data-search={false}
-      data-size={28}
-      data-solid={false}
-      multiline={true}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-error={false}
-            data-ghost={false}
-            data-grown={false}
-            data-modifier-color="cobalt"
-            data-multiline={true}
-            data-outline={false}
-            data-search={false}
-            data-size={28}
-            data-solid={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <Text
-              className="md-chip-center-section"
-              data-multiline={true}
-              data-search={false}
-            >
-              <p
-                className="md-text-wrapper md-chip-center-section"
-                data-multiline={true}
-                data-search={false}
-                data-type="body-primary"
-              />
-            </Text>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-  </ButtonPill>
-</Chip>
-`;
-
-exports[`<Chip /> snapshot it should match snapshot with multiline 1`] = `
-<Chip
-  multiline={true}
->
-  <ButtonPill
-    className="md-chip-wrapper"
-    data-error={false}
-    data-multiline={true}
-    data-search={false}
-    data-size={28}
-    multiline={true}
-    size={28}
-  >
-    <ButtonSimple
-      className="md-button-pill-wrapper md-chip-wrapper"
-      data-color="primary"
-      data-disabled={false}
-      data-error={false}
-      data-ghost={false}
-      data-grown={false}
-      data-multiline={true}
-      data-outline={false}
-      data-search={false}
-      data-size={28}
-      data-solid={false}
-      multiline={true}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-pill-wrapper md-chip-wrapper md-button-simple-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-error={false}
-            data-ghost={false}
-            data-grown={false}
-            data-multiline={true}
-            data-outline={false}
-            data-search={false}
-            data-size={28}
-            data-solid={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <Text
-              className="md-chip-center-section"
-              data-multiline={true}
-              data-search={false}
-            >
-              <p
-                className="md-text-wrapper md-chip-center-section"
-                data-multiline={true}
-                data-search={false}
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
                 data-type="body-primary"
               />
             </Text>
@@ -543,10 +350,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -560,10 +364,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={true}
       data-search={false}
@@ -582,10 +383,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={true}
             data-search={false}
@@ -611,10 +409,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -638,10 +433,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={true}
     data-size={28}
@@ -655,10 +447,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={true}
@@ -678,10 +467,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={true}
@@ -707,10 +493,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={true}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -732,10 +515,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -748,10 +528,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -770,10 +547,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -799,10 +573,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -835,10 +606,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
     }
     className="md-chip-wrapper"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -856,10 +624,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -878,10 +643,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -921,10 +683,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -948,10 +707,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
   <ButtonPill
     className="example-class"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -964,10 +720,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -986,10 +739,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -1015,10 +765,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -1042,10 +789,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -1059,10 +803,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -1082,10 +823,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -1112,10 +850,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -1144,10 +879,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
-<<<<<<< HEAD
     data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -1166,10 +898,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
-<<<<<<< HEAD
       data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -1194,10 +923,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
-<<<<<<< HEAD
             data-modifier-color="mint"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -1440,10 +1166,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
-<<<<<<< HEAD
               type="body-primary"
-=======
->>>>>>> ce22f63c9 (feat(chips-modifiers): add tests, correct constants)
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
