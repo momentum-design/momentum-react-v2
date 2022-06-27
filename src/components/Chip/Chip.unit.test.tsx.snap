@@ -7,6 +7,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -20,6 +21,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -42,6 +44,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -68,6 +71,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -91,6 +95,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={true}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -104,6 +109,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
       data-error={true}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -123,6 +129,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
             data-error={true}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -148,6 +155,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -234,12 +242,13 @@ exports[`<Chip /> snapshot it should match snapshot with mulitline color 1`] = `
               className="md-chip-center-section"
               data-multiline={true}
               data-search={false}
+              type="subheader-secondary"
             >
-              <p
+              <h3
                 className="md-text-wrapper md-chip-center-section"
                 data-multiline={true}
                 data-search={false}
-                data-type="body-primary"
+                data-type="subheader-secondary"
               />
             </Text>
           </button>
@@ -257,6 +266,7 @@ exports[`<Chip /> snapshot it should match snapshot with multiline 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={true}
     data-search={false}
     data-size={28}
@@ -270,6 +280,7 @@ exports[`<Chip /> snapshot it should match snapshot with multiline 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={true}
       data-outline={false}
       data-search={false}
@@ -289,6 +300,7 @@ exports[`<Chip /> snapshot it should match snapshot with multiline 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={true}
             data-outline={false}
             data-search={false}
@@ -314,12 +326,13 @@ exports[`<Chip /> snapshot it should match snapshot with multiline 1`] = `
               className="md-chip-center-section"
               data-multiline={true}
               data-search={false}
+              type="subheader-secondary"
             >
-              <p
+              <h3
                 className="md-text-wrapper md-chip-center-section"
                 data-multiline={true}
                 data-search={false}
-                data-type="body-primary"
+                data-type="subheader-secondary"
               />
             </Text>
           </button>
@@ -337,6 +350,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -350,6 +364,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={true}
       data-search={false}
@@ -368,6 +383,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={true}
             data-search={false}
@@ -393,6 +409,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -416,6 +433,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={true}
     data-size={28}
@@ -429,6 +447,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={true}
@@ -448,6 +467,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={true}
@@ -473,6 +493,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={true}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -494,6 +515,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -506,6 +528,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -524,6 +547,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -549,6 +573,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -581,6 +606,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
     }
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -598,6 +624,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -616,6 +643,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -655,6 +683,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -678,6 +707,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
   <ButtonPill
     className="example-class"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -690,6 +720,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -708,6 +739,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -733,6 +765,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -756,6 +789,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -769,6 +803,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -788,6 +823,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -814,6 +850,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -842,6 +879,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -860,6 +898,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -884,6 +923,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -918,6 +958,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -946,6 +987,7 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -964,6 +1006,7 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -988,6 +1031,7 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -1013,6 +1057,7 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -1048,6 +1093,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -1065,6 +1111,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -1088,6 +1135,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -1118,6 +1166,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
@@ -1141,6 +1190,7 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
   <ButtonPill
     className="md-chip-wrapper"
     data-error={false}
+    data-modifier-color="mint"
     data-multiline={false}
     data-search={false}
     data-size={28}
@@ -1154,6 +1204,7 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
       data-error={false}
       data-ghost={false}
       data-grown={false}
+      data-modifier-color="mint"
       data-multiline={false}
       data-outline={false}
       data-search={false}
@@ -1173,6 +1224,7 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
             data-error={false}
             data-ghost={false}
             data-grown={false}
+            data-modifier-color="mint"
             data-multiline={false}
             data-outline={false}
             data-search={false}
@@ -1198,6 +1250,7 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
               className="md-chip-center-section"
               data-multiline={false}
               data-search={false}
+              type="body-primary"
             >
               <p
                 className="md-text-wrapper md-chip-center-section"
