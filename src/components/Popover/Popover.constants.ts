@@ -17,6 +17,7 @@ const DEFAULTS = {
   INTERACTIVE: false,
   COLOR: COLORS.PRIMARY,
   BOUNDARY: BOUNDARIES.PARENT,
+  HIDE_ON_ESC: true,
 };
 
 const STYLE = {

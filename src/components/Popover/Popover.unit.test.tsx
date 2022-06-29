@@ -291,5 +291,56 @@ describe('<Popover />', () => {
         expect(screen.queryByText('Content')).not.toBeInTheDocument();
       });
     });
+
+    it('should hide Popover after pressing Esc by default', async () => {
+      expect.assertions(3);
+
+      render(
+        <Popover triggerComponent={<button>Click Me!</button>} trigger="click">
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
+      const content = await screen.findByText('Content');
+      expect(content).toBeVisible();
+
+      userEvent.keyboard('{Escape}');
+
+      // content should be hidden
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
+    });
+
+    it('should not hide Popover after pressing Esc when hideOnEsc is false', async () => {
+      expect.assertions(3);
+
+      render(
+        <Popover triggerComponent={<button>Click Me!</button>} trigger="click" hideOnEsc={false}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
+      const content = await screen.findByText('Content');
+      expect(content).toBeVisible();
+
+      userEvent.keyboard('{Escape}');
+
+      // content should still be visible
+      const contentAfterEsc = await screen.findByText('Content');
+      expect(contentAfterEsc).toBeVisible();
+    });
   });
 });
