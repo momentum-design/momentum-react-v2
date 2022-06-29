@@ -62,6 +62,13 @@ export type PopoverCommonStyleProps = {
    * @default `scollParent`
    */
   boundary?: BoundaryType;
+
+  /**
+   * Whether the popover should hide when Esc is pressed
+   *
+   * @default true
+   */
+  hideOnEsc?: boolean;
 };
 
 export interface Props extends PopoverCommonStyleProps {
