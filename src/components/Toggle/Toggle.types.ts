@@ -16,9 +16,4 @@ export interface Props extends Omit<AriaSwitchBase, 'children'> {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
-
-  /**
-   * String that displays the label of this toggle.
-   */
-  label?: string;
 }

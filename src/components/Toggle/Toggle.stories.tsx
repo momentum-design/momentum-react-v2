@@ -24,7 +24,7 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   defaultSelected: TOGGLE_CONSTANTS.DEFAULTS.DEFAULT_SELECTION,
   isDisabled: TOGGLE_CONSTANTS.DEFAULTS.IS_DISABLED,
-  label: 'Example text',
+  'aria-label': 'Example text',
 };
 
 const componentStateToProps = (state) => {
@@ -47,15 +47,14 @@ const States = MultiTemplateWithPseudoStates<ToggleProps>(Toggle, componentState
 States.argTypes = { ...argTypes };
 delete States.argTypes.defaultSelected;
 delete States.argTypes.isDisabled;
-delete States.argTypes.label;
 delete States.argTypes.onChange;
 
 States.args = {};
 
 States.parameters = {
   variants: [
-    { isSelected: false, label: 'Off' },
-    { isSelected: true, label: 'On' },
+    { isSelected: false, label: 'Off', 'aria-label': 'off' },
+    { isSelected: true, label: 'On', 'aria-label': 'on' },
   ],
 };
 

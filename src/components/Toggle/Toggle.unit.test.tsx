@@ -16,14 +16,6 @@ describe('<Toggle />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with label', () => {
-      expect.assertions(1);
-
-      const container = mount(<Toggle aria-label={'toggle'} label={'Hello toggle'} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
     it('should match snapshot with className', () => {
       expect.assertions(1);
 
@@ -169,9 +161,7 @@ describe('<Toggle />', () => {
 
       const mockCallback = jest.fn();
 
-      const { getByRole } = render(
-        <Toggle onChange={mockCallback} aria-label={'toggle'} label={'Toggle'} />
-      );
+      const { getByRole } = render(<Toggle onChange={mockCallback} aria-label={'toggle'} />);
       const input = getByRole('switch');
 
       userEvent.type(input, '{Space}');
