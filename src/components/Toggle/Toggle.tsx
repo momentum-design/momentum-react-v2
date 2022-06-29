@@ -13,16 +13,13 @@ import './Toggle.style.scss';
  * The Toggle component. Also known as Switch.
  */
 const Toggle = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
-  const { id, className, style, isDisabled, label } = props;
+  const { id, className, style, isDisabled } = props;
 
   const internalRef = React.useRef<HTMLInputElement>();
   const ref = providedRef || internalRef;
 
-  const children = label && <span className={STYLE.label}>{label}</span>;
-  const ariaProps = { ...props, children };
-
-  const state = useToggleState(ariaProps);
-  const { inputProps } = useSwitch(ariaProps, state, ref);
+  const state = useToggleState(props);
+  const { inputProps } = useSwitch(props, state, ref);
   const { isFocusVisible, focusProps } = useFocusRing();
 
   return (
@@ -44,7 +41,6 @@ const Toggle = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
           [STYLE.focused]: isFocusVisible,
         })}
       />
-      {children}
     </label>
   );
 };

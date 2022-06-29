@@ -23,16 +23,6 @@ const toggleArgTypes = {
       defaultValue: CONSTANTS.DEFAULTS.IS_DISABLED,
     },
   },
-  label: {
-    description: 'The label that the toggle should have.',
-    control: { type: 'text' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: CONSTANTS.DEFAULTS.LABEL,
-    },
-  },
 };
 
 export { toggleArgTypes };
