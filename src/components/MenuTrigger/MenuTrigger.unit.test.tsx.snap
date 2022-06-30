@@ -13,6 +13,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
   <Popover
     className="md-menu-trigger-wrapper"
     color="primary"
+    hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
     onKeyDown={[Function]}
@@ -2201,6 +2202,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
   <Popover
     className="example-class md-menu-trigger-wrapper"
     color="primary"
+    hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
     onKeyDown={[Function]}
@@ -4389,6 +4391,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
   <Popover
     className="md-menu-trigger-wrapper"
     color="secondary"
+    hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
     onKeyDown={[Function]}
@@ -6577,6 +6580,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
   <Popover
     className="md-menu-trigger-wrapper"
     color="primary"
+    hideOnEsc={false}
     id="example-id"
     interactive={true}
     onClickOutside={[Function]}
@@ -8769,6 +8773,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
   <Popover
     className="md-menu-trigger-wrapper"
     color="primary"
+    hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
     onKeyDown={[Function]}
@@ -10957,6 +10962,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
   <Popover
     className="md-menu-trigger-wrapper"
     color="primary"
+    hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
     onKeyDown={[Function]}
@@ -13213,6 +13219,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
   <Popover
     className="md-menu-trigger-wrapper"
     color="primary"
+    hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
     onKeyDown={[Function]}
@@ -15417,6 +15424,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
   <Popover
     className="md-menu-trigger-wrapper"
     color="primary"
+    hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
     onKeyDown={[Function]}

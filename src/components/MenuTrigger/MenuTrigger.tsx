@@ -122,6 +122,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       color={color}
       onClickOutside={state.close}
       setInstance={setPopoverInstance}
+      hideOnEsc={false}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
       <FocusScope restoreFocus contain>
