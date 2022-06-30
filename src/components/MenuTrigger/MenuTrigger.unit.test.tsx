@@ -249,7 +249,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
       onOpenChangeMock.mockClear();
 
-      userEvent.keyboard('{escape}');
+      userEvent.keyboard('{Escape}');
 
       expect(onOpenChangeMock).toHaveBeenCalledWith(false);
       expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
@@ -333,7 +333,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
 
-      userEvent.keyboard('{escape}');
+      userEvent.keyboard('{Escape}');
 
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();

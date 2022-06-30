@@ -1,10 +1,10 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import type { Plugin } from 'tippy.js';
 
 // Tippy plugin to add hiding on Esc to Popover:
-export const hideOnEscPlugin = {
+export const hideOnEscPlugin: Plugin = {
   name: 'hideOnEsc',
   defaultValue: true,
-  fn({ hide }: { hide: () => void }) {
+  fn({ hide }) {
     // hide popover when Escape key is pressed
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
