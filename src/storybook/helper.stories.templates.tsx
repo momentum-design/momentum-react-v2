@@ -35,24 +35,15 @@ function MultiTemplate<Props>(Component: FC): Story<Props> {
 }
 
 const COMPONENT_STATES = ['', 'Hover', 'Active', 'Disable', 'Focus'];
-type ComponentStates = `${Lowercase<typeof COMPONENT_STATES[number]>}`;
-export type ComponentStateToPropsFn = (state: ComponentStates) => any;
 
 /**
  * Component utility function that returns all component states for a variant
  * @param Component
- * @param args
  * @param variant
- * @param componentStateToProps
  * @returns ReactElement
  */
 
-export const getComponentStates = (
-  Component: FC,
-  args: any,
-  variant: any,
-  componentStateToProps?: ComponentStateToPropsFn
-): ReactElement => {
+export const getComponentStates = (Component: FC, args: any, variant: any): ReactElement => {
   const items = COMPONENT_STATES.map((state, index) => {
     const getChildren = () => {
       if (variant.children) {
@@ -62,14 +53,15 @@ export const getComponentStates = (
       }
     };
 
-    const stateProps = componentStateToProps?.(state.toLowerCase()) ?? {
-      className: state.toLowerCase(),
-    };
-
     return (
       <div key={index}>
         <p>{state || 'Normal'}</p>
-        <Component {...variant} {...args} {...stateProps} children={getChildren()} />
+        <Component
+          {...variant}
+          {...args}
+          children={getChildren()}
+          className={state.toLowerCase()}
+        />
       </div>
     );
   });
@@ -94,20 +86,16 @@ export const getComponentStates = (
 /**
  * Generate a Story Template that consists of multiple variants with all Component states. See the [Storybook Documentation]{@link https://storybook.js.org/docs/react/writing-stories/introduction#using-args}.
  * @param Component - Functional Component to generate multiple templates from.
- * @param componentStateToProps
  * @returns - A Story Template with multiple variants of the provided Component's states.
  */
-function MultiTemplateWithPseudoStates<Props>(
-  Component: FC,
-  componentStateToProps?: ComponentStateToPropsFn
-): Story<Props> {
+function MultiTemplateWithPseudoStates<Props>(Component: FC): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
     const { variants } = parameters;
 
     const items = variants.map((variant, index) => (
       <div key={index}>
         <div style={{ padding: '0 1rem' }}>{variant.label}</div>
-        {getComponentStates(Component, args, variant, componentStateToProps)}
+        {getComponentStates(Component, args, variant)}
       </div>
     ));
 

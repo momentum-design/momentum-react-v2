@@ -1,10 +1,11 @@
-import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import Toggle, { ToggleProps, TOGGLE_CONSTANTS } from './';
 import Documentation from './Toggle.stories.docs.mdx';
 import argTypes from './Toggle.stories.args';
+import React from 'react';
 
 export default {
   title: 'Momentum UI/Toggle',
@@ -17,6 +18,16 @@ export default {
   },
 };
 
+type ToggleWithLabelProps = ToggleProps & { label: string };
+const ToggleWithLabel = ({ label, ...props }: ToggleWithLabelProps) => (
+  <div>
+    <label htmlFor={label} style={{ display: 'flex', alignItems: 'center' }}>
+      <Toggle id={label} {...props} />
+      {label}
+    </label>
+  </div>
+);
+
 const Example = Template<ToggleProps>(Toggle).bind({});
 
 Example.argTypes = { ...argTypes };
@@ -24,38 +35,24 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   defaultSelected: TOGGLE_CONSTANTS.DEFAULTS.DEFAULT_SELECTION,
   isDisabled: TOGGLE_CONSTANTS.DEFAULTS.IS_DISABLED,
-  'aria-label': 'Example text',
 };
 
-const componentStateToProps = (state) => {
-  switch (state) {
-    case 'hover':
-      return { className: 'hover' };
-    case 'active':
-      return { className: 'active' };
-    case 'focus':
-      return { className: 'focused' };
-    case 'disable':
-      return { isDisabled: true };
-    default:
-      return undefined;
-  }
-};
+const Common = MultiTemplate<ToggleWithLabelProps>(ToggleWithLabel).bind({});
 
-const States = MultiTemplateWithPseudoStates<ToggleProps>(Toggle, componentStateToProps).bind({});
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.defaultSelected;
+delete Common.argTypes.isDisabled;
+delete Common.argTypes.label;
+delete Common.argTypes.onChange;
 
-States.argTypes = { ...argTypes };
-delete States.argTypes.defaultSelected;
-delete States.argTypes.isDisabled;
-delete States.argTypes.onChange;
-
-States.args = {};
-
-States.parameters = {
+Common.args = {};
+Common.parameters = {
   variants: [
-    { isSelected: false, label: 'Off', 'aria-label': 'off' },
-    { isSelected: true, label: 'On', 'aria-label': 'on' },
+    { defaultSelected: true, isDisabled: false, label: 'Selected' },
+    { defaultSelected: true, isDisabled: true, label: 'Selected + Disabled' },
+    { defaultSelected: false, isDisabled: false, label: 'Not selected' },
+    { defaultSelected: false, isDisabled: true, label: 'Not selected + Disabled' },
   ],
 };
 
-export { Example, States };
+export { Example, Common };
