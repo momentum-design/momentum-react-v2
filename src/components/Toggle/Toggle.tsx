@@ -1,9 +1,7 @@
 import React, { FC, forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import { VisuallyHidden } from '@react-aria/visually-hidden';
 import { useSwitch } from '@react-aria/switch';
 import { useToggleState } from '@react-stately/toggle';
-import { useFocusRing } from '@react-aria/focus';
 
 import { STYLE } from './Toggle.constants';
 import { Props } from './Toggle.types';
@@ -20,28 +18,20 @@ const Toggle = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
 
   const state = useToggleState(props);
   const { inputProps } = useSwitch(props, state, ref);
-  const { isFocusVisible, focusProps } = useFocusRing();
 
   return (
-    <label
-      className={classnames(className, STYLE.wrapper)}
+    <input
+      className={classnames(STYLE.toggle, className, {
+        [STYLE.on]: state.isSelected,
+        [STYLE.off]: !state.isSelected,
+      })}
       id={id}
       style={style}
       data-disabled={!!isDisabled}
       data-selected={state.isSelected}
-    >
-      <VisuallyHidden>
-        <input {...inputProps} {...focusProps} ref={ref} />
-      </VisuallyHidden>
-      <div
-        className={classnames(STYLE.toggle, {
-          [STYLE.on]: state.isSelected,
-          [STYLE.off]: !state.isSelected,
-          [STYLE.disabled]: isDisabled,
-          [STYLE.focused]: isFocusVisible,
-        })}
-      />
-    </label>
+      {...inputProps}
+      ref={ref}
+    />
   );
 };
 

@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import Toggle, { TOGGLE_CONSTANTS as CONSTANTS } from './';
+import Toggle from './';
 
 describe('<Toggle />', () => {
   describe('snapshot', () => {
@@ -65,13 +65,12 @@ describe('<Toggle />', () => {
 
   describe('attributes', () => {
     it('should have its wrapper class and data atts reflect the default values', () => {
-      expect.assertions(3);
+      expect.assertions(2);
 
       const wrapper = mount(<Toggle aria-label={'toggle'} />)
         .find(Toggle)
         .getDOMNode();
 
-      expect(wrapper.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
       expect(wrapper.getAttribute('data-disabled')).toBe('false');
       expect(wrapper.getAttribute('data-selected')).toBe('false');
     });
@@ -168,6 +167,46 @@ describe('<Toggle />', () => {
 
       expect(mockCallback).toBeCalledWith(true);
       expect(input).toBeChecked();
+    });
+
+    it('should be focusable', async () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const { getByRole } = render(<Toggle onChange={mockCallback} aria-label={'toggle'} />);
+      const input = getByRole('switch');
+
+      userEvent.tab();
+
+      expect(input).toHaveFocus();
+    });
+
+    it('should work with label', async () => {
+      expect.assertions(4);
+
+      const mockCallback = jest.fn();
+
+      const { getByText } = render(
+        <label htmlFor={'123'}>
+          Labeled
+          <Toggle
+            id={'123'}
+            defaultSelected={false}
+            onChange={mockCallback}
+            aria-label={'toggle'}
+          />
+        </label>
+      );
+      const label = getByText('Labeled');
+
+      userEvent.click(label);
+      expect(mockCallback).toBeCalledTimes(1);
+      expect(mockCallback).toBeCalledWith(true);
+
+      userEvent.click(label);
+      expect(mockCallback).toBeCalledTimes(2);
+      expect(mockCallback).toBeCalledWith(false);
     });
   });
 });
