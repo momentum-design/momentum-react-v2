@@ -1817,15 +1817,15 @@
   resolved "https://registry.yarnpkg.com/@momentum-ui/animations/-/animations-1.3.0.tgz#1aeb51679a4019afff1381eb8627fe143befff1c"
   integrity sha512-lUKggfh1PjJ949HFxZdY23lSIIN0FTUyoNLOSSbU0L9bQI0ryx6FYTrJMiS2e/DS/gyUk306++OXxRnNSq3Kjw==
 
-"@momentum-ui/design-tokens@^0.0.44":
-  version "0.0.44"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.44.tgz#49e8b2f54ce51b17e8cbe8162f4253dfc3deacc9"
-  integrity sha512-XbQPzHyNS9t7rxupD3A859HmJijK/2n9yZqm9+flwhUDR9LFqGzggNSNcvvh/dr+AkxBsXupNImRTZySHYXwOA==
+"@momentum-ui/design-tokens@^0.0.45":
+  version "0.0.45"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.45.tgz#4763c1f6b2a8bcc1089f781a2223978db5bdb9cf"
+  integrity sha512-fATRau2NuViSc5IBUsMiu9Q7JTeitRrbYq3CWo6iDDsY8ydQErYOkwSCXBipBHdxgreZRPrmU4mhnjM2xdNUDg==
 
-"@momentum-ui/icons-rebrand@^1.31.1":
-  version "1.31.1"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons-rebrand/-/icons-rebrand-1.31.1.tgz#49f357eb416ed844ae059e544041ef495d7b35a3"
-  integrity sha512-gvalde0UcRCkPUeMl00OR5/TJwDAEe5KFfQVY1JmpFiTiKXMgal2z1iQvZrgWJDavfheMiAgEEhTHvFKlkCAQg==
+"@momentum-ui/icons-rebrand@^1.38.0":
+  version "1.38.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/icons-rebrand/-/icons-rebrand-1.38.0.tgz#c684d5180373330120a7d0b116331e0c561959ed"
+  integrity sha512-ug3YgInnIHt9jyolpCAgIFtPC3CudaXgHJuy8d1Bfh/VhIy7ahuZprMBm57IUKQz2XiRvfTIPDJkLKAK5a29rQ==
 
 "@momentum-ui/icons@8.28.4":
   version "8.28.4"
