@@ -6,7 +6,7 @@ import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 export type SupportedAvatar = ReactElement<AvatarProps>;
 export type SupportedIcon = ReactElement<IconProps>;
 export type SupportedColor = TeamColor;
-export type SupportedSize = 16 | 24 | 28 | 32;
+export type SupportedSize = 16 | 24 | 28;
 
 export interface Props {
   /**

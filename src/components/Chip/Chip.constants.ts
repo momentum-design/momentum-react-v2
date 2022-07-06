@@ -1,4 +1,5 @@
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
+import { SupportedSize } from './Chip.types';
 
 const CLASS_PREFIX = 'md-chip';
 
@@ -23,6 +24,12 @@ const MULTILINE_COLORS: Record<string, TeamColor> = {
   VIOLET: 'violet',
 };
 
+const SIZES: Record<string, SupportedSize> = {
+  MULTILINE: 16,
+  SEARCH: 24,
+  DEFAULT: 28,
+};
+
 const DEFAULTS = {
   DISABLED: false,
   ERROR: false,
@@ -31,7 +38,7 @@ const DEFAULTS = {
   COLOR: MULTILINE_COLORS.MINT,
   MULTILINE: false,
   SEARCH: false,
-  SIZE: 28,
+  SIZE: SIZES.DEFAULT,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE, MULTILINE_COLORS };
