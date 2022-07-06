@@ -7,6 +7,7 @@ import Text from '../Text';
 
 import Chip, { CHIP_CONSTANTS, CHIP_CONSTANTS as CONSTANTS } from './';
 import { BUTTON_PILL_CONSTANTS } from '../ButtonPill';
+import { SupportedSize } from './Chip.types';
 
 const text = 'Some chip text';
 const exampleIcon = <Icon name="placeholder" scale={16} />;
