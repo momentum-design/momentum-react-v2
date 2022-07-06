@@ -170,7 +170,7 @@ describe('<Toggle />', () => {
     });
 
     it('should be focusable', async () => {
-      expect.assertions(1);
+      expect.assertions(2);
 
       const mockCallback = jest.fn();
 
@@ -180,6 +180,10 @@ describe('<Toggle />', () => {
       userEvent.tab();
 
       expect(input).toHaveFocus();
+
+      userEvent.tab();
+
+      expect(input).not.toHaveFocus();
     });
 
     it('should work with label', async () => {
