@@ -23,6 +23,7 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   children: 'Example',
+  onPress: () => alert('Pressed'),
 };
 
 const Colors = MultiTemplate<TagProps>(Tag).bind({});
