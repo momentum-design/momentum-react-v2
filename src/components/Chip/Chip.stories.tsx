@@ -2,7 +2,7 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import Chip, { ChipProps } from './';
+import Chip, { ChipProps, CHIP_CONSTANTS } from './';
 import argTypes from './Chip.stories.args';
 import Documentation from './Chip.stories.docs.mdx';
 import Icon from '../Icon';
@@ -94,13 +94,22 @@ Common.parameters = {
       size: 24,
       search: true,
     },
-    {
-      children: 'L2',
-      multiline: true,
-      size: 16,
-      chipColor: 'cyan',
-    },
   ],
 };
 
-export { Example, Common };
+const Colors = MultiTemplate<ChipProps>(Chip).bind({});
+
+Colors.args = {
+  style: { margin: '1rem' },
+};
+
+Colors.parameters = {
+  variants: Object.values(CHIP_CONSTANTS.MULTILINE_COLORS).map((color) => ({
+    children: `chipColor = ${color}`,
+    chipColor: color,
+    size: 16,
+    multiline: true,
+  })),
+};
+
+export { Example, Common, Colors };

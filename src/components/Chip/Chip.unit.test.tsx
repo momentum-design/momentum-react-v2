@@ -7,6 +7,7 @@ import Text from '../Text';
 
 import Chip, { CHIP_CONSTANTS, CHIP_CONSTANTS as CONSTANTS } from './';
 import { BUTTON_PILL_CONSTANTS } from '../ButtonPill';
+import { SupportedSize } from './Chip.types';
 
 const text = 'Some chip text';
 const exampleIcon = <Icon name="placeholder" scale={16} />;
@@ -18,6 +19,7 @@ const error = !CHIP_CONSTANTS.DEFAULTS.ERROR;
 const color = CHIP_CONSTANTS.MULTILINE_COLORS.COBALT;
 const multiline = !CHIP_CONSTANTS.DEFAULTS.MULTILINE;
 const search = !CHIP_CONSTANTS.DEFAULTS.SEARCH;
+const size = CHIP_CONSTANTS.DEFAULTS.SIZE;
 
 describe('<Chip />', () => {
   describe('snapshot', () => {
@@ -256,6 +258,13 @@ describe('<Chip />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-modifier-color')).toBe(color);
+    });
+    it('should have size when provided', () => {
+      const element = mount(<Chip size={size} />)
+        .find(Chip)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-size')).toBe(size);
     });
   });
 });
