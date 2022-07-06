@@ -30,6 +30,7 @@ const DEFAULTS = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
+  pressable: `${CLASS_PREFIX}-pressable`,
 };
 
 export { CLASS_PREFIX, COLORS, DEFAULTS, STYLE, FORMATS, FORMATS_DISABLED };

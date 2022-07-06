@@ -200,6 +200,40 @@ describe('<Tag />', () => {
 
       expect(component.getAttribute(attribute)).toBe(CONSTANTS.DEFAULTS.COLOR);
     });
+
+    it('should have pressable class when onPress is provided', async () => {
+      expect.assertions(1);
+
+      const spy = jest.fn();
+
+      render(<Tag data-testid={testid} onPress={spy} />);
+
+      const component = await screen.findByTestId(testid);
+
+      expect(component.classList.contains('md-tag-pressable')).toBe(true);
+    });
+
+    it('should not have pressable class when onPress is not provided', async () => {
+      expect.assertions(1);
+
+      render(<Tag data-testid={testid} />);
+
+      const component = await screen.findByTestId(testid);
+
+      expect(component.classList.contains('md-tag-pressable')).toBe(false);
+    });
+
+    it('should not have pressable class when disabled', async () => {
+      expect.assertions(1);
+
+      const spy = jest.fn();
+
+      render(<Tag data-testid={testid} onPress={spy} isDisabled />);
+
+      const component = await screen.findByTestId(testid);
+
+      expect(component.classList.contains('md-tag-pressable')).toBe(false);
+    });
   });
 
   describe('actions', () => {

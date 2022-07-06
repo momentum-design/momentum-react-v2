@@ -8,7 +8,6 @@ import CardStatus from './CardStatus';
 import { DEFAULTS, STYLE } from './Card.constants';
 import type { Props } from './Card.types';
 import './Card.style.scss';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 /**
  * The Card component.
