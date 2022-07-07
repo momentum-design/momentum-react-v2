@@ -30,7 +30,7 @@ const Tag: FC<Props> = (props: Props) => {
   return (
     <ButtonSimple
       className={classnames(STYLE.wrapper, className, {
-         [STYLE.pressable]: props.onPress && !disabled
+         [STYLE.pressable]: props.onPress && !disabled,
       })}
       data-color={disabled ? DEFAULTS.COLOR : color}
       data-format={format}
