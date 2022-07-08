@@ -263,7 +263,7 @@ describe('<Chip />', () => {
         .find(Chip)
         .getDOMNode();
 
-      expect(element.getAttribute('data-size')).toBe(size);
+      expect(element.getAttribute('data-size')).toBe(String(size));
     });
   });
 });
