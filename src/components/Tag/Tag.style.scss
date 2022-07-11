@@ -113,6 +113,10 @@
   border-color: var(--local-border-color);
   color: var(--local-text-color);
 
+  &.md-tag-pressable {
+    cursor: pointer;
+  }
+
   &:hover {
     background-color: var(--local-background-hover);
   }

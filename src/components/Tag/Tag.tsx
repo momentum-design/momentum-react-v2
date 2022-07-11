@@ -22,10 +22,16 @@ const Tag: FC<Props> = (props: Props) => {
   } = props;
 
   const disabled = isDisabled || FORMATS_DISABLED.includes(format);
+  const clsNames = [STYLE.wrapper, className];
+  if (props.onPress && !disabled) {
+    clsNames.push(STYLE.pressable);
+  }
 
   return (
     <ButtonSimple
-      className={classnames(STYLE.wrapper, className)}
+      className={classnames(STYLE.wrapper, className, {
+        [STYLE.pressable]: props.onPress && !disabled,
+      })}
       data-color={disabled ? DEFAULTS.COLOR : color}
       data-format={format}
       isDisabled={disabled}

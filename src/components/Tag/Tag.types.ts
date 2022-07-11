@@ -28,4 +28,10 @@ export interface Props extends ButtonSimpleProps {
    * Special type for this component.
    */
   format?: Format;
+
+  /**
+   * Determines if this component is disabled
+   * @default false
+   */
+  isDisabled?: boolean;
 }
