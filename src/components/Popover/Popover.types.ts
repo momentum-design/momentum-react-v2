@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
-import type { Instance } from 'tippy.js';
+import type { Instance, LifecycleHooks } from 'tippy.js';
 import type { TippyProps } from '@tippyjs/react';
 import type { Color } from '../ModalContainer/ModalContainer.types';
 
@@ -71,7 +71,7 @@ export type PopoverCommonStyleProps = {
   hideOnEsc?: boolean;
 };
 
-export interface Props extends PopoverCommonStyleProps {
+export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> {
   /**
    * Child components of this Popover (what will be shown within the Popover)
    */
@@ -124,9 +124,4 @@ export interface Props extends PopoverCommonStyleProps {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
-
-  /**
-   * Callback when user clicks outside the target.
-   */
-  onClickOutside?: (instance: Instance, event: Event) => void;
 }
