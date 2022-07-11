@@ -155,12 +155,31 @@ describe('<Popover />', () => {
 
   describe('actions', () => {
     it('should show/hide Popover on click', async () => {
-      expect.assertions(2);
+      expect.assertions(15);
+
+      const props = {
+        onCreate: jest.fn(),
+        onDestroy: jest.fn(),
+        onHidden: jest.fn(),
+        onHide: jest.fn(),
+        onMount: jest.fn(),
+        onShow: jest.fn(),
+        onShown: jest.fn(),
+        onTrigger: jest.fn(),
+        onUntrigger: jest.fn(),
+      };
+
+      expect(props.onMount).not.toBeCalled();
+
       render(
-        <Popover triggerComponent={<button>Click Me!</button>}>
+        <Popover triggerComponent={<button>Click Me!</button>} {...props}>
           <p>Content</p>
         </Popover>
       );
+
+      expect(props.onShow).not.toBeCalled();
+      expect(props.onShown).not.toBeCalled();
+      expect(props.onTrigger).not.toBeCalled();
 
       // assert no popover on screen
       const contentBeforeClick = screen.queryByText('Content');
@@ -171,9 +190,21 @@ describe('<Popover />', () => {
       const content = await screen.findByText('Content');
       expect(content).toBeVisible();
 
+      expect(props.onMount).toBeCalled();
+      expect(props.onShow).toBeCalled();
+      expect(props.onTrigger).toBeCalled();
+
+      expect(props.onHide).not.toBeCalled();
+      expect(props.onHidden).not.toBeCalled();
+      expect(props.onUntrigger).not.toBeCalled();
+
       // after another click, popover should be hidden again
       userEvent.click(screen.getByRole('button', { name: /click me!/i }));
       await waitForElementToBeRemoved(() => screen.queryByText('Content'));
+
+      expect(props.onHide).toBeCalled();
+      expect(props.onHidden).toBeCalled();
+      expect(props.onUntrigger).toBeCalled();
     });
 
     it('should show/hide Popover on tab + enter', async () => {
