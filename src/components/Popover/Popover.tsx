@@ -32,9 +32,20 @@ const Popover: FC<Props> = (props: Props) => {
     className,
     id,
     style,
-    onClickOutside,
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
+    onAfterUpdate,
+    onBeforeUpdate,
+    onCreate,
+    onDestroy,
+    onHidden,
+    onHide,
+    onMount,
+    onShow,
+    onShown,
+    onTrigger,
+    onUntrigger,
+    onClickOutside,
     ...rest
   } = props;
 
@@ -74,7 +85,6 @@ const Popover: FC<Props> = (props: Props) => {
       trigger={trigger === 'mouseenter' ? 'mouseenter focusin' : trigger}
       interactive={interactive}
       appendTo="parent"
-      onClickOutside={onClickOutside}
       popperOptions={{
         modifiers: [
           {
@@ -99,6 +109,20 @@ const Popover: FC<Props> = (props: Props) => {
       plugins={hideOnEsc ? [hideOnEscPlugin] : undefined}
       // add arrow height to default offset if arrow is shown:
       offset={[0, showArrow ? ARROW_HEIGHT + OFFSET : OFFSET]}
+      {...{
+        onAfterUpdate,
+        onBeforeUpdate,
+        onCreate,
+        onDestroy,
+        onHidden,
+        onHide,
+        onMount,
+        onShow,
+        onShown,
+        onTrigger,
+        onUntrigger,
+        onClickOutside,
+      }}
     >
       {React.cloneElement(triggerComponent, { useNativeKeyDown: true })}
     </LazyTippy>
