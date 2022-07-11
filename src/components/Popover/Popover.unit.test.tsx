@@ -155,7 +155,7 @@ describe('<Popover />', () => {
 
   describe('actions', () => {
     it('should show/hide Popover on click', async () => {
-      expect.assertions(15);
+      expect.assertions(19);
 
       const props = {
         onCreate: jest.fn(),
@@ -170,12 +170,15 @@ describe('<Popover />', () => {
       };
 
       expect(props.onMount).not.toBeCalled();
+      expect(props.onCreate).not.toBeCalled();
 
-      render(
+      const { unmount } = render(
         <Popover triggerComponent={<button>Click Me!</button>} {...props}>
           <p>Content</p>
         </Popover>
       );
+
+      expect(props.onCreate).toBeCalled();
 
       expect(props.onShow).not.toBeCalled();
       expect(props.onShown).not.toBeCalled();
@@ -197,6 +200,7 @@ describe('<Popover />', () => {
       expect(props.onHide).not.toBeCalled();
       expect(props.onHidden).not.toBeCalled();
       expect(props.onUntrigger).not.toBeCalled();
+      expect(props.onDestroy).not.toBeCalled();
 
       // after another click, popover should be hidden again
       userEvent.click(screen.getByRole('button', { name: /click me!/i }));
@@ -205,6 +209,10 @@ describe('<Popover />', () => {
       expect(props.onHide).toBeCalled();
       expect(props.onHidden).toBeCalled();
       expect(props.onUntrigger).toBeCalled();
+
+      unmount();
+
+      expect(props.onDestroy).toBeCalled();
     });
 
     it('should show/hide Popover on tab + enter', async () => {
