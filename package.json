@@ -101,7 +101,7 @@
     "@momentum-ui/animations": "^1.3.0",
     "@momentum-ui/design-tokens": "^0.0.45",
     "@momentum-ui/icons": "8.28.4",
-    "@momentum-ui/icons-rebrand": "^1.38.1",
+    "@momentum-ui/icons-rebrand": "^1.39.0",
     "@momentum-ui/tokens": "^1.7.1",
     "@react-aria/button": "3.4.3",
     "@react-aria/checkbox": "^3.4.1",
