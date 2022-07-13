@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC, useCallback, forwardRef } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
@@ -56,7 +56,6 @@ const Popover: FC<Props> = (props: Props) => {
   } = props;
 
   const tippyRef = React.useRef(null);
-  const triggerRef = React.useRef(null);
 
   const handleOnCloseButtonClick = useCallback(() => {
     tippyRef?.current?._tippy?.hide();
@@ -64,9 +63,9 @@ const Popover: FC<Props> = (props: Props) => {
 
   const handleOnPopoverHide = useCallback(() => {
     if (focusBackOnTrigger) {
-      triggerRef?.current?.focus();
+      tippyRef?.current?._tippy?.reference?.focus();
     }
-  }, [triggerComponent, triggerRef, focusBackOnTrigger]);
+  }, [triggerComponent, tippyRef, focusBackOnTrigger]);
 
   React.useEffect(() => {
     if (tippyRef?.current?._tippy) {
@@ -158,7 +157,9 @@ const Popover: FC<Props> = (props: Props) => {
         }
       }}
     >
-      {React.cloneElement(triggerComponent, { useNativeKeyDown: true, ref: triggerRef })}
+      {React.cloneElement(triggerComponent, {
+        useNativeKeyDown: true,
+      })}
     </LazyTippy>
   );
 };
