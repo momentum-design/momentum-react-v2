@@ -10,9 +10,22 @@ import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import { PopoverInstance } from './Popover.types';
 
 describe('<Popover />', () => {
+  /**
+   * Opens the popover by clicking on the trigger component, waits until
+   * content gets displayed, expects it to be visible and returns the content.
+   * expect() statements count: 1
+   * @returns {HTMLElement}
+   */
+  const openPopoverByClickingOnTriggerAndCheckContent = async (name = /click me!/i) => {
+    userEvent.click(screen.getByRole('button', { name }));
+    const content = await screen.findByText('Content');
+    expect(content).toBeVisible();
+    return content;
+  };
+
   describe('snapshot', () => {
-    it('should match snapshot', () => {
-      expect.assertions(1);
+    it('should match snapshot', async () => {
+      expect.assertions(3);
 
       const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>}>
@@ -21,10 +34,14 @@ describe('<Popover />', () => {
       );
 
       expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with className', () => {
-      expect.assertions(1);
+    it('should match snapshot with className', async () => {
+      expect.assertions(3);
 
       const className = 'example-class';
 
@@ -35,10 +52,14 @@ describe('<Popover />', () => {
       );
 
       expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with id', () => {
-      expect.assertions(1);
+    it('should match snapshot with id', async () => {
+      expect.assertions(3);
 
       const id = 'example-id';
 
@@ -49,10 +70,14 @@ describe('<Popover />', () => {
       );
 
       expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with style', () => {
-      expect.assertions(1);
+    it('should match snapshot with style', async () => {
+      expect.assertions(3);
 
       const style = { color: 'pink' };
 
@@ -63,10 +88,14 @@ describe('<Popover />', () => {
       );
 
       expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with color', () => {
-      expect.assertions(1);
+    it('should match snapshot with color', async () => {
+      expect.assertions(3);
 
       const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>} color={COLORS.TERTIARY}>
@@ -75,12 +104,32 @@ describe('<Popover />', () => {
       );
 
       expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with closeButtonPlacement', async () => {
+      expect.assertions(3);
+
+      const { container } = render(
+        <Popover triggerComponent={<button>Click Me!</button>} closeButtonPlacement="top-right">
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe('attributes', () => {
     it('should have provided attributes when attributes are provided', async () => {
-      expect.assertions(5);
+      expect.assertions(6);
       const className = 'example-class';
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
@@ -97,8 +146,7 @@ describe('<Popover />', () => {
           <p>Content</p>
         </Popover>
       );
-      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
-      const content = await screen.findByText('Content');
+      const content = await openPopoverByClickingOnTriggerAndCheckContent();
 
       expect(content.parentElement.classList.contains(STYLE.wrapper)).toBe(true);
       expect(content.parentElement.classList.contains(className)).toBe(true);
@@ -151,6 +199,32 @@ describe('<Popover />', () => {
       popover = await screen.findByText('Popover Element');
       expect(popover).toBeVisible();
     });
+
+    it('should render the close button if provided', async () => {
+      expect.assertions(4);
+
+      render(
+        <Popover
+          triggerComponent={<button>Click Me!</button>}
+          interactive
+          closeButtonPlacement="top-right"
+          closeButtonProps={{ 'aria-label': 'Close' }}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      const closeButton = await screen.findByRole('button', { name: 'Close' });
+      expect(closeButton).toBeVisible();
+      expect(closeButton.getAttribute('aria-label')).toBe('Close');
+    });
   });
 
   describe('actions', () => {
@@ -189,9 +263,7 @@ describe('<Popover />', () => {
       expect(contentBeforeClick).not.toBeInTheDocument();
 
       // after click, popover should be shown
-      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
-      const content = await screen.findByText('Content');
-      expect(content).toBeVisible();
+      await openPopoverByClickingOnTriggerAndCheckContent();
 
       expect(props.onMount).toBeCalled();
       expect(props.onShow).toBeCalled();
@@ -320,9 +392,7 @@ describe('<Popover />', () => {
       render(<ParentComponent />);
 
       // show popover from the parent component
-      userEvent.click(screen.getByRole('button', { name: /show/i }));
-      const content = await screen.findByText('Content');
-      expect(content).toBeVisible();
+      await openPopoverByClickingOnTriggerAndCheckContent(/show/i);
 
       // hide popover from the parent component
       userEvent.click(screen.getByRole('button', { name: /hide/i }));
@@ -345,9 +415,7 @@ describe('<Popover />', () => {
       expect(contentBeforeClick).not.toBeInTheDocument();
 
       // after click, popover should be shown
-      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
-      const content = await screen.findByText('Content');
-      expect(content).toBeVisible();
+      await openPopoverByClickingOnTriggerAndCheckContent();
 
       userEvent.keyboard('{Escape}');
 
@@ -371,15 +439,88 @@ describe('<Popover />', () => {
       expect(contentBeforeClick).not.toBeInTheDocument();
 
       // after click, popover should be shown
-      userEvent.click(screen.getByRole('button', { name: /click me!/i }));
-      const content = await screen.findByText('Content');
-      expect(content).toBeVisible();
+      await openPopoverByClickingOnTriggerAndCheckContent();
 
       userEvent.keyboard('{Escape}');
 
       // content should still be visible
       const contentAfterEsc = await screen.findByText('Content');
       expect(contentAfterEsc).toBeVisible();
+    });
+
+    it('it should close the Popover if closeButtonPlacement is not none', async () => {
+      expect.assertions(3);
+
+      render(
+        <Popover
+          closeButtonProps={{ 'aria-label': 'Close' }}
+          triggerComponent={<button>Click Me!</button>}
+          interactive
+          closeButtonPlacement="top-right"
+          trigger="click"
+          hideOnEsc={false}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      // click the close button
+      userEvent.click(screen.getByRole('button', { name: 'Close' }));
+
+      // content should be hidden
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
+    });
+
+    it('it should focus on the trigger component when focusBackOnTrigger= = true and popover gets closed', async () => {
+      expect.assertions(5);
+
+      render(
+        <Popover
+          closeButtonProps={{ 'aria-label': 'Close' }}
+          triggerComponent={<button>Click Me!</button>}
+          interactive
+          closeButtonPlacement="top-right"
+          trigger="click"
+          hideOnEsc={false}
+          focusBackOnTrigger
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      const closeButton = screen.getByRole('button', { name: 'Close' });
+
+      userEvent.tab();
+      // click the close button
+
+      expect(document.activeElement).toEqual(closeButton);
+
+      userEvent.click(closeButton);
+
+      // content should be hidden
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
+
+      const triggerComponent = screen.getByRole('button', { name: /click me!/i });
+      expect(document.activeElement).toEqual(triggerComponent);
     });
   });
 });

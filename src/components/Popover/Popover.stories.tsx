@@ -4,7 +4,7 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Documentation from './Popover.stories.docs.mdx';
 import { Item } from '@react-stately/collections';
-
+import Text from '../Text';
 import Popover, { PopoverProps } from './';
 import ButtonPill from '../ButtonPill';
 import ButtonSimple from '../ButtonSimple';
@@ -12,6 +12,7 @@ import Menu from '../Menu';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Popover.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
+import Flex from '../Flex';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -71,6 +72,30 @@ InteractiveContent.args = {
   ),
 };
 
+const WithCloseButton = Template<PopoverProps>(Popover).bind({});
+
+WithCloseButton.argTypes = { ...argTypes };
+
+WithCloseButton.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  closeButtonPlacement: 'top-right',
+  focusBackOnTrigger: true,
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
+  ),
+  children: (
+    <Flex style={{ width: '10rem', height: '10rem' }} justifyContent="center" alignItems="center">
+      <Text type="display">🏖</Text>
+    </Flex>
+  ),
+};
+
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -124,4 +149,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, InteractiveContent, Common };
+export { Example, InteractiveContent, WithCloseButton, Common };

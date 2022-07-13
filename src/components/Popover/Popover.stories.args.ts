@@ -1,7 +1,7 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
-import { DEFAULTS, BOUNDARIES } from './Popover.constants';
+import { DEFAULTS, BOUNDARIES, CLOSE_BUTTON_PLACEMENTS } from './Popover.constants';
 
 const popoverArgTypes = {
   trigger: {
@@ -101,6 +101,31 @@ const popoverArgTypes = {
       },
       defaultValue: {
         summary: DEFAULTS.BOUNDARY,
+      },
+    },
+  },
+  closeButtonPlacement: {
+    description: `Placement of the close button relative to the container of the popover`,
+    options: [...Object.values(CLOSE_BUTTON_PLACEMENTS as Record<string, string>)],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.CLOSE_BUTTON_PLACEMENT,
+      },
+    },
+  },
+  focusBackOnTrigger: {
+    description: `Determines wether the focus should return to the trigger element when the popover is closed`,
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT,
       },
     },
   },

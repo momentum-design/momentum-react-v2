@@ -5,3 +5,17 @@
 .tippy-content {
   padding: 0;
 }
+
+.md-popover-close-button {
+  position: absolute;
+  z-index: 1000;
+  top: 0.5rem;
+
+  &[data-placement='top-left'] {
+    left: 0.5rem;
+  }
+
+  &[data-placement='top-right'] {
+    right: 0.5rem;
+  }
+}

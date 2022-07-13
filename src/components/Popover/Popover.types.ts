@@ -2,10 +2,12 @@ import type { CSSProperties, ReactElement, ReactNode } from 'react';
 import type { Instance, LifecycleHooks } from 'tippy.js';
 import type { TippyProps } from '@tippyjs/react';
 import type { Color } from '../ModalContainer/ModalContainer.types';
+import { ButtonCircleProps } from '../ButtonCircle';
 
 // variant - based on Figma mockups:
 export type VariantType = 'small' | 'medium';
 export type BoundaryType = 'parent' | 'viewport' | 'window' | HTMLElement;
+export type CloseButtonPlacement = 'top-left' | 'top-right' | 'none';
 
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
@@ -124,4 +126,21 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * Position of the close button
+   * @default `none`
+   */
+  closeButtonPlacement?: CloseButtonPlacement;
+
+  /**
+   * Props that are passed down to the close button.
+   */
+  closeButtonProps?: ButtonCircleProps;
+
+  /**
+   * Determines if the component will focus back on the trigger when the Popover is hidden.
+   * @default `false`
+   */
+  focusBackOnTrigger?: boolean;
 }

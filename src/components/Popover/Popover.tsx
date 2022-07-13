@@ -1,13 +1,16 @@
-import React, { FC } from 'react';
+import React, { FC, useCallback } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
+import ButtonCircle from '../ButtonCircle';
+import Icon from '../Icon';
 import { LazyTippy } from './LazyTippy';
 import { ARROW_ID, ELEVATIONS, ROUNDS } from '../ModalContainer/ModalContainer.constants';
-import { ARROW_PADDING, DEFAULTS, OFFSET } from './Popover.constants';
+import { ARROW_PADDING, DEFAULTS, OFFSET, STYLE } from './Popover.constants';
 import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
 import type { Props } from './Popover.types';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 import { hideOnEscPlugin } from './tippyPlugins';
+import classNames from 'classnames';
 
 /**
  * The Popover component allows adding a Popover to whatever provided
@@ -34,6 +37,9 @@ const Popover: FC<Props> = (props: Props) => {
     style,
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
+    focusBackOnTrigger = DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT,
+    closeButtonPlacement = DEFAULTS.CLOSE_BUTTON_PLACEMENT,
+    closeButtonProps,
     onAfterUpdate,
     onBeforeUpdate,
     onCreate,
@@ -50,6 +56,17 @@ const Popover: FC<Props> = (props: Props) => {
   } = props;
 
   const tippyRef = React.useRef(null);
+  const triggerRef = React.useRef(null);
+
+  const handleOnCloseButtonClick = useCallback(() => {
+    tippyRef?.current?._tippy?.hide();
+  }, [tippyRef]);
+
+  const handleOnPopoverHide = useCallback(() => {
+    if (focusBackOnTrigger) {
+      triggerRef?.current?.focus();
+    }
+  }, [triggerComponent, triggerRef, focusBackOnTrigger]);
 
   React.useEffect(() => {
     if (tippyRef?.current?._tippy) {
@@ -77,6 +94,18 @@ const Popover: FC<Props> = (props: Props) => {
           className={className}
           {...rest}
         >
+          {closeButtonPlacement !== 'none' && (
+            <ButtonCircle
+              {...closeButtonProps}
+              className={classNames(STYLE.closeButton, closeButtonProps?.className)}
+              data-placement={closeButtonPlacement}
+              ghost
+              size={20}
+              onPress={handleOnCloseButtonClick}
+            >
+              <Icon name="cancel" weight="bold" scale={16} />
+            </ButtonCircle>
+          )}
           {children}
         </ModalContainer>
       )}
@@ -115,7 +144,6 @@ const Popover: FC<Props> = (props: Props) => {
         onCreate,
         onDestroy,
         onHidden,
-        onHide,
         onMount,
         onShow,
         onShown,
@@ -123,8 +151,14 @@ const Popover: FC<Props> = (props: Props) => {
         onUntrigger,
         onClickOutside,
       }}
+      onHide={(instance) => {
+        handleOnPopoverHide();
+        if (onHide) {
+          onHide(instance);
+        }
+      }}
     >
-      {React.cloneElement(triggerComponent, { useNativeKeyDown: true })}
+      {React.cloneElement(triggerComponent, { useNativeKeyDown: true, ref: triggerRef })}
     </LazyTippy>
   );
 };
