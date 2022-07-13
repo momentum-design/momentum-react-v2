@@ -106,7 +106,7 @@ const popoverArgTypes = {
   },
   closeButtonPlacement: {
     description: `Placement of the close button relative to the container of the popover`,
-    options: [...Object.values(CLOSE_BUTTON_PLACEMENTS as Record<string, string>)],
+    options: [...Object.values(CLOSE_BUTTON_PLACEMENTS)],
     control: { type: 'select' },
     table: {
       type: {
