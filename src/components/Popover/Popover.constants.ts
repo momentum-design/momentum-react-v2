@@ -9,7 +9,7 @@ const BOUNDARIES = {
   PARENT: 'scrollParent',
 };
 
-const CLOSE_BUTTON_PLACEMENTS: Record<string, string> = {
+const CLOSE_BUTTON_PLACEMENTS = {
   TOP_LEFT: 'top-left',
   TOP_RIGHT: 'top-right',
   NONE: 'none',
