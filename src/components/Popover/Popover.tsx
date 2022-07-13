@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC, useCallback, forwardRef } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
