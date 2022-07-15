@@ -13,7 +13,7 @@
   border-radius: math.div($switch-height, 2);
   margin-right: 0.5rem;
   transition: background $transition-time;
-  background-color: var(--togglemomentumstyle-untoggled-background);
+  background-color: var(--toggle-untoggled-background);
 
   &:before {
     content: '';
@@ -23,7 +23,7 @@
     margin: $thumb-margin;
     display: block;
     transition: transform $transition-time;
-    background-color: var(--togglemomentumstyle-untoggled-thumb-tint);
+    background-color: var(--toggle-untoggled-thumb-tint);
   }
 
   &:checked:before {
@@ -31,10 +31,10 @@
   }
 
   &:checked {
-    background-color: var(--togglemomentumstyle-toggled-background);
+    background-color: var(--toggle-toggled-background);
 
     &:before {
-      background-color: var(--togglemomentumstyle-toggled-thumb-tint);
+      background-color: var(--toggle-toggled-thumb-tint);
       transform: translateX($switch-width - $switch-height);
     }
   }
@@ -46,17 +46,17 @@
 
   // Hovered
   &:hover {
-    background-color: var(--togglemomentumstyle-untoggled-background-hovered);
+    background-color: var(--toggle-untoggled-background-hovered);
 
     &:before {
-      background-color: var(--togglemomentumstyle-untoggled-thumb-tint-hovered);
+      background-color: var(--toggle-untoggled-thumb-tint-hovered);
     }
 
     &:checked {
-      background-color: var(--togglemomentumstyle-toggled-background-hovered);
+      background-color: var(--toggle-toggled-background-hovered);
 
       &:before {
-        background-color: var(--togglemomentumstyle-toggled-thumb-tint-hovered);
+        background-color: var(--toggle-toggled-thumb-tint-hovered);
         transform: translateX($switch-width - $switch-height);
       }
     }
@@ -64,17 +64,17 @@
 
   // Pressed
   &:active {
-    background-color: var(--togglemomentumstyle-untoggled-background-pressed);
+    background-color: var(--toggle-untoggled-background-pressed);
 
     &:before {
-      background-color: var(--togglemomentumstyle-untoggled-thumb-tint-pressed);
+      background-color: var(--toggle-untoggled-thumb-tint-pressed);
     }
 
     &:checked {
-      background-color: var(--togglemomentumstyle-toggled-background-pressed);
+      background-color: var(--toggle-toggled-background-pressed);
 
       &:before {
-        background-color: var(--togglemomentumstyle-toggled-thumb-tint-pressed);
+        background-color: var(--toggle-toggled-thumb-tint-pressed);
         transform: translateX($switch-width - $switch-height);
       }
     }
@@ -82,17 +82,17 @@
 
   // Disabled
   &:disabled {
-    background-color: var(--togglemomentumstyle-untoggled-background-disabled);
+    background-color: var(--toggle-untoggled-background-disabled);
 
     &:before {
-      background-color: var(--togglemomentumstyle-untoggled-thumb-tint-disabled);
+      background-color: var(--toggle-untoggled-thumb-tint-disabled);
     }
 
     &:checked {
-      background-color: var(--togglemomentumstyle-toggled-background-disabled);
+      background-color: var(--toggle-toggled-background-disabled);
 
       &:before {
-        background-color: var(--togglemomentumstyle-toggled-thumb-tint-disabled);
+        background-color: var(--toggle-toggled-thumb-tint-disabled);
         transform: translateX($switch-width - $switch-height);
       }
     }
