@@ -1239,9 +1239,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 1"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 1"
                               >
                                 Item 1
                               </div>
@@ -1344,9 +1346,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 2"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 2"
                               >
                                 Item 2
                               </div>
@@ -2654,9 +2658,11 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 1"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 1"
                               >
                                 Item 1
                               </div>
@@ -2759,9 +2765,11 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 2"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 2"
                               >
                                 Item 2
                               </div>
@@ -3746,9 +3754,11 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 1"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 1"
                               >
                                 Item 1
                               </div>
@@ -3851,9 +3861,11 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 2"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 2"
                               >
                                 Item 2
                               </div>
@@ -5230,9 +5242,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 1"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 1"
                               >
                                 Item 1
                               </div>
@@ -5370,9 +5384,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 2"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 2"
                               >
                                 Item 2
                               </div>
