@@ -14,8 +14,12 @@
   > .md-radio-wrapper {
     display: flex;
     justify-content: start;
+    gap: 0.5rem;
     align-items: center;
     font-size: 1rem;
+    height: 1.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 
     > .md-radio-selected,
     .md-radio-not-selected {
@@ -24,11 +28,8 @@
       border-radius: 0.5rem;
       outline: none !important;
       display: flex;
-      flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-right: 0.5rem;
-      margin-left: 0.5rem;
     }
 
     &[data-disabled='false'] {

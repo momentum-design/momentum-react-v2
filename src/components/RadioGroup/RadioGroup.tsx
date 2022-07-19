@@ -61,6 +61,8 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
   );
 };
 
+// Where should passed style, id, and className go?
+
 const Radio: FC<Props> = (props: Props) => {
   const { className, children, isDisabled, id, style } = props;
   const state = useContext(RadioContext);
