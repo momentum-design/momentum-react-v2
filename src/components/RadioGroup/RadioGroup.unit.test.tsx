@@ -54,7 +54,7 @@ describe('<RadioGroup />', () => {
         .find(RadioGroup)
         .getDOMNode();
 
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
+      expect(element.classList.contains(CONSTANTS.STYLE.group)).toBe(true);
     });
 
     it('should have provided class when className is provided', () => {
