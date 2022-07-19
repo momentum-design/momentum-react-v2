@@ -1,8 +1,20 @@
 .md-radio-group {
+  display: flex;
+  justify-content: start;
+  width: fit-content;
+
+  &[data-direction='vertical'] {
+    flex-direction: column;
+  }
+
+  &[data-direction='horizontal'] {
+    flex-direction: row;
+  }
+
   > .md-radio-wrapper {
     display: flex;
+    justify-content: start;
     align-items: center;
-    width: fit-content;
     font-size: 1rem;
 
     > .md-radio-selected,
