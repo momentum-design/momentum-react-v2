@@ -28,7 +28,7 @@ export interface Props {
   position?: 'start' | 'middle' | 'end' | 'fill';
 
   /**
-   * Title to show tool tip.
+   * Title to show tooltip.
    */
   title?: string;
 }
