@@ -5,6 +5,7 @@ const DEFAULTS = {
   GROUP_READONLY: false,
   GROUP_LABEL: undefined,
   GROUP_ORIENTATION: 'vertical',
+  GROUP_ARIA_LABEL: 'radio button group',
   OPTION_DISABLED: false,
 };
 

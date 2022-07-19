@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
-import { RadioAriaProps } from '@react-aria/radio';
+import { AriaRadioGroupProps, AriaRadioProps } from '@react-types/radio';
 
-export interface GroupProps {
+export interface GroupProps extends AriaRadioGroupProps {
   /**
    * Child components of this RadioGroup.
    */
@@ -13,33 +13,14 @@ export interface GroupProps {
   className?: string;
 
   /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
-
-  /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
 
-  label?: ReactNode;
-
   options?: Array<Props | string>;
-
-  value?: string;
-
-  orientation?: 'horizontal' | 'vertical';
-
-  defualtValue?: string;
-
-  onChange?: (value: string) => void;
-
-  isDisabled?: boolean;
-
-  isReadOnly?: boolean;
 }
 
-export interface Props extends RadioAriaProps {
+export interface Props extends AriaRadioProps {
   style?: CSSProperties;
 
   className?: string;
