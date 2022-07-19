@@ -43,9 +43,6 @@ Example.args = {
       value: 'option3',
     },
   ],
-  label: 'Example',
-  defaultValue: 'option1',
-  isReadOnly: false,
 };
 
 // TODO: Inject additional stories here.
@@ -62,9 +59,7 @@ Common.parameters = {
     {
       children: (
         <>
-          <Radio value="option1" className=".hover">
-            Selected + Label
-          </Radio>
+          <Radio value="option1">Selected + Label</Radio>
         </>
       ),
       value: 'option1',

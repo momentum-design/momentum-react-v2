@@ -1,77 +1,585 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RadioGroup /> snapshot should match snapshot 1`] = `
-<RadioGroup>
+<DocumentFragment>
+  <div
+    aria-labelledby="test-ID"
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span
+      id="test-ID"
+    >
+      Test Radio Group
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
+<DocumentFragment>
   <div
     aria-orientation="vertical"
-    className="md-radio-group"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
+    class="md-radio-group"
+    data-direction="vertical"
     role="radiogroup"
   >
     <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
   </div>
-</RadioGroup>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper example-class"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with child id 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+      id="example-id"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          id="example-id"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+      style="color: pink;"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled and selected 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          checked=""
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-selected radio"
+      />
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with child thats selected 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          checked=""
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-selected radio"
+      />
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`<RadioGroup /> snapshot should match snapshot with className 1`] = `
-<RadioGroup
-  className="example-class"
->
+<DocumentFragment>
   <div
+    aria-labelledby="test-ID"
     aria-orientation="vertical"
-    className="example-class md-radio-group"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
+    class="example-class md-radio-group"
+    data-direction="vertical"
     role="radiogroup"
   >
-    <span />
+    <span
+      id="test-ID"
+    >
+      Test Radio Group
+    </span>
   </div>
-</RadioGroup>
+</DocumentFragment>
 `;
 
 exports[`<RadioGroup /> snapshot should match snapshot with id 1`] = `
-<RadioGroup
-  id="example-id"
->
+<DocumentFragment>
+  <div
+    aria-labelledby="test-ID"
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    id="example-id"
+    role="radiogroup"
+  >
+    <span
+      id="test-ID"
+    >
+      Test Radio Group
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`] = `
+<DocumentFragment>
   <div
     aria-orientation="vertical"
-    className="md-radio-group"
-    id="example-id"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
+    class="md-radio-group"
+    data-direction="vertical"
     role="radiogroup"
   >
     <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 2
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option3"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 3
+    </label>
   </div>
-</RadioGroup>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with multiple children and orientation horizontal 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="md-radio-group"
+    data-direction="horizontal"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 2
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option3"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 3
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with multiple children with one disabled 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 1
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 2
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option3"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 3
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with multiple children with one selected 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="md-radio-group"
+    data-direction="vertical"
+    role="radiogroup"
+  >
+    <span />
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          checked=""
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+      </div>
+      <div
+        class="md-radio-selected radio"
+      />
+      Option 1
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 2
+    </label>
+    <label
+      class="md-radio-wrapper"
+      data-disabled="false"
+    >
+      <div
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option3"
+        />
+      </div>
+      <div
+        class="md-radio-not-selected radio"
+      />
+      Option 3
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`<RadioGroup /> snapshot should match snapshot with style 1`] = `
-<RadioGroup
-  style={
-    Object {
-      "color": "pink",
-    }
-  }
->
+<DocumentFragment>
   <div
+    aria-labelledby="test-ID"
     aria-orientation="vertical"
-    className="md-radio-group"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
+    class="md-radio-group"
+    data-direction="vertical"
     role="radiogroup"
-    style={
-      Object {
-        "color": "pink",
-      }
-    }
+    style="color: pink;"
   >
-    <span />
+    <span
+      id="test-ID"
+    >
+      Test Radio Group
+    </span>
   </div>
-</RadioGroup>
+</DocumentFragment>
 `;

@@ -64,9 +64,15 @@ const radioGroupArgTypes = {
     defaultValue: DEFAULTS.GROUP_READONLY,
   },
   orientation: {
-    description: 'ab',
+    description: 'The axis the Radio Button(s) should align with.',
     control: 'select',
     options: ['vertical', 'horizontal'],
+    table: {
+      type: {
+        summary: "'vertical' | 'horizontal'",
+      },
+    },
+    defaultValue: DEFAULTS.GROUP_ORIENTATION,
   },
 };
 
