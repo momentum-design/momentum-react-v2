@@ -62,6 +62,7 @@ const EXCEPTION_ICONS_LIST = [
   'info-badge',
   'priority-badge',
   'draft-indicator-small',
+  'warning-badge',
 ];
 
 const STYLE = {
