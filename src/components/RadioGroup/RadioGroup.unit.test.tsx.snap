@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> snapshot should match snapshot 1`] = `
+<RadioGroup>
+  <div
+    aria-orientation="vertical"
+    className="md-radio-group-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="radiogroup"
+  >
+    <span />
+  </div>
+</RadioGroup>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with className 1`] = `
+<RadioGroup
+  className="example-class"
+>
+  <div
+    aria-orientation="vertical"
+    className="example-class md-radio-group-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="radiogroup"
+  >
+    <span />
+  </div>
+</RadioGroup>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with id 1`] = `
+<RadioGroup
+  id="example-id"
+>
+  <div
+    aria-orientation="vertical"
+    className="md-radio-group-wrapper"
+    id="example-id"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="radiogroup"
+  >
+    <span />
+  </div>
+</RadioGroup>
+`;
+
+exports[`<RadioGroup /> snapshot should match snapshot with style 1`] = `
+<RadioGroup
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    aria-orientation="vertical"
+    className="md-radio-group-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="radiogroup"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <span />
+  </div>
+</RadioGroup>
+`;
