@@ -1,4 +1,4 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import React from 'react';
@@ -29,33 +29,38 @@ Example.argTypes = { ...argTypes };
 
 // TODO: Provide default arguments for this story here. These populate into the argument table for this component.
 Example.args = {
-  children: (
-    <>
-      <Radio value="option1">Option 1</Radio>
-      <Radio value="option2">Option 2</Radio>
-      <Radio value="option3">Option 3</Radio>
-    </>
-  ),
+  options: [
+    {
+      children: 'Option 1',
+      value: 'option1',
+    },
+    {
+      children: 'Option 2',
+      value: 'option2',
+    },
+    {
+      children: 'Option 3',
+      value: 'option3',
+    },
+  ],
   label: 'Example',
 };
 
 // TODO: Inject additional stories here.
 
 // NOTE: Common variants story. This renders multiple variants of a single component.
-const Common = MultiTemplate<RadioGroupProps>(RadioGroup).bind({});
+const Common = MultiTemplateWithPseudoStates(RadioGroup).bind({});
 
 Common.argTypes = { ...argTypes };
-delete Common.argTypes.children;
-
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component for all variants.
-Common.args = {};
+delete Common.argTypes.isSelected;
+delete Common.argTypes.isDisabled;
 
 Common.parameters = {
   variants: [
     {
       children: (
         <>
-          <Radio value="option1">Selected</Radio>
+          <Radio value="option1">Selected + Label</Radio>
         </>
       ),
       value: 'option1',
@@ -63,7 +68,23 @@ Common.parameters = {
     {
       children: (
         <>
-          <Radio value="option1">Unselected</Radio>
+          <Radio value="option1">Unselected + Label</Radio>
+        </>
+      ),
+      value: 'option2',
+    },
+    {
+      children: (
+        <>
+          <Radio value="option1" />
+        </>
+      ),
+      value: 'option1',
+    },
+    {
+      children: (
+        <>
+          <Radio value="option1" />
         </>
       ),
       value: 'option2',
