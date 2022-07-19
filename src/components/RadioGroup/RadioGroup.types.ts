@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement, ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { RadioAriaProps } from '@react-aria/radio';
 
 export interface GroupProps {
@@ -23,13 +23,12 @@ export interface GroupProps {
   style?: CSSProperties;
 
   label?: string;
+
+  options?: Array<Props | string>;
 }
 
 export interface Props extends RadioAriaProps {
   style?: CSSProperties;
-}
 
-export type RadioValue = {
-  value: string;
-  child: ReactNode;
-};
+  className?: string;
+}
