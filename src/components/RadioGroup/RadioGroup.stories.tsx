@@ -1,9 +1,9 @@
-import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import React from 'react';
 
-import { Radio, RadioGroup, RadioGroupProps } from './';
+import RadioGroup, { Radio, RadioGroupProps } from './';
 import argTypes from './RadioGroup.stories.args';
 import Documentation from './RadioGroup.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
@@ -49,8 +49,8 @@ Example.args = {
 // TODO: Inject additional stories here.
 
 // NOTE: Common variants story. This renders multiple variants of a single component.
-const Common = MultiTemplateWithPseudoStates(RadioGroup).bind({});
-
+const Common = MultiTemplate(RadioGroup).bind({});
+// Psuedo states would be applied to group element
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.isSelected;
 delete Common.argTypes.isDisabled;
@@ -60,7 +60,9 @@ Common.parameters = {
     {
       children: (
         <>
-          <Radio value="option1">Selected + Label</Radio>
+          <Radio value="option1" className=".hover">
+            Selected + Label
+          </Radio>
         </>
       ),
       value: 'option1',

@@ -4,7 +4,7 @@ exports[`<RadioGroup /> snapshot should match snapshot 1`] = `
 <RadioGroup>
   <div
     aria-orientation="vertical"
-    className="md-radio-group-wrapper"
+    className="md-radio-group"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -21,7 +21,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with className 1`] = `
 >
   <div
     aria-orientation="vertical"
-    className="example-class md-radio-group-wrapper"
+    className="example-class md-radio-group"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -38,7 +38,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with id 1`] = `
 >
   <div
     aria-orientation="vertical"
-    className="md-radio-group-wrapper"
+    className="md-radio-group"
     id="example-id"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -60,7 +60,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with style 1`] = `
 >
   <div
     aria-orientation="vertical"
-    className="md-radio-group-wrapper"
+    className="md-radio-group"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}

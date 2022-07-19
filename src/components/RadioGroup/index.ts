@@ -6,5 +6,5 @@ export { CONSTANTS as RADIO_GROUP_CONSTANTS };
 
 export type RadioProps = Props;
 export type RadioGroupProps = GroupProps;
-export { RadioGroup, Radio };
+export { Radio };
 export default RadioGroup;
