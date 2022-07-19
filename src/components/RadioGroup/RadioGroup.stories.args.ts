@@ -14,7 +14,7 @@ const radioGroupArgTypes = {
       type: {
         summary: 'string',
       },
-      defaultValue: DEFAULTS.LABEL,
+      defaultValue: DEFAULTS.GROUP_LABEL,
     },
   },
   options: {
@@ -24,6 +24,49 @@ const radioGroupArgTypes = {
         summary: 'Array<RadioOption>',
       },
     },
+  },
+  value: {
+    description: 'The current value (controlled).',
+    control: { type: 'text', required: false },
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  defaultValue: {
+    description: 'The default value (uncontrolled).',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  isDisabled: {
+    description: 'Whether the input is disabled',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+    },
+    defaultValue: DEFAULTS.GROUP_DISABLED,
+  },
+  isReadOnly: {
+    description: 'Whether the input can be selected but not changed by the user.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+    },
+    defaultValue: DEFAULTS.GROUP_READONLY,
+  },
+  orientation: {
+    description: 'ab',
+    control: 'select',
+    options: ['vertical', 'horizontal'],
   },
 };
 

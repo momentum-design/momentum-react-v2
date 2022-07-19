@@ -1,8 +1,11 @@
 const CLASS_PREFIX = 'md-radio';
 
 const DEFAULTS = {
-  IS_DISABLED: false,
-  LABEL: undefined,
+  GROUP_DISABLED: false,
+  GROUP_READONLY: false,
+  GROUP_LABEL: undefined,
+  GROUP_ORIENTATION: 'vertical',
+  OPTION_DISABLED: false,
 };
 
 const STYLE = {
