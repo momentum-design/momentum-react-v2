@@ -18,10 +18,12 @@ import Icon from '../Icon';
 export const RadioContext = React.createContext(null);
 
 const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
-  const { className, label, children, id, style, options } = props;
-
+  const { className, label, children, id, style, options, isDisabled, orientation } = props;
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
+
+  const direction = orientation || DEFAULTS.GROUP_ORIENTATION;
+  const disabled = isDisabled || DEFAULTS.GROUP_DISABLED;
 
   let childElement: ReactElement;
   if (React.isValidElement(children)) {
@@ -32,13 +34,13 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
         {options.map((option: string | Props) => {
           if (typeof option === 'string') {
             return (
-              <Radio key={option} value={option}>
+              <Radio key={option} value={option} isDisabled={disabled}>
                 {option}
               </Radio>
             );
           } else {
             const value = option.value;
-            return <Radio key={value} {...option} />;
+            return <Radio key={value} {...option} isDisabled={disabled} />;
           }
         })}
       </>
@@ -46,8 +48,14 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
   }
 
   return (
-    <div {...radioGroupProps} className={classnames(className, STYLE.group)} id={id} style={style}>
-      <span {...labelProps}>{label || DEFAULTS.LABEL}</span>
+    <div
+      {...radioGroupProps}
+      className={classnames(className, STYLE.group)}
+      id={id}
+      style={style}
+      data-direction={direction}
+    >
+      <span {...labelProps}>{label || DEFAULTS.GROUP_LABEL}</span>
       <RadioContext.Provider value={state}>{childElement}</RadioContext.Provider>
     </div>
   );
@@ -60,7 +68,7 @@ const Radio: FC<Props> = (props: Props) => {
   const { inputProps } = useRadio(props, state, ref);
   const { isFocusVisible, focusProps } = useFocusRing();
   const selected = state.selectedValue === props.value;
-  const disabled = isDisabled || DEFAULTS.IS_DISABLED;
+  const disabled = isDisabled || DEFAULTS.OPTION_DISABLED;
 
   const icon = <Icon className={STYLE.icon} name="shape-circle" weight="filled" scale={8} />;
 

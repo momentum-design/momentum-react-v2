@@ -44,6 +44,8 @@ Example.args = {
     },
   ],
   label: 'Example',
+  defaultValue: 'option1',
+  isReadOnly: false,
 };
 
 // TODO: Inject additional stories here.

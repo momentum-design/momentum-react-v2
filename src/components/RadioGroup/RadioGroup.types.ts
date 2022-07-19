@@ -22,9 +22,21 @@ export interface GroupProps {
    */
   style?: CSSProperties;
 
-  label?: string;
+  label?: ReactNode;
 
   options?: Array<Props | string>;
+
+  value?: string;
+
+  orientation?: 'horizontal' | 'vertical';
+
+  defualtValue?: string;
+
+  onChange?: (value: string) => void;
+
+  isDisabled?: boolean;
+
+  isReadOnly?: boolean;
 }
 
 export interface Props extends RadioAriaProps {
