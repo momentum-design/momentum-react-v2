@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useContext, useRef } from 'react';
+import React, { FC, ReactElement, ReactNode, useContext, useRef } from 'react';
 import classnames from 'classnames';
 import { useRadioGroup, useRadio } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
@@ -25,8 +25,8 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
   const direction = orientation || DEFAULTS.GROUP_ORIENTATION;
   const disabled = isDisabled || DEFAULTS.GROUP_DISABLED;
 
-  let childElement: ReactElement;
-  if (React.isValidElement(children)) {
+  let childElement: ReactNode;
+  if (children) {
     childElement = children;
   } else if (Array.isArray(options)) {
     childElement = (
@@ -38,6 +38,8 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
                 {option}
               </Radio>
             );
+          } else if (React.isValidElement(option)) {
+            return option;
           } else {
             const value = option.value;
             return <Radio key={value} {...option} isDisabled={disabled} />;
