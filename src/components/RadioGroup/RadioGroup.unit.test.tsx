@@ -274,6 +274,34 @@ describe('<RadioGroup />', () => {
       expect(asFragment()).toMatchSnapshot();
     });
 
+    it('should match snapshot with multiple children with group disabled', () => {
+      expect.assertions(1);
+
+      const { asFragment } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              children: 'Option 1',
+              value: 'option1',
+            },
+            {
+              children: 'Option 2',
+              value: 'option2',
+            },
+            {
+              children: 'Option 3',
+              value: 'option3',
+            },
+          ]}
+          isDisabled={true}
+        />
+      );
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    // Start
     it('should match snapshot with multiple children and orientation horizontal', () => {
       expect.assertions(1);
 
@@ -682,6 +710,105 @@ describe('<RadioGroup />', () => {
       userEvent.type(option2, '{arrowup}');
 
       expect(changeHandler).toBeCalledWith('option1');
+    });
+
+    it('should not call onChange handler when a disabled option is clicked', () => {
+      expect.assertions(1);
+
+      const changeHandler = jest.fn();
+
+      const { getByText } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              children: 'Option 1',
+              value: 'option1',
+              id: 'option1',
+            },
+            {
+              children: 'Option 2',
+              value: 'option2',
+              id: 'option2',
+              isDisabled: true,
+            },
+          ]}
+          defaultValue="option1"
+          onChange={changeHandler}
+        />
+      );
+
+      const option2 = getByText('Option 2').querySelector('.radio');
+
+      userEvent.click(option2);
+
+      expect(changeHandler).not.toBeCalled();
+    });
+
+    it('should not call onChange handler when the group is readonly and an option is clicked', () => {
+      expect.assertions(1);
+
+      const changeHandler = jest.fn();
+
+      const { getByText } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              children: 'Option 1',
+              value: 'option1',
+              id: 'option1',
+            },
+            {
+              children: 'Option 2',
+              value: 'option2',
+              id: 'option2',
+            },
+          ]}
+          defaultValue="option1"
+          onChange={changeHandler}
+          isReadOnly={true}
+        />
+      );
+
+      const option2 = getByText('Option 2').querySelector('.radio');
+
+      userEvent.click(option2);
+
+      expect(changeHandler).not.toBeCalled();
+    });
+
+    it('should not call onChange handler when the group is disabled and an option is clicked', () => {
+      expect.assertions(1);
+
+      const changeHandler = jest.fn();
+
+      const { getByText } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              children: 'Option 1',
+              value: 'option1',
+              id: 'option1',
+            },
+            {
+              children: 'Option 2',
+              value: 'option2',
+              id: 'option2',
+            },
+          ]}
+          defaultValue="option1"
+          onChange={changeHandler}
+          isDisabled={true}
+        />
+      );
+
+      const option2 = getByText('Option 2').querySelector('.radio');
+
+      userEvent.click(option2);
+
+      expect(changeHandler).not.toBeCalled();
     });
   });
 });
