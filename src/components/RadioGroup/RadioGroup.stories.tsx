@@ -43,6 +43,7 @@ Example.args = {
       value: 'option3',
     },
   ],
+  label: 'Example',
 };
 
 // TODO: Inject additional stories here.
