@@ -89,6 +89,26 @@ Common.parameters = {
       ),
       value: 'option2',
     },
+    {
+      children: (
+        <>
+          <Radio value="option1" isDisabled={true}>
+            Selected + Disabled
+          </Radio>
+        </>
+      ),
+      value: 'option1',
+    },
+    {
+      children: (
+        <>
+          <Radio value="option1" isDisabled={true}>
+            Unselected + Disabled
+          </Radio>
+        </>
+      ),
+      value: 'option2',
+    },
   ],
 };
 
