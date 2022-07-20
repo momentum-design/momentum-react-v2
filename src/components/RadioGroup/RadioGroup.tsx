@@ -41,7 +41,7 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
             return option;
           } else {
             const value = option.value;
-            return <Radio key={value} {...option} isDisabled={disabled} />;
+            return <Radio key={value} isDisabled={disabled} {...option} />;
           }
         })}
       </>
