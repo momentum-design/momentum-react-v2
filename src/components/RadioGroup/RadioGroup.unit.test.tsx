@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import RadioGroup from './';
+import RadioGroup, { Radio } from './';
 import { STYLE } from './RadioGroup.constants';
 
 describe('<RadioGroup />', () => {
@@ -12,6 +12,63 @@ describe('<RadioGroup />', () => {
       expect.assertions(1);
 
       const { asFragment } = render(<RadioGroup label="Test Radio Group" />);
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should match snapshot when rendered with hard-coded child components', () => {
+      expect.assertions(1);
+
+      const { asFragment } = render(
+        <RadioGroup label="Test Radio Group">
+          <Radio value="option1">Option 1</Radio>
+        </RadioGroup>
+      );
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    // it('should match snapshot when rendered with list of react components passed to options', () => {
+    // })
+
+    it('should match snapshot when rendered with multiple hard-coded child components', () => {
+      expect.assertions(1);
+
+      const { asFragment } = render(
+        <RadioGroup label="Test Radio Group">
+          <Radio value="option1">Option 1</Radio>
+          <Radio value="option2">Option 2</Radio>
+        </RadioGroup>
+      );
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should match snapshot when rendered with list of strings passed to options', () => {
+      expect.assertions(1);
+
+      const { asFragment } = render(
+        <RadioGroup label="Test Radio Group" options={['Option 1', 'Option 2']} />
+      );
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should match snapshot when rendered with a mix of strings and props passwed to options', () => {
+      expect.assertions(1);
+
+      const { asFragment } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            'Option 1',
+            {
+              children: 'Option 2',
+              value: 'option2',
+            },
+          ]}
+        />
+      );
 
       expect(asFragment()).toMatchSnapshot();
     });
