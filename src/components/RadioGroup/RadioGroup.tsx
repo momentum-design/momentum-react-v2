@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, ReactNode, useContext, useRef } from 'react';
+import React, { FC, ReactNode, useContext, useRef } from 'react';
 import classnames from 'classnames';
 import { useRadioGroup, useRadio } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
@@ -10,7 +10,6 @@ import { useFocusRing, VisuallyHidden } from 'react-aria';
 
 import Icon from '../Icon';
 
-// TODO: Update JSDOC for this component.
 /**
  * The RadioGroup component.
  */

@@ -28,8 +28,23 @@ describe('<RadioGroup />', () => {
       expect(asFragment()).toMatchSnapshot();
     });
 
-    // it('should match snapshot when rendered with list of react components passed to options', () => {
-    // })
+    it('should match snapshot when rendered with list of react components passed to options', () => {
+      expect.assertions(1);
+
+      const { asFragment } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            // eslint-disable-next-line react/jsx-key
+            <Radio value="option1">Option 1</Radio>,
+            // eslint-disable-next-line react/jsx-key
+            <Radio value="option2">Option 2</Radio>,
+          ]}
+        />
+      );
+
+      expect(asFragment()).toMatchSnapshot();
+    });
 
     it('should match snapshot when rendered with multiple hard-coded child components', () => {
       expect.assertions(1);
@@ -108,6 +123,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -125,6 +141,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -143,6 +160,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -161,6 +179,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -180,6 +199,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -205,6 +225,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -231,6 +252,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -257,6 +279,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -285,6 +308,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -305,6 +329,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
@@ -325,6 +350,7 @@ describe('<RadioGroup />', () => {
 
       const { asFragment } = render(
         <RadioGroup
+          label="Test Radio Group"
           options={[
             {
               children: 'Option 1',
