@@ -6,7 +6,8 @@ import { useRadioGroupState } from '@react-stately/radio';
 import { STYLE, DEFAULTS } from './RadioGroup.constants';
 import { GroupProps, Props } from './RadioGroup.types';
 import './RadioGroup.style.scss';
-import { useFocusRing, VisuallyHidden } from 'react-aria';
+import { VisuallyHidden } from '@react-aria/visually-hidden';
+import { useFocusRing } from '@react-aria/focus';
 
 import Icon from '../Icon';
 
