@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { Checkbox, Icon, ListItem, ListItemSection } from '@momentum-ui/react-collaboration';
+import { CheckboxNext, Icon, ListItem, ListItemSection } from '@momentum-ui/react-collaboration';
 import SelectContext from '../SelectContext';
 import ListContext from '../ListContext';
 import { UIDConsumer } from 'react-uid';
@@ -14,12 +14,7 @@ class SelectOption extends React.Component {
 
     const separateChildren = (isMulti, cxtActive, uniqueId) => {
       return isMulti ? (
-        <Checkbox
-          htmlId={`${uniqueId}__checkbox`}
-          label={label}
-          checked={cxtActive || false}
-          onChange={() => {}}
-        />
+        <CheckboxNext id={`${uniqueId}__checkbox`} label={label} isSelected={cxtActive || false} />
       ) : (
         [
           <ListItemSection key="child-0" position="center">
