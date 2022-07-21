@@ -161,4 +161,5 @@ export {
   MeetingContainer,
   TextToast,
   Toggle,
+  Chip as ChipNext,
 } from './components';
