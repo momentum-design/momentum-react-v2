@@ -118,6 +118,22 @@ describe('<RadioGroup />', () => {
       expect(asFragment()).toMatchSnapshot();
     });
 
+    it('should match snapshot with description', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      const { asFragment } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          description="The radio group description"
+          style={style}
+        />
+      );
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
     it('should match snapshot with child', () => {
       expect.assertions(1);
 
