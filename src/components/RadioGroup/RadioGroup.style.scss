@@ -21,8 +21,7 @@
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 
-    > .md-radio-selected,
-    .md-radio-not-selected {
+    > .md-radio-button {
       height: 1rem;
       width: 1rem;
       border-radius: 0.5rem;
@@ -43,27 +42,31 @@
         color: var(--radio-unchecked-text);
       }
 
-      > .md-radio-selected {
-        background-color: var(--radio-checked-background);
-      }
+      > .md-radio-button {
+        &[data-selected='true'] {
+          background-color: var(--radio-checked-background);
+        }
 
-      > .md-radio-not-selected {
-        background-color: var(--radio-unchecked-background);
-        border-style: solid;
-        border-color: var(--radio-unchecked-border-color);
-        border-width: 0.0625rem;
+        &[data-selected='false'] {
+          background-color: var(--radio-unchecked-background);
+          border-style: solid;
+          border-color: var(--radio-unchecked-border-color);
+          border-width: 0.0625rem;
+        }
       }
 
       &:hover,
       &.hover {
         color: var(--radio-checked-text-hovered);
 
-        > .md-radio-selected {
-          background-color: var(--radio-checked-background-hovered);
-        }
+        > .md-radio-button {
+          &[data-selected='true'] {
+            background-color: var(--radio-checked-background-hovered);
+          }
 
-        > .md-radio-not-selected {
-          background-color: var(--radio-unchecked-background-hovered);
+          &[data-selected='false'] {
+            background-color: var(--radio-unchecked-background-hovered);
+          }
         }
       }
 
@@ -85,7 +88,7 @@
       }
 
       &.focus {
-        .radio {
+        .md-radio-button {
           box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
         }
       }
@@ -101,14 +104,16 @@
 
       color: var(--radio-unchecked-text-disabled);
 
-      > .md-radio-selected {
-        background-color: var(--radio-checked-background-disabled);
-        border-style: none;
-      }
+      .md-radio-button {
+        &[data-selected='true'] {
+          background-color: var(--radio-checked-background-disabled);
+          border-style: none;
+        }
 
-      > .md-radio-not-selected {
-        background-color: var(--radio-unchecked-background-disabled);
-        border-style: none;
+        &[data-selected='false'] {
+          background-color: var(--radio-unchecked-background-disabled);
+          border-style: none;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import React from 'react';
 
-import RadioGroup, { Radio, RadioGroupProps } from './';
+import RadioGroup, { RadioGroupProps } from './';
 import argTypes from './RadioGroup.stories.args';
 import Documentation from './RadioGroup.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
@@ -58,55 +58,57 @@ delete Common.argTypes.isDisabled;
 Common.parameters = {
   variants: [
     {
-      children: (
-        <>
-          <Radio value="option1">Selected + Label</Radio>
-        </>
-      ),
+      options: [
+        {
+          value: 'option1',
+          label: 'Selected + Label',
+        },
+      ],
       value: 'option1',
     },
     {
-      children: (
-        <>
-          <Radio value="option1">Unselected + Label</Radio>
-        </>
-      ),
+      options: [
+        {
+          value: 'option1',
+          label: 'Selected + Label',
+        },
+      ],
       value: 'option2',
     },
     {
-      children: (
-        <>
-          <Radio value="option1" />
-        </>
-      ),
+      options: [
+        {
+          value: 'option1',
+        },
+      ],
       value: 'option1',
     },
     {
-      children: (
-        <>
-          <Radio value="option1" />
-        </>
-      ),
+      options: [
+        {
+          value: 'option1',
+        },
+      ],
       value: 'option2',
     },
     {
-      children: (
-        <>
-          <Radio value="option1" isDisabled={true}>
-            Selected + Disabled
-          </Radio>
-        </>
-      ),
+      options: [
+        {
+          value: 'option1',
+          label: 'Selected + Label',
+          isDisabled: true,
+        },
+      ],
       value: 'option1',
     },
     {
-      children: (
-        <>
-          <Radio value="option1" isDisabled={true}>
-            Unselected + Disabled
-          </Radio>
-        </>
-      ),
+      options: [
+        {
+          value: 'option1',
+          label: 'Selected + Label',
+          isDisabled: true,
+        },
+      ],
       value: 'option2',
     },
   ],
