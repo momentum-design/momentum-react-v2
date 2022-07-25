@@ -19,6 +19,8 @@ export interface GroupProps extends AriaRadioGroupProps {
 
   options?: Array<Props | string | ReactNode>;
 
+  setValue?: (value: string) => void;
+
   description?: string;
 }
 
@@ -26,4 +28,6 @@ export interface Props extends AriaRadioProps {
   style?: CSSProperties;
 
   className?: string;
+
+  label?: string;
 }
