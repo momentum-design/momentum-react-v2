@@ -14,8 +14,7 @@ const STYLE = {
   group: `${CLASS_PREFIX}-group`,
   description: `${CLASS_PREFIX}-group-description`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  selected: `${CLASS_PREFIX}-selected`,
-  notSelected: `${CLASS_PREFIX}-not-selected`,
+  button: `${CLASS_PREFIX}-button`,
   focus: `${CLASS_PREFIX}-focus`,
   icon: `${CLASS_PREFIX}-icon`,
 };
