@@ -18,7 +18,8 @@ import Icon from '../Icon';
 export const RadioContext = React.createContext(null);
 
 const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
-  const { className, label, children, id, style, options, isDisabled, orientation } = props;
+  const { className, label, children, id, style, options, isDisabled, orientation, description } =
+    props;
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
@@ -58,6 +59,7 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
       data-direction={direction}
     >
       <span {...labelProps}>{label || DEFAULTS.GROUP_LABEL}</span>
+      {description && <div className={STYLE.description}>{description}</div>}
       <RadioContext.Provider value={state}>{childElement}</RadioContext.Provider>
     </div>
   );

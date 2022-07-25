@@ -4,6 +4,7 @@ const DEFAULTS = {
   GROUP_DISABLED: false,
   GROUP_READONLY: false,
   GROUP_LABEL: undefined,
+  GROUP_DESCRIPTION: undefined,
   GROUP_ORIENTATION: 'vertical',
   GROUP_ARIA_LABEL: 'radio button group',
   OPTION_DISABLED: false,
@@ -11,6 +12,7 @@ const DEFAULTS = {
 
 const STYLE = {
   group: `${CLASS_PREFIX}-group`,
+  description: `${CLASS_PREFIX}-group-description`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
   selected: `${CLASS_PREFIX}-selected`,
   notSelected: `${CLASS_PREFIX}-not-selected`,
