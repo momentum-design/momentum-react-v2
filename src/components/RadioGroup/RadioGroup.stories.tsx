@@ -1,7 +1,6 @@
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import React from 'react';
 
 import RadioGroup, { RadioGroupProps } from './';
 import argTypes from './RadioGroup.stories.args';
@@ -31,15 +30,15 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   options: [
     {
-      children: 'Option 1',
+      label: 'Option 1',
       value: 'option1',
     },
     {
-      children: 'Option 2',
+      label: 'Option 2',
       value: 'option2',
     },
     {
-      children: 'Option 3',
+      label: 'Option 3',
       value: 'option3',
     },
   ],

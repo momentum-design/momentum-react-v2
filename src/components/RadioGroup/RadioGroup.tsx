@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 import { useRadioGroup } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
@@ -15,38 +15,25 @@ import Radio from './Radio';
 export const RadioContext = React.createContext(null);
 
 const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
-  const { className, label, children, id, style, options, isDisabled, orientation, description } =
+  const { className, label, id, style, options, isDisabled, setValue, orientation, description } =
     props;
 
-  const state = useRadioGroupState(props);
+  let onChange: (value: string) => void = props.onChange;
+
+  if (setValue) {
+    onChange = props.onChange
+      ? (value: string) => {
+          setValue(value);
+          props.onChange(value);
+        }
+      : setValue;
+  }
+
+  const state = useRadioGroupState({ ...props, onChange });
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
   const direction = orientation || DEFAULTS.GROUP_ORIENTATION;
   const disabled = isDisabled || DEFAULTS.GROUP_DISABLED;
-
-  let childElement: ReactNode;
-  if (children) {
-    childElement = children;
-  } else if (Array.isArray(options)) {
-    childElement = (
-      <>
-        {options.map((option: string | Props) => {
-          if (typeof option === 'string') {
-            return (
-              <Radio key={option} value={option} isDisabled={disabled}>
-                {option}
-              </Radio>
-            );
-          } else if (React.isValidElement(option)) {
-            return option;
-          } else {
-            const value = option.value;
-            return <Radio key={value} isDisabled={disabled} {...option} />;
-          }
-        })}
-      </>
-    );
-  }
 
   return (
     <div
@@ -58,7 +45,21 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
     >
       <span {...labelProps}>{label || DEFAULTS.GROUP_LABEL}</span>
       {description && <div className={STYLE.description}>{description}</div>}
-      <RadioContext.Provider value={state}>{childElement}</RadioContext.Provider>
+      <RadioContext.Provider value={state}>
+        {options &&
+          options.map((option: string | Props) => {
+            if (typeof option === 'string') {
+              return (
+                <Radio key={option} value={option} isDisabled={disabled}>
+                  {option}
+                </Radio>
+              );
+            } else {
+              const value = option.value;
+              return <Radio key={value} isDisabled={disabled} {...option} />;
+            }
+          })}
+      </RadioContext.Provider>
     </div>
   );
 };

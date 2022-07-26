@@ -47,9 +47,10 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
-      Option 1
     </label>
     <label
       class="md-radio-wrapper"
@@ -59,6 +60,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 2"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -66,100 +68,9 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
-      />
-      Option 2
-    </label>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<RadioGroup /> snapshot should match snapshot when rendered with hard-coded child components 1`] = `
-<DocumentFragment>
-  <div
-    aria-labelledby="test-ID"
-    aria-orientation="vertical"
-    class="md-radio-group"
-    data-direction="vertical"
-    role="radiogroup"
-  >
-    <span
-      id="test-ID"
-    >
-      Test Radio Group
-    </span>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <div
-        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-      >
-        <input
-          name="test-ID"
-          tabindex="0"
-          type="radio"
-          value="option1"
-        />
-      </div>
-      <div
-        class="md-radio-not-selected radio"
-      />
-      Option 1
-    </label>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<RadioGroup /> snapshot should match snapshot when rendered with list of react components passed to options 1`] = `
-<DocumentFragment>
-  <div
-    aria-labelledby="test-ID"
-    aria-orientation="vertical"
-    class="md-radio-group"
-    data-direction="vertical"
-    role="radiogroup"
-  >
-    <span
-      id="test-ID"
-    >
-      Test Radio Group
-    </span>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <div
-        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-      >
-        <input
-          name="test-ID"
-          tabindex="0"
-          type="radio"
-          value="option1"
-        />
-      </div>
-      <div
-        class="md-radio-not-selected radio"
-      />
-      Option 1
-    </label>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <div
-        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-      >
-        <input
-          name="test-ID"
-          tabindex="0"
-          type="radio"
-          value="option2"
-        />
-      </div>
-      <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 2
     </label>
@@ -196,9 +107,10 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
-      Option 1
     </label>
     <label
       class="md-radio-wrapper"
@@ -215,65 +127,10 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
-      Option 2
-    </label>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<RadioGroup /> snapshot should match snapshot when rendered with multiple hard-coded child components 1`] = `
-<DocumentFragment>
-  <div
-    aria-labelledby="test-ID"
-    aria-orientation="vertical"
-    class="md-radio-group"
-    data-direction="vertical"
-    role="radiogroup"
-  >
-    <span
-      id="test-ID"
-    >
-      Test Radio Group
-    </span>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <div
-        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-      >
-        <input
-          name="test-ID"
-          tabindex="0"
-          type="radio"
-          value="option1"
-        />
-      </div>
-      <div
-        class="md-radio-not-selected radio"
-      />
-      Option 1
-    </label>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <div
-        style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-      >
-        <input
-          name="test-ID"
-          tabindex="0"
-          type="radio"
-          value="option2"
-        />
-      </div>
-      <div
-        class="md-radio-not-selected radio"
-      />
-      Option 2
     </label>
   </div>
 </DocumentFragment>
@@ -301,6 +158,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -308,7 +166,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -338,6 +198,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] 
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -345,7 +206,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] 
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -376,6 +239,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child id 1`] = `
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           id="example-id"
           name="test-ID"
           tabindex="0"
@@ -384,7 +248,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with child id 1`] = `
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -415,6 +281,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -422,7 +289,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -452,6 +321,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           disabled=""
           name="test-ID"
           type="radio"
@@ -459,7 +329,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -489,6 +361,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           checked=""
           disabled=""
           name="test-ID"
@@ -497,7 +370,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
         />
       </div>
       <div
-        class="md-radio-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="true"
       />
       Option 1
     </label>
@@ -527,6 +402,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats selected
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           checked=""
           name="test-ID"
           tabindex="0"
@@ -535,7 +411,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats selected
         />
       </div>
       <div
-        class="md-radio-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="true"
       />
       Option 1
     </label>
@@ -626,6 +504,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -633,7 +512,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -645,6 +526,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 2"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -652,7 +534,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 2
     </label>
@@ -664,6 +548,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 3"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -671,7 +556,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 3
     </label>
@@ -701,6 +588,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -708,7 +596,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -720,6 +610,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 2"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -727,7 +618,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 2
     </label>
@@ -739,6 +632,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 3"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -746,7 +640,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 3
     </label>
@@ -777,6 +673,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           disabled=""
           name="test-ID"
           type="radio"
@@ -784,7 +681,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -796,6 +695,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 2"
           disabled=""
           name="test-ID"
           type="radio"
@@ -803,7 +703,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 2
     </label>
@@ -815,6 +717,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 3"
           disabled=""
           name="test-ID"
           type="radio"
@@ -822,7 +725,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 3
     </label>
@@ -852,6 +757,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -859,7 +765,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 1
     </label>
@@ -871,6 +779,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 2"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -878,7 +787,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 2
     </label>
@@ -890,6 +801,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 3"
           disabled=""
           name="test-ID"
           type="radio"
@@ -897,7 +809,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 3
     </label>
@@ -927,6 +841,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           checked=""
           name="test-ID"
           tabindex="0"
@@ -935,7 +850,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="true"
       />
       Option 1
     </label>
@@ -947,6 +864,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 2"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -954,7 +872,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 2
     </label>
@@ -966,6 +886,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 3"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -973,7 +894,9 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         />
       </div>
       <div
-        class="md-radio-not-selected radio"
+        class="md-radio-button"
+        data-focused="false"
+        data-selected="false"
       />
       Option 3
     </label>
