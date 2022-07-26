@@ -18,22 +18,19 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
   const { className, label, id, style, options, isDisabled, setValue, orientation, description } =
     props;
 
-  let onChange: (value: string) => void = props.onChange;
-
-  if (setValue) {
-    onChange = props.onChange
-      ? (value: string) => {
-          setValue(value);
-          props.onChange(value);
-        }
-      : setValue;
-  }
+  const onChange = (value: string) => {
+    setValue?.(value);
+  };
 
   const state = useRadioGroupState({ ...props, onChange });
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
   const direction = orientation || DEFAULTS.GROUP_ORIENTATION;
   const disabled = isDisabled || DEFAULTS.GROUP_DISABLED;
+
+  if (direction === 'horizontal' && description) {
+    console.warn('Using orientation=horizontal and description at the same time is not supported');
+  }
 
   return (
     <div

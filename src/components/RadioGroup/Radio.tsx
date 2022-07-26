@@ -9,8 +9,6 @@ import { STYLE, DEFAULTS } from './RadioGroup.constants';
 import { Props } from './RadioGroup.types';
 import { RadioContext } from './RadioGroup';
 
-import Icon from '../Icon';
-
 import './RadioGroup.style.scss';
 
 const Radio: FC<Props> = (props: Props) => {
@@ -32,13 +30,7 @@ const Radio: FC<Props> = (props: Props) => {
       <VisuallyHidden>
         <input {...inputProps} {...focusProps} ref={ref} />
       </VisuallyHidden>
-      {
-        <div data-selected={selected} data-focused={isFocusVisible} className={STYLE.button}>
-          {selected && (
-            <Icon className={STYLE.icon} name="shape-circle" weight="filled" scale={8} />
-          )}
-        </div>
-      }
+      {<div data-selected={selected} data-focused={isFocusVisible} className={STYLE.button} />}
       {label}
     </label>
   );
