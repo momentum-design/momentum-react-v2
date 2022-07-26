@@ -12,7 +12,7 @@ import Icon from '../Icon';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction } = props;
+  const { item, state, title, onAction } = props;
 
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
@@ -53,13 +53,17 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
           <ListItemBaseSection position="start">
             {isSelected ? tickIcon : <div className={STYLE.tickPlaceholder} />}
           </ListItemBaseSection>
-          <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
+          <ListItemBaseSection position="fill" title={title}>
+            {item.rendered}
+          </ListItemBaseSection>
         </>
       );
     } else {
       return (
         <>
-          <ListItemBaseSection position="fill">{item.rendered}</ListItemBaseSection>
+          <ListItemBaseSection position="fill" title={title}>
+            {item.rendered}
+          </ListItemBaseSection>
           {isSelected && <ListItemBaseSection position="end">{tickIcon}</ListItemBaseSection>}
         </>
       );
