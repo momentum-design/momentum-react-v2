@@ -75,7 +75,6 @@ const radioGroupArgTypes = {
         summary: 'boolean',
       },
     },
-    defaultValue: DEFAULTS.GROUP_READONLY,
   },
   orientation: {
     description: 'The axis the Radio Button(s) should align with.',
