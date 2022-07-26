@@ -274,7 +274,6 @@ describe('<RadioGroup />', () => {
       expect(asFragment()).toMatchSnapshot();
     });
 
-    // Start
     it('should match snapshot with multiple children and orientation horizontal', () => {
       expect.assertions(1);
 
@@ -482,7 +481,7 @@ describe('<RadioGroup />', () => {
       expect(radio).toHaveStyle(styleString);
     });
 
-    it('should give only the select element the selected class', () => {
+    it('should give only the select element the selected style', () => {
       expect.assertions(2);
 
       const { getByText } = render(
@@ -502,8 +501,8 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.md-radio-button');
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option1 = getByText('Option 1').children[1];
+      const option2 = getByText('Option 2').children[1];
 
       expect(option1).toHaveAttribute('data-selected', 'true');
       expect(option2).toHaveAttribute('data-selected', 'false');
@@ -533,8 +532,8 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.md-radio-button');
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option1 = getByText('Option 1').children[1];
+      const option2 = getByText('Option 2').children[1];
 
       expect(option1).toHaveAttribute('data-selected', 'true');
       expect(option2).toHaveAttribute('data-selected', 'false');
@@ -570,7 +569,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2');
 
       userEvent.click(option2);
 
@@ -602,7 +601,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.md-radio-button');
+      const option1 = getByText('Option 1');
 
       userEvent.click(option1);
 
@@ -634,7 +633,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2');
 
       userEvent.click(option2);
 
@@ -667,8 +666,8 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.md-radio-button');
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option1 = getByText('Option 1');
+      const option2 = getByText('Option 2');
 
       userEvent.type(option1, '{arrowdown}');
 
@@ -705,7 +704,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2');
 
       userEvent.click(option2);
 
@@ -738,7 +737,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2');
 
       userEvent.click(option2);
 
@@ -771,7 +770,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2');
 
       userEvent.click(option2);
 

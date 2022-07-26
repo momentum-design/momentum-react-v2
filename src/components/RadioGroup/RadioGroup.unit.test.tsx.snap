@@ -454,11 +454,12 @@ exports[`<RadioGroup /> snapshot should match snapshot with description 1`] = `
     >
       Test Radio Group
     </span>
-    <div
-      class="md-radio-group-description"
+    <small
+      class="md-text-wrapper"
+      data-type="body-secondary"
     >
       The radio group description
-    </div>
+    </small>
   </div>
 </DocumentFragment>
 `;

@@ -21,12 +21,10 @@ export default {
   },
 };
 
-// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<RadioGroupProps>(RadioGroup).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component.
 Example.args = {
   options: [
     {
@@ -45,11 +43,8 @@ Example.args = {
   label: 'Example',
 };
 
-// TODO: Inject additional stories here.
-
-// NOTE: Common variants story. This renders multiple variants of a single component.
 const Common = MultiTemplate(RadioGroup).bind({});
-// Psuedo states would be applied to group element
+
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.isSelected;
 delete Common.argTypes.isDisabled;
@@ -113,5 +108,4 @@ Common.parameters = {
   ],
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example, Common };

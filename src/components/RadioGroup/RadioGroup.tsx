@@ -7,6 +7,7 @@ import { STYLE, DEFAULTS } from './RadioGroup.constants';
 import { GroupProps, Props } from './RadioGroup.types';
 import './RadioGroup.style.scss';
 import Radio from './Radio';
+import Text, { TEXT_CONSTANTS } from '../Text';
 
 /**
  * The RadioGroup component.
@@ -15,8 +16,17 @@ import Radio from './Radio';
 export const RadioContext = React.createContext(null);
 
 const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
-  const { className, label, id, style, options, isDisabled, setValue, orientation, description } =
-    props;
+  const {
+    className,
+    description = DEFAULTS.GROUP_DESCRIPTION,
+    id,
+    isDisabled = DEFAULTS.GROUP_DISABLED,
+    label = DEFAULTS.GROUP_LABEL,
+    options,
+    orientation = DEFAULTS.GROUP_ORIENTATION,
+    setValue,
+    style,
+  } = props;
 
   const onChange = (value: string) => {
     setValue?.(value);
@@ -25,10 +35,7 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
   const state = useRadioGroupState({ ...props, onChange });
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
-  const direction = orientation || DEFAULTS.GROUP_ORIENTATION;
-  const disabled = isDisabled || DEFAULTS.GROUP_DISABLED;
-
-  if (direction === 'horizontal' && description) {
+  if (orientation === 'horizontal' && description) {
     console.warn('Using orientation=horizontal and description at the same time is not supported');
   }
 
@@ -38,21 +45,21 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
       className={classnames(className, STYLE.group)}
       id={id}
       style={style}
-      data-direction={direction}
+      data-direction={orientation}
     >
-      <span {...labelProps}>{label || DEFAULTS.GROUP_LABEL}</span>
-      {description && <div className={STYLE.description}>{description}</div>}
+      <span {...labelProps}>{label}</span>
+      {description && <Text type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>{description}</Text>}
       <RadioContext.Provider value={state}>
         {options &&
           options.map((option: string | Props) => {
             if (typeof option === 'string') {
               return (
-                <Radio key={option} value={option} isDisabled={disabled}>
+                <Radio key={option} value={option} isDisabled={isDisabled}>
                   {option}
                 </Radio>
               );
             } else {
-              return <Radio key={option.value} isDisabled={disabled} {...option} />;
+              return <Radio key={option.value} isDisabled={isDisabled} {...option} />;
             }
           })}
       </RadioContext.Provider>

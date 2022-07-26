@@ -2,7 +2,6 @@ const CLASS_PREFIX = 'md-radio';
 
 const DEFAULTS = {
   GROUP_DISABLED: false,
-  GROUP_READONLY: false,
   GROUP_LABEL: undefined,
   GROUP_DESCRIPTION: undefined,
   GROUP_ORIENTATION: 'vertical',

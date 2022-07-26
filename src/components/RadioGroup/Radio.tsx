@@ -12,17 +12,16 @@ import { RadioContext } from './RadioGroup';
 import './RadioGroup.style.scss';
 
 const Radio: FC<Props> = (props: Props) => {
-  const { className, isDisabled, id, style, label } = props;
+  const { className, isDisabled = DEFAULTS.OPTION_DISABLED, id, style, label } = props;
   const state = useContext(RadioContext);
   const ref = useRef(null);
   const { inputProps } = useRadio({ 'aria-label': label, ...props }, state, ref);
   const { isFocusVisible, focusProps } = useFocusRing();
-  const disabled = isDisabled || DEFAULTS.OPTION_DISABLED;
   const selected = state.selectedValue === props.value;
 
   return (
     <label
-      data-disabled={disabled}
+      data-disabled={isDisabled}
       className={classnames(STYLE.wrapper, className)}
       style={style}
       id={id}
@@ -30,7 +29,7 @@ const Radio: FC<Props> = (props: Props) => {
       <VisuallyHidden>
         <input {...inputProps} {...focusProps} ref={ref} />
       </VisuallyHidden>
-      {<div data-selected={selected} data-focused={isFocusVisible} className={STYLE.button} />}
+      <div data-selected={selected} data-focused={isFocusVisible} className={STYLE.button} />
       {label}
     </label>
   );
