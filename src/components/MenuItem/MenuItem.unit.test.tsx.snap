@@ -223,9 +223,11 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
         >
           <ListItemBaseSection
             position="fill"
+            title="Item 1"
           >
             <div
               data-position="fill"
+              title="Item 1"
             >
               Item 1
             </div>
@@ -471,9 +473,11 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
           </ListItemBaseSection>
           <ListItemBaseSection
             position="fill"
+            title="Item 1"
           >
             <div
               data-position="fill"
+              title="Item 1"
             >
               Item 1
             </div>
