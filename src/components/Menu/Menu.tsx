@@ -58,13 +58,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
         }
 
         let menuItem = (
-          <MenuItem
-            key={item.key}
-            item={item}
-            state={state}
-            title={item.textValue}
-            onAction={_props.onAction}
-          />
+          <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
         );
 
         if (item.wrapper) {
