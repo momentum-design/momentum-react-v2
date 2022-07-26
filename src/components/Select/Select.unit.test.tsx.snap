@@ -4422,6 +4422,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             <span
               class="md-select-selected-item-wrapper"
               id="test-ID"
+              title="Item 1"
             >
               Item 1
             </span>
@@ -4531,6 +4532,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           <span
             className="md-select-selected-item-wrapper"
             id="test-ID"
+            title="Item 1"
           >
             Item 1
           </span>
@@ -4760,6 +4762,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             <span
               class="md-select-selected-item-wrapper"
               id="test-ID"
+              title="Item 1"
             >
               Item 1
             </span>
@@ -4869,6 +4872,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           <span
             className="md-select-selected-item-wrapper"
             id="test-ID"
+            title="Item 1"
           >
             Item 1
           </span>
