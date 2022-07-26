@@ -279,6 +279,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -298,6 +299,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -317,6 +319,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -347,6 +350,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -366,6 +370,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -385,6 +390,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -676,6 +682,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -739,9 +746,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -950,6 +959,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -1013,9 +1023,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -1224,6 +1236,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -1287,9 +1300,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -1523,6 +1538,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -1586,9 +1602,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -1797,6 +1815,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -1860,9 +1879,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -2071,6 +2092,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -2134,9 +2156,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>
@@ -2471,6 +2495,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -2490,6 +2515,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -2509,6 +2535,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -2539,6 +2566,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -2558,6 +2586,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -2577,6 +2606,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -2868,6 +2898,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -2931,9 +2962,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -3142,6 +3175,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -3205,9 +3239,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -3416,6 +3452,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -3479,9 +3516,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -3715,6 +3754,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -3778,9 +3818,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -3989,6 +4031,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -4052,9 +4095,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -4263,6 +4308,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -4326,9 +4372,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>
@@ -4663,6 +4711,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -4682,6 +4731,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -4701,6 +4751,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -4731,6 +4782,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -4750,6 +4802,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -4769,6 +4822,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -5060,6 +5114,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5123,9 +5178,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -5334,6 +5391,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5397,9 +5455,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -5608,6 +5668,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5671,9 +5732,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -5907,6 +5970,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5970,9 +6034,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -6181,6 +6247,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -6244,9 +6311,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -6455,6 +6524,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -6518,9 +6588,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>
@@ -6857,6 +6929,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -6876,6 +6949,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -6895,6 +6969,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -6925,6 +7000,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -6944,6 +7020,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -6963,6 +7040,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -7256,6 +7334,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -7319,9 +7398,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -7530,6 +7611,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -7593,9 +7675,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -7804,6 +7888,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -7867,9 +7952,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -8103,6 +8190,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -8166,9 +8254,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -8377,6 +8467,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -8440,9 +8531,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -8651,6 +8744,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -8714,9 +8808,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>
@@ -9051,6 +9147,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -9070,6 +9167,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -9089,6 +9187,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -9119,6 +9218,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -9138,6 +9238,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -9157,6 +9258,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -9448,6 +9550,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -9511,9 +9614,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -9722,6 +9827,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -9785,9 +9891,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -9996,6 +10104,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10059,9 +10168,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -10295,6 +10406,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10358,9 +10470,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -10569,6 +10683,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10632,9 +10747,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -10843,6 +10960,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10906,9 +11024,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>
@@ -11243,6 +11363,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -11262,6 +11383,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -11281,6 +11403,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -11311,6 +11434,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -11330,6 +11454,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -11349,6 +11474,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -11670,6 +11796,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -11733,9 +11860,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -11944,6 +12073,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12007,9 +12137,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -12218,6 +12350,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12281,9 +12414,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -12517,6 +12652,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12580,9 +12716,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -12791,6 +12929,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12854,9 +12993,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -13065,6 +13206,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -13128,9 +13270,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>
@@ -13509,6 +13653,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -13528,6 +13673,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -13547,6 +13693,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -13577,6 +13724,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -13596,6 +13744,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -13615,6 +13764,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -13916,6 +14066,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -13979,9 +14130,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -14190,6 +14343,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -14253,9 +14407,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -14464,6 +14620,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -14527,9 +14684,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -14763,6 +14922,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -14826,9 +14986,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -15037,6 +15199,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -15100,9 +15263,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -15311,6 +15476,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -15374,9 +15540,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>
@@ -15711,6 +15879,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     >
                       <div
                         data-position="fill"
+                        title="One"
                       >
                         One
                       </div>
@@ -15730,6 +15899,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     >
                       <div
                         data-position="fill"
+                        title="Two"
                       >
                         Two
                       </div>
@@ -15749,6 +15919,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     >
                       <div
                         data-position="fill"
+                        title="Three"
                       >
                         Three
                       </div>
@@ -15779,6 +15950,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     >
                       <div
                         data-position="fill"
+                        title="Four"
                       >
                         Four
                       </div>
@@ -15798,6 +15970,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     >
                       <div
                         data-position="fill"
+                        title="Five"
                       >
                         Five
                       </div>
@@ -15817,6 +15990,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     >
                       <div
                         data-position="fill"
+                        title="Six"
                       >
                         Six
                       </div>
@@ -16108,6 +16282,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
+                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -16171,9 +16346,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="One"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="One"
                                   >
                                     One
                                   </div>
@@ -16382,6 +16559,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
+                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -16445,9 +16623,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Two"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Two"
                                   >
                                     Two
                                   </div>
@@ -16656,6 +16836,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
+                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -16719,9 +16900,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Three"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Three"
                                   >
                                     Three
                                   </div>
@@ -16955,6 +17138,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
+                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -17018,9 +17202,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Four"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Four"
                                   >
                                     Four
                                   </div>
@@ -17229,6 +17415,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
+                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -17292,9 +17479,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Five"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Five"
                                   >
                                     Five
                                   </div>
@@ -17503,6 +17692,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
+                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -17566,9 +17756,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                               >
                                 <ListItemBaseSection
                                   position="fill"
+                                  title="Six"
                                 >
                                   <div
                                     data-position="fill"
+                                    title="Six"
                                   >
                                     Six
                                   </div>

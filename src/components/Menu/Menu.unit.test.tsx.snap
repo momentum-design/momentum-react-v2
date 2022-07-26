@@ -170,6 +170,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="One"
     >
       <ListItemBase
         aria-disabled={false}
@@ -231,9 +232,11 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="One"
               >
                 <div
                   data-position="fill"
+                  title="One"
                 >
                   One
                 </div>
@@ -398,6 +401,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="Two"
     >
       <ListItemBase
         aria-disabled={false}
@@ -459,9 +463,11 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="Two"
               >
                 <div
                   data-position="fill"
+                  title="Two"
                 >
                   Two
                 </div>
@@ -646,6 +652,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="One"
     >
       <ListItemBase
         aria-disabled={false}
@@ -707,9 +714,11 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="One"
               >
                 <div
                   data-position="fill"
+                  title="One"
                 >
                   One
                 </div>
@@ -874,6 +883,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="Two"
     >
       <ListItemBase
         aria-disabled={false}
@@ -935,9 +945,11 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="Two"
               >
                 <div
                   data-position="fill"
+                  title="Two"
                 >
                   Two
                 </div>
@@ -1123,6 +1135,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="One"
     >
       <ListItemBase
         aria-disabled={false}
@@ -1184,9 +1197,11 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="One"
               >
                 <div
                   data-position="fill"
+                  title="One"
                 >
                   One
                 </div>
@@ -1351,6 +1366,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="Two"
     >
       <ListItemBase
         aria-disabled={false}
@@ -1412,9 +1428,11 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="Two"
               >
                 <div
                   data-position="fill"
+                  title="Two"
                 >
                   Two
                 </div>
@@ -1600,6 +1618,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="One"
     >
       <ListItemBase
         aria-disabled={false}
@@ -1661,9 +1680,11 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="One"
               >
                 <div
                   data-position="fill"
+                  title="One"
                 >
                   One
                 </div>
@@ -1828,6 +1849,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="Two"
     >
       <ListItemBase
         aria-disabled={false}
@@ -1889,9 +1911,11 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="Two"
               >
                 <div
                   data-position="fill"
+                  title="Two"
                 >
                   Two
                 </div>
@@ -2076,6 +2100,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="One"
     >
       <ListItemBase
         aria-disabled={false}
@@ -2137,9 +2162,11 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="One"
               >
                 <div
                   data-position="fill"
+                  title="One"
                 >
                   One
                 </div>
@@ -2304,6 +2331,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="Two"
     >
       <ListItemBase
         aria-disabled={false}
@@ -2365,9 +2393,11 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="Two"
               >
                 <div
                   data-position="fill"
+                  title="Two"
                 >
                   Two
                 </div>
@@ -2561,6 +2591,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="One"
     >
       <ListItemBase
         aria-disabled={false}
@@ -2622,9 +2653,11 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="One"
               >
                 <div
                   data-position="fill"
+                  title="One"
                 >
                   One
                 </div>
@@ -2789,6 +2822,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
           "toggleKey": [Function],
         }
       }
+      title="Two"
     >
       <ListItemBase
         aria-disabled={false}
@@ -2850,9 +2884,11 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
             >
               <ListItemBaseSection
                 position="fill"
+                title="Two"
               >
                 <div
                   data-position="fill"
+                  title="Two"
                 >
                   Two
                 </div>
