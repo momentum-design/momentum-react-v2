@@ -2,11 +2,17 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { DEFAULTS } from './RadioGroup.constants';
 
 const radioGroupArgTypes = {
-  // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
   children: {
     table: {
       disable: true,
     },
+  },
+  onChange: {
+    description: 'Callback called when the state is changed.',
+  },
+  setValue: {
+    description:
+      'Setter for the using the component as controlled. Called when the state is changed.',
   },
   label: {
     description: 'The label of the checkbox group.',
@@ -36,7 +42,7 @@ const radioGroupArgTypes = {
     },
   },
   value: {
-    description: 'The current value (controlled).',
+    description: 'The current value.',
     control: { type: 'text', required: false },
     table: {
       type: {
@@ -45,7 +51,7 @@ const radioGroupArgTypes = {
     },
   },
   defaultValue: {
-    description: 'The default value (uncontrolled).',
+    description: 'The default value.',
     control: { type: 'text' },
     table: {
       type: {
