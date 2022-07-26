@@ -3,11 +3,6 @@ import { AriaRadioGroupProps, AriaRadioProps } from '@react-types/radio';
 
 export interface GroupProps extends AriaRadioGroupProps {
   /**
-   * Child components of this RadioGroup.
-   */
-  children?: ReactNode;
-
-  /**
    * Custom class for overriding this component's CSS.
    */
   className?: string;

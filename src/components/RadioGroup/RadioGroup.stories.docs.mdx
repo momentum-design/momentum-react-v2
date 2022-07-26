@@ -2,18 +2,17 @@ The `<RadioGroup />` component.
 
 Options for the component can either be specified in two ways:
 
-Child `<Radio props=... >Some Element</Radio>` components
+- Passing an array of `RadioProps` to the options prop.
+- Passing an array of strings to the options prop. The string is used for both the label and the value of the button.
 
-Passing an array of props into options.
-
-The props that can be passed in this way are:
+The props for `RadioProps` are:
 
 | Prop             | Type                           | Description                                                                                                            |
 | ---------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | style            | `cssProperties`                | The CSS properties for the radio button.                                                                               |
 | className        | `string`                       | The classname to use for the radio button.                                                                             |
 | value            | `string`                       | The value of the radio button, used when submitting an HTML form. See MDN.                                             |
-| children         | `ReactNode`                    | The label for the Radio. Accepts any renderable node.                                                                  |
+| label            | `string`                       | The label for the Radio button.                                                                                        |
 | isDisabled       | `boolean`                      | Whether the radio button is disabled or not. Shows that a selection exists, but is not available in that circumstance. |
 | autoFocus        | `boolean`                      | Whether the element should receive focus on render.                                                                    |
 | onFocus          | `(e: FocusEvent) => void`      | Handler that is called when the element receives focus.                                                                |

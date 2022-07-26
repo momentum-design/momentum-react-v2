@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import RadioGroup, { Radio } from './';
+import RadioGroup from './';
 import { STYLE } from './RadioGroup.constants';
 
 describe('<RadioGroup />', () => {
@@ -12,49 +12,6 @@ describe('<RadioGroup />', () => {
       expect.assertions(1);
 
       const { asFragment } = render(<RadioGroup label="Test Radio Group" />);
-
-      expect(asFragment()).toMatchSnapshot();
-    });
-
-    it('should match snapshot when rendered with hard-coded child components', () => {
-      expect.assertions(1);
-
-      const { asFragment } = render(
-        <RadioGroup label="Test Radio Group">
-          <Radio value="option1">Option 1</Radio>
-        </RadioGroup>
-      );
-
-      expect(asFragment()).toMatchSnapshot();
-    });
-
-    it('should match snapshot when rendered with list of react components passed to options', () => {
-      expect.assertions(1);
-
-      const { asFragment } = render(
-        <RadioGroup
-          label="Test Radio Group"
-          options={[
-            // eslint-disable-next-line react/jsx-key
-            <Radio value="option1">Option 1</Radio>,
-            // eslint-disable-next-line react/jsx-key
-            <Radio value="option2">Option 2</Radio>,
-          ]}
-        />
-      );
-
-      expect(asFragment()).toMatchSnapshot();
-    });
-
-    it('should match snapshot when rendered with multiple hard-coded child components', () => {
-      expect.assertions(1);
-
-      const { asFragment } = render(
-        <RadioGroup label="Test Radio Group">
-          <Radio value="option1">Option 1</Radio>
-          <Radio value="option2">Option 2</Radio>
-        </RadioGroup>
-      );
 
       expect(asFragment()).toMatchSnapshot();
     });
@@ -78,7 +35,7 @@ describe('<RadioGroup />', () => {
           options={[
             'Option 1',
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
             },
           ]}
@@ -142,7 +99,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
           ]}
@@ -160,7 +117,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
           ]}
@@ -179,7 +136,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               isDisabled: true,
             },
@@ -198,7 +155,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               isDisabled: true,
             },
@@ -218,15 +175,15 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
             },
             {
-              children: 'Option 3',
+              label: 'Option 3',
               value: 'option3',
             },
           ]}
@@ -244,15 +201,15 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
             },
             {
-              children: 'Option 3',
+              label: 'Option 3',
               value: 'option3',
             },
           ]}
@@ -271,15 +228,15 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
             },
             {
-              children: 'Option 3',
+              label: 'Option 3',
               value: 'option3',
               isDisabled: true,
             },
@@ -298,15 +255,15 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
             },
             {
-              children: 'Option 3',
+              label: 'Option 3',
               value: 'option3',
             },
           ]}
@@ -326,15 +283,15 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
             },
             {
-              children: 'Option 3',
+              label: 'Option 3',
               value: 'option3',
             },
           ]}
@@ -355,7 +312,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               className,
             },
@@ -376,7 +333,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id,
             },
@@ -397,7 +354,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               style,
             },
@@ -467,7 +424,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               className,
             },
@@ -490,7 +447,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id,
             },
@@ -513,7 +470,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               style,
             },
@@ -526,18 +483,18 @@ describe('<RadioGroup />', () => {
     });
 
     it('should give only the select element the selected class', () => {
-      expect.assertions(4);
+      expect.assertions(2);
 
       const { getByText } = render(
         <RadioGroup
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
             },
           ]}
@@ -545,31 +502,29 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.radio');
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option1 = getByText('Option 1').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
-      expect(option1).toHaveClass(STYLE.selected);
-      expect(option1).not.toHaveClass(STYLE.notSelected);
-      expect(option2).toHaveClass(STYLE.notSelected);
-      expect(option2).not.toHaveClass(STYLE.selected);
+      expect(option1).toHaveAttribute('data-selected', 'true');
+      expect(option2).toHaveAttribute('data-selected', 'false');
     });
   });
 
   describe('actions', () => {
     it('should change which option is selected when clicked', () => {
-      expect.assertions(8);
+      expect.assertions(4);
 
       const { getByText } = render(
         <RadioGroup
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
             },
@@ -578,20 +533,16 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.radio');
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option1 = getByText('Option 1').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
-      expect(option1).toHaveClass(STYLE.selected);
-      expect(option1).not.toHaveClass(STYLE.notSelected);
-      expect(option2).toHaveClass(STYLE.notSelected);
-      expect(option2).not.toHaveClass(STYLE.selected);
+      expect(option1).toHaveAttribute('data-selected', 'true');
+      expect(option2).toHaveAttribute('data-selected', 'false');
 
       userEvent.click(option2);
 
-      expect(option1).not.toHaveClass(STYLE.selected);
-      expect(option1).toHaveClass(STYLE.notSelected);
-      expect(option2).not.toHaveClass(STYLE.notSelected);
-      expect(option2).toHaveClass(STYLE.selected);
+      expect(option1).toHaveAttribute('data-selected', 'false');
+      expect(option2).toHaveAttribute('data-selected', 'true');
     });
 
     it('should call onChange handler when option is clicked', () => {
@@ -604,12 +555,12 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
             },
@@ -619,7 +570,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
       userEvent.click(option2);
 
@@ -636,12 +587,12 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
             },
@@ -651,7 +602,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.radio');
+      const option1 = getByText('Option 1').querySelector('.md-radio-button');
 
       userEvent.click(option1);
 
@@ -668,12 +619,12 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
             },
@@ -683,7 +634,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
       userEvent.click(option2);
 
@@ -701,12 +652,12 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
             },
@@ -716,8 +667,8 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').querySelector('.radio');
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option1 = getByText('Option 1').querySelector('.md-radio-button');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
       userEvent.type(option1, '{arrowdown}');
 
@@ -738,12 +689,12 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
               isDisabled: true,
@@ -754,7 +705,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
       userEvent.click(option2);
 
@@ -771,12 +722,12 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
             },
@@ -787,7 +738,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
       userEvent.click(option2);
 
@@ -804,12 +755,12 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           options={[
             {
-              children: 'Option 1',
+              label: 'Option 1',
               value: 'option1',
               id: 'option1',
             },
             {
-              children: 'Option 2',
+              label: 'Option 2',
               value: 'option2',
               id: 'option2',
             },
@@ -820,11 +771,78 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2').querySelector('.radio');
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
 
       userEvent.click(option2);
 
       expect(changeHandler).not.toBeCalled();
+    });
+
+    it('should call setValue on state change if setValue is passed', () => {
+      expect.assertions(1);
+
+      const setValue = jest.fn();
+
+      const { getByText } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              label: 'Option 1',
+              value: 'option1',
+              id: 'option1',
+            },
+            {
+              label: 'Option 2',
+              value: 'option2',
+              id: 'option2',
+            },
+          ]}
+          defaultValue="option1"
+          setValue={setValue}
+        />
+      );
+
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+
+      userEvent.click(option2);
+
+      expect(setValue).toBeCalledWith('option2');
+    });
+
+    it('should call both onChange and setValue if both are passed', () => {
+      expect.assertions(2);
+
+      const setValue = jest.fn();
+      const changeHandler = jest.fn();
+
+      const { getByText } = render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              label: 'Option 1',
+              value: 'option1',
+              id: 'option1',
+            },
+            {
+              label: 'Option 2',
+              value: 'option2',
+              id: 'option2',
+            },
+          ]}
+          defaultValue="option1"
+          onChange={changeHandler}
+          setValue={setValue}
+        />
+      );
+
+      const option2 = getByText('Option 2').querySelector('.md-radio-button');
+
+      userEvent.click(option2);
+
+      expect(setValue).toBeCalledWith('option2');
+      expect(changeHandler).toBeCalledWith('option2');
     });
   });
 });

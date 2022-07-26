@@ -14,30 +14,13 @@ import Icon from '../Icon';
 import './RadioGroup.style.scss';
 
 const Radio: FC<Props> = (props: Props) => {
-  const { className, children, isDisabled, id, style, label } = props;
+  const { className, isDisabled, id, style, label } = props;
   const state = useContext(RadioContext);
   const ref = useRef(null);
   const { inputProps } = useRadio({ 'aria-label': label, ...props }, state, ref);
   const { isFocusVisible, focusProps } = useFocusRing();
   const disabled = isDisabled || DEFAULTS.OPTION_DISABLED;
   const selected = state.selectedValue === props.value;
-
-  const icon = <Icon className={STYLE.icon} name="shape-circle" weight="filled" scale={8} />;
-
-  const radio = (
-    <div
-      data-selected={selected}
-      className={classnames(
-        STYLE.button,
-        {
-          [STYLE.focus]: isFocusVisible,
-        },
-        'radio'
-      )}
-    >
-      {selected && icon}
-    </div>
-  );
 
   return (
     <label
@@ -49,8 +32,14 @@ const Radio: FC<Props> = (props: Props) => {
       <VisuallyHidden>
         <input {...inputProps} {...focusProps} ref={ref} />
       </VisuallyHidden>
-      {radio}
-      {children || label}
+      {
+        <div data-selected={selected} data-focused={isFocusVisible} className={STYLE.button}>
+          {selected && (
+            <Icon className={STYLE.icon} name="shape-circle" weight="filled" scale={8} />
+          )}
+        </div>
+      }
+      {label}
     </label>
   );
 };

@@ -53,6 +53,11 @@
           border-color: var(--radio-unchecked-border-color);
           border-width: 0.0625rem;
         }
+
+        &[data-focused='true'],
+        &.focus {
+          box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
+        }
       }
 
       &:hover,
@@ -74,22 +79,14 @@
       &.active {
         color: var(--radio-unchecked-text-pressed);
 
-        > .md-radio-selected {
-          background-color: var(--radio-checked-background-pressed);
-        }
+        > .md-radio-button {
+          &[data-selected='true'] {
+            background-color: var(--radio-checked-background-pressed);
+          }
 
-        > .md-radio-not-selected {
-          background-color: var(--radio-unchecked-background-pressed);
-        }
-      }
-
-      .md-radio-focus {
-        box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
-      }
-
-      &.focus {
-        .md-radio-button {
-          box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
+          &[data-selected='true'] {
+            background-color: var(--radio-unchecked-background-pressed);
+          }
         }
       }
     }
