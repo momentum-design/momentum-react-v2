@@ -4,10 +4,10 @@ import './ListItemBaseSection.style.scss';
 import { Props } from './ListItemBaseSection.types';
 
 const ListItemBaseSection: FC<Props> = (props: Props) => {
-  const { className, children, position, style, id } = props;
+  const { className, children, position, style, id, title } = props;
 
   return (
-    <div data-position={position} className={className} style={style} id={id}>
+    <div data-position={position} className={className} style={style} title={title} id={id}>
       {children}
     </div>
   );

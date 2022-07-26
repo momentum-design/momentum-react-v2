@@ -255,9 +255,11 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 1"
                       >
                         <div
                           data-position="fill"
+                          title="Item 1"
                         >
                           Item 1
                         </div>
@@ -358,9 +360,11 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 2"
                       >
                         <div
                           data-position="fill"
+                          title="Item 2"
                         >
                           Item 2
                         </div>
@@ -635,9 +639,11 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 1"
                       >
                         <div
                           data-position="fill"
+                          title="Item 1"
                         >
                           Item 1
                         </div>
@@ -738,9 +744,11 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 2"
                       >
                         <div
                           data-position="fill"
+                          title="Item 2"
                         >
                           Item 2
                         </div>
@@ -1016,9 +1024,11 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 1"
                       >
                         <div
                           data-position="fill"
+                          title="Item 1"
                         >
                           Item 1
                         </div>
@@ -1119,9 +1129,11 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 2"
                       >
                         <div
                           data-position="fill"
+                          title="Item 2"
                         >
                           Item 2
                         </div>
@@ -1396,9 +1408,11 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 1"
                       >
                         <div
                           data-position="fill"
+                          title="Item 1"
                         >
                           Item 1
                         </div>
@@ -1499,9 +1513,11 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 2"
                       >
                         <div
                           data-position="fill"
+                          title="Item 2"
                         >
                           Item 2
                         </div>
@@ -1932,9 +1948,11 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 1"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 1"
                               >
                                 Item 1
                               </div>
@@ -2035,9 +2053,11 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 2"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 2"
                               >
                                 Item 2
                               </div>
@@ -2179,9 +2199,11 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                           >
                             <ListItemBaseSection
                               position="fill"
+                              title="Item 3"
                             >
                               <div
                                 data-position="fill"
+                                title="Item 3"
                               >
                                 Item 3
                               </div>
@@ -2477,9 +2499,11 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 1"
                       >
                         <div
                           data-position="fill"
+                          title="Item 1"
                         >
                           Item 1
                         </div>
@@ -2580,9 +2604,11 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                     >
                       <ListItemBaseSection
                         position="fill"
+                        title="Item 2"
                       >
                         <div
                           data-position="fill"
+                          title="Item 2"
                         >
                           Item 2
                         </div>
