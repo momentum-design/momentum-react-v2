@@ -32,19 +32,14 @@
     }
 
     &[data-disabled='false'] {
-      .md-radio-icon {
-        svg {
-          fill: var(--radio-checked-icon);
-        }
-      }
-
       > .md-radio-label {
         color: var(--radio-unchecked-text);
       }
 
       > .md-radio-button {
         &[data-selected='true'] {
-          background-color: var(--radio-checked-background);
+          border: 5px solid var(--radio-checked-background);
+          border-radius: 50%;
         }
 
         &[data-selected='false'] {
@@ -66,7 +61,8 @@
 
         > .md-radio-button {
           &[data-selected='true'] {
-            background-color: var(--radio-checked-background-hovered);
+            border: 5px solid var(--radio-checked-background-hovered);
+            border-radius: 50%;
           }
 
           &[data-selected='false'] {
@@ -81,10 +77,11 @@
 
         > .md-radio-button {
           &[data-selected='true'] {
-            background-color: var(--radio-checked-background-pressed);
+            border: 5px solid var(--radio-checked-background-pressed);
+            border-radius: 50%;
           }
 
-          &[data-selected='true'] {
+          &[data-selected='false'] {
             background-color: var(--radio-unchecked-background-pressed);
           }
         }
@@ -93,18 +90,12 @@
 
     &[data-disabled='true'],
     &.disable {
-      .md-radio-icon {
-        svg {
-          fill: var(--radio-checked-icon-disabled);
-        }
-      }
-
       color: var(--radio-unchecked-text-disabled);
 
       .md-radio-button {
         &[data-selected='true'] {
-          background-color: var(--radio-checked-background-disabled);
-          border-style: none;
+          border: 5px solid var(--radio-checked-background-disabled);
+          border-radius: 50%;
         }
 
         &[data-selected='false'] {

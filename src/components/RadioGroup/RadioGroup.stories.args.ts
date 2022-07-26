@@ -7,9 +7,6 @@ const radioGroupArgTypes = {
       disable: true,
     },
   },
-  onChange: {
-    description: 'Callback called when the state is changed.',
-  },
   setValue: {
     description:
       'Setter for the using the component as controlled. Called when the state is changed.',
@@ -24,7 +21,8 @@ const radioGroupArgTypes = {
     },
   },
   description: {
-    description: 'The description attached to the radio group',
+    description:
+      'The description attached to the radio group. Not supported in horizontal oritentation.',
     control: { type: 'text', required: false },
     table: {
       type: {

@@ -17,7 +17,7 @@ export default {
     },
   },
   args: {
-    onChange: action('onChange'),
+    setValue: action('setValue'),
   },
 };
 

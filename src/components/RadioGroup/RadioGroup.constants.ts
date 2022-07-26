@@ -16,7 +16,6 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   button: `${CLASS_PREFIX}-button`,
   focus: `${CLASS_PREFIX}-focus`,
-  icon: `${CLASS_PREFIX}-icon`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };
