@@ -47,6 +47,7 @@ Example.args = {
   label: 'Single Value',
   placeholder: 'Select an option',
   onSelectionChange: action('onSelectionChange'),
+  style: { maxWidth: '15rem' },
   children: [
     <Item key="1">This is a very long option and should trim.</Item>,
     <Item key="2">Blue</Item>,
