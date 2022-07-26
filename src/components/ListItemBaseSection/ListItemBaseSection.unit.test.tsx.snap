@@ -63,3 +63,15 @@ exports[`ListItemBaseSection snapshot should match snapshot with style 1`] = `
   </div>
 </ListItemBaseSection>
 `;
+
+exports[`ListItemBaseSection snapshot should match snapshot with title 1`] = `
+<ListItemBaseSection
+  title="some title"
+>
+  <div
+    title="some title"
+  >
+    Test
+  </div>
+</ListItemBaseSection>
+`;
