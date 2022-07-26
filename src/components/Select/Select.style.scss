@@ -26,9 +26,16 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 0.5rem;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s;
   outline: none !important;
   cursor: pointer;
+
+  > span:first-of-type {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
   &:hover {
     background-color: var(--textinput-background-hovered);
@@ -63,7 +70,8 @@
 }
 
 .md-select-icon-wrapper {
-  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
 }
 
 .md-select-selected-item-wrapper {

@@ -122,7 +122,11 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
           ref={selectRef}
           title={title}
         >
-          <span {...valueProps} className={STYLE.selectedItemWrapper}>
+          <span
+            title={state.selectedItem?.textValue}
+            {...valueProps}
+            className={STYLE.selectedItemWrapper}
+          >
             {state.selectedItem ? state.selectedItem.rendered : placeholder}
           </span>
           <span aria-hidden="true" className={STYLE.iconWrapper}>
