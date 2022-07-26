@@ -475,9 +475,11 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
               >
                 <ListItemBaseSection
                   position="fill"
+                  title="Item 1"
                 >
                   <div
                     data-position="fill"
+                    title="Item 1"
                   >
                     Item 1
                   </div>
@@ -748,9 +750,11 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
               >
                 <ListItemBaseSection
                   position="fill"
+                  title="Item 2"
                 >
                   <div
                     data-position="fill"
+                    title="Item 2"
                   >
                     Item 2
                   </div>

@@ -682,7 +682,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -959,7 +958,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -1236,7 +1234,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -1538,7 +1535,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -1815,7 +1811,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -2092,7 +2087,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -2898,7 +2892,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -3175,7 +3168,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -3452,7 +3444,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -3754,7 +3745,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -4031,7 +4021,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -4308,7 +4297,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5114,7 +5102,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5391,7 +5378,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5668,7 +5654,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -5970,7 +5955,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -6247,7 +6231,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -6524,7 +6507,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -7334,7 +7316,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -7611,7 +7592,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -7888,7 +7868,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -8190,7 +8169,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -8467,7 +8445,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -8744,7 +8721,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -9550,7 +9526,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -9827,7 +9802,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10104,7 +10078,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10406,7 +10379,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10683,7 +10655,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -10960,7 +10931,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -11796,7 +11766,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12073,7 +12042,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12350,7 +12318,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12652,7 +12619,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -12929,7 +12895,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -13206,7 +13171,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -14066,7 +14030,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -14343,7 +14306,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -14620,7 +14582,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -14922,7 +14883,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -15199,7 +15159,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -15476,7 +15435,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -16282,7 +16240,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
-                        title="One"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -16559,7 +16516,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
-                        title="Two"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -16836,7 +16792,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
-                        title="Three"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -17138,7 +17093,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
-                        title="Four"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -17415,7 +17369,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
-                        title="Five"
                       >
                         <ListItemBase
                           aria-checked={false}
@@ -17692,7 +17645,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "toggleKey": [Function],
                           }
                         }
-                        title="Six"
                       >
                         <ListItemBase
                           aria-checked={false}
