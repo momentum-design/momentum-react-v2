@@ -57,4 +57,4 @@ export { default as TextToast } from './TextToast';
 export { default as Checkbox } from './Checkbox';
 export { default as ToastNotification } from './ToastNotification';
 export { default as Toggle } from './Toggle';
-export { default as RadioGroup, Radio } from './RadioGroup';
+export { default as RadioGroup } from './RadioGroup';
