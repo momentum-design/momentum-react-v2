@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import RadioGroup from './';
@@ -369,9 +369,9 @@ describe('<RadioGroup />', () => {
     it('should have its group class', () => {
       expect.assertions(1);
 
-      const { getByRole } = render(<RadioGroup label="Test Radio Group" />);
+      render(<RadioGroup label="Test Radio Group" />);
 
-      const radioGroup = getByRole('radiogroup');
+      const radioGroup = screen.getByRole('radiogroup');
 
       expect(radioGroup).toHaveClass(STYLE.group);
     });
@@ -381,9 +381,9 @@ describe('<RadioGroup />', () => {
 
       const className = 'example-class';
 
-      const { getByRole } = render(<RadioGroup label="Test Radio Group" className={className} />);
+      render(<RadioGroup label="Test Radio Group" className={className} />);
 
-      const radioGroup = getByRole('radiogroup');
+      const radioGroup = screen.getByRole('radiogroup');
 
       expect(radioGroup).toHaveClass(className);
     });
@@ -393,9 +393,9 @@ describe('<RadioGroup />', () => {
 
       const id = 'example-id';
 
-      const { getByRole } = render(<RadioGroup label="Test Radio Group" id={id} />);
+      render(<RadioGroup label="Test Radio Group" id={id} />);
 
-      const radioGroup = getByRole('radiogroup');
+      const radioGroup = screen.getByRole('radiogroup');
 
       expect(radioGroup.id).toBe(id);
     });
@@ -406,9 +406,9 @@ describe('<RadioGroup />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const { getByRole } = render(<RadioGroup label="Test Radio Group" style={style} />);
+      render(<RadioGroup label="Test Radio Group" style={style} />);
 
-      const radioGroup = getByRole('radiogroup');
+      const radioGroup = screen.getByRole('radiogroup');
 
       expect(radioGroup).toHaveStyle(styleString);
     });
@@ -418,7 +418,7 @@ describe('<RadioGroup />', () => {
 
       const className = 'example-class';
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -431,7 +431,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const radio = getByText('Option 1');
+      const radio = screen.getByText('Option 1');
 
       expect(radio).toHaveClass(className);
     });
@@ -441,7 +441,7 @@ describe('<RadioGroup />', () => {
 
       const id = 'example-id';
 
-      const { getByRole } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -453,7 +453,7 @@ describe('<RadioGroup />', () => {
           ]}
         />
       );
-      const radio = getByRole('radio');
+      const radio = screen.getByRole('radio');
 
       expect(radio.id).toBe(id);
     });
@@ -464,7 +464,7 @@ describe('<RadioGroup />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -476,15 +476,15 @@ describe('<RadioGroup />', () => {
           ]}
         />
       );
-      const radio = getByText('Option 1');
+      const radio = screen.getByText('Option 1');
 
       expect(radio).toHaveStyle(styleString);
     });
 
     it('should give only the select element the selected style', () => {
-      expect.assertions(2);
+      expect.assertions(4);
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -501,11 +501,15 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').children[1];
-      const option2 = getByText('Option 2').children[1];
+      const option1 = screen.getByText('Option 1').children[1];
+      const option1Input = screen.getByRole('radio', { name: 'Option 1' });
+      const option2 = screen.getByText('Option 2').children[1];
+      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
 
       expect(option1).toHaveAttribute('data-selected', 'true');
+      expect(option1Input).toBeChecked();
       expect(option2).toHaveAttribute('data-selected', 'false');
+      expect(option2Input).not.toBeChecked();
     });
   });
 
@@ -513,7 +517,7 @@ describe('<RadioGroup />', () => {
     it('should change which option is selected when clicked', () => {
       expect.assertions(4);
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -532,8 +536,8 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1').children[1];
-      const option2 = getByText('Option 2').children[1];
+      const option1 = screen.getByText('Option 1').children[1];
+      const option2 = screen.getByText('Option 2').children[1];
 
       expect(option1).toHaveAttribute('data-selected', 'true');
       expect(option2).toHaveAttribute('data-selected', 'false');
@@ -549,7 +553,7 @@ describe('<RadioGroup />', () => {
 
       const setValue = jest.fn();
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -569,7 +573,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2');
+      const option2 = screen.getByText('Option 2');
 
       userEvent.click(option2);
 
@@ -581,7 +585,7 @@ describe('<RadioGroup />', () => {
 
       const setValue = jest.fn();
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -601,7 +605,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1');
+      const option1 = screen.getByText('Option 1');
 
       userEvent.click(option1);
 
@@ -613,7 +617,7 @@ describe('<RadioGroup />', () => {
 
       const setValue = jest.fn();
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -633,7 +637,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2');
+      const option2 = screen.getByText('Option 2');
 
       userEvent.click(option2);
 
@@ -646,7 +650,7 @@ describe('<RadioGroup />', () => {
 
       const setValue = jest.fn();
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -666,8 +670,8 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = getByText('Option 1');
-      const option2 = getByText('Option 2');
+      const option1 = screen.getByText('Option 1');
+      const option2 = screen.getByText('Option 2');
 
       userEvent.type(option1, '{arrowdown}');
 
@@ -679,11 +683,11 @@ describe('<RadioGroup />', () => {
     });
 
     it('should not call setValue when a disabled option is clicked', () => {
-      expect.assertions(1);
+      expect.assertions(2);
 
       const setValue = jest.fn();
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -704,7 +708,10 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2');
+      const option2 = screen.getByText('Option 2');
+      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
+
+      expect(option2Input).toBeDisabled();
 
       userEvent.click(option2);
 
@@ -716,7 +723,7 @@ describe('<RadioGroup />', () => {
 
       const setValue = jest.fn();
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -737,7 +744,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2');
+      const option2 = screen.getByText('Option 2');
 
       userEvent.click(option2);
 
@@ -745,11 +752,11 @@ describe('<RadioGroup />', () => {
     });
 
     it('should not call setValue when the group is disabled and an option is clicked', () => {
-      expect.assertions(1);
+      expect.assertions(3);
 
       const setValue = jest.fn();
 
-      const { getByText } = render(
+      render(
         <RadioGroup
           label="Test Radio Group"
           options={[
@@ -770,11 +777,58 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = getByText('Option 2');
+      const option1Input = screen.getByRole('radio', { name: 'Option 1' });
+      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
+      const option2 = screen.getByText('Option 2');
+
+      expect(option1Input).toBeDisabled();
+      expect(option2Input).toBeDisabled();
 
       userEvent.click(option2);
 
       expect(setValue).not.toBeCalled();
+    });
+
+    it('should focus selected option on keyboard input', () => {
+      expect.assertions(5);
+
+      const setValue = jest.fn();
+
+      render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              label: 'Option 1',
+              value: 'option1',
+              id: 'option1',
+            },
+            {
+              label: 'Option 2',
+              value: 'option2',
+              id: 'option2',
+            },
+          ]}
+          defaultValue="option1"
+          setValue={setValue}
+        />
+      );
+
+      const option1 = screen.getByText('Option 1');
+      const opiton1Input = screen.getByRole('radio', { name: 'Option 1' });
+      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
+
+      userEvent.tab();
+
+      expect(opiton1Input).toHaveFocus();
+      expect(setValue).not.toBeCalled();
+
+      userEvent.type(option1, '{arrowdown}');
+
+      expect(option2Input).toHaveFocus();
+      expect(option2Input).toBeChecked();
+
+      expect(setValue).toBeCalledWith('option2');
     });
   });
 });
