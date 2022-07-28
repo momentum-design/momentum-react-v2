@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
-import { Checkbox, List, ListItem } from '@momentum-ui/react-collaboration';
+import { CheckboxNext, List, ListItem } from '@momentum-ui/react-collaboration';
 
 export default class ListWithEventBubbling extends React.PureComponent {
   state = {
     enableBubbling: true,
   };
 
-  onChange = (e) => {
-    this.setState({ enableBubbling: e.target.checked });
+  onChange = (isSelected) => {
+    this.setState({ enableBubbling: isSelected });
   };
 
   bubbledEventHandler = (e) => {
@@ -27,11 +27,11 @@ export default class ListWithEventBubbling extends React.PureComponent {
             <ListItem label="List Item 4" />
           </List>
         </div>
-        <Checkbox
-          checked={this.state.enableBubbling}
+        <CheckboxNext
+          isSelected={this.state.enableBubbling}
           onChange={this.onChange}
           label="Enable Event Bubbling (See Console)"
-          htmlId={`checkbox-for-event-bubbling`}
+          id={`checkbox-for-event-bubbling`}
         />
       </div>
     );
