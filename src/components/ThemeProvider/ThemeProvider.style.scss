@@ -75,6 +75,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'CiscoSansTT';
+  src: url('../../fonts/CiscoSansTT-MediumOblique.woff2') format('woff2'),
+    url('../../fonts/CiscoSansTT-MediumOblique.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
 /* 700 */
 @font-face {
   font-family: 'CiscoSansTT';
