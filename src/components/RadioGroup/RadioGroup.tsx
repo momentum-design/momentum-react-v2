@@ -12,7 +12,6 @@ import Text, { TEXT_CONSTANTS } from '../Text';
 /**
  * The RadioGroup component.
  */
-
 export const RadioContext = React.createContext(null);
 
 const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
@@ -53,11 +52,7 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
         {options &&
           options.map((option: string | Props) => {
             if (typeof option === 'string') {
-              return (
-                <Radio key={option} value={option} isDisabled={isDisabled}>
-                  {option}
-                </Radio>
-              );
+              return <Radio key={option} value={option} isDisabled={isDisabled} label={option} />;
             } else {
               return <Radio key={option.value} isDisabled={isDisabled} {...option} />;
             }

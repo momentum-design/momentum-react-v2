@@ -3,6 +3,7 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import RadioGroup, { RadioGroupProps } from './';
+import Radio from './Radio';
 import argTypes from './RadioGroup.stories.args';
 import Documentation from './RadioGroup.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
@@ -10,6 +11,7 @@ import { action } from '@storybook/addon-actions';
 export default {
   title: 'Momentum UI/RadioGroup',
   component: RadioGroup,
+  subcomponents: { Radio },
   parameters: {
     expanded: true,
     docs: {
