@@ -152,6 +152,7 @@ export {
   ReactionBadge,
   ReactionButton,
   ReactionPicker,
+  RadioGroup as RadioGroupNext,
   AddReactionButton,
   Menu as MenuNext,
   MenuTrigger,
