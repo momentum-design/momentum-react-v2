@@ -40,6 +40,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -51,6 +52,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
         data-focused="false"
         data-selected="false"
       />
+      Option 1
     </label>
     <label
       class="md-radio-wrapper"
@@ -100,6 +102,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 1"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -111,6 +114,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
         data-focused="false"
         data-selected="false"
       />
+      Option 1
     </label>
     <label
       class="md-radio-wrapper"
@@ -120,6 +124,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          aria-label="Option 2"
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -131,6 +136,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
         data-focused="false"
         data-selected="false"
       />
+      Option 2
     </label>
   </div>
 </DocumentFragment>
