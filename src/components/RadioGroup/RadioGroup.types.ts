@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { AriaRadioGroupProps, AriaRadioProps } from '@react-types/radio';
 
-export interface GroupProps extends Omit<AriaRadioGroupProps, 'children' | 'onChange'> {
+export interface GroupProps extends Omit<AriaRadioGroupProps, 'children'> {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -16,12 +16,6 @@ export interface GroupProps extends Omit<AriaRadioGroupProps, 'children' | 'onCh
    * Array of radio button options.
    */
   options?: Array<Props | string>;
-
-  /**
-   * Setter for the RadioGroups value. Called when the value is changed by the user.
-   */
-
-  setValue?: (value: string) => void;
 
   /**
    * The description for the RadioGroup.
