@@ -22,6 +22,8 @@
     margin-right: 0.5rem;
 
     > .md-radio-button {
+      appearance: none;
+      -webkit-appearance: none;
       height: 1rem;
       width: 1rem;
       border-radius: 0.5rem;
@@ -49,7 +51,6 @@
           border-width: 0.0625rem;
         }
 
-        &[data-focused='true'],
         &.focus {
           box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
         }

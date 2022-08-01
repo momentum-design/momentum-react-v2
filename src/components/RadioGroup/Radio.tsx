@@ -1,6 +1,5 @@
 import React, { FC, useContext, useRef } from 'react';
-import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { useFocusRing } from '@react-aria/focus';
+import { FocusRing } from '@react-aria/focus';
 import { useRadio } from '@react-aria/radio';
 
 import classnames from 'classnames';
@@ -16,7 +15,6 @@ const Radio: FC<Props> = (props: Props) => {
   const state = useContext(RadioContext);
   const ref = useRef(null);
   const { inputProps } = useRadio({ 'aria-label': label, ...props }, state, ref);
-  const { isFocusVisible, focusProps } = useFocusRing();
   const selected = state.selectedValue === props.value;
 
   return (
@@ -26,10 +24,9 @@ const Radio: FC<Props> = (props: Props) => {
       style={style}
       id={id}
     >
-      <VisuallyHidden>
-        <input {...inputProps} {...focusProps} ref={ref} />
-      </VisuallyHidden>
-      <div data-selected={selected} data-focused={isFocusVisible} className={STYLE.button} />
+      <FocusRing>
+        <input data-selected={selected} {...inputProps} className={STYLE.button} ref={ref} />
+      </FocusRing>
       {label}
     </label>
   );
