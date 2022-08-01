@@ -274,33 +274,6 @@ describe('<RadioGroup />', () => {
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it('should match snapshot with multiple children and orientation horizontal', () => {
-      expect.assertions(1);
-
-      const { asFragment } = render(
-        <RadioGroup
-          label="Test Radio Group"
-          options={[
-            {
-              label: 'Option 1',
-              value: 'option1',
-            },
-            {
-              label: 'Option 2',
-              value: 'option2',
-            },
-            {
-              label: 'Option 3',
-              value: 'option3',
-            },
-          ]}
-          orientation="horizontal"
-        />
-      );
-
-      expect(asFragment()).toMatchSnapshot();
-    });
-
     it('should match snapshot with child className', () => {
       expect.assertions(1);
 

@@ -22,7 +22,6 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
     isDisabled = DEFAULTS.GROUP_DISABLED,
     label = DEFAULTS.GROUP_LABEL,
     options,
-    orientation = DEFAULTS.GROUP_ORIENTATION,
     setValue,
     style,
   } = props;
@@ -34,18 +33,8 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
   const state = useRadioGroupState({ ...props, onChange });
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
-  if (orientation === 'horizontal' && description) {
-    console.warn('Using orientation=horizontal and description at the same time is not supported');
-  }
-
   return (
-    <div
-      {...radioGroupProps}
-      className={classnames(className, STYLE.group)}
-      id={id}
-      style={style}
-      data-direction={orientation}
-    >
+    <div {...radioGroupProps} className={classnames(className, STYLE.group)} id={id} style={style}>
       <span {...labelProps}>{label}</span>
       {description && <Text type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>{description}</Text>}
       <RadioContext.Provider value={state}>
