@@ -15,8 +15,6 @@ const Radio: FC<Props> = (props: Props) => {
   const state = useContext(RadioContext);
   const ref = useRef(null);
   const { inputProps } = useRadio({ 'aria-label': label, ...props }, state, ref);
-  const selected = state.selectedValue === props.value;
-
   return (
     <label
       data-disabled={isDisabled}
@@ -25,7 +23,7 @@ const Radio: FC<Props> = (props: Props) => {
       id={id}
     >
       <FocusRing>
-        <input data-selected={selected} {...inputProps} className={STYLE.button} ref={ref} />
+        <input {...inputProps} className={STYLE.button} ref={ref} />
       </FocusRing>
       {label}
     </label>

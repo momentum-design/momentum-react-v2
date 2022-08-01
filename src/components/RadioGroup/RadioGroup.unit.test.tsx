@@ -482,7 +482,7 @@ describe('<RadioGroup />', () => {
     });
 
     it('should give only the select element the selected style', () => {
-      expect.assertions(4);
+      expect.assertions(2);
 
       render(
         <RadioGroup
@@ -504,9 +504,7 @@ describe('<RadioGroup />', () => {
       const option1 = screen.getByLabelText('Option 1');
       const option2 = screen.getByLabelText('Option 2');
 
-      expect(option1).toHaveAttribute('data-selected', 'true');
       expect(option1).toBeChecked();
-      expect(option2).toHaveAttribute('data-selected', 'false');
       expect(option2).not.toBeChecked();
     });
   });
@@ -537,13 +535,13 @@ describe('<RadioGroup />', () => {
       const option1 = screen.getByLabelText('Option 1');
       const option2 = screen.getByLabelText('Option 2');
 
-      expect(option1).toHaveAttribute('data-selected', 'true');
-      expect(option2).toHaveAttribute('data-selected', 'false');
+      expect(option1).toBeChecked();
+      expect(option2).not.toBeChecked();
 
       userEvent.click(option2);
 
-      expect(option1).toHaveAttribute('data-selected', 'false');
-      expect(option2).toHaveAttribute('data-selected', 'true');
+      expect(option1).not.toBeChecked();
+      expect(option2).toBeChecked();
     });
 
     it('should call setValue when option is clicked', () => {
