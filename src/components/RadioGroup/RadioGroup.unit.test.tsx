@@ -501,15 +501,13 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = screen.getByText('Option 1').children[1];
-      const option1Input = screen.getByRole('radio', { name: 'Option 1' });
-      const option2 = screen.getByText('Option 2').children[1];
-      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
+      const option1 = screen.getByLabelText('Option 1');
+      const option2 = screen.getByLabelText('Option 2');
 
       expect(option1).toHaveAttribute('data-selected', 'true');
-      expect(option1Input).toBeChecked();
+      expect(option1).toBeChecked();
       expect(option2).toHaveAttribute('data-selected', 'false');
-      expect(option2Input).not.toBeChecked();
+      expect(option2).not.toBeChecked();
     });
   });
 
@@ -536,8 +534,8 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = screen.getByText('Option 1').children[1];
-      const option2 = screen.getByText('Option 2').children[1];
+      const option1 = screen.getByLabelText('Option 1');
+      const option2 = screen.getByLabelText('Option 2');
 
       expect(option1).toHaveAttribute('data-selected', 'true');
       expect(option2).toHaveAttribute('data-selected', 'false');
@@ -708,10 +706,9 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option2 = screen.getByText('Option 2');
-      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
+      const option2 = screen.getByLabelText('Option 2');
 
-      expect(option2Input).toBeDisabled();
+      expect(option2).toBeDisabled();
 
       userEvent.click(option2);
 
@@ -777,12 +774,11 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1Input = screen.getByRole('radio', { name: 'Option 1' });
-      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
-      const option2 = screen.getByText('Option 2');
+      const option1 = screen.getByLabelText('Option 1');
+      const option2 = screen.getByLabelText('Option 2');
 
-      expect(option1Input).toBeDisabled();
-      expect(option2Input).toBeDisabled();
+      expect(option1).toBeDisabled();
+      expect(option2).toBeDisabled();
 
       userEvent.click(option2);
 
@@ -814,19 +810,18 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const option1 = screen.getByText('Option 1');
-      const opiton1Input = screen.getByRole('radio', { name: 'Option 1' });
-      const option2Input = screen.getByRole('radio', { name: 'Option 2' });
+      const option1 = screen.getByLabelText('Option 1');
+      const option2 = screen.getByLabelText('Option 2');
 
       userEvent.tab();
 
-      expect(opiton1Input).toHaveFocus();
+      expect(option1).toHaveFocus();
       expect(setValue).not.toBeCalled();
 
       userEvent.type(option1, '{arrowdown}');
 
-      expect(option2Input).toHaveFocus();
-      expect(option2Input).toBeChecked();
+      expect(option2).toHaveFocus();
+      expect(option2).toBeChecked();
 
       expect(setValue).toBeCalledWith('option2');
     });
