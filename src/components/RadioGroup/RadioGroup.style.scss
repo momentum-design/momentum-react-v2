@@ -33,18 +33,21 @@
       align-items: center;
     }
 
+    // Could maybe use :has() when there is more support
+    // See https://caniuse.com/css-has
+
     &[data-disabled='false'] {
       > .md-radio-label {
         color: var(--radio-unchecked-text);
       }
 
       > .md-radio-button {
-        &[data-selected='true'] {
+        &:checked {
           border: 5px solid var(--radio-checked-background);
           border-radius: 50%;
         }
 
-        &[data-selected='false'] {
+        &:not(:checked) {
           background-color: var(--radio-unchecked-background);
           border-style: solid;
           border-color: var(--radio-unchecked-border-color);
@@ -61,12 +64,12 @@
         color: var(--radio-checked-text-hovered);
 
         > .md-radio-button {
-          &[data-selected='true'] {
+          &:checked {
             border: 5px solid var(--radio-checked-background-hovered);
             border-radius: 50%;
           }
 
-          &[data-selected='false'] {
+          &:not(:checked) {
             background-color: var(--radio-unchecked-background-hovered);
           }
         }
@@ -77,12 +80,12 @@
         color: var(--radio-unchecked-text-pressed);
 
         > .md-radio-button {
-          &[data-selected='true'] {
+          &:checked {
             border: 5px solid var(--radio-checked-background-pressed);
             border-radius: 50%;
           }
 
-          &[data-selected='false'] {
+          &:not(:checked) {
             background-color: var(--radio-unchecked-background-pressed);
           }
         }
@@ -93,13 +96,13 @@
     &.disable {
       color: var(--radio-unchecked-text-disabled);
 
-      .md-radio-button {
-        &[data-selected='true'] {
+      > .md-radio-button {
+        &:checked {
           border: 5px solid var(--radio-checked-background-disabled);
           border-radius: 50%;
         }
 
-        &[data-selected='false'] {
+        &:not(:checked) {
           background-color: var(--radio-unchecked-background-disabled);
           border-style: none;
         }

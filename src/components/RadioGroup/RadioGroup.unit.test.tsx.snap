@@ -39,7 +39,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -54,7 +53,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
       <input
         aria-label="Option 2"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -87,7 +85,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -102,7 +99,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
       <input
         aria-label="Option 2"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -135,7 +131,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -168,7 +163,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] 
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -202,7 +196,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child id 1`] = `
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         id="example-id"
         name="test-ID"
         tabindex="0"
@@ -237,7 +230,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -270,7 +262,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         disabled=""
         name="test-ID"
         type="radio"
@@ -304,7 +295,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
         aria-label="Option 1"
         checked=""
         class="md-radio-button"
-        data-selected="true"
         disabled=""
         name="test-ID"
         type="radio"
@@ -338,7 +328,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats selected
         aria-label="Option 1"
         checked=""
         class="md-radio-button"
-        data-selected="true"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -433,7 +422,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -448,7 +436,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
       <input
         aria-label="Option 2"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -463,7 +450,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
       <input
         aria-label="Option 3"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -496,7 +482,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -511,7 +496,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
       <input
         aria-label="Option 2"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -526,7 +510,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children an
       <input
         aria-label="Option 3"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -560,7 +543,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         disabled=""
         name="test-ID"
         type="radio"
@@ -575,7 +557,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 2"
         class="md-radio-button"
-        data-selected="false"
         disabled=""
         name="test-ID"
         type="radio"
@@ -590,7 +571,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 3"
         class="md-radio-button"
-        data-selected="false"
         disabled=""
         name="test-ID"
         type="radio"
@@ -623,7 +603,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 1"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -638,7 +617,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 2"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -653,7 +631,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 3"
         class="md-radio-button"
-        data-selected="false"
         disabled=""
         name="test-ID"
         type="radio"
@@ -687,7 +664,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
         aria-label="Option 1"
         checked=""
         class="md-radio-button"
-        data-selected="true"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -702,7 +678,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 2"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
@@ -717,7 +692,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
       <input
         aria-label="Option 3"
         class="md-radio-button"
-        data-selected="false"
         name="test-ID"
         tabindex="0"
         type="radio"
