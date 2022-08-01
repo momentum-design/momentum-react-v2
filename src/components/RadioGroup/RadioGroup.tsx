@@ -22,15 +22,10 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
     isDisabled = DEFAULTS.GROUP_DISABLED,
     label = DEFAULTS.GROUP_LABEL,
     options,
-    setValue,
     style,
   } = props;
 
-  const onChange = (value: string) => {
-    setValue?.(value);
-  };
-
-  const state = useRadioGroupState({ ...props, onChange });
+  const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
   return (
