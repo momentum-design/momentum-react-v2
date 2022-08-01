@@ -2,6 +2,7 @@
   display: flex;
   justify-content: start;
   width: fit-content;
+  flex-direction: column;
 
   > .md-radio-wrapper {
     display: flex;
@@ -19,14 +20,8 @@
       height: 1rem;
       width: 1rem;
       border-radius: 0.5rem;
-      outline: none !important;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      outline: none;
     }
-
-    // Could maybe use :has() when there is more support
-    // See https://caniuse.com/css-has
 
     &[data-disabled='false'] {
       > .md-radio-label {
@@ -36,7 +31,6 @@
       > .md-radio-button {
         &:checked {
           border: 5px solid var(--radio-checked-background);
-          border-radius: 50%;
         }
 
         &:not(:checked) {
@@ -58,7 +52,6 @@
         > .md-radio-button {
           &:checked {
             border: 5px solid var(--radio-checked-background-hovered);
-            border-radius: 50%;
           }
 
           &:not(:checked) {
@@ -74,7 +67,6 @@
         > .md-radio-button {
           &:checked {
             border: 5px solid var(--radio-checked-background-pressed);
-            border-radius: 50%;
           }
 
           &:not(:checked) {
@@ -91,7 +83,6 @@
       > .md-radio-button {
         &:checked {
           border: 5px solid var(--radio-checked-background-disabled);
-          border-radius: 50%;
         }
 
         &:not(:checked) {

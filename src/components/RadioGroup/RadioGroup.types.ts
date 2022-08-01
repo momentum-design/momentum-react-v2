@@ -15,7 +15,7 @@ export interface GroupProps extends Omit<AriaRadioGroupProps, 'children'> {
   /**
    * Array of radio button options.
    */
-  options?: Array<Props | string>;
+  options?: Array<RadioProps | string>;
 
   /**
    * The description for the RadioGroup.
@@ -24,7 +24,7 @@ export interface GroupProps extends Omit<AriaRadioGroupProps, 'children'> {
   description?: string;
 }
 
-export interface Props extends Omit<AriaRadioProps, 'children'> {
+export interface RadioProps extends Omit<AriaRadioProps, 'children'> {
   /**
    * Custom style for overriding this component's CSS.
    */
