@@ -76,17 +76,6 @@ const radioGroupArgTypes = {
       },
     },
   },
-  orientation: {
-    description: 'The axis the Radio Button(s) should align with.',
-    control: 'select',
-    options: ['vertical', 'horizontal'],
-    table: {
-      type: {
-        summary: "'vertical' | 'horizontal'",
-      },
-    },
-    defaultValue: DEFAULTS.GROUP_ORIENTATION,
-  },
 };
 
 export { radioGroupArgTypes };

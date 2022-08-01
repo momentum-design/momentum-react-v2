@@ -6,7 +6,6 @@ exports[`<RadioGroup /> snapshot should match snapshot 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -24,7 +23,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -70,7 +68,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -116,7 +113,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -148,7 +144,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] 
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -180,7 +175,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child id 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -214,7 +208,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -247,7 +240,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -279,7 +271,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -312,7 +303,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats selected
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -345,7 +335,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with className 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="example-class md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -363,7 +352,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with description 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
     style="color: pink;"
   >
@@ -388,7 +376,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with id 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     id="example-id"
     role="radiogroup"
   >
@@ -407,67 +394,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
-    role="radiogroup"
-  >
-    <span
-      id="test-ID"
-    >
-      Test Radio Group
-    </span>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <input
-        aria-label="Option 2"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option2"
-      />
-      Option 2
-    </label>
-    <label
-      class="md-radio-wrapper"
-      data-disabled="false"
-    >
-      <input
-        aria-label="Option 3"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option3"
-      />
-      Option 3
-    </label>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<RadioGroup /> snapshot should match snapshot with multiple children and orientation horizontal 1`] = `
-<DocumentFragment>
-  <div
-    aria-labelledby="test-ID"
-    aria-orientation="horizontal"
-    class="md-radio-group"
-    data-direction="horizontal"
     role="radiogroup"
   >
     <span
@@ -528,7 +454,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -588,7 +513,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -648,7 +572,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
   >
     <span
@@ -709,7 +632,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with style 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    data-direction="vertical"
     role="radiogroup"
     style="color: pink;"
   >
