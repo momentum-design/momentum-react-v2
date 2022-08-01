@@ -5,12 +5,12 @@ import { useRadio } from '@react-aria/radio';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './RadioGroup.constants';
-import { Props } from './RadioGroup.types';
+import { RadioProps } from './RadioGroup.types';
 import { RadioContext } from './RadioGroup';
 
 import './RadioGroup.style.scss';
 
-const Radio: FC<Props> = (props: Props) => {
+const Radio: FC<RadioProps> = (props: RadioProps) => {
   const { className, isDisabled = DEFAULTS.OPTION_DISABLED, id, style, label } = props;
   const state = useContext(RadioContext);
   const ref = useRef(null);

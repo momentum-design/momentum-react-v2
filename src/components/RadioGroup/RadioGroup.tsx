@@ -4,7 +4,7 @@ import { useRadioGroup } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
 
 import { STYLE, DEFAULTS } from './RadioGroup.constants';
-import { GroupProps, Props } from './RadioGroup.types';
+import { GroupProps, RadioProps } from './RadioGroup.types';
 import './RadioGroup.style.scss';
 import Radio from './Radio';
 import Text, { TEXT_CONSTANTS } from '../Text';
@@ -34,7 +34,7 @@ const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
       {description && <Text type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>{description}</Text>}
       <RadioContext.Provider value={state}>
         {options &&
-          options.map((option: string | Props) => {
+          options.map((option: string | RadioProps) => {
             if (typeof option === 'string') {
               return <Radio key={option} value={option} isDisabled={isDisabled} label={option} />;
             } else {
