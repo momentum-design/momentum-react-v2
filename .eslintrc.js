@@ -28,8 +28,9 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:storybook/recommended',
+    'prettier',
   ],
-  plugins: ['react', 'jsx-a11y', 'cypress', '@typescript-eslint', 'prettier'],
+  plugins: ['react', 'jsx-a11y', 'cypress', '@typescript-eslint'],
   ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -59,13 +60,6 @@ module.exports = {
       files: ['config/**'],
       rules: {
         '@typescript-eslint/no-var-requires': 0,
-      },
-    },
-    {
-      files: ['src/legacy/**', 'src/examples/**'],
-      rules: {
-        'prettier/prettier': 0,
-        quotes: 0,
       },
     },
   ],
@@ -138,13 +132,6 @@ module.exports = {
         required: {
           some: ['nesting', 'id'],
         },
-      },
-    ],
-    'prettier/prettier': [
-      'error',
-      {},
-      {
-        usePrettierrc: true,
       },
     ],
   },

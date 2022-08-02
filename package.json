@@ -209,7 +209,6 @@
     "eslint-plugin-cypress": "^2.2.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "7.12.2",
     "eslint-plugin-storybook": "^0.5.5",
     "eslint-watch": "^6.0.0",
@@ -266,6 +265,9 @@
     ]
   },
   "lint-staged": {
+    "/**/*.{md}": [
+      "prettier --write"
+    ],
     "{config,src}/**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --fix"
