@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { AriaRadioGroupProps, AriaRadioProps } from '@react-types/radio';
 
-export interface GroupProps extends Omit<AriaRadioGroupProps, 'children'> {
+export interface RadioGroupProps extends Omit<AriaRadioGroupProps, 'children'> {
   /**
    * Custom class for overriding this component's CSS.
    */

@@ -4,7 +4,7 @@ import { useRadioGroup } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
 
 import { STYLE, DEFAULTS } from './RadioGroup.constants';
-import { GroupProps, RadioProps } from './RadioGroup.types';
+import { RadioGroupProps, RadioProps } from './RadioGroup.types';
 import './RadioGroup.style.scss';
 import Radio from './Radio';
 import Text, { TEXT_CONSTANTS } from '../Text';
@@ -14,7 +14,7 @@ import Text, { TEXT_CONSTANTS } from '../Text';
  */
 export const RadioContext = React.createContext(null);
 
-const RadioGroup: FC<GroupProps> = (props: GroupProps) => {
+const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
   const {
     className,
     description = DEFAULTS.GROUP_DESCRIPTION,
