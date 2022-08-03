@@ -35,7 +35,7 @@ const Toggle = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
   );
 };
 
-const ToggleWithRef = forwardRef(Toggle) as FC<Props>;
+const ToggleWithRef: FC<Props> = forwardRef(Toggle);
 ToggleWithRef.displayName = 'Toggle';
 
 export default ToggleWithRef;

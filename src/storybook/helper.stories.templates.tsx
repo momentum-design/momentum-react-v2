@@ -20,7 +20,7 @@ function Template<Props>(Component: FC): Story<Props> {
  * @param Component - Functional Component to generate multiple templates from.
  * @returns - A Story Template with multiple variants of the provided Component.
  */
-function MultiTemplate<Props>(Component: FC): Story<Props> {
+function MultiTemplate<Props>(Component: FC<Props>): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
     const { variants } = parameters;
 
