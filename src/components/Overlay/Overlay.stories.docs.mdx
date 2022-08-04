@@ -1,6 +1,8 @@
-The `<Overlay />` component is used to bring attention to any provided children of itself by placing a colored element over its parent component or the entire viewport.
+The `<Overlay />` component is used to bring attention to any provided children of itself by placing
+a colored element over its parent component or the entire viewport.
 
-Note that the render state of this component must be managed manually from within its child components. This includes any action that is used to remove/deconstruct the `<Overlay />` component.
+Note that the render state of this component must be managed manually from within its child
+components. This includes any action that is used to remove/deconstruct the `<Overlay />` component.
 
 The default `z-index` for this component is `1000`.
 
@@ -23,6 +25,6 @@ const App = () => {
         </Overlay>
       )}
     </div>
-  )
-}
+  );
+};
 ```
