@@ -1,4 +1,6 @@
-The `<Toast />` component. This component is designed to consume the `<ToastContent />` and the `<ToastDetails />` component. These two sub-components can be injected with any combination of the following:
+The `<Toast />` component. This component is designed to consume the `<ToastContent />` and the
+`<ToastDetails />` component. These two sub-components can be injected with any combination of the
+following:
 
 ```jsx
 return (
@@ -9,15 +11,13 @@ return (
 );
 ```
 
-*or*
+_or_
 
 ```jsx
-return (
-  <Toast content={<ToastContent />} details={<ToastDetails />} />
-);
+return <Toast content={<ToastContent />} details={<ToastDetails />} />;
 ```
 
-*or*
+_or_
 
 ```jsx
 return (
@@ -27,7 +27,7 @@ return (
 );
 ```
 
-*or*
+_or_
 
 ```jsx
 return (
@@ -37,4 +37,5 @@ return (
 );
 ```
 
-Note that the `controls` prop will be ignored in the case that `title` and `details` data is not provided.
+Note that the `controls` prop will be ignored in the case that `title` and `details` data is not
+provided.

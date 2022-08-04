@@ -264,7 +264,7 @@
     ]
   },
   "lint-staged": {
-    "/**/*.{md}": [
+    "/**/*.{md,mdx}": [
       "prettier --write"
     ],
     "{config,src}/**/*.{js,jsx,ts,tsx}": [
