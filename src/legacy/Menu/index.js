@@ -52,7 +52,7 @@ class Menu extends React.Component {
           return;
         }
 
-        this.menuNode.querySelector(`[data-md-event-key="${listContext.focus}"]`).focus();
+        this.menuNode.querySelector(`[data-md-event-key="${listContext.focus}"]`)?.focus();
       }
     }
   }

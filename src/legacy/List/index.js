@@ -56,7 +56,7 @@ class List extends React.Component {
     if (!this._needsRefocus || !this.listNode) return;
 
     if (listContext.focus && prevState.listContext.focus !== listContext.focus) {
-      this.listNode.querySelector(`[data-md-event-key="${listContext.focus}"]`).focus();
+      this.listNode.querySelector(`[data-md-event-key="${listContext.focus}"]`)?.focus();
     }
   }
 
@@ -74,7 +74,7 @@ class List extends React.Component {
         focus = this.getNextFocusedChild(items, items[0], 0);
       }
       if (focus && shouldFocusInitial) {
-        this.listNode.querySelector(`[data-md-event-key="${focus}"]`).focus();
+        this.listNode.querySelector(`[data-md-event-key="${focus}"]`)?.focus();
       }
     }
   };
