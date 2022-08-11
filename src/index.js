@@ -21,6 +21,8 @@ export {
   CallControl,
   Card,
   CardSection,
+  Checkbox,
+  CheckboxGroup,
   Chip,
   CloseIcon,
   CloseWrapper,

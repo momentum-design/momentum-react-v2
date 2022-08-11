@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <Checkbox /> should match SnapShot 1`] = `
+<Checkbox
+  autoFocus={false}
+  checked={false}
+  className=""
+  disabled={false}
+  htmlId="test123"
+  indeterminate={false}
+  inputRef={null}
+  label=""
+  name=""
+  nestedLevel={0}
+  onChange={[Function]}
+  required={false}
+  value=""
+>
+  <div
+    className="md-input-container md-checkbox "
+  >
+    <input
+      aria-checked={false}
+      autoFocus={false}
+      checked={false}
+      className="md-input md-checkbox__input"
+      disabled={false}
+      id="test123"
+      name=""
+      onChange={[Function]}
+      required={false}
+      tabIndex={0}
+      type="checkbox"
+      value=""
+    />
+    <Label
+      className="md-checkbox__label"
+      htmlFor="test123"
+      label=""
+      theme=""
+    >
+      <label
+        className="md-label md-checkbox__label"
+        htmlFor="test123"
+      />
+    </Label>
+  </div>
+</Checkbox>
+`;
