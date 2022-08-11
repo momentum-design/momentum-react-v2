@@ -20,6 +20,8 @@ export { default as ButtonGroup } from './ButtonGroup';
 export { default as CallControl } from './CallControl';
 export { default as Card } from './Card';
 export { default as CardSection } from './CardSection';
+export { default as Checkbox } from './Checkbox';
+export { default as CheckboxGroup } from './CheckboxGroup';
 export { default as Chip } from './Chip';
 export { default as CloseIcon } from './CloseIcon';
 export { default as CloseWrapper } from './CloseWrapper';
