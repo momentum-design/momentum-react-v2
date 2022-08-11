@@ -41,6 +41,7 @@ export { default as FormSubSection } from './FormSubSection';
 export { default as Icon } from './Icon';
 export { default as Input } from './Input';
 export { default as InputMessage } from './InputMessage';
+export { default as InputHelper } from './InputHelper';
 export { default as InputSearch } from './InputSearch';
 export { default as InputSection } from './InputSection';
 export { default as Label } from './Label';

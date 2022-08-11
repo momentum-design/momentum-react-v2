@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Select, SelectOption, CheckboxNext } from '@momentum-ui/react-collaboration';
+import { Select, SelectOption } from '@momentum-ui/react-collaboration';
 
 describe('tests for <SelectOption />', () => {
   it('should match SnapShot', () => {
@@ -54,7 +54,7 @@ describe('tests for <SelectOption />', () => {
     );
 
     container.find('button').simulate('click');
-    expect(container.find(CheckboxNext).props().isSelected).toEqual(true);
+    expect(container.find('Checkbox').props().checked).toEqual(true);
   });
 
   it('should pass props to ListItem', () => {

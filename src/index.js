@@ -42,6 +42,7 @@ export {
   Icon,
   Input,
   InputMessage,
+  InputHelper,
   InputSearch,
   InputSection,
   Label,
