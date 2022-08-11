@@ -12,6 +12,7 @@ export { default as ButtonGroup } from '../../legacy/ButtonGroup/examples/Kitche
 export { default as CallControl } from '../../legacy/CallControl/examples/KitchenSink';
 export { default as Card } from '../../legacy/Card/examples/KitchenSink';
 export { default as CardSection } from '../../legacy/CardSection/examples/KitchenSink';
+export { default as Checkbox } from '../../legacy/Checkbox/examples/KitchenSink';
 export { default as Coachmark } from '../../legacy/Coachmark/examples/KitchenSink';
 export { default as CollapseButton } from '../../legacy/CollapseButton/examples/KitchenSink';
 export { default as ComboBox } from '../../legacy/ComboBox/examples/KitchenSink';
@@ -24,6 +25,7 @@ export { default as FormSection } from '../../legacy/FormSection/examples/Kitche
 export { default as FormSubSection } from '../../legacy/FormSubSection/examples/KitchenSink';
 export { default as Icon } from '../../legacy/Icon/examples/KitchenSink';
 export { default as Input } from '../../legacy/Input/examples/KitchenSink';
+export { default as InputHelper } from '../../legacy/InputHelper/examples/KitchenSink';
 export { default as InputSearch } from '../../legacy/InputSearch/examples/KitchenSink';
 export { default as Label } from '../../legacy/Label/examples/KitchenSink';
 export { default as Lightbox } from '../../legacy/Lightbox/examples/KitchenSink';
