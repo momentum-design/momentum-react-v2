@@ -8,6 +8,8 @@ import {
   MenuItem,
   MenuOverlay,
 } from '@momentum-ui/react-collaboration';
+import Toggle from '../../../components/Toggle';
+
 export default class CustomMenuItems extends React.PureComponent {
   onClick(event, value) {
     alert(`${value} clicked`);
@@ -20,15 +22,18 @@ export default class CustomMenuItems extends React.PureComponent {
             Show Customized MenuItems
           </Button>
         }
-        direction="top-center"
+        direction="bottom-center"
       >
         <MenuContent>Content</MenuContent>
         <Menu>
-          <MenuItem>
+          <MenuItem keepMenuOpen>
             <ListItemSection position="left">
               <Icon name="edit_20" />
             </ListItemSection>
-            <ListItemSection position="center">Edit space settings</ListItemSection>
+            <ListItemSection position="center">Dark mode</ListItemSection>
+            <ListItemSection position="right">
+              <Toggle />
+            </ListItemSection>
           </MenuItem>
           <MenuItem keepMenuOpen>
             <ListItemSection position="left">

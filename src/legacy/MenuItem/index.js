@@ -35,6 +35,10 @@ class MenuItem extends React.Component {
     const { onClick, parentKeyDown, parentOnSelect } = this.props;
     const { eventKey } = opts;
 
+    if (!e.target?.classList?.contains(`${prefix}-list-item`)) {
+      return;
+    }
+
     if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
       onClick && onClick(e);
       parentOnSelect && parentOnSelect(e, { eventKey, element: this });
