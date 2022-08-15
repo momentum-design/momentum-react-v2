@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MenuItem } from '@momentum-ui/react-collaboration';
 import SelectableContext from '../../SelectableContext';
-
+import { Icon, ListItemSection, MenuItem } from '@momentum-ui/react-collaboration';
+import Toggle from '../../../components/Toggle';
 beforeEach(() => {
   jest.resetModules();
   jest.clearAllMocks();
@@ -47,6 +47,38 @@ describe('tests for <MenuItem />', () => {
     listItem.simulate('click');
     expect(context.parentOnSelect.mock.calls.length).toBe(1);
     expect(onClick.mock.calls[0][1].value).toBe('test');
+  });
+
+  it('should not call e.preventDefault if target is not md-list-item', () => {
+    const onClick = jest.fn();
+
+    const wrapper = mount(
+      <SelectableContext.Provider value={context}>
+        <MenuItem onClick={onClick} label="one" value="test">
+          <ListItemSection position="left">
+            <Icon name="edit_20" />
+          </ListItemSection>
+          <ListItemSection position="center">Dark mode</ListItemSection>
+          <ListItemSection position="right">
+            <Toggle aria-label="toggle" />
+          </ListItemSection>
+        </MenuItem>
+      </SelectableContext.Provider>
+    );
+
+    const toggle = wrapper.find(Toggle);
+
+    const mockEvent = {
+      preventDefault: jest.fn(),
+      keyCode: 32,
+      target: toggle.getDOMNode(),
+    };
+
+    const listItem = wrapper.find(Toggle);
+    listItem.simulate('keydown', mockEvent);
+    expect(onClick).not.toBeCalled();
+    expect(context.parentKeyDown).not.toBeCalled();
+    expect(mockEvent.preventDefault).not.toBeCalled();
   });
 
   it('should call handleKeyDown function of context when keyDown is fired on ListItem', () => {
