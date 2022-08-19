@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import { ToastContainer, cssTransition } from 'react-toastify';
+import { dismiss, getContainerID, isActive, notify, update } from './NotificationSystem.utils';
+import { ATTENTION, DEFAULTS, POSITION, STYLE } from './NotificationSystem.constants';
 
-import { ATTENTION, DEFAULTS, STYLE } from './NotificationSystem.constants';
+import type { CompoundProps, Props } from './NotificationSystem.types';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './NotificationSystem.style.scss';
-import type { CompoundProps, Props } from './NotificationSystem.types';
-import { dismiss, getContainerID, notify, update } from './NotificationSystem.utils';
 
 const slideAndBlur = cssTransition({
   enter: 'slideInRight',
@@ -52,7 +52,10 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
 };
 
 export default NotificationSystem;
+
 NotificationSystem.notify = notify;
 NotificationSystem.update = update;
 NotificationSystem.dismiss = dismiss;
+NotificationSystem.isActive = isActive;
 NotificationSystem.ATTENTION = ATTENTION;
+NotificationSystem.POSITION = POSITION;

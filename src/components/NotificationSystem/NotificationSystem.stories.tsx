@@ -11,6 +11,7 @@ import Text from '../Text';
 import { Id, toast } from 'react-toastify';
 import { ATTENTION, POSITION } from './NotificationSystem.constants';
 import NotificationTemplate from './NotificationTemplate';
+import { PositionType } from './NotificationSystem.types';
 
 export default {
   title: 'Momentum UI/NotificationSystem',
@@ -165,7 +166,7 @@ const UpdateContent = Template<NotificationSystemProps>(() => {
 }).bind({});
 
 UpdateContent.argTypes = { ...argTypes };
-
+delete UpdateContent.argTypes['position'];
 UpdateContent.args = {};
 
 const ResetTimer = Template<NotificationSystemProps>(() => {
@@ -217,8 +218,44 @@ const ResetTimer = Template<NotificationSystemProps>(() => {
 }).bind({});
 
 ResetTimer.argTypes = { ...argTypes };
-
+delete ResetTimer.argTypes['position'];
 ResetTimer.args = {};
+
+const MultipleSystems = Template<NotificationSystemProps>(() => {
+  const toastId = React.useRef<Id>(null);
+  const { POSITION } = NotificationSystem;
+
+  const showNotification = React.useCallback((position: PositionType) => {
+    toastId.current = NotificationSystem.notify(
+      <NotificationTemplate notificationText={`I'm a notification on the ${position} position`} />,
+      {
+        autoClose: 5000,
+        notificationSystemId: position,
+      }
+    );
+  }, []);
+
+  return (
+    <>
+      <ButtonPill onPress={() => showNotification(POSITION.TOP_RIGHT)}>
+        Show Notification on top-right
+      </ButtonPill>
+      <ButtonPill onPress={() => showNotification(POSITION.BOTTOM_RIGHT)}>
+        Show Notification on bottom-right
+      </ButtonPill>
+      <ButtonPill onPress={() => showNotification(POSITION.BOTTOM_LEFT)}>
+        Show Notification on bottom-left
+      </ButtonPill>
+      <NotificationSystem position={POSITION.TOP_RIGHT} id={POSITION.TOP_RIGHT} />
+      <NotificationSystem position={POSITION.BOTTOM_RIGHT} id={POSITION.BOTTOM_RIGHT} />
+      <NotificationSystem position={POSITION.BOTTOM_LEFT} id={POSITION.BOTTOM_LEFT} />
+    </>
+  );
+}).bind({});
+
+MultipleSystems.argTypes = { ...argTypes };
+delete MultipleSystems.argTypes['position'];
+MultipleSystems.args = {};
 
 // NOTE: Common variants story. This renders multiple variants of a single component.
 const Common = MultiTemplate<NotificationSystemProps>(NotificationSystem).bind({});
@@ -236,4 +273,4 @@ Common.parameters = {
 };
 
 // NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
-export { Example, Important, Mixed, UpdateContent, ResetTimer, Common };
+export { Example, Important, Mixed, UpdateContent, ResetTimer, MultipleSystems, Common };
