@@ -7,7 +7,7 @@ import type {
 } from './NotificationSystem.types';
 
 export const getContainerID = (id: string, attention: AttentionType): string =>
-  [id, attention, DEFAULTS.CONTAINER_ID_SUFFIX].join('_');
+  [id, attention, DEFAULTS.CONTAINER_ID_SUFFIX].join('_').replace(/^_+/, '');
 
 export const calculateAutoClose = (options?: NotifyOptionsType): number | false => {
   const defaultAutoClose =
@@ -24,9 +24,10 @@ export const notify = (content: ToastContent, options?: NotifyOptionsType): Id =
   });
 
 export const update = (toastId: Id, options?: UpdateOptionsType): void => {
+  const { notificationSystemId, attention, ...updateOptions } = options;
   toast.update(toastId, {
-    ...options,
-    containerId: getContainerID(options?.notificationSystemId, options?.attention || ATTENTION.LOW),
+    ...updateOptions,
+    containerId: getContainerID(notificationSystemId, attention || ATTENTION.LOW),
   });
 };
 
