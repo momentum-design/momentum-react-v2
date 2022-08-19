@@ -8,10 +8,10 @@ import argTypes from './NotificationSystem.stories.args';
 import Documentation from './NotificationSystem.stories.docs.mdx';
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
-import { Id, toast } from 'react-toastify';
 import { ATTENTION, POSITION } from './NotificationSystem.constants';
 import NotificationTemplate from './NotificationTemplate';
-import { PositionType } from './NotificationSystem.types';
+import type { PositionType } from './NotificationSystem.types';
+import type { Id } from 'react-toastify';
 
 export default {
   title: 'Momentum UI/NotificationSystem',
@@ -29,10 +29,12 @@ const Example = Template<NotificationSystemProps>((args) => {
     <>
       <ButtonPill
         onPress={() =>
-          NotificationSystem.notify(<NotificationTemplate notificationText="I'm a notification" />)
+          NotificationSystem.notify(
+            <NotificationTemplate notificationText="I'm a low attention notification" />
+          )
         }
       >
-        Trigger a new notification
+        Trigger a new low attention notification
       </ButtonPill>
       <NotificationSystem {...args} />
     </>
@@ -52,14 +54,14 @@ const Important = Template<NotificationSystemProps>((args) => {
         onPress={() =>
           NotificationSystem.notify(
             <NotificationTemplate
-              notificationText="I'm a important notification"
+              notificationText="I'm a medium attention notification, which does stay here permanently and requires an action."
               closeButtonText="Close"
             />,
             { attention: ATTENTION.MEDIUM }
           )
         }
       >
-        Trigger a new important notification
+        Trigger a new medium attention notification
       </ButtonPill>
       <NotificationSystem {...args} />
     </>
@@ -78,17 +80,17 @@ const Mixed = Template<NotificationSystemProps>((args) => {
       <ButtonPill
         onPress={() =>
           NotificationSystem.notify(
-            <NotificationTemplate notificationText="I'm a normal notification" />
+            <NotificationTemplate notificationText="I'm a low attention notification" />
           )
         }
       >
-        Trigger a new notification
+        Trigger a new low attention notification
       </ButtonPill>
       <ButtonPill
         onPress={() =>
           NotificationSystem.notify(
             <NotificationTemplate
-              notificationText="I'm a important notification, which does stay here permanently and requires an action."
+              notificationText="I'm a medium attention notification, which does stay here permanently and requires an action."
               closeButtonText="Close"
             />,
             {
@@ -97,7 +99,7 @@ const Mixed = Template<NotificationSystemProps>((args) => {
           )
         }
       >
-        Trigger a new important notification
+        Trigger a new medium attention notification
       </ButtonPill>
       <NotificationSystem {...args} />
     </>
@@ -112,7 +114,6 @@ Mixed.args = {
 
 const UpdateContent = Template<NotificationSystemProps>(() => {
   const toastId = React.useRef<Id>(null);
-  const systemId = 'test';
 
   const [numberRaisedHand, setNumberRaisedHand] = React.useState(0);
 
@@ -135,7 +136,7 @@ const UpdateContent = Template<NotificationSystemProps>(() => {
   }, []);
 
   React.useEffect(() => {
-    if (toast.isActive(toastId.current)) {
+    if (NotificationSystem.isActive(toastId.current)) {
       if (numberRaisedHand === 0) {
         // if toast active, but numberRaisedHand got 0, dismiss the toast
         NotificationSystem.dismiss(toastId.current);
@@ -143,15 +144,12 @@ const UpdateContent = Template<NotificationSystemProps>(() => {
         // if toast active and numberRaisedHand higher than 0, update the existing toast
         NotificationSystem.update(toastId.current, {
           render: Notification,
-          notificationSystemId: systemId,
         });
       }
     } else {
       if (numberRaisedHand > 0) {
         // if no toast is there and number of raised hand is higher than 0, show new notification
-        toastId.current = NotificationSystem.notify(Notification, {
-          notificationSystemId: systemId,
-        });
+        toastId.current = NotificationSystem.notify(Notification);
       }
     }
   }, [numberRaisedHand]);
@@ -160,13 +158,13 @@ const UpdateContent = Template<NotificationSystemProps>(() => {
     <>
       <ButtonPill onPress={increaseCount}>Increase number raised hand</ButtonPill>
       <ButtonPill onPress={decreaseCount}>Decrease number raised hand</ButtonPill>
-      <NotificationSystem id={systemId} />
+      <NotificationSystem />
     </>
   );
 }).bind({});
 
 UpdateContent.argTypes = { ...argTypes };
-delete UpdateContent.argTypes['position'];
+delete UpdateContent.argTypes.position;
 UpdateContent.args = {};
 
 const ResetTimer = Template<NotificationSystemProps>(() => {
@@ -218,7 +216,7 @@ const ResetTimer = Template<NotificationSystemProps>(() => {
 }).bind({});
 
 ResetTimer.argTypes = { ...argTypes };
-delete ResetTimer.argTypes['position'];
+delete ResetTimer.argTypes.position;
 ResetTimer.args = {};
 
 const MultipleSystems = Template<NotificationSystemProps>(() => {
@@ -254,23 +252,7 @@ const MultipleSystems = Template<NotificationSystemProps>(() => {
 }).bind({});
 
 MultipleSystems.argTypes = { ...argTypes };
-delete MultipleSystems.argTypes['position'];
+delete MultipleSystems.argTypes.position;
 MultipleSystems.args = {};
 
-// NOTE: Common variants story. This renders multiple variants of a single component.
-const Common = MultiTemplate<NotificationSystemProps>(NotificationSystem).bind({});
-
-Common.argTypes = { ...argTypes };
-delete Common.argTypes.children;
-
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component for all variants.
-Common.args = {
-  children: 'Example',
-};
-
-Common.parameters = {
-  variants: [{ children: 'Example A' }, { children: 'Example B' }, { children: 'Example C' }],
-};
-
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
-export { Example, Important, Mixed, UpdateContent, ResetTimer, MultipleSystems, Common };
+export { Example, Important, Mixed, UpdateContent, ResetTimer, MultipleSystems };
