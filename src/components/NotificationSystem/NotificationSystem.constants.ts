@@ -9,7 +9,7 @@ const POSITION = {
 
 const DEFAULTS = {
   POSITION: POSITION.TOP_RIGHT,
-  CONTAINER_ID_SUFFIX: 'container_notification',
+  CONTAINER_ID_SUFFIX: 'notification_container',
   AUTOCLOSE_TIMEOUT: 3000,
 };
 
