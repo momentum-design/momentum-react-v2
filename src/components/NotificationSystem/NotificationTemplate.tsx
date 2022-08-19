@@ -4,6 +4,7 @@ import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import type { CloseButtonProps } from 'react-toastify';
 
+import './NotificationTemplate.style.scss';
 /**
  * The NotificationTemplate component.
  */
@@ -49,7 +50,15 @@ const NotificationTemplate: FC<NotificationTemplateProps> = (props: Notification
     <ToastNotification
       text={notificationText}
       onClose={handleClose}
-      leadingVisual={<Icon name="info-circle" scale={24} weight="filled" fillColor="lightblue" />}
+      leadingVisual={
+        <Icon
+          name="info-circle"
+          className="icon"
+          scale={24}
+          weight="filled"
+          fillColor="lightblue"
+        />
+      }
       buttonGroup={
         closeButtonText && (
           <ButtonPill outline size={28} onPress={handleClose}>
