@@ -30,6 +30,8 @@ export const update = (toastId: Id, options?: UpdateOptionsType): void => {
   });
 };
 
-export const dismiss = (toastId: Id) => {
+export const dismiss = (toastId: Id): void => {
   toast.dismiss(toastId);
 };
+
+export const isActive = (toastId: Id): boolean => toast.isActive(toastId);

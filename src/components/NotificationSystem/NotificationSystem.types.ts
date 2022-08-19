@@ -1,7 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 import { ATTENTION, POSITION } from './NotificationSystem.constants';
-import { dismiss, notify, update } from './NotificationSystem.utils';
-import NotificationTemplate from './NotificationTemplate';
+import { dismiss, isActive, notify, update } from './NotificationSystem.utils';
 import type { ToastOptions, UpdateOptions } from 'react-toastify';
 
 export type AttentionType = typeof ATTENTION[keyof typeof ATTENTION];
@@ -43,10 +42,15 @@ export interface CompoundProps {
    */
   update: typeof update;
   dismiss: typeof dismiss;
+  isActive: typeof isActive;
   /**
    * The ATTENTION enum to give consumers access to the different attention types
    */
   ATTENTION: typeof ATTENTION;
+  /**
+   * The POSITION enum to give consumers access to the different positioning options
+   */
+  POSITION: typeof POSITION;
 }
 
 export interface Props {
