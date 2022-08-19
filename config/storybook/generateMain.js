@@ -44,6 +44,12 @@ const generateMain = (dir) => {
         use: ['@svgr/webpack', assetLoader],
       });
 
+      config.module.rules.push({
+        test: /\.mjs$/,
+        include: /[\\/]node_modules[\\/](react-toastify|tapable)/,
+        type: 'javascript/auto',
+      });
+
       // Find the rule that already handles node_modules dependencies
       const nodeModulesRule = config.module.rules.find(({ include }) =>
         include && include.test ? include.test('/node_modules/semver/something.js') : false

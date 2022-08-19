@@ -1,0 +1,102 @@
+.md-notification-system-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+
+  &[data-position='top-right'] {
+    top: 0.75rem;
+    right: 0.5rem;
+  }
+
+  &[data-position='bottom-right'] {
+    bottom: 0.75rem;
+    right: 0.5rem;
+  }
+
+  &[data-position='top-left'] {
+    top: 0.75rem;
+    left: 0.5rem;
+  }
+
+  &[data-position='bottom-left'] {
+    bottom: 0.75rem;
+    left: 0.5rem;
+  }
+
+  .Toastify__toast-container {
+    padding: 0px;
+    width: unset;
+    position: unset;
+
+    @-webkit-keyframes slide-in-right {
+      0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-in-right {
+      0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .slideInRight {
+      -webkit-animation: slide-in-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: slide-in-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    .fadeOut {
+      -webkit-animation: fade-out 0.2s ease-out both;
+      animation: fade-out 0.2s ease-out both;
+    }
+  }
+
+  .Toastify__toast {
+    padding: 0px;
+    min-height: 0px;
+    background: none;
+    margin-bottom: 0.5rem;
+    cursor: default;
+  }
+
+  .Toastify__toast-body {
+    padding: 0px;
+    margin: 0px;
+  }
+}
