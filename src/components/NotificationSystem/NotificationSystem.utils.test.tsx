@@ -31,6 +31,10 @@ describe('NotificationSystem utils', () => {
     it('should return the right container id if no id is passed in', () => {
       expect(getContainerID(undefined, ATTENTION.MEDIUM)).toBe('medium_notification_container');
     });
+
+    it('should return the right container id if no id is passed in', () => {
+      expect(getContainerID(undefined, undefined)).toBe('notification_container');
+    });
   });
 
   describe('calculateAutoClose', () => {
