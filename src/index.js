@@ -160,4 +160,5 @@ export {
   TextToast,
   Toggle,
   Chip as ChipNext,
+  NotificationSystem,
 } from './components';
