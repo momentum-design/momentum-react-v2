@@ -5,9 +5,6 @@ import ButtonPill from '../ButtonPill';
 import type { CloseButtonProps } from 'react-toastify';
 
 import './NotificationTemplate.style.scss';
-/**
- * The NotificationTemplate component.
- */
 
 interface NotificationTemplateProps {
   /**
@@ -36,6 +33,7 @@ interface NotificationTemplateProps {
    */
   className?: string;
 }
+
 /**
  * NOTE: this component is only used for the stories
  */

@@ -1,1 +1,6 @@
-The `<NotificationSystem />` component.
+The `<NotificationSystem />` component allows consumers to trigger notifications on the screen.
+First simply render the `<NotificationSystem />` component with the position you would like to see the notifications at.
+The default position will be `top-right`. After that component has been rendered, you can use utils from the NotificationSystem component,
+like `NotificationSystem.notify` or others, which allow creating new notifications on that position, updating existing notifications (`update`) or dismiss existing notifications.
+These utils accept multiple options, like an `attention` option which allows creating notifications which require action - they will always stay on top. Those notifications
+can be created by using the `MEDIUM` attention type.

@@ -4,7 +4,7 @@ import { POSITION, DEFAULTS } from './NotificationSystem.constants';
 const notificationSystemArgTypes = {
   position: {
     description: `Position of the Notification system relative to the parent component`,
-    options: [...Object.values(POSITION as Record<string, string>)],
+    options: [...Object.values(POSITION)],
     control: { type: 'select' },
     table: {
       type: {
