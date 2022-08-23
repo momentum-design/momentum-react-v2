@@ -38,17 +38,25 @@ describe('NotificationSystem utils', () => {
   });
 
   describe('calculateAutoClose', () => {
+    it('should return the DEFAULT timeout if no option is provided', () => {
+      expect(calculateAutoClose({})).toBe(DEFAULTS.AUTOCLOSE_TIMEOUT);
+    });
+
+    it('should return the DEFAULT timeout if no custom autoClose is provided and ATTENTION is low', () => {
+      expect(calculateAutoClose({ attention: ATTENTION.LOW })).toBe(DEFAULTS.AUTOCLOSE_TIMEOUT);
+    });
+
     it('should return the right autoClose timeout if an custom autoClose is provided', () => {
       const autoClose = 3500;
       expect(calculateAutoClose({ autoClose })).toBe(3500);
     });
 
-    it('should return false if no custom autoClose is provided and ATTENTION is medium', () => {
-      expect(calculateAutoClose({ attention: ATTENTION.MEDIUM })).toBe(false);
+    it('should return false if no custom autoClose is provided', () => {
+      expect(calculateAutoClose({ autoClose: false })).toBe(false);
     });
 
-    it('should return the DEFAULT timeout if no custom autoClose is provided and ATTENTION is low', () => {
-      expect(calculateAutoClose({ attention: ATTENTION.LOW })).toBe(DEFAULTS.AUTOCLOSE_TIMEOUT);
+    it('should return false if no custom autoClose is provided and ATTENTION is medium', () => {
+      expect(calculateAutoClose({ attention: ATTENTION.MEDIUM })).toBe(false);
     });
   });
 

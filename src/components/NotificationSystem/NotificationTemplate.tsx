@@ -3,6 +3,7 @@ import ToastNotification from '../ToastNotification';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import type { CloseButtonProps } from 'react-toastify';
+import type { PressEvent } from '@react-types/shared';
 
 import './NotificationTemplate.style.scss';
 
@@ -40,8 +41,8 @@ interface NotificationTemplateProps {
 const NotificationTemplate: FC<NotificationTemplateProps> = (props: NotificationTemplateProps) => {
   const { notificationText, closeToast, closeButtonText, className } = props;
 
-  const handleClose = React.useCallback((args: any) => {
-    closeToast?.(args);
+  const handleClose = React.useCallback((e: PressEvent) => {
+    closeToast?.(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
   }, []);
 
   return (

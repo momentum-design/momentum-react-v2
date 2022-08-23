@@ -77,6 +77,13 @@ export interface Props {
    * Default: `top-right`
    */
   position?: PositionType;
+
+  /**
+   * Allows overriding the zIndex of the NotificationSystem
+   *
+   * Default: 10000
+   */
+  zIndex?: number;
   /**
    * Child components of this NotificationSystem.
    */

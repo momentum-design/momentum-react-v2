@@ -11,6 +11,7 @@ const DEFAULTS = {
   POSITION: POSITION.TOP_RIGHT,
   CONTAINER_ID_SUFFIX: 'notification_container',
   AUTOCLOSE_TIMEOUT: 3000,
+  Z_INDEX: 10000,
 };
 
 const STYLE = {
