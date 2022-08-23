@@ -7,7 +7,19 @@ export type AttentionType = typeof ATTENTION[keyof typeof ATTENTION];
 export type PositionType = typeof POSITION[keyof typeof POSITION];
 
 type CustomOptions = {
+  /**
+   * attention type - can be either 'MEDIUM' or 'LOW'
+   *
+   * MEDIUM notifications will always stay on top and are meant to be notifications that require action, like clicking a button
+   *
+   * LOW notifications will be shown underneath the MEDIUM ones and are meant to be for information purposes
+   */
   attention?: AttentionType;
+  /**
+   * The id of the NotificationSystem to add/update the notification at
+   *
+   * Can be used to trigger multiple notifications at different positions on the screen at the same time
+   */
   notificationSystemId?: string;
 };
 
@@ -21,15 +33,9 @@ export interface CompoundProps {
   /**
    * Trigger a notification
    *
-   * These notifications are normal notifications, which will be ranked underneath important notifications,
-   * if there are some.
-   *
    * `content` - custom content of the notification. A ToastNotification or TextToast component could be for example
    * be passed in - the component will receive a `closeToast` callback prop, which has to be put on the close buttons in
    * your custom notification component.
-   * There's also a NotificationTemplate available, which can be used (`<NotificationSystem.Template/>`).
-   *
-   * If no autoClose is provided, the default autoClose duration of 3000ms will be used
    *
    * Returns the id of the notification, which has been created - can be used for updates, etc.
    */
@@ -38,10 +44,19 @@ export interface CompoundProps {
   /**
    * Update a existing notification
    *
-   * ...
+   * Pass in the toastId to update an existing notification. To update the content of the notification, use the `render` option
    */
   update: typeof update;
+
+  /**
+   * Dismiss a existing notification
+   *
+   * Pass in the toastId to dismiss an existing notification
+   */
   dismiss: typeof dismiss;
+  /**
+   * Returns true if the provided toastId points to an active notification (= currently shown on the screen)
+   */
   isActive: typeof isActive;
   /**
    * The ATTENTION enum to give consumers access to the different attention types

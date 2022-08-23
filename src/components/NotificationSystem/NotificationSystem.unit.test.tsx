@@ -1,12 +1,12 @@
 import React, { CSSProperties } from 'react';
-import { act, fireEvent, render, screen, waitForElementToBeRemoved } from '@testing-library/react';
+import { act, render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import NotificationSystem from './';
 import NotificationTemplate from './NotificationTemplate';
 import type { AttentionType, PositionType } from './NotificationSystem.types';
 import { STYLE } from './NotificationSystem.constants';
-import { Id } from 'react-toastify';
+import userEvent from '@testing-library/user-event';
 
 type PrepareForSnapshotProps = {
   notificationText: string;
@@ -142,15 +142,8 @@ describe('<NotificationSystem />', () => {
   });
 
   describe('actions', () => {
-    beforeEach(() => {
-      jest.useFakeTimers();
-    });
-    afterEach(() => {
-      jest.runOnlyPendingTimers();
-      jest.useRealTimers();
-    });
     it('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
-      expect.assertions(3);
+      expect.assertions(4);
 
       render(<NotificationSystem />);
 
@@ -165,6 +158,7 @@ describe('<NotificationSystem />', () => {
       // wait till the toast shows up on the screen:
       const toast = await screen.findByRole('alert');
       expect(toast).toBeVisible();
+      expect(toast).toHaveTextContent(notificationText);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
 
@@ -174,10 +168,128 @@ describe('<NotificationSystem />', () => {
       });
 
       // check if toast got removed and the toast is not active anymore
-      await waitForElementToBeRemoved(() => screen.getByRole('alert'));
+      await waitForElementToBeRemoved(() => screen.queryByRole('alert'));
       expect(NotificationSystem.isActive(toastId)).toBeFalsy();
     });
 
-    /* interaction test with "Medium" attention notification missing */
+    it('should close the `medium attention` notification after clicking on the close button', async () => {
+      expect.assertions(5);
+
+      render(<NotificationSystem />);
+
+      const closeButtonText = 'Close';
+      const toastId = '12345';
+      act(() => {
+        NotificationSystem.notify(
+          <NotificationTemplate
+            notificationText={notificationText}
+            closeButtonText={closeButtonText}
+          />,
+          {
+            autoClose: false,
+            toastId,
+            attention: NotificationSystem.ATTENTION.MEDIUM,
+          }
+        );
+      });
+
+      // wait till the toast shows up on the screen:
+      const toast = await screen.findByRole('alert');
+      expect(toast).toBeVisible();
+      expect(toast).toHaveTextContent(notificationText);
+
+      expect(NotificationSystem.isActive(toastId)).toBeTruthy();
+
+      const closeButton = screen.getByRole('button', { name: closeButtonText });
+      // dismiss the toast by clicking the close button
+
+      userEvent.click(closeButton);
+
+      // check if toast got removed and the toast is not active anymore
+      const toastAfterRemoval = screen.queryByRole('alert');
+      expect(toastAfterRemoval).not.toBeInTheDocument();
+      expect(NotificationSystem.isActive(toastId)).toBeFalsy();
+    });
+
+    it('should update an existing notification', async () => {
+      expect.assertions(5);
+
+      render(<NotificationSystem />);
+
+      const toastId = '12345';
+      const newNotificationText = 'this is a new text';
+      act(() => {
+        NotificationSystem.notify(<NotificationTemplate notificationText={notificationText} />, {
+          autoClose: false,
+          toastId,
+        });
+      });
+
+      // wait till the toast shows up on the screen:
+      const toast = await screen.findByRole('alert');
+      expect(toast).toBeVisible();
+      expect(toast).toHaveTextContent(notificationText);
+
+      expect(NotificationSystem.isActive(toastId)).toBeTruthy();
+
+      act(() => {
+        NotificationSystem.update(toastId, {
+          render: <NotificationTemplate notificationText={newNotificationText} />,
+        });
+      });
+
+      await waitFor(() => {
+        expect(screen.getByRole('alert')).toHaveTextContent(newNotificationText);
+      });
+    });
+
+    it('should allow triggering notifications in multiple systems', async () => {
+      expect.assertions(7);
+
+      const firstSystemId = 'id123';
+      const secondSystemId = 'id234';
+      render(
+        <>
+          <NotificationSystem id={firstSystemId} />
+          <NotificationSystem id={secondSystemId} />
+        </>
+      );
+
+      act(() => {
+        NotificationSystem.notify(
+          <NotificationTemplate notificationText={notificationText + firstSystemId} />,
+          {
+            autoClose: false,
+            notificationSystemId: firstSystemId,
+          }
+        );
+      });
+
+      // wait till the first toast shows up on the screen:
+      const toasts = await screen.findAllByRole('alert');
+      expect(toasts).toHaveLength(1);
+      expect(toasts[0]).toBeVisible();
+      expect(toasts[0]).toHaveTextContent(notificationText + firstSystemId);
+
+      // trigger second notification
+      act(() => {
+        NotificationSystem.notify(
+          <NotificationTemplate notificationText={notificationText + secondSystemId} />,
+          {
+            autoClose: false,
+            notificationSystemId: secondSystemId,
+          }
+        );
+      });
+
+      // wait till the 2 toasts shows up on the screen:
+      let toastsAfterUpdate: HTMLElement[];
+      await waitFor(() => {
+        toastsAfterUpdate = screen.getAllByRole('alert');
+        expect(toastsAfterUpdate).toHaveLength(2);
+      });
+      expect(toastsAfterUpdate[1]).toBeVisible();
+      expect(toastsAfterUpdate[1]).toHaveTextContent(notificationText + secondSystemId);
+    });
   });
 });
