@@ -15,6 +15,7 @@ type PrepareForSnapshotProps = {
   style?: CSSProperties;
   position?: PositionType;
   attention?: AttentionType;
+  zIndex?: number;
 };
 
 // pin the toast id to make the snapshots reliable:
@@ -29,9 +30,16 @@ describe('<NotificationSystem />', () => {
     style,
     position,
     attention,
+    zIndex,
   }: PrepareForSnapshotProps) => {
     const { container } = render(
-      <NotificationSystem className={className} id={id} style={style} position={position} />
+      <NotificationSystem
+        className={className}
+        id={id}
+        style={style}
+        position={position}
+        zIndex={zIndex}
+      />
     );
 
     act(() => {
@@ -103,6 +111,17 @@ describe('<NotificationSystem />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with different zIndex than default', async () => {
+      expect.assertions(1);
+
+      const { container } = await waitForNotificationToAppear({
+        notificationText,
+        zIndex: 9898,
+      });
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -111,7 +130,8 @@ describe('<NotificationSystem />', () => {
       const { ATTENTION, POSITION } = NotificationSystem;
       const className = 'example-class';
       const style = { color: 'pink' };
-      const styleString = 'color: pink;';
+      const zIndex = 8989;
+      const styleString = `color: pink; z-index: ${zIndex};`;
       const id = 'example-id';
       const position = POSITION.BOTTOM_LEFT;
       const attention = ATTENTION.MEDIUM;
@@ -123,6 +143,7 @@ describe('<NotificationSystem />', () => {
         id,
         position,
         attention,
+        zIndex,
       });
 
       const notificationContainer = container.querySelector(`[data-position="${position}"]`);
