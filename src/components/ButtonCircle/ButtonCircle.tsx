@@ -1,6 +1,8 @@
 import React, { Children, forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
 import ButtonSimple from '../ButtonSimple';
+import { useToggleState } from '@react-stately/toggle';
+import { useToggleButton } from 'react-aria';
 
 import { DEFAULTS, STYLE } from './ButtonCircle.constants';
 import { Props } from './ButtonCircle.types';
@@ -10,6 +12,8 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
   const { children, className, color, disabled, ghost, outline, size, ...otherProps } = props;
 
   const multipleChildren = Children.count(children) > 1;
+  const state = useToggleState({ ...props, isDisabled: disabled });
+  const { buttonProps } = useToggleButton({ ...props, isDisabled: disabled }, state, providedRef);
 
   return (
     <ButtonSimple
@@ -21,8 +25,10 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
       data-outline={outline || DEFAULTS.OUTLINE}
       data-size={size || DEFAULTS.SIZE}
       data-disabled={disabled || DEFAULTS.DISABLED}
+      data-selected={state.isSelected || DEFAULTS.SELECTED}
       isDisabled={disabled}
       {...otherProps}
+      {...buttonProps}
     >
       {children}
     </ButtonSimple>

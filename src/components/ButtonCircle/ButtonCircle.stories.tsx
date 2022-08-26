@@ -67,6 +67,30 @@ Outline.argTypes = { ...argTypes };
 delete Outline.argTypes.color;
 delete Outline.argTypes.outline;
 
+const IsSelected = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
+
+IsSelected.args = {
+  children: <Icon name="raise-hand" weight="filled" autoScale={150} />,
+};
+
+IsSelected.parameters = {
+  variants: [
+    { ghost: true },
+    { ghost: true, isSelected: false },
+    { ghost: true, isSelected: true },
+    { ghost: true, isSelected: true, disabled: true },
+    { ghost: true, outline: true },
+    { ghost: true, outline: true, isSelected: false },
+    { ghost: true, outline: true, isSelected: true },
+    { ghost: true, outline: true, isSelected: true, disabled: true },
+  ],
+};
+
+IsSelected.argTypes = { ...argTypes };
+delete Outline.argTypes.ghost;
+delete Outline.argTypes.outline;
+delete Outline.argTypes.isSelected;
+
 const States = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
 
 States.args = {
@@ -187,7 +211,13 @@ Common.parameters = {
       disabled: true,
       outline: true,
     },
+    {
+      children: <Icon name="raise-hand" weight="filled" autoScale={150} />,
+      outline: true,
+      ghost: true,
+      isSelected: true,
+    },
   ],
 };
 
-export { Example, Colors, Outline, States, Sizes, Common };
+export { Example, Colors, Outline, IsSelected, States, Sizes, Common };

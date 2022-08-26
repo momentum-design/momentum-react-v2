@@ -115,12 +115,22 @@ describe('<ButtonCircle />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot when color is outlined', () => {
+    it('should match snapshot when is outline', () => {
       expect.assertions(1);
 
       const outline = !DEFAULTS.OUTLINE;
 
       const container = mount(<ButtonCircle outline={outline}>X</ButtonCircle>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when is selected', () => {
+      expect.assertions(1);
+
+      const isSelected = !DEFAULTS.SELECTED;
+
+      const container = mount(<ButtonCircle isSelected={isSelected}>X</ButtonCircle>);
 
       expect(container).toMatchSnapshot();
     });
@@ -218,6 +228,18 @@ describe('<ButtonCircle />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
+    });
+
+    it('should pass isSelected prop', () => {
+      expect.assertions(1);
+
+      const isSelected = !DEFAULTS.SELECTED;
+
+      const element = mount(<ButtonCircle isSelected={isSelected} />)
+        .find(ButtonCircle)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-selected')).toBe(`${isSelected}`);
     });
 
     it('should pass size prop', () => {

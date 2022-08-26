@@ -137,6 +137,42 @@
       color: var(--button-secondary-text-pressed);
     }
 
+    &[data-selected='true'] {
+      background-color: var(--toggleButton-active-background);
+      border-color: var(--toggleButton-active-border-color);
+      color: var(--toggleButton-active-text);
+
+      &:hover {
+        background-color: var(--toggleButton-active-background-hovered);
+        border-color: var(--toggleButton-active-border-color-hovered);
+        color: var(--toggleButton-active-text-hovered);
+      }
+
+      &:active {
+        background-color: var(--toggleButton-active-background-pressed);
+        border-color: var(--toggleButton-active-border-color-pressed);
+        color: var(--toggleButton-active-text-pressed);
+      }
+
+      &[data-disabled='true'] {
+        background-color: var(--toggleButton-active-disabled-background);
+        border-color: var(--button-secondary-border-color-disabled);
+        color: var(--toggleButton-active-disabled-text);
+
+        &:hover {
+          background-color: var(--toggleButton-active-disabled-background);
+          border-color: var(--button-secondary-border-color-disabled);
+          color: var(--toggleButton-active-disabled-text);
+        }
+
+        &:active {
+          background-color: var(--toggleButton-active-background-pressed);
+          border-color: var(--toggleButton-active-border-color-pressed);
+          color: var(--toggleButton-active-text-pressed);
+        }
+      }
+    }
+
     &[data-color='join'] {
       background-color: rgba(0, 0, 0, 0); // IEFIX
       background-color: var(--button-join-outline-background);
@@ -272,6 +308,27 @@
       background-color: var(--button-secondary-background-pressed);
       color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--button-secondary-text-pressed);
+    }
+
+    &[data-selected='true'] {
+      background-color: var(--toggleButton-active-background);
+      border-color: var(--button-ghost-background);
+      color: var(--toggleButton-active-text);
+
+      &:hover {
+        background-color: var(--toggleButton-active-background-hovered);
+        color: var(--toggleButton-active-text-hovered);
+      }
+
+      &:active {
+        background-color: var(--toggleButton-active-background-pressed);
+        color: var(--toggleButton-active-text-pressed);
+      }
+
+      &[data-disabled='true'] {
+        background-color: var(--toggleButton-active-disabled-background);
+        color: var(--toggleButton-active-disabled-text);
+      }
     }
 
     &[data-disabled='true'] {

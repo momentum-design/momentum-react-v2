@@ -7,6 +7,7 @@ const DEFAULTS = {
   DISABLED: false,
   GHOST: false,
   OUTLINE: false,
+  SELECTED: false,
   SIZE: 40,
 };
 

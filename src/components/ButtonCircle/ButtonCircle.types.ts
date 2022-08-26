@@ -31,4 +31,9 @@ export interface Props extends ButtonSimpleProps {
    * Size index of this ButtonCircle.
    */
   size?: Size;
+
+  /**
+   * Whether the button is selected (active) or not.
+   */
+  isSelected?: boolean;
 }

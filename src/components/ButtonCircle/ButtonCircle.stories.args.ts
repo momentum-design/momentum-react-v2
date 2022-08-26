@@ -89,6 +89,19 @@ const buttonCircleArgTypes = {
       },
     },
   },
+  isSelected: {
+    description: 'Whether this button is selected or not',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SELECTED,
+      },
+    },
+  },
 };
 
 export { buttonCircleArgTypes };
