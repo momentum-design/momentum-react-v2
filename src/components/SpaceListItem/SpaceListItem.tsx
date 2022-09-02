@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, RefObject, useRef } from 'react';
+import React, { FC, forwardRef, RefObject, useRef, Fragment } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './SpaceListItem.constants';
@@ -55,8 +55,19 @@ const SpaceListItem: FC<Props> = forwardRef(
               type="body-secondary"
               data-test="list-item-second-line"
             >
-              {/* //TODO: change with dot divider when available */}
-              {_secondLineArray.join(' - ')}
+              {_secondLineArray[0]}
+              {_secondLineArray.length > 1 && (
+                <>
+                  {_secondLineArray.slice(1).map((elem, i) => {
+                    return (
+                      <Fragment key={`second-list-item-${i}`}>
+                        <DividerDot data-test="multiple-string-secondLine-divider-dot" />
+                        {elem}
+                      </Fragment>
+                    );
+                  })}
+                </>
+              )}
             </Text>
           </>
         );
