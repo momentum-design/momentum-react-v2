@@ -277,7 +277,7 @@ describe('<SpaceListItem />', () => {
         .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
-      expect(element.textContent).toBe('one - two');
+      expect(element.textContent).toBe('onetwo');
     });
 
     it('should have provided dot in compact mode', async () => {
@@ -292,6 +292,23 @@ describe('<SpaceListItem />', () => {
       expect(
         container.find(DividerDot).filter("[data-test='compact-mode-divider-dot']").props()
       ).toEqual({ 'data-test': 'compact-mode-divider-dot' });
+    });
+
+    it('should have provided dot when secondLine is more than one string', async () => {
+      expect.assertions(1);
+
+      const secondLine = ['one', 'two'];
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+      );
+
+      expect(
+        container
+          .find(DividerDot)
+          .filter("[data-test='multiple-string-secondLine-divider-dot']")
+          .props()
+      ).toEqual({ 'data-test': 'multiple-string-secondLine-divider-dot' });
     });
 
     it('should have provided isNewActivity class when isNewActivity is provided', async () => {

@@ -143,7 +143,7 @@ Common.parameters = {
       ),
       isAlert: true,
       teamColor: TEAM_COLORS.slate,
-      secondLine: ['Test', 'Another Test'],
+      secondLine: ['Test', 'Another Test', 'Last Test'],
     },
     {
       avatar: (
