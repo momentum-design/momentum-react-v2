@@ -40,6 +40,7 @@ const Popover: FC<Props> = (props: Props) => {
     focusBackOnTrigger = DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT,
     closeButtonPlacement = DEFAULTS.CLOSE_BUTTON_PLACEMENT,
     closeButtonProps,
+    strategy = DEFAULTS.STRATEGY,
     onAfterUpdate,
     onBeforeUpdate,
     onCreate,
@@ -131,6 +132,7 @@ const Popover: FC<Props> = (props: Props) => {
             },
           },
         ],
+        strategy,
       }}
       animation={false}
       delay={delay}

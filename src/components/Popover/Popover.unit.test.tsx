@@ -125,6 +125,22 @@ describe('<Popover />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with strategy = fixed', async () => {
+      expect.assertions(3);
+
+      const { container } = render(
+        <Popover triggerComponent={<button>Click Me!</button>} strategy="fixed">
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

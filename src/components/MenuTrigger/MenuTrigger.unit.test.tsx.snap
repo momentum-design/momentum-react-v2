@@ -68,6 +68,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -113,6 +114,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -158,6 +160,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
@@ -2278,6 +2281,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -2323,6 +2327,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -2368,6 +2373,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
@@ -4488,6 +4494,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -4533,6 +4540,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -4578,6 +4586,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
@@ -6699,6 +6708,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -6744,6 +6754,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -6789,6 +6800,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
@@ -8912,6 +8924,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -8957,6 +8970,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -9002,6 +9016,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
@@ -11122,6 +11137,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -11167,6 +11183,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -11212,6 +11229,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
@@ -13405,6 +13423,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -13450,6 +13469,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -13495,6 +13515,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
@@ -15626,6 +15647,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               },
             },
           ],
+          "strategy": "absolute",
         }
       }
       render={[Function]}
@@ -15671,6 +15693,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 },
               },
             ],
+            "strategy": "absolute",
           }
         }
         render={[Function]}
@@ -15716,6 +15739,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   },
                 },
               ],
+              "strategy": "absolute",
             }
           }
           render={[Function]}
