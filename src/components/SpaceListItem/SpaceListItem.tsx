@@ -56,18 +56,15 @@ const SpaceListItem: FC<Props> = forwardRef(
               data-test="list-item-second-line"
             >
               {_secondLineArray[0]}
-              {_secondLineArray.length > 1 && (
-                <>
-                  {_secondLineArray.slice(1).map((elem, i) => {
-                    return (
-                      <Fragment key={`second-list-item-${i}`}>
-                        <DividerDot data-test="multiple-string-secondLine-divider-dot" />
-                        {elem}
-                      </Fragment>
-                    );
-                  })}
-                </>
-              )}
+              {_secondLineArray.length > 1 &&
+                _secondLineArray.slice(1).map((elem, i) => {
+                  return (
+                    <Fragment key={`second-list-item-${i}`}>
+                      <DividerDot data-test="multiple-string-secondLine-divider-dot" />
+                      {elem}
+                    </Fragment>
+                  );
+                })}
             </Text>
           </>
         );
