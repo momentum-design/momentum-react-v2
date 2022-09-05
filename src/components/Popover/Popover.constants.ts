@@ -26,6 +26,7 @@ const DEFAULTS = {
   HIDE_ON_ESC: true,
   CLOSE_BUTTON_PLACEMENT: CLOSE_BUTTON_PLACEMENTS.NONE,
   FOCUS_BACK_ON_TRIGGER_COMPONENT: false,
+  STRATEGY: 'absolute' as const,
 };
 
 const STYLE = {

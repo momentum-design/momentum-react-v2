@@ -362,6 +362,73 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
 </div>
 `;
 
+exports[`<Popover /> snapshot should match snapshot with strategy = fixed 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+</div>
+`;
+
+exports[`<Popover /> snapshot should match snapshot with strategy = fixed 2`] = `
+<div>
+  <button
+    aria-describedby="tippy-7"
+  >
+    Click Me!
+  </button>
+  <div
+    data-tippy-root=""
+    id="tippy-7"
+    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+    >
+      <p>
+        Content
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Popover /> snapshot should match snapshot with style 1`] = `
 <div>
   <button>
