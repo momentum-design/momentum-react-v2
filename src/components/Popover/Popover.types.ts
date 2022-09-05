@@ -110,7 +110,7 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    *
    * setInstance is the setter function of a useState hook
    */
-  setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance>>;
+  setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance | undefined>>;
 
   /**
    * Custom class for overriding this component's CSS.
