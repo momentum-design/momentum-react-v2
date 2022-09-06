@@ -4,6 +4,7 @@ const CLASS_PREFIX = 'md-space-list-item';
 
 const DEFAULTS = {
   TEAM_COLOR: TEAM_COLORS.default,
+  DIVIDER_DOT: false,
 };
 
 const STYLE = {
