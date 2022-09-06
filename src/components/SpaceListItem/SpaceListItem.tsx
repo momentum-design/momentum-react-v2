@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, RefObject, useRef, Fragment } from 'react';
+import React, { FC, forwardRef, RefObject, useRef } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './SpaceListItem.constants';
@@ -9,6 +9,7 @@ import ListItemBaseSection from '../ListItemBaseSection';
 import Text from '../Text';
 import Icon from '../Icon';
 import DividerDot from '../DividerDot';
+import SecondLineElement from './SecondLineElement';
 
 //TODO: support 2-line labels for right/position-end section.
 /**
@@ -43,7 +44,16 @@ const SpaceListItem: FC<Props> = forwardRef(
     const renderText = () => {
       const _secondLineArray: string[] = typeof secondLine === 'string' ? [secondLine] : secondLine;
 
-      if (secondLine) {
+      const _secondLineArrayClean = _secondLineArray?.reduce((filteredArray, nextElement) => {
+        const nextElementClean = nextElement.trim();
+        if (nextElementClean) {
+          filteredArray.push(nextElementClean);
+          return filteredArray;
+        }
+        return filteredArray;
+      }, []);
+
+      if (_secondLineArrayClean?.length) {
         return (
           <>
             <Text type="body-primary" data-test="list-item-first-line">
@@ -55,16 +65,20 @@ const SpaceListItem: FC<Props> = forwardRef(
               type="body-secondary"
               data-test="list-item-second-line"
             >
-              {_secondLineArray[0]}
-              {_secondLineArray.length > 1 &&
-                _secondLineArray.slice(1).map((elem, i) => {
+              {_secondLineArrayClean.map((secondLineContent, i) => {
+                const showDividerDot = i > 0 ? true : false;
+
+                if (secondLineContent.length) {
                   return (
-                    <Fragment key={`second-list-item-${i}`}>
-                      <DividerDot data-test="multiple-string-secondLine-divider-dot" />
-                      {elem}
-                    </Fragment>
+                    <SecondLineElement
+                      key={`second-line-item-${i}`}
+                      showDividerDot={showDividerDot}
+                    >
+                      {secondLineContent}
+                    </SecondLineElement>
                   );
-                })}
+                }
+              })}
             </Text>
           </>
         );
