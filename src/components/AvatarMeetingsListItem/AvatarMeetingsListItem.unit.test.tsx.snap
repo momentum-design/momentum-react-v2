@@ -448,13 +448,28 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 size={28}
               >
                 <ButtonSimple
+                  aria-pressed={false}
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={true}
                   data-multiple-children={false}
                   data-outline={false}
+                  data-selected={false}
                   data-size={28}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  type="button"
                 >
                   <FocusRing>
                     <FocusRing
@@ -462,12 +477,14 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
+                        aria-pressed={false}
                         className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={false}
+                        data-selected={false}
                         data-size={28}
                         onBlur={[Function]}
                         onClick={[Function]}
@@ -625,13 +642,28 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 size={28}
               >
                 <ButtonSimple
+                  aria-pressed={false}
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={true}
                   data-multiple-children={false}
                   data-outline={false}
+                  data-selected={false}
                   data-size={28}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  type="button"
                 >
                   <FocusRing>
                     <FocusRing
@@ -639,12 +671,14 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
+                        aria-pressed={false}
                         className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={false}
+                        data-selected={false}
                         data-size={28}
                         onBlur={[Function]}
                         onClick={[Function]}
@@ -807,13 +841,28 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 size={28}
               >
                 <ButtonSimple
+                  aria-pressed={false}
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={true}
                   data-multiple-children={false}
                   data-outline={false}
+                  data-selected={false}
                   data-size={28}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  type="button"
                 >
                   <FocusRing>
                     <FocusRing
@@ -821,12 +870,14 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
+                        aria-pressed={false}
                         className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={false}
+                        data-selected={false}
                         data-size={28}
                         onBlur={[Function]}
                         onClick={[Function]}

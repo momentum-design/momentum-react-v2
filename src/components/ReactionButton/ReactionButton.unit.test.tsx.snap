@@ -8,6 +8,7 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
     size={32}
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -15,7 +16,21 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
       data-multiple-children={false}
       data-outline={false}
       data-reacted={false}
+      data-selected={false}
       data-size={32}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -23,6 +38,7 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
@@ -30,6 +46,7 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
             data-multiple-children={false}
             data-outline={false}
             data-reacted={false}
+            data-selected={false}
             data-size={32}
             onBlur={[Function]}
             onClick={[Function]}
@@ -73,6 +90,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
     size={32}
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper example-class md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -80,7 +98,21 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
       data-multiple-children={false}
       data-outline={false}
       data-reacted={false}
+      data-selected={false}
       data-size={32}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -88,6 +120,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper example-class md-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
@@ -95,6 +128,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
             data-multiple-children={false}
             data-outline={false}
             data-reacted={false}
+            data-selected={false}
             data-size={32}
             onBlur={[Function]}
             onClick={[Function]}
@@ -139,6 +173,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
     size={32}
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -146,8 +181,22 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
       data-multiple-children={false}
       data-outline={false}
       data-reacted={false}
+      data-selected={false}
       data-size={32}
       id="example-id"
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -155,6 +204,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
@@ -162,6 +212,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
             data-multiple-children={false}
             data-outline={false}
             data-reacted={false}
+            data-selected={false}
             data-size={32}
             id="example-id"
             onBlur={[Function]}
@@ -206,6 +257,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
     size={32}
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -213,7 +265,21 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
       data-multiple-children={false}
       data-outline={false}
       data-reacted={true}
+      data-selected={false}
       data-size={32}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -221,6 +287,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
@@ -228,6 +295,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
             data-multiple-children={false}
             data-outline={false}
             data-reacted={true}
+            data-selected={false}
             data-size={32}
             onBlur={[Function]}
             onClick={[Function]}
@@ -280,6 +348,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
     }
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -287,12 +356,26 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
       data-multiple-children={false}
       data-outline={false}
       data-reacted={false}
+      data-selected={false}
       data-size={32}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
       style={
         Object {
           "color": "pink",
         }
       }
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -300,6 +383,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
@@ -307,6 +391,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
             data-multiple-children={false}
             data-outline={false}
             data-reacted={false}
+            data-selected={false}
             data-size={32}
             onBlur={[Function]}
             onClick={[Function]}

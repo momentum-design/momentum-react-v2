@@ -7,13 +7,28 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
     size={20}
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper md-add-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
       data-multiple-children={false}
       data-outline={false}
+      data-selected={false}
       data-size={20}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -21,12 +36,14 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
             data-multiple-children={false}
             data-outline={false}
+            data-selected={false}
             data-size={20}
             onBlur={[Function]}
             onClick={[Function]}
@@ -81,13 +98,28 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
     size={20}
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper example-class md-add-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
       data-multiple-children={false}
       data-outline={false}
+      data-selected={false}
       data-size={20}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -95,12 +127,14 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper example-class md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
             data-multiple-children={false}
             data-outline={false}
+            data-selected={false}
             data-size={20}
             onBlur={[Function]}
             onClick={[Function]}
@@ -156,14 +190,29 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
     size={20}
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper md-add-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
       data-multiple-children={false}
       data-outline={false}
+      data-selected={false}
       data-size={20}
       id="example-id"
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -171,12 +220,14 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
             data-multiple-children={false}
             data-outline={false}
+            data-selected={false}
             data-size={20}
             id="example-id"
             onBlur={[Function]}
@@ -241,18 +292,33 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
     }
   >
     <ButtonSimple
+      aria-pressed={false}
       className="md-button-circle-wrapper md-add-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
       data-multiple-children={false}
       data-outline={false}
+      data-selected={false}
       data-size={20}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
       style={
         Object {
           "color": "pink",
         }
       }
+      type="button"
     >
       <FocusRing>
         <FocusRing
@@ -260,12 +326,14 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
           focusRingClass="md-focus-ring-wrapper children"
         >
           <button
+            aria-pressed={false}
             className="md-button-circle-wrapper md-add-reaction-button-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
             data-multiple-children={false}
             data-outline={false}
+            data-selected={false}
             data-size={20}
             onBlur={[Function]}
             onClick={[Function]}

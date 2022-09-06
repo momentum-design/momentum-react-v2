@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import { ButtonSimpleProps } from '../ButtonSimple';
+import { AriaToggleButtonProps } from '@react-types/button';
 export type Size = 64 | 52 | 40 | 32 | 28 | 20;
-export interface Props extends ButtonSimpleProps {
+export interface Props extends ButtonSimpleProps, AriaToggleButtonProps {
   /**
    * Child components of this ButtonCircle.
    */
@@ -31,9 +32,4 @@ export interface Props extends ButtonSimpleProps {
    * Size index of this ButtonCircle.
    */
   size?: Size;
-
-  /**
-   * Whether the button is selected (active) or not.
-   */
-  isSelected?: boolean;
 }

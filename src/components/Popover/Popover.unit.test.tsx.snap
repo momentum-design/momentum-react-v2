@@ -164,6 +164,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
       data-round="50"
     >
       <button
+        aria-pressed="false"
         class="md-button-circle-wrapper md-popover-close-button md-button-simple-wrapper"
         data-color="primary"
         data-disabled="false"
@@ -171,6 +172,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
         data-multiple-children="false"
         data-outline="false"
         data-placement="top-right"
+        data-selected="false"
         data-size="20"
         type="button"
       >

@@ -111,13 +111,28 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
             color="join"
           >
             <ButtonSimple
+              aria-pressed={false}
               className="md-button-circle-wrapper"
               data-color="join"
               data-disabled={false}
               data-ghost={false}
               data-multiple-children={false}
               data-outline={false}
+              data-selected={false}
               data-size={40}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
             >
               <FocusRing>
                 <FocusRing
@@ -125,12 +140,14 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-pressed={false}
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="join"
                     data-disabled={false}
                     data-ghost={false}
                     data-multiple-children={false}
                     data-outline={false}
+                    data-selected={false}
                     data-size={40}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -177,13 +194,28 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
             color="cancel"
           >
             <ButtonSimple
+              aria-pressed={false}
               className="md-button-circle-wrapper"
               data-color="cancel"
               data-disabled={false}
               data-ghost={false}
               data-multiple-children={false}
               data-outline={false}
+              data-selected={false}
               data-size={40}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
             >
               <FocusRing>
                 <FocusRing
@@ -191,12 +223,14 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-pressed={false}
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="cancel"
                     data-disabled={false}
                     data-ghost={false}
                     data-multiple-children={false}
                     data-outline={false}
+                    data-selected={false}
                     data-size={40}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -367,13 +401,28 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
             color="join"
           >
             <ButtonSimple
+              aria-pressed={false}
               className="md-button-circle-wrapper"
               data-color="join"
               data-disabled={false}
               data-ghost={false}
               data-multiple-children={false}
               data-outline={false}
+              data-selected={false}
               data-size={40}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
             >
               <FocusRing>
                 <FocusRing
@@ -381,12 +430,14 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-pressed={false}
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="join"
                     data-disabled={false}
                     data-ghost={false}
                     data-multiple-children={false}
                     data-outline={false}
+                    data-selected={false}
                     data-size={40}
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -433,13 +484,28 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
             color="cancel"
           >
             <ButtonSimple
+              aria-pressed={false}
               className="md-button-circle-wrapper"
               data-color="cancel"
               data-disabled={false}
               data-ghost={false}
               data-multiple-children={false}
               data-outline={false}
+              data-selected={false}
               data-size={40}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
             >
               <FocusRing>
                 <FocusRing
@@ -447,12 +513,14 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-pressed={false}
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="cancel"
                     data-disabled={false}
                     data-ghost={false}
                     data-multiple-children={false}
                     data-outline={false}
+                    data-selected={false}
                     data-size={40}
                     onBlur={[Function]}
                     onClick={[Function]}

@@ -66,12 +66,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                     class="md-toast-notification-close-button"
                   >
                     <button
+                      aria-pressed="false"
                       class="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
                       data-multiple-children="false"
                       data-outline="false"
+                      data-selected="false"
                       data-size="20"
                       type="button"
                     >
@@ -175,12 +177,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                     class="md-toast-notification-close-button"
                   >
                     <button
+                      aria-pressed="false"
                       class="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
                       data-multiple-children="false"
                       data-outline="false"
+                      data-selected="false"
                       data-size="20"
                       type="button"
                     >
@@ -280,12 +284,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                     class="md-toast-notification-close-button"
                   >
                     <button
+                      aria-pressed="false"
                       class="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
                       data-multiple-children="false"
                       data-outline="false"
+                      data-selected="false"
                       data-size="20"
                       type="button"
                     >
@@ -382,12 +388,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                     class="md-toast-notification-close-button"
                   >
                     <button
+                      aria-pressed="false"
                       class="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
                       data-multiple-children="false"
                       data-outline="false"
+                      data-selected="false"
                       data-size="20"
                       type="button"
                     >
@@ -495,12 +503,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                     class="md-toast-notification-close-button"
                   >
                     <button
+                      aria-pressed="false"
                       class="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
                       data-multiple-children="false"
                       data-outline="false"
+                      data-selected="false"
                       data-size="20"
                       type="button"
                     >
@@ -604,12 +614,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                     class="md-toast-notification-close-button"
                   >
                     <button
+                      aria-pressed="false"
                       class="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
                       data-multiple-children="false"
                       data-outline="false"
+                      data-selected="false"
                       data-size="20"
                       type="button"
                     >
@@ -713,12 +725,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                     class="md-toast-notification-close-button"
                   >
                     <button
+                      aria-pressed="false"
                       class="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
                       data-multiple-children="false"
                       data-outline="false"
+                      data-selected="false"
                       data-size="20"
                       type="button"
                     >
