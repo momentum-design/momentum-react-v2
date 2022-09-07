@@ -2,7 +2,6 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import SecondLineElement from '.';
-import { mountAndWait } from '../../../../test/utils';
 import DividerDot from '../../DividerDot';
 
 describe('<SecondLineElement />', () => {
@@ -33,9 +32,7 @@ describe('<SecondLineElement />', () => {
     it('should have provided children', async () => {
       expect.assertions(1);
 
-      const container = (
-        await mountAndWait(<SecondLineElement>{exampleChildProp}</SecondLineElement>)
-      )
+      const container = mount(<SecondLineElement>{exampleChildProp}</SecondLineElement>)
         .find('[data-test="second-line-element-child"]')
         .getDOMNode();
 
