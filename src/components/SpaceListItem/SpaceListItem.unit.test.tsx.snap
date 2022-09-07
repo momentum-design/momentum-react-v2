@@ -78,6 +78,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                 />
               </DividerDot>
               <Text
+                aria-label="testteam"
                 data-test="list-item-second-line"
                 style={
                   Object {
@@ -87,6 +88,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                 type="body-secondary"
               >
                 <small
+                  aria-label="testteam"
                   className="md-text-wrapper"
                   data-test="list-item-second-line"
                   data-type="body-secondary"
@@ -100,7 +102,11 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                     key="second-line-item-0"
                     showDividerDot={false}
                   >
-                    testteam
+                    <span
+                      data-test="second-line-element-child"
+                    >
+                      testteam
+                    </span>
                   </SecondLineElement>
                 </small>
               </Text>
@@ -1549,6 +1555,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                 />
               </Text>
               <Text
+                aria-label="one, two, three"
                 data-test="list-item-second-line"
                 style={
                   Object {
@@ -1558,6 +1565,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                 type="body-secondary"
               >
                 <small
+                  aria-label="one, two, three"
                   className="md-text-wrapper"
                   data-test="list-item-second-line"
                   data-type="body-secondary"
@@ -1571,7 +1579,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                     key="second-line-item-0"
                     showDividerDot={false}
                   >
-                    one
+                    <span
+                      data-test="second-line-element-child"
+                    >
+                      one
+                    </span>
                   </SecondLineElement>
                   <SecondLineElement
                     key="second-line-item-1"
@@ -1584,7 +1596,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                         className="md-divider-dot-wrapper"
                       />
                     </DividerDot>
-                    two
+                    <span
+                      data-test="second-line-element-child"
+                    >
+                      two
+                    </span>
                   </SecondLineElement>
                   <SecondLineElement
                     key="second-line-item-2"
@@ -1597,7 +1613,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                         className="md-divider-dot-wrapper"
                       />
                     </DividerDot>
-                    three
+                    <span
+                      data-test="second-line-element-child"
+                    >
+                      three
+                    </span>
                   </SecondLineElement>
                 </small>
               </Text>
@@ -1684,6 +1704,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                 />
               </Text>
               <Text
+                aria-label="secondLine"
                 data-test="list-item-second-line"
                 style={
                   Object {
@@ -1693,6 +1714,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                 type="body-secondary"
               >
                 <small
+                  aria-label="secondLine"
                   className="md-text-wrapper"
                   data-test="list-item-second-line"
                   data-type="body-secondary"
@@ -1706,7 +1728,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                     key="second-line-item-0"
                     showDividerDot={false}
                   >
-                    secondLine
+                    <span
+                      data-test="second-line-element-child"
+                    >
+                      secondLine
+                    </span>
                   </SecondLineElement>
                 </small>
               </Text>

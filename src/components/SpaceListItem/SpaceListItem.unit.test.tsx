@@ -280,6 +280,7 @@ describe('<SpaceListItem />', () => {
       expect.assertions(1);
 
       const secondLine = ['one', 'two'];
+      const ariaLabel = 'one, two';
 
       const element = (
         await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
@@ -287,13 +288,14 @@ describe('<SpaceListItem />', () => {
         .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
-      expect(element.textContent).toBe('onetwo');
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
     it('should have provided secondLine when secondLine contains empty strings', async () => {
       expect.assertions(1);
 
       const secondLine = ['   ', 'two', '  ', 'four', 'five    '];
+      const ariaLabel = 'two, four, five';
 
       const element = (
         await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
@@ -301,7 +303,7 @@ describe('<SpaceListItem />', () => {
         .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
-      expect(element.textContent).toBe('twofourfive');
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
     it('should have provided dot in compact mode', async () => {
@@ -317,8 +319,6 @@ describe('<SpaceListItem />', () => {
         container.find(DividerDot).filter("[data-test='compact-mode-divider-dot']").props()
       ).toEqual({ 'data-test': 'compact-mode-divider-dot' });
     });
-
-    // Begins here
 
     it('should have provided dot when secondLine constains two strings', async () => {
       expect.assertions(1);

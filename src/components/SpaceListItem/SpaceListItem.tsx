@@ -64,20 +64,15 @@ const SpaceListItem: FC<Props> = forwardRef(
               style={{ color: `var(--theme-text-team-${teamColor}-normal)` }}
               type="body-secondary"
               data-test="list-item-second-line"
+              aria-label={_secondLineArrayClean.join(', ')}
             >
               {_secondLineArrayClean.map((secondLineContent, i) => {
-                const showDividerDot = i > 0 ? true : false;
-
-                if (secondLineContent.length) {
-                  return (
-                    <SecondLineElement
-                      key={`second-line-item-${i}`}
-                      showDividerDot={showDividerDot}
-                    >
-                      {secondLineContent}
-                    </SecondLineElement>
-                  );
-                }
+                const showDividerDot = i > 0;
+                return (
+                  <SecondLineElement key={`second-line-item-${i}`} showDividerDot={showDividerDot}>
+                    {secondLineContent}
+                  </SecondLineElement>
+                );
               })}
             </Text>
           </>
