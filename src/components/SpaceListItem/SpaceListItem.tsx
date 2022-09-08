@@ -48,7 +48,6 @@ const SpaceListItem: FC<Props> = forwardRef(
         const nextElementClean = nextElement.trim();
         if (nextElementClean) {
           filteredArray.push(nextElementClean);
-          return filteredArray;
         }
         return filteredArray;
       }, []);

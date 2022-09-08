@@ -102,11 +102,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                     key="second-line-item-0"
                     showDividerDot={false}
                   >
-                    <span
-                      data-test="second-line-element-child"
-                    >
-                      testteam
-                    </span>
+                    testteam
                   </SecondLineElement>
                 </small>
               </Text>
@@ -1579,11 +1575,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                     key="second-line-item-0"
                     showDividerDot={false}
                   >
-                    <span
-                      data-test="second-line-element-child"
-                    >
-                      one
-                    </span>
+                    one
                   </SecondLineElement>
                   <SecondLineElement
                     key="second-line-item-1"
@@ -1596,11 +1588,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                         className="md-divider-dot-wrapper"
                       />
                     </DividerDot>
-                    <span
-                      data-test="second-line-element-child"
-                    >
-                      two
-                    </span>
+                    two
                   </SecondLineElement>
                   <SecondLineElement
                     key="second-line-item-2"
@@ -1613,11 +1601,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                         className="md-divider-dot-wrapper"
                       />
                     </DividerDot>
-                    <span
-                      data-test="second-line-element-child"
-                    >
-                      three
-                    </span>
+                    three
                   </SecondLineElement>
                 </small>
               </Text>
@@ -1728,11 +1712,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                     key="second-line-item-0"
                     showDividerDot={false}
                   >
-                    <span
-                      data-test="second-line-element-child"
-                    >
-                      secondLine
-                    </span>
+                    secondLine
                   </SecondLineElement>
                 </small>
               </Text>
