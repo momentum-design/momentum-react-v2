@@ -8,7 +8,7 @@ export interface Props extends AriaButtonProps {
   /**
    * Child components of this Tab.
    */
-  children?: string | ReactElement<TextProps | BadgeProps | IconProps>[];
+  children?: string | ReactElement<TextProps | BadgeProps | IconProps | undefined>[];
 
   /**
    * Custom class for overriding this component's CSS.

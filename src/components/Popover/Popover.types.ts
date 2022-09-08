@@ -11,6 +11,7 @@ export type CloseButtonPlacement = 'top-left' | 'top-right' | 'none';
 
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
+export type PositioningStrategy = TippyProps['popperOptions']['strategy'];
 
 /**
  * Popover instance interface abstracted from Tippy.js
@@ -110,7 +111,7 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    *
    * setInstance is the setter function of a useState hook
    */
-  setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance>>;
+  setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance | undefined>>;
 
   /**
    * Custom class for overriding this component's CSS.
@@ -143,4 +144,10 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default `false`
    */
   focusBackOnTrigger?: boolean;
+
+  /**
+   * Describes the positioning strategy to use.
+   * @default `absolute`
+   */
+  strategy?: PositioningStrategy;
 }
