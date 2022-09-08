@@ -2,11 +2,7 @@
 
 exports[`<SecondLineElement /> snapshot should match snapshot with children 1`] = `
 <SecondLineElement>
-  <span
-    data-test="second-line-element-child"
-  >
-    example-text
-  </span>
+  example-text
 </SecondLineElement>
 `;
 
@@ -21,10 +17,6 @@ exports[`<SecondLineElement /> snapshot should match snapshot with children and 
       className="md-divider-dot-wrapper"
     />
   </DividerDot>
-  <span
-    data-test="second-line-element-child"
-  >
-    example-text
-  </span>
+  example-text
 </SecondLineElement>
 `;

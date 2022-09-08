@@ -15,7 +15,7 @@ const SecondLineElement: FC<Props> = (props: Props) => {
   return (
     <>
       {showDividerDot && <DividerDot data-test="multiple-string-second-line-divider-dot" />}
-      <span data-test="second-line-element-child">{children}</span>
+      {children}
     </>
   );
 };

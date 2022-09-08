@@ -32,11 +32,9 @@ describe('<SecondLineElement />', () => {
     it('should have provided children', async () => {
       expect.assertions(1);
 
-      const container = mount(<SecondLineElement>{exampleChildProp}</SecondLineElement>)
-        .find('[data-test="second-line-element-child"]')
-        .getDOMNode();
+      const container = mount(<SecondLineElement>{exampleChildProp}</SecondLineElement>);
 
-      expect(container.textContent).toBe(exampleChildProp);
+      expect(container.text()).toEqual(exampleChildProp);
     });
 
     it('should have provided dot when dot is provided', () => {
@@ -44,11 +42,8 @@ describe('<SecondLineElement />', () => {
 
       const container = mount(
         <SecondLineElement showDividerDot={showDividerDot}>{exampleChildProp}</SecondLineElement>
-      ).find(DividerDot);
-
-      expect(
-        container.filter("[data-test='multiple-string-second-line-divider-dot']").length
-      ).toEqual(1);
+      );
+      expect(container.text()).toEqual(exampleChildProp);
     });
 
     it('should not have provided dot when dot is not provided', () => {
