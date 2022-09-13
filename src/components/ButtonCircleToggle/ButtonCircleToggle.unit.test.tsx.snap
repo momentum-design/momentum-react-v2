@@ -1,0 +1,659 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
+<ButtonSimpleToggle>
+  <ButtonCircle
+    aria-pressed={false}
+    className="md-button-circle-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onBlur={null}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    size={40}
+    type="button"
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-multiple-children={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      isDisabled={false}
+      onBlur={null}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-multiple-children={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonCircle>
+</ButtonSimpleToggle>
+`;
+
+exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being false 1`] = `
+<ButtonSimpleToggle
+  ghost={false}
+>
+  <ButtonCircle
+    aria-pressed={false}
+    className="md-button-circle-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={false}
+    onBlur={null}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    size={40}
+    type="button"
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-multiple-children={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      isDisabled={false}
+      onBlur={null}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-multiple-children={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonCircle>
+</ButtonSimpleToggle>
+`;
+
+exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being true 1`] = `
+<ButtonSimpleToggle
+  ghost={true}
+>
+  <ButtonCircle
+    aria-pressed={false}
+    className="md-button-circle-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onBlur={null}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    size={40}
+    type="button"
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-multiple-children={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      isDisabled={false}
+      onBlur={null}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-multiple-children={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonCircle>
+</ButtonSimpleToggle>
+`;
+
+exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected being false 1`] = `
+<ButtonSimpleToggle
+  isSelected={false}
+>
+  <ButtonCircle
+    aria-pressed={false}
+    className="md-button-circle-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onBlur={null}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    size={40}
+    type="button"
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-multiple-children={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      isDisabled={false}
+      onBlur={null}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-multiple-children={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonCircle>
+</ButtonSimpleToggle>
+`;
+
+exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected being true 1`] = `
+<ButtonSimpleToggle
+  isSelected={true}
+>
+  <ButtonCircle
+    aria-pressed={true}
+    className="md-button-circle-toggle-wrapper"
+    data-selected={true}
+    disabled={false}
+    ghost={true}
+    onBlur={null}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    size={40}
+    type="button"
+  >
+    <ButtonSimple
+      aria-pressed={true}
+      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-multiple-children={false}
+      data-outline={false}
+      data-selected={true}
+      data-size={40}
+      isDisabled={false}
+      onBlur={null}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={true}
+            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-multiple-children={false}
+            data-outline={false}
+            data-selected={true}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonCircle>
+</ButtonSimpleToggle>
+`;
+
+exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline being false 1`] = `
+<ButtonSimpleToggle
+  outline={false}
+>
+  <ButtonCircle
+    aria-pressed={false}
+    className="md-button-circle-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onBlur={null}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    outline={false}
+    size={40}
+    type="button"
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-multiple-children={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      isDisabled={false}
+      onBlur={null}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-multiple-children={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonCircle>
+</ButtonSimpleToggle>
+`;
+
+exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline being true 1`] = `
+<ButtonSimpleToggle
+  outline={true}
+>
+  <ButtonCircle
+    aria-pressed={false}
+    className="md-button-circle-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onBlur={null}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    outline={true}
+    size={40}
+    type="button"
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-multiple-children={false}
+      data-outline={true}
+      data-selected={false}
+      data-size={40}
+      isDisabled={false}
+      onBlur={null}
+      onClick={[Function]}
+      onDragStart={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-multiple-children={false}
+            data-outline={true}
+            data-selected={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonCircle>
+</ButtonSimpleToggle>
+`;
