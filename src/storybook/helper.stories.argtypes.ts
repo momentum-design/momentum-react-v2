@@ -668,6 +668,48 @@ const commonAriaButton = {
   },
 };
 
+const commonAriaButtonToggle = {
+  isSelected: {
+    description: 'Whether the element should be selected (controlled).',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  defaultSelected: {
+    description: 'Whether the element should be selected (uncontrolled).',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onChange: {
+    action: 'onPress',
+    description: "Handler that is called when the element's selection state chnges.",
+    table: {
+      category: 'React Aria - ButtonToggle',
+      type: {
+        summary: '(isSelected: boolean) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+};
+
 const commonStyles = {
   className: {
     description: "If present, this value will be added to the rendered element's `class` attribute",
@@ -731,6 +773,7 @@ const commonHTMLAttributes = {
 
 export {
   commonAriaButton,
+  commonAriaButtonToggle,
   commonAriaDialog,
   commonAriaFocusScope,
   commonAriaHover,
