@@ -1,16 +1,21 @@
-The `<MenuTrigger />` component. Implemented using [useMenuTrigger](https://react-spectrum.adobe.com/react-aria/useMenuTrigger.html) from React-Aria.
+The `<MenuTrigger />` component. Implemented using
+[useMenuTrigger](https://react-spectrum.adobe.com/react-aria/useMenuTrigger.html) from React-Aria.
 
 ## Content
 
-The `<Menu />` element follows the [Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from the `@react-stately` library, accepting both static and dynamic collections. `<Menu />` accepts `<Item />` elements as children, each with a key prop. Basic usage of `<Menu />`, seen in the example below, shows multiple options populated with a string.
-Simple element with simple options as text.
+The `<Menu />` element follows the
+[Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from
+the `@react-stately` library, accepting both static and dynamic collections. `<Menu />` accepts
+`<Item />` elements as children, each with a key prop. Basic usage of `<Menu />`, seen in the
+example below, shows multiple options populated with a string. Simple element with simple options as
+text.
 
 ## Important!
 
-The `<Menu />` components provided to the `<MenuTrigger />` need to be separated and not grouped together!
-For example, if you have a wrapper component that groups together 2 Menus related to each other, and you render
-that component inside the `<MenuTrigger />` as one single child, the MenuTrigger will not identify the Menus
-correctly and will break accessibility.
+The `<Menu />` components provided to the `<MenuTrigger />` need to be separated and not grouped
+together! For example, if you have a wrapper component that groups together 2 Menus related to each
+other, and you render that component inside the `<MenuTrigger />` as one single child, the
+MenuTrigger will not identify the Menus correctly and will break accessibility.
 
 Therefore you need to pass 2 children (one per `<Menu />`).
 
@@ -38,8 +43,8 @@ return (
 );
 ```
 
-The type of each child doesn't necessarily need to be `Menu`, as long as the leaf component of the child resolves to `Menu`.
-Exmaple
+The type of each child doesn't necessarily need to be `Menu`, as long as the leaf component of the
+child resolves to `Menu`. Exmaple
 
 ```js
 const WrappedSettingsMenu = (

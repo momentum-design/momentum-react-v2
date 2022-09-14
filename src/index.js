@@ -107,6 +107,7 @@ export {
   Avatar as AvatarNext,
   PresenceType,
   ButtonCircle,
+  ButtonCircleToggle,
   AvatarCompact as AvatarCompactNext,
   ButtonControl,
   ButtonDialpad,

@@ -1,11 +1,14 @@
-The `<List />` (exported as `<ListNext />`) component acts as a wrapper **only** for `ListItemBase` items (and any other components which are based on `ListItemBase` like `SpaceListItem` or `MeetingListItem`). The container is mainly providing accessibility.
+The `<List />` (exported as `<ListNext />`) component acts as a wrapper **only** for `ListItemBase`
+items (and any other components which are based on `ListItemBase` like `SpaceListItem` or
+`MeetingListItem`). The container is mainly providing accessibility.
 
 Keyboard accessibility supported:
 
 - up ↑ and down ↓ arrows
 - left ← and right → arrows (which map to up/down as follows: left = up, right = down)
 
-The container can be used with virtualised lists (see Cantina code), static lists and dynamic (changing) lists as well.
+The container can be used with virtualised lists (see Cantina code), static lists and dynamic
+(changing) lists as well.
 
 ## Simple Static List
 
@@ -21,10 +24,14 @@ To create a simple sattic List your code should look like this.
 <List/>
 ```
 
-First, it's important you provide `listSize` prop to the List, to make sure the list knows how many ==**interactive**== elements there are in the list (interactive/focusable).
-A list can have non-interactive elements as well (for example list headers), but those are not focusable and this is why the list needs keep track only of the ones the user can interact with.
-Second, it's important to provide the interactive elements with an index. This is the order in which they will be focused while pressing up/down/left/right arrows (according to accessibility rules mentioned above).
-A good example for lists with headers (which are not interactive) see the CalendarList story under the List component.
+First, it's important you provide `listSize` prop to the List, to make sure the list knows how many
+==**interactive**== elements there are in the list (interactive/focusable). A list can have
+non-interactive elements as well (for example list headers), but those are not focusable and this is
+why the list needs keep track only of the ones the user can interact with. Second, it's important to
+provide the interactive elements with an index. This is the order in which they will be focused
+while pressing up/down/left/right arrows (according to accessibility rules mentioned above). A good
+example for lists with headers (which are not interactive) see the CalendarList story under the List
+component.
 
 ## Dynamic List
 

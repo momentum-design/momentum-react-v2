@@ -1,0 +1,39 @@
+.md-button-circle-toggle-wrapper {
+  &[data-selected='true'] {
+    &[data-outline='true'], &[data-ghost='true'] {
+      background-color: var(--toggleButton-active-background);
+      color: var(--toggleButton-active-text);
+
+      &:hover {
+        background-color: var(--toggleButton-active-background-hovered);
+        color: var(--toggleButton-active-text-hovered);
+      }
+
+      &:active {
+        background-color: var(--toggleButton-active-background-pressed);
+        color: var(--toggleButton-active-text-pressed);
+      }
+
+      &[data-disabled='true'] {
+        background-color: var(--toggleButton-active-background-disabled);
+        color: var(--toggleButton-active-text-disabled);
+      }
+    }
+
+    &[data-outline='true'] {
+      border-color: var(--toggleButton-active-border-color);
+
+      &:hover {
+        border-color: var(--toggleButton-active-border-color-hovered);
+      }
+
+      &:active {
+        border-color: var(--toggleButton-active-border-color-pressed);
+      }
+
+      &[data-disabled='true'] {
+        border-color: var(--toggleButton-active-border-color-disabled);
+      }
+    }
+  }
+}
