@@ -11,6 +11,7 @@ export { default as ButtonDialpad } from './ButtonDialpad';
 export { default as ButtonGroup } from './ButtonGroup';
 export { default as ButtonHyperlink } from './ButtonHyperlink';
 export { default as ButtonPill } from './ButtonPill';
+export { default as ButtonPillToggle } from './ButtonPillToggle';
 export { default as ButtonSimple } from './ButtonSimple';
 export { default as Coachmark } from './Coachmark';
 export { default as FocusRing } from './FocusRing';
