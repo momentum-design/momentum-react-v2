@@ -8,7 +8,7 @@ import { DEFAULTS as BUTTON_CIRCLE_DEFAULTS } from '../ButtonCircle/ButtonCircle
 import { Size as ButtonCircleSize } from '../ButtonCircle/ButtonCircle.types';
 import { Props } from './ButtonCircleToggle.types';
 import './ButtonCircleToggle.style.scss';
-import { chain } from 'react-aria';
+import { chain } from '@react-aria/utils';
 
 const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const {
