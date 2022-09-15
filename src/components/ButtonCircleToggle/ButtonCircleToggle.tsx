@@ -61,6 +61,6 @@ const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTML
   );
 });
 
-ButtonCircleToggle.displayName = 'ButtonSimpleToggle';
+ButtonCircleToggle.displayName = 'ButtonCircleToggle';
 
 export default ButtonCircleToggle;

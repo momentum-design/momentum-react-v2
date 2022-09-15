@@ -1,0 +1,495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
+<ButtonPillToggle>
+  <ButtonPill
+    aria-pressed={false}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onPress={[Function]}
+    size={40}
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      data-solid={false}
+      isDisabled={false}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            data-solid={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being false 1`] = `
+<ButtonPillToggle
+  ghost={false}
+>
+  <ButtonPill
+    aria-pressed={false}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={false}
+    onPress={[Function]}
+    size={40}
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={false}
+      data-grown={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      data-solid={false}
+      isDisabled={false}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={false}
+            data-grown={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            data-solid={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being true 1`] = `
+<ButtonPillToggle
+  ghost={true}
+>
+  <ButtonPill
+    aria-pressed={false}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onPress={[Function]}
+    size={40}
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      data-solid={false}
+      isDisabled={false}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            data-solid={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected being false 1`] = `
+<ButtonPillToggle
+  isSelected={false}
+>
+  <ButtonPill
+    aria-pressed={false}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    isSelected={false}
+    onPress={[Function]}
+    size={40}
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      data-solid={false}
+      isDisabled={false}
+      isSelected={false}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            data-solid={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected being true 1`] = `
+<ButtonPillToggle
+  isSelected={true}
+>
+  <ButtonPill
+    aria-pressed={true}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={true}
+    disabled={false}
+    ghost={true}
+    isSelected={true}
+    onPress={[Function]}
+    size={40}
+  >
+    <ButtonSimple
+      aria-pressed={true}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-outline={false}
+      data-selected={true}
+      data-size={40}
+      data-solid={false}
+      isDisabled={false}
+      isSelected={true}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={true}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-outline={false}
+            data-selected={true}
+            data-size={40}
+            data-solid={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being false 1`] = `
+<ButtonPillToggle
+  outline={false}
+>
+  <ButtonPill
+    aria-pressed={false}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onPress={[Function]}
+    outline={false}
+    size={40}
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-outline={false}
+      data-selected={false}
+      data-size={40}
+      data-solid={false}
+      isDisabled={false}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-outline={false}
+            data-selected={false}
+            data-size={40}
+            data-solid={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being true 1`] = `
+<ButtonPillToggle
+  outline={true}
+>
+  <ButtonPill
+    aria-pressed={false}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    onPress={[Function]}
+    outline={true}
+    size={40}
+  >
+    <ButtonSimple
+      aria-pressed={false}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-outline={true}
+      data-selected={false}
+      data-size={40}
+      data-solid={false}
+      isDisabled={false}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-pressed={false}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-outline={true}
+            data-selected={false}
+            data-size={40}
+            data-solid={false}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;

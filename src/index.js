@@ -114,6 +114,7 @@ export {
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,
   ButtonPill,
+  ButtonPillToggle,
   ButtonSimple,
   Checkbox as CheckboxNext,
   Coachmark as CoachmarkNext,
