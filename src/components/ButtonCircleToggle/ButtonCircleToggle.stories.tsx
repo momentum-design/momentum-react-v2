@@ -8,6 +8,7 @@ import Icon from '../Icon';
 import ButtonCircleToggle, { ButtonCircleToggleProps } from './';
 import argTypes from './ButtonCircleToggle.stories.args';
 import Documentation from './ButtonCircleToggle.stories.docs.mdx';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/ButtonCircleToggle',
@@ -29,6 +30,8 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   children: <Icon name="cancel" autoScale={150} />,
+  onChange: action('onChange'),
+  onPress: action('onPress'),
 };
 
 // Pseudostates will be correctly applied to ButtonCircleToggle once ButtonCircle
