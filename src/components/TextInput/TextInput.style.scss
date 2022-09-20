@@ -39,6 +39,48 @@
     &::placeholder {
       color: var(--textinput-placeholder-text);
     }
+
+    &::-webkit-contacts-auto-fill-button {
+      background-color: var(--theme-text-secondary-normal);
+
+      &:hover {
+        background-color: var(--theme-text-primary-normal);
+      }
+
+      &:active {
+        background-color: var(--theme-text-secondary-normal);
+      }
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-animation: autofill 0s forwards;
+      animation: autofill 0s forwards;
+    }
+
+    @keyframes autofill {
+      100% {
+        background: transparent;
+        color: inherit;
+      }
+    }
+
+    @-webkit-keyframes autofill {
+      100% {
+        background: transparent;
+        color: inherit;
+      }
+    }
+
+    &:-webkit-autofill-strong-password {
+      margin-top: 0.0625rem;
+      margin-left: 0.0625rem;
+      -webkit-box-shadow: 0 0 0 3.75rem #f9ffbd inset;
+      box-shadow: 0 0 0 3.75rem #f9ffbd inset;
+      border-radius: 0.375rem 0 0 0.375rem;
+    }
   }
 
   &[data-level='error'] {
