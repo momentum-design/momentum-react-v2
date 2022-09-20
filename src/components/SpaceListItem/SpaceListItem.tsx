@@ -24,7 +24,7 @@ const SpaceListItem: FC<Props> = forwardRef(
       style,
       avatar,
       firstLine,
-      secondLine,
+      secondLine = DEFAULTS.SECOND_LINE,
       isNewActivity,
       isUnread,
       teamColor = DEFAULTS.TEAM_COLOR,
