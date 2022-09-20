@@ -42,9 +42,9 @@ const SpaceListItem: FC<Props> = forwardRef(
     } = props;
 
     const renderText = () => {
-      const _secondLineArray: string[] = typeof secondLine === 'string' ? [secondLine] : secondLine;
+      const secondLineArray: string[] = typeof secondLine === 'string' ? [secondLine] : secondLine;
 
-      const _secondLineArrayClean = _secondLineArray?.reduce((filteredArray, nextElement) => {
+      const secondLineArrayClean = secondLineArray.reduce((filteredArray, nextElement) => {
         const nextElementClean = nextElement.trim();
         if (nextElementClean) {
           filteredArray.push(nextElementClean);
@@ -52,7 +52,7 @@ const SpaceListItem: FC<Props> = forwardRef(
         return filteredArray;
       }, []);
 
-      if (_secondLineArrayClean?.length) {
+      if (secondLineArrayClean.length) {
         return (
           <>
             <Text type="body-primary" data-test="list-item-first-line">
@@ -63,16 +63,13 @@ const SpaceListItem: FC<Props> = forwardRef(
               style={{ color: `var(--theme-text-team-${teamColor}-normal)` }}
               type="body-secondary"
               data-test="list-item-second-line"
-              aria-label={_secondLineArrayClean.join(', ')}
+              aria-label={secondLineArrayClean.join(', ')}
             >
-              {_secondLineArrayClean.map((secondLineContent, i) => {
-                const showDividerDot = i > 0;
-                return (
-                  <SecondLineElement key={`second-line-item-${i}`} showDividerDot={showDividerDot}>
-                    {secondLineContent}
-                  </SecondLineElement>
-                );
-              })}
+              {secondLineArrayClean.map((secondLineContent, i) => (
+                <SecondLineElement key={`second-line-item-${i}`} showDividerDot={i > 0}>
+                  {secondLineContent}
+                </SecondLineElement>
+              ))}
             </Text>
           </>
         );
