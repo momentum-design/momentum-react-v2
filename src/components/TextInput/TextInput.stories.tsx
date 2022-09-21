@@ -1,5 +1,6 @@
 import React, { useState, FC, useRef } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import ButtonPill from '../ButtonPill';
 
 import TextInput, { TextInputProps } from './';
 
@@ -59,6 +60,12 @@ interface StoryProps extends TextInputProps {
   initialValue: string;
 }
 
+interface FormProps extends TextInputProps {
+  displayName?: boolean;
+  emailAddress?: boolean;
+  password?: boolean;
+}
+
 const PaddedExample: FC<TextInputProps> = (props: TextInputProps) => {
   return (
     <div style={{ margin: '1rem' }}>
@@ -85,9 +92,63 @@ const BetterExample: FC<StoryProps> = (props: StoryProps) => {
   return <TextInput {...mutatedProps} value={value} ref={ref} onChange={onChange} />;
 };
 
+const FormExample: FC<FormProps> = (props: FormProps) => {
+  const { displayName = false, emailAddress = false, password = false } = props;
+
+  return (
+    <>
+      <form>
+        {displayName && (
+          <TextInput
+            placeholder={'Display Name'}
+            type="name"
+            style={{ marginTop: '1rem', marginBottom: '1rem', width: '16.25rem' }}
+          />
+        )}
+        {emailAddress && (
+          <TextInput
+            placeholder={'Email address'}
+            type="email"
+            style={{
+              marginTop: !displayName ? '1rem' : '0',
+              marginBottom: '1rem',
+              width: '16.25rem',
+            }}
+          />
+        )}
+        {password && (
+          <TextInput
+            type="password"
+            placeholder={'Password'}
+            style={{ marginBottom: '1rem', width: '16.25rem' }}
+          />
+        )}
+        <ButtonPill size={32} grown style={{ marginBottom: '1rem', width: '16.25rem' }}>
+          Next
+        </ButtonPill>
+      </form>
+    </>
+  );
+};
+
 const Example = Template<StoryProps>(BetterExample).bind({});
 
 Example.args = {};
+
+const Forms = Template<FormProps>(() => {
+  return (
+    <>
+      These stories allow for testing of the behaviour and styling of autofill in browers. The first
+      form is to test the autofill of contact information, such as a Display Name.
+      <FormExample displayName={true} emailAddress={true} />
+      The second form is to test the autofill of log-on credentials and, when available in browser,
+      a password suggestion.
+      <FormExample emailAddress={true} password={true} />
+    </>
+  );
+});
+
+Forms.args = {};
 
 const Common = MultiTemplate<TextInputProps>(PaddedExample).bind({});
 Common.args = {};
@@ -113,4 +174,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Common };
+export { Example, Forms, Common };
