@@ -82,6 +82,10 @@ const Avatar: React.FC<Props> = (props: Props) => {
           presenceIcon = 'meetings-presence';
           presenceColor = 'var(--avatar-presence-icon-schedule)';
           break;
+        case PresenceType.Call:
+          presenceIcon = 'handset';
+          presenceColor = 'var(--avatar-presence-icon-call)';
+          break;
         case PresenceType.DND:
           presenceIcon = 'dnd-presence';
           presenceColor = 'var(--avatar-presence-icon-dnd)';
@@ -102,13 +106,17 @@ const Avatar: React.FC<Props> = (props: Props) => {
           presenceIcon = 'pto-presence';
           presenceColor = 'var(--avatar-presence-icon-ooo)';
           break;
-        case PresenceType.Call:
-          presenceIcon = 'handset';
-          presenceColor = 'var(--avatar-presence-icon-call)';
+        case PresenceType.OnMobile:
+          presenceIcon = 'phone';
+          presenceColor = 'var(--avatar-presence-icon-on-mobile)';
           break;
         case PresenceType.OnDevice:
           presenceIcon = 'generic-device-video';
           presenceColor = 'var(--avatar-presence-icon-on-device)';
+          break;
+        case PresenceType.OnHold:
+          presenceIcon = 'pause';
+          presenceColor = 'var(--avatar-presence-icon-on-hold)';
           break;
         default:
           break;
