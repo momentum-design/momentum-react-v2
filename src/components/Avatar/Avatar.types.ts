@@ -13,6 +13,8 @@ export enum PresenceType {
   Away = 'away',
   // Out of Office
   OOO = 'OOO',
+  Call = 'call',
+  OnDevice = 'onDevice',
 }
 
 export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
