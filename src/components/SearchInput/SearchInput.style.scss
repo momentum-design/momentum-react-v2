@@ -14,6 +14,8 @@
   width: $search-width;
   display: flex;
   align-content: center;
+  justify-content: center;
+  align-items: center;
 
   &[data-focus='true'] {
     box-shadow: var(--md-globals-focus-ring-box-shadow);
@@ -71,9 +73,9 @@
   .md-search-input-searching {
     $icon-height: math.div($search-height, 2);
 
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 8px;
+    // margin-top: 0px;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
     align-content: center;
     // flex-grow: 0;
   }
