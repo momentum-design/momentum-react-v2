@@ -627,6 +627,100 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
       </div>
     </div>
   </Avatar>
+  <Avatar
+    key="9"
+    presence="call"
+    title="Cisco Webex"
+  >
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+      title="Cisco Webex"
+    >
+      <span>
+        CW
+      </span>
+      <div
+        className="md-avatar-presence-icon-wrapper"
+      >
+        <Icon
+          fillColor="var(--avatar-presence-icon-call)"
+          name="handset"
+          scale={8}
+          strokeColor="none"
+          weight="filled"
+        >
+          <div
+            className="md-icon-wrapper"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={8}
+              data-test="handset"
+              height="100%"
+              style={
+                Object {
+                  "fill": "var(--avatar-presence-icon-call)",
+                  "stroke": "none",
+                }
+              }
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+    </div>
+  </Avatar>
+  <Avatar
+    key="10"
+    presence="onDevice"
+    title="Cisco Webex"
+  >
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+      title="Cisco Webex"
+    >
+      <span>
+        CW
+      </span>
+      <div
+        className="md-avatar-presence-icon-wrapper"
+      >
+        <Icon
+          fillColor="var(--avatar-presence-icon-on-device)"
+          name="generic-device-video"
+          scale={8}
+          strokeColor="none"
+          weight="filled"
+        >
+          <div
+            className="md-icon-wrapper"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={8}
+              data-test="generic-device-video"
+              height="100%"
+              style={
+                Object {
+                  "fill": "var(--avatar-presence-icon-on-device)",
+                  "stroke": "none",
+                }
+              }
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+    </div>
+  </Avatar>
 </div>
 `;
 
