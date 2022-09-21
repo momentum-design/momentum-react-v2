@@ -6,6 +6,7 @@ export enum PresenceType {
   Active = 'active',
   Meet = 'meet',
   Schedule = 'schedule',
+  Call = 'call',
   // Do not Disturb
   DND = 'DND',
   Presenting = 'presenting',
@@ -13,8 +14,9 @@ export enum PresenceType {
   Away = 'away',
   // Out of Office
   OOO = 'OOO',
-  Call = 'call',
+  OnMobile = 'onMobile',
   OnDevice = 'onDevice',
+  OnHold = 'onHold',
 }
 
 export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
