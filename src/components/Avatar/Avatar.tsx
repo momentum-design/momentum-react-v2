@@ -102,6 +102,14 @@ const Avatar: React.FC<Props> = (props: Props) => {
           presenceIcon = 'pto-presence';
           presenceColor = 'var(--avatar-presence-icon-ooo)';
           break;
+        case PresenceType.Call:
+          presenceIcon = 'handset';
+          presenceColor = 'var(--avatar-presence-icon-call)';
+          break;
+        case PresenceType.OnDevice:
+          presenceIcon = 'generic-device-video';
+          presenceColor = 'var(--avatar-presence-icon-on-device)';
+          break;
         default:
           break;
       }
