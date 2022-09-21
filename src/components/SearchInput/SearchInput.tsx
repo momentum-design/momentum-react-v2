@@ -13,6 +13,7 @@ import InputMessage from '../InputMessage';
 import { useFocusState } from '../../hooks/useFocusState';
 
 import Icon from '../Icon';
+import LoadingSpinner from '../LoadingSpinner';
 
 /**
  *  Search input
@@ -47,12 +48,11 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
         </label>
       )}
       <div>
-        <Icon
-          weight="light"
-          scale={18}
-          className={STYLE.search}
-          name={searching ? 'spinner' : 'search'}
-        />
+        {searching ? (
+          <LoadingSpinner scale={16} className={STYLE.searching} />
+        ) : (
+          <Icon weight="bold" scale={16} className={STYLE.search} name={'search'} />
+        )}
       </div>
       <div className={STYLE.container}>
         <input {...inputProps} {...focusProps} ref={inputRef} />

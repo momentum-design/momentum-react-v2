@@ -1,10 +1,17 @@
+@use "sass:math";
+
 .md-search-input-wrapper {
+  $search-width: 16.25rem;
+  $search-height: 2rem;
+  $search-border-radius: math.div($search-height, 4);
+
   position: relative;
-  border-radius: 0.5rem;
+  border-radius: $search-border-radius;
   background-color: var(--textinput-background);
   border: 0.0625rem solid var(--textinput-border-color);
   box-sizing: border-box;
-  height: 1.75rem;
+  height: $search-height;
+  width: $search-width;
   display: flex;
   align-content: center;
 
@@ -48,7 +55,6 @@
     color: var(--textinput-text);
     font-family: var(--md-globals-font-default);
     font-size: 0.875rem;
-    height: 1.75rem;
     display: inline-block;
     flex: 1;
 
@@ -61,12 +67,15 @@
     }
   }
 
-  .md-search-input-search {
-    margin-left: 0.5625rem;
-    margin-right: 0.5625rem;
-    height: 1.625rem;
+  .md-search-input-search,
+  .md-search-input-searching {
+    $icon-height: math.div($search-height, 2);
+
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 8px;
     align-content: center;
-    flex-grow: 0;
+    // flex-grow: 0;
   }
 
   .md-search-input-clear {
