@@ -1,16 +1,13 @@
 @use "sass:math";
 
 .md-search-input-wrapper {
-  $search-width: 16.25rem;
-  $search-height: 2rem;
-
   position: relative;
   border-radius: 0.5rem;
   background-color: var(--textinput-background);
   border: 0.0625rem solid var(--textinput-border-color);
   box-sizing: border-box;
-  height: $search-height;
-  width: $search-width;
+  height: 2rem;
+  width: 16.25rem;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -18,6 +15,10 @@
 
   &[data-focus='true'] {
     box-shadow: var(--md-globals-focus-ring-box-shadow);
+  }
+
+  &[data-height='28'] {
+    height: 1.75rem;
   }
 
   &:hover {
@@ -68,27 +69,12 @@
     }
   }
 
-  .md-search-input-search {
-    $icon-height: math.div($search-height, 2);
-
-    // margin-top: 0px;
-    width: 1rem;
-    height: 1rem;
+  .md-search-input-search,
+  .md-search-input-searching {
     margin-left: 0.375rem;
     margin-right: 0.375rem;
     align-content: center;
-    // flex-grow: 0;
-  }
-
-  .md-search-input-searching {
-    $icon-height: math.div($search-height, 2);
-
-    // margin-top: 0px;
-    scale: math.div(2, 3);
-    margin-left: 0.2rem;
-    margin-right: 0.15rem;
-    align-content: center;
-    // flex-grow: 0;
+    flex-grow: 0;
   }
 
   .md-search-input-clear {

@@ -72,7 +72,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
     setSearching(true);
     setTimeout(() => {
       setSearching(false);
-    }, 500);
+    }, 1500);
     if (e.toLowerCase().startsWith('from:')) {
       setFilters([
         {
@@ -122,6 +122,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
 const Example = Template<SearchInputExampleProps>(BetterExample).bind({});
 
 Example.argTypes = { ...argTypes };
+delete Example.argTypes.searching;
 
 /**
  * Common variants story. This renders multiple variants of a single component.
@@ -131,10 +132,7 @@ const PaddedExample: FC<SearchInputProps> = (props: SearchInputProps) => {
   return (
     <>
       <div style={{ margin: '1rem' }}>
-        <SearchInput style={{ height: 32 }} {...props} />
-      </div>
-      <div style={{ margin: '1rem' }}>
-        <SearchInput style={{ height: 28 }} {...props} />
+        <SearchInput height={32} {...props} />
       </div>
     </>
   );
