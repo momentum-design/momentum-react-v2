@@ -1,6 +1,20 @@
+import { IconScale } from '../Icon';
+
 const CLASS_PREFIX = 'md-search-input';
 
-const DEFAULTS = {};
+const HEIGHTS = {
+  28: 28,
+  32: 32,
+};
+
+const SEARCH_ICON_HEIGHT_MAPPING: Record<number, IconScale> = {
+  28: 12,
+  32: 16,
+};
+
+const DEFAULTS = {
+  HEIGHT: HEIGHTS[32],
+};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
@@ -10,4 +24,4 @@ const STYLE = {
   clear: `${CLASS_PREFIX}-clear`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE };
+export { CLASS_PREFIX, HEIGHTS, SEARCH_ICON_HEIGHT_MAPPING, DEFAULTS, STYLE };

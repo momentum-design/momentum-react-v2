@@ -3,10 +3,9 @@
 .md-search-input-wrapper {
   $search-width: 16.25rem;
   $search-height: 2rem;
-  $search-border-radius: math.div($search-height, 4);
 
   position: relative;
-  border-radius: $search-border-radius;
+  border-radius: 0.5rem;
   background-color: var(--textinput-background);
   border: 0.0625rem solid var(--textinput-border-color);
   box-sizing: border-box;
@@ -69,13 +68,25 @@
     }
   }
 
-  .md-search-input-search,
+  .md-search-input-search {
+    $icon-height: math.div($search-height, 2);
+
+    // margin-top: 0px;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+    align-content: center;
+    // flex-grow: 0;
+  }
+
   .md-search-input-searching {
     $icon-height: math.div($search-height, 2);
 
     // margin-top: 0px;
-    margin-left: 0.375rem;
-    margin-right: 0.375rem;
+    scale: math.div(2, 3);
+    margin-left: 0.2rem;
+    margin-right: 0.15rem;
     align-content: center;
     // flex-grow: 0;
   }

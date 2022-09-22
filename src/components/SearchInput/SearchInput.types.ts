@@ -1,6 +1,8 @@
 import { CSSProperties } from 'react';
 import { AriaSearchFieldProps } from '@react-types/searchfield';
 
+export type SearchFieldHeight = 28 | 32;
+
 export interface SearchFilterTranslations {
   /**
    * The text shown in the filter bubble
@@ -81,4 +83,10 @@ export interface Props extends AriaSearchFieldProps {
    * Initial text for accessible label
    */
   initialLabel?: string;
+
+  /**
+   * Height of the search field
+   * @default 32
+   */
+  height?: SearchFieldHeight;
 }
