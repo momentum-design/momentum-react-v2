@@ -28,9 +28,6 @@ Example.args = {
   children: 'Example text',
 };
 
-// Pseudostates will be correctly applied to ButtonPillToggle once ButtonPill
-// is fixed to receive these pseudostates.
-
 const Outline = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle).bind({});
 
 Outline.argTypes = { ...argTypes };
@@ -39,12 +36,15 @@ delete Outline.argTypes.ghost;
 delete Outline.argTypes.outline;
 delete Outline.argTypes.isSelected;
 
-Outline.args = {
-  children: 'Example text',
-};
-
 Outline.parameters = {
-  variants: [{ outline: true }, { outline: true, isSelected: true }],
+  variants: [
+    ...[false, true].map((isSelected) => ({
+      isSelected,
+      outline: true,
+      label: `isSelected: ${isSelected}`,
+      children: 'Example text',
+    })),
+  ],
 };
 
 const Ghost = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle).bind({});
@@ -55,12 +55,15 @@ delete Ghost.argTypes.ghost;
 delete Ghost.argTypes.outline;
 delete Ghost.argTypes.isSelected;
 
-Ghost.args = {
-  children: 'Example text',
-};
-
 Ghost.parameters = {
-  variants: [{ ghost: true }, { ghost: true, isSelected: true }],
+  variants: [
+    ...[false, true].map((isSelected) => ({
+      isSelected,
+      ghost: true,
+      label: `isSelected: ${isSelected}`,
+      children: 'Example text',
+    })),
+  ],
 };
 
 export { Example, Outline, Ghost };
