@@ -676,6 +676,53 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
   </Avatar>
   <Avatar
     key="10"
+    presence="busy"
+    title="Cisco Webex"
+  >
+    <div
+      className="md-avatar-wrapper"
+      data-color="default"
+      data-size={24}
+      title="Cisco Webex"
+    >
+      <span>
+        CW
+      </span>
+      <div
+        className="md-avatar-presence-icon-wrapper"
+      >
+        <Icon
+          fillColor="var(--avatar-presence-icon-busy)"
+          name="busy-presence"
+          scale={8}
+          strokeColor="none"
+          weight="bold"
+        >
+          <div
+            className="md-icon-wrapper"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={8}
+              data-test="busy-presence"
+              height="100%"
+              style={
+                Object {
+                  "fill": "var(--avatar-presence-icon-busy)",
+                  "stroke": "none",
+                }
+              }
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+    </div>
+  </Avatar>
+  <Avatar
+    key="11"
     presence="onMobile"
     title="Cisco Webex"
   >
@@ -722,7 +769,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     </div>
   </Avatar>
   <Avatar
-    key="11"
+    key="12"
     presence="onDevice"
     title="Cisco Webex"
   >
@@ -769,7 +816,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
     </div>
   </Avatar>
   <Avatar
-    key="12"
+    key="13"
     presence="onHold"
     title="Cisco Webex"
   >
