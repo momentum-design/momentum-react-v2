@@ -14,6 +14,7 @@ export enum PresenceType {
   Away = 'away',
   // Out of Office
   OOO = 'OOO',
+  Busy = 'busy',
   OnMobile = 'onMobile',
   OnDevice = 'onDevice',
   OnHold = 'onHold',
