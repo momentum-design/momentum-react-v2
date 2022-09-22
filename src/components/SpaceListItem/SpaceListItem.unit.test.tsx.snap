@@ -78,6 +78,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                 />
               </DividerDot>
               <Text
+                aria-label="testteam"
                 data-test="list-item-second-line"
                 style={
                   Object {
@@ -87,6 +88,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                 type="body-secondary"
               >
                 <small
+                  aria-label="testteam"
                   className="md-text-wrapper"
                   data-test="list-item-second-line"
                   data-type="body-secondary"
@@ -96,7 +98,12 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                     }
                   }
                 >
-                  testteam
+                  <SecondLineElement
+                    key="second-line-item-0"
+                    showDividerDot={false}
+                  >
+                    testteam
+                  </SecondLineElement>
                 </small>
               </Text>
             </div>
@@ -1471,6 +1478,149 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
 </SpaceListItem>
 `;
 
+exports[`<SpaceListItem /> snapshot should match snapshot with multiple string secondLine 1`] = `
+<SpaceListItem
+  secondLine={
+    Array [
+      "one",
+      "two",
+      "three",
+    ]
+  }
+>
+  <ListItemBase
+    className="md-space-list-item-wrapper"
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={false}
+          data-interactive={true}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+          tabIndex={-1}
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper text-column"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper text-column"
+              data-position="middle"
+            >
+              <Text
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
+                  data-test="list-item-first-line"
+                  data-type="body-primary"
+                />
+              </Text>
+              <Text
+                aria-label="one, two, three"
+                data-test="list-item-second-line"
+                style={
+                  Object {
+                    "color": "var(--theme-text-team-default-normal)",
+                  }
+                }
+                type="body-secondary"
+              >
+                <small
+                  aria-label="one, two, three"
+                  className="md-text-wrapper"
+                  data-test="list-item-second-line"
+                  data-type="body-secondary"
+                  style={
+                    Object {
+                      "color": "var(--theme-text-team-default-normal)",
+                    }
+                  }
+                >
+                  <SecondLineElement
+                    key="second-line-item-0"
+                    showDividerDot={false}
+                  >
+                    one
+                  </SecondLineElement>
+                  <SecondLineElement
+                    key="second-line-item-1"
+                    showDividerDot={true}
+                  >
+                    <DividerDot
+                      data-test="multiple-string-second-line-divider-dot"
+                    >
+                      <div
+                        className="md-divider-dot-wrapper"
+                      />
+                    </DividerDot>
+                    two
+                  </SecondLineElement>
+                  <SecondLineElement
+                    key="second-line-item-2"
+                    showDividerDot={true}
+                  >
+                    <DividerDot
+                      data-test="multiple-string-second-line-divider-dot"
+                    >
+                      <div
+                        className="md-divider-dot-wrapper"
+                      />
+                    </DividerDot>
+                    three
+                  </SecondLineElement>
+                </small>
+              </Text>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
 exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = `
 <SpaceListItem
   secondLine="secondLine"
@@ -1538,6 +1688,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                 />
               </Text>
               <Text
+                aria-label="secondLine"
                 data-test="list-item-second-line"
                 style={
                   Object {
@@ -1547,6 +1698,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                 type="body-secondary"
               >
                 <small
+                  aria-label="secondLine"
                   className="md-text-wrapper"
                   data-test="list-item-second-line"
                   data-type="body-secondary"
@@ -1556,7 +1708,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                     }
                   }
                 >
-                  secondLine
+                  <SecondLineElement
+                    key="second-line-item-0"
+                    showDividerDot={false}
+                  >
+                    secondLine
+                  </SecondLineElement>
                 </small>
               </Text>
             </div>

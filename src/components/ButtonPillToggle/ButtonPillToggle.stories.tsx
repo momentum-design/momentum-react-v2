@@ -1,18 +1,14 @@
-import React from 'react';
-
 import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import Icon from '../Icon';
-import ButtonCircleToggle, { ButtonCircleToggleProps } from './';
-import argTypes from './ButtonCircleToggle.stories.args';
-import Documentation from './ButtonCircleToggle.stories.docs.mdx';
-import { action } from '@storybook/addon-actions';
+import ButtonPillToggle, { ButtonPillToggleProps } from './';
+import argTypes from './ButtonPillToggle.stories.args';
+import Documentation from './ButtonPillToggle.stories.docs.mdx';
 
 export default {
-  title: 'Momentum UI/ButtonCircleToggle',
-  component: ButtonCircleToggle,
+  title: 'Momentum UI/ButtonPillToggle',
+  component: ButtonPillToggle,
   parameters: {
     expanded: true,
     docs: {
@@ -24,17 +20,15 @@ export default {
   },
 };
 
-const Example = Template<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
+const Example = Template<ButtonPillToggleProps>(ButtonPillToggle).bind({});
 
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  children: <Icon name="cancel" autoScale={150} />,
-  onChange: action('onChange'),
-  onPress: action('onPress'),
+  children: 'Example text',
 };
 
-const Outline = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
+const Outline = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle).bind({});
 
 Outline.argTypes = { ...argTypes };
 delete Outline.argTypes.children;
@@ -48,12 +42,12 @@ Outline.parameters = {
       isSelected,
       outline: true,
       label: `isSelected: ${isSelected}`,
-      children: <Icon name="cancel" autoScale={150} />,
+      children: 'Example text',
     })),
   ],
 };
 
-const Ghost = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
+const Ghost = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle).bind({});
 
 Ghost.argTypes = { ...argTypes };
 delete Ghost.argTypes.children;
@@ -63,11 +57,11 @@ delete Ghost.argTypes.isSelected;
 
 Ghost.parameters = {
   variants: [
-    ...[true, false].map((isSelected) => ({
+    ...[false, true].map((isSelected) => ({
       isSelected,
       ghost: true,
       label: `isSelected: ${isSelected}`,
-      children: <Icon name="cancel" autoScale={150} />,
+      children: 'Example text',
     })),
   ],
 };

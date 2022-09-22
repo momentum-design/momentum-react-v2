@@ -12,14 +12,16 @@
   outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-  &:hover {
+  &:hover,
+  &.hover {
     background-color: rgba(0, 0, 0, 0.8); // IEFIX
     background-color: var(--button-primary-background-hovered);
     color: rgba(255, 255, 255, 0.95); // IEFIX
     color: var(--button-primary-text-hovered);
   }
 
-  &:active {
+  &:active,
+  &.active {
     background-color: rgba(0, 0, 0, 0.7); // IEFIX
     background-color: var(--button-primary-background-pressed);
     color: rgba(255, 255, 255, 0.95); // IEFIX
@@ -32,14 +34,16 @@
     color: rgba(255, 255, 255, 1); // IEFIX
     color: var(--button-message-fill-text);
 
-    &:hover {
+    &:hover,
+    &.hover {
       background-color: rgba(3, 83, 168, 1); // IEFIX
       background-color: var(--button-message-fill-background-hovered);
       color: rgba(255, 255, 255, 1); // IEFIX
       color: var(--button-message-fill-text-hovered);
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: rgba(6, 58, 117, 1); // IEFIX
       background-color: var(--button-message-fill-background-pressed);
       color: rgba(255, 255, 255, 1); // IEFIX
@@ -53,14 +57,16 @@
     color: rgba(255, 255, 255, 1); // IEFIX
     color: var(--button-join-fill-text);
 
-    &:hover {
+    &:hover,
+    &.hover {
       background-color: rgba(24, 94, 70, 1); // IEFIX
       background-color: var(--button-join-fill-background-hovered);
       color: rgba(255, 255, 255, 1); // IEFIX
       color: var(--button-join-fill-text-hovered);
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: rgba(19, 66, 49, 1); // IEFIX
       background-color: var(--button-join-fill-background-pressed);
       color: rgba(255, 255, 255, 1); // IEFIX
@@ -74,14 +80,16 @@
     color: rgba(255, 255, 255, 1); // IEFIX
     color: var(--button-cancel-fill-text);
 
-    &:hover {
+    &:hover,
+    &.hover {
       background-color: rgba(171, 10, 21, 1); // IEFIX
       background-color: var(--button-cancel-fill-background-hovered);
       color: rgba(255, 255, 255, 1); // IEFIX
       color: var(--button-cancel-fill-text-hovered);
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: rgba(120, 13, 19, 1); // IEFIX
       background-color: var(--button-cancel-fill-background-pressed);
       color: rgba(255, 255, 255, 1); // IEFIX
@@ -89,21 +97,24 @@
     }
   }
 
-  &[data-disabled='true'] {
+  &[data-disabled='true'],
+  &.disable {
     background-color: rgba(0, 0, 0, 0.2); // IEFIX
     background-color: var(--button-primary-background-disabled);
     color: rgba(0, 0, 0, 0.4); // IEFIX
     color: var(--button-primary-text-disabled);
     cursor: auto;
 
-    &:hover {
+    &:hover,
+    &.hover {
       background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--button-primary-background-disabled);
       color: rgba(0, 0, 0, 0.4); // IEFIX
       color: var(--button-primary-text-disabled);
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--button-primary-background-disabled);
       color: rgba(0, 0, 0, 0.4); // IEFIX
@@ -119,7 +130,8 @@
     color: rgba(0, 0, 0, 0.95); // IEFIX
     color: var(--button-secondary-text);
 
-    &:hover {
+    &:hover,
+    &.hover {
       background-color: rgba(0, 0, 0, 0.07); // IEFIX
       background-color: var(--button-secondary-background-hovered);
       border-color: rgba(0, 0, 0, 0.3); // IEFIX
@@ -128,7 +140,8 @@
       color: var(--button-secondary-text-hovered);
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--button-secondary-background-pressed);
       border-color: rgba(0, 0, 0, 0.3); // IEFIX
@@ -145,7 +158,8 @@
       color: rgba(24, 94, 70, 1); // IEFIX
       color: var(--button-join-outline-text);
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: rgba(24, 94, 70, 1); // IEFIX
         background-color: var(--button-join-outline-background-hovered);
         border-color: rgba(0, 0, 0, 0);
@@ -153,7 +167,8 @@
         color: var(--button-join-outline-text-hovered);
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: rgba(19, 66, 49, 1); // IEFIX
         background-color: var(--button-join-outline-background-pressed);
         border-color: rgba(0, 0, 0, 0);
@@ -170,7 +185,8 @@
       color: rgba(171, 10, 21, 1); // IEFIX
       color: var(--button-cancel-outline-text);
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: rgba(171, 10, 21, 1); // IEFIX
         background-color: var(--button-cancel-outline-background-hovered);
         border-color: rgba(0, 0, 0, 0);
@@ -178,7 +194,8 @@
         color: var(--button-cancel-outline-text-hovered);
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: rgba(120, 13, 19, 1); // IEFIX
         background-color: var(--button-cancel-outline-background-pressed);
         border-color: rgba(0, 0, 0, 0);
@@ -187,7 +204,8 @@
       }
     }
 
-    &[data-disabled='true'] {
+    &[data-disabled='true'],
+    &.disable {
       background-color: rgba(0, 0, 0, 0); // IEFIX
       background-color: var(--button-secondary-background-disabled);
       border-color: rgba(0, 0, 0, 0.2); // IEFIX
@@ -196,7 +214,8 @@
       color: var(--button-secondary-text-disabled);
       cursor: auto;
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: rgba(0, 0, 0, 0); // IEFIX
         background-color: var(--button-secondary-background-disabled);
         border-color: rgba(0, 0, 0, 0.2); // IEFIX
@@ -205,7 +224,8 @@
         color: var(--button-secondary-text-disabled);
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: rgba(0, 0, 0, 0); // IEFIX
         background-color: var(--button-secondary-background-disabled);
         border-color: rgba(0, 0, 0, 0.2); // IEFIX
@@ -221,31 +241,36 @@
     border-color: var(--videoSupport-controls-button-border-color);
     color: var(--videoSupport-controls-button-text);
 
-    &:hover {
+    &:hover,
+    &.hover {
       background-color: var(--videoSupport-controls-button-background-hovered);
       border-color: var(--videoSupport-controls-button-border-color-hovered);
       color: var(--videoSupport-controls-button-text-hovered);
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: var(--videoSupport-controls-button-background-pressed);
       border-color: var(--videoSupport-controls-button-border-color-pressed);
       color: var(--videoSupport-controls-button-text-pressed);
     }
 
-    &[data-disabled='true'] {
+    &[data-disabled='true'],
+    &.disable {
       background-color: var(--videoSupport-controls-button-background-disabled);
       border-color: var(--videoSupport-controls-button-border-color-disabled);
       color: var(--videoSupport-controls-button-text-disabled);
       cursor: auto;
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: var(--videoSupport-controls-button-background-disabled);
         border-color: var(--videoSupport-controls-button-border-color-disabled);
         color: var(--videoSupport-controls-button-text-disabled);
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: var(--videoSupport-controls-button-background-disabled);
         border-color: var(--videoSupport-controls-button-border-color-disabled);
         color: var(--videoSupport-controls-button-text-disabled);
@@ -260,35 +285,40 @@
     color: rgba(0, 0, 0, 0.95); // IEFIX
     color: var(--button-ghost-text);
 
-    &:hover {
+    &:hover,
+    &.hover {
       background-color: rgba(0, 0, 0, 0.07); // IEFIX
       background-color: var(--button-ghost-background-hovered);
       color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--button-ghost-text-hovered);
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--button-secondary-background-pressed);
       color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--button-secondary-text-pressed);
     }
 
-    &[data-disabled='true'] {
+    &[data-disabled='true'],
+    &.disable {
       background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--button-primary-background-disabled);
       color: rgba(0, 0, 0, 0.4); // IEFIX
       color: var(--button-primary-text-disabled);
       cursor: auto;
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: rgba(0, 0, 0, 0.2); // IEFIX
         background-color: var(--button-primary-background-disabled);
         color: rgba(0, 0, 0, 0.4); // IEFIX
         color: var(--button-primary-text-disabled);
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: rgba(0, 0, 0, 0.2); // IEFIX
         background-color: var(--button-primary-background-disabled);
         color: rgba(0, 0, 0, 0.4); // IEFIX
