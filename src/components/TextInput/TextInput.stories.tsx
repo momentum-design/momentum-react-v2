@@ -96,38 +96,41 @@ const FormExample: FC<FormProps> = (props: FormProps) => {
   const { displayName = false, emailAddress = false, password = false } = props;
 
   return (
-    <>
-      <form>
-        {displayName && (
-          <TextInput
-            placeholder={'Display Name'}
-            type="name"
-            style={{ marginTop: '1rem', marginBottom: '1rem', width: '16.25rem' }}
-          />
-        )}
-        {emailAddress && (
-          <TextInput
-            placeholder={'Email address'}
-            type="email"
-            style={{
-              marginTop: !displayName ? '1rem' : '0',
-              marginBottom: '1rem',
-              width: '16.25rem',
-            }}
-          />
-        )}
-        {password && (
-          <TextInput
-            type="password"
-            placeholder={'Password'}
-            style={{ marginBottom: '1rem', width: '16.25rem' }}
-          />
-        )}
-        <ButtonPill size={32} grown style={{ marginBottom: '1rem', width: '16.25rem' }}>
-          Next
-        </ButtonPill>
-      </form>
-    </>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        location.reload();
+      }}
+    >
+      {displayName && (
+        <TextInput
+          placeholder={'Display Name'}
+          type="name"
+          style={{ marginTop: '1rem', marginBottom: '1rem', width: '16.25rem' }}
+        />
+      )}
+      {emailAddress && (
+        <TextInput
+          placeholder={'Email address'}
+          type="email"
+          style={{
+            marginTop: !displayName ? '1rem' : '0',
+            marginBottom: '1rem',
+            width: '16.25rem',
+          }}
+        />
+      )}
+      {password && (
+        <TextInput
+          type="password"
+          placeholder={'Password'}
+          style={{ marginBottom: '1rem', width: '16.25rem' }}
+        />
+      )}
+      <ButtonPill type="submit" size={32} grown style={{ marginBottom: '1rem', width: '16.25rem' }}>
+        Submit
+      </ButtonPill>
+    </form>
   );
 };
 
@@ -137,14 +140,14 @@ Example.args = {};
 
 const Forms = Template<FormProps>(() => {
   return (
-    <>
+    <div>
       These stories allow for testing of the behaviour and styling of autofill in browers. The first
       form is to test the autofill of contact information, such as a Display Name.
       <FormExample displayName={true} emailAddress={true} />
       The second form is to test the autofill of log-on credentials and, when available in browser,
       a password suggestion.
       <FormExample emailAddress={true} password={true} />
-    </>
+    </div>
   );
 });
 
