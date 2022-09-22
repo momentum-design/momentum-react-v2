@@ -106,6 +106,10 @@ const Avatar: React.FC<Props> = (props: Props) => {
           presenceIcon = 'pto-presence';
           presenceColor = 'var(--avatar-presence-icon-ooo)';
           break;
+        case PresenceType.Busy:
+          presenceIcon = 'busy-presence';
+          presenceColor = 'var(--avatar-presence-icon-busy)';
+          break;
         case PresenceType.OnMobile:
           presenceIcon = 'phone';
           presenceColor = 'var(--avatar-presence-icon-on-mobile)';
@@ -127,7 +131,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
       <div className={STYLE.presenceIconWrapper}>
         <Icon
           name={presenceIcon}
-          weight="filled"
+          weight={presenceIcon === 'busy-presence' ? 'bold' : 'filled'}
           fillColor={presenceColor}
           strokeColor="none"
           scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
