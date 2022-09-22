@@ -34,9 +34,6 @@ Example.args = {
   onPress: action('onPress'),
 };
 
-// Pseudostates will be correctly applied to ButtonCircleToggle once ButtonCircle
-// is fixed to receive these pseudostates.
-
 const Outline = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
 
 Outline.argTypes = { ...argTypes };
@@ -45,12 +42,15 @@ delete Outline.argTypes.ghost;
 delete Outline.argTypes.outline;
 delete Outline.argTypes.isSelected;
 
-Outline.args = {
-  children: <Icon name="cancel" autoScale={150} />,
-};
-
 Outline.parameters = {
-  variants: [{ outline: true }, { outline: true, isSelected: true }],
+  variants: [
+    ...[false, true].map((isSelected) => ({
+      isSelected,
+      outline: true,
+      label: `isSelected: ${isSelected}`,
+      children: <Icon name="cancel" autoScale={150} />,
+    })),
+  ],
 };
 
 const Ghost = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
@@ -61,12 +61,15 @@ delete Ghost.argTypes.ghost;
 delete Ghost.argTypes.outline;
 delete Ghost.argTypes.isSelected;
 
-Ghost.args = {
-  children: <Icon name="cancel" autoScale={150} />,
-};
-
 Ghost.parameters = {
-  variants: [{ ghost: true }, { ghost: true, isSelected: true }],
+  variants: [
+    ...[true, false].map((isSelected) => ({
+      isSelected,
+      ghost: true,
+      label: `isSelected: ${isSelected}`,
+      children: <Icon name="cancel" autoScale={150} />,
+    })),
+  ],
 };
 
 export { Example, Outline, Ghost };

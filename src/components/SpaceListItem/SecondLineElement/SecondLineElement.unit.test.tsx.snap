@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SecondLineElement /> snapshot should match snapshot with children 1`] = `
+<SecondLineElement>
+  example-text
+</SecondLineElement>
+`;
+
+exports[`<SecondLineElement /> snapshot should match snapshot with children and showDividerDot 1`] = `
+<SecondLineElement
+  showDividerDot={true}
+>
+  <DividerDot
+    data-test="multiple-string-second-line-divider-dot"
+  >
+    <div
+      className="md-divider-dot-wrapper"
+    />
+  </DividerDot>
+  example-text
+</SecondLineElement>
+`;

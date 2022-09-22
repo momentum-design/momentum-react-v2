@@ -9,6 +9,7 @@ import ListItemBaseSection from '../ListItemBaseSection';
 import Text from '../Text';
 import Icon from '../Icon';
 import DividerDot from '../DividerDot';
+import SecondLineElement from './SecondLineElement';
 
 //TODO: support 2-line labels for right/position-end section.
 /**
@@ -23,7 +24,7 @@ const SpaceListItem: FC<Props> = forwardRef(
       style,
       avatar,
       firstLine,
-      secondLine,
+      secondLine = DEFAULTS.SECOND_LINE,
       isNewActivity,
       isUnread,
       teamColor = DEFAULTS.TEAM_COLOR,
@@ -41,9 +42,17 @@ const SpaceListItem: FC<Props> = forwardRef(
     } = props;
 
     const renderText = () => {
-      const _secondLineArray: string[] = typeof secondLine === 'string' ? [secondLine] : secondLine;
+      const secondLineArray: string[] = typeof secondLine === 'string' ? [secondLine] : secondLine;
 
-      if (secondLine) {
+      const secondLineArrayClean = secondLineArray.reduce((filteredArray, nextElement) => {
+        const nextElementClean = nextElement.trim();
+        if (nextElementClean) {
+          filteredArray.push(nextElementClean);
+        }
+        return filteredArray;
+      }, []);
+
+      if (secondLineArrayClean.length) {
         return (
           <>
             <Text type="body-primary" data-test="list-item-first-line">
@@ -54,9 +63,13 @@ const SpaceListItem: FC<Props> = forwardRef(
               style={{ color: `var(--theme-text-team-${teamColor}-normal)` }}
               type="body-secondary"
               data-test="list-item-second-line"
+              aria-label={secondLineArrayClean.join(', ')}
             >
-              {/* //TODO: change with dot divider when available */}
-              {_secondLineArray.join(' - ')}
+              {secondLineArrayClean.map((secondLineContent, i) => (
+                <SecondLineElement key={`second-line-item-${i}`} showDividerDot={i > 0}>
+                  {secondLineContent}
+                </SecondLineElement>
+              ))}
             </Text>
           </>
         );

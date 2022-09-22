@@ -77,6 +77,16 @@ describe('<SpaceListItem />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with multiple string secondLine', async () => {
+      expect.assertions(1);
+
+      const secondLine = ['one', 'two', 'three'];
+
+      const container = await mountAndWait(<SpaceListItem secondLine={secondLine} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with isNewActivity', async () => {
       expect.assertions(1);
 
@@ -270,6 +280,7 @@ describe('<SpaceListItem />', () => {
       expect.assertions(1);
 
       const secondLine = ['one', 'two'];
+      const ariaLabel = 'one, two';
 
       const element = (
         await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
@@ -277,7 +288,22 @@ describe('<SpaceListItem />', () => {
         .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
-      expect(element.textContent).toBe('one - two');
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+    });
+
+    it('should have provided secondLine when secondLine contains empty strings', async () => {
+      expect.assertions(1);
+
+      const secondLine = ['   ', 'two', '  ', 'four', 'five    '];
+      const ariaLabel = 'two, four, five';
+
+      const element = (
+        await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
+      )
+        .find(`[data-type="body-secondary"]`)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
     it('should have provided dot in compact mode', async () => {
@@ -292,6 +318,103 @@ describe('<SpaceListItem />', () => {
       expect(
         container.find(DividerDot).filter("[data-test='compact-mode-divider-dot']").props()
       ).toEqual({ 'data-test': 'compact-mode-divider-dot' });
+    });
+
+    it('should have provided dot when secondLine constains two strings', async () => {
+      expect.assertions(1);
+
+      const secondLine = ['one', 'two'];
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+      );
+
+      expect(
+        container
+          .find(DividerDot)
+          .filter("[data-test='multiple-string-second-line-divider-dot']")
+          .props()
+      ).toEqual({ 'data-test': 'multiple-string-second-line-divider-dot' });
+    });
+
+    it('should have provided dots when secondLine contains five strings', async () => {
+      expect.assertions(1);
+
+      const secondLine = ['one', 'two', 'three', 'four', 'five'];
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+      );
+
+      expect(
+        container.find(DividerDot).filter("[data-test='multiple-string-second-line-divider-dot']")
+          .length
+      ).toEqual(4);
+    });
+
+    it('should have provided dots when secondLine is multiple strings and in compact mode', async () => {
+      expect.assertions(2);
+
+      const secondLine = ['one', 'two', 'three'];
+
+      const container = (
+        await mountAndWait(
+          <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+        )
+      ).find(DividerDot);
+
+      expect(
+        container.filter("[data-test='multiple-string-second-line-divider-dot']").length
+      ).toEqual(2);
+      expect(container.filter("[data-test='compact-mode-divider-dot']").length).toEqual(1);
+    });
+
+    it('should have provided dots when secondLine contains empty strings and in compact mode', async () => {
+      expect.assertions(2);
+
+      const secondLine = ['   ', 'two', '  ', 'four', 'five    '];
+
+      const container = (
+        await mountAndWait(
+          <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+        )
+      ).find(DividerDot);
+
+      expect(
+        container.filter("[data-test='multiple-string-second-line-divider-dot']").length
+      ).toEqual(2);
+      expect(container.filter("[data-test='compact-mode-divider-dot']").length).toEqual(1);
+    });
+
+    it('should not have any dot when secondLine is an empty array', async () => {
+      expect.assertions(1);
+
+      const secondLine = [];
+
+      const container = (
+        await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
+      ).find(DividerDot);
+
+      expect(
+        container.filter("[data-test='multiple-string-second-line-divider-dot']").length
+      ).toEqual(0);
+    });
+
+    it('should not have any dot when secondLine is an empty array in compact mode', async () => {
+      expect.assertions(2);
+
+      const secondLine = [];
+
+      const container = (
+        await mountAndWait(
+          <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+        )
+      ).find(DividerDot);
+
+      expect(
+        container.filter("[data-test='multiple-string-second-line-divider-dot']").length
+      ).toEqual(0);
+      expect(container.filter("[data-test='compact-mode-divider-dot']").length).toEqual(0);
     });
 
     it('should have provided isNewActivity class when isNewActivity is provided', async () => {
