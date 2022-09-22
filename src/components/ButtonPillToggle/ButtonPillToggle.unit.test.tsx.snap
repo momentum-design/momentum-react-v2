@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
-<ButtonCircleToggle>
-  <ButtonCircle
+exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
+<ButtonPillToggle>
+  <ButtonPill
     aria-pressed={false}
-    className="md-button-circle-toggle-wrapper"
+    className="md-button-pill-toggle-wrapper"
     data-selected={false}
     disabled={false}
     ghost={true}
@@ -13,14 +13,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
   >
     <ButtonSimple
       aria-pressed={false}
-      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={true}
-      data-multiple-children={false}
+      data-grown={false}
       data-outline={false}
       data-selected={false}
       data-size={40}
+      data-solid={false}
       isDisabled={false}
       onPress={[Function]}
     >
@@ -34,14 +35,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
         >
           <button
             aria-pressed={false}
-            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={true}
-            data-multiple-children={false}
+            data-grown={false}
             data-outline={false}
             data-selected={false}
             data-size={40}
+            data-solid={false}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -62,17 +64,17 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
         </FocusRing>
       </FocusRing>
     </ButtonSimple>
-  </ButtonCircle>
-</ButtonCircleToggle>
+  </ButtonPill>
+</ButtonPillToggle>
 `;
 
-exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being false 1`] = `
-<ButtonCircleToggle
+exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being false 1`] = `
+<ButtonPillToggle
   ghost={false}
 >
-  <ButtonCircle
+  <ButtonPill
     aria-pressed={false}
-    className="md-button-circle-toggle-wrapper"
+    className="md-button-pill-toggle-wrapper"
     data-selected={false}
     disabled={false}
     ghost={false}
@@ -81,14 +83,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
   >
     <ButtonSimple
       aria-pressed={false}
-      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
-      data-multiple-children={false}
+      data-grown={false}
       data-outline={false}
       data-selected={false}
       data-size={40}
+      data-solid={false}
       isDisabled={false}
       onPress={[Function]}
     >
@@ -102,14 +105,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
         >
           <button
             aria-pressed={false}
-            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
-            data-multiple-children={false}
+            data-grown={false}
             data-outline={false}
             data-selected={false}
             data-size={40}
+            data-solid={false}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -130,17 +134,17 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
         </FocusRing>
       </FocusRing>
     </ButtonSimple>
-  </ButtonCircle>
-</ButtonCircleToggle>
+  </ButtonPill>
+</ButtonPillToggle>
 `;
 
-exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being true 1`] = `
-<ButtonCircleToggle
+exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being true 1`] = `
+<ButtonPillToggle
   ghost={true}
 >
-  <ButtonCircle
+  <ButtonPill
     aria-pressed={false}
-    className="md-button-circle-toggle-wrapper"
+    className="md-button-pill-toggle-wrapper"
     data-selected={false}
     disabled={false}
     ghost={true}
@@ -149,14 +153,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
   >
     <ButtonSimple
       aria-pressed={false}
-      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={true}
-      data-multiple-children={false}
+      data-grown={false}
       data-outline={false}
       data-selected={false}
       data-size={40}
+      data-solid={false}
       isDisabled={false}
       onPress={[Function]}
     >
@@ -170,14 +175,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
         >
           <button
             aria-pressed={false}
-            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={true}
-            data-multiple-children={false}
+            data-grown={false}
             data-outline={false}
             data-selected={false}
             data-size={40}
+            data-solid={false}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -198,17 +204,17 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
         </FocusRing>
       </FocusRing>
     </ButtonSimple>
-  </ButtonCircle>
-</ButtonCircleToggle>
+  </ButtonPill>
+</ButtonPillToggle>
 `;
 
-exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected being false 1`] = `
-<ButtonCircleToggle
+exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected being false 1`] = `
+<ButtonPillToggle
   isSelected={false}
 >
-  <ButtonCircle
+  <ButtonPill
     aria-pressed={false}
-    className="md-button-circle-toggle-wrapper"
+    className="md-button-pill-toggle-wrapper"
     data-selected={false}
     disabled={false}
     ghost={true}
@@ -218,14 +224,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
   >
     <ButtonSimple
       aria-pressed={false}
-      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={true}
-      data-multiple-children={false}
+      data-grown={false}
       data-outline={false}
       data-selected={false}
       data-size={40}
+      data-solid={false}
       isDisabled={false}
       isSelected={false}
       onPress={[Function]}
@@ -240,14 +247,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
         >
           <button
             aria-pressed={false}
-            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={true}
-            data-multiple-children={false}
+            data-grown={false}
             data-outline={false}
             data-selected={false}
             data-size={40}
+            data-solid={false}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -268,17 +276,17 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
         </FocusRing>
       </FocusRing>
     </ButtonSimple>
-  </ButtonCircle>
-</ButtonCircleToggle>
+  </ButtonPill>
+</ButtonPillToggle>
 `;
 
-exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected being true 1`] = `
-<ButtonCircleToggle
+exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected being true 1`] = `
+<ButtonPillToggle
   isSelected={true}
 >
-  <ButtonCircle
+  <ButtonPill
     aria-pressed={true}
-    className="md-button-circle-toggle-wrapper"
+    className="md-button-pill-toggle-wrapper"
     data-selected={true}
     disabled={false}
     ghost={true}
@@ -288,14 +296,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
   >
     <ButtonSimple
       aria-pressed={true}
-      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={true}
-      data-multiple-children={false}
+      data-grown={false}
       data-outline={false}
       data-selected={true}
       data-size={40}
+      data-solid={false}
       isDisabled={false}
       isSelected={true}
       onPress={[Function]}
@@ -310,14 +319,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
         >
           <button
             aria-pressed={true}
-            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={true}
-            data-multiple-children={false}
+            data-grown={false}
             data-outline={false}
             data-selected={true}
             data-size={40}
+            data-solid={false}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -338,17 +348,17 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
         </FocusRing>
       </FocusRing>
     </ButtonSimple>
-  </ButtonCircle>
-</ButtonCircleToggle>
+  </ButtonPill>
+</ButtonPillToggle>
 `;
 
-exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline being false 1`] = `
-<ButtonCircleToggle
+exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being false 1`] = `
+<ButtonPillToggle
   outline={false}
 >
-  <ButtonCircle
+  <ButtonPill
     aria-pressed={false}
-    className="md-button-circle-toggle-wrapper"
+    className="md-button-pill-toggle-wrapper"
     data-selected={false}
     disabled={false}
     ghost={true}
@@ -358,14 +368,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
   >
     <ButtonSimple
       aria-pressed={false}
-      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={true}
-      data-multiple-children={false}
+      data-grown={false}
       data-outline={false}
       data-selected={false}
       data-size={40}
+      data-solid={false}
       isDisabled={false}
       onPress={[Function]}
     >
@@ -379,14 +390,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
         >
           <button
             aria-pressed={false}
-            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={true}
-            data-multiple-children={false}
+            data-grown={false}
             data-outline={false}
             data-selected={false}
             data-size={40}
+            data-solid={false}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -407,17 +419,17 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
         </FocusRing>
       </FocusRing>
     </ButtonSimple>
-  </ButtonCircle>
-</ButtonCircleToggle>
+  </ButtonPill>
+</ButtonPillToggle>
 `;
 
-exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline being true 1`] = `
-<ButtonCircleToggle
+exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being true 1`] = `
+<ButtonPillToggle
   outline={true}
 >
-  <ButtonCircle
+  <ButtonPill
     aria-pressed={false}
-    className="md-button-circle-toggle-wrapper"
+    className="md-button-pill-toggle-wrapper"
     data-selected={false}
     disabled={false}
     ghost={true}
@@ -427,14 +439,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
   >
     <ButtonSimple
       aria-pressed={false}
-      className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
       data-ghost={true}
-      data-multiple-children={false}
+      data-grown={false}
       data-outline={true}
       data-selected={false}
       data-size={40}
+      data-solid={false}
       isDisabled={false}
       onPress={[Function]}
     >
@@ -448,14 +461,15 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
         >
           <button
             aria-pressed={false}
-            className="md-button-circle-wrapper md-button-circle-toggle-wrapper md-button-simple-wrapper"
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
             data-ghost={true}
-            data-multiple-children={false}
+            data-grown={false}
             data-outline={true}
             data-selected={false}
             data-size={40}
+            data-solid={false}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -476,6 +490,6 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
         </FocusRing>
       </FocusRing>
     </ButtonSimple>
-  </ButtonCircle>
-</ButtonCircleToggle>
+  </ButtonPill>
+</ButtonPillToggle>
 `;
