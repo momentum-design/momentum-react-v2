@@ -58,6 +58,7 @@
     &:-webkit-autofill:active {
       -webkit-animation: autofill 0s forwards;
       animation: autofill 0s forwards;
+      border-radius: 0.438rem 0 0 0.438rem;
     }
 
     @keyframes autofill {
