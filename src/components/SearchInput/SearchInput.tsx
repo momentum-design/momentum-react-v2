@@ -4,7 +4,7 @@ import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
-import { STYLE } from './SearchInput.constants';
+import { STYLE, DEFAULTS, SEARCH_ICON_HEIGHT_MAPPING } from './SearchInput.constants';
 import { Props } from './SearchInput.types';
 import './SearchInput.style.scss';
 import { useSearchField } from '@react-aria/searchfield';
@@ -19,7 +19,16 @@ import LoadingSpinner from '../LoadingSpinner';
  *  Search input
  */
 const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
-  const { className, id, style, searching, clearButtonAriaLabel, label, isDisabled } = props;
+  const {
+    className,
+    id,
+    style,
+    searching,
+    clearButtonAriaLabel,
+    label,
+    isDisabled,
+    height = DEFAULTS.HEIGHT,
+  } = props;
   const state = useSearchFieldState(props);
   const componentRef = useRef(null);
   const inputRef = ref || componentRef;
@@ -41,6 +50,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       style={style}
       data-disabled={isDisabled}
       data-focus={isFocused}
+      data-height={height}
     >
       {label && (
         <label htmlFor={labelProps.htmlFor} {...labelProps}>
@@ -49,9 +59,14 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       )}
       <div>
         {searching ? (
-          <LoadingSpinner className={STYLE.searching} />
+          <LoadingSpinner scale={SEARCH_ICON_HEIGHT_MAPPING[height]} className={STYLE.searching} />
         ) : (
-          <Icon weight="bold" className={STYLE.search} name={'search'} />
+          <Icon
+            weight="bold"
+            scale={SEARCH_ICON_HEIGHT_MAPPING[height]}
+            className={STYLE.search}
+            name={'search'}
+          />
         )}
       </div>
       <div className={STYLE.container}>
@@ -63,7 +78,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
           {...clearButtonProps}
           aria-label={clearButtonAriaLabel}
         >
-          <Icon scale={18} name="cancel" />
+          <Icon weight="bold" scale={SEARCH_ICON_HEIGHT_MAPPING[height]} name="cancel" />
         </ButtonSimple>
       )}
       <InputMessage />

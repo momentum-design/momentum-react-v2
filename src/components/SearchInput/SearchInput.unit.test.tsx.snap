@@ -8,14 +8,15 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
     <div
       className="md-search-input-wrapper"
       data-focus={false}
+      data-height={32}
       onClick={[Function]}
     >
       <div>
         <Icon
           className="md-search-input-search"
           name="search"
-          scale={18}
-          weight="light"
+          scale={16}
+          weight="bold"
         >
           <div
             className="md-icon-wrapper md-search-input-search"
@@ -23,7 +24,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
             <svg
               className=""
               data-autoscale={false}
-              data-scale={18}
+              data-scale={16}
               data-test="search"
               fill="currentColor"
               height="100%"
@@ -111,14 +112,15 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
     <div
       className="md-search-input-wrapper"
       data-focus={false}
+      data-height={32}
       onClick={[Function]}
     >
       <div>
         <Icon
           className="md-search-input-search"
           name="search"
-          scale={18}
-          weight="light"
+          scale={16}
+          weight="bold"
         >
           <div
             className="md-icon-wrapper md-search-input-search"
@@ -126,7 +128,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
             <svg
               className=""
               data-autoscale={false}
-              data-scale={18}
+              data-scale={16}
               data-test="search"
               fill="currentColor"
               height="100%"
@@ -186,7 +188,8 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
             >
               <Icon
                 name="cancel"
-                scale={18}
+                scale={16}
+                weight="bold"
               >
                 <div
                   className="md-icon-wrapper"
@@ -194,7 +197,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
                   <svg
                     className=""
                     data-autoscale={false}
-                    data-scale={18}
+                    data-scale={16}
                     data-test="cancel"
                     fill="currentColor"
                     height="100%"
@@ -243,31 +246,62 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
     <div
       className="md-search-input-wrapper"
       data-focus={false}
+      data-height={32}
       onClick={[Function]}
     >
       <div>
-        <Icon
-          className="md-search-input-search"
-          name="spinner"
-          scale={18}
-          weight="light"
+        <LoadingSpinner
+          className="md-search-input-searching"
+          scale={16}
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-search-input-searching md-loading-spinner-wrapper"
           >
-            <svg
-              className=""
-              data-autoscale={false}
-              data-scale={18}
-              data-test="spinner"
-              fill="currentColor"
-              height="100%"
-              style={Object {}}
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
+            <Icon
+              name="spinner"
+              scale={16}
+              weight="regular"
+            >
+              <div
+                className="md-icon-wrapper"
+              >
+                <svg
+                  className=""
+                  data-autoscale={false}
+                  data-scale={16}
+                  data-test="spinner"
+                  fill="currentColor"
+                  height="100%"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
+            <Icon
+              className="md-loading-spinner-arch"
+              name="spinner-partial"
+              scale={16}
+              weight="regular"
+            >
+              <div
+                className="md-icon-wrapper md-loading-spinner-arch"
+              >
+                <svg
+                  className=""
+                  data-autoscale={false}
+                  data-scale={16}
+                  data-test="spinner-partial"
+                  fill="currentColor"
+                  height="100%"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
           </div>
-        </Icon>
+        </LoadingSpinner>
       </div>
       <div
         className="md-search-input-container"
@@ -320,6 +354,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
     <div
       className="md-search-input-wrapper"
       data-focus={false}
+      data-height={32}
       onClick={[Function]}
     >
       <label
@@ -332,8 +367,8 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
         <Icon
           className="md-search-input-search"
           name="search"
-          scale={18}
-          weight="light"
+          scale={16}
+          weight="bold"
         >
           <div
             className="md-icon-wrapper md-search-input-search"
@@ -341,7 +376,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
             <svg
               className=""
               data-autoscale={false}
-              data-scale={18}
+              data-scale={16}
               data-test="search"
               fill="currentColor"
               height="100%"
@@ -404,14 +439,15 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
     <div
       className="example-class md-search-input-wrapper"
       data-focus={false}
+      data-height={32}
       onClick={[Function]}
     >
       <div>
         <Icon
           className="md-search-input-search"
           name="search"
-          scale={18}
-          weight="light"
+          scale={16}
+          weight="bold"
         >
           <div
             className="md-icon-wrapper md-search-input-search"
@@ -419,7 +455,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
             <svg
               className=""
               data-autoscale={false}
-              data-scale={18}
+              data-scale={16}
               data-test="search"
               fill="currentColor"
               height="100%"
@@ -481,6 +517,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
     <div
       className="md-search-input-wrapper"
       data-focus={false}
+      data-height={32}
       id="example-id"
       onClick={[Function]}
     >
@@ -488,8 +525,8 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
         <Icon
           className="md-search-input-search"
           name="search"
-          scale={18}
-          weight="light"
+          scale={16}
+          weight="bold"
         >
           <div
             className="md-icon-wrapper md-search-input-search"
@@ -497,7 +534,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
             <svg
               className=""
               data-autoscale={false}
-              data-scale={18}
+              data-scale={16}
               data-test="search"
               fill="currentColor"
               height="100%"
@@ -563,6 +600,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
     <div
       className="md-search-input-wrapper"
       data-focus={false}
+      data-height={32}
       onClick={[Function]}
       style={
         Object {
@@ -574,8 +612,8 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
         <Icon
           className="md-search-input-search"
           name="search"
-          scale={18}
-          weight="light"
+          scale={16}
+          weight="bold"
         >
           <div
             className="md-icon-wrapper md-search-input-search"
@@ -583,7 +621,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
             <svg
               className=""
               data-autoscale={false}
-              data-scale={18}
+              data-scale={16}
               data-test="search"
               fill="currentColor"
               height="100%"

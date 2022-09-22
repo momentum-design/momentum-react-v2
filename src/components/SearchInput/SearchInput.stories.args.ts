@@ -1,4 +1,5 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { DEFAULTS, HEIGHTS } from './SearchInput.constants';
 
 export default {
   ...commonStyles,
@@ -22,6 +23,15 @@ export default {
   },
   searching: {
     description: 'Triggers the display of the spinner when true',
+    table: {
+      category: 'Props',
+    },
+  },
+  height: {
+    description: 'Changes the height of the SearchInput component',
+    options: [...Object.values(HEIGHTS)],
+    control: { type: 'select' },
+    defaultValue: DEFAULTS.HEIGHT,
     table: {
       category: 'Props',
     },
