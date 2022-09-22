@@ -49,9 +49,9 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       )}
       <div>
         {searching ? (
-          <LoadingSpinner scale={16} className={STYLE.searching} />
+          <LoadingSpinner className={STYLE.searching} />
         ) : (
-          <Icon weight="bold" scale={16} className={STYLE.search} name={'search'} />
+          <Icon weight="bold" className={STYLE.search} name={'search'} />
         )}
       </div>
       <div className={STYLE.container}>
