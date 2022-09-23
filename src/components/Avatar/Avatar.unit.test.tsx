@@ -1,11 +1,9 @@
 import Avatar from '.';
 import { mount } from 'enzyme';
 import React from 'react';
-import { MAX_INITIALS_SPACE, SIZES, STYLE } from './Avatar.constants';
-import { AvatarSize, PresenceType } from './Avatar.types';
+import { MAX_INITIALS_SPACE, SIZES, STYLE, AVATAR_COLORS } from './Avatar.constants';
+import { AvatarColor, AvatarSize, PresenceType } from './Avatar.types';
 import { mountAndWait } from '../../../test/utils';
-import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
-import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 
 describe('Avatar', () => {
   describe('snapshot', () => {
@@ -194,7 +192,7 @@ describe('Avatar', () => {
     it('should pass the color prop', () => {
       expect.assertions(1);
 
-      const color = TEAM_COLORS.cyan as TeamColor;
+      const color = AVATAR_COLORS.cyan as AvatarColor;
 
       const element = mount(<Avatar initials="CW" color={color} />)
         .find(`div.${STYLE.wrapper}`)

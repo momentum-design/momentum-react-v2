@@ -34,6 +34,8 @@ const AVATAR_ICON_SIZE_MAPPING: Record<number, { scale: IconScale; weight: IconW
   124: { scale: 64, weight: 'light' },
 };
 
+const AVATAR_COLORS = { ...TEAM_COLORS, yellow: 'yellow' };
+
 const TYPES = {
   person: 'person',
   space: 'space',
@@ -52,7 +54,7 @@ const STYLE = {
 const DEFAULTS = {
   PRESENCE: PresenceType.Default,
   SIZE: SIZES[24],
-  COLOR: TEAM_COLORS.default,
+  COLOR: AVATAR_COLORS.default,
   TYPE: TYPES.person,
   HIDE_DEFAULT_TOOLTIP: false,
 };
@@ -67,4 +69,5 @@ export {
   MAX_INITIALS_PERSON,
   AVATAR_PRESENCE_ICON_SIZE_MAPPING,
   AVATAR_ICON_SIZE_MAPPING,
+  AVATAR_COLORS,
 };
