@@ -17,12 +17,12 @@ const SIZES = {
 };
 
 const AVATAR_PRESENCE_ICON_SIZE_MAPPING: Record<number, IconScale> = {
-  24: 8,
-  32: 12,
-  48: 14,
-  72: 16,
-  88: 20,
-  124: 28,
+  24: 10,
+  32: 14,
+  48: 16,
+  72: 20,
+  88: 28,
+  124: 40,
 };
 
 const AVATAR_ICON_SIZE_MAPPING: Record<number, { scale: IconScale; weight: IconWeight }> = {

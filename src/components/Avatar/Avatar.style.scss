@@ -9,6 +9,10 @@
   justify-content: center;
   bottom: -0.2rem;
   right: -0.2rem;
+
+  &[data-shape='false'] {
+    border-radius: 25%;
+  }
 }
 
 .md-avatar-wrapper {
