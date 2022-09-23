@@ -103,14 +103,16 @@ const FormExample: FC<FormProps> = (props: FormProps) => {
       }}
     >
       {displayName && (
-        <TextInput
+        <BetterExample
+          initialValue=""
           placeholder={'Display Name'}
           type="name"
           style={{ marginTop: '1rem', marginBottom: '1rem', width: '16.25rem' }}
         />
       )}
       {emailAddress && (
-        <TextInput
+        <BetterExample
+          initialValue=""
           placeholder={'Email address'}
           type="email"
           style={{
@@ -121,7 +123,8 @@ const FormExample: FC<FormProps> = (props: FormProps) => {
         />
       )}
       {password && (
-        <TextInput
+        <BetterExample
+          initialValue=""
           type="password"
           placeholder={'Password'}
           style={{ marginBottom: '1rem', width: '16.25rem' }}
