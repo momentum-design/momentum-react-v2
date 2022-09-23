@@ -36,7 +36,9 @@
   }
 
   .md-avatar-icon-wrapper {
-    fill: var(--avatar-color-avatar-text);
+    svg {
+      fill: var(--avatar-color-avatar-text);
+    }
   }
 
   // Background Color
@@ -82,6 +84,10 @@
 
   &[data-color='pink'] {
     background-color: var(--avatar-color-avatar-background-pink);
+  }
+
+  &[data-color='yellow'] {
+    background-color: var(--avatar-color-avatar-background-yellow);
   }
 
   // Sizes

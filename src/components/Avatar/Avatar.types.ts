@@ -21,6 +21,7 @@ export enum PresenceType {
 }
 
 export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
+export type AvatarColor = TeamColor | 'yellow';
 
 export interface Props extends Omit<AriaButtonProps, 'type'> {
   /**
@@ -58,7 +59,7 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   /**
    * Background color for avatar
    */
-  color?: TeamColor;
+  color?: AvatarColor;
   /**
    * Determines if the avatar is for a space or person
    */
