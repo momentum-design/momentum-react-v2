@@ -1,20 +1,18 @@
 import { IconScale } from '../Icon';
+import { SearchFieldHeight } from './SearchInput.types';
 
 const CLASS_PREFIX = 'md-search-input';
 
-const HEIGHTS = {
-  28: 28,
-  32: 32,
-};
+const HEIGHTS = [28, 32] as const;
 
-const SEARCH_ICON_HEIGHT_MAPPING: Record<number, IconScale> = {
+const SEARCH_ICON_HEIGHT_MAPPING: Record<SearchFieldHeight, IconScale> = {
   28: 12,
   32: 16,
 };
 
 const DEFAULTS = {
-  HEIGHT: HEIGHTS[32],
-};
+  HEIGHT: 32,
+} as const;
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,

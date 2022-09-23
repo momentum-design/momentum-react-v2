@@ -1,7 +1,8 @@
 import { CSSProperties } from 'react';
 import { AriaSearchFieldProps } from '@react-types/searchfield';
+import { HEIGHTS } from './SearchInput.constants';
 
-export type SearchFieldHeight = 28 | 32;
+export type SearchFieldHeight = typeof HEIGHTS[number];
 
 export interface SearchFilterTranslations {
   /**
