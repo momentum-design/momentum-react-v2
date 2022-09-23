@@ -508,6 +508,84 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
 </SSRProvider>
 `;
 
+exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
+<SSRProvider>
+  <SearchInput
+    aria-label="search"
+    height={28}
+  >
+    <div
+      className="md-search-input-wrapper"
+      data-focus={false}
+      data-height={28}
+      onClick={[Function]}
+    >
+      <div>
+        <Icon
+          className="md-search-input-search"
+          name="search"
+          scale={12}
+          weight="bold"
+        >
+          <div
+            className="md-icon-wrapper md-search-input-search"
+          >
+            <svg
+              className=""
+              data-autoscale={false}
+              data-scale={12}
+              data-test="search"
+              fill="currentColor"
+              height="100%"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+      <div
+        className="md-search-input-container"
+      >
+        <input
+          aria-label="search"
+          disabled={false}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          type="search"
+          value=""
+        />
+      </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message-message"
+            message-level="none"
+            role="alert"
+          >
+            <Text
+              className="md-input-message--text"
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
+          </div>
+        </div>
+      </InputMessage>
+    </div>
+  </SearchInput>
+</SSRProvider>
+`;
+
 exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
 <SSRProvider>
   <SearchInput

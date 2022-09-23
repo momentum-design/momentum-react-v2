@@ -28,7 +28,7 @@ export default {
     },
   },
   height: {
-    description: 'Changes the height of the SearchInput component',
+    description: 'Changes the height of the component',
     options: [...Object.values(HEIGHTS)],
     control: { type: 'select' },
     defaultValue: DEFAULTS.HEIGHT,

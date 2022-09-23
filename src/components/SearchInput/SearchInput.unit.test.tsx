@@ -77,6 +77,14 @@ describe('<SearchInput />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with height', async () => {
+      expect.assertions(1);
+
+      const container = await mountComponent(<SearchInput aria-label="search" height={28} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot when filters are set', async () => {
       expect.assertions(1);
 
@@ -151,6 +159,26 @@ describe('<SearchInput />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should have provided height when height is provided', async () => {
+      expect.assertions(1);
+
+      const element = (await mountAndWait(<SearchInput aria-label="search" height={28} />))
+        .find(SearchInput)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-height')).toBe('28');
+    });
+
+    it('should have default height when height is not provided', async () => {
+      expect.assertions(1);
+
+      const element = (await mountAndWait(<SearchInput aria-label="search" />))
+        .find(SearchInput)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-height')).toBe('32');
     });
 
     it('should pass the aria label to the input', async () => {
