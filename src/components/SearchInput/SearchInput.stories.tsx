@@ -131,7 +131,7 @@ delete Example.argTypes.searching;
 const PaddedExample: FC<SearchInputProps> = (props: SearchInputProps) => {
   return (
     <div style={{ margin: '1rem' }}>
-      <SearchInput height={32} {...props} />
+      <SearchInput {...props} />
     </div>
   );
 };

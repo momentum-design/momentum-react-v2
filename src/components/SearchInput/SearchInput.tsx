@@ -4,7 +4,7 @@ import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
-import { STYLE, DEFAULTS, SEARCH_ICON_HEIGHT_MAPPING } from './SearchInput.constants';
+import { STYLE, DEFAULTS, ICON_HEIGHT_MAPPING } from './SearchInput.constants';
 import { Props } from './SearchInput.types';
 import './SearchInput.style.scss';
 import { useSearchField } from '@react-aria/searchfield';
@@ -59,11 +59,11 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       )}
       <div>
         {searching ? (
-          <LoadingSpinner scale={SEARCH_ICON_HEIGHT_MAPPING[height]} className={STYLE.searching} />
+          <LoadingSpinner scale={ICON_HEIGHT_MAPPING[height]} className={STYLE.searching} />
         ) : (
           <Icon
             weight="bold"
-            scale={SEARCH_ICON_HEIGHT_MAPPING[height]}
+            scale={ICON_HEIGHT_MAPPING[height]}
             className={STYLE.search}
             name={'search'}
           />
@@ -78,7 +78,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
           {...clearButtonProps}
           aria-label={clearButtonAriaLabel}
         >
-          <Icon weight="bold" scale={SEARCH_ICON_HEIGHT_MAPPING[height]} name="cancel" />
+          <Icon weight="bold" scale={ICON_HEIGHT_MAPPING[height]} name="cancel" />
         </ButtonSimple>
       )}
       <InputMessage />
