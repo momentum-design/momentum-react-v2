@@ -127,6 +127,7 @@ const Popover: FC<Props> = (props: Props) => {
           {
             name: 'preventOverflow',
             options: {
+              padding: 8,
               altAxis: true,
               boundariesElement: boundary,
             },
