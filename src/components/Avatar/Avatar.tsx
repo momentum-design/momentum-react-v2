@@ -60,7 +60,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
   const renderPresence = (presenceType: PresenceType) => {
     let presenceIcon: string;
     let presenceColor: string;
-    let wrapperIsCircle = true;
+    let isCircularWrapper = true;
 
     //TODO: temporary fix until design gives proper design spec for failure badge
     if (failureBadge) {
@@ -78,17 +78,17 @@ const Avatar: React.FC<Props> = (props: Props) => {
         case PresenceType.Meet:
           presenceIcon = 'camera-presence';
           presenceColor = 'var(--avatar-presence-icon-meeting)';
-          wrapperIsCircle = false;
+          isCircularWrapper = false;
           break;
         case PresenceType.Schedule:
           presenceIcon = 'meetings-presence';
           presenceColor = 'var(--avatar-presence-icon-schedule)';
-          wrapperIsCircle = false;
+          isCircularWrapper = false;
           break;
         case PresenceType.Call:
           presenceIcon = 'handset';
           presenceColor = 'var(--avatar-presence-icon-call)';
-          wrapperIsCircle = false;
+          isCircularWrapper = false;
           break;
         case PresenceType.DND:
           presenceIcon = 'dnd-presence';
@@ -97,7 +97,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
         case PresenceType.Presenting:
           presenceIcon = 'share-screen';
           presenceColor = 'var(--avatar-presence-icon-presenting)';
-          wrapperIsCircle = false;
+          isCircularWrapper = false;
           break;
         case PresenceType.QuietHours:
           presenceIcon = 'quiet-hours-presence';
@@ -118,17 +118,17 @@ const Avatar: React.FC<Props> = (props: Props) => {
         case PresenceType.OnMobile:
           presenceIcon = 'phone';
           presenceColor = 'var(--avatar-presence-icon-on-mobile)';
-          wrapperIsCircle = false;
+          isCircularWrapper = false;
           break;
         case PresenceType.OnDevice:
           presenceIcon = 'generic-device-video';
           presenceColor = 'var(--avatar-presence-icon-on-device)';
-          wrapperIsCircle = false;
+          isCircularWrapper = false;
           break;
         case PresenceType.OnHold:
           presenceIcon = 'pause';
           presenceColor = 'var(--avatar-presence-icon-on-hold)';
-          wrapperIsCircle = false;
+          isCircularWrapper = false;
           break;
         default:
           break;
@@ -136,7 +136,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
     }
 
     return (
-      <div className={STYLE.presenceIconWrapper} data-shape={wrapperIsCircle}>
+      <div className={STYLE.presenceIconWrapper} data-shape={isCircularWrapper}>
         <Icon
           name={presenceIcon}
           weight={presenceIcon === 'busy-presence' ? 'bold' : 'filled'}
