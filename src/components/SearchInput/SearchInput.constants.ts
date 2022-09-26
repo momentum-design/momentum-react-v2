@@ -5,7 +5,7 @@ const CLASS_PREFIX = 'md-search-input';
 
 const HEIGHTS = [28, 32] as const;
 
-const SEARCH_ICON_HEIGHT_MAPPING: Record<SearchFieldHeight, IconScale> = {
+const ICON_HEIGHT_MAPPING: Record<SearchFieldHeight, IconScale> = {
   28: 12,
   32: 16,
 };
@@ -22,4 +22,4 @@ const STYLE = {
   clear: `${CLASS_PREFIX}-clear`,
 };
 
-export { CLASS_PREFIX, HEIGHTS, SEARCH_ICON_HEIGHT_MAPPING, DEFAULTS, STYLE };
+export { CLASS_PREFIX, HEIGHTS, ICON_HEIGHT_MAPPING, DEFAULTS, STYLE };
