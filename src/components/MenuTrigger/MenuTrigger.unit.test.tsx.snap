@@ -65,6 +65,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -111,6 +112,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -157,6 +159,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
@@ -2278,6 +2281,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -2324,6 +2328,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -2370,6 +2375,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
@@ -4491,6 +4497,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -4537,6 +4544,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -4583,6 +4591,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
@@ -6705,6 +6714,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -6751,6 +6761,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -6797,6 +6808,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
@@ -8921,6 +8933,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -8967,6 +8980,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -9013,6 +9027,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
@@ -11134,6 +11149,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -11180,6 +11196,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -11226,6 +11243,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
@@ -13420,6 +13438,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -13466,6 +13485,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -13512,6 +13532,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
@@ -15644,6 +15665,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
+                "padding": 8,
               },
             },
           ],
@@ -15690,6 +15712,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
+                  "padding": 8,
                 },
               },
             ],
@@ -15736,6 +15759,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
+                    "padding": 8,
                   },
                 },
               ],
