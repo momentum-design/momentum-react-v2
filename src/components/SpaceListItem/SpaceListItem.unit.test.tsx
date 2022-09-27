@@ -306,6 +306,30 @@ describe('<SpaceListItem />', () => {
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
+    it('should not have secondLine when secondLine is null', async () => {
+      expect.assertions(1);
+
+      const secondLine = null;
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+      );
+
+      expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
+    });
+
+    it('should not have secondLine when secondLine is undefined', async () => {
+      expect.assertions(1);
+
+      const secondLine = undefined;
+
+      const container = await mountAndWait(
+        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+      );
+
+      expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
+    });
+
     it('should have provided dot in compact mode', async () => {
       expect.assertions(1);
 
