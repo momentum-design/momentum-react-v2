@@ -10,6 +10,7 @@ import Text from '../Text';
 import Icon from '../Icon';
 import DividerDot from '../DividerDot';
 import SecondLineElement from './SecondLineElement';
+import { cleanSecondLine } from './SpaceListItem.utils';
 
 //TODO: support 2-line labels for right/position-end section.
 /**
@@ -42,15 +43,7 @@ const SpaceListItem: FC<Props> = forwardRef(
     } = props;
 
     const renderText = () => {
-      const secondLineArray: string[] = typeof secondLine === 'string' ? [secondLine] : secondLine;
-
-      const secondLineArrayClean = secondLineArray.reduce((filteredArray, nextElement) => {
-        const nextElementClean = nextElement.trim();
-        if (nextElementClean) {
-          filteredArray.push(nextElementClean);
-        }
-        return filteredArray;
-      }, []);
+      const secondLineArrayClean = cleanSecondLine(secondLine);
 
       if (secondLineArrayClean.length) {
         return (
