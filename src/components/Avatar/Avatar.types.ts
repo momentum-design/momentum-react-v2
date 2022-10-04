@@ -1,5 +1,6 @@
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 import { AriaButtonProps } from '@react-types/button';
+import { SIZES } from './Avatar.constants';
 
 export enum PresenceType {
   Default = 'default',
@@ -20,7 +21,7 @@ export enum PresenceType {
   OnHold = 'onHold',
 }
 
-export type AvatarSize = 24 | 32 | 48 | 72 | 88 | 124;
+export type AvatarSize = typeof SIZES[number];
 export type AvatarColor = TeamColor | 'yellow';
 
 export interface Props extends Omit<AriaButtonProps, 'type'> {

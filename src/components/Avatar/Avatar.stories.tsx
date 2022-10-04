@@ -13,6 +13,7 @@ import {
 } from '@storybook/addon-docs';
 
 import Documentation from './Avatar.documentation.mdx';
+import argTypes from './Avatar.stories.args';
 import { PresenceType } from './Avatar.types';
 import { AVATAR_COLORS, DEFAULTS, SIZES, TYPES } from './Avatar.constants';
 
@@ -34,159 +35,6 @@ export default {
     expanded: true,
     docs: {
       page: DocsPage,
-    },
-  },
-  argTypes: {
-    className: {
-      defaultValue: undefined,
-      description:
-        'If present, the class name will be added to the underlying component. Used to override styles by consumers.',
-      control: { type: 'text' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
-    size: {
-      defaultValue: DEFAULTS.SIZE,
-      description: 'Size represents the size of te avatar.',
-      options: [undefined, ...Object.values(SIZES)],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'number',
-        },
-        defaultValue: {
-          summary: DEFAULTS.SIZE,
-        },
-      },
-    },
-    presence: {
-      defaultValue: DEFAULTS.PRESENCE,
-      description:
-        'Determines the current state of the user. (User is in meeting, presenting etc).',
-      options: [undefined, ...Object.values(PresenceType)],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: DEFAULTS.PRESENCE,
-        },
-      },
-    },
-    src: {
-      defaultValue: undefined,
-      description: 'URL with profile image for the avatar.',
-      control: { type: 'text' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
-    initials: {
-      defaultValue: undefined,
-      description: 'Initials to display inside the avatar.',
-      control: { type: 'text' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
-    title: {
-      defaultValue: undefined,
-      description:
-        'Name of person/space. The component will extract initials from this value and display accordingly',
-      control: { type: 'text', required: true },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
-    color: {
-      defaultValue: DEFAULTS.COLOR,
-      description:
-        'In case `src` is not provided, we can provide a color for the avatar using this property.',
-      options: [undefined, ...Object.values(AVATAR_COLORS)],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: DEFAULTS.COLOR,
-        },
-      },
-    },
-    icon: {
-      defaultValue: undefined,
-      description: 'Name of the icon to be displayed inside the Avatar. Must be a valid icon name.',
-      control: { type: 'text' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: undefined,
-        },
-      },
-    },
-    type: {
-      defaultValue: DEFAULTS.TYPE,
-      description: 'Determines whether the avatar is for a person or a space.',
-      options: [undefined, ...Object.values(TYPES)],
-      control: { type: 'select' },
-      table: {
-        type: {
-          summary: 'string',
-        },
-        defaultValue: {
-          summary: DEFAULTS.TYPE,
-        },
-      },
-    },
-    isTyping: {
-      defaultValue: false,
-      description: 'Determines whether the user is typing.',
-      control: { type: 'boolean' },
-      table: {
-        type: {
-          summary: 'boolean',
-        },
-        defaultValue: {
-          summary: false,
-        },
-      },
-    },
-    failureBadge: {
-      defaultValue: false,
-      description: 'Determines if there is an error in the Avatar component.',
-      control: { type: 'boolean' },
-      table: {
-        type: {
-          summary: 'boolean',
-        },
-        defaultValue: {
-          summary: false,
-        },
-      },
     },
   },
 };
@@ -219,12 +67,17 @@ const MultiTemplate: Story<AvatarProps> = (args: AvatarProps, { parameters }) =>
 
 const Example = Template.bind({});
 
+Example.argTypes = { ...argTypes };
+
 Example.args = {
   src: 'https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2855&q=80',
   initials: 'AS',
 };
 
 const PresenceTypes = MultiTemplate.bind({});
+
+PresenceTypes.argTypes = { ...argTypes };
+delete PresenceTypes.argTypes.presence;
 
 PresenceTypes.args = {
   initials: 'AS',
@@ -241,6 +94,9 @@ PresenceTypes.parameters = {
 };
 
 const Sizes = MultiTemplate.bind({});
+
+Sizes.argTypes = { ...argTypes };
+delete Sizes.argTypes.size;
 
 Sizes.args = {
   initials: 'A',
@@ -260,6 +116,8 @@ Sizes.parameters = {
 
 const Icons = MultiTemplate.bind({});
 
+Icons.argTypes = { ...argTypes };
+
 Icons.args = {
   initials: 'A',
 };
@@ -277,6 +135,9 @@ Icons.parameters = {
 };
 
 const Color = MultiTemplate.bind({});
+
+Color.argTypes = { ...argTypes };
+delete Color.argTypes.color;
 
 Color.args = {
   initials: 'A',
@@ -298,6 +159,10 @@ const Common = MultiTemplate.bind({});
 
 const cartesian = <T extends (string | number)[][]>(...arr: T) =>
   arr.reduce((a, b) => a.flatMap((c) => b.map((d) => [...c, d])), [[]]);
+
+Common.argTypes = { ...argTypes };
+delete Common.argTypes.size;
+delete Common.argTypes.presence;
 
 Common.args = {
   initials: 'B',

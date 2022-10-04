@@ -172,11 +172,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                   </span>
                   <div
                     className="md-avatar-presence-icon-wrapper"
+                    data-shape={true}
                   >
                     <Icon
                       fillColor="var(--avatar-presence-icon-active)"
                       name="unread"
-                      scale={12}
+                      scale={14}
                       strokeColor="none"
                       weight="filled"
                     >
@@ -186,7 +187,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                         <svg
                           className=""
                           data-autoscale={false}
-                          data-scale={12}
+                          data-scale={14}
                           data-test="unread"
                           height="100%"
                           style={
