@@ -15,7 +15,7 @@ import {
 import Documentation from './Avatar.documentation.mdx';
 import argTypes from './Avatar.stories.args';
 import { PresenceType } from './Avatar.types';
-import { AVATAR_COLORS, DEFAULTS, SIZES, TYPES } from './Avatar.constants';
+import { AVATAR_COLORS, SIZES } from './Avatar.constants';
 
 const DocsPage: FC = () => (
   <>
