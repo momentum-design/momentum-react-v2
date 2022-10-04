@@ -22,7 +22,7 @@ const AVATAR_PRESENCE_ICON_SIZE_MAPPING: Record<number, IconScale> = {
 const AVATAR_ICON_SIZE_MAPPING: Record<number, { scale: IconScale; weight: IconWeight }> = {
   24: { scale: 16, weight: 'bold' },
   32: { scale: 20, weight: 'regular' },
-  48: { scale: 22, weight: 'regular' },
+  48: { scale: 28, weight: 'regular' },
   64: { scale: 36, weight: 'regular' },
   72: { scale: 40, weight: 'regular' },
   88: { scale: 48, weight: 'regular' },
