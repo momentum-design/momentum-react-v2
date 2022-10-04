@@ -130,7 +130,7 @@ describe('Avatar', () => {
     it('should pass the size prop', () => {
       expect.assertions(1);
 
-      const size = SIZES[48] as AvatarSize;
+      const size = SIZES[2] as AvatarSize;
 
       const element = mount(<Avatar initials="CW" size={size} />)
         .find(`div.${STYLE.wrapper}`)
