@@ -87,7 +87,7 @@ import { Button } from '@momentum-ui/react-collaboration';
 const Component = () => (
   <div>
     <Button name="primary" size="large">
-      Welcome to Momentum UI - React Collaboration
+      Welcome to Momentum UI - React Collaboration - Button
     </Button>
   </div>
 );
