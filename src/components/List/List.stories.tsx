@@ -114,7 +114,7 @@ Common.parameters = {
                       }
                     >
                       <Menu selectionMode="single" key="2">
-                        <Item key="one">This is a longer text and should trim nicely...</Item>
+                        <Item key="one">One</Item>
                         <Item key="two">Two</Item>
                         <Item key="three">Three</Item>
                       </Menu>
