@@ -11,6 +11,7 @@ import { useTreeState, TreeState } from '@react-stately/tree';
 import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
+import { ListContext } from '../List/List.utils';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -76,20 +77,24 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   // sense especially when there are multiple menus inside.
   delete menuProps['aria-labelledby'];
 
+  // ListContext is necessary to prevent changes in parent ListContext
+  // for example when Menu is inside a list row
   return (
     <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
-      <ul
-        className={classnames(className, STYLE.wrapper)}
-        id={id}
-        style={style}
-        ref={ref}
-        {...menuProps}
-      >
-        {Array.from(state.collection.getKeys()).map((key) => {
-          const item = state.collection.getItem(key) as Node<T>;
-          return renderItem(item, state);
-        })}
-      </ul>
+      <ListContext.Provider value={{}}>
+        <ul
+          className={classnames(className, STYLE.wrapper)}
+          id={id}
+          style={style}
+          ref={ref}
+          {...menuProps}
+        >
+          {Array.from(state.collection.getKeys()).map((key) => {
+            const item = state.collection.getItem(key) as Node<T>;
+            return renderItem(item, state);
+          })}
+        </ul>
+      </ListContext.Provider>
     </MenuAppearanceContext.Provider>
   );
 };

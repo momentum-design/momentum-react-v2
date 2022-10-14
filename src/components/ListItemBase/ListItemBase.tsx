@@ -79,6 +79,16 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     ...rest,
   });
 
+  // Prevent list item update because it can cause state lost in the focused component e.g. in Menu
+  const listItemPressProps = {
+    ...pressProps,
+    onKeyDown: (event) => {
+      if (ref.current === document.activeElement || event.key === 'Tab') {
+        pressProps.onKeyDown(event);
+      }
+    },
+  };
+
   /**
    * Focus management
    */
@@ -90,12 +100,9 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
-    if (listContext && listContext?.setContext && isPressed && shouldFocusOnPress) {
-      // Prevent list item update because it can cause state lost in the focused component e.g. in Menu
-      if (!getKeyboardFocusableElements(ref).includes(document.activeElement)) {
-        ref.current.focus();
-        listContext.setContext(itemIndex);
-      }
+    if (listContext?.setContext && isPressed && shouldFocusOnPress && itemIndex !== undefined) {
+      ref.current.focus();
+      listContext.setContext(itemIndex);
     }
   }, [isPressed]);
 
@@ -189,7 +196,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     if (contextMenuActions) {
       ref.current.addEventListener('contextmenu', handleOnContextMenu);
     }
-    () => {
+    return () => {
       ref.current.removeEventListener('contextmenu', handleOnContextMenu);
     };
   }, []);
@@ -207,6 +214,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         data-interactive={interactive}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         role={role}
+        {...listItemPressProps}
       >
         {content}
         {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}
