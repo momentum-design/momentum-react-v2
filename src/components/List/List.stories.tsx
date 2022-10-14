@@ -24,6 +24,9 @@ import { MeetingMarker } from '../MeetingListItem/MeetingListItem.types';
 import ButtonGroup from '../ButtonGroup';
 import ButtonHyperlink from '../ButtonHyperlink';
 import Badge from '../Badge';
+import Menu from '../Menu';
+import { Item } from '@react-stately/collections';
+import { MenuTrigger } from '..';
 
 const TEST_LIST_SIZE = 30;
 
@@ -103,6 +106,19 @@ Common.parameters = {
                     <ButtonPill disabled color="join" size={28}>
                       Button 3
                     </ButtonPill>
+                    <MenuTrigger
+                      triggerComponent={
+                        <ButtonPill size={28}>
+                          <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+                        </ButtonPill>
+                      }
+                    >
+                      <Menu selectionMode="single" key="2">
+                        <Item key="one">This is a longer text and should trim nicely...</Item>
+                        <Item key="two">Two</Item>
+                        <Item key="three">Three</Item>
+                      </Menu>
+                    </MenuTrigger>
                   </Flex>
                 }
               />

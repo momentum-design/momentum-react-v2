@@ -13,6 +13,7 @@ import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
+import { getKeyboardFocusableElements } from './ListItemBase.utils';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
@@ -90,22 +91,16 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
     if (listContext && listContext?.setContext && isPressed && shouldFocusOnPress) {
-      ref.current.focus();
-      listContext.setContext(itemIndex);
+      // Prevent list item update because it can cause state lost in the focused component e.g. in Menu
+      if (!getKeyboardFocusableElements(ref).includes(document.activeElement)) {
+        ref.current.focus();
+        listContext.setContext(itemIndex);
+      }
     }
   }, [isPressed]);
 
-  function getKeyboardFocusableElements<T extends HTMLElement>(_ref: RefObject<T>) {
-    const result = _ref.current.querySelectorAll(
-      'a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
-    );
-    return Array.from(result).filter(
-      (el) => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden')
-    );
-  }
-
   useEffect(() => {
-    if (!listContext?.currentFocus) {
+    if (listContext?.currentFocus === undefined) {
       return;
     }
 
@@ -212,7 +207,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         data-interactive={interactive}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         role={role}
-        {...pressProps}
       >
         {content}
         {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}
