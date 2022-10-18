@@ -79,7 +79,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     ...rest,
   });
 
-  // Prevent list item update because it can cause state lost in the focused component e.g. in Menu
+  // Prevent list item update because it can cause state lost in the focused component e.g. Menu
   const listItemPressProps = {
     ...pressProps,
     onKeyDown: (event) => {
