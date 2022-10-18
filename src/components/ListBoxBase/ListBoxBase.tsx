@@ -9,6 +9,7 @@ import { ListState } from '@react-stately/list';
 
 import { Node } from '@react-types/shared';
 import MenuListBackground from '../MenuListBackground';
+import { ListContext } from '../List/List.utils';
 
 export const ListBoxContext = React.createContext<ListState<unknown>>(null);
 
@@ -42,17 +43,21 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
     });
   };
 
+  // ListContext is necessary to prevent changes in parent ListContext
+  // for example when Menu is inside a list row
   return (
     <ListBoxContext.Provider value={state}>
-      <MenuListBackground
-        {...listBoxProps}
-        color={'primary'}
-        ref={ref}
-        style={style}
-        className={className}
-      >
-        {renderItems()}
-      </MenuListBackground>
+      <ListContext.Provider value={{}}>
+        <MenuListBackground
+          {...listBoxProps}
+          color={'primary'}
+          ref={ref}
+          style={style}
+          className={className}
+        >
+          {renderItems()}
+        </MenuListBackground>
+      </ListContext.Provider>
     </ListBoxContext.Provider>
   );
 };
