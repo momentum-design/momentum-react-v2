@@ -236,25 +236,25 @@ describe('<List />', () => {
     it('should handle focus on tabbable elements in the list row', () => {
       expect.assertions(11);
 
-      const { getAllByTestId, getAllByRole } = render(
+      const { getAllByRole } = render(
         <List listSize={2}>
           <ListItemBase key="0" itemIndex={0}>
             <ListItemBaseSection>
-              <input data-testid="input" />
-              <button data-testid="button">Button 1</button>
+              <input type="text" />
+              <button>Button 1</button>
             </ListItemBaseSection>
           </ListItemBase>
           <ListItemBase key="1" itemIndex={1}>
             <ListItemBaseSection>
-              <input data-testid="input" />
-              <button data-testid="button">Button 2</button>
+              <input type="text" />
+              <button>Button 2</button>
             </ListItemBaseSection>
           </ListItemBase>
         </List>
       );
       const listItems = getAllByRole('listitem');
-      const inputs = getAllByTestId('input');
-      const buttons = getAllByTestId('button');
+      const inputs = getAllByRole('textbox');
+      const buttons = getAllByRole('button');
 
       expect(listItems[0]).toHaveFocus();
 
@@ -289,7 +289,7 @@ describe('<List />', () => {
       expect(listItems[1]).toHaveFocus();
     });
 
-    it('should handle manu in the list item', async () => {
+    it('should handle menu in the list item', async () => {
       expect.assertions(2);
 
       const { getAllByRole, findAllByText } = render(
