@@ -22,7 +22,7 @@ export const useMutationObservable = (
   targetEl: Node,
   callback: MutationCallback,
   config: MutationObserverInit = DEFAULT_OPTIONS
-) => {
+): void => {
   const [observer, setObserver] = useState<MutationObserver>(null);
 
   useEffect(() => {
