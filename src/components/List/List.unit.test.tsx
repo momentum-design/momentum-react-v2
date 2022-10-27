@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { mount } from 'enzyme';
 
 import List, { LIST_CONSTANTS as CONSTANTS } from './';
@@ -240,13 +240,13 @@ describe('<List />', () => {
         <List listSize={2}>
           <ListItemBase key="0" itemIndex={0}>
             <ListItemBaseSection>
-              <input type="text" />
+              <input type="text 1" />
               <button>Button 1</button>
             </ListItemBaseSection>
           </ListItemBase>
           <ListItemBase key="1" itemIndex={1}>
             <ListItemBaseSection>
-              <input type="text" />
+              <input type="text 2" />
               <button>Button 2</button>
             </ListItemBaseSection>
           </ListItemBase>
@@ -312,8 +312,47 @@ describe('<List />', () => {
       userEvent.tab();
       userEvent.keyboard('{Enter}');
 
-      const firstMenuItem = (await findAllByText('menu item 1'))[0].parentElement;
+      const firstMenuItem = (await findAllByText('menu item 1'))[0].closest('li');
       expect(firstMenuItem).toHaveFocus();
+    });
+
+    it('should handle focus on tabbable elements in the list row even when the item changes', async () => {
+      expect.assertions(4);
+
+      const DynamicComponent = () => {
+        const [muted, setMuted] = useState(false);
+        useEffect(() => {
+          setTimeout(() => setMuted(() => true));
+        }, []);
+
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+        return muted ? <div tabIndex={0}>muted</div> : <button>mute</button>;
+      };
+
+      const { getAllByRole, findAllByText } = render(
+        <List listSize={2}>
+          <ListItemBase key="0" itemIndex={0}>
+            <button>Button 1</button>
+          </ListItemBase>
+          <ListItemBase key="1" itemIndex={1}>
+            <DynamicComponent />
+          </ListItemBase>
+        </List>
+      );
+
+      const listItems = getAllByRole('listitem');
+      const buttons = getAllByRole('button');
+
+      expect(listItems[0]).toHaveFocus();
+
+      userEvent.tab();
+      expect(buttons[0]).toHaveFocus();
+
+      const updatedButton = await findAllByText('muted');
+
+      userEvent.tab();
+      expect(updatedButton[0]).not.toHaveFocus();
+      expect(document.body).toHaveFocus();
     });
   });
 });
