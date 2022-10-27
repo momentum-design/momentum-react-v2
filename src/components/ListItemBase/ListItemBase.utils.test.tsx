@@ -4,7 +4,7 @@ describe('getKeyboardFocusableElements', () => {
   const createRootNodeRef = (content = '') => {
     const root = document.createElement('div');
     root.innerHTML = content;
-    return { current: root };
+    return root;
   };
 
   it('should return with empty array when no child of the root node', () => {

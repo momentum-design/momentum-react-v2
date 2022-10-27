@@ -1,4 +1,12 @@
-import React, { RefObject, forwardRef, ReactNode, useRef, useEffect, useState } from 'react';
+import React, {
+  RefObject,
+  forwardRef,
+  ReactNode,
+  useRef,
+  useEffect,
+  useState,
+  useCallback,
+} from 'react';
 import classnames from 'classnames';
 
 import './ListItemBase.style.scss';
@@ -14,6 +22,7 @@ import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
 import { getKeyboardFocusableElements } from './ListItemBase.utils';
+import { useMutationObservable } from '../../hooks/useMutationObservable';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
@@ -106,25 +115,23 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     }
   }, [isPressed]);
 
+  const updateTabIndexes = useCallback(() => {
+    getKeyboardFocusableElements(ref.current)
+      .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
+      .forEach((el) => el.setAttribute('tabindex', focus ? '0' : '-2'));
+  }, [ref, focus]);
+
   useEffect(() => {
     if (listContext?.currentFocus === undefined) {
       return;
     }
-
-    const focusableElements = getKeyboardFocusableElements(ref);
-
     if (focus) {
       ref.current.focus();
-
-      focusableElements.forEach((element) => {
-        element.setAttribute('tabindex', '0');
-      });
-    } else {
-      focusableElements.forEach((element) => {
-        element.setAttribute('tabindex', '-2');
-      });
     }
+    updateTabIndexes();
   }, [listContext?.currentFocus]);
+
+  useMutationObservable(ref.current, updateTabIndexes);
 
   /**
    * Context menu
