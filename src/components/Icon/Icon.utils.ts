@@ -1,4 +1,4 @@
-import { IconWeight } from './Icon.types';
+import type { IconWeight } from './Icon.types';
 import { DEFAULTS } from './Icon.constants';
 /**
  * Creates the resolved name for SVG icons lookup.
