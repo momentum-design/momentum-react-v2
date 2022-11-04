@@ -11,6 +11,7 @@ import {
   VIEW_BOX_SPECS,
 } from './Icon.constants';
 import classnames from 'classnames';
+import { getResolvedSVGName } from './Icon.utils';
 
 /**
  * Icon component that can dynamically display SVG icons with a valid name.
@@ -28,9 +29,11 @@ const Icon: React.FC<Props> = (props: Props) => {
     style,
     title,
     weight,
+    weightless = DEFAULTS.WEIGHTLESS,
     ...otherProps
   } = props;
-  const { SvgIcon, error } = useDynamicSVGImport(`${name}-${weight || DEFAULTS.WEIGHT}`);
+  const resolvedSVGName = getResolvedSVGName(name, weight, weightless);
+  const { SvgIcon, error } = useDynamicSVGImport(resolvedSVGName);
 
   const isColoredIcon = name.indexOf('coloured') > 0;
 

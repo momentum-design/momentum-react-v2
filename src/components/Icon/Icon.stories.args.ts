@@ -98,4 +98,17 @@ export default {
       },
     },
   },
+  weightless: {
+    defaultValue: CONSTANTS.DEFAULTS.WEIGHTLESS,
+    description: 'Identifies the icons that do not have a weight.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.WEIGHTLESS,
+      },
+    },
+  },
 };
