@@ -87,4 +87,13 @@ export interface Props {
    * Not all icons have all 4 styles.
    */
   weight?: IconWeight;
+
+  /**
+   * Due to the fact that some icons don't come with a weight,
+   * we need a way to access them without relying on the weight rule.
+   * Use this prop to specify if you're trying to use an icon without weight.
+   * @remarks
+   * An example would be brand icons.
+   */
+  weightless?: boolean;
 }

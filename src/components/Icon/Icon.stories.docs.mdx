@@ -1,1 +1,38 @@
+import Icon from './Icon.tsx';
+
 `<Icon />` is a generic icon component that acts as an dynamic icon loader.
+
+# `weight` vs `weightless`
+
+The way the `<Icon/>` component works, is, it takes `name` and an optional `weight` props. The
+`name` props identifies the icon `name` (can usually be found in Figma specs easily by looking at
+the name of the Figma component). The `weight` prop determines the style of the icon, and there are
+4 possible options: (thin, regular, bold, filled). Most icons from the icons library will have a
+weight variant (remark: some might only have a subset of those), but some icons will not have a
+weight variant (these are special icons): examples are brand icons, and icons like
+`webex-assistant-active`.
+
+If you're trying to use an icon which has a variant, use the `weight` prop. (Note that it defaults
+to `regular` if not provided.) If you're trying to use an icon that doesn't support weights, you'll
+have to use the `weightless` prop so that the `<Icon/>` component can find the correct .svg file.
+
+### How SVG name resolving works
+
+The internal logic to find icons is as follows: `resolvedSVGName` = `name` + `weight` if
+`weightless=false` otherwise `name`.
+
+#### Examples:
+
+| Component                                                  | resolvedSVGName                              | explanation                                                          | rendered                                                 |
+| ---------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| `<Icon name="cancel"/>`                                    | `cancel-regular.svg`                         | Because weight prop defaults to regular.                             | <Icon name="cancel"/>                                    |
+| `<Icon name="cancel" weight="thin"/>`                      | `cancel-regular-thin.svg`                    | Weight `thin` for `cancel` icon doens't exist.                       | <Icon name="cancel" weight="thin"/>                      |
+| `<Icon name="cancel" weight="regular"/>`                   | `cancel-regular.svg`                         |                                                                      | <Icon name="cancel" weight="regular"/>                   |
+| `<Icon name="cancel" weight="bold"/>`                      | `cancel-bold.svg`                            |                                                                      | <Icon name="cancel" weight="bold"/>                      |
+| `<Icon name="cancel" weight="filled"/>`                    | `cancel-filled.svg`                          | Weight `filled` for `cancel` icon doens't exist.                     | <Icon name="cancel" weight="filled"/>                    |
+| `<Icon name="webex-assistant-active-colored" weightless/>` | `webex-assistant-active-colored.svg`         |                                                                      | <Icon name="webex-assistant-active-colored" weightless/> |
+| `<Icon name="webex-assistant-active-colored"/>`            | `webex-assistant-active-colored-regular.svg` | ⚠️ This will break! Make sure you check if the icon supports weights. | <Icon name="webex-assistant-active-colored" />           |
+
+# Figma Icons Library
+
+[Figma Link](https://www.figma.com/file/SXK8Gb5tMlN9xiG2cC4OBu/Assets---Icon-Library?node-id=0%3A1)
