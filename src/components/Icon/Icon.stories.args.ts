@@ -100,7 +100,7 @@ export default {
   },
   weightless: {
     defaultValue: CONSTANTS.DEFAULTS.WEIGHTLESS,
-    description: 'Identifies the icons that do not have a weight.',
+    description: "Indicates if the icon doesn't have a weight",
     control: { type: 'boolean' },
     table: {
       type: {

@@ -1,4 +1,4 @@
-import { IconWeight } from '.';
+import type { IconWeight } from '.';
 import { getResolvedSVGName } from './Icon.utils';
 
 describe('getResolvedSVGName', () => {
