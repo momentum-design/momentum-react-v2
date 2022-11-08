@@ -1,0 +1,33 @@
+The `<OverlayAlert />` component is used to bring attention to any provided children of itself by placing a colored element over its parent component or the entire viewport.
+
+Note that the render state of this component must be managed manually from within its various component props, such as `children`, `actions`, or `controls`. This is inclusive of any actions that remove/deconstruct the `<OverlayAlert />` component.
+
+The default `z-index` for this component is `1000`.
+
+Example:
+
+```jsx
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+    const open = () => {
+      setIsOpen(true);
+    };
+
+    const close = () => {
+      setIsOpen(false);
+    };
+
+    return (
+      <div id="app">
+        <ButtonPill onPress={open}>Open</ButtonPill>
+        {isOpen && <OverlayAlert
+          actions={<ButtonPill onPress={close} size={28}>OK</ButtonPill>}
+          controls={<ButtonControl onPress={close} control="close" />}
+          {...args}
+        />}
+      </div>
+    );
+  };
+}
+```
