@@ -1,0 +1,44 @@
+.md-overlay-alert-wrapper {
+  > :first-child {
+    max-width: 32rem;
+    min-width: 20rem;
+
+    > :first-child {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      > .md-overlay-alert-title {
+        justify-self: start;
+        margin: 0.1875rem 1rem;
+      }
+
+      > :last-child {
+        display: flex;
+        justify-content: end;
+      }
+    }
+
+    > :not(:first-child):not(:last-child) {
+      padding: 0.5rem 1rem 0;
+      width: 100%;
+
+      > .md-overlay-alert-details {
+        display: block;
+        line-height: 1.25rem;
+      }
+    }
+
+    > :last-child {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem 1.5rem;
+      width: 100%;
+
+      > * {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

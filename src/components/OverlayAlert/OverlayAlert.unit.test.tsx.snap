@@ -1,0 +1,802 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
+<OverlayAlert>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div />
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
+<OverlayAlert
+  actions={
+    <ButtonPill>
+      Button Pill
+    </ButtonPill>
+  }
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div />
+          <div>
+            <ButtonPill>
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-grown={false}
+                data-outline={false}
+                data-size={40}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
+                  >
+                    <button
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-grown={false}
+                      data-outline={false}
+                      data-size={40}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      <span>
+                        Button Pill
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </ButtonPill>
+          </div>
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
+<OverlayAlert
+  className="example-class"
+>
+  <Overlay
+    className="example-class md-overlay-alert-wrapper"
+  >
+    <div
+      className="example-class md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div />
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
+<OverlayAlert
+  controls={
+    <ButtonControl
+      control="close"
+    />
+  }
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div>
+              <ButtonControl
+                control="close"
+              >
+                <ButtonSimple
+                  className="md-button-control-wrapper"
+                >
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
+                      <button
+                        className="md-button-control-wrapper md-button-simple-wrapper"
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          autoScale={true}
+                          name="cancel"
+                          weight="bold"
+                        />
+                      </button>
+                    </FocusRing>
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonControl>
+            </div>
+          </div>
+          <div />
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
+<OverlayAlert
+  details="example-details"
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div>
+            <Text
+              className="md-overlay-alert-details"
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-overlay-alert-details"
+                data-type="body-secondary"
+              >
+                example-details
+              </small>
+            </Text>
+          </div>
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with details and children 1`] = `
+<OverlayAlert
+  details="example-details"
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div>
+            example-children
+          </div>
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
+<OverlayAlert
+  id="example-id"
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+    id="example-id"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+      id="example-id"
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div />
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1`] = `
+<OverlayAlert
+  actions={
+    <React.Fragment>
+      <ButtonPill>
+        Button Pill
+      </ButtonPill>
+      ,
+      <ButtonPill>
+        Button Pill
+      </ButtonPill>
+      ,
+      <ButtonPill>
+        Button Pill
+      </ButtonPill>
+      ,
+    </React.Fragment>
+  }
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div />
+          <div>
+            <ButtonPill
+              key="0"
+            >
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-grown={false}
+                data-outline={false}
+                data-size={40}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
+                  >
+                    <button
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-grown={false}
+                      data-outline={false}
+                      data-size={40}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      <span>
+                        Button Pill
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </ButtonPill>
+            ,
+            <ButtonPill
+              key="1"
+            >
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-grown={false}
+                data-outline={false}
+                data-size={40}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
+                  >
+                    <button
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-grown={false}
+                      data-outline={false}
+                      data-size={40}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      <span>
+                        Button Pill
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </ButtonPill>
+            ,
+            <ButtonPill
+              key="2"
+            >
+              <ButtonSimple
+                className="md-button-pill-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-grown={false}
+                data-outline={false}
+                data-size={40}
+                data-solid={false}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
+                  >
+                    <button
+                      className="md-button-pill-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={false}
+                      data-grown={false}
+                      data-outline={false}
+                      data-size={40}
+                      data-solid={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
+                    >
+                      <span>
+                        Button Pill
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </ButtonPill>
+            ,
+          </div>
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 1`] = `
+<OverlayAlert
+  controls={
+    <React.Fragment>
+      <ButtonControl
+        control="close"
+      />
+      ,
+      <ButtonControl
+        control="favorite"
+      />
+      ,
+      <ButtonControl
+        control="maximize"
+      />
+      ,
+    </React.Fragment>
+  }
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div>
+              <ButtonControl
+                control="close"
+                key="0"
+              >
+                <ButtonSimple
+                  className="md-button-control-wrapper"
+                >
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
+                      <button
+                        className="md-button-control-wrapper md-button-simple-wrapper"
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          autoScale={true}
+                          name="cancel"
+                          weight="bold"
+                        />
+                      </button>
+                    </FocusRing>
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonControl>
+              ,
+              <ButtonControl
+                control="favorite"
+                key="1"
+              >
+                <ButtonSimple
+                  className="md-button-control-wrapper"
+                >
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
+                      <button
+                        className="md-button-control-wrapper md-button-simple-wrapper"
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          autoScale={true}
+                          color="var(--theme-text-warning-normal)"
+                          name="favorite"
+                          weight="filled"
+                        />
+                      </button>
+                    </FocusRing>
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonControl>
+              ,
+              <ButtonControl
+                control="maximize"
+                key="2"
+              >
+                <ButtonSimple
+                  className="md-button-control-wrapper"
+                >
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
+                      <button
+                        className="md-button-control-wrapper md-button-simple-wrapper"
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          autoScale={true}
+                          name="arrow-up"
+                          weight="bold"
+                        />
+                      </button>
+                    </FocusRing>
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonControl>
+              ,
+            </div>
+          </div>
+          <div />
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
+<OverlayAlert
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <div />
+          </div>
+          <div />
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
+
+exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
+<OverlayAlert
+  title="example-title"
+>
+  <Overlay
+    className="md-overlay-alert-wrapper"
+  >
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="primary"
+      data-fullscreen={false}
+    >
+      <ModalContainer>
+        <div
+          className="md-modal-container-wrapper"
+          data-color="primary"
+          data-elevation={0}
+          data-padded={false}
+          data-round={0}
+        >
+          <div>
+            <Text
+              className="md-overlay-alert-title"
+              type="header-primary"
+            >
+              <h3
+                className="md-text-wrapper md-overlay-alert-title"
+                data-type="header-primary"
+              >
+                example-title
+              </h3>
+            </Text>
+            <div />
+          </div>
+          <div />
+          <div />
+        </div>
+      </ModalContainer>
+    </div>
+  </Overlay>
+</OverlayAlert>
+`;
