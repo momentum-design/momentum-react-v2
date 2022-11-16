@@ -11,6 +11,7 @@ import type { Props } from './Popover.types';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 import { hideOnEscPlugin } from './tippyPlugins';
 import classNames from 'classnames';
+import { isMRv2Button } from '../../helpers/verifyTypes';
 
 /**
  * The Popover component allows adding a Popover to whatever provided
@@ -160,9 +161,11 @@ const Popover: FC<Props> = (props: Props) => {
         }
       }}
     >
-      {React.cloneElement(triggerComponent, {
-        useNativeKeyDown: true,
-      })}
+      {isMRv2Button(triggerComponent)
+        ? React.cloneElement(triggerComponent, {
+            useNativeKeyDown: true,
+          })
+        : triggerComponent}
     </LazyTippy>
   );
 };
