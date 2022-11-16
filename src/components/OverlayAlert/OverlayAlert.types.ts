@@ -3,11 +3,12 @@ import { CSSProperties, ReactElement, ReactNode } from 'react';
 import { ButtonControlProps } from '../ButtonControl';
 import { ButtonSimpleProps } from '../ButtonSimple';
 import { ButtonGroupProps } from '../ButtonGroup';
+import { OverlayProps } from '../Overlay';
 
 export type SupportedActions = ButtonSimpleProps | ButtonGroupProps;
 export type SupportedControls = ButtonControlProps;
 
-export interface Props {
+export interface Props extends OverlayProps {
   /**
    * Actions associated with this OverlayAlert.
    */
