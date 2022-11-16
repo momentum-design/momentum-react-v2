@@ -222,6 +222,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}
@@ -2438,6 +2439,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}
@@ -4654,6 +4656,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}
@@ -6871,6 +6874,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}
@@ -9090,6 +9094,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}
@@ -11306,6 +11311,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}
@@ -13595,6 +13601,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}
@@ -15822,6 +15829,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     onMouseUp={[Function]}
+                    onPointerDown={[Function]}
                     onTouchCancel={[Function]}
                     onTouchEnd={[Function]}
                     onTouchMove={[Function]}

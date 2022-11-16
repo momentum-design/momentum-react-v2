@@ -26,13 +26,18 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
    * React aria's pointerDown handler is interfering with how overlays capture
    * events like `clickOutside` (Our popover implementation which uses tippy underneath).
    * The main cause is the fact that they preventDefault the event for any event that is not
-   * draggable. They also stop propagation which could cause other bugs in the future.
+   * draggable. We intercept the event and slightly modify it so that the event is not
+   * prevent defaulted. This does rly heavily on the implementation of how usePress works,
+   * but the other solution would be to fork the package and maintain it ourselves.
    *
    * Original implementation of the onPointerDown form @react-aria/interactions
    * can be found here node_modules/@react-aria/interactions/src/usePress.ts
    */
   const onPointerDown: PointerEventHandler<HTMLButtonElement> = useCallback((event) => {
     if (event?.button !== 0 || !event?.currentTarget.contains(event?.target as HTMLElement)) return;
+    event.currentTarget.draggable = true;
+    buttonProps.onPointerDown(event);
+    event.currentTarget.draggable = false;
   }, []);
 
   return (

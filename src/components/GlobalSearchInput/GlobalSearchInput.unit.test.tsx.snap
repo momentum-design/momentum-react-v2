@@ -191,6 +191,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               onMouseUp={[Function]}
+              onPointerDown={[Function]}
               onTouchCancel={[Function]}
               onTouchEnd={[Function]}
               onTouchMove={[Function]}

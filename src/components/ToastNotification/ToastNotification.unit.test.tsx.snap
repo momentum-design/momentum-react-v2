@@ -122,6 +122,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   onMouseUp={[Function]}
+                  onPointerDown={[Function]}
                   onTouchCancel={[Function]}
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}
@@ -174,6 +175,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   onMouseUp={[Function]}
+                  onPointerDown={[Function]}
                   onTouchCancel={[Function]}
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}

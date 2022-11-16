@@ -480,6 +480,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         onMouseUp={[Function]}
+                        onPointerDown={[Function]}
                         onTouchCancel={[Function]}
                         onTouchEnd={[Function]}
                         onTouchMove={[Function]}
@@ -657,6 +658,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         onMouseUp={[Function]}
+                        onPointerDown={[Function]}
                         onTouchCancel={[Function]}
                         onTouchEnd={[Function]}
                         onTouchMove={[Function]}
@@ -839,6 +841,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         onMouseUp={[Function]}
+                        onPointerDown={[Function]}
                         onTouchCancel={[Function]}
                         onTouchEnd={[Function]}
                         onTouchMove={[Function]}

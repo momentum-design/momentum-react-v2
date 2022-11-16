@@ -211,6 +211,7 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}

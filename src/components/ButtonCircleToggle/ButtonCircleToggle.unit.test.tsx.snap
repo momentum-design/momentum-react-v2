@@ -53,6 +53,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -121,6 +122,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -189,6 +191,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -259,6 +262,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -329,6 +333,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -398,6 +403,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -467,6 +473,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}

@@ -32,6 +32,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -143,6 +144,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -263,6 +265,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -402,6 +405,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -514,6 +518,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               onMouseUp={[Function]}
+                              onPointerDown={[Function]}
                               onTouchCancel={[Function]}
                               onTouchEnd={[Function]}
                               onTouchMove={[Function]}
@@ -567,6 +572,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               onMouseUp={[Function]}
+                              onPointerDown={[Function]}
                               onTouchCancel={[Function]}
                               onTouchEnd={[Function]}
                               onTouchMove={[Function]}
@@ -620,6 +626,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               onMouseUp={[Function]}
+                              onPointerDown={[Function]}
                               onTouchCancel={[Function]}
                               onTouchEnd={[Function]}
                               onTouchMove={[Function]}
@@ -680,6 +687,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -827,6 +835,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -951,6 +960,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
                             onMouseUp={[Function]}
+                            onPointerDown={[Function]}
                             onTouchCancel={[Function]}
                             onTouchEnd={[Function]}
                             onTouchMove={[Function]}
@@ -1004,6 +1014,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
                             onMouseUp={[Function]}
+                            onPointerDown={[Function]}
                             onTouchCancel={[Function]}
                             onTouchEnd={[Function]}
                             onTouchMove={[Function]}
@@ -1081,6 +1092,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               onMouseUp={[Function]}
+                              onPointerDown={[Function]}
                               onTouchCancel={[Function]}
                               onTouchEnd={[Function]}
                               onTouchMove={[Function]}
@@ -1139,6 +1151,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               onMouseUp={[Function]}
+                              onPointerDown={[Function]}
                               onTouchCancel={[Function]}
                               onTouchEnd={[Function]}
                               onTouchMove={[Function]}
@@ -1207,6 +1220,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -1338,6 +1352,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -1452,6 +1467,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               onMouseUp={[Function]}
+                              onPointerDown={[Function]}
                               onTouchCancel={[Function]}
                               onTouchEnd={[Function]}
                               onTouchMove={[Function]}
@@ -1510,6 +1526,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               onMouseUp={[Function]}
+                              onPointerDown={[Function]}
                               onTouchCancel={[Function]}
                               onTouchEnd={[Function]}
                               onTouchMove={[Function]}
@@ -1575,6 +1592,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -1685,6 +1703,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -1794,6 +1813,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -1909,6 +1929,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -2030,6 +2051,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -2200,6 +2222,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -2321,6 +2344,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -2405,6 +2429,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
                             onMouseUp={[Function]}
+                            onPointerDown={[Function]}
                             onTouchCancel={[Function]}
                             onTouchEnd={[Function]}
                             onTouchMove={[Function]}
@@ -2458,6 +2483,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
                             onMouseUp={[Function]}
+                            onPointerDown={[Function]}
                             onTouchCancel={[Function]}
                             onTouchEnd={[Function]}
                             onTouchMove={[Function]}

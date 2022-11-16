@@ -55,6 +55,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -125,6 +126,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being fa
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -195,6 +197,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being tr
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -267,6 +270,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -339,6 +343,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -410,6 +415,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -481,6 +487,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
