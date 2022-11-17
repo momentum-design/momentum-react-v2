@@ -50,22 +50,21 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     buttonRef.current?.focus();
   }, []);
 
-  const menuContext = {
-    ...menuProps,
-    onClose: state.close,
-    closeOnSelect,
-    ref: menuRef,
-  };
-
   /**
    * Handle closeOnSelect from @react-aria manually
    */
-  useEffect(() => {
-    if (!state.isOpen && popoverInstance?.state.isVisible) {
-      popoverInstance.hide();
-      handleFocusBackOnTrigger();
-    }
-  }, [state.isOpen, popoverInstance]);
+  const closeMenuTrigger = () => {
+    state.close();
+    popoverInstance.hide();
+    handleFocusBackOnTrigger();
+  };
+
+  const menuContext = {
+    ...menuProps,
+    onClose: closeMenuTrigger,
+    closeOnSelect,
+    ref: menuRef,
+  };
 
   /**
    * Handle isOpen from @react-aria manually
