@@ -86,12 +86,12 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
       if (event.key === 'Escape') {
-        state.close();
+        closeMenuTrigger();
       }
       // When there are more than one menus inside the menu trigger, we should not close the overlay
       // according to W-ARIA
       if (state.isOpen && event.key === 'Tab' && menus.length === 1) {
-        state.close();
+        closeMenuTrigger();
       }
     },
   });
@@ -119,13 +119,13 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       variant={variant as VariantType}
       delay={delay}
       color={color}
-      onClickOutside={state.close}
+      onClickOutside={closeMenuTrigger}
       setInstance={setPopoverInstance}
       hideOnEsc={false}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
       <FocusScope restoreFocus contain>
-        <DismissButton onDismiss={state.close} />
+        <DismissButton onDismiss={closeMenuTrigger} />
         {menus.map((menu: ReactElement, index) => {
           return (
             <MenuContext.Provider
@@ -142,7 +142,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
             </MenuContext.Provider>
           );
         })}
-        <DismissButton onDismiss={state.close} />
+        <DismissButton onDismiss={closeMenuTrigger} />
       </FocusScope>
     </Popover>
   );
