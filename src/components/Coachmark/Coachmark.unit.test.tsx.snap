@@ -27,7 +27,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           class="md-coachmark-header"
         >
           <div
-            class="md-icon-wrapper"
+            class="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               class=""
