@@ -7,13 +7,16 @@ svg.md-icon-coloured {
   }
 }
 
+.md-icon-no-shrink {
+  flex-shrink: 0;
+}
+
 .md-icon-wrapper {
   align-items: center;
   display: flex;
   height: fit-content;
   justify-content: center;
   width: fit-content;
-  flex-shrink: 0;
 
   > *[data-autoscale='true'] {
     width: 1em;

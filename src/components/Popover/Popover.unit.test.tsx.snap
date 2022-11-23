@@ -173,22 +173,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
         data-placement="top-right"
         data-size="20"
         type="button"
-      >
-        <div
-          class="md-icon-wrapper"
-        >
-          <svg
-            class=""
-            data-autoscale="false"
-            data-scale="16"
-            data-test="cancel"
-            fill="currentColor"
-            height="100%"
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </button>
+      />
       <p>
         Content
       </p>

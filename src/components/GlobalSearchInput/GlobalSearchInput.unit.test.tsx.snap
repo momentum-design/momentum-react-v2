@@ -22,7 +22,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
           weight="light"
         >
           <div
-            className="md-icon-wrapper md-global-search-input-search"
+            className="md-icon-wrapper md-global-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -114,7 +114,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
           weight="light"
         >
           <div
-            className="md-icon-wrapper md-global-search-input-search"
+            className="md-icon-wrapper md-global-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -203,7 +203,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
                 scale={18}
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -250,7 +250,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
           weight="light"
         >
           <div
-            className="md-icon-wrapper md-global-search-input-search"
+            className="md-icon-wrapper md-global-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -314,7 +314,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
           weight="light"
         >
           <div
-            className="md-icon-wrapper md-global-search-input-search"
+            className="md-icon-wrapper md-global-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -379,7 +379,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
           weight="light"
         >
           <div
-            className="md-icon-wrapper md-global-search-input-search"
+            className="md-icon-wrapper md-global-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -452,7 +452,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
           weight="light"
         >
           <div
-            className="md-icon-wrapper md-global-search-input-search"
+            className="md-icon-wrapper md-global-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""

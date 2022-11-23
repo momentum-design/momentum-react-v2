@@ -192,7 +192,7 @@ exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
   scale={16}
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-no-shrink"
   >
     <svg
       className=""
@@ -215,7 +215,7 @@ exports[`<Icon /> snapshot should match snapshot with small icons 1`] = `
   scale={14}
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-no-shrink"
   >
     <svg
       className=""

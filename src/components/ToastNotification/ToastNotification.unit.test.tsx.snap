@@ -305,7 +305,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
             weight="bold"
           >
             <div
-              className="md-icon-wrapper"
+              className="md-icon-wrapper md-icon-no-shrink"
             >
               <svg
                 className=""
