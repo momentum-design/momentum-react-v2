@@ -43,7 +43,7 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
         weight="filled"
       >
         <div
-          className="md-icon-wrapper"
+          className="md-icon-wrapper md-icon-no-shrink"
         >
           <svg
             className=""
@@ -101,7 +101,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
       weight="bold"
     >
       <div
-        className="md-icon-wrapper md-avatar-icon-wrapper"
+        className="md-icon-wrapper md-avatar-icon-wrapper md-icon-no-shrink"
       >
         <svg
           className=""
@@ -278,7 +278,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -326,7 +326,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -374,7 +374,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -422,7 +422,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -470,7 +470,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -518,7 +518,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -566,7 +566,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -614,7 +614,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -662,7 +662,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -710,7 +710,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -758,7 +758,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -806,7 +806,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""
@@ -854,7 +854,7 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
           weight="filled"
         >
           <div
-            className="md-icon-wrapper"
+            className="md-icon-wrapper md-icon-no-shrink"
           >
             <svg
               className=""

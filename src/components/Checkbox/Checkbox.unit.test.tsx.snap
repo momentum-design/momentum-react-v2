@@ -278,7 +278,7 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
         weight="bold"
       >
         <div
-          className="md-icon-wrapper md-checkbox-icon"
+          className="md-icon-wrapper md-checkbox-icon md-icon-no-shrink"
         >
           <svg
             className=""
@@ -468,7 +468,7 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
         weight="bold"
       >
         <div
-          className="md-icon-wrapper md-checkbox-icon"
+          className="md-icon-wrapper md-checkbox-icon md-icon-no-shrink"
         >
           <svg
             className=""

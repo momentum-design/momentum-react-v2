@@ -70,6 +70,7 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   notFound: `${CLASS_PREFIX}-not-found`,
   coloured: `${CLASS_PREFIX}-coloured`,
+  noShrink: `${CLASS_PREFIX}-no-shrink`,
 };
 
 export {

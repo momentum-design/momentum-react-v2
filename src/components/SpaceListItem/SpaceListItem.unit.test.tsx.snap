@@ -624,7 +624,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -734,7 +734,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -844,7 +844,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -954,7 +954,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
                 weight="filled"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -1064,7 +1064,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -1340,7 +1340,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -1450,7 +1450,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""

@@ -19,7 +19,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-icon-wrapper md-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -123,7 +123,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-icon-wrapper md-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -192,7 +192,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -263,7 +263,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
               weight="regular"
             >
               <div
-                className="md-icon-wrapper"
+                className="md-icon-wrapper md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -285,7 +285,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
               weight="regular"
             >
               <div
-                className="md-icon-wrapper md-loading-spinner-arch"
+                className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -371,7 +371,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-icon-wrapper md-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -450,7 +450,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-icon-wrapper md-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -528,7 +528,7 @@ exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-icon-wrapper md-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -607,7 +607,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-icon-wrapper md-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""
@@ -694,7 +694,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-search-input-search"
+            className="md-icon-wrapper md-search-input-search md-icon-no-shrink"
           >
             <svg
               className=""

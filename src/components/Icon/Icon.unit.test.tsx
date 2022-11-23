@@ -193,20 +193,28 @@ describe('<Icon />', () => {
     it('should pass scale prop', async () => {
       const scale = 16;
 
-      const wrapper = await mountAndWait(<Icon name={'accessibility'} scale={scale} />);
+      const wrapper = await mountAndWait(
+        <Icon name={'accessibility'} id={'fake-id'} scale={scale} />
+      );
       const icon = wrapper.find('svg').getDOMNode();
+      const div = wrapper.find('div').filter({ id: 'fake-id' });
 
       expect(icon.getAttribute('data-scale')).toBe(`${scale}`);
+      expect(div.props().className).toBe('md-icon-wrapper md-icon-no-shrink');
     });
 
     it('should pass autoScale prop and disable scale prop', async () => {
       const autoScale = true;
 
-      const wrapper = await mountAndWait(<Icon name={'accessibility'} autoScale={autoScale} />);
+      const wrapper = await mountAndWait(
+        <Icon name={'accessibility'} autoScale={autoScale} id={'fake-id'} />
+      );
       const icon = wrapper.find('svg').getDOMNode();
+      const div = wrapper.find('div').filter({ id: 'fake-id' });
 
       expect(icon.getAttribute('data-autoscale')).toBe(`${autoScale}`);
       expect(icon.getAttribute('data-scale')).toBe('false');
+      expect(div.props().className).toBe('md-icon-wrapper');
     });
 
     it('should pass autoScale prop as numeric value when set appropriately', async () => {

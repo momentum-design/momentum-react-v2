@@ -182,7 +182,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                       weight="filled"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-no-shrink"
                       >
                         <svg
                           className=""
@@ -492,7 +492,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                           weight="bold"
                         >
                           <div
-                            className="md-icon-wrapper"
+                            className="md-icon-wrapper md-icon-no-shrink"
                           >
                             <svg
                               className=""
@@ -671,7 +671,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                           weight="bold"
                         >
                           <div
-                            className="md-icon-wrapper"
+                            className="md-icon-wrapper md-icon-no-shrink"
                           >
                             <svg
                               className=""
@@ -853,7 +853,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                           weight="bold"
                         >
                           <div
-                            className="md-icon-wrapper"
+                            className="md-icon-wrapper md-icon-no-shrink"
                           >
                             <svg
                               className=""
@@ -1179,7 +1179,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -1309,7 +1309,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -1439,7 +1439,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -1569,7 +1569,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper"
+                  className="md-icon-wrapper md-icon-no-shrink"
                 >
                   <svg
                     className=""
