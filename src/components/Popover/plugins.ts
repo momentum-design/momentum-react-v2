@@ -1,6 +1,13 @@
 import { PopoverInstance } from '.';
 import { STYLE } from './Popover.constants';
 
+/**
+ * Due to @react-aria's event abstraction layer, we add an invisible backdrop for all popovers
+ * to not interfere with any components built with the hooks from @react-aria.
+ *
+ * This will make sure that popovers are closed on clickoutside and no longer
+ * be stuck open in case the even target was a @react-aria button.
+ */
 export const addBackdrop = {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   fn(instance: PopoverInstance) {
