@@ -49,6 +49,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="bottom-start"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -91,6 +98,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -138,6 +148,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -2265,6 +2278,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="bottom-start"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -2307,6 +2327,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -2354,6 +2377,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -4481,6 +4507,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="bottom-start"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -4523,6 +4556,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -4570,6 +4606,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -6698,6 +6737,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="bottom-start"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -6740,6 +6786,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -6787,6 +6836,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -8917,6 +8969,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="top"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -8959,6 +9018,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         placement="top"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -9006,6 +9068,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           placement="top"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -11133,6 +11198,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="bottom-start"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -11175,6 +11247,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -11222,6 +11297,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -13422,6 +13500,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="bottom-start"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -13464,6 +13549,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -13511,6 +13599,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -15649,6 +15740,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
       onClickOutside={[Function]}
       onHide={[Function]}
       placement="bottom-start"
+      plugins={
+        Array [
+          Object {
+            "fn": [Function],
+          },
+        ]
+      }
       popperOptions={
         Object {
           "modifiers": Array [
@@ -15691,6 +15789,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -15738,6 +15839,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },

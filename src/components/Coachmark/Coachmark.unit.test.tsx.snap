@@ -158,6 +158,10 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
       </div>
     </div>
   </div>
+  <div
+    aria-hidden="true"
+    class="md-popover-backdrop"
+  />
 </div>
 `;
 
@@ -288,5 +292,9 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
       </div>
     </div>
   </div>
+  <div
+    aria-hidden="true"
+    class="md-popover-backdrop"
+  />
 </div>
 `;
