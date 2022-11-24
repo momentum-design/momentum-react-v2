@@ -2,6 +2,7 @@ import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 
 const CLASS_PREFIX = 'md-popover';
+const BACKDROP_CLASS = 'tippy-backdrop';
 
 const BOUNDARIES = {
   VIEWPORT: 'viewport',
@@ -33,6 +34,7 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   arrowWrapper: `${CLASS_PREFIX}-arrow-wrapper`,
   closeButton: `${CLASS_PREFIX}-close-button`,
+  backdrop: `${CLASS_PREFIX}-backdrop`,
 };
 
 // default offset between popover and trigger component:
@@ -49,4 +51,5 @@ export {
   ARROW_PADDING,
   BOUNDARIES,
   CLOSE_BUTTON_PLACEMENTS,
+  BACKDROP_CLASS,
 };

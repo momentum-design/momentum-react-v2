@@ -7,6 +7,7 @@ import ButtonSimple from '../ButtonSimple';
 
 import Popover from './';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
+import { STYLE as POPOVER_STYLE } from './Popover.constants';
 import { PopoverInstance } from './Popover.types';
 
 describe('<Popover />', () => {
@@ -16,10 +17,14 @@ describe('<Popover />', () => {
    * expect() statements count: 1
    * @returns {HTMLElement}
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const openPopoverByClickingOnTriggerAndCheckContent = async (user: any, name = /click me!/i) => {
-    await user.click(screen.getByRole('button', { name }));
-    const content = await screen.findByText('Content');
+  const openPopoverByClickingOnTriggerAndCheckContent = async (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    user: any,
+    buttonName = /click me!/i,
+    contentName = /Content/i
+  ) => {
+    await user.click(screen.getByRole('button', { name: buttonName }));
+    const content = await screen.findByText(contentName);
     expect(content).toBeVisible();
     return content;
   };
@@ -149,6 +154,36 @@ describe('<Popover />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should display only one popover at all time', async () => {
+      expect.assertions(6);
+
+      const { container } = render(
+        <>
+          <Popover triggerComponent={<ButtonSimple>Popover 1</ButtonSimple>} strategy="fixed">
+            <p>Content</p>
+          </Popover>
+          <Popover triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>} strategy="fixed">
+            <p>Content</p>
+          </Popover>
+          <ButtonSimple>Other button</ButtonSimple>
+        </>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 1/i);
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 2/i);
+
+      expect(container).toMatchSnapshot();
+
+      userEvent.click(screen.getByRole('button', { name: /Other button/i }));
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -179,6 +214,67 @@ describe('<Popover />', () => {
       expect(content.parentElement.getAttribute('style')).toBe(styleString);
       expect(content.parentElement.getAttribute('data-color')).toBe(COLORS.TERTIARY);
       expect(content.parentElement.id).toBe(id);
+    });
+
+    it('should not add useNativeKeyDown on the DOM button', async () => {
+      expect.assertions(2);
+
+      render(
+        <>
+          <Popover triggerComponent={<button>Popover 1</button>} strategy="fixed">
+            <p>Content 1</p>
+          </Popover>
+          <Popover triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>} strategy="fixed">
+            <p>Content 2</p>
+          </Popover>
+          <ButtonSimple>Other button</ButtonSimple>
+        </>
+      );
+
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('useNativeKeyDown')).toBeNull();
+
+      const button2 = screen.getByRole('button', { name: /Popover 2/i });
+      expect(button2.getAttribute('useNativeKeyDown')).toBeNull();
+    });
+
+    it('should display only one popover at all time', async () => {
+      expect.assertions(6);
+
+      render(
+        <>
+          <Popover triggerComponent={<ButtonSimple>Popover 1</ButtonSimple>} strategy="fixed">
+            <p>Content 1</p>
+          </Popover>
+          <Popover triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>} strategy="fixed">
+            <p>Content 2</p>
+          </Popover>
+          <ButtonSimple>Other button</ButtonSimple>
+        </>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClickPopover1 = screen.queryByText('Content 1');
+      expect(contentBeforeClickPopover1).not.toBeInTheDocument();
+
+      // assert no popover on screen
+      const contentBeforeClickPopover2 = screen.queryByText('Content 2');
+      expect(contentBeforeClickPopover2).not.toBeInTheDocument();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 1/i, /Content 1/i);
+
+      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 2/i, /Content 2/i);
+
+      // assert that first popover has closed, and only second one is open
+      const contentAfterClickingBoth = screen.queryByText('Content 1');
+      expect(contentAfterClickingBoth).not.toBeInTheDocument();
+
+      // at this point popover 2 is still open and we click on another button
+      userEvent.click(screen.getByRole('button', { name: /Other button/i }));
+
+      // assert that first popover has closed, and only second one is open
+      const contentAfterClickingOuterButton = screen.queryByText('Content 2');
+      expect(contentAfterClickingOuterButton).not.toBeInTheDocument();
     });
 
     it('should not automatically disappear on focus-change when trigger is manual', async () => {
@@ -252,6 +348,32 @@ describe('<Popover />', () => {
       const closeButton = await screen.findByRole('button', { name: 'Close' });
       expect(closeButton).toBeVisible();
       expect(closeButton.getAttribute('aria-label')).toBe('Close');
+    });
+
+    it('should render the the backdrop', async () => {
+      expect.assertions(4);
+
+      const { container } = render(
+        <Popover
+          triggerComponent={<button>Click Me!</button>}
+          interactive
+          closeButtonPlacement="top-right"
+          closeButtonProps={{ 'aria-label': 'Close' }}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
+      expect(backdrop).toBeVisible();
+      expect(backdrop.getAttribute('aria-hidden')).toBe('true');
     });
   });
 
@@ -559,6 +681,32 @@ describe('<Popover />', () => {
 
       const triggerComponent = screen.getByRole('button', { name: /click me!/i });
       expect(document.activeElement).toEqual(triggerComponent);
+    });
+
+    it('should hide Popover after clicking on the backdrop', async () => {
+      expect.assertions(3);
+
+      const { container } = render(
+        <Popover triggerComponent={<button>Click Me!</button>} trigger="click">
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      await openPopoverByClickingOnTriggerAndCheckContent();
+
+      const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
+
+      userEvent.click(backdrop);
+
+      // content should be hidden
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
     });
   });
 });
