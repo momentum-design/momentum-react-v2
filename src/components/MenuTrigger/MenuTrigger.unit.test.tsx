@@ -230,6 +230,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     ],
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const openMenu = async (user: any) => {
     await user.click(screen.getByRole('button', { name: 'Open Menu' }));
   };
