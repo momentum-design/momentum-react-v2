@@ -66,6 +66,7 @@ describe('<Coachmark />', () => {
   describe('attributes', () => {
     it('should allow actions', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const onPressMock = jest.fn();
 
@@ -89,7 +90,7 @@ describe('<Coachmark />', () => {
 
       expect(button).toBeVisible();
 
-      userEvent.click(button);
+      await user.click(button);
 
       expect(onPressMock).toHaveBeenCalledTimes(1);
     });
@@ -133,6 +134,7 @@ describe('<Coachmark />', () => {
 
     it('should allow dismiss via keypress', async () => {
       expect.assertions(3);
+      const user = userEvent.setup();
 
       const mockDismiss = jest.fn();
 
@@ -148,8 +150,8 @@ describe('<Coachmark />', () => {
 
       expect(dismissButton).toBeVisible();
 
-      userEvent.tab();
-      userEvent.keyboard('{enter}');
+      await user.tab();
+      await user.keyboard('{enter}');
 
       await waitFor(() => {
         expect(screen.queryByText(children)).not.toBeInTheDocument();
@@ -160,6 +162,7 @@ describe('<Coachmark />', () => {
 
     it('should allow dismiss via click', async () => {
       expect.assertions(3);
+      const user = userEvent.setup();
 
       const mockDismiss = jest.fn();
 
@@ -175,7 +178,7 @@ describe('<Coachmark />', () => {
 
       expect(dismissButton).toBeVisible();
 
-      userEvent.click(dismissButton);
+      await user.click(dismissButton);
 
       await waitFor(() => {
         expect(screen.queryByText(children)).not.toBeInTheDocument();

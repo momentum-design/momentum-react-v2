@@ -39,9 +39,7 @@ Example.args = {
   delay: [0, 0],
   children: <p>Content Text Content Text</p>,
   triggerComponent: (
-    <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }} useNativeKeyDown>
-      Click me!
-    </ButtonSimple>
+    <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonSimple>
   ),
 };
 

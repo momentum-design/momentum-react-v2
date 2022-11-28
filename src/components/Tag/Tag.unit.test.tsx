@@ -241,6 +241,7 @@ describe('<Tag />', () => {
 
     it('should support click event', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       const spy = jest.fn();
 
@@ -248,13 +249,14 @@ describe('<Tag />', () => {
 
       const component = await screen.findByTestId(testid);
 
-      userEvent.click(component);
+      await user.click(component);
 
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
     it('should support keyboard event', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       const spy = jest.fn();
 
@@ -264,13 +266,14 @@ describe('<Tag />', () => {
 
       component.focus();
 
-      userEvent.keyboard('{Enter}');
+      await user.keyboard('{Enter}');
 
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
     it('should not support click event when disabled', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       const spy = jest.fn();
 
@@ -278,7 +281,7 @@ describe('<Tag />', () => {
 
       const component = await screen.findByTestId(testid);
 
-      userEvent.click(component);
+      await user.click(component);
 
       expect(spy).not.toHaveBeenCalled();
     });

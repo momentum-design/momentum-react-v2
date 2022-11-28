@@ -148,8 +148,9 @@ describe('<List />', () => {
   });
 
   describe('list focus', () => {
-    it('should handle up/down arrow keys correctly', () => {
+    it('should handle up/down arrow keys correctly', async () => {
       expect.assertions(8);
+      const user = userEvent.setup();
 
       const { getAllByRole } = render(
         <List listSize={3}>
@@ -167,32 +168,35 @@ describe('<List />', () => {
 
       const listItems = getAllByRole('listitem');
 
+      await user.tab();
+
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowDown}');
+      await user.keyboard('{ArrowDown}');
       expect(listItems[1]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowDown}');
+      await user.keyboard('{ArrowDown}');
       expect(listItems[2]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowDown}');
+      await user.keyboard('{ArrowDown}');
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowUp}');
+      await user.keyboard('{ArrowUp}');
       expect(listItems[2]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowUp}');
+      await user.keyboard('{ArrowUp}');
       expect(listItems[1]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowUp}');
+      await user.keyboard('{ArrowUp}');
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowUp}');
+      await user.keyboard('{ArrowUp}');
       expect(listItems[2]).toHaveFocus();
     });
 
-    it('should handle left/right arrow keys correctly', () => {
+    it('should handle left/right arrow keys correctly', async () => {
       expect.assertions(8);
+      const user = userEvent.setup();
 
       const { getAllByRole } = render(
         <List listSize={3}>
@@ -209,44 +213,47 @@ describe('<List />', () => {
       );
       const listItems = getAllByRole('listitem');
 
+      await user.tab();
+
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowRight}');
+      await user.keyboard('{ArrowRight}');
       expect(listItems[1]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowRight}');
+      await user.keyboard('{ArrowRight}');
       expect(listItems[2]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowRight}');
+      await user.keyboard('{ArrowRight}');
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowLeft}');
+      await user.keyboard('{ArrowLeft}');
       expect(listItems[2]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowLeft}');
+      await user.keyboard('{ArrowLeft}');
       expect(listItems[1]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowLeft}');
+      await user.keyboard('{ArrowLeft}');
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowLeft}');
+      await user.keyboard('{ArrowLeft}');
       expect(listItems[2]).toHaveFocus();
     });
 
-    it('should handle focus on tabbable elements in the list row', () => {
+    it('should handle focus on tabbable elements in the list row', async () => {
       expect.assertions(11);
+      const user = userEvent.setup();
 
       const { getAllByRole } = render(
         <List listSize={2}>
           <ListItemBase key="0" itemIndex={0}>
-            <ListItemBaseSection>
-              <input type="text 1" />
+            <ListItemBaseSection position="fill">
+              <input type="text" id="1" />
               <button>Button 1</button>
             </ListItemBaseSection>
           </ListItemBase>
           <ListItemBase key="1" itemIndex={1}>
-            <ListItemBaseSection>
-              <input type="text 2" />
+            <ListItemBaseSection position="fill">
+              <input type="text" id="2" />
               <button>Button 2</button>
             </ListItemBaseSection>
           </ListItemBase>
@@ -256,41 +263,49 @@ describe('<List />', () => {
       const inputs = getAllByRole('textbox');
       const buttons = getAllByRole('button');
 
+      await user.tab();
+
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.tab();
+      await user.tab();
       expect(inputs[0]).toHaveFocus();
 
-      userEvent.tab();
+      await user.tab();
       expect(buttons[0]).toHaveFocus();
 
-      userEvent.tab();
+      await user.tab();
       expect(document.body).toHaveFocus();
 
-      userEvent.tab({ shift: true });
+      await user.tab({ shift: true });
       expect(buttons[0]).toHaveFocus();
 
-      userEvent.tab({ shift: true });
+      await user.tab({ shift: true });
+
       expect(inputs[0]).toHaveFocus();
 
-      userEvent.keyboard('{ArrowDown}');
+      await user.keyboard('{ArrowDown}');
       expect(listItems[1]).toHaveFocus();
 
-      userEvent.tab();
+      await user.tab();
+
       expect(inputs[1]).toHaveFocus();
 
-      userEvent.tab();
+      await user.tab();
+
       expect(buttons[1]).toHaveFocus();
 
-      userEvent.tab({ shift: true });
+      await user.tab({ shift: true });
+
       expect(inputs[1]).toHaveFocus();
 
-      userEvent.tab({ shift: true });
+      await user.tab({ shift: true });
+
       expect(listItems[1]).toHaveFocus();
     });
 
     it('should handle menu in the list item', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const { getAllByRole, findAllByText } = render(
         <List listSize={1}>
@@ -307,10 +322,12 @@ describe('<List />', () => {
       );
       const listItems = getAllByRole('listitem');
 
+      await user.tab();
+
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.tab();
-      userEvent.keyboard('{Enter}');
+      await user.tab();
+      await user.keyboard('{Enter}');
 
       const firstMenuItem = (await findAllByText('menu item 1'))[0].closest('li');
       expect(firstMenuItem).toHaveFocus();
@@ -318,6 +335,7 @@ describe('<List />', () => {
 
     it('should handle focus on tabbable elements in the list row even when the item changes', async () => {
       expect.assertions(4);
+      const user = userEvent.setup();
 
       const DynamicComponent = () => {
         const [muted, setMuted] = useState(false);
@@ -343,14 +361,16 @@ describe('<List />', () => {
       const listItems = getAllByRole('listitem');
       const buttons = getAllByRole('button');
 
+      await user.tab();
+
       expect(listItems[0]).toHaveFocus();
 
-      userEvent.tab();
+      await user.tab();
       expect(buttons[0]).toHaveFocus();
 
       const updatedButton = await findAllByText('muted');
 
-      userEvent.tab();
+      await user.tab();
       expect(updatedButton[0]).not.toHaveFocus();
       expect(document.body).toHaveFocus();
     });

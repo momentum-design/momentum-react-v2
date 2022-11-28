@@ -483,8 +483,9 @@ describe('<RadioGroup />', () => {
   });
 
   describe('actions', () => {
-    it('should change which option is selected when clicked', () => {
+    it('should change which option is selected when clicked', async () => {
       expect.assertions(4);
+      const user = userEvent.setup();
 
       render(
         <RadioGroup
@@ -511,14 +512,15 @@ describe('<RadioGroup />', () => {
       expect(option1).toBeChecked();
       expect(option2).not.toBeChecked();
 
-      userEvent.click(option2);
+      await user.click(option2);
 
       expect(option1).not.toBeChecked();
       expect(option2).toBeChecked();
     });
 
-    it('should call onChange when option is clicked', () => {
+    it('should call onChange when option is clicked', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -544,13 +546,14 @@ describe('<RadioGroup />', () => {
 
       const option2 = screen.getByText('Option 2');
 
-      userEvent.click(option2);
+      await user.click(option2);
 
       expect(onChange).toBeCalledWith('option2');
     });
 
-    it('should not call call onChange when defualt value is clicked first', () => {
+    it('should not call call onChange when defualt value is clicked first', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -576,13 +579,14 @@ describe('<RadioGroup />', () => {
 
       const option1 = screen.getByText('Option 1');
 
-      userEvent.click(option1);
+      await user.click(option1);
 
       expect(onChange).not.toBeCalled();
     });
 
-    it('should call onChange only once when an option is clicked several times', () => {
+    it('should call onChange only once when an option is clicked several times', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -608,14 +612,15 @@ describe('<RadioGroup />', () => {
 
       const option2 = screen.getByText('Option 2');
 
-      userEvent.click(option2);
+      await user.click(option2);
 
       expect(onChange).toBeCalledWith('option2');
       expect(onChange).toBeCalledTimes(1);
     });
 
-    it('should allow keyboard navigation', () => {
+    it('should allow keyboard navigation', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -642,17 +647,18 @@ describe('<RadioGroup />', () => {
       const option1 = screen.getByText('Option 1');
       const option2 = screen.getByText('Option 2');
 
-      userEvent.type(option1, '{arrowdown}');
+      await user.type(option1, '{arrowdown}');
 
       expect(onChange).toBeCalledWith('option2');
 
-      userEvent.type(option2, '{arrowup}');
+      await user.type(option2, '{arrowup}');
 
       expect(onChange).toBeCalledWith('option1');
     });
 
-    it('should not call onChange when a disabled option is clicked', () => {
+    it('should not call onChange when a disabled option is clicked', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -681,13 +687,14 @@ describe('<RadioGroup />', () => {
 
       expect(option2).toBeDisabled();
 
-      userEvent.click(option2);
+      await user.click(option2);
 
       expect(onChange).not.toBeCalled();
     });
 
-    it('should not call onChange when the group is readonly and an option is clicked', () => {
+    it('should not call onChange when the group is readonly and an option is clicked', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -714,13 +721,14 @@ describe('<RadioGroup />', () => {
 
       const option2 = screen.getByText('Option 2');
 
-      userEvent.click(option2);
+      await user.click(option2);
 
       expect(onChange).not.toBeCalled();
     });
 
-    it('should not call onChange when the group is disabled and an option is clicked', () => {
+    it('should not call onChange when the group is disabled and an option is clicked', async () => {
       expect.assertions(3);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -751,13 +759,14 @@ describe('<RadioGroup />', () => {
       expect(option1).toBeDisabled();
       expect(option2).toBeDisabled();
 
-      userEvent.click(option2);
+      await user.click(option2);
 
       expect(onChange).not.toBeCalled();
     });
 
-    it('should focus selected option on keyboard input', () => {
+    it('should focus selected option on keyboard input', async () => {
       expect.assertions(5);
+      const user = userEvent.setup();
 
       const onChange = jest.fn();
 
@@ -784,12 +793,12 @@ describe('<RadioGroup />', () => {
       const option1 = screen.getByLabelText('Option 1');
       const option2 = screen.getByLabelText('Option 2');
 
-      userEvent.tab();
+      await user.tab();
 
       expect(option1).toHaveFocus();
       expect(onChange).not.toBeCalled();
 
-      userEvent.type(option1, '{arrowdown}');
+      await user.type(option1, '{arrowdown}');
 
       expect(option2).toHaveFocus();
       expect(option2).toBeChecked();

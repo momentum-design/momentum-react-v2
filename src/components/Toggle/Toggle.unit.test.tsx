@@ -136,8 +136,9 @@ describe('<Toggle />', () => {
   });
 
   describe('actions', () => {
-    it('should handle mouse press events', () => {
+    it('should handle mouse press events', async () => {
       expect.assertions(4);
+      const user = userEvent.setup();
 
       const mockCallback = jest.fn();
 
@@ -146,24 +147,25 @@ describe('<Toggle />', () => {
       );
       const input = getByRole('switch');
 
-      userEvent.click(input);
+      await user.click(input);
       expect(mockCallback).toBeCalledTimes(1);
       expect(mockCallback).toBeCalledWith(true);
 
-      userEvent.click(input);
+      await user.click(input);
       expect(mockCallback).toBeCalledTimes(2);
       expect(mockCallback).toBeCalledWith(false);
     });
 
     it('should handle press space key', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const mockCallback = jest.fn();
 
       const { getByRole } = render(<Toggle onChange={mockCallback} aria-label={'toggle'} />);
       const input = getByRole('switch');
 
-      userEvent.type(input, '{Space}');
+      await user.type(input, '{Space}');
 
       expect(mockCallback).toBeCalledWith(true);
       expect(input).toBeChecked();
@@ -171,23 +173,25 @@ describe('<Toggle />', () => {
 
     it('should be focusable', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const mockCallback = jest.fn();
 
       const { getByRole } = render(<Toggle onChange={mockCallback} aria-label={'toggle'} />);
       const input = getByRole('switch');
 
-      userEvent.tab();
+      await user.tab();
 
       expect(input).toHaveFocus();
 
-      userEvent.tab();
+      await user.tab();
 
       expect(input).not.toHaveFocus();
     });
 
     it('should work with label', async () => {
       expect.assertions(4);
+      const user = userEvent.setup();
 
       const mockCallback = jest.fn();
 
@@ -204,11 +208,11 @@ describe('<Toggle />', () => {
       );
       const label = getByText('Labeled');
 
-      userEvent.click(label);
+      await user.click(label);
       expect(mockCallback).toBeCalledTimes(1);
       expect(mockCallback).toBeCalledWith(true);
 
-      userEvent.click(label);
+      await user.click(label);
       expect(mockCallback).toBeCalledTimes(2);
       expect(mockCallback).toBeCalledWith(false);
     });

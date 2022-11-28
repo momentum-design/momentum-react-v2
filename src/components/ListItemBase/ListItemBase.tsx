@@ -21,7 +21,7 @@ import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
-import { getKeyboardFocusableElements } from './ListItemBase.utils';
+import { getKeyboardFocusableElements, useDidUpdateEffect } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 
 //TODO: Implement multi-line
@@ -102,6 +102,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
    * Focus management
    */
 
+  const [shouldIgnoreFocusUpdate, setShouldIgnoreFocusUpdate] = useState(false);
   const focus = listContext?.currentFocus === itemIndex;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
@@ -121,12 +122,33 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
       .forEach((el) => el.setAttribute('tabindex', focus ? '0' : '-2'));
   }, [ref, focus]);
 
+  useDidUpdateEffect(() => {
+    if (focus && !shouldIgnoreFocusUpdate) {
+      ref.current.focus();
+    } else if (shouldIgnoreFocusUpdate) {
+      setShouldIgnoreFocusUpdate(false);
+    }
+  }, [listContext?.currentFocus]);
+
+  /**
+   * When the items inside the list context gets smaller (search/filter applied)
+   * we want to silently update the currentFocus back to the first element in
+   * case the index of the element focused before the list shrink is now outside
+   * the size of the new list size (shrinked size)
+   */
+  useEffect(() => {
+    if (listContext?.currentFocus >= listContext?.listSize) {
+      // set focus to first item
+      listContext.setContext(0);
+      updateTabIndexes();
+      // mark the update as silent (don't actually DOM focus the element)
+      setShouldIgnoreFocusUpdate(true);
+    }
+  }, [listContext?.currentFocus, listContext?.listSize]);
+
   useEffect(() => {
     if (listContext?.currentFocus === undefined) {
       return;
-    }
-    if (focus) {
-      ref.current.focus();
     }
     updateTabIndexes();
   }, [listContext?.currentFocus]);

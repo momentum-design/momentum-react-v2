@@ -230,26 +230,28 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     ],
   };
 
-  const openMenu = () => {
-    userEvent.click(screen.getByRole('button', { name: 'Open Menu' }));
+  const openMenu = async (user: any) => {
+    await user.click(screen.getByRole('button', { name: 'Open Menu' }));
   };
 
   describe('actions', () => {
     it('should callback correctly when onOpenChange is provided ', async () => {
       expect.assertions(5);
+      const user = userEvent.setup();
+
       const onOpenChangeMock = jest.fn();
 
       render(<MenuTrigger {...defaultProps} onOpenChange={onOpenChangeMock} />);
       expect(onOpenChangeMock).not.toHaveBeenCalled();
 
-      openMenu();
+      await openMenu(user);
       await screen.findByRole('menu', { name: 'Single Menu' });
 
       expect(onOpenChangeMock).toHaveBeenCalledWith(true);
       expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
       onOpenChangeMock.mockClear();
 
-      userEvent.keyboard('{Escape}');
+      await user.keyboard('{Escape}');
 
       expect(onOpenChangeMock).toHaveBeenCalledWith(false);
       expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
@@ -257,14 +259,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
     it('should close the menu when closeOnSelect is true', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
 
-      openMenu();
+      await openMenu(user);
 
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
-      userEvent.click(screen.getByRole('menuitemradio', { name: 'One' }));
+      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
@@ -273,14 +276,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
     it('should not close the menu when closeOnSelect is false', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-      openMenu();
+      await openMenu(user);
 
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
-      userEvent.click(screen.getByRole('menuitemradio', { name: 'One' }));
+      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
       await waitFor(() => {
         expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
@@ -289,6 +293,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
     it('should open and close if isOpen prop is provided (controlled)', async () => {
       expect.assertions(3);
+      const user = userEvent.setup();
 
       const ParentComponent = () => {
         const [open, setOpen] = React.useState(false);
@@ -310,12 +315,12 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       let menu = screen.queryByRole('menu', { name: 'Single Menu' });
       expect(menu).not.toBeInTheDocument();
 
-      userEvent.click(screen.getByRole('button', { name: /show/i }));
+      await user.click(screen.getByRole('button', { name: /show/i }));
 
       menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
 
-      userEvent.click(screen.getByRole('button', { name: /hide/i }));
+      await user.click(screen.getByRole('button', { name: /hide/i }));
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
       });
@@ -325,15 +330,16 @@ describe('<MenuTrigger /> - React Testing Library', () => {
   describe('keyboard accessibility', () => {
     it('closes the menu on Escape', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} />);
 
-      openMenu();
+      await openMenu(user);
 
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
 
-      userEvent.keyboard('{Escape}');
+      await user.keyboard('{Escape}');
 
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
@@ -342,15 +348,16 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
     it('closes the menu on Tab if only one menu present', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} children={[defaultProps.children[0]]} />);
 
-      openMenu();
+      await openMenu(user);
 
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
 
-      userEvent.tab();
+      await user.tab();
 
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
@@ -359,55 +366,59 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
     it("doesn't close the menu on Tab if more than one menu present", async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} />);
 
-      openMenu();
+      await openMenu(user);
 
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
 
-      userEvent.tab();
+      await user.tab();
 
       expect(menu).toBeVisible();
     });
 
     it('will focus back on trigger component after the menu trigger closes', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} />);
 
-      openMenu();
+      await openMenu(user);
 
       await screen.findByRole('menu', { name: 'Single Menu' });
 
-      userEvent.keyboard('{escape}');
+      await user.keyboard('{escape}');
 
       expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
     });
 
     it('will focus on the first menu option when menu trigger is opened', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
 
-      openMenu();
+      await openMenu(user);
 
       expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
     });
 
     it('selects option on Space', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-      openMenu();
+      await openMenu(user);
 
       await screen.findByRole('menu', { name: 'Single Menu' });
 
       screen.getByRole('menuitemradio', { name: 'One' }).focus();
 
-      userEvent.keyboard('{space}');
+      await user.keyboard('{space}');
 
       expect(
         (await screen.findByRole('menuitemradio', { name: 'One' })).getAttribute('aria-checked')
@@ -416,16 +427,17 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
     it('selects option on Enter', async () => {
       expect.assertions(1);
+      const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-      openMenu();
+      await openMenu(user);
 
       await screen.findByRole('menu', { name: 'Single Menu' });
 
       screen.getByRole('menuitemradio', { name: 'Two' }).focus();
 
-      userEvent.keyboard('{enter}');
+      await user.keyboard('{enter}');
 
       expect(
         (await screen.findByRole('menuitemradio', { name: 'Two' })).getAttribute('aria-checked')

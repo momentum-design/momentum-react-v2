@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -26,7 +26,7 @@ import ButtonHyperlink from '../ButtonHyperlink';
 import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
-import { MenuTrigger } from '..';
+import { MenuTrigger, SearchInput } from '..';
 
 const TEST_LIST_SIZE = 30;
 
@@ -178,6 +178,39 @@ CalendarList.parameters = {
 };
 
 /**
+ * Example illustrating search + list.
+ */
+const ListSearchWrapper = () => {
+  const defaultItems = [
+    { key: '1', data: 'one' },
+    { key: '2', data: 'two' },
+    { key: '3', data: 'three' },
+    { key: '4', data: 'four' },
+    { key: '5', data: 'five' },
+    { key: '6', data: 'six' },
+  ];
+  const [query, setQuery] = useState('');
+
+  const filtered = useMemo(() => {
+    return defaultItems.filter((item) => item.data.indexOf(query) !== -1);
+  }, [query, defaultItems]);
+
+  return (
+    <>
+      <SearchInput value={query} onChange={setQuery} />
+      <List shouldItemFocusBeInset listSize={filtered.length}>
+        {filtered &&
+          filtered.map((item, index) => (
+            <ListItemBase itemIndex={index} key={item.key} isPadded>
+              {`Item ${item.data}-${index}`}
+            </ListItemBase>
+          ))}
+      </List>
+    </>
+  );
+};
+
+/**
  * Example illustrating List works well with lists
  * that change dynamically and preserves keyboard navigation
  */
@@ -230,5 +263,6 @@ const DynamicListWrapper = () => {
 };
 
 const DynamicList = Template<unknown>(DynamicListWrapper).bind({});
+const Search = Template<unknown>(ListSearchWrapper).bind({});
 
-export { Example, Common, CalendarList, DynamicList };
+export { Example, Common, CalendarList, DynamicList, Search };

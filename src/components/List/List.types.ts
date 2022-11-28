@@ -43,4 +43,5 @@ export interface ListContextValue {
   shouldFocusOnPress?: boolean;
   shouldItemFocusBeInset?: boolean;
   setContext?: (newFocus: number) => void;
+  listSize?: number;
 }
