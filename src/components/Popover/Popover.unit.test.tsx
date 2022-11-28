@@ -8,7 +8,7 @@ import ButtonSimple from '../ButtonSimple';
 import Popover from './';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import { STYLE as POPOVER_STYLE } from './Popover.constants';
-import { PopoverInstance } from './Popover.types';
+import { PopoverInstance, PositioningStrategy } from './Popover.types';
 
 describe('<Popover />', () => {
   /**
@@ -155,35 +155,44 @@ describe('<Popover />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should display only one popover at all time', async () => {
-      expect.assertions(6);
+    it.each([['fixed'], ['absolute']])(
+      'should display only one popover at all time',
+      async (strategy) => {
+        expect.assertions(6);
 
-      const { container } = render(
-        <>
-          <Popover triggerComponent={<ButtonSimple>Popover 1</ButtonSimple>} strategy="fixed">
-            <p>Content</p>
-          </Popover>
-          <Popover triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>} strategy="fixed">
-            <p>Content</p>
-          </Popover>
-          <ButtonSimple>Other button</ButtonSimple>
-        </>
-      );
+        const { container } = render(
+          <>
+            <Popover
+              triggerComponent={<ButtonSimple>Popover 1</ButtonSimple>}
+              strategy={strategy as PositioningStrategy}
+            >
+              <p>Content 1</p>
+            </Popover>
+            <Popover
+              triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>}
+              strategy={strategy as PositioningStrategy}
+            >
+              <p>Content 2</p>
+            </Popover>
+            <ButtonSimple>Other button</ButtonSimple>
+          </>
+        );
 
-      expect(container).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 1/i);
+        await openPopoverByClickingOnTriggerAndCheckContent(/Popover 1/i, /Content 1/i);
 
-      expect(container).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 2/i);
+        await openPopoverByClickingOnTriggerAndCheckContent(/Popover 2/i, /Content 2/i);
 
-      expect(container).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-      userEvent.click(screen.getByRole('button', { name: /Other button/i }));
+        userEvent.click(screen.getByRole('button', { name: /Other button/i }));
 
-      expect(container).toMatchSnapshot();
-    });
+        expect(container).toMatchSnapshot();
+      }
+    );
   });
 
   describe('attributes', () => {
