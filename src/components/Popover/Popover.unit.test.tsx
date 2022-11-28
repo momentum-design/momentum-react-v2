@@ -16,6 +16,7 @@ describe('<Popover />', () => {
    * expect() statements count: 1
    * @returns {HTMLElement}
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const openPopoverByClickingOnTriggerAndCheckContent = async (user: any, name = /click me!/i) => {
     await user.click(screen.getByRole('button', { name }));
     const content = await screen.findByText('Content');
