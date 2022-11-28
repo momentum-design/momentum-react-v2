@@ -8,18 +8,21 @@ import { ListContext } from './List.utils';
 import { useKeyboard } from '@react-aria/interactions';
 
 const List: FC<Props> = (props: Props) => {
+  const { className, id, style, children, shouldFocusOnPress, listSize, shouldItemFocusBeInset } =
+    props;
+
   const [currentFocus, setCurrentFocus] = useState<number>(0);
 
   const setContext = useCallback(
     (newFocus) => {
       setCurrentFocus(newFocus);
     },
-    [currentFocus, setCurrentFocus]
+    [currentFocus, setCurrentFocus, listSize]
   );
 
   const getContext = useCallback(
-    () => ({ shouldFocusOnPress, shouldItemFocusBeInset, currentFocus, setContext }),
-    [currentFocus, setCurrentFocus]
+    () => ({ listSize, shouldFocusOnPress, shouldItemFocusBeInset, currentFocus, setContext }),
+    [currentFocus, setCurrentFocus, listSize]
   );
 
   const { keyboardProps } = useKeyboard({
@@ -42,9 +45,6 @@ const List: FC<Props> = (props: Props) => {
       }
     },
   });
-
-  const { className, id, style, children, shouldFocusOnPress, listSize, shouldItemFocusBeInset } =
-    props;
 
   const ref = useRef<HTMLUListElement>();
 

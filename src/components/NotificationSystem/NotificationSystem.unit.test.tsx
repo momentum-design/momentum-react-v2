@@ -195,6 +195,7 @@ describe('<NotificationSystem />', () => {
 
     it('should close the `medium attention` notification after clicking on the close button', async () => {
       expect.assertions(5);
+      const user = userEvent.setup();
 
       render(<NotificationSystem />);
 
@@ -224,7 +225,7 @@ describe('<NotificationSystem />', () => {
       const closeButton = screen.getByRole('button', { name: closeButtonText });
       // dismiss the toast by clicking the close button
 
-      userEvent.click(closeButton);
+      await user.click(closeButton);
 
       // check if toast got removed and the toast is not active anymore
       const toastAfterRemoval = screen.queryByRole('alert');

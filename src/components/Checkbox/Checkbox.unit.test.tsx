@@ -148,6 +148,7 @@ describe('<Checkbox />', () => {
   describe('actions', () => {
     it('should handle mouse press events', async () => {
       expect.assertions(4);
+      const user = userEvent.setup();
 
       const mockCallback = jest.fn();
 
@@ -155,17 +156,18 @@ describe('<Checkbox />', () => {
 
       const input = getByRole('checkbox');
 
-      userEvent.click(input);
+      await user.click(input);
       expect(mockCallback).toBeCalledTimes(1);
       expect(mockCallback).toBeCalledWith(true);
 
-      userEvent.click(input);
+      await user.click(input);
       expect(mockCallback).toBeCalledTimes(2);
       expect(mockCallback).toBeCalledWith(false);
     });
 
     it('should handle press space key', async () => {
       expect.assertions(2);
+      const user = userEvent.setup();
 
       const mockCallback = jest.fn();
 
@@ -173,7 +175,7 @@ describe('<Checkbox />', () => {
 
       const input = getByRole('checkbox');
 
-      userEvent.type(input, '{Space}');
+      await user.type(input, '{Space}');
       expect(mockCallback).toBeCalledWith(true);
       expect(input).toBeChecked();
     });
