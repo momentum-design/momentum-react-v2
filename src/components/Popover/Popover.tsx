@@ -9,9 +9,8 @@ import { ARROW_PADDING, DEFAULTS, OFFSET, STYLE } from './Popover.constants';
 import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
 import type { Props } from './Popover.types';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
-import { hideOnEscPlugin } from './tippyPlugins';
+import { hideOnEscPlugin, addBackdrop } from './tippyPlugins';
 import classNames from 'classnames';
-import { addBackdrop } from './plugins';
 import { isMRv2Button } from '../../helpers/verifyTypes';
 
 /**

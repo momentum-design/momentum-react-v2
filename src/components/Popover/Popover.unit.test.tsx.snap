@@ -71,7 +71,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 2`] = 
       data-round="50"
     >
       <p>
-        Content
+        Content 1
       </p>
       <div
         class="md-modal-container-arrow-wrapper"
@@ -154,7 +154,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 3`] = 
       data-round="50"
     >
       <p>
-        Content
+        Content 2
       </p>
       <div
         class="md-modal-container-arrow-wrapper"
@@ -196,6 +196,230 @@ exports[`<Popover /> snapshot should display only one popover at all time 3`] = 
 `;
 
 exports[`<Popover /> snapshot should display only one popover at all time 4`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 1
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Popover /> snapshot should display only one popover at all time 5`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 1
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Popover /> snapshot should display only one popover at all time 6`] = `
+<div>
+  <button
+    aria-describedby="tippy-10"
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 1
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+  <div
+    data-tippy-root=""
+    id="tippy-10"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+    >
+      <p>
+        Content 1
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    class="md-popover-backdrop"
+  />
+</div>
+`;
+
+exports[`<Popover /> snapshot should display only one popover at all time 7`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 1
+    </span>
+  </button>
+  <button
+    aria-describedby="tippy-11"
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Popover 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+  <div
+    data-tippy-root=""
+    id="tippy-11"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+    >
+      <p>
+        Content 2
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    class="md-popover-backdrop"
+  />
+</div>
+`;
+
+exports[`<Popover /> snapshot should display only one popover at all time 8`] = `
 <div>
   <button
     class="md-button-simple-wrapper"
