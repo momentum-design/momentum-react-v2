@@ -316,7 +316,7 @@ describe('<Popover />', () => {
       expect(props.onDestroy).toBeCalled();
     });
 
-    it('should show/hide Popover on tab + enter', async () => {
+    it.only('should show/hide Popover on tab + enter', async () => {
       expect.assertions(2);
       const user = userEvent.setup();
 
