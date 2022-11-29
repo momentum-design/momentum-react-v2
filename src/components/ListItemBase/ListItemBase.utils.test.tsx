@@ -1,4 +1,5 @@
-import { getKeyboardFocusableElements } from './ListItemBase.utils';
+import { renderHook } from '@testing-library/react-hooks';
+import { getKeyboardFocusableElements, useDidUpdateEffect } from './ListItemBase.utils';
 
 describe('getKeyboardFocusableElements', () => {
   const createRootNodeRef = (content = '') => {
@@ -38,5 +39,17 @@ describe('getKeyboardFocusableElements', () => {
     ).map((n) => n.id);
 
     expect(ids).toEqual(['3']);
+  });
+});
+
+describe('useDidUpdateEffect', () => {
+  it('does not run the effect on initial render', async () => {
+    const effect = jest.fn();
+    const { rerender } = renderHook(({ input, effect }) => useDidUpdateEffect(effect, input), {
+      initialProps: { effect, input: ['one'] },
+    });
+    expect(effect).not.toBeCalled();
+    rerender({ effect, input: ['two'] });
+    expect(effect).toBeCalled();
   });
 });

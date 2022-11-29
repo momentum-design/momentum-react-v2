@@ -137,7 +137,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
    * the size of the new list size (shrinked size)
    */
   useEffect(() => {
-    if (listContext?.currentFocus >= listContext?.listSize) {
+    if (!!listContext?.listSize && listContext?.currentFocus > listContext?.listSize) {
       // set focus to first item
       listContext.setContext(0);
       updateTabIndexes();
