@@ -248,14 +248,14 @@ describe('<Popover />', () => {
     });
 
     it('should display only one popover at all time', async () => {
-      expect.assertions(6);
+      expect.assertions(7);
 
       render(
         <>
-          <Popover triggerComponent={<ButtonSimple>Popover 1</ButtonSimple>} strategy="fixed">
+          <Popover triggerComponent={<ButtonSimple>Popover 1</ButtonSimple>}>
             <p>Content 1</p>
           </Popover>
-          <Popover triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>} strategy="fixed">
+          <Popover triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>}>
             <p>Content 2</p>
           </Popover>
           <ButtonSimple>Other button</ButtonSimple>
@@ -363,7 +363,7 @@ describe('<Popover />', () => {
     });
 
     it('should render the the backdrop', async () => {
-      expect.assertions(4);
+      expect.assertions(6);
 
       const { container } = render(
         <Popover
@@ -386,6 +386,15 @@ describe('<Popover />', () => {
       const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
       expect(backdrop).toBeVisible();
       expect(backdrop.getAttribute('aria-hidden')).toBe('true');
+
+      // close the popover
+      userEvent.click(backdrop);
+
+      const contentAfterClick = screen.queryByText('Content');
+      expect(contentAfterClick).not.toBeInTheDocument();
+
+      const backdropAfterClose = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
+      expect(backdropAfterClose).not.toBeInTheDocument();
     });
   });
 
