@@ -281,9 +281,12 @@ describe('<Popover />', () => {
       // at this point popover 2 is still open and we click on another button
       userEvent.click(screen.getByRole('button', { name: /Other button/i }));
 
+      const content1AfterClickingOuterButton = screen.queryByText('Content 1');
+      expect(content1AfterClickingOuterButton).not.toBeInTheDocument();
+
       // assert that first popover has closed, and only second one is open
-      const contentAfterClickingOuterButton = screen.queryByText('Content 2');
-      expect(contentAfterClickingOuterButton).not.toBeInTheDocument();
+      const content2AfterClickingOuterButton = screen.queryByText('Content 2');
+      expect(content2AfterClickingOuterButton).not.toBeInTheDocument();
     });
 
     it('should not automatically disappear on focus-change when trigger is manual', async () => {
