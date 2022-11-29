@@ -34,7 +34,6 @@ export const hideOnEscPlugin: Plugin = {
  */
 export const addBackdrop: Plugin = {
   name: 'addBackdrop',
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   fn(instance: PopoverInstance) {
     return {
       onMount() {
