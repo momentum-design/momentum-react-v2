@@ -188,7 +188,7 @@ describe('<Popover />', () => {
 
         expect(container).toMatchSnapshot();
 
-        userEvent.click(screen.getByRole('button', { name: /Other button/i }));
+        await user.click(screen.getByRole('button', { name: /Other button/i }));
 
         expect(container).toMatchSnapshot();
       }
@@ -279,7 +279,7 @@ describe('<Popover />', () => {
       expect(contentAfterClickingBoth).not.toBeInTheDocument();
 
       // at this point popover 2 is still open and we click on another button
-      userEvent.click(screen.getByRole('button', { name: /Other button/i }));
+      await user.click(screen.getByRole('button', { name: /Other button/i }));
 
       const content1AfterClickingOuterButton = screen.queryByText('Content 1');
       expect(content1AfterClickingOuterButton).not.toBeInTheDocument();
@@ -388,7 +388,7 @@ describe('<Popover />', () => {
       expect(backdrop.getAttribute('aria-hidden')).toBe('true');
 
       // close the popover
-      userEvent.click(backdrop);
+      await user.click(backdrop);
 
       const contentAfterClick = screen.queryByText('Content');
       expect(contentAfterClick).not.toBeInTheDocument();
@@ -722,7 +722,7 @@ describe('<Popover />', () => {
 
       const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
 
-      userEvent.click(backdrop);
+      await user.click(backdrop);
 
       // content should be hidden
       await waitFor(() => {
