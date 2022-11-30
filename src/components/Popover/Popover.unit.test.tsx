@@ -159,6 +159,7 @@ describe('<Popover />', () => {
       'should display only one popover at all time',
       async (strategy) => {
         expect.assertions(6);
+        const user = userEvent.setup();
 
         const { container } = render(
           <>
@@ -180,11 +181,11 @@ describe('<Popover />', () => {
 
         expect(container).toMatchSnapshot();
 
-        await openPopoverByClickingOnTriggerAndCheckContent(/Popover 1/i, /Content 1/i);
+        await openPopoverByClickingOnTriggerAndCheckContent(user, /Popover 1/i, /Content 1/i);
 
         expect(container).toMatchSnapshot();
 
-        await openPopoverByClickingOnTriggerAndCheckContent(/Popover 2/i, /Content 2/i);
+        await openPopoverByClickingOnTriggerAndCheckContent(user, /Popover 2/i, /Content 2/i);
 
         expect(container).toMatchSnapshot();
 
@@ -249,6 +250,7 @@ describe('<Popover />', () => {
 
     it('should display only one popover at all time', async () => {
       expect.assertions(7);
+      const user = userEvent.setup();
 
       render(
         <>
@@ -270,9 +272,9 @@ describe('<Popover />', () => {
       const contentBeforeClickPopover2 = screen.queryByText('Content 2');
       expect(contentBeforeClickPopover2).not.toBeInTheDocument();
 
-      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 1/i, /Content 1/i);
+      await openPopoverByClickingOnTriggerAndCheckContent(user, /Popover 1/i, /Content 1/i);
 
-      await openPopoverByClickingOnTriggerAndCheckContent(/Popover 2/i, /Content 2/i);
+      await openPopoverByClickingOnTriggerAndCheckContent(user, /Popover 2/i, /Content 2/i);
 
       // assert that first popover has closed, and only second one is open
       const contentAfterClickingBoth = screen.queryByText('Content 1');
@@ -364,7 +366,7 @@ describe('<Popover />', () => {
 
     it('should render the the backdrop', async () => {
       expect.assertions(6);
-
+      const user = userEvent.setup();
       const { container } = render(
         <Popover
           triggerComponent={<button>Click Me!</button>}
@@ -381,7 +383,7 @@ describe('<Popover />', () => {
       expect(contentBeforeClick).not.toBeInTheDocument();
 
       // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent();
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
 
       const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
       expect(backdrop).toBeVisible();
@@ -706,6 +708,7 @@ describe('<Popover />', () => {
 
     it('should hide Popover after clicking on the backdrop', async () => {
       expect.assertions(3);
+      const user = userEvent.setup();
 
       const { container } = render(
         <Popover triggerComponent={<button>Click Me!</button>} trigger="click">
@@ -718,7 +721,7 @@ describe('<Popover />', () => {
       expect(contentBeforeClick).not.toBeInTheDocument();
 
       // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent();
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
 
       const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
 
