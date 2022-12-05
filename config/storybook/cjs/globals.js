@@ -1,6 +1,6 @@
 import {
   DEFAULTS,
-  THEME_NAMES,
+  THEMES,
 } from '../../../dist/cjs/components/ThemeProvider/ThemeProvider.constants';
 
 const globals = {
@@ -20,7 +20,7 @@ const globals = {
     defaultValue: DEFAULTS.THEME,
     toolbar: {
       icon: 'paintbrush',
-      items: [...Object.values(THEME_NAMES)],
+      items: [...Object.values(THEMES)],
       showName: true,
     },
   },

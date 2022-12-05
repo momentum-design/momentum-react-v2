@@ -1,7 +1,4 @@
-import {
-  DEFAULTS,
-  THEME_NAMES,
-} from '../../../src/components/ThemeProvider/ThemeProvider.constants';
+import { DEFAULTS, THEMES } from '../../../src/components/ThemeProvider/ThemeProvider.constants';
 
 const globals = {
   display: {
@@ -20,7 +17,7 @@ const globals = {
     defaultValue: DEFAULTS.THEME,
     toolbar: {
       icon: 'paintbrush',
-      items: [...Object.values(THEME_NAMES)],
+      items: [...Object.values(THEMES)],
       showName: true,
     },
   },
