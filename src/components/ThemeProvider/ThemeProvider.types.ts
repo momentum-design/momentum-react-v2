@@ -14,6 +14,8 @@ export type ThemeNames =
   | 'lightRose'
   | 'lightWebex';
 
+export type MDTheme = 'webex-dark' | 'webex-light';
+
 export type TeamColor =
   | 'default'
   | 'gold'
@@ -46,5 +48,5 @@ export interface Props {
   /**
    * The theme name to provide styles from to all child components.
    */
-  theme?: ThemeNames;
+  theme?: ThemeNames | MDTheme;
 }

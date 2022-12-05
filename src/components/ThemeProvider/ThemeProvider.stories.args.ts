@@ -6,7 +6,7 @@ const themeProviderArgTypes = {
   theme: {
     description:
       'The name of the target theme to apply to all child nodes of this `<ThemeProvider />`.',
-    options: [...Object.values(CONSTANTS.THEME_NAMES)],
+    options: [...Object.values(CONSTANTS.THEMES)],
     control: { type: 'select' },
     table: {
       type: {
