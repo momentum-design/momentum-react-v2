@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from '@momentum-ui/react-collaboration';
 
-import { STYLE, THEME_CLASS_PREFIX, THEME_NAMES } from './ThemeProvider.constants';
+import { STYLE, THEME_CLASS_PREFIX, THEMES } from './ThemeProvider.constants';
 
 describe('<ThemeProvider />', () => {
   let container;
@@ -11,7 +11,7 @@ describe('<ThemeProvider />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const themeName = THEME_NAMES[Object.keys(THEME_NAMES)[0]];
+      const themeName = THEMES[Object.keys(THEMES)[0]];
 
       container = mount(<ThemeProvider theme={themeName} />);
 
@@ -53,7 +53,7 @@ describe('<ThemeProvider />', () => {
     it('should have an abstracted theme class', () => {
       expect.assertions(1);
 
-      const themeName = THEME_NAMES[Object.keys(THEME_NAMES)[0]];
+      const themeName = THEMES[Object.keys(THEMES)[0]];
 
       const element = mount(<ThemeProvider theme={themeName} />)
         .find(ThemeProvider)

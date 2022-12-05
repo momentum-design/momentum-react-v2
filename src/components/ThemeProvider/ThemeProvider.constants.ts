@@ -22,11 +22,21 @@ const THEME_NAMES = {
   LIGHT_WEBEX: 'lightWebex',
 };
 
+const MD_THEMES = {
+  WEBEX_DARK: 'webex-dark',
+  WEBEX_LIGHT: 'webex-light',
+};
+
+const THEMES = {
+  ...THEME_NAMES,
+  ...MD_THEMES,
+};
+
 const DEFAULTS = {
   THEME: THEME_NAMES.DARK_WEBEX,
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE, THEME_CLASS_PREFIX, THEME_NAMES };
+export { CLASS_PREFIX, DEFAULTS, MD_THEMES, STYLE, THEME_CLASS_PREFIX, THEME_NAMES, THEMES };
 
 export const TEAM_COLORS = {
   default: 'default',
