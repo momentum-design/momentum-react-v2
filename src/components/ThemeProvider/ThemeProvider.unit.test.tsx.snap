@@ -5,7 +5,7 @@ exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
   theme="darkWebex"
 >
   <div
-    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex"
+    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex md-theme-stable-darkWebex"
   />
 </ThemeProvider>
 `;
@@ -19,7 +19,7 @@ exports[`<ThemeProvider /> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
-    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex"
+    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex md-theme-stable-darkWebex"
     style={
       Object {
         "color": "pink",
