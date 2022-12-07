@@ -1822,10 +1822,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@momentum-design/tokens@^0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@momentum-design/tokens/-/tokens-0.0.25.tgz#c354f03ccf1078031ab03c71e895f5354ce8f816"
-  integrity sha512-40EHDIPJ5VheD+5DvpK3AmROs0NTTdqp1y3eMJRtArbuHMifybcODafF+ZWZVUa+qDdHNJ0qEYitKiVOpJfk/A==
+"@momentum-design/tokens@^0.0.31":
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/@momentum-design/tokens/-/tokens-0.0.31.tgz#aa07b3a189e2496f5c86da399019a744ed4da20b"
+  integrity sha512-zWNqS/hfC8LCNmR6zwTm7TzgrYG/pdKoxDG4coKWI2Z6mEitojA3FrUfMQ86q2l4DiAviJxh3Ra1iNScTz3JLw==
 
 "@momentum-ui/animations@^1.4.0":
   version "1.4.0"
@@ -11806,7 +11806,7 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, gl
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^8.0.1:
+glob@^8.0.1, glob@^8.0.3:
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-8.0.3.tgz#415c6eb2deed9e502c68fa44a272e6da6eeca42e"
   integrity sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==
