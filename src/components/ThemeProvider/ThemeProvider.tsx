@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 
 import '@momentum-ui/design-tokens/dist/index.css';
 import '@momentum-design/tokens/dist/css/core/complete.css';
-import '@momentum-design/tokens/dist/css/theme/webex/dark-complete.css';
-import '@momentum-design/tokens/dist/css/theme/webex/light-complete.css';
+import '@momentum-design/tokens/dist/css/theme/webex/dark-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/light-stable.css';
 
 import { DEFAULTS, STYLE, THEME_CLASS_PREFIX, THEME_CLASS_STABLE } from './ThemeProvider.constants';
 import { Props } from './ThemeProvider.types';
