@@ -97,7 +97,7 @@ AudioVideoControls.parameters = {
           placement="top-end"
           triggerComponent={
             <ButtonCircle outline ghost key="1" size={40}>
-              <Icon name="arrow-down-optical" autoScale={100} />
+              <Icon name="arrow-down" autoScale={100} />
             </ButtonCircle>
           }
           children={[
@@ -126,7 +126,7 @@ AudioVideoControls.parameters = {
           </div>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
-          <Icon name="arrow-down-optical" autoScale={100} />
+          <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
       round: true,
@@ -135,13 +135,13 @@ AudioVideoControls.parameters = {
     {
       children: [
         <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
-          <Icon key="0" name="camera-on-colored" autoScale={125} style={{ marginLeft: 'auto' }} />
+          <Icon key="0" name="camera-on" autoScale={125} style={{ marginLeft: 'auto' }} />
           <div key="1" style={{ marginRight: 'auto' }}>
             Stop Video
           </div>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
-          <Icon name="arrow-down-optical" autoScale={100} />
+          <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
       round: true,
@@ -154,7 +154,7 @@ AudioVideoControls.parameters = {
           <div key="1">Start Video</div>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
-          <Icon name="arrow-down-optical" autoScale={100} />
+          <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
       round: true,
@@ -167,7 +167,7 @@ AudioVideoControls.parameters = {
           <div key="1">Long Label Possibly German</div>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
-          <Icon name="arrow-down-optical" autoScale={100} />
+          <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
       round: true,

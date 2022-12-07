@@ -10,7 +10,7 @@ describe('Icon', () => {
     const onErrorMock = jest.fn();
     const mockSVG = 'SVG_CONTENT';
     jest.mock(
-      '@momentum-ui/icons-rebrand/svg/test_icon-regular.svg?svgr',
+      '@momentum-design/icons/dist/svg/test_icon-regular.svg?svgr',
       () => {
         return { ReactComponent: mockSVG };
       },
@@ -42,7 +42,7 @@ describe('Icon', () => {
     const expectedError = new Error('error');
 
     jest.mock(
-      '@momentum-ui/icons-rebrand/svg/bad_icon.svg?svgr',
+      '@momentum-design/icons/dist/svg/bad_icon.svg?svgr',
       () => {
         throw expectedError;
       },

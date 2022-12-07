@@ -1822,6 +1822,11 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
+"@momentum-design/icons@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@momentum-design/icons/-/icons-0.0.2.tgz#e24ee0293bedf8a72df0629262ea1e5483dfef42"
+  integrity sha512-xMhFePSQd8rKfzfS7+gkbNUh2wWidbu+YNfT8uLV7MUvKmdqPTO2tF8QjQi5wFytA9WD9ULanbC4HeJ13notXA==
+
 "@momentum-ui/animations@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@momentum-ui/animations/-/animations-1.4.0.tgz#feafac71b564c3bc6433d3499ad5b9ea98196a39"

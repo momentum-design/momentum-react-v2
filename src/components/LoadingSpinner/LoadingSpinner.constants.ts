@@ -6,7 +6,7 @@ const DEFAULTS = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  arch: `${CLASS_PREFIX}-arch`,
+  icon: `${CLASS_PREFIX}-icon`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };

@@ -1,10 +1,6 @@
 .md-loading-spinner-wrapper {
   position: relative;
 
-  svg {
-    fill: var(--spinner-loading-track);
-  }
-
   @keyframes spin-animation {
     from {
       transform: rotate(0deg);
@@ -15,15 +11,17 @@
     }
   }
 
-  .md-loading-spinner-arch {
-    position: absolute;
-    top: 0;
+  .md-loading-spinner-icon {
     animation-name: spin-animation;
     animation-duration: 0.75s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
-    svg {
+    svg > path:first-child {
+      fill: var(--spinner-loading-track);
+    }
+
+    svg > path:nth-child(2) {
       fill: var(--spinner-loading-cursor);
     }
   }

@@ -11,8 +11,7 @@ const LoadingSpinner: FC<Props> = (props: Props) => {
 
   return (
     <div className={classnames(className, STYLE.wrapper)} id={id} style={style} {...rest}>
-      <Icon scale={scale} name="spinner" weight="regular" />
-      <Icon scale={scale} className={STYLE.arch} name="spinner-partial" weight="regular" />
+      <Icon className={STYLE.icon} scale={scale} name="spinner-filled" weight="regular" />
     </div>
   );
 };
