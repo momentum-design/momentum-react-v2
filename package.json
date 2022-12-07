@@ -98,7 +98,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-design/tokens": "^0.0.25",
+    "@momentum-design/tokens": "^0.0.31",
     "@momentum-ui/animations": "^1.4.0",
     "@momentum-ui/design-tokens": "^0.0.59",
     "@momentum-ui/icons": "8.28.4",
@@ -215,6 +215,7 @@
     "eslint-watch": "^6.0.0",
     "file-loader": "^1.1.6",
     "fs-extra": "^5.0.0",
+    "glob": "^8.0.3",
     "html-webpack-plugin": "3.2.0",
     "husky": "^7.0.1",
     "jest": "^26.0.0",
