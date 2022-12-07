@@ -1,4 +1,5 @@
 const THEME_CLASS_PREFIX = 'md-theme';
+const THEME_CLASS_STABLE = 'stable';
 const CLASS_PREFIX = `${THEME_CLASS_PREFIX}-provider`;
 
 const STYLE = {
@@ -36,7 +37,16 @@ const DEFAULTS = {
   THEME: THEME_NAMES.DARK_WEBEX,
 };
 
-export { CLASS_PREFIX, DEFAULTS, MD_THEMES, STYLE, THEME_CLASS_PREFIX, THEME_NAMES, THEMES };
+export {
+  CLASS_PREFIX,
+  DEFAULTS,
+  MD_THEMES,
+  STYLE,
+  THEME_CLASS_PREFIX,
+  THEME_CLASS_STABLE,
+  THEME_NAMES,
+  THEMES,
+};
 
 export const TEAM_COLORS = {
   default: 'default',
