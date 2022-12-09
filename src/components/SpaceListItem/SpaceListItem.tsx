@@ -53,7 +53,7 @@ const SpaceListItem: FC<Props> = forwardRef(
             </Text>
             {isCompact && <DividerDot data-test="compact-mode-divider-dot" />}
             <Text
-              style={{ color: `var(--theme-text-team-${teamColor}-normal)` }}
+              style={{ color: `var(--mds-color-theme-text-team-${teamColor}-normal)` }}
               type="body-secondary"
               data-test="list-item-second-line"
               aria-label={secondLineArrayClean.join(', ')}
@@ -83,26 +83,26 @@ const SpaceListItem: FC<Props> = forwardRef(
         title: rightIconTooltip,
       };
       if (isMention) {
-        return <Icon fillColor={'var(--listitem-tick)'} name="mention" {...iconProps} />;
+        return <Icon fillColor={'var(--mds-color-theme-control-active-normal)'} name="mention" {...iconProps} />;
       } else if (isEnterRoom) {
-        return <Icon fillColor={'var(--listitem-tick)'} name="enter-room" {...iconProps} />;
+        return <Icon fillColor={'var(--mds-color-theme-control-active-normal)'} name="enter-room" {...iconProps} />;
       } else if (isAlertMuted) {
-        return <Icon fillColor={'var(--listitem-icon)'} name="alert-muted" {...iconProps} />;
+        return <Icon fillColor={'var(--mds-color-theme-text-primary-normal)'} name="alert-muted" {...iconProps} />;
       } else if (isAlert) {
-        return <Icon fillColor={'var(--listitem-icon)'} name="alert" {...iconProps} />;
+        return <Icon fillColor={'var(--mds-color-theme-text-primary-normal)'} name="alert" {...iconProps} />;
       } else if (!isSelected && isDraft) {
         return <Icon name="draft-indicator" {...iconProps} />;
       } else if (isError) {
         return (
           <Icon
-            fillColor={'var(--label-error-text)'}
+            fillColor={'var(--mds-color-theme-text-error-normal)'}
             name="priority-circle"
             {...iconProps}
             weight="filled"
           />
         );
       } else if (isUnread) {
-        return <Icon name="unread" fillColor={'var(--listitem-tick)'} {...iconProps} />;
+        return <Icon name="unread" fillColor={'var(--mds-color-theme-control-active-normal)'} {...iconProps} />;
       } else if (action) {
         return <>{action}</>;
       } else return null;

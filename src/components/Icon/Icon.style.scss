@@ -3,7 +3,7 @@ svg.md-icon-coloured {
 
   path:not([fill]) {
     fill: rgba(0, 0, 0, 0.95); // IEFIX
-    fill: var(--theme-text-primary-normal);
+    fill: var(--mds-color-theme-text-primary-normal);
   }
 }
 

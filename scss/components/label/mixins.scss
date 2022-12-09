@@ -4,7 +4,7 @@
     font-size: $label__font-size;
     line-height: $label__line-height;
     color: $label__font-color;
-    color: var(--theme-text-primary-normal);
+    color: var(--mds-color-theme-text-primary-normal);
 
     .#{$dark-class} &,
     &.#{$label__class}--dark {

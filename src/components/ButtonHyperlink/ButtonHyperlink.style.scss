@@ -1,7 +1,7 @@
 .md-button-hyperlink-wrapper {
   background-color: rgba(0, 0, 0, 0);
   border: var(--md-globals-border-clear);
-  color: var(--theme-text-accent-normal);
+  color: var(--mds-color-theme-text-accent-normal);
   cursor: pointer;
   font-family: var(--md-globals-font-default);
   outline: none !important;
@@ -10,19 +10,19 @@
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
   &:focus {
-    color: var(--theme-text-accent-normal);
+    color: var(--mds-color-theme-text-accent-normal);
   }
 
   &:hover {
-    color: var(--theme-text-accent-hover);
+    color: var(--mds-color-theme-text-accent-hover);
   }
 
   &:active {
-    color: var(--theme-text-accent-active);
+    color: var(--mds-color-theme-text-accent-active);
   }
 
   &[data-disabled='true'] {
-    color: var(--theme-text-primary-disabled);
+    color: var(--mds-color-theme-text-primary-disabled);
     cursor: auto;
   }
 }

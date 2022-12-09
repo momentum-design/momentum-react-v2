@@ -1,5 +1,5 @@
 .md-list-header-wrapper {
-  color: var(--listitem-textsecondary);
+  color: var(--mds-color-theme-text-secondary-normal);
   font-size: 0.875rem;
   // Override margin between start section and middle/fill sections
   div[data-position='start'] {
@@ -27,21 +27,21 @@
 
     &[data-outline-position='bottom'] {
       &[data-outline-color='primary'] {
-        border-bottom: 1px solid var(--list-header-outline-primary);
+        border-bottom: 1px solid var(--mds-color-theme-outline-primary-normal);
       }
 
       &[data-outline-color='secondary'] {
-        border-bottom: 1px solid var(--list-header-outline-secondary);
+        border-bottom: 1px solid var(--mds-color-theme-outline-secondary-normal);
       }
     }
 
     &[data-outline-position='top'] {
       &[data-outline-color='primary'] {
-        border-top: 1px solid var(--list-header-outline-primary);
+        border-top: 1px solid var(--mds-color-theme-outline-primary-normal);
       }
 
       &[data-outline-color='secondary'] {
-        border-top: 1px solid var(--list-header-outline-secondary);
+        border-top: 1px solid var(--mds-color-theme-outline-secondary-normal);
       }
     }
   }

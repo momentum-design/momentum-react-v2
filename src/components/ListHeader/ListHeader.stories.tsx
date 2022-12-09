@@ -100,7 +100,7 @@ Common.parameters = {
               name="external-user"
               scale={16}
               weight="bold"
-              fillColor="var(--theme-text-warning-normal)"
+              fillColor="var(--mds-color-theme-text-warning-normal)"
               strokeColor="none"
             />
           </ListItemBaseSection>

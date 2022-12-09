@@ -1,5 +1,5 @@
 const THEME_CLASS_PREFIX = 'md-theme';
-const THEME_CLASS_STABLE = 'stable';
+const THEME_CLASS_PREFIX_STABLE = 'mds-theme-stable';
 const CLASS_PREFIX = `${THEME_CLASS_PREFIX}-provider`;
 
 const STYLE = {
@@ -43,7 +43,7 @@ export {
   MD_THEMES,
   STYLE,
   THEME_CLASS_PREFIX,
-  THEME_CLASS_STABLE,
+  THEME_CLASS_PREFIX_STABLE,
   THEME_NAMES,
   THEMES,
 };

@@ -7,19 +7,19 @@
 
     > .md-toast-content-action {
       &[data-color='cancel'] {
-        color: var(--theme-text-error-normal);
+        color: var(--mds-color-theme-text-error-normal);
       }
 
       &[data-color='join'] {
-        color: var(--theme-text-accent-normal);
+        color: var(--mds-color-theme-text-accent-normal);
       }
 
       &[data-color='success'] {
-        color: var(--theme-text-success-normal);
+        color: var(--mds-color-theme-text-success-normal);
       }
 
       &[data-color='warning'] {
-        color: var(--theme-text-warning-normal);
+        color: var(--mds-color-theme-text-warning-normal);
       }
     }
   }

@@ -32,8 +32,8 @@ const Example: Story<OverlayProps> = (args: OverlayProps) => {
     <div
       style={{
         alignItems: 'center',
-        backgroundColor: 'var(--theme-background-solid-primary-normal)',
-        border: '1px var(--modal-primary-border-style) var(--modal-primary-border-color)',
+        backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
+        border: '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
         display: 'flex',
         padding: '4rem',
         position: 'relative',

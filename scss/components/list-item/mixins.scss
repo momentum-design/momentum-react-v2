@@ -288,7 +288,7 @@
 
 @mixin list-item-color(
   $color: $list-item__color, // Color must stay at top for hoisting reasons
-  $color-css-var: --listitem-textprimary,
+  $color-css-var: --mds-color-theme-text-primary-normal,
   $active-color: $color,
   $active-color-css-var: $color-css-var,
   $hover-color: $color,

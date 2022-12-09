@@ -82,7 +82,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                 data-test="list-item-second-line"
                 style={
                   Object {
-                    "color": "var(--theme-text-team-default-normal)",
+                    "color": "var(--mds-color-theme-text-team-default-normal)",
                   }
                 }
                 type="body-secondary"
@@ -94,7 +94,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                   data-type="body-secondary"
                   style={
                     Object {
-                      "color": "var(--theme-text-team-default-normal)",
+                      "color": "var(--mds-color-theme-text-team-default-normal)",
                     }
                   }
                 >
@@ -617,7 +617,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
               data-position="end"
             >
               <Icon
-                fillColor="var(--listitem-icon)"
+                fillColor="var(--mds-color-theme-text-primary-normal)"
                 name="alert"
                 scale={14}
                 strokeColor="none"
@@ -634,7 +634,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--listitem-icon)",
+                        "fill": "var(--mds-color-theme-text-primary-normal)",
                         "stroke": "none",
                       }
                     }
@@ -727,7 +727,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
               data-position="end"
             >
               <Icon
-                fillColor="var(--listitem-icon)"
+                fillColor="var(--mds-color-theme-text-primary-normal)"
                 name="alert-muted"
                 scale={14}
                 strokeColor="none"
@@ -744,7 +744,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--listitem-icon)",
+                        "fill": "var(--mds-color-theme-text-primary-normal)",
                         "stroke": "none",
                       }
                     }
@@ -837,7 +837,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
               data-position="end"
             >
               <Icon
-                fillColor="var(--listitem-tick)"
+                fillColor="var(--mds-color-theme-control-active-normal)"
                 name="enter-room"
                 scale={14}
                 strokeColor="none"
@@ -854,7 +854,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--listitem-tick)",
+                        "fill": "var(--mds-color-theme-control-active-normal)",
                         "stroke": "none",
                       }
                     }
@@ -947,7 +947,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
               data-position="end"
             >
               <Icon
-                fillColor="var(--label-error-text)"
+                fillColor="var(--mds-color-theme-text-error-normal)"
                 name="priority-circle"
                 scale={14}
                 strokeColor="none"
@@ -964,7 +964,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--label-error-text)",
+                        "fill": "var(--mds-color-theme-text-error-normal)",
                         "stroke": "none",
                       }
                     }
@@ -1057,7 +1057,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
               data-position="end"
             >
               <Icon
-                fillColor="var(--listitem-tick)"
+                fillColor="var(--mds-color-theme-control-active-normal)"
                 name="mention"
                 scale={14}
                 strokeColor="none"
@@ -1074,7 +1074,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--listitem-tick)",
+                        "fill": "var(--mds-color-theme-control-active-normal)",
                         "stroke": "none",
                       }
                     }
@@ -1443,7 +1443,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
               data-position="end"
             >
               <Icon
-                fillColor="var(--listitem-tick)"
+                fillColor="var(--mds-color-theme-control-active-normal)"
                 name="unread"
                 scale={14}
                 strokeColor="none"
@@ -1460,7 +1460,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--listitem-tick)",
+                        "fill": "var(--mds-color-theme-control-active-normal)",
                         "stroke": "none",
                       }
                     }
@@ -1555,7 +1555,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                 data-test="list-item-second-line"
                 style={
                   Object {
-                    "color": "var(--theme-text-team-default-normal)",
+                    "color": "var(--mds-color-theme-text-team-default-normal)",
                   }
                 }
                 type="body-secondary"
@@ -1567,7 +1567,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                   data-type="body-secondary"
                   style={
                     Object {
-                      "color": "var(--theme-text-team-default-normal)",
+                      "color": "var(--mds-color-theme-text-team-default-normal)",
                     }
                   }
                 >
@@ -1692,7 +1692,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                 data-test="list-item-second-line"
                 style={
                   Object {
-                    "color": "var(--theme-text-team-default-normal)",
+                    "color": "var(--mds-color-theme-text-team-default-normal)",
                   }
                 }
                 type="body-secondary"
@@ -1704,7 +1704,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                   data-type="body-secondary"
                   style={
                     Object {
-                      "color": "var(--theme-text-team-default-normal)",
+                      "color": "var(--mds-color-theme-text-team-default-normal)",
                     }
                   }
                 >

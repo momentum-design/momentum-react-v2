@@ -9,23 +9,23 @@
   }
 
   .md-text-input-container {
-    background-color: var(--textinput-background);
-    border: 0.0625rem var(--textinput-border-style) var(--textinput-border-color);
+    background-color: var(--mds-color-theme-background-solid-primary-normal);
+    border: 0.0625rem var(--md-globals-border-style-solid) var(--mds-color-theme-outline-input-normal);
     border-radius: 0.5rem;
 
     &:hover {
-      background-color: var(--textinput-background-hovered);
-      border-color: var(--textinput-border-color-hovered);
+      background-color: var(--mds-color-theme-background-primary-hover);
+      border-color: var(--mds-color-theme-outline-input-normal);
 
       input {
-        color: var(--textinput-text-hovered);
+        color: var(--mds-color-theme-text-primary-normal);
       }
     }
   }
 
   input {
     width: calc(100% - 2rem);
-    color: var(--textinput-text);
+    color: var(--mds-color-theme-text-primary-normal);
     outline: none;
     height: 2rem;
     box-sizing: border-box;
@@ -37,18 +37,18 @@
     padding-left: 0.75rem;
 
     &::placeholder {
-      color: var(--textinput-placeholder-text);
+      color: var(--mds-color-theme-text-secondary-normal);
     }
 
     &::-webkit-contacts-auto-fill-button {
-      background-color: var(--theme-text-secondary-normal);
+      background-color: var(--mds-color-theme-text-secondary-normal);
 
       &:hover {
-        background-color: var(--theme-text-primary-normal);
+        background-color: var(--mds-color-theme-text-primary-normal);
       }
 
       &:active {
-        background-color: var(--theme-text-secondary-normal);
+        background-color: var(--mds-color-theme-text-secondary-normal);
       }
     }
 
@@ -86,12 +86,12 @@
 
   &[data-level='error'] {
     .md-text-input-container {
-      background-color: var(--textinput-error-background);
-      border-color: var(--textinput-error-border-color);
+      background-color: var(--mds-color-theme-background-alert-error-normal);
+      border-color: var(--mds-color-theme-outline-cancel-normal);
 
       &:hover {
-        background-color: var(--textinput-error-background-hovered);
-        border-color: var(--textinput-error-border-color-hovered);
+        background-color: var(--mds-color-theme-background-primary-hover);
+        border-color: var(--mds-color-theme-outline-cancel-normal);
       }
     }
   }
@@ -104,11 +104,11 @@
 
   &[data-disabled='true'] {
     .md-text-input-container {
-      background-color: var(--textinput-background-disabled);
-      border-color: var(--textinput-background-disabled);
+      background-color: var(--mds-color-theme-background-primary-disabled);
+      border-color: var(--mds-color-theme-background-primary-disabled);
 
       input {
-        color: var(--textinput-text-disabled);
+        color: var(--mds-color-theme-text-primary-disabled);
       }
     }
   }
@@ -124,7 +124,7 @@
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    color: var(--theme-text-secondary-normal);
+    color: var(--mds-color-theme-text-secondary-normal);
     display: inline-flex;
     height: 2rem;
     align-items: center;

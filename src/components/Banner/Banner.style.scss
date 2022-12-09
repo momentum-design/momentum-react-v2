@@ -23,15 +23,15 @@
   }
 
   > .md-banner-title {
-    color: var(--theme-text-primary-normal);
+    color: var(--mds-color-theme-text-primary-normal);
   }
 
   > .md-banner-description {
-    color: var(--theme-text-secondary-normal);
+    color: var(--mds-color-theme-text-secondary-normal);
   }
 
   > .md-banner-details {
-    color: var(--theme-text-secondary-normal);
+    color: var(--mds-color-theme-text-secondary-normal);
   }
 
   &[data-shape='square'] {

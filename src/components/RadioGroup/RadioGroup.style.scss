@@ -25,18 +25,18 @@
 
     &[data-disabled='false'] {
       > .md-radio-label {
-        color: var(--radio-unchecked-text);
+        color: var(--mds-color-theme-text-primary-normal);
       }
 
       > .md-radio-button {
         &:checked {
-          border: 5px solid var(--radio-checked-background);
+          border: 5px solid var(--mds-color-theme-control-active-normal);
         }
 
         &:not(:checked) {
-          background-color: var(--radio-unchecked-background);
+          background-color: var(--mds-color-theme-control-inactive-normal);
           border-style: solid;
-          border-color: var(--radio-unchecked-border-color);
+          border-color: var(--mds-color-theme-outline-input-normal);
           border-width: 0.0625rem;
         }
 
@@ -47,30 +47,30 @@
 
       &:hover,
       &.hover {
-        color: var(--radio-checked-text-hovered);
+        color: var(--mds-color-theme-text-primary-normal);
 
         > .md-radio-button {
           &:checked {
-            border: 5px solid var(--radio-checked-background-hovered);
+            border: 5px solid var(--mds-color-theme-control-active-hover);
           }
 
           &:not(:checked) {
-            background-color: var(--radio-unchecked-background-hovered);
+            background-color: var(--mds-color-theme-control-inactive-hover);
           }
         }
       }
 
       &:active,
       &.active {
-        color: var(--radio-unchecked-text-pressed);
+        color: var(--mds-color-theme-text-primary-normal);
 
         > .md-radio-button {
           &:checked {
-            border: 5px solid var(--radio-checked-background-pressed);
+            border: 5px solid var(--mds-color-theme-control-active-pressed);
           }
 
           &:not(:checked) {
-            background-color: var(--radio-unchecked-background-pressed);
+            background-color: var(--mds-color-theme-control-inactive-pressed);
           }
         }
       }
@@ -78,15 +78,15 @@
 
     &[data-disabled='true'],
     &.disable {
-      color: var(--radio-unchecked-text-disabled);
+      color: var(--mds-color-theme-text-primary-disabled);
 
       > .md-radio-button {
         &:checked {
-          border: 5px solid var(--radio-checked-background-disabled);
+          border: 5px solid var(--mds-color-theme-control-active-disabled);
         }
 
         &:not(:checked) {
-          background-color: var(--radio-unchecked-background-disabled);
+          background-color: var(--mds-color-theme-control-inactive-disabled);
           border-style: none;
         }
       }

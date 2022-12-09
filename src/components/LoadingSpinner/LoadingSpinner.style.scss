@@ -2,7 +2,7 @@
   position: relative;
 
   svg {
-    fill: var(--spinner-loading-track);
+    fill: var(--mds-color-theme-control-inactive-normal);
   }
 
   @keyframes spin-animation {
@@ -24,7 +24,7 @@
     animation-timing-function: linear;
 
     svg {
-      fill: var(--spinner-loading-cursor);
+      fill: var(--mds-color-theme-outline-input-active);
     }
   }
 }

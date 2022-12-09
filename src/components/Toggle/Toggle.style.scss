@@ -13,7 +13,7 @@
   border-radius: math.div($switch-height, 2);
   margin-right: 0.5rem;
   transition: background $transition-time;
-  background-color: var(--toggle-untoggled-background);
+  background-color: var(--mds-color-theme-control-inactive-normal);
 
   &:before {
     content: '';
@@ -23,7 +23,7 @@
     margin: $thumb-margin;
     display: block;
     transition: transform $transition-time;
-    background-color: var(--toggle-untoggled-thumb-tint);
+    background-color: var(--mds-color-theme-text-primary-normal);
   }
 
   &:checked:before {
@@ -31,10 +31,10 @@
   }
 
   &:checked {
-    background-color: var(--toggle-toggled-background);
+    background-color: var(--mds-color-theme-control-active-normal);
 
     &:before {
-      background-color: var(--toggle-toggled-thumb-tint);
+      background-color: var(--mds-color-theme-text-inverted-normal);
       transform: translateX($switch-width - $switch-height);
     }
   }
@@ -46,17 +46,17 @@
 
   // Hovered
   &:hover {
-    background-color: var(--toggle-untoggled-background-hovered);
+    background-color: var(--mds-color-theme-control-inactive-hover);
 
     &:before {
-      background-color: var(--toggle-untoggled-thumb-tint-hovered);
+      background-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &:checked {
-      background-color: var(--toggle-toggled-background-hovered);
+      background-color: var(--mds-color-theme-control-active-hover);
 
       &:before {
-        background-color: var(--toggle-toggled-thumb-tint-hovered);
+        background-color: var(--mds-color-theme-text-inverted-normal);
         transform: translateX($switch-width - $switch-height);
       }
     }
@@ -64,17 +64,17 @@
 
   // Pressed
   &:active {
-    background-color: var(--toggle-untoggled-background-pressed);
+    background-color: var(--mds-color-theme-control-inactive-pressed);
 
     &:before {
-      background-color: var(--toggle-untoggled-thumb-tint-pressed);
+      background-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &:checked {
-      background-color: var(--toggle-toggled-background-pressed);
+      background-color: var(--mds-color-theme-control-active-pressed);
 
       &:before {
-        background-color: var(--toggle-toggled-thumb-tint-pressed);
+        background-color: var(--mds-color-theme-text-inverted-normal);
         transform: translateX($switch-width - $switch-height);
       }
     }
@@ -82,17 +82,17 @@
 
   // Disabled
   &:disabled {
-    background-color: var(--toggle-untoggled-background-disabled);
+    background-color: var(--mds-color-theme-control-inactive-disabled);
 
     &:before {
-      background-color: var(--toggle-untoggled-thumb-tint-disabled);
+      background-color: var(--mds-color-theme-text-primary-disabled);
     }
 
     &:checked {
-      background-color: var(--toggle-toggled-background-disabled);
+      background-color: var(--mds-color-theme-control-active-disabled);
 
       &:before {
-        background-color: var(--toggle-toggled-thumb-tint-disabled);
+        background-color: var(--mds-color-theme-text-inverted-disabled);
         transform: translateX($switch-width - $switch-height);
       }
     }

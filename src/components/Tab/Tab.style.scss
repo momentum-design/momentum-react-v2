@@ -10,65 +10,65 @@
   /* Colorization */
   &[data-active='false'] {
     &[data-disabled='false'] {
-      background-color: var(--tab-inactive-background);
+      background-color: var(--mds-color-theme-button-secondary-normal);
 
       .md-text-wrapper,
       .md-icon-wrapper {
-        color: var(--tab-inactive-text);
+        color: var(--mds-color-theme-text-secondary-normal);
       }
 
       &:hover {
-        background-color: var(--tab-inactive-background-hovered);
+        background-color: var(--mds-color-theme-button-secondary-hover);
 
         .md-text-wrapper,
         .md-icon-wrapper {
-          color: var(--tab-inactive-text-hovered);
+          color: var(--mds-color-theme-text-primary-normal);
         }
       }
 
       &:active {
-        background-color: var(--tab-active-background-pressed);
+        background-color: var(--mds-color-theme-button-secondary-pressed);
 
         .md-text-wrapper,
         .md-icon-wrapper {
-          color: var(--tab-active-text-pressed);
+          color: var(--mds-color-theme-text-primary-normal);
         }
       }
     }
 
     &[data-disabled='true'] {
-      background-color: var(--tab-inactive-background);
+      background-color: var(--mds-color-theme-button-secondary-normal);
 
       .md-text-wrapper,
       .md-icon-wrapper {
-        color: var(--tab-inactive-text-disabled);
+        color: var(--mds-color-theme-text-primary-disabled);
       }
     }
   }
 
   &[data-active='true'] {
-    background-color: var(--tab-active-background);
+    background-color: var(--mds-color-theme-button-secondary-active-normal);
 
     .md-text-wrapper,
     .md-icon-wrapper {
-      color: var(--tab-inactive-text);
+      color: var(--mds-color-theme-text-secondary-normal);
     }
 
     &:hover {
-      background-color: var(--tab-active-background-hovered);
+      background-color: var(--mds-color-theme-button-secondary-active-hover);
 
       .md-text-wrapper,
       .md-icon-wrapper {
-        color: var(--tab-active-text-hovered);
+        color: var(--mds-color-theme-text-primary-normal);
       }
     }
 
     &:active {
-      background-color: var(--tab-active-background-pressed);
+      background-color: var(--mds-color-theme-button-secondary-pressed);
 
       .md-text-wrapper,
       .md-icon-wrapper {
-        color: var(--tab-active-text-pressed);
+        color: var(--mds-color-theme-text-primary-normal);
       }
     }
 
@@ -79,11 +79,11 @@
     }
 
     &[data-disabled='true'] {
-      background-color: var(--tab-inactive-background);
+      background-color: var(--mds-color-theme-button-secondary-normal);
 
       .md-text-wrapper,
       .md-icon-wrapper {
-        color: var(--tab-inactive-text-disabled);
+        color: var(--mds-color-theme-text-primary-disabled);
       }
     }
   }

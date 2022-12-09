@@ -3,8 +3,8 @@
 .md-search-input-wrapper {
   position: relative;
   border-radius: 0.5rem;
-  background-color: var(--textinput-background);
-  border: 0.0625rem solid var(--textinput-border-color);
+  background-color: var(--mds-color-theme-background-solid-primary-normal);
+  border: 0.0625rem solid var(--mds-color-theme-outline-input-normal);
   box-sizing: border-box;
   height: 2rem;
   width: 16.25rem;
@@ -20,19 +20,19 @@
   }
 
   &:hover {
-    background-color: var(--textinput-background-hovered);
+    background-color: var(--mds-color-theme-background-primary-hover);
   }
 
   &[data-disabled='true'] {
-    background-color: var(--textinput-background-disabled);
-    border-color: var(--textinput-background-disabled);
+    background-color: var(--mds-color-theme-background-primary-disabled);
+    border-color: var(--mds-color-theme-background-primary-disabled);
 
     input {
-      color: var(--textinput-text-disabled);
+      color: var(--mds-color-theme-text-primary-disabled);
     }
 
     .search-icon {
-      color: var(--textinput-text-disabled);
+      color: var(--mds-color-theme-text-primary-disabled);
     }
   }
 
@@ -52,7 +52,7 @@
     border: 0;
     background-color: transparent;
     box-shadow: none;
-    color: var(--textinput-text);
+    color: var(--mds-color-theme-text-primary-normal);
     font-family: var(--md-globals-font-default);
     font-size: 0.875rem;
     display: inline-block;
@@ -63,7 +63,7 @@
     }
 
     &::placeholder {
-      color: var(--globalHeader-textfieldPlaceholderText-text);
+      color: var(--mds-color-theme-text-secondary-normal);
     }
   }
 
@@ -79,10 +79,10 @@
     margin-right: 0.5rem;
     background-color: transparent;
     cursor: pointer;
-    color: var(--globalHeader-buttonIcon-icon);
+    color: var(--mds-color-theme-text-primary-normal);
 
     &:active {
-      color: var(--globalHeader-buttonIcon-icon-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
     }
   }
 

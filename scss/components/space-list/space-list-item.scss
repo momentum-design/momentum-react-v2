@@ -56,19 +56,19 @@
         $avatar-font-size: $list-item--space__avatar__font-size
       );
       @include list-item-color(
-        $background-color: --listitem-background,
+        $background-color: --mds-color-theme-background-primary-ghost,
         $background-color-css-var: --null,
         $color: $list-item--space__color,
-        $color-css-var: --listitem-textprimary,
+        $color-css-var: --mds-color-theme-text-primary-normal,
         $hover-bgrd-color: $list-item--space__background--hover,
-        $hover-bgrd-color-css-var: --listitem-background-hovered,
+        $hover-bgrd-color-css-var: --mds-color-theme-background-primary-ghost-hovered,
         $active-bgrd-color: $list-item--space__background--pressed,
-        $active-bgrd-color-css-var: --listitem-background-pressed,
+        $active-bgrd-color-css-var: --mds-color-theme-background-primary-ghost-pressed,
         $header-color: $list-item--space__color--header,
         $subheader-color: $list-item--space__color--header,
-        $subheader-color-css-var: --listitem-textsecondary,
+        $subheader-color-css-var: --mds-color-theme-text-secondary-normal,
         $focus-color: $list-item__color--dark,
-        $focus-color-css-var: --listitem-textprimary,
+        $focus-color-css-var: --mds-color-theme-text-primary-normal,
       );
       @include list-item--contrast(
         $color--contrast: $list-item__color--dark--contrast,
@@ -86,7 +86,7 @@
         padding: $list-item--space-overview__padding;
 
         > [class$='__left'] {
-          fill: --listitem-icon;
+          fill: --mds-color-theme-text-primary-normal;
         }
 
         [class*='__header'] {
@@ -314,23 +314,23 @@
           $background-color: $md-gray-05,
           $background-color-css-var:--listitem-background,
           $color: $md-gray-70,
-          $color-css-var: --listitem-textprimary,
+          $color-css-var: --mds-color-theme-text-primary-normal,
           $active-color: $md-gray-100,
-          $active-color-css-var: --listitem-textprimary-pressed,
+          $active-color-css-var: --mds-color-theme-text-primary-normal-pressed,
           $hover-bgrd-color: $md-gray-10,
-          $hover-bgrd-color-css-var: --listitem-background-hovered,
+          $hover-bgrd-color-css-var: --mds-color-theme-background-primary-ghost-hovered,
           $active-bgrd-color: $md-gray-10,
           $active-bgrd-color-css-var:--listitem-background-pressed,
           $hover-header-color: $md-gray-100,
-          $hover-header-color-css-var: --listitem-textprimary-hovered,
+          $hover-header-color-css-var: --mds-color-theme-text-primary-normal-hovered,
           $hover-subheader-color: $md-gray-100,
-          $hover-subheader-color-css-var: --listitem-textsecondary-hovered,
+          $hover-subheader-color-css-var: --mds-color-theme-text-secondary-normal-hovered,
           $header-color: $md-gray-70,
-          $header-color-css-var: --listitem-textsecondary,
+          $header-color-css-var: --mds-color-theme-text-secondary-normal,
           $subheader-color: $md-gray-70,
-          $subheader-color-css-var: --listitem-textsecondary,
+          $subheader-color-css-var: --mds-color-theme-text-secondary-normal,
           $focus-color: $md-gray-10,
-          $focus-color-css-var: --listitem-textprimary,
+          $focus-color-css-var: --mds-color-theme-text-primary-normal,
         );
 
         .md-icon {

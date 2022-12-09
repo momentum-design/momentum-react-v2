@@ -1,5 +1,5 @@
 .md-space-list-item-wrapper {
-  color: var(--listitem-textsecondary);
+  color: var(--mds-color-theme-text-secondary-normal);
 
   &[data-size='32'] {
     // All immediate children and any deep .md-text-wrapper child
@@ -14,7 +14,7 @@
 .md-space-list-item-is-new-activity {
   p {
     font-weight: bold !important;
-    color: var(--listitem-textprimary) !important;
+    color: var(--mds-color-theme-text-primary-normal) !important;
   }
 }
 
@@ -58,7 +58,7 @@
 
   small {
     margin: 0;
-    color: var(--listitem-textsecondary);
+    color: var(--mds-color-theme-text-secondary-normal);
     margin-top: -4px;
     white-space: nowrap;
     overflow: hidden;

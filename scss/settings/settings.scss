@@ -5880,7 +5880,7 @@ $modal__radius: $global-radius !default;
 // Modal Dialog Settings
 $modal-dialog__top: rem-calc(100);
 $modal-dialog__padding: rem-calc(20);
-$modal-dialog__border: 1px solid var(--theme-outline-secondary-normal, $md-gray-30);
+$modal-dialog__border: 1px solid var(--mds-color-theme-outline-secondary-normal, $md-gray-30);
 $modal-dialog__box-shadow: 0 8px 16px 0 $black-08;
 $modal-header__padding--dialog: 0 0 rem-calc(12) 0;
 

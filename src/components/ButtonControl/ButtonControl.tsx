@@ -26,8 +26,8 @@ const ButtonControl: FC<Props> = (props: Props) => {
     case ICONS.favorite:
       iconProps.weight = ICON_CONSTANTS.WEIGHTS.filled;
       iconProps.color = props.isDisabled
-        ? 'var(--button-primary-text-disabled)'
-        : 'var(--theme-text-warning-normal)';
+        ? 'var(--mds-color-theme-text-primary-disabled)'
+        : 'var(--mds-color-theme-text-warning-normal)';
       break;
   }
 

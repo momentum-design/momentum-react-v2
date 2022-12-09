@@ -23,7 +23,7 @@ const Badge: FC<Props> = (props: Props) => {
           name="unread"
           weight="bold"
           scale={12}
-          fillColor={'var(--badge-background)'}
+          fillColor={'var(--mds-color-theme-background-accent-normal)'}
           strokeColor="none"
         />
       ) : null}
