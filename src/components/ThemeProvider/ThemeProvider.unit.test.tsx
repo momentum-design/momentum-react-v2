@@ -2,7 +2,12 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from '@momentum-ui/react-collaboration';
 
-import { STYLE, THEME_CLASS_PREFIX, THEME_CLASS_STABLE, THEMES } from './ThemeProvider.constants';
+import {
+  STYLE,
+  THEME_CLASS_PREFIX,
+  THEME_CLASS_PREFIX_STABLE,
+  THEMES,
+} from './ThemeProvider.constants';
 
 describe('<ThemeProvider />', () => {
   let container;
@@ -60,9 +65,7 @@ describe('<ThemeProvider />', () => {
         .getDOMNode();
 
       expect(element.classList.contains(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
-      expect(
-        element.classList.contains(`${THEME_CLASS_PREFIX}-${THEME_CLASS_STABLE}-${themeName}`)
-      ).toBe(true);
+      expect(element.classList.contains(`${THEME_CLASS_PREFIX_STABLE}-${themeName}`)).toBe(true);
     });
 
     it('should have provided style when style is provided', () => {
