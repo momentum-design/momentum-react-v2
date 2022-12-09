@@ -20,9 +20,7 @@ const theme = (Story, { globals }) => {
       theme={theme}
       style={{
         backgroundColor:
-          'var(--md-color-theme-bg-mob-primary, var(--theme-background-solid-primary-normal))',
-        color:
-          'var(--md-color-theme-content-text-neutral-primary, var(--theme-text-primary-normal))',
+          'var(--md-color-theme-bg-mob-primary, var(--mds-color-theme-background-solid-primary-normal))',
         height: '100vh',
         overflowY: 'scroll',
         padding: '2rem',

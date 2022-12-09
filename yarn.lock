@@ -1822,20 +1822,22 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@momentum-design/tokens@^0.0.31":
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/@momentum-design/tokens/-/tokens-0.0.31.tgz#aa07b3a189e2496f5c86da399019a744ed4da20b"
-  integrity sha512-zWNqS/hfC8LCNmR6zwTm7TzgrYG/pdKoxDG4coKWI2Z6mEitojA3FrUfMQ86q2l4DiAviJxh3Ra1iNScTz3JLw==
+"@momentum-design/tokens@^0.0.32":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@momentum-design/tokens/-/tokens-0.0.32.tgz#b1c7c6aa4848603e11892b6fe3fd69dc6c76f1c9"
+  integrity sha512-VLZdcbqQrt9TfwM0iFqWLBlRMnbUvhcBwk87naCWoqUBA6MCB/AaWT/Khyx7kCofFBXLekTbmpzcS9PFQy/KiQ==
 
 "@momentum-ui/animations@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@momentum-ui/animations/-/animations-1.4.0.tgz#feafac71b564c3bc6433d3499ad5b9ea98196a39"
   integrity sha512-6/R5F5E2jV0dROe1d6fSvEVky7ICJnTMT2Kc2IQAAaHKRLxjwsNoM1gPIKStYLfjV3tKV/AD+5HPpi+leMILBQ==
 
-"@momentum-ui/design-tokens@^0.0.59":
-  version "0.0.59"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.59.tgz#6b5cfb6a06bf32a70e321886046158b343ee3bf1"
-  integrity sha512-i/zHhx2py687Vh/3iAbSM3E6wuChH/lpgwSyCxg/JyZ44SU3FBpJqIQZZ9IKy4OeVP4RiOdlvOg+ZR5H824hoQ==
+"@momentum-ui/design-tokens@^0.0.63":
+  version "0.0.63"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/design-tokens/-/design-tokens-0.0.63.tgz#dfa1b90faa3ca6620bf10099dfe06ed450a6949e"
+  integrity sha512-ciYtYQwtRfyf77yNZAFw4tjuKyqkpiURZ4o6+jw6ZvqJ+JoOK+1sEi5JSknHLM1Q0gTrsiTM16bVEt+bR4+B+Q==
+  dependencies:
+    momentum-abstract "^1.0.28"
 
 "@momentum-ui/icons-rebrand@^1.40.15":
   version "1.40.15"
@@ -15936,6 +15938,11 @@ moment@2.24.0:
   version "2.29.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
   integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
+
+momentum-abstract@^1.0.28:
+  version "1.0.41"
+  resolved "https://registry.yarnpkg.com/momentum-abstract/-/momentum-abstract-1.0.41.tgz#e91b41c95c7159dd9ac0025b572583e4ea5191e4"
+  integrity sha512-nULFKk1w5B0FLAgIT5vWV3+sZo2unda7In3aDF+EOGSXgBu5aSItzYtFZRW15HsAttW2zgxgKnfm+uUeG3d/fQ==
 
 moo-color@^1.0.2:
   version "1.0.2"

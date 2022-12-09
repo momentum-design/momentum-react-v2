@@ -3,7 +3,7 @@ const glob = require('glob');
 
 const listStyleSheetFiles = () => {
   return new Promise((resolve, reject) => {
-    glob('./src/components/**/*.*', (error, files) => {
+    glob('./scss/**/*.*', (error, files) => {
       if (error) {
         reject(error);
       }
@@ -33,18 +33,28 @@ const readSourceFile = (target) => {
 
 const replaceValues = (reference, data) => {
   // replace all old themes with new themes.
-  let mutable = data.replaceAll('var(--theme', 'var(--md-color-theme');
+  let mutable1 = data.replaceAll('var(--theme', 'var(--mds-color-theme');
+  let mutable = mutable1.replaceAll(': --theme', ': --mds-color-theme');
 
   // replace component tokens with theme tokens.
-  return Object.entries(reference).reduce((output, [componentToken, themeToken]) => (
-    output.replaceAll(`var(${componentToken})`, themeToken.includes('--md-color-theme') || themeToken.includes('--md-globals') ? `var(${themeToken})` : themeToken)
-  ), mutable);
+  const final = Object.entries(reference).reduce((output, [componentToken, themeToken]) => {
+    const first = output.replaceAll(`var(${componentToken})`, themeToken.includes('--mds-color-theme') || themeToken.includes('--md-globals') ? `var(${themeToken})` : themeToken);
+    const second = first.replaceAll(`: ${componentToken}`, `: ${themeToken}`);
+
+    return second;
+  }, mutable);
+
+  return final;
+
+  // return Object.entries(reference).reduce((output, [componentToken, themeToken]) => (
+  //   output.replaceAll(`var(${componentToken})`, themeToken.includes('--mds-color-theme') || themeToken.includes('--md-globals') ? `var(${themeToken})` : themeToken)
+  // ), mutable);
 };
 
 const main = () => {
   return listStyleSheetFiles()
     .then((files) => Promise.all([
-      readSourceFile('./webex-light-theme-references.json'),
+      readSourceFile('./webex-light-theme-references-validated.json'),
       readStyleSheetFiles(files)
     ]))
     .then(([reference, sheets]) => {
