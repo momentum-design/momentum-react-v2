@@ -5,7 +5,12 @@ import '@momentum-design/tokens/dist/css/core/complete.css';
 import '@momentum-design/tokens/dist/css/theme/webex/dark-stable.css';
 import '@momentum-design/tokens/dist/css/theme/webex/light-stable.css';
 
-import { DEFAULTS, STYLE, THEME_CLASS_PREFIX, THEME_CLASS_PREFIX_STABLE } from './ThemeProvider.constants';
+import {
+  DEFAULTS,
+  STYLE,
+  THEME_CLASS_PREFIX,
+  THEME_CLASS_PREFIX_STABLE,
+} from './ThemeProvider.constants';
 import { Props } from './ThemeProvider.types';
 import './ThemeProvider.style.scss';
 
@@ -18,7 +23,7 @@ const ThemeProvider: FC<Props> = ({ children, id, style, theme }: Props) => {
 
   return (
     <div
-      className={`${STYLE.wrapper} ${STYLE.globals} ${themeClassStable}`}
+      className={`${STYLE.wrapper} ${STYLE.globals} ${themeClass} ${themeClassStable}`}
       id={id}
       style={style}
     >

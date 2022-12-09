@@ -1,5 +1,5 @@
-const fs = require('fs/promises');
-const glob = require('glob');
+const fs = require('fs/promises'); // eslint-disable-line
+const glob = require('glob'); // eslint-disable-line
 
 const listStyleSheetFiles = () => {
   return new Promise((resolve, reject) => {
@@ -66,7 +66,4 @@ const main = () => {
     .then((sheets) => writeStyleSheetFiles(sheets));
 };
 
-main()
-  .then(() => {
-    console.log('done');
-  });
+main();
