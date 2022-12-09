@@ -5,7 +5,7 @@
   align-items: center;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--listitem-textprimary);
+  color: var(--mds-color-theme-text-primary-normal);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
   outline: none;
@@ -15,31 +15,31 @@
 
     &:hover,
     &.hover {
-      background-color: var(--theme-background-primary-hover);
+      background-color: var(--mds-color-theme-background-primary-hover);
     }
 
     &:active,
     &.active {
-      color: var(--listitem-textprimary);
-      background-color: var(--theme-background-primary-active);
+      color: var(--mds-color-theme-text-primary-normal);
+      background-color: var(--mds-color-theme-background-primary-active);
     }
 
     &.focus {
-      color: var(--listitem-textprimary);
+      color: var(--mds-color-theme-text-primary-normal);
     }
   }
 
   &[data-disabled='true'],
   &.disable {
-    background-color: var(--listitem-background-disabled);
+    background-color: var(--mds-color-theme-background-primary-ghost);
 
     &,
     .md-text-wrapper {
-      color: var(--listitem-textprimary-disabled);
+      color: var(--mds-color-theme-text-primary-disabled);
     }
 
     svg {
-      fill: var(--listitem-tick-disabled);
+      fill: var(--mds-color-theme-text-primary-disabled);
     }
   }
 
@@ -126,12 +126,12 @@
     border: var(--md-globals-border-clear);
     text-align: left;
     width: 100%;
-    background-color: var(--button-secondary-background);
-    color: var(--button-secondary-text);
+    background-color: var(--mds-color-theme-button-secondary-normal);
+    color: var(--mds-color-theme-text-primary-normal);
 
     &:hover {
-      background-color: var(--button-secondary-background-hovered);
-      color: var(--button-secondary-text-hovered);
+      background-color: var(--mds-color-theme-button-secondary-hover);
+      color: var(--mds-color-theme-text-primary-normal);
     }
   }
 }

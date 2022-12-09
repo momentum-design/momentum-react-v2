@@ -1,8 +1,8 @@
 .md-button-control-wrapper {
   align-items: center;
-  background-color: var(--button-ghost-background);
+  background-color: var(--mds-color-theme-button-secondary-normal);
   border: var(--md-globals-border-clear);
-  color: var(--button-ghost-text);
+  color: var(--mds-color-theme-text-primary-normal);
   cursor: pointer;
   display: flex;
   font-family: var(--md-globals-font-default);
@@ -15,28 +15,28 @@
   width: 2rem;
 
   &:hover {
-    background-color: var(--button-ghost-background-hovered);
-    color: var(--button-ghost-text-hovered);
+    background-color: var(--mds-color-theme-button-secondary-hover);
+    color: var(--mds-color-theme-text-primary-normal);
   }
 
   &:active {
-    background-color: var(--button-secondary-background-pressed);
-    color: var(--button-secondary-text-pressed);
+    background-color: var(--mds-color-theme-button-secondary-pressed);
+    color: var(--mds-color-theme-text-primary-normal);
   }
 
   &[data-disabled='true'] {
-    background-color: var(--button-ghost-background);
-    color: var(--button-primary-text-disabled);
+    background-color: var(--mds-color-theme-button-secondary-normal);
+    color: var(--mds-color-theme-text-primary-disabled);
     cursor: auto;
 
     &:hover {
-      background-color: var(--button-ghost-background);
-      color: var(--button-primary-text-disabled);
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-primary-disabled);
     }
 
     &:active {
-      background-color: var(--button-ghost-background);
-      color: var(--button-primary-text-disabled);
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-primary-disabled);
     }
   }
 

@@ -12,19 +12,19 @@
   .#{$checkbox__class} {
     @include checkbox-color(
       $border-color: $input__border-color,
-      $border-color-css-var: --theme-outline-input-normal,
+      $border-color-css-var: --mds-color-theme-outline-input-normal,
       $background-color: $input__background,
-      $background-color-css-var: --theme-control-inactive-normal,
+      $background-color-css-var: --mds-color-theme-control-inactive-normal,
       $background-color--disabled: $form-control__background,
-      $background-color--disabled-css-var: --theme-control-inactive-hover,
+      $background-color--disabled-css-var: --mds-color-theme-control-inactive-hover,
       $background-color--hover: $input__background--hover,
-      $background-color--hover-css-var: --theme-control-inactive-hover,
+      $background-color--hover-css-var: --mds-color-theme-control-inactive-hover,
       $background-color--checked: $form-control__background--checked,
-      $background-color--checked-css-var: --theme-control-active-normal,
+      $background-color--checked-css-var: --mds-color-theme-control-active-normal,
       $background-color--checked-hover: $form-control__background--checked-hover,
-      $background-color--checked-hover-css-var: --theme-control-active-hover,
+      $background-color--checked-hover-css-var: --mds-color-theme-control-active-hover,
       $label-color: $form-control__label,
-      $label-color-css-var: --theme-text-primary-normal
+      $label-color-css-var: --mds-color-theme-text-primary-normal
     );
 
     .#{$checkbox__class}__input {
@@ -43,17 +43,17 @@
         + .#{$checkbox__class}__label {
           &:before {
             color: $form-control__content;
-            color: var(--theme-text-primary-inverted);
+            color: var(--mds-color-theme-text-primary-inverted);
             cursor: pointer;
           }
         }
 
         &:disabled {
           + .#{$checkbox__class}__label {
-            color: var(--theme-text-primary-disabled);
+            color: var(--mds-color-theme-text-primary-disabled);
 
             &:before {
-              color: var(--theme-text-primary-normal);
+              color: var(--mds-color-theme-text-primary-normal);
             }
           }
         }
@@ -64,14 +64,14 @@
       &.disabled {
         + .#{$checkbox__class}__label {
           cursor: default;
-          color: var(--theme-text-primary-disabled) !important;
+          color: var(--mds-color-theme-text-primary-disabled) !important;
 
           &:before {
             cursor: default;
           }
         }
         ~ .#{$prefix}-input__help-text {
-          color: var(--theme-text-primary-disabled) !important;
+          color: var(--mds-color-theme-text-primary-disabled) !important;
         }
       }
 

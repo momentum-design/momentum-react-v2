@@ -47,7 +47,7 @@ Common.parameters = {
       textAlignment: 'center',
       iconProps: {
         name: 'sound-default',
-        fillColor: 'var(--banner-success-text)',
+        fillColor: 'var(--mds-color-theme-text-success-normal)',
         autoScale: true,
       },
       style: { width: 'fit-content' },

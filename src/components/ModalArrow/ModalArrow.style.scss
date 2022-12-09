@@ -1,22 +1,22 @@
 .md-modal-arrow-svg {
   path {
-    stroke: var(--modal-primary-border-color);
+    stroke: var(--mds-color-theme-outline-secondary-normal);
     stroke-width: 0.125rem;
 
     &[data-color='primary'] {
-      fill: var(--theme-background-solid-primary-normal);
+      fill: var(--mds-color-theme-background-solid-primary-normal);
     }
 
     &[data-color='secondary'] {
-      fill: var(--theme-background-solid-secondary-normal);
+      fill: var(--mds-color-theme-background-solid-secondary-normal);
     }
 
     &[data-color='tertiary'] {
-      fill: var(--theme-background-solid-tertiary-normal);
+      fill: var(--mds-color-theme-background-solid-tertiary-normal);
     }
 
     &[data-color='quaternary'] {
-      fill: var(--theme-background-solid-quaternary-normal);
+      fill: var(--mds-color-theme-background-solid-quaternary-normal);
     }
   }
 }

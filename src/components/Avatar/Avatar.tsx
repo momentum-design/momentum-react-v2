@@ -65,7 +65,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
     //TODO: temporary fix until design gives proper design spec for failure badge
     if (failureBadge) {
       presenceIcon = 'warning';
-      presenceColor = 'var(--avatar-presence-icon-dnd)';
+      presenceColor = 'var(--mds-color-theme-indicator-attention)';
     } else {
       if (!presenceType) return;
       if (presenceType === PresenceType.Default) return;
@@ -73,61 +73,61 @@ const Avatar: React.FC<Props> = (props: Props) => {
       switch (presenceType) {
         case PresenceType.Active:
           presenceIcon = 'unread';
-          presenceColor = 'var(--avatar-presence-icon-active)';
+          presenceColor = 'var(--mds-color-theme-indicator-stable)';
           break;
         case PresenceType.Meet:
           presenceIcon = 'camera-presence';
-          presenceColor = 'var(--avatar-presence-icon-meeting)';
+          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
           isCircularWrapper = false;
           break;
         case PresenceType.Schedule:
           presenceIcon = 'meetings-presence';
-          presenceColor = 'var(--avatar-presence-icon-schedule)';
+          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
           isCircularWrapper = false;
           break;
         case PresenceType.Call:
           presenceIcon = 'handset';
-          presenceColor = 'var(--avatar-presence-icon-call)';
+          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
           isCircularWrapper = false;
           break;
         case PresenceType.DND:
           presenceIcon = 'dnd-presence';
-          presenceColor = 'var(--avatar-presence-icon-dnd)';
+          presenceColor = 'var(--mds-color-theme-indicator-attention)';
           break;
         case PresenceType.Presenting:
           presenceIcon = 'share-screen';
-          presenceColor = 'var(--avatar-presence-icon-presenting)';
+          presenceColor = 'var(--mds-color-theme-indicator-attention)';
           isCircularWrapper = false;
           break;
         case PresenceType.QuietHours:
           presenceIcon = 'quiet-hours-presence';
-          presenceColor = 'var(--avatar-presence-icon-quiet-hours)';
+          presenceColor = 'var(--mds-color-theme-indicator-locked)';
           break;
         case PresenceType.Away:
           presenceIcon = 'recents-presence';
-          presenceColor = 'var(--avatar-presence-icon-away)';
+          presenceColor = 'var(--mds-color-theme-indicator-locked)';
           break;
         case PresenceType.OOO:
           presenceIcon = 'pto-presence';
-          presenceColor = 'var(--avatar-presence-icon-ooo)';
+          presenceColor = 'var(--mds-color-theme-indicator-locked)';
           break;
         case PresenceType.Busy:
           presenceIcon = 'busy-presence';
-          presenceColor = 'var(--avatar-presence-icon-busy)';
+          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
           break;
         case PresenceType.OnMobile:
           presenceIcon = 'phone';
-          presenceColor = 'var(--avatar-presence-icon-on-mobile)';
+          presenceColor = 'var(--mds-color-theme-indicator-locked)';
           isCircularWrapper = false;
           break;
         case PresenceType.OnDevice:
           presenceIcon = 'generic-device-video';
-          presenceColor = 'var(--avatar-presence-icon-on-device)';
+          presenceColor = 'var(--mds-color-theme-indicator-locked)';
           isCircularWrapper = false;
           break;
         case PresenceType.OnHold:
           presenceIcon = 'pause';
-          presenceColor = 'var(--avatar-presence-icon-on-hold)';
+          presenceColor = 'var(--mds-color-theme-indicator-locked)';
           isCircularWrapper = false;
           break;
         default:

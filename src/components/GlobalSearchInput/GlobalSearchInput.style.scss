@@ -1,7 +1,7 @@
 .md-global-search-input-wrapper {
   position: relative;
   border-radius: 6.25rem;
-  background-color: var(--globalHeader-textfield-background);
+  background-color: var(--mds-color-theme-background-secondary-normal);
   border: 0.0625rem solid transparent;
   box-sizing: border-box;
   height: 1.75rem;
@@ -13,7 +13,7 @@
   }
 
   &:hover {
-    background-color: var(--globalHeader-textfield-background-hovered);
+    background-color: var(--mds-color-theme-background-secondary-hover);
   }
 
   .md-global-search-input-container {
@@ -42,7 +42,7 @@
     border: 0;
     background-color: transparent;
     box-shadow: none;
-    color: var(--globalHeader-textfield-text);
+    color: var(--mds-color-theme-text-primary-normal);
     font-family: var(--md-globals-font-default);
     font-size: 0.875rem;
     height: 100%;
@@ -54,7 +54,7 @@
     }
 
     &::placeholder {
-      color: var(--globalHeader-textfieldPlaceholderText-text);
+      color: var(--mds-color-theme-text-secondary-normal);
     }
   }
 
@@ -76,10 +76,10 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    color: var(--globalHeader-buttonIcon-icon);
+    color: var(--mds-color-theme-text-primary-normal);
 
     &:active {
-      color: var(--globalHeader-buttonIcon-icon-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
     }
   }
 
@@ -93,8 +93,8 @@
 
     p {
       box-sizing: border-box;
-      background-color: var(--globalHeader-modifierChip-background);
-      color: var(--globalHeader-modifierChip-text);
+      background-color: var(--mds-color-theme-button-primary-normal);
+      color: var(--mds-color-theme-text-inverted-normal);
       z-index: 1;
       border-radius: 1rem;
       padding: 0.125rem 0.5rem 0.125rem 0.5rem;

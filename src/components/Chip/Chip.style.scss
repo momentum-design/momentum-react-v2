@@ -10,12 +10,12 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
   &[data-error='true'],
   &[data-error='true']:hover,
   &[data-error='true']:active {
-    background-color: var(--chips-background-error);
-    color: var(--chips-text-error);
+    background-color: var(--mds-color-theme-background-alert-error-normal);
+    color: var(--mds-color-theme-text-error-normal);
 
     &[data-outline='true'] {
       border: 0.0625rem solid;
-      border-color: var(--chips-outline-error);
+      border-color: var(--mds-color-theme-outline-cancel-normal);
     }
   }
 
@@ -23,52 +23,52 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
     &[data-outline='true'] {
       border: 0.0625rem solid;
       border-radius: 1rem;
-      border-color: var(--chips-outline-normal);
+      border-color: var(--mds-color-theme-outline-primary-normal);
     }
   }
 
   &[data-multiline='true'] {
     border-radius: 0.875rem;
-    background-color: var(--chips-outline-multiline-background);
+    background-color: var(--mds-color-theme-background-primary-ghost);
 
     &[data-modifier-color='orange'] {
-      border-color: var(--chips-outline-multiline-text-orange);
-      color: var(--chips-outline-multiline-text-orange);
+      border-color: var(--mds-color-theme-text-team-orange-normal);
+      color: var(--mds-color-theme-text-team-orange-normal);
     }
 
     &[data-modifier-color='lime'] {
-      border-color: var(--chips-outline-multiline-text-lime);
-      color: var(--chips-outline-multiline-text-lime);
+      border-color: var(--mds-color-theme-text-team-lime-normal);
+      color: var(--mds-color-theme-text-team-lime-normal);
     }
 
     &[data-modifier-color='mint'] {
-      border-color: var(--chips-outline-multiline-text-mint);
-      color: var(--chips-outline-multiline-text-mint);
+      border-color: var(--mds-color-theme-text-team-mint-normal);
+      color: var(--mds-color-theme-text-team-mint-normal);
     }
 
     &[data-modifier-color='cyan'] {
-      border-color: var(--chips-outline-multiline-text-cyan);
-      color: var(--chips-outline-multiline-text-cyan);
+      border-color: var(--mds-color-theme-text-team-cyan-normal);
+      color: var(--mds-color-theme-text-team-cyan-normal);
     }
 
     &[data-modifier-color='cobalt'] {
-      border-color: var(--chips-outline-multiline-text-cobalt);
-      color: var(--chips-outline-multiline-text-cobalt);
+      border-color: var(--mds-color-theme-text-team-cobalt-normal);
+      color: var(--mds-color-theme-text-team-cobalt-normal);
     }
 
     &[data-modifier-color='violet'] {
-      border-color: var(--chips-outline-multiline-text-violet);
-      color: var(--chips-outline-multiline-text-violet);
+      border-color: var(--mds-color-theme-text-team-violet-normal);
+      color: var(--mds-color-theme-text-team-violet-normal);
     }
 
     &[data-modifier-color='purple'] {
-      border-color: var(--chips-outline-multiline-text-purple);
-      color: var(--chips-outline-multiline-text-purple);
+      border-color: var(--mds-color-theme-text-team-purple-normal);
+      color: var(--mds-color-theme-text-team-purple-normal);
     }
 
     &[data-modifier-color='pink'] {
-      border-color: var(--chips-outline-multiline-text-pink);
-      color: var(--chips-outline-multiline-text-pink);
+      border-color: var(--mds-color-theme-text-team-pink-normal);
+      color: var(--mds-color-theme-text-team-pink-normal);
     }
   }
 

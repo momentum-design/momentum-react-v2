@@ -18,7 +18,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
           className="md-global-search-input-search"
           name="search"
           scale={18}
-          strokeColor="var(--theme-text-primary-normal)"
+          strokeColor="var(--mds-color-theme-text-primary-normal)"
           weight="light"
         >
           <div
@@ -33,7 +33,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
               height="100%"
               style={
                 Object {
-                  "stroke": "var(--theme-text-primary-normal)",
+                  "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -110,7 +110,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
           className="md-global-search-input-search"
           name="search"
           scale={18}
-          strokeColor="var(--theme-text-primary-normal)"
+          strokeColor="var(--mds-color-theme-text-primary-normal)"
           weight="light"
         >
           <div
@@ -125,7 +125,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
               height="100%"
               style={
                 Object {
-                  "stroke": "var(--theme-text-primary-normal)",
+                  "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -246,7 +246,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
           className="md-global-search-input-search"
           name="spinner"
           scale={18}
-          strokeColor="var(--theme-text-primary-normal)"
+          strokeColor="var(--mds-color-theme-text-primary-normal)"
           weight="light"
         >
           <div
@@ -261,7 +261,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
               height="100%"
               style={
                 Object {
-                  "stroke": "var(--theme-text-primary-normal)",
+                  "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -310,7 +310,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
           className="md-global-search-input-search"
           name="search"
           scale={18}
-          strokeColor="var(--theme-text-primary-normal)"
+          strokeColor="var(--mds-color-theme-text-primary-normal)"
           weight="light"
         >
           <div
@@ -325,7 +325,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
               height="100%"
               style={
                 Object {
-                  "stroke": "var(--theme-text-primary-normal)",
+                  "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -375,7 +375,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
           className="md-global-search-input-search"
           name="search"
           scale={18}
-          strokeColor="var(--theme-text-primary-normal)"
+          strokeColor="var(--mds-color-theme-text-primary-normal)"
           weight="light"
         >
           <div
@@ -390,7 +390,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
               height="100%"
               style={
                 Object {
-                  "stroke": "var(--theme-text-primary-normal)",
+                  "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
               viewBox="0, 0, 32, 32"
@@ -448,7 +448,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
           className="md-global-search-input-search"
           name="search"
           scale={18}
-          strokeColor="var(--theme-text-primary-normal)"
+          strokeColor="var(--mds-color-theme-text-primary-normal)"
           weight="light"
         >
           <div
@@ -463,7 +463,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
               height="100%"
               style={
                 Object {
-                  "stroke": "var(--theme-text-primary-normal)",
+                  "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
               viewBox="0, 0, 32, 32"

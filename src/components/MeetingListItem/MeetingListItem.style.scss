@@ -4,32 +4,32 @@
   overflow: hidden;
 
   &:not([data-color='Transparent']) {
-    background-color: var(--theme-background-secondary-normal);
+    background-color: var(--mds-color-theme-background-secondary-normal);
 
     &:hover,
     &.hover {
-      background-color: var(--theme-background-secondary-hover);
+      background-color: var(--mds-color-theme-background-secondary-hover);
     }
 
     &:active,
     &.active {
-      background-color: var(--theme-background-secondary-active);
+      background-color: var(--mds-color-theme-background-secondary-active);
     }
 
     &[data-disabled='true'],
     &.disable {
-      background-color: var(--theme-background-secondary-normal);
+      background-color: var(--mds-color-theme-background-secondary-normal);
     }
   }
 
   &[data-color='GrayStatic'] {
-    background-color: var(--theme-background-secondary-normal);
+    background-color: var(--mds-color-theme-background-secondary-normal);
 
     &.hover,
     &:hover,
     &.active,
     &:active {
-      background-color: var(--theme-background-secondary-normal);
+      background-color: var(--mds-color-theme-background-secondary-normal);
     }
   }
 
@@ -52,12 +52,12 @@
 
       &[data-color='AcceptedActive'] {
         background-color: rgba(29, 128, 95, 1); // IEFIX
-        background-color: var(--meetingmarker-active-background);
+        background-color: var(--mds-color-theme-button-join-normal);
       }
 
       &[data-color='AcceptedInactive'] {
         background-color: rgba(0, 0, 0, 0.2); // IEFIX
-        background-color: var(--meetingmarker-inactive-background);
+        background-color: var(--mds-color-theme-background-secondary-active);
       }
 
       &[data-color='TentativeActive'] {
@@ -65,22 +65,22 @@
           -45deg,
           transparent,
           transparent 7%,
-          var(--meetingmarker-active-background) 7%,
-          var(--meetingmarker-active-background) 14%
+          var(--mds-color-theme-button-join-normal) 7%,
+          var(--mds-color-theme-button-join-normal) 14%
         );
         background: -o-repeating-linear-gradient(
           -45deg,
           transparent,
           transparent 7%,
-          var(--meetingmarker-active-background) 7%,
-          var(--meetingmarker-active-background) 14%
+          var(--mds-color-theme-button-join-normal) 7%,
+          var(--mds-color-theme-button-join-normal) 14%
         );
         background: repeating-linear-gradient(
           -45deg,
           transparent,
           transparent 7%,
-          var(--meetingmarker-active-background) 7%,
-          var(--meetingmarker-active-background) 14%
+          var(--mds-color-theme-button-join-normal) 7%,
+          var(--mds-color-theme-button-join-normal) 14%
         );
       }
 
@@ -89,22 +89,22 @@
           -45deg,
           transparent,
           transparent 7%,
-          var(--meetingmarker-inactive-background) 7%,
-          var(--meetingmarker-inactive-background) 14%
+          var(--mds-color-theme-background-secondary-active) 7%,
+          var(--mds-color-theme-background-secondary-active) 14%
         );
         background: -o-repeating-linear-gradient(
           -45deg,
           transparent,
           transparent 7%,
-          var(--meetingmarker-inactive-background) 7%,
-          var(--meetingmarker-inactive-background) 14%
+          var(--mds-color-theme-background-secondary-active) 7%,
+          var(--mds-color-theme-background-secondary-active) 14%
         );
         background: repeating-linear-gradient(
           -45deg,
           transparent,
           transparent 7%,
-          var(--meetingmarker-inactive-background) 7%,
-          var(--meetingmarker-inactive-background) 14%
+          var(--mds-color-theme-background-secondary-active) 7%,
+          var(--mds-color-theme-background-secondary-active) 14%
         );
       }
     }
@@ -119,11 +119,11 @@
   &[data-disabled='false'] {
     .md-meeting-list-item-middle-section {
       *:first-of-type {
-        color: var(--theme-text-primary-normal);
+        color: var(--mds-color-theme-text-primary-normal);
       }
 
       *:last-of-type:not(:first-of-type) {
-        color: var(--theme-text-secondary-normal);
+        color: var(--mds-color-theme-text-secondary-normal);
       }
     }
   }
@@ -131,7 +131,7 @@
   .md-meeting-list-item-end-section {
     .md-button-group-wrapper > .md-icon-wrapper > svg {
       path {
-        fill: var(--theme-text-secondary-normal);
+        fill: var(--mds-color-theme-text-secondary-normal);
       }
     }
   }

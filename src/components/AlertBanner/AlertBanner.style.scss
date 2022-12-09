@@ -7,158 +7,158 @@
 
   &[data-static='true'] {
     background-color: rgba(255, 255, 255, 1); // IEFIX
-    background-color: var(--theme-background-solid-primary-normal);
+    background-color: var(--mds-color-theme-background-solid-primary-normal);
     border: 0.0625rem solid rgba(0, 0, 0, 0.2); // IEFIX
-    border: 0.0625rem solid var(--theme-outline-secondary-normal);
+    border: 0.0625rem solid var(--mds-color-theme-outline-secondary-normal);
     color: rgba(0, 0, 0, 0.95); // IEFIX
-    color: var(--label-primary-text);
+    color: var(--mds-color-theme-text-primary-normal);
 
     > .md-alert-banner-buttons > * {
       background-color: rgba(0, 0, 0, 0); // IEFIX
-      background-color: var(--button-ghost-background);
+      background-color: var(--mds-color-theme-button-secondary-normal);
       color: rgba(0, 0, 0, 0.95); // IEFIX
-      color: var(--button-ghost-text);
+      color: var(--mds-color-theme-text-primary-normal);
 
       &:hover {
         color: rgba(0, 0, 0, 0.95); // IEFIX
-        color: var(--button-ghost-text-hovered);
+        color: var(--mds-color-theme-text-primary-normal);
       }
 
       &:active {
         background-color: rgba(0, 0, 0, 0.2); // IEFIX
-        background-color: var(--button-secondary-background-pressed);
+        background-color: var(--mds-color-theme-button-secondary-pressed);
         color: rgba(0, 0, 0, 0.95); // IEFIX
-        color: var(--button-secondary-text-pressed);
+        color: var(--mds-color-theme-text-primary-normal);
       }
     }
   }
 
   &[data-color='default'] {
     background-color: rgba(237, 237, 237, 1); // IEFIX
-    background-color: var(--theme-background-alert-default-normal);
+    background-color: var(--mds-color-theme-background-alert-default-normal);
     color: rgba(0, 0, 0, 0.6); // IEFIX
-    color: var(--theme-text-secondary-normal);
+    color: var(--mds-color-theme-text-secondary-normal);
 
     > .md-alert-banner-buttons > * {
       background-color: rgba(237, 237, 237, 1); // IEFIX
-      background-color: var(--theme-background-alert-default-normal);
+      background-color: var(--mds-color-theme-background-alert-default-normal);
       color: rgba(0, 0, 0, 0.6); // IEFIX
-      color: var(--theme-text-secondary-normal);
+      color: var(--mds-color-theme-text-secondary-normal);
 
       &:hover {
         color: rgba(0, 0, 0, 0.95); // IEFIX
-        color: var(--theme-text-primary-normal);
+        color: var(--mds-color-theme-text-primary-normal);
       }
 
       &:active {
         color: rgba(0, 0, 0, 0.95); // IEFIX
-        color: var(--theme-text-primary-normal);
+        color: var(--mds-color-theme-text-primary-normal);
         background-color: rgba(222, 222, 222, 1); // IEFIX
-        background-color: var(--theme-background-alert-default-active);
+        background-color: var(--mds-color-theme-background-alert-default-active);
       }
     }
   }
 
   &[data-color='error'] {
     background-color: rgba(255, 232, 234, 1); // IEFIX
-    background-color: var(--theme-background-alert-error-normal);
+    background-color: var(--mds-color-theme-background-alert-error-normal);
     color: rgba(171, 10, 21, 1); // IEFIX
-    color: var(--theme-text-error-normal);
+    color: var(--mds-color-theme-text-error-normal);
 
     > .md-alert-banner-buttons > * {
       color: rgba(171, 10, 21, 1); // IEFIX
-      color: var(--theme-text-error-normal);
+      color: var(--mds-color-theme-text-error-normal);
       background-color: rgba(255, 232, 234, 1); // IEFIX
-      background-color: var(--theme-background-alert-error-normal);
+      background-color: var(--mds-color-theme-background-alert-error-normal);
 
       &:hover {
         color: rgba(79, 14, 16, 1); // IEFIX
-        color: var(--theme-text-error-hover);
+        color: var(--mds-color-theme-text-error-hover);
       }
 
       &:active {
         color: rgba(79, 14, 16, 1); // IEFIX
-        color: var(--theme-text-error-active);
+        color: var(--mds-color-theme-text-error-active);
         background-color: rgba(255, 212, 218, 1); // IEFIX
-        background-color: var(--theme-background-alert-error-active);
+        background-color: var(--mds-color-theme-background-alert-error-active);
       }
     }
   }
 
   &[data-color='success'] {
     background-color: rgba(206, 245, 235, 1); // IEFIX
-    background-color: var(--theme-background-alert-success-normal);
+    background-color: var(--mds-color-theme-background-alert-success-normal);
     color: rgba(24, 94, 70, 1); // IEFIX
-    color: var(--theme-text-success-normal);
+    color: var(--mds-color-theme-text-success-normal);
 
     > .md-alert-banner-buttons > * {
       color: rgba(24, 94, 70, 1); // IEFIX
-      color: var(--theme-text-success-normal);
+      color: var(--mds-color-theme-text-success-normal);
       background-color: rgba(206, 245, 235, 1); // IEFIX
-      background-color: var(--theme-background-alert-success-normal);
+      background-color: var(--mds-color-theme-background-alert-success-normal);
 
       &:hover {
         color: rgba(14, 43, 32, 1); // IEFIX
-        color: var(--theme-text-success-hover);
+        color: var(--mds-color-theme-text-success-hover);
       }
 
       &:active {
         color: rgba(14, 43, 32, 1); // IEFIX
-        color: var(--theme-text-success-active);
+        color: var(--mds-color-theme-text-success-active);
         background-color: rgba(159, 237, 216, 1); // IEFIX
-        background-color: var(--theme-background-alert-success-active);
+        background-color: var(--mds-color-theme-background-alert-success-active);
       }
     }
   }
 
   &[data-color='theme'] {
     background-color: rgba(219, 240, 255, 1); // IEFIX
-    background-color: var(--theme-background-alert-theme-normal);
+    background-color: var(--mds-color-theme-background-alert-theme-normal);
     color: rgba(3, 83, 168, 1); // IEFIX
-    color: var(--theme-text-accent-normal);
+    color: var(--mds-color-theme-text-accent-normal);
 
     > .md-alert-banner-buttons > * {
       color: rgba(3, 83, 168, 1); // IEFIX
-      color: var(--theme-text-accent-normal);
+      color: var(--mds-color-theme-text-accent-normal);
       background-color: rgba(219, 240, 255, 1); // IEFIX
-      background-color: var(--theme-background-alert-theme-normal);
+      background-color: var(--mds-color-theme-background-alert-theme-normal);
 
       &:hover {
         color: rgba(10, 39, 74, 1); // IEFIX
-        color: var(--theme-text-accent-hover);
+        color: var(--mds-color-theme-text-accent-hover);
       }
 
       &:active {
         color: rgba(10, 39, 74, 1); // IEFIX
-        color: var(--theme-text-accent-active);
+        color: var(--mds-color-theme-text-accent-active);
         background-color: rgba(191, 227, 255, 1); // IEFIX
-        background-color: var(--theme-background-alert-theme-active);
+        background-color: var(--mds-color-theme-background-alert-theme-active);
       }
     }
   }
 
   &[data-color='warning'] {
     background-color: rgba(255, 235, 194, 1); // IEFIX
-    background-color: var(--theme-background-alert-warning-normal);
+    background-color: var(--mds-color-theme-background-alert-warning-normal);
     color: rgba(125, 71, 5, 1); // IEFIX
-    color: var(--theme-text-warning-normal);
+    color: var(--mds-color-theme-text-warning-normal);
 
     > .md-alert-banner-buttons > * {
       color: rgba(125, 71, 5, 1); // IEFIX
-      color: var(--theme-text-warning-normal);
+      color: var(--mds-color-theme-text-warning-normal);
       background-color: rgba(255, 235, 194, 1); // IEFIX
-      background-color: var(--theme-background-alert-warning-normal);
+      background-color: var(--mds-color-theme-background-alert-warning-normal);
 
       &:hover {
         color: rgba(54, 34, 12, 1); // IEFIX
-        color: var(--theme-text-warning-hover);
+        color: var(--mds-color-theme-text-warning-hover);
       }
 
       &:active {
         color: rgba(54, 34, 12, 1); // IEFIX
-        color: var(--theme-text-warning-active);
+        color: var(--mds-color-theme-text-warning-active);
         background-color: rgba(255, 218, 148, 1); // IEFIX
-        background-color: var(--theme-background-alert-warning-active);
+        background-color: var(--mds-color-theme-background-alert-warning-active);
       }
     }
   }

@@ -32,7 +32,7 @@
             $line-height: rem-calc(24)
           ) {
             color: $modal-message__color;
-            color: var(--theme-text-secondary-normal, $modal-message__color);
+            color: var(--mds-color-theme-text-secondary-normal, $modal-message__color);
             text-align: left;
             flex-flow: row wrap;
           }
@@ -58,14 +58,14 @@
         display: flex;
         flex-direction: column;
         background-color: $modal__background;
-        background-color: var(--theme-background-solid-primary-normal, $modal__background);
+        background-color: var(--mds-color-theme-background-solid-primary-normal, $modal__background);
 
         @include modal-color(
           $color: $modal__color,
-          $color-css-var: --theme-text-primary-normal,
+          $color-css-var: --mds-color-theme-text-primary-normal,
           $bg: $modal__background,
-          $bg-css-var: --theme-background-solid-primary-normal,
-          $border-color-css-var: --theme-outline-secondary-normal
+          $bg-css-var: --mds-color-theme-background-solid-primary-normal,
+          $border-color-css-var: --mds-color-theme-outline-secondary-normal
         );
       }
 
@@ -320,7 +320,7 @@
             font-size: 14px;
             line-height: 22px;
             color: $md-gray-70;
-            color: var(--theme-text-secondary-normal, $md-gray-70);
+            color: var(--mds-color-theme-text-secondary-normal, $md-gray-70);
           }
         }
 

@@ -2,9 +2,9 @@
   display: flex;
   padding: 0.5rem 0.75rem;
   width: 20rem;
-  border: 0.0625rem solid var(--textToast-border-color);
+  border: 0.0625rem solid var(--mds-color-theme-outline-secondary-normal);
   border-radius: 0.5rem;
-  background-color: var(--textToast-background);
+  background-color: var(--mds-color-theme-background-solid-secondary-normal);
   box-shadow: var(--md-globals-elevation-2);
   align-items: center;
   box-sizing: content-box !important;
@@ -25,5 +25,5 @@
 }
 
 .md-text-toast-text {
-  color: var(--textToast-text);
+  color: var(--mds-color-theme-text-primary-normal);
 }

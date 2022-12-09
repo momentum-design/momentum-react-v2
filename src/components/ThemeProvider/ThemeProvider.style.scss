@@ -123,9 +123,9 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  color: var(--theme-text-primary-normal);
+  color: var(--mds-color-theme-text-primary-normal);
   // IE11 Bug with scroll bar: See https://www.sitepoint.com/community/t/content-shifting/110141/9
-  background: var(--theme-background-solid-primary-normal);
+  background: var(--mds-color-theme-background-solid-primary-normal);
   background: var(--md-globals-gradient-primary);
   font-family: var(--md-globals-font-default);
   font-weight: normal;
@@ -133,17 +133,17 @@
   // Firefox fix for scrollbar
   // On macOS, you need to set the General > Show scroll bars
   // setting in System Preferences to "Always" for this property to have any effect.
-  scrollbar-color: var(--scrollbar-track-background) var(--scrollbar-thumb-background);
+  scrollbar-color: var(--mds-color-theme-scrollbar-background-secondary-normal) var(--mds-color-theme-scrollbar-button-normal);
 }
 
 /* Global variables not available as tokens. */
 .md-theme-provider-globals {
   --md-globals-border-clear: 0rem solid rgba(0, 0, 0, 0);
   --md-globals-focus-ring-box-shadow: 0 0 0 0.25rem rgba(100, 180, 250, 0.3),
-    0 0 0 0.125rem var(--theme-outline-theme-normal);
+    0 0 0 0.125rem var(--mds-color-theme-outline-theme-normal);
   --md-globals-focus-ring-box-shadow-accent: 0 0 0 0.0625rem
-      var(--theme-background-solid-primary-normal),
-    0 0 0 0.3125rem rgba(100, 180, 250, 0.3), 0 0 0 0.1875rem var(--theme-outline-theme-normal);
+      var(--mds-color-theme-background-solid-primary-normal),
+    0 0 0 0.3125rem rgba(100, 180, 250, 0.3), 0 0 0 0.1875rem var(--mds-color-theme-outline-theme-normal);
   --md-globals-focus-ring-box-shadow-inset: var(--md-globals-focus-ring-box-shadow) inset;
   --md-globals-elevation-0: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-elevation-1: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
@@ -158,20 +158,12 @@
   --md-globals-font-default: 'CiscoSansTT';
 
   // Gradient backgrounds
-  --md-globals-gradient-primary: linear-gradient(
-    180deg,
-    var(--theme-background-gradient-primary-0) 0%,
-    var(--theme-background-gradient-primary-1) 100%
-  );
-  --md-globals-gradient-secondary: linear-gradient(
-    180deg,
-    var(--theme-background-gradient-secondary-0) 0%,
-    var(--theme-background-gradient-secondary-1) 100%
-  );
+  --md-globals-gradient-primary: var(--mds-color-theme-background-gradient-primary);
+  --md-globals-gradient-secondary: var(--mds-color-theme-background-gradient-secondary);
 
   &.md-theme-lightWebex {
     --md-globals-focus-ring-box-shadow: 0 0 0 0.25rem rgba(17, 112, 207, 0.3),
-      0 0 0 0.125rem var(--theme-outline-theme-normal);
+      0 0 0 0.125rem var(--mds-color-theme-outline-theme-normal);
   }
 }
 
@@ -189,7 +181,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb-background);
+  background-color: var(--mds-color-theme-scrollbar-button-normal);
   border: 0.25rem solid transparent;
   border-radius: 0.5rem;
   background-clip: content-box;
@@ -197,7 +189,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-background-hovered);
+  background: var(--mds-color-theme-scrollbar-button-hover);
   border: 0.25rem solid transparent;
   border-radius: 0.5rem;
   background-clip: content-box;
@@ -205,7 +197,7 @@
 
 /* Handle on press */
 ::-webkit-scrollbar-thumb:active {
-  background: var(--scrollbar-thumb-background-pressed);
+  background: var(--mds-color-theme-scrollbar-button-pressed);
   border: 0.25rem solid transparent;
   border-radius: 0.5rem;
   height: 6.25rem;

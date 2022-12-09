@@ -1,13 +1,13 @@
 .md-card-wrapper {
-  --local-normal-background-color: var(--card-inactive-background);
-  --local-hover-background-color: var(--card-inactive-background-hovered);
-  --local-active-background-color: var(--card-inactive-background-active);
+  --local-normal-background-color: var(--mds-color-theme-background-secondary-normal);
+  --local-hover-background-color: var(--mds-color-theme-background-secondary-hover);
+  --local-active-background-color: var(--mds-color-theme-background-secondary-active);
   --local-border-color: transparent;
 
   border: var(--md-globals-border-clear);
   font-family: var(--md-globals-font-default);
   outline: none !important;
-  color: var(--theme-text-primary-normal); //overriding legacy styles sheet
+  color: var(--mds-color-theme-text-primary-normal); //overriding legacy styles sheet
   width: 100%;
   cursor: pointer;
   display: flex;
@@ -17,15 +17,15 @@
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
   &[data-color='success'] {
-    --local-normal-background-color: var(--card-success-background);
-    --local-hover-background-color: var(--card-success-background-hovered);
-    --local-active-background-color: var(--card-success-background-active);
+    --local-normal-background-color: var(--mds-color-theme-background-alert-success-normal);
+    --local-hover-background-color: var(--mds-color-theme-background-alert-success-hover);
+    --local-active-background-color: var(--mds-color-theme-background-alert-success-active);
   }
 
   &[data-color='transparent'] {
-    --local-normal-background-color: var(--card-transparent-background);
-    --local-hover-background-color: var(--card-transparent-background-hovered);
-    --local-active-background-color: var(--card-transparent-background-active);
+    --local-normal-background-color: var(--mds-color-theme-background-primary-ghost);
+    --local-hover-background-color: var(--mds-color-theme-background-primary-hover);
+    --local-active-background-color: var(--mds-color-theme-background-primary-active);
   }
 
   &[data-static='true'] {
@@ -36,9 +36,9 @@
   }
 
   &[data-disabled='true'] {
-    --local-normal-background-color: var(--card-transparent-background);
-    --local-hover-background-color: var(--card-transparent-background);
-    --local-active-background-color: var(--card-transparent-background);
+    --local-normal-background-color: var(--mds-color-theme-background-primary-ghost);
+    --local-hover-background-color: var(--mds-color-theme-background-primary-ghost);
+    --local-active-background-color: var(--mds-color-theme-background-primary-ghost);
 
     cursor: auto;
   }
@@ -48,7 +48,7 @@
   }
 
   &[data-outline='true'] {
-    --local-border-color: var(--theme-outline-disabled-normal);
+    --local-border-color: var(--mds-color-theme-outline-disabled-normal);
   }
 
   box-shadow: inset 0 0 0 0.125rem var(--local-border-color);

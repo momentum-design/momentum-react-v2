@@ -1,13 +1,13 @@
 .md-tag-wrapper {
   /* unchanged variables */
-  --local-border-style: var(--tags-primary-border-style);
+  --local-border-style: var(--md-globals-border-style-solid);
 
   /* default color */
-  --local-background-normal: var(--tags-primary-background);
-  --local-background-hover: var(--tags-primary-background-hovered);
-  --local-background-active: var(--tags-primary-background-pressed);
-  --local-border-color: var(--tags-primary-border-color);
-  --local-text-color: var(--tags-primary-text);
+  --local-background-normal: var(--mds-color-theme-background-solid-tertiary-normal);
+  --local-background-hover: var(--mds-color-theme-background-solid-secondary-normal);
+  --local-background-active: var(--mds-color-theme-background-solid-primary-normal);
+  --local-border-color: var(--mds-color-theme-outline-primary-normal);
+  --local-text-color: var(--mds-color-theme-text-primary-normal);
 
   align-items: center;
   border-radius: 0.25rem;
@@ -20,92 +20,92 @@
 
   &:not([isDisabled='true']) {
     &[data-color='cobalt'] {
-      --local-background-normal: var(--tags-cobalt-background);
-      --local-background-hover: var(--tags-cobalt-background-hovered);
-      --local-background-active: var(--tags-cobalt-background-pressed);
-      --local-border-color: var(--tags-cobalt-border-color);
-      --local-text-color: var(--tags-cobalt-text);
+      --local-background-normal: var(--mds-color-theme-background-label-cobalt-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-cobalt-hover);
+      --local-background-active: var(--mds-color-theme-background-label-cobalt-active);
+      --local-border-color: var(--mds-color-theme-outline-label-cobalt);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-color='lime'] {
-      --local-background-normal: var(--tags-lime-background);
-      --local-background-hover: var(--tags-lime-background-hovered);
-      --local-background-active: var(--tags-lime-background-pressed);
-      --local-border-color: var(--tags-lime-border-color);
-      --local-text-color: var(--tags-lime-text);
+      --local-background-normal: var(--mds-color-theme-background-label-lime-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-lime-hover);
+      --local-background-active: var(--mds-color-theme-background-label-lime-active);
+      --local-border-color: var(--mds-color-theme-outline-label-lime);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-color='mint'] {
-      --local-background-normal: var(--tags-mint-background);
-      --local-background-hover: var(--tags-mint-background-hovered);
-      --local-background-active: var(--tags-mint-background-pressed);
-      --local-border-color: var(--tags-mint-border-color);
-      --local-text-color: var(--tags-mint-text);
+      --local-background-normal: var(--mds-color-theme-background-label-mint-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-mint-hover);
+      --local-background-active: var(--mds-color-theme-background-label-mint-active);
+      --local-border-color: var(--mds-color-theme-outline-label-mint);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-color='slate'] {
-      --local-background-normal: var(--tags-slate-background);
-      --local-background-hover: var(--tags-slate-background-hovered);
-      --local-background-active: var(--tags-slate-background-pressed);
-      --local-border-color: var(--tags-slate-border-color);
-      --local-text-color: var(--tags-slate-text);
+      --local-background-normal: var(--mds-color-theme-background-label-slate-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-slate-hover);
+      --local-background-active: var(--mds-color-theme-background-label-slate-active);
+      --local-border-color: var(--mds-color-theme-outline-label-slate);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-color='violet'] {
-      --local-background-normal: var(--tags-violet-background);
-      --local-background-hover: var(--tags-violet-background-hovered);
-      --local-background-active: var(--tags-violet-background-pressed);
-      --local-border-color: var(--tags-violet-border-color);
-      --local-text-color: var(--tags-violet-text);
+      --local-background-normal: var(--mds-color-theme-background-label-violet-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-violet-hover);
+      --local-background-active: var(--mds-color-theme-background-label-violet-active);
+      --local-border-color: var(--mds-color-theme-outline-label-violet);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-color='purple'] {
-      --local-background-normal: var(--tags-purple-background);
-      --local-background-hover: var(--tags-purple-background-hovered);
-      --local-background-active: var(--tags-purple-background-pressed);
-      --local-border-color: var(--tags-purple-border-color);
-      --local-text-color: var(--tags-purple-text);
+      --local-background-normal: var(--mds-color-theme-background-label-purple-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-purple-hover);
+      --local-background-active: var(--mds-color-theme-background-label-purple-active);
+      --local-border-color: var(--mds-color-theme-outline-label-purple);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-color='orange'] {
-      --local-background-normal: var(--tags-orange-background);
-      --local-background-hover: var(--tags-orange-background-hovered);
-      --local-background-active: var(--tags-orange-background-pressed);
-      --local-border-color: var(--tags-orange-border-color);
-      --local-text-color: var(--tags-orange-text);
+      --local-background-normal: var(--mds-color-theme-background-label-orange-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-orange-hover);
+      --local-background-active: var(--mds-color-theme-background-label-orange-active);
+      --local-border-color: var(--mds-color-theme-outline-label-orange);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-color='gold'] {
-      --local-background-normal: var(--tags-gold-background);
-      --local-background-hover: var(--tags-gold-background-hovered);
-      --local-background-active: var(--tags-gold-background-pressed);
-      --local-border-color: var(--tags-gold-border-color);
-      --local-text-color: var(--tags-gold-text);
+      --local-background-normal: var(--mds-color-theme-background-label-gold-normal);
+      --local-background-hover: var(--mds-color-theme-background-label-gold-hover);
+      --local-background-active: var(--mds-color-theme-background-label-gold-active);
+      --local-border-color: var(--mds-color-theme-outline-label-gold);
+      --local-text-color: var(--mds-color-theme-text-primary-normal);
     }
   }
 
   &[data-format='error'] {
-    --local-background-normal: var(--tags-error-background);
-    --local-background-hover: var(--tags-error-background);
-    --local-background-active: var(--tags-error-background);
-    --local-border-color: var(--tags-error-border-color);
-    --local-text-color: var(--tags-error-text);
+    --local-background-normal: var(--mds-color-theme-background-alert-error-normal);
+    --local-background-hover: var(--mds-color-theme-background-alert-error-normal);
+    --local-background-active: var(--mds-color-theme-background-alert-error-normal);
+    --local-border-color: var(--mds-color-theme-outline-cancel-normal);
+    --local-text-color: var(--mds-color-theme-text-primary-normal);
   }
 
   &[data-format='overlay'] {
-    --local-background-normal: var(--tags-overlay-background);
-    --local-background-hover: var(--tags-overlay-background);
-    --local-background-active: var(--tags-overlay-background);
-    --local-border-color: var(--tags-overlay-border-color);
-    --local-text-color: var(--tags-overlay-text);
+    --local-background-normal: var(--mds-color-theme-background-common-normal);
+    --local-background-hover: var(--mds-color-theme-background-common-normal);
+    --local-background-active: var(--mds-color-theme-background-common-normal);
+    --local-border-color: var(--mds-color-theme-common-control-share-content-inactive);
+    --local-text-color: var(--mds-color-theme-common-text-black);
   }
 
   &[data-format='static'] {
-    --local-background-normal: var(--tags-static-background);
-    --local-background-hover: var(--tags-static-background);
-    --local-background-active: var(--tags-static-background);
-    --local-border-color: var(--tags-static-border-color);
-    --local-text-color: var(--tags-static-text);
+    --local-background-normal: var(--mds-color-theme-background-solid-primary-normal);
+    --local-background-hover: var(--mds-color-theme-background-solid-primary-normal);
+    --local-background-active: var(--mds-color-theme-background-solid-primary-normal);
+    --local-border-color: var(--mds-color-theme-outline-primary-normal);
+    --local-text-color: var(--mds-color-theme-text-primary-normal);
   }
 
   background-color: var(--local-background-normal);

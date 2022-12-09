@@ -189,7 +189,7 @@
   .#{$input__class}__secondary-label {
     @if $color-help {
       color: $color-help;
-      color: var(--theme-text-primary-normal);
+      color: var(--mds-color-theme-text-primary-normal);
     }
   }
 }

@@ -7,11 +7,11 @@
   width: 0.25rem;
 
   &[data-color='inactive'] {
-    --local-background-color: var(--meetingmarker-inactive-background);
+    --local-background-color: var(--mds-color-theme-background-secondary-active);
   }
 
   &[data-color='success'] {
-    --local-background-color: var(--meetingmarker-active-background);
+    --local-background-color: var(--mds-color-theme-button-join-normal);
   }
 
   &:not([data-striped='true']) {

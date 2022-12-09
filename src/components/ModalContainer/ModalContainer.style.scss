@@ -6,7 +6,7 @@
   width: fit-content;
   list-style: none;
   margin: 0;
-  border: 0.0625rem var(--modal-primary-border-style) var(--modal-primary-border-color);
+  border: 0.0625rem var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal);
   outline: none;
 
   /* Arrow placement (svg arrow size is 12px, that's why the following offsets are set like that) */
@@ -132,19 +132,19 @@
   }
 
   &[data-color='primary'] {
-    background-color: var(--theme-background-solid-primary-normal);
+    background-color: var(--mds-color-theme-background-solid-primary-normal);
   }
 
   &[data-color='secondary'] {
-    background-color: var(--theme-background-solid-secondary-normal);
+    background-color: var(--mds-color-theme-background-solid-secondary-normal);
   }
 
   &[data-color='tertiary'] {
-    background-color: var(--theme-background-solid-tertiary-normal);
+    background-color: var(--mds-color-theme-background-solid-tertiary-normal);
   }
 
   &[data-color='quaternary'] {
-    background-color: var(--theme-background-solid-quaternary-normal);
+    background-color: var(--mds-color-theme-background-solid-quaternary-normal);
   }
 
   &[data-elevation='0'] {

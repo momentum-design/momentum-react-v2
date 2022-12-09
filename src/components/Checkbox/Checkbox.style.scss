@@ -19,48 +19,48 @@
   &[data-disabled='false'] {
     .md-checkbox-icon {
       svg {
-        fill: var(--checkbox-checked-icon);
+        fill: var(--mds-color-theme-text-inverted-normal);
       }
     }
 
     > .md-checkbox-label {
-      color: var(--checkbox-unchecked-text);
+      color: var(--mds-color-theme-text-primary-normal);
     }
 
     > .md-checkbox-selected {
-      background-color: var(--checkbox-checked-background);
+      background-color: var(--mds-color-theme-control-active-normal);
     }
 
     > .md-checkbox-not-selected {
-      background-color: var(--checkbox-unchecked-background);
+      background-color: var(--mds-color-theme-control-inactive-normal);
       border-style: solid;
-      border-color: var(--checkbox-unchecked-border-color);
+      border-color: var(--mds-color-theme-outline-input-normal);
       border-width: 0.0625rem;
     }
 
     &:hover,
     &.hover {
-      color: var(--checkbox-checked-text-hovered);
+      color: var(--mds-color-theme-text-primary-normal);
 
       > .md-checkbox-selected {
-        background-color: var(--checkbox-checked-background-hovered);
+        background-color: var(--mds-color-theme-control-active-hover);
       }
 
       > .md-checkbox-not-selected {
-        background-color: var(--checkbox-unchecked-background-hovered);
+        background-color: var(--mds-color-theme-control-inactive-hover);
       }
     }
 
     &:active,
     &.active {
-      color: var(--checkbox-unchecked-text-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
 
       > .md-checkbox-selected {
-        background-color: var(--checkbox-checked-background-pressed);
+        background-color: var(--mds-color-theme-control-active-pressed);
       }
 
       > .md-checkbox-not-selected {
-        background-color: var(--checkbox-unchecked-background-pressed);
+        background-color: var(--mds-color-theme-control-inactive-pressed);
       }
     }
 
@@ -79,19 +79,19 @@
   &.disable {
     .md-checkbox-icon {
       svg {
-        fill: var(--checkbox-checked-icon-disabled);
+        fill: var(--mds-color-theme-control-inactive-hover);
       }
     }
 
-    color: var(--checkbox-unchecked-text-disabled);
+    color: var(--mds-color-theme-text-primary-disabled);
 
     > .md-checkbox-selected {
-      background-color: var(--checkbox-checked-background-disabled);
+      background-color: var(--mds-color-theme-control-active-disabled);
       border-style: none;
     }
 
     > .md-checkbox-not-selected {
-      background-color: var(--checkbox-unchecked-background-disabled);
+      background-color: var(--mds-color-theme-control-inactive-hover);
       border-style: none;
     }
   }

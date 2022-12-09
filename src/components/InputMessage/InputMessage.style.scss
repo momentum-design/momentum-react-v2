@@ -4,27 +4,27 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    color: var(--theme-text-primary-normal);
-    fill: var(--theme-text-primary-normal);
+    color: var(--mds-color-theme-text-primary-normal);
+    fill: var(--mds-color-theme-text-primary-normal);
 
     &[message-level='error'] {
-      color: var(--theme-text-error-normal);
-      fill: var(--theme-text-error-normal);
+      color: var(--mds-color-theme-text-error-normal);
+      fill: var(--mds-color-theme-text-error-normal);
     }
 
     &[message-level='warning'] {
-      color: var(--theme-text-warning-normal);
-      fill: var(--theme-text-warning-normal);
+      color: var(--mds-color-theme-text-warning-normal);
+      fill: var(--mds-color-theme-text-warning-normal);
     }
 
     &[message-level='success'] {
-      color: var(--theme-text-success-normal);
-      fill: var(--theme-text-success-normal);
+      color: var(--mds-color-theme-text-success-normal);
+      fill: var(--mds-color-theme-text-success-normal);
     }
 
     &[message-level='help'] {
-      color: var(--theme-text-secondary-normal);
-      fill: var(--theme-text-secondary-normal);
+      color: var(--mds-color-theme-text-secondary-normal);
+      fill: var(--mds-color-theme-text-secondary-normal);
     }
 
     .md-input-message--icon {

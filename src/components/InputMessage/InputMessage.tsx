@@ -46,7 +46,7 @@ const InputMessage = (props: Props): ReactElement => {
               name="warning"
               weight="bold"
               scale={16}
-              fillColor={`var(--theme-text-${level}-normal)`}
+              fillColor={`var(--mds-color-theme-text-${level}-normal)`}
             />
           </div>
         )}

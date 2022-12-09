@@ -1,6 +1,6 @@
 .md-avatar-presence-icon-wrapper {
   position: absolute;
-  background-color: var(--avatar-presence-icon-background);
+  background-color: var(--mds-color-theme-background-solid-primary-normal);
   border-radius: 100vh;
   width: 1.125rem;
   height: 1.125rem;
@@ -25,7 +25,7 @@
 
   span {
     font-weight: 500;
-    color: var(--avatar-color-avatar-text);
+    color: var(--mds-color-theme-common-text-white);
   }
 
   img {
@@ -41,57 +41,57 @@
 
   .md-avatar-icon-wrapper {
     svg {
-      fill: var(--avatar-color-avatar-text);
+      fill: var(--mds-color-theme-common-text-white);
     }
   }
 
   // Background Color
   &[data-color='default'] {
-    background-color: var(--avatar-color-avatar-background-default);
+    background-color: var(--mds-color-theme-avatar-default);
   }
 
   &[data-color='gold'] {
-    background-color: var(--avatar-color-avatar-background-gold);
+    background-color: var(--mds-color-theme-avatar-gold);
   }
 
   &[data-color='orange'] {
-    background-color: var(--avatar-color-avatar-background-orange);
+    background-color: var(--mds-color-theme-avatar-orange);
   }
 
   &[data-color='lime'] {
-    background-color: var(--avatar-color-avatar-background-lime);
+    background-color: var(--mds-color-theme-avatar-lime);
   }
 
   &[data-color='mint'] {
-    background-color: var(--avatar-color-avatar-background-mint);
+    background-color: var(--mds-color-theme-avatar-mint);
   }
 
   &[data-color='cyan'] {
-    background-color: var(--avatar-color-avatar-background-cyan);
+    background-color: var(--mds-color-theme-avatar-cyan);
   }
 
   &[data-color='cobalt'] {
-    background-color: var(--avatar-color-avatar-background-cobalt);
+    background-color: var(--mds-color-theme-avatar-cobalt);
   }
 
   &[data-color='slate'] {
-    background-color: var(--avatar-color-avatar-background-slate);
+    background-color: var(--mds-color-theme-avatar-slate);
   }
 
   &[data-color='violet'] {
-    background-color: var(--avatar-color-avatar-background-violet);
+    background-color: var(--mds-color-theme-avatar-violet);
   }
 
   &[data-color='purple'] {
-    background-color: var(--avatar-color-avatar-background-purple);
+    background-color: var(--mds-color-theme-avatar-purple);
   }
 
   &[data-color='pink'] {
-    background-color: var(--avatar-color-avatar-background-pink);
+    background-color: var(--mds-color-theme-avatar-pink);
   }
 
   &[data-color='yellow'] {
-    background-color: var(--avatar-color-avatar-background-yellow);
+    background-color: var(--mds-color-theme-avatar-yellow);
   }
 
   // Sizes
@@ -205,7 +205,7 @@
 .md-avatar-animation-wrapper {
   width: 100%;
   height: 100%;
-  background: var(--overlayFade-secondary-background-normal);
+  background: var(--mds-color-theme-common-overlay-secondary-normal);
   position: absolute;
   display: flex;
   justify-content: center;

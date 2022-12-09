@@ -28,7 +28,7 @@
       > *:first-child {
         > *:first-child {
           &[data-disabled='true'] {
-            color: var(--theme-text-primary-disabled);
+            color: var(--mds-color-theme-text-primary-disabled);
           }
         }
       }
@@ -38,11 +38,11 @@
         align-items: center;
 
         > *[data-color='success'] {
-          color: var(--theme-text-success-normal);
+          color: var(--mds-color-theme-text-success-normal);
         }
 
         > *[data-color='secondary'] {
-          color: var(--theme-text-secondary-normal);
+          color: var(--mds-color-theme-text-secondary-normal);
         }
 
         > .md-divider-dot-wrapper {

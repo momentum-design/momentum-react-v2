@@ -175,7 +175,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                     data-shape={true}
                   >
                     <Icon
-                      fillColor="var(--avatar-presence-icon-active)"
+                      fillColor="var(--mds-color-theme-indicator-stable)"
                       name="unread"
                       scale={14}
                       strokeColor="none"
@@ -192,7 +192,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                           height="100%"
                           style={
                             Object {
-                              "fill": "var(--avatar-presence-icon-active)",
+                              "fill": "var(--mds-color-theme-indicator-stable)",
                               "stroke": "none",
                             }
                           }
@@ -846,7 +846,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         type="button"
                       >
                         <Icon
-                          fillColor="var(--label-error-text)"
+                          fillColor="var(--mds-color-theme-text-error-normal)"
                           name="microphone-muted"
                           scale={16}
                           strokeColor="none"
@@ -863,7 +863,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                               height="100%"
                               style={
                                 Object {
-                                  "fill": "var(--label-error-text)",
+                                  "fill": "var(--mds-color-theme-text-error-normal)",
                                   "stroke": "none",
                                 }
                               }
@@ -1172,7 +1172,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="middle"
             >
               <Icon
-                fillColor="var(--label-success-text)"
+                fillColor="var(--mds-color-theme-text-success-normal)"
                 name="scheduler-available"
                 scale={16}
                 strokeColor="none"
@@ -1189,7 +1189,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--label-success-text)",
+                        "fill": "var(--mds-color-theme-text-success-normal)",
                         "stroke": "none",
                       }
                     }
@@ -1302,7 +1302,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="middle"
             >
               <Icon
-                fillColor="var(--label-secondary-text)"
+                fillColor="var(--mds-color-theme-text-secondary-normal)"
                 name="scheduler-not-working-hours"
                 scale={16}
                 strokeColor="none"
@@ -1319,7 +1319,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--label-secondary-text)",
+                        "fill": "var(--mds-color-theme-text-secondary-normal)",
                         "stroke": "none",
                       }
                     }
@@ -1432,7 +1432,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="middle"
             >
               <Icon
-                fillColor="var(--label-warning-text)"
+                fillColor="var(--mds-color-theme-text-warning-normal)"
                 name="scheduler-unavailable"
                 scale={16}
                 strokeColor="none"
@@ -1449,7 +1449,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--label-warning-text)",
+                        "fill": "var(--mds-color-theme-text-warning-normal)",
                         "stroke": "none",
                       }
                     }
@@ -1562,7 +1562,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="middle"
             >
               <Icon
-                fillColor="var(--label-error-text)"
+                fillColor="var(--mds-color-theme-text-error-normal)"
                 name="scheduler-unknown"
                 scale={16}
                 strokeColor="none"
@@ -1579,7 +1579,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     height="100%"
                     style={
                       Object {
-                        "fill": "var(--label-error-text)",
+                        "fill": "var(--mds-color-theme-text-error-normal)",
                         "stroke": "none",
                       }
                     }

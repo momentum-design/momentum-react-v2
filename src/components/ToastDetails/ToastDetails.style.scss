@@ -36,7 +36,7 @@
     }
 
     > .md-toast-details-subject {
-      color: var(--theme-text-secondary-normal);
+      color: var(--mds-color-theme-text-secondary-normal);
       font-size: 0.875rem;
       margin-bottom: 0.25rem;
     }
@@ -45,19 +45,19 @@
       font-size: 0.875rem;
 
       &[data-color='cancel'] {
-        color: var(--theme-text-error-normal);
+        color: var(--mds-color-theme-text-error-normal);
       }
 
       &[data-color='join'] {
-        color: var(--theme-text-accent-normal);
+        color: var(--mds-color-theme-text-accent-normal);
       }
 
       &[data-color='success'] {
-        color: var(--theme-text-success-normal);
+        color: var(--mds-color-theme-text-success-normal);
       }
 
       &[data-color='warning'] {
-        color: var(--theme-text-warning-normal);
+        color: var(--mds-color-theme-text-warning-normal);
       }
     }
 
@@ -68,7 +68,7 @@
 
       > .md-toast-details-badge {
         align-items: center;
-        border: var(--separator-primary) solid 2px;
+        border: var(--mds-color-theme-outline-primary-normal) solid 2px;
         border-radius: 0.25rem;
         display: flex;
         font-size: 0.875rem;

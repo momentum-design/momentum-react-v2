@@ -2,44 +2,44 @@
   &[data-selected='true'] {
     &[data-outline='true'],
     &[data-ghost='true'] {
-      background-color: var(--toggleButton-active-background);
-      color: var(--toggleButton-active-text);
+      background-color: var(--mds-color-theme-button-secondary-active-normal);
+      color: var(--mds-color-theme-text-primary-normal);
 
       &:hover,
       &.hover {
-        background-color: var(--toggleButton-active-background-hovered);
-        color: var(--toggleButton-active-text-hovered);
+        background-color: var(--mds-color-theme-button-secondary-active-hover);
+        color: var(--mds-color-theme-text-primary-normal);
       }
 
       &:active,
       &.active {
-        background-color: var(--toggleButton-active-background-pressed);
-        color: var(--toggleButton-active-text-pressed);
+        background-color: var(--mds-color-theme-button-secondary-active-pressed);
+        color: var(--mds-color-theme-text-primary-normal);
       }
 
       &[data-disabled='true'],
       &.disable {
-        background-color: var(--toggleButton-active-background-disabled);
-        color: var(--toggleButton-active-text-disabled);
+        background-color: var(--mds-color-theme-button-secondary-active-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
       }
     }
 
     &[data-outline='true'] {
-      border-color: var(--toggleButton-active-border-color);
+      border-color: var(--mds-color-theme-outline-button-normal);
 
       &:hover,
       &.hover {
-        border-color: var(--toggleButton-active-border-color-hovered);
+        border-color: var(--mds-color-theme-outline-button-normal);
       }
 
       &:active,
       &.active {
-        border-color: var(--toggleButton-active-border-color-pressed);
+        border-color: var(--mds-color-theme-outline-button-normal);
       }
 
       &[data-disabled='true'],
       &.disable {
-        border-color: var(--toggleButton-active-border-color-disabled);
+        border-color: var(--mds-color-theme-outline-disabled-normal);
       }
     }
   }

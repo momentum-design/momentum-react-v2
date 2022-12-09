@@ -1,14 +1,14 @@
 .md-reaction-badge-wrapper {
   border: 0.0625rem solid rgba(255, 255, 255, 0.2); // IEFIX
-  border-color: var(--theme-outline-secondary-normal);
+  border-color: var(--mds-color-theme-outline-secondary-normal);
   border-width: 0.0625rem;
   margin: 0 0.125rem;
 
   /* Colorization */
   background-color: rgba(255, 255, 255, 0.11); // IEFIX
-  background-color: var(--reaction-badge-primary-background);
+  background-color: var(--mds-color-theme-background-secondary-normal);
   color: rgba(255, 255, 255, 0.95); // IEFIX
-  color: var(--reaction-badge-primary-unreacted-text);
+  color: var(--mds-color-theme-text-primary-normal);
 
   .reaction-badge-count {
     height: 1rem;
@@ -17,20 +17,20 @@
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.2); // IEFIX
-    background-color: var(--reaction-badge-primary-background-hovered);
+    background-color: var(--mds-color-theme-background-secondary-hover);
     color: rgba(255, 255, 255, 0.95); // IEFIX
-    color: var(--button-secondary-text-hovered);
+    color: var(--mds-color-theme-text-primary-normal);
   }
 
   &:active {
     background-color: rgba(255, 255, 255, 0.3); // IEFIX
-    background-color: var(--reaction-badge-primary-background-pressed);
+    background-color: var(--mds-color-theme-background-secondary-active);
     color: rgba(255, 255, 255, 0.95); // IEFIX
-    color: var(--button-secondary-text-pressed);
+    color: var(--mds-color-theme-text-primary-normal);
   }
 
   &[data-reacted='true'] {
     color: rgba(100, 180, 250, 1); // IEFIX
-    color: var(--reaction-badge-primary-reacted-text);
+    color: var(--mds-color-theme-text-accent-normal);
   }
 }

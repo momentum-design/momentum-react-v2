@@ -54,7 +54,7 @@
           background-color: $background-color--checked;
           background-color: var($background-color--checked-css-var, $background-color--checked);
           border: none;
-          color: var(--theme-text-primary-inverted);
+          color: var(--mds-color-theme-text-primary-inverted);
         }
 
         &:hover,

@@ -4,14 +4,14 @@
   font-family: var(--md-globals-font-default);
   outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-  background-color: var(--button-dialpad-background);
+  background-color: var(--mds-color-theme-button-secondary-normal);
 
   &:hover {
-    background-color: var(--button-dialpad-background-hovered);
+    background-color: var(--mds-color-theme-button-secondary-hover);
   }
 
   &:active {
-    background-color: var(--button-dialpad-background-pressed);
+    background-color: var(--mds-color-theme-button-secondary-pressed);
   }
 
   > * {
@@ -22,33 +22,33 @@
   }
 
   > .md-button-dialpad-primary-text {
-    color: var(--button-dialpad-special-text-number);
+    color: var(--mds-color-theme-text-primary-normal);
   }
 
   > .md-button-dialpad-secondary-text {
-    color: var(--button-dialpad-special-text-characters);
+    color: var(--mds-color-theme-text-secondary-normal);
     margin-top: 0.2em;
   }
 
   &[data-disabled='true'] {
-    background-color: var(--button-dialpad-background-disabled);
-    color: var(--button-dialpad-text-number);
+    background-color: var(--mds-color-theme-button-secondary-normal);
+    color: var(--mds-color-theme-text-primary-normal);
     cursor: auto;
 
     > .md-button-dialpad-primary-text {
-      color: var(--button-dialpad-text-number);
+      color: var(--mds-color-theme-text-primary-normal);
     }
 
     > .md-button-dialpad-secondary-text {
-      color: var(--button-dialpad-text-characters);
+      color: var(--mds-color-theme-text-secondary-normal);
     }
 
     &:hover {
-      background-color: var(--button-dialpad-background-disabled);
+      background-color: var(--mds-color-theme-button-secondary-normal);
     }
 
     &:active {
-      background-color: var(--button-dialpad-background-disabled);
+      background-color: var(--mds-color-theme-button-secondary-normal);
     }
   }
 

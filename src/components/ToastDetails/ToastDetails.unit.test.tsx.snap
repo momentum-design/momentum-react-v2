@@ -404,7 +404,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
               >
                 <Icon
                   autoScale={true}
-                  color="var(--theme-text-warning-normal)"
+                  color="var(--mds-color-theme-text-warning-normal)"
                   name="favorite"
                   weight="filled"
                 >
@@ -419,8 +419,8 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                       height="100%"
                       style={
                         Object {
-                          "fill": "var(--theme-text-warning-normal)",
-                          "stroke": "var(--theme-text-warning-normal)",
+                          "fill": "var(--mds-color-theme-text-warning-normal)",
+                          "stroke": "var(--mds-color-theme-text-warning-normal)",
                         }
                       }
                       viewBox="0, 0, 32, 32"
@@ -674,7 +674,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
               >
                 <Icon
                   autoScale={true}
-                  color="var(--theme-text-warning-normal)"
+                  color="var(--mds-color-theme-text-warning-normal)"
                   name="favorite"
                   weight="filled"
                 >
@@ -689,8 +689,8 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                       height="100%"
                       style={
                         Object {
-                          "fill": "var(--theme-text-warning-normal)",
-                          "stroke": "var(--theme-text-warning-normal)",
+                          "fill": "var(--mds-color-theme-text-warning-normal)",
+                          "stroke": "var(--mds-color-theme-text-warning-normal)",
                         }
                       }
                       viewBox="0, 0, 32, 32"
@@ -911,7 +911,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
               >
                 <Icon
                   autoScale={true}
-                  color="var(--theme-text-warning-normal)"
+                  color="var(--mds-color-theme-text-warning-normal)"
                   name="favorite"
                   weight="filled"
                 >
@@ -926,8 +926,8 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "var(--theme-text-warning-normal)",
-                          "stroke": "var(--theme-text-warning-normal)",
+                          "fill": "var(--mds-color-theme-text-warning-normal)",
+                          "stroke": "var(--mds-color-theme-text-warning-normal)",
                         }
                       }
                       viewBox="0, 0, 32, 32"

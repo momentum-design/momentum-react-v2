@@ -116,7 +116,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
           weight="light"
           scale={18}
           className={STYLE.search}
-          strokeColor="var(--theme-text-primary-normal)"
+          strokeColor="var(--mds-color-theme-text-primary-normal)"
           name={searching ? 'spinner' : 'search'}
         />
       </div>

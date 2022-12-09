@@ -650,7 +650,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                       >
                         <Icon
                           autoScale={true}
-                          color="var(--theme-text-warning-normal)"
+                          color="var(--mds-color-theme-text-warning-normal)"
                           name="favorite"
                           weight="filled"
                         />
