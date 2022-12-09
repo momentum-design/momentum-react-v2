@@ -2,7 +2,7 @@ const fs = require('fs'); // eslint-disable-line
 const glob = require('glob'); // eslint-disable-line
 const getTokenCssVars = require('./getTokenCssVars'); // eslint-disable-line
 
-const colors = getTokenCssVars();
+let colors;
 
 const getColor = function (cssVar) {
   // exclude locally defined css vars
@@ -57,8 +57,12 @@ const args = process.argv.slice(2);
 
 const file = args[0];
 
-if (file) {
-  readAndCheckCSS(file);
-} else {
-  checkAllFiles();
-}
+getTokenCssVars().then((results) => {
+  colors = results;
+
+  if (file) {
+    readAndCheckCSS(file);
+  } else {
+    checkAllFiles();
+  }
+});
