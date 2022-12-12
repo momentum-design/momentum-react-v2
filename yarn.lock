@@ -1822,15 +1822,15 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
+"@momentum-design/animations@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@momentum-design/animations/-/animations-0.0.1.tgz#331821e2b00e27fe94d486748ce5db03213acc7c"
+  integrity sha512-cMwe5lQ30sgJyrRA25ImrOQEj1Cvi15Qxmd+OEnCcSOBRyi+/IIn0Ozj1nVAcFkrncqUtr49L/hDtyQ0XtrafA==
+
 "@momentum-design/tokens@^0.0.32":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@momentum-design/tokens/-/tokens-0.0.32.tgz#b1c7c6aa4848603e11892b6fe3fd69dc6c76f1c9"
   integrity sha512-VLZdcbqQrt9TfwM0iFqWLBlRMnbUvhcBwk87naCWoqUBA6MCB/AaWT/Khyx7kCofFBXLekTbmpzcS9PFQy/KiQ==
-
-"@momentum-ui/animations@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/animations/-/animations-1.4.0.tgz#feafac71b564c3bc6433d3499ad5b9ea98196a39"
-  integrity sha512-6/R5F5E2jV0dROe1d6fSvEVky7ICJnTMT2Kc2IQAAaHKRLxjwsNoM1gPIKStYLfjV3tKV/AD+5HPpi+leMILBQ==
 
 "@momentum-ui/design-tokens@^0.0.63":
   version "0.0.63"
