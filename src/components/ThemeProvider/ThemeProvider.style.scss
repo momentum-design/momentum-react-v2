@@ -133,7 +133,8 @@
   // Firefox fix for scrollbar
   // On macOS, you need to set the General > Show scroll bars
   // setting in System Preferences to "Always" for this property to have any effect.
-  scrollbar-color: var(--mds-color-theme-scrollbar-background-secondary-normal) var(--mds-color-theme-scrollbar-button-normal);
+  scrollbar-color: var(--mds-color-theme-scrollbar-background-secondary-normal)
+    var(--mds-color-theme-scrollbar-button-normal);
 }
 
 /* Global variables not available as tokens. */
@@ -143,7 +144,8 @@
     0 0 0 0.125rem var(--mds-color-theme-outline-theme-normal);
   --md-globals-focus-ring-box-shadow-accent: 0 0 0 0.0625rem
       var(--mds-color-theme-background-solid-primary-normal),
-    0 0 0 0.3125rem rgba(100, 180, 250, 0.3), 0 0 0 0.1875rem var(--mds-color-theme-outline-theme-normal);
+    0 0 0 0.3125rem rgba(100, 180, 250, 0.3),
+    0 0 0 0.1875rem var(--mds-color-theme-outline-theme-normal);
   --md-globals-focus-ring-box-shadow-inset: var(--md-globals-focus-ring-box-shadow) inset;
   --md-globals-elevation-0: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-elevation-1: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
@@ -156,6 +158,8 @@
   --md-globals-elevation-8: 0 2rem 4rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-focus-ring-outline: none;
   --md-globals-font-default: 'CiscoSansTT';
+  --md-globals-border-style-none: none;
+  --md-globals-border-style-solid: solid;
 
   // Gradient backgrounds
   --md-globals-gradient-primary: var(--mds-color-theme-background-gradient-primary);
