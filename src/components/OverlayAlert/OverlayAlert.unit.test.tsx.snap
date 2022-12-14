@@ -19,6 +19,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div />
@@ -55,6 +58,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div />
@@ -137,6 +143,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div />
@@ -173,6 +182,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div>
               <ButtonControl
                 control="close"
@@ -245,6 +257,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div>
@@ -289,6 +304,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div>
@@ -325,6 +343,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div />
@@ -372,6 +393,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div />
@@ -576,6 +600,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div>
               <ButtonControl
                 control="close"
@@ -747,6 +774,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
           data-round={0}
         >
           <div>
+            <div
+              className="md-overlay-alert-title"
+            />
             <div />
           </div>
           <div />
@@ -779,17 +809,21 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
           data-round={0}
         >
           <div>
-            <Text
+            <div
               className="md-overlay-alert-title"
-              type="header-primary"
             >
-              <h3
-                className="md-text-wrapper md-overlay-alert-title"
-                data-type="header-primary"
+              <Text
+                className="md-overlay-alert-title"
+                type="header-primary"
               >
-                example-title
-              </h3>
-            </Text>
+                <h3
+                  className="md-text-wrapper md-overlay-alert-title"
+                  data-type="header-primary"
+                >
+                  example-title
+                </h3>
+              </Text>
+            </div>
             <div />
           </div>
           <div />
