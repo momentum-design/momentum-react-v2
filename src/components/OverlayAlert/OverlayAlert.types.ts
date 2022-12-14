@@ -1,9 +1,10 @@
-import { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { CSSProperties, ReactElement, ReactNode } from 'react';
 
-import { ButtonControlProps } from '../ButtonControl';
-import { ButtonSimpleProps } from '../ButtonSimple';
-import { ButtonGroupProps } from '../ButtonGroup';
-import { OverlayProps } from '../Overlay';
+import type { ButtonControlProps } from '../ButtonControl';
+import type { ButtonSimpleProps } from '../ButtonSimple';
+import type { ButtonGroupProps } from '../ButtonGroup';
+import type { OverlayProps, OverlayColor } from '../Overlay';
+import type { ModalContainerColor } from '../ModalContainer';
 
 export type SupportedActions = ButtonSimpleProps | ButtonGroupProps;
 export type SupportedControls = ButtonControlProps;
@@ -38,6 +39,16 @@ export interface Props extends OverlayProps {
    * Custom id for overriding this component's CSS.
    */
   id?: string;
+
+  /**
+   * Color of the nested modal within this component.
+   */
+  modalColor?: ModalContainerColor;
+
+  /**
+   * Color of the overlay of this component.
+   */
+  overlayColor?: OverlayColor;
 
   /**
    * Custom style for overriding this component's CSS.
