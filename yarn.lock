@@ -1827,6 +1827,11 @@
   resolved "https://registry.yarnpkg.com/@momentum-design/animations/-/animations-0.0.1.tgz#331821e2b00e27fe94d486748ce5db03213acc7c"
   integrity sha512-cMwe5lQ30sgJyrRA25ImrOQEj1Cvi15Qxmd+OEnCcSOBRyi+/IIn0Ozj1nVAcFkrncqUtr49L/hDtyQ0XtrafA==
 
+"@momentum-design/icons@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@momentum-design/icons/-/icons-0.0.10.tgz#6c6a5bfd6c4de79ab7c37f4f08e63f95fcdfe74b"
+  integrity sha512-r0UnuITJRxjJDv9F8eopkIBRoMGQHoIJY/xCB6RhQlwsU0BE2sbqAmzQGsfRkr88nMLVDEl2qm4ktAPPxLpk2A==
+
 "@momentum-design/tokens@^0.0.32":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@momentum-design/tokens/-/tokens-0.0.32.tgz#b1c7c6aa4848603e11892b6fe3fd69dc6c76f1c9"
@@ -1839,15 +1844,10 @@
   dependencies:
     momentum-abstract "^1.0.28"
 
-"@momentum-ui/icons-rebrand@^1.40.15":
-  version "1.40.15"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons-rebrand/-/icons-rebrand-1.40.15.tgz#c1ed3703059eddeb017e54302030f266ad567945"
-  integrity sha512-BIglA+fexx/jOn0NK6EFFe0OdyRstGP2/qg/O3V8jVd19Ttr9EkH8SGbrKEkhvBeN+y20ETxGj3vTZDXiDcu4A==
-
-"@momentum-ui/icons@8.28.4":
-  version "8.28.4"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-8.28.4.tgz#0654f0718e785f4e256d7721221e2003cae5117f"
-  integrity sha512-KoM7cyRl7rxrKJSb8K/ck5jcWR2KNB5pLzGoaLSeG9twf9aIq0DUPqQBDirm1m4JG+UrU8QqGxC5r9YAkcf96g==
+"@momentum-ui/icons@^8.32.0":
+  version "8.32.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-8.32.0.tgz#cb459d25c13c72db586a406659d070c7dee11aad"
+  integrity sha512-29VYepMbsRpGzEmMlJQJM1LpNs3eLA+h3OVlz7VvU1Yidcim6zLG9lvhL9jeenlMv265H8ddL/GxWrTu1ZsXTw==
 
 "@momentum-ui/tokens@^1.7.1":
   version "1.7.1"
