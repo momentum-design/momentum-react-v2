@@ -94,6 +94,32 @@ WithCloseButton.args = {
   ),
 };
 
+const Offset = Template<PopoverProps>(Popover).bind({});
+
+Offset.argTypes = { ...argTypes };
+
+Offset.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.RIGHT,
+  showArrow: true,
+  variant: 'small',
+  closeButtonPlacement: 'top-right',
+  focusBackOnTrigger: true,
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  offset: [0, -150],
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex', width: '30rem' }}>
+      Click me!
+    </ButtonPill>
+  ),
+  children: (
+    <Flex style={{ width: '10rem', height: '10rem' }} justifyContent="center" alignItems="center">
+      <Text type="display">🏖</Text>
+    </Flex>
+  ),
+};
+
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -147,4 +173,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, InteractiveContent, WithCloseButton, Common };
+export { Example, InteractiveContent, WithCloseButton, Offset, Common };
