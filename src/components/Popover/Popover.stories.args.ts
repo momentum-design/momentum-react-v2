@@ -31,6 +31,18 @@ const popoverArgTypes = {
       },
     },
   },
+  offset: {
+    description: `Displaces the tippy from its reference element in pixels (skidding and distance).`,
+    control: { type: 'array' },
+    table: {
+      type: {
+        summary: 'array',
+      },
+      defaultValue: {
+        summary: [DEFAULTS.OFFEST_DISTANCE, DEFAULTS.OFFEST_SKIDDING],
+      },
+    },
+  },
   showArrow: {
     description: `Whether the arrow should be shown`,
     control: { type: 'boolean' },
