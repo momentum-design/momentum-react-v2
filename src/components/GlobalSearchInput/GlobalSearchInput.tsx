@@ -73,10 +73,12 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       onFiltersChange && filters.length && onFiltersChange(filters.slice(0, filters.length - 1));
       filterToRemove && setAriaAlert(filterToRemove.translations.filterRemoved);
     } else {
-      if (onKeyDown) {
+      if (inputProps.onKeyDown) {
+        // The `inputProps.onKeyDown()` call also bubbles to the original `onKeyDown` prop.
+        inputProps.onKeyDown(e);
+      } else if (onKeyDown) {
         onKeyDown(e as BaseEvent<React.KeyboardEvent<HTMLInputElement>>);
       }
-      inputProps.onKeyDown(e);
     }
   };
 
