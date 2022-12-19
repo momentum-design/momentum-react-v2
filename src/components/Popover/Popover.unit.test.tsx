@@ -398,6 +398,33 @@ describe('<Popover />', () => {
       const backdropAfterClose = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
       expect(backdropAfterClose).not.toBeInTheDocument();
     });
+
+    it('should not render the backdrop if addBackdrop is false', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+      const { container } = render(
+        <Popover
+          triggerComponent={<button>Click Me!</button>}
+          interactive
+          closeButtonPlacement="top-right"
+          closeButtonProps={{ 'aria-label': 'Close' }}
+          addBackdrop={false}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      // assert no backdrop has been rendered
+      const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
+      expect(backdrop).not.toBeInTheDocument();
+    });
   });
 
   describe('actions', () => {

@@ -53,7 +53,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -104,7 +104,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -155,7 +155,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
@@ -2285,7 +2285,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -2336,7 +2336,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -2387,7 +2387,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
@@ -4517,7 +4517,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -4568,7 +4568,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -4619,7 +4619,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
@@ -6750,7 +6750,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -6801,7 +6801,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -6852,7 +6852,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
@@ -8985,7 +8985,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -9036,7 +9036,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -9087,7 +9087,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
@@ -11217,7 +11217,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -11268,7 +11268,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -11319,7 +11319,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
@@ -13522,7 +13522,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -13573,7 +13573,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -13624,7 +13624,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
@@ -15765,7 +15765,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         Array [
           Object {
             "fn": [Function],
-            "name": "addBackdrop",
+            "name": "addBackdropPlugin",
           },
         ]
       }
@@ -15816,7 +15816,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             },
             Object {
               "fn": [Function],
-              "name": "addBackdrop",
+              "name": "addBackdropPlugin",
             },
           ]
         }
@@ -15867,7 +15867,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               },
               Object {
                 "fn": [Function],
-                "name": "addBackdrop",
+                "name": "addBackdropPlugin",
               },
             ]
           }
