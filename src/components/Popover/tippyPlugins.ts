@@ -32,8 +32,8 @@ export const hideOnEscPlugin: Plugin = {
  * This will make sure that popovers are closed on clickoutside and no longer
  * be stuck open in case the even target was a @react-aria button.
  */
-export const addBackdrop: Plugin = {
-  name: 'addBackdrop',
+export const addBackdropPlugin: Plugin = {
+  name: 'addBackdropPlugin',
   fn(instance: PopoverInstance) {
     return {
       onMount() {
