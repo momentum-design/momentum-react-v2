@@ -72,6 +72,13 @@ export type PopoverCommonStyleProps = {
    * @default true
    */
   hideOnEsc?: boolean;
+
+  /**
+   * Whether the popover should hide on clicking outside the popover
+   *
+   * @default true
+   */
+  addBackdrop?: boolean;
 };
 
 export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> {
