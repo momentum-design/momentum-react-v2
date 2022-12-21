@@ -42,8 +42,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
       interactive={true}
       offset={
         Array [
-          0,
           5,
+          0,
         ]
       }
       onClickOutside={[Function]}
@@ -90,8 +90,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         interactive={true}
         offset={
           Array [
-            0,
             5,
+            0,
           ]
         }
         onClickOutside={[Function]}
@@ -141,8 +141,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           interactive={true}
           offset={
             Array [
-              0,
               5,
+              0,
             ]
           }
           onClickOutside={[Function]}
@@ -2274,8 +2274,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
       interactive={true}
       offset={
         Array [
-          0,
           5,
+          0,
         ]
       }
       onClickOutside={[Function]}
@@ -2322,8 +2322,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         interactive={true}
         offset={
           Array [
-            0,
             5,
+            0,
           ]
         }
         onClickOutside={[Function]}
@@ -2373,8 +2373,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           interactive={true}
           offset={
             Array [
-              0,
               5,
+              0,
             ]
           }
           onClickOutside={[Function]}
@@ -4506,8 +4506,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
       interactive={true}
       offset={
         Array [
-          0,
           5,
+          0,
         ]
       }
       onClickOutside={[Function]}
@@ -4554,8 +4554,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         interactive={true}
         offset={
           Array [
-            0,
             5,
+            0,
           ]
         }
         onClickOutside={[Function]}
@@ -4605,8 +4605,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           interactive={true}
           offset={
             Array [
-              0,
               5,
+              0,
             ]
           }
           onClickOutside={[Function]}
@@ -6739,8 +6739,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
       interactive={true}
       offset={
         Array [
-          0,
           5,
+          0,
         ]
       }
       onClickOutside={[Function]}
@@ -6787,8 +6787,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         interactive={true}
         offset={
           Array [
-            0,
             5,
+            0,
           ]
         }
         onClickOutside={[Function]}
@@ -6838,8 +6838,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           interactive={true}
           offset={
             Array [
-              0,
               5,
+              0,
             ]
           }
           onClickOutside={[Function]}
@@ -8974,8 +8974,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
       interactive={true}
       offset={
         Array [
-          0,
           5,
+          0,
         ]
       }
       onClickOutside={[Function]}
@@ -9022,8 +9022,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         interactive={true}
         offset={
           Array [
-            0,
             5,
+            0,
           ]
         }
         onClickOutside={[Function]}
@@ -9073,8 +9073,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           interactive={true}
           offset={
             Array [
-              0,
               5,
+              0,
             ]
           }
           onClickOutside={[Function]}
@@ -11206,8 +11206,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
       interactive={true}
       offset={
         Array [
-          0,
-          17,
+          5,
+          12,
         ]
       }
       onClickOutside={[Function]}
@@ -11254,8 +11254,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         interactive={true}
         offset={
           Array [
-            0,
-            17,
+            5,
+            12,
           ]
         }
         onClickOutside={[Function]}
@@ -11305,8 +11305,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           interactive={true}
           offset={
             Array [
-              0,
-              17,
+              5,
+              12,
             ]
           }
           onClickOutside={[Function]}
@@ -13511,8 +13511,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
       interactive={true}
       offset={
         Array [
-          0,
           5,
+          0,
         ]
       }
       onClickOutside={[Function]}
@@ -13559,8 +13559,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         interactive={true}
         offset={
           Array [
-            0,
             5,
+            0,
           ]
         }
         onClickOutside={[Function]}
@@ -13610,8 +13610,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           interactive={true}
           offset={
             Array [
-              0,
               5,
+              0,
             ]
           }
           onClickOutside={[Function]}
@@ -15754,8 +15754,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
       interactive={true}
       offset={
         Array [
-          0,
           5,
+          0,
         ]
       }
       onClickOutside={[Function]}
@@ -15802,8 +15802,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         interactive={true}
         offset={
           Array [
-            0,
             5,
+            0,
           ]
         }
         onClickOutside={[Function]}
@@ -15853,8 +15853,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           interactive={true}
           offset={
             Array [
-              0,
               5,
+              0,
             ]
           }
           onClickOutside={[Function]}
