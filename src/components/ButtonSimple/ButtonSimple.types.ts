@@ -34,4 +34,9 @@ export interface Props extends AriaButtonProps, HoverProps {
    * This is necessary since `react-aria` supress that behaviour by design.
    */
   useNativeKeyDown?: boolean;
+
+  /**
+   * Role for adding accessibility
+   */
+  role?: string;
 }
