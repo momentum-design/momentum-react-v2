@@ -73,6 +73,16 @@ describe('<ButtonPill />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with role', () => {
+      expect.assertions(1);
+
+      const role = 'tablist';
+
+      container = mount(<ButtonGroup role={role}>{childrenTemplate}</ButtonGroup>);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -145,6 +155,18 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-round')).toBe(`${round}`);
+    });
+
+    it('should pass role prop', () => {
+      expect.assertions(1);
+
+      const role = 'tablist';
+
+      const element = mount(<ButtonGroup role={role}>{childrenTemplate}</ButtonGroup>)
+        .find(ButtonGroup)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe(role);
     });
   });
 });

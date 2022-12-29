@@ -63,6 +63,16 @@ describe('<ButtonSimple />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with role', () => {
+      expect.assertions(1);
+
+      const role = 'tab';
+
+      const container = mount(<ButtonSimple role={role} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -113,6 +123,18 @@ describe('<ButtonSimple />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
+    });
+
+    it('should have the role when provided', () => {
+      expect.assertions(1);
+
+      const role = 'tab';
+
+      const element = mount(<ButtonSimple role={role} />)
+        .find(ButtonSimple)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe(role);
     });
   });
 

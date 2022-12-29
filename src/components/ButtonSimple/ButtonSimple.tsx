@@ -15,7 +15,7 @@ import './ButtonSimple.style.scss';
  */
 
 const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { children, className, isDisabled, id, style, title, useNativeKeyDown } = props;
+  const { children, className, isDisabled, id, style, title, useNativeKeyDown, role } = props;
   const internalRef = useRef();
   const ref = providedRef || internalRef;
 
@@ -34,6 +34,7 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
         {...hoverProps}
         // override of onKeyDown to ensure the standard html button behavior (on enter => onClick) happens
         onKeyDown={useNativeKeyDown ? props.onKeyDown : buttonProps.onKeyDown}
+        role={role}
       >
         {typeof children === 'string' ? <span>{children}</span> : children}
       </button>
