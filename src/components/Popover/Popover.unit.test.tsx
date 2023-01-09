@@ -155,12 +155,50 @@ describe('<Popover />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with offset', async () => {
+    it('should match snapshot with offsetSkidding', async () => {
       expect.assertions(3);
       const user = userEvent.setup();
 
       const { container } = render(
-        <Popover offset={[2, 2]} triggerComponent={<button>Click Me!</button>}>
+        <Popover offsetSkidding={2} triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with offsetDistance', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover offsetDistance={3} triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with offsetSkidding and offsetDistance', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover
+          offsetDistance={3}
+          offsetSkidding={10}
+          triggerComponent={<button>Click Me!</button>}
+        >
           <p>Content</p>
         </Popover>
       );

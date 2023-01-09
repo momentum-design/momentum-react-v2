@@ -31,15 +31,27 @@ const popoverArgTypes = {
       },
     },
   },
-  offset: {
-    description: `Displaces the tippy from its reference element in pixels (skidding and distance).`,
-    control: { type: 'array' },
+  offsetSkidding: {
+    description: `The offset skidding (in px) along the reference.`,
+    control: { type: 'number' },
     table: {
       type: {
-        summary: 'array',
+        summary: 'number',
       },
       defaultValue: {
-        summary: [DEFAULTS.OFFEST_DISTANCE, DEFAULTS.OFFEST_SKIDDING],
+        summary: DEFAULTS.OFFEST_SKIDDING,
+      },
+    },
+  },
+  offsetDistance: {
+    description: `The offest distance (in px) from the reference.`,
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: DEFAULTS.OFFEST_DISTANCE,
       },
     },
   },

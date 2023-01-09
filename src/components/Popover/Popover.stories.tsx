@@ -107,7 +107,7 @@ Offset.args = {
   focusBackOnTrigger: true,
   color: COLORS.TERTIARY,
   delay: [0, 0],
-  offset: [0, -150],
+  offsetDistance: -150,
   triggerComponent: (
     <ButtonPill style={{ margin: '10rem auto', display: 'flex', width: '30rem' }}>
       Click me!

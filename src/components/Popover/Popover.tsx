@@ -30,7 +30,8 @@ const Popover: FC<Props> = (props: Props) => {
     placement = DEFAULTS.PLACEMENT,
     interactive = DEFAULTS.INTERACTIVE,
     showArrow = DEFAULTS.SHOW_ARROW,
-    offset = [DEFAULTS.OFFEST_DISTANCE, DEFAULTS.OFFEST_SKIDDING],
+    offsetDistance = DEFAULTS.OFFEST_DISTANCE,
+    offsetSkidding = DEFAULTS.OFFEST_SKIDDING,
     color,
     delay,
     setInstance,
@@ -78,16 +79,6 @@ const Popover: FC<Props> = (props: Props) => {
       setInstance?.(tippyRef.current._tippy);
     }
   }, [tippyRef, setInstance]);
-
-  const distance = offset[0] ? offset[0] : DEFAULTS.OFFEST_DISTANCE;
-
-  let skidding: number | undefined;
-
-  if (offset[1]) {
-    skidding = showArrow ? ARROW_HEIGHT + offset[1] : offset[1];
-  } else {
-    skidding = showArrow ? ARROW_HEIGHT + DEFAULTS.OFFEST_SKIDDING : DEFAULTS.OFFEST_SKIDDING;
-  }
 
   return (
     <LazyTippy
@@ -152,7 +143,7 @@ const Popover: FC<Props> = (props: Props) => {
       delay={delay}
       plugins={addTippyPlugins(hideOnEsc, addBackdrop)}
       // add arrow height to default offset if arrow is shown:
-      offset={[distance, skidding]}
+      offset={[offsetSkidding, showArrow ? ARROW_HEIGHT + offsetDistance : offsetDistance]}
       {...{
         onAfterUpdate,
         onBeforeUpdate,
