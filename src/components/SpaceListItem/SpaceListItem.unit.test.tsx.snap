@@ -82,7 +82,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                 data-test="list-item-second-line"
                 style={
                   Object {
-                    "color": "var(--mds-color-theme-text-team-default-normal)",
+                    "color": "var(--mds-color-theme-text-teamdefault-normal)",
                   }
                 }
                 type="body-secondary"
@@ -94,7 +94,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                   data-type="body-secondary"
                   style={
                     Object {
-                      "color": "var(--mds-color-theme-text-team-default-normal)",
+                      "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
                 >
@@ -1555,7 +1555,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                 data-test="list-item-second-line"
                 style={
                   Object {
-                    "color": "var(--mds-color-theme-text-team-default-normal)",
+                    "color": "var(--mds-color-theme-text-teamdefault-normal)",
                   }
                 }
                 type="body-secondary"
@@ -1567,7 +1567,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                   data-type="body-secondary"
                   style={
                     Object {
-                      "color": "var(--mds-color-theme-text-team-default-normal)",
+                      "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
                 >
@@ -1692,7 +1692,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                 data-test="list-item-second-line"
                 style={
                   Object {
-                    "color": "var(--mds-color-theme-text-team-default-normal)",
+                    "color": "var(--mds-color-theme-text-teamdefault-normal)",
                   }
                 }
                 type="body-secondary"
@@ -1704,7 +1704,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                   data-type="body-secondary"
                   style={
                     Object {
-                      "color": "var(--mds-color-theme-text-team-default-normal)",
+                      "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
                 >

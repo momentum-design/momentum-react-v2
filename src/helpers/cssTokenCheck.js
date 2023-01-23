@@ -17,16 +17,23 @@ const getColor = function (cssVar) {
 const checkCSSVars = function (source) {
   const lines = source.split('\n');
 
+  const variableTokens = new Set([
+    '--mds-color-theme-text-${level}-normal',
+    '--mds-color-theme-text-team${teamColorForToken}-normal',
+  ]);
+
   lines.forEach((currentLine, index) => {
-    const matcher = /var[(](.*?)[)]/g;
+    const matcher = /--mds(.*?)[,;)]/g;
     const matches = currentLine.matchAll(matcher);
 
     for (const match of matches) {
-      const cssVar = match[1];
-      try {
-        getColor(cssVar);
-      } catch (error) {
-        throw `line ${index + 1}: ${error}`;
+      const cssVar = match[0].slice(0, -1);
+      if (!variableTokens.has(cssVar)) {
+        try {
+          getColor(cssVar);
+        } catch (error) {
+          throw `line ${index + 1}: ${error}`;
+        }
       }
     }
   });
@@ -38,7 +45,25 @@ const readAndCheckCSS = function (filePath) {
 };
 
 const checkAllFiles = function () {
-  glob('src/**/*.scss', {}, (_er, files) => {
+  glob('src/**/*.*', {}, (_er, files) => {
+    const errors = [];
+    files.forEach((filePath) => {
+      try {
+        if (filePath != 'src/helpers/cssTokenCheck.js') {
+          readAndCheckCSS(filePath);
+        }
+      } catch (error) {
+        errors.push(`In file ${filePath}:\n ${error}\n`);
+      }
+    });
+    if (errors.length) {
+      throw new Error('Missing CSS vars detected in the following:\n\n' + errors.join('\n'));
+    }
+  });
+};
+
+const checkAllLegacyFiles = function () {
+  glob('scss/**/*.*', {}, (_er, files) => {
     const errors = [];
     files.forEach((filePath) => {
       try {
@@ -64,5 +89,6 @@ getTokenCssVars().then((results) => {
     readAndCheckCSS(file);
   } else {
     checkAllFiles();
+    checkAllLegacyFiles();
   }
 });
