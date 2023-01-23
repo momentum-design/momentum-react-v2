@@ -260,7 +260,7 @@
       $background-color-disabled: $input__background--disabled,
       $background-color-disabled-css-var: --mds-color-theme-background-solid-primary-normal-disabled,
       $background-color-hover: $input__background--hover,
-      $background-color-hover-css-var: --mds-color-theme-background-solid-primary-normal-hovered,
+      $background-color-hover-css-var: --mds-color-theme-background-primary-hover,
       $border-color: $input__border-color,
       $border-color-css-var: --mds-color-theme-outline-input-normal,
       $color: $input__font-color,
@@ -283,9 +283,9 @@
     &.#{$prefix}-error {
       @include input-color(
         $background-color: $input__background--error,
-        $background-color-css-var: --mds-color-theme-background-alert-error-normal,
+        $background-color-css-var: --mds-color-theme-background-solid-primary-normal,
         $background-color-hover: $input__background--error--hover,
-        $background-color-hover-css-var: --mds-color-theme-background-alert-error-normal-hovered,
+        $background-color-hover-css-var: --mds-color-theme-background-primary-hover,
         $border-color: $input__border-color--error,
         $border-color-css-var: --mds-color-theme-outline-cancel-normal,
         $color-message: $input__message__font-color--error,
