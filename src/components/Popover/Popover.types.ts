@@ -160,7 +160,7 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
   strategy?: PositioningStrategy;
 
   /**
-   * The offest distance (in px) from the reference.
+   * The offset distance (in px) from the reference.
    * @default 'undefined'
    */
   offsetDistance?: number;

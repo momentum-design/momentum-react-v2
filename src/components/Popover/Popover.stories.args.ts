@@ -39,19 +39,19 @@ const popoverArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: DEFAULTS.OFFEST_SKIDDING,
+        summary: DEFAULTS.OFFSET_SKIDDING,
       },
     },
   },
   offsetDistance: {
-    description: `The offest distance (in px) from the reference.`,
+    description: `The offset distance (in px) from the reference.`,
     control: { type: 'number' },
     table: {
       type: {
         summary: 'number',
       },
       defaultValue: {
-        summary: DEFAULTS.OFFEST_DISTANCE,
+        summary: DEFAULTS.OFFSET_DISTANCE,
       },
     },
   },
