@@ -258,7 +258,7 @@
       $background-color: $input__background,
       $background-color-css-var: --mds-color-theme-background-solid-primary-normal,
       $background-color-disabled: $input__background--disabled,
-      $background-color-disabled-css-var: --mds-color-theme-background-solid-primary-normal-disabled,
+      $background-color-disabled-css-var: --mds-color-theme-background-primary-disabled,
       $background-color-hover: $input__background--hover,
       $background-color-hover-css-var: --mds-color-theme-background-primary-hover,
       $border-color: $input__border-color,
@@ -270,13 +270,13 @@
       $color-clear-hover: $input__clear-icon__color--hover,
       $color-clear-hover-css-var: --mds-color-theme-text-secondary-normal,
       $color-disabled: $input__font-color--disabled,
-      $color-disabled-css-var: --mds-color-theme-text-primary-normal-disabled,
+      $color-disabled-css-var: --mds-color-theme-text-primary-disabled,
       $color-help: $input__font-color--help,
       $color-help-css-var: --mds-color-theme-text-secondary-normal,
       $color-placeholder: $input__font-color--placeholder,
       $color-placeholder-css-var: --mds-color-theme-text-secondary-normal,
       $color-read-only: $input__font-color--read-only,
-      $color-read-only-css-var: --mds-color-theme-text-primary-normal-disabled
+      $color-read-only-css-var: --mds-color-theme-text-primary-disabled
     );
 
     // Error
