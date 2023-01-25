@@ -1,7 +1,7 @@
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
-
+import React, { useState } from 'react';
 import Reaction, { ReactionProps } from './';
 import argTypes from './Reaction.stories.args';
 import Documentation from './Reaction.stories.docs.mdx';
@@ -23,7 +23,24 @@ export default {
   },
 };
 
-const Example = Template<ReactionProps>(Reaction).bind({});
+const Wrapper = () => {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setShow(true);
+        }}
+      >
+        Trigger
+      </button>
+      {show && <Reaction autoPlay name="haha" loop={1} onComplete={() => setShow(false)} />}
+    </div>
+  );
+};
+
+const Example = Template<ReactionProps>(Wrapper).bind({});
 
 Example.argTypes = { ...argTypes };
 

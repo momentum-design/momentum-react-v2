@@ -32,6 +32,7 @@ Example.args = {
   'aria-label': 'Menu component',
   onAction: action('onAction'),
   selectionMode: 'single',
+  onSelectionChange: action('onSelectionChange'),
   children: [
     <Item key="one">One</Item>,
     <Item key="two">Two</Item>,

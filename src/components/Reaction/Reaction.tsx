@@ -9,18 +9,23 @@ import { Props } from './Reaction.types';
 import './Reaction.style.scss';
 
 const Reaction: FC<Props> = (props: Props) => {
-  const { autoPlay, className, id, loop, name, size, style } = props;
+  const { autoPlay, className, id, loop, name, size, style, onComplete } = props;
   const { animationData, error } = useDynamicJSONImport(name);
   const svgContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (animationData) {
-      lottie.loadAnimation({
+      const animation = lottie.loadAnimation({
         container: svgContainer.current, // the dom element that will contain the animation
         renderer: 'svg',
         loop: loop,
         autoplay: autoPlay,
         animationData: animationData,
+      });
+
+      animation.addEventListener('complete', () => {
+        onComplete();
+        animation.destroy();
       });
     }
   }, [svgContainer, animationData]);
