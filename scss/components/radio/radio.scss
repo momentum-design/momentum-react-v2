@@ -12,19 +12,19 @@
   .#{$radio__class} {
     @include radio-color(
       $border-color: $input__border-color,
-      $border-color-css-var: --md-input-outline-color,
+      $border-color-css-var: --mdl-input-outline-color,
       $background-color: $input__background,
-      $background-color-css-var: --md-input-background-color,
+      $background-color-css-var: --mdl-input-background-color,
       $background-color--disabled: $form-control__background,
-      $background-color--disabled-css-var: --md-input-outline-color,
+      $background-color--disabled-css-var: --mdl-input-outline-color,
       $background-color--hover: $input__background--hover,
-      $background-color--hover-css-var: --md-input-background-hover,
+      $background-color--hover-css-var: --mdl-input-background-hover,
       $background-color--checked: $form-control__background--checked,
-      $background-color--checked-css-var: --md-input-background-theme-color,
+      $background-color--checked-css-var: --mdl-input-background-theme-color,
       $background-color--checked-hover: $form-control__background--checked-hover,
-      $background-color--checked-hover-css-var: --md-input-background-theme-hover,
+      $background-color--checked-hover-css-var: --mdl-input-background-theme-hover,
       $label-color: $form-control__label,
-      $label-color-css-var: --md-input-text-primary
+      $label-color-css-var: --mdl-input-text-primary
     );
 
     .#{$radio__class}__input {
@@ -41,7 +41,7 @@
         + .#{$radio__class}__label {
           &:before {
             color: $form-control__content;
-            color: var(--md-input-background-color, $form-control__content);
+            color: var(--mdl-input-background-color, $form-control__content);
             cursor: pointer;
           }
         }
@@ -64,7 +64,7 @@
       display: flex;
       line-height: $radio__size;
       color: $form-control__label;
-      color: var(--md-background-primary, $form-control__label);
+      color: var(--mdl-background-primary, $form-control__label);
       font-size: $radio__label-size;
       cursor: pointer;
 

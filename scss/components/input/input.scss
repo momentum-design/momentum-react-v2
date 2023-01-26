@@ -308,9 +308,9 @@
     &.#{$prefix}-warning {
       @include input-color(
         $background-color: $input__background--warning,
-        $background-color-css-var: --md-alert-background-warning,
+        $background-color-css-var: --mdl-alert-background-warning,
         $background-color-hover: $input__background--warning--hover,
-        $background-color-hover-css-var: --md-alert-background-warning,
+        $background-color-hover-css-var: --mdl-alert-background-warning,
         $border-color: $input__border-color--warning,
         $color-message: $input__message__font-color--warning,
         $color-message-css-var: --mds-color-theme-text-warning-normal
@@ -332,12 +332,12 @@
     &.#{$prefix}-success {
       @include input-color(
         $background-color: $input__background--success,
-        $background-color-css-var: --md-alert-background-success,
+        $background-color-css-var: --mdl-alert-background-success,
         $background-color-hover: $input__background--success--hover,
-        $background-color-hover-css-var: --md-alert-background-success,
+        $background-color-hover-css-var: --mdl-alert-background-success,
         $border-color: $input__border-color--success,
         $color-message: $input__message__font-color--success,
-        $color-message-css-var: --md-input-text-error
+        $color-message-css-var: --mdl-input-text-error
       );
 
       .#{$input__class} {

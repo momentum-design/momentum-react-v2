@@ -1,7 +1,7 @@
 const path = require('path'); // eslint-disable-line
 const fs = require('fs/promises'); // eslint-disable-line
 
-const getTokenCssVars = function () {
+const getMDSTokens = function () {
   return fs
     .readFile(
       path.join(
@@ -21,4 +21,23 @@ const getTokenCssVars = function () {
     .then((jsonString) => JSON.parse(jsonString));
 };
 
-module.exports = getTokenCssVars;
+const getMDLTokens = function () {
+  return fs
+    .readFile(path.join(__dirname, '../../src/examples/ThemeSelect/themes.js'))
+    .then((buffer) => buffer.toString('utf-8'))
+    .then((data) =>
+      data
+        .split('\n')
+        .filter((line) => line.includes('--'))
+        .map((line) =>
+          line.replace("'", '"').replace("': '", '": "').replace("',", '",').replace("'", '"')
+        )
+        .join('\n')
+    )
+    .then((formattedLines) => {
+      return ['{', formattedLines, '}'].join('\n');
+    })
+    .then((jsonString) => JSON.parse(jsonString));
+};
+
+module.exports = { getMDSTokens, getMDLTokens };

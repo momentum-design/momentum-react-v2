@@ -21,15 +21,15 @@
       $radius: $button__radius--36
     );
     @include button-color(
-      $bg-css-var: --md-button-secondary-bg-color,
-      $bg-active-css-var: --md-button-secondary-pressed-bg-color,
-      $bg-disabled-css-var: --md-button-disabled-bg-color,
-      $bg-hover-css-var: --md-button-secondary-hover-bg-color,
-      $border-focus-css-var: --md-button-focus-ring-color,
-      $color-css-var: --md-button-secondary-text-color,
-      $color-active-css-var: --md-button-secondary-text-color,
-      $color-disabled-css-var: --md-button-disabled-text-color,
-      $color-hover-css-var: --md-button-secondary-text-color,
+      $bg-css-var: --mdl-button-secondary-bg-color,
+      $bg-active-css-var: --mdl-button-secondary-pressed-bg-color,
+      $bg-disabled-css-var: --mdl-button-disabled-bg-color,
+      $bg-hover-css-var: --mdl-button-secondary-hover-bg-color,
+      $border-focus-css-var: --mdl-button-focus-ring-color,
+      $color-css-var: --mdl-button-secondary-text-color,
+      $color-active-css-var: --mdl-button-secondary-text-color,
+      $color-disabled-css-var: --mdl-button-disabled-text-color,
+      $color-hover-css-var: --mdl-button-secondary-text-color,
       $focus: true
     );
     @include single-transition(
@@ -258,13 +258,13 @@
 
       &--files {
         @include button-color(
-          $bg-css-var: --md-button-files-normal-bg-color,
-          $bg-active-css-var: --md-button-files-pressed-bg-color,
-          $bg-hover-css-var: --md-button-files-hover-bg-color,
+          $bg-css-var: --mdl-button-files-normal-bg-color,
+          $bg-active-css-var: --mdl-button-files-pressed-bg-color,
+          $bg-hover-css-var: --mdl-button-files-hover-bg-color,
 
-          $color-css-var: --md-button-files-normal-text-color,
-          $color-active-css-var: --md-button-files-pressed-text-color,
-          $color-hover-css-var: --md-button-files-hover-text-color,
+          $color-css-var: --mdl-button-files-normal-text-color,
+          $color-active-css-var: --mdl-button-files-pressed-text-color,
+          $color-hover-css-var: --mdl-button-files-hover-text-color,
 
           $color: $button__font-color,
           $bg: transparent,
@@ -275,13 +275,13 @@
 
       &--whiteboards {
         @include button-color(
-          $bg-css-var: --md-button-whiteboards-normal-bg-color,
-          $bg-active-css-var: --md-button-whiteboards-pressed-bg-color,
-          $bg-hover-css-var: --md-button-whiteboards-hover-bg-color,
+          $bg-css-var: --mdl-button-whiteboards-normal-bg-color,
+          $bg-active-css-var: --mdl-button-whiteboards-pressed-bg-color,
+          $bg-hover-css-var: --mdl-button-whiteboards-hover-bg-color,
 
-          $color-css-var: --md-button-whiteboards-normal-text-color,
-          $color-active-css-var: --md-button-whiteboards-pressed-text-color,
-          $color-hover-css-var: --md-button-whiteboards-hover-text-color,
+          $color-css-var: --mdl-button-whiteboards-normal-text-color,
+          $color-active-css-var: --mdl-button-whiteboards-pressed-text-color,
+          $color-hover-css-var: --mdl-button-whiteboards-hover-text-color,
 
           $color: $button__font-color,
           $bg: transparent,
@@ -292,15 +292,15 @@
 
       &--blue {
         @include button-color(
-          $bg-css-var: --md-button-primary-bg-color,
-          $bg-active-css-var: --md-button-primary-pressed-bg-color,
-          $bg-disabled-css-var: --md-button-disabled-bg-color,
-          $bg-hover-css-var: --md-button-primary-hover-bg-color,
-          $border-focus-css-var: --md-button-focus-ring-color,
-          $color-css-var: --md-button-primary-text-color,
-          $color-active-css-var: --md-button-primary-text-color,
-          $color-disabled-css-var: --md-button-disabled-text-color,
-          $color-hover-css-var: --md-button-primary-text-color,
+          $bg-css-var: --mdl-button-primary-bg-color,
+          $bg-active-css-var: --mdl-button-primary-pressed-bg-color,
+          $bg-disabled-css-var: --mdl-button-disabled-bg-color,
+          $bg-hover-css-var: --mdl-button-primary-hover-bg-color,
+          $border-focus-css-var: --mdl-button-focus-ring-color,
+          $color-css-var: --mdl-button-primary-text-color,
+          $color-active-css-var: --mdl-button-primary-text-color,
+          $color-disabled-css-var: --mdl-button-disabled-text-color,
+          $color-hover-css-var: --mdl-button-primary-text-color,
           $color: $button__font-color--alt,
           $bg: $button--blue__background-color,
           $bg-hover: $button--blue__background-color--hover,
@@ -327,39 +327,39 @@
       &--blue-outline {
         @include button-color(
           $bg: $button--white__background-color,
-          $bg-css-var: --md-background-primary,
+          $bg-css-var: --mdl-background-primary,
           $bg-active: $button--blue__background-color--active,
-          $bg-active-css-var: --md-button-primary-pressed-bg-color,
-          $bg-disabled-css-var: --md-button-disabled-bg-color,
+          $bg-active-css-var: --mdl-button-primary-pressed-bg-color,
+          $bg-disabled-css-var: --mdl-button-disabled-bg-color,
           $bg-hover: $button--blue__background-color--hover,
-          $bg-hover-css-var: --md-button-primary-hover-bg-color,
+          $bg-hover-css-var: --mdl-button-primary-hover-bg-color,
           $border: 1px solid,
           $border-color: $button--blue__background-color,
-          $border-color-css-var: --md-button-primary-outline-color,
+          $border-color-css-var: --mdl-button-primary-outline-color,
           $color: $button--blue__background-color,
-          $color-css-var: --md-button-primary-outline-text-color,
-          $color-active-css-var: --md-button-primary-text-color,
-          $color-disabled: --md-button-disabled-text-color,
+          $color-css-var: --mdl-button-primary-outline-text-color,
+          $color-active-css-var: --mdl-button-primary-text-color,
+          $color-disabled: --mdl-button-disabled-text-color,
           $color-hover: $button__font-color--alt,
-          $color-hover-css-var: --md-button-primary-text-color
+          $color-hover-css-var: --mdl-button-primary-text-color
         );
       }
 
       &--red {
         @include button-color(
           $bg: $button--red__background-color,
-          $bg-css-var: --md-button-cancel-bg-color,
+          $bg-css-var: --mdl-button-cancel-bg-color,
           $bg-active: $button--red__background-color--active,
-          $bg-active-css-var: --md-button-cancel-pressed-bg-color,
-          $bg-disabled-css-var: --md-button-disabled-bg-color,
+          $bg-active-css-var: --mdl-button-cancel-pressed-bg-color,
+          $bg-disabled-css-var: --mdl-button-disabled-bg-color,
           $bg-hover: $button--red__background-color--hover,
-          $bg-hover-css-var: --md-button-cancel-hover-bg-color,
-          $border-focus-css-var: --md-button-focus-ring-color,
+          $bg-hover-css-var: --mdl-button-cancel-hover-bg-color,
+          $border-focus-css-var: --mdl-button-focus-ring-color,
           $color: $button__font-color--alt,
-          $color-css-var: --md-button-cancel-text-color,
-          $color-active-css-var: --md-button-cancel-text-color,
-          $color-disabled-css-var: --md-button-disabled-text-color,
-          $color-hover-css-var: --md-button-cancel-text-color
+          $color-css-var: --mdl-button-cancel-text-color,
+          $color-active-css-var: --mdl-button-cancel-text-color,
+          $color-disabled-css-var: --mdl-button-disabled-text-color,
+          $color-hover-css-var: --mdl-button-cancel-text-color
         );
 
         .#{$dark-class} & {
@@ -382,18 +382,18 @@
       &--green {
         @include button-color(
           $bg: $button--green__background-color,
-          $bg-css-var: --md-button-join-bg-color,
+          $bg-css-var: --mdl-button-join-bg-color,
           $bg-active: $button--green__background-color--active,
-          $bg-active-css-var: --md-button-join-pressed-bg-color,
-          $bg-disabled-css-var: --md-button-disabled-bg-color,
+          $bg-active-css-var: --mdl-button-join-pressed-bg-color,
+          $bg-disabled-css-var: --mdl-button-disabled-bg-color,
           $bg-hover: $button--green__background-color--hover,
-          $bg-hover-css-var: --md-button-join-hover-bg-color,
-          $border-focus-css-var: --md-button-focus-ring-color,
+          $bg-hover-css-var: --mdl-button-join-hover-bg-color,
+          $border-focus-css-var: --mdl-button-focus-ring-color,
           $color: $button__font-color--alt,
-          $color-css-var: --md-button-join-text-color,
-          $color-active-css-var: --md-button-join-text-color,
-          $color-disabled-css-var: --md-button-disabled-text-color,
-          $color-hover-css-var: --md-button-join-text-color
+          $color-css-var: --mdl-button-join-text-color,
+          $color-active-css-var: --mdl-button-join-text-color,
+          $color-disabled-css-var: --mdl-button-disabled-text-color,
+          $color-hover-css-var: --mdl-button-join-text-color
         );
 
         .#{$dark-class} & {
@@ -416,18 +416,18 @@
       &--ghost {
         @include button-color(
           $bg: transparent,
-          $bg-css-var: --md-button-ghost-bg-color,
+          $bg-css-var: --mdl-button-ghost-bg-color,
           $bg-active: $md-gray-20,
-          $bg-active-css-var: --md-background-quaternary,
-          $bg-disabled-css-var: --md-button-disabled-bg-color,
+          $bg-active-css-var: --mdl-background-quaternary,
+          $bg-disabled-css-var: --mdl-button-disabled-bg-color,
           $bg-hover: $md-gray-10,
-          $bg-hover-css-var: --md-background-tertiary,
-          $border-focus-css-var: --md-button-focus-ring-color,
+          $bg-hover-css-var: --mdl-background-tertiary,
+          $border-focus-css-var: --mdl-button-focus-ring-color,
           $color: $md-gray-100,
-          $color-css-var: --md-button-ghost-text-color,
-          $color-active-css-var: --md-button-ghost-text-color,
-          $color-disabled-css-var: --md-button-disabled-text-color,
-          $color-hover-css-var: --md-button-ghost-text-color
+          $color-css-var: --mdl-button-ghost-text-color,
+          $color-active-css-var: --mdl-button-ghost-text-color,
+          $color-disabled-css-var: --mdl-button-disabled-text-color,
+          $color-hover-css-var: --mdl-button-ghost-text-color
         );
       }
 
@@ -660,22 +660,22 @@
     &.#{$button__class}--icon {
       @include button-color(
         $color: inherit,
-        $color-css-var: --md-textColor-secondary,
+        $color-css-var: --mdl-textColor-secondary,
         $bg: transparent,
         $bg-hover: transparent,
         $bg-active: transparent,
         $color-disabled: $button__link-color--disabled,
-        $color-disabled-css-var: --md-button-disabled-text-color,
+        $color-disabled-css-var: --mdl-button-disabled-text-color,
       );
       @include button-color-fill(
         $fill: $md-gray-70,
-        $fill-css-var: --md-textColor-secondary,
+        $fill-css-var: --mdl-textColor-secondary,
         $fill-hover: $md-theme-60,
-        $fill-hover-css-var: --md-button-primary-bg-color,
+        $fill-hover-css-var: --mdl-button-primary-bg-color,
         $fill-active: $md-theme-70,
-        $fill-active-css-var: --md-button-primary-hover-bg-color,
+        $fill-active-css-var: --mdl-button-primary-hover-bg-color,
         $fill-disabled: $button__link-color--disabled,
-        $fill-disabled-css-var: --md-textColor-disabled
+        $fill-disabled-css-var: --mdl-textColor-disabled
       );
       @include button-size($radius: 0, $padding: 0, $height: auto);
 
