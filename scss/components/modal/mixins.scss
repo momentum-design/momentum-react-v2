@@ -107,11 +107,11 @@
 
 @mixin modal-color(
     $color: $md-white-100,
-    $color-css-var: --md-textColor-primary,
+    $color-css-var: --mdl-textColor-primary,
     $bg: false,
-    $bg-css-var: --md-background-primary,
+    $bg-css-var: --mdl-background-primary,
     $border-color: $md-white-100,
-    $border-color-css-var: --md-separator-primary,
+    $border-color-css-var: --mdl-separator-primary,
     $box-shadow: false
   ) {
 

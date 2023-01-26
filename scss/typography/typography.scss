@@ -37,13 +37,13 @@
   a {
     line-height: inherit;
     color: $anchor-font-color;
-    color: var(--md-textColor-hyperlink-color, $anchor-font-color);
+    color: var(--mdl-textColor-hyperlink-color, $anchor-font-color);
     text-decoration: $anchor-text-decoration;
 
     &:hover,
     &:focus {
       color: $anchor-font-color-hover;
-      color: var(--md-textColor-hyperlink-hover, $anchor-font-color-hover);
+      color: var(--mdl-textColor-hyperlink-hover, $anchor-font-color-hover);
 
       @if $anchor-text-decoration-hover !=$anchor-text-decoration {
         text-decoration: $anchor-text-decoration-hover;
@@ -89,7 +89,7 @@
     clear: both;
     border: $hr-border-style;
     border-color: $hr-border-color;
-    border-color: var(--md-separator-primary, $hr-border-color);
+    border-color: var(--mdl-separator-primary, $hr-border-color);
     border-width: $hr-border-width 0 0;
   }
 
@@ -238,7 +238,7 @@
     margin: 0 0 $paragraph-margin-bottom;
     border-#{$default-float}: $blockquote-border;
     border-color: $blockquote-border-color;
-    border-color: var(--md-separator-primary, $blockquote-border-color);
+    border-color: var(--mdl-separator-primary, $blockquote-border-color);
 
     cite {
       display: block;

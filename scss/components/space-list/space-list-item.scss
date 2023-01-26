@@ -335,13 +335,13 @@
 
         .md-icon {
           color: $md-gray-70;
-          color: var(--md-textColor-secondary, $md-gray-70);
+          color: var(--mdl-textColor-secondary, $md-gray-70);
         }
 
         &.#{$list-item__class}--space-filter-summary {
           [class*='__header'] {
             color: $md-gray-70;
-            color: var(--md-textColor-secondary, $md-gray-70);
+            color: var(--mdl-textColor-secondary, $md-gray-70);
           }
         }
 
@@ -353,7 +353,7 @@
             > [class*='__header'] {
               > [class$='-secondary'] {
                 color: $md-gray-70;
-                color: var(--md-textColor-secondary, $md-gray-70);
+                color: var(--mdl-textColor-secondary, $md-gray-70);
               }
             }
           }
@@ -363,7 +363,7 @@
               [class$='__attachment--top'] {
                 [class$='-left'] {
                   color: $md-gray-70;
-                  color: var(--md-textColor-secondary, $md-gray-70);
+                  color: var(--mdl-textColor-secondary, $md-gray-70);
                 }
               }
             }
@@ -371,7 +371,7 @@
 
           [class*='__result'] {
             color: $md-gray-70;
-            color: var(--md-textColor-secondary, $md-gray-70);
+            color: var(--mdl-textColor-secondary, $md-gray-70);
           }
         }
 
@@ -382,39 +382,39 @@
             [class$='__header'],
             [class$='__header--overview'] {
               color: $md-gray-70;
-              color: var(--md-textColor-secondary, $md-gray-70);
+              color: var(--mdl-textColor-secondary, $md-gray-70);
             }
           }
         }
 
         [class$='__header--overview'] {
           color: $md-gray-70;
-          color: var(--md-textColor-secondary, $md-gray-70);
+          color: var(--mdl-textColor-secondary, $md-gray-70);
         }
 
         &.#{$list-item__class}--unread {
           .#{$list-item__class}__header {
             color: $md-gray-100;
-            color: var(--md-textColor-primary, $md-gray-100);
+            color: var(--mdl-textColor-primary, $md-gray-100);
           }
         }
 
         &.#{$list-item__class}--space-meeting {
           [class$='--attendees'] {
             color: $md-gray-70;
-            color: var(--md-textColor-primary, $md-gray-70);
+            color: var(--mdl-textColor-primary, $md-gray-70);
             fill: $md-gray-70;
-            fill: var(--md-textColor-primary, $md-gray-70);
+            fill: var(--mdl-textColor-primary, $md-gray-70);
           }
 
           .#{$button__class} {
             color: $md-gray-05;
-            color: var(--md-button-primary-text-color, $md-gray-05);
+            color: var(--mdl-button-primary-text-color, $md-gray-05);
             background-color: $md-green-60;
-            background-color: var(--md-button-join-bg-color, $md-green-60);
+            background-color: var(--mdl-button-join-bg-color, $md-green-60);
             &:hover {
               background-color: $md-green-70;
-              background-color: var(--md-button-join-hover-bg-color, $md-green-70);
+              background-color: var(--mdl-button-join-hover-bg-color, $md-green-70);
             }
           }
         }

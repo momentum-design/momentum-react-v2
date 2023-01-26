@@ -51,7 +51,7 @@
         $hover-bgrd-color: $list-item__background,
         $active-bgrd-color: $list-item__background,
         $header-color: $list-item-header__color,
-        $header-color-css-var: --md-textColor-primary,
+        $header-color-css-var: --mdl-textColor-primary,
       );
 
       margin: $list-item-header__margin;
@@ -74,25 +74,25 @@
         &-light {
           @include list-item-color(
             $background-color: $md-gray-05,
-            $background-color-css-var: --md-background-secondary,
+            $background-color-css-var: --mdl-background-secondary,
             $color: $md-gray-70,
-            $color-css-var: --md-textColor-secondary,
+            $color-css-var: --mdl-textColor-secondary,
             $active-color: $md-gray-100,
-            $active-color-css-var: --md-textColor-primary,
+            $active-color-css-var: --mdl-textColor-primary,
             $hover-bgrd-color: $md-gray-10,
-            $hover-bgrd-color-css-var: --md-background-tertiary,
+            $hover-bgrd-color-css-var: --mdl-background-tertiary,
             $active-bgrd-color:$md-gray-10,
-            $active-bgrd-color-css-var: --md-background-tertiary,
+            $active-bgrd-color-css-var: --mdl-background-tertiary,
             $hover-header-color: $md-gray-100,
-            $hover-header-color-css-var: --md-textColor-primary,
+            $hover-header-color-css-var: --mdl-textColor-primary,
             $hover-subheader-color: $md-gray-100,
-            $hover-subheader-color-css-var: --md-textColor-primary,
+            $hover-subheader-color-css-var: --mdl-textColor-primary,
             $header-color: $md-gray-70,
-            $header-color-css-var: --md-textColor-secondary,
+            $header-color-css-var: --mdl-textColor-secondary,
             $subheader-color: $md-gray-70,
-            $subheader-color-css-var: --md-textColor-secondary,
+            $subheader-color-css-var: --mdl-textColor-secondary,
             $focus-color:$md-gray-10,
-            $focus-color-css-var: --md-background-tertiary,
+            $focus-color-css-var: --mdl-background-tertiary,
           );
         }
       }

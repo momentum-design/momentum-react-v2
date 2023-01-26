@@ -294,7 +294,7 @@
   $hover-color: $color,
   $hover-color-css-var: $color-css-var,
   $active-bgrd-color: $list-item__background--pressed,
-  $active-bgrd-color-css-var: --md-background-quaternary,
+  $active-bgrd-color-css-var: --mdl-background-quaternary,
   $active-section-left-color: $active-color,
   $active-section-left-color-css-var: $active-color-css-var,
   $active-section-right-color: $active-color,
@@ -320,14 +320,14 @@
   $header-color: $color,
 
   $hover-bgrd-color: $list-item__background--hover,
-  $hover-bgrd-color-css-var: --md-background-tertiary,
+  $hover-bgrd-color-css-var: --mdl-background-tertiary,
   $includeFocus: true,
   $section-left-color: $color,
   $section-left-color-css-var: $color-css-var,
   $section-right-color: $color,
   $section-right-color-css-var: $color-css-var,
   $subheader-color: $list-item__color--subheader,
-  $subheader-color-css-var: --md-textColor-secondary,
+  $subheader-color-css-var: --mdl-textColor-secondary,
 ) {
   color: $color;
   color: var($color-css-var, $color);

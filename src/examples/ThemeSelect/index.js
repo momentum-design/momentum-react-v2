@@ -52,7 +52,7 @@ const ThemeSelect = () => {
               </div>
               <div
                 style={{
-                  border: '1px solid var(--md-textColor-primary)',
+                  border: '1px solid var(--mdl-textColor-primary)',
                   backgroundColor: `var(${key})`,
                   float: 'left',
                   width: '10rem',
