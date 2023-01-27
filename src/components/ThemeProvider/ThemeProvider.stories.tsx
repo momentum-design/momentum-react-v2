@@ -28,15 +28,15 @@ Example.args = {
   children: (
     <div
       style={{
-        backgroundColor: 'var(--md-color-theme-background-solid-primary-normal)',
+        backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
         padding: '2rem',
       }}
     >
       <div
         style={{
           alignItems: 'center',
-          backgroundColor: 'var(--md-color-theme-button-primary-normal)',
-          color: 'var(--md-color-theme-text-inverted-normal)',
+          backgroundColor: 'var(--mds-color-theme-button-primary-normal)',
+          color: 'var(--mds-color-theme-text-inverted-normal)',
           display: 'flex',
           height: '4rem',
           justifyContent: 'center',

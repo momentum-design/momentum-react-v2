@@ -8,16 +8,16 @@ let isSrc;
 
 const isMDSTokenValid = function (token) {
   if (!mdsTokens[token]) {
-    throw `MDS token not found for ${token}`;
+    throw new Error(`MDS token not found for ${token}`);
   }
 };
 
 const isMDLTokenValid = function (token) {
   if (isSrc) {
-    throw `Legacy MDL token ${token} was found in src/`;
+    throw new Error(`Legacy MDL token ${token} was found in src/`);
   }
   if (!mdlTokens[token]) {
-    throw `MDL token not found for ${token}`;
+    throw new Error(`MDL token not found for ${token}`);
   }
 };
 
@@ -29,12 +29,13 @@ const isVarTokenValid = function (token) {
     token.match('--none') ||
     token.match('transparent') ||
     token.match('--null') ||
-    token.match('$')
+    token.slice(0, 1) === '$'
   ) {
     return;
   }
+
   if (!mdsTokens[token] && !mdlTokens[token]) {
-    throw `Var token not found for ${token}`;
+    throw new Error(`Var token not found for ${token}`);
   }
 };
 
@@ -51,12 +52,16 @@ const checkMDSTokens = function (source) {
     const matches = currentLine.matchAll(matcher);
 
     for (const match of matches) {
+      //match[0] gives you the entire match string.
+      //Example: In 'background-color: var(--mds-color-theme-common-overlay-primary-normal);'
+      //match[0] gives you '--mds-color-theme-common-overlay-primary-normal)'
+      //With slice(0,-1), we cut the last char from that string to remove the final ')'
       const token = match[0].slice(0, -1);
       if (!variableTokens.has(token)) {
         try {
           isMDSTokenValid(token);
         } catch (error) {
-          throw `line ${index + 1}: ${error}`;
+          throw new Error(`line ${index + 1}: ${error}`);
         }
       }
     }
@@ -71,11 +76,15 @@ const checkMDLTokens = function (source) {
     const matches = currentLine.matchAll(matcher);
 
     for (const match of matches) {
+      //match[0] gives you the entire match string.
+      //Example: In '$bg-css-var: --mdl-button-secondary-bg-color,'
+      //match[0] gives you '--mdl-button-secondary-bg-color,'
+      //With slice(0,-1), we cut the last char from that string to remove the final ',' or ')'
       const token = match[0].slice(0, -1);
       try {
         isMDLTokenValid(token);
       } catch (error) {
-        throw `line ${index + 1}: ${error}`;
+        throw new Error(`line ${index + 1}: ${error}`);
       }
     }
   });
@@ -94,6 +103,22 @@ const checkVarTokens = function (source) {
     const matches = currentLine.matchAll(matcher);
 
     for (const match of matches) {
+      //match[0] gives you the entire match string.
+
+      //Example 1: In 'background-color: var(--mdl-background-quaternary, rgba(0, 115, 149, 0.56)); }'
+      //match[0] gives you 'var(--mdl-background-quaternaryss, rgba(0, 115, 149, 0.56)'
+      //I do not want to test the rgba colors, so I replace any match of them with '**'
+      //Which gives me 'var(--mdl-background-quaternaryss, **'
+      //With slice(4,-1), we cut the 'var(' in the beginning and the last char '*'
+      //So get get '--mdl-background-quaternaryss, *'. If we split that with ', '
+      //We get an array like [ '--mdl-background-quaternaryss', '*' ]
+
+      //Example 2: In 'color: var(--mds-color-theme-text-success-normal);'
+      //match[0] gives you 'var(--mds-color-theme-text-success-normal)'
+      //I do not find any rgba color in this var so the replacement for '**' is ignored.
+      //With slice(4,-1), we cut the 'var(' in the beginning and the last char ','
+      //So get get '-mds-color-theme-text-success-normal'. If we split that with ', '
+      //We get an array like [ '-mds-color-theme-text-success-normal']
       let tokens = match[0].replace(/rgba[(](.*?)[)]/g, '**').slice(4, -1);
       tokens.split(', ').forEach((token) => {
         if (
@@ -105,7 +130,7 @@ const checkVarTokens = function (source) {
           try {
             isVarTokenValid(token);
           } catch (error) {
-            throw `line ${index + 1}: ${error}`;
+            throw new Error(`line ${index + 1}: ${error}`);
           }
         }
       });
