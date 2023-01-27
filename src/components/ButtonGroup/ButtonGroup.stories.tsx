@@ -28,11 +28,13 @@ export default {
 };
 
 const commonChildren = [
-  <ButtonPill key="0">Example</ButtonPill>,
-  <ButtonCircle key="1">
+  <ButtonPill ghost key="0">
+    Example
+  </ButtonPill>,
+  <ButtonCircle ghost key="1">
     <Icon name="redo" autoScale={150} />
   </ButtonCircle>,
-  <ButtonCircle key="2">
+  <ButtonCircle ghost key="2">
     <Icon name="cancel" autoScale={150} />
   </ButtonCircle>,
 ];
@@ -70,6 +72,19 @@ Spacing.parameters = {
 
 Spacing.argTypes = { ...argTypes };
 delete Spacing.argTypes.spaced;
+
+const Separator = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+
+Separator.args = {
+  children: [...commonChildren],
+};
+
+Separator.parameters = {
+  variants: [{}, { separator: true }],
+};
+
+Separator.argTypes = { ...argTypes };
+delete Separator.argTypes.separator;
 
 const AudioVideoControls = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 AudioVideoControls.argTypes = { ...argTypes };
@@ -281,4 +296,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Spacing, AudioVideoControls, Common };
+export { Example, Rounding, Spacing, Separator, AudioVideoControls, Common };

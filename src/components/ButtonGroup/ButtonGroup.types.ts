@@ -37,6 +37,11 @@ export interface Props {
   compressed?: boolean;
 
   /**
+   * Whether to to add a separator line between <SupportedComponents />.
+   */
+  separator?: boolean;
+
+  /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;

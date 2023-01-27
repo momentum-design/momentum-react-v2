@@ -105,6 +105,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
           className="md-button-group-wrapper"
           data-compressed={false}
           data-round={false}
+          data-separator={false}
           data-spaced={true}
         >
           <ButtonCircle
@@ -361,6 +362,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
           className="md-button-group-wrapper"
           data-compressed={false}
           data-round={false}
+          data-separator={false}
           data-spaced={true}
         >
           <ButtonCircle
