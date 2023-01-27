@@ -35,7 +35,9 @@ const getMDLTokens = function () {
         .join('\n')
     )
     .then((formattedLines) => {
-      return ['{', formattedLines, '}'].join('\n');
+      // We take out the last char of the last line, which is a ',' comma.
+      // We need to take this out in order to make the json valid
+      return ['{', formattedLines.slice(0, -1), '}'].join('\n');
     })
     .then((jsonString) => JSON.parse(jsonString));
 };
