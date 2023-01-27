@@ -150,6 +150,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
                   className="md-button-group-wrapper"
                   data-compressed={false}
                   data-round={false}
+                  data-separator={false}
                   data-spaced={false}
                 />
               </ButtonGroup>

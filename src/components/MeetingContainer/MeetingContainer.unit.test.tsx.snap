@@ -92,6 +92,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -218,6 +219,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -325,6 +327,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -473,6 +476,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   >
                     <ButtonCircle
@@ -740,6 +744,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -1038,6 +1043,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   >
                     <ButtonPill
@@ -1267,6 +1273,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -1409,6 +1416,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   >
                     <ButtonPill
@@ -1637,6 +1645,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -1747,6 +1756,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -1861,6 +1871,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -1976,6 +1987,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -2139,6 +2151,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -2265,6 +2278,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
@@ -2492,6 +2506,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                     className="md-button-group-wrapper"
                     data-compressed={false}
                     data-round={false}
+                    data-separator={false}
                     data-spaced={true}
                   />
                 </ButtonGroup>
