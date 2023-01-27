@@ -3,7 +3,10 @@
   display: flex;
   height: fit-content;
   width: fit-content;
-  border: 1px solid var(--mds-color-theme-outline-button-normal);
+
+  &[data-separator='true'] {
+    border: 1px solid var(--mds-color-theme-outline-button-normal);
+  }
 
   &[data-spaced='true'] {
     > * {
