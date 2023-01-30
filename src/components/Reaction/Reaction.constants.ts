@@ -11,6 +11,7 @@ const SIZES = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
+  notFound: `${CLASS_PREFIX}-not-found`,
 };
 
 const REACTION_NAMES = {
