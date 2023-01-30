@@ -28,13 +28,11 @@ export default {
 };
 
 const commonChildren = [
-  <ButtonPill ghost key="0">
-    Example
-  </ButtonPill>,
-  <ButtonCircle ghost key="1">
+  <ButtonPill key="0">Example</ButtonPill>,
+  <ButtonCircle key="1">
     <Icon name="redo" autoScale={150} />
   </ButtonCircle>,
-  <ButtonCircle ghost key="2">
+  <ButtonCircle key="2">
     <Icon name="cancel" autoScale={150} />
   </ButtonCircle>,
 ];
@@ -75,16 +73,59 @@ delete Spacing.argTypes.spaced;
 
 const Separator = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 
-Separator.args = {
-  children: [...commonChildren],
-};
+const separatorCommonChildren = [
+  <ButtonPill ghost key="0">
+    Example
+  </ButtonPill>,
+  <ButtonCircle ghost key="1">
+    <Icon name="redo" autoScale={150} />
+  </ButtonCircle>,
+  <ButtonCircle ghost key="2">
+    <Icon name="cancel" autoScale={150} />
+  </ButtonCircle>,
+];
+
+const callControlsCommonChildren = [
+  <ButtonCircle ghost key="0" size={40}>
+    <Icon key="0" name="raise-hand" autoScale={125} />
+  </ButtonCircle>,
+  <MenuTrigger
+    key="2"
+    placement="top-end"
+    triggerComponent={
+      <ButtonCircle ghost key="1" size={40}>
+        <Icon name="reactions" autoScale={125} />
+      </ButtonCircle>
+    }
+    children={[
+      <Menu key="0" selectionMode="single">
+        <Item>Item 1</Item>
+        <Item>Item 2</Item>
+      </Menu>,
+    ]}
+  />,
+];
 
 Separator.parameters = {
-  variants: [{}, { separator: true }],
+  variants: [
+    { children: separatorCommonChildren },
+    { children: separatorCommonChildren, separator: true },
+    { children: separatorCommonChildren, round: true },
+    { children: separatorCommonChildren, round: true, separator: true },
+    {
+      style: { marginTop: '1rem' },
+      children: callControlsCommonChildren,
+      round: true,
+      separator: true,
+    },
+  ],
 };
 
 Separator.argTypes = { ...argTypes };
 delete Separator.argTypes.separator;
+delete Separator.argTypes.round;
+delete Separator.argTypes.compressed;
+delete Separator.argTypes.spaced;
 
 const AudioVideoControls = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 AudioVideoControls.argTypes = { ...argTypes };
