@@ -36,6 +36,65 @@ exports[`<Reaction/> snapshot should match snapshot with id 1`] = `
 </Reaction>
 `;
 
+exports[`<Reaction/> snapshot should match snapshot with spinner while animation data is not defined 1`] = `
+<Reaction
+  name="haha"
+  size={16}
+>
+  <LoadingSpinner
+    scale={16}
+  >
+    <div
+      className="md-loading-spinner-wrapper"
+    >
+      <Icon
+        name="spinner"
+        scale={16}
+        weight="regular"
+      >
+        <div
+          className="md-icon-wrapper md-icon-no-shrink"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={16}
+            data-test="spinner"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+      <Icon
+        className="md-loading-spinner-arch"
+        name="spinner-partial"
+        scale={16}
+        weight="regular"
+      >
+        <div
+          className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={16}
+            data-test="spinner-partial"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+    </div>
+  </LoadingSpinner>
+</Reaction>
+`;
+
 exports[`<Reaction/> snapshot should match snapshot with style 1`] = `
 <Reaction
   name="haha"
