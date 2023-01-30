@@ -1,4 +1,6 @@
+import { AnimationEventCallback } from 'lottie-web';
 import { CSSProperties } from 'react';
+import { IconScale } from '../Icon/Icon.types';
 
 export interface Props {
   /**
@@ -30,10 +32,15 @@ export interface Props {
   /**
    * Size index of this Reaction.
    */
-  size?: number;
+  size?: IconScale;
 
   /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * Callback that gets called after animation has finished.
+   */
+  onComplete?: AnimationEventCallback;
 }

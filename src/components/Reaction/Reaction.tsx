@@ -1,28 +1,35 @@
 import React, { FC, useRef, useEffect } from 'react';
 import classnames from 'classnames';
-import lottie from 'lottie-web';
+import lottie, { AnimationItem } from 'lottie-web';
 import { useDynamicJSONImport } from '../../hooks/useDynamicJSONImport';
 
 import Icon from '../Icon';
 import { DEFAULTS, STYLE } from './Reaction.constants';
 import { Props } from './Reaction.types';
 import './Reaction.style.scss';
+import LoadingSpinner from '../LoadingSpinner';
 
 const Reaction: FC<Props> = (props: Props) => {
-  const { autoPlay, className, id, loop, name, size, style } = props;
+  const { autoPlay, className, id, loop, name, size, style, onComplete } = props;
   const { animationData, error } = useDynamicJSONImport(name);
   const svgContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let animation: AnimationItem;
     if (animationData) {
-      lottie.loadAnimation({
+      animation = lottie.loadAnimation({
         container: svgContainer.current, // the dom element that will contain the animation
         renderer: 'svg',
         loop: loop,
         autoplay: autoPlay,
         animationData: animationData,
+        name,
       });
+      animation.addEventListener('complete', onComplete);
     }
+    () => {
+      animation?.removeEventListener('complete', onComplete);
+    };
   }, [svgContainer, animationData]);
 
   if (error) {
@@ -40,8 +47,7 @@ const Reaction: FC<Props> = (props: Props) => {
     );
   }
   if (!animationData) {
-    // TODO: spinner NYI
-    return <Icon name={'spinner'} scale={16} />;
+    return <LoadingSpinner scale={size} />;
   }
 };
 

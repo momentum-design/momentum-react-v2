@@ -6,6 +6,7 @@ import Reaction, { ReactionProps } from './';
 import argTypes from './Reaction.stories.args';
 import Documentation from './Reaction.stories.docs.mdx';
 import { REACTION_NAMES } from './Reaction.constants';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/Reaction',
@@ -20,6 +21,7 @@ export default {
     name: REACTION_NAMES.thumbUpYellow,
     loop: 1,
     autoPlay: true,
+    onComplete: action('onComplete'),
   },
 };
 
