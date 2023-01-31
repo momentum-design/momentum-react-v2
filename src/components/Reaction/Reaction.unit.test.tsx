@@ -10,10 +10,6 @@ import LoadingSpinner from '../LoadingSpinner';
 
 describe('<Reaction/>', () => {
   describe('snapshot', () => {
-    beforeEach(() => {
-      console.warn = jest.fn();
-    });
-
     it('should match snapshot', async () => {
       expect.assertions(1);
 
@@ -76,7 +72,6 @@ describe('<Reaction/>', () => {
   describe('attributes', () => {
     beforeEach(() => {
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: 'data' });
-      console.warn = jest.fn();
     });
 
     it('should have its wrapper class', async () => {
@@ -135,10 +130,6 @@ describe('<Reaction/>', () => {
   });
 
   describe('actions', () => {
-    beforeEach(() => {
-      console.warn = jest.fn();
-    });
-
     it('should set/remove listeners correctly', async () => {
       const addEventListener = jest.fn();
       const removeEventListener = jest.fn();
