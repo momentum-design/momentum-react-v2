@@ -40,7 +40,6 @@ const Reaction: FC<Props> = (props: Props) => {
   }, [svgContainer, animationData]);
 
   if (error) {
-    console.warn('Reaction load failed:', error);
     return <div className={STYLE.notFound}>{GLYPH_NOT_FOUND}</div>;
   }
   if (animationData) {
