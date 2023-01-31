@@ -73,6 +73,16 @@ describe('<ButtonSimple />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with tabIndex', () => {
+      expect.assertions(1);
+
+      const tabIndex = -1;
+
+      const container = mount(<ButtonSimple tabIndex={tabIndex} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -135,6 +145,18 @@ describe('<ButtonSimple />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('role')).toBe(role);
+    });
+
+    it('should have the tabIndex when provided', () => {
+      expect.assertions(1);
+
+      const tabIndex = -1;
+
+      const element = mount(<ButtonSimple tabIndex={tabIndex} />)
+        .find(ButtonSimple)
+        .getDOMNode();
+
+      expect(element.getAttribute('tabIndex')).toBe(`${tabIndex}`);
     });
   });
 

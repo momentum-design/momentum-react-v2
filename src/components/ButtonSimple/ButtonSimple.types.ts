@@ -39,4 +39,9 @@ export interface Props extends AriaButtonProps, HoverProps {
    * Role for adding accessibility
    */
   role?: string;
+
+  /**
+   * Tabindex for accessibility
+   */
+  tabIndex?: number;
 }
