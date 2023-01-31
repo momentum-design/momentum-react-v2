@@ -1,8 +1,13 @@
+import ListItemBaseSection from '../ListItemBaseSection';
+import ButtonPill from '../ButtonPill';
 import ListItemBase from '.';
 import { mount } from 'enzyme';
 import React from 'react';
+import '@testing-library/jest-dom';
 import { STYLE } from './ListItemBase.constants';
 import * as ListContext from '../List/List.utils';
+import userEvent from '@testing-library/user-event';
+import { render } from '@testing-library/react';
 
 describe('ListItemBase', () => {
   let container;
@@ -253,6 +258,55 @@ describe('ListItemBase', () => {
       });
 
       expect(mockCallback).toBeCalledTimes(1);
+    });
+  });
+
+  describe('keydown', () => {
+    const renderWithButtons = () => {
+      container = render(
+        <ListItemBase data-testid="list-item-1" itemIndex={0}>
+          <ListItemBaseSection position="end">
+            <ButtonPill data-testid="first-button-1" color="join" size={24}>
+              Join
+            </ButtonPill>
+          </ListItemBaseSection>
+          <ListItemBaseSection position="end">
+            <ButtonPill data-testid="second-button-1" color="join" size={24}>
+              Join
+            </ButtonPill>
+          </ListItemBaseSection>
+        </ListItemBase>
+      );
+    };
+
+    it('should handle right arrow key', async () => {
+      const user = userEvent.setup();
+      renderWithButtons();
+
+      const { getByTestId } = container;
+      await user.tab();
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('second-button-1')).toHaveFocus();
+      // loop back
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+    });
+
+    it('should handle left arrow key', async () => {
+      const user = userEvent.setup();
+      renderWithButtons();
+
+      const { getByTestId } = container;
+      await user.tab();
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('second-button-1')).toHaveFocus();
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+      // loop back
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('second-button-1')).toHaveFocus();
     });
   });
 });
