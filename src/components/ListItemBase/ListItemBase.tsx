@@ -11,7 +11,7 @@ import classnames from 'classnames';
 
 import './ListItemBase.style.scss';
 import { ContextMenuState, Props } from './ListItemBase.types';
-import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
+import { DEFAULTS, KEYS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import FocusRing from '../FocusRing';
@@ -48,6 +48,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   const internalRef = useRef<HTMLLIElement>();
   const ref = providedRef || internalRef;
+  const navigableChildren = useRef<Element[]>();
 
   if (shape === SHAPES.isPilled && (size === SIZES[40] || size === SIZES[70])) {
     console.warn(
@@ -92,8 +93,53 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const listItemPressProps = {
     ...pressProps,
     onKeyDown: (event) => {
-      if (ref.current === document.activeElement || event.key === 'Tab') {
+      if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
         pressProps.onKeyDown(event);
+      }
+
+      const { target, key } = event;
+      if (key === KEYS.RIGHT_KEY) {
+        // right keycode
+        let newTarget;
+        if (!navigableChildren.current) {
+          navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
+        }
+        if (navigableChildren.current.length > 0) {
+          const index = navigableChildren.current.indexOf(target);
+          if (index > -1) {
+            if (index + 1 < navigableChildren.current.length) {
+              newTarget = navigableChildren.current[index + 1];
+            } else {
+              newTarget = navigableChildren.current[0];
+            }
+          } else {
+            newTarget = navigableChildren.current[0];
+          }
+          event.preventDefault();
+          event.stopPropagation();
+          newTarget.focus();
+        }
+      } else if (key === KEYS.LEFT_KEY) {
+        // left keycode
+        let newTarget;
+        if (!navigableChildren.current) {
+          navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
+        }
+        if (navigableChildren.current.length > 0) {
+          const index = navigableChildren.current.indexOf(target);
+          if (index > -1) {
+            if (index > 0) {
+              newTarget = navigableChildren.current[index - 1];
+            } else {
+              newTarget = navigableChildren.current[navigableChildren.current.length - 1];
+            }
+          } else {
+            newTarget = navigableChildren.current[navigableChildren.current.length - 1];
+          }
+          event.preventDefault();
+          event.stopPropagation();
+          newTarget.focus();
+        }
       }
     },
   };
@@ -119,8 +165,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const updateTabIndexes = useCallback(() => {
     getKeyboardFocusableElements(ref.current)
       .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
-      .forEach((el) => el.setAttribute('tabindex', focus ? '0' : '-2'));
-  }, [ref, focus]);
+      .forEach((el) => el.setAttribute('tabindex', '-1'));
+  }, [ref]);
 
   useDidUpdateEffect(() => {
     if (focus && !shouldIgnoreFocusUpdate) {

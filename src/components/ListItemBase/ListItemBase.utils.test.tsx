@@ -12,7 +12,7 @@ describe('getKeyboardFocusableElements', () => {
     expect(getKeyboardFocusableElements(createRootNodeRef())).toEqual([]);
   });
 
-  it('should return with focusable tags', () => {
+  it('should return with focusable tags for only elements which can be focused with tab', () => {
     const ids = getKeyboardFocusableElements(
       createRootNodeRef(`
       <a id='1'/>
@@ -24,10 +24,31 @@ describe('getKeyboardFocusableElements', () => {
       <details id='7'></details>
       <div tabindex='0' id='8'>
       <div tabindex='-1' id='9'>
+      <div id='10'></div>
     `)
     ).map((n) => n.id);
 
     expect(ids).toEqual(['2', '3', '4', '5', '6', '7', '8']);
+  });
+
+  it('should return with focusable tags for any elements which can be focused', () => {
+    const ids = getKeyboardFocusableElements(
+      createRootNodeRef(`
+      <a id='1'/>
+      <a href="#" id='2'/>
+      <button id='3'/>
+      <input id='4'/>
+      <textarea id='5'></textarea>
+      <select id='6'></select>
+      <details id='7'></details>
+      <div tabindex='0' id='8'>
+      <div tabindex='-1' id='9'>
+      <div id='10'></div>
+    `),
+      false
+    ).map((n) => n.id);
+
+    expect(ids).toEqual(['2', '3', '4', '5', '6', '7', '8', '9']);
   });
   it('should return filter out disabled and aria hidden nodes', () => {
     const ids = getKeyboardFocusableElements(
