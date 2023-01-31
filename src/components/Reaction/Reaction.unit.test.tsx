@@ -136,7 +136,6 @@ describe('<Reaction/>', () => {
 
   describe('actions', () => {
     beforeEach(() => {
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: 'data' });
       console.warn = jest.fn();
     });
 
@@ -161,6 +160,26 @@ describe('<Reaction/>', () => {
 
       expect(destroy).toBeCalledTimes(1);
       expect(removeEventListener).toBeCalledWith('complete', onComplete);
+    });
+
+    it('should not set/remove listeners if onComplete not provided', async () => {
+      const addEventListener = jest.fn();
+      const removeEventListener = jest.fn();
+      const destroy = jest.fn();
+
+      jest
+        .spyOn(lottie, 'loadAnimation')
+        .mockReturnValue({ addEventListener, removeEventListener, destroy } as never);
+      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: 'data' });
+      const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
+
+      expect(addEventListener).not.toHaveBeenCalledWith('complete', expect.any(Function));
+      expect(removeEventListener).not.toHaveBeenCalledWith('complete', expect.any(Function));
+
+      wrapper.unmount();
+
+      expect(destroy).toBeCalledTimes(1);
+      expect(removeEventListener).not.toBeCalledWith('complete', expect.any(Function));
     });
 
     it('should render glyph not found if error', async () => {

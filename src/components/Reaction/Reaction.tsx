@@ -25,11 +25,15 @@ const Reaction: FC<Props> = (props: Props) => {
         animationData: animationData,
         name,
       });
-      animation.addEventListener('complete', onComplete);
+      if (onComplete) {
+        animation.addEventListener('complete', onComplete);
+      }
     }
     return () => {
       if (animation) {
-        animation.removeEventListener('complete', onComplete);
+        if (onComplete) {
+          animation.removeEventListener('complete', onComplete);
+        }
         animation.destroy();
       }
     };
