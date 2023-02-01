@@ -26,7 +26,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: false,
+        summary: CONSTANTS.DEFAULTS.REACTED,
       },
     },
   },
