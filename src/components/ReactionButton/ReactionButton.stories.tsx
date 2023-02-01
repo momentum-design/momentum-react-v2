@@ -8,7 +8,7 @@ import argTypes from './ReactionButton.stories.args';
 import Documentation from './ReactionButton.stories.docs.mdx';
 
 import Reaction from '../Reaction';
-import { REACTION_NAMES } from '../Reaction/Reaction.constants';
+import { REACTIONS } from '../Reaction/Reaction.constants';
 
 export default {
   title: 'Momentum UI/ReactionButton',
@@ -20,7 +20,7 @@ export default {
     },
   },
   args: {
-    children: <Reaction name={REACTION_NAMES.haha} />,
+    children: <Reaction name={REACTIONS.haha} />,
   },
 };
 
@@ -36,14 +36,14 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      children: <Reaction name={REACTION_NAMES.haha} />,
+      children: <Reaction name={REACTIONS.haha} />,
       reacted: true,
     },
     {
-      children: <Reaction name={REACTION_NAMES.wow} />,
+      children: <Reaction name={REACTIONS.wow} />,
     },
     {
-      children: <Reaction name={REACTION_NAMES.smile} />,
+      children: <Reaction name={REACTIONS.smile} />,
     },
   ],
 };

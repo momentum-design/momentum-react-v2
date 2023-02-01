@@ -7,7 +7,7 @@ import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
 import ReactionBadge, { ReactionBadgeProps } from './';
 import argTypes from './ReactionBadge.stories.args';
 import Documentation from './ReactionBadge.stories.docs.mdx';
-import { REACTION_NAMES } from '../Reaction/Reaction.constants';
+import { REACTIONS } from '../Reaction/Reaction.constants';
 
 import Reaction from '../Reaction';
 
@@ -21,7 +21,7 @@ export default {
     },
   },
   args: {
-    reaction: <Reaction name={REACTION_NAMES.haha} autoPlay loop />,
+    reaction: <Reaction name={REACTIONS.haha} autoPlay loop />,
     count: '1',
   },
 };
@@ -42,15 +42,15 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      reaction: <Reaction name={REACTION_NAMES.popper} autoPlay loop />,
+      reaction: <Reaction name={REACTIONS.celebrate} autoPlay loop />,
       count: 1,
     },
     {
-      reaction: <Reaction name={REACTION_NAMES.heart} autoPlay loop />,
+      reaction: <Reaction name={REACTIONS.heart} autoPlay loop />,
       count: 1,
     },
     {
-      reaction: <Reaction name={REACTION_NAMES.sad} autoPlay loop />,
+      reaction: <Reaction name={REACTIONS.sad} autoPlay loop />,
       count: 1,
     },
   ],

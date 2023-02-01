@@ -1,18 +1,13 @@
-.md-reaction-wrapper {
-  height: 100%;
+.md-reaction-wrapper,
+.md-reaction-not-found {
+  height: 10rem;
   display: flex;
 
   &[data-size='12'] {
-    width: 0.75rem;
+    width: 10rem;
   }
 
   &[data-size='16'] {
-    width: 1rem;
+    width: 10rem;
   }
-}
-
-.md-reaction-not-found {
-  height: 100%;
-  align-items: center;
-  display: flex;
 }
