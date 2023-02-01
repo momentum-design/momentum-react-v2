@@ -63,6 +63,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
             >
               <div
                 className="md-reaction-wrapper"
+                data-name="haha"
                 data-size={12}
               />
             </Reaction>
@@ -141,6 +142,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
             >
               <div
                 className="md-reaction-wrapper"
+                data-name="haha"
                 data-size={12}
               />
             </Reaction>
@@ -219,6 +221,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
             >
               <div
                 className="md-reaction-wrapper"
+                data-name="haha"
                 data-size={12}
               />
             </Reaction>
@@ -302,6 +305,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
             >
               <div
                 className="md-reaction-wrapper"
+                data-name="haha"
                 data-size={12}
               />
             </Reaction>
@@ -380,6 +384,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
             >
               <div
                 className="md-reaction-wrapper"
+                data-name="haha"
                 data-size={12}
               />
             </Reaction>
@@ -477,6 +482,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
             >
               <div
                 className="md-reaction-wrapper"
+                data-name="haha"
                 data-size={12}
               />
             </Reaction>

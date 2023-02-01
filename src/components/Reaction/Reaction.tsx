@@ -40,13 +40,18 @@ const Reaction: FC<Props> = (props: Props) => {
   }, [svgContainer, animationData]);
 
   if (error) {
-    return <div className={STYLE.notFound}>{GLYPH_NOT_FOUND}</div>;
+    return (
+      <div data-name={name} className={STYLE.notFound}>
+        {GLYPH_NOT_FOUND}
+      </div>
+    );
   }
   if (animationData) {
     return (
       <div
         className={classnames(className, STYLE.wrapper)}
         data-size={size || DEFAULTS.SIZE}
+        data-name={name}
         id={id}
         ref={svgContainer}
         style={style}
