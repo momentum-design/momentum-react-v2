@@ -23,7 +23,9 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
   const { buttonProps } = useButton(props, ref);
   const { hoverProps } = useHover(props);
 
-  const otherProps = { ...buttonProps, ...hoverProps, role, tabIndex };
+  const otherProps = tabIndex
+    ? { ...buttonProps, ...hoverProps, role, tabIndex }
+    : { ...buttonProps, ...hoverProps, role };
 
   return (
     <FocusRing disabled={isDisabled}>

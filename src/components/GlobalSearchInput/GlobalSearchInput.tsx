@@ -134,7 +134,6 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
           className={STYLE.clear}
           {...clearButtonProps}
           aria-label={clearButtonAriaLabel}
-          tabIndex={-1}
         >
           <Icon scale={18} name="cancel" />
         </ButtonSimple>
