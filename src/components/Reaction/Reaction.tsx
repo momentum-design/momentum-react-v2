@@ -41,7 +41,7 @@ const Reaction: FC<Props> = (props: Props) => {
 
   if (error) {
     return (
-      <div data-name={name} className={STYLE.notFound}>
+      <div data-error={`not-found:${name}`} className={STYLE.notFound}>
         {GLYPH_NOT_FOUND}
       </div>
     );

@@ -55,7 +55,7 @@ describe('<Reaction/>', () => {
 
       const container = await mountAndWait(<Reaction name="haha" size={16} />);
 
-      expect(container.find(`.${STYLE.notFound}`).text()).toEqual(GLYPH_NOT_FOUND);
+      expect(container).toMatchSnapshot();
     });
 
     it('should match snapshot with spinner while animation data is not defined', async () => {

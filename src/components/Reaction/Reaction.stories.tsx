@@ -23,6 +23,7 @@ export default {
     name: REACTIONS.celebrate,
     autoPlay: true,
     onComplete: action('onComplete'),
+    size: 'auto',
   },
 };
 
