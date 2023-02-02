@@ -173,6 +173,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
         onPress={[Function]}
         onPressStart={[Function]}
         preventFocusOnPress={true}
+        tabIndex={-1}
       >
         <FocusRing>
           <FocusRing
