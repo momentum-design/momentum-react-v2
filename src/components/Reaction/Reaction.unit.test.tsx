@@ -4,7 +4,7 @@ import { mountAndWait } from '../../../test/utils';
 import Reaction, { REACTION_CONSTANTS as CONSTANTS } from './';
 import lottie from 'lottie-web';
 import * as jsonImport from '../../hooks/useDynamicJSONImport';
-import { STYLE } from './Reaction.constants';
+import { REACTIONS, STYLE } from './Reaction.constants';
 import { GLYPH_NOT_FOUND } from '../Icon/Icon.constants';
 import LoadingSpinner from '../LoadingSpinner';
 
@@ -65,6 +65,21 @@ describe('<Reaction/>', () => {
 
       const container = await mountAndWait(<Reaction name="haha" size={16} />);
 
+      expect(container).toMatchSnapshot();
+    });
+
+    it('match all available animations', async () => {
+      expect.assertions(1);
+
+      const ReactionKeys = () => (
+        <div>
+          {Object.keys(REACTIONS).map((key) => (
+            <p key={key}>{key}</p>
+          ))}
+        </div>
+      );
+
+      const container = await mountAndWait(<ReactionKeys />);
       expect(container).toMatchSnapshot();
     });
   });
