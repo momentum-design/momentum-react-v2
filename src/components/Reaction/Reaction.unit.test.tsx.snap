@@ -25,6 +25,20 @@ exports[`<Reaction/> snapshot should match snapshot with className 1`] = `
 </Reaction>
 `;
 
+exports[`<Reaction/> snapshot should match snapshot with glyph not found if error 1`] = `
+<Reaction
+  name="haha"
+  size={16}
+>
+  <div
+    className="md-reaction-not-found"
+    data-error="not-found:haha"
+  >
+    ⃞
+  </div>
+</Reaction>
+`;
+
 exports[`<Reaction/> snapshot should match snapshot with id 1`] = `
 <Reaction
   id="example-id"

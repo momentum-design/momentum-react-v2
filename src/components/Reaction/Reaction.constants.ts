@@ -6,7 +6,7 @@ import {
   ReactionWithSkinTone,
   SkinTone,
 } from './Reaction.types';
-import { cartesian } from './Reaction.util';
+import { cartesian, generateReactionsWithSkinTone } from './Reaction.util';
 
 const CLASS_PREFIX = 'md-reaction';
 
@@ -57,23 +57,21 @@ const REACTIONS_WITHOUT_SKIN_TONE: Record<ReactionWithoutSkinTone, ReactionWitho
 
 const ORIGINAL_REACTIONS = {
   ...REACTIONS_WITHOUT_SKIN_TONE,
-  ...cartesian(Object.values(REACTIONS_WITH_SKIN_TONE), Object.values(SKIN_TONES)).reduce(
-    (acc, { type, skinTone }) => ({ ...acc, [`${type}-${skinTone}`]: `${type}-${skinTone}` }),
-    {}
+  ...generateReactionsWithSkinTone(
+    cartesian(Object.values(REACTIONS_WITH_SKIN_TONE), Object.values(SKIN_TONES)),
+    ({ type, skinTone }) => `${type}-${skinTone}`
   ),
 } as Record<OriginalReactionName, OriginalReactionName>;
 
 const ON_VIDEO_REACTIONS = {
+  // append on video path prefix to each.
   ...Object.values(REACTIONS_WITHOUT_SKIN_TONE).reduce(
     (acc, name) => ({ ...acc, [`${ON_VIDEO_PATH}${name}`]: `${ON_VIDEO_PATH}${name}` }),
     {}
   ),
-  ...cartesian(Object.values(REACTIONS_WITH_SKIN_TONE), Object.values(SKIN_TONES)).reduce(
-    (acc, { type, skinTone }) => ({
-      ...acc,
-      [`${ON_VIDEO_PATH}${type}-${skinTone}`]: `${ON_VIDEO_PATH}${type}-${skinTone}`,
-    }),
-    {}
+  ...generateReactionsWithSkinTone(
+    cartesian(Object.values(REACTIONS_WITH_SKIN_TONE), Object.values(SKIN_TONES)),
+    ({ type, skinTone }) => `${ON_VIDEO_PATH}${type}-${skinTone}`
   ),
 } as Record<OnVideoReactionName, OnVideoReactionName>;
 
