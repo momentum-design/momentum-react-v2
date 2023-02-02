@@ -1,5 +1,6 @@
 import { default as Reaction } from './Reaction';
 import * as CONSTANTS from './Reaction.constants';
+import { REACTIONS, SKIN_TONES } from './Reaction.constants';
 import {
   Props,
   SkinTone as SkinToneType,
@@ -9,6 +10,7 @@ import {
 } from './Reaction.types';
 
 export { CONSTANTS as REACTION_CONSTANTS };
+export { REACTIONS, SKIN_TONES };
 
 export type ReactionProps = Props;
 export type SkinTone = SkinToneType;
