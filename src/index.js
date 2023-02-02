@@ -155,6 +155,8 @@ export {
   ReactionBadge,
   ReactionButton,
   ReactionPicker,
+  REACTIONS,
+  SKIN_TONES,
   RadioGroup as RadioGroupNext,
   AddReactionButton,
   Menu as MenuNext,
