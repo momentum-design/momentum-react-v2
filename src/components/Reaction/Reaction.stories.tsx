@@ -44,7 +44,7 @@ Original.argTypes = { ...argTypes };
 delete Original.argTypes.children;
 
 Original.parameters = {
-  variants: [...Object.values(ORIGINAL_REACTIONS).map((name) => ({ name }))],
+  variants: [...Object.values(ORIGINAL_REACTIONS).map((name) => ({ name, size: 'auto' }))],
 };
 
 const OnVideo = MultiTemplate<ReactionProps>(ReactionWithLabel).bind({});
@@ -53,7 +53,7 @@ OnVideo.argTypes = { ...argTypes };
 delete OnVideo.argTypes.children;
 
 OnVideo.parameters = {
-  variants: [...Object.values(ON_VIDEO_REACTIONS).map((name) => ({ name }))],
+  variants: [...Object.values(ON_VIDEO_REACTIONS).map((name) => ({ name, size: 'auto' }))],
 };
 
 export { Example, Original, OnVideo };

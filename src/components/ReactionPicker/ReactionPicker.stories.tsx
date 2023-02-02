@@ -11,25 +11,25 @@ import Documentation from './ReactionPicker.stories.docs.mdx';
 
 const reactionChildren = [
   <ReactionButton key="1">
-    <Reaction name={'popper'} />
+    <Reaction name="celebrate" autoPlay />
   </ReactionButton>,
   <ReactionButton key="2">
-    <Reaction name={'heart'} />
+    <Reaction name="heart" autoPlay />
   </ReactionButton>,
   <ReactionButton key="3">
-    <Reaction name={'thumb-up-yellow'} />
+    <Reaction name="thumb-up-yellow" autoPlay />
   </ReactionButton>,
   <ReactionButton reacted key="4">
-    <Reaction name={'smile'} />
+    <Reaction name="smile" autoPlay />
   </ReactionButton>,
   <ReactionButton key="5">
-    <Reaction name={'haha'} />
+    <Reaction name="haha" autoPlay />
   </ReactionButton>,
   <ReactionButton key="6">
-    <Reaction name={'wow'} />
+    <Reaction name="wow" autoPlay />
   </ReactionButton>,
   <ReactionButton key="7">
-    <Reaction name={'sad'} />
+    <Reaction name="sad" autoPlay />
   </ReactionButton>,
 ];
 
