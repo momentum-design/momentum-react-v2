@@ -16,6 +16,7 @@ type PrepareForSnapshotProps = {
   position?: PositionType;
   attention?: AttentionType;
   zIndex?: number;
+  limit?: number;
 };
 
 // pin the toast id to make the snapshots reliable:
@@ -31,6 +32,7 @@ describe('<NotificationSystem />', () => {
     position,
     attention,
     zIndex,
+    limit,
   }: PrepareForSnapshotProps) => {
     const { container } = render(
       <NotificationSystem
@@ -39,6 +41,7 @@ describe('<NotificationSystem />', () => {
         style={style}
         position={position}
         zIndex={zIndex}
+        limit={limit}
       />
     );
 
@@ -124,6 +127,17 @@ describe('<NotificationSystem />', () => {
     });
   });
 
+  it('should match snapshot when limit is set to notifications', async () => {
+    expect.assertions(1);
+
+    const { container } = await waitForNotificationToAppear({
+      notificationText,
+      limit: 5,
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
   describe('attributes', () => {
     it('should have provided attributes when attributes are provided', async () => {
       expect.assertions(6);
@@ -160,6 +174,43 @@ describe('<NotificationSystem />', () => {
         `${id}_${ATTENTION.MEDIUM}_notification_container`
       );
     });
+  });
+
+  it("should limit toast notifications shown on screen when 'limit' is set", async () => {
+    const toastLimit = 2;
+
+    const { container } = await waitForNotificationToAppear({
+      notificationText,
+      limit: toastLimit,
+      id: '1234567',
+    });
+
+    act(() => {
+      NotificationSystem.notify(
+        <NotificationTemplate notificationText="creating additional toast to meet the toast limit" />,
+        {
+          toastId: '12345890',
+          notificationSystemId: '1234567',
+        }
+      );
+    });
+
+    act(() => {
+      NotificationSystem.notify(
+        <NotificationTemplate notificationText="additional toast to test the limit works" />,
+        {
+          toastId: '1234589012',
+          notificationSystemId: '1234567',
+        }
+      );
+    });
+
+    await screen.findByText('creating additional toast to meet the toast limit');
+
+    const notificationContainerToasts = container.getElementsByClassName(
+      'md-toast-notification-wrapper'
+    );
+    expect(notificationContainerToasts.length).toBe(toastLimit);
   });
 
   describe('actions', () => {
