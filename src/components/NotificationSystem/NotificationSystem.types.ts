@@ -103,4 +103,9 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * limit the number of notifications displayed.
+   */
+  limit?: number;
 }

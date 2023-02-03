@@ -21,7 +21,14 @@ const slideAndBlur = cssTransition({
  * are exposed on the component directly, like `NotificationSystem.notify` or `NotificationSystem.update`
  */
 const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
-  const { position = DEFAULTS.POSITION, zIndex = DEFAULTS.Z_INDEX, className, id, style } = props;
+  const {
+    position = DEFAULTS.POSITION,
+    zIndex = DEFAULTS.Z_INDEX,
+    className,
+    id,
+    style,
+    limit,
+  } = props;
 
   const commonProps = {
     newestOnTop: true,
@@ -47,11 +54,13 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
       <ToastContainer
         {...commonProps}
         position={position}
+        limit={limit}
         containerId={getContainerID(id, attentionOrder[0])}
       />
       <ToastContainer
         {...commonProps}
         position={position}
+        limit={limit}
         containerId={getContainerID(id, attentionOrder[1])}
       />
     </div>
