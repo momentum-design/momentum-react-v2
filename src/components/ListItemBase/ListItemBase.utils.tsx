@@ -1,7 +1,8 @@
 import { DependencyList, EffectCallback, useEffect, useRef } from 'react';
+import { KEYS } from './ListItemBase.constants';
 
 /**
- * Same as useEffect but ignores first render.
+ * Returns all focusable child elements as an Element Array
  * @param root - root node to search in
  * @param tabOnly - whether only tabbable children should be returned or all
  * children that can be focused. Element with 0 tabindex can be tabbed to,
@@ -33,4 +34,47 @@ export const useDidUpdateEffect = (fn: EffectCallback, inputs: DependencyList): 
     }
     didMountRef.current = true;
   }, inputs);
+};
+
+/**
+ * Handles left and right arrow key navigation for the given Element Array
+ * @param event - keyboard trigger event
+ * @param navigableElements - Element Array to navigate through
+ */
+export const handleLeftRightArrowNavigation = (
+  event: KeyboardEvent,
+  navigableElements: Element[]
+): void => {
+  const { key, target } = event;
+  if (key === KEYS.RIGHT_KEY) {
+    let newTarget;
+    const index = navigableElements.indexOf(target as Element);
+    if (index > -1) {
+      if (index + 1 < navigableElements.length) {
+        newTarget = navigableElements[index + 1];
+      } else {
+        newTarget = navigableElements[0];
+      }
+    } else {
+      newTarget = navigableElements[0];
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    newTarget.focus();
+  } else if (key === KEYS.LEFT_KEY) {
+    let newTarget;
+    const index = navigableElements.indexOf(target as Element);
+    if (index > -1) {
+      if (index > 0) {
+        newTarget = navigableElements[index - 1];
+      } else {
+        newTarget = navigableElements[navigableElements.length - 1];
+      }
+    } else {
+      newTarget = navigableElements[navigableElements.length - 1];
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    newTarget.focus();
+  }
 };

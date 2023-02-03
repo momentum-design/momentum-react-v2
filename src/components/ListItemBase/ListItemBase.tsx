@@ -21,7 +21,11 @@ import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
-import { getKeyboardFocusableElements, useDidUpdateEffect } from './ListItemBase.utils';
+import {
+  getKeyboardFocusableElements,
+  handleLeftRightArrowNavigation,
+  useDidUpdateEffect,
+} from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 
 //TODO: Implement multi-line
@@ -97,48 +101,12 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
         pressProps.onKeyDown(event);
       }
 
-      const { target, key } = event;
-      if (key === KEYS.RIGHT_KEY) {
-        // right keycode
-        let newTarget;
+      if (event.key === KEYS.RIGHT_KEY || event.key === KEYS.LEFT_KEY) {
         if (!navigableChildren.current) {
           navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
         }
         if (navigableChildren.current.length > 0) {
-          const index = navigableChildren.current.indexOf(target);
-          if (index > -1) {
-            if (index + 1 < navigableChildren.current.length) {
-              newTarget = navigableChildren.current[index + 1];
-            } else {
-              newTarget = navigableChildren.current[0];
-            }
-          } else {
-            newTarget = navigableChildren.current[0];
-          }
-          event.preventDefault();
-          event.stopPropagation();
-          newTarget.focus();
-        }
-      } else if (key === KEYS.LEFT_KEY) {
-        // left keycode
-        let newTarget;
-        if (!navigableChildren.current) {
-          navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
-        }
-        if (navigableChildren.current.length > 0) {
-          const index = navigableChildren.current.indexOf(target);
-          if (index > -1) {
-            if (index > 0) {
-              newTarget = navigableChildren.current[index - 1];
-            } else {
-              newTarget = navigableChildren.current[navigableChildren.current.length - 1];
-            }
-          } else {
-            newTarget = navigableChildren.current[navigableChildren.current.length - 1];
-          }
-          event.preventDefault();
-          event.stopPropagation();
-          newTarget.focus();
+          handleLeftRightArrowNavigation(event, navigableChildren.current);
         }
       }
     },
