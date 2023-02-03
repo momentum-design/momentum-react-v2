@@ -36,7 +36,7 @@ const Example = Template<NotificationSystemProps>((args) => {
       >
         Trigger a new low attention notification
       </ButtonPill>
-      <NotificationSystem {...args} />
+      <NotificationSystem {...args} limit={3} />
     </>
   );
 }).bind({});
