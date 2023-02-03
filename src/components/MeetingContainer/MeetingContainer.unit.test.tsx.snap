@@ -876,6 +876,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                         <a
                           className="md-button-hyperlink-wrapper md-meeting-container-space-link"
                           data-disabled={false}
+                          data-inverted={false}
                           onBlur={[Function]}
                           onClick={[Function]}
                           onDragStart={[Function]}
@@ -2086,6 +2087,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                         <a
                           className="md-button-hyperlink-wrapper md-meeting-container-space-link"
                           data-disabled={false}
+                          data-inverted={false}
                           onBlur={[Function]}
                           onClick={[Function]}
                           onDragStart={[Function]}

@@ -1,4 +1,4 @@
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
@@ -26,13 +26,14 @@ const Example = Template<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
 
 Example.argTypes = { ...argTypes };
 
-const States = MultiTemplate<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
+const States = MultiTemplateWithPseudoStates<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
 
 States.parameters = {
-  variants: [{}, { disabled: true }],
+  variants: [{ label: 'Default hyperlink' }, { inverted: true }],
 };
 
 States.argTypes = { ...argTypes };
 delete States.argTypes.disabled;
+delete States.argTypes.inverted;
 
 export { Example, States };

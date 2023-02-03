@@ -26,6 +26,16 @@ describe('ButtonHyperlink', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when inverted', () => {
+      expect.assertions(1);
+
+      const inverted = !DEFAULTS.INVERTED;
+
+      container = mount(<ButtonHyperlink inverted={inverted}>Hyperlink</ButtonHyperlink>);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with title', () => {
       expect.assertions(1);
 
@@ -67,6 +77,18 @@ describe('ButtonHyperlink', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
+    });
+
+    it('should pass inverted prop', () => {
+      expect.assertions(1);
+
+      const inverted = !DEFAULTS.INVERTED;
+
+      const element = mount(<ButtonHyperlink inverted={inverted} />)
+        .find(ButtonHyperlink)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-inverted')).toBe(`${inverted}`);
     });
 
     it('should pass child prop', () => {

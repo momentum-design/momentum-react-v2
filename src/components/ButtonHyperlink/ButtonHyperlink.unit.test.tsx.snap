@@ -10,6 +10,7 @@ exports[`ButtonHyperlink snapshot should match snapshot 1`] = `
       <a
         className="md-button-hyperlink-wrapper"
         data-disabled={false}
+        data-inverted={false}
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -50,6 +51,7 @@ exports[`ButtonHyperlink snapshot should match snapshot when disabled 1`] = `
         aria-disabled={true}
         className="md-button-hyperlink-wrapper"
         data-disabled={true}
+        data-inverted={false}
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -73,6 +75,43 @@ exports[`ButtonHyperlink snapshot should match snapshot when disabled 1`] = `
 </ButtonHyperlink>
 `;
 
+exports[`ButtonHyperlink snapshot should match snapshot when inverted 1`] = `
+<ButtonHyperlink
+  inverted={true}
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <a
+        className="md-button-hyperlink-wrapper"
+        data-disabled={false}
+        data-inverted={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        Hyperlink
+      </a>
+    </FocusRing>
+  </FocusRing>
+</ButtonHyperlink>
+`;
+
 exports[`ButtonHyperlink snapshot should match snapshot with title 1`] = `
 <ButtonHyperlink
   title="Example Text"
@@ -85,6 +124,7 @@ exports[`ButtonHyperlink snapshot should match snapshot with title 1`] = `
       <a
         className="md-button-hyperlink-wrapper"
         data-disabled={false}
+        data-inverted={false}
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}

@@ -35,4 +35,17 @@ export default {
       },
     },
   },
+  inverted: {
+    description: 'Whether to render the `<ButtonHyperlink />` with inverted theme colors',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.INVERTED,
+      },
+    },
+  },
 };
