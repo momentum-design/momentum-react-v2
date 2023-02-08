@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactElement } from 'react';
 import ToastNotification from '../ToastNotification';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
@@ -9,9 +9,9 @@ import './NotificationTemplate.style.scss';
 
 interface NotificationTemplateProps {
   /**
-   * Text content to be shown in notification
+   * The content to be shown in notification
    */
-  notificationText: string;
+  content: string | ReactElement | ReactElement[];
 
   /**
    * Text of Close Button
@@ -39,7 +39,7 @@ interface NotificationTemplateProps {
  * NOTE: this component is only used for the stories
  */
 const NotificationTemplate: FC<NotificationTemplateProps> = (props: NotificationTemplateProps) => {
-  const { notificationText, closeToast, closeButtonText, className } = props;
+  const { content, closeToast, closeButtonText, className } = props;
 
   const handleClose = React.useCallback((e: PressEvent) => {
     closeToast?.(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
@@ -47,7 +47,7 @@ const NotificationTemplate: FC<NotificationTemplateProps> = (props: Notification
 
   return (
     <ToastNotification
-      text={notificationText}
+      content={content}
       onClose={handleClose}
       leadingVisual={
         <Icon

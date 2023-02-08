@@ -9,7 +9,7 @@ import { STYLE } from './NotificationSystem.constants';
 import userEvent from '@testing-library/user-event';
 
 type PrepareForSnapshotProps = {
-  notificationText: string;
+  content: string;
   className?: string;
   id?: string;
   style?: CSSProperties;
@@ -26,11 +26,11 @@ type PrepareForSnapshotProps = {
 
 // pin the toast id to make the snapshots reliable:
 const fixedToastId = '123456';
-const notificationText = 'This is a test';
+const content = 'This is a test';
 
 describe('<NotificationSystem />', () => {
   const waitForNotificationToAppear = async ({
-    notificationText,
+    content,
     className,
     id,
     style,
@@ -51,7 +51,7 @@ describe('<NotificationSystem />', () => {
     );
 
     act(() => {
-      NotificationSystem.notify(<NotificationTemplate notificationText={notificationText} />, {
+      NotificationSystem.notify(<NotificationTemplate content={content} />, {
         toastId: fixedToastId,
         notificationSystemId: id,
         attention,
@@ -59,14 +59,14 @@ describe('<NotificationSystem />', () => {
     });
 
     // wait till the toast shows up on the screen:
-    await screen.findByText(notificationText);
+    await screen.findByText(content);
     return { container };
   };
 
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
-      const { container } = await waitForNotificationToAppear({ notificationText });
+      const { container } = await waitForNotificationToAppear({ content });
 
       expect(container).toMatchSnapshot();
     });
@@ -75,7 +75,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
       const className = 'example-class';
 
-      const { container } = await waitForNotificationToAppear({ notificationText, className });
+      const { container } = await waitForNotificationToAppear({ content, className });
 
       expect(container).toMatchSnapshot();
     });
@@ -84,7 +84,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const id = 'example-id';
-      const { container } = await waitForNotificationToAppear({ notificationText, id });
+      const { container } = await waitForNotificationToAppear({ content, id });
 
       expect(container).toMatchSnapshot();
     });
@@ -93,7 +93,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
-      const { container } = await waitForNotificationToAppear({ notificationText, style });
+      const { container } = await waitForNotificationToAppear({ content, style });
 
       expect(container).toMatchSnapshot();
     });
@@ -102,7 +102,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const { container } = await waitForNotificationToAppear({
-        notificationText,
+        content,
         position: NotificationSystem.POSITION.BOTTOM_RIGHT,
       });
 
@@ -113,7 +113,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const { container } = await waitForNotificationToAppear({
-        notificationText,
+        content,
         attention: NotificationSystem.ATTENTION.MEDIUM,
       });
 
@@ -124,7 +124,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const { container } = await waitForNotificationToAppear({
-        notificationText,
+        content,
         zIndex: 9898,
       });
 
@@ -136,7 +136,7 @@ describe('<NotificationSystem />', () => {
     expect.assertions(1);
 
     const { container } = await waitForNotificationToAppear({
-      notificationText,
+      content,
       limit: 5,
     });
 
@@ -211,7 +211,7 @@ describe('<NotificationSystem />', () => {
       const attention = ATTENTION.MEDIUM;
 
       const { container } = await waitForNotificationToAppear({
-        notificationText,
+        content,
         className,
         style,
         id,
@@ -240,14 +240,14 @@ describe('<NotificationSystem />', () => {
     const toastLimit = 2;
 
     const { container } = await waitForNotificationToAppear({
-      notificationText,
+      content,
       limit: toastLimit,
       id: '1234567',
     });
 
     act(() => {
       NotificationSystem.notify(
-        <NotificationTemplate notificationText="creating additional toast to meet the toast limit" />,
+        <NotificationTemplate content="creating additional toast to meet the toast limit" />,
         {
           toastId: '12345890',
           notificationSystemId: '1234567',
@@ -257,7 +257,7 @@ describe('<NotificationSystem />', () => {
 
     act(() => {
       NotificationSystem.notify(
-        <NotificationTemplate notificationText="additional toast to test the limit works" />,
+        <NotificationTemplate content="additional toast to test the limit works" />,
         {
           toastId: '1234589012',
           notificationSystemId: '1234567',
@@ -281,7 +281,7 @@ describe('<NotificationSystem />', () => {
 
       const toastId = '12345';
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate notificationText={notificationText} />, {
+        NotificationSystem.notify(<NotificationTemplate content={content} />, {
           autoClose: false,
           toastId,
         });
@@ -290,7 +290,7 @@ describe('<NotificationSystem />', () => {
       // wait till the toast shows up on the screen:
       const toast = await screen.findByRole('alert');
       expect(toast).toBeVisible();
-      expect(toast).toHaveTextContent(notificationText);
+      expect(toast).toHaveTextContent(content);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
 
@@ -315,7 +315,7 @@ describe('<NotificationSystem />', () => {
       act(() => {
         NotificationSystem.notify(
           <NotificationTemplate
-            notificationText={notificationText}
+            content={content}
             closeButtonText={closeButtonText}
           />,
           {
@@ -329,7 +329,7 @@ describe('<NotificationSystem />', () => {
       // wait till the toast shows up on the screen:
       const toast = await screen.findByRole('alert');
       expect(toast).toBeVisible();
-      expect(toast).toHaveTextContent(notificationText);
+      expect(toast).toHaveTextContent(content);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
 
@@ -350,9 +350,9 @@ describe('<NotificationSystem />', () => {
       render(<NotificationSystem />);
 
       const toastId = '12345';
-      const newNotificationText = 'this is a new text';
+      const newcontent = 'this is a new text';
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate notificationText={notificationText} />, {
+        NotificationSystem.notify(<NotificationTemplate content={content} />, {
           autoClose: false,
           toastId,
         });
@@ -361,18 +361,18 @@ describe('<NotificationSystem />', () => {
       // wait till the toast shows up on the screen:
       const toast = await screen.findByRole('alert');
       expect(toast).toBeVisible();
-      expect(toast).toHaveTextContent(notificationText);
+      expect(toast).toHaveTextContent(content);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
 
       act(() => {
         NotificationSystem.update(toastId, {
-          render: <NotificationTemplate notificationText={newNotificationText} />,
+          render: <NotificationTemplate content={newcontent} />,
         });
       });
 
       await waitFor(() => {
-        expect(screen.getByRole('alert')).toHaveTextContent(newNotificationText);
+        expect(screen.getByRole('alert')).toHaveTextContent(newcontent);
       });
     });
 
@@ -390,7 +390,7 @@ describe('<NotificationSystem />', () => {
 
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate notificationText={notificationText + firstSystemId} />,
+          <NotificationTemplate content={content + firstSystemId} />,
           {
             autoClose: false,
             notificationSystemId: firstSystemId,
@@ -402,12 +402,12 @@ describe('<NotificationSystem />', () => {
       const toasts = await screen.findAllByRole('alert');
       expect(toasts).toHaveLength(1);
       expect(toasts[0]).toBeVisible();
-      expect(toasts[0]).toHaveTextContent(notificationText + firstSystemId);
+      expect(toasts[0]).toHaveTextContent(content + firstSystemId);
 
       // trigger second notification
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate notificationText={notificationText + secondSystemId} />,
+          <NotificationTemplate content={content + secondSystemId} />,
           {
             autoClose: false,
             notificationSystemId: secondSystemId,
@@ -422,7 +422,7 @@ describe('<NotificationSystem />', () => {
         expect(toastsAfterUpdate).toHaveLength(2);
       });
       expect(toastsAfterUpdate[1]).toBeVisible();
-      expect(toastsAfterUpdate[1]).toHaveTextContent(notificationText + secondSystemId);
+      expect(toastsAfterUpdate[1]).toHaveTextContent(content + secondSystemId);
     });
   });
 });

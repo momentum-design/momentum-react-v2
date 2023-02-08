@@ -2,7 +2,7 @@
 
 exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
 <ToastNotification
-  text="Example text"
+  content="Example text"
 >
   <ModalContainer
     className="md-toast-notification-wrapper"
@@ -20,11 +20,11 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
         className="md-toast-notification-body"
       >
         <Text
-          className="md-toast-notification-text"
+          className="md-toast-notification-content"
           type="body-primary"
         >
           <p
-            className="md-text-wrapper md-toast-notification-text"
+            className="md-text-wrapper md-toast-notification-content"
             data-type="body-primary"
           >
             Example text
@@ -53,7 +53,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
       </ButtonPill>
     </React.Fragment>
   }
-  text="Example text"
+  content="Example text"
 >
   <ModalContainer
     className="md-toast-notification-wrapper"
@@ -71,11 +71,11 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
         className="md-toast-notification-body"
       >
         <Text
-          className="md-toast-notification-text"
+          className="md-toast-notification-content"
           type="body-primary"
         >
           <p
-            className="md-text-wrapper md-toast-notification-text"
+            className="md-text-wrapper md-toast-notification-content"
             data-type="body-primary"
           >
             Example text
@@ -197,7 +197,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
 exports[`<ToastNotification /> snapshot should match snapshot with className 1`] = `
 <ToastNotification
   className="example-class"
-  text="Example text"
+  content="Example text"
 >
   <ModalContainer
     className="example-class md-toast-notification-wrapper"
@@ -215,11 +215,11 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
         className="md-toast-notification-body"
       >
         <Text
-          className="example-class md-toast-notification-text"
+          className="example-class md-toast-notification-content"
           type="body-primary"
         >
           <p
-            className="md-text-wrapper example-class md-toast-notification-text"
+            className="md-text-wrapper example-class md-toast-notification-content"
             data-type="body-primary"
           >
             Example text
@@ -233,8 +233,8 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
 
 exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
 <ToastNotification
+  content="Example text"
   id="example-id"
-  text="Example text"
 >
   <ModalContainer
     className="md-toast-notification-wrapper"
@@ -254,11 +254,11 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
         className="md-toast-notification-body"
       >
         <Text
-          className="md-toast-notification-text"
+          className="md-toast-notification-content"
           type="body-primary"
         >
           <p
-            className="md-text-wrapper md-toast-notification-text"
+            className="md-text-wrapper md-toast-notification-content"
             data-type="body-primary"
           >
             Example text
@@ -272,6 +272,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
 
 exports[`<ToastNotification /> snapshot should match snapshot with leading visual 1`] = `
 <ToastNotification
+  content="Example text"
   leadingVisual={
     <Icon
       name="help-circle"
@@ -279,7 +280,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
       weight="bold"
     />
   }
-  text="Example text"
 >
   <ModalContainer
     className="md-toast-notification-wrapper"
@@ -322,11 +322,122 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
           </Icon>
         </div>
         <Text
-          className="md-toast-notification-text"
+          className="md-toast-notification-content"
           type="body-primary"
         >
           <p
-            className="md-text-wrapper md-toast-notification-text"
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
+          >
+            Example text
+          </p>
+        </Text>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with non string content 1`] = `
+<ToastNotification
+  content={
+    <React.Fragment>
+      Example text
+    </React.Fragment>
+  }
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <div
+          className="md-toast-notification-content"
+        >
+          Example text
+        </div>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with onToastMessageClick callback 1`] = `
+<ToastNotification
+  content="Example text"
+  onToastMessageClick={[MockFunction]}
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+        onClick={[MockFunction]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <Text
+          className="md-toast-notification-content"
+          type="body-primary"
+        >
+          <p
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
+          >
+            Example text
+          </p>
+        </Text>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with string content 1`] = `
+<ToastNotification
+  content="Example text"
+>
+  <ModalContainer
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    round={50}
+  >
+    <div
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <Text
+          className="md-toast-notification-content"
+          type="body-primary"
+        >
+          <p
+            className="md-text-wrapper md-toast-notification-content"
             data-type="body-primary"
           >
             Example text
@@ -340,12 +451,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
 
 exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
 <ToastNotification
+  content="Example text"
   style={
     Object {
       "color": "pink",
     }
   }
-  text="Example text"
 >
   <ModalContainer
     className="md-toast-notification-wrapper"
@@ -373,47 +484,11 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
         className="md-toast-notification-body"
       >
         <Text
-          className="md-toast-notification-text"
+          className="md-toast-notification-content"
           type="body-primary"
         >
           <p
-            className="md-text-wrapper md-toast-notification-text"
-            data-type="body-primary"
-          >
-            Example text
-          </p>
-        </Text>
-      </div>
-    </div>
-  </ModalContainer>
-</ToastNotification>
-`;
-
-exports[`<ToastNotification /> snapshot should match snapshot with text 1`] = `
-<ToastNotification
-  text="Example text"
->
-  <ModalContainer
-    className="md-toast-notification-wrapper"
-    isPadded={true}
-    round={50}
-  >
-    <div
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-padded={true}
-      data-round={50}
-    >
-      <div
-        className="md-toast-notification-body"
-      >
-        <Text
-          className="md-toast-notification-text"
-          type="body-primary"
-        >
-          <p
-            className="md-text-wrapper md-toast-notification-text"
+            className="md-text-wrapper md-toast-notification-content"
             data-type="body-primary"
           >
             Example text

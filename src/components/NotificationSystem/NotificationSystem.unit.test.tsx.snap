@@ -57,7 +57,7 @@ exports[`<NotificationSystem /> should match snapshot when limit is set to notif
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -711,7 +711,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -820,7 +820,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -925,7 +925,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -1027,7 +1027,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -1140,7 +1140,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -1249,7 +1249,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -1358,7 +1358,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
