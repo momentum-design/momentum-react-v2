@@ -24,23 +24,23 @@ const STYLE = {
   notFound: `${CLASS_PREFIX}-not-found`,
 };
 
-const ON_VIDEO_PATH = 'on-video/';
+const ON_VIDEO_PATH = 'on_video/';
 
 const SKIN_TONES: Record<SkinTone, SkinTone> = {
   yellow: 'yellow',
   light: 'light',
-  'medium-light': 'medium-light',
+  medium_light: 'medium_light',
   medium: 'medium',
-  'medium-dark': 'medium-dark',
+  medium_dark: 'medium_dark',
   dark: 'dark',
 };
 
 const REACTIONS_WITH_SKIN_TONE: Record<ReactionWithSkinTone, ReactionWithSkinTone> = {
   clap: 'clap',
-  'thumb-up': 'thumb-up',
-  'thumb-down': 'thumb-down',
+  thumb_up: 'thumb_up',
+  thumb_down: 'thumb_down',
   prayer: 'prayer',
-  'raise-hand': 'raise-hand',
+  raise_hand: 'raise_hand',
 };
 
 const REACTIONS_WITHOUT_SKIN_TONE: Record<ReactionWithoutSkinTone, ReactionWithoutSkinTone> = {
@@ -51,15 +51,15 @@ const REACTIONS_WITHOUT_SKIN_TONE: Record<ReactionWithoutSkinTone, ReactionWitho
   celebrate: 'celebrate',
   heart: 'heart',
   fire: 'fire',
-  'speed-up': 'speed-up',
-  'slow-down': 'slow-down',
+  speed_up: 'speed_up',
+  slow_down: 'slow_down',
 };
 
 const ORIGINAL_REACTIONS = {
   ...REACTIONS_WITHOUT_SKIN_TONE,
   ...generateReactionsWithSkinTone(
     cartesian(Object.values(REACTIONS_WITH_SKIN_TONE), Object.values(SKIN_TONES)),
-    ({ type, skinTone }) => `${type}-${skinTone}`
+    ({ type, skinTone }) => `${type}_${skinTone}`
   ),
 } as Record<OriginalReactionName, OriginalReactionName>;
 
@@ -71,7 +71,7 @@ const ON_VIDEO_REACTIONS = {
   ),
   ...generateReactionsWithSkinTone(
     cartesian(Object.values(REACTIONS_WITH_SKIN_TONE), Object.values(SKIN_TONES)),
-    ({ type, skinTone }) => `${ON_VIDEO_PATH}${type}-${skinTone}`
+    ({ type, skinTone }) => `${ON_VIDEO_PATH}${type}_${skinTone}`
   ),
 } as Record<OnVideoReactionName, OnVideoReactionName>;
 
