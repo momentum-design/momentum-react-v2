@@ -6,7 +6,7 @@ import { ON_VIDEO_PATH } from './Reaction.constants';
 
 type OnVideoPrefix = typeof ON_VIDEO_PATH;
 
-export type ReactionWithSkinTone = 'clap' | 'thumb-up' | 'thumb-down' | 'prayer' | 'raise-hand';
+export type ReactionWithSkinTone = 'clap' | 'thumb_up' | 'thumb_down' | 'prayer' | 'raise_hand';
 
 export type ReactionWithoutSkinTone =
   | 'smile'
@@ -16,14 +16,14 @@ export type ReactionWithoutSkinTone =
   | 'celebrate'
   | 'heart'
   | 'fire'
-  | 'speed-up'
-  | 'slow-down';
+  | 'speed_up'
+  | 'slow_down';
 
-export type SkinTone = 'yellow' | 'light' | 'medium-light' | 'medium' | 'medium-dark' | 'dark';
+export type SkinTone = 'yellow' | 'light' | 'medium_light' | 'medium' | 'medium_dark' | 'dark';
 
 // Maps through all ReactionType and appends all SkinTones.
 type GenerateReactionName<ReactionType extends string, SkinType extends string> = keyof {
-  [R in ReactionType as `${R}-${SkinType}`];
+  [R in ReactionType as `${R}_${SkinType}`];
 };
 
 // Appends prefix to literal.

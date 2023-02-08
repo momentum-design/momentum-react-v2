@@ -1822,10 +1822,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@momentum-design/animations@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@momentum-design/animations/-/animations-0.0.3.tgz#3715a10e1ab1f08af0778535ab97259405ef0dd7"
-  integrity sha512-IK43P0EHjhReZbkM+zbP8+OzOR6vq0FOzv0ckCOwySt4Z5UJpA3X8FRIdXv//VSHXZogFphoUIXViT+Ez/Xs8Q==
+"@momentum-design/animations@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@momentum-design/animations/-/animations-0.0.4.tgz#befb1080aa4d065d14df08bd7105508d9d7d7ba8"
+  integrity sha512-AufClFuhGB3STX6mBoq3g8MsS4HTpg6eNPVF5aNXCuIZ62TP2HkEz2FgRuv+iaIKeRSqrFTA81Q3akNkmqnkqg==
 
 "@momentum-design/tokens@^0.0.32":
   version "0.0.32"
