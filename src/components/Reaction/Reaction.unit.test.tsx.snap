@@ -39,359 +39,359 @@ exports[`<Reaction/> snapshot match all available animations 1`] = `
       fire
     </p>
     <p
-      key="speed-up"
+      key="speed_up"
     >
-      speed-up
+      speed_up
     </p>
     <p
-      key="slow-down"
+      key="slow_down"
     >
-      slow-down
+      slow_down
     </p>
     <p
-      key="clap-yellow"
+      key="clap_yellow"
     >
-      clap-yellow
+      clap_yellow
     </p>
     <p
-      key="clap-light"
+      key="clap_light"
     >
-      clap-light
+      clap_light
     </p>
     <p
-      key="clap-medium-light"
+      key="clap_medium_light"
     >
-      clap-medium-light
+      clap_medium_light
     </p>
     <p
-      key="clap-medium"
+      key="clap_medium"
     >
-      clap-medium
+      clap_medium
     </p>
     <p
-      key="clap-medium-dark"
+      key="clap_medium_dark"
     >
-      clap-medium-dark
+      clap_medium_dark
     </p>
     <p
-      key="clap-dark"
+      key="clap_dark"
     >
-      clap-dark
+      clap_dark
     </p>
     <p
-      key="thumb-up-yellow"
+      key="thumb_up_yellow"
     >
-      thumb-up-yellow
+      thumb_up_yellow
     </p>
     <p
-      key="thumb-up-light"
+      key="thumb_up_light"
     >
-      thumb-up-light
+      thumb_up_light
     </p>
     <p
-      key="thumb-up-medium-light"
+      key="thumb_up_medium_light"
     >
-      thumb-up-medium-light
+      thumb_up_medium_light
     </p>
     <p
-      key="thumb-up-medium"
+      key="thumb_up_medium"
     >
-      thumb-up-medium
+      thumb_up_medium
     </p>
     <p
-      key="thumb-up-medium-dark"
+      key="thumb_up_medium_dark"
     >
-      thumb-up-medium-dark
+      thumb_up_medium_dark
     </p>
     <p
-      key="thumb-up-dark"
+      key="thumb_up_dark"
     >
-      thumb-up-dark
+      thumb_up_dark
     </p>
     <p
-      key="thumb-down-yellow"
+      key="thumb_down_yellow"
     >
-      thumb-down-yellow
+      thumb_down_yellow
     </p>
     <p
-      key="thumb-down-light"
+      key="thumb_down_light"
     >
-      thumb-down-light
+      thumb_down_light
     </p>
     <p
-      key="thumb-down-medium-light"
+      key="thumb_down_medium_light"
     >
-      thumb-down-medium-light
+      thumb_down_medium_light
     </p>
     <p
-      key="thumb-down-medium"
+      key="thumb_down_medium"
     >
-      thumb-down-medium
+      thumb_down_medium
     </p>
     <p
-      key="thumb-down-medium-dark"
+      key="thumb_down_medium_dark"
     >
-      thumb-down-medium-dark
+      thumb_down_medium_dark
     </p>
     <p
-      key="thumb-down-dark"
+      key="thumb_down_dark"
     >
-      thumb-down-dark
+      thumb_down_dark
     </p>
     <p
-      key="prayer-yellow"
+      key="prayer_yellow"
     >
-      prayer-yellow
+      prayer_yellow
     </p>
     <p
-      key="prayer-light"
+      key="prayer_light"
     >
-      prayer-light
+      prayer_light
     </p>
     <p
-      key="prayer-medium-light"
+      key="prayer_medium_light"
     >
-      prayer-medium-light
+      prayer_medium_light
     </p>
     <p
-      key="prayer-medium"
+      key="prayer_medium"
     >
-      prayer-medium
+      prayer_medium
     </p>
     <p
-      key="prayer-medium-dark"
+      key="prayer_medium_dark"
     >
-      prayer-medium-dark
+      prayer_medium_dark
     </p>
     <p
-      key="prayer-dark"
+      key="prayer_dark"
     >
-      prayer-dark
+      prayer_dark
     </p>
     <p
-      key="raise-hand-yellow"
+      key="raise_hand_yellow"
     >
-      raise-hand-yellow
+      raise_hand_yellow
     </p>
     <p
-      key="raise-hand-light"
+      key="raise_hand_light"
     >
-      raise-hand-light
+      raise_hand_light
     </p>
     <p
-      key="raise-hand-medium-light"
+      key="raise_hand_medium_light"
     >
-      raise-hand-medium-light
+      raise_hand_medium_light
     </p>
     <p
-      key="raise-hand-medium"
+      key="raise_hand_medium"
     >
-      raise-hand-medium
+      raise_hand_medium
     </p>
     <p
-      key="raise-hand-medium-dark"
+      key="raise_hand_medium_dark"
     >
-      raise-hand-medium-dark
+      raise_hand_medium_dark
     </p>
     <p
-      key="raise-hand-dark"
+      key="raise_hand_dark"
     >
-      raise-hand-dark
+      raise_hand_dark
     </p>
     <p
-      key="on-video/smile"
+      key="on_video/smile"
     >
-      on-video/smile
+      on_video/smile
     </p>
     <p
-      key="on-video/sad"
+      key="on_video/sad"
     >
-      on-video/sad
+      on_video/sad
     </p>
     <p
-      key="on-video/wow"
+      key="on_video/wow"
     >
-      on-video/wow
+      on_video/wow
     </p>
     <p
-      key="on-video/haha"
+      key="on_video/haha"
     >
-      on-video/haha
+      on_video/haha
     </p>
     <p
-      key="on-video/celebrate"
+      key="on_video/celebrate"
     >
-      on-video/celebrate
+      on_video/celebrate
     </p>
     <p
-      key="on-video/heart"
+      key="on_video/heart"
     >
-      on-video/heart
+      on_video/heart
     </p>
     <p
-      key="on-video/fire"
+      key="on_video/fire"
     >
-      on-video/fire
+      on_video/fire
     </p>
     <p
-      key="on-video/speed-up"
+      key="on_video/speed_up"
     >
-      on-video/speed-up
+      on_video/speed_up
     </p>
     <p
-      key="on-video/slow-down"
+      key="on_video/slow_down"
     >
-      on-video/slow-down
+      on_video/slow_down
     </p>
     <p
-      key="on-video/clap-yellow"
+      key="on_video/clap_yellow"
     >
-      on-video/clap-yellow
+      on_video/clap_yellow
     </p>
     <p
-      key="on-video/clap-light"
+      key="on_video/clap_light"
     >
-      on-video/clap-light
+      on_video/clap_light
     </p>
     <p
-      key="on-video/clap-medium-light"
+      key="on_video/clap_medium_light"
     >
-      on-video/clap-medium-light
+      on_video/clap_medium_light
     </p>
     <p
-      key="on-video/clap-medium"
+      key="on_video/clap_medium"
     >
-      on-video/clap-medium
+      on_video/clap_medium
     </p>
     <p
-      key="on-video/clap-medium-dark"
+      key="on_video/clap_medium_dark"
     >
-      on-video/clap-medium-dark
+      on_video/clap_medium_dark
     </p>
     <p
-      key="on-video/clap-dark"
+      key="on_video/clap_dark"
     >
-      on-video/clap-dark
+      on_video/clap_dark
     </p>
     <p
-      key="on-video/thumb-up-yellow"
+      key="on_video/thumb_up_yellow"
     >
-      on-video/thumb-up-yellow
+      on_video/thumb_up_yellow
     </p>
     <p
-      key="on-video/thumb-up-light"
+      key="on_video/thumb_up_light"
     >
-      on-video/thumb-up-light
+      on_video/thumb_up_light
     </p>
     <p
-      key="on-video/thumb-up-medium-light"
+      key="on_video/thumb_up_medium_light"
     >
-      on-video/thumb-up-medium-light
+      on_video/thumb_up_medium_light
     </p>
     <p
-      key="on-video/thumb-up-medium"
+      key="on_video/thumb_up_medium"
     >
-      on-video/thumb-up-medium
+      on_video/thumb_up_medium
     </p>
     <p
-      key="on-video/thumb-up-medium-dark"
+      key="on_video/thumb_up_medium_dark"
     >
-      on-video/thumb-up-medium-dark
+      on_video/thumb_up_medium_dark
     </p>
     <p
-      key="on-video/thumb-up-dark"
+      key="on_video/thumb_up_dark"
     >
-      on-video/thumb-up-dark
+      on_video/thumb_up_dark
     </p>
     <p
-      key="on-video/thumb-down-yellow"
+      key="on_video/thumb_down_yellow"
     >
-      on-video/thumb-down-yellow
+      on_video/thumb_down_yellow
     </p>
     <p
-      key="on-video/thumb-down-light"
+      key="on_video/thumb_down_light"
     >
-      on-video/thumb-down-light
+      on_video/thumb_down_light
     </p>
     <p
-      key="on-video/thumb-down-medium-light"
+      key="on_video/thumb_down_medium_light"
     >
-      on-video/thumb-down-medium-light
+      on_video/thumb_down_medium_light
     </p>
     <p
-      key="on-video/thumb-down-medium"
+      key="on_video/thumb_down_medium"
     >
-      on-video/thumb-down-medium
+      on_video/thumb_down_medium
     </p>
     <p
-      key="on-video/thumb-down-medium-dark"
+      key="on_video/thumb_down_medium_dark"
     >
-      on-video/thumb-down-medium-dark
+      on_video/thumb_down_medium_dark
     </p>
     <p
-      key="on-video/thumb-down-dark"
+      key="on_video/thumb_down_dark"
     >
-      on-video/thumb-down-dark
+      on_video/thumb_down_dark
     </p>
     <p
-      key="on-video/prayer-yellow"
+      key="on_video/prayer_yellow"
     >
-      on-video/prayer-yellow
+      on_video/prayer_yellow
     </p>
     <p
-      key="on-video/prayer-light"
+      key="on_video/prayer_light"
     >
-      on-video/prayer-light
+      on_video/prayer_light
     </p>
     <p
-      key="on-video/prayer-medium-light"
+      key="on_video/prayer_medium_light"
     >
-      on-video/prayer-medium-light
+      on_video/prayer_medium_light
     </p>
     <p
-      key="on-video/prayer-medium"
+      key="on_video/prayer_medium"
     >
-      on-video/prayer-medium
+      on_video/prayer_medium
     </p>
     <p
-      key="on-video/prayer-medium-dark"
+      key="on_video/prayer_medium_dark"
     >
-      on-video/prayer-medium-dark
+      on_video/prayer_medium_dark
     </p>
     <p
-      key="on-video/prayer-dark"
+      key="on_video/prayer_dark"
     >
-      on-video/prayer-dark
+      on_video/prayer_dark
     </p>
     <p
-      key="on-video/raise-hand-yellow"
+      key="on_video/raise_hand_yellow"
     >
-      on-video/raise-hand-yellow
+      on_video/raise_hand_yellow
     </p>
     <p
-      key="on-video/raise-hand-light"
+      key="on_video/raise_hand_light"
     >
-      on-video/raise-hand-light
+      on_video/raise_hand_light
     </p>
     <p
-      key="on-video/raise-hand-medium-light"
+      key="on_video/raise_hand_medium_light"
     >
-      on-video/raise-hand-medium-light
+      on_video/raise_hand_medium_light
     </p>
     <p
-      key="on-video/raise-hand-medium"
+      key="on_video/raise_hand_medium"
     >
-      on-video/raise-hand-medium
+      on_video/raise_hand_medium
     </p>
     <p
-      key="on-video/raise-hand-medium-dark"
+      key="on_video/raise_hand_medium_dark"
     >
-      on-video/raise-hand-medium-dark
+      on_video/raise_hand_medium_dark
     </p>
     <p
-      key="on-video/raise-hand-dark"
+      key="on_video/raise_hand_dark"
     >
-      on-video/raise-hand-dark
+      on_video/raise_hand_dark
     </p>
   </div>
 </ReactionKeys>
