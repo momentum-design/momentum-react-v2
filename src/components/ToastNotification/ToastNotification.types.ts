@@ -12,9 +12,9 @@ export type SupportedButtonGroup = ButtonPillProps | ButtonCircleProps;
 
 export interface Props {
   /**
-   * The text that appears inside the Notification toast.
+   * The free string or component that appears inside the Notification toast.
    */
-  text: string;
+  content: string | ReactElement | ReactElement[];
   /**
    * Leading visual of this notification toast. It can be an Icon, Avatar or Badge.
    */
@@ -44,4 +44,9 @@ export interface Props {
    * Callback when user clicks on the close button.
    */
   onClose?: (event: PressEvent) => void;
+
+  /**
+   * Callback when user clicks on the notification.
+   */
+  onToastMessageClick?: (event: React.MouseEvent<HTMLElement>) => void;
 }

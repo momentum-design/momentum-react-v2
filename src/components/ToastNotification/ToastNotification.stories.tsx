@@ -27,7 +27,7 @@ const Example = Template<ToastNotificationProps>(ToastNotification).bind({});
 Example.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
 Example.args = {
-  text: 'Example text',
+  content: 'Example text',
 };
 
 const LeadingVisual = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
@@ -37,27 +37,30 @@ LeadingVisual.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 LeadingVisual.parameters = {
   variants: [
     {
-      text: 'Example text',
+      content: 'Example text',
       leadingVisual: <Avatar initials="CW" size={32} />,
     },
     {
-      text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      content:
+        'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Avatar initials="CW" size={32} />,
     },
     {
-      text: 'Example text',
+      content: 'Example text',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
     },
     {
-      text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      content:
+        'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
     },
     {
-      text: 'Example text',
+      content: 'Example text',
       leadingVisual: <Icon name="info-circle" scale={14} weight="filled" fillColor="yellow" />,
     },
     {
-      text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      content:
+        'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Icon name="info-circle" scale={14} weight="filled" fillColor="yellow" />,
     },
   ],
@@ -70,7 +73,7 @@ ButtonGroup.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 ButtonGroup.parameters = {
   variants: [
     {
-      text: 'Example text',
+      content: 'Example text',
       buttonGroup: (
         <ButtonPill outline size={28}>
           Button
@@ -78,7 +81,8 @@ ButtonGroup.parameters = {
       ),
     },
     {
-      text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      content:
+        'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       buttonGroup: (
         <ButtonPill outline size={28}>
           Button
@@ -86,7 +90,7 @@ ButtonGroup.parameters = {
       ),
     },
     {
-      text: 'Example text',
+      content: 'Example text',
       buttonGroup: (
         <>
           <ButtonPill size={28}>Button</ButtonPill>
@@ -97,7 +101,8 @@ ButtonGroup.parameters = {
       ),
     },
     {
-      text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      content:
+        'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       buttonGroup: (
         <>
           <ButtonPill size={28}>Button</ButtonPill>
@@ -117,7 +122,7 @@ Common.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 Common.parameters = {
   variants: [
     {
-      text: 'Example text',
+      content: 'Example text',
       leadingVisual: <Avatar initials="CW" size={32} />,
       buttonGroup: (
         <ButtonPill outline size={28}>
@@ -126,7 +131,8 @@ Common.parameters = {
       ),
     },
     {
-      text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      content:
+        'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Avatar initials="CW" size={32} />,
       buttonGroup: (
         <ButtonPill outline size={28}>
@@ -135,7 +141,7 @@ Common.parameters = {
       ),
     },
     {
-      text: 'Example text',
+      content: 'Example text',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
       buttonGroup: (
         <>
@@ -147,7 +153,8 @@ Common.parameters = {
       ),
     },
     {
-      text: 'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      content:
+        'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
       buttonGroup: (
         <>
