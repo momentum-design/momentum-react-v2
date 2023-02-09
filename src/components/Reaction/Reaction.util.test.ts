@@ -2,17 +2,17 @@ import { cartesian, generateReactionsWithSkinTone } from './Reaction.util';
 
 describe('cartesian', () => {
   it('returns the correct value', () => {
-    const result = cartesian(['prayer', 'raise-hand'], ['yellow', 'dark']);
+    const result = cartesian(['prayer', 'raise_hand'], ['yellow', 'dark']);
     expect(result).toEqual([
       { type: 'prayer', skinTone: 'yellow' },
       { type: 'prayer', skinTone: 'dark' },
-      { type: 'raise-hand', skinTone: 'yellow' },
-      { type: 'raise-hand', skinTone: 'dark' },
+      { type: 'raise_hand', skinTone: 'yellow' },
+      { type: 'raise_hand', skinTone: 'dark' },
     ]);
   });
 
   it('returns the correct value when second param is empty', () => {
-    const result = cartesian(['prayer', 'raise-hand'], []);
+    const result = cartesian(['prayer', 'raise_hand'], []);
     expect(result).toEqual([]);
   });
 
@@ -33,16 +33,16 @@ describe('generateReactionsWithSkinTone', () => {
       [
         { type: 'prayer', skinTone: 'yellow' },
         { type: 'prayer', skinTone: 'dark' },
-        { type: 'raise-hand', skinTone: 'yellow' },
-        { type: 'raise-hand', skinTone: 'dark' },
+        { type: 'raise_hand', skinTone: 'yellow' },
+        { type: 'raise_hand', skinTone: 'dark' },
       ],
       ({ type, skinTone }) => `${type}+${skinTone}`
     );
     expect(result).toEqual({
       'prayer+yellow': 'prayer+yellow',
       'prayer+dark': 'prayer+dark',
-      'raise-hand+yellow': 'raise-hand+yellow',
-      'raise-hand+dark': 'raise-hand+dark',
+      'raise_hand+yellow': 'raise_hand+yellow',
+      'raise_hand+dark': 'raise_hand+dark',
     });
   });
 

@@ -17,7 +17,7 @@ const reactionChildren = [
     <Reaction name="heart" autoPlay />
   </ReactionButton>,
   <ReactionButton key="3">
-    <Reaction name="thumb-up-yellow" autoPlay />
+    <Reaction name="thumb_up_yellow" autoPlay />
   </ReactionButton>,
   <ReactionButton reacted key="4">
     <Reaction name="smile" autoPlay />
