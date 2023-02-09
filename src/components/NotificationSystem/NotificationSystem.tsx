@@ -9,11 +9,6 @@ import type { CompoundProps, Props } from './NotificationSystem.types';
 import 'react-toastify/dist/ReactToastify.css';
 import './NotificationSystem.style.scss';
 
-const slideAndBlur = cssTransition({
-  enter: 'slideInRight',
-  exit: 'fadeOut',
-});
-
 /**
  * The `<NotificationSystem />` component allows consumers to trigger notifications on the defined position on the screen.
  *
@@ -28,16 +23,29 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
     id,
     style,
     limit,
+    newestOnTop = DEFAULTS.NEWEST_ON_TOP,
+    enterAnimation = DEFAULTS.ENTER_ANIMATION,
+    toastClassName,
+    bodyClassName,
+    containerClassName,
   } = props;
 
+  const slideAndBlur = cssTransition({
+    enter: enterAnimation,
+    exit: 'fadeOut',
+  });
+
   const commonProps = {
-    newestOnTop: true,
+    newestOnTop,
     enableMultiContainer: true,
     transition: slideAndBlur,
     hideProgressBar: true,
     closeOnClick: false,
     draggable: false,
     closeButton: false,
+    toastClassName,
+    bodyClassName,
+    className: containerClassName,
   };
 
   // get an attention order array to position the toastContainers correctly based on the `position` prop
