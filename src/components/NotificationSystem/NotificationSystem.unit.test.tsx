@@ -17,6 +17,11 @@ type PrepareForSnapshotProps = {
   attention?: AttentionType;
   zIndex?: number;
   limit?: number;
+  enterAnimation?: string;
+  newestOnTop?: boolean;
+  containerClassName?: string;
+  bodyClassName?: string;
+  toastClassName?: string;
 };
 
 // pin the toast id to make the snapshots reliable:
@@ -133,6 +138,61 @@ describe('<NotificationSystem />', () => {
     const { container } = await waitForNotificationToAppear({
       notificationText,
       limit: 5,
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot with enter animation', async () => {
+    expect.assertions(1);
+
+    const { container } = await waitForNotificationToAppear({
+      notificationText,
+      enterAnimation: 'slideInBottom',
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot with newest on top', async () => {
+    expect.assertions(1);
+
+    const { container } = await waitForNotificationToAppear({
+      notificationText,
+      newestOnTop: false,
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot with toast class name', async () => {
+    expect.assertions(1);
+
+    const { container } = await waitForNotificationToAppear({
+      notificationText,
+      toastClassName: 'toast',
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot with body class name', async () => {
+    expect.assertions(1);
+
+    const { container } = await waitForNotificationToAppear({
+      notificationText,
+      bodyClassName: 'body-toast',
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot with container class name', async () => {
+    expect.assertions(1);
+
+    const { container } = await waitForNotificationToAppear({
+      notificationText,
+      bodyClassName: 'container',
     });
 
     expect(container).toMatchSnapshot();
