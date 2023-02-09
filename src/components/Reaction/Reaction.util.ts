@@ -21,17 +21,17 @@ export const cartesian = <X, Y>(x: X[], y: Y[]): Grouping<X, Y>[] =>
  *
  * ```js
  * {
- *  "raise-hand-yellow": "raise-hand-yellow",
- *  "raise-hand-light": "raise-hand-light",
- *  "raise-hand-medium-light": "raise-hand-medium-light",
- *  "raise-hand-medium": "raise-hand-medium",
- *  "raise-hand-medium-dark": "raise-hand-dark",
+ *  "raise_hand_yellow": "raise_hand_yellow",
+ *  "raise_hand_light": "raise_hand_light",
+ *  "raise_hand_medium_light": "raise_hand_medium_light",
+ *  "raise_hand_medium": "raise_hand_medium",
+ *  "raise_hand_medium_dark": "raise_hand_dark",
  * ...
  * }
  * ```
  *
  * @param grouping array with all the combinations between reactions and skin tones
- * @param mapping - mapping function
+ * @param mapping mapping function
  * @returns object with keys and value that represent valid reactions
  */
 export const generateReactionsWithSkinTone = (
