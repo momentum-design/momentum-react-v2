@@ -8,8 +8,16 @@ import { ListContext } from './List.utils';
 import { useKeyboard } from '@react-aria/interactions';
 
 const List: FC<Props> = (props: Props) => {
-  const { className, id, style, children, shouldFocusOnPress, listSize, shouldItemFocusBeInset } =
-    props;
+  const {
+    className,
+    id,
+    style,
+    children,
+    shouldFocusOnPress,
+    listSize,
+    role,
+    shouldItemFocusBeInset,
+  } = props;
 
   const [currentFocus, setCurrentFocus] = useState<number>(0);
 
@@ -55,6 +63,7 @@ const List: FC<Props> = (props: Props) => {
         ref={ref}
         style={style}
         id={id}
+        role={role}
         {...keyboardProps}
       >
         {children}
