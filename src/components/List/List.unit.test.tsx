@@ -75,6 +75,19 @@ describe('<List />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with role', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <List role="tablist" {...commonProps}>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
+        </List>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     /* ...additional snapshot tests... */
   });
 

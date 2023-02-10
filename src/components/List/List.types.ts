@@ -27,6 +27,11 @@ export interface Props {
   listSize: number;
 
   /**
+   * Aria role
+   */
+  role?: string;
+
+  /**
    * Determines if the onPress handler should also focus the selected item
    */
   shouldFocusOnPress?: boolean;
