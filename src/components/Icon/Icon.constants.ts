@@ -74,6 +74,8 @@ const STYLE = {
   notFound: `${CLASS_PREFIX}-not-found`,
   coloured: `${CLASS_PREFIX}-coloured`,
   noShrink: `${CLASS_PREFIX}-no-shrink`,
+  autoScales: `${CLASS_PREFIX}-auto-scales`,
+  scales: `${CLASS_PREFIX}-scales`,
 };
 
 export {

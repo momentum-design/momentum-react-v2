@@ -365,7 +365,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
             weight="bold"
           >
             <div
-              className="md-icon-wrapper md-icon-no-shrink"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
             >
               <svg
                 className=""
@@ -428,7 +428,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = 
             weight="bold"
           >
             <div
-              className="md-icon-wrapper md-icon-no-shrink"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
             >
               <svg
                 className=""
@@ -491,7 +491,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with className 1`]
             weight="bold"
           >
             <div
-              className="md-icon-wrapper md-icon-no-shrink"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
             >
               <svg
                 className=""
@@ -554,7 +554,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
             weight="bold"
           >
             <div
-              className="md-icon-wrapper md-icon-no-shrink"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
             >
               <svg
                 className=""
@@ -619,7 +619,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
             weight="bold"
           >
             <div
-              className="md-icon-wrapper md-icon-no-shrink"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
             >
               <svg
                 className=""
@@ -696,7 +696,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
             weight="bold"
           >
             <div
-              className="md-icon-wrapper md-icon-no-shrink"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
             >
               <svg
                 className=""

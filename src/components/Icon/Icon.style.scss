@@ -1,4 +1,4 @@
-@mixin icon-auto-scales {
+.md-icon-auto-scales {
   &[data-autoscale='true'],
   > *[data-autoscale='true'] {
     width: 1em;
@@ -54,7 +54,7 @@
   }
 }
 
-@mixin icon-scales {
+.md-icon-scales {
   &[data-scale='8'],
   > *[data-scale='8'] {
     width: 0.5rem;
@@ -195,9 +195,6 @@ svg.md-icon-coloured {
   height: fit-content;
   justify-content: center;
   width: fit-content;
-
-  @include icon-scales;
-  @include icon-auto-scales;
 }
 
 .md-icon-not-found {

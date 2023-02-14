@@ -4,10 +4,10 @@ import lottie, { AnimationItem } from 'lottie-web';
 import { useDynamicJSONImport } from '../../hooks/useDynamicJSONImport';
 
 import { DEFAULTS, STYLE } from './Reaction.constants';
+import { STYLE as ICON_STYLE, GLYPH_NOT_FOUND } from '../Icon/Icon.constants';
 import { Props } from './Reaction.types';
 import './Reaction.style.scss';
 import LoadingSpinner from '../LoadingSpinner';
-import { GLYPH_NOT_FOUND } from '../Icon/Icon.constants';
 
 const Reaction: FC<Props> = (props: Props) => {
   const { autoPlay, className, id, loop, name, size, style, onComplete } = props;
@@ -49,7 +49,7 @@ const Reaction: FC<Props> = (props: Props) => {
   if (animationData) {
     return (
       <div
-        className={classnames(className, STYLE.wrapper)}
+        className={classnames(className, STYLE.wrapper, ICON_STYLE.scales)}
         data-scale={size || DEFAULTS.SIZE}
         data-name={name}
         id={id}

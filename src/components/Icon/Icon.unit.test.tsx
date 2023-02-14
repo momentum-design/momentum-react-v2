@@ -200,7 +200,9 @@ describe('<Icon />', () => {
       const div = wrapper.find('div').filter({ id: 'fake-id' });
 
       expect(icon.getAttribute('data-scale')).toBe(`${scale}`);
-      expect(div.props().className).toBe('md-icon-wrapper md-icon-no-shrink');
+      expect(div.props().className).toBe(
+        'md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink'
+      );
     });
 
     it('should pass autoScale prop and disable scale prop', async () => {
@@ -214,7 +216,7 @@ describe('<Icon />', () => {
 
       expect(icon.getAttribute('data-autoscale')).toBe(`${autoScale}`);
       expect(icon.getAttribute('data-scale')).toBe('false');
-      expect(div.props().className).toBe('md-icon-wrapper');
+      expect(div.props().className).toBe('md-icon-wrapper md-icon-auto-scales md-icon-scales');
     });
 
     it('should pass autoScale prop as numeric value when set appropriately', async () => {

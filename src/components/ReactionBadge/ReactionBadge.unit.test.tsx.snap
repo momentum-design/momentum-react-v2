@@ -62,7 +62,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
+                className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
               />
@@ -141,7 +141,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
+                className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
               />
@@ -220,7 +220,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
+                className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
               />
@@ -304,7 +304,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
+                className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
               />
@@ -383,7 +383,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
+                className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
               />
@@ -481,7 +481,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
+                className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
               />

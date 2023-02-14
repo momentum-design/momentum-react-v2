@@ -290,7 +290,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                   weight="bold"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -349,7 +349,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                   weight="bold"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -409,7 +409,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -560,7 +560,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                   weight="bold"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -619,7 +619,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                   weight="bold"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -679,7 +679,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -797,7 +797,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                   weight="bold"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -856,7 +856,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                   weight="bold"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""
@@ -916,7 +916,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                   >
                     <svg
                       className=""

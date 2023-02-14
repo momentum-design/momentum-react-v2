@@ -42,7 +42,7 @@ exports[`<NotificationSystem /> should match snapshot when limit is set to notif
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -76,7 +76,7 @@ exports[`<NotificationSystem /> should match snapshot when limit is set to notif
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -151,7 +151,7 @@ exports[`<NotificationSystem /> should match snapshot with body class name 1`] =
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -185,7 +185,7 @@ exports[`<NotificationSystem /> should match snapshot with body class name 1`] =
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -260,7 +260,7 @@ exports[`<NotificationSystem /> should match snapshot with container class name 
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -294,7 +294,7 @@ exports[`<NotificationSystem /> should match snapshot with container class name 
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -369,7 +369,7 @@ exports[`<NotificationSystem /> should match snapshot with enter animation 1`] =
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -403,7 +403,7 @@ exports[`<NotificationSystem /> should match snapshot with enter animation 1`] =
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -478,7 +478,7 @@ exports[`<NotificationSystem /> should match snapshot with newest on top 1`] = `
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -512,7 +512,7 @@ exports[`<NotificationSystem /> should match snapshot with newest on top 1`] = `
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -587,7 +587,7 @@ exports[`<NotificationSystem /> should match snapshot with toast class name 1`] 
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -621,7 +621,7 @@ exports[`<NotificationSystem /> should match snapshot with toast class name 1`] 
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -696,7 +696,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -730,7 +730,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -805,7 +805,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -839,7 +839,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -910,7 +910,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -944,7 +944,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -1012,7 +1012,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -1046,7 +1046,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -1125,7 +1125,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -1159,7 +1159,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -1234,7 +1234,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -1268,7 +1268,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -1343,7 +1343,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -1377,7 +1377,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
