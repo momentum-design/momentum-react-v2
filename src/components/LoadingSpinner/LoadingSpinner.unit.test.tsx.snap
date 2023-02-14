@@ -11,7 +11,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       >
         <svg
           className=""
@@ -33,7 +33,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
       >
         <svg
           className=""
@@ -65,7 +65,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       >
         <svg
           className=""
@@ -87,7 +87,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
       >
         <svg
           className=""
@@ -120,7 +120,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       >
         <svg
           className=""
@@ -142,7 +142,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
       >
         <svg
           className=""
@@ -174,7 +174,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       >
         <svg
           className=""
@@ -196,7 +196,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
       >
         <svg
           className=""
@@ -237,7 +237,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       >
         <svg
           className=""
@@ -259,7 +259,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
       weight="regular"
     >
       <div
-        className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
       >
         <svg
           className=""

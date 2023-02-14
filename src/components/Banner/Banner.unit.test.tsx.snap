@@ -154,7 +154,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                       name="camera"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -220,7 +220,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                       name="cancel"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -411,7 +411,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                       name="camera"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -477,7 +477,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                       name="cancel"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""

@@ -27,7 +27,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           class="md-coachmark-header"
         >
           <div
-            class="md-icon-wrapper md-icon-no-shrink"
+            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
           >
             <svg
               class=""
@@ -60,7 +60,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
               type="button"
             >
               <div
-                class="md-icon-wrapper"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
               >
                 <svg
                   class=""
@@ -248,7 +248,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
             type="button"
           >
             <div
-              class="md-icon-wrapper"
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
             >
               <svg
                 class=""

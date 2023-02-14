@@ -631,7 +631,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
         type="button"
       >
         <div
-          class="md-icon-wrapper md-icon-no-shrink"
+          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
         >
           <svg
             class=""

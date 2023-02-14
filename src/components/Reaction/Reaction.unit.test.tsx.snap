@@ -402,7 +402,7 @@ exports[`<Reaction/> snapshot should match snapshot 1`] = `
   name="haha"
 >
   <div
-    className="md-reaction-wrapper"
+    className="md-reaction-wrapper md-icon-scales"
     data-name="haha"
     data-scale={12}
   />
@@ -415,7 +415,7 @@ exports[`<Reaction/> snapshot should match snapshot with className 1`] = `
   name="haha"
 >
   <div
-    className="example-class md-reaction-wrapper"
+    className="example-class md-reaction-wrapper md-icon-scales"
     data-name="haha"
     data-scale={12}
   />
@@ -442,7 +442,7 @@ exports[`<Reaction/> snapshot should match snapshot with id 1`] = `
   name="haha"
 >
   <div
-    className="md-reaction-wrapper"
+    className="md-reaction-wrapper md-icon-scales"
     data-name="haha"
     data-scale={12}
     id="example-id"
@@ -467,7 +467,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
         weight="regular"
       >
         <div
-          className="md-icon-wrapper md-icon-no-shrink"
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
         >
           <svg
             className=""
@@ -489,7 +489,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
         weight="regular"
       >
         <div
-          className="md-icon-wrapper md-loading-spinner-arch md-icon-no-shrink"
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
         >
           <svg
             className=""
@@ -519,7 +519,7 @@ exports[`<Reaction/> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
-    className="md-reaction-wrapper"
+    className="md-reaction-wrapper md-icon-scales"
     data-name="haha"
     data-scale={12}
     style={

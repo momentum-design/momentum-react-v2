@@ -83,7 +83,9 @@ const Icon: React.FC<Props> = (props: Props) => {
   if (SvgIcon) {
     return (
       <div
-        className={classnames(STYLE.wrapper, className, { [STYLE.noShrink]: scale })}
+        className={classnames(STYLE.wrapper, STYLE.autoScales, STYLE.scales, className, {
+          [STYLE.noShrink]: scale,
+        })}
         id={id}
         style={style}
         title={title}
