@@ -404,7 +404,7 @@ exports[`<Reaction/> snapshot should match snapshot 1`] = `
   <div
     className="md-reaction-wrapper"
     data-name="haha"
-    data-size={12}
+    data-scale={12}
   />
 </Reaction>
 `;
@@ -417,7 +417,7 @@ exports[`<Reaction/> snapshot should match snapshot with className 1`] = `
   <div
     className="example-class md-reaction-wrapper"
     data-name="haha"
-    data-size={12}
+    data-scale={12}
   />
 </Reaction>
 `;
@@ -444,7 +444,7 @@ exports[`<Reaction/> snapshot should match snapshot with id 1`] = `
   <div
     className="md-reaction-wrapper"
     data-name="haha"
-    data-size={12}
+    data-scale={12}
     id="example-id"
   />
 </Reaction>
@@ -521,7 +521,7 @@ exports[`<Reaction/> snapshot should match snapshot with style 1`] = `
   <div
     className="md-reaction-wrapper"
     data-name="haha"
-    data-size={12}
+    data-scale={12}
     style={
       Object {
         "color": "pink",

@@ -9,6 +9,7 @@ import Documentation from './Reaction.stories.docs.mdx';
 import { ON_VIDEO_REACTIONS, ORIGINAL_REACTIONS, REACTIONS } from './Reaction.constants';
 import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
+import { ICON_CONSTANTS } from '../Icon';
 
 export default {
   title: 'Momentum UI/Reaction',
@@ -38,6 +39,13 @@ const ReactionWithLabel = (props: ReactionProps) => (
   </Flex>
 );
 
+const Sizes = MultiTemplate<ReactionProps>(Reaction).bind({});
+Sizes.parameters = {
+  variants: [...Object.values(ICON_CONSTANTS.SIZES).map((size) => ({ name: 'haha', size }))],
+};
+Sizes.argTypes = { ...argTypes };
+delete Sizes.argTypes.size;
+
 const Original = MultiTemplate<ReactionProps>(ReactionWithLabel).bind({});
 
 Original.argTypes = { ...argTypes };
@@ -56,4 +64,4 @@ OnVideo.parameters = {
   variants: [...Object.values(ON_VIDEO_REACTIONS).map((name) => ({ name, size: 'auto' }))],
 };
 
-export { Example, Original, OnVideo };
+export { Example, Original, OnVideo, Sizes };

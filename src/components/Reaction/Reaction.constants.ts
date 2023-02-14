@@ -1,3 +1,4 @@
+import { ICON_CONSTANTS } from '../Icon';
 import {
   OnVideoReactionName,
   OriginalReactionName,
@@ -14,10 +15,7 @@ const DEFAULTS = {
   SIZE: 12,
 };
 
-const SIZES = {
-  12: 12,
-  16: 16,
-};
+const SIZES = ICON_CONSTANTS.SIZES;
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,

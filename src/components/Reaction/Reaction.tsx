@@ -37,7 +37,7 @@ const Reaction: FC<Props> = (props: Props) => {
         animation.destroy();
       }
     };
-  }, [svgContainer, animationData]);
+  }, [svgContainer, animationData, autoPlay, loop]);
 
   if (error) {
     return (
@@ -50,7 +50,7 @@ const Reaction: FC<Props> = (props: Props) => {
     return (
       <div
         className={classnames(className, STYLE.wrapper)}
-        data-size={size || DEFAULTS.SIZE}
+        data-scale={size || DEFAULTS.SIZE}
         data-name={name}
         id={id}
         ref={svgContainer}
