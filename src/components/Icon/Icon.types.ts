@@ -18,7 +18,9 @@ export type IconScale =
   | 56
   | 64
   | 120
-  | 124;
+  | 124
+  | 'auto'
+  | 'inherit';
 
 export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
 

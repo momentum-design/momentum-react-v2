@@ -1,3 +1,4 @@
+import { IconScale } from '.';
 import type { IconWeight } from './Icon.types';
 
 const CLASS_PREFIX = 'md-icon';
@@ -23,7 +24,7 @@ const SCALES = {
   200: 200,
 };
 
-const SIZES: Record<number, number> = {
+const SIZES: Record<IconScale, IconScale> = {
   8: 8,
   10: 10,
   12: 12,
@@ -42,6 +43,8 @@ const SIZES: Record<number, number> = {
   64: 64,
   120: 120,
   124: 124,
+  auto: 'auto',
+  inherit: 'inherit',
 };
 
 const VIEW_BOX_SPECS = {

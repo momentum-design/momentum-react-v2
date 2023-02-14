@@ -7,6 +7,8 @@ import {
   ReactionName as ReactionNameType,
   OnVideoReactionName as OnVideoReactionNameType,
   OriginalReactionName as OriginalReactionNameType,
+  ReactionWithSkinTone as ReactionWithSkinToneType,
+  ReactionWithoutSkinTone as ReactionWithoutSkinToneType,
 } from './Reaction.types';
 
 export { CONSTANTS as REACTION_CONSTANTS };
@@ -17,5 +19,6 @@ export type SkinTone = SkinToneType;
 export type ReactionName = ReactionNameType;
 export type OriginalReactionName = OriginalReactionNameType;
 export type OnVideoReactionName = OnVideoReactionNameType;
-
+export type ReactionWithSkinTone = ReactionWithSkinToneType;
+export type ReactionWithoutSkinTone = ReactionWithoutSkinToneType;
 export default Reaction;

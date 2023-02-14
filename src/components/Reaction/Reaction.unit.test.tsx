@@ -140,7 +140,7 @@ describe('<Reaction/>', () => {
       const wrapper = await mountAndWait(<Reaction name="haha" size={size} />);
       const element = wrapper.find(Reaction).getDOMNode();
 
-      expect(element.getAttribute('data-size')).toBe(`${size}`);
+      expect(element.getAttribute('data-scale')).toBe(`${size}`);
     });
   });
 

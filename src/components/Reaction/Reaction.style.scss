@@ -1,24 +1,12 @@
+@use '../Icon/Icon.style.scss' as *;
+
 .md-reaction-wrapper,
 .md-reaction-not-found {
+  align-items: center;
   display: flex;
+  height: fit-content;
+  justify-content: center;
+  width: fit-content;
 
-  &[data-size='12'] {
-    width: 0.75rem;
-  }
-
-  &[data-size='16'] {
-    width: 1rem;
-  }
-
-  &[data-size='160'] {
-    width: 10rem;
-  }
-
-  &[data-size='320'] {
-    width: 20rem;
-  }
-
-  &[data-size='auto'] {
-    width: auto;
-  }
+  @include icon-scales;
 }
