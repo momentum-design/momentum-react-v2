@@ -75,6 +75,19 @@ describe('<List />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with role', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <List role="tablist" {...commonProps}>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
+        </List>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     /* ...additional snapshot tests... */
   });
 
@@ -240,7 +253,7 @@ describe('<List />', () => {
     });
 
     it('should handle focus on tabbable elements in the list row', async () => {
-      expect.assertions(11);
+      expect.assertions(10);
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
@@ -267,40 +280,36 @@ describe('<List />', () => {
 
       expect(listItems[0]).toHaveFocus();
 
-      await user.tab();
+      await user.keyboard('{ArrowRight}');
       expect(inputs[0]).toHaveFocus();
 
-      await user.tab();
+      await user.keyboard('{ArrowRight}');
       expect(buttons[0]).toHaveFocus();
 
       await user.tab();
       expect(document.body).toHaveFocus();
 
       await user.tab({ shift: true });
-      expect(buttons[0]).toHaveFocus();
+      expect(listItems[0]).toHaveFocus();
 
-      await user.tab({ shift: true });
+      await user.keyboard('{ArrowRight}');
 
       expect(inputs[0]).toHaveFocus();
 
       await user.keyboard('{ArrowDown}');
       expect(listItems[1]).toHaveFocus();
 
-      await user.tab();
+      await user.keyboard('{ArrowRight}');
 
       expect(inputs[1]).toHaveFocus();
 
-      await user.tab();
+      await user.keyboard('{ArrowRight}');
 
       expect(buttons[1]).toHaveFocus();
 
-      await user.tab({ shift: true });
+      await user.keyboard('{ArrowLeft}');
 
       expect(inputs[1]).toHaveFocus();
-
-      await user.tab({ shift: true });
-
-      expect(listItems[1]).toHaveFocus();
     });
 
     it('should handle menu in the list item', async () => {
@@ -326,7 +335,7 @@ describe('<List />', () => {
 
       expect(listItems[0]).toHaveFocus();
 
-      await user.tab();
+      await user.keyboard('{ArrowRight}');
       await user.keyboard('{Enter}');
 
       const firstMenuItem = (await findAllByText('menu item 1'))[0].closest('li');
@@ -365,7 +374,7 @@ describe('<List />', () => {
 
       expect(listItems[0]).toHaveFocus();
 
-      await user.tab();
+      await user.keyboard('{ArrowRight}');
       expect(buttons[0]).toHaveFocus();
 
       const updatedButton = await findAllByText('muted');

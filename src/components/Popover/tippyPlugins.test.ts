@@ -1,6 +1,6 @@
 import { PopoverInstance } from '.';
 import { STYLE } from './Popover.constants';
-import { hideOnEscPlugin, addBackdrop } from './tippyPlugins';
+import { hideOnEscPlugin, addBackdropPlugin } from './tippyPlugins';
 
 describe('tippyPlugins', () => {
   describe('hideOnEscPlugin', () => {
@@ -13,10 +13,10 @@ describe('tippyPlugins', () => {
     });
   });
 
-  describe('addBackdrop', () => {
+  describe('addBackdropPlugin', () => {
     it('should return plugin correctly', () => {
-      expect(addBackdrop).toStrictEqual({
-        name: 'addBackdrop',
+      expect(addBackdropPlugin).toStrictEqual({
+        name: 'addBackdropPlugin',
         fn: expect.any(Function),
       });
     });
@@ -28,7 +28,7 @@ describe('tippyPlugins', () => {
         hide: hideMock,
       } as unknown as PopoverInstance;
 
-      const pluginInstance = addBackdrop.fn(tippyInstance);
+      const pluginInstance = addBackdropPlugin.fn(tippyInstance);
       pluginInstance.onMount(tippyInstance);
 
       expect(hideMock).not.toBeCalled();
@@ -55,7 +55,7 @@ describe('tippyPlugins', () => {
         hide: hideMock,
       } as unknown as PopoverInstance;
 
-      const pluginInstance = addBackdrop.fn(tippyInstance);
+      const pluginInstance = addBackdropPlugin.fn(tippyInstance);
       pluginInstance.onMount(tippyInstance);
 
       expect(hideMock).not.toBeCalled();

@@ -5,7 +5,7 @@ exports[`<Icon /> snapshot should match snapshot 1`] = `
   name="accessibility"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
   >
     <svg
       className=""
@@ -28,7 +28,7 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to 'true' 1`
   name="accessibility"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
   >
     <svg
       className=""
@@ -51,7 +51,7 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to a percent
   name="accessibility"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
   >
     <svg
       className=""
@@ -74,7 +74,7 @@ exports[`<Icon /> snapshot should match snapshot with className 1`] = `
   name="accessibility"
 >
   <div
-    className="md-icon-wrapper example-class"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales example-class"
   >
     <svg
       className=""
@@ -97,7 +97,7 @@ exports[`<Icon /> snapshot should match snapshot with color 1`] = `
   name="accessibility"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
   >
     <svg
       className=""
@@ -124,7 +124,7 @@ exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
   name="accessibility"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
   >
     <svg
       className=""
@@ -150,7 +150,7 @@ exports[`<Icon /> snapshot should match snapshot with id 1`] = `
   name="accessibility"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
     id="example-id"
   >
     <svg
@@ -192,7 +192,7 @@ exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
   scale={16}
 >
   <div
-    className="md-icon-wrapper md-icon-no-shrink"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
   >
     <svg
       className=""
@@ -215,7 +215,7 @@ exports[`<Icon /> snapshot should match snapshot with small icons 1`] = `
   scale={14}
 >
   <div
-    className="md-icon-wrapper md-icon-no-shrink"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
   >
     <svg
       className=""
@@ -238,7 +238,7 @@ exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
   strokeColor="red"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
   >
     <svg
       className=""
@@ -269,7 +269,7 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
     style={
       Object {
         "color": "pink",
@@ -297,7 +297,7 @@ exports[`<Icon /> snapshot should match snapshot with title 1`] = `
   title="You have a draft message"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
     title="You have a draft message"
   >
     <svg
@@ -321,7 +321,7 @@ exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
   weight="light"
 >
   <div
-    className="md-icon-wrapper"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
   >
     <svg
       className=""

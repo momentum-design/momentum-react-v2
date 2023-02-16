@@ -20,6 +20,8 @@ const DEFAULTS = {
   VARIANT: 'small',
   TRIGGER: 'click',
   PLACEMENT: PLACEMENTS.AUTO as string,
+  OFFSET_DISTANCE: 5,
+  OFFSET_SKIDDING: 0,
   SHOW_ARROW: true,
   INTERACTIVE: false,
   COLOR: COLORS.PRIMARY,
@@ -28,6 +30,7 @@ const DEFAULTS = {
   CLOSE_BUTTON_PLACEMENT: CLOSE_BUTTON_PLACEMENTS.NONE,
   FOCUS_BACK_ON_TRIGGER_COMPONENT: false,
   STRATEGY: 'absolute' as const,
+  ADD_BACKDROP: true,
 };
 
 const STYLE = {
@@ -37,9 +40,6 @@ const STYLE = {
   backdrop: `${CLASS_PREFIX}-backdrop`,
 };
 
-// default offset between popover and trigger component:
-const OFFSET = 5;
-
 // padding between the edge of the popover and the arrow, to ensure the arrow doesn't get pushed outside
 const ARROW_PADDING = 5;
 
@@ -47,7 +47,6 @@ export {
   CLASS_PREFIX,
   DEFAULTS,
   STYLE,
-  OFFSET,
   ARROW_PADDING,
   BOUNDARIES,
   CLOSE_BUTTON_PLACEMENTS,

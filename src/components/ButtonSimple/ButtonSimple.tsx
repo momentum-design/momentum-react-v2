@@ -15,12 +15,17 @@ import './ButtonSimple.style.scss';
  */
 
 const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { children, className, isDisabled, id, style, title, useNativeKeyDown } = props;
+  const { children, className, isDisabled, id, style, title, useNativeKeyDown, role, tabIndex } =
+    props;
   const internalRef = useRef();
   const ref = providedRef || internalRef;
 
   const { buttonProps } = useButton(props, ref);
   const { hoverProps } = useHover(props);
+
+  const otherProps = tabIndex
+    ? { ...buttonProps, ...hoverProps, role, tabIndex }
+    : { ...buttonProps, ...hoverProps, role };
 
   return (
     <FocusRing disabled={isDisabled}>
@@ -30,8 +35,7 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
         ref={ref}
         style={style}
         title={title}
-        {...buttonProps}
-        {...hoverProps}
+        {...otherProps}
         // override of onKeyDown to ensure the standard html button behavior (on enter => onClick) happens
         onKeyDown={useNativeKeyDown ? props.onKeyDown : buttonProps.onKeyDown}
       >

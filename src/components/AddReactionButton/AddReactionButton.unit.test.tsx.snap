@@ -49,7 +49,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
               scale={12}
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -123,7 +123,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
               scale={12}
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -200,7 +200,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
               scale={12}
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -293,7 +293,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
               scale={12}
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""

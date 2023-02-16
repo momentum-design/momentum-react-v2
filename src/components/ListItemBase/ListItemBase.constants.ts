@@ -27,4 +27,14 @@ const STYLE = {
   contextMenuWrapper: `${CLASS_PREFIX}-context-menu-wrapper`,
 };
 
-export { DEFAULTS, STYLE, SIZES, SHAPES };
+const KEYS = {
+  TAB_KEY: 'Tab',
+  ENTER_KEY: 'Enter',
+  SPACE_KEY: ' ',
+  LEFT_KEY: 'ArrowLeft',
+  UP_KEY: 'ArrowUp',
+  RIGHT_KEY: 'ArrowRight',
+  DOWN_KEY: 'ArrowDown',
+};
+
+export { DEFAULTS, KEYS, STYLE, SIZES, SHAPES };

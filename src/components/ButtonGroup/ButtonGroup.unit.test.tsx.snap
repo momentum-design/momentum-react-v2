@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
+exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
 <ButtonGroup>
   <div
     className="md-button-group-wrapper"
     data-compressed={false}
     data-round={false}
+    data-separator={false}
     data-spaced={false}
   >
     <ButtonPill
@@ -112,7 +113,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
 </ButtonGroup>
 `;
 
-exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
+exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
 <ButtonGroup
   spaced={true}
 >
@@ -120,6 +121,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
     className="md-button-group-wrapper"
     data-compressed={false}
     data-round={false}
+    data-separator={false}
     data-spaced={true}
   >
     <ButtonPill
@@ -226,7 +228,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when spaced 1`] = `
 </ButtonGroup>
 `;
 
-exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
+exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
 <ButtonCircle
   className="example-class"
 >
@@ -274,7 +276,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
 </ButtonCircle>
 `;
 
-exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
+exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
 <ButtonCircle
   id="example-id"
 >
@@ -324,7 +326,123 @@ exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
 </ButtonCircle>
 `;
 
-exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
+exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
+<ButtonGroup
+  role="tablist"
+>
+  <div
+    className="md-button-group-wrapper"
+    data-compressed={false}
+    data-round={false}
+    data-separator={false}
+    data-spaced={false}
+    role="tablist"
+  >
+    <ButtonPill
+      key="0"
+    >
+      <ButtonSimple
+        className="md-button-pill-wrapper"
+        data-color="primary"
+        data-disabled={false}
+        data-ghost={false}
+        data-grown={false}
+        data-outline={false}
+        data-size={40}
+        data-solid={false}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-pill-wrapper md-button-simple-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-ghost={false}
+              data-grown={false}
+              data-outline={false}
+              data-size={40}
+              data-solid={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                Example A
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+    </ButtonPill>
+    <ButtonCircle
+      key="1"
+    >
+      <ButtonSimple
+        className="md-button-circle-wrapper"
+        data-color="primary"
+        data-disabled={false}
+        data-ghost={false}
+        data-multiple-children={false}
+        data-outline={false}
+        data-size={40}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-circle-wrapper md-button-simple-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-ghost={false}
+              data-multiple-children={false}
+              data-outline={false}
+              data-size={40}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                A
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+    </ButtonCircle>
+  </div>
+</ButtonGroup>
+`;
+
+exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
 <ButtonGroup
   round={true}
 >
@@ -332,6 +450,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
     className="md-button-group-wrapper"
     data-compressed={false}
     data-round={true}
+    data-separator={false}
     data-spaced={false}
   >
     <ButtonPill
@@ -438,7 +557,122 @@ exports[`<ButtonPill /> snapshot should match snapshot with round 1`] = `
 </ButtonGroup>
 `;
 
-exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
+exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
+<ButtonGroup
+  separator={true}
+>
+  <div
+    className="md-button-group-wrapper"
+    data-compressed={false}
+    data-round={false}
+    data-separator={true}
+    data-spaced={false}
+  >
+    <ButtonPill
+      key="0"
+    >
+      <ButtonSimple
+        className="md-button-pill-wrapper"
+        data-color="primary"
+        data-disabled={false}
+        data-ghost={false}
+        data-grown={false}
+        data-outline={false}
+        data-size={40}
+        data-solid={false}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-pill-wrapper md-button-simple-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-ghost={false}
+              data-grown={false}
+              data-outline={false}
+              data-size={40}
+              data-solid={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                Example A
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+    </ButtonPill>
+    <ButtonCircle
+      key="1"
+    >
+      <ButtonSimple
+        className="md-button-circle-wrapper"
+        data-color="primary"
+        data-disabled={false}
+        data-ghost={false}
+        data-multiple-children={false}
+        data-outline={false}
+        data-size={40}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-circle-wrapper md-button-simple-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-ghost={false}
+              data-multiple-children={false}
+              data-outline={false}
+              data-size={40}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                A
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+    </ButtonCircle>
+  </div>
+</ButtonGroup>
+`;
+
+exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
 <ButtonCircle
   style={
     Object {

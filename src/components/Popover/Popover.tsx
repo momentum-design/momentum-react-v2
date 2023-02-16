@@ -5,13 +5,13 @@ import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
 import { LazyTippy } from './LazyTippy';
 import { ARROW_ID, ELEVATIONS, ROUNDS } from '../ModalContainer/ModalContainer.constants';
-import { ARROW_PADDING, DEFAULTS, OFFSET, STYLE } from './Popover.constants';
+import { ARROW_PADDING, DEFAULTS, STYLE } from './Popover.constants';
 import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
 import type { Props } from './Popover.types';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
-import { hideOnEscPlugin, addBackdrop } from './tippyPlugins';
 import classNames from 'classnames';
 import { isMRv2Button } from '../../helpers/verifyTypes';
+import { addTippyPlugins } from './Popover.utils';
 
 /**
  * The Popover component allows adding a Popover to whatever provided
@@ -30,6 +30,8 @@ const Popover: FC<Props> = (props: Props) => {
     placement = DEFAULTS.PLACEMENT,
     interactive = DEFAULTS.INTERACTIVE,
     showArrow = DEFAULTS.SHOW_ARROW,
+    offsetDistance = DEFAULTS.OFFSET_DISTANCE,
+    offsetSkidding = DEFAULTS.OFFSET_SKIDDING,
     color,
     delay,
     setInstance,
@@ -38,6 +40,7 @@ const Popover: FC<Props> = (props: Props) => {
     style,
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
+    addBackdrop = DEFAULTS.ADD_BACKDROP,
     focusBackOnTrigger = DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT,
     closeButtonPlacement = DEFAULTS.CLOSE_BUTTON_PLACEMENT,
     closeButtonProps,
@@ -138,9 +141,9 @@ const Popover: FC<Props> = (props: Props) => {
       }}
       animation={false}
       delay={delay}
-      plugins={hideOnEsc ? [hideOnEscPlugin, addBackdrop] : [addBackdrop]}
+      plugins={addTippyPlugins(hideOnEsc, addBackdrop)}
       // add arrow height to default offset if arrow is shown:
-      offset={[0, showArrow ? ARROW_HEIGHT + OFFSET : OFFSET]}
+      offset={[offsetSkidding, showArrow ? ARROW_HEIGHT + offsetDistance : offsetDistance]}
       {...{
         onAfterUpdate,
         onBeforeUpdate,

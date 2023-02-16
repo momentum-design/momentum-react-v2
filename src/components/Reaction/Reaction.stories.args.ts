@@ -46,7 +46,7 @@ export default {
     control: { type: 'select' },
     table: {
       type: {
-        summary: 'number',
+        summary: 'IconScale',
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.SIZE,

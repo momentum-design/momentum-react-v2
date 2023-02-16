@@ -31,6 +31,30 @@ const popoverArgTypes = {
       },
     },
   },
+  offsetSkidding: {
+    description: `The offset skidding (in px) along the reference.`,
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: DEFAULTS.OFFSET_SKIDDING,
+      },
+    },
+  },
+  offsetDistance: {
+    description: `The offset distance (in px) from the reference.`,
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: DEFAULTS.OFFSET_DISTANCE,
+      },
+    },
+  },
   showArrow: {
     description: `Whether the arrow should be shown`,
     control: { type: 'boolean' },

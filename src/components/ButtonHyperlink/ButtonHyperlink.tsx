@@ -15,6 +15,7 @@ const ButtonHyperlink = forwardRef((props: Props, providedRef: RefObject<HTMLAnc
   const mutatedProps = {
     ...props,
     isDisabled: props.disabled,
+    isInverted: props.inverted,
   };
 
   delete mutatedProps.disabled;
@@ -29,6 +30,7 @@ const ButtonHyperlink = forwardRef((props: Props, providedRef: RefObject<HTMLAnc
         {...buttonProps}
         ref={ref}
         data-disabled={props.disabled || DEFAULTS.DISABLED}
+        data-inverted={props.inverted || DEFAULTS.INVERTED}
         title={title}
       >
         {props.children}

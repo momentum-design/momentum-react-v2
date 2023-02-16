@@ -38,4 +38,29 @@ export default {
       },
     },
   },
+  shouldItemFocusBeInset: {
+    description:
+      'Determines wether the focus around list-items should be inset or outset. This is needed for virtualized lists',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  role: {
+    description: 'Aria role',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };

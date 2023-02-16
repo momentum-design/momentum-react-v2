@@ -15,17 +15,29 @@ import './OverlayAlert.style.scss';
  * @beta
  */
 const OverlayAlert: FC<Props> = (props: Props) => {
-  const { actions, children, className, controls, details, title, ...other } = props;
+  const {
+    actions,
+    children,
+    className,
+    controls,
+    details,
+    modalColor,
+    overlayColor,
+    title,
+    ...other
+  } = props;
 
   return (
-    <Overlay className={classnames(className, STYLE.wrapper)} {...other}>
-      <ModalContainer>
+    <Overlay className={classnames(className, STYLE.wrapper)} color={overlayColor} {...other}>
+      <ModalContainer color={modalColor}>
         <div>
-          {!!title && (
-            <Text className={classnames(STYLE.title)} type="header-primary">
-              {title}
-            </Text>
-          )}
+          <div className={classnames(STYLE.title)}>
+            {!!title && (
+              <Text className={classnames(STYLE.title)} type="header-primary">
+                {title}
+              </Text>
+            )}
+          </div>
           <div>{controls}</div>
         </div>
         <div>

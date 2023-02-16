@@ -3,13 +3,13 @@ import React, { ReactElement } from 'react';
 import { mountAndWait } from '../../../test/utils';
 import ReactionButton, { REACTION_BUTTON_CONSTANTS as CONSTANTS } from './';
 import Reaction, { ReactionProps } from '../Reaction';
-import { REACTION_NAMES } from '../Reaction/Reaction.constants';
+import { REACTIONS } from '../Reaction/Reaction.constants';
 
 describe('<ReactionButton />', () => {
   let children: ReactElement<ReactionProps>;
 
   beforeEach(() => {
-    children = <Reaction name={REACTION_NAMES.haha} />;
+    children = <Reaction name={REACTIONS.haha} />;
   });
 
   describe('snapshot', () => {

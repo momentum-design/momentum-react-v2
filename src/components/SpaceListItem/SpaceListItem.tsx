@@ -45,6 +45,10 @@ const SpaceListItem: FC<Props> = forwardRef(
     const renderText = () => {
       const secondLineArrayClean = cleanSecondLine(secondLine);
 
+      // All --mds-color-theme-text-team* tokens have a dash before the color --mds-color-theme-text-team-cobalt-* --mds-color-theme-text-team-cyan-* etc
+      // except for --mds-color-theme-teamdefault-*
+      const teamColorForToken = teamColor === DEFAULTS.TEAM_COLOR ? teamColor : `-${teamColor}`;
+
       if (secondLineArrayClean.length) {
         return (
           <>
@@ -53,7 +57,7 @@ const SpaceListItem: FC<Props> = forwardRef(
             </Text>
             {isCompact && <DividerDot data-test="compact-mode-divider-dot" />}
             <Text
-              style={{ color: `var(--mds-color-theme-text-team-${teamColor}-normal)` }}
+              style={{ color: `var(--mds-color-theme-text-team${teamColorForToken}-normal)` }}
               type="body-secondary"
               data-test="list-item-second-line"
               aria-label={secondLineArrayClean.join(', ')}
@@ -83,13 +87,37 @@ const SpaceListItem: FC<Props> = forwardRef(
         title: rightIconTooltip,
       };
       if (isMention) {
-        return <Icon fillColor={'var(--mds-color-theme-control-active-normal)'} name="mention" {...iconProps} />;
+        return (
+          <Icon
+            fillColor={'var(--mds-color-theme-control-active-normal)'}
+            name="mention"
+            {...iconProps}
+          />
+        );
       } else if (isEnterRoom) {
-        return <Icon fillColor={'var(--mds-color-theme-control-active-normal)'} name="enter-room" {...iconProps} />;
+        return (
+          <Icon
+            fillColor={'var(--mds-color-theme-control-active-normal)'}
+            name="enter-room"
+            {...iconProps}
+          />
+        );
       } else if (isAlertMuted) {
-        return <Icon fillColor={'var(--mds-color-theme-text-primary-normal)'} name="alert-muted" {...iconProps} />;
+        return (
+          <Icon
+            fillColor={'var(--mds-color-theme-text-primary-normal)'}
+            name="alert-muted"
+            {...iconProps}
+          />
+        );
       } else if (isAlert) {
-        return <Icon fillColor={'var(--mds-color-theme-text-primary-normal)'} name="alert" {...iconProps} />;
+        return (
+          <Icon
+            fillColor={'var(--mds-color-theme-text-primary-normal)'}
+            name="alert"
+            {...iconProps}
+          />
+        );
       } else if (!isSelected && isDraft) {
         return <Icon name="draft-indicator" {...iconProps} />;
       } else if (isError) {
@@ -102,7 +130,13 @@ const SpaceListItem: FC<Props> = forwardRef(
           />
         );
       } else if (isUnread) {
-        return <Icon name="unread" fillColor={'var(--mds-color-theme-control-active-normal)'} {...iconProps} />;
+        return (
+          <Icon
+            name="unread"
+            fillColor={'var(--mds-color-theme-control-active-normal)'}
+            {...iconProps}
+          />
+        );
       } else if (action) {
         return <>{action}</>;
       } else return null;

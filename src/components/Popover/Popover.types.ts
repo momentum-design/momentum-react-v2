@@ -72,6 +72,14 @@ export type PopoverCommonStyleProps = {
    * @default true
    */
   hideOnEsc?: boolean;
+
+  /**
+   * Whether or not an invisible backdrop is added behind the popover. A backdrop, when added, will hide the
+   * popover when you click outside of it, preventing multiple popovers from opening at once.
+   *
+   * @default true
+   */
+  addBackdrop?: boolean;
 };
 
 export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> {
@@ -150,4 +158,16 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default `absolute`
    */
   strategy?: PositioningStrategy;
+
+  /**
+   * The offset distance (in px) from the reference.
+   * @default 'undefined'
+   */
+  offsetDistance?: number;
+
+  /**
+   * The offset skidding (in px) along the reference.
+   * @default 'undefined'
+   */
+  offsetSkidding?: number;
 }

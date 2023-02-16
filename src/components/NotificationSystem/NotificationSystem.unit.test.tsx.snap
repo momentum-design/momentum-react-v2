@@ -1,5 +1,659 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<NotificationSystem /> should match snapshot when limit is set to notifications 1`] = `
+<div>
+  <div
+    class="md-notification-system-wrapper"
+    data-position="top-right"
+    style="z-index: 10000;"
+  >
+    <div
+      class="Toastify"
+      id="medium_notification_container"
+    />
+    <div
+      class="Toastify"
+      id="low_notification_container"
+    >
+      <div
+        class="Toastify__toast-container Toastify__toast-container--top-right"
+      >
+        <div
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          id="123456"
+          style="--nth: 1; --len: 1;"
+        >
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div>
+              <div
+                class="md-toast-notification-wrapper md-modal-container-wrapper"
+                data-color="primary"
+                data-elevation="0"
+                data-padded="true"
+                data-round="50"
+              >
+                <div
+                  class="md-toast-notification-body"
+                >
+                  <div
+                    class="md-toast-notification-leading-visual"
+                  >
+                    <div
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                    >
+                      <svg
+                        class=""
+                        data-autoscale="false"
+                        data-scale="24"
+                        data-test="info-circle"
+                        height="100%"
+                        style="fill: lightblue;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    class="md-text-wrapper md-toast-notification-text"
+                    data-type="body-primary"
+                  >
+                    This is a test
+                  </p>
+                  <div
+                    class="md-toast-notification-close-button"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-size="20"
+                      type="button"
+                    >
+                      <div
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      >
+                        <svg
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<NotificationSystem /> should match snapshot with body class name 1`] = `
+<div>
+  <div
+    class="md-notification-system-wrapper"
+    data-position="top-right"
+    style="z-index: 10000;"
+  >
+    <div
+      class="Toastify"
+      id="medium_notification_container"
+    />
+    <div
+      class="Toastify"
+      id="low_notification_container"
+    >
+      <div
+        class="Toastify__toast-container Toastify__toast-container--top-right"
+      >
+        <div
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          id="123456"
+          style="--nth: 1; --len: 1;"
+        >
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div>
+              <div
+                class="md-toast-notification-wrapper md-modal-container-wrapper"
+                data-color="primary"
+                data-elevation="0"
+                data-padded="true"
+                data-round="50"
+              >
+                <div
+                  class="md-toast-notification-body"
+                >
+                  <div
+                    class="md-toast-notification-leading-visual"
+                  >
+                    <div
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                    >
+                      <svg
+                        class=""
+                        data-autoscale="false"
+                        data-scale="24"
+                        data-test="info-circle"
+                        height="100%"
+                        style="fill: lightblue;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    class="md-text-wrapper md-toast-notification-text"
+                    data-type="body-primary"
+                  >
+                    This is a test
+                  </p>
+                  <div
+                    class="md-toast-notification-close-button"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-size="20"
+                      type="button"
+                    >
+                      <div
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      >
+                        <svg
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<NotificationSystem /> should match snapshot with container class name 1`] = `
+<div>
+  <div
+    class="md-notification-system-wrapper"
+    data-position="top-right"
+    style="z-index: 10000;"
+  >
+    <div
+      class="Toastify"
+      id="medium_notification_container"
+    />
+    <div
+      class="Toastify"
+      id="low_notification_container"
+    >
+      <div
+        class="Toastify__toast-container Toastify__toast-container--top-right"
+      >
+        <div
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          id="123456"
+          style="--nth: 1; --len: 1;"
+        >
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div>
+              <div
+                class="md-toast-notification-wrapper md-modal-container-wrapper"
+                data-color="primary"
+                data-elevation="0"
+                data-padded="true"
+                data-round="50"
+              >
+                <div
+                  class="md-toast-notification-body"
+                >
+                  <div
+                    class="md-toast-notification-leading-visual"
+                  >
+                    <div
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                    >
+                      <svg
+                        class=""
+                        data-autoscale="false"
+                        data-scale="24"
+                        data-test="info-circle"
+                        height="100%"
+                        style="fill: lightblue;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    class="md-text-wrapper md-toast-notification-text"
+                    data-type="body-primary"
+                  >
+                    This is a test
+                  </p>
+                  <div
+                    class="md-toast-notification-close-button"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-size="20"
+                      type="button"
+                    >
+                      <div
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      >
+                        <svg
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<NotificationSystem /> should match snapshot with enter animation 1`] = `
+<div>
+  <div
+    class="md-notification-system-wrapper"
+    data-position="top-right"
+    style="z-index: 10000;"
+  >
+    <div
+      class="Toastify"
+      id="medium_notification_container"
+    />
+    <div
+      class="Toastify"
+      id="low_notification_container"
+    >
+      <div
+        class="Toastify__toast-container Toastify__toast-container--top-right"
+      >
+        <div
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          id="123456"
+          style="--nth: 1; --len: 1;"
+        >
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div>
+              <div
+                class="md-toast-notification-wrapper md-modal-container-wrapper"
+                data-color="primary"
+                data-elevation="0"
+                data-padded="true"
+                data-round="50"
+              >
+                <div
+                  class="md-toast-notification-body"
+                >
+                  <div
+                    class="md-toast-notification-leading-visual"
+                  >
+                    <div
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                    >
+                      <svg
+                        class=""
+                        data-autoscale="false"
+                        data-scale="24"
+                        data-test="info-circle"
+                        height="100%"
+                        style="fill: lightblue;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    class="md-text-wrapper md-toast-notification-text"
+                    data-type="body-primary"
+                  >
+                    This is a test
+                  </p>
+                  <div
+                    class="md-toast-notification-close-button"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-size="20"
+                      type="button"
+                    >
+                      <div
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      >
+                        <svg
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<NotificationSystem /> should match snapshot with newest on top 1`] = `
+<div>
+  <div
+    class="md-notification-system-wrapper"
+    data-position="top-right"
+    style="z-index: 10000;"
+  >
+    <div
+      class="Toastify"
+      id="medium_notification_container"
+    />
+    <div
+      class="Toastify"
+      id="low_notification_container"
+    >
+      <div
+        class="Toastify__toast-container Toastify__toast-container--top-right"
+      >
+        <div
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          id="123456"
+          style="--nth: 1; --len: 1;"
+        >
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div>
+              <div
+                class="md-toast-notification-wrapper md-modal-container-wrapper"
+                data-color="primary"
+                data-elevation="0"
+                data-padded="true"
+                data-round="50"
+              >
+                <div
+                  class="md-toast-notification-body"
+                >
+                  <div
+                    class="md-toast-notification-leading-visual"
+                  >
+                    <div
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                    >
+                      <svg
+                        class=""
+                        data-autoscale="false"
+                        data-scale="24"
+                        data-test="info-circle"
+                        height="100%"
+                        style="fill: lightblue;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    class="md-text-wrapper md-toast-notification-text"
+                    data-type="body-primary"
+                  >
+                    This is a test
+                  </p>
+                  <div
+                    class="md-toast-notification-close-button"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-size="20"
+                      type="button"
+                    >
+                      <div
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      >
+                        <svg
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<NotificationSystem /> should match snapshot with toast class name 1`] = `
+<div>
+  <div
+    class="md-notification-system-wrapper"
+    data-position="top-right"
+    style="z-index: 10000;"
+  >
+    <div
+      class="Toastify"
+      id="medium_notification_container"
+    />
+    <div
+      class="Toastify"
+      id="low_notification_container"
+    >
+      <div
+        class="Toastify__toast-container Toastify__toast-container--top-right"
+      >
+        <div
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          id="123456"
+          style="--nth: 1; --len: 1;"
+        >
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div>
+              <div
+                class="md-toast-notification-wrapper md-modal-container-wrapper"
+                data-color="primary"
+                data-elevation="0"
+                data-padded="true"
+                data-round="50"
+              >
+                <div
+                  class="md-toast-notification-body"
+                >
+                  <div
+                    class="md-toast-notification-leading-visual"
+                  >
+                    <div
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                    >
+                      <svg
+                        class=""
+                        data-autoscale="false"
+                        data-scale="24"
+                        data-test="info-circle"
+                        height="100%"
+                        style="fill: lightblue;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    class="md-text-wrapper md-toast-notification-text"
+                    data-type="body-primary"
+                  >
+                    This is a test
+                  </p>
+                  <div
+                    class="md-toast-notification-close-button"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-size="20"
+                      type="button"
+                    >
+                      <div
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      >
+                        <svg
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
 <div>
   <div
@@ -42,7 +696,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -76,7 +730,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -151,7 +805,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -185,7 +839,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -256,7 +910,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -290,7 +944,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -358,7 +1012,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -392,7 +1046,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -471,7 +1125,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -505,7 +1159,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -580,7 +1234,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -614,7 +1268,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""
@@ -689,7 +1343,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                     class="md-toast-notification-leading-visual"
                   >
                     <div
-                      class="md-icon-wrapper icon md-icon-no-shrink"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
                     >
                       <svg
                         class=""
@@ -723,7 +1377,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                       type="button"
                     >
                       <div
-                        class="md-icon-wrapper md-icon-no-shrink"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       >
                         <svg
                           class=""

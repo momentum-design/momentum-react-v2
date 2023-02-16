@@ -180,7 +180,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -239,7 +239,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -298,7 +298,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -392,6 +392,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -442,7 +443,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""
@@ -807,7 +808,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -866,7 +867,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -925,7 +926,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -1019,6 +1020,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -1069,7 +1071,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""
@@ -1390,7 +1392,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -1449,7 +1451,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -1508,7 +1510,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -1603,6 +1605,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -1653,7 +1656,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""
@@ -1961,7 +1964,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -2020,7 +2023,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -2079,7 +2082,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -2174,6 +2177,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -2224,7 +2228,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""
@@ -2575,7 +2579,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -2634,7 +2638,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -2693,7 +2697,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -2787,6 +2791,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -2837,7 +2842,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""
@@ -3203,7 +3208,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -3262,7 +3267,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -3321,7 +3326,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -3415,6 +3420,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -3465,7 +3471,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""
@@ -3839,7 +3845,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -3898,7 +3904,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -3957,7 +3963,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       weight="bold"
                     >
                       <div
-                        className="md-icon-wrapper"
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                       >
                         <svg
                           className=""
@@ -4051,6 +4057,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -4101,7 +4108,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""
@@ -4409,7 +4416,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     weight="bold"
                   >
                     <div
-                      className="md-icon-wrapper"
+                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                     >
                       <svg
                         className=""
@@ -4465,7 +4472,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     weight="bold"
                   >
                     <div
-                      className="md-icon-wrapper"
+                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                     >
                       <svg
                         className=""
@@ -4521,7 +4528,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     weight="bold"
                   >
                     <div
-                      className="md-icon-wrapper"
+                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                     >
                       <svg
                         className=""
@@ -4665,6 +4672,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
             className="md-button-group-wrapper md-toast-content-actions"
             data-compressed={false}
             data-round={false}
+            data-separator={false}
             data-spaced={true}
           >
             <ButtonCircle
@@ -4715,7 +4723,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         weight="bold"
                       >
                         <div
-                          className="md-icon-wrapper"
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
                         >
                           <svg
                             className=""

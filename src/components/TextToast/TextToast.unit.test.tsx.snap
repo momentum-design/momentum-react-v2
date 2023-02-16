@@ -64,7 +64,7 @@ exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
       name="noise-removal"
     >
       <div
-        className="md-icon-wrapper"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
       >
         <svg
           className=""

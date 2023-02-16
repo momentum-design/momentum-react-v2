@@ -1,6 +1,9 @@
 import { commonStyles, extendArgTypes } from '../../storybook/helper.stories.argtypes';
 import { overlayArgTypes } from '../Overlay/Overlay.stories.args';
 
+import { MODAL_CONTAINER_CONSTANTS } from '../ModalContainer';
+import { OVERLAY_CONSTANTS } from '../Overlay';
+
 const overlayAlertArgTypes = {
   actions: {
     description:
@@ -53,6 +56,32 @@ const overlayAlertArgTypes = {
       },
     },
   },
+  modalColor: {
+    description: 'Provides the color for the modal container of this element.',
+    control: { type: 'select' },
+    options: [undefined, ...Object.values(MODAL_CONTAINER_CONSTANTS.COLORS)],
+    table: {
+      type: {
+        summary: 'ReactNode',
+      },
+      defaultValue: {
+        summary: MODAL_CONTAINER_CONSTANTS.DEFAULTS.COLOR,
+      },
+    },
+  },
+  overlayColor: {
+    description: 'Provides the color for the overlay of this element.',
+    control: { type: 'select' },
+    options: [undefined, ...Object.values(OVERLAY_CONSTANTS.COLORS)],
+    table: {
+      type: {
+        summary: 'ReactNode',
+      },
+      defaultValue: {
+        summary: OVERLAY_CONSTANTS.DEFAULTS.COLOR,
+      },
+    },
+  },
   title: {
     description: 'Provides the title within this component as a `string`.',
     control: { type: 'text' },
@@ -71,6 +100,6 @@ export { overlayAlertArgTypes };
 
 export default {
   ...commonStyles,
-  ...extendArgTypes('Overlay', overlayArgTypes),
+  ...extendArgTypes('Overlay', overlayArgTypes, ['color']),
   ...overlayAlertArgTypes,
 };

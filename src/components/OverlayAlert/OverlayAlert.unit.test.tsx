@@ -3,6 +3,8 @@ import { mount } from 'enzyme';
 
 import ButtonControl from '../ButtonControl';
 import ButtonPill from '../ButtonPill';
+import ModalContainer, { MODAL_CONTAINER_CONSTANTS } from '../ModalContainer';
+import Overlay, { OVERLAY_CONSTANTS } from '../Overlay';
 
 import OverlayAlert, { OVERLAY_ALERT_CONSTANTS as CONSTANTS, OVERLAY_ALERT_CONSTANTS } from './';
 
@@ -177,6 +179,26 @@ describe('<OverlayAlert />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
+    it('should provide the local <Overlay /> with its respective color', () => {
+      expect.assertions(1);
+
+      const overlayColor = Object.values(OVERLAY_CONSTANTS.COLORS).pop();
+
+      const element = mount(<OverlayAlert overlayColor={overlayColor} />).find(Overlay);
+
+      expect(element.props().color).toBe(overlayColor);
+    });
+
+    it('should provide the local <ModalContainer /> with its respective color', () => {
+      expect.assertions(1);
+
+      const modalColor = Object.values(MODAL_CONTAINER_CONSTANTS.COLORS).pop();
+
+      const element = mount(<OverlayAlert modalColor={modalColor} />).find(ModalContainer);
+
+      expect(element.props().color).toBe(modalColor);
+    });
+
     it('should have provided actions when actions is provided', () => {
       expect.assertions(1);
 
@@ -228,7 +250,19 @@ describe('<OverlayAlert />', () => {
         .getDOMNode()
         .getElementsByClassName(OVERLAY_ALERT_CONSTANTS.STYLE.title)[0];
 
-      expect(target.innerHTML).toBe(title);
+      expect(target.innerHTML.includes(title)).toBe(true);
+    });
+
+    it('should still render a empty div with the appropriate class when no title is provided', () => {
+      expect.assertions(1);
+
+      const component = mount(<OverlayAlert />).find(OverlayAlert);
+
+      const target = component
+        .getDOMNode()
+        .getElementsByClassName(OVERLAY_ALERT_CONSTANTS.STYLE.title)[0];
+
+      expect(target.classList.contains(OVERLAY_ALERT_CONSTANTS.STYLE.title)).toBe(true);
     });
 
     it('should have provided children when details and children are provided', () => {
