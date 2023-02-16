@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactNode } from 'react';
 import ToastNotification from '../ToastNotification';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
@@ -11,7 +11,7 @@ interface NotificationTemplateProps {
   /**
    * The content to be shown in notification
    */
-  content: string | ReactElement | ReactElement[];
+  content: ReactNode;
 
   /**
    * Text of Close Button

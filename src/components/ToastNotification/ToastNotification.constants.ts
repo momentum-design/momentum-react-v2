@@ -11,8 +11,4 @@ const STYLE = {
   buttonGroup: `${CLASS_PREFIX}-button-group`,
 };
 
-const KEYS = {
-  ENTER_KEY: 'Enter',
-};
-
-export { CLASS_PREFIX, DEFAULTS, STYLE, KEYS };
+export { CLASS_PREFIX, DEFAULTS, STYLE };

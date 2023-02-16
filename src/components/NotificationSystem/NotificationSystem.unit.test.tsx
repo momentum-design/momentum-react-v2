@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, ReactNode } from 'react';
 import { act, render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -9,7 +9,7 @@ import { STYLE } from './NotificationSystem.constants';
 import userEvent from '@testing-library/user-event';
 
 type PrepareForSnapshotProps = {
-  content: string;
+  content: ReactNode;
   className?: string;
   id?: string;
   style?: CSSProperties;
@@ -26,7 +26,8 @@ type PrepareForSnapshotProps = {
 
 // pin the toast id to make the snapshots reliable:
 const fixedToastId = '123456';
-const content = 'This is a test';
+const textContent = 'This is a test';
+const nodeContent = <>{textContent}</>;
 
 describe('<NotificationSystem />', () => {
   const waitForNotificationToAppear = async ({
@@ -59,14 +60,14 @@ describe('<NotificationSystem />', () => {
     });
 
     // wait till the toast shows up on the screen:
-    await screen.findByText(content);
+    await screen.findByText(textContent);
     return { container };
   };
 
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
-      const { container } = await waitForNotificationToAppear({ content });
+      const { container } = await waitForNotificationToAppear({ content: textContent });
 
       expect(container).toMatchSnapshot();
     });
@@ -75,7 +76,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
       const className = 'example-class';
 
-      const { container } = await waitForNotificationToAppear({ content, className });
+      const { container } = await waitForNotificationToAppear({ content: textContent, className });
 
       expect(container).toMatchSnapshot();
     });
@@ -84,7 +85,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const id = 'example-id';
-      const { container } = await waitForNotificationToAppear({ content, id });
+      const { container } = await waitForNotificationToAppear({ content: textContent, id });
 
       expect(container).toMatchSnapshot();
     });
@@ -93,7 +94,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
-      const { container } = await waitForNotificationToAppear({ content, style });
+      const { container } = await waitForNotificationToAppear({ content: textContent, style });
 
       expect(container).toMatchSnapshot();
     });
@@ -102,7 +103,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const { container } = await waitForNotificationToAppear({
-        content,
+        content: textContent,
         position: NotificationSystem.POSITION.BOTTOM_RIGHT,
       });
 
@@ -113,7 +114,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const { container } = await waitForNotificationToAppear({
-        content,
+        content: textContent,
         attention: NotificationSystem.ATTENTION.MEDIUM,
       });
 
@@ -124,78 +125,94 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const { container } = await waitForNotificationToAppear({
-        content,
+        content: textContent,
         zIndex: 9898,
       });
 
       expect(container).toMatchSnapshot();
     });
-  });
 
-  it('should match snapshot when limit is set to notifications', async () => {
-    expect.assertions(1);
+    it('should match snapshot with enter animation', async () => {
+      expect.assertions(1);
 
-    const { container } = await waitForNotificationToAppear({
-      content,
-      limit: 5,
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+        enterAnimation: 'slideInBottom',
+      });
+
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
-  });
+    it('should match snapshot with newest on top', async () => {
+      expect.assertions(1);
 
-  it('should match snapshot with enter animation', async () => {
-    expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+        newestOnTop: false,
+      });
 
-    const { container } = await waitForNotificationToAppear({
-      content,
-      enterAnimation: 'slideInBottom',
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
-  });
+    it('should match snapshot with toast class name', async () => {
+      expect.assertions(1);
 
-  it('should match snapshot with newest on top', async () => {
-    expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+        toastClassName: 'toast',
+      });
 
-    const { container } = await waitForNotificationToAppear({
-      content,
-      newestOnTop: false,
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
-  });
+    it('should match snapshot with body class name', async () => {
+      expect.assertions(1);
 
-  it('should match snapshot with toast class name', async () => {
-    expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+        bodyClassName: 'body-toast',
+      });
 
-    const { container } = await waitForNotificationToAppear({
-      content,
-      toastClassName: 'toast',
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
-  });
+    it('should match snapshot with container class name', async () => {
+      expect.assertions(1);
 
-  it('should match snapshot with body class name', async () => {
-    expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+        bodyClassName: 'container',
+      });
 
-    const { container } = await waitForNotificationToAppear({
-      content,
-      bodyClassName: 'body-toast',
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
-  });
+    it('should match snapshot when limit is set to notifications', async () => {
+      expect.assertions(1);
 
-  it('should match snapshot with container class name', async () => {
-    expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+        limit: 5,
+      });
 
-    const { container } = await waitForNotificationToAppear({
-      content,
-      bodyClassName: 'container',
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
+    it('should match snapshot if notification content is a free string', async () => {
+      expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+      });
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot if notification content is not a free string', async () => {
+      expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content: nodeContent,
+      });
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -211,7 +228,7 @@ describe('<NotificationSystem />', () => {
       const attention = ATTENTION.MEDIUM;
 
       const { container } = await waitForNotificationToAppear({
-        content,
+        content: textContent,
         className,
         style,
         id,
@@ -234,43 +251,63 @@ describe('<NotificationSystem />', () => {
         `${id}_${ATTENTION.MEDIUM}_notification_container`
       );
     });
-  });
 
-  it("should limit toast notifications shown on screen when 'limit' is set", async () => {
-    const toastLimit = 2;
+    it("should limit toast notifications shown on screen when 'limit' is set", async () => {
+      const toastLimit = 2;
 
-    const { container } = await waitForNotificationToAppear({
-      content,
-      limit: toastLimit,
-      id: '1234567',
-    });
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+        limit: toastLimit,
+        id: '1234567',
+      });
 
-    act(() => {
-      NotificationSystem.notify(
-        <NotificationTemplate content="creating additional toast to meet the toast limit" />,
-        {
-          toastId: '12345890',
-          notificationSystemId: '1234567',
-        }
+      act(() => {
+        NotificationSystem.notify(
+          <NotificationTemplate content="creating additional toast to meet the toast limit" />,
+          {
+            toastId: '12345890',
+            notificationSystemId: '1234567',
+          }
+        );
+      });
+
+      act(() => {
+        NotificationSystem.notify(
+          <NotificationTemplate content="additional toast to test the limit works" />,
+          {
+            toastId: '1234589012',
+            notificationSystemId: '1234567',
+          }
+        );
+      });
+
+      await screen.findByText('creating additional toast to meet the toast limit');
+
+      const notificationContainerToasts = container.getElementsByClassName(
+        'md-toast-notification-wrapper'
       );
+      expect(notificationContainerToasts.length).toBe(toastLimit);
     });
 
-    act(() => {
-      NotificationSystem.notify(
-        <NotificationTemplate content="additional toast to test the limit works" />,
-        {
-          toastId: '1234589012',
-          notificationSystemId: '1234567',
-        }
-      );
+    it('should accept a free string as a notification content', async () => {
+      expect.assertions(1);
+
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
+      });
+
+      expect(container).toHaveTextContent(textContent);
     });
 
-    await screen.findByText('creating additional toast to meet the toast limit');
+    it('should accept a react node as a notification content', async () => {
+      expect.assertions(1);
 
-    const notificationContainerToasts = container.getElementsByClassName(
-      'md-toast-notification-wrapper'
-    );
-    expect(notificationContainerToasts.length).toBe(toastLimit);
+      const { container } = await waitForNotificationToAppear({
+        content: nodeContent,
+      });
+
+      expect(container).toHaveTextContent(textContent);
+    });
   });
 
   describe('actions', () => {
@@ -281,7 +318,7 @@ describe('<NotificationSystem />', () => {
 
       const toastId = '12345';
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={content} />, {
+        NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
           autoClose: false,
           toastId,
         });
@@ -290,7 +327,7 @@ describe('<NotificationSystem />', () => {
       // wait till the toast shows up on the screen:
       const toast = await screen.findByRole('alert');
       expect(toast).toBeVisible();
-      expect(toast).toHaveTextContent(content);
+      expect(toast).toHaveTextContent(textContent);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
 
@@ -314,10 +351,7 @@ describe('<NotificationSystem />', () => {
       const toastId = '12345';
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate
-            content={content}
-            closeButtonText={closeButtonText}
-          />,
+          <NotificationTemplate content={textContent} closeButtonText={closeButtonText} />,
           {
             autoClose: false,
             toastId,
@@ -329,7 +363,7 @@ describe('<NotificationSystem />', () => {
       // wait till the toast shows up on the screen:
       const toast = await screen.findByRole('alert');
       expect(toast).toBeVisible();
-      expect(toast).toHaveTextContent(content);
+      expect(toast).toHaveTextContent(textContent);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
 
@@ -352,7 +386,7 @@ describe('<NotificationSystem />', () => {
       const toastId = '12345';
       const newcontent = 'this is a new text';
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={content} />, {
+        NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
           autoClose: false,
           toastId,
         });
@@ -361,7 +395,7 @@ describe('<NotificationSystem />', () => {
       // wait till the toast shows up on the screen:
       const toast = await screen.findByRole('alert');
       expect(toast).toBeVisible();
-      expect(toast).toHaveTextContent(content);
+      expect(toast).toHaveTextContent(textContent);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
 
@@ -389,30 +423,24 @@ describe('<NotificationSystem />', () => {
       );
 
       act(() => {
-        NotificationSystem.notify(
-          <NotificationTemplate content={content + firstSystemId} />,
-          {
-            autoClose: false,
-            notificationSystemId: firstSystemId,
-          }
-        );
+        NotificationSystem.notify(<NotificationTemplate content={textContent + firstSystemId} />, {
+          autoClose: false,
+          notificationSystemId: firstSystemId,
+        });
       });
 
       // wait till the first toast shows up on the screen:
       const toasts = await screen.findAllByRole('alert');
       expect(toasts).toHaveLength(1);
       expect(toasts[0]).toBeVisible();
-      expect(toasts[0]).toHaveTextContent(content + firstSystemId);
+      expect(toasts[0]).toHaveTextContent(textContent + firstSystemId);
 
       // trigger second notification
       act(() => {
-        NotificationSystem.notify(
-          <NotificationTemplate content={content + secondSystemId} />,
-          {
-            autoClose: false,
-            notificationSystemId: secondSystemId,
-          }
-        );
+        NotificationSystem.notify(<NotificationTemplate content={textContent + secondSystemId} />, {
+          autoClose: false,
+          notificationSystemId: secondSystemId,
+        });
       });
 
       // wait till the 2 toasts shows up on the screen:
@@ -422,7 +450,7 @@ describe('<NotificationSystem />', () => {
         expect(toastsAfterUpdate).toHaveLength(2);
       });
       expect(toastsAfterUpdate[1]).toBeVisible();
-      expect(toastsAfterUpdate[1]).toHaveTextContent(content + secondSystemId);
+      expect(toastsAfterUpdate[1]).toHaveTextContent(textContent + secondSystemId);
     });
   });
 });

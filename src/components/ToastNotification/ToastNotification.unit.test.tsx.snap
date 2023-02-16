@@ -402,52 +402,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
 </ToastNotification>
 `;
 
-exports[`<ToastNotification /> snapshot should match snapshot with onToastPress callback 1`] = `
-<ToastNotification
-  content="Example text"
-  onToastPress={[MockFunction]}
->
-  <ModalContainer
-    className="md-toast-notification-wrapper"
-    isPadded={true}
-    round={50}
-  >
-    <div
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-padded={true}
-      data-round={50}
-    >
-      <div
-        className="md-toast-notification-body"
-        onClick={[MockFunction]}
-        onKeyDown={[Function]}
-        role="button"
-        tabIndex={0}
-      >
-        <PrimitiveConverter
-          className="md-toast-notification-content"
-          fontStyle="body-primary"
-        >
-          <Text
-            className="md-toast-notification-content"
-            type="body-primary"
-          >
-            <p
-              className="md-text-wrapper md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
-      </div>
-    </div>
-  </ModalContainer>
-</ToastNotification>
-`;
-
 exports[`<ToastNotification /> snapshot should match snapshot with string content 1`] = `
 <ToastNotification
   content="Example text"

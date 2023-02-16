@@ -44,9 +44,4 @@ export interface Props {
    * Callback when user clicks on the close button.
    */
   onClose?: (event: PressEvent) => void;
-
-  /**
-   * Callback when user clicks on the toast notification.
-   */
-  onToastPress?: (event: React.MouseEvent<HTMLElement>) => void;
 }

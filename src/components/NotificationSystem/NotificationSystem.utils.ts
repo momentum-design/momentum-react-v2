@@ -43,6 +43,7 @@ export const notify = (content: ToastContent, options?: NotifyOptionsType): Id =
     autoClose: calculateAutoClose(options),
     containerId: getContainerID(options?.notificationSystemId, options?.attention || ATTENTION.LOW),
     onClose: options?.onClose,
+    role: options?.role,
   });
 
 /**
