@@ -1,4 +1,6 @@
 import React, { ReactElement } from 'react';
+import { fireEvent, render } from '@testing-library/react';
+
 import { mountAndWait } from '../../../test/utils';
 import Icon, { IconProps } from '../Icon';
 import ButtonPill, { ButtonPillProps } from '../ButtonPill';
@@ -12,7 +14,7 @@ describe('<ToastNotification />', () => {
   let leadingVisual: ReactElement<IconProps>;
   let buttonGroup: ReactElement<ButtonPillProps>;
   let onClose;
-  let onToastMessageClick;
+  let onToastPress;
   const exampleContent = 'Example text';
 
   beforeEach(() => {
@@ -28,7 +30,7 @@ describe('<ToastNotification />', () => {
     onClose = () => {
       alert('Hello');
     };
-    onToastMessageClick = jest.fn();
+    onToastPress = jest.fn();
   });
 
   describe('snapshot', () => {
@@ -112,11 +114,11 @@ describe('<ToastNotification />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with onToastMessageClick callback', async () => {
+    it('should match snapshot with onToastPress callback', async () => {
       expect.assertions(1);
 
       const container = await mountAndWait(
-        <ToastNotification content={exampleContent} onToastMessageClick={onToastMessageClick} />
+        <ToastNotification content={exampleContent} onToastPress={onToastPress} />
       );
 
       expect(container).toMatchSnapshot();
@@ -206,17 +208,17 @@ describe('<ToastNotification />', () => {
       expect(element2).toBeDefined();
     });
 
-    it('should wrap the onToastMessageClick inside when it is provided', async () => {
+    it('should wrap the onToastPress inside when it is provided', async () => {
       expect.assertions(1);
 
       const wrapper = await mountAndWait(
-        <ToastNotification onToastMessageClick={onToastMessageClick} content={exampleContent} />
+        <ToastNotification onToastPress={onToastPress} content={exampleContent} />
       );
       const element = wrapper.find('.md-toast-notification-body').getDOMNode();
       expect(element.getAttribute('role')).toBe('button');
     });
 
-    it('should not wrap the onToastMessageClick inside when it is not provided', async () => {
+    it('should not wrap the onToastPress inside when it is not provided', async () => {
       expect.assertions(1);
 
       const wrapper = await mountAndWait(<ToastNotification content={exampleContent} />);
@@ -270,63 +272,14 @@ describe('<ToastNotification />', () => {
       expect(mockCallback).toBeCalledTimes(1);
     });
 
-    it('should handle mouse click events on the toast message if method is provided', async () => {
+    it('should handle mouse click events on the toast if method is provided', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
+      
+      const {container} = render(<ToastNotification onToastPress={mockCallback} content={exampleContent} />);
+      fireEvent.click(container.getElementsByClassName(STYLE.body)[0]);
 
-      const wrapper = await mountAndWait(
-        <ToastNotification onToastMessageClick={mockCallback} content={exampleContent} />
-      );
-      const component = wrapper.find('div').filter({ className: STYLE.body });
-
-      component.props().onClick({
-        altKey: false,
-        button: 0,
-        buttons: 0,
-        clientX: 0,
-        clientY: 0,
-        ctrlKey: false,
-        getModifierState: function (): boolean {
-          throw new Error('Function not implemented.');
-        },
-        metaKey: false,
-        movementX: 0,
-        movementY: 0,
-        pageX: 0,
-        pageY: 0,
-        relatedTarget: undefined,
-        screenX: 0,
-        screenY: 0,
-        shiftKey: false,
-        detail: 0,
-        view: undefined,
-        nativeEvent: undefined,
-        currentTarget: undefined,
-        target: undefined,
-        bubbles: false,
-        cancelable: false,
-        defaultPrevented: false,
-        eventPhase: 0,
-        isTrusted: false,
-        preventDefault: function (): void {
-          throw new Error('Function not implemented.');
-        },
-        isDefaultPrevented: function (): boolean {
-          throw new Error('Function not implemented.');
-        },
-        stopPropagation: function (): void {
-          throw new Error('Function not implemented.');
-        },
-        isPropagationStopped: function (): boolean {
-          throw new Error('Function not implemented.');
-        },
-        persist: function (): void {
-          throw new Error('Function not implemented.');
-        },
-        timeStamp: 0,
-        type: '',
-      });
       expect(mockCallback).toBeCalledTimes(1);
     });
   });

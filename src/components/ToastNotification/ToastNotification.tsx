@@ -1,15 +1,13 @@
 import React, { FC, HTMLAttributes } from 'react';
-import { isString } from 'lodash';
-
 import classnames from 'classnames';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
-import Text from '../Text';
 
 import { STYLE, KEYS } from './ToastNotification.constants';
 import { Props } from './ToastNotification.types';
 import './ToastNotification.style.scss';
+import { PrimitiveConverter } from '../../utils';
 
 /**
  * The ToastNotification component.
@@ -23,19 +21,19 @@ const ToastNotification: FC<Props> = (props: Props) => {
     leadingVisual,
     buttonGroup,
     onClose,
-    onToastMessageClick,
+    onToastPress,
   } = props;
 
   const handleOnKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
     if (e.key === KEYS.ENTER_KEY) {
-      onToastMessageClick(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
+      onToastPress(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
     }
   };
 
   const divProps: HTMLAttributes<HTMLDivElement> = {
     className: STYLE.body,
-    ...(onToastMessageClick && {
-      onClick: onToastMessageClick,
+    ...(onToastPress && {
+      onClick: onToastPress,
       onKeyDown: handleOnKeyDown,
       role: 'button',
       tabIndex: 0,
@@ -54,14 +52,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
         {leadingVisual && (
           <div className={classnames(className, STYLE.leadingVisual)}>{leadingVisual}</div>
         )}
-        {isString(content) ? (
-          <Text className={classnames(className, STYLE.content)} type="body-primary">
-            {content}
-          </Text>
-        ) : (
-          <div className={classnames(className, STYLE.content)}>{content}</div>
-        )}
-
+          <PrimitiveConverter className={classnames(className, STYLE.content)} fontStyle='body-primary'>{content}</PrimitiveConverter>
         {onClose && (
           <div className={classnames(className, STYLE.closeButton)}>
             <ButtonCircle size={20} ghost onPress={onClose}>

@@ -166,7 +166,7 @@ exports[`<NotificationSystem /> should match snapshot with body class name 1`] =
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -275,7 +275,7 @@ exports[`<NotificationSystem /> should match snapshot with container class name 
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -384,7 +384,7 @@ exports[`<NotificationSystem /> should match snapshot with enter animation 1`] =
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -493,7 +493,7 @@ exports[`<NotificationSystem /> should match snapshot with newest on top 1`] = `
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
@@ -602,7 +602,7 @@ exports[`<NotificationSystem /> should match snapshot with toast class name 1`] 
                     </div>
                   </div>
                   <p
-                    class="md-text-wrapper md-toast-notification-text"
+                    class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
                   >
                     This is a test
