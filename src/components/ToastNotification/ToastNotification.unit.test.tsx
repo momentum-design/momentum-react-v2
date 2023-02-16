@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import { fireEvent, render } from '@testing-library/react';
 
 import { mountAndWait } from '../../../test/utils';
 import Icon, { IconProps } from '../Icon';
@@ -7,14 +6,12 @@ import ButtonPill, { ButtonPillProps } from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 
 import ToastNotification, { TOAST_NOTIFICATION_CONSTANTS as CONSTANTS } from './';
-import { STYLE } from './ToastNotification.constants';
 import Text from '../Text';
 
 describe('<ToastNotification />', () => {
   let leadingVisual: ReactElement<IconProps>;
   let buttonGroup: ReactElement<ButtonPillProps>;
   let onClose;
-  let onToastPress;
   const exampleContent = 'Example text';
 
   beforeEach(() => {
@@ -30,7 +27,6 @@ describe('<ToastNotification />', () => {
     onClose = () => {
       alert('Hello');
     };
-    onToastPress = jest.fn();
   });
 
   describe('snapshot', () => {
@@ -109,16 +105,6 @@ describe('<ToastNotification />', () => {
 
       const container = await mountAndWait(
         <ToastNotification content={exampleContent} buttonGroup={buttonGroup} />
-      );
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with onToastPress callback', async () => {
-      expect.assertions(1);
-
-      const container = await mountAndWait(
-        <ToastNotification content={exampleContent} onToastPress={onToastPress} />
       );
 
       expect(container).toMatchSnapshot();
@@ -208,24 +194,6 @@ describe('<ToastNotification />', () => {
       expect(element2).toBeDefined();
     });
 
-    it('should wrap the onToastPress inside when it is provided', async () => {
-      expect.assertions(1);
-
-      const wrapper = await mountAndWait(
-        <ToastNotification onToastPress={onToastPress} content={exampleContent} />
-      );
-      const element = wrapper.find('.md-toast-notification-body').getDOMNode();
-      expect(element.getAttribute('role')).toBe('button');
-    });
-
-    it('should not wrap the onToastPress inside when it is not provided', async () => {
-      expect.assertions(1);
-
-      const wrapper = await mountAndWait(<ToastNotification content={exampleContent} />);
-      const element = wrapper.find('.md-toast-notification-body').getDOMNode();
-      expect(element.getAttribute('role')).toBeNull();
-    });
-
     it('should wrap notification content inside Text component if content is a free string', async () => {
       expect.assertions(1);
 
@@ -268,17 +236,6 @@ describe('<ToastNotification />', () => {
         target: component.getDOMNode(),
         altKey: false,
       });
-
-      expect(mockCallback).toBeCalledTimes(1);
-    });
-
-    it('should handle mouse click events on the toast if method is provided', async () => {
-      expect.assertions(1);
-
-      const mockCallback = jest.fn();
-      
-      const {container} = render(<ToastNotification onToastPress={mockCallback} content={exampleContent} />);
-      fireEvent.click(container.getElementsByClassName(STYLE.body)[0]);
 
       expect(mockCallback).toBeCalledTimes(1);
     });

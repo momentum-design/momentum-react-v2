@@ -26,7 +26,7 @@ type CustomOptions = {
 export type UpdateOptionsType = UpdateOptions & CustomOptions;
 
 export type NotifyOptionsType =
-  | (Pick<ToastOptions, 'toastId' | 'autoClose' | 'onClose'> & CustomOptions)
+  | (Pick<ToastOptions, 'toastId' | 'autoClose' | 'onClose' | 'role'> & CustomOptions)
   | undefined;
 
 export interface CompoundProps {
