@@ -1,5 +1,5 @@
 import { PressEvent } from '@react-types/shared';
-import { CSSProperties, ReactElement } from 'react';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
 
 import { AvatarProps } from '../Avatar';
 import { IconProps } from '../Icon';
@@ -14,7 +14,7 @@ export interface Props {
   /**
    * The free string or component that appears inside the Notification toast.
    */
-  content: string | ReactElement | ReactElement[];
+  content: ReactNode;
   /**
    * Leading visual of this notification toast. It can be an Icon, Avatar or Badge.
    */
@@ -46,7 +46,7 @@ export interface Props {
   onClose?: (event: PressEvent) => void;
 
   /**
-   * Callback when user clicks on the notification.
+   * Callback when user clicks on the toast notification.
    */
-  onToastMessageClick?: (event: React.MouseEvent<HTMLElement>) => void;
+  onToastPress?: (event: React.MouseEvent<HTMLElement>) => void;
 }

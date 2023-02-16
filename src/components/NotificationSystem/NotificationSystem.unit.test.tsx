@@ -147,7 +147,7 @@ describe('<NotificationSystem />', () => {
     expect.assertions(1);
 
     const { container } = await waitForNotificationToAppear({
-      notificationText,
+      content,
       enterAnimation: 'slideInBottom',
     });
 
@@ -158,7 +158,7 @@ describe('<NotificationSystem />', () => {
     expect.assertions(1);
 
     const { container } = await waitForNotificationToAppear({
-      notificationText,
+      content,
       newestOnTop: false,
     });
 
@@ -169,7 +169,7 @@ describe('<NotificationSystem />', () => {
     expect.assertions(1);
 
     const { container } = await waitForNotificationToAppear({
-      notificationText,
+      content,
       toastClassName: 'toast',
     });
 
@@ -180,7 +180,7 @@ describe('<NotificationSystem />', () => {
     expect.assertions(1);
 
     const { container } = await waitForNotificationToAppear({
-      notificationText,
+      content,
       bodyClassName: 'body-toast',
     });
 
@@ -191,7 +191,7 @@ describe('<NotificationSystem />', () => {
     expect.assertions(1);
 
     const { container } = await waitForNotificationToAppear({
-      notificationText,
+      content,
       bodyClassName: 'container',
     });
 
