@@ -19,22 +19,17 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
       <div
         className="md-toast-notification-body"
       >
-        <PrimitiveConverter
+        <Text
           className="md-toast-notification-content"
-          fontStyle="body-primary"
+          type="body-primary"
         >
-          <Text
-            className="md-toast-notification-content"
-            type="body-primary"
+          <p
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
           >
-            <p
-              className="md-text-wrapper md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
+            Example text
+          </p>
+        </Text>
       </div>
     </div>
   </ModalContainer>
@@ -75,22 +70,17 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
       <div
         className="md-toast-notification-body"
       >
-        <PrimitiveConverter
+        <Text
           className="md-toast-notification-content"
-          fontStyle="body-primary"
+          type="body-primary"
         >
-          <Text
-            className="md-toast-notification-content"
-            type="body-primary"
+          <p
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
           >
-            <p
-              className="md-text-wrapper md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
+            Example text
+          </p>
+        </Text>
       </div>
       <div
         className="md-toast-notification-button-group"
@@ -224,22 +214,17 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
       <div
         className="md-toast-notification-body"
       >
-        <PrimitiveConverter
+        <Text
           className="example-class md-toast-notification-content"
-          fontStyle="body-primary"
+          type="body-primary"
         >
-          <Text
-            className="example-class md-toast-notification-content"
-            type="body-primary"
+          <p
+            className="md-text-wrapper example-class md-toast-notification-content"
+            data-type="body-primary"
           >
-            <p
-              className="md-text-wrapper example-class md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
+            Example text
+          </p>
+        </Text>
       </div>
     </div>
   </ModalContainer>
@@ -268,22 +253,17 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
       <div
         className="md-toast-notification-body"
       >
-        <PrimitiveConverter
+        <Text
           className="md-toast-notification-content"
-          fontStyle="body-primary"
+          type="body-primary"
         >
-          <Text
-            className="md-toast-notification-content"
-            type="body-primary"
+          <p
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
           >
-            <p
-              className="md-text-wrapper md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
+            Example text
+          </p>
+        </Text>
       </div>
     </div>
   </ModalContainer>
@@ -341,22 +321,17 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
             </div>
           </Icon>
         </div>
-        <PrimitiveConverter
+        <Text
           className="md-toast-notification-content"
-          fontStyle="body-primary"
+          type="body-primary"
         >
-          <Text
-            className="md-toast-notification-content"
-            type="body-primary"
+          <p
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
           >
-            <p
-              className="md-text-wrapper md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
+            Example text
+          </p>
+        </Text>
       </div>
     </div>
   </ModalContainer>
@@ -366,9 +341,9 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
 exports[`<ToastNotification /> snapshot should match snapshot with non string content 1`] = `
 <ToastNotification
   content={
-    <React.Fragment>
+    <button>
       Example text
-    </React.Fragment>
+    </button>
   }
 >
   <ModalContainer
@@ -386,16 +361,13 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
       <div
         className="md-toast-notification-body"
       >
-        <PrimitiveConverter
+        <div
           className="md-toast-notification-content"
-          fontStyle="body-primary"
         >
-          <div
-            className="md-toast-notification-content"
-          >
+          <button>
             Example text
-          </div>
-        </PrimitiveConverter>
+          </button>
+        </div>
       </div>
     </div>
   </ModalContainer>
@@ -421,22 +393,17 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
       <div
         className="md-toast-notification-body"
       >
-        <PrimitiveConverter
+        <Text
           className="md-toast-notification-content"
-          fontStyle="body-primary"
+          type="body-primary"
         >
-          <Text
-            className="md-toast-notification-content"
-            type="body-primary"
+          <p
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
           >
-            <p
-              className="md-text-wrapper md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
+            Example text
+          </p>
+        </Text>
       </div>
     </div>
   </ModalContainer>
@@ -477,22 +444,17 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
       <div
         className="md-toast-notification-body"
       >
-        <PrimitiveConverter
+        <Text
           className="md-toast-notification-content"
-          fontStyle="body-primary"
+          type="body-primary"
         >
-          <Text
-            className="md-toast-notification-content"
-            type="body-primary"
+          <p
+            className="md-text-wrapper md-toast-notification-content"
+            data-type="body-primary"
           >
-            <p
-              className="md-text-wrapper md-toast-notification-content"
-              data-type="body-primary"
-            >
-              Example text
-            </p>
-          </Text>
-        </PrimitiveConverter>
+            Example text
+          </p>
+        </Text>
       </div>
     </div>
   </ModalContainer>

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { isString } from 'lodash';
 import classnames from 'classnames';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
@@ -7,7 +8,7 @@ import Icon from '../Icon';
 import { STYLE } from './ToastNotification.constants';
 import { Props } from './ToastNotification.types';
 import './ToastNotification.style.scss';
-import { PrimitiveConverter } from '../../utils';
+import Text from '../Text';
 
 /**
  * The ToastNotification component.
@@ -27,12 +28,13 @@ const ToastNotification: FC<Props> = (props: Props) => {
         {leadingVisual && (
           <div className={classnames(className, STYLE.leadingVisual)}>{leadingVisual}</div>
         )}
-        <PrimitiveConverter
-          className={classnames(className, STYLE.content)}
-          fontStyle="body-primary"
-        >
-          {content}
-        </PrimitiveConverter>
+        {isString(content) ? (
+          <Text className={classnames(className, STYLE.content)} type="body-primary">
+            {content}
+          </Text>
+        ) : (
+          <div className={classnames(className, STYLE.content)}>{content}</div>
+        )}
         {onClose && (
           <div className={classnames(className, STYLE.closeButton)}>
             <ButtonCircle size={20} ghost onPress={onClose}>

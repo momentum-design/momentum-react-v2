@@ -12,7 +12,7 @@ export type SupportedButtonGroup = ButtonPillProps | ButtonCircleProps;
 
 export interface Props {
   /**
-   * The free string or component that appears inside the Notification toast.
+   * The free string or a ReactElement that appears inside the Notification toast.
    */
   content: ReactNode;
   /**
