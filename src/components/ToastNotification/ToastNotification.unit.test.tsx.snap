@@ -95,6 +95,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-ghost={false}
             data-grown={false}
             data-outline={false}
+            data-shallow-disabled={false}
             data-size={28}
             data-solid={false}
           >
@@ -110,6 +111,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-ghost={false}
                   data-grown={false}
                   data-outline={false}
+                  data-shallow-disabled={false}
                   data-size={28}
                   data-solid={false}
                   onBlur={[Function]}
@@ -147,6 +149,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-ghost={false}
             data-grown={false}
             data-outline={true}
+            data-shallow-disabled={false}
             data-size={28}
             data-solid={false}
           >
@@ -162,6 +165,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-ghost={false}
                   data-grown={false}
                   data-outline={true}
+                  data-shallow-disabled={false}
                   data-size={28}
                   data-solid={false}
                   onBlur={[Function]}
