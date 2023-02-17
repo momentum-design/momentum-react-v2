@@ -1,4 +1,4 @@
-import React, { FC, Fragment, isValidElement } from 'react';
+import React, { FC, isValidElement } from 'react';
 import classNames from 'classnames';
 import Text from '../components/Text';
 import { FontStyle } from '../components/Text/Text.types';
@@ -38,9 +38,7 @@ const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConvert
   }
 
   return isElement ? (
-    children.type === Fragment && className ?
-     React.cloneElement(<div />, { ...addedProps }, children) : 
-     React.cloneElement(children, { ...addedProps })
+    React.cloneElement(children, { ...addedProps })
   ) : (
     <Text {...addedProps} type={fontStyle}>
       {children}

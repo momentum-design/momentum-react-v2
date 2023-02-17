@@ -24,7 +24,19 @@ export default {
 
 const Example = Template<ToastNotificationProps>(ToastNotification).bind({});
 
-Example.argTypes = { ...argTypes, onClose: { action: 'closed' } };
+Example.argTypes = {
+  ...argTypes,
+  content: {
+    ...argTypes.content,
+    control: { type: 'select' },
+    options: ['Text', 'ReactElement'],
+    mapping: {
+      Text: 'Example Text',
+      ReactElement: <ButtonPill color="message">Example ReactElement</ButtonPill>,
+    },
+  },
+  onClose: { action: 'closed' },
+};
 
 Example.args = {
   content: 'Example text',

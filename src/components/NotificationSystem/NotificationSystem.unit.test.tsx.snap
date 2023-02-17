@@ -56,12 +56,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -129,7 +130,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
       >
         <div
           class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
-          id="123456"
+          id="12345"
           style="--nth: 1; --len: 1;"
         >
           <div
@@ -204,13 +205,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
               </div>
             </div>
           </div>
-          <div
-            aria-hidden="true"
-            aria-label="notification timer"
-            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
-            role="progressbar"
-            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
-          />
         </div>
       </div>
     </div>
@@ -277,7 +271,9 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   <div
                     class="md-toast-notification-content"
                   >
-                    This is a test
+                    <button>
+                      This is a test
+                    </button>
                   </div>
                   <div
                     class="md-toast-notification-close-button"
@@ -382,12 +378,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -491,12 +488,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -600,12 +598,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -709,12 +708,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -814,12 +814,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -916,12 +917,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -1029,12 +1031,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -1138,12 +1141,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -1247,12 +1251,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -1356,12 +1361,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -1465,12 +1471,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >
@@ -1574,12 +1581,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                       />
                     </div>
                   </div>
-                  <p
-                    class="md-text-wrapper md-toast-notification-content"
-                    data-type="body-primary"
+                  <div
+                    class="md-toast-notification-content"
                   >
-                    This is a test
-                  </p>
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
                   <div
                     class="md-toast-notification-close-button"
                   >

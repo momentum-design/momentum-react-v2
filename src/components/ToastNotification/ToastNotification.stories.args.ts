@@ -2,8 +2,7 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 const toastNotificationArgTypes = {
   content: {
-    description:
-      'Provides the notification content of this Notification Toast. It can be a free string, or a ReactNode',
+    description: 'Provides the notification content of this Notification Toast.',
     control: { type: 'text' },
     table: {
       type: {

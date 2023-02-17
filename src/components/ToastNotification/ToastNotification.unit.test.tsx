@@ -65,9 +65,7 @@ describe('<ToastNotification />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(
-        <ToastNotification style={style} content={exampleContent} />
-      );
+      const container = await mountAndWait(<ToastNotification style={style} content={exampleContent} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -83,7 +81,7 @@ describe('<ToastNotification />', () => {
     it('should match snapshot with non string content', async () => {
       expect.assertions(1);
 
-      const content = <>{exampleContent}</>;
+      const content = <button>{exampleContent}</button>;
 
       const container = await mountAndWait(<ToastNotification content={content} />);
 
@@ -207,7 +205,7 @@ describe('<ToastNotification />', () => {
     it('should not wrap notification content inside Text component if content is not a free string', async () => {
       expect.assertions(1);
 
-      const notificationContent = <>Hello</>;
+      const notificationContent = <button>{exampleContent}</button>;
       const wrapper = await mountAndWait(<ToastNotification content={notificationContent} />);
       const textComponent = wrapper
         .find(Text)
