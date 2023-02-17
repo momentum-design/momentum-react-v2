@@ -78,6 +78,16 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when shallow disabled', () => {
+      expect.assertions(1);
+
+      const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
+
+      container = mount(<ButtonPill shallowDisabled={shallowDisabled}>Example Text</ButtonPill>);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot when a ghost', () => {
       expect.assertions(1);
 
@@ -209,6 +219,18 @@ describe('<ButtonPill />', () => {
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
     });
 
+    it('should pass shallow disabled prop', () => {
+      expect.assertions(1);
+
+      const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
+
+      const element = mount(<ButtonPill shallowDisabled={shallowDisabled} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
+    });
+
     it('should pass ghost prop', () => {
       expect.assertions(1);
 
@@ -309,6 +331,28 @@ describe('<ButtonPill />', () => {
       const mockCallback = jest.fn();
 
       const component = mount(<ButtonPill onPress={mockCallback} />).find(ButtonPill);
+
+      component.props().onPress({
+        type: 'press',
+        pointerType: 'mouse',
+        altKey: false,
+        shiftKey: false,
+        ctrlKey: false,
+        metaKey: false,
+        target: component.getDOMNode(),
+      });
+
+      expect(mockCallback).toBeCalledTimes(1);
+    });
+
+    it('should handle mouse press events even if shallow disabled', () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const component = mount(<ButtonPill shallowDisabled onPress={mockCallback} />).find(
+        ButtonPill
+      );
 
       component.props().onPress({
         type: 'press',

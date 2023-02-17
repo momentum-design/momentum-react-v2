@@ -12,6 +12,8 @@ import ButtonPill, { ButtonPillProps } from './';
 import argTypes from './ButtonPill.stories.args';
 import Documentation from './ButtonPill.stories.docs.mdx';
 
+import Popover, { PopoverProps } from '../Popover';
+
 export default {
   title: 'Momentum UI/ButtonPill',
   component: ButtonPill,
@@ -145,6 +147,109 @@ Sizes.parameters = {
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
+const Disabled = MultiTemplate<PopoverProps>(Popover).bind({});
+
+Disabled.parameters = {
+  variants: [
+    {
+      children: 'I am a popover',
+      triggerComponent: <ButtonPill>Primary button</ButtonPill>,
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: <ButtonPill disabled>Disabled primary button</ButtonPill>,
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: <ButtonPill shallowDisabled>Shallow disabled primarybutton</ButtonPill>,
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: <ButtonPill outline>Secondary button</ButtonPill>,
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill outline disabled>
+          Disabled secondary button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill outline shallowDisabled>
+          Shallow disabled secondary button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: <ButtonPill ghost>Ghost button</ButtonPill>,
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill ghost disabled>
+          Disabled ghost button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill ghost shallowDisabled>
+          Shallow disabled ghost button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: <ButtonPill color="join">Join button</ButtonPill>,
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill color="join" disabled>
+          Disabled join button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill color="join" shallowDisabled>
+          Shallow disabled join button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill color="join" outline>
+          Join outline button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill color="join" outline disabled>
+          Disabled join outline button
+        </ButtonPill>
+      ),
+    },
+    {
+      children: 'I am a popover',
+      triggerComponent: (
+        <ButtonPill color="join" outline shallowDisabled>
+          Shallow disabled join outline button
+        </ButtonPill>
+      ),
+    },
+  ],
+};
+
 const Common = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -172,4 +277,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Overflow, Colors, Outline, Grown, States, Sizes, Common };
+export { Example, Overflow, Colors, Outline, Grown, States, Sizes, Disabled, Common };

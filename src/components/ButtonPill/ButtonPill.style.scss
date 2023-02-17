@@ -124,6 +124,7 @@
         color: var(--mds-color-theme-common-text-white);
       }
 
+      &[data-shallow-disabled='true'],
       &[data-disabled='true'],
       &.disable {
         background-color: rgba(0, 0, 0, 0); // IEFIX
@@ -237,12 +238,14 @@
     }
 
     &[data-disabled='true'],
-    &.disable {
+    &.disable,
+    &[data-shallow-disabled='true'] {
       background-color: var(--mds-color-theme-button-secondary-normal);
       color: var(--mds-color-theme-text-primary-disabled);
     }
 
-    &[data-color='cancel'][data-disabled='false'] {
+    &[data-color='cancel'][data-disabled='false'],
+    &[data-color='cancel'][data-shallow-disabled='true'] {
       color: rgba(171, 10, 21, 1); // IEFIX
       color: var(--mds-color-theme-text-error-normal);
 
@@ -259,7 +262,8 @@
       }
     }
 
-    &[data-color='message'][data-disabled='false'] {
+    &[data-color='message'][data-disabled='false'],
+    &[data-color='message'][data-shallow-disabled='false'] {
       color: rgba(3, 83, 168, 1); // IEFIX
       color: var(--mds-color-theme-text-accent-normal);
 
@@ -302,6 +306,7 @@
     }
   }
 
+  &[data-shallow-disabled='true'],
   &[data-disabled='true'],
   &.disable {
     background-color: rgba(0, 0, 0, 0.2); // IEFIX

@@ -3,6 +3,7 @@ const CLASS_PREFIX = 'md-button-pill';
 const DEFAULTS = {
   COLOR: 'primary',
   DISABLED: false,
+  SHALLOW_DISABLED: false,
   GHOST: false,
   GROWN: false,
   OUTLINE: false,

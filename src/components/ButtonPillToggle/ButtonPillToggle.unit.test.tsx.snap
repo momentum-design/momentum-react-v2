@@ -20,6 +20,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
       data-grown={false}
       data-outline={false}
       data-selected={false}
+      data-shallow-disabled={false}
       data-size={40}
       data-solid={false}
       isDisabled={false}
@@ -42,6 +43,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
             data-grown={false}
             data-outline={false}
             data-selected={false}
+            data-shallow-disabled={false}
             data-size={40}
             data-solid={false}
             disabled={false}
@@ -90,6 +92,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being fa
       data-grown={false}
       data-outline={false}
       data-selected={false}
+      data-shallow-disabled={false}
       data-size={40}
       data-solid={false}
       isDisabled={false}
@@ -112,6 +115,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being fa
             data-grown={false}
             data-outline={false}
             data-selected={false}
+            data-shallow-disabled={false}
             data-size={40}
             data-solid={false}
             disabled={false}
@@ -160,6 +164,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being tr
       data-grown={false}
       data-outline={false}
       data-selected={false}
+      data-shallow-disabled={false}
       data-size={40}
       data-solid={false}
       isDisabled={false}
@@ -182,6 +187,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being tr
             data-grown={false}
             data-outline={false}
             data-selected={false}
+            data-shallow-disabled={false}
             data-size={40}
             data-solid={false}
             disabled={false}
@@ -231,6 +237,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
       data-grown={false}
       data-outline={false}
       data-selected={false}
+      data-shallow-disabled={false}
       data-size={40}
       data-solid={false}
       isDisabled={false}
@@ -254,6 +261,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             data-grown={false}
             data-outline={false}
             data-selected={false}
+            data-shallow-disabled={false}
             data-size={40}
             data-solid={false}
             disabled={false}
@@ -303,6 +311,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
       data-grown={false}
       data-outline={false}
       data-selected={true}
+      data-shallow-disabled={false}
       data-size={40}
       data-solid={false}
       isDisabled={false}
@@ -326,6 +335,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             data-grown={false}
             data-outline={false}
             data-selected={true}
+            data-shallow-disabled={false}
             data-size={40}
             data-solid={false}
             disabled={false}
@@ -375,6 +385,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
       data-grown={false}
       data-outline={false}
       data-selected={false}
+      data-shallow-disabled={false}
       data-size={40}
       data-solid={false}
       isDisabled={false}
@@ -397,6 +408,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             data-grown={false}
             data-outline={false}
             data-selected={false}
+            data-shallow-disabled={false}
             data-size={40}
             data-solid={false}
             disabled={false}
@@ -446,6 +458,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
       data-grown={false}
       data-outline={true}
       data-selected={false}
+      data-shallow-disabled={false}
       data-size={40}
       data-solid={false}
       isDisabled={false}
@@ -468,6 +481,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             data-grown={false}
             data-outline={true}
             data-selected={false}
+            data-shallow-disabled={false}
             data-size={40}
             data-solid={false}
             disabled={false}
