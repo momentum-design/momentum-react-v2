@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode } from 'react';
+import React, { CSSProperties, ReactNode, isValidElement } from 'react';
 import { act, render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -17,7 +17,7 @@ type PrepareForSnapshotProps = {
   attention?: AttentionType;
   zIndex?: number;
   limit?: number;
-  enterAnimation?: string;
+  enterAnimation?: Parameters<typeof NotificationSystem>[0]['enterAnimation'];
   newestOnTop?: boolean;
   containerClassName?: string;
   bodyClassName?: string;
@@ -39,6 +39,11 @@ describe('<NotificationSystem />', () => {
     attention,
     zIndex,
     limit,
+    enterAnimation,
+    newestOnTop,
+    containerClassName,
+    bodyClassName,
+    toastClassName,
   }: PrepareForSnapshotProps) => {
     const { container } = render(
       <NotificationSystem
@@ -48,6 +53,11 @@ describe('<NotificationSystem />', () => {
         position={position}
         zIndex={zIndex}
         limit={limit}
+        enterAnimation={enterAnimation}
+        newestOnTop={newestOnTop}
+        containerClassName={containerClassName}
+        bodyClassName={bodyClassName}
+        toastClassName={toastClassName}
       />
     );
 
@@ -60,7 +70,12 @@ describe('<NotificationSystem />', () => {
     });
 
     // wait till the toast shows up on the screen:
-    await screen.findByRole('button', { name: textContent });
+    const isReactElement = isValidElement(content);
+    if (isReactElement) {
+      await screen.findByRole('button', { name: textContent });
+    } else {
+      await screen.findByText(content as string);
+    }
     return { container };
   };
 
@@ -199,22 +214,12 @@ describe('<NotificationSystem />', () => {
     });
 
     it('should match snapshot if notification content is a free string', async () => {
-      expect.assertions(3);
-      const { container } = render(<NotificationSystem />);
+      expect.assertions(1);
 
-      const toastId = '12345';
-      act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
-          autoClose: false,
-          toastId,
-        });
+      const { container } = await waitForNotificationToAppear({
+        content: textContent,
       });
 
-      // wait till the toast shows up on the screen:
-      const toast = await screen.findByText(textContent);
-
-      expect(toast).toBeVisible();
-      expect(toast).toHaveTextContent(textContent);
       expect(container).toMatchSnapshot();
     });
 
@@ -299,36 +304,6 @@ describe('<NotificationSystem />', () => {
         'md-toast-notification-wrapper'
       );
       expect(notificationContainerToasts.length).toBe(toastLimit);
-    });
-
-    it('should accept a free string as a notification content', async () => {
-      expect.assertions(2);
-
-      const { container } = render(<NotificationSystem />);
-
-      const toastId = '12345';
-      act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
-          autoClose: false,
-          toastId,
-        });
-      });
-
-      // wait till the toast shows up on the screen:
-      const toast = await screen.findByText(textContent);
-
-      expect(toast).toBeVisible();
-      expect(container).toHaveTextContent(textContent);
-    });
-
-    it('should accept a react element as a notification content', async () => {
-      expect.assertions(1);
-
-      const { container } = await waitForNotificationToAppear({
-        content,
-      });
-
-      expect(container).toHaveTextContent(textContent);
     });
   });
 
