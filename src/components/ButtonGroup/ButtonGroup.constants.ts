@@ -4,6 +4,7 @@ const DEFAULTS = {
   ROUND: false,
   SPACED: false,
   COMPRESSED: false,
+  SEPARATOR: false,
 };
 
 const STYLE = {

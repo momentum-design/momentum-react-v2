@@ -23,7 +23,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
           weight="bold"
         >
           <div
-            className="md-icon-wrapper md-icon-no-shrink"
+            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
           >
             <svg
               className=""

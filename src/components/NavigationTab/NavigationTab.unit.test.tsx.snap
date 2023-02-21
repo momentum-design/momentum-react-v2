@@ -255,7 +255,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
                 weight="filled"
               >
                 <div
-                  className="md-icon-wrapper md-navigation-tab-icon md-icon-no-shrink"
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -533,7 +533,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                 weight="filled"
               >
                 <div
-                  className="md-icon-wrapper md-navigation-tab-icon md-icon-no-shrink"
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
                 >
                   <svg
                     className=""
@@ -614,7 +614,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                 weight="filled"
               >
                 <div
-                  className="md-icon-wrapper md-navigation-tab-icon md-icon-no-shrink"
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
                 >
                   <svg
                     className=""

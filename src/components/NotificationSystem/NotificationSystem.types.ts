@@ -103,4 +103,35 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * limit the number of notifications displayed.
+   */
+  limit?: number;
+
+  /**
+   * Determines wether the new notifications go on top or not.
+   */
+  newestOnTop?: boolean;
+
+  /**
+   * CSS animation when the toast enters the screen.
+   * @default 'slideInRight'
+   */
+  enterAnimation?: 'slideInRight' | 'slideInBottom';
+
+  /**
+   * Add optional classes to the toast
+   */
+  toastClassName?: string;
+
+  /**
+   * Add optional classes to the toast body
+   */
+  bodyClassName?: string;
+
+  /**
+   * Add optional classes to the container
+   */
+  containerClassName?: string;
 }

@@ -61,4 +61,19 @@ export default {
       },
     },
   },
+  separator: {
+    defaultValue: CONSTANTS.DEFAULTS.SEPARATOR,
+    description:
+      'Whether to to add a separator line between ChildNodes. Recommended to be used with ghost buttons',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SEPARATOR,
+      },
+    },
+  },
 };

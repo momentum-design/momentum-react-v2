@@ -17,6 +17,11 @@ export interface Props extends AriaButtonProps<'a'> {
   disabled?: boolean;
 
   /**
+   * Whether or not this ButtonDialpad has inverted theme colors.
+   */
+  inverted?: boolean;
+
+  /**
    * title to use for this component.
    */
   title?: string;

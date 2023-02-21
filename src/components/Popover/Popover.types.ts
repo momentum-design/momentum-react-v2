@@ -158,4 +158,16 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default `absolute`
    */
   strategy?: PositioningStrategy;
+
+  /**
+   * The offset distance (in px) from the reference.
+   * @default 'undefined'
+   */
+  offsetDistance?: number;
+
+  /**
+   * The offset skidding (in px) along the reference.
+   * @default 'undefined'
+   */
+  offsetSkidding?: number;
 }

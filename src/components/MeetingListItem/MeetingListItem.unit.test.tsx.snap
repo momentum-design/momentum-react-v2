@@ -150,6 +150,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
                   className="md-button-group-wrapper"
                   data-compressed={false}
                   data-round={false}
+                  data-separator={false}
                   data-spaced={false}
                 />
               </ButtonGroup>
@@ -449,7 +450,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                 weight="bold"
               >
                 <div
-                  className="md-icon-wrapper md-icon-no-shrink"
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 >
                   <svg
                     className=""

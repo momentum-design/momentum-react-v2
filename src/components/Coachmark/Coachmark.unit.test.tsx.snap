@@ -27,7 +27,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           class="md-coachmark-header"
         >
           <div
-            class="md-icon-wrapper md-icon-no-shrink"
+            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
           >
             <svg
               class=""
@@ -51,6 +51,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
             class="md-button-group-wrapper"
             data-compressed="false"
             data-round="true"
+            data-separator="false"
             data-spaced="false"
           >
             <button
@@ -59,7 +60,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
               type="button"
             >
               <div
-                class="md-icon-wrapper"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
               >
                 <svg
                   class=""
@@ -92,6 +93,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           class="md-button-group-wrapper"
           data-compressed="false"
           data-round="true"
+          data-separator="false"
           data-spaced="true"
         >
           <button
@@ -198,6 +200,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
             class="md-button-group-wrapper"
             data-compressed="false"
             data-round="true"
+            data-separator="false"
             data-spaced="true"
           >
             <button
@@ -236,6 +239,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
           class="md-button-group-wrapper md-coachmark-controls"
           data-compressed="false"
           data-round="true"
+          data-separator="false"
           data-spaced="false"
         >
           <button
@@ -244,7 +248,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
             type="button"
           >
             <div
-              class="md-icon-wrapper"
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
             >
               <svg
                 class=""

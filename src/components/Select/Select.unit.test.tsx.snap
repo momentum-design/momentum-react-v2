@@ -173,7 +173,7 @@ exports[`Select snapshot should match snapshot 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -285,7 +285,7 @@ exports[`Select snapshot should match snapshot 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -481,7 +481,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -593,7 +593,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -790,7 +790,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -902,7 +902,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -1577,7 +1577,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -1689,7 +1689,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -1886,7 +1886,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -1998,7 +1998,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -2205,7 +2205,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -2317,7 +2317,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -2995,7 +2995,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -3107,7 +3107,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -3305,7 +3305,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -3417,7 +3417,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -4094,7 +4094,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -4208,7 +4208,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -4431,7 +4431,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -4546,7 +4546,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -4771,7 +4771,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -4886,7 +4886,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -5269,7 +5269,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                   weight="bold"
                                 >
                                   <div
-                                    className="md-icon-wrapper md-list-box-item-tick-icon md-icon-no-shrink"
+                                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-list-box-item-tick-icon md-icon-no-shrink"
                                   >
                                     <svg
                                       className=""
@@ -5628,7 +5628,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -5740,7 +5740,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""
@@ -5936,7 +5936,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
               class="md-select-icon-wrapper"
             >
               <div
-                class="md-icon-wrapper md-icon-no-shrink"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   class=""
@@ -6049,7 +6049,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
               weight="bold"
             >
               <div
-                className="md-icon-wrapper md-icon-no-shrink"
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               >
                 <svg
                   className=""

@@ -1,12 +1,410 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Reaction/> snapshot match all available animations 1`] = `
+<ReactionKeys>
+  <div>
+    <p
+      key="smile"
+    >
+      smile
+    </p>
+    <p
+      key="sad"
+    >
+      sad
+    </p>
+    <p
+      key="wow"
+    >
+      wow
+    </p>
+    <p
+      key="haha"
+    >
+      haha
+    </p>
+    <p
+      key="celebrate"
+    >
+      celebrate
+    </p>
+    <p
+      key="heart"
+    >
+      heart
+    </p>
+    <p
+      key="fire"
+    >
+      fire
+    </p>
+    <p
+      key="speed_up"
+    >
+      speed_up
+    </p>
+    <p
+      key="slow_down"
+    >
+      slow_down
+    </p>
+    <p
+      key="clap_yellow"
+    >
+      clap_yellow
+    </p>
+    <p
+      key="clap_light"
+    >
+      clap_light
+    </p>
+    <p
+      key="clap_medium_light"
+    >
+      clap_medium_light
+    </p>
+    <p
+      key="clap_medium"
+    >
+      clap_medium
+    </p>
+    <p
+      key="clap_medium_dark"
+    >
+      clap_medium_dark
+    </p>
+    <p
+      key="clap_dark"
+    >
+      clap_dark
+    </p>
+    <p
+      key="thumb_up_yellow"
+    >
+      thumb_up_yellow
+    </p>
+    <p
+      key="thumb_up_light"
+    >
+      thumb_up_light
+    </p>
+    <p
+      key="thumb_up_medium_light"
+    >
+      thumb_up_medium_light
+    </p>
+    <p
+      key="thumb_up_medium"
+    >
+      thumb_up_medium
+    </p>
+    <p
+      key="thumb_up_medium_dark"
+    >
+      thumb_up_medium_dark
+    </p>
+    <p
+      key="thumb_up_dark"
+    >
+      thumb_up_dark
+    </p>
+    <p
+      key="thumb_down_yellow"
+    >
+      thumb_down_yellow
+    </p>
+    <p
+      key="thumb_down_light"
+    >
+      thumb_down_light
+    </p>
+    <p
+      key="thumb_down_medium_light"
+    >
+      thumb_down_medium_light
+    </p>
+    <p
+      key="thumb_down_medium"
+    >
+      thumb_down_medium
+    </p>
+    <p
+      key="thumb_down_medium_dark"
+    >
+      thumb_down_medium_dark
+    </p>
+    <p
+      key="thumb_down_dark"
+    >
+      thumb_down_dark
+    </p>
+    <p
+      key="prayer_yellow"
+    >
+      prayer_yellow
+    </p>
+    <p
+      key="prayer_light"
+    >
+      prayer_light
+    </p>
+    <p
+      key="prayer_medium_light"
+    >
+      prayer_medium_light
+    </p>
+    <p
+      key="prayer_medium"
+    >
+      prayer_medium
+    </p>
+    <p
+      key="prayer_medium_dark"
+    >
+      prayer_medium_dark
+    </p>
+    <p
+      key="prayer_dark"
+    >
+      prayer_dark
+    </p>
+    <p
+      key="raise_hand_yellow"
+    >
+      raise_hand_yellow
+    </p>
+    <p
+      key="raise_hand_light"
+    >
+      raise_hand_light
+    </p>
+    <p
+      key="raise_hand_medium_light"
+    >
+      raise_hand_medium_light
+    </p>
+    <p
+      key="raise_hand_medium"
+    >
+      raise_hand_medium
+    </p>
+    <p
+      key="raise_hand_medium_dark"
+    >
+      raise_hand_medium_dark
+    </p>
+    <p
+      key="raise_hand_dark"
+    >
+      raise_hand_dark
+    </p>
+    <p
+      key="on_video/smile"
+    >
+      on_video/smile
+    </p>
+    <p
+      key="on_video/sad"
+    >
+      on_video/sad
+    </p>
+    <p
+      key="on_video/wow"
+    >
+      on_video/wow
+    </p>
+    <p
+      key="on_video/haha"
+    >
+      on_video/haha
+    </p>
+    <p
+      key="on_video/celebrate"
+    >
+      on_video/celebrate
+    </p>
+    <p
+      key="on_video/heart"
+    >
+      on_video/heart
+    </p>
+    <p
+      key="on_video/fire"
+    >
+      on_video/fire
+    </p>
+    <p
+      key="on_video/speed_up"
+    >
+      on_video/speed_up
+    </p>
+    <p
+      key="on_video/slow_down"
+    >
+      on_video/slow_down
+    </p>
+    <p
+      key="on_video/clap_yellow"
+    >
+      on_video/clap_yellow
+    </p>
+    <p
+      key="on_video/clap_light"
+    >
+      on_video/clap_light
+    </p>
+    <p
+      key="on_video/clap_medium_light"
+    >
+      on_video/clap_medium_light
+    </p>
+    <p
+      key="on_video/clap_medium"
+    >
+      on_video/clap_medium
+    </p>
+    <p
+      key="on_video/clap_medium_dark"
+    >
+      on_video/clap_medium_dark
+    </p>
+    <p
+      key="on_video/clap_dark"
+    >
+      on_video/clap_dark
+    </p>
+    <p
+      key="on_video/thumb_up_yellow"
+    >
+      on_video/thumb_up_yellow
+    </p>
+    <p
+      key="on_video/thumb_up_light"
+    >
+      on_video/thumb_up_light
+    </p>
+    <p
+      key="on_video/thumb_up_medium_light"
+    >
+      on_video/thumb_up_medium_light
+    </p>
+    <p
+      key="on_video/thumb_up_medium"
+    >
+      on_video/thumb_up_medium
+    </p>
+    <p
+      key="on_video/thumb_up_medium_dark"
+    >
+      on_video/thumb_up_medium_dark
+    </p>
+    <p
+      key="on_video/thumb_up_dark"
+    >
+      on_video/thumb_up_dark
+    </p>
+    <p
+      key="on_video/thumb_down_yellow"
+    >
+      on_video/thumb_down_yellow
+    </p>
+    <p
+      key="on_video/thumb_down_light"
+    >
+      on_video/thumb_down_light
+    </p>
+    <p
+      key="on_video/thumb_down_medium_light"
+    >
+      on_video/thumb_down_medium_light
+    </p>
+    <p
+      key="on_video/thumb_down_medium"
+    >
+      on_video/thumb_down_medium
+    </p>
+    <p
+      key="on_video/thumb_down_medium_dark"
+    >
+      on_video/thumb_down_medium_dark
+    </p>
+    <p
+      key="on_video/thumb_down_dark"
+    >
+      on_video/thumb_down_dark
+    </p>
+    <p
+      key="on_video/prayer_yellow"
+    >
+      on_video/prayer_yellow
+    </p>
+    <p
+      key="on_video/prayer_light"
+    >
+      on_video/prayer_light
+    </p>
+    <p
+      key="on_video/prayer_medium_light"
+    >
+      on_video/prayer_medium_light
+    </p>
+    <p
+      key="on_video/prayer_medium"
+    >
+      on_video/prayer_medium
+    </p>
+    <p
+      key="on_video/prayer_medium_dark"
+    >
+      on_video/prayer_medium_dark
+    </p>
+    <p
+      key="on_video/prayer_dark"
+    >
+      on_video/prayer_dark
+    </p>
+    <p
+      key="on_video/raise_hand_yellow"
+    >
+      on_video/raise_hand_yellow
+    </p>
+    <p
+      key="on_video/raise_hand_light"
+    >
+      on_video/raise_hand_light
+    </p>
+    <p
+      key="on_video/raise_hand_medium_light"
+    >
+      on_video/raise_hand_medium_light
+    </p>
+    <p
+      key="on_video/raise_hand_medium"
+    >
+      on_video/raise_hand_medium
+    </p>
+    <p
+      key="on_video/raise_hand_medium_dark"
+    >
+      on_video/raise_hand_medium_dark
+    </p>
+    <p
+      key="on_video/raise_hand_dark"
+    >
+      on_video/raise_hand_dark
+    </p>
+  </div>
+</ReactionKeys>
+`;
+
 exports[`<Reaction/> snapshot should match snapshot 1`] = `
 <Reaction
   name="haha"
 >
   <div
-    className="md-reaction-wrapper"
-    data-size={12}
+    className="md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
   />
 </Reaction>
 `;
@@ -17,9 +415,24 @@ exports[`<Reaction/> snapshot should match snapshot with className 1`] = `
   name="haha"
 >
   <div
-    className="example-class md-reaction-wrapper"
-    data-size={12}
+    className="example-class md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
   />
+</Reaction>
+`;
+
+exports[`<Reaction/> snapshot should match snapshot with glyph not found if error 1`] = `
+<Reaction
+  name="haha"
+  size={16}
+>
+  <div
+    className="md-reaction-not-found"
+    data-error="not-found:haha"
+  >
+    ⃞
+  </div>
 </Reaction>
 `;
 
@@ -29,10 +442,70 @@ exports[`<Reaction/> snapshot should match snapshot with id 1`] = `
   name="haha"
 >
   <div
-    className="md-reaction-wrapper"
-    data-size={12}
+    className="md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
     id="example-id"
   />
+</Reaction>
+`;
+
+exports[`<Reaction/> snapshot should match snapshot with spinner while animation data is not defined 1`] = `
+<Reaction
+  name="haha"
+  size={16}
+>
+  <LoadingSpinner
+    scale={16}
+  >
+    <div
+      className="md-loading-spinner-wrapper"
+    >
+      <Icon
+        name="spinner"
+        scale={16}
+        weight="regular"
+      >
+        <div
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={16}
+            data-test="spinner"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+      <Icon
+        className="md-loading-spinner-arch"
+        name="spinner-partial"
+        scale={16}
+        weight="regular"
+      >
+        <div
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
+        >
+          <svg
+            className=""
+            data-autoscale={false}
+            data-scale={16}
+            data-test="spinner-partial"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      </Icon>
+    </div>
+  </LoadingSpinner>
 </Reaction>
 `;
 
@@ -46,8 +519,9 @@ exports[`<Reaction/> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
-    className="md-reaction-wrapper"
-    data-size={12}
+    className="md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
     style={
       Object {
         "color": "pink",

@@ -8,7 +8,7 @@ import {
 
 import { DEFAULTS, STYLE } from './ButtonGroup.constants';
 
-describe('<ButtonPill />', () => {
+describe('<ButtonGroup />', () => {
   const childrenTemplate = [
     <ButtonPill key="0">Example A</ButtonPill>,
     <ButtonCircle key="1">A</ButtonCircle>,
@@ -40,6 +40,16 @@ describe('<ButtonPill />', () => {
       const spaced = !DEFAULTS.SPACED;
 
       container = mount(<ButtonGroup spaced={spaced}>{childrenTemplate}</ButtonGroup>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with separator', () => {
+      expect.assertions(1);
+
+      const separator = !DEFAULTS.SEPARATOR;
+
+      container = mount(<ButtonGroup separator={separator}>{childrenTemplate}</ButtonGroup>);
 
       expect(container).toMatchSnapshot();
     });
@@ -155,6 +165,18 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-round')).toBe(`${round}`);
+    });
+
+    it('should pass separator prop', () => {
+      expect.assertions(1);
+
+      const separator = !DEFAULTS.SEPARATOR;
+
+      const element = mount(<ButtonGroup separator={separator}>{childrenTemplate}</ButtonGroup>)
+        .find(ButtonGroup)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-separator')).toBe(`${separator}`);
     });
 
     it('should pass role prop', () => {

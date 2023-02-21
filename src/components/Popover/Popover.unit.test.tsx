@@ -155,6 +155,61 @@ describe('<Popover />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with offsetSkidding', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover offsetSkidding={2} triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with offsetDistance', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover offsetDistance={3} triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with offsetSkidding and offsetDistance', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover
+          offsetDistance={3}
+          offsetSkidding={10}
+          triggerComponent={<button>Click Me!</button>}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it.each([['fixed'], ['absolute']])(
       'should display only one popover at all time',
       async (strategy) => {
@@ -364,7 +419,7 @@ describe('<Popover />', () => {
       expect(closeButton.getAttribute('aria-label')).toBe('Close');
     });
 
-    it('should render the the backdrop', async () => {
+    it('should render the backdrop', async () => {
       expect.assertions(6);
       const user = userEvent.setup();
       const { container } = render(

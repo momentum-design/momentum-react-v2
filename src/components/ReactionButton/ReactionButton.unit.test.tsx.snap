@@ -51,8 +51,9 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
-                data-size={12}
+                className="md-reaction-wrapper md-icon-scales"
+                data-name="haha"
+                data-scale={12}
               />
             </Reaction>
           </button>
@@ -116,8 +117,9 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
-                data-size={12}
+                className="md-reaction-wrapper md-icon-scales"
+                data-name="haha"
+                data-scale={12}
               />
             </Reaction>
           </button>
@@ -184,8 +186,9 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
-                data-size={12}
+                className="md-reaction-wrapper md-icon-scales"
+                data-name="haha"
+                data-scale={12}
               />
             </Reaction>
           </button>
@@ -249,8 +252,9 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
-                data-size={12}
+                className="md-reaction-wrapper md-icon-scales"
+                data-name="haha"
+                data-scale={12}
               />
             </Reaction>
           </button>
@@ -333,8 +337,9 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
               name="haha"
             >
               <div
-                className="md-reaction-wrapper"
-                data-size={12}
+                className="md-reaction-wrapper md-icon-scales"
+                data-name="haha"
+                data-scale={12}
               />
             </Reaction>
           </button>

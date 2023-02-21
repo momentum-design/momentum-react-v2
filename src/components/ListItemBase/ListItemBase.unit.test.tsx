@@ -1,8 +1,14 @@
+import ListItemBaseSection from '../ListItemBaseSection';
+import ButtonPill from '../ButtonPill';
 import ListItemBase from '.';
 import { mount } from 'enzyme';
 import React from 'react';
+import '@testing-library/jest-dom';
 import { STYLE } from './ListItemBase.constants';
 import * as ListContext from '../List/List.utils';
+import userEvent from '@testing-library/user-event';
+import { render } from '@testing-library/react';
+import List from '../List/List';
 
 describe('ListItemBase', () => {
   let container;
@@ -12,6 +18,10 @@ describe('ListItemBase', () => {
       jest
         .spyOn(ListContext, 'useListContext')
         .mockImplementation(() => ({ currentFocus: 0, shouldFocusOnPres: false }));
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
     });
 
     it('should match snapshot', () => {
@@ -253,6 +263,106 @@ describe('ListItemBase', () => {
       });
 
       expect(mockCallback).toBeCalledTimes(1);
+    });
+  });
+
+  describe('keydown', () => {
+    const renderWithNButtons = (n: number) => {
+      return render(
+        <List listSize={2}>
+          <ListItemBase data-testid="list-item-1" key="0" itemIndex={0}>
+            <ListItemBaseSection position="end">
+              {n > 0 ? (
+                <ButtonPill data-testid="first-button-1" color="join" size={24}>
+                  Join
+                </ButtonPill>
+              ) : (
+                <span>Empty</span>
+              )}
+              {n > 1 ? (
+                <ButtonPill data-testid="second-button-1" color="join" size={24}>
+                  Join
+                </ButtonPill>
+              ) : (
+                <span>Empty</span>
+              )}
+            </ListItemBaseSection>
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="1" itemIndex={1}>
+            <ListItemBaseSection position="end">
+              {n > 0 ? (
+                <ButtonPill data-testid="first-button-2" color="join" size={24}>
+                  Join
+                </ButtonPill>
+              ) : (
+                <span>Empty</span>
+              )}
+              {n > 1 ? (
+                <ButtonPill data-testid="second-button-2" color="join" size={24}>
+                  Join
+                </ButtonPill>
+              ) : (
+                <span>Empty</span>
+              )}
+            </ListItemBaseSection>
+          </ListItemBase>
+        </List>
+      );
+    };
+
+    it('should handle right arrow key', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = renderWithNButtons(2);
+      await user.tab();
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('second-button-1')).toHaveFocus();
+      // loop back
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+    });
+
+    it('should handle left arrow key', async () => {
+      const user = userEvent.setup();
+      const { getByTestId } = renderWithNButtons(2);
+
+      await user.tab();
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('second-button-1')).toHaveFocus();
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+      // loop back
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('second-button-1')).toHaveFocus();
+    });
+
+    it('should keep focus on the child when there is only one', async () => {
+      const user = userEvent.setup();
+      const { getByTestId } = renderWithNButtons(1);
+
+      await user.tab();
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('first-button-1')).toHaveFocus();
+    });
+
+    it('moves between list items when there are no interactive child elements', async () => {
+      const user = userEvent.setup();
+      const { getByTestId } = renderWithNButtons(0);
+
+      await user.tab();
+      expect(getByTestId('list-item-1')).toHaveFocus();
+      await user.keyboard('{ArrowRight}');
+      expect(getByTestId('list-item-2')).toHaveFocus();
+      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('list-item-1')).toHaveFocus();
     });
   });
 });

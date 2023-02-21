@@ -11,7 +11,7 @@ import classnames from 'classnames';
 
 import './ListItemBase.style.scss';
 import { ContextMenuState, Props } from './ListItemBase.types';
-import { DEFAULTS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
+import { DEFAULTS, KEYS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import FocusRing from '../FocusRing';
@@ -21,7 +21,11 @@ import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
-import { getKeyboardFocusableElements, useDidUpdateEffect } from './ListItemBase.utils';
+import {
+  getKeyboardFocusableElements,
+  handleLeftRightArrowNavigation,
+  useDidUpdateEffect,
+} from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 
 //TODO: Implement multi-line
@@ -48,6 +52,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   const internalRef = useRef<HTMLLIElement>();
   const ref = providedRef || internalRef;
+  const navigableChildren = useRef<Element[]>();
 
   if (shape === SHAPES.isPilled && (size === SIZES[40] || size === SIZES[70])) {
     console.warn(
@@ -92,8 +97,17 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const listItemPressProps = {
     ...pressProps,
     onKeyDown: (event) => {
-      if (ref.current === document.activeElement || event.key === 'Tab') {
+      if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
         pressProps.onKeyDown(event);
+      }
+
+      if (event.key === KEYS.RIGHT_KEY || event.key === KEYS.LEFT_KEY) {
+        if (!navigableChildren.current) {
+          navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
+        }
+        if (navigableChildren.current.length > 0) {
+          handleLeftRightArrowNavigation(event, navigableChildren.current);
+        }
       }
     },
   };
@@ -119,8 +133,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const updateTabIndexes = useCallback(() => {
     getKeyboardFocusableElements(ref.current)
       .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
-      .forEach((el) => el.setAttribute('tabindex', focus ? '0' : '-2'));
-  }, [ref, focus]);
+      .forEach((el) => el.setAttribute('tabindex', '-1'));
+  }, [ref]);
 
   useDidUpdateEffect(() => {
     if (focus && !shouldIgnoreFocusUpdate) {

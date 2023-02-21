@@ -5,7 +5,7 @@ import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
 import { LazyTippy } from './LazyTippy';
 import { ARROW_ID, ELEVATIONS, ROUNDS } from '../ModalContainer/ModalContainer.constants';
-import { ARROW_PADDING, DEFAULTS, OFFSET, STYLE } from './Popover.constants';
+import { ARROW_PADDING, DEFAULTS, STYLE } from './Popover.constants';
 import { ARROW_HEIGHT } from '../ModalArrow/ModalArrow.constants';
 import type { Props } from './Popover.types';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
@@ -30,6 +30,8 @@ const Popover: FC<Props> = (props: Props) => {
     placement = DEFAULTS.PLACEMENT,
     interactive = DEFAULTS.INTERACTIVE,
     showArrow = DEFAULTS.SHOW_ARROW,
+    offsetDistance = DEFAULTS.OFFSET_DISTANCE,
+    offsetSkidding = DEFAULTS.OFFSET_SKIDDING,
     color,
     delay,
     setInstance,
@@ -141,7 +143,7 @@ const Popover: FC<Props> = (props: Props) => {
       delay={delay}
       plugins={addTippyPlugins(hideOnEsc, addBackdrop)}
       // add arrow height to default offset if arrow is shown:
-      offset={[0, showArrow ? ARROW_HEIGHT + OFFSET : OFFSET]}
+      offset={[offsetSkidding, showArrow ? ARROW_HEIGHT + offsetDistance : offsetDistance]}
       {...{
         onAfterUpdate,
         onBeforeUpdate,

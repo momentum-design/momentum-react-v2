@@ -2,6 +2,7 @@ const CLASS_PREFIX = 'md-button-hyperlink';
 
 const DEFAULTS = {
   DISABLED: false,
+  INVERTED: false,
 };
 
 const STYLE = {
