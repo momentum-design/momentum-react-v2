@@ -130,7 +130,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
       >
         <div
           class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
-          id="12345"
+          id="123456"
           style="--nth: 1; --len: 1;"
         >
           <div
@@ -205,6 +205,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
               </div>
             </div>
           </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
         </div>
       </div>
     </div>
@@ -456,7 +463,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
           style="--nth: 1; --len: 1;"
         >
           <div
-            class="Toastify__toast-body"
+            class="Toastify__toast-body body-toast"
             role="alert"
           >
             <div>
@@ -676,7 +683,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
           style="--nth: 1; --len: 1;"
         >
           <div
-            class="Toastify__toast-body"
+            class="Toastify__toast-body container"
             role="alert"
           >
             <div>
@@ -1104,7 +1111,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
         class="Toastify__toast-container Toastify__toast-container--top-right"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInBottom"
           id="123456"
           style="--nth: 1; --len: 1;"
         >
@@ -1544,7 +1551,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
         class="Toastify__toast-container Toastify__toast-container--top-right"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default toast slideInRight"
           id="123456"
           style="--nth: 1; --len: 1;"
         >
