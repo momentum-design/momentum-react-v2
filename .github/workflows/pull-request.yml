@@ -127,6 +127,9 @@ jobs:
       - name: test-static
         run: yarn ci:test:lint
 
+      - name: test-tokens
+        run: yarn ci:test:tokens
+
   build-source:
     name: Build - Source
     needs: initialize
