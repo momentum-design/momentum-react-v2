@@ -1,4 +1,10 @@
+import { OVERLAY_CONSTANTS } from '../Overlay';
+
 const CLASS_PREFIX = 'md-overlay-alert';
+
+const DEFAULTS = {
+  OVERLAY_COLOR: OVERLAY_CONSTANTS.COLORS.SECONDARY,
+};
 
 const STYLE = {
   details: `${CLASS_PREFIX}-details`,
@@ -6,4 +12,4 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
-export { CLASS_PREFIX, STYLE };
+export { CLASS_PREFIX, DEFAULTS, STYLE };

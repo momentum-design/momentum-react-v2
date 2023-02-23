@@ -5,7 +5,7 @@ import ModalContainer from '../ModalContainer';
 import Overlay from '../Overlay';
 import Text from '../Text';
 
-import { STYLE } from './OverlayAlert.constants';
+import { DEFAULTS, STYLE } from './OverlayAlert.constants';
 import { Props } from './OverlayAlert.types';
 import './OverlayAlert.style.scss';
 
@@ -22,7 +22,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     controls,
     details,
     modalColor,
-    overlayColor,
+    overlayColor = DEFAULTS.OVERLAY_COLOR,
     title,
     ...other
   } = props;

@@ -179,10 +179,20 @@ describe('<OverlayAlert />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
+    it('should provided the local <Overlay /> with the "secondary" color by default', () => {
+      expect.assertions(1);
+
+      const overlayColor = OVERLAY_ALERT_CONSTANTS.DEFAULTS.OVERLAY_COLOR;
+
+      const element = mount(<OverlayAlert />).find(Overlay);
+
+      expect(element.props().color).toBe(overlayColor);
+    });
+
     it('should provide the local <Overlay /> with its respective color', () => {
       expect.assertions(1);
 
-      const overlayColor = Object.values(OVERLAY_CONSTANTS.COLORS).pop();
+      const overlayColor = Object.values(OVERLAY_CONSTANTS.COLORS).shift();
 
       const element = mount(<OverlayAlert overlayColor={overlayColor} />).find(Overlay);
 
