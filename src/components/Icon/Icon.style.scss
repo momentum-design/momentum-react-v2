@@ -180,7 +180,6 @@ svg.md-icon-coloured {
   fill: initial;
 
   path:not([fill]) {
-    fill: rgba(0, 0, 0, 0.95); // IEFIX
     fill: var(--mds-color-theme-text-primary-normal);
   }
 }

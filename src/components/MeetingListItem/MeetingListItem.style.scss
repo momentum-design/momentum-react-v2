@@ -51,12 +51,10 @@
       margin-right: 0.5rem;
 
       &[data-color='AcceptedActive'] {
-        background-color: rgba(29, 128, 95, 1); // IEFIX
         background-color: var(--mds-color-theme-button-join-normal);
       }
 
       &[data-color='AcceptedInactive'] {
-        background-color: rgba(0, 0, 0, 0.2); // IEFIX
         background-color: var(--mds-color-theme-background-secondary-active);
       }
 

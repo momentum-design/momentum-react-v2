@@ -1,8 +1,6 @@
 .md-tab-wrapper {
-  border: 0rem solid rgba(0, 0, 0, 0); // IEFIX
   border: var(--md-globals-border-clear);
   cursor: pointer;
-  font-family: CiscoSansTT; // IEFIX
   font-family: var(--md-globals-font-default);
   outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
