@@ -4,10 +4,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
 <OverlayAlert>
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -43,10 +44,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -130,10 +132,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
 >
   <Overlay
     className="example-class md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="example-class md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -169,10 +172,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -244,10 +248,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -291,10 +296,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -328,11 +334,12 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
     id="example-id"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
       id="example-id"
     >
@@ -380,10 +387,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -593,10 +601,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>
@@ -757,6 +766,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
     style={
       Object {
         "color": "pink",
@@ -765,7 +775,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
       style={
         Object {
@@ -802,10 +812,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
 >
   <Overlay
     className="md-overlay-alert-wrapper"
+    color="secondary"
   >
     <div
       className="md-overlay-alert-wrapper md-overlay-wrapper"
-      data-color="primary"
+      data-color="secondary"
       data-fullscreen={false}
     >
       <ModalContainer>

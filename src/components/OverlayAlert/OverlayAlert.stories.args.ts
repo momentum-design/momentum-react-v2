@@ -3,6 +3,7 @@ import { overlayArgTypes } from '../Overlay/Overlay.stories.args';
 
 import { MODAL_CONTAINER_CONSTANTS } from '../ModalContainer';
 import { OVERLAY_CONSTANTS } from '../Overlay';
+import { OVERLAY_ALERT_CONSTANTS } from '.';
 
 const overlayAlertArgTypes = {
   actions: {
@@ -78,7 +79,7 @@ const overlayAlertArgTypes = {
         summary: 'ReactNode',
       },
       defaultValue: {
-        summary: OVERLAY_CONSTANTS.DEFAULTS.COLOR,
+        summary: OVERLAY_ALERT_CONSTANTS.DEFAULTS.OVERLAY_COLOR,
       },
     },
   },
