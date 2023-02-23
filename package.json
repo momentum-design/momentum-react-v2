@@ -84,8 +84,6 @@
     "styles:build:css": "sass templates/sass:css/",
     "styles:build:settings": "node ./tools/generateSettingsScss.js",
     "styles:build:tokens": "node ./tools/generateScssFromTokens.js",
-    "styles:makeIECompatible": "node ./src/helpers/cssCompatibility.js add",
-    "styles:makeIEIncompatible": "node ./src/helpers/cssCompatibility.js remove",
     "styles:tokenCheck": "node ./src/helpers/cssTokenCheck.js",
     "test": "yarn source:test",
     "test:watch": "yarn source:test --watch"
