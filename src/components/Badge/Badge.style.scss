@@ -1,25 +1,24 @@
 .md-badge-wrapper {
-    font-family: CiscoSansTT; // IEFIX
-    font-family: var(--md-globals-font-default);
-    outline: none;
+  font-family: var(--md-globals-font-default);
+  outline: none;
 
-    &[data-size="18"]{
-        /* Colorization */
-        background-color: var(--mds-color-theme-background-accent-normal);
-        color: var(--mds-color-theme-common-text-white); // Update with component token
+  &[data-size='18'] {
+    /* Colorization */
+    background-color: var(--mds-color-theme-background-accent-normal);
+    color: var(--mds-color-theme-common-text-white); // Update with component token
 
-         /* Sizing */
-        border-radius: 2rem;
-        height: 1.125rem;
-        min-width: 1.125rem;
-        width: fit-content;
-        box-sizing: border-box;
-        padding:0 0.25rem;
-         /* Align */
-        text-align: center;
-         /* Font */
-        font-size: 0.75rem;
-        line-height: 1.15rem;
-        font-weight: medium;
-    }
+    /* Sizing */
+    border-radius: 2rem;
+    height: 1.125rem;
+    min-width: 1.125rem;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0 0.25rem;
+    /* Align */
+    text-align: center;
+    /* Font */
+    font-size: 0.75rem;
+    line-height: 1.15rem;
+    font-weight: medium;
+  }
 }

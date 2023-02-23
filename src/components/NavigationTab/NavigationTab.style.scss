@@ -1,6 +1,5 @@
 .md-navigation-tab-wrapper {
   cursor: pointer;
-  font-family: CiscoSansTT; // IEFIX
   font-family: var(--md-globals-font-default);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   // ----- COLOR ----- //
@@ -9,89 +8,71 @@
   border-radius: 6rem;
   outline: none !important;
   border-color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0); // IEFIX
   background-color: var(--mds-color-theme-button-secondary-normal);
 
   > .md-navigation-tab-icon > * {
-    color: rgba(0, 0, 0, 0.6); // IEFIX
     color: var(--mds-color-theme-text-secondary-normal);
   }
 
   > .md-navigation-tab-label {
-    color: rgba(0, 0, 0, 0.6); // IEFIX
     color: var(--mds-color-theme-text-secondary-normal);
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.07); // IEFIX
     background-color: var(--mds-color-theme-button-secondary-hover);
 
     > .md-navigation-tab-icon > * {
-      color: rgba(0, 0, 0, 0.6); // IEFIX
       color: var(--mds-color-theme-text-secondary-normal);
     }
 
     > .md-navigation-tab-label {
-      color: rgba(0, 0, 0, 0.6); // IEFIX
       color: var(--mds-color-theme-text-secondary-normal);
     }
   }
 
   &:active {
-    background-color: rgba(0, 0, 0, 0.2); // IEFIX
     background-color: var(--mds-color-theme-button-secondary-pressed);
 
     > .md-navigation-tab-icon > * {
-      color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--mds-color-theme-text-primary-normal);
     }
 
     > .md-navigation-tab-label {
-      color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--mds-color-theme-text-primary-normal);
     }
   }
 
   &[data-active='true'] {
-    background-color: rgba(0, 0, 0, 0.2); // IEFIX
     background-color: var(--mds-color-theme-button-secondary-pressed);
 
     > .md-navigation-tab-icon > * {
-      color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--mds-color-theme-text-primary-normal);
     }
 
     > .md-navigation-tab-label {
-      color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--mds-color-theme-text-primary-normal);
     }
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--mds-color-theme-button-secondary-pressed);
 
       > .md-navigation-tab-icon > * {
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
       }
 
       > .md-navigation-tab-label {
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
       }
     }
 
     &:active {
-      background-color: rgba(0, 0, 0, 0.2); // IEFIX
       background-color: var(--mds-color-theme-button-secondary-pressed);
 
       > .md-navigation-tab-icon > * {
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
       }
 
       > .md-navigation-tab-label {
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
       }
     }

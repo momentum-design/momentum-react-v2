@@ -6,11 +6,8 @@
       font-family: 'CiscoSansTT Regular';
       width: 2.75rem;
       height: 3rem;
-      border: 1px solid rgba(0, 0, 0, 0.5); // IEFIX
       border: 1px solid var(--mds-color-theme-outline-input-normal);
-      color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--mds-color-theme-text-primary-normal);
-      background-color: rgba(255, 255, 255, 1); // IEFIX
       background-color: var(--mds-color-theme-background-solid-primary-normal);
       box-sizing: border-box;
       border-radius: 0.5rem;
@@ -22,20 +19,14 @@
       }
 
       &:hover {
-        border: 1px solid rgba(0, 0, 0, 0.5); // IEFIX
         border: 1px solid var(--mds-color-theme-outline-input-normal);
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
-        background-color: rgba(0, 0, 0, 0.04); // IEFIX
         background-color: var(--mds-color-theme-background-primary-hover);
       }
 
       &:active {
-        border-color: rgba(0, 0, 0, 0.9); // IEFIX
         border-color: var(--mds-color-theme-outline-input-active);
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
-        background-color: rgba(0, 0, 0, 0.11); // IEFIX
         background-color: var(--mds-color-theme-background-primary-active);
       }
 
@@ -46,11 +37,8 @@
           animation: 1s blink step-end infinite;
         }
 
-        border-color: rgba(17, 112, 207, 1); // IEFIX
         border-color: var(--mds-color-theme-outline-theme-normal);
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
-        background-color: rgba(0, 0, 0, 0.11); // IEFIX
         background-color: var(--mds-color-theme-background-primary-active);
       }
     }
@@ -63,7 +51,6 @@
     }
 
     50% {
-      color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--mds-color-theme-text-primary-normal);
     }
   }
@@ -71,28 +58,19 @@
   &[data-level='error'] {
     .md-code-input-container {
       .md-code-input-character {
-        border-color: rgba(171, 10, 21, 1); // IEFIX
         border-color: var(--mds-color-theme-outline-cancel-normal);
-        color: rgba(0, 0, 0, 0.95); // IEFIX
         color: var(--mds-color-theme-text-primary-normal);
-        background-color: rgba(255, 232, 234, 1); // IEFIX
         background-color: var(--mds-color-theme-background-alert-error-normal);
 
         &:hover {
-          border-color: rgba(171, 10, 21, 1); // IEFIX
           border-color: var(--mds-color-theme-outline-cancel-normal);
-          color: rgba(0, 0, 0, 0.95); // IEFIX
           color: var(--mds-color-theme-text-primary-normal);
-          background-color: rgba(0, 0, 0, 0.04); // IEFIX
           background-color: var(--mds-color-theme-background-primary-hover);
         }
 
         &:active {
-          border-color: rgba(171, 10, 21, 1); // IEFIX
           border-color: var(--mds-color-theme-outline-cancel-normal);
-          color: rgba(0, 0, 0, 0.95); // IEFIX
           color: var(--mds-color-theme-text-primary-normal);
-          background-color: rgba(0, 0, 0, 0.04); // IEFIX
           background-color: var(--mds-color-theme-background-primary-hover);
         }
       }
@@ -102,11 +80,8 @@
   input:disabled ~ .md-code-input-container {
     .md-code-input-character {
       cursor: default;
-      border-color: rgba(255, 255, 255, 0); // IEFIX
       border-color: var(--mds-color-theme-background-primary-ghost);
-      color: rgba(0, 0, 0, 0.95); // IEFIX
       color: var(--mds-color-theme-text-primary-normal);
-      background-color: rgba(0, 0, 0, 0.11); // IEFIX
       background-color: var(--mds-color-theme-background-primary-disabled);
     }
   }
