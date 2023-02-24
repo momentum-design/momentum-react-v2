@@ -133,7 +133,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -271,7 +271,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg

@@ -60,6 +60,20 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
 </ModalContainer>
 `;
 
+exports[`<ModalContainer /> snapshot should match snapshot with arrowId 1`] = `
+<ModalContainer
+  arrowId="example-id"
+>
+  <div
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
+  />
+</ModalContainer>
+`;
+
 exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
 <ModalContainer>
   <div

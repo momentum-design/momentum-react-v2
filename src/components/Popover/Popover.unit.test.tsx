@@ -10,6 +10,12 @@ import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import { STYLE as POPOVER_STYLE } from './Popover.constants';
 import { PopoverInstance, PositioningStrategy } from './Popover.types';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<Popover />', () => {
   /**
    * Opens the popover by clicking on the trigger component, waits until
@@ -30,6 +36,10 @@ describe('<Popover />', () => {
   };
 
   describe('snapshot', () => {
+    // beforeEach(() => {
+    //   jest.spyOn(uuid, 'v4').mockReturnValue(FAKE_UUID);
+    // });
+
     it('should match snapshot', async () => {
       expect.assertions(3);
       const user = userEvent.setup();
