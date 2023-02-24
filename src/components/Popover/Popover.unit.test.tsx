@@ -36,10 +36,6 @@ describe('<Popover />', () => {
   };
 
   describe('snapshot', () => {
-    // beforeEach(() => {
-    //   jest.spyOn(uuid, 'v4').mockReturnValue(FAKE_UUID);
-    // });
-
     it('should match snapshot', async () => {
       expect.assertions(3);
       const user = userEvent.setup();
