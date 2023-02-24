@@ -76,7 +76,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 2`] = 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -159,7 +159,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 3`] = 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -300,7 +300,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 6`] = 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -383,7 +383,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 7`] = 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -483,7 +483,7 @@ exports[`<Popover /> snapshot should match snapshot 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -554,7 +554,7 @@ exports[`<Popover /> snapshot should match snapshot with className 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -651,7 +651,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -722,7 +722,7 @@ exports[`<Popover /> snapshot should match snapshot with color 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -794,7 +794,7 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -865,7 +865,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetDistance 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -936,7 +936,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -1007,7 +1007,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding and offs
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -1078,7 +1078,7 @@ exports[`<Popover /> snapshot should match snapshot with strategy = fixed 2`] = 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -1150,7 +1150,7 @@ exports[`<Popover /> snapshot should match snapshot with style 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow"
+        id="arrow1"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg

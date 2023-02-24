@@ -90,6 +90,16 @@ describe('<ModalContainer />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with arrowId', () => {
+      expect.assertions(1);
+
+      const arrowId = 'example-id';
+
+      const container = mount(<ModalContainer arrowId={arrowId} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with children', () => {
       expect.assertions(1);
 
@@ -231,6 +241,18 @@ describe('<ModalContainer />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-arrow-orientation')).toBe('horizontal');
+    });
+
+    it('should have provided arrowId to arrowWrapper when arrowId is provided and showArrow is true', () => {
+      expect.assertions(1);
+
+      const arrowId = 'example-id';
+      const element = mount(<ModalContainer arrowId={arrowId} showArrow />)
+        .find('div')
+        .filter({ className: 'md-modal-container-arrow-wrapper' })
+        .getDOMNode();
+
+      expect(element.getAttribute('id')).toBe(arrowId);
     });
   });
 });

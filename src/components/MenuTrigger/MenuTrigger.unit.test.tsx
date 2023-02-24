@@ -12,6 +12,12 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<MenuTrigger /> - Enzyme', () => {
   const defaultProps = {
     isOpen: true,
@@ -33,9 +39,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
-
       const container = await mountAndWait(<MenuTrigger {...defaultProps} />);
-
       expect(container).toMatchSnapshot();
     });
 

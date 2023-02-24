@@ -10,6 +10,7 @@ import { getArrowOrientation } from './ModalContainer.utils';
 
 const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   const {
+    arrowId = ARROW_ID,
     showArrow = DEFAULTS.SHOW_ARROW,
     placement,
     children,
@@ -43,7 +44,7 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
       {
         /*arrow has to be wrapped in HTML element to allow Popover to style it*/
         showArrow && (
-          <div id={ARROW_ID} data-popper-arrow className={classnames(STYLE.arrowWrapper)}>
+          <div id={arrowId} data-popper-arrow className={classnames(STYLE.arrowWrapper)}>
             <ModalArrow placement={placement} color={color} />
           </div>
         )
