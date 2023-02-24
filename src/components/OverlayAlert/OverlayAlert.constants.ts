@@ -3,6 +3,9 @@ import { OVERLAY_CONSTANTS } from '../Overlay';
 const CLASS_PREFIX = 'md-overlay-alert';
 
 const DEFAULTS = {
+  /**
+   * Default <Overlay /> color prop.
+   */
   OVERLAY_COLOR: OVERLAY_CONSTANTS.COLORS.SECONDARY,
 };
 
