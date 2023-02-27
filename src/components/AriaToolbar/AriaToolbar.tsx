@@ -10,7 +10,16 @@ import { useKeyboard } from '@react-aria/interactions';
  * The AriaToolbar component.
  */
 const AriaToolbar: FC<Props> = (props: Props) => {
-  const { className, id, style, children, orientation = 'horizontal', onTabPress } = props;
+  const {
+    ariaLabel,
+    className,
+    id,
+    style,
+    children,
+    orientation = 'horizontal',
+    onTabPress,
+    ariaControls,
+  } = props;
 
   const [currentFocus, setCurrentFocus] = useState(undefined);
 
@@ -49,7 +58,14 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   }, [currentFocus]);
 
   return (
-    <div role="toolbar" className={classnames(className, STYLE.wrapper)} id={id} style={style}>
+    <div
+      aria-label={ariaLabel}
+      aria-controls={ariaControls}
+      role="toolbar"
+      className={classnames(className, STYLE.wrapper)}
+      id={id}
+      style={style}
+    >
       {React.Children.map<ReactNode, ReactNode>(children, (child, index) => {
         return React.cloneElement(child as React.ReactElement<any>, {
           tabIndex: index === (currentFocus || 0) ? 0 : -1,

@@ -25,6 +25,7 @@ export interface Props {
    * The orientation of the toolbar
    * horizontal -> left/right keys to navigate
    * vertical -> up/down keys to navigate
+   * default is horizontal
    */
   orientation?: 'horizontal' | 'vertical';
 
@@ -32,6 +33,11 @@ export interface Props {
    * The HTML ID of the element that this toolbar relates to
    */
   ariaControls?: string;
+
+  /**
+   * aria-label attribute for the toolbar
+   */
+  ariaLabel: string;
 
   /**
    * This handler is called when tab is pressed by one of the elements

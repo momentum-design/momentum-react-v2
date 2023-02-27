@@ -27,6 +27,7 @@ const Horizontal = () => {
   return (
     <>
       <AriaToolbar
+        ariaLabel="toolbar 1"
         ariaControls="textInput"
         style={{ display: 'flex', columnGap: '0.5rem', marginBottom: '1rem' }}
       >
@@ -45,6 +46,7 @@ const Vertical = () => {
       <AriaToolbar
         orientation="vertical"
         ariaControls="textInput"
+        ariaLabel="toolbar 1"
         style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
       >
         <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
@@ -54,6 +56,7 @@ const Vertical = () => {
       <AriaToolbar
         orientation="vertical"
         ariaControls="textInput"
+        ariaLabel="toolbar 2"
         style={{
           display: 'flex',
           rowGap: '0.5rem',
