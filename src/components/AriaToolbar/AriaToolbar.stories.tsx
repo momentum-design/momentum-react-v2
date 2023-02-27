@@ -26,12 +26,15 @@ const onPressHandler = () => {
 const Horizontal = () => {
   return (
     <>
-      <AriaToolbar ariaControls="textInput" style={{ display: 'flex', columnGap: '0.5rem' }}>
+      <AriaToolbar
+        ariaControls="textInput"
+        style={{ display: 'flex', columnGap: '0.5rem', marginBottom: '1rem' }}
+      >
         <ButtonPill onPress={onPressHandler}>Item 1</ButtonPill>
         <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
         <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
       </AriaToolbar>
-      <input type="text" id="textInput" />
+      <input type="text" id="textInput" aria-label="A text input" />
     </>
   );
 };
@@ -48,7 +51,22 @@ const Vertical = () => {
         <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
         <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
       </AriaToolbar>
-      <input type="text" id="textInput" />
+      <AriaToolbar
+        orientation="vertical"
+        ariaControls="textInput"
+        style={{
+          display: 'flex',
+          rowGap: '0.5rem',
+          flexDirection: 'column',
+          marginTop: '1rem',
+          marginBottom: '1rem',
+        }}
+      >
+        <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
+        <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+        <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+      </AriaToolbar>
+      <input type="text" id="textInput" aria-label="A text input" />
     </>
   );
 };
