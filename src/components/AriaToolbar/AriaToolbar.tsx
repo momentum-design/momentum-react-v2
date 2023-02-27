@@ -16,7 +16,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
 
   const numChildren = React.Children.count(children);
 
-  const ref = useRef<HTMLDivElement>(null);
+  const buttonRefs = useRef({});
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (e) => {
@@ -38,14 +38,25 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   });
 
   useEffect(() => {
-    (ref.current.children[currentFocus] as HTMLElement).focus();
+    buttonRefs.current[currentFocus].focus();
   }, [currentFocus]);
 
   return (
-    <div ref={ref} className={classnames(className, STYLE.wrapper)} id={id} style={style}>
+    <div role="toolbar" className={classnames(className, STYLE.wrapper)} id={id} style={style}>
       {React.Children.map<ReactNode, ReactNode>(children, (child, index) => {
         return React.cloneElement(child as React.ReactElement<any>, {
           tabIndex: index === currentFocus ? 0 : -1,
+          ref: (e) => {
+            buttonRefs.current[index] = e;
+          },
+          onPress: () => {
+            setCurrentFocus(index);
+            if (React.isValidElement(child)) {
+              if (child.props.onPress) {
+                child.props.onPress();
+              }
+            }
+          },
           ...keyboardProps,
         });
       })}

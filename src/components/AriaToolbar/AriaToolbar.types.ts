@@ -27,4 +27,9 @@ export interface Props {
    * vertical -> up/down keys to navigate
    */
   orientation?: 'horizontal' | 'vertical';
+
+  /**
+   * The HTML ID of the element that this toolbar relates to
+   */
+  ariaControls?: string;
 }
