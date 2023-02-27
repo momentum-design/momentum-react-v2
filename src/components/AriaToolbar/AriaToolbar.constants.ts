@@ -1,6 +1,8 @@
 const CLASS_PREFIX = 'md-aria-toolbar';
 
-const DEFAULTS = {};
+const DEFAULTS = {
+  ORIENTATION: 'horizontal',
+};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,

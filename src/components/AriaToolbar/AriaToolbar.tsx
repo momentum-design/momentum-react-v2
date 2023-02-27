@@ -1,13 +1,13 @@
 import React, { FC, ReactNode, useRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './AriaToolbar.constants';
+import { DEFAULTS, STYLE } from './AriaToolbar.constants';
 import { Props } from './AriaToolbar.types';
-import './AriaToolbar.style.scss';
 import { useKeyboard } from '@react-aria/interactions';
 
 /**
- * The AriaToolbar component.
+ * The AriaToolbar component. A style-less component implementing the Aria Toolbar pattern
+ * see https://www.w3.org/WAI/ARIA/apg/patterns/toolbar
  */
 const AriaToolbar: FC<Props> = (props: Props) => {
   const {
@@ -16,7 +16,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     id,
     style,
     children,
-    orientation = 'horizontal',
+    orientation = DEFAULTS.ORIENTATION,
     onTabPress,
     ariaControls,
   } = props;
