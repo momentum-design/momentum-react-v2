@@ -45,8 +45,8 @@ describe('<AriaToolbar />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should set tab index appropriately', () => {
-      expect.assertions(2);
+    it('should set tab index appropriately - horizontal orientation', () => {
+      expect.assertions(4);
 
       const container = mount(
         <AriaToolbar ariaLabel="test">
@@ -59,6 +59,40 @@ describe('<AriaToolbar />', () => {
       expect(container).toMatchSnapshot();
 
       triggerPress(container.find(ButtonSimple).at(2));
+
+      expect(container).toMatchSnapshot();
+
+      container.find(ButtonSimple).at(2).simulate('keyDown', { key: 'ArrowLeft' });
+
+      expect(container).toMatchSnapshot();
+
+      container.find(ButtonSimple).at(1).simulate('keyDown', { key: 'ArrowRight' });
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should set tab index appropriately - vertical orientation', () => {
+      expect.assertions(4);
+
+      const container = mount(
+        <AriaToolbar orientation="vertical" ariaLabel="test">
+          <ButtonSimple />
+          <ButtonSimple />
+          <ButtonSimple />
+        </AriaToolbar>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      triggerPress(container.find(ButtonSimple).at(2));
+
+      expect(container).toMatchSnapshot();
+
+      container.find(ButtonSimple).at(2).simulate('keyDown', { key: 'ArrowUp' });
+
+      expect(container).toMatchSnapshot();
+
+      container.find(ButtonSimple).at(1).simulate('keyDown', { key: 'ArrowDown' });
 
       expect(container).toMatchSnapshot();
     });
@@ -153,22 +187,21 @@ describe('<AriaToolbar />', () => {
 
       expect(onTabPress).toBeCalled();
     });
+  });
 
-    // it('should set current focus on press', () => {
-    //   expect.assertions(1);
+  it('child onPress is still called', () => {
+    expect.assertions(1);
 
-    //   const onTabPress = jest.fn();
+    const onPress = jest.fn();
 
-    //   const element = mount(
-    //     <AriaToolbar ariaLabel='test' onTabPress={onTabPress} >
-    //       <ButtonSimple>test button</ButtonSimple>
-    //       <ButtonSimple>test button</ButtonSimple>
-    //       <ButtonSimple>test button</ButtonSimple>
-    //     </AriaToolbar>);
+    const element = mount(
+      <AriaToolbar ariaLabel="test">
+        <ButtonSimple onPress={onPress}>test button</ButtonSimple>
+      </AriaToolbar>
+    );
 
-    //   triggerPress(element.find(ButtonSimple).at(2));
+    triggerPress(element.find(ButtonSimple));
 
-    //   expect(document.activeElement).toEqual('test');
-    // });
+    expect(onPress).toBeCalled();
   });
 });
