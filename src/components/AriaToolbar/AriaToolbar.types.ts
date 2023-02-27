@@ -32,4 +32,10 @@ export interface Props {
    * The HTML ID of the element that this toolbar relates to
    */
   ariaControls?: string;
+
+  /**
+   * This handler is called when tab is pressed by one of the elements
+   * within the toolbar.
+   */
+  onTabPress?: () => void;
 }

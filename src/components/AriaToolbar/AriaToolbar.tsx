@@ -10,9 +10,9 @@ import { useKeyboard } from '@react-aria/interactions';
  * The AriaToolbar component.
  */
 const AriaToolbar: FC<Props> = (props: Props) => {
-  const { className, id, style, children, orientation = 'horizontal' } = props;
+  const { className, id, style, children, orientation = 'horizontal', onTabPress } = props;
 
-  const [currentFocus, setCurrentFocus] = useState(0);
+  const [currentFocus, setCurrentFocus] = useState(undefined);
 
   const numChildren = React.Children.count(children);
 
@@ -23,13 +23,20 @@ const AriaToolbar: FC<Props> = (props: Props) => {
       switch (e.key) {
         case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
           e.preventDefault();
-          setCurrentFocus((numChildren + currentFocus - 1) % numChildren);
+          setCurrentFocus((numChildren + (currentFocus || 0) - 1) % numChildren);
           break;
 
         case orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
           e.preventDefault();
-          setCurrentFocus((numChildren + currentFocus + 1) % numChildren);
+          setCurrentFocus((numChildren + (currentFocus || 0) + 1) % numChildren);
           break;
+
+        case 'Tab': {
+          if (onTabPress) {
+            onTabPress();
+          }
+          break;
+        }
 
         default:
           break;
@@ -38,14 +45,14 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   });
 
   useEffect(() => {
-    buttonRefs.current[currentFocus].focus();
+    buttonRefs.current[currentFocus]?.focus();
   }, [currentFocus]);
 
   return (
     <div role="toolbar" className={classnames(className, STYLE.wrapper)} id={id} style={style}>
       {React.Children.map<ReactNode, ReactNode>(children, (child, index) => {
         return React.cloneElement(child as React.ReactElement<any>, {
-          tabIndex: index === currentFocus ? 0 : -1,
+          tabIndex: index === (currentFocus || 0) ? 0 : -1,
           ref: (e) => {
             buttonRefs.current[index] = e;
           },
