@@ -18,26 +18,38 @@ export default {
   },
 };
 
+const onPressHandler = () => {
+  const input: HTMLInputElement = document.getElementById('textInput') as HTMLInputElement;
+  input.value = input.value + 'a';
+};
+
 const Horizontal = () => {
   return (
-    <AriaToolbar style={{ display: 'flex', columnGap: '0.5rem' }}>
-      <ButtonPill>Item 1</ButtonPill>
-      <ButtonCircle>2</ButtonCircle>
-      <ButtonCircle>3</ButtonCircle>
-    </AriaToolbar>
+    <>
+      <AriaToolbar ariaControls="textInput" style={{ display: 'flex', columnGap: '0.5rem' }}>
+        <ButtonPill onPress={onPressHandler}>Item 1</ButtonPill>
+        <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+        <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+      </AriaToolbar>
+      <input type="text" id="textInput" />
+    </>
   );
 };
 
 const Vertical = () => {
   return (
-    <AriaToolbar
-      orientation="vertical"
-      style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
-    >
-      <ButtonCircle>1</ButtonCircle>
-      <ButtonCircle>2</ButtonCircle>
-      <ButtonCircle>3</ButtonCircle>
-    </AriaToolbar>
+    <>
+      <AriaToolbar
+        orientation="vertical"
+        ariaControls="textInput"
+        style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
+      >
+        <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
+        <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+        <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+      </AriaToolbar>
+      <input type="text" id="textInput" />
+    </>
   );
 };
 

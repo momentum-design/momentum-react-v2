@@ -177,4 +177,5 @@ export {
   Toggle,
   Chip as ChipNext,
   NotificationSystem,
+  AriaToolbar,
 } from './components';
