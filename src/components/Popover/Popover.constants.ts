@@ -40,7 +40,7 @@ const STYLE = {
   backdrop: `${CLASS_PREFIX}-backdrop`,
 };
 
-// padding between the edge of the popover and the arrow, to ensure the arrow doesn't get pushed outside
+// padding between the edge of the popover and the arrow, to ensure the arrow doesn't get pushed outside.
 const ARROW_PADDING = 5;
 
 export {
