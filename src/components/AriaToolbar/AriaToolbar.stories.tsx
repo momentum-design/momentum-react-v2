@@ -7,6 +7,8 @@ import Documentation from './AriaToolbar.stories.docs.mdx';
 import ButtonCircle from '../ButtonCircle';
 import ButtonPill from '../ButtonPill';
 
+import argTypes from './AriaToolbar.stories.args';
+
 export default {
   title: 'Momentum UI/AriaToolbar',
   component: AriaToolbar,
@@ -23,13 +25,14 @@ const onPressHandler = () => {
   input.value = input.value + 'a';
 };
 
-const Horizontal = () => {
+const Horizontal = (props) => {
   return (
     <>
       <AriaToolbar
         ariaLabel="toolbar 1"
         ariaControls="textInput"
         style={{ display: 'flex', columnGap: '0.5rem', marginBottom: '1rem' }}
+        {...props}
       >
         <ButtonPill onPress={onPressHandler}>Item 1</ButtonPill>
         <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
@@ -39,6 +42,8 @@ const Horizontal = () => {
     </>
   );
 };
+
+Horizontal.argTypes = argTypes;
 
 const Vertical = () => {
   return (
@@ -74,5 +79,4 @@ const Vertical = () => {
   );
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Horizontal, Vertical };
