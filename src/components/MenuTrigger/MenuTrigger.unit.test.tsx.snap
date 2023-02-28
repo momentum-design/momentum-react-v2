@@ -64,7 +64,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               "enabled": false,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -115,7 +115,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 "enabled": false,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -166,7 +166,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   "enabled": false,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -437,6 +437,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
               elevation={3}
@@ -2298,7 +2299,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               "enabled": false,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -2349,7 +2350,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 "enabled": false,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -2400,7 +2401,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   "enabled": false,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -2671,6 +2672,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="example-class md-menu-trigger-wrapper"
               color="primary"
               elevation={3}
@@ -4532,7 +4534,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               "enabled": false,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -4583,7 +4585,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 "enabled": false,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -4634,7 +4636,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   "enabled": false,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -4905,6 +4907,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="secondary"
               elevation={3}
@@ -6767,7 +6770,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               "enabled": false,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -6818,7 +6821,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 "enabled": false,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -6869,7 +6872,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   "enabled": false,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -7141,6 +7144,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
               elevation={3}
@@ -9004,7 +9008,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               "enabled": false,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -9055,7 +9059,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 "enabled": false,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -9106,7 +9110,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   "enabled": false,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -9377,6 +9381,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
               elevation={3}
@@ -11238,7 +11243,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               "enabled": true,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -11289,7 +11294,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 "enabled": true,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -11340,7 +11345,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   "enabled": true,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -11609,7 +11614,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   <div
                     class="md-modal-container-arrow-wrapper"
                     data-popper-arrow="true"
-                    id="arrow"
+                    id="arrow1"
                     style="position: absolute; left: 0px; transform: translate(5px, 0px);"
                   >
                     <svg
@@ -11641,6 +11646,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
               elevation={3}
@@ -13430,7 +13436,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 <div
                   className="md-modal-container-arrow-wrapper"
                   data-popper-arrow={true}
-                  id="arrow"
+                  id="arrow1"
                 >
                   <ModalArrow
                     color="primary"
@@ -13545,7 +13551,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               "enabled": false,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -13596,7 +13602,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 "enabled": false,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -13647,7 +13653,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   "enabled": false,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -13919,6 +13925,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
               elevation={3}
@@ -15790,7 +15797,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               "enabled": false,
               "name": "arrow",
               "options": Object {
-                "element": "#arrow",
+                "element": "#arrow1",
                 "padding": 5,
               },
             },
@@ -15841,7 +15848,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 "enabled": false,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -15892,7 +15899,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   "enabled": false,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -16163,6 +16170,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             }
           >
             <ModalContainer
+              arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
               elevation={3}

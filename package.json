@@ -97,8 +97,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-design/tokens": "^0.0.32",
     "@momentum-design/animations": "^0.0.4",
+    "@momentum-design/tokens": "^0.0.32",
     "@momentum-ui/design-tokens": "^0.0.63",
     "@momentum-ui/icons": "8.28.4",
     "@momentum-ui/icons-rebrand": "^1.40.15",
@@ -145,7 +145,8 @@
     "react-verification-input": "^2.0.1",
     "sass": "1.49.9",
     "ts-loader": "^8.2.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -179,6 +180,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.23",
+    "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
     "autoprefixer": "^7.2.4",

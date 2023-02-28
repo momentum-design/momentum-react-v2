@@ -1,5 +1,5 @@
 import { PressEvent } from '@react-types/shared';
-import { CSSProperties, ReactElement } from 'react';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
 
 import { AvatarProps } from '../Avatar';
 import { IconProps } from '../Icon';
@@ -12,9 +12,9 @@ export type SupportedButtonGroup = ButtonPillProps | ButtonCircleProps;
 
 export interface Props {
   /**
-   * The text that appears inside the Notification toast.
+   * The free string or a ReactElement that appears inside the Notification toast.
    */
-  text: string;
+  content: ReactNode;
   /**
    * Leading visual of this notification toast. It can be an Icon, Avatar or Badge.
    */

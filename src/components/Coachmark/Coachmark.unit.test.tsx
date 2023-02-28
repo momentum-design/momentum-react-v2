@@ -7,6 +7,12 @@ import ButtonPill from '../ButtonPill';
 
 import Coachmark from './';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<Coachmark />', () => {
   const iconName = 'placeholder';
   const children = 'Children';

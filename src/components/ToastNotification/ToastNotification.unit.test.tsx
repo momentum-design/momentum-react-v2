@@ -1,16 +1,18 @@
 import React, { ReactElement } from 'react';
+
 import { mountAndWait } from '../../../test/utils';
 import Icon, { IconProps } from '../Icon';
 import ButtonPill, { ButtonPillProps } from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 
 import ToastNotification, { TOAST_NOTIFICATION_CONSTANTS as CONSTANTS } from './';
+import Text from '../Text';
 
 describe('<ToastNotification />', () => {
   let leadingVisual: ReactElement<IconProps>;
   let buttonGroup: ReactElement<ButtonPillProps>;
   let onClose;
-  const exampleText = 'Example text';
+  const exampleContent = 'Example text';
 
   beforeEach(() => {
     leadingVisual = <Icon name="help-circle" scale={24} weight="bold" />;
@@ -31,7 +33,7 @@ describe('<ToastNotification />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ToastNotification text={exampleText} />);
+      const container = await mountAndWait(<ToastNotification content={exampleContent} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -42,7 +44,7 @@ describe('<ToastNotification />', () => {
       const className = 'example-class';
 
       const container = await mountAndWait(
-        <ToastNotification className={className} text={exampleText} />
+        <ToastNotification className={className} content={exampleContent} />
       );
 
       expect(container).toMatchSnapshot();
@@ -53,7 +55,7 @@ describe('<ToastNotification />', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<ToastNotification id={id} text={exampleText} />);
+      const container = await mountAndWait(<ToastNotification id={id} content={exampleContent} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -63,17 +65,25 @@ describe('<ToastNotification />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<ToastNotification style={style} text={exampleText} />);
+      const container = await mountAndWait(<ToastNotification style={style} content={exampleContent} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with text', async () => {
+    it('should match snapshot with string content', async () => {
       expect.assertions(1);
 
-      const text = 'Example text';
+      const container = await mountAndWait(<ToastNotification content={exampleContent} />);
 
-      const container = await mountAndWait(<ToastNotification text={text} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with non string content', async () => {
+      expect.assertions(1);
+
+      const content = <button>{exampleContent}</button>;
+
+      const container = await mountAndWait(<ToastNotification content={content} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -82,7 +92,7 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const container = await mountAndWait(
-        <ToastNotification text={exampleText} leadingVisual={leadingVisual} />
+        <ToastNotification content={exampleContent} leadingVisual={leadingVisual} />
       );
 
       expect(container).toMatchSnapshot();
@@ -92,7 +102,7 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const container = await mountAndWait(
-        <ToastNotification text={exampleText} buttonGroup={buttonGroup} />
+        <ToastNotification content={exampleContent} buttonGroup={buttonGroup} />
       );
 
       expect(container).toMatchSnapshot();
@@ -103,7 +113,7 @@ describe('<ToastNotification />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<ToastNotification text={exampleText} />);
+      const wrapper = await mountAndWait(<ToastNotification content={exampleContent} />);
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -115,7 +125,7 @@ describe('<ToastNotification />', () => {
       const className = 'example-class';
 
       const wrapper = await mountAndWait(
-        <ToastNotification className={className} text={exampleText} />
+        <ToastNotification className={className} content={exampleContent} />
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
@@ -127,7 +137,7 @@ describe('<ToastNotification />', () => {
 
       const id = 'example-id';
 
-      const wrapper = await mountAndWait(<ToastNotification id={id} text={exampleText} />);
+      const wrapper = await mountAndWait(<ToastNotification id={id} content={exampleContent} />);
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.id).toBe(id);
@@ -139,7 +149,9 @@ describe('<ToastNotification />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const wrapper = await mountAndWait(<ToastNotification style={style} text={exampleText} />);
+      const wrapper = await mountAndWait(
+        <ToastNotification style={style} content={exampleContent} />
+      );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -149,7 +161,7 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const wrapper = await mountAndWait(
-        <ToastNotification onClose={onClose} text={exampleText} />
+        <ToastNotification onClose={onClose} content={exampleContent} />
       );
       const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
 
@@ -160,7 +172,7 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const wrapper = await mountAndWait(
-        <ToastNotification leadingVisual={leadingVisual} text={exampleText} />
+        <ToastNotification leadingVisual={leadingVisual} content={exampleContent} />
       );
       const element = wrapper.find(Icon).getDOMNode();
 
@@ -171,13 +183,34 @@ describe('<ToastNotification />', () => {
       expect.assertions(2);
 
       const wrapper = await mountAndWait(
-        <ToastNotification buttonGroup={buttonGroup} text={exampleText} />
+        <ToastNotification buttonGroup={buttonGroup} content={exampleContent} />
       );
       const element1 = wrapper.find(ButtonPill).at(0).getDOMNode();
       const element2 = wrapper.find(ButtonPill).at(1).getDOMNode();
 
       expect(element1).toBeDefined();
       expect(element2).toBeDefined();
+    });
+
+    it('should wrap notification content inside Text component if content is a free string', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(<ToastNotification content={exampleContent} />);
+      const textComponent = wrapper
+        .find(Text)
+        .filter({ className: 'md-toast-notification-content' });
+      expect(textComponent).toBeDefined();
+    });
+
+    it('should not wrap notification content inside Text component if content is not a free string', async () => {
+      expect.assertions(1);
+
+      const notificationContent = <button>{exampleContent}</button>;
+      const wrapper = await mountAndWait(<ToastNotification content={notificationContent} />);
+      const textComponent = wrapper
+        .find(Text)
+        .filter({ className: 'md-toast-notification-content' });
+      expect(textComponent).toMatchObject({});
     });
   });
 
@@ -188,7 +221,7 @@ describe('<ToastNotification />', () => {
       const mockCallback = jest.fn();
 
       const wrapper = await mountAndWait(
-        <ToastNotification onClose={mockCallback} text={exampleText} />
+        <ToastNotification onClose={mockCallback} content={exampleContent} />
       );
       const component = wrapper.find(ButtonCircle);
 

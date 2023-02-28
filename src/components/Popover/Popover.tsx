@@ -12,6 +12,8 @@ import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 import classNames from 'classnames';
 import { isMRv2Button } from '../../helpers/verifyTypes';
 import { addTippyPlugins } from './Popover.utils';
+// eslint-disable-next-line import/no-unresolved
+import { v4 as uuidV4 } from 'uuid';
 
 /**
  * The Popover component allows adding a Popover to whatever provided
@@ -62,6 +64,8 @@ const Popover: FC<Props> = (props: Props) => {
 
   const tippyRef = React.useRef(null);
 
+  const arrowId = `${ARROW_ID}${uuidV4()}`;
+
   const handleOnCloseButtonClick = useCallback(() => {
     tippyRef?.current?._tippy?.hide();
   }, [tippyRef]);
@@ -89,6 +93,7 @@ const Popover: FC<Props> = (props: Props) => {
         <ModalContainer
           id={id}
           showArrow={showArrow}
+          arrowId={arrowId}
           placement={attrs['data-placement']}
           isPadded
           round={variant === 'medium' ? ROUNDS[75] : ROUNDS[50]}
@@ -124,7 +129,7 @@ const Popover: FC<Props> = (props: Props) => {
             name: 'arrow',
             enabled: showArrow,
             options: {
-              element: `#${ARROW_ID}`, // use arrow div id from Modal container
+              element: `#${arrowId}`, // use unique arrow Id for each popover instance with an arrow
               padding: ARROW_PADDING,
             },
           },
