@@ -1,9 +1,10 @@
-import React, { FC, ReactNode, useRef, useState, useEffect } from 'react';
+import React, { FC, useRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './AriaToolbar.constants';
 import { Props } from './AriaToolbar.types';
 import { useKeyboard } from '@react-aria/interactions';
+import { map } from 'lodash';
 
 /**
  * The AriaToolbar component. A style-less component implementing the Aria Toolbar pattern
@@ -23,7 +24,8 @@ const AriaToolbar: FC<Props> = (props: Props) => {
 
   const [currentFocus, setCurrentFocus] = useState(undefined);
 
-  const numChildren = React.Children.count(children);
+  const validChildren = React.Children.toArray(children);
+  const numChildren = validChildren.length;
 
   const buttonRefs = useRef({});
 
@@ -66,7 +68,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
       id={id}
       style={style}
     >
-      {React.Children.map<ReactNode, ReactNode>(children, (child, index) => {
+      {map(validChildren, (child, index) => {
         return React.cloneElement(child as React.ReactElement<any>, {
           tabIndex: index === (currentFocus || 0) ? 0 : -1,
           ref: (e) => {
@@ -74,10 +76,8 @@ const AriaToolbar: FC<Props> = (props: Props) => {
           },
           onPress: () => {
             setCurrentFocus(index);
-            if (React.isValidElement(child)) {
-              if (child.props.onPress) {
-                child.props.onPress();
-              }
+            if (child.props.onPress) {
+              child.props.onPress();
             }
           },
           ...keyboardProps,
