@@ -71,6 +71,19 @@ describe('<AriaToolbar />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should not render invalid elements', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <AriaToolbar orientation="vertical" ariaLabel="test">
+          <ButtonSimple />
+          {null}
+        </AriaToolbar>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should set tab index appropriately - vertical orientation', () => {
       expect.assertions(4);
 

@@ -61,6 +61,52 @@ exports[`<AriaToolbar /> snapshot should match snapshot with style 1`] = `
 </AriaToolbar>
 `;
 
+exports[`<AriaToolbar /> snapshot should not render invalid elements 1`] = `
+<AriaToolbar
+  ariaLabel="test"
+  orientation="vertical"
+>
+  <div
+    aria-label="test"
+    className="md-aria-toolbar-wrapper"
+    role="toolbar"
+  >
+    <ButtonSimple
+      key=".0"
+      onKeyDown={[Function]}
+      onPress={[Function]}
+      tabIndex={0}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-button-simple-wrapper"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </div>
+</AriaToolbar>
+`;
+
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 1`] = `
 <AriaToolbar
   ariaLabel="test"
