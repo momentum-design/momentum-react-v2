@@ -2488,6 +2488,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@momentum-design/icons@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@momentum-design/icons@npm:0.0.10"
+  checksum: 2e519d7cb742cbbc7d3cbcfc4e8d51935edfbec0621d2ec5acd52f35c44ed1ae53d157adb8119201c21c3ac9e83fec6f94ba3e0e33f5694af3a64dbd8e1a3452
+  languageName: node
+  linkType: hard
+
 "@momentum-design/tokens@npm:^0.0.36":
   version: 0.0.36
   resolution: "@momentum-design/tokens@npm:0.0.36"
@@ -2501,13 +2508,6 @@ __metadata:
   dependencies:
     momentum-abstract: ^1.0.28
   checksum: 1ada21f0a3a5126d8c4d94f4216547e94babfbb2a8e671ada50f0e0893fff12e2a63700f3e609c7d887847a1f7887b5be81765b6d10fde86b1cbd0d63cc3616c
-  languageName: node
-  linkType: hard
-
-"@momentum-ui/icons-rebrand@npm:^1.40.15":
-  version: 1.40.15
-  resolution: "@momentum-ui/icons-rebrand@npm:1.40.15"
-  checksum: 88d2771ce0926243af0d18ccd29d08e8fa01aed6883585745b39ced20507cde6a16039a88ca3af714e64dd20acf6e128e846e3c38b7ef11165b7217c8af30da8
   languageName: node
   linkType: hard
 
@@ -2540,10 +2540,10 @@ __metadata:
     "@cypress/webpack-preprocessor": ^4.1.0
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
+    "@momentum-design/icons": ^0.0.10
     "@momentum-design/tokens": ^0.0.36
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
-    "@momentum-ui/icons-rebrand": ^1.40.15
     "@momentum-ui/tokens": ^1.7.1
     "@percy/cli": ^1.0.0-beta.67
     "@percy/cypress": ^0.2.3
