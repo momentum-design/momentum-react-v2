@@ -10,13 +10,7 @@ package-lock.json
 
 # Ignore Yarn
 ###################
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+yarn-*
 
 # Ignore IDE files #
 ####################
@@ -112,6 +106,7 @@ packages
 **/downloads
 **/backup
 **/uploads
+**/yarn-*
 **/webpack-stats.json
 **/bundles
 **/*.js.map
