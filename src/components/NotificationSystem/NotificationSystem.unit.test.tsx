@@ -376,6 +376,8 @@ describe('<NotificationSystem />', () => {
     });
 
     it('should update an existing notification', async () => {
+      expect.assertions(5);
+
       render(<NotificationSystem />);
 
       const toastId = '12345';

@@ -5,12 +5,12 @@ describe('Icon', () => {
   beforeEach(() => jest.resetModules());
 
   it('should successfully return svg component if icon exists', async () => {
-    const name = '3d-object-regular';
+    const name = 'test_icon-regular';
     const onCompleteMock = jest.fn();
     const onErrorMock = jest.fn();
     const mockSVG = 'SVG_CONTENT';
     jest.mock(
-      '@momentum-design/icons/dist/svg/3d-object-regular.svg?svgr',
+      '@momentum-ui/icons-rebrand/svg/test_icon-regular.svg?svgr',
       () => {
         return { ReactComponent: mockSVG };
       },
@@ -42,7 +42,7 @@ describe('Icon', () => {
     const expectedError = new Error('error');
 
     jest.mock(
-      '@momentum-design/icons/dist/svg/bad_icon.svg?svgr',
+      '@momentum-ui/icons-rebrand/svg/bad_icon.svg?svgr',
       () => {
         throw expectedError;
       },
