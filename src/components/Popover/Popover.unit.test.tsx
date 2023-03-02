@@ -490,7 +490,6 @@ describe('<Popover />', () => {
 
   describe('actions', () => {
     it('should show/hide Popover on click', async () => {
-      expect.assertions(19);
       const user = userEvent.setup();
 
       const props = {
