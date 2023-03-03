@@ -56,9 +56,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   });
 
   useEffect(() => {
-    setTimeout(() => {
-      buttonRefs.current[currentFocus]?.focus();
-    });
+    buttonRefs.current[currentFocus]?.focus();
   }, [currentFocus]);
 
   return (
