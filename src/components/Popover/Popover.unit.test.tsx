@@ -794,6 +794,46 @@ describe('<Popover />', () => {
       expect(document.activeElement).toEqual(triggerComponent);
     });
 
+    it('it should focus on the firstFocusElement', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const FirstFocusComponent = () => {
+        const [ref, setRef] = useState<HTMLButtonElement>();
+
+        return (
+          <Popover
+            closeButtonProps={{ 'aria-label': 'Close' }}
+            triggerComponent={<button>Click Me!</button>}
+            interactive
+            closeButtonPlacement="top-right"
+            trigger="click"
+            hideOnEsc={false}
+            firstFocusElement={ref}
+          >
+            <ButtonSimple role="group" ref={setRef}>
+              FirstFocusButton
+            </ButtonSimple>
+            <p>Content</p>
+          </Popover>
+        );
+      };
+
+      render(<FirstFocusComponent />);
+
+      // assert no popover on screen
+      const contentBeforeClick = screen.queryByText('Content');
+      expect(contentBeforeClick).not.toBeInTheDocument();
+
+      // after click, popover should be shown
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      // focus should now be on the first focus el
+      const button = screen.getByRole('group');
+
+      expect(document.activeElement).toEqual(button);
+    });
+
     it('should hide Popover after clicking on the backdrop', async () => {
       expect.assertions(3);
       const user = userEvent.setup();

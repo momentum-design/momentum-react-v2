@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC, useCallback, useEffect } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
@@ -59,6 +59,7 @@ const Popover: FC<Props> = (props: Props) => {
     onTrigger,
     onUntrigger,
     onClickOutside,
+    firstFocusElement,
     ...rest
   } = props;
 
@@ -83,6 +84,10 @@ const Popover: FC<Props> = (props: Props) => {
       setInstance?.(tippyRef.current._tippy);
     }
   }, [tippyRef, setInstance]);
+
+  useEffect(() => {
+    firstFocusElement?.focus();
+  }, [firstFocusElement]);
 
   return (
     <LazyTippy

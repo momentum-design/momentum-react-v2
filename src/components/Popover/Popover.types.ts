@@ -170,4 +170,11 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default 'undefined'
    */
   offsetSkidding?: number;
+
+  /**
+   * The element used to focus on when the popover opens
+   * See PopoverWithFirstFocus in storybook for example usage
+   * @default 'undefined'
+   */
+  firstFocusElement?: HTMLElement;
 }

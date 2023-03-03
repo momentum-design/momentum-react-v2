@@ -109,6 +109,32 @@ describe('<AriaToolbar />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should update order if triggered externally', () => {
+      expect.assertions(4);
+
+      const container = mount(
+        <AriaToolbar orientation="vertical" ariaLabel="test">
+          <ButtonSimple />
+          <ButtonSimple />
+          <ButtonSimple />
+        </AriaToolbar>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      container.find(ButtonSimple).at(2).simulate('focus');
+
+      expect(container).toMatchSnapshot();
+
+      container.find(ButtonSimple).at(2).simulate('keyDown', { key: 'ArrowUp' });
+
+      expect(container).toMatchSnapshot();
+
+      container.find(ButtonSimple).at(1).simulate('keyDown', { key: 'ArrowDown' });
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

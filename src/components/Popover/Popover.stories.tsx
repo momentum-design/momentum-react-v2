@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -13,6 +13,7 @@ import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Popover.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Flex from '../Flex';
+import AriaToolbar from '../AriaToolbar';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -67,6 +68,40 @@ InteractiveContent.args = {
       <Item key="five">Five</Item>
       <Item key="six">Six</Item>
     </Menu>
+  ),
+};
+
+const PopoverWithFirstFocus = (props) => {
+  const [ref, setRef] = useState<HTMLButtonElement>();
+
+  return (
+    <Popover firstFocusElement={ref} {...props}>
+      <AriaToolbar ariaLabel="toolbar">
+        <ButtonPill key={1}>1</ButtonPill>
+        <ButtonPill key={2} ref={setRef}>
+          2
+        </ButtonPill>
+        <ButtonPill key={3}>3</ButtonPill>
+        <ButtonPill key={4}>4</ButtonPill>
+      </AriaToolbar>
+    </Popover>
+  );
+};
+
+const InteractiveFocus = Template<PopoverProps>(PopoverWithFirstFocus).bind({});
+
+InteractiveFocus.argTypes = { ...argTypes };
+
+InteractiveFocus.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
   ),
 };
 
@@ -173,4 +208,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, InteractiveContent, WithCloseButton, Offset, Common };
+export { Example, InteractiveContent, InteractiveFocus, WithCloseButton, Offset, Common };
