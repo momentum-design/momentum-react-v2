@@ -56,7 +56,9 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   });
 
   useEffect(() => {
-    buttonRefs.current[currentFocus]?.focus();
+    setTimeout(() => {
+      buttonRefs.current[currentFocus]?.focus();
+    });
   }, [currentFocus]);
 
   return (
@@ -69,10 +71,19 @@ const AriaToolbar: FC<Props> = (props: Props) => {
       style={style}
     >
       {map(validChildren, (child, index) => {
-        return React.cloneElement(child as React.ReactElement<any>, {
+        return React.cloneElement(child, {
           tabIndex: index === (currentFocus || 0) ? 0 : -1,
           ref: (e) => {
             buttonRefs.current[index] = e;
+            if (child.ref) {
+              child.ref(e);
+            }
+          },
+          onFocus: (e) => {
+            setCurrentFocus(index);
+            if (child.props.onFocus) {
+              child.props.onFocus(e);
+            }
           },
           onPress: () => {
             setCurrentFocus(index);
