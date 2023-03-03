@@ -99,6 +99,21 @@ describe('Select', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with border', async () => {
+      expect.assertions(1);
+
+      const showBorder = false;
+
+      container = await mountAndWait(
+        <Select id="test-id" showBorder={showBorder} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with listbox opened', async () => {
       expect.assertions(1);
 

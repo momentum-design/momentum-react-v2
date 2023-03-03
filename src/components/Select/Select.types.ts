@@ -34,4 +34,8 @@ export interface Props<T> extends AriaSelectProps<T> {
    * title to use for this component.
    */
   title?: string;
+  /**
+   * showBorder for the component
+   */
+  showBorder?: boolean;
 }

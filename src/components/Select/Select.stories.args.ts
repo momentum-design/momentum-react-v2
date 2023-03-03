@@ -46,6 +46,20 @@ export default {
       },
     },
   },
+  showBorder: {
+    defaultValue: CONSTANTS.DEFAULTS.SHOULD_SHOW_BORDER,
+    description: 'If this component should have border around it.',
+    control: { type: 'boolean' },
+    options: [true, false],
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SHOULD_SHOW_BORDER,
+      },
+    },
+  },
   items: {
     defaultValue: [],
     description:

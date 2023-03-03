@@ -10,6 +10,7 @@ const DIRECTIONS: Record<string, SelectDirection> = {
 const DEFAULTS = {
   DIRECTION: DIRECTIONS.bottom,
   SHOULD_AUTOFOCUS: true,
+  SHOULD_SHOW_BORDER: true,
 };
 
 const STYLE = {
@@ -21,6 +22,7 @@ const STYLE = {
   selectedItemWrapper: `${CLASS_PREFIX}-selected-item-wrapper`,
   overlay: `${CLASS_PREFIX}-overlay`,
   menuListBox: `${CLASS_PREFIX}-menu-listbox`,
+  borderLess: 'borderLess',
 };
 
 const SELECT_HEIGHT_ADJUST_BORDER = 2; // 2px extra because of the border(top, down);
