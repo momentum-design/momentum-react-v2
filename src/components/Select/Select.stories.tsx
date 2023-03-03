@@ -311,6 +311,7 @@ Common.parameters = {
       label: 'Direction Top',
       items: singleItems,
       direction: 'top',
+      showBorder: true,
       children: (item) => <Item key={item.id}>{item.value}</Item>,
     },
   ],

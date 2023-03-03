@@ -30,6 +30,7 @@
   outline: none !important;
   cursor: pointer;
 
+
   > span:first-of-type {
     display: block;
     text-overflow: ellipsis;
@@ -99,4 +100,8 @@
   &[data-direction='bottom'] {
     margin-top: 0.25rem;
   }
+}
+
+.borderLess {
+  border: none;
 }

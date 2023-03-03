@@ -25,6 +25,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     placeholder,
     direction = DEFAULTS.DIRECTION,
     title,
+    showBorder = DEFAULTS.SHOULD_SHOW_BORDER
   } = props;
   const state = useSelectState(props);
 
@@ -117,7 +118,8 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
           className={classnames(
             STYLE.dropdownInput,
             { [STYLE.selected]: state.selectedItem },
-            { [STYLE.open]: state.isOpen }
+            { [STYLE.open]: state.isOpen },
+            { [STYLE.borderLess]: !showBorder }
           )}
           ref={selectRef}
           title={title}
