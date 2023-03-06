@@ -4,6 +4,9 @@ import { mount } from 'enzyme';
 import AriaToolbar, { ARIA_TOOLBAR_CONSTANTS as CONSTANTS } from './';
 import ButtonSimple from '../ButtonSimple';
 import { triggerPress } from '../../../test/utils';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
 
 describe('<AriaToolbar />', () => {
   describe('snapshot', () => {
@@ -110,10 +113,10 @@ describe('<AriaToolbar />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should update order if triggered externally', () => {
-      expect.assertions(4);
-
-      const container = mount(
+    it('should update order if triggered externally', async () => {
+      expect.assertions(7);
+      const user = userEvent.setup();
+      const { getAllByRole, container } = render(
         <AriaToolbar orientation="vertical" ariaLabel="test">
           <ButtonSimple />
           <ButtonSimple />
@@ -123,16 +126,21 @@ describe('<AriaToolbar />', () => {
 
       expect(container).toMatchSnapshot();
 
-      container.find(ButtonSimple).at(2).simulate('focus');
+      const buttons = getAllByRole('button');
 
+      buttons[2].focus();
+
+      expect(buttons[2]).toHaveFocus();
       expect(container).toMatchSnapshot();
 
-      container.find(ButtonSimple).at(2).simulate('keyDown', { key: 'ArrowUp' });
+      await user.keyboard('{ArrowUp}');
 
+      expect(buttons[1]).toHaveFocus();
       expect(container).toMatchSnapshot();
 
-      container.find(ButtonSimple).at(1).simulate('keyDown', { key: 'ArrowDown' });
+      await user.keyboard('{ArrowDown}');
 
+      expect(buttons[2]).toHaveFocus();
       expect(container).toMatchSnapshot();
     });
   });

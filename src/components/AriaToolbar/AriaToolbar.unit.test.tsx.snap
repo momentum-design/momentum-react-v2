@@ -1025,461 +1025,101 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
 `;
 
 exports[`<AriaToolbar /> snapshot should update order if triggered externally 1`] = `
-<AriaToolbar
-  ariaLabel="test"
-  orientation="vertical"
->
+<div>
   <div
     aria-label="test"
-    className="md-aria-toolbar-wrapper"
+    class="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+    <button
+      class="md-button-simple-wrapper"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
   </div>
-</AriaToolbar>
+</div>
 `;
 
 exports[`<AriaToolbar /> snapshot should update order if triggered externally 2`] = `
-<AriaToolbar
-  ariaLabel="test"
-  orientation="vertical"
->
+<div>
   <div
     aria-label="test"
-    className="md-aria-toolbar-wrapper"
+    class="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper md-focus-ring-wrapper children"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper md-focus-ring-wrapper children"
+      type="button"
+    />
   </div>
-</AriaToolbar>
+</div>
 `;
 
 exports[`<AriaToolbar /> snapshot should update order if triggered externally 3`] = `
-<AriaToolbar
-  ariaLabel="test"
-  orientation="vertical"
->
+<div>
   <div
     aria-label="test"
-    className="md-aria-toolbar-wrapper"
+    class="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper md-focus-ring-wrapper children"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper md-focus-ring-wrapper children"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
   </div>
-</AriaToolbar>
+</div>
 `;
 
 exports[`<AriaToolbar /> snapshot should update order if triggered externally 4`] = `
-<AriaToolbar
-  ariaLabel="test"
-  orientation="vertical"
->
+<div>
   <div
     aria-label="test"
-    className="md-aria-toolbar-wrapper"
+    class="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper md-focus-ring-wrapper children"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper"
+      tabindex="-1"
+      type="button"
+    />
+    <button
+      class="md-button-simple-wrapper md-focus-ring-wrapper children"
+      type="button"
+    />
   </div>
-</AriaToolbar>
+</div>
 `;
