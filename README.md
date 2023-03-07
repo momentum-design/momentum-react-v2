@@ -52,6 +52,7 @@ the most up-to-date changes.
   [webpack](https://github.com/webpack/webpack) - Documentation
 - [percy](https://percy.io/) / [cypress](https://github.com/cypress-io/cypress) - Visual Testing
 
+
 ## Copyright
 
 Copyright (c) 2021 Cisco Systems
