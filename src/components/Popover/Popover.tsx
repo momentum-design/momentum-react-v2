@@ -65,7 +65,8 @@ const Popover: FC<Props> = (props: Props) => {
 
   const tippyRef = React.useRef(null);
 
-  const arrowId = `${ARROW_ID}${uuidV4()}`;
+  // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):
+  const arrowId = React.useMemo(() => `${ARROW_ID}${uuidV4()}`, []);
 
   const handleOnCloseButtonClick = useCallback(() => {
     tippyRef?.current?._tippy?.hide();
