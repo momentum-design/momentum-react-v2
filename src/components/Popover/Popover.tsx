@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect } from 'react';
+import React, { FC, useCallback, useEffect, useMemo } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
@@ -65,7 +65,9 @@ const Popover: FC<Props> = (props: Props) => {
 
   const tippyRef = React.useRef(null);
 
-  const arrowId = `${ARROW_ID}${uuidV4()}`;
+  const arrowId = useMemo(() => {
+    return `${ARROW_ID}${uuidV4()}`;
+  }, []);
 
   const handleOnCloseButtonClick = useCallback(() => {
     tippyRef?.current?._tippy?.hide();
