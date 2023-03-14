@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ReactionButton /> attributes should have its wrapper class 1`] = `null`;
+
 exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
 <ReactionButton>
   <ButtonCircle
