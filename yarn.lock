@@ -2633,7 +2633,7 @@ __metadata:
     jest-cli: ^26.0.0
     lint-staged: ^11.1.2
     lodash: ^4.17.11
-    lottie-web: ^5.7.13
+    lottie-web: 5.10.2
     mini-css-extract-plugin: 0.7.0
     moment: ^2.24.0
     moment-timezone: ^0.5.14
@@ -20159,10 +20159,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lottie-web@npm:^5.7.13":
-  version: 5.7.13
-  resolution: "lottie-web@npm:5.7.13"
-  checksum: 1b26e88d0e12df10afed9f5c686887ddb30b5cc8ca9d4268b1b0ddc78a794d6d6d7cc8573a87ab51c9d9bd60ac493582b1d002586425df4e5d9c638c682e3c01
+"lottie-web@npm:5.10.2":
+  version: 5.10.2
+  resolution: "lottie-web@npm:5.10.2"
+  checksum: 9ec80b479d8d03c079bd4f246d301f0c4aac2c4d6f8daaa79f6f3fc285aaba377c64879f6748d49c1db52b9854aea81c3203d858e9c686f7a47cd8b771d112d0
   languageName: node
   linkType: hard
 
