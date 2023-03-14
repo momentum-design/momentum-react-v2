@@ -1,2 +1,3 @@
 import * as React from 'react';
-export default JSON.stringify({});
+import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json?lottie';
+export default smile;

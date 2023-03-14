@@ -8,6 +8,8 @@ import { REACTIONS, STYLE } from './Reaction.constants';
 import { GLYPH_NOT_FOUND } from '../Icon/Icon.constants';
 import LoadingSpinner from '../LoadingSpinner';
 
+import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
+
 describe('<Reaction/>', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
@@ -86,7 +88,7 @@ describe('<Reaction/>', () => {
 
   describe('attributes', () => {
     beforeEach(() => {
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: 'data' });
+      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
     });
 
     it('should have its wrapper class', async () => {
@@ -154,7 +156,7 @@ describe('<Reaction/>', () => {
       jest
         .spyOn(lottie, 'loadAnimation')
         .mockReturnValue({ addEventListener, removeEventListener, destroy } as never);
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: 'data' });
+      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
       const wrapper = await mountAndWait(
         <Reaction name="haha" size={16} onComplete={onComplete} />
       );
@@ -176,7 +178,7 @@ describe('<Reaction/>', () => {
       jest
         .spyOn(lottie, 'loadAnimation')
         .mockReturnValue({ addEventListener, removeEventListener, destroy } as never);
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: 'data' });
+      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
       const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
 
       expect(addEventListener).not.toHaveBeenCalledWith('complete', expect.any(Function));
