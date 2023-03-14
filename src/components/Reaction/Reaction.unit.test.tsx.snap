@@ -401,55 +401,11 @@ exports[`<Reaction/> snapshot should match snapshot 1`] = `
 <Reaction
   name="haha"
 >
-  <LoadingSpinner>
-    <div
-      className="md-loading-spinner-wrapper"
-    >
-      <Icon
-        name="spinner"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-      <Icon
-        className="md-loading-spinner-arch"
-        name="spinner-partial"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner-partial"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-    </div>
-  </LoadingSpinner>
+  <div
+    className="md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
+  />
 </Reaction>
 `;
 
@@ -458,55 +414,11 @@ exports[`<Reaction/> snapshot should match snapshot with className 1`] = `
   className="example-class"
   name="haha"
 >
-  <LoadingSpinner>
-    <div
-      className="md-loading-spinner-wrapper"
-    >
-      <Icon
-        name="spinner"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-      <Icon
-        className="md-loading-spinner-arch"
-        name="spinner-partial"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner-partial"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-    </div>
-  </LoadingSpinner>
+  <div
+    className="example-class md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
+  />
 </Reaction>
 `;
 
@@ -529,55 +441,12 @@ exports[`<Reaction/> snapshot should match snapshot with id 1`] = `
   id="example-id"
   name="haha"
 >
-  <LoadingSpinner>
-    <div
-      className="md-loading-spinner-wrapper"
-    >
-      <Icon
-        name="spinner"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-      <Icon
-        className="md-loading-spinner-arch"
-        name="spinner-partial"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner-partial"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-    </div>
-  </LoadingSpinner>
+  <div
+    className="md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
+    id="example-id"
+  />
 </Reaction>
 `;
 
@@ -649,54 +518,15 @@ exports[`<Reaction/> snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <LoadingSpinner>
-    <div
-      className="md-loading-spinner-wrapper"
-    >
-      <Icon
-        name="spinner"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-      <Icon
-        className="md-loading-spinner-arch"
-        name="spinner-partial"
-        scale={24}
-        weight="regular"
-      >
-        <div
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        >
-          <svg
-            className=""
-            data-autoscale={false}
-            data-scale={24}
-            data-test="spinner-partial"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </Icon>
-    </div>
-  </LoadingSpinner>
+  <div
+    className="md-reaction-wrapper md-icon-scales"
+    data-name="haha"
+    data-scale={12}
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  />
 </Reaction>
 `;
