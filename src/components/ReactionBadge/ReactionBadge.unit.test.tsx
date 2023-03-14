@@ -3,11 +3,18 @@ import { mountAndWait } from '../../../test/utils';
 
 import ReactionBadge, { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 import Reaction from '../Reaction';
+import * as jsonImport from '../../hooks/useDynamicJSONImport';
+import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
+
 import ButtonSimple from '../ButtonSimple';
 
 describe('<ReactionBadge name="haha" />', () => {
   const reactionProp = <Reaction name="haha" />;
   describe('snapshot', () => {
+    beforeEach(() => {
+      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
+    });
+
     it('should match snapshot', async () => {
       expect.assertions(1);
 

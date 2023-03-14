@@ -11,6 +11,10 @@ import LoadingSpinner from '../LoadingSpinner';
 import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
 
 describe('<Reaction/>', () => {
+  beforeEach(() => {
+    jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
+  });
+
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
@@ -87,10 +91,6 @@ describe('<Reaction/>', () => {
   });
 
   describe('attributes', () => {
-    beforeEach(() => {
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
-    });
-
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
