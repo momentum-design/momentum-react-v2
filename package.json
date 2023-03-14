@@ -133,7 +133,7 @@
     "globby": "^11.0.4",
     "handlebars": "^4.1.0",
     "lodash": "^4.17.11",
-    "lottie-web": "^5.7.13",
+    "lottie-web": "5.10.2",
     "moment": "^2.24.0",
     "node-sass-tilde-importer": "^1.0.2",
     "object-assign": "4.1.1",
