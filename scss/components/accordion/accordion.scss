@@ -29,7 +29,7 @@
         padding: $accordion-header__padding;
         font-family: $accordion-header__font-family;
         font-size: $accordion__font-size;
-        font-weight: normal;
+        font-weight: 450;
         cursor: pointer;
         justify-content: space-between;
         align-items: center;
@@ -43,7 +43,7 @@
 
           font-family: $icon-font-name;
           font-size: $accordion-arrow__font-size;
-          font-weight: normal;
+          font-weight: 450;
         }
 
         &.#{$accordion__class}__header {

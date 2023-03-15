@@ -206,7 +206,7 @@
       .#{$alert__class}__title {
         padding-bottom: rem-calc(24);
         font-size: rem-calc(14);
-        font-weight: bold;
+        font-weight: 750;
         line-height: rem-calc(22);
         color: $alert__font-color--title;
         color: var(--mdl-alert-text-theme, $alert__font-color--title);
@@ -218,7 +218,7 @@
         &-title {
           padding-top: rem-calc(8);
           font-size: rem-calc(16);
-          font-weight: bold;
+          font-weight: 750;
           line-height: rem-calc(24);
         }
 

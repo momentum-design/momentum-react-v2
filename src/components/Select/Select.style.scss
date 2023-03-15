@@ -19,7 +19,7 @@
   color: var(--mds-color-theme-text-secondary-normal);
   border: 1px solid var(--mds-color-theme-outline-input-normal);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 1.5rem;
   padding: 0.25rem 0.75rem;
   display: flex;
@@ -29,7 +29,6 @@
   transition: background-color 0.2s;
   outline: none !important;
   cursor: pointer;
-
 
   > span:first-of-type {
     display: block;

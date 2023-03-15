@@ -3,7 +3,6 @@
     .md-code-input-character {
       flex: auto;
       cursor: text;
-      font-family: 'CiscoSansTT Regular';
       width: 2.75rem;
       height: 3rem;
       border: 1px solid var(--mds-color-theme-outline-input-normal);
@@ -32,7 +31,7 @@
 
       &--selected:empty {
         &:before {
-          font-family: 'CiscoSansTT Thin';
+          font-weight: 250;
           content: '|';
           animation: 1s blink step-end infinite;
         }
