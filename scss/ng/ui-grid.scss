@@ -50,7 +50,7 @@ $ui-grid-selected-color: $md-theme-50;
     overflow: hidden;
     font-family: $brand-font-cisco-TT-Light, sans-serif;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 750;
     color: $md-gray-90;
     background-color: $md-gray-10;
   }
@@ -124,7 +124,7 @@ $ui-grid-selected-color: $md-theme-50;
   .ui-grid-top-panel {
     position: relative;
     overflow: hidden; // Disable so menus show up
-    font-weight: bold;
+    font-weight: 750;
     background-color: transparent;
     border-bottom: 1px solid $md-gray-10;
   }
@@ -189,7 +189,7 @@ $ui-grid-selected-color: $md-theme-50;
 
   .ui-grid-header-cell-label {
     font-size: $h5-font-size;
-    font-weight: normal;
+    font-weight: 450;
     line-height: $h5-line-height;
     color: $md-gray-70;
     white-space: nowrap;
@@ -475,7 +475,7 @@ $ui-grid-selected-color: $md-theme-50;
   .ui-grid-footer-panel {
     position: relative;
     // overflow: hidden;  // Disable so menus show up
-    font-weight: bold;
+    font-weight: 750;
     background: $ui-grid-header-background-color;
     background: $ui-grid-background-gradient-settings;
     border-top: 1px solid $ui-grid-border-color;
@@ -555,7 +555,7 @@ $ui-grid-selected-color: $md-theme-50;
     right: 0;
     z-index: 2;
     height: 31px;
-    font-weight: normal;
+    font-weight: 450;
     cursor: pointer;
     background: $ui-grid-header-background-color;
     border: $ui-grid-border-width solid $ui-grid-border-color;
@@ -602,7 +602,7 @@ $ui-grid-selected-color: $md-theme-50;
       margin-bottom: 0;
       font-size: 14px;
       font-size: 10px;
-      font-weight: normal;
+      font-weight: 450;
       line-height: 1.42857143;
       line-height: 1;
       color: transparent;
@@ -693,7 +693,7 @@ $media screen and (-webkit-min-device-pixel-ratio:0) {
     margin-left: -0.5em;
     font-family: $icon-font-name;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 450;
     /* fix buttons height, for twitter bootstrap */
     line-height: 1em;
     text-align: center;
@@ -808,7 +808,7 @@ $media screen and (-webkit-min-device-pixel-ratio:0) {
       left: 0;
       z-index: 2;
       min-height: 27px;
-      font-weight: normal;
+      font-weight: 450;
       cursor: pointer;
       background: $ui-grid-header-background-color;
       border: $ui-grid-border-width solid $ui-grid-border-color;
@@ -952,7 +952,7 @@ $media screen and (-webkit-min-device-pixel-ratio:0) {
 
   // ui-grid-icons //
   .ui-grid-tree-header-row {
-    font-weight: bold !important;
+    font-weight: 750 !important;
   }
 
   .ui-grid-icon-plus-squared:before {

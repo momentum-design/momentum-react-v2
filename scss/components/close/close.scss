@@ -4,7 +4,7 @@
   .#{$close__class} {
     float: right;
     font-size: ($font-size-base * 1.5);
-    font-weight: bold;
+    font-weight: 750;
     line-height: 1;
     color: $close__font-color;
     color: var(--mdl-textColor-primary, $close__font-color);
@@ -24,7 +24,7 @@
 button.#{$close__class} {
   min-width: initial;
   padding: 0;
-  font-weight: normal;
+  font-weight: 450;
   cursor: pointer;
   background: transparent;
   border-radius: 0;
