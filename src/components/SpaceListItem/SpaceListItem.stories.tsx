@@ -46,6 +46,7 @@ Common.args = {
   firstLine: 'Cisco Webex',
   secondLine: 'Webex Teams',
   onPress: action(`Space List Item Press`),
+  title: 'Tooltip that appears even on disabled',
 };
 
 Common.parameters = {
@@ -53,6 +54,7 @@ Common.parameters = {
     {
       avatar: <Avatar title="C" presence={PresenceType.Away} size={32} />,
       isNewActivity: true,
+      title: 'Tooltip that appears even on disabled',
     },
     {
       avatar: (
@@ -66,6 +68,7 @@ Common.parameters = {
       isNewActivity: true,
       isUnread: true,
       teamColor: TEAM_COLORS.gold,
+      title: 'Tooltip that appears even on disabled',
     },
     {
       avatar: (
@@ -78,6 +81,7 @@ Common.parameters = {
       ),
       isMention: true,
       teamColor: TEAM_COLORS.gold,
+      title: 'Tooltip that appears even on disabled',
     },
 
     {
@@ -91,6 +95,7 @@ Common.parameters = {
       ),
       isEnterRoom: true,
       teamColor: TEAM_COLORS.pink,
+      title: 'Tooltip that appears even on disabled',
     },
 
     {
@@ -104,6 +109,7 @@ Common.parameters = {
       ),
       isAlertMuted: true,
       teamColor: TEAM_COLORS.purple,
+      title: 'Tooltip that appears even on disabled',
     },
 
     {
@@ -117,6 +123,7 @@ Common.parameters = {
       ),
       isError: true,
       teamColor: TEAM_COLORS.slate,
+      title: 'Tooltip that appears even on disabled',
     },
 
     {
@@ -131,6 +138,7 @@ Common.parameters = {
       isError: true,
       teamColor: TEAM_COLORS.slate,
       secondLine: ['Test', 'Another Test'],
+      title: 'Tooltip that appears even on disabled',
     },
     {
       avatar: (
@@ -144,6 +152,7 @@ Common.parameters = {
       isAlert: true,
       teamColor: TEAM_COLORS.slate,
       secondLine: ['Test', 'Another Test', 'Last Test'],
+      title: 'Tooltip that appears even on disabled',
     },
     {
       avatar: (
@@ -167,6 +176,7 @@ Common.parameters = {
         </Flex>
       ) as JSX.Element,
       teamColor: TEAM_COLORS.mint,
+      title: 'Tooltip that appears even on disabled',
     },
   ],
 };

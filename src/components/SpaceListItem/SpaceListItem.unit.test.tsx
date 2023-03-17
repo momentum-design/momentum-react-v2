@@ -211,6 +211,16 @@ describe('<SpaceListItem />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with isDisabled', async () => {
+      expect.assertions(1);
+
+      const isDisabled = true;
+
+      const container = await mountAndWait(<SpaceListItem isDisabled={isDisabled} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -565,6 +575,28 @@ describe('<SpaceListItem />', () => {
         .getDOMNode();
 
       expect(element.classList.contains('active')).toBe(true);
+    });
+
+    it('should have provided disabled colours when isDisabled is provided', async () => {
+      expect.assertions(3);
+
+      const isDisabled = true;
+      const firstLine = 'firstLine';
+      const isMention = true;
+
+      const element = await mountAndWait(
+        <SpaceListItem firstLine={firstLine} isMention={isMention} isDisabled={isDisabled} />
+      );
+
+      const firstLineElement = element.find(`[data-test="list-item-first-line"]`).at(0);
+
+      const mentionIcon = element.find(Icon);
+
+      const listItemBaseIcon = element.find(ListItemBase);
+
+      expect(firstLineElement.props()['data-disabled']).toBe(isDisabled);
+      expect(mentionIcon.props().fillColor).toBe('var(--mds-color-theme-text-primary-disabled)');
+      expect(listItemBaseIcon.props().isDisabled).toBe(isDisabled);
     });
   });
 });

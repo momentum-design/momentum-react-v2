@@ -27,10 +27,26 @@
     &.focus {
       color: var(--mds-color-theme-text-primary-normal);
     }
+
+    &[data-disabled='true'],
+    &.disable {
+      cursor: default;
+      background-color: var(--mds-color-theme-background-primary-ghost);
+
+      &,
+      .md-text-wrapper {
+        color: var(--mds-color-theme-text-primary-disabled);
+      }
+
+      svg {
+        fill: var(--mds-color-theme-text-primary-disabled);
+      }
+    }
   }
 
   &[data-disabled='true'],
   &.disable {
+    cursor: default;
     background-color: var(--mds-color-theme-background-primary-ghost);
 
     &,
