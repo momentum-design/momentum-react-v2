@@ -103,4 +103,9 @@ export interface Props extends PressEvents, ContextMenu {
    * Right icon tooltip shown on hover.
    */
   rightIconTooltip?: string;
+
+  /**
+   * Whether or not this SpaceListItem should look disabled, but allowing actions like onPress to be passed.
+   */
+  isDisabled?: boolean;
 }

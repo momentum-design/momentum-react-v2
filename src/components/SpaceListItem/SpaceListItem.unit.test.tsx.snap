@@ -8,6 +8,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={32}
   >
@@ -59,11 +60,13 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 >
@@ -126,6 +129,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
 <SpaceListItem>
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -177,11 +181,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -212,6 +218,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -263,11 +270,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -298,6 +307,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
 >
   <ListItemBase
     className="example-class md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -349,11 +359,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -380,6 +392,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -431,11 +444,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 >
@@ -465,6 +480,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
   <ListItemBase
     className="md-space-list-item-wrapper"
     id="example-id"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -517,11 +533,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -548,6 +566,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -599,11 +618,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -658,6 +679,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -709,11 +731,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -762,12 +786,98 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
 </SpaceListItem>
 `;
 
+exports[`<SpaceListItem /> snapshot should match snapshot with isDisabled 1`] = `
+<SpaceListItem
+  isDisabled={true}
+>
+  <ListItemBase
+    className="md-space-list-item-wrapper"
+    isDisabled={true}
+    shape="isPilled"
+    size={50}
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
+          data-disabled={true}
+          data-interactive={true}
+          data-padded={false}
+          data-shape="isPilled"
+          data-size={50}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="listitem"
+          tabIndex={-1}
+        >
+          <ListItemBaseSection
+            position="start"
+          >
+            <div
+              data-position="start"
+            />
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            className="md-space-list-item-text-wrapper text-column"
+            position="middle"
+          >
+            <div
+              className="md-space-list-item-text-wrapper text-column"
+              data-position="middle"
+            >
+              <Text
+                data-disabled={true}
+                data-test="list-item-first-line"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper"
+                  data-disabled={true}
+                  data-test="list-item-first-line"
+                  data-type="body-primary"
+                />
+              </Text>
+            </div>
+          </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            />
+          </ListItemBaseSection>
+        </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</SpaceListItem>
+`;
+
 exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] = `
 <SpaceListItem
   isEnterRoom={true}
 >
   <ListItemBase
     className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -819,11 +929,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -878,6 +990,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -929,11 +1042,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -988,6 +1103,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -1039,11 +1155,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1098,6 +1216,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
 >
   <ListItemBase
     className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -1149,11 +1268,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1180,6 +1301,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     isSelected={true}
     shape="isPilled"
     size={50}
@@ -1232,11 +1354,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1264,6 +1388,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     isSelected={false}
     shape="isPilled"
     size={50}
@@ -1316,11 +1441,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1334,6 +1461,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
               data-position="end"
             >
               <Icon
+                fillColor="var(--mds-color-theme-text-primary-normal)"
                 name="draft-indicator"
                 scale={14}
                 strokeColor="none"
@@ -1347,10 +1475,10 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
                     data-autoscale={false}
                     data-scale={14}
                     data-test="draft-indicator"
-                    fill="currentColor"
                     height="100%"
                     style={
                       Object {
+                        "fill": "var(--mds-color-theme-text-primary-normal)",
                         "stroke": "none",
                       }
                     }
@@ -1374,6 +1502,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -1425,11 +1554,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1490,6 +1621,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -1541,11 +1673,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1627,6 +1761,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -1678,11 +1813,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1742,6 +1879,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
     style={
@@ -1803,11 +1941,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />
@@ -1834,6 +1974,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
 >
   <ListItemBase
     className="md-space-list-item-wrapper"
+    isDisabled={false}
     shape="isPilled"
     size={50}
   >
@@ -1885,11 +2026,13 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
               data-position="middle"
             >
               <Text
+                data-disabled={false}
                 data-test="list-item-first-line"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper"
+                  data-disabled={false}
                   data-test="list-item-first-line"
                   data-type="body-primary"
                 />

@@ -16,6 +16,12 @@
     font-weight: bold !important;
     color: var(--mds-color-theme-text-primary-normal) !important;
   }
+
+  p {
+    &[data-disabled='true'] {
+      color: var(--mds-color-theme-text-primary-disabled) !important;
+    }
+  }
 }
 
 .md-space-list-item-text-wrapper {

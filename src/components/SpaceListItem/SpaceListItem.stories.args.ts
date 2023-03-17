@@ -1,5 +1,6 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
+import { DEFAULTS } from './SpaceListItem.constants';
 
 export default {
   ...commonStyles,
@@ -171,6 +172,20 @@ export default {
       },
       defaultValue: {
         summary: false,
+      },
+    },
+  },
+  isDisabled: {
+    description:
+      'Determines if the component should be disabled (this still allows onPress actions to still be passed).',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.DISABLED,
       },
     },
   },
