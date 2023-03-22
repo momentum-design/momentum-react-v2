@@ -58,9 +58,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -167,41 +175,56 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                   data-size={32}
                   title="Cisco"
                 >
-                  <span>
-                    C
-                  </span>
-                  <div
-                    className="md-avatar-presence-icon-wrapper"
-                    data-shape={true}
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
                   >
-                    <Icon
-                      fillColor="var(--mds-color-theme-indicator-stable)"
-                      name="unread"
-                      scale={14}
-                      strokeColor="none"
-                      weight="filled"
+                    <span
+                      className="md-avatar-wrapper-children"
                     >
-                      <div
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      C
+                    </span>
+                  </Initials>
+                  <Presence
+                    isCircularWrapper={true}
+                    presenceColor="var(--mds-color-theme-indicator-stable)"
+                    presenceIcon="unread"
+                    size={32}
+                  >
+                    <div
+                      className="md-avatar-presence-icon-wrapper"
+                      data-shape={true}
+                    >
+                      <Icon
+                        fillColor="var(--mds-color-theme-indicator-stable)"
+                        name="unread"
+                        scale={14}
+                        strokeColor="none"
+                        weight="filled"
                       >
-                        <svg
-                          className=""
-                          data-autoscale={false}
-                          data-scale={14}
-                          data-test="unread"
-                          height="100%"
-                          style={
-                            Object {
-                              "fill": "var(--mds-color-theme-indicator-stable)",
-                              "stroke": "none",
+                        <div
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        >
+                          <svg
+                            className=""
+                            data-autoscale={false}
+                            data-scale={14}
+                            data-test="unread"
+                            height="100%"
+                            style={
+                              Object {
+                                "fill": "var(--mds-color-theme-indicator-stable)",
+                                "stroke": "none",
+                              }
                             }
-                          }
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </div>
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </div>
+                  </Presence>
                 </div>
               </Avatar>
             </div>
@@ -302,9 +325,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -409,9 +440,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -586,9 +625,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -768,9 +815,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -946,9 +1001,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -1053,9 +1116,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -1156,9 +1227,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -1286,9 +1365,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -1416,9 +1503,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -1546,9 +1641,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -1676,9 +1779,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>
@@ -1803,9 +1914,17 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
                   data-size={32}
                   title="C"
                 >
-                  <span>
-                    C
-                  </span>
+                  <Initials
+                    className="md-avatar-wrapper-children"
+                    initials="C"
+                    type="person"
+                  >
+                    <span
+                      className="md-avatar-wrapper-children"
+                    >
+                      C
+                    </span>
+                  </Initials>
                 </div>
               </Avatar>
             </div>

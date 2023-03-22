@@ -39,6 +39,7 @@ const TYPES = {
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   outerWrapper: `${CLASS_PREFIX}-outer-wrapper`,
+  wrapperChildren: `${CLASS_PREFIX}-wrapper-children`,
   iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
   imageHidden: `${CLASS_PREFIX}-image-hidden`,
   presenceIconWrapper: `${CLASS_PREFIX}-presence-icon-wrapper`,
@@ -48,7 +49,7 @@ const STYLE = {
 
 const DEFAULTS = {
   PRESENCE: PresenceType.Default,
-  SIZE: 24,
+  SIZE: 24 as const,
   COLOR: AVATAR_COLORS.default,
   TYPE: TYPES.person,
   HIDE_DEFAULT_TOOLTIP: false,

@@ -21,9 +21,17 @@ exports[`<ToastDetails /> snapshot should match snapshot 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -66,9 +74,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with badges 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -126,9 +142,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with children 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -167,9 +191,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with className 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -222,9 +254,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -482,9 +522,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -742,9 +790,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -968,9 +1024,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with id 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -1007,9 +1071,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with info 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -1052,9 +1124,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with infoColor 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -1106,9 +1186,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with style 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -1145,9 +1233,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with subject 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
@@ -1189,9 +1285,17 @@ exports[`<ToastDetails /> snapshot should match snapshot with title 1`] = `
         data-color="default"
         data-size={32}
       >
-        <span>
-          T
-        </span>
+        <Initials
+          className="md-avatar-wrapper-children"
+          initials="T"
+          type="person"
+        >
+          <span
+            className="md-avatar-wrapper-children"
+          >
+            T
+          </span>
+        </Initials>
       </div>
     </Avatar>
     <div
