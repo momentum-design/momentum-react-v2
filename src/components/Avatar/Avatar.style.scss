@@ -23,6 +23,10 @@
   position: relative;
   width: fit-content;
 
+  .md-avatar-wrapper-children {
+    position: absolute;
+  }
+
   span {
     font-weight: 500;
     color: var(--mds-color-theme-common-text-white);

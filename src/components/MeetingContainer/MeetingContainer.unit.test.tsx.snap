@@ -168,9 +168,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                     className="md-avatar-wrapper"
                     data-color="default"
                     data-size={32}
-                  >
-                    <span />
-                  </div>
+                  />
                 </Avatar>
               </div>
               <div

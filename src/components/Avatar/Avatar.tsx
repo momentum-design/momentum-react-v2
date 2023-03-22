@@ -1,21 +1,17 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 
 import './Avatar.style.scss';
-import { PresenceType, Props } from './Avatar.types';
-import {
-  STYLE,
-  DEFAULTS,
-  TYPES,
-  MAX_INITIALS_PERSON,
-  MAX_INITIALS_SPACE,
-  AVATAR_PRESENCE_ICON_SIZE_MAPPING,
-  AVATAR_ICON_SIZE_MAPPING,
-} from './Avatar.constants';
+import type { Props } from './Avatar.types';
+import { STYLE, DEFAULTS, AVATAR_ICON_SIZE_MAPPING } from './Avatar.constants';
 import Icon from '../Icon';
-import { getInitials } from './Avatar.utils';
 import ButtonSimple from '../ButtonSimple';
 import Loading from '../../legacy/Loading';
+import Presence from './Presence';
+import Initials from './Initials';
+import { getInitials } from './Avatar.utils';
+import { getPresenceIconColor } from './Presence.utils';
+import { useAvatarImage } from './Avatar.hooks';
 
 const Avatar: React.FC<Props> = (props: Props) => {
   const {
@@ -36,194 +32,19 @@ const Avatar: React.FC<Props> = (props: Props) => {
     ...rest
   } = props;
 
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageLoadFailed, setImageLoadFailed] = useState(false);
-  const imageRef = useRef<HTMLImageElement>();
+  const initialsText = initials ? initials : title ? getInitials(title, type) : undefined;
+  const { presenceColor, presenceIcon, isCircularWrapper } = getPresenceIconColor(
+    presence,
+    failureBadge
+  );
+
+  const { imageLoaded, handleOnLoad, handleOnError } = useAvatarImage(src);
 
   if (src && icon) {
     console.warn(
       'Avatar: You can only use either an image or an icon inside the Avatar but not both.'
     );
   }
-
-  useEffect(() => {
-    if (imageRef && imageRef.current && imageRef.current.complete) {
-      handleOnLoad();
-    }
-  }, []);
-
-  useEffect(() => {
-    setImageLoadFailed(false);
-    setImageLoaded(false);
-  }, [src]);
-
-  const renderPresence = (presenceType: PresenceType) => {
-    let presenceIcon: string;
-    let presenceColor: string;
-    let isCircularWrapper = true;
-
-    //TODO: temporary fix until design gives proper design spec for failure badge
-    if (failureBadge) {
-      presenceIcon = 'warning';
-      presenceColor = 'var(--mds-color-theme-indicator-attention)';
-    } else {
-      if (!presenceType) return;
-      if (presenceType === PresenceType.Default) return;
-
-      switch (presenceType) {
-        case PresenceType.Active:
-          presenceIcon = 'unread';
-          presenceColor = 'var(--mds-color-theme-indicator-stable)';
-          break;
-        case PresenceType.Meet:
-          presenceIcon = 'camera-presence';
-          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
-          isCircularWrapper = false;
-          break;
-        case PresenceType.Schedule:
-          presenceIcon = 'meetings-presence';
-          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
-          isCircularWrapper = false;
-          break;
-        case PresenceType.Call:
-          presenceIcon = 'handset';
-          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
-          isCircularWrapper = false;
-          break;
-        case PresenceType.DND:
-          presenceIcon = 'dnd-presence';
-          presenceColor = 'var(--mds-color-theme-indicator-attention)';
-          break;
-        case PresenceType.Presenting:
-          presenceIcon = 'share-screen';
-          presenceColor = 'var(--mds-color-theme-indicator-attention)';
-          isCircularWrapper = false;
-          break;
-        case PresenceType.QuietHours:
-          presenceIcon = 'quiet-hours-presence';
-          presenceColor = 'var(--mds-color-theme-indicator-locked)';
-          break;
-        case PresenceType.Away:
-          presenceIcon = 'recents-presence';
-          presenceColor = 'var(--mds-color-theme-indicator-locked)';
-          break;
-        case PresenceType.OOO:
-          presenceIcon = 'pto-presence';
-          presenceColor = 'var(--mds-color-theme-indicator-locked)';
-          break;
-        case PresenceType.Busy:
-          presenceIcon = 'busy-presence';
-          presenceColor = 'var(--mds-color-theme-indicator-unstable)';
-          break;
-        case PresenceType.OnMobile:
-          presenceIcon = 'phone';
-          presenceColor = 'var(--mds-color-theme-indicator-locked)';
-          isCircularWrapper = false;
-          break;
-        case PresenceType.OnDevice:
-          presenceIcon = 'generic-device-video';
-          presenceColor = 'var(--mds-color-theme-indicator-locked)';
-          isCircularWrapper = false;
-          break;
-        case PresenceType.OnHold:
-          presenceIcon = 'pause';
-          presenceColor = 'var(--mds-color-theme-indicator-locked)';
-          isCircularWrapper = false;
-          break;
-        default:
-          break;
-      }
-    }
-
-    return (
-      <div className={STYLE.presenceIconWrapper} data-shape={isCircularWrapper}>
-        <Icon
-          name={presenceIcon}
-          weight={presenceIcon === 'busy-presence' ? 'bold' : 'filled'}
-          fillColor={presenceColor}
-          strokeColor="none"
-          scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
-        />
-      </div>
-    );
-  };
-
-  const renderInitials = () => {
-    if (src) {
-      if (!imageLoadFailed && imageLoaded) {
-        return null;
-      }
-    }
-
-    if (icon) {
-      return null;
-    }
-
-    // Error handling for initials length
-    if (initials) {
-      type === TYPES.person &&
-        initials.length > MAX_INITIALS_PERSON &&
-        console.warn(
-          `Avatar with type person should not have more than ${MAX_INITIALS_PERSON} initials.`
-        );
-
-      type === TYPES.space &&
-        initials.length > MAX_INITIALS_SPACE &&
-        console.warn(
-          `Avatar with type space should not have more than ${MAX_INITIALS_SPACE} initials.`
-        );
-    }
-
-    return <span>{initials ? initials : title ? getInitials(title, type) : ''}</span>;
-  };
-
-  const renderIcon = () => {
-    if (icon) {
-      return (
-        <Icon
-          className={STYLE.iconWrapper}
-          name={icon}
-          scale={AVATAR_ICON_SIZE_MAPPING[size].scale}
-          weight={AVATAR_ICON_SIZE_MAPPING[size].weight}
-        />
-      );
-    }
-  };
-
-  const renderImage = () => {
-    if (src && !imageLoadFailed) {
-      return (
-        <img
-          src={src}
-          alt={alt}
-          onLoad={handleOnLoad}
-          onError={handleOnError}
-          ref={imageRef}
-          className={!imageLoaded ? STYLE.imageHidden : ''}
-        />
-      );
-    }
-    return null;
-  };
-
-  const handleOnLoad = () => {
-    setImageLoaded(true);
-  };
-
-  const handleOnError = () => {
-    setImageLoadFailed(true);
-  };
-
-  //TODO: Temporary fix for typing animation. This should be re-implemented
-  const renderTypingAnimation = () => {
-    return (
-      <span className={STYLE.animationWrapper}>
-        <div style={{ transform: 'scale(0.4)' }}>
-          <Loading />
-        </div>
-      </span>
-    );
-  };
 
   const content = (
     <div
@@ -233,19 +54,46 @@ const Avatar: React.FC<Props> = (props: Props) => {
       title={!hideDefaultTooltip ? title : ''}
       {...(!onPress && { ...rest })}
     >
-      {/*
-        Renders by default with initials or title.
-        Doesn't render if src has loaded successfully or icon is provided.
-        It also renders if src has failed to load.
-      */}
-      {isTyping && renderTypingAnimation()}
-      {renderInitials()}
-      {/* Renders if src is provided. */}
-      {renderImage()}
-      {/* Renders if icon is provided. */}
-      {renderIcon()}
-      {/* Renders if presence is provided. */}
-      {renderPresence(presence)}
+      {!imageLoaded && !icon && initialsText && (
+        <Initials initials={initialsText} type={type} className={STYLE.wrapperChildren} />
+      )}
+
+      {src && (
+        <img
+          src={src}
+          alt={alt}
+          onLoad={handleOnLoad}
+          onError={handleOnError}
+          className={classnames(STYLE.wrapperChildren, { [STYLE.imageHidden]: !imageLoaded })}
+        />
+      )}
+
+      {icon && (
+        <Icon
+          className={classnames(STYLE.wrapperChildren, STYLE.iconWrapper)}
+          name={icon}
+          scale={AVATAR_ICON_SIZE_MAPPING[size].scale}
+          weight={AVATAR_ICON_SIZE_MAPPING[size].weight}
+        />
+      )}
+
+      {/* //TODO: Temporary fix for typing animation. This should be re-implemented */}
+      {isTyping && (
+        <span className={classnames(STYLE.wrapperChildren, STYLE.animationWrapper)}>
+          <div style={{ transform: 'scale(0.4)' }}>
+            <Loading />
+          </div>
+        </span>
+      )}
+
+      {presenceColor && presenceIcon && (
+        <Presence
+          presenceColor={presenceColor}
+          presenceIcon={presenceIcon}
+          isCircularWrapper={isCircularWrapper}
+          size={size}
+        />
+      )}
     </div>
   );
 
