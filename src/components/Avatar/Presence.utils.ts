@@ -5,7 +5,10 @@ type ReturnType = {
   presenceColor?: string;
   isCircularWrapper?: boolean;
 };
-export const getPresenceIconColor = (presenceType, failureBadge): ReturnType => {
+export const getPresenceIconColor = (
+  presenceType: PresenceType,
+  failureBadge: boolean
+): ReturnType => {
   let presenceIcon: string;
   let presenceColor: string;
   let isCircularWrapper = true;
