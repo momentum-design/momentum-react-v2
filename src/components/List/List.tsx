@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { STYLE } from './List.constants';
 import { Props } from './List.types';
 import './List.style.scss';
-import { ListContext } from './List.utils';
+import { ListContext, setNextFocus } from './List.utils';
 import { useKeyboard } from '@react-aria/interactions';
 
 const List: FC<Props> = (props: Props) => {
@@ -17,6 +17,7 @@ const List: FC<Props> = (props: Props) => {
     listSize,
     role,
     shouldItemFocusBeInset,
+    noLoop,
   } = props;
 
   const [currentFocus, setCurrentFocus] = useState<number>(0);
@@ -39,13 +40,13 @@ const List: FC<Props> = (props: Props) => {
         case 'ArrowUp':
         case 'ArrowLeft':
           e.preventDefault();
-          setCurrentFocus((listSize + currentFocus - 1) % listSize);
+          setNextFocus(true, listSize, currentFocus, noLoop, setCurrentFocus);
           break;
 
         case 'ArrowDown':
         case 'ArrowRight':
           e.preventDefault();
-          setCurrentFocus((listSize + currentFocus + 1) % listSize);
+          setNextFocus(false, listSize, currentFocus, noLoop, setCurrentFocus);
           break;
 
         default:
