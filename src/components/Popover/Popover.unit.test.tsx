@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useState } from 'react';
-import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
@@ -537,7 +537,9 @@ describe('<Popover />', () => {
 
       // after another click, popover should be hidden again
       await user.click(screen.getByRole('button', { name: /click me!/i }));
-      await waitForElementToBeRemoved(() => screen.queryByText('Content'));
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
 
       expect(props.onHide).toBeCalled();
       expect(props.onHidden).toBeCalled();
@@ -549,7 +551,7 @@ describe('<Popover />', () => {
     });
 
     it('should show/hide Popover on tab + enter', async () => {
-      expect.assertions(2);
+      expect.assertions(4);
       const user = userEvent.setup();
 
       render(
@@ -570,11 +572,13 @@ describe('<Popover />', () => {
 
       // after hitting space, popover should be hidden again
       await user.keyboard('{ }');
-      await waitForElementToBeRemoved(() => screen.queryByText('Content'));
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
     });
 
     it('should show Popover on mouseenter', async () => {
-      expect.assertions(2);
+      expect.assertions(4);
       const user = userEvent.setup();
 
       render(
@@ -594,11 +598,14 @@ describe('<Popover />', () => {
 
       // after unhover, popover should be hidden again
       await user.unhover(screen.getByRole('button', { name: /hover me!/i }));
-      await waitForElementToBeRemoved(() => screen.queryByText('Content'));
+
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
     });
 
     it('should show Popover on focusin', async () => {
-      expect.assertions(2);
+      expect.assertions(4);
       const user = userEvent.setup();
 
       render(
@@ -618,7 +625,9 @@ describe('<Popover />', () => {
 
       // after tabbing away, popover should be hidden again
       await user.tab();
-      await waitForElementToBeRemoved(() => screen.queryByText('Content'));
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
     });
 
     it('should show/hide Popover when triggered through instance', async () => {
