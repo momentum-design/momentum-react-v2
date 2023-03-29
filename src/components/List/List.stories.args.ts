@@ -26,8 +26,20 @@ export default {
       },
     },
   },
-  shouldFocusOnPres: {
+  shouldFocusOnPress: {
     description: 'Determines if the onPress handler should also focus the selected item',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  noLoop: {
+    description: 'Determines if the focus should loop if you get to the end of the list',
     control: { type: 'boolean' },
     table: {
       type: {

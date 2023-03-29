@@ -27,6 +27,11 @@ export interface Props {
   listSize: number;
 
   /**
+   * Whether the list should loop when you reach the top/bottom
+   */
+  noLoop?: boolean;
+
+  /**
    * Aria role
    */
   role?: string;
