@@ -3,7 +3,7 @@
     @font-face {
       font-family: 'Inter Thin';
       font-style: normal;
-      font-weight: 450;
+      font-weight: 200;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -13,7 +13,7 @@
   @include exports('brand-font-face-thin-oblique') {
     @font-face {
       font-family: 'Inter Thin Oblique';
-      font-style: italic;
+      font-style: 200;
       font-weight: 450;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
@@ -25,7 +25,7 @@
     @font-face {
       font-family: 'Inter Extra Light';
       font-style: normal;
-      font-weight: 450;
+      font-weight: 250;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -36,7 +36,7 @@
     @font-face {
       font-family: 'Inter Extra Light Oblique';
       font-style: italic;
-      font-weight: 450;
+      font-weight: 250;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -47,7 +47,7 @@
     @font-face {
       font-family: 'Inter Light';
       font-style: normal;
-      font-weight: 450;
+      font-weight: 350;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -58,7 +58,7 @@
     @font-face {
       font-family: 'Inter Light Oblique';
       font-style: italic;
-      font-weight: 450;
+      font-weight: 350;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -91,7 +91,18 @@
     @font-face {
       font-family: 'Inter Medium';
       font-style: normal;
-      font-weight: 450;
+      font-weight: 550;
+      src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
+      font-display: fallback;
+    }
+  }
+}
+@mixin brand-font-face-medium-oblique {
+  @include exports('brand-font-face-medium') {
+    @font-face {
+      font-family: 'Inter Medium Oblique';
+      font-style: italic;
+      font-weight: 550;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -102,7 +113,7 @@
     @font-face {
       font-family: 'Inter Bold';
       font-style: normal;
-      font-weight: 450;
+      font-weight: 750;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -113,7 +124,7 @@
     @font-face {
       font-family: 'Inter Bold Oblique';
       font-style: italic;
-      font-weight: 450;
+      font-weight: 750;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -124,7 +135,7 @@
     @font-face {
       font-family: 'Inter Heavy';
       font-style: normal;
-      font-weight: 450;
+      font-weight: 850;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -135,7 +146,7 @@
     @font-face {
       font-family: 'Inter Heavy Oblique';
       font-style: italic;
-      font-weight: 450;
+      font-weight: 850;
       src: url('#{$brand-font-folder}/Inter.var.woff2') format('woff2');
       font-display: fallback;
     }
@@ -150,6 +161,7 @@
   @include brand-font-face-light;
   @include brand-font-face-light-oblique;
   @include brand-font-face-medium;
+  @include brand-font-face-medium-oblique;
   @include brand-font-face-regular;
   @include brand-font-face-regular-oblique;
   @include brand-font-face-bold;

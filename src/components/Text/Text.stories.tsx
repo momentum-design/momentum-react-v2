@@ -51,8 +51,8 @@ Fonts.parameters = {
     ...Object.values([
       { weight: 200, style: 'normal', name: 'Thin' },
       { weight: 200, style: 'italic', name: 'Thin' },
-      { weight: 250, style: 'normal', name: 'ExtraLight' },
-      { weight: 250, style: 'italic', name: 'ExtraLight' },
+      { weight: 250, style: 'normal', name: 'Extra Light' },
+      { weight: 250, style: 'italic', name: 'Extra Light' },
       { weight: 350, style: 'normal', name: 'Light' },
       { weight: 350, style: 'italic', name: 'Light' },
       { weight: 450, style: 'normal', name: 'Regular' },
@@ -63,11 +63,46 @@ Fonts.parameters = {
       { weight: 750, style: 'italic', name: 'Bold' },
       { weight: 850, style: 'normal', name: 'Heavy' },
       { weight: 850, style: 'italic', name: 'Heavy' },
-    ]).map(({ weight, style, name }, index) => {
+    ]).map(({ weight, style }, index) => {
       return {
         style: {
-          fontFamily: 'Inter',
           fontWeight: weight,
+          fontStyle: style,
+          marginTop: index % 2 == 0 ? '1rem' : 0,
+        },
+        children: `Inter ${weight} - ${style}`,
+      };
+    }),
+  ],
+};
+
+const FontsLegacy = MultiTemplate<TextProps>(Text).bind({});
+
+FontsLegacy.argTypes = { ...argTypes };
+delete FontsLegacy.argTypes.type;
+
+FontsLegacy.parameters = {
+  variants: [
+    ...Object.values([
+      { weight: 200, style: 'normal', name: 'Thin' },
+      { weight: 200, style: 'italic', name: 'Thin' },
+      { weight: 250, style: 'normal', name: 'Extra Light' },
+      { weight: 250, style: 'italic', name: 'Extra Light' },
+      { weight: 350, style: 'normal', name: 'Light' },
+      { weight: 350, style: 'italic', name: 'Light' },
+      { weight: 450, style: 'normal', name: 'Regular' },
+      { weight: 450, style: 'italic', name: 'Regular' },
+      { weight: 550, style: 'normal', name: 'Medium' },
+      { weight: 550, style: 'italic', name: 'Medium' },
+      { weight: 750, style: 'normal', name: 'Bold' },
+      { weight: 750, style: 'italic', name: 'Bold' },
+      { weight: 850, style: 'normal', name: 'Heavy' },
+      { weight: 850, style: 'italic', name: 'Heavy' },
+    ]).map(({ style, name }, index) => {
+      return {
+        style: {
+          fontFamily: `Inter ${name}`,
+          // fontWeight: weight,
           fontStyle: style,
           marginTop: index % 2 == 0 ? '1rem' : 0,
         },
@@ -77,4 +112,4 @@ Fonts.parameters = {
   ],
 };
 
-export { Example, Types, Fonts };
+export { Example, Types, Fonts, FontsLegacy };
