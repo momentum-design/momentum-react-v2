@@ -108,4 +108,9 @@ export interface Props extends PressEvents, ContextMenu {
    * Whether or not this SpaceListItem should look disabled, but allowing actions like onPress to be passed.
    */
   isDisabled?: boolean;
+
+  /**
+   * Title of this SpaceListItem. Appears below the item box.
+   */
+  title?: string;
 }
