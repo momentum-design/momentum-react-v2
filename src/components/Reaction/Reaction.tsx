@@ -10,7 +10,7 @@ import './Reaction.style.scss';
 import LoadingSpinner from '../LoadingSpinner';
 
 const Reaction: FC<Props> = (props: Props) => {
-  const { autoPlay, className, id, loop, name, size, style, onComplete } = props;
+  const { autoPlay, className, id, loop, name, size, style, onComplete, ...otherProps } = props;
   const { animationData, error } = useDynamicJSONImport(name);
   const svgContainer = useRef<HTMLDivElement>(null);
 
@@ -55,6 +55,7 @@ const Reaction: FC<Props> = (props: Props) => {
         id={id}
         ref={svgContainer}
         style={style}
+        {...otherProps}
       />
     );
   }
