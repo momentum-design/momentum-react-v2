@@ -18,6 +18,8 @@
   background: var(--md-globals-gradient-primary);
   font-family: var(--md-globals-font-default);
   font-weight: 450;
+  // adjusting Inter's letter spacing to match the old CiscoSans
+  letter-spacing: -0.25px;
 
   // Firefox fix for scrollbar
   // On macOS, you need to set the General > Show scroll bars
