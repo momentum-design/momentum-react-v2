@@ -2201,7 +2201,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   class=""
                   data-autoscale="false"
                   data-scale="16"
-                  data-test="arrow-up"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   viewBox="0, 0, 32, 32"
@@ -2302,7 +2302,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             className="md-select-icon-wrapper"
           >
             <Icon
-              name="arrow-up"
+              name="arrow-down"
               scale={16}
               weight="bold"
             >
@@ -2313,7 +2313,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   className=""
                   data-autoscale={false}
                   data-scale={16}
-                  data-test="arrow-up"
+                  data-test="arrow-down"
                   fill="currentColor"
                   height="100%"
                   style={Object {}}

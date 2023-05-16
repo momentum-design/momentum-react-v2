@@ -25,7 +25,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     placeholder,
     direction = DEFAULTS.DIRECTION,
     title,
-    showBorder = DEFAULTS.SHOULD_SHOW_BORDER
+    showBorder = DEFAULTS.SHOULD_SHOW_BORDER,
   } = props;
   const state = useSelectState(props);
 
@@ -52,13 +52,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     overlayRef
   );
 
-  const getArrowIcon = (isOpen: boolean) => {
-    if (direction === 'bottom') {
-      return isOpen ? 'arrow-up' : 'arrow-down';
-    } else {
-      return isOpen ? 'arrow-down' : 'arrow-up';
-    }
-  };
+  const getArrowIcon = (isOpen: boolean) => (isOpen ? 'arrow-up' : 'arrow-down');
 
   // used to calculate position of top direction dropdown
   useEffect(() => {
