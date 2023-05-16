@@ -50,6 +50,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           <div
             class="md-button-group-wrapper"
             data-compressed="false"
+            data-orientation="horizontal"
             data-round="true"
             data-separator="false"
             data-spaced="false"
@@ -92,6 +93,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
         <div
           class="md-button-group-wrapper"
           data-compressed="false"
+          data-orientation="horizontal"
           data-round="true"
           data-separator="false"
           data-spaced="true"
@@ -201,6 +203,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
           <div
             class="md-button-group-wrapper"
             data-compressed="false"
+            data-orientation="horizontal"
             data-round="true"
             data-separator="false"
             data-spaced="true"
@@ -242,6 +245,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
         <div
           class="md-button-group-wrapper md-coachmark-controls"
           data-compressed="false"
+          data-orientation="horizontal"
           data-round="true"
           data-separator="false"
           data-spaced="false"

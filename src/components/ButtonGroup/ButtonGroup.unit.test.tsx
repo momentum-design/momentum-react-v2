@@ -93,6 +93,16 @@ describe('<ButtonGroup />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with orientation = vertical', () => {
+      expect.assertions(1);
+
+      const orientation = 'vertical';
+
+      container = mount(<ButtonGroup orientation={orientation}>{childrenTemplate}</ButtonGroup>);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -189,6 +199,18 @@ describe('<ButtonGroup />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('role')).toBe(role);
+    });
+
+    it('should pass orientation prop', () => {
+      expect.assertions(1);
+
+      const orientation = 'vertical';
+
+      const element = mount(<ButtonGroup orientation={orientation}>{childrenTemplate}</ButtonGroup>)
+        .find(ButtonGroup)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-orientation')).toBe(`${orientation}`);
     });
   });
 });

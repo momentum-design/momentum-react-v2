@@ -4,6 +4,14 @@
   height: fit-content;
   width: fit-content;
 
+  &[data-orientation='horizontal'] {
+    flex-direction: row;
+  }
+
+  &[data-orientation='vertical'] {
+    flex-direction: column;
+  }
+
   &[data-separator='true'] {
     border: 1px solid var(--mds-color-theme-outline-button-normal);
   }
@@ -28,19 +36,41 @@
       border-radius: 0;
     }
 
-    &[data-compressed='false'] {
-      &[data-separator='true'] {
-        > button {
-          &:not(:first-of-type) {
-            border-image: -webkit-linear-gradient(
-                top,
-                rgba(1, 1, 1, 0) 25%,
-                var(--mds-color-theme-outline-button-normal) 25%,
-                var(--mds-color-theme-outline-button-normal) 75%,
-                rgba(1, 1, 1, 0) 75%
-              )
-              1;
-            border-image-width: 0px 0px 0px 1px;
+    &[data-orientation='horizontal'] {
+      &[data-compressed='false'] {
+        &[data-separator='true'] {
+          > button {
+            &:not(:first-of-type) {
+              border-image: -webkit-linear-gradient(
+                  top,
+                  rgba(1, 1, 1, 0) 25%,
+                  var(--mds-color-theme-outline-button-normal) 25%,
+                  var(--mds-color-theme-outline-button-normal) 75%,
+                  rgba(1, 1, 1, 0) 75%
+                )
+                1;
+              border-image-width: 0px 0px 0px 1px;
+            }
+          }
+        }
+      }
+    }
+
+    &[data-orientation='vertical'] {
+      &[data-compressed='false'] {
+        &[data-separator='true'] {
+          > button {
+            &:not(:first-of-type) {
+              border-image: -webkit-linear-gradient(
+                  left,
+                  rgba(1, 1, 1, 0) 25%,
+                  var(--mds-color-theme-outline-button-normal) 25%,
+                  var(--mds-color-theme-outline-button-normal) 75%,
+                  rgba(1, 1, 1, 0) 75%
+                )
+                1;
+              border-image-width: 1px 0px 0px 0px;
+            }
           }
         }
       }
@@ -48,31 +78,67 @@
   }
 
   &[data-round='true'] {
-    border-radius: 100vh;
+    &[data-orientation='horizontal'] {
+      border-radius: 100vh;
 
-    &[data-spaced='false'] {
-      > button {
-        &:first-of-type {
-          border-top-left-radius: 100vh;
-          border-bottom-left-radius: 100vh;
-        }
-
-        &:last-of-type {
-          border-top-right-radius: 100vh;
-          border-bottom-right-radius: 100vh;
-        }
-      }
-
-      &[data-compressed='true'] {
+      &[data-spaced='false'] {
         > button {
-          &:not(:first-of-type) {
-            border-left: none;
-            padding-left: 0.2rem;
+          &:first-of-type {
+            border-top-left-radius: 100vh;
+            border-bottom-left-radius: 100vh;
           }
 
-          &:not(:last-of-type) {
-            border-right: none;
-            padding-right: 0.2rem;
+          &:last-of-type {
+            border-top-right-radius: 100vh;
+            border-bottom-right-radius: 100vh;
+          }
+        }
+
+        &[data-compressed='true'] {
+          > button {
+            &:not(:first-of-type) {
+              border-left: none;
+              padding-left: 0.2rem;
+            }
+
+            &:not(:last-of-type) {
+              border-right: none;
+              padding-right: 0.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &[data-round='true'] {
+    &[data-orientation='vertical'] {
+      border-radius: 100vh;
+
+      &[data-spaced='false'] {
+        > button {
+          &:first-of-type {
+            border-top-left-radius: 100vh;
+            border-top-right-radius: 100vh;
+          }
+
+          &:last-of-type {
+            border-bottom-left-radius: 100vh;
+            border-bottom-right-radius: 100vh;
+          }
+        }
+
+        &[data-compressed='true'] {
+          > button {
+            &:not(:first-of-type) {
+              border-top: none;
+              padding-top: 0.2rem;
+            }
+
+            &:not(:last-of-type) {
+              border-bottom: none;
+              padding-bottom: 0.2rem;
+            }
           }
         }
       }

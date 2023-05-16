@@ -9,6 +9,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot 1`] = `
     <div
       className="md-button-group-wrapper md-reaction-picker-wrapper"
       data-compressed={false}
+      data-orientation="horizontal"
       data-round={true}
       data-separator={false}
       data-spaced={false}
@@ -26,6 +27,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
     <div
       className="md-button-group-wrapper md-reaction-picker-wrapper"
       data-compressed={false}
+      data-orientation="horizontal"
       data-round={true}
       data-separator={false}
       data-spaced={false}
@@ -97,6 +99,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with className 1`] = 
     <div
       className="md-button-group-wrapper example-class md-reaction-picker-wrapper"
       data-compressed={false}
+      data-orientation="horizontal"
       data-round={true}
       data-separator={false}
       data-spaced={false}
@@ -117,6 +120,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with id 1`] = `
     <div
       className="md-button-group-wrapper md-reaction-picker-wrapper"
       data-compressed={false}
+      data-orientation="horizontal"
       data-round={true}
       data-separator={false}
       data-spaced={false}
@@ -146,6 +150,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
     <div
       className="md-button-group-wrapper md-reaction-picker-wrapper"
       data-compressed={false}
+      data-orientation="horizontal"
       data-round={true}
       data-separator={false}
       data-spaced={false}

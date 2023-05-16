@@ -4,6 +4,7 @@ import { ButtonCircleProps } from '../ButtonCircle';
 import { ButtonPillProps } from '../ButtonPill';
 
 export type SupportedComponents = ButtonCircleProps | ButtonPillProps;
+export type ButtonGroupOrientation = 'horizontal' | 'vertical';
 
 export interface Props {
   /**
@@ -50,4 +51,11 @@ export interface Props {
    * Role for adding accessibility
    */
   role?: string;
+
+  /**
+   * Orientation of ButtonGroup
+   *
+   * Default: `horizontal`
+   */
+  orientation?: ButtonGroupOrientation;
 }

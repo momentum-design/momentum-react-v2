@@ -112,6 +112,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
         <div
           className="md-button-group-wrapper"
           data-compressed={false}
+          data-orientation="horizontal"
           data-round={false}
           data-separator={false}
           data-spaced={true}
@@ -369,6 +370,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
         <div
           className="md-button-group-wrapper"
           data-compressed={false}
+          data-orientation="horizontal"
           data-round={false}
           data-separator={false}
           data-spaced={true}
