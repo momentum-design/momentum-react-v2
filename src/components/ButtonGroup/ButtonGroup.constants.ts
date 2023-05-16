@@ -5,6 +5,7 @@ const DEFAULTS = {
   SPACED: false,
   COMPRESSED: false,
   SEPARATOR: false,
+  ORIENTATION: 'horizontal',
 };
 
 const STYLE = {

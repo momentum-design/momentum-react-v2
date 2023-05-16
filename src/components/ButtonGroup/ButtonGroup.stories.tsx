@@ -106,6 +106,15 @@ const callControlsCommonChildren = [
   />,
 ];
 
+const paginationCommonChildren = [
+  <ButtonCircle ghost key="0" size={28}>
+    <Icon name="arrow-up" autoScale={150} />
+  </ButtonCircle>,
+  <ButtonCircle ghost key="1" size={28}>
+    <Icon name="arrow-down" autoScale={150} />
+  </ButtonCircle>,
+];
+
 Separator.parameters = {
   variants: [
     { children: separatorCommonChildren },
@@ -115,6 +124,13 @@ Separator.parameters = {
     {
       style: { marginTop: '1rem' },
       children: callControlsCommonChildren,
+      round: true,
+      separator: true,
+    },
+    {
+      style: { marginTop: '1rem' },
+      orientation: 'vertical',
+      children: paginationCommonChildren,
       round: true,
       separator: true,
     },

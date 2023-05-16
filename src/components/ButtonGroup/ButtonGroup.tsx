@@ -6,7 +6,18 @@ import { Props } from './ButtonGroup.types';
 import './ButtonGroup.style.scss';
 
 const ButtonGroup: FC<Props> = (props: Props) => {
-  const { children, className, id, round, spaced, compressed, separator, style, role } = props;
+  const {
+    children,
+    className,
+    id,
+    round,
+    spaced,
+    compressed,
+    separator,
+    style,
+    role,
+    orientation,
+  } = props;
 
   return (
     <div
@@ -15,6 +26,7 @@ const ButtonGroup: FC<Props> = (props: Props) => {
       data-spaced={spaced || DEFAULTS.SPACED}
       data-compressed={compressed || DEFAULTS.COMPRESSED}
       data-separator={separator || DEFAULTS.SEPARATOR}
+      data-orientation={orientation || DEFAULTS.ORIENTATION}
       id={id}
       style={style}
       role={role}

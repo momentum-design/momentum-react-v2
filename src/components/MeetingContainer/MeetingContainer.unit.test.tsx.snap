@@ -91,6 +91,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -216,6 +217,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -324,6 +326,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -473,6 +476,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -741,6 +745,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -1041,6 +1046,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -1275,6 +1281,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -1418,6 +1425,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -1651,6 +1659,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -1762,6 +1771,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -1877,6 +1887,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -1993,6 +2004,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -2158,6 +2170,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -2285,6 +2298,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}
@@ -2513,6 +2527,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                   <div
                     className="md-button-group-wrapper"
                     data-compressed={false}
+                    data-orientation="horizontal"
                     data-round={false}
                     data-separator={false}
                     data-spaced={true}

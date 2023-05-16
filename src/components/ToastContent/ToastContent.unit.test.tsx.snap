@@ -160,6 +160,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
       <div
         className="md-button-group-wrapper md-toast-content-actions"
         data-compressed={false}
+        data-orientation="horizontal"
         data-round={false}
         data-separator={false}
         data-spaced={true}

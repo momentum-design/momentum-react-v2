@@ -76,4 +76,18 @@ export default {
       },
     },
   },
+  orientation: {
+    defaultValue: CONSTANTS.DEFAULTS.ORIENTATION,
+    description: 'Orientation of the ButtonGroup. Defaults to `horizontal`',
+    options: ['horizontal', 'vertical'],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'horizontal | vertical',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.ORIENTATION,
+      },
+    },
+  },
 };
