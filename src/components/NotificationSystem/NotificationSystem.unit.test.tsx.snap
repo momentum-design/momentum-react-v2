@@ -74,6 +74,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -183,6 +184,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -293,6 +295,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -403,6 +406,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -513,6 +517,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -623,6 +628,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -733,6 +739,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -839,6 +846,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -942,6 +950,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1056,6 +1065,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1166,6 +1176,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1276,6 +1287,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1386,6 +1398,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1496,6 +1509,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1606,6 +1620,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                       data-multiple-children="false"
                       data-outline="false"
                       data-size="20"
+                      data-solid="false"
                       type="button"
                     >
                       <div

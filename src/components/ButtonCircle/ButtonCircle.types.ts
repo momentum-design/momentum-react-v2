@@ -28,6 +28,11 @@ export interface Props extends ButtonSimpleProps {
   outline?: boolean;
 
   /**
+   * Whether to use the solid background variant of this ButtonCircle.
+   */
+  solid?: boolean;
+
+  /**
    * Size index of this ButtonCircle.
    */
   size?: Size;

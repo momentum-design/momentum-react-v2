@@ -8,6 +8,7 @@ const DEFAULTS = {
   GHOST: false,
   OUTLINE: false,
   SIZE: 40,
+  SOLID: false,
 };
 
 const COLORS = {

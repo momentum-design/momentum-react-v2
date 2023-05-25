@@ -495,6 +495,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-multiple-children={false}
                   data-outline={false}
                   data-size={28}
+                  data-solid={false}
                 >
                   <FocusRing>
                     <FocusRing
@@ -509,6 +510,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-multiple-children={false}
                         data-outline={false}
                         data-size={28}
+                        data-solid={false}
                         onBlur={[Function]}
                         onClick={[Function]}
                         onDragStart={[Function]}
@@ -680,6 +682,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-multiple-children={false}
                   data-outline={false}
                   data-size={28}
+                  data-solid={false}
                 >
                   <FocusRing>
                     <FocusRing
@@ -694,6 +697,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-multiple-children={false}
                         data-outline={false}
                         data-size={28}
+                        data-solid={false}
                         onBlur={[Function]}
                         onClick={[Function]}
                         onDragStart={[Function]}
@@ -870,6 +874,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-multiple-children={false}
                   data-outline={false}
                   data-size={28}
+                  data-solid={false}
                 >
                   <FocusRing>
                     <FocusRing
@@ -884,6 +889,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-multiple-children={false}
                         data-outline={false}
                         data-size={28}
+                        data-solid={false}
                         onBlur={[Function]}
                         onClick={[Function]}
                         onDragStart={[Function]}

@@ -134,6 +134,17 @@ describe('<ButtonCircle />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot when color is outlined and solid is set', () => {
+      expect.assertions(1);
+
+      const outline = !DEFAULTS.OUTLINE;
+      const solid = !DEFAULTS.SOLID;
+
+      const container = mount(<ButtonCircle outline={outline} solid={solid} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -254,6 +265,18 @@ describe('<ButtonCircle />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
+    });
+
+    it('should pass solid prop', () => {
+      expect.assertions(1);
+
+      const solid = !DEFAULTS.SOLID;
+
+      const element = mount(<ButtonCircle solid={solid} />)
+        .find(ButtonCircle)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-solid')).toBe(`${solid}`);
     });
 
     it('should render ButtonSimple', () => {

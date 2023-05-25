@@ -56,16 +56,31 @@ Outline.args = {
 
 Outline.parameters = {
   variants: [
-    { outline: true },
-    { color: 'join', outline: true },
-    { color: 'cancel', outline: true },
-    { color: 'message', outline: true },
+    { outline: true, ghost: true },
+    { outline: true, ghost: false },
+    { color: 'join', outline: true, ghost: true },
+    { color: 'cancel', outline: true, ghost: true },
   ],
 };
 
 Outline.argTypes = { ...argTypes };
 delete Outline.argTypes.color;
 delete Outline.argTypes.outline;
+
+const Solid = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
+
+Solid.args = {
+  children: <Icon name="favorite" weight="filled" autoScale={150} />,
+};
+
+Solid.parameters = {
+  variants: [{ solid: true }],
+};
+
+Solid.argTypes = { ...argTypes };
+delete Solid.argTypes.solid;
+delete Solid.argTypes.color;
+delete Solid.argTypes.ghost;
 
 const States = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
 
@@ -139,6 +154,7 @@ delete Common.argTypes.color;
 delete Common.argTypes.disabled;
 delete Common.argTypes.ghost;
 delete Common.argTypes.outline;
+delete Common.argTypes.solid;
 
 Common.parameters = {
   variants: [
@@ -190,4 +206,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Colors, Outline, States, Sizes, Common };
+export { Example, Colors, Outline, Solid, States, Sizes, Common };

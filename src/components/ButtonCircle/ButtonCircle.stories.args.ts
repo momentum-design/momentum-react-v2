@@ -76,6 +76,20 @@ const buttonCircleArgTypes = {
       },
     },
   },
+  solid: {
+    description:
+      'Whether to use the solid background variant of this `<ButtonCircle />`. Does not support `color` or `ghost`',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SOLID,
+      },
+    },
+  },
   size: {
     description: 'Modifies the size of this component.',
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],
