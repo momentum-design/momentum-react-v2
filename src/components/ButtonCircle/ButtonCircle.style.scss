@@ -71,25 +71,6 @@
     }
   }
 
-  &[data-disabled='true'],
-  &.disable {
-    background-color: var(--mds-color-theme-button-primary-disabled);
-    color: var(--mds-color-theme-text-primary-disabled);
-    cursor: auto;
-
-    &:hover,
-    &.hover {
-      background-color: var(--mds-color-theme-button-primary-disabled);
-      color: var(--mds-color-theme-text-primary-disabled);
-    }
-
-    &:active,
-    &.active {
-      background-color: var(--mds-color-theme-button-primary-disabled);
-      color: var(--mds-color-theme-text-primary-disabled);
-    }
-  }
-
   &[data-outline='true'][data-ghost='true'] {
     background-color: var(--mds-color-theme-button-secondary-normal);
     border-color: var(--mds-color-theme-outline-button-normal);
@@ -246,6 +227,59 @@
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-primary-disabled);
+        color: var(--mds-color-theme-text-primary-disabled);
+      }
+    }
+  }
+
+  &[data-solid='true'] {
+    background-color: var(--mds-color-theme-button-inverted-normal);
+    color: var(--mds-color-theme-text-primary-normal);
+
+    &:hover,
+    &.hover {
+      background-color: var(--mds-color-theme-button-inverted-hover);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--mds-color-theme-button-inverted-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+  }
+
+  &[data-disabled='true'],
+  &.disable {
+    background-color: var(--mds-color-theme-button-primary-disabled);
+    color: var(--mds-color-theme-text-primary-disabled);
+    cursor: auto;
+
+    &:hover,
+    &.hover {
+      background-color: var(--mds-color-theme-button-primary-disabled);
+      color: var(--mds-color-theme-text-primary-disabled);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--mds-color-theme-button-primary-disabled);
+      color: var(--mds-color-theme-text-primary-disabled);
+    }
+
+    &[data-solid='true'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-primary-disabled);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-normal);
         color: var(--mds-color-theme-text-primary-disabled);
       }
     }

@@ -496,6 +496,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-multiple-children={false}
                         data-outline={true}
                         data-size={28}
+                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -510,6 +511,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-multiple-children={false}
                               data-outline={true}
                               data-size={28}
+                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -549,6 +551,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-multiple-children={false}
                         data-outline={true}
                         data-size={28}
+                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -563,6 +566,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-multiple-children={false}
                               data-outline={true}
                               data-size={28}
+                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -602,6 +606,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-multiple-children={false}
                         data-outline={true}
                         data-size={28}
+                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -616,6 +621,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-multiple-children={false}
                               data-outline={true}
                               data-size={28}
+                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
