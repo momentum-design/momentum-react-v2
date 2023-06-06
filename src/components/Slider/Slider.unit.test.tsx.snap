@@ -139,6 +139,40 @@ exports[`<Slider /> snapshot should match snapshot with id 1`] = `
 </div>
 `;
 
+exports[`<Slider /> snapshot should match snapshot with isDisabled 1`] = `
+<div>
+  <div
+    class="md-slider-wrapper"
+    role="group"
+  >
+    <div
+      class="md-slider-track md-slider-track-disabled"
+      style="--local-value: 20%;"
+    >
+      <div
+        class="md-slider-thumb md-slider-thumb-disabled"
+      >
+        <div
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-labelledby="test-ID"
+            aria-valuetext="2"
+            id="test-ID"
+            max="10"
+            min="0"
+            step="1"
+            tabindex="0"
+            type="range"
+            value="2"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Slider /> snapshot should match snapshot with style 1`] = `
 <div>
   <div

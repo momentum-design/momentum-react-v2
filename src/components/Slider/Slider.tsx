@@ -27,11 +27,11 @@ const Slider: FC<SliderProps> = (props: SliderProps) => {
         {...trackProps}
         ref={trackRef}
         className={classnames(STYLE.track, {
-          disabled: isDisabled,
+          [STYLE.trackDisabled]: isDisabled,
         })}
         style={trackStyle}
       >
-        <Thumb state={state} trackRef={trackRef} ariaLabel={ariaLabel} />
+        <Thumb state={state} trackRef={trackRef} ariaLabel={ariaLabel} isDisabled={isDisabled} />
       </div>
     </div>
   );

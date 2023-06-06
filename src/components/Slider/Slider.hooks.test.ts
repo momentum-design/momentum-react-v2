@@ -1,7 +1,8 @@
 import { useSliderSideEffects, useThumbSideEffects } from './Slider.hooks';
 import { renderHook } from '@testing-library/react-hooks';
 import { useRef } from 'react';
-import { useNumberFormatter, useSlider } from 'react-aria';
+import { useSlider } from '@react-aria/slider';
+import { useNumberFormatter } from '@react-aria/i18n';
 import { useSliderState } from '@react-stately/slider';
 import type { SliderHookArgs, ThumbHookArgs } from './Slider.types';
 
@@ -49,6 +50,13 @@ describe('useSliderSideEffects', () => {
       maxValue: 10,
       step: 1,
       expectedValuePercentage: 0,
+    },
+    {
+      value: 3,
+      minValue: 0,
+      maxValue: 10,
+      step: 4,
+      expectedValuePercentage: 30,
     },
   ])(
     'should return as expected for %o',

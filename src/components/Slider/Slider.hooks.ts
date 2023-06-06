@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react';
 import { clamp } from '@react-aria/utils';
 import { useSliderState, SliderStateOptions } from '@react-stately/slider';
-import { useNumberFormatter, useSlider, useSliderThumb } from 'react-aria';
+import { useSlider, useSliderThumb } from '@react-aria/slider';
+import { useNumberFormatter } from '@react-aria/i18n';
 import { getValuePercentage } from './Slider.utils';
 import {
   SliderHookArgs,
@@ -22,18 +23,17 @@ const useSliderSideEffects = ({
   const trackRef = React.useRef<HTMLDivElement>(null);
   const numberFormatter = useNumberFormatter();
 
-  const handleChange = (newValueArray: number[]) => {
-    // onChange returns an array of values, pick first:
-    onChange(newValueArray[0]);
+  const handleChange = (newValue: number) => {
+    onChange(newValue);
   };
 
-  const sliderProps: SliderStateOptions = {
+  const sliderProps: SliderStateOptions<number> = {
     isDisabled,
     step,
     minValue,
     maxValue,
     numberFormatter,
-    value: [clamp(value, minValue, maxValue)],
+    value: clamp(value, minValue, maxValue),
     onChange: handleChange,
   };
 

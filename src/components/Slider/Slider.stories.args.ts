@@ -73,6 +73,18 @@ const sliderArgTypes = {
       },
     },
   },
+  isDisabled: {
+    description: 'isDisabled state for the slider',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { sliderArgTypes };

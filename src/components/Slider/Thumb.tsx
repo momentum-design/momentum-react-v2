@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { mergeProps, VisuallyHidden } from 'react-aria';
+import { VisuallyHidden } from '@react-aria/visually-hidden';
+import { mergeProps } from '@react-aria/utils';
 import classnames from 'classnames';
 
 import { STYLE } from './Slider.constants';
@@ -12,7 +13,12 @@ const Thumb: FC<ThumbProps> = (props: ThumbProps) => {
 
   return (
     <FocusRing within>
-      <div {...thumbProps} className={classnames(STYLE.thumb)}>
+      <div
+        {...thumbProps}
+        className={classnames(STYLE.thumb, {
+          [STYLE.thumbDisabled]: props.isDisabled,
+        })}
+      >
         <VisuallyHidden>
           <input ref={inputRef} {...mergeProps(inputProps)} aria-label={props.ariaLabel} />
         </VisuallyHidden>

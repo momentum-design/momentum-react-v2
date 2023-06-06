@@ -54,7 +54,7 @@ export interface SliderProps {
   ariaLabel?: string;
 }
 
-export interface ThumbProps extends Pick<SliderProps, 'ariaLabel'> {
+export interface ThumbProps extends Pick<SliderProps, 'ariaLabel' | 'isDisabled'> {
   state: SliderState;
   trackRef: React.MutableRefObject<HTMLDivElement>;
 }
