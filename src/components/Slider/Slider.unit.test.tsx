@@ -61,6 +61,14 @@ describe('<Slider />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with isDisabled', () => {
+      expect.assertions(1);
+
+      const { container } = render(<Slider {...defaultProps} isDisabled={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -172,7 +180,7 @@ describe('<Slider />', () => {
       expect(sliderInputAfterChange.getAttribute('value')).toBe(newValue.toString());
     });
 
-    it('should be change value as expected if pressing left and down arrow key', async () => {
+    it('should change value as expected when left or down arrow key is pressed', async () => {
       expect.assertions(6);
       const user = userEvent.setup();
 
@@ -196,7 +204,7 @@ describe('<Slider />', () => {
       expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValueAfterDown);
     });
 
-    it('should be change value as expected if pressing right and up arrow key', async () => {
+    it('should change value as expected when right or up arrow key is pressed', async () => {
       expect.assertions(6);
       const user = userEvent.setup();
 
@@ -220,7 +228,7 @@ describe('<Slider />', () => {
       expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValueAfterUp);
     });
 
-    it('should be stick to minValue even after pressing more often left arrow', async () => {
+    it('should stick to minValue even after pressing left arrow key again', async () => {
       expect.assertions(6);
       const user = userEvent.setup();
 
@@ -247,7 +255,7 @@ describe('<Slider />', () => {
       expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValueAfterLeft);
     });
 
-    it('should be stick to maxValue even after pressing more often right arrow', async () => {
+    it('should stick to maxValue even after pressing right arrow key again', async () => {
       expect.assertions(6);
       const user = userEvent.setup();
 
