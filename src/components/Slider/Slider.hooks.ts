@@ -23,17 +23,17 @@ const useSliderSideEffects = ({
   const trackRef = React.useRef<HTMLDivElement>(null);
   const numberFormatter = useNumberFormatter();
 
-  const handleChange = (newValue: number) => {
-    onChange(newValue);
+  const handleChange = (newValues: Array<number>) => {
+    onChange(newValues[0]);
   };
 
-  const sliderProps: SliderStateOptions<number> = {
+  const sliderProps: SliderStateOptions<Array<number>> = {
     isDisabled,
     step,
     minValue,
     maxValue,
     numberFormatter,
-    value: clamp(value, minValue, maxValue),
+    value: [clamp(value, minValue, maxValue)],
     onChange: handleChange,
   };
 
