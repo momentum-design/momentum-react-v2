@@ -178,4 +178,5 @@ export {
   Chip as ChipNext,
   NotificationSystem,
   AriaToolbar,
+  Slider as SliderNext,
 } from './components';
