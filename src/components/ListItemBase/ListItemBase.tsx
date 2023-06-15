@@ -240,7 +240,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
       ref.current.addEventListener('contextmenu', handleOnContextMenu);
     }
     return () => {
-      ref.current.removeEventListener('contextmenu', handleOnContextMenu);
+      ref.current?.removeEventListener('contextmenu', handleOnContextMenu);
     };
   }, []);
 
