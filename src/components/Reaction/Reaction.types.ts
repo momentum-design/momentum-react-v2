@@ -22,14 +22,13 @@ export type ReactionWithoutSkinTone =
 export type SkinTone = 'yellow' | 'light' | 'medium_light' | 'medium' | 'medium_dark' | 'dark';
 
 // Maps through all ReactionType and appends all SkinTones.
-type GenerateReactionName<ReactionType extends string, SkinType extends string> = keyof {
-  [R in ReactionType as `${R}_${SkinType}`];
-};
+type GenerateReactionName<
+  ReactionType extends string,
+  SkinType extends string
+> = `${ReactionType}_${SkinType}`;
 
 // Appends prefix to literal.
-type AppendPrefix<P extends string, T extends string> = keyof {
-  [Type in T as `${P}${T}`];
-};
+type AppendPrefix<P extends string, T extends string> = `${P}${T}`;
 
 // Original
 export type OriginalReactionWithoutSkinTone = ReactionWithoutSkinTone;
