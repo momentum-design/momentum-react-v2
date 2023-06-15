@@ -1,6 +1,4 @@
 import type { CSSProperties } from 'react';
-import type { SliderState } from '@react-stately/slider';
-import React from 'react';
 
 export interface SliderProps {
   /**
@@ -31,7 +29,7 @@ export interface SliderProps {
   /**
    * onChange callback of value - allows for a controlled component
    */
-  onChange: React.Dispatch<React.SetStateAction<number>>;
+  onChange: (value: number) => void;
 
   /**
    * Step size of the slider
@@ -54,28 +52,12 @@ export interface SliderProps {
   ariaLabel?: string;
 }
 
-export interface ThumbProps extends Pick<SliderProps, 'ariaLabel' | 'isDisabled'> {
-  state: SliderState;
-  trackRef: React.MutableRefObject<HTMLDivElement>;
-}
-
 export type SliderHookArgs = Pick<
   SliderProps,
-  'onChange' | 'value' | 'minValue' | 'maxValue' | 'isDisabled' | 'step' | 'ariaLabel'
+  'value' | 'onChange' | 'step' | 'maxValue' | 'minValue'
 >;
 
-export interface SliderHookReturnType {
-  groupProps: React.HTMLAttributes<HTMLElement>;
-  trackProps: React.HTMLAttributes<HTMLElement>;
-  state: SliderState;
-  trackRef: React.MutableRefObject<HTMLDivElement>;
-  trackStyle: React.CSSProperties;
-}
-
-export type ThumbHookArgs = Pick<SliderHookReturnType, 'state' | 'trackRef'>;
-
-export interface ThumbHookReturnType {
-  thumbProps: React.HTMLAttributes<HTMLElement>;
-  inputProps: React.HTMLAttributes<HTMLElement>;
+export type SliderHookReturn = {
   inputRef: React.MutableRefObject<HTMLInputElement>;
-}
+  handleChange: React.ChangeEventHandler<HTMLInputElement>;
+};

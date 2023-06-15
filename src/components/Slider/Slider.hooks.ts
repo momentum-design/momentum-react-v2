@@ -1,71 +1,29 @@
-import React, { useMemo } from 'react';
-import { clamp } from '@react-aria/utils';
-import { useSliderState, SliderStateOptions } from '@react-stately/slider';
-import { useSlider, useSliderThumb } from '@react-aria/slider';
-import { useNumberFormatter } from '@react-aria/i18n';
-import { getValuePercentage } from './Slider.utils';
-import {
-  SliderHookArgs,
-  SliderHookReturnType,
-  ThumbHookArgs,
-  ThumbHookReturnType,
-} from './Slider.types';
+import type { SliderHookArgs, SliderHookReturn } from './Slider.types';
+import { useRef, useLayoutEffect } from 'react';
+import { setLocalValueOnElement } from './Slider.utils';
 
-const useSliderSideEffects = ({
-  value,
-  minValue,
-  maxValue,
+export const useSliderSideEffects = ({
   onChange,
-  isDisabled,
+  value,
   step,
-  ariaLabel,
-}: SliderHookArgs): SliderHookReturnType => {
-  const trackRef = React.useRef<HTMLDivElement>(null);
-  const numberFormatter = useNumberFormatter();
+  maxValue,
+  minValue,
+}: SliderHookArgs): SliderHookReturn => {
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const handleChange = (newValues: Array<number>) => {
-    onChange(newValues[0]);
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const inputElement = e.currentTarget;
+    setLocalValueOnElement(inputElement);
+    onChange(+inputElement.value);
   };
 
-  const sliderProps: SliderStateOptions<Array<number>> = {
-    isDisabled,
-    step,
-    minValue,
-    maxValue,
-    numberFormatter,
-    value: [clamp(value, minValue, maxValue)],
-    onChange: handleChange,
-  };
+  useLayoutEffect(() => {
+    if (inputRef?.current) {
+      setLocalValueOnElement(inputRef.current);
+    }
+  }, [value, step, maxValue, minValue]);
 
-  const state = useSliderState(sliderProps);
-  const { groupProps, trackProps } = useSlider(
-    { ...sliderProps, 'aria-label': ariaLabel },
-    state,
-    trackRef
-  );
-
-  // pass css variable of value to track for styling
-  const trackStyle = useMemo(
-    () => ({ '--local-value': `${getValuePercentage(state)}%` } as React.CSSProperties),
-    [state]
-  );
-
-  return { groupProps, trackProps, state, trackRef, trackStyle };
+  return { inputRef, handleChange };
 };
-
-const useThumbSideEffects = ({ state, trackRef }: ThumbHookArgs): ThumbHookReturnType => {
-  const inputRef = React.useRef<HTMLInputElement>(null);
-
-  const { thumbProps, inputProps } = useSliderThumb(
-    {
-      index: 0,
-      trackRef,
-      inputRef,
-    },
-    state
-  );
-
-  return { thumbProps, inputProps, inputRef };
-};
-
-export { useSliderSideEffects, useThumbSideEffects };

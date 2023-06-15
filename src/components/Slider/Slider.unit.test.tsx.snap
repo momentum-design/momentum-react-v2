@@ -2,208 +2,87 @@
 
 exports[`<Slider /> snapshot should match snapshot 1`] = `
 <div>
-  <div
+  <input
     class="md-slider-wrapper"
-    role="group"
-  >
-    <div
-      class="md-slider-track"
-      style="--local-value: 20%;"
-    >
-      <div
-        class="md-slider-thumb"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby="test-ID"
-            aria-valuetext="2"
-            id="test-ID"
-            max="10"
-            min="0"
-            step="1"
-            tabindex="0"
-            type="range"
-            value="2"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+    max="10"
+    min="0"
+    step="1"
+    style="--local-value: 20%;"
+    type="range"
+    value="2"
+  />
 </div>
 `;
 
 exports[`<Slider /> snapshot should match snapshot with ariaLabel 1`] = `
 <div>
-  <div
+  <input
     aria-label="test aria label"
     class="md-slider-wrapper"
-    role="group"
-  >
-    <div
-      class="md-slider-track"
-      style="--local-value: 20%;"
-    >
-      <div
-        class="md-slider-thumb"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-label="test aria label"
-            aria-labelledby="test-ID"
-            aria-valuetext="2"
-            id="test-ID"
-            max="10"
-            min="0"
-            step="1"
-            tabindex="0"
-            type="range"
-            value="2"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+    max="10"
+    min="0"
+    step="1"
+    style="--local-value: 20%;"
+    type="range"
+    value="2"
+  />
 </div>
 `;
 
 exports[`<Slider /> snapshot should match snapshot with className 1`] = `
 <div>
-  <div
+  <input
     class="example-class md-slider-wrapper"
-    role="group"
-  >
-    <div
-      class="md-slider-track"
-      style="--local-value: 20%;"
-    >
-      <div
-        class="md-slider-thumb"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby="test-ID"
-            aria-valuetext="2"
-            id="test-ID"
-            max="10"
-            min="0"
-            step="1"
-            tabindex="0"
-            type="range"
-            value="2"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+    max="10"
+    min="0"
+    step="1"
+    style="--local-value: 20%;"
+    type="range"
+    value="2"
+  />
 </div>
 `;
 
 exports[`<Slider /> snapshot should match snapshot with id 1`] = `
 <div>
-  <div
+  <input
     class="md-slider-wrapper"
     id="example-id"
-    role="group"
-  >
-    <div
-      class="md-slider-track"
-      style="--local-value: 20%;"
-    >
-      <div
-        class="md-slider-thumb"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby="test-ID"
-            aria-valuetext="2"
-            id="test-ID"
-            max="10"
-            min="0"
-            step="1"
-            tabindex="0"
-            type="range"
-            value="2"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+    max="10"
+    min="0"
+    step="1"
+    style="--local-value: 20%;"
+    type="range"
+    value="2"
+  />
 </div>
 `;
 
 exports[`<Slider /> snapshot should match snapshot with isDisabled 1`] = `
 <div>
-  <div
+  <input
     class="md-slider-wrapper"
-    role="group"
-  >
-    <div
-      class="md-slider-track md-slider-track-disabled"
-      style="--local-value: 20%;"
-    >
-      <div
-        class="md-slider-thumb md-slider-thumb-disabled"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby="test-ID"
-            aria-valuetext="2"
-            id="test-ID"
-            max="10"
-            min="0"
-            step="1"
-            tabindex="0"
-            type="range"
-            value="2"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+    disabled=""
+    max="10"
+    min="0"
+    step="1"
+    style="--local-value: 20%;"
+    type="range"
+    value="2"
+  />
 </div>
 `;
 
 exports[`<Slider /> snapshot should match snapshot with style 1`] = `
 <div>
-  <div
+  <input
     class="md-slider-wrapper"
-    role="group"
-    style="color: pink;"
-  >
-    <div
-      class="md-slider-track"
-      style="--local-value: 20%;"
-    >
-      <div
-        class="md-slider-thumb"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby="test-ID"
-            aria-valuetext="2"
-            id="test-ID"
-            max="10"
-            min="0"
-            step="1"
-            tabindex="0"
-            type="range"
-            value="2"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+    max="10"
+    min="0"
+    step="1"
+    style="color: pink; --local-value: 20%;"
+    type="range"
+    value="2"
+  />
 </div>
 `;

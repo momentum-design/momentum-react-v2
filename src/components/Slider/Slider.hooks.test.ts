@@ -1,10 +1,8 @@
-import { useSliderSideEffects, useThumbSideEffects } from './Slider.hooks';
+import { useSliderSideEffects } from './Slider.hooks';
 import { renderHook } from '@testing-library/react-hooks';
-import { useRef } from 'react';
-import { useSlider } from '@react-aria/slider';
-import { useNumberFormatter } from '@react-aria/i18n';
-import { useSliderState } from '@react-stately/slider';
-import type { SliderHookArgs, ThumbHookArgs } from './Slider.types';
+import type { SliderHookArgs } from './Slider.types';
+import { act } from '@testing-library/react';
+import * as utils from './Slider.utils';
 
 describe('useSliderSideEffects', () => {
   let result;
@@ -15,142 +13,31 @@ describe('useSliderSideEffects', () => {
     }));
   };
 
-  it.each([
-    {
-      value: 1,
+  it('should fire handleChange as expected', () => {
+    const args = {
+      onChange: jest.fn(),
+      value: 5,
       minValue: 0,
       maxValue: 10,
       step: 1,
-      expectedValuePercentage: 10,
-    },
-    {
-      value: 9,
-      minValue: 0,
-      maxValue: 10,
-      step: 1,
-      expectedValuePercentage: 90,
-    },
-    {
-      value: 105,
-      minValue: 100,
-      maxValue: 110,
-      step: 1,
-      expectedValuePercentage: 50,
-    },
-    {
-      value: 11,
-      minValue: 0,
-      maxValue: 10,
-      step: 1,
-      expectedValuePercentage: 100,
-    },
-    {
-      value: 4,
-      minValue: 5,
-      maxValue: 10,
-      step: 1,
-      expectedValuePercentage: 0,
-    },
-    {
-      value: 3,
-      minValue: 0,
-      maxValue: 10,
-      step: 4,
-      expectedValuePercentage: 30,
-    },
-  ])(
-    'should return as expected for %o',
-    ({ value, minValue, maxValue, step, expectedValuePercentage }) => {
-      render({
-        value,
-        minValue,
-        maxValue,
-        step,
-        onChange: jest.fn(),
-        isDisabled: false,
-        ariaLabel: 'test label',
-      });
+    };
 
-      expect(result.current).toStrictEqual({
-        groupProps: {
-          'aria-label': 'test label',
-          'aria-labelledby': undefined,
-          id: 'test-ID',
-          role: 'group',
-        },
-        trackProps: {
-          onKeyDown: expect.any(Function),
-          onMouseDown: expect.any(Function),
-          onPointerDown: expect.any(Function),
-          onTouchStart: expect.any(Function),
-        },
-        state: expect.any(Object),
-        trackRef: expect.any(Object),
-        trackStyle: {
-          '--local-value': `${expectedValuePercentage}%`,
-        },
-      });
-    }
-  );
-});
-
-describe('useThumbSideEffects', () => {
-  let result;
-  const sliderProps = { step: 1, minValue: 0, maxValue: 10, value: [5] };
-
-  const render = (args: Omit<ThumbHookArgs, 'state'>) => {
-    ({ result } = renderHook(
-      (props) => {
-        const trackRef = useRef<HTMLDivElement>(null);
-        const numberFormatter = useNumberFormatter();
-
-        const state = useSliderState({ ...sliderProps, numberFormatter });
-        useSlider(sliderProps, state, trackRef);
-        return useThumbSideEffects({ ...props, state });
+    const changeEvent = {
+      currentTarget: {
+        value: '8',
+        min: '0',
+        max: '10',
       },
-      {
-        initialProps: args,
-      }
-    ));
-  };
+    };
 
-  it('should return as expected', () => {
-    render({
-      trackRef: { current: null },
+    const setLocalSpy = jest.spyOn(utils, 'setLocalValueOnElement').mockImplementation(jest.fn());
+
+    render(args);
+    act(() => {
+      result.current.handleChange(changeEvent);
     });
 
-    expect(result.current).toEqual({
-      inputProps: {
-        'aria-errormessage': undefined,
-        'aria-invalid': undefined,
-        'aria-label': undefined,
-        'aria-labelledby': 'test-ID',
-        'aria-orientation': undefined,
-        'aria-required': undefined,
-        'aria-valuetext': `${sliderProps.value[0]}`,
-        disabled: undefined,
-        id: 'test-ID',
-        max: sliderProps.maxValue,
-        min: sliderProps.minValue,
-        onBlur: expect.any(Function),
-        onChange: expect.any(Function),
-        onFocus: expect.any(Function),
-        onKeyDown: undefined,
-        onKeyUp: undefined,
-        step: sliderProps.step,
-        tabIndex: 0,
-        type: 'range',
-        value: sliderProps.value[0],
-      },
-      inputRef: {
-        current: null,
-      },
-      thumbProps: {
-        onKeyDown: expect.any(Function),
-        onMouseDown: expect.any(Function),
-        onPointerDown: expect.any(Function),
-        onTouchStart: expect.any(Function),
-      },
-    });
+    expect(args.onChange).toBeCalledWith(+changeEvent.currentTarget.value);
+    expect(setLocalSpy).toBeCalledWith(changeEvent.currentTarget);
   });
 });

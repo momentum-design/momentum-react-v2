@@ -76,7 +76,7 @@ describe('<Slider />', () => {
       expect.assertions(1);
       render(<Slider {...defaultProps} />);
 
-      const element = screen.getByRole('group');
+      const element = screen.getByRole('slider');
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
@@ -88,7 +88,7 @@ describe('<Slider />', () => {
 
       render(<Slider {...defaultProps} className={className} />);
 
-      const element = screen.getByRole('group');
+      const element = screen.getByRole('slider');
 
       expect(element.classList.contains(className)).toBe(true);
     });
@@ -100,7 +100,7 @@ describe('<Slider />', () => {
 
       render(<Slider {...defaultProps} id={id} />);
 
-      const element = screen.getByRole('group');
+      const element = screen.getByRole('slider');
 
       expect(element.id).toBe(id);
     });
@@ -112,9 +112,9 @@ describe('<Slider />', () => {
       const styleString = 'color: pink;';
 
       render(<Slider {...defaultProps} style={style} />);
-      const element = screen.getByRole('group');
+      const element = screen.getByRole('slider');
 
-      expect(element.getAttribute('style')).toBe(styleString);
+      expect(element.getAttribute('style')).toBe(`${styleString} --local-value: 20%;`);
     });
 
     it('should have provided ariaLabel when ariaLabel is provided', () => {
@@ -124,7 +124,7 @@ describe('<Slider />', () => {
 
       render(<Slider {...defaultProps} ariaLabel={ariaLabel} />);
 
-      const element = screen.getByRole('group');
+      const element = screen.getByRole('slider');
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
@@ -180,108 +180,7 @@ describe('<Slider />', () => {
       expect(sliderInputAfterChange.getAttribute('value')).toBe(newValue.toString());
     });
 
-    it('should change value as expected when left or down arrow key is pressed', async () => {
-      expect.assertions(6);
-      const user = userEvent.setup();
-
-      render(<ControlledComponent />);
-
-      await user.tab();
-      await user.keyboard('{ArrowLeft}');
-      const newValue = defaultProps.value - defaultProps.step;
-
-      const sliderInput = screen.getByRole('slider');
-      expect(sliderInput).toHaveFocus();
-      expect(sliderInput.getAttribute('value')).toBe(newValue.toString());
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValue);
-
-      await user.keyboard('{ArrowDown}');
-      const newValueAfterDown = newValue - defaultProps.step;
-
-      const sliderInputAfterPressingDown = screen.getByRole('slider');
-      expect(sliderInputAfterPressingDown).toHaveFocus();
-      expect(sliderInputAfterPressingDown.getAttribute('value')).toBe(newValueAfterDown.toString());
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValueAfterDown);
-    });
-
-    it('should change value as expected when right or up arrow key is pressed', async () => {
-      expect.assertions(6);
-      const user = userEvent.setup();
-
-      render(<ControlledComponent />);
-
-      await user.tab();
-      await user.keyboard('{ArrowRight}');
-      const newValue = defaultProps.value + defaultProps.step;
-
-      const sliderInput = screen.getByRole('slider');
-      expect(sliderInput).toHaveFocus();
-      expect(sliderInput.getAttribute('value')).toBe(newValue.toString());
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValue);
-
-      await user.keyboard('{ArrowUp}');
-      const newValueAfterUp = newValue + defaultProps.step;
-
-      const sliderInputAfterPressingUp = screen.getByRole('slider');
-      expect(sliderInputAfterPressingUp).toHaveFocus();
-      expect(sliderInputAfterPressingUp.getAttribute('value')).toBe(newValueAfterUp.toString());
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValueAfterUp);
-    });
-
-    it('should stick to minValue even after pressing left arrow key again', async () => {
-      expect.assertions(6);
-      const user = userEvent.setup();
-
-      defaultProps.value = 4;
-      defaultProps.minValue = 3;
-      render(<ControlledComponent />);
-
-      await user.tab();
-      await user.keyboard('{ArrowLeft}');
-      const newValue = defaultProps.minValue;
-
-      const sliderInput = screen.getByRole('slider');
-      expect(sliderInput).toHaveFocus();
-      expect(sliderInput.getAttribute('value')).toBe(newValue.toString());
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValue);
-
-      // should stay at minValue:
-      await user.keyboard('{ArrowLeft}');
-      const newValueAfterLeft = defaultProps.minValue;
-
-      const sliderInputAfterPressingLeft = screen.getByRole('slider');
-      expect(sliderInputAfterPressingLeft).toHaveFocus();
-      expect(sliderInputAfterPressingLeft.getAttribute('value')).toBe(newValueAfterLeft.toString());
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValueAfterLeft);
-    });
-
-    it('should stick to maxValue even after pressing right arrow key again', async () => {
-      expect.assertions(6);
-      const user = userEvent.setup();
-
-      defaultProps.value = 5;
-      defaultProps.maxValue = 6;
-      render(<ControlledComponent />);
-
-      await user.tab();
-      await user.keyboard('{ArrowRight}');
-      const newValue = defaultProps.maxValue;
-
-      const sliderInput = screen.getByRole('slider');
-      expect(sliderInput).toHaveFocus();
-      expect(sliderInput.getAttribute('value')).toBe(newValue.toString());
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValue);
-
-      // should stay at maxValue:
-      await user.keyboard('{ArrowRight}');
-      const newValueAfterRight = defaultProps.maxValue;
-
-      const sliderInputAfterPressingRight = screen.getByRole('slider');
-      expect(sliderInputAfterPressingRight).toHaveFocus();
-      expect(sliderInputAfterPressingRight.getAttribute('value')).toBe(
-        newValueAfterRight.toString()
-      );
-      expect(defaultProps.onChange).toHaveBeenLastCalledWith(newValueAfterRight);
-    });
+    // NOTE: keyboard interaction tests can't be added yet due to lack of support in RTL:
+    // https://github.com/testing-library/user-event/issues/1067
   });
 });
