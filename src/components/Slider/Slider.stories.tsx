@@ -41,6 +41,7 @@ Example.args = {
   maxValue: 100,
   ariaLabel: 'slider',
   value: 0,
+  isDisabled: false,
 };
 
 // NOTE: Common variants story. This renders multiple variants of a single component.
