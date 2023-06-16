@@ -19,32 +19,32 @@ export interface SliderProps {
   /**
    * Whether Slider is disabled
    */
-  isDisabled: boolean;
+  isDisabled?: boolean;
 
   /**
    * Current value of slider - allows for a controlled component
    */
-  value: number;
+  value?: number;
 
   /**
    * onChange callback of value - allows for a controlled component
    */
-  onChange: (value: number) => void;
+  onChange?: (value: number) => void;
 
   /**
    * Step size of the slider
    */
-  step: number;
+  step?: number;
 
   /**
    * Min value of the slider
    */
-  minValue: number;
+  minValue?: number;
 
   /**
    * Max value of the slider
    */
-  maxValue: number;
+  maxValue?: number;
 
   /**
    * aria-label to be passed to slider group

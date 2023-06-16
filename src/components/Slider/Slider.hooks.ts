@@ -16,7 +16,7 @@ export const useSliderSideEffects = ({
   ) => {
     const inputElement = e.currentTarget;
     setLocalValueOnElement(inputElement);
-    onChange(+inputElement.value);
+    onChange?.(+inputElement.value);
   };
 
   useLayoutEffect(() => {
