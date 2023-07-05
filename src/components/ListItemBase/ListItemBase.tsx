@@ -27,6 +27,7 @@ import {
   useDidUpdateEffect,
 } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
+import { usePrevious } from '../../hooks/usePrevious';
 
 //TODO: Implement multi-line
 const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
@@ -136,8 +137,14 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
       .forEach((el) => el.setAttribute('tabindex', '-1'));
   }, [ref]);
 
+  const lastCurrentFocus = usePrevious(listContext?.currentFocus);
   useDidUpdateEffect(() => {
-    if (focus && !shouldIgnoreFocusUpdate) {
+    if (
+      lastCurrentFocus !== undefined &&
+      lastCurrentFocus !== listContext?.currentFocus &&
+      focus &&
+      !shouldIgnoreFocusUpdate
+    ) {
       ref.current.focus();
     } else if (shouldIgnoreFocusUpdate) {
       setShouldIgnoreFocusUpdate(false);

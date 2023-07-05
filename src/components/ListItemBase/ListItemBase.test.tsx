@@ -5,10 +5,11 @@ import { mount } from 'enzyme';
 import React from 'react';
 import '@testing-library/jest-dom';
 import { STYLE } from './ListItemBase.constants';
-import * as ListContext from '../List/List.utils';
+import * as listUtils from '../List/List.utils';
 import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import List from '../List/List';
+import { ListContextValue } from '../List/List.types';
 
 describe('ListItemBase', () => {
   let container;
@@ -16,7 +17,7 @@ describe('ListItemBase', () => {
   describe('snapshot', () => {
     beforeEach(() => {
       jest
-        .spyOn(ListContext, 'useListContext')
+        .spyOn(listUtils, 'useListContext')
         .mockImplementation(() => ({ currentFocus: 0, shouldFocusOnPres: false }));
     });
 
@@ -364,5 +365,33 @@ describe('ListItemBase', () => {
       await user.keyboard('{ArrowLeft}');
       expect(getByTestId('list-item-1')).toHaveFocus();
     });
+  });
+
+  it('should not steal focus when context update but the current focus does not changed', () => {
+    const Wrapper = ({ value }: { value: ListContextValue }) => {
+      return (
+        <listUtils.ListContext.Provider value={value}>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={0} />
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1} />
+        </listUtils.ListContext.Provider>
+      );
+    };
+
+    const { getByTestId, rerender } = render(<Wrapper value={undefined} />);
+
+    expect(getByTestId('list-item-1')).not.toHaveFocus();
+
+    rerender(
+      <Wrapper
+        value={{
+          listSize: 2,
+          shouldFocusOnPress: false,
+          shouldItemFocusBeInset: false,
+          currentFocus: 0,
+          setContext: jest.fn(),
+        }}
+      />
+    );
+    expect(getByTestId('list-item-1')).not.toHaveFocus();
   });
 });
