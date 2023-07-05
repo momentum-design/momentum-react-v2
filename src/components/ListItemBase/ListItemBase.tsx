@@ -116,8 +116,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   /**
    * Focus management
    */
-
-  const [shouldIgnoreFocusUpdate, setShouldIgnoreFocusUpdate] = useState(false);
   const focus = listContext?.currentFocus === itemIndex;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
@@ -139,15 +137,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   const lastCurrentFocus = usePrevious(listContext?.currentFocus);
   useDidUpdateEffect(() => {
-    if (
-      lastCurrentFocus !== undefined &&
-      lastCurrentFocus !== listContext?.currentFocus &&
-      focus &&
-      !shouldIgnoreFocusUpdate
-    ) {
+    if (lastCurrentFocus !== undefined && lastCurrentFocus !== listContext?.currentFocus && focus) {
       ref.current.focus();
-    } else if (shouldIgnoreFocusUpdate) {
-      setShouldIgnoreFocusUpdate(false);
     }
   }, [listContext?.currentFocus]);
 
@@ -162,8 +153,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
       // set focus to first item
       listContext.setContext(0);
       updateTabIndexes();
-      // mark the update as silent (don't actually DOM focus the element)
-      setShouldIgnoreFocusUpdate(true);
     }
   }, [listContext?.currentFocus, listContext?.listSize]);
 
