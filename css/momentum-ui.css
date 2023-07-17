@@ -21317,7 +21317,7 @@ button.md-close {
       align-items: center;
       flex-flow: row nowrap;
       width: 40%;
-      margin-right: 3px; }
+      margin-right: 12px; }
 
 .md-content-file {
   display: flex;
