@@ -494,6 +494,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-ghost={true}
                   data-multiple-children={false}
                   data-outline={false}
+                  data-shallow-disabled={false}
                   data-size={28}
                   data-solid={false}
                 >
@@ -509,6 +510,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={false}
+                        data-shallow-disabled={false}
                         data-size={28}
                         data-solid={false}
                         onBlur={[Function]}
@@ -681,6 +683,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-ghost={true}
                   data-multiple-children={false}
                   data-outline={false}
+                  data-shallow-disabled={false}
                   data-size={28}
                   data-solid={false}
                 >
@@ -696,6 +699,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={false}
+                        data-shallow-disabled={false}
                         data-size={28}
                         data-solid={false}
                         onBlur={[Function]}
@@ -873,6 +877,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-ghost={true}
                   data-multiple-children={false}
                   data-outline={false}
+                  data-shallow-disabled={false}
                   data-size={28}
                   data-solid={false}
                 >
@@ -888,6 +893,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={false}
+                        data-shallow-disabled={false}
                         data-size={28}
                         data-solid={false}
                         onBlur={[Function]}
