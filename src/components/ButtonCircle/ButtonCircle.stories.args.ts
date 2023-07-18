@@ -49,6 +49,20 @@ const buttonCircleArgTypes = {
       },
     },
   },
+  shallowDisabled: {
+    description:
+      'Whether to render the COMPONENT looking as if disabled, but allowing onPress actions to still be passed.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+      },
+    },
+  },
   ghost: {
     description:
       'Whether this component is a ghost. This overrides the `color` and `outline` props.',

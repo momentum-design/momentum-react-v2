@@ -130,6 +130,7 @@
       }
     }
 
+    &[data-shallow-disabled='true'],
     &[data-disabled='true'],
     &.disable {
       background-color: var(--mds-color-theme-button-secondary-normal);
@@ -172,6 +173,7 @@
       color: var(--mds-color-theme-text-primary-normal);
     }
 
+    &[data-shallow-disabled='true'],
     &[data-disabled='true'],
     &.disable {
       background-color: var(--mds-color-theme-button-inverted-normal);
@@ -212,6 +214,7 @@
       color: var(--mds-color-theme-text-primary-normal);
     }
 
+    &[data-shallow-disabled='true'],
     &[data-disabled='true'],
     &.disable {
       background-color: var(--mds-color-theme-button-secondary-normal);
@@ -249,6 +252,7 @@
     }
   }
 
+  &[data-shallow-disabled='true'],
   &[data-disabled='true'],
   &.disable {
     background-color: var(--mds-color-theme-button-primary-disabled);

@@ -5,6 +5,7 @@ const CLASS_PREFIX = 'md-button-circle';
 const DEFAULTS = {
   COLOR: 'primary',
   DISABLED: false,
+  SHALLOW_DISABLED: false,
   GHOST: false,
   OUTLINE: false,
   SIZE: 40,
