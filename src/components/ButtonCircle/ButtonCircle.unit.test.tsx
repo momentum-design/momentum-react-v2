@@ -90,6 +90,16 @@ describe('<ButtonCircle />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when shallow disabled', () => {
+      expect.assertions(1);
+
+      const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
+
+      const container = mount(<ButtonCircle shallowDisabled={shallowDisabled}>X</ButtonCircle>);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot when a ghost', () => {
       expect.assertions(1);
 
@@ -207,6 +217,18 @@ describe('<ButtonCircle />', () => {
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
     });
 
+    it('should pass sallow disabled prop', () => {
+      expect.assertions(1);
+
+      const shallowDisabled = !DEFAULTS.DISABLED;
+
+      const element = mount(<ButtonCircle shallowDisabled={shallowDisabled} />)
+        .find(ButtonCircle)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
+    });
+
     it('should pass ghost prop', () => {
       expect.assertions(1);
 
@@ -295,6 +317,28 @@ describe('<ButtonCircle />', () => {
       const mockCallback = jest.fn();
 
       const component = mount(<ButtonCircle onPress={mockCallback} />).find(ButtonCircle);
+
+      component.props().onPress({
+        type: 'press',
+        pointerType: 'mouse',
+        altKey: false,
+        shiftKey: false,
+        ctrlKey: false,
+        metaKey: false,
+        target: component.getDOMNode(),
+      });
+
+      expect(mockCallback).toBeCalledTimes(1);
+    });
+
+    it('should handle mouse press events if shallow disabled', () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const component = mount(<ButtonCircle shallowDisabled onPress={mockCallback} />).find(
+        ButtonCircle
+      );
 
       component.props().onPress({
         type: 'press',

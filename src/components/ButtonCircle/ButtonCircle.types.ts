@@ -18,6 +18,11 @@ export interface Props extends ButtonSimpleProps {
   disabled?: boolean;
 
   /**
+   * Whether or not this ButtonCircle should look disabled, but allowing actions like onPress to be passed.
+   */
+  shallowDisabled?: boolean;
+
+  /**
    * Whether or not this ButtonCircle is ghosted.
    */
   ghost?: boolean;

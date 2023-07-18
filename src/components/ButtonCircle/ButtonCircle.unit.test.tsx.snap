@@ -9,6 +9,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
   >
@@ -24,6 +25,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
@@ -59,6 +61,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
     data-ghost={true}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
   >
@@ -74,6 +77,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
           data-ghost={true}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
@@ -114,6 +118,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
     data-ghost={true}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
     isDisabled={true}
@@ -133,6 +138,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
           data-ghost={true}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           disabled={true}
@@ -173,6 +179,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
     data-ghost={false}
     data-multiple-children={false}
     data-outline={true}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
   >
@@ -188,6 +195,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
           data-ghost={false}
           data-multiple-children={false}
           data-outline={true}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
@@ -228,6 +236,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
     data-ghost={false}
     data-multiple-children={false}
     data-outline={true}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={true}
   >
@@ -243,6 +252,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
           data-ghost={false}
           data-multiple-children={false}
           data-outline={true}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={true}
           onBlur={[Function]}
@@ -278,6 +288,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
     isDisabled={true}
@@ -297,9 +308,66 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <span>
+            X
+          </span>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</ButtonCircle>
+`;
+
+exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1`] = `
+<ButtonCircle
+  shallowDisabled={true}
+>
+  <ButtonSimple
+    className="md-button-circle-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-multiple-children={false}
+    data-outline={false}
+    data-shallow-disabled={true}
+    data-size={40}
+    data-solid={false}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-button-circle-wrapper md-button-simple-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-multiple-children={false}
+          data-outline={false}
+          data-shallow-disabled={true}
+          data-size={40}
+          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -337,6 +405,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
   >
@@ -352,6 +421,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
@@ -387,6 +457,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
   >
@@ -402,6 +473,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
@@ -441,6 +513,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
     id="example-id"
@@ -457,6 +530,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           id="example-id"
@@ -491,6 +565,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
     data-ghost={false}
     data-multiple-children={true}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
   >
@@ -506,6 +581,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
           data-ghost={false}
           data-multiple-children={true}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
@@ -548,6 +624,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={64}
     data-solid={false}
   >
@@ -563,6 +640,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={64}
           data-solid={false}
           onBlur={[Function]}
@@ -606,6 +684,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
     style={
@@ -626,6 +705,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
@@ -666,6 +746,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
     data-ghost={false}
     data-multiple-children={false}
     data-outline={false}
+    data-shallow-disabled={false}
     data-size={40}
     data-solid={false}
     title="Example Text"
@@ -682,6 +763,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
           data-ghost={false}
           data-multiple-children={false}
           data-outline={false}
+          data-shallow-disabled={false}
           data-size={40}
           data-solid={false}
           onBlur={[Function]}
