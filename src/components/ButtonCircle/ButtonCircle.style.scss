@@ -214,19 +214,19 @@
 
     &[data-disabled='true'],
     &.disable {
-      background-color: var(--mds-color-theme-button-primary-disabled);
+      background-color: var(--mds-color-theme-button-secondary-normal);
       color: var(--mds-color-theme-text-primary-disabled);
       cursor: auto;
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-primary-disabled);
+        background-color: var(--mds-color-theme-button-secondary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-primary-disabled);
+        background-color: var(--mds-color-theme-button-secondary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
       }
     }
