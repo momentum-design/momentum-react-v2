@@ -495,6 +495,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={true}
+                        data-shallow-disabled={false}
                         data-size={28}
                         data-solid={false}
                       >
@@ -510,6 +511,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-ghost={true}
                               data-multiple-children={false}
                               data-outline={true}
+                              data-shallow-disabled={false}
                               data-size={28}
                               data-solid={false}
                               onBlur={[Function]}
@@ -550,6 +552,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={true}
+                        data-shallow-disabled={false}
                         data-size={28}
                         data-solid={false}
                       >
@@ -565,6 +568,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-ghost={true}
                               data-multiple-children={false}
                               data-outline={true}
+                              data-shallow-disabled={false}
                               data-size={28}
                               data-solid={false}
                               onBlur={[Function]}
@@ -605,6 +609,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-ghost={true}
                         data-multiple-children={false}
                         data-outline={true}
+                        data-shallow-disabled={false}
                         data-size={28}
                         data-solid={false}
                       >
@@ -620,6 +625,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-ghost={true}
                               data-multiple-children={false}
                               data-outline={true}
+                              data-shallow-disabled={false}
                               data-size={28}
                               data-solid={false}
                               onBlur={[Function]}
