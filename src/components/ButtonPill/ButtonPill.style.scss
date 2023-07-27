@@ -113,6 +113,35 @@
     }
   }
 
+  // PRIMARY SOLID GHOST
+  &[data-ghost='true'],
+  &[data-solid='true'] {
+    &[data-outline='false'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-primary-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-hover);
+        color: var(--mds-color-theme-text-primary-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-pressed);
+        color: var(--mds-color-theme-text-primary-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-secondary-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        cursor: auto;
+      }
+    }
+  }
+
   // JOIN
   &[data-color='join'] {
     background-color: var(--mds-color-theme-button-join-normal);
