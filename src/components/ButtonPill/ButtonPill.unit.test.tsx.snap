@@ -8,10 +8,10 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -24,10 +24,10 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -64,10 +64,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
     data-disabled={false}
     data-ghost={true}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -80,10 +80,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
           data-disabled={false}
           data-ghost={true}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -121,10 +121,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled
     data-disabled={true}
     data-ghost={true}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     isDisabled={true}
   >
     <FocusRing
@@ -141,10 +141,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled
           data-disabled={true}
           data-ghost={true}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -182,10 +182,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={true}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -198,10 +198,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={true}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -228,10 +228,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
 </ButtonPill>
 `;
 
-exports[`<ButtonPill /> snapshot should match snapshot when color is outlined and solid is set 1`] = `
+exports[`<ButtonPill /> snapshot should match snapshot when color is outlined and inverted is set 1`] = `
 <ButtonPill
+  inverted={true}
   outline={true}
-  solid={true}
 >
   <ButtonSimple
     className="md-button-pill-wrapper"
@@ -239,10 +239,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined an
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={true}
     data-outline={true}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={true}
   >
     <FocusRing>
       <FocusRing
@@ -255,10 +255,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined an
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={true}
           data-outline={true}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={true}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -295,10 +295,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
     data-disabled={true}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     isDisabled={true}
   >
     <FocusRing
@@ -315,10 +315,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
           data-disabled={true}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -356,10 +356,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when shallow disabled 1`]
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={true}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -372,10 +372,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when shallow disabled 1`]
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={true}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -412,10 +412,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when width is grown 1`] =
     data-disabled={false}
     data-ghost={false}
     data-grown={true}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -428,10 +428,10 @@ exports[`<ButtonPill /> snapshot should match snapshot when width is grown 1`] =
           data-disabled={false}
           data-ghost={false}
           data-grown={true}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -468,10 +468,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -484,10 +484,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -520,10 +520,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -536,10 +536,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -576,10 +576,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     id="example-id"
   >
     <FocusRing>
@@ -593,10 +593,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -630,10 +630,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -646,10 +646,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -690,10 +690,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     style={
       Object {
         "color": "pink",
@@ -711,10 +711,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -752,10 +752,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
     data-disabled={false}
     data-ghost={false}
     data-grown={false}
+    data-inverted={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     title="Example Text"
   >
     <FocusRing>
@@ -769,10 +769,10 @@ exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
           data-disabled={false}
           data-ghost={false}
           data-grown={false}
+          data-inverted={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}

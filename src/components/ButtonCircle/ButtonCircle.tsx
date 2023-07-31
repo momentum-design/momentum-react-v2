@@ -15,10 +15,14 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
     shallowDisabled,
     ghost,
     outline,
-    solid,
+    inverted,
     size,
     ...otherProps
   } = props;
+
+  if (ghost && inverted) {
+    console.warn('ButtonCircle: Ghost inverted button circle is not allowed in Momentum.');
+  }
 
   const multipleChildren = Children.count(children) > 1;
 
@@ -31,7 +35,7 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
       data-multiple-children={multipleChildren}
       data-outline={outline || DEFAULTS.OUTLINE}
       data-size={size || DEFAULTS.SIZE}
-      data-solid={solid || DEFAULTS.SOLID}
+      data-inverted={inverted || DEFAULTS.INVERTED}
       data-disabled={disabled || DEFAULTS.DISABLED}
       data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
       isDisabled={disabled}

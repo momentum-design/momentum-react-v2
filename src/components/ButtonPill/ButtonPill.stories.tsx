@@ -2,7 +2,11 @@ import React from 'react';
 
 import Icon from '../Icon';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import {
+  MultiTemplate,
+  MultiTemplateWithPseudoStates,
+  Template,
+} from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
@@ -45,31 +49,6 @@ Overflow.argTypes = {
   ...argTypes,
 };
 
-const Colors = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
-
-Colors.parameters = {
-  variants: [{}, { color: 'join' }, { color: 'cancel' }, { color: 'message' }],
-};
-
-Colors.argTypes = { ...argTypes };
-delete Colors.argTypes.color;
-
-const Outline = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
-
-Outline.parameters = {
-  variants: [
-    { outline: true },
-    { color: 'join', outline: true },
-    { color: 'cancel', outline: true },
-    { color: 'message', outline: true },
-    { solid: true, outline: true },
-  ],
-};
-
-Outline.argTypes = { ...argTypes };
-delete Outline.argTypes.color;
-delete Outline.argTypes.outline;
-
 const Grown = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
 Grown.parameters = {
@@ -87,6 +66,7 @@ Grown.parameters = {
         <div key={1}>Example Text</div>,
       ],
       outline: true,
+      inverted: true,
       grown: true,
     },
     {
@@ -118,7 +98,8 @@ Grown.parameters = {
         <Icon key={0} name="open-pages" autoScale={125} />,
         <div key={1}>Example Text</div>,
       ],
-      solid: true,
+      ghost: true,
+      outline: true,
       grown: true,
     },
   ],
@@ -127,16 +108,6 @@ Grown.parameters = {
 Grown.argTypes = { ...argTypes };
 delete Grown.argTypes.color;
 delete Grown.argTypes.grown;
-
-const States = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
-
-States.parameters = {
-  variants: [{}, { ghost: true }, { disabled: true }, { ghost: true, disabled: true }],
-};
-
-States.argTypes = { ...argTypes };
-delete States.argTypes.disabled;
-delete States.argTypes.ghost;
 
 const Sizes = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
@@ -165,12 +136,16 @@ Disabled.parameters = {
     },
     {
       children: 'I am a popover',
-      triggerComponent: <ButtonPill outline>Secondary button</ButtonPill>,
+      triggerComponent: (
+        <ButtonPill outline ghost>
+          Secondary button
+        </ButtonPill>
+      ),
     },
     {
       children: 'I am a popover',
       triggerComponent: (
-        <ButtonPill outline disabled>
+        <ButtonPill outline ghost disabled>
           Disabled secondary button
         </ButtonPill>
       ),
@@ -178,7 +153,7 @@ Disabled.parameters = {
     {
       children: 'I am a popover',
       triggerComponent: (
-        <ButtonPill outline shallowDisabled>
+        <ButtonPill outline ghost shallowDisabled>
           Shallow disabled secondary button
         </ButtonPill>
       ),
@@ -226,7 +201,7 @@ Disabled.parameters = {
     {
       children: 'I am a popover',
       triggerComponent: (
-        <ButtonPill color="join" outline>
+        <ButtonPill color="join" outline inverted>
           Join outline button
         </ButtonPill>
       ),
@@ -234,7 +209,7 @@ Disabled.parameters = {
     {
       children: 'I am a popover',
       triggerComponent: (
-        <ButtonPill color="join" outline disabled>
+        <ButtonPill color="join" outline inverted disabled>
           Disabled join outline button
         </ButtonPill>
       ),
@@ -242,11 +217,157 @@ Disabled.parameters = {
     {
       children: 'I am a popover',
       triggerComponent: (
-        <ButtonPill color="join" outline shallowDisabled>
+        <ButtonPill color="join" outline inverted shallowDisabled>
           Shallow disabled join outline button
         </ButtonPill>
       ),
     },
+  ],
+};
+
+const NotGhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(
+  ButtonPill
+).bind({});
+
+NotGhostNotOutlineNotInverted.argTypes = { ...argTypes };
+delete NotGhostNotOutlineNotInverted.argTypes.children;
+delete NotGhostNotOutlineNotInverted.argTypes.outline;
+delete NotGhostNotOutlineNotInverted.argTypes.ghost;
+delete NotGhostNotOutlineNotInverted.argTypes.inverted;
+
+NotGhostNotOutlineNotInverted.args = {
+  outline: false,
+  ghost: false,
+  inverted: false,
+};
+
+NotGhostNotOutlineNotInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
+
+const GhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill).bind(
+  {}
+);
+
+GhostNotOutlineNotInverted.argTypes = { ...argTypes };
+delete GhostNotOutlineNotInverted.argTypes.children;
+delete GhostNotOutlineNotInverted.argTypes.outline;
+delete GhostNotOutlineNotInverted.argTypes.ghost;
+delete GhostNotOutlineNotInverted.argTypes.inverted;
+
+GhostNotOutlineNotInverted.args = {
+  outline: false,
+  ghost: true,
+  inverted: false,
+};
+
+GhostNotOutlineNotInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
+
+const NotGhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill).bind(
+  {}
+);
+
+NotGhostOutlineNotInverted.argTypes = { ...argTypes };
+delete NotGhostOutlineNotInverted.argTypes.children;
+delete NotGhostOutlineNotInverted.argTypes.outline;
+delete NotGhostOutlineNotInverted.argTypes.ghost;
+delete NotGhostOutlineNotInverted.argTypes.inverted;
+
+NotGhostOutlineNotInverted.args = {
+  outline: true,
+  ghost: false,
+  inverted: false,
+};
+
+NotGhostOutlineNotInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
+
+const NotGhostNotOutlineInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill).bind(
+  {}
+);
+
+NotGhostNotOutlineInverted.argTypes = { ...argTypes };
+delete NotGhostNotOutlineInverted.argTypes.children;
+delete NotGhostNotOutlineInverted.argTypes.outline;
+delete NotGhostNotOutlineInverted.argTypes.ghost;
+delete NotGhostNotOutlineInverted.argTypes.inverted;
+
+NotGhostNotOutlineInverted.args = {
+  outline: false,
+  ghost: false,
+  inverted: true,
+};
+
+NotGhostNotOutlineInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
+
+const GhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill).bind({});
+
+GhostOutlineNotInverted.argTypes = { ...argTypes };
+delete GhostOutlineNotInverted.argTypes.children;
+delete GhostOutlineNotInverted.argTypes.outline;
+delete GhostOutlineNotInverted.argTypes.ghost;
+delete GhostOutlineNotInverted.argTypes.inverted;
+
+GhostOutlineNotInverted.args = {
+  outline: true,
+  ghost: true,
+  inverted: false,
+};
+
+GhostOutlineNotInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
+
+const NotGhostOutlineInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill).bind({});
+
+NotGhostOutlineInverted.argTypes = { ...argTypes };
+delete NotGhostOutlineInverted.argTypes.children;
+delete NotGhostOutlineInverted.argTypes.outline;
+delete NotGhostOutlineInverted.argTypes.ghost;
+delete NotGhostOutlineInverted.argTypes.inverted;
+
+NotGhostOutlineInverted.args = {
+  outline: true,
+  ghost: false,
+  inverted: true,
+};
+
+NotGhostOutlineInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
   ],
 };
 
@@ -277,4 +398,17 @@ Common.parameters = {
   ],
 };
 
-export { Example, Overflow, Colors, Outline, Grown, States, Sizes, Disabled, Common };
+export {
+  Example,
+  Overflow,
+  Grown,
+  Sizes,
+  Disabled,
+  NotGhostNotOutlineNotInverted,
+  GhostNotOutlineNotInverted,
+  NotGhostOutlineNotInverted,
+  NotGhostNotOutlineInverted,
+  GhostOutlineNotInverted,
+  NotGhostOutlineInverted,
+  Common,
+};

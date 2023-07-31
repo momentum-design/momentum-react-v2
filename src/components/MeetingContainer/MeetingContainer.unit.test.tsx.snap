@@ -493,11 +493,11 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-color="join"
                         data-disabled={false}
                         data-ghost={true}
+                        data-inverted={false}
                         data-multiple-children={false}
                         data-outline={true}
                         data-shallow-disabled={false}
                         data-size={28}
-                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -509,11 +509,11 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-color="join"
                               data-disabled={false}
                               data-ghost={true}
+                              data-inverted={false}
                               data-multiple-children={false}
                               data-outline={true}
                               data-shallow-disabled={false}
                               data-size={28}
-                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -550,11 +550,11 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-color="join"
                         data-disabled={false}
                         data-ghost={true}
+                        data-inverted={false}
                         data-multiple-children={false}
                         data-outline={true}
                         data-shallow-disabled={false}
                         data-size={28}
-                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -566,11 +566,11 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-color="join"
                               data-disabled={false}
                               data-ghost={true}
+                              data-inverted={false}
                               data-multiple-children={false}
                               data-outline={true}
                               data-shallow-disabled={false}
                               data-size={28}
-                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -607,11 +607,11 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                         data-color="join"
                         data-disabled={false}
                         data-ghost={true}
+                        data-inverted={false}
                         data-multiple-children={false}
                         data-outline={true}
                         data-shallow-disabled={false}
                         data-size={28}
-                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -623,11 +623,11 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                               data-color="join"
                               data-disabled={false}
                               data-ghost={true}
+                              data-inverted={false}
                               data-multiple-children={false}
                               data-outline={true}
                               data-shallow-disabled={false}
                               data-size={28}
-                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -1076,10 +1076,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                         data-disabled={false}
                         data-ghost={true}
                         data-grown={false}
+                        data-inverted={false}
                         data-outline={true}
                         data-shallow-disabled={false}
                         data-size={28}
-                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -1092,10 +1092,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               data-disabled={false}
                               data-ghost={true}
                               data-grown={false}
+                              data-inverted={false}
                               data-outline={true}
                               data-shallow-disabled={false}
                               data-size={28}
-                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -1136,10 +1136,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                         data-disabled={false}
                         data-ghost={false}
                         data-grown={false}
+                        data-inverted={false}
                         data-outline={false}
                         data-shallow-disabled={false}
                         data-size={28}
-                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -1152,10 +1152,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               data-disabled={false}
                               data-ghost={false}
                               data-grown={false}
+                              data-inverted={false}
                               data-outline={false}
                               data-shallow-disabled={false}
                               data-size={28}
-                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -1455,10 +1455,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                         data-disabled={false}
                         data-ghost={true}
                         data-grown={false}
+                        data-inverted={false}
                         data-outline={true}
                         data-shallow-disabled={false}
                         data-size={28}
-                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -1471,10 +1471,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               data-disabled={false}
                               data-ghost={true}
                               data-grown={false}
+                              data-inverted={false}
                               data-outline={true}
                               data-shallow-disabled={false}
                               data-size={28}
-                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}
@@ -1515,10 +1515,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                         data-disabled={false}
                         data-ghost={false}
                         data-grown={false}
+                        data-inverted={false}
                         data-outline={false}
                         data-shallow-disabled={false}
                         data-size={28}
-                        data-solid={false}
                       >
                         <FocusRing>
                           <FocusRing
@@ -1531,10 +1531,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               data-disabled={false}
                               data-ghost={false}
                               data-grown={false}
+                              data-inverted={false}
                               data-outline={false}
                               data-shallow-disabled={false}
                               data-size={28}
-                              data-solid={false}
                               onBlur={[Function]}
                               onClick={[Function]}
                               onDragStart={[Function]}

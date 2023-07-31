@@ -2,7 +2,11 @@ import React from 'react';
 
 import Icon from '../Icon';
 
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import {
+  MultiTemplate,
+  MultiTemplateWithPseudoStates,
+  Template,
+} from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
@@ -35,66 +39,155 @@ Example.args = {
   children: <Icon name="chat-group" autoScale={150} />,
 };
 
-const Colors = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
+const NotGhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
+  ButtonCircle
+).bind({});
 
-Colors.args = {
-  children: <Icon name="chat-group" autoScale={150} />,
+NotGhostNotOutlineNotInverted.argTypes = { ...argTypes };
+delete NotGhostNotOutlineNotInverted.argTypes.children;
+delete NotGhostNotOutlineNotInverted.argTypes.outline;
+delete NotGhostNotOutlineNotInverted.argTypes.ghost;
+delete NotGhostNotOutlineNotInverted.argTypes.inverted;
+
+NotGhostNotOutlineNotInverted.args = {
+  outline: false,
+  ghost: false,
+  inverted: false,
 };
 
-Colors.parameters = {
-  variants: [{}, { color: 'join' }, { color: 'cancel' }, { color: 'message' }],
-};
-
-Colors.argTypes = { ...argTypes };
-delete Colors.argTypes.color;
-
-const Outline = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
-
-Outline.args = {
-  children: <Icon name="favorite" weight="filled" autoScale={150} />,
-};
-
-Outline.parameters = {
+NotGhostNotOutlineNotInverted.parameters = {
   variants: [
-    { outline: true, ghost: true },
-    { outline: true, ghost: false },
-    { color: 'join', outline: true, ghost: true },
-    { color: 'cancel', outline: true, ghost: true },
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
   ],
 };
 
-Outline.argTypes = { ...argTypes };
-delete Outline.argTypes.color;
-delete Outline.argTypes.outline;
+const GhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
+  ButtonCircle
+).bind({});
 
-const Solid = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
+GhostNotOutlineNotInverted.argTypes = { ...argTypes };
+delete GhostNotOutlineNotInverted.argTypes.children;
+delete GhostNotOutlineNotInverted.argTypes.outline;
+delete GhostNotOutlineNotInverted.argTypes.ghost;
+delete GhostNotOutlineNotInverted.argTypes.inverted;
 
-Solid.args = {
-  children: <Icon name="favorite" weight="filled" autoScale={150} />,
+GhostNotOutlineNotInverted.args = {
+  outline: false,
+  ghost: true,
+  inverted: false,
 };
 
-Solid.parameters = {
-  variants: [{ solid: true }],
+GhostNotOutlineNotInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
 };
 
-Solid.argTypes = { ...argTypes };
-delete Solid.argTypes.solid;
-delete Solid.argTypes.color;
-delete Solid.argTypes.ghost;
+const NotGhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
+  ButtonCircle
+).bind({});
 
-const States = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
+NotGhostOutlineNotInverted.argTypes = { ...argTypes };
+delete NotGhostOutlineNotInverted.argTypes.children;
+delete NotGhostOutlineNotInverted.argTypes.outline;
+delete NotGhostOutlineNotInverted.argTypes.ghost;
+delete NotGhostOutlineNotInverted.argTypes.inverted;
 
-States.args = {
-  children: <Icon name="settings" weight="filled" autoScale={150} />,
+NotGhostOutlineNotInverted.args = {
+  outline: true,
+  ghost: false,
+  inverted: false,
 };
 
-States.parameters = {
-  variants: [{}, { ghost: true }, { disabled: true }, { ghost: true, disabled: true }],
+NotGhostOutlineNotInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
 };
 
-States.argTypes = { ...argTypes };
-delete States.argTypes.disabled;
-delete States.argTypes.ghost;
+const NotGhostNotOutlineInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
+  ButtonCircle
+).bind({});
+
+NotGhostNotOutlineInverted.argTypes = { ...argTypes };
+delete NotGhostNotOutlineInverted.argTypes.children;
+delete NotGhostNotOutlineInverted.argTypes.outline;
+delete NotGhostNotOutlineInverted.argTypes.ghost;
+delete NotGhostNotOutlineInverted.argTypes.inverted;
+
+NotGhostNotOutlineInverted.args = {
+  outline: false,
+  ghost: false,
+  inverted: true,
+};
+
+NotGhostNotOutlineInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
+
+const GhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(ButtonCircle).bind(
+  {}
+);
+
+GhostOutlineNotInverted.argTypes = { ...argTypes };
+delete GhostOutlineNotInverted.argTypes.children;
+delete GhostOutlineNotInverted.argTypes.outline;
+delete GhostOutlineNotInverted.argTypes.ghost;
+delete GhostOutlineNotInverted.argTypes.inverted;
+
+GhostOutlineNotInverted.args = {
+  outline: true,
+  ghost: true,
+  inverted: false,
+};
+
+GhostOutlineNotInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
+
+const NotGhostOutlineInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(ButtonCircle).bind(
+  {}
+);
+
+NotGhostOutlineInverted.argTypes = { ...argTypes };
+delete NotGhostOutlineInverted.argTypes.children;
+delete NotGhostOutlineInverted.argTypes.outline;
+delete NotGhostOutlineInverted.argTypes.ghost;
+delete NotGhostOutlineInverted.argTypes.inverted;
+
+NotGhostOutlineInverted.args = {
+  outline: true,
+  ghost: false,
+  inverted: true,
+};
+
+NotGhostOutlineInverted.parameters = {
+  variants: [
+    { label: 'color: undefined', color: undefined },
+    { label: 'color: join', color: 'join' },
+    { label: 'color: cancel', color: 'cancel' },
+    { label: 'color: message', color: 'message' },
+  ],
+};
 
 const Sizes = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
 
@@ -154,7 +247,7 @@ delete Common.argTypes.color;
 delete Common.argTypes.disabled;
 delete Common.argTypes.ghost;
 delete Common.argTypes.outline;
-delete Common.argTypes.solid;
+delete Common.argTypes.inverted;
 
 Common.parameters = {
   variants: [
@@ -206,4 +299,14 @@ Common.parameters = {
   ],
 };
 
-export { Example, Colors, Outline, Solid, States, Sizes, Common };
+export {
+  Example,
+  NotGhostNotOutlineNotInverted,
+  GhostNotOutlineNotInverted,
+  NotGhostOutlineNotInverted,
+  NotGhostNotOutlineInverted,
+  GhostOutlineNotInverted,
+  NotGhostOutlineInverted,
+  Sizes,
+  Common,
+};

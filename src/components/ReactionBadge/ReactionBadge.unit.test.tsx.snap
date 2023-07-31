@@ -21,11 +21,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
       data-disabled={false}
       data-ghost={false}
       data-grown={false}
+      data-inverted={false}
       data-outline={false}
       data-reacted={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
     >
       <FocusRing>
         <FocusRing
@@ -39,11 +39,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={false}
             data-reacted={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}
@@ -102,11 +102,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
       data-disabled={false}
       data-ghost={false}
       data-grown={false}
+      data-inverted={false}
       data-outline={false}
       data-reacted={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
     >
       <FocusRing>
         <FocusRing
@@ -120,11 +120,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={false}
             data-reacted={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}
@@ -183,11 +183,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
       data-disabled={false}
       data-ghost={false}
       data-grown={false}
+      data-inverted={false}
       data-outline={false}
       data-reacted={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
     >
       <FocusRing>
         <FocusRing
@@ -201,11 +201,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={false}
             data-reacted={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}
@@ -267,11 +267,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
       data-disabled={false}
       data-ghost={false}
       data-grown={false}
+      data-inverted={false}
       data-outline={false}
       data-reacted={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
       id="example-id"
     >
       <FocusRing>
@@ -286,11 +286,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={false}
             data-reacted={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             id="example-id"
             onBlur={[Function]}
             onClick={[Function]}
@@ -350,11 +350,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
       data-disabled={false}
       data-ghost={false}
       data-grown={false}
+      data-inverted={false}
       data-outline={false}
       data-reacted={true}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
     >
       <FocusRing>
         <FocusRing
@@ -368,11 +368,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={false}
             data-reacted={true}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}
@@ -440,11 +440,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
       data-disabled={false}
       data-ghost={false}
       data-grown={false}
+      data-inverted={false}
       data-outline={false}
       data-reacted={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
       style={
         Object {
           "color": "pink",
@@ -463,11 +463,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={false}
             data-reacted={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}

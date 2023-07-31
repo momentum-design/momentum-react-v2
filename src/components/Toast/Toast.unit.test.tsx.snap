@@ -413,11 +413,11 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -429,11 +429,11 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -486,10 +486,10 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -502,10 +502,10 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -540,10 +540,10 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -556,10 +556,10 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -594,10 +594,10 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -610,10 +610,10 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1060,11 +1060,11 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1076,11 +1076,11 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1133,10 +1133,10 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1149,10 +1149,10 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1187,10 +1187,10 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1203,10 +1203,10 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1241,10 +1241,10 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1257,10 +1257,10 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1664,11 +1664,11 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1680,11 +1680,11 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1737,10 +1737,10 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1753,10 +1753,10 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1791,10 +1791,10 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1807,10 +1807,10 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -1845,10 +1845,10 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -1861,10 +1861,10 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2255,11 +2255,11 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -2271,11 +2271,11 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2328,10 +2328,10 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -2344,10 +2344,10 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2382,10 +2382,10 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -2398,10 +2398,10 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2436,10 +2436,10 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -2452,10 +2452,10 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2888,11 +2888,11 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -2904,11 +2904,11 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -2961,10 +2961,10 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -2977,10 +2977,10 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3015,10 +3015,10 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -3031,10 +3031,10 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3069,10 +3069,10 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -3085,10 +3085,10 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3536,11 +3536,11 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -3552,11 +3552,11 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3609,10 +3609,10 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -3625,10 +3625,10 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3663,10 +3663,10 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -3679,10 +3679,10 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -3717,10 +3717,10 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -3733,10 +3733,10 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -4192,11 +4192,11 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -4208,11 +4208,11 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -4265,10 +4265,10 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -4281,10 +4281,10 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -4319,10 +4319,10 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -4335,10 +4335,10 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -4373,10 +4373,10 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -4389,10 +4389,10 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -4826,11 +4826,11 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={false}
+                data-inverted={false}
                 data-multiple-children={false}
                 data-outline={true}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -4842,11 +4842,11 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                       data-color="primary"
                       data-disabled={false}
                       data-ghost={false}
+                      data-inverted={false}
                       data-multiple-children={false}
                       data-outline={true}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -4899,10 +4899,10 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -4915,10 +4915,10 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -4953,10 +4953,10 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -4969,10 +4969,10 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -5007,10 +5007,10 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={28}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -5023,10 +5023,10 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={28}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}

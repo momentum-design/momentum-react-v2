@@ -125,11 +125,11 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
               data-color="join"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
             >
               <FocusRing>
                 <FocusRing
@@ -141,11 +141,11 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                     data-color="join"
                     data-disabled={false}
                     data-ghost={false}
+                    data-inverted={false}
                     data-multiple-children={false}
                     data-outline={false}
                     data-shallow-disabled={false}
                     data-size={40}
-                    data-solid={false}
                     onBlur={[Function]}
                     onClick={[Function]}
                     onDragStart={[Function]}
@@ -195,11 +195,11 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
               data-color="cancel"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
             >
               <FocusRing>
                 <FocusRing
@@ -211,11 +211,11 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                     data-color="cancel"
                     data-disabled={false}
                     data-ghost={false}
+                    data-inverted={false}
                     data-multiple-children={false}
                     data-outline={false}
                     data-shallow-disabled={false}
                     data-size={40}
-                    data-solid={false}
                     onBlur={[Function]}
                     onClick={[Function]}
                     onDragStart={[Function]}
@@ -391,11 +391,11 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
               data-color="join"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
             >
               <FocusRing>
                 <FocusRing
@@ -407,11 +407,11 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                     data-color="join"
                     data-disabled={false}
                     data-ghost={false}
+                    data-inverted={false}
                     data-multiple-children={false}
                     data-outline={false}
                     data-shallow-disabled={false}
                     data-size={40}
-                    data-solid={false}
                     onBlur={[Function]}
                     onClick={[Function]}
                     onDragStart={[Function]}
@@ -461,11 +461,11 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
               data-color="cancel"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
             >
               <FocusRing>
                 <FocusRing
@@ -477,11 +477,11 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                     data-color="cancel"
                     data-disabled={false}
                     data-ghost={false}
+                    data-inverted={false}
                     data-multiple-children={false}
                     data-outline={false}
                     data-shallow-disabled={false}
                     data-size={40}
-                    data-solid={false}
                     onBlur={[Function]}
                     onClick={[Function]}
                     onDragStart={[Function]}

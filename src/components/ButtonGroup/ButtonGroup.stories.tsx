@@ -107,10 +107,10 @@ const callControlsCommonChildren = [
 ];
 
 const paginationCommonChildren = [
-  <ButtonCircle solid disabled key="0" size={28}>
+  <ButtonCircle inverted disabled key="0" size={28}>
     <Icon name="arrow-up" autoScale={150} />
   </ButtonCircle>,
-  <ButtonCircle solid key="1" size={28}>
+  <ButtonCircle inverted key="1" size={28}>
     <Icon name="arrow-down" autoScale={150} />
   </ButtonCircle>,
 ];

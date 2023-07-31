@@ -23,7 +23,7 @@ export interface Props extends ButtonSimpleProps {
   shallowDisabled?: boolean;
 
   /**
-   * Whether or not this ButtonPill is ghosted.
+   * Whether or not this ButtonPill has a transparent background.
    */
   ghost?: boolean;
 
@@ -33,14 +33,14 @@ export interface Props extends ButtonSimpleProps {
   grown?: boolean;
 
   /**
-   * Whether to use the outline variant of this ButtonPill if available.
+   * Whether or not this ButtonPill has an outline/border.
    */
   outline?: boolean;
 
   /**
-   * Whether to use the solid background variant of this ButtonPill. Only available with outline currently.
+   * Whether or not this ButtonCircle has inverted background (black for dark mode and white for light mode).
    */
-  solid?: boolean;
+  inverted?: boolean;
 
   /**
    * Size index of this ButtonPill.

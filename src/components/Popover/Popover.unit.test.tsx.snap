@@ -624,12 +624,12 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
         data-color="primary"
         data-disabled="false"
         data-ghost="true"
+        data-inverted="false"
         data-multiple-children="false"
         data-outline="false"
         data-placement="top-right"
         data-shallow-disabled="false"
         data-size="20"
-        data-solid="false"
         type="button"
       >
         <div

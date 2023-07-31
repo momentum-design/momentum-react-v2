@@ -16,7 +16,7 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
     grown,
     outline,
     size,
-    solid,
+    inverted,
     ...otherProps
   } = props;
 
@@ -31,7 +31,7 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
       data-grown={grown || DEFAULTS.GROWN}
       data-outline={outline || DEFAULTS.OUTLINE}
       data-size={size || DEFAULTS.SIZE}
-      data-solid={solid || DEFAULTS.SOLID}
+      data-inverted={inverted || DEFAULTS.INVERTED}
       isDisabled={disabled}
       {...otherProps}
     />

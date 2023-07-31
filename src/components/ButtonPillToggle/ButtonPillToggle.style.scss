@@ -2,44 +2,44 @@
   &[data-selected='true'] {
     &[data-outline='true'],
     &[data-ghost='true'] {
-      background-color: var(--mds-color-theme-button-secondary-active-normal);
-      color: var(--mds-color-theme-text-primary-normal);
+      background-color: var(--mds-color-theme-button-secondary-active-normal) !important;
+      color: var(--mds-color-theme-text-primary-normal) !important;
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-secondary-active-hover);
-        color: var(--mds-color-theme-text-primary-normal);
+        background-color: var(--mds-color-theme-button-secondary-active-hover) !important;
+        color: var(--mds-color-theme-text-primary-normal) !important;
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-secondary-active-pressed);
-        color: var(--mds-color-theme-text-primary-normal);
+        background-color: var(--mds-color-theme-button-secondary-active-pressed) !important;
+        color: var(--mds-color-theme-text-primary-normal) !important;
       }
 
       &[data-disabled='true'],
       &.disable {
-        background-color: var(--mds-color-theme-button-secondary-active-normal);
-        color: var(--mds-color-theme-text-primary-disabled);
+        background-color: var(--mds-color-theme-button-secondary-active-normal) !important;
+        color: var(--mds-color-theme-text-primary-disabled) !important;
       }
     }
 
     &[data-outline='true'] {
-      border-color: var(--mds-color-theme-outline-button-normal);
+      border-color: var(--mds-color-theme-outline-button-normal) !important;
 
       &:hover,
       &.hover {
-        border-color: var(--mds-color-theme-outline-button-normal);
+        border-color: var(--mds-color-theme-outline-button-normal) !important;
       }
 
       &:active,
       &.active {
-        border-color: var(--mds-color-theme-outline-button-normal);
+        border-color: var(--mds-color-theme-outline-button-normal) !important;
       }
 
       &[data-disabled='true'],
       &.disable {
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-disabled-normal) !important;
       }
     }
   }

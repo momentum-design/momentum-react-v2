@@ -27,10 +27,8 @@ const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTML
 
   const state = useToggleState(props);
 
-  if (ghost === false && outline === false) {
-    console.warn(
-      'ButtonCircleToggle is only designed for outline or ghost circle buttons. Outline and ghost properties cannot be false at the same time.'
-    );
+  if (outline === false) {
+    console.warn('ButtonCircleToggle is only designed for ghost circle buttons.');
   }
 
   return (

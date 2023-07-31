@@ -74,10 +74,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={40}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -90,10 +90,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={40}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -419,10 +419,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={40}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -435,10 +435,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={40}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -473,10 +473,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={40}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -489,10 +489,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={40}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}
@@ -527,10 +527,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                 data-disabled={false}
                 data-ghost={false}
                 data-grown={false}
+                data-inverted={false}
                 data-outline={false}
                 data-shallow-disabled={false}
                 data-size={40}
-                data-solid={false}
               >
                 <FocusRing>
                   <FocusRing
@@ -543,10 +543,10 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                       data-disabled={false}
                       data-ghost={false}
                       data-grown={false}
+                      data-inverted={false}
                       data-outline={false}
                       data-shallow-disabled={false}
                       data-size={40}
-                      data-solid={false}
                       onBlur={[Function]}
                       onClick={[Function]}
                       onDragStart={[Function]}

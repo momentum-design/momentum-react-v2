@@ -6,7 +6,8 @@
   outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-  // PRIMARY
+  // A. GHOST = FALSE | OUTLINE = FALSE | INVERTED = FALSE
+  // A.1 Color = undefined
   background-color: var(--mds-color-theme-button-primary-normal);
   color: var(--mds-color-theme-text-inverted-normal);
 
@@ -30,88 +31,7 @@
     cursor: auto;
   }
 
-  // PRIMARY GHOST
-  &[data-ghost='true'][data-solid='false'] {
-    background-color: var(--mds-color-theme-button-secondary-normal);
-    color: var(--mds-color-theme-text-primary-normal);
-
-    &:hover,
-    &.hover {
-      background-color: var(--mds-color-theme-button-secondary-hover);
-      color: var(--mds-color-theme-text-primary-normal);
-    }
-
-    &:active,
-    &.active {
-      background-color: var(--mds-color-theme-button-secondary-pressed);
-      color: var(--mds-color-theme-text-primary-normal);
-    }
-
-    &[data-disabled='true'],
-    &.disable,
-    &[data-shallow-disabled='true'] {
-      background-color: var(--mds-color-theme-button-secondary-normal);
-      color: var(--mds-color-theme-text-primary-disabled);
-      cursor: auto;
-    }
-
-    // PRIMARY OUTLINE GHOST
-    &[data-outline='true'] {
-      border-color: var(--mds-color-theme-outline-button-normal);
-
-      &:hover,
-      &.hover {
-        border-color: var(--mds-color-theme-outline-button-normal);
-      }
-
-      &:active,
-      &.active {
-        border-color: var(--mds-color-theme-outline-button-normal);
-      }
-
-      &[data-disabled='true'],
-      &.disable,
-      &[data-shallow-disabled='true'] {
-        border-color: var(--mds-color-theme-outline-disabled-normal);
-        cursor: auto;
-      }
-    }
-  }
-
-  // PRIMARY OUTLINE SOLID N0T-GHOST
-  &[data-ghost='false'],
-  &[data-solid='true'] {
-    &[data-outline='true'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
-      border-color: var(--mds-color-theme-outline-button-normal);
-      color: var(--mds-color-theme-text-primary-normal);
-
-      &:hover,
-      &.hover {
-        background-color: var(--mds-color-theme-button-inverted-hover);
-        border-color: var(--mds-color-theme-outline-button-normal);
-        color: var(--mds-color-theme-text-primary-normal);
-      }
-
-      &:active,
-      &.active {
-        background-color: var(--mds-color-theme-button-inverted-pressed);
-        border-color: var(--mds-color-theme-outline-button-normal);
-        color: var(--mds-color-theme-text-primary-normal);
-      }
-
-      &[data-disabled='true'],
-      &.disable,
-      &[data-shallow-disabled='true'] {
-        background-color: var(--mds-color-theme-button-secondary-normal);
-        border-color: var(--mds-color-theme-outline-disabled-normal);
-        color: var(--mds-color-theme-text-primary-disabled);
-        cursor: auto;
-      }
-    }
-  }
-
-  // JOIN
+  // A.2 Color = join
   &[data-color='join'] {
     background-color: var(--mds-color-theme-button-join-normal);
     color: var(--mds-color-theme-common-text-white);
@@ -135,94 +55,9 @@
       color: var(--mds-color-theme-text-primary-disabled);
       cursor: auto;
     }
-
-    &[data-ghost='true'][data-solid='false'] {
-      background-color: var(--mds-color-theme-button-secondary-normal);
-      color: var(--mds-color-theme-text-success-normal);
-
-      &:hover,
-      &.hover {
-        background-color: var(--mds-color-theme-button-secondary-hover);
-        color: var(--mds-color-theme-text-success-normal);
-      }
-
-      &:active,
-      &.active {
-        background-color: var(--mds-color-theme-button-secondary-pressed);
-        color: var(--mds-color-theme-text-success-normal);
-      }
-
-      &[data-shallow-disabled='true'],
-      &[data-disabled='true'],
-      &.disable {
-        background-color: var(--mds-color-theme-button-secondary-normal);
-        color: var(--mds-color-theme-text-primary-disabled);
-        cursor: auto;
-      }
-
-      &[data-outline='true'] {
-        background-color: var(--mds-color-theme-button-secondary-normal);
-        border-color: var(--mds-color-theme-outline-join-normal);
-        color: var(--mds-color-theme-text-success-normal);
-
-        &:hover,
-        &.hover {
-          background-color: var(--mds-color-theme-button-join-hover);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &:active,
-        &.active {
-          background-color: var(--mds-color-theme-button-join-pressed);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &[data-shallow-disabled='true'],
-        &[data-disabled='true'],
-        &.disable {
-          background-color: var(--mds-color-theme-button-secondary-normal);
-          border-color: var(--mds-color-theme-outline-disabled-normal);
-          color: var(--mds-color-theme-text-primary-disabled);
-          cursor: auto;
-        }
-      }
-    }
-
-    &[data-ghost='false'],
-    &[data-solid='true'] {
-      &[data-outline='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
-        border-color: var(--mds-color-theme-outline-join-normal);
-        color: var(--mds-color-theme-text-success-normal);
-
-        &:hover,
-        &.hover {
-          background-color: var(--mds-color-theme-button-join-hover);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &:active,
-        &.active {
-          background-color: var(--mds-color-theme-button-join-pressed);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &[data-shallow-disabled='true'],
-        &[data-disabled='true'],
-        &.disable {
-          background-color: var(--mds-color-theme-button-secondary-normal);
-          border-color: var(--mds-color-theme-outline-disabled-normal);
-          color: var(--mds-color-theme-text-primary-disabled);
-          cursor: auto;
-        }
-      }
-    }
   }
-  // CANCEL
+
+  // A.3 Color = cancel
   &[data-color='cancel'] {
     background-color: var(--mds-color-theme-button-cancel-normal);
     color: var(--mds-color-theme-common-text-white);
@@ -246,95 +81,9 @@
       color: var(--mds-color-theme-text-primary-disabled);
       cursor: auto;
     }
-
-    &[data-ghost='true'][data-solid='false'] {
-      background-color: var(--mds-color-theme-button-secondary-normal);
-      color: var(--mds-color-theme-text-error-normal);
-
-      &:hover,
-      &.hover {
-        background-color: var(--mds-color-theme-button-secondary-hover);
-        color: var(--mds-color-theme-text-error-normal);
-      }
-
-      &:active,
-      &.active {
-        background-color: var(--mds-color-theme-button-secondary-pressed);
-        color: var(--mds-color-theme-text-error-normal);
-      }
-
-      &[data-shallow-disabled='true'],
-      &[data-disabled='true'],
-      &.disable {
-        background-color: var(--mds-color-theme-button-secondary-normal);
-        color: var(--mds-color-theme-text-primary-disabled);
-        cursor: auto;
-      }
-
-      &[data-outline='true'] {
-        background-color: var(--mds-color-theme-button-secondary-normal);
-        border-color: var(--mds-color-theme-outline-cancel-normal);
-        color: var(--mds-color-theme-text-error-normal);
-
-        &:hover,
-        &.hover {
-          background-color: var(--mds-color-theme-button-cancel-hover);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &:active,
-        &.active {
-          background-color: var(--mds-color-theme-button-cancel-pressed);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &[data-shallow-disabled='true'],
-        &[data-disabled='true'],
-        &.disable {
-          background-color: var(--mds-color-theme-button-secondary-normal);
-          border-color: var(--mds-color-theme-outline-disabled-normal);
-          color: var(--mds-color-theme-text-primary-disabled);
-          cursor: auto;
-        }
-      }
-    }
-
-    &[data-ghost='false'],
-    &[data-solid='true'] {
-      &[data-outline='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
-        border-color: var(--mds-color-theme-outline-cancel-normal);
-        color: var(--mds-color-theme-text-error-normal);
-
-        &:hover,
-        &.hover {
-          background-color: var(--mds-color-theme-button-cancel-hover);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &:active,
-        &.active {
-          background-color: var(--mds-color-theme-button-cancel-pressed);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
-
-        &[data-shallow-disabled='true'],
-        &[data-disabled='true'],
-        &.disable {
-          background-color: var(--mds-color-theme-button-secondary-normal);
-          border-color: var(--mds-color-theme-outline-disabled-normal);
-          color: var(--mds-color-theme-text-primary-disabled);
-          cursor: auto;
-        }
-      }
-    }
   }
 
-  // MESSAGE
+  // A.4 Color = message
   &[data-color='message'] {
     background-color: var(--mds-color-theme-button-accent-normal);
     color: var(--mds-color-theme-common-text-white);
@@ -358,8 +107,88 @@
       color: var(--mds-color-theme-text-primary-disabled);
       cursor: auto;
     }
+  }
 
-    &[data-ghost='true'][data-solid='false'] {
+  // B. GHOST = TRUE | OUTLINE = FALSE | INVERTED = FALSE
+  &[data-ghost='true'][data-outline='false'][data-inverted='false'] {
+    // B.1 color = undefined
+    background-color: var(--mds-color-theme-button-secondary-normal);
+    color: var(--mds-color-theme-text-primary-normal);
+
+    &:hover,
+    &.hover {
+      background-color: var(--mds-color-theme-button-secondary-hover);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--mds-color-theme-button-secondary-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+
+    &[data-disabled='true'],
+    &.disable,
+    &[data-shallow-disabled='true'] {
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-primary-disabled);
+      cursor: auto;
+    }
+
+    // B.2 color = join
+    &[data-color='join'] {
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-success-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-secondary-hover);
+        color: var(--mds-color-theme-text-success-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-secondary-pressed);
+        color: var(--mds-color-theme-text-success-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-secondary-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        cursor: auto;
+      }
+    }
+
+    // B.3 color = cancel
+    &[data-color='cancel'] {
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-error-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-secondary-hover);
+        color: var(--mds-color-theme-text-error-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-secondary-pressed);
+        color: var(--mds-color-theme-text-error-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-secondary-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        cursor: auto;
+      }
+    }
+
+    // B.4 color = message
+    &[data-color='message'] {
       background-color: var(--mds-color-theme-button-secondary-normal);
       color: var(--mds-color-theme-text-accent-normal);
 
@@ -375,76 +204,411 @@
         color: var(--mds-color-theme-text-accent-normal);
       }
 
-      &[data-shallow-disabled='true'],
       &[data-disabled='true'],
-      &.disable {
+      &.disable,
+      &[data-shallow-disabled='true'] {
         background-color: var(--mds-color-theme-button-secondary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
         cursor: auto;
       }
+    }
+  }
 
-      &[data-outline='true'] {
-        background-color: var(--mds-color-theme-button-secondary-normal);
-        border-color: var(--mds-color-theme-outline-theme-normal);
-        color: var(--mds-color-theme-text-accent-normal);
+  // C. GHOST = FALSE | OUTLINE = TRUE | INVERTED = FALSE
+  &[data-outline='false'][data-outline='true'][data-inverted='false'] {
+    // C.1 color = undefined
+    border-color: var(--mds-color-theme-outline-button-normal);
 
-        &:hover,
-        &.hover {
-          background-color: var(--mds-color-theme-button-accent-hover);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
+    &[data-disabled='true'],
+    &.disable,
+    &[data-shallow-disabled='true'] {
+      border-color: var(--mds-color-theme-outline-disabled-normal);
+      cursor: auto;
+    }
 
-        &:active,
-        &.active {
-          background-color: var(--mds-color-theme-button-accent-pressed);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
+    // C.1 color = join
+    &[data-color='join'] {
+      border-color: var(--mds-color-theme-outline-join-normal);
 
-        &[data-shallow-disabled='true'],
-        &[data-disabled='true'],
-        &.disable {
-          background-color: var(--mds-color-theme-button-secondary-normal);
-          border-color: var(--mds-color-theme-outline-disabled-normal);
-          color: var(--mds-color-theme-text-primary-disabled);
-          cursor: auto;
-        }
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
       }
     }
 
-    &[data-ghost='false'],
-    &[data-solid='true'] {
-      &[data-outline='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
-        border-color: var(--mds-color-theme-outline-theme-normal);
-        color: var(--mds-color-theme-text-accent-normal);
+    // C.2 color = cancel
+    &[data-color='cancel'] {
+      border-color: var(--mds-color-theme-outline-cancel-normal);
 
-        &:hover,
-        &.hover {
-          background-color: var(--mds-color-theme-button-accent-hover);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
+      }
+    }
 
-        &:active,
-        &.active {
-          background-color: var(--mds-color-theme-button-accent-pressed);
-          border-color: rgba(0, 0, 0, 0);
-          color: var(--mds-color-theme-common-text-white);
-        }
+    // C.3 color = message
+    &[data-color='message'] {
+      border-color: var(--mds-color-theme-outline-theme-normal);
 
-        &[data-shallow-disabled='true'],
-        &[data-disabled='true'],
-        &.disable {
-          background-color: var(--mds-color-theme-button-secondary-normal);
-          border-color: var(--mds-color-theme-outline-disabled-normal);
-          color: var(--mds-color-theme-text-primary-disabled);
-          cursor: auto;
-        }
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
       }
     }
   }
+
+  // D. GHOST = FALSE | OUTLINE = FALSE | INVERTED = TRUE
+  &[data-ghost='false'][data-outline='false'][data-inverted='true'] {
+    // D.1 color = undefined
+    background-color: var(--mds-color-theme-button-inverted-normal);
+    color: var(--mds-color-theme-text-primary-normal);
+
+    &:hover,
+    &.hover {
+      background-color: var(--mds-color-theme-button-inverted-hover);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--mds-color-theme-button-inverted-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+
+    &[data-disabled='true'],
+    &.disable,
+    &[data-shallow-disabled='true'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-primary-disabled);
+      cursor: auto;
+    }
+
+    // D.2 color = join
+    &[data-color='join'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-success-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-hover);
+        color: var(--mds-color-theme-text-success-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-pressed);
+        color: var(--mds-color-theme-text-success-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-inverted-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        cursor: auto;
+      }
+    }
+
+    // D.3 color = cancel
+    &[data-color='cancel'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-error-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-hover);
+        color: var(--mds-color-theme-text-error-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-pressed);
+        color: var(--mds-color-theme-text-error-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-inverted-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        cursor: auto;
+      }
+    }
+
+    // D.4 color = message
+    &[data-color='message'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-accent-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-hover);
+        color: var(--mds-color-theme-text-accent-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-pressed);
+        color: var(--mds-color-theme-text-accent-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-inverted-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        cursor: auto;
+      }
+    }
+  }
+
+  // E. GHOST = TRUE | OUTLINE = TRUE | INVERTED = FALSE
+  &[data-ghost='true'][data-outline='true'][data-inverted='false'] {
+    // E.1 color = undefined
+    background-color: var(--mds-color-theme-button-secondary-normal);
+    color: var(--mds-color-theme-text-primary-normal);
+    border-color: var(--mds-color-theme-outline-button-normal);
+
+    &:hover,
+    &.hover {
+      background-color: var(--mds-color-theme-button-secondary-hover);
+      color: var(--mds-color-theme-text-primary-normal);
+      border-color: var(--mds-color-theme-outline-button-normal);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--mds-color-theme-button-secondary-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
+      border-color: var(--mds-color-theme-outline-button-normal);
+    }
+
+    &[data-disabled='true'],
+    &.disable,
+    &[data-shallow-disabled='true'] {
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-primary-disabled);
+      border-color: var(--mds-color-theme-outline-disabled-normal);
+      cursor: auto;
+    }
+
+    // E.2 color = join
+    &[data-color='join'] {
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-success-normal);
+      border-color: var(--mds-color-theme-outline-join-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-join-hover);
+        color: var(--mds-color-theme-common-text-white);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-join-pressed);
+        color: var(--mds-color-theme-common-text-white);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-secondary-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
+      }
+    }
+
+    // E.3 color = cancel
+    &[data-color='cancel'] {
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-error-normal);
+      border-color: var(--mds-color-theme-outline-cancel-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-cancel-hover);
+        color: var(--mds-color-theme-common-text-white);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-cancel-pressed);
+        color: var(--mds-color-theme-common-text-white);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-secondary-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
+      }
+    }
+
+    // E.4 color = message
+    &[data-color='message'] {
+      background-color: var(--mds-color-theme-button-secondary-normal);
+      color: var(--mds-color-theme-text-accent-normal);
+      border-color: var(--mds-color-theme-outline-theme-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-accent-hover);
+        color: var(--mds-color-theme-common-text-white);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-accent-pressed);
+        color: var(--mds-color-theme-common-text-white);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-secondary-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
+      }
+    }
+  }
+
+  // F. GHOST = FALSE | OUTLINE = TRUE | INVERTED = TRUE
+  &[data-ghost='false'][data-outline='true'][data-inverted='true'] {
+    // F.1 color = undefined
+    background-color: var(--mds-color-theme-button-inverted-normal);
+    color: var(--mds-color-theme-text-primary-normal);
+    border-color: var(--mds-color-theme-outline-button-normal);
+
+    &:hover,
+    &.hover {
+      background-color: var(--mds-color-theme-button-inverted-hover);
+      border-color: var(--mds-color-theme-outline-button-normal);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--mds-color-theme-button-inverted-pressed);
+      border-color: var(--mds-color-theme-outline-button-normal);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
+
+    &[data-disabled='true'],
+    &.disable,
+    &[data-shallow-disabled='true'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-primary-disabled);
+      border-color: var(--mds-color-theme-outline-disabled-normal);
+      cursor: auto;
+    }
+
+    // F.2 color = join
+    &[data-color='join'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-success-normal);
+      border-color: var(--mds-color-theme-outline-join-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-hover);
+        color: var(--mds-color-theme-text-success-normal);
+        border-color: var(--mds-color-theme-outline-join-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-pressed);
+        color: var(--mds-color-theme-text-success-normal);
+        border-color: var(--mds-color-theme-outline-join-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-inverted-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
+      }
+    }
+
+    // F.3 color = cancel
+    &[data-color='cancel'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-error-normal);
+      border-color: var(--mds-color-theme-outline-cancel-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-hover);
+        color: var(--mds-color-theme-text-error-normal);
+        border-color: var(--mds-color-theme-outline-cancel-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-pressed);
+        color: var(--mds-color-theme-text-error-normal);
+        border-color: var(--mds-color-theme-outline-cancel-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-inverted-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
+      }
+    }
+
+    // F.4 color = message
+    &[data-color='message'] {
+      background-color: var(--mds-color-theme-button-inverted-normal);
+      color: var(--mds-color-theme-text-accent-normal);
+      border-color: var(--mds-color-theme-outline-theme-normal);
+
+      &:hover,
+      &.hover {
+        background-color: var(--mds-color-theme-button-inverted-hover);
+        color: var(--mds-color-theme-text-accent-normal);
+        border-color: var(--mds-color-theme-outline-theme-normal);
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--mds-color-theme-button-inverted-pressed);
+        color: var(--mds-color-theme-text-accent-normal);
+        border-color: var(--mds-color-theme-outline-theme-normal);
+      }
+
+      &[data-disabled='true'],
+      &.disable,
+      &[data-shallow-disabled='true'] {
+        background-color: var(--mds-color-theme-button-inverted-normal);
+        color: var(--mds-color-theme-text-primary-disabled);
+        border-color: var(--mds-color-theme-outline-disabled-normal);
+        cursor: auto;
+      }
+    }
+  }
+
+  // G. GHOST = TRUE | OUTLINE = FALSE | INVERTED = TRUE
+  // Not allowed
+
+  // H. GHOST = TRUE | OUTLINE = TRUE | INVERTED = TRUE
+  // Not allowed
 
   /* Sizing and spacing */
 
