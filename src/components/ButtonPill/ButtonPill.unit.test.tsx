@@ -133,14 +133,14 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot when color is outlined and solid is set', () => {
+    it('should match snapshot when color is outlined and inverted is set', () => {
       expect.assertions(1);
 
       const outline = !DEFAULTS.OUTLINE;
-      const solid = !DEFAULTS.SOLID;
+      const inverted = !DEFAULTS.INVERTED;
 
       container = mount(
-        <ButtonPill outline={outline} solid={solid}>
+        <ButtonPill outline={outline} inverted={inverted}>
           Example Text
         </ButtonPill>
       );
@@ -267,16 +267,16 @@ describe('<ButtonPill />', () => {
       expect(element.getAttribute('data-grown')).toBe(`${grown}`);
     });
 
-    it('should pass solid prop', () => {
+    it('should pass inverted prop', () => {
       expect.assertions(1);
 
-      const solid = !DEFAULTS.SOLID;
+      const inverted = !DEFAULTS.INVERTED;
 
-      const element = mount(<ButtonPill solid={solid} />)
+      const element = mount(<ButtonPill inverted={inverted} />)
         .find(ButtonPill)
         .getDOMNode();
 
-      expect(element.getAttribute('data-solid')).toBe(`${solid}`);
+      expect(element.getAttribute('data-inverted')).toBe(`${inverted}`);
     });
 
     it('should pass size prop', () => {

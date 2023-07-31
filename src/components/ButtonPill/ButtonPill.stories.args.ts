@@ -23,8 +23,7 @@ export default {
     },
   },
   color: {
-    description:
-      'Modifies the color of this `<ButtonPill />`. Some colors do not include an outline variant.',
+    description: 'Modifies the color of this `<ButtonPill />`.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -64,8 +63,7 @@ export default {
     },
   },
   ghost: {
-    description:
-      'Whether this `<ButtonPill />` is a ghost. This overrides the `color` and `outline` props.',
+    description: 'Whether this component has a transparent background.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -91,7 +89,7 @@ export default {
     },
   },
   outline: {
-    description: 'Whether to render the outline variant of this `<ButtonPill />`.',
+    description: 'Whether this component has an outline/border.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -103,9 +101,9 @@ export default {
       },
     },
   },
-  solid: {
+  inverted: {
     description:
-      'Whether to use the solid background variant of this `<ButtonPill />`. Only available with outline currently. Does not support `color`',
+      'Whether this component has inverted background (black for dark mode and white for light mode)',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -113,7 +111,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SOLID,
+        summary: CONSTANTS.DEFAULTS.INVERTED,
       },
     },
   },

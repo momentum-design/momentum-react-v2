@@ -145,13 +145,13 @@ describe('<ButtonCircle />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot when color is outlined and solid is set', () => {
+    it('should match snapshot when color is outlined and inverted is set', () => {
       expect.assertions(1);
 
       const outline = !DEFAULTS.OUTLINE;
-      const solid = !DEFAULTS.SOLID;
+      const inverted = !DEFAULTS.INVERTED;
 
-      const container = mount(<ButtonCircle outline={outline} solid={solid} />);
+      const container = mount(<ButtonCircle outline={outline} inverted={inverted} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -289,16 +289,16 @@ describe('<ButtonCircle />', () => {
       expect(element.getAttribute('title')).toBe(title);
     });
 
-    it('should pass solid prop', () => {
+    it('should pass inverted prop', () => {
       expect.assertions(1);
 
-      const solid = !DEFAULTS.SOLID;
+      const inverted = !DEFAULTS.INVERTED;
 
-      const element = mount(<ButtonCircle solid={solid} />)
+      const element = mount(<ButtonCircle inverted={inverted} />)
         .find(ButtonCircle)
         .getDOMNode();
 
-      expect(element.getAttribute('data-solid')).toBe(`${solid}`);
+      expect(element.getAttribute('data-inverted')).toBe(`${inverted}`);
     });
 
     it('should render ButtonSimple', () => {

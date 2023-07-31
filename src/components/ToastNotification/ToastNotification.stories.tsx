@@ -87,7 +87,7 @@ ButtonGroup.parameters = {
     {
       content: 'Example text',
       buttonGroup: (
-        <ButtonPill outline size={28}>
+        <ButtonPill outline ghost size={28}>
           Button
         </ButtonPill>
       ),
@@ -96,7 +96,7 @@ ButtonGroup.parameters = {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
       buttonGroup: (
-        <ButtonPill outline size={28}>
+        <ButtonPill outline ghost size={28}>
           Button
         </ButtonPill>
       ),
@@ -106,7 +106,7 @@ ButtonGroup.parameters = {
       buttonGroup: (
         <>
           <ButtonPill size={28}>Button</ButtonPill>
-          <ButtonPill outline size={28}>
+          <ButtonPill outline ghost size={28}>
             Button
           </ButtonPill>
         </>
@@ -118,7 +118,7 @@ ButtonGroup.parameters = {
       buttonGroup: (
         <>
           <ButtonPill size={28}>Button</ButtonPill>
-          <ButtonPill outline size={28}>
+          <ButtonPill outline ghost size={28}>
             Button
           </ButtonPill>
         </>

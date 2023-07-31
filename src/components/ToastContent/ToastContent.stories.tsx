@@ -84,7 +84,7 @@ Common.parameters = {
       actionColor: 'join',
       actions: (
         <ButtonGroup spaced>
-          <ButtonCircle outline size={28}>
+          <ButtonCircle outline inverted size={28}>
             <Icon name="alarm" weight="bold" autoScale={125} />
           </ButtonCircle>
           <ButtonPill color="message" size={28}>
@@ -108,7 +108,7 @@ Common.parameters = {
       info: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing.',
       actions: (
         <ButtonGroup spaced>
-          <ButtonCircle outline size={28}>
+          <ButtonCircle outline inverted size={28}>
             <Icon name="alarm" weight="bold" autoScale={125} />
           </ButtonCircle>
           <ButtonPill color="join" size={28}>
@@ -134,7 +134,7 @@ Common.parameters = {
       actor: 'Actor',
       actions: (
         <ButtonGroup spaced>
-          <ButtonPill outline size={28}>
+          <ButtonPill outline inverted size={28}>
             Snooze
           </ButtonPill>
         </ButtonGroup>

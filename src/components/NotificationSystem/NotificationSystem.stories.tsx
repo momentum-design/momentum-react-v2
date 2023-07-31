@@ -30,7 +30,7 @@ const Example = Template<NotificationSystemProps>((args) => {
       <ButtonPill
         onPress={() =>
           NotificationSystem.notify(
-            <NotificationTemplate notificationText="I'm a low attention notification" />
+            <NotificationTemplate content="I'm a low attention notification" />
           )
         }
       >
@@ -54,7 +54,7 @@ const Important = Template<NotificationSystemProps>((args) => {
         onPress={() =>
           NotificationSystem.notify(
             <NotificationTemplate
-              notificationText="I'm a medium attention notification, which does stay here permanently and requires an action."
+              content="I'm a medium attention notification, which does stay here permanently and requires an action."
               closeButtonText="Close"
             />,
             { attention: ATTENTION.MEDIUM }
@@ -80,7 +80,7 @@ const Mixed = Template<NotificationSystemProps>((args) => {
       <ButtonPill
         onPress={() =>
           NotificationSystem.notify(
-            <NotificationTemplate notificationText="I'm a low attention notification" />
+            <NotificationTemplate content="I'm a low attention notification" />
           )
         }
       >
@@ -90,7 +90,7 @@ const Mixed = Template<NotificationSystemProps>((args) => {
         onPress={() =>
           NotificationSystem.notify(
             <NotificationTemplate
-              notificationText="I'm a medium attention notification, which does stay here permanently and requires an action."
+              content="I'm a medium attention notification, which does stay here permanently and requires an action."
               closeButtonText="Close"
             />,
             {
@@ -119,7 +119,7 @@ const UpdateContent = Template<NotificationSystemProps>(() => {
 
   const Notification = (
     <NotificationTemplate
-      notificationText={
+      content={
         numberRaisedHand > 1
           ? `${numberRaisedHand} have their hand raised.`
           : 'User A has the hand raised.'
@@ -182,7 +182,7 @@ const ResetTimer = Template<NotificationSystemProps>(() => {
 
   const [notificationIsShown, setNotificationIsShown] = React.useState(false);
 
-  const Notification = <NotificationTemplate notificationText={`I am disappearing in 5 seconds`} />;
+  const Notification = <NotificationTemplate content={`I am disappearing in 5 seconds`} />;
 
   const handleClose = React.useCallback(() => {
     setNotificationIsShown(false);
@@ -225,7 +225,7 @@ const MultipleSystems = Template<NotificationSystemProps>(() => {
 
   const showNotification = React.useCallback((position: PositionType) => {
     toastId.current = NotificationSystem.notify(
-      <NotificationTemplate notificationText={`I'm a notification on the ${position} position`} />,
+      <NotificationTemplate content={`I'm a notification on the ${position} position`} />,
       {
         autoClose: 5000,
         notificationSystemId: position,

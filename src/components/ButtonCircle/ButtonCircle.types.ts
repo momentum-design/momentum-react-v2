@@ -23,19 +23,19 @@ export interface Props extends ButtonSimpleProps {
   shallowDisabled?: boolean;
 
   /**
-   * Whether or not this ButtonCircle is ghosted.
+   * Whether or not this ButtonCircle has a transparent background.
    */
   ghost?: boolean;
 
   /**
-   * Whether to use the outline variant of this ButtonCircle if available.
+   * Whether or not this ButtonCircle has an outline/border.
    */
   outline?: boolean;
 
   /**
-   * Whether to use the solid background variant of this ButtonCircle.
+   * Whether or not this ButtonCircle has inverted background (black for dark mode and white for light mode).
    */
-  solid?: boolean;
+  inverted?: boolean;
 
   /**
    * Size index of this ButtonCircle.

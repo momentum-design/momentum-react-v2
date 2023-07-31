@@ -30,7 +30,7 @@ export default {
 
 const commonButtons = (
   <ButtonGroup spaced>
-    <ButtonCircle outline size={28}>
+    <ButtonCircle outline ghost size={28}>
       <Icon name="alarm" weight="bold" autoScale={125} />
     </ButtonCircle>
     <ButtonPill color="message" size={28}>

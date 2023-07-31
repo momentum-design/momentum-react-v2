@@ -23,8 +23,7 @@ const buttonCircleArgTypes = {
     },
   },
   color: {
-    description:
-      'Modifies the color of this component. Some colors do not include an outline variant.',
+    description: 'Modifies the color of this component.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -51,7 +50,7 @@ const buttonCircleArgTypes = {
   },
   shallowDisabled: {
     description:
-      'Whether to render the COMPONENT looking as if disabled, but allowing onPress actions to still be passed.',
+      'Whether to render the component looking as if disabled, but allowing onPress actions to still be passed.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -64,8 +63,7 @@ const buttonCircleArgTypes = {
     },
   },
   ghost: {
-    description:
-      'Whether this component is a ghost. This overrides the `color` and `outline` props.',
+    description: 'Whether this component has a transparent background.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -78,7 +76,7 @@ const buttonCircleArgTypes = {
     },
   },
   outline: {
-    description: 'Whether to render the outline variant of this component.',
+    description: 'Whether this component has an outline/border.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -90,9 +88,9 @@ const buttonCircleArgTypes = {
       },
     },
   },
-  solid: {
+  inverted: {
     description:
-      'Whether to use the solid background variant of this `<ButtonCircle />`. Does not support `color` or `ghost`',
+      'Whether this component has inverted background (black for dark mode and white for light mode)',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -100,7 +98,7 @@ const buttonCircleArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SOLID,
+        summary: CONSTANTS.DEFAULTS.INVERTED,
       },
     },
   },

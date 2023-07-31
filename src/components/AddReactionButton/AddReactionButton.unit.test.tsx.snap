@@ -11,11 +11,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
+      data-inverted={false}
       data-multiple-children={false}
       data-outline={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
     >
       <FocusRing>
         <FocusRing
@@ -27,11 +27,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
+            data-inverted={false}
             data-multiple-children={false}
             data-outline={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}
@@ -89,11 +89,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
+      data-inverted={false}
       data-multiple-children={false}
       data-outline={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
     >
       <FocusRing>
         <FocusRing
@@ -105,11 +105,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
+            data-inverted={false}
             data-multiple-children={false}
             data-outline={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}
@@ -168,11 +168,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
+      data-inverted={false}
       data-multiple-children={false}
       data-outline={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
       id="example-id"
     >
       <FocusRing>
@@ -185,11 +185,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
+            data-inverted={false}
             data-multiple-children={false}
             data-outline={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             id="example-id"
             onBlur={[Function]}
             onClick={[Function]}
@@ -257,11 +257,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
       data-color="primary"
       data-disabled={false}
       data-ghost={false}
+      data-inverted={false}
       data-multiple-children={false}
       data-outline={false}
       data-shallow-disabled={false}
       data-size={20}
-      data-solid={false}
       style={
         Object {
           "color": "pink",
@@ -278,11 +278,11 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
+            data-inverted={false}
             data-multiple-children={false}
             data-outline={false}
             data-shallow-disabled={false}
             data-size={20}
-            data-solid={false}
             onBlur={[Function]}
             onClick={[Function]}
             onDragStart={[Function]}

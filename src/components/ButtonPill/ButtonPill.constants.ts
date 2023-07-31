@@ -8,7 +8,7 @@ const DEFAULTS = {
   GROWN: false,
   OUTLINE: false,
   SIZE: 40,
-  SOLID: false,
+  INVERTED: false,
 };
 
 const COLORS = {

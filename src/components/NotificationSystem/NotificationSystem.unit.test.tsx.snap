@@ -71,11 +71,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -182,11 +182,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -294,11 +294,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -406,11 +406,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -518,11 +518,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -630,11 +630,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -742,11 +742,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -850,11 +850,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -955,11 +955,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1071,11 +1071,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1183,11 +1183,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1295,11 +1295,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1407,11 +1407,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1519,11 +1519,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div
@@ -1631,11 +1631,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                       data-color="primary"
                       data-disabled="false"
                       data-ghost="true"
+                      data-inverted="false"
                       data-multiple-children="false"
                       data-outline="false"
                       data-shallow-disabled="false"
                       data-size="20"
-                      data-solid="false"
                       type="button"
                     >
                       <div

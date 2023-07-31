@@ -43,12 +43,12 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
             data-color="primary"
             data-disabled={false}
             data-ghost={false}
+            data-inverted={false}
             data-multiple-children={false}
             data-outline={false}
             data-reacted={false}
             data-shallow-disabled={false}
             data-size={32}
-            data-solid={false}
           >
             <FocusRing>
               <FocusRing
@@ -60,12 +60,12 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={false}
+                  data-inverted={false}
                   data-multiple-children={false}
                   data-outline={false}
                   data-reacted={false}
                   data-shallow-disabled={false}
                   data-size={32}
-                  data-solid={false}
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragStart={[Function]}

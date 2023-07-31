@@ -52,6 +52,7 @@ Common.parameters = {
       leftIcon: exampleIcon,
       rightIcon: exampleRightIcon,
       outline: true,
+      inverted: true,
     },
     {
       children: 'Lonnnnnnnnnnnnnnng Example E',
@@ -71,6 +72,7 @@ Common.parameters = {
       rightIcon: exampleRightIcon,
       outline: true,
       error: true,
+      inverted: true,
     },
     {
       children: 'Example H',

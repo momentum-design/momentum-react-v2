@@ -7,11 +7,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -23,11 +23,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -59,11 +59,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={true}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -75,11 +75,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -116,11 +116,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
     data-color="primary"
     data-disabled={true}
     data-ghost={true}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     isDisabled={true}
   >
     <FocusRing
@@ -136,11 +136,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
           data-color="primary"
           data-disabled={true}
           data-ghost={true}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -177,11 +177,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={true}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -193,11 +193,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={true}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -224,21 +224,21 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
 </ButtonCircle>
 `;
 
-exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined and solid is set 1`] = `
+exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined and inverted is set 1`] = `
 <ButtonCircle
+  inverted={true}
   outline={true}
-  solid={true}
 >
   <ButtonSimple
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={true}
     data-multiple-children={false}
     data-outline={true}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={true}
   >
     <FocusRing>
       <FocusRing
@@ -250,11 +250,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={true}
           data-multiple-children={false}
           data-outline={true}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={true}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -286,11 +286,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
     data-color="primary"
     data-disabled={true}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     isDisabled={true}
   >
     <FocusRing
@@ -306,11 +306,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
           data-color="primary"
           data-disabled={true}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -347,11 +347,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={true}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -363,11 +363,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={true}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -403,11 +403,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -419,11 +419,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -455,11 +455,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
     data-color="message"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -471,11 +471,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
           data-color="message"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -511,11 +511,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     id="example-id"
   >
     <FocusRing>
@@ -528,11 +528,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -563,11 +563,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={true}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -579,11 +579,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={true}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -622,11 +622,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={64}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -638,11 +638,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={64}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -682,11 +682,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     style={
       Object {
         "color": "pink",
@@ -703,11 +703,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -744,11 +744,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     title="Example Text"
   >
     <FocusRing>
@@ -761,11 +761,11 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}

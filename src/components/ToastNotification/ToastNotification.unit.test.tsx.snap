@@ -94,10 +94,10 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={false}
             data-shallow-disabled={false}
             data-size={28}
-            data-solid={false}
           >
             <FocusRing>
               <FocusRing
@@ -110,10 +110,10 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-inverted={false}
                   data-outline={false}
                   data-shallow-disabled={false}
                   data-size={28}
-                  data-solid={false}
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragStart={[Function]}
@@ -148,10 +148,10 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-inverted={false}
             data-outline={true}
             data-shallow-disabled={false}
             data-size={28}
-            data-solid={false}
           >
             <FocusRing>
               <FocusRing
@@ -164,10 +164,10 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-inverted={false}
                   data-outline={true}
                   data-shallow-disabled={false}
                   data-size={28}
-                  data-solid={false}
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragStart={[Function]}

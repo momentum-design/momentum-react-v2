@@ -60,7 +60,7 @@ const NotificationTemplate: FC<NotificationTemplateProps> = (props: Notification
       }
       buttonGroup={
         closeButtonText && (
-          <ButtonPill outline size={28} onPress={handleClose}>
+          <ButtonPill outline ghost size={28} onPress={handleClose}>
             {closeButtonText}
           </ButtonPill>
         )

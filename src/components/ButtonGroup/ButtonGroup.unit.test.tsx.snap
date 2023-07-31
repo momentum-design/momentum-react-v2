@@ -19,10 +19,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
         data-disabled={false}
         data-ghost={false}
         data-grown={false}
+        data-inverted={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -35,10 +35,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -71,11 +71,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
         data-color="primary"
         data-disabled={false}
         data-ghost={false}
+        data-inverted={false}
         data-multiple-children={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -87,11 +87,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
               data-color="primary"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -141,10 +141,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
         data-disabled={false}
         data-ghost={false}
         data-grown={false}
+        data-inverted={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -157,10 +157,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -193,11 +193,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
         data-color="primary"
         data-disabled={false}
         data-ghost={false}
+        data-inverted={false}
         data-multiple-children={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -209,11 +209,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
               data-color="primary"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -251,11 +251,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
   >
     <FocusRing>
       <FocusRing
@@ -267,11 +267,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -303,11 +303,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     id="example-id"
   >
     <FocusRing>
@@ -320,11 +320,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -369,10 +369,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
         data-disabled={false}
         data-ghost={false}
         data-grown={false}
+        data-inverted={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -385,10 +385,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -421,11 +421,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
         data-color="primary"
         data-disabled={false}
         data-ghost={false}
+        data-inverted={false}
         data-multiple-children={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -437,11 +437,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
               data-color="primary"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -492,10 +492,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
         data-disabled={false}
         data-ghost={false}
         data-grown={false}
+        data-inverted={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -508,10 +508,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -544,11 +544,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
         data-color="primary"
         data-disabled={false}
         data-ghost={false}
+        data-inverted={false}
         data-multiple-children={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -560,11 +560,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
               data-color="primary"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -614,10 +614,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
         data-disabled={false}
         data-ghost={false}
         data-grown={false}
+        data-inverted={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -630,10 +630,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -666,11 +666,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
         data-color="primary"
         data-disabled={false}
         data-ghost={false}
+        data-inverted={false}
         data-multiple-children={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -682,11 +682,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
               data-color="primary"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -736,10 +736,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
         data-disabled={false}
         data-ghost={false}
         data-grown={false}
+        data-inverted={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -752,10 +752,10 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -788,11 +788,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
         data-color="primary"
         data-disabled={false}
         data-ghost={false}
+        data-inverted={false}
         data-multiple-children={false}
         data-outline={false}
         data-shallow-disabled={false}
         data-size={40}
-        data-solid={false}
       >
         <FocusRing>
           <FocusRing
@@ -804,11 +804,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
               data-color="primary"
               data-disabled={false}
               data-ghost={false}
+              data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={40}
-              data-solid={false}
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -850,11 +850,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
     data-shallow-disabled={false}
     data-size={40}
-    data-solid={false}
     style={
       Object {
         "color": "pink",
@@ -871,11 +871,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
-          data-solid={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}

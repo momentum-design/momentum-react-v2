@@ -104,10 +104,10 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
             data-disabled="false"
             data-ghost="false"
             data-grown="false"
+            data-inverted="false"
             data-outline="false"
             data-shallow-disabled="false"
             data-size="40"
-            data-solid="false"
             type="button"
           >
             <span>
@@ -120,10 +120,10 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
             data-disabled="false"
             data-ghost="false"
             data-grown="false"
+            data-inverted="false"
             data-outline="false"
             data-shallow-disabled="false"
             data-size="40"
-            data-solid="false"
             type="button"
           >
             <span>
@@ -214,10 +214,10 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
               data-disabled="false"
               data-ghost="false"
               data-grown="false"
+              data-inverted="false"
               data-outline="false"
               data-shallow-disabled="false"
               data-size="40"
-              data-solid="false"
               type="button"
             >
               <span>
@@ -230,10 +230,10 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
               data-disabled="false"
               data-ghost="false"
               data-grown="false"
+              data-inverted="false"
               data-outline="false"
               data-shallow-disabled="false"
               data-size="40"
-              data-solid="false"
               type="button"
             >
               <span>
