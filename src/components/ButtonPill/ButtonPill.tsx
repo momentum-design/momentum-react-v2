@@ -20,6 +20,10 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
     ...otherProps
   } = props;
 
+  if (ghost && inverted) {
+    console.warn('ButtonPill: Ghost inverted button circle is not allowed in Momentum.');
+  }
+
   return (
     <ButtonSimple
       className={classnames(STYLE.wrapper, className)}
