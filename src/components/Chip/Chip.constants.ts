@@ -35,6 +35,7 @@ const DEFAULTS = {
   ERROR: false,
   AVATAR: undefined,
   OUTLINE: false,
+  GHOST: false,
   COLOR: MULTILINE_COLORS.MINT,
   MULTILINE: false,
   SEARCH: false,

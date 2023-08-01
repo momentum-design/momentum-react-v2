@@ -72,7 +72,7 @@ export const getComponentStates = (Component: FC, args: any, variant: any): Reac
         minWidth: '18rem',
         padding: '1rem',
         display: 'grid',
-        gridTemplateColumns: `repeat(1, auto)`,
+        gridTemplateColumns: `repeat(${COMPONENT_STATES.length}, 1fr)`,
         gap: '1.5rem',
         alignItems: 'start',
         alignContent: 'start',

@@ -21,7 +21,7 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
   } = props;
 
   if (ghost && inverted) {
-    console.warn('ButtonPill: Ghost inverted button circle is not allowed in Momentum.');
+    console.warn('MRV2: Momentum does not support a ghost inverted ButtonPill.');
   }
 
   return (

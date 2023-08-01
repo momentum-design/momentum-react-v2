@@ -10,7 +10,10 @@ button.md-button-pill-wrapper.md-chip-wrapper.md-button-simple-wrapper {
   &[data-error='true'],
   &[data-error='true']:hover,
   &[data-error='true']:active {
-    background-color: var(--mds-color-theme-background-alert-error-normal) !important;
+    &[data-ghost='false'] {
+      background-color: var(--mds-color-theme-background-alert-error-normal) !important;
+    }
+
     color: var(--mds-color-theme-text-error-normal) !important;
 
     &[data-outline='true'] {

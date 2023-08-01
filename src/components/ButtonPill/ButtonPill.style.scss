@@ -408,12 +408,14 @@
       &.hover {
         background-color: var(--mds-color-theme-button-join-hover);
         color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-join-pressed);
         color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &[data-disabled='true'],
@@ -436,12 +438,14 @@
       &.hover {
         background-color: var(--mds-color-theme-button-cancel-hover);
         color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-cancel-pressed);
         color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &[data-disabled='true'],
@@ -464,12 +468,14 @@
       &.hover {
         background-color: var(--mds-color-theme-button-accent-hover);
         color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-accent-pressed);
         color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &[data-disabled='true'],
