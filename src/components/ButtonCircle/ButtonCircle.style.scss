@@ -527,16 +527,16 @@
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-inverted-hover);
-        color: var(--mds-color-theme-text-success-normal);
-        border-color: var(--mds-color-theme-outline-join-normal);
+        background-color: var(--mds-color-theme-button-join-hover);
+        color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-inverted-pressed);
-        color: var(--mds-color-theme-text-success-normal);
-        border-color: var(--mds-color-theme-outline-join-normal);
+        background-color: var(--mds-color-theme-button-join-pressed);
+        color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &[data-disabled='true'],
@@ -557,16 +557,16 @@
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-inverted-hover);
-        color: var(--mds-color-theme-text-error-normal);
-        border-color: var(--mds-color-theme-outline-cancel-normal);
+        background-color: var(--mds-color-theme-button-cancel-hover);
+        color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-inverted-pressed);
-        color: var(--mds-color-theme-text-error-normal);
-        border-color: var(--mds-color-theme-outline-cancel-normal);
+        background-color: var(--mds-color-theme-button-cancel-pressed);
+        color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &[data-disabled='true'],
@@ -587,16 +587,16 @@
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-inverted-hover);
-        color: var(--mds-color-theme-text-accent-normal);
-        border-color: var(--mds-color-theme-outline-theme-normal);
+        background-color: var(--mds-color-theme-button-accent-hover);
+        color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-inverted-pressed);
-        color: var(--mds-color-theme-text-accent-normal);
-        border-color: var(--mds-color-theme-outline-theme-normal);
+        background-color: var(--mds-color-theme-button-accent-pressed);
+        color: var(--mds-color-theme-common-text-white);
+        border-color: transparent;
       }
 
       &[data-disabled='true'],

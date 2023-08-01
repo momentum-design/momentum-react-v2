@@ -27,7 +27,7 @@ const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<HTMLBu
   const state = useToggleState(props);
 
   if (ghost === false) {
-    console.warn('MRV2: Momentum does not support non-ghost inverted ButtonPillToggle.');
+    console.warn('MRV2: Momentum does not support non-ghost ButtonPillToggle.');
   }
 
   return (
