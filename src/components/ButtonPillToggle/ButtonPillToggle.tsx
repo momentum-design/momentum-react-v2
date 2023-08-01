@@ -26,10 +26,8 @@ const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<HTMLBu
 
   const state = useToggleState(props);
 
-  if (ghost === false && outline === false) {
-    console.warn(
-      'ButtonPillToggle is only designed for outline or ghost pill buttons. Outline and ghost properties cannot be false at the same time.'
-    );
+  if (ghost === false) {
+    console.warn('MRV2: Momentum does not support non-ghost inverted ButtonPillToggle.');
   }
 
   return (

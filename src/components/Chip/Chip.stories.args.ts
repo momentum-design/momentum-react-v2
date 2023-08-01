@@ -62,6 +62,18 @@ const chipArgTypes = {
       },
     },
   },
+  ghost: {
+    description: 'Sets the chip to have ghost background styling',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CHIP_CONSTANTS.DEFAULTS.GHOST,
+      },
+    },
+  },
   disabled: {
     description: 'Sets whether the chip is disabled',
     control: { type: 'boolean' },
