@@ -28,7 +28,7 @@ const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTML
   const state = useToggleState(props);
 
   if (ghost === false) {
-    console.warn('MRV2: Momentum does not support non-ghost inverted ButtonCircleToggle.');
+    console.warn('MRV2: Momentum does not support non-ghost ButtonCircleToggle.');
   }
 
   return (
