@@ -1,0 +1,15 @@
+The `<FixedWidthButtonPillContent />` component.
+
+This component can be used if you have a `<ButtonPill />`, or a `<ButtonPillToggle />`, component
+where the string content changes onPress or as a consequence of a state change. A button which
+changes width in these circumstances may change the layout of a page and result in a suboptimal UX.
+
+Tips:
+
+We recommend adding `overflow: hidden;` to the button you use this with. Otherwise the user may be
+able to trigger the onPress callback on the button from above the button.
+
+Internally this component uses the Momentum React V2 `<Icon />` and `<Text />` components to mimic
+the button content to achieve the fixed width. We recommend using the `<Text />` component for the
+string child component to ensure truncation works as expected if you set a maximum width to the
+button.

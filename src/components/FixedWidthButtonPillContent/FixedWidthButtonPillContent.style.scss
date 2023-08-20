@@ -1,0 +1,51 @@
+$button-pill-border-width: 0.0625rem;
+
+.md-fixed-width-button-pill-content-wrapper {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-self: flex-end;
+
+  .md-fixed-width-button-pill-content-button-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.375rem;
+
+    &[data-size='40'] {
+      font-size: 1rem;
+      height: 2.5rem - $button-pill-border-width;
+      line-height: 2.5rem;
+    }
+
+    &[data-size='32'] {
+      font-size: 1rem;
+      height: 2rem - $button-pill-border-width;
+      line-height: 2rem;
+    }
+
+    &[data-size='28'] {
+      font-size: 0.875rem;
+      height: 1.75rem - $button-pill-border-width;
+      line-height: 1.75rem;
+    }
+
+    &[data-size='24'] {
+      font-size: 0.75rem;
+      height: 1.5rem - $button-pill-border-width;
+      line-height: 1.5rem;
+    }
+
+    &[data-size='20'] {
+      font-size: 0.75rem;
+      height: 1.25rem - $button-pill-border-width;
+      line-height: 1.125rem;
+    }
+  }
+
+  &[data-hidden='true'] {
+    visibility: hidden;
+  }
+}
