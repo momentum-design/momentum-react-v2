@@ -4,16 +4,15 @@ import { DEFAULTS } from './FixedWidthButtonPillContent.constants';
 import { SIZES as ICON_SIZES } from '../Icon/Icon.constants';
 
 const fixedWidthButtonPillContentArgTypes = {
-  // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
   children: {
-    description: 'Provides the child nodes for this element.', // NOTE: Description of this prop.
-    control: { type: 'text' }, // NOTE: Control type for this prop.
+    description: 'Provides the child nodes for this element.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'ReactNode', // NOTE: Explicit type of this prop.
+        summary: 'ReactNode',
       },
       defaultValue: {
-        summary: 'undefined', // NOTE: Default value for this prop.
+        summary: 'undefined',
       },
     },
   },
@@ -59,7 +58,6 @@ const fixedWidthButtonPillContentArgTypes = {
   stringContentVariations: {
     description:
       'An array of strings that will be used in the `<ButtonPill />` component. The longest string will dictate the fixed width of the `<ButtonPill />`',
-    // options: [true, false],
     control: { type: 'text' },
     table: {
       type: {
