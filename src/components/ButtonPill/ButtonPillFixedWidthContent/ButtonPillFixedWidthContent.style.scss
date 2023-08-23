@@ -1,12 +1,12 @@
 $button-pill-border-width: 0.0625rem;
 
-.md-fixed-width-button-pill-content-wrapper {
+.md-button-pill-fixed-width-content-wrapper {
   display: flex;
   max-width: 100%;
   flex-direction: column;
   align-self: flex-end;
 
-  .md-fixed-width-button-pill-content-button-content {
+  .md-button-pill-fixed-width-content-button-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -43,9 +43,9 @@ $button-pill-border-width: 0.0625rem;
       height: 1.25rem - $button-pill-border-width;
       line-height: 1.125rem;
     }
-  }
 
-  &[data-hidden='true'] {
-    visibility: hidden;
+    &[data-hidden='true'] {
+      visibility: hidden;
+    }
   }
 }

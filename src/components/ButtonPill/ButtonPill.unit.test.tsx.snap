@@ -566,6 +566,129 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
 </ButtonPill>
 `;
 
+exports[`<ButtonPill /> snapshot should match snapshot with contentVariations 1`] = `
+<ButtonPill
+  contentVariations={
+    Object {
+      "includeIcon": true,
+      "stringContentVariations": Array [
+        "Mute",
+        "Unmute",
+      ],
+    }
+  }
+>
+  <ButtonSimple
+    className="md-button-pill-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-button-pill-wrapper md-button-simple-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <ButtonPillFixedWidthContent
+            buttonPillSize={40}
+            includeIcon={true}
+            stringContentVariations={
+              Array [
+                "Mute",
+                "Unmute",
+              ]
+            }
+          >
+            <div
+              className="md-button-pill-fixed-width-content-wrapper"
+            >
+              <div
+                className="md-button-pill-fixed-width-content-button-content"
+                data-hidden={true}
+                data-size={40}
+                key="Mute"
+              >
+                <Icon
+                  name="placeholder"
+                  scale={20}
+                />
+                <Text
+                  type="subheader-primary"
+                >
+                  <h3
+                    className="md-text-wrapper"
+                    data-type="subheader-primary"
+                  >
+                    Mute
+                  </h3>
+                </Text>
+              </div>
+              <div
+                className="md-button-pill-fixed-width-content-button-content"
+                data-hidden={true}
+                data-size={40}
+                key="Unmute"
+              >
+                <Icon
+                  name="placeholder"
+                  scale={20}
+                />
+                <Text
+                  type="subheader-primary"
+                >
+                  <h3
+                    className="md-text-wrapper"
+                    data-type="subheader-primary"
+                  >
+                    Unmute
+                  </h3>
+                </Text>
+              </div>
+              <div
+                className="md-button-pill-fixed-width-content-button-content"
+                data-hidden={false}
+                data-size={40}
+              />
+            </div>
+          </ButtonPillFixedWidthContent>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</ButtonPill>
+`;
+
 exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
 <ButtonPill
   id="example-id"

@@ -1,6 +1,11 @@
 import { ReactNode } from 'react';
 import { ButtonSimpleProps } from '../ButtonSimple';
 
+export type ContentVariations = {
+  stringContentVariations: string[];
+  includeIcon: boolean;
+};
+
 export interface Props extends ButtonSimpleProps {
   /**
    * Child components of this ButtonPill.
@@ -46,4 +51,12 @@ export interface Props extends ButtonSimpleProps {
    * Size index of this ButtonPill.
    */
   size?: number;
+
+  /**
+   * An object consisting of an array of strings, stringContentVariations, and a boolean, includeIcon.
+   * stringContentVariations are the strings that may be passed as children to the `<ButtonPill />` component
+   * depending on various state changes. includeIcon is whether or not to include an icon in the fixed width.
+   * Use this prop to acheive a fixed button width based on the longest string and avoid unwanted layout changes.
+   */
+  contentVariations?: ContentVariations;
 }

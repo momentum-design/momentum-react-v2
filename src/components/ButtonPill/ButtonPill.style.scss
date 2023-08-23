@@ -5,6 +5,7 @@
   font-family: var(--md-globals-font-default);
   outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  overflow: hidden !important;
 
   // A. GHOST = FALSE | OUTLINE = FALSE | INVERTED = FALSE
   // A.1 Color = undefined

@@ -5,10 +5,12 @@ import ButtonSimple from '../ButtonSimple';
 import { DEFAULTS, STYLE } from './ButtonPill.constants';
 import { Props } from './ButtonPill.types';
 import './ButtonPill.style.scss';
+import ButtonPillFixedWidthContent from './ButtonPillFixedWidthContent';
 
 const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const {
     className,
+    children,
     color,
     disabled,
     shallowDisabled,
@@ -17,8 +19,10 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
     outline,
     size,
     inverted,
+    contentVariations = DEFAULTS.CONTENT_VARIATIONS,
     ...otherProps
   } = props;
+  const { stringContentVariations, includeIcon } = contentVariations;
 
   if (ghost && inverted) {
     console.warn('MRV2: Momentum does not support a ghost inverted ButtonPill.');
@@ -38,7 +42,19 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
       data-inverted={inverted || DEFAULTS.INVERTED}
       isDisabled={disabled}
       {...otherProps}
-    />
+    >
+      {stringContentVariations.length ? (
+        <ButtonPillFixedWidthContent
+          stringContentVariations={stringContentVariations}
+          includeIcon={includeIcon}
+          buttonPillSize={size || DEFAULTS.SIZE}
+        >
+          {children}
+        </ButtonPillFixedWidthContent>
+      ) : (
+        children
+      )}
+    </ButtonSimple>
   );
 });
 

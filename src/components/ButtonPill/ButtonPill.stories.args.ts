@@ -128,4 +128,16 @@ export default {
       },
     },
   },
+  contentVariations: {
+    description:
+      'An object consisting of an array of strings, stringContentVariations, and a boolean, includeIcon. stringContentVariations are the strings that may be passed as children to the `<ButtonPill />` component depending on various state changes. includeIcon is whether or not to include an icon in the fixed width. Use this prop to acheive a fixed button width based on the longest string and avoid unwanted layout changes.',
+    table: {
+      type: {
+        summary: '{stringContentVariations: string[], includeIcon: boolean}',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.CONTENT_VARIATIONS,
+      },
+    },
+  },
 };

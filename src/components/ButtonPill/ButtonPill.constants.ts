@@ -9,6 +9,7 @@ const DEFAULTS = {
   OUTLINE: false,
   SIZE: 40,
   INVERTED: false,
+  CONTENT_VARIATIONS: { stringContentVariations: [], includeIcon: false },
 };
 
 const COLORS = {

@@ -4,9 +4,16 @@ The `<ButtonPill />` component. This component accepts multiple scopes of child-
 - `color` - The particular color given to the component. Can be 'join' (green), 'cancel' (red) or
   'message' (blue). If undefined, the black/white colors are given to the button.
 - `disabled` - Whether the button is disabled or not.
-- `shallowDisabled` - Whether to render the `<ButtonPill />` looking as if disabled, but allowing onPress actions to still be passed.
+- `shallowDisabled` - Whether to render the `<ButtonPill />` looking as if disabled, but allowing
+  onPress actions to still be passed.
 - `ghost` - Whether the button has a transparent background or not.
 - `grown` - Whether the button's width follows the width of its container or not.
 - `outline` - Whether the button has an outline/border around it.
-- `inverted` - Whether this component has inverted background (black for dark mode and white for light mode).
+- `inverted` - Whether this component has inverted background (black for dark mode and white for
+  light mode).
 - `size` - Size index of this ButtonPill. Can be 40, 32, 28, 24, or 20.
+- `contentVariations` - An object consisting of an array of strings, stringContentVariations, and a
+  boolean, includeIcon. stringContentVariations are the strings that may be passed as children to
+  the `<ButtonPill />` component depending on various state changes. includeIcon is whether or not
+  to include an icon in the fixed width. Use this prop to acheive a fixed button width based on the
+  longest string and avoid unwanted layout changes.

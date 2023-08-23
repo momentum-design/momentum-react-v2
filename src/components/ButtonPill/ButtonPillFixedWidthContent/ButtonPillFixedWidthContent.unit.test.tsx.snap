@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot 1`] = `
-<FixedWidthButtonPillContent
+exports[`<ButtonPillFixedWidthContent /> snapshot should match snapshot 1`] = `
+<ButtonPillFixedWidthContent
+  buttonPillSize={40}
+  includeIcon={true}
   stringContentVariations={
     Array [
       "long",
@@ -11,14 +13,18 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot 1`] = `
   }
 >
   <div
-    className="md-fixed-width-button-pill-content-wrapper"
+    className="md-button-pill-fixed-width-content-wrapper"
   >
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="long"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -31,11 +37,15 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot 1`] = `
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="longer"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -48,11 +58,15 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot 1`] = `
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="longest"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -65,7 +79,7 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot 1`] = `
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={false}
       data-size={40}
     >
@@ -83,12 +97,13 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot 1`] = `
       </Text>
     </div>
   </div>
-</FixedWidthButtonPillContent>
+</ButtonPillFixedWidthContent>
 `;
 
-exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with buttonPillSize 1`] = `
-<FixedWidthButtonPillContent
+exports[`<ButtonPillFixedWidthContent /> snapshot should match snapshot with buttonPillSize 1`] = `
+<ButtonPillFixedWidthContent
   buttonPillSize={24}
+  includeIcon={true}
   stringContentVariations={
     Array [
       "long",
@@ -98,14 +113,18 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with but
   }
 >
   <div
-    className="md-fixed-width-button-pill-content-wrapper"
+    className="md-button-pill-fixed-width-content-wrapper"
   >
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={24}
       key="long"
     >
+      <Icon
+        name="placeholder"
+        scale={16}
+      />
       <Text
         type="body-compact"
       >
@@ -118,11 +137,15 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with but
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={24}
       key="longer"
     >
+      <Icon
+        name="placeholder"
+        scale={16}
+      />
       <Text
         type="body-compact"
       >
@@ -135,11 +158,15 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with but
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={24}
       key="longest"
     >
+      <Icon
+        name="placeholder"
+        scale={16}
+      />
       <Text
         type="body-compact"
       >
@@ -152,7 +179,7 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with but
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={false}
       data-size={24}
     >
@@ -170,12 +197,14 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with but
       </Text>
     </div>
   </div>
-</FixedWidthButtonPillContent>
+</ButtonPillFixedWidthContent>
 `;
 
-exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with className 1`] = `
-<FixedWidthButtonPillContent
+exports[`<ButtonPillFixedWidthContent /> snapshot should match snapshot with className 1`] = `
+<ButtonPillFixedWidthContent
+  buttonPillSize={40}
   className="example-class"
+  includeIcon={true}
   stringContentVariations={
     Array [
       "long",
@@ -185,14 +214,18 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with cla
   }
 >
   <div
-    className="md-fixed-width-button-pill-content-wrapper"
+    className="md-button-pill-fixed-width-content-wrapper"
   >
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="long"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -205,11 +238,15 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with cla
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="longer"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -222,11 +259,15 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with cla
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="longest"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -239,7 +280,7 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with cla
       </Text>
     </div>
     <div
-      className="example-class md-fixed-width-button-pill-content-button-content"
+      className="example-class md-button-pill-fixed-width-content-button-content"
       data-hidden={false}
       data-size={40}
     >
@@ -257,12 +298,13 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with cla
       </Text>
     </div>
   </div>
-</FixedWidthButtonPillContent>
+</ButtonPillFixedWidthContent>
 `;
 
-exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with icon 1`] = `
-<FixedWidthButtonPillContent
-  icon={true}
+exports[`<ButtonPillFixedWidthContent /> snapshot should match snapshot with icon 1`] = `
+<ButtonPillFixedWidthContent
+  buttonPillSize={40}
+  includeIcon={true}
   stringContentVariations={
     Array [
       "long",
@@ -272,17 +314,17 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with ico
   }
 >
   <div
-    className="md-fixed-width-button-pill-content-wrapper"
+    className="md-button-pill-fixed-width-content-wrapper"
   >
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="long"
     >
       <Icon
         name="placeholder"
-        scale={32}
+        scale={20}
       />
       <Text
         type="subheader-primary"
@@ -296,14 +338,14 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with ico
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="longer"
     >
       <Icon
         name="placeholder"
-        scale={32}
+        scale={20}
       />
       <Text
         type="subheader-primary"
@@ -317,14 +359,14 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with ico
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="longest"
     >
       <Icon
         name="placeholder"
-        scale={32}
+        scale={20}
       />
       <Text
         type="subheader-primary"
@@ -338,7 +380,7 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with ico
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={false}
       data-size={40}
     >
@@ -356,198 +398,13 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with ico
       </Text>
     </div>
   </div>
-</FixedWidthButtonPillContent>
+</ButtonPillFixedWidthContent>
 `;
 
-exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with icon and iconScale 1`] = `
-<FixedWidthButtonPillContent
-  icon={true}
-  iconScale={16}
-  stringContentVariations={
-    Array [
-      "long",
-      "longer",
-      "longest",
-    ]
-  }
->
-  <div
-    className="md-fixed-width-button-pill-content-wrapper"
-  >
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={true}
-      data-size={40}
-      key="long"
-    >
-      <Icon
-        name="placeholder"
-        scale={16}
-      />
-      <Text
-        type="subheader-primary"
-      >
-        <h3
-          className="md-text-wrapper"
-          data-type="subheader-primary"
-        >
-          long
-        </h3>
-      </Text>
-    </div>
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={true}
-      data-size={40}
-      key="longer"
-    >
-      <Icon
-        name="placeholder"
-        scale={16}
-      />
-      <Text
-        type="subheader-primary"
-      >
-        <h3
-          className="md-text-wrapper"
-          data-type="subheader-primary"
-        >
-          longer
-        </h3>
-      </Text>
-    </div>
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={true}
-      data-size={40}
-      key="longest"
-    >
-      <Icon
-        name="placeholder"
-        scale={16}
-      />
-      <Text
-        type="subheader-primary"
-      >
-        <h3
-          className="md-text-wrapper"
-          data-type="subheader-primary"
-        >
-          longest
-        </h3>
-      </Text>
-    </div>
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={false}
-      data-size={40}
-    >
-      <Icon
-        name="placeholder"
-        scale={20}
-      />
-      <Text>
-        <p
-          className="md-text-wrapper"
-          data-type="body-primary"
-        >
-          Example
-        </p>
-      </Text>
-    </div>
-  </div>
-</FixedWidthButtonPillContent>
-`;
-
-exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with iconScale 1`] = `
-<FixedWidthButtonPillContent
-  iconScale={16}
-  stringContentVariations={
-    Array [
-      "long",
-      "longer",
-      "longest",
-    ]
-  }
->
-  <div
-    className="md-fixed-width-button-pill-content-wrapper"
-  >
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={true}
-      data-size={40}
-      key="long"
-    >
-      <Text
-        type="subheader-primary"
-      >
-        <h3
-          className="md-text-wrapper"
-          data-type="subheader-primary"
-        >
-          long
-        </h3>
-      </Text>
-    </div>
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={true}
-      data-size={40}
-      key="longer"
-    >
-      <Text
-        type="subheader-primary"
-      >
-        <h3
-          className="md-text-wrapper"
-          data-type="subheader-primary"
-        >
-          longer
-        </h3>
-      </Text>
-    </div>
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={true}
-      data-size={40}
-      key="longest"
-    >
-      <Text
-        type="subheader-primary"
-      >
-        <h3
-          className="md-text-wrapper"
-          data-type="subheader-primary"
-        >
-          longest
-        </h3>
-      </Text>
-    </div>
-    <div
-      className="md-fixed-width-button-pill-content-button-content"
-      data-hidden={false}
-      data-size={40}
-    >
-      <Icon
-        name="placeholder"
-        scale={20}
-      />
-      <Text>
-        <p
-          className="md-text-wrapper"
-          data-type="body-primary"
-        >
-          Example
-        </p>
-      </Text>
-    </div>
-  </div>
-</FixedWidthButtonPillContent>
-`;
-
-exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with stringContentVariations 1`] = `
-<FixedWidthButtonPillContent
+exports[`<ButtonPillFixedWidthContent /> snapshot should match snapshot with stringContentVariations 1`] = `
+<ButtonPillFixedWidthContent
+  buttonPillSize={40}
+  includeIcon={true}
   stringContentVariations={
     Array [
       "test",
@@ -556,14 +413,18 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with str
   }
 >
   <div
-    className="md-fixed-width-button-pill-content-wrapper"
+    className="md-button-pill-fixed-width-content-wrapper"
   >
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="test"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -576,11 +437,15 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with str
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={true}
       data-size={40}
       key="testing"
     >
+      <Icon
+        name="placeholder"
+        scale={20}
+      />
       <Text
         type="subheader-primary"
       >
@@ -593,7 +458,7 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with str
       </Text>
     </div>
     <div
-      className="md-fixed-width-button-pill-content-button-content"
+      className="md-button-pill-fixed-width-content-button-content"
       data-hidden={false}
       data-size={40}
     >
@@ -611,5 +476,5 @@ exports[`<FixedWidthButtonPillContent /> snapshot should match snapshot with str
       </Text>
     </div>
   </div>
-</FixedWidthButtonPillContent>
+</ButtonPillFixedWidthContent>
 `;

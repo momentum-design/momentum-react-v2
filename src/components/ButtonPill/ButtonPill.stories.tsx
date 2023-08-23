@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 
 import Icon from '../Icon';
 
@@ -17,6 +17,11 @@ import argTypes from './ButtonPill.stories.args';
 import Documentation from './ButtonPill.stories.docs.mdx';
 
 import Popover, { PopoverProps } from '../Popover';
+import Text from '../Text';
+import {
+  getIconScaleFromButtonPillSize,
+  getTextTypeFromButtonPillSize,
+} from './ButtonPillFixedWidthContent/ButtonPillFixedWidthContent.utils';
 
 export default {
   title: 'Momentum UI/ButtonPill',
@@ -371,6 +376,43 @@ NotGhostOutlineInverted.parameters = {
   ],
 };
 
+const FixedWidthContent = Template<ButtonPillProps>((args) => {
+  const { contentVariations, size, ...otherProps } = args as ButtonPillProps;
+  const { stringContentVariations, includeIcon } = contentVariations;
+
+  const [currentChildIndex, setCurrentChildIndex] = useState(0);
+  const handlePress = useCallback(() => {
+    setCurrentChildIndex((prev) => (prev + 1) % stringContentVariations.length);
+  }, [stringContentVariations]);
+  const textType = getTextTypeFromButtonPillSize(size);
+  const iconScale = getIconScaleFromButtonPillSize(size);
+
+  return (
+    <div style={{ marginTop: '6rem' }}>
+      <ButtonPill
+        {...otherProps}
+        size={size}
+        onPress={handlePress}
+        contentVariations={contentVariations}
+      >
+        {includeIcon && <Icon name="placeholder" scale={iconScale} />}
+        <Text type={textType}>{stringContentVariations[currentChildIndex]}</Text>
+      </ButtonPill>
+    </div>
+  );
+}).bind({});
+
+FixedWidthContent.argTypes = { ...argTypes };
+delete FixedWidthContent.argTypes.children;
+
+FixedWidthContent.args = {
+  contentVariations: {
+    stringContentVariations: ['Press me', 'Press me again', 'Press me one more time'],
+    includeIcon: false,
+  },
+  size: 40,
+};
+
 const Common = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -410,5 +452,6 @@ export {
   NotGhostNotOutlineInverted,
   GhostOutlineNotInverted,
   NotGhostOutlineInverted,
+  FixedWidthContent,
   Common,
 };

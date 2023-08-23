@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 
 import ButtonPill, { BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
 import ButtonSimple from '../ButtonSimple';
+import ButtonPillFixedWidthContent from './ButtonPillFixedWidthContent';
 
 const { COLORS, DEFAULTS, SIZES, STYLE } = CONSTANTS;
 
@@ -154,6 +155,16 @@ describe('<ButtonPill />', () => {
       const title = 'Example Text';
 
       const container = mount(<ButtonPill title={title} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with contentVariations', () => {
+      expect.assertions(1);
+
+      const contentVariations = { stringContentVariations: ['Mute', 'Unmute'], includeIcon: true };
+
+      const container = mount(<ButtonPill contentVariations={contentVariations} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -321,6 +332,30 @@ describe('<ButtonPill />', () => {
       container = mount(<ButtonPill>Example Text</ButtonPill>);
 
       expect(container.find(ButtonSimple).exists()).toBe(true);
+    });
+
+    it('should render ButtonPillFixedWidthContent if applicable', () => {
+      expect.assertions(1);
+
+      const contentVariations = { stringContentVariations: ['Mute', 'Unmute'], includeIcon: true };
+
+      container = mount(
+        <ButtonPill contentVariations={contentVariations}>Example Text</ButtonPill>
+      );
+
+      expect(container.find(ButtonPillFixedWidthContent).exists()).toBe(true);
+    });
+
+    it('should not render ButtonPillFixedWidthContent if not applicable', () => {
+      expect.assertions(1);
+
+      const contentVariations = { stringContentVariations: [], includeIcon: true };
+
+      container = mount(
+        <ButtonPill contentVariations={contentVariations}>Example Text</ButtonPill>
+      );
+
+      expect(container.find(ButtonPillFixedWidthContent).exists()).toBe(false);
     });
   });
 

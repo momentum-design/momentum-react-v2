@@ -1,13 +1,12 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import FixedWidthButtonPillContent, {
-  FIXED_WIDTH_BUTTON_PILL_CONTENT_CONSTANTS as CONSTANTS,
-} from './';
-import Icon from '../Icon';
-import Text from '../Text';
+import ButtonPillFixedWidthContent from '.';
+import Icon from '../../Icon';
+import Text from '../../Text';
+import { STYLE } from './ButtonPillFixedWidthContent.constants';
 
-describe('<FixedWidthButtonPillContent />', () => {
+describe('<ButtonPillFixedWidthContent />', () => {
   describe('snapshot', () => {
     const snapshotChildren = (
       <>
@@ -22,9 +21,11 @@ describe('<FixedWidthButtonPillContent />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={snapshotChildren}
           stringContentVariations={stringContentVariationsExample}
+          includeIcon
+          buttonPillSize={40}
         />
       );
 
@@ -37,10 +38,12 @@ describe('<FixedWidthButtonPillContent />', () => {
       const className = 'example-class';
 
       const container = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           className={className}
           children={snapshotChildren}
           stringContentVariations={stringContentVariationsExample}
+          includeIcon
+          buttonPillSize={40}
         />
       );
 
@@ -51,9 +54,11 @@ describe('<FixedWidthButtonPillContent />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={snapshotChildren}
           stringContentVariations={stringContentVariationsExample2}
+          includeIcon
+          buttonPillSize={40}
         />
       );
 
@@ -66,10 +71,11 @@ describe('<FixedWidthButtonPillContent />', () => {
       const buttonPillSize = 24;
 
       const container = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           buttonPillSize={buttonPillSize}
           children={snapshotChildren}
           stringContentVariations={stringContentVariationsExample}
+          includeIcon
         />
       );
 
@@ -80,43 +86,11 @@ describe('<FixedWidthButtonPillContent />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <FixedWidthButtonPillContent
-          icon
+        <ButtonPillFixedWidthContent
+          includeIcon
           children={snapshotChildren}
           stringContentVariations={stringContentVariationsExample}
-        />
-      );
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with iconScale', () => {
-      expect.assertions(1);
-
-      const iconScale = 16;
-
-      const container = mount(
-        <FixedWidthButtonPillContent
-          iconScale={iconScale}
-          children={snapshotChildren}
-          stringContentVariations={stringContentVariationsExample}
-        />
-      );
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with icon and iconScale', () => {
-      expect.assertions(1);
-
-      const iconScale = 16;
-
-      const container = mount(
-        <FixedWidthButtonPillContent
-          icon
-          iconScale={iconScale}
-          children={snapshotChildren}
-          stringContentVariations={stringContentVariationsExample}
+          buttonPillSize={40}
         />
       );
 
@@ -142,15 +116,17 @@ describe('<FixedWidthButtonPillContent />', () => {
       expect.assertions(1);
 
       const element = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={children}
           stringContentVariations={stringContentVariationsExample}
+          includeIcon
+          buttonPillSize={40}
         />
       )
-        .find(FixedWidthButtonPillContent)
+        .find(ButtonPillFixedWidthContent)
         .getDOMNode();
 
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
+      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
     it('should pass the buttonPillSize prop through correctly', () => {
@@ -159,10 +135,11 @@ describe('<FixedWidthButtonPillContent />', () => {
       const buttonPillSize = 32;
 
       const divElements = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={children}
           stringContentVariations={stringContentVariationsExample}
           buttonPillSize={buttonPillSize}
+          includeIcon={false}
         />
       ).find('div');
 
@@ -179,13 +156,15 @@ describe('<FixedWidthButtonPillContent />', () => {
       const className = 'class-name-example';
 
       const element = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           className={className}
           children={children}
           stringContentVariations={stringContentVariationsExample}
+          buttonPillSize={40}
+          includeIcon={false}
         />
       )
-        .find(FixedWidthButtonPillContent)
+        .find(ButtonPillFixedWidthContent)
         .find('div')
         .at(4)
         .getDOMNode();
@@ -197,12 +176,14 @@ describe('<FixedWidthButtonPillContent />', () => {
       expect.assertions(3);
 
       const textElements = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={children}
           stringContentVariations={stringContentVariationsExample}
+          buttonPillSize={40}
+          includeIcon={false}
         />
       )
-        .find(FixedWidthButtonPillContent)
+        .find(ButtonPillFixedWidthContent)
         .find(Text);
 
       const firstTextElementProps = textElements.at(0).props();
@@ -224,13 +205,14 @@ describe('<FixedWidthButtonPillContent />', () => {
       expect.assertions(3);
 
       const textElements = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={children}
           stringContentVariations={stringContentVariationsExample}
           buttonPillSize={24}
+          includeIcon
         />
       )
-        .find(FixedWidthButtonPillContent)
+        .find(ButtonPillFixedWidthContent)
         .find(Text);
 
       const firstTextElementProps = textElements.at(0).props();
@@ -248,67 +230,68 @@ describe('<FixedWidthButtonPillContent />', () => {
       });
     });
 
-    it('should have an icon component for each string content variation when icon = true ', () => {
+    it('should have icon components with correct icon scale that corresponds to the button size', () => {
       expect.assertions(3);
 
       const iconElements = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={childrenWithIcon}
           stringContentVariations={stringContentVariationsExample}
-          icon
+          buttonPillSize={24}
+          includeIcon
         />
       )
-        .find(FixedWidthButtonPillContent)
+        .find(ButtonPillFixedWidthContent)
         .find(Icon);
 
       const firstIconElementProps = iconElements.at(0).props();
       const secondIconElementProps = iconElements.at(1).props();
       const thirdIconElementProps = iconElements.at(2).props();
 
-      const iconProps = { name: 'placeholder', scale: 32 };
+      const iconProps = { name: 'placeholder', scale: 16 };
 
       expect(firstIconElementProps).toStrictEqual(iconProps);
       expect(secondIconElementProps).toStrictEqual(iconProps);
       expect(thirdIconElementProps).toStrictEqual(iconProps);
     });
 
-    it('should have an icon component for each string content variation when icon = true with correct iconScale ', () => {
+    it('should have an icon component for each string content variation when includeIcon = true ', () => {
       expect.assertions(3);
 
-      const iconScale = 16;
-
       const iconElements = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={childrenWithIcon}
           stringContentVariations={stringContentVariationsExample}
-          icon
-          iconScale={iconScale}
+          includeIcon
+          buttonPillSize={40}
         />
       )
-        .find(FixedWidthButtonPillContent)
+        .find(ButtonPillFixedWidthContent)
         .find(Icon);
 
       const firstIconElementProps = iconElements.at(0).props();
       const secondIconElementProps = iconElements.at(1).props();
       const thirdIconElementProps = iconElements.at(2).props();
 
-      const iconProps = { name: 'placeholder', scale: iconScale };
+      const iconProps = { name: 'placeholder', scale: 20 };
 
       expect(firstIconElementProps).toStrictEqual(iconProps);
       expect(secondIconElementProps).toStrictEqual(iconProps);
       expect(thirdIconElementProps).toStrictEqual(iconProps);
     });
 
-    it('should not have an icon component for each string content variation when icon = false ', () => {
+    it('should not have an icon component for each string content variation when includeIcon = false ', () => {
       expect.assertions(1);
 
       const iconElements = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={children}
           stringContentVariations={stringContentVariationsExample}
+          includeIcon={false}
+          buttonPillSize={40}
         />
       )
-        .find(FixedWidthButtonPillContent)
+        .find(ButtonPillFixedWidthContent)
         .find(Icon);
 
       expect(iconElements.length).toEqual(0);
@@ -318,9 +301,11 @@ describe('<FixedWidthButtonPillContent />', () => {
       expect.assertions(1);
 
       const element = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={children}
           stringContentVariations={stringContentVariationsExample}
+          includeIcon={false}
+          buttonPillSize={40}
         />
       )
         .find('div')
@@ -336,10 +321,11 @@ describe('<FixedWidthButtonPillContent />', () => {
       const buttonPillSize = 32;
 
       const divElements = mount(
-        <FixedWidthButtonPillContent
+        <ButtonPillFixedWidthContent
           children={children}
           stringContentVariations={stringContentVariationsExample}
           buttonPillSize={buttonPillSize}
+          includeIcon
         />
       ).find('div');
 
