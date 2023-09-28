@@ -1,5 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
 
 import Overlay, { OVERLAY_CONSTANTS as CONSTANTS } from './';
 
@@ -140,6 +143,80 @@ describe('<Overlay />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-fullscreen')).toBe(`${fullscreen}`);
+    });
+  });
+
+  describe('actions', () => {
+    it('should not lock focus if no focusLockProps are supplied', async () => {
+      expect.assertions(5);
+
+      const Component = () => {
+        return (
+          <>
+            <button>button</button>
+            <Overlay>
+              <button>button</button>
+              <button>button</button>
+            </Overlay>
+          </>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      render(<Component />);
+
+      const buttons = await screen.findAllByText('button');
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[0]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[1]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[2]).toHaveFocus();
+
+      await user.tab();
+
+      expect(document.body).toHaveFocus();
+    });
+
+    it('should lock focus around the children', async () => {
+      expect.assertions(3);
+
+      const Component = () => {
+        return (
+          <>
+            <button>button</button>
+            <Overlay focusLockProps={{}}>
+              <button>button</button>
+              <button>button</button>
+            </Overlay>
+          </>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      render(<Component />);
+
+      const buttons = await screen.findAllByText('button');
+
+      expect(buttons[1]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[2]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[1]).toHaveFocus();
     });
   });
 });
