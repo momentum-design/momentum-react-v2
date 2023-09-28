@@ -7,6 +7,7 @@ import ModalContainer, { MODAL_CONTAINER_CONSTANTS } from '../ModalContainer';
 import Overlay, { OVERLAY_CONSTANTS } from '../Overlay';
 
 import OverlayAlert, { OVERLAY_ALERT_CONSTANTS as CONSTANTS, OVERLAY_ALERT_CONSTANTS } from './';
+import { STYLE as OVERLAY_STYLE } from '../Overlay/Overlay.constants';
 
 describe('<OverlayAlert />', () => {
   describe('snapshot', () => {
@@ -136,7 +137,7 @@ describe('<OverlayAlert />', () => {
       expect.assertions(1);
 
       const element = mount(<OverlayAlert />)
-        .find(OverlayAlert)
+        .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes its class names to Overlay
         .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -148,7 +149,7 @@ describe('<OverlayAlert />', () => {
       const className = 'example-class';
 
       const element = mount(<OverlayAlert className={className} />)
-        .find(OverlayAlert)
+        .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes its class names to Overlay
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -160,7 +161,7 @@ describe('<OverlayAlert />', () => {
       const id = 'example-id';
 
       const element = mount(<OverlayAlert id={id} />)
-        .find(OverlayAlert)
+        .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes other props to Overlay
         .getDOMNode();
 
       expect(element.id).toBe(id);
@@ -173,7 +174,7 @@ describe('<OverlayAlert />', () => {
       const styleString = 'color: pink;';
 
       const element = mount(<OverlayAlert style={style} />)
-        .find(OverlayAlert)
+        .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes other props to Overlay
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -240,7 +241,7 @@ describe('<OverlayAlert />', () => {
 
       const details = 'details-example';
 
-      const component = mount(<OverlayAlert details={details} />).find(OverlayAlert);
+      const component = mount(<OverlayAlert details={details} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
       const target = component
         .getDOMNode()
@@ -254,7 +255,7 @@ describe('<OverlayAlert />', () => {
 
       const title = 'title-example';
 
-      const component = mount(<OverlayAlert title={title} />).find(OverlayAlert);
+      const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
       const target = component
         .getDOMNode()
@@ -266,7 +267,7 @@ describe('<OverlayAlert />', () => {
     it('should still render a empty div with the appropriate class when no title is provided', () => {
       expect.assertions(1);
 
-      const component = mount(<OverlayAlert />).find(OverlayAlert);
+      const component = mount(<OverlayAlert />).find(`.${OVERLAY_STYLE.wrapper}`);
 
       const target = component
         .getDOMNode()

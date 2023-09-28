@@ -24,11 +24,17 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     modalColor,
     overlayColor = DEFAULTS.OVERLAY_COLOR,
     title,
+    focusLockProps = DEFAULTS.FOCUS_LOCK_PROPS,
     ...other
   } = props;
 
   return (
-    <Overlay className={classnames(className, STYLE.wrapper)} color={overlayColor} {...other}>
+    <Overlay
+      focusLockProps={focusLockProps}
+      className={classnames(className, STYLE.wrapper)}
+      color={overlayColor}
+      {...other}
+    >
       <ModalContainer color={modalColor}>
         <div>
           <div className={classnames(STYLE.title)}>

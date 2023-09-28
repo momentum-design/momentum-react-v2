@@ -1,4 +1,5 @@
-import type { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { CSSProperties, ReactElement, ReactNode, ComponentProps } from 'react';
+import FocusLock from 'react-focus-lock';
 
 import type { ButtonControlProps } from '../ButtonControl';
 import type { ButtonSimpleProps } from '../ButtonSimple';
@@ -59,4 +60,9 @@ export interface Props extends OverlayProps {
    * Title for this OverlayAlert.
    */
   title?: string;
+
+  /**
+   * Props to be passed to Overlay for FocusLock
+   */
+  focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
 }

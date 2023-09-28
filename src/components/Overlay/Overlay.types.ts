@@ -1,4 +1,5 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode, ComponentProps } from 'react';
+import FocusLock from 'react-focus-lock';
 
 export type Color = 'primary' | 'secondary';
 
@@ -32,4 +33,9 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * Props to be passed to FocusLock
+   */
+  focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
 }
