@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
+import FocusLock from 'react-focus-lock';
 
 import { DEFAULTS, STYLE } from './Overlay.constants';
 import { Props } from './Overlay.types';
@@ -16,9 +17,10 @@ const Overlay: FC<Props> = (props: Props) => {
     fullscreen = DEFAULTS.FULLSCREEN,
     id,
     style,
+    focusLockProps,
   } = props;
 
-  return (
+  const content = (
     <div
       className={classnames(className, STYLE.wrapper)}
       data-color={color}
@@ -29,6 +31,12 @@ const Overlay: FC<Props> = (props: Props) => {
       {children}
     </div>
   );
+
+  if (!focusLockProps) {
+    return <>{content}</>;
+  }
+
+  return <FocusLock {...focusLockProps}>{content}</FocusLock>;
 };
 
 export default Overlay;

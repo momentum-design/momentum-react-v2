@@ -60,6 +60,14 @@ describe('<Overlay />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with focusLockProps', () => {
+      expect.assertions(1);
+
+      const container = mount(<Overlay focusLockProps={{ returnFocus: true }} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

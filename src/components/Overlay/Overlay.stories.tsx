@@ -33,7 +33,8 @@ const Example: Story<OverlayProps> = (args: OverlayProps) => {
       style={{
         alignItems: 'center',
         backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
-        border: '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
+        border:
+          '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
         display: 'flex',
         padding: '4rem',
         position: 'relative',
@@ -58,4 +59,43 @@ const Example: Story<OverlayProps> = (args: OverlayProps) => {
 
 Example.argTypes = { ...argTypes };
 
-export { Example };
+const WithFocusLock: Story<OverlayProps> = (args: OverlayProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div
+      style={{
+        alignItems: 'center',
+        backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
+        border:
+          '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
+        display: 'flex',
+        padding: '4rem',
+        position: 'relative',
+        width: '80%',
+      }}
+    >
+      {isOpen && (
+        <Overlay focusLockProps={{ returnFocus: true }} {...args}>
+          <ModalContainer color="tertiary" elevation={2} round={50} isPadded>
+            <div style={{ marginRight: '1rem' }}>Foreground Container</div>
+            <button>A Button</button>
+            <button onClick={toggleOpen}>Close Overlay</button>
+          </ModalContainer>
+        </Overlay>
+      )}
+      <ModalContainer color="tertiary" elevation={2} round={50} isPadded>
+        <div style={{ marginRight: '1rem' }}>Background Container</div>
+        <button onClick={toggleOpen}>Open Overlay</button>
+      </ModalContainer>
+    </div>
+  );
+};
+
+WithFocusLock.argTypes = { ...argTypes };
+
+export { Example, WithFocusLock };

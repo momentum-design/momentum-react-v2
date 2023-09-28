@@ -7,6 +7,10 @@ const DEFAULTS = {
    * Default <Overlay /> color prop.
    */
   OVERLAY_COLOR: OVERLAY_CONSTANTS.COLORS.SECONDARY,
+  /**
+   * Default props for react focus lock, which will be passed to Overlay
+   */
+  FOCUS_LOCK_PROPS: { returnFocus: true },
 };
 
 const STYLE = {
