@@ -35,17 +35,17 @@ const OverlayAlert: FC<Props> = (props: Props) => {
       color={overlayColor}
       {...other}
     >
-      <ModalContainer color={modalColor}>
+      <ModalContainer round={75} color={modalColor}>
         <div>
-          <div className={classnames(STYLE.title)}>
-            {!!title && (
-              <Text className={classnames(STYLE.title)} type="header-primary">
-                {title}
-              </Text>
-            )}
-          </div>
           <div>{controls}</div>
         </div>
+        {!!title && (
+          <div className={classnames(STYLE.title)}>
+            <Text className={classnames(STYLE.title)} type="header-primary">
+              {title}
+            </Text>
+          </div>
+        )}
         <div>
           {children
             ? children

@@ -264,7 +264,7 @@ describe('<OverlayAlert />', () => {
       expect(target.innerHTML.includes(title)).toBe(true);
     });
 
-    it('should still render a empty div with the appropriate class when no title is provided', () => {
+    it('should not render an empty div when no title is provided', () => {
       expect.assertions(1);
 
       const component = mount(<OverlayAlert />).find(`.${OVERLAY_STYLE.wrapper}`);
@@ -273,7 +273,7 @@ describe('<OverlayAlert />', () => {
         .getDOMNode()
         .getElementsByClassName(OVERLAY_ALERT_CONSTANTS.STYLE.title)[0];
 
-      expect(target.classList.contains(OVERLAY_ALERT_CONSTANTS.STYLE.title)).toBe(true);
+      expect(target).toBeUndefined();
     });
 
     it('should have provided children when details and children are provided', () => {
