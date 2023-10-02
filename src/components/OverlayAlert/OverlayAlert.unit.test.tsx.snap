@@ -904,12 +904,12 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
                     <div />
                   </div>
                   <div>
-                    <small
+                    <p
                       class="md-text-wrapper md-overlay-alert-details"
-                      data-type="body-secondary"
+                      data-type="body-primary"
                     >
                       example-details
-                    </small>
+                    </p>
                   </div>
                   <div />
                 </div>
@@ -944,12 +944,12 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
                       <div />
                     </div>
                     <div>
-                      <small
+                      <p
                         class="md-text-wrapper md-overlay-alert-details"
-                        data-type="body-secondary"
+                        data-type="body-primary"
                       >
                         example-details
-                      </small>
+                      </p>
                     </div>
                     <div />
                   </div>
@@ -983,14 +983,14 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
               <div>
                 <Text
                   className="md-overlay-alert-details"
-                  type="body-secondary"
+                  type="body-primary"
                 >
-                  <small
+                  <p
                     className="md-text-wrapper md-overlay-alert-details"
-                    data-type="body-secondary"
+                    data-type="body-primary"
                   >
                     example-details
-                  </small>
+                  </p>
                 </Text>
               </div>
               <div />

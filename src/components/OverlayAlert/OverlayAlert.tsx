@@ -50,7 +50,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
           {children
             ? children
             : !!details && (
-                <Text className={classnames(STYLE.details)} type="body-secondary">
+                <Text className={classnames(STYLE.details)} type="body-primary">
                   {details}
                 </Text>
               )}

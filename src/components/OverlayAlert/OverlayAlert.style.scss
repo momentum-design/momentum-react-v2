@@ -1,6 +1,6 @@
 .md-overlay-alert-wrapper {
   > :first-child {
-    max-width: 32rem;
+    max-width: 25rem;
     min-width: 20rem;
 
     > :first-child {
@@ -18,7 +18,7 @@
     }
 
     > :not(:first-child):not(:last-child) {
-      padding: 0.5rem 1rem 0;
+      padding: 0.5rem 1.25rem 0;
       width: 100%;
 
       > .md-overlay-alert-details {
@@ -30,7 +30,7 @@
     > :last-child {
       display: flex;
       justify-content: flex-end;
-      padding: 1rem 1.5rem;
+      padding: 1.25rem 1.25rem;
       width: 100%;
 
       > * {
