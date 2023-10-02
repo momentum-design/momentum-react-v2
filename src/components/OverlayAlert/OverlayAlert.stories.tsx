@@ -134,4 +134,56 @@ WithoutTitle.parameters = {
 
 WithoutTitle.args = { ...{ details: coreArgs.details } };
 
-export { Example, WithoutActions, WithoutControls, WithoutTitle };
+const FigmaExample: Story<OverlayAlertProps> = (args: OverlayAlertProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const open = () => {
+    setIsOpen(true);
+  };
+
+  const close = () => {
+    setIsOpen(false);
+  };
+
+  const actions = [
+    <ButtonPill key={0} outline inverted onPress={close} size={32}>
+      Secondary
+    </ButtonPill>,
+    <ButtonPill key={1} onPress={close} size={32}>
+      Primary
+    </ButtonPill>,
+  ];
+
+  const controls = [<ButtonControl key={2} onPress={close} control="close" />];
+
+  return (
+    <div
+      style={{
+        alignItems: 'center',
+        backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
+        border:
+          '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
+        display: 'flex',
+        height: '80%',
+        paddingLeft: '4rem',
+        position: 'relative',
+        width: '80%',
+      }}
+    >
+      <ButtonPill onPress={open}>Open</ButtonPill>
+      {isOpen && (
+        <OverlayAlert
+          details="In ultrices dapibus tortor in posuere. Sed rhoncus mi sem."
+          title="Title"
+          actions={<>{actions}</>}
+          controls={<>{controls}</>}
+          {...args}
+        />
+      )}
+    </div>
+  );
+};
+
+FigmaExample.argTypes = { ...argTypes };
+
+export { Example, WithoutActions, WithoutControls, WithoutTitle, FigmaExample };
