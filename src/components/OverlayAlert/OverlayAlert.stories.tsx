@@ -66,7 +66,8 @@ function Template(): Story<OverlayAlertProps> {
         style={{
           alignItems: 'center',
           backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
-          border: '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
+          border:
+            '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
           display: 'flex',
           height: '80%',
           paddingLeft: '4rem',
@@ -122,4 +123,15 @@ WithoutControls.parameters = {
 
 WithoutControls.args = { ...coreArgs };
 
-export { Example, WithoutActions, WithoutControls };
+const WithoutTitle = Template().bind({});
+
+WithoutTitle.argTypes = { ...argTypes };
+
+WithoutTitle.parameters = {
+  hasActions: true,
+  hasControls: true,
+};
+
+WithoutTitle.args = { ...{ details: coreArgs.details } };
+
+export { Example, WithoutActions, WithoutControls, WithoutTitle };

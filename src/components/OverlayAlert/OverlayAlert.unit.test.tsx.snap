@@ -74,12 +74,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div />
@@ -110,12 +107,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div />
@@ -135,18 +129,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div />
@@ -255,12 +248,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div />
@@ -308,12 +298,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div />
@@ -350,18 +337,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div />
@@ -518,12 +504,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div />
@@ -554,12 +537,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div />
@@ -579,18 +559,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div />
@@ -699,12 +678,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div>
                       <button
                         class="md-button-control-wrapper md-button-simple-wrapper"
@@ -740,12 +716,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div>
                         <button
                           class="md-button-control-wrapper md-button-simple-wrapper"
@@ -770,18 +743,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div>
                   <ButtonControl
                     control="close"
@@ -926,12 +898,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div>
@@ -969,12 +938,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div>
@@ -1001,18 +967,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div>
@@ -1129,12 +1094,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div>
@@ -1167,12 +1129,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div>
@@ -1194,18 +1153,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div>
@@ -1314,12 +1272,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div />
@@ -1351,12 +1306,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div />
@@ -1377,18 +1329,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
           data-fullscreen={false}
           id="example-id"
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div />
@@ -1508,12 +1459,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div />
@@ -1596,12 +1544,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div />
@@ -1673,18 +1618,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div />
@@ -1967,12 +1911,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div>
                       <button
                         class="md-button-control-wrapper md-button-simple-wrapper"
@@ -2019,12 +1960,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div>
                         <button
                           class="md-button-control-wrapper md-button-simple-wrapper"
@@ -2060,18 +1998,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div>
                   <ButtonControl
                     control="close"
@@ -2311,12 +2248,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    />
                     <div />
                   </div>
                   <div />
@@ -2348,12 +2282,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      />
                       <div />
                     </div>
                     <div />
@@ -2378,18 +2309,17 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
             }
           }
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                />
                 <div />
               </div>
               <div />
@@ -2494,20 +2424,20 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
-                  data-round="0"
+                  data-round="75"
                 >
                   <div>
-                    <div
-                      class="md-overlay-alert-title"
-                    >
-                      <h3
-                        class="md-text-wrapper md-overlay-alert-title"
-                        data-type="header-primary"
-                      >
-                        example-title
-                      </h3>
-                    </div>
                     <div />
+                  </div>
+                  <div
+                    class="md-overlay-alert-title"
+                  >
+                    <h3
+                      class="md-text-wrapper md-overlay-alert-title"
+                      data-type="header-primary"
+                    >
+                      example-title
+                    </h3>
                   </div>
                   <div />
                   <div />
@@ -2537,20 +2467,20 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
-                    data-round="0"
+                    data-round="75"
                   >
                     <div>
-                      <div
-                        class="md-overlay-alert-title"
-                      >
-                        <h3
-                          class="md-text-wrapper md-overlay-alert-title"
-                          data-type="header-primary"
-                        >
-                          example-title
-                        </h3>
-                      </div>
                       <div />
+                    </div>
+                    <div
+                      class="md-overlay-alert-title"
+                    >
+                      <h3
+                        class="md-text-wrapper md-overlay-alert-title"
+                        data-type="header-primary"
+                      >
+                        example-title
+                      </h3>
                     </div>
                     <div />
                     <div />
@@ -2569,31 +2499,33 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
           data-color="secondary"
           data-fullscreen={false}
         >
-          <ModalContainer>
+          <ModalContainer
+            round={75}
+          >
             <div
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
-              data-round={0}
+              data-round={75}
             >
               <div>
-                <div
-                  className="md-overlay-alert-title"
-                >
-                  <Text
-                    className="md-overlay-alert-title"
-                    type="header-primary"
-                  >
-                    <h3
-                      className="md-text-wrapper md-overlay-alert-title"
-                      data-type="header-primary"
-                    >
-                      example-title
-                    </h3>
-                  </Text>
-                </div>
                 <div />
+              </div>
+              <div
+                className="md-overlay-alert-title"
+              >
+                <Text
+                  className="md-overlay-alert-title"
+                  type="header-primary"
+                >
+                  <h3
+                    className="md-text-wrapper md-overlay-alert-title"
+                    data-type="header-primary"
+                  >
+                    example-title
+                  </h3>
+                </Text>
               </div>
               <div />
               <div />
