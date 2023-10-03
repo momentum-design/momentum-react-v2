@@ -5,11 +5,7 @@
 
     > :first-child {
       width: 100%;
-
-      > .md-overlay-alert-title {
-        justify-self: start;
-        margin: 0.1875rem 1rem;
-      }
+      margin-bottom: -0.5rem;
 
       > :last-child {
         display: flex;
@@ -17,7 +13,13 @@
       }
     }
 
-    > :not(:first-child):not(:last-child) {
+    > .md-overlay-alert-title {
+      width: 100%;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    > :not(:first-child):not(:last-child):not(.md-overlay-alert-title) {
       padding: 0.5rem 1.25rem 0;
       width: 100%;
 
