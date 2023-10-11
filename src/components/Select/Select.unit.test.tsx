@@ -4,8 +4,18 @@ import { Item } from '@react-stately/collections';
 import { DIRECTIONS, STYLE } from './Select.constants';
 import { mountAndWait, triggerPress, waitForComponentToPaint } from '../../../test/utils';
 import ListBoxBase from '../ListBoxBase';
+import Popover from '../Popover';
+
+import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
+import { render, screen, waitFor } from '@testing-library/react';
 
 jest.mock('@react-aria/utils');
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
 
 describe('Select', () => {
   let container;
@@ -200,6 +210,21 @@ describe('Select', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with listboxMaxHeight', async () => {
+      expect.assertions(1);
+
+      const listboxMaxHeight = '50px';
+
+      container = await mountAndWait(
+        <Select listboxMaxHeight={listboxMaxHeight} isOpen={true} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -306,6 +331,237 @@ describe('Select', () => {
       const button = wrapper.find('.md-select-dropdown-input').getDOMNode();
 
       expect(button.getAttribute('title')).toBe(title);
+    });
+
+    it('should have expected props on Popover', async () => {
+      expect.assertions(1);
+
+      const direction = 'top';
+
+      const wrapper = await mountAndWait(
+        <Select direction={direction} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(wrapper.find(Popover).props()).toEqual({
+        interactive: true,
+        showArrow: false,
+        triggerComponent: expect.any(Object),
+        trigger: 'manual',
+        setInstance: expect.any(Function),
+        placement: direction,
+        onClickOutside: expect.any(Function),
+        addBackdrop: true,
+        hideOnEsc: false,
+        style: { maxHeight: 'none' },
+        className: 'md-select-popover',
+        children: expect.any(Object),
+        onKeyDown: expect.any(Function),
+        onKeyUp: undefined,
+      });
+    });
+  });
+
+  describe('actions', () => {
+    it('should show Listbox on click', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      // list box should be shown after clicking on button
+      await user.click(screen.getByRole('button', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+    });
+
+    it('should show Listbox when focused and pressing enter', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      const button = screen.getByRole('button', { name: 'test' });
+      button.focus();
+      expect(button).toHaveFocus();
+
+      await user.keyboard('{Enter}');
+      // list box should be shown after focus and pressing enter
+      expect(screen.getByRole('listbox')).toBeVisible();
+    });
+
+    it('should show Listbox when focused and pressing space', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      const button = screen.getByRole('button', { name: 'test' });
+      button.focus();
+      expect(button).toHaveFocus();
+
+      await user.keyboard('{ }');
+      // list box should be shown after focus and pressing space
+      expect(screen.getByRole('listbox')).toBeVisible();
+    });
+
+    it('should hide Listbox when clicking outside', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+          <button>button-outside</button>
+        </>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('button', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // close listbox by clicking outside
+      await user.click(screen.getByRole('button', { name: 'button-outside' }));
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+    });
+
+    it('should hide Listbox when pressing Escape', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+          <button>button-outside</button>
+        </>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('button', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // close listbox by pressing escape
+      await user.keyboard('{Escape}');
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+    });
+
+    it('should select first option when pressing enter after opening', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+          <button>button-outside</button>
+        </>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('button', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose first value and close listbox by pressing enter
+      await user.keyboard('{Enter}');
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // first item should be selected
+      expect(screen.getByRole('button', { name: 'test' }).textContent).toBe('Item 1');
+    });
+
+    it('should select second option when pressing arrow-down & enter after opening', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+          <button>button-outside</button>
+        </>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('button', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose second value and close listbox by pressing arrow-down and enter
+      await user.keyboard('{ArrowDown}');
+      await user.keyboard('{Enter}');
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // second item should be selected
+      expect(screen.getByRole('button', { name: 'test' }).textContent).toBe('Item 2');
+    });
+
+    it('should select third option when clicking on it after opening', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+            <Item>Item 3</Item>
+          </Select>
+          <button>button-outside</button>
+        </>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('button', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose third value and close listbox by clicking on it
+      await user.click(screen.getByRole('option', { name: 'Item 3' }));
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // second item should be selected
+      expect(screen.getByRole('button', { name: 'test' }).textContent).toBe('Item 3');
     });
   });
 });

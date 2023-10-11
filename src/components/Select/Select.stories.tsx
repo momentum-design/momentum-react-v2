@@ -41,6 +41,23 @@ const singleItems: SelectData[] = [
   { id: 3, value: 'Yellow' },
 ];
 
+const manyItems: SelectData[] = [
+  { id: 0, value: 'Red' },
+  { id: 1, value: 'Blue' },
+  { id: 2, value: 'Green' },
+  { id: 3, value: 'Yellow' },
+  { id: 4, value: 'Red' },
+  { id: 5, value: 'Blue' },
+  { id: 6, value: 'Green' },
+  { id: 7, value: 'Yellow' },
+  { id: 8, value: 'Red' },
+  { id: 9, value: 'Blue' },
+  { id: 10, value: 'Green' },
+  { id: 11, value: 'Yellow' },
+  { id: 12, value: 'Red' },
+  { id: 13, value: 'Blue' },
+];
+
 const Example = Template(Select).bind({});
 
 Example.args = {
@@ -311,6 +328,29 @@ Common.parameters = {
       label: 'Direction Top',
       items: singleItems,
       direction: 'top',
+      showBorder: true,
+      children: (item) => <Item key={item.id}>{item.value}</Item>,
+    },
+    {
+      label: 'With a lot of list items',
+      items: manyItems,
+      direction: 'bottom',
+      showBorder: true,
+      children: (item) => <Item key={item.id}>{item.value}</Item>,
+    },
+    {
+      label: 'With a lot of list items and fixed height',
+      items: manyItems,
+      listboxMaxHeight: '13.5rem',
+      direction: 'bottom',
+      showBorder: true,
+      children: (item) => <Item key={item.id}>{item.value}</Item>,
+    },
+    {
+      label: 'Select with fixed width',
+      style: { width: '25rem', margin: '1rem' },
+      items: singleItems,
+      direction: 'bottom',
       showBorder: true,
       children: (item) => <Item key={item.id}>{item.value}</Item>,
     },

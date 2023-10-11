@@ -1,3 +1,4 @@
+import { FocusStrategy } from '@react-types/shared';
 import { SelectDirection } from '.';
 
 const CLASS_PREFIX = 'md-select';
@@ -9,7 +10,7 @@ const DIRECTIONS: Record<string, SelectDirection> = {
 
 const DEFAULTS = {
   DIRECTION: DIRECTIONS.bottom,
-  SHOULD_AUTOFOCUS: true,
+  FOCUS_STRATEGY: 'first' as FocusStrategy,
   SHOULD_SHOW_BORDER: true,
 };
 
@@ -20,8 +21,8 @@ const STYLE = {
   open: `${CLASS_PREFIX}-open`,
   iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
   selectedItemWrapper: `${CLASS_PREFIX}-selected-item-wrapper`,
-  overlay: `${CLASS_PREFIX}-overlay`,
   menuListBox: `${CLASS_PREFIX}-menu-listbox`,
+  popover: `${CLASS_PREFIX}-popover`,
   borderLess: 'borderLess',
 };
 
