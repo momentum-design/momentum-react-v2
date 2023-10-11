@@ -1,17 +1,26 @@
-import React, { ReactElement, RefObject, useRef, forwardRef, useState, useEffect } from 'react';
+import React, {
+  ReactElement,
+  useCallback,
+  RefObject,
+  useRef,
+  forwardRef,
+  useState,
+  useEffect,
+} from 'react';
 import classnames from 'classnames';
 
 import './Select.style.scss';
 import { Props } from './Select.types';
-import { DEFAULTS, SELECT_HEIGHT_ADJUST_BORDER, STYLE } from './Select.constants';
+import { DEFAULTS, STYLE } from './Select.constants';
 import { useSelectState } from '@react-stately/select';
 import { useButton } from '@react-aria/button';
-import { DismissButton, useOverlay } from '@react-aria/overlays';
-import { FocusScope } from '@react-aria/focus';
 import { useSelect, HiddenSelect } from '@react-aria/select';
 import Icon from '../Icon';
+import { useKeyboard } from '@react-aria/interactions';
 import ListBoxBase from '../ListBoxBase';
-import FocusRing from '../FocusRing';
+import Popover, { PopoverInstance } from '../Popover';
+import Text from '../Text';
+import { FocusScope } from 'react-aria';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
@@ -26,111 +35,118 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     direction = DEFAULTS.DIRECTION,
     title,
     showBorder = DEFAULTS.SHOULD_SHOW_BORDER,
+    listboxMaxHeight,
   } = props;
-  const state = useSelectState(props);
-
-  // used to calculate position of top direction dropdown
-  const [inputHeight, setInputHeight] = useState(0);
+  const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
 
   const selectRef = useRef<HTMLButtonElement>(null);
-
   const boxRef = useRef<HTMLUListElement>(null);
 
+  const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
-
   const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
   delete buttonProps.color;
 
-  const overlayRef = useRef<HTMLDivElement>(null);
-  const { overlayProps } = useOverlay(
-    {
-      onClose: () => state.close(),
-      shouldCloseOnBlur: true,
-      isOpen: state.isOpen,
-      isDismissable: true,
-    },
-    overlayRef
-  );
-
   const getArrowIcon = (isOpen: boolean) => (isOpen ? 'arrow-up' : 'arrow-down');
 
-  // used to calculate position of top direction dropdown
   useEffect(() => {
-    if (selectRef && selectRef.current && selectRef.current.clientHeight)
-      setInputHeight(selectRef.current.clientHeight + SELECT_HEIGHT_ADJUST_BORDER);
+    if (popoverInstance) {
+      if (state.isOpen) {
+        // show popover once state changes to isOpen = true
+        popoverInstance.show();
+      } else {
+        // hide popover once state changes to isOpen = false
+        popoverInstance.hide();
+        handleFocusBackOnTrigger();
+      }
+    }
+  }, [state.isOpen, popoverInstance]);
+
+  const handleFocusBackOnTrigger = useCallback(() => {
+    selectRef.current?.focus();
   }, []);
 
-  const listBox = (
-    <FocusScope restoreFocus>
-      {/*
-        //TODO:
-        This div should really be a Popover component but I will refrain from creating another
-        component as this PR is already big. I have created a workaround, so the Select can work meanwhile
-      */}
-      <div
-        {...overlayProps}
-        ref={overlayRef}
-        className={STYLE.overlay}
-        data-direction={direction}
-        style={{
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          ['--md-globals-select-dropdown-input-height' as any]: `${(inputHeight / 16).toFixed(
-            1
-          )}rem`,
-        }}
+  /**
+   * Handle closeOnSelect from @react-aria manually
+   */
+  const closePopover = () => {
+    state.close();
+  };
+
+  const triggerComponent = (
+    <button
+      id={name}
+      {...buttonProps}
+      className={classnames(
+        STYLE.dropdownInput,
+        { [STYLE.selected]: state.selectedItem },
+        { [STYLE.open]: state.isOpen },
+        { [STYLE.borderLess]: !showBorder }
+      )}
+      title={title}
+    >
+      <span
+        title={state.selectedItem?.textValue}
+        {...valueProps}
+        className={STYLE.selectedItemWrapper}
       >
-        {/* Invisible button for accessibility */}
-        <DismissButton onDismiss={() => state.close()} />
-        <ListBoxBase
-          {...menuProps}
-          ref={boxRef}
-          state={state}
-          disallowEmptySelection
-          // eslint-disable-next-line jsx-a11y/no-autofocus
-          autoFocus={state.focusStrategy || DEFAULTS.SHOULD_AUTOFOCUS}
-          className={STYLE.menuListBox}
-        />
-        {/* Invisible button for accessibility */}
-        <DismissButton onDismiss={() => state.close()} />
-      </div>
-    </FocusScope>
+        {state.selectedItem ? state.selectedItem.rendered : placeholder}
+      </span>
+      <span aria-hidden="true" className={STYLE.iconWrapper}>
+        <Icon name={getArrowIcon(state.isOpen)} weight="bold" scale={16} />
+      </span>
+    </button>
   );
+
+  const { keyboardProps } = useKeyboard({
+    onKeyDown: (event) => {
+      if (event.key === 'Escape') {
+        closePopover();
+      }
+    },
+  });
+
+  // delete color prop which is passed down and used in the ModalContainer
+  // because it conflicts with the HTML color property
+  delete keyboardProps.color;
 
   return (
     <div className={classnames(className, STYLE.wrapper)} ref={ref} style={style} id={id}>
       {label && (
         <label htmlFor={name} {...labelProps}>
-          {/* //TODO: change with <Text /> when available */}
-          {label}
+          <Text>{label}</Text>
         </label>
       )}
       <HiddenSelect state={state} triggerRef={selectRef} label={label} name={name} />
-      <FocusRing>
-        <button
-          id={name}
-          {...buttonProps}
-          className={classnames(
-            STYLE.dropdownInput,
-            { [STYLE.selected]: state.selectedItem },
-            { [STYLE.open]: state.isOpen },
-            { [STYLE.borderLess]: !showBorder }
-          )}
-          ref={selectRef}
-          title={title}
-        >
-          <span
-            title={state.selectedItem?.textValue}
-            {...valueProps}
-            className={STYLE.selectedItemWrapper}
-          >
-            {state.selectedItem ? state.selectedItem.rendered : placeholder}
-          </span>
-          <span aria-hidden="true" className={STYLE.iconWrapper}>
-            <Icon name={getArrowIcon(state.isOpen)} weight="bold" scale={16} />
-          </span>
-        </button>
-      </FocusRing>
-      {state.isOpen && !isDisabled && listBox}
+
+      <Popover
+        interactive={true}
+        showArrow={false}
+        triggerComponent={React.cloneElement(triggerComponent, {
+          ref: selectRef,
+        })}
+        trigger="manual"
+        setInstance={setPopoverInstance}
+        placement={direction}
+        onClickOutside={closePopover}
+        addBackdrop
+        hideOnEsc={false}
+        {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
+        style={{ maxHeight: listboxMaxHeight || 'none' }}
+        className={STYLE.popover}
+      >
+        <FocusScope contain>
+          <ListBoxBase
+            {...menuProps}
+            ref={boxRef}
+            state={state}
+            disallowEmptySelection
+            // eslint-disable-next-line jsx-a11y/no-autofocus
+            autoFocus={state.focusStrategy || DEFAULTS.FOCUS_STRATEGY}
+            className={STYLE.menuListBox}
+          />
+        </FocusScope>
+      </Popover>
     </div>
   );
 }
