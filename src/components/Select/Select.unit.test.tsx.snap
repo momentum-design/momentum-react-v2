@@ -251,7 +251,6 @@ exports[`Select snapshot should match snapshot 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -781,7 +780,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -1312,7 +1310,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -2354,7 +2351,6 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -2885,7 +2881,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -3416,7 +3411,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -3957,7 +3951,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -5002,7 +4995,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -5534,7 +5526,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -6576,7 +6567,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -7620,7 +7610,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -8181,7 +8170,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -8746,7 +8734,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -9880,7 +9867,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}
@@ -10410,7 +10396,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
       </div>
     </HiddenSelect>
     <Popover
-      addBackdrop={true}
       className="md-select-popover"
       hideOnEsc={false}
       interactive={true}

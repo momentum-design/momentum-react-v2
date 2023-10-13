@@ -69,9 +69,9 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   /**
    * Handle closeOnSelect from @react-aria manually
    */
-  const closePopover = () => {
+  const closePopover = useCallback(() => {
     state.close();
-  };
+  }, []);
 
   const triggerComponent = (
     <button
@@ -120,7 +120,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
       <HiddenSelect state={state} triggerRef={selectRef} label={label} name={name} />
 
       <Popover
-        interactive={true}
+        interactive
         showArrow={false}
         triggerComponent={React.cloneElement(triggerComponent, {
           ref: selectRef,
@@ -129,7 +129,6 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         setInstance={setPopoverInstance}
         placement={direction}
         onClickOutside={closePopover}
-        addBackdrop
         hideOnEsc={false}
         {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
         style={{ maxHeight: listboxMaxHeight || 'none' }}
