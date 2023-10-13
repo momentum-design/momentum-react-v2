@@ -353,7 +353,6 @@ describe('Select', () => {
         setInstance: expect.any(Function),
         placement: direction,
         onClickOutside: expect.any(Function),
-        addBackdrop: true,
         hideOnEsc: false,
         style: { maxHeight: 'none' },
         className: 'md-select-popover',
@@ -458,13 +457,10 @@ describe('Select', () => {
       const user = userEvent.setup();
 
       render(
-        <>
-          <Select id="test-id" label="test">
-            <Item>Item 1</Item>
-            <Item>Item 2</Item>
-          </Select>
-          <button>button-outside</button>
-        </>
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
       );
 
       // open listbox
@@ -482,13 +478,10 @@ describe('Select', () => {
       const user = userEvent.setup();
 
       render(
-        <>
-          <Select id="test-id" label="test">
-            <Item>Item 1</Item>
-            <Item>Item 2</Item>
-          </Select>
-          <button>button-outside</button>
-        </>
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
       );
 
       // open listbox
@@ -510,13 +503,10 @@ describe('Select', () => {
       const user = userEvent.setup();
 
       render(
-        <>
-          <Select id="test-id" label="test">
-            <Item>Item 1</Item>
-            <Item>Item 2</Item>
-          </Select>
-          <button>button-outside</button>
-        </>
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
       );
 
       // open listbox
@@ -539,14 +529,11 @@ describe('Select', () => {
       const user = userEvent.setup();
 
       render(
-        <>
-          <Select id="test-id" label="test">
-            <Item>Item 1</Item>
-            <Item>Item 2</Item>
-            <Item>Item 3</Item>
-          </Select>
-          <button>button-outside</button>
-        </>
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+          <Item>Item 3</Item>
+        </Select>
       );
 
       // open listbox
@@ -562,6 +549,31 @@ describe('Select', () => {
       });
       // second item should be selected
       expect(screen.getByRole('button', { name: 'test' }).textContent).toBe('Item 3');
+    });
+
+    it('should focus on 2nd option after opening if first option is disabled', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Select id="test-id" label="test" disabledKeys={['1']}>
+          <Item key="1">Item 1</Item>
+          <Item key="2">Item 2</Item>
+        </Select>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('button', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose second value and close listbox by pressing enter
+      await user.keyboard('{Enter}');
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // second item should be selected
+      expect(screen.getByRole('button', { name: 'test' }).textContent).toBe('Item 2');
     });
   });
 });
