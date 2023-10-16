@@ -14,13 +14,13 @@ import { Props } from './Select.types';
 import { DEFAULTS, STYLE } from './Select.constants';
 import { useSelectState } from '@react-stately/select';
 import { useButton } from '@react-aria/button';
+import { FocusScope } from '@react-aria/focus';
+import { useKeyboard } from '@react-aria/interactions';
 import { useSelect, HiddenSelect } from '@react-aria/select';
 import Icon from '../Icon';
-import { useKeyboard } from '@react-aria/interactions';
 import ListBoxBase from '../ListBoxBase';
 import Popover, { PopoverInstance } from '../Popover';
 import Text from '../Text';
-import { FocusScope } from 'react-aria';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
