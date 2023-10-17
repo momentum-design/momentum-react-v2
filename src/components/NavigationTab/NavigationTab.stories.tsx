@@ -27,7 +27,7 @@ Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
 Sizes.parameters = {
-  variants: [{ size: undefined }, { size: 48 }, { size: 200 }],
+  variants: [{ size: undefined }, { size: 40 }, { size: 48 }, { size: 200 }],
 };
 
 const Active = MultiTemplate<NavigationTabProps>(NavigationTab).bind({});

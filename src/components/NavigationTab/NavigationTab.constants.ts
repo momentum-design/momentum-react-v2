@@ -7,6 +7,7 @@ const DEFAULTS = {
 };
 
 const SIZES = {
+  40: 40,
   48: 48,
   200: 200,
 };

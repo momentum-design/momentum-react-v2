@@ -43,4 +43,4 @@ export interface Props extends AriaButtonProps {
   active?: boolean;
 }
 
-export type NavTabSize = 48 | 200;
+export type NavTabSize = 40 | 48 | 200;
