@@ -7,14 +7,18 @@ import { STYLE } from './ContentSeparator.constants';
 import { useSeparator } from '@react-aria/separator';
 
 const ContentSeparator: React.FC<Props> = (props: Props) => {
-  const { className, children } = props;
+  const { className, children, gradient } = props;
 
   const { separatorProps } = useSeparator({
     elementType: 'li',
   });
 
   return (
-    <li {...separatorProps} className={classnames(className, STYLE.wrapper)}>
+    <li
+      {...separatorProps}
+      className={classnames(className, STYLE.wrapper)}
+      data-gradient={gradient}
+    >
       {children}
     </li>
   );

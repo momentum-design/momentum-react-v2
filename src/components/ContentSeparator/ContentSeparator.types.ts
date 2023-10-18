@@ -9,4 +9,8 @@ export interface Props {
    * The child components of this component.
    */
   children?: ReactNode;
+  /**
+   * Gradient to be specifically targeted when used inside NavigationTab
+   */
+  gradient?: boolean;
 }
