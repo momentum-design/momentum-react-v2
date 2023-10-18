@@ -3,6 +3,13 @@
   margin: 0.25rem 0;
   display: flex;
   flex-direction: row;
+  &[data-gradient="true"] {
+    &:after {
+      border-bottom: none;
+      height: 1px;
+      background: linear-gradient(90deg, var(--mds-color-theme-gradientdivider-normal-0) -2.27%, var(--mds-color-theme-gradientdivider-normal-1) 21.16%, var(--mds-color-theme-gradientdivider-normal-1) 73.47%, var(--mds-color-theme-gradientdivider-normal-0) 102.35%);
+    }
+  }
 
   &:after {
     content: '';
