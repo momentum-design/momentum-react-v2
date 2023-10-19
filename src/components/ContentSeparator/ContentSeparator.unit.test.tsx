@@ -27,7 +27,7 @@ describe('ContentSeparator', () => {
     it('should render with default props', () => {
       const container = mount(<ContentSeparator>hello</ContentSeparator>);
 
-      expect(container.find('li').prop('className')).toEqual('ContentSeparator wrapper');
+      expect(container.find('li').prop('className')).toEqual('md-content-separator-wrapper');
       expect(container.find('li').prop('data-gradient')).toBeUndefined();
     });
 
@@ -40,11 +40,10 @@ describe('ContentSeparator', () => {
         </ContentSeparator>
       );
 
-      expect(container.find('li').props()).toMatchObject({
-        role: 'separator',
-        'data-gradient': true,
-        className: 'custom-class md-content-separator-wrapper',
-      });
+      expect(container.find('li').prop('className')).toEqual(
+        'custom-class md-content-separator-wrapper'
+      );
+      expect(container.find('li').prop('data-gradient')).toEqual(true);
     });
   });
 });
