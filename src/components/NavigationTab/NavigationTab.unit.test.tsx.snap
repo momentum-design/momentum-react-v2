@@ -387,6 +387,53 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
 <div>
   <NavigationTab
     key="0"
+    size={40}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <ButtonSimple
+          className="md-navigation-tab-wrapper"
+          data-active={false}
+          data-size={40}
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-navigation-tab-wrapper md-button-simple-wrapper"
+                data-active={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              />
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </FocusRing>
+    </FocusRing>
+  </NavigationTab>
+  <NavigationTab
+    key="1"
     size={48}
   >
     <FocusRing>
@@ -433,7 +480,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
     </FocusRing>
   </NavigationTab>
   <NavigationTab
-    key="1"
+    key="2"
     size={200}
   >
     <FocusRing>
