@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect } from 'react';
+import React, { ForwardedRef, forwardRef, useCallback, useEffect } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
@@ -11,6 +11,7 @@ import type { Props } from './Popover.types';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 import classNames from 'classnames';
 import { isMRv2Button } from '../../helpers/verifyTypes';
+import { applyRef } from '../../utils';
 import { addTippyPlugins } from './Popover.utils';
 // eslint-disable-next-line import/no-unresolved
 import { v4 as uuidV4 } from 'uuid';
@@ -23,7 +24,7 @@ import { v4 as uuidV4 } from 'uuid';
  * Popover uses @tippyjs/react under the hood - possible attributes for future modification
  * can be found here: https://atomiks.github.io/tippyjs/v6/all-props/
  */
-const Popover: FC<Props> = (props: Props) => {
+const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   const {
     children,
     trigger = DEFAULTS.TRIGGER,
@@ -63,28 +64,38 @@ const Popover: FC<Props> = (props: Props) => {
     ...rest
   } = props;
 
-  const tippyRef = React.useRef(null);
+  const localRef = React.useRef(null);
+
+  // use a callback so that the ref can be duplicated on a local version of it (to be used in this component)
+  // as well as the forwarded version (to allow for nesting)
+  const tippyRef = useCallback(
+    (node: HTMLElement) => {
+      applyRef(localRef, node);
+      applyRef(ref, node);
+    },
+    [localRef, ref]
+  );
 
   // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):
   const arrowId = React.useMemo(() => `${ARROW_ID}${uuidV4()}`, []);
 
   const handleOnCloseButtonClick = useCallback(() => {
-    tippyRef?.current?._tippy?.hide();
-  }, [tippyRef]);
+    localRef?.current?._tippy?.hide();
+  }, [localRef]);
 
   const handleOnPopoverHide = useCallback(() => {
     if (focusBackOnTrigger) {
-      tippyRef?.current?._tippy?.reference?.focus();
+      localRef?.current?._tippy?.reference?.focus();
     }
-  }, [triggerComponent, tippyRef, focusBackOnTrigger]);
+  }, [triggerComponent, localRef, focusBackOnTrigger]);
 
   React.useEffect(() => {
-    if (tippyRef?.current?._tippy) {
+    if (localRef?.current?._tippy) {
       // will set the instance of the Popover to the _tippy object of the Popover,
       // which will allow showing & hiding from a parent component
-      setInstance?.(tippyRef.current._tippy);
+      setInstance?.(localRef.current._tippy);
     }
-  }, [tippyRef, setInstance]);
+  }, [localRef, setInstance]);
 
   useEffect(() => {
     firstFocusElement?.focus();
@@ -182,6 +193,8 @@ const Popover: FC<Props> = (props: Props) => {
         : triggerComponent}
     </LazyTippy>
   );
-};
+});
+
+Popover.displayName = 'Popover';
 
 export default Popover;
