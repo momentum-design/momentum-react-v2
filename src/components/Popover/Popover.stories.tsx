@@ -155,6 +155,32 @@ Offset.args = {
   ),
 };
 
+const MultiplePopovers = Template<PopoverProps>(Popover).bind({});
+
+MultiplePopovers.argTypes = { ...argTypes };
+
+MultiplePopovers.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: 'Interactive content on click',
+  triggerComponent: (
+    <Popover
+      trigger="mouseenter"
+      placement={PLACEMENTS.BOTTOM}
+      showArrow
+      triggerComponent={
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+          Hover or click me!
+        </ButtonSimple>
+      }
+    >
+      Description tooltip on hover
+    </Popover>
+  ),
+};
+
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -208,4 +234,12 @@ Common.parameters = {
   ],
 };
 
-export { Example, InteractiveContent, InteractiveFocus, WithCloseButton, Offset, Common };
+export {
+  Example,
+  InteractiveContent,
+  InteractiveFocus,
+  WithCloseButton,
+  Offset,
+  MultiplePopovers,
+  Common,
+};
