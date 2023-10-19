@@ -488,384 +488,445 @@ describe('<Popover />', () => {
     });
   });
 
-  describe('actions', () => {
-    it('should show/hide Popover on click', async () => {
-      const user = userEvent.setup();
+  const nullRef = null;
+  const callbackRef = jest.fn();
+  const mutableRef = { current: null };
+  const refCases = [
+    {
+      description: 'null',
+      ref: nullRef,
+      checkRef: () => expect(nullRef).toBeNull(), // some tests expect a fixed number of assertions so performing one here anyway
+      resetRef: () => undefined,
+    },
+    {
+      description: 'callback',
+      ref: callbackRef,
+      checkRef: (node: HTMLElement) => expect(callbackRef).toHaveBeenLastCalledWith(node),
+      resetRef: () => callbackRef.mockClear(),
+    },
+    {
+      description: 'mutable',
+      ref: mutableRef,
+      checkRef: (node: HTMLElement) => expect(mutableRef).toStrictEqual({ current: node }),
+      resetRef: () => (mutableRef.current = null),
+    },
+  ];
 
-      const props = {
-        onCreate: jest.fn(),
-        onDestroy: jest.fn(),
-        onHidden: jest.fn(),
-        onHide: jest.fn(),
-        onMount: jest.fn(),
-        onShow: jest.fn(),
-        onShown: jest.fn(),
-        onTrigger: jest.fn(),
-        onUntrigger: jest.fn(),
-      };
-
-      expect(props.onMount).not.toBeCalled();
-      expect(props.onCreate).not.toBeCalled();
-
-      const { unmount } = render(
-        <Popover triggerComponent={<button>Click Me!</button>} {...props}>
-          <p>Content</p>
-        </Popover>
-      );
-
-      expect(props.onCreate).toBeCalled();
-
-      expect(props.onShow).not.toBeCalled();
-      expect(props.onShown).not.toBeCalled();
-      expect(props.onTrigger).not.toBeCalled();
-
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
-
-      // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent(user);
-
-      expect(props.onMount).toBeCalled();
-      expect(props.onShow).toBeCalled();
-      expect(props.onTrigger).toBeCalled();
-
-      expect(props.onHide).not.toBeCalled();
-      expect(props.onHidden).not.toBeCalled();
-      expect(props.onUntrigger).not.toBeCalled();
-      expect(props.onDestroy).not.toBeCalled();
-
-      // after another click, popover should be hidden again
-      await user.click(screen.getByRole('button', { name: /click me!/i }));
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+  refCases.forEach(({ description, ref, checkRef, resetRef }) => {
+    describe(`actions (${description} ref)`, () => {
+      beforeEach(() => {
+        resetRef();
       });
 
-      expect(props.onHide).toBeCalled();
-      expect(props.onHidden).toBeCalled();
-      expect(props.onUntrigger).toBeCalled();
+      it('should show/hide Popover on click', async () => {
+        const user = userEvent.setup();
 
-      unmount();
+        const props = {
+          onCreate: jest.fn(),
+          onDestroy: jest.fn(),
+          onHidden: jest.fn(),
+          onHide: jest.fn(),
+          onMount: jest.fn(),
+          onShow: jest.fn(),
+          onShown: jest.fn(),
+          onTrigger: jest.fn(),
+          onUntrigger: jest.fn(),
+        };
 
-      expect(props.onDestroy).toBeCalled();
-    });
+        expect(props.onMount).not.toBeCalled();
+        expect(props.onCreate).not.toBeCalled();
 
-    it('should show/hide Popover on tab + enter', async () => {
-      expect.assertions(4);
-      const user = userEvent.setup();
-
-      render(
-        <Popover triggerComponent={<ButtonSimple>Click Me!</ButtonSimple>}>
-          <p>Content</p>
-        </Popover>
-      );
-
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
-
-      // after tab and enter, popover should be shown
-      await user.tab();
-      await user.keyboard('{Enter}');
-      const content = await screen.findByText('Content');
-      expect(content).toBeVisible();
-
-      // after hitting space, popover should be hidden again
-      await user.keyboard('{ }');
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
-      });
-    });
-
-    it('should show Popover on mouseenter', async () => {
-      expect.assertions(4);
-      const user = userEvent.setup();
-
-      render(
-        <Popover triggerComponent={<button>Hover Me!</button>} trigger="mouseenter">
-          <p>Content</p>
-        </Popover>
-      );
-
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
-
-      // after hover, popover should be shown
-      await user.hover(screen.getByRole('button', { name: /hover me!/i }));
-      const content = await screen.findByText('Content');
-      expect(content).toBeVisible();
-
-      // after unhover, popover should be hidden again
-      await user.unhover(screen.getByRole('button', { name: /hover me!/i }));
-
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
-      });
-    });
-
-    it('should show Popover on focusin', async () => {
-      expect.assertions(4);
-      const user = userEvent.setup();
-
-      render(
-        <Popover triggerComponent={<button>Focus Me!</button>} trigger="focusin">
-          <p>Content</p>
-        </Popover>
-      );
-
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
-
-      // after tabbing to it, popover should be shown
-      await user.tab();
-      const content = await screen.findByText('Content');
-      expect(content).toBeVisible();
-
-      // after tabbing away, popover should be hidden again
-      await user.tab();
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
-      });
-    });
-
-    it('should show/hide Popover when triggered through instance', async () => {
-      expect.assertions(2);
-      const user = userEvent.setup();
-
-      const ParentComponent = () => {
-        const [instance, setInstance] = React.useState<PopoverInstance>();
-
-        const handleShow = React.useCallback(() => {
-          instance.show();
-        }, [instance]);
-
-        const handleHide = React.useCallback(() => {
-          instance.hide();
-        }, [instance]);
-
-        return (
-          <>
-            <Popover
-              triggerComponent={<button>Focus Me!</button>}
-              trigger="focusin"
-              setInstance={setInstance}
-            >
-              <p>Content</p>
-            </Popover>
-            <button id="show" onClick={handleShow}>
-              Show
-            </button>
-            <button id="hide" onClick={handleHide}>
-              Hide
-            </button>
-          </>
+        const { unmount } = render(
+          <Popover ref={ref} triggerComponent={<button>Click Me!</button>} {...props}>
+            <p>Content</p>
+          </Popover>
         );
-      };
 
-      render(<ParentComponent />);
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
 
-      // show popover from the parent component
-      await openPopoverByClickingOnTriggerAndCheckContent(user, /show/i);
+        expect(props.onCreate).toBeCalled();
 
-      // hide popover from the parent component
-      await user.click(screen.getByRole('button', { name: /hide/i }));
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
-      });
-    });
+        expect(props.onShow).not.toBeCalled();
+        expect(props.onShown).not.toBeCalled();
+        expect(props.onTrigger).not.toBeCalled();
 
-    it('should hide Popover after pressing Esc by default', async () => {
-      expect.assertions(3);
-      const user = userEvent.setup();
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
 
-      render(
-        <Popover triggerComponent={<button>Click Me!</button>} trigger="click">
-          <p>Content</p>
-        </Popover>
-      );
+        // after click, popover should be shown
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
 
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
+        expect(props.onMount).toBeCalled();
+        expect(props.onShow).toBeCalled();
+        expect(props.onTrigger).toBeCalled();
 
-      // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent(user);
+        expect(props.onHide).not.toBeCalled();
+        expect(props.onHidden).not.toBeCalled();
+        expect(props.onUntrigger).not.toBeCalled();
+        expect(props.onDestroy).not.toBeCalled();
 
-      await user.keyboard('{Escape}');
+        // after another click, popover should be hidden again
+        await user.click(screen.getByRole('button', { name: /click me!/i }));
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
 
-      // content should be hidden
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
-      });
-    });
+        expect(props.onHide).toBeCalled();
+        expect(props.onHidden).toBeCalled();
+        expect(props.onUntrigger).toBeCalled();
 
-    it('should not hide Popover after pressing Esc when hideOnEsc is false', async () => {
-      expect.assertions(3);
-      const user = userEvent.setup();
+        unmount();
 
-      render(
-        <Popover triggerComponent={<button>Click Me!</button>} trigger="click" hideOnEsc={false}>
-          <p>Content</p>
-        </Popover>
-      );
-
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
-
-      // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent(user);
-
-      await user.keyboard('{Escape}');
-
-      // content should still be visible
-      const contentAfterEsc = await screen.findByText('Content');
-      expect(contentAfterEsc).toBeVisible();
-    });
-
-    it('it should close the Popover if closeButtonPlacement is not none', async () => {
-      expect.assertions(3);
-      const user = userEvent.setup();
-
-      render(
-        <Popover
-          closeButtonProps={{ 'aria-label': 'Close' }}
-          triggerComponent={<button>Click Me!</button>}
-          interactive
-          closeButtonPlacement="top-right"
-          trigger="click"
-          hideOnEsc={false}
-        >
-          <p>Content</p>
-        </Popover>
-      );
-
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
-
-      // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent(user);
-
-      // click the close button
-      await user.click(screen.getByRole('button', { name: 'Close' }));
-
-      // content should be hidden
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
-      });
-    });
-
-    it('it should focus on the trigger component when focusBackOnTrigger= = true and popover gets closed', async () => {
-      expect.assertions(5);
-      const user = userEvent.setup();
-
-      render(
-        <Popover
-          closeButtonProps={{ 'aria-label': 'Close' }}
-          triggerComponent={<button>Click Me!</button>}
-          interactive
-          closeButtonPlacement="top-right"
-          trigger="click"
-          hideOnEsc={false}
-          focusBackOnTrigger
-        >
-          <p>Content</p>
-        </Popover>
-      );
-
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
-
-      // after click, popover should be shown
-
-      await openPopoverByClickingOnTriggerAndCheckContent(user);
-
-      const closeButton = screen.getByRole('button', { name: 'Close' });
-
-      await user.tab();
-      // click the close button
-
-      expect(document.activeElement).toEqual(closeButton);
-
-      await user.click(closeButton);
-
-      // content should be hidden
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        expect(props.onDestroy).toBeCalled();
       });
 
-      const triggerComponent = screen.getByRole('button', { name: /click me!/i });
-      expect(document.activeElement).toEqual(triggerComponent);
-    });
+      it('should show/hide Popover on tab + enter', async () => {
+        expect.assertions(5);
+        const user = userEvent.setup();
 
-    it('it should focus on the firstFocusElement', async () => {
-      expect.assertions(3);
-      const user = userEvent.setup();
+        render(
+          <Popover ref={ref} triggerComponent={<ButtonSimple>Click Me!</ButtonSimple>}>
+            <p>Content</p>
+          </Popover>
+        );
 
-      const FirstFocusComponent = () => {
-        const [ref, setRef] = useState<HTMLButtonElement>();
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
 
-        return (
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after tab and enter, popover should be shown
+        await user.tab();
+        await user.keyboard('{Enter}');
+        const content = await screen.findByText('Content');
+        expect(content).toBeVisible();
+
+        // after hitting space, popover should be hidden again
+        await user.keyboard('{ }');
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
+
+      it('should show Popover on mouseenter', async () => {
+        expect.assertions(5);
+        const user = userEvent.setup();
+
+        render(
+          <Popover ref={ref} triggerComponent={<button>Hover Me!</button>} trigger="mouseenter">
+            <p>Content</p>
+          </Popover>
+        );
+
+        checkRef(screen.getByRole('button', { name: 'Hover Me!' }));
+
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after hover, popover should be shown
+        await user.hover(screen.getByRole('button', { name: /hover me!/i }));
+        const content = await screen.findByText('Content');
+        expect(content).toBeVisible();
+
+        // after unhover, popover should be hidden again
+        await user.unhover(screen.getByRole('button', { name: /hover me!/i }));
+
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
+
+      it('should show Popover on focusin', async () => {
+        expect.assertions(5);
+        const user = userEvent.setup();
+
+        render(
+          <Popover ref={ref} triggerComponent={<button>Focus Me!</button>} trigger="focusin">
+            <p>Content</p>
+          </Popover>
+        );
+
+        checkRef(screen.getByRole('button', { name: 'Focus Me!' }));
+
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after tabbing to it, popover should be shown
+        await user.tab();
+        const content = await screen.findByText('Content');
+        expect(content).toBeVisible();
+
+        // after tabbing away, popover should be hidden again
+        await user.tab();
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
+
+      it('should show/hide Popover when triggered through instance', async () => {
+        expect.assertions(3);
+        const user = userEvent.setup();
+
+        const ParentComponent = () => {
+          const [instance, setInstance] = React.useState<PopoverInstance>();
+
+          const handleShow = React.useCallback(() => {
+            instance.show();
+          }, [instance]);
+
+          const handleHide = React.useCallback(() => {
+            instance.hide();
+          }, [instance]);
+
+          return (
+            <>
+              <Popover
+                ref={ref}
+                triggerComponent={<button>Focus Me!</button>}
+                trigger="focusin"
+                setInstance={setInstance}
+              >
+                <p>Content</p>
+              </Popover>
+              <button id="show" onClick={handleShow}>
+                Show
+              </button>
+              <button id="hide" onClick={handleHide}>
+                Hide
+              </button>
+            </>
+          );
+        };
+
+        render(<ParentComponent />);
+
+        checkRef(screen.getByRole('button', { name: 'Focus Me!' }));
+
+        // show popover from the parent component
+        await openPopoverByClickingOnTriggerAndCheckContent(user, /show/i);
+
+        // hide popover from the parent component
+        await user.click(screen.getByRole('button', { name: /hide/i }));
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
+
+      it('should hide Popover after pressing Esc by default', async () => {
+        expect.assertions(4);
+        const user = userEvent.setup();
+
+        render(
+          <Popover ref={ref} triggerComponent={<button>Click Me!</button>} trigger="click">
+            <p>Content</p>
+          </Popover>
+        );
+
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
+
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after click, popover should be shown
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+        await user.keyboard('{Escape}');
+
+        // content should be hidden
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
+
+      it('should not hide Popover after pressing Esc when hideOnEsc is false', async () => {
+        expect.assertions(4);
+        const user = userEvent.setup();
+
+        render(
           <Popover
+            ref={ref}
+            triggerComponent={<button>Click Me!</button>}
+            trigger="click"
+            hideOnEsc={false}
+          >
+            <p>Content</p>
+          </Popover>
+        );
+
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
+
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after click, popover should be shown
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+        await user.keyboard('{Escape}');
+
+        // content should still be visible
+        const contentAfterEsc = await screen.findByText('Content');
+        expect(contentAfterEsc).toBeVisible();
+      });
+
+      it('it should close the Popover if closeButtonPlacement is not none', async () => {
+        expect.assertions(4);
+        const user = userEvent.setup();
+
+        render(
+          <Popover
+            ref={ref}
             closeButtonProps={{ 'aria-label': 'Close' }}
             triggerComponent={<button>Click Me!</button>}
             interactive
             closeButtonPlacement="top-right"
             trigger="click"
             hideOnEsc={false}
-            firstFocusElement={ref}
           >
-            <ButtonSimple role="group" ref={setRef}>
-              FirstFocusButton
-            </ButtonSimple>
             <p>Content</p>
           </Popover>
         );
-      };
 
-      render(<FirstFocusComponent />);
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
 
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
 
-      // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent(user);
+        // after click, popover should be shown
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
 
-      // focus should now be on the first focus el
-      const button = screen.getByRole('group');
+        // click the close button
+        await user.click(screen.getByRole('button', { name: 'Close' }));
 
-      expect(document.activeElement).toEqual(button);
-    });
+        // content should be hidden
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
 
-    it('should hide Popover after clicking on the backdrop', async () => {
-      expect.assertions(3);
-      const user = userEvent.setup();
+      it('it should focus on the trigger component when focusBackOnTrigger= = true and popover gets closed', async () => {
+        expect.assertions(6);
+        const user = userEvent.setup();
 
-      const { container } = render(
-        <Popover triggerComponent={<button>Click Me!</button>} trigger="click">
-          <p>Content</p>
-        </Popover>
-      );
+        render(
+          <Popover
+            ref={ref}
+            closeButtonProps={{ 'aria-label': 'Close' }}
+            triggerComponent={<button>Click Me!</button>}
+            interactive
+            closeButtonPlacement="top-right"
+            trigger="click"
+            hideOnEsc={false}
+            focusBackOnTrigger
+          >
+            <p>Content</p>
+          </Popover>
+        );
 
-      // assert no popover on screen
-      const contentBeforeClick = screen.queryByText('Content');
-      expect(contentBeforeClick).not.toBeInTheDocument();
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
 
-      // after click, popover should be shown
-      await openPopoverByClickingOnTriggerAndCheckContent(user);
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
 
-      const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
+        // after click, popover should be shown
 
-      await user.click(backdrop);
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
 
-      // content should be hidden
-      await waitFor(() => {
-        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        const closeButton = screen.getByRole('button', { name: 'Close' });
+
+        await user.tab();
+        // click the close button
+
+        expect(document.activeElement).toEqual(closeButton);
+
+        await user.click(closeButton);
+
+        // content should be hidden
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+
+        const triggerComponent = screen.getByRole('button', { name: /click me!/i });
+        expect(document.activeElement).toEqual(triggerComponent);
+      });
+
+      it('it should focus on the firstFocusElement', async () => {
+        expect.assertions(4);
+        const user = userEvent.setup();
+
+        const FirstFocusComponent = () => {
+          const [buttonRef, setRef] = useState<HTMLButtonElement>();
+
+          return (
+            <Popover
+              ref={ref}
+              closeButtonProps={{ 'aria-label': 'Close' }}
+              triggerComponent={<button>Click Me!</button>}
+              interactive
+              closeButtonPlacement="top-right"
+              trigger="click"
+              hideOnEsc={false}
+              firstFocusElement={buttonRef}
+            >
+              <ButtonSimple role="group" ref={setRef}>
+                FirstFocusButton
+              </ButtonSimple>
+              <p>Content</p>
+            </Popover>
+          );
+        };
+
+        render(<FirstFocusComponent />);
+
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
+
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after click, popover should be shown
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+        // focus should now be on the first focus el
+        const button = screen.getByRole('group');
+
+        expect(document.activeElement).toEqual(button);
+      });
+
+      it('should hide Popover after clicking on the backdrop', async () => {
+        expect.assertions(4);
+        const user = userEvent.setup();
+
+        const { container } = render(
+          <Popover ref={ref} triggerComponent={<button>Click Me!</button>} trigger="click">
+            <p>Content</p>
+          </Popover>
+        );
+
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
+
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after click, popover should be shown
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+        const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
+
+        await user.click(backdrop);
+
+        // content should be hidden
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
       });
     });
   });
