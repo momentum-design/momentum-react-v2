@@ -352,27 +352,27 @@ Common.parameters = {
     },
     {
       children: [
-        <div key="0" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+        <div key="0" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
           <ButtonCircle ghost size={32}>
             <Icon name="camera-presence" autoScale={150} />
           </ButtonCircle>
         </div>,
-        <div key="1" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+        <div key="1" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
           <ButtonCircle ghost size={32}>
             <Icon name="quiet-hours-presence" autoScale={150} />
           </ButtonCircle>
         </div>,
-        <div key="2" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+        <div key="2" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
           <ButtonCircle ghost size={32}>
             <Icon name="handset" autoScale={150} />
           </ButtonCircle>
         </div>,
-        <div key="3" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+        <div key="3" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
           <ButtonCircle ghost size={32}>
             <Icon name="meetings-presence" autoScale={150} />
           </ButtonCircle>
         </div>,
-        <div key="4" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+        <div key="4" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
           <ButtonCircle ghost size={32}>
             <Icon name="pto-presence" autoScale={150} />
           </ButtonCircle>

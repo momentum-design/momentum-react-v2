@@ -1,11 +1,18 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 
-import { DEFAULTS, STYLE } from './ButtonGroup.constants';
+import { DEFAULTS, STYLE, CHILD_OF } from './ButtonGroup.constants';
 import { Props } from './ButtonGroup.types';
+
 import './ButtonGroup.style.scss';
 
-const ButtonGroup: FC<Props> = (props: Props) => {
+export interface CompoundProps {
+  CHILD_PROPS: {
+    [CHILD_OF.KEY]: typeof CHILD_OF.VALUE;
+  };
+}
+
+const ButtonGroup: FC<Props> & CompoundProps = (props: Props) => {
   const {
     children,
     className,
@@ -37,3 +44,7 @@ const ButtonGroup: FC<Props> = (props: Props) => {
 };
 
 export default ButtonGroup;
+
+ButtonGroup.CHILD_PROPS = {
+  [CHILD_OF.KEY]: CHILD_OF.VALUE,
+};
