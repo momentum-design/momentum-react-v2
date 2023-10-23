@@ -350,6 +350,40 @@ Common.parameters = {
         backgroundColor: 'Chocolate',
       },
     },
+    {
+      children: [
+        <div key="0" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+          <ButtonCircle ghost size={32}>
+            <Icon name="camera-presence" autoScale={150} />
+          </ButtonCircle>
+        </div>,
+        <div key="1" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+          <ButtonCircle ghost size={32}>
+            <Icon name="quiet-hours-presence" autoScale={150} />
+          </ButtonCircle>
+        </div>,
+        <div key="2" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+          <ButtonCircle ghost size={32}>
+            <Icon name="handset" autoScale={150} />
+          </ButtonCircle>
+        </div>,
+        <div key="3" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+          <ButtonCircle ghost size={32}>
+            <Icon name="meetings-presence" autoScale={150} />
+          </ButtonCircle>
+        </div>,
+        <div key="4" data-childof="button-group" style={{ fontSize: '0.8rem' }}>
+          <ButtonCircle ghost size={32}>
+            <Icon name="pto-presence" autoScale={150} />
+          </ButtonCircle>
+        </div>,
+      ],
+      round: true,
+      spaced: true,
+      style: {
+        backgroundColor: 'Chocolate',
+      },
+    },
   ],
 };
 
