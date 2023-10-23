@@ -6,13 +6,15 @@ export default {
   ...commonStyles,
   children: {
     defaultValue: undefined,
-    description: 'Provides the SupportedButton child nodes for this component.',
+    description:
+      'Provides the SupportedButton child nodes for this component. Elements, which wrap the Button, could also be passed in, with `data-childof="button-group"` to be set and using the same `fontSize` as the Button it is wrapping.',
     control: {
       type: 'none',
     },
     table: {
       type: {
-        summary: 'ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>>',
+        summary:
+          'ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>> | Array<HTMLElement>',
       },
       defaultValue: {
         summary: 'undefined',

@@ -9,8 +9,15 @@ export type ButtonGroupOrientation = 'horizontal' | 'vertical';
 export interface Props {
   /**
    * Button shaped components.
+   *
+   * NOTE: if passing in wrapper around buttons (using a HTMLElement),
+   * each wrapper needs to have `data-childof="button-group"` to be set and
+   * using the same `fontSize` as the Button it is wrapping.
    */
-  children?: ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>>;
+  children?:
+    | ReactElement<SupportedComponents>
+    | Array<ReactElement<SupportedComponents>>
+    | Array<HTMLElement>;
 
   /**
    * Custom class for overriding this component's CSS.
