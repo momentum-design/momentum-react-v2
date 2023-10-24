@@ -13,6 +13,8 @@ export interface Props {
    * NOTE: if passing in wrapper around buttons (using a HTMLElement),
    * each wrapper needs to have `data-childof="button-group"` to be set and
    * using the same `fontSize` as the Button it is wrapping.
+   *
+   * `data-compressed` is also required to be set on the wrapper, if `compressed` is set to true on the button group.
    */
   children?:
     | ReactElement<SupportedComponents>
