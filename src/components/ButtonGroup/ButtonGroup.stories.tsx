@@ -86,14 +86,14 @@ const separatorCommonChildren = [
 ];
 
 const callControlsCommonChildren = [
-  <ButtonCircle ghost key="0" size={40}>
+  <ButtonCircle key="0" ghost size={40}>
     <Icon key="0" name="raise-hand" autoScale={125} />
   </ButtonCircle>,
   <MenuTrigger
-    key="2"
+    key="1"
     placement="top-end"
     triggerComponent={
-      <ButtonCircle ghost key="1" size={40}>
+      <ButtonCircle ghost size={40}>
         <Icon name="reactions" autoScale={125} />
       </ButtonCircle>
     }
@@ -104,6 +104,31 @@ const callControlsCommonChildren = [
       </Menu>,
     ]}
   />,
+];
+
+const callControlsCommonChildrenWithDiv = [
+  <div key="0" {...ButtonGroup.CHILD_PROPS}>
+    <ButtonCircle ghost size={40}>
+      <Icon key="0" name="raise-hand" autoScale={125} />
+    </ButtonCircle>
+  </div>,
+  <div key="1" {...ButtonGroup.CHILD_PROPS}>
+    <MenuTrigger
+      key="2"
+      placement="top-end"
+      triggerComponent={
+        <ButtonCircle ghost size={40}>
+          <Icon name="reactions" autoScale={125} />
+        </ButtonCircle>
+      }
+      children={[
+        <Menu key="0" selectionMode="single">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Menu>,
+      ]}
+    />
+  </div>,
 ];
 
 const paginationCommonChildren = [
@@ -124,6 +149,12 @@ Separator.parameters = {
     {
       style: { marginTop: '1rem' },
       children: callControlsCommonChildren,
+      round: true,
+      separator: true,
+    },
+    {
+      style: { marginTop: '1rem' },
+      children: callControlsCommonChildrenWithDiv,
       round: true,
       separator: true,
     },
@@ -241,6 +272,23 @@ AudioVideoControls.parameters = {
         <ButtonCircle outline ghost key="1" size={40}>
           <Icon name="arrow-down-optical" autoScale={100} />
         </ButtonCircle>,
+      ],
+      round: true,
+      compressed: true,
+    },
+    {
+      children: [
+        <div key="0" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }} data-compressed>
+          <ButtonPill outline ghost size={40} style={{ minWidth: '8.3rem' }}>
+            <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
+            <div key="1">Long Label Possibly German</div>
+          </ButtonPill>
+        </div>,
+        <div key="1" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }} data-compressed>
+          <ButtonCircle outline ghost size={40}>
+            <Icon name="arrow-down-optical" scale={16} />
+          </ButtonCircle>
+        </div>,
       ],
       round: true,
       compressed: true,
