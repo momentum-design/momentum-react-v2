@@ -13,4 +13,6 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, SIZES, STYLE };
+const GENERIC_CHANGE = 'GENERIC_CNAGE';
+
+export { CLASS_PREFIX, DEFAULTS, SIZES, STYLE, GENERIC_CHANGE };
