@@ -81,6 +81,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -99,6 +100,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -150,6 +154,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -2316,6 +2323,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -2334,6 +2342,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -2385,6 +2396,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -4551,6 +4565,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -4569,6 +4584,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -4620,6 +4638,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -6787,6 +6808,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -6805,6 +6827,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -6856,6 +6881,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -9025,6 +9053,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -9043,6 +9072,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         placement="top"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -9094,6 +9126,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           placement="top"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -11260,6 +11295,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -11278,6 +11314,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -11329,6 +11368,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -13568,6 +13610,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -13586,6 +13629,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -13637,6 +13683,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -15814,6 +15863,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         }
       }
       render={[Function]}
+      setInstance={[Function]}
       trigger="click"
     >
       <ForwardRef(TippyWrapper)
@@ -15832,6 +15882,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         placement="bottom-start"
         plugins={
           Array [
+            Object {
+              "fn": [Function],
+            },
             Object {
               "fn": [Function],
             },
@@ -15883,6 +15936,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
