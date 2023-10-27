@@ -353,6 +353,7 @@ describe('Select', () => {
         setInstance: expect.any(Function),
         placement: direction,
         onClickOutside: expect.any(Function),
+        onHide: expect.any(Function),
         hideOnEsc: false,
         style: { maxHeight: 'none' },
         className: 'md-select-popover',
