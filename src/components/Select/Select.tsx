@@ -129,6 +129,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         setInstance={setPopoverInstance}
         placement={direction}
         onClickOutside={closePopover}
+        onHide={closePopover}
         hideOnEsc={false}
         {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
         style={{ maxHeight: listboxMaxHeight || 'none' }}
