@@ -225,6 +225,19 @@ describe('Select', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with isInForm = false', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(
+        <Select isInForm={false} isOpen={true} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

@@ -16,7 +16,7 @@ import { useSelectState } from '@react-stately/select';
 import { useButton } from '@react-aria/button';
 import { FocusScope } from '@react-aria/focus';
 import { useKeyboard } from '@react-aria/interactions';
-import { useSelect } from '@react-aria/select';
+import { HiddenSelect, useSelect } from '@react-aria/select';
 import Icon from '../Icon';
 import ListBoxBase from '../ListBoxBase';
 import Popover, { PopoverInstance } from '../Popover';
@@ -36,6 +36,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     title,
     showBorder = DEFAULTS.SHOULD_SHOW_BORDER,
     listboxMaxHeight,
+    isInForm = DEFAULTS.IS_IN_FORM,
   } = props;
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
   const hasBeenOpened = useRef<boolean>(false);
@@ -65,6 +66,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         // hide popover once state changes to isOpen = false
         popoverInstance.hide();
         if (hasBeenOpened.current) {
+          // only do this if it has been opened previously to prevent unexpected focus
           handleFocusBackOnTrigger();
         }
       }
@@ -138,7 +140,15 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
           <Text>{label}</Text>
         </label>
       )}
-
+      {isInForm && (
+        <HiddenSelect
+          isDisabled={isDisabled}
+          state={state}
+          triggerRef={selectRef}
+          label={label}
+          name={name}
+        />
+      )}
       <Popover
         interactive
         showArrow={false}

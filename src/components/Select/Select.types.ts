@@ -44,4 +44,9 @@ export interface Props<T> extends AriaSelectProps<T> {
    * To override the list box max height
    */
   listboxMaxHeight?: string;
+
+  /**
+   * Whether this component is a child of, or associated to, a form
+   */
+  isInForm?: boolean;
 }
