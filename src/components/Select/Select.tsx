@@ -16,7 +16,7 @@ import { useSelectState } from '@react-stately/select';
 import { useButton } from '@react-aria/button';
 import { FocusScope } from '@react-aria/focus';
 import { useKeyboard } from '@react-aria/interactions';
-import { useSelect, HiddenSelect } from '@react-aria/select';
+import { useSelect } from '@react-aria/select';
 import Icon from '../Icon';
 import ListBoxBase from '../ListBoxBase';
 import Popover, { PopoverInstance } from '../Popover';
@@ -38,6 +38,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     listboxMaxHeight,
   } = props;
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
+  const hasBeenOpened = useRef<boolean>(false);
 
   const selectRef = useRef<HTMLButtonElement>(null);
   const boxRef = useRef<HTMLUListElement>(null);
@@ -46,31 +47,50 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
   const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
   delete buttonProps.color;
+  delete buttonProps.onKeyDown;
 
   const getArrowIcon = (isOpen: boolean) => (isOpen ? 'arrow-up' : 'arrow-down');
+
+  const handleFocusBackOnTrigger = useCallback(() => {
+    selectRef.current?.focus();
+  }, []);
 
   useEffect(() => {
     if (popoverInstance) {
       if (state.isOpen) {
         // show popover once state changes to isOpen = true
         popoverInstance.show();
+        hasBeenOpened.current = true;
       } else {
         // hide popover once state changes to isOpen = false
         popoverInstance.hide();
-        handleFocusBackOnTrigger();
+        if (hasBeenOpened.current) {
+          handleFocusBackOnTrigger();
+        }
       }
     }
   }, [state.isOpen, popoverInstance]);
-
-  const handleFocusBackOnTrigger = useCallback(() => {
-    selectRef.current?.focus();
-  }, []);
 
   /**
    * Handle closeOnSelect from @react-aria manually
    */
   const closePopover = useCallback(() => {
     state.close();
+  }, []);
+
+  /**
+   * Handle onKeyDown from @react-aria manually
+   */
+  const onKeyDown = useCallback((e) => {
+    switch (e.key) {
+      case 'Enter':
+      case ' ':
+      case 'ArrowDown':
+      case 'ArrowUp':
+        e.preventDefault();
+        state.open();
+        break;
+    }
   }, []);
 
   const triggerComponent = (
@@ -84,6 +104,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         { [STYLE.borderLess]: !showBorder }
       )}
       title={title}
+      onKeyDown={onKeyDown}
     >
       <span
         title={state.selectedItem?.textValue}
@@ -117,7 +138,6 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
           <Text>{label}</Text>
         </label>
       )}
-      <HiddenSelect state={state} triggerRef={selectRef} label={label} name={name} />
 
       <Popover
         interactive
