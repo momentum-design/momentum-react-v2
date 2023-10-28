@@ -430,6 +430,52 @@ describe('Select', () => {
       expect(screen.getByRole('listbox')).toBeVisible();
     });
 
+    it('should show Listbox when focused and pressing ArrowUp', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      const button = screen.getByRole('button', { name: 'test' });
+      button.focus();
+      expect(button).toHaveFocus();
+
+      await user.keyboard('{ArrowUp}');
+      // list box should be shown after focus and pressing space
+      expect(screen.getByRole('listbox')).toBeVisible();
+    });
+
+    it('should show Listbox when focused and pressing ArrowDown', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      const button = screen.getByRole('button', { name: 'test' });
+      button.focus();
+      expect(button).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+      // list box should be shown after focus and pressing space
+      expect(screen.getByRole('listbox')).toBeVisible();
+    });
+
     it('should hide Listbox when clicking outside', async () => {
       const user = userEvent.setup();
 
