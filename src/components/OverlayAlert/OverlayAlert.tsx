@@ -25,14 +25,22 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     overlayColor = DEFAULTS.OVERLAY_COLOR,
     title,
     focusLockProps = DEFAULTS.FOCUS_LOCK_PROPS,
+    onClose,
     ...other
   } = props;
+
+  const onKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      onClose?.();
+    }
+  };
 
   return (
     <Overlay
       focusLockProps={focusLockProps}
       className={classnames(className, STYLE.wrapper)}
       color={overlayColor}
+      onKeyDown={onKeyDown}
       {...other}
     >
       <ModalContainer round={75} color={modalColor}>
