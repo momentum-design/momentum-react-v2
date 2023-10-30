@@ -5364,6 +5364,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       hideOnEsc={false}
       interactive={true}
       onClickOutside={[Function]}
+      onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
       setInstance={[Function]}
