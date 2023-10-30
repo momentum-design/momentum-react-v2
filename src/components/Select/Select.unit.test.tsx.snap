@@ -5340,7 +5340,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
 exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
 <Select
   isInForm={false}
-  isOpen={true}
   label="test"
 >
   <div
@@ -5377,11 +5376,11 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls="test-ID"
-          aria-expanded={true}
+          aria-controls={null}
+          aria-expanded={false}
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
-          className="md-select-dropdown-input md-select-open"
+          className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
           onClick={[Function]}
@@ -5408,7 +5407,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             className="md-select-icon-wrapper"
           >
             <Icon
-              name="arrow-up"
+              name="arrow-down"
               scale={16}
               weight="bold"
             />
@@ -5574,11 +5573,11 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls="test-ID"
-              aria-expanded={true}
+              aria-controls={null}
+              aria-expanded={false}
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
-              className="md-select-dropdown-input md-select-open"
+              className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
               onClick={[Function]}
@@ -5605,7 +5604,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                 className="md-select-icon-wrapper"
               >
                 <Icon
-                  name="arrow-up"
+                  name="arrow-down"
                   scale={16}
                   weight="bold"
                 >
@@ -5616,7 +5615,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                       className=""
                       data-autoscale={false}
                       data-scale={16}
-                      data-test="arrow-up"
+                      data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
                       style={Object {}}
@@ -5632,523 +5631,12 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                 <div
                   data-tippy-root=""
                   id="tippy-15"
-                  style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+                  style="z-index: 9999;"
                 >
-                  <div
-                    class="md-select-popover md-modal-container-wrapper"
-                    data-arrow-orientation="vertical"
-                    data-color="primary"
-                    data-elevation="3"
-                    data-padded="true"
-                    data-placement="bottom"
-                    data-round="50"
-                    style="max-height: none;"
-                  >
-                    <span
-                      data-focus-scope-start="true"
-                      hidden=""
-                    />
-                    <ul
-                      aria-labelledby="test-ID"
-                      class="md-select-menu-listbox md-menu-list-background-wrapper"
-                      data-color="primary"
-                      id="test-ID"
-                      role="listbox"
-                      tabindex="-1"
-                    >
-                      <li
-                        aria-disabled="false"
-                        aria-selected="false"
-                        class="md-list-item-base-wrapper"
-                        data-disabled="false"
-                        data-interactive="true"
-                        data-key="$.0"
-                        data-padded="true"
-                        data-shape="rectangle"
-                        data-size="40"
-                        id="test-ID-option-$.0"
-                        role="option"
-                        tabindex="0"
-                      >
-                        <div
-                          data-position="fill"
-                          title="Item 1"
-                        >
-                          Item 1
-                        </div>
-                      </li>
-                      <li
-                        aria-disabled="false"
-                        aria-selected="false"
-                        class="md-list-item-base-wrapper"
-                        data-disabled="false"
-                        data-interactive="true"
-                        data-key="$.1"
-                        data-padded="true"
-                        data-shape="rectangle"
-                        data-size="40"
-                        id="test-ID-option-$.1"
-                        role="option"
-                        tabindex="-1"
-                      >
-                        <div
-                          data-position="fill"
-                          title="Item 2"
-                        >
-                          Item 2
-                        </div>
-                      </li>
-                    </ul>
-                    <span
-                      data-focus-scope-end="true"
-                      hidden=""
-                    />
-                  </div>
+                  
                 </div>
               }
-            >
-              <ModalContainer
-                arrowId="arrow1"
-                className="md-select-popover"
-                elevation={3}
-                isPadded={true}
-                onKeyDown={[Function]}
-                placement="bottom"
-                round={50}
-                showArrow={false}
-                style={
-                  Object {
-                    "maxHeight": "none",
-                  }
-                }
-              >
-                <div
-                  className="md-select-popover md-modal-container-wrapper"
-                  data-arrow-orientation="vertical"
-                  data-color="primary"
-                  data-elevation={3}
-                  data-padded={true}
-                  data-placement="bottom"
-                  data-round={50}
-                  onKeyDown={[Function]}
-                  style={
-                    Object {
-                      "maxHeight": "none",
-                    }
-                  }
-                >
-                  <FocusScope
-                    contain={true}
-                  >
-                    <span
-                      data-focus-scope-start={true}
-                      hidden={true}
-                    />
-                    <ListBoxBase
-                      aria-labelledby="test-ID"
-                      autoFocus="first"
-                      className="md-select-menu-listbox"
-                      disallowEmptySelection={true}
-                      id="test-ID"
-                      onBlur={[Function]}
-                      shouldFocusOnHover={true}
-                      shouldSelectOnPressUp={true}
-                      state={
-                        Object {
-                          "close": [Function],
-                          "collection": ListCollection {
-                            "firstKey": "$.0",
-                            "iterable": Object {
-                              Symbol(Symbol.iterator): [Function],
-                            },
-                            "keyMap": Map {
-                              "$.0" => Object {
-                                "aria-label": undefined,
-                                "childNodes": Object {
-                                  Symbol(Symbol.iterator): [Function],
-                                },
-                                "hasChildNodes": false,
-                                "index": 0,
-                                "key": "$.0",
-                                "level": 0,
-                                "nextKey": "$.1",
-                                "parentKey": null,
-                                "prevKey": undefined,
-                                "props": Object {
-                                  "children": "Item 1",
-                                },
-                                "rendered": "Item 1",
-                                "shouldInvalidate": undefined,
-                                "textValue": "Item 1",
-                                "type": "item",
-                                "value": undefined,
-                                "wrapper": undefined,
-                              },
-                              "$.1" => Object {
-                                "aria-label": undefined,
-                                "childNodes": Object {
-                                  Symbol(Symbol.iterator): [Function],
-                                },
-                                "hasChildNodes": false,
-                                "index": 1,
-                                "key": "$.1",
-                                "level": 0,
-                                "nextKey": undefined,
-                                "parentKey": null,
-                                "prevKey": "$.0",
-                                "props": Object {
-                                  "children": "Item 2",
-                                },
-                                "rendered": "Item 2",
-                                "shouldInvalidate": undefined,
-                                "textValue": "Item 2",
-                                "type": "item",
-                                "value": undefined,
-                                "wrapper": undefined,
-                              },
-                            },
-                            "lastKey": "$.1",
-                          },
-                          "disabledKeys": Set {},
-                          "focusStrategy": null,
-                          "isFocused": false,
-                          "isOpen": true,
-                          "open": [Function],
-                          "selectedItem": null,
-                          "selectedKey": null,
-                          "selectionManager": SelectionManager {
-                            "_isSelectAll": null,
-                            "allowsCellSelection": false,
-                            "collection": ListCollection {
-                              "firstKey": "$.0",
-                              "iterable": Object {
-                                Symbol(Symbol.iterator): [Function],
-                              },
-                              "keyMap": Map {
-                                "$.0" => Object {
-                                  "aria-label": undefined,
-                                  "childNodes": Object {
-                                    Symbol(Symbol.iterator): [Function],
-                                  },
-                                  "hasChildNodes": false,
-                                  "index": 0,
-                                  "key": "$.0",
-                                  "level": 0,
-                                  "nextKey": "$.1",
-                                  "parentKey": null,
-                                  "prevKey": undefined,
-                                  "props": Object {
-                                    "children": "Item 1",
-                                  },
-                                  "rendered": "Item 1",
-                                  "shouldInvalidate": undefined,
-                                  "textValue": "Item 1",
-                                  "type": "item",
-                                  "value": undefined,
-                                  "wrapper": undefined,
-                                },
-                                "$.1" => Object {
-                                  "aria-label": undefined,
-                                  "childNodes": Object {
-                                    Symbol(Symbol.iterator): [Function],
-                                  },
-                                  "hasChildNodes": false,
-                                  "index": 1,
-                                  "key": "$.1",
-                                  "level": 0,
-                                  "nextKey": undefined,
-                                  "parentKey": null,
-                                  "prevKey": "$.0",
-                                  "props": Object {
-                                    "children": "Item 2",
-                                  },
-                                  "rendered": "Item 2",
-                                  "shouldInvalidate": undefined,
-                                  "textValue": "Item 2",
-                                  "type": "item",
-                                  "value": undefined,
-                                  "wrapper": undefined,
-                                },
-                              },
-                              "lastKey": "$.1",
-                            },
-                            "state": Object {
-                              "childFocusStrategy": "first",
-                              "disabledKeys": Set {},
-                              "disallowEmptySelection": true,
-                              "focusedKey": "$.0",
-                              "isFocused": true,
-                              "selectedKeys": Set {},
-                              "selectionMode": "single",
-                              "setFocused": [Function],
-                              "setFocusedKey": [Function],
-                              "setSelectedKeys": [Function],
-                            },
-                          },
-                          "setFocused": [Function],
-                          "setSelectedKey": [Function],
-                          "toggle": [Function],
-                        }
-                      }
-                    >
-                      <MenuListBackground
-                        aria-labelledby="test-ID"
-                        className="md-select-menu-listbox"
-                        color="primary"
-                        id="test-ID"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        onKeyDownCapture={[Function]}
-                        onMouseDown={[Function]}
-                        role="listbox"
-                        tabIndex={-1}
-                      >
-                        <FocusRing>
-                          <FocusRing
-                            focusClass="md-focus-ring-wrapper children"
-                            focusRingClass="md-focus-ring-wrapper children"
-                          >
-                            <ul
-                              aria-labelledby="test-ID"
-                              className="md-select-menu-listbox md-menu-list-background-wrapper"
-                              data-color="primary"
-                              id="test-ID"
-                              onBlur={[Function]}
-                              onFocus={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyDownCapture={[Function]}
-                              onMouseDown={[Function]}
-                              role="listbox"
-                              tabIndex={-1}
-                            >
-                              <ListBoxItem
-                                item={
-                                  Object {
-                                    "aria-label": undefined,
-                                    "childNodes": Object {
-                                      Symbol(Symbol.iterator): [Function],
-                                    },
-                                    "hasChildNodes": false,
-                                    "index": 0,
-                                    "key": "$.0",
-                                    "level": 0,
-                                    "nextKey": "$.1",
-                                    "parentKey": null,
-                                    "prevKey": undefined,
-                                    "props": Object {
-                                      "children": "Item 1",
-                                    },
-                                    "rendered": "Item 1",
-                                    "shouldInvalidate": undefined,
-                                    "textValue": "Item 1",
-                                    "type": "item",
-                                    "value": undefined,
-                                    "wrapper": undefined,
-                                  }
-                                }
-                                key="$.0"
-                              >
-                                <ListItemBase
-                                  aria-describedby={null}
-                                  aria-disabled={false}
-                                  aria-labelledby={null}
-                                  aria-selected={false}
-                                  data-key="$.0"
-                                  id="test-ID-option-$.0"
-                                  isDisabled={false}
-                                  isPadded={true}
-                                  key="$.0"
-                                  onClick={[Function]}
-                                  onDragStart={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  onKeyUp={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  onMouseUp={[Function]}
-                                  onTouchCancel={[Function]}
-                                  onTouchEnd={[Function]}
-                                  onTouchMove={[Function]}
-                                  onTouchStart={[Function]}
-                                  role="option"
-                                  tabIndex={0}
-                                >
-                                  <FocusRing
-                                    isInset={false}
-                                  >
-                                    <FocusRing
-                                      focusClass="md-focus-ring-wrapper children"
-                                      focusRingClass="md-focus-ring-wrapper children"
-                                      isInset={false}
-                                    >
-                                      <li
-                                        aria-describedby={null}
-                                        aria-disabled={false}
-                                        aria-labelledby={null}
-                                        aria-selected={false}
-                                        className="md-list-item-base-wrapper"
-                                        data-disabled={false}
-                                        data-interactive={true}
-                                        data-key="$.0"
-                                        data-padded={true}
-                                        data-shape="rectangle"
-                                        data-size={40}
-                                        id="test-ID-option-$.0"
-                                        onBlur={[Function]}
-                                        onClick={[Function]}
-                                        onDragStart={[Function]}
-                                        onFocus={[Function]}
-                                        onKeyDown={[Function]}
-                                        onKeyUp={[Function]}
-                                        onMouseDown={[Function]}
-                                        onMouseEnter={[Function]}
-                                        onMouseLeave={[Function]}
-                                        onMouseUp={[Function]}
-                                        onTouchCancel={[Function]}
-                                        onTouchEnd={[Function]}
-                                        onTouchMove={[Function]}
-                                        onTouchStart={[Function]}
-                                        role="option"
-                                        tabIndex={0}
-                                      >
-                                        <ListItemBaseSection
-                                          position="fill"
-                                          title="Item 1"
-                                        >
-                                          <div
-                                            data-position="fill"
-                                            title="Item 1"
-                                          >
-                                            Item 1
-                                          </div>
-                                        </ListItemBaseSection>
-                                      </li>
-                                    </FocusRing>
-                                  </FocusRing>
-                                </ListItemBase>
-                              </ListBoxItem>
-                              <ListBoxItem
-                                item={
-                                  Object {
-                                    "aria-label": undefined,
-                                    "childNodes": Object {
-                                      Symbol(Symbol.iterator): [Function],
-                                    },
-                                    "hasChildNodes": false,
-                                    "index": 1,
-                                    "key": "$.1",
-                                    "level": 0,
-                                    "nextKey": undefined,
-                                    "parentKey": null,
-                                    "prevKey": "$.0",
-                                    "props": Object {
-                                      "children": "Item 2",
-                                    },
-                                    "rendered": "Item 2",
-                                    "shouldInvalidate": undefined,
-                                    "textValue": "Item 2",
-                                    "type": "item",
-                                    "value": undefined,
-                                    "wrapper": undefined,
-                                  }
-                                }
-                                key="$.1"
-                              >
-                                <ListItemBase
-                                  aria-describedby={null}
-                                  aria-disabled={false}
-                                  aria-labelledby={null}
-                                  aria-selected={false}
-                                  data-key="$.1"
-                                  id="test-ID-option-$.1"
-                                  isDisabled={false}
-                                  isPadded={true}
-                                  key="$.1"
-                                  onClick={[Function]}
-                                  onDragStart={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  onKeyUp={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  onMouseUp={[Function]}
-                                  onTouchCancel={[Function]}
-                                  onTouchEnd={[Function]}
-                                  onTouchMove={[Function]}
-                                  onTouchStart={[Function]}
-                                  role="option"
-                                  tabIndex={-1}
-                                >
-                                  <FocusRing
-                                    isInset={false}
-                                  >
-                                    <FocusRing
-                                      focusClass="md-focus-ring-wrapper children"
-                                      focusRingClass="md-focus-ring-wrapper children"
-                                      isInset={false}
-                                    >
-                                      <li
-                                        aria-describedby={null}
-                                        aria-disabled={false}
-                                        aria-labelledby={null}
-                                        aria-selected={false}
-                                        className="md-list-item-base-wrapper"
-                                        data-disabled={false}
-                                        data-interactive={true}
-                                        data-key="$.1"
-                                        data-padded={true}
-                                        data-shape="rectangle"
-                                        data-size={40}
-                                        id="test-ID-option-$.1"
-                                        onBlur={[Function]}
-                                        onClick={[Function]}
-                                        onDragStart={[Function]}
-                                        onFocus={[Function]}
-                                        onKeyDown={[Function]}
-                                        onKeyUp={[Function]}
-                                        onMouseDown={[Function]}
-                                        onMouseEnter={[Function]}
-                                        onMouseLeave={[Function]}
-                                        onMouseUp={[Function]}
-                                        onTouchCancel={[Function]}
-                                        onTouchEnd={[Function]}
-                                        onTouchMove={[Function]}
-                                        onTouchStart={[Function]}
-                                        role="option"
-                                        tabIndex={-1}
-                                      >
-                                        <ListItemBaseSection
-                                          position="fill"
-                                          title="Item 2"
-                                        >
-                                          <div
-                                            data-position="fill"
-                                            title="Item 2"
-                                          >
-                                            Item 2
-                                          </div>
-                                        </ListItemBaseSection>
-                                      </li>
-                                    </FocusRing>
-                                  </FocusRing>
-                                </ListItemBase>
-                              </ListBoxItem>
-                            </ul>
-                          </FocusRing>
-                        </FocusRing>
-                      </MenuListBackground>
-                    </ListBoxBase>
-                    <span
-                      data-focus-scope-end={true}
-                      hidden={true}
-                    />
-                  </FocusScope>
-                </div>
-              </ModalContainer>
-            </Portal>
+            />
           </Tippy>
         </ForwardRef(TippyWrapper)>
       </LazyTippy>
