@@ -120,4 +120,18 @@ export default {
       },
     },
   },
+  listboxWidth: {
+    defaultValue: undefined,
+    description:
+      'To override the list box width. NOTE: if set, the popover strategy will be set to "fixed". To style the list box without applying fixed popover strategy, pass in className instead',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
 };
