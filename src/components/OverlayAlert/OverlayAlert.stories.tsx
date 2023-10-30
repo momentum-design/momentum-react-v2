@@ -92,7 +92,7 @@ const coreArgs = {
 
 const Example = Template().bind({});
 
-Example.argTypes = { ...argTypes };
+Example.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
 Example.parameters = {
   hasActions: true,

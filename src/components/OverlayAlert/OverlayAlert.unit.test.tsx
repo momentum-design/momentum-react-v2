@@ -5,6 +5,8 @@ import ButtonControl from '../ButtonControl';
 import ButtonPill from '../ButtonPill';
 import ModalContainer, { MODAL_CONTAINER_CONSTANTS } from '../ModalContainer';
 import Overlay, { OVERLAY_CONSTANTS } from '../Overlay';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import OverlayAlert, { OVERLAY_ALERT_CONSTANTS as CONSTANTS, OVERLAY_ALERT_CONSTANTS } from './';
 import { STYLE as OVERLAY_STYLE } from '../Overlay/Overlay.constants';
@@ -288,6 +290,24 @@ describe('<OverlayAlert />', () => {
 
       expect(tree.includes(children)).toBe(true);
       expect(tree.includes(details)).toBe(false);
+    });
+  });
+
+  describe('actions', () => {
+    it('should fire onClose if Escape is pressed', async () => {
+      const onCloseFn = jest.fn();
+      const contentText = 'test 123';
+
+      const user = userEvent.setup();
+
+      render(
+        <OverlayAlert onClose={onCloseFn}>
+          <button>{contentText}</button>
+        </OverlayAlert>
+      );
+      await user.keyboard('{Escape}');
+
+      expect(onCloseFn).toHaveBeenCalledTimes(1);
     });
   });
 });

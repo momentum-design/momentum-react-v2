@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import FocusLock from 'react-focus-lock';
@@ -18,6 +19,8 @@ const Overlay: FC<Props> = (props: Props) => {
     id,
     style,
     focusLockProps,
+    onKeyDown,
+    ...other
   } = props;
 
   const content = (
@@ -27,6 +30,8 @@ const Overlay: FC<Props> = (props: Props) => {
       data-fullscreen={fullscreen}
       id={id}
       style={style}
+      onKeyDown={onKeyDown}
+      {...other}
     >
       {children}
     </div>

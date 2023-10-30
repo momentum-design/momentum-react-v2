@@ -38,4 +38,10 @@ export interface Props {
    * Props to be passed to FocusLock
    */
   focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
+
+  /**
+   * Callback function for when the escape key is pressed on the container div
+   * @param event - React Keyboard Event
+   */
+  onKeyDown?: (event: React.KeyboardEvent) => void;
 }

@@ -10,6 +10,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -128,6 +129,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -184,6 +186,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -336,6 +339,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -440,6 +444,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -558,6 +563,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
           className="example-class md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -614,6 +620,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -742,6 +749,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -834,6 +842,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -966,6 +975,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -1030,6 +1040,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -1152,6 +1163,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -1207,6 +1219,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
       }
     }
     id="example-id"
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -1328,6 +1341,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
           data-color="secondary"
           data-fullscreen={false}
           id="example-id"
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -1395,6 +1409,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -1617,6 +1632,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -1847,6 +1863,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -1997,6 +2014,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}
@@ -2178,6 +2196,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
     style={
       Object {
         "color": "pink",
@@ -2303,6 +2322,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
           style={
             Object {
               "color": "pink",
@@ -2360,6 +2380,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
         "returnFocus": true,
       }
     }
+    onKeyDown={[Function]}
   >
     <FocusLock
       as="div"
@@ -2498,6 +2519,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
           className="md-overlay-alert-wrapper md-overlay-wrapper"
           data-color="secondary"
           data-fullscreen={false}
+          onKeyDown={[Function]}
         >
           <ModalContainer
             round={75}

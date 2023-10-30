@@ -65,4 +65,9 @@ export interface Props extends OverlayProps {
    * Props to be passed to Overlay for FocusLock
    */
   focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
+
+  /**
+   * Callback function to be fired when Escape key is pressed.
+   */
+  onClose?: () => void;
 }
