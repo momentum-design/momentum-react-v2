@@ -230,7 +230,7 @@ describe('Select', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <Select isInForm={false} isOpen={true} label="test">
+        <Select isInForm={false} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
