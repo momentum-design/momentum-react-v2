@@ -94,6 +94,13 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     ...rest,
   });
 
+  // Update navigableChildren if children change
+  useEffect(() => {
+    if (children) {
+      navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
+    }
+  }, [ref, children]);
+
   // Prevent list item update because it can cause state lost in the focused component e.g. Menu
   const listItemPressProps = {
     ...pressProps,

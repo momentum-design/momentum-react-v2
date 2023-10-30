@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 
 import ListItemBase from '.';
 
@@ -20,6 +20,10 @@ import ButtonPill from '../ButtonPill';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import argTypes from './ListItemBase.stories.args';
+import ButtonSimple from '../ButtonSimple';
+import Text from '../Text';
+import ButtonCircle from '../ButtonCircle';
+import Popover from '../Popover';
 
 export default {
   title: 'Momentum UI/ListItemBase',
@@ -214,4 +218,83 @@ Shapes.parameters = {
   ],
 };
 
-export { Example, Sizes, Shapes, Common };
+const ListItemWithChangingContent = () => {
+  const [showButtonSimple, setShowButtonSimple] = useState<boolean>(false);
+  const [removeButton, setRemoveButton] = useState<boolean>(false);
+  const [showText, setShowText] = useState<boolean>(false);
+
+  const handleChange = useCallback(() => {
+    setShowButtonSimple((curr) => !curr);
+  }, []);
+
+  const handleRemove = useCallback(() => {
+    setRemoveButton((curr) => !curr);
+  }, []);
+
+  const handleShowTextInstead = useCallback(() => {
+    setShowText((curr) => !curr);
+  }, []);
+
+  return (
+    <div
+      style={{
+        width: '40rem',
+        height: '4rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '0.5rem',
+      }}
+    >
+      <Text>Example with changing context - try it out!</Text>
+      <ListItemBase size={40} isPadded>
+        <div
+          style={{
+            width: '40rem',
+            height: '4rem',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          {removeButton && (
+            <Popover
+              trigger="mouseenter"
+              placement="bottom"
+              triggerComponent={
+                <ButtonCircle size={20} ghost outline onPress={handleShowTextInstead}>
+                  <Icon name="plus" weight="bold" scale={16} />
+                </ButtonCircle>
+              }
+            >
+              Extra button to toggle text
+            </Popover>
+          )}
+          {showButtonSimple ? (
+            <div>
+              <div>
+                <ButtonSimple onPress={handleRemove}>Toggle extra button</ButtonSimple>
+              </div>
+            </div>
+          ) : (
+            <ButtonPill size={20} ghost outline onPress={handleShowTextInstead}>
+              Toggle text
+            </ButtonPill>
+          )}
+          {showText && <Text>Unfocusable text</Text>}
+          <ButtonPill size={20} ghost outline onPress={handleChange}>
+            Change button
+          </ButtonPill>
+        </div>
+      </ListItemBase>
+    </div>
+  );
+};
+
+const ChangingContent = Template(ListItemWithChangingContent).bind({});
+
+ChangingContent.argTypes = { ...argTypes };
+
+export { Example, Sizes, Shapes, Common, ChangingContent };
