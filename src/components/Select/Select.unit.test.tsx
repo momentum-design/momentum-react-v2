@@ -238,6 +238,21 @@ describe('Select', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with listboxWidth', async () => {
+      expect.assertions(1);
+
+      const listboxWidth = '200px';
+
+      container = await mountAndWait(
+        <Select listboxWidth={listboxWidth} isOpen={true} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -299,7 +314,7 @@ describe('Select', () => {
       );
       const element = wrapper.find(Select).getDOMNode();
 
-      expect(element.getAttribute('style')).toBe(styleString);
+      expect(element.getAttribute('style')).toBe(`--local-width: 100%; ${styleString}`);
     });
 
     it('should have listbox open when isOpen prop is set to true', async () => {
@@ -373,6 +388,41 @@ describe('Select', () => {
         children: expect.any(Object),
         onKeyDown: expect.any(Function),
         onKeyUp: undefined,
+        strategy: 'absolute',
+      });
+    });
+
+    it('should have expected attributes set when listboxWidth is passed in', async () => {
+      expect.assertions(2);
+
+      const direction = 'top';
+
+      const wrapper = await mountAndWait(
+        <Select direction={direction} listboxWidth="200px" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      const wrapperDiv = wrapper.find('.md-select-wrapper').getDOMNode();
+
+      expect(wrapperDiv.getAttribute('style')).toBe('--local-width: 200px;');
+      expect(wrapper.find(Popover).props()).toEqual({
+        interactive: true,
+        showArrow: false,
+        triggerComponent: expect.any(Object),
+        trigger: 'manual',
+        setInstance: expect.any(Function),
+        placement: direction,
+        onClickOutside: expect.any(Function),
+        onHide: expect.any(Function),
+        hideOnEsc: false,
+        style: { maxHeight: 'none' },
+        className: 'md-select-popover',
+        children: expect.any(Object),
+        onKeyDown: expect.any(Function),
+        onKeyUp: undefined,
+        strategy: 'fixed',
       });
     });
   });

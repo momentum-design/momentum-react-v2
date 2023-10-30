@@ -3,6 +3,8 @@
   position: relative;
   display: inline-block;
 
+  --local-width: 100%;
+
   label {
     display: flex;
     color: var(--mds-color-theme-text-primary-normal);
@@ -14,12 +16,12 @@
 
   /* to make sure the popover matches the parent width, we have to override tippy css here: */
   div[data-tippy-root=''] {
-    width: 100%;
+    width: var(--local-width);
   }
 }
 
 .md-select-dropdown-input {
-  width: 100%;
+  width: var(--local-width);
   background-color: var(--mds-color-theme-background-solid-primary-normal);
   color: var(--mds-color-theme-text-secondary-normal);
   border: 1px solid var(--mds-color-theme-outline-input-normal);

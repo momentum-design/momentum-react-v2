@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, {
   ReactElement,
   useCallback,
@@ -37,6 +38,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     showBorder = DEFAULTS.SHOULD_SHOW_BORDER,
     listboxMaxHeight,
     isInForm = DEFAULTS.IS_IN_FORM,
+    listboxWidth,
   } = props;
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
   const hasBeenOpened = useRef<boolean>(false);
@@ -134,7 +136,13 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   delete keyboardProps.color;
 
   return (
-    <div className={classnames(className, STYLE.wrapper)} ref={ref} style={style} id={id}>
+    /* @ts-ignore: next-line */
+    <div
+      className={classnames(className, STYLE.wrapper)}
+      ref={ref}
+      style={{ '--local-width': listboxWidth || '100%', ...style }}
+      id={id}
+    >
       {label && (
         <label htmlFor={name} {...labelProps}>
           <Text>{label}</Text>
@@ -164,6 +172,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
         style={{ maxHeight: listboxMaxHeight || 'none' }}
         className={STYLE.popover}
+        strategy={listboxWidth ? 'fixed' : 'absolute'}
       >
         <FocusScope contain>
           <ListBoxBase

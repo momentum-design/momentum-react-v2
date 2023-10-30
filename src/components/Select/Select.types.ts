@@ -49,4 +49,13 @@ export interface Props<T> extends AriaSelectProps<T> {
    * Whether this component is a child of, or associated to, a form
    */
   isInForm?: boolean;
+
+  /**
+   * Override the list box width to allow for fixed popover strategy
+   *
+   * To style the list box without applying fixed popover strategy, pass in className instead
+   *
+   * NOTE: if set, the popover strategy will be set to 'fixed'
+   */
+  listboxWidth?: string;
 }

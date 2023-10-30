@@ -15,6 +15,8 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import argTypes from './Select.stories.args';
 
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { Story } from '@storybook/react';
+import OverlayAlert from '../OverlayAlert';
 
 export default {
   title: 'Momentum UI/Select',
@@ -357,4 +359,30 @@ Common.parameters = {
   ],
 };
 
-export { Example, Sections, DisabledOptions, Common };
+const InListItem: Story<any> = (args: any) => {
+  return (
+    <OverlayAlert>
+      <div style={{ overflowY: 'scroll' }}>
+        <Select {...args} />
+      </div>
+    </OverlayAlert>
+  );
+};
+
+InListItem.args = {
+  label: 'Single Value',
+  placeholder: 'Select an option',
+  onSelectionChange: action('onSelectionChange'),
+  style: { maxWidth: '15rem' },
+  children: [
+    <Item key="1">This is a very long option and should trim.</Item>,
+    <Item key="2">Blue</Item>,
+    <Item key="3">Green</Item>,
+    <Item key="4">Yellow</Item>,
+  ],
+  listboxWidth: '200px',
+};
+
+InListItem.argTypes = { ...argTypes };
+
+export { Example, Sections, DisabledOptions, Common, InListItem };
