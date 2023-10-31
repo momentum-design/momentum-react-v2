@@ -136,10 +136,10 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   delete keyboardProps.color;
 
   return (
-    /* @ts-ignore: next-line */
     <div
       className={classnames(className, STYLE.wrapper)}
       ref={ref}
+      /* @ts-ignore: next-line */
       style={{ '--local-width': listboxWidth || '100%', ...style }}
       id={id}
     >
