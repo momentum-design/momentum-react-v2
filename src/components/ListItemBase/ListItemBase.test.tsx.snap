@@ -128,6 +128,49 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
 </ListItemBase>
 `;
 
+exports[`ListItemBase snapshot should match snapshot with interactive=false 1`] = `
+<ListItemBase
+  interactive={false}
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-disabled={false}
+        data-interactive={false}
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="listitem"
+        tabIndex={-1}
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
 exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
 <ListItemBase
   isDisabled={true}

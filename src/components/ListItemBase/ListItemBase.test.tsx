@@ -112,6 +112,16 @@ describe('ListItemBase', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with interactive=false', () => {
+      expect.assertions(1);
+
+      const interactive = false;
+
+      container = mount(<ListItemBase interactive={interactive}>Test</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -233,7 +243,7 @@ describe('ListItemBase', () => {
     });
 
     it('should have provided data-interactive when interactive is provided', () => {
-      expect.assertions(1);
+      expect.assertions(2);
 
       const interactive = false;
 
@@ -242,6 +252,7 @@ describe('ListItemBase', () => {
       const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('data-interactive')).toBe(`${interactive}`);
+      expect(element.getAttribute('tabIndex')).toBe('-1');
     });
   });
 
