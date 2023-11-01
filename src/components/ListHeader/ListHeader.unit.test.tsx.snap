@@ -49,7 +49,7 @@ exports[`<ListHeader /> snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -109,7 +109,7 @@ exports[`<ListHeader /> snapshot should match snapshot with bold 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -168,7 +168,7 @@ exports[`<ListHeader /> snapshot should match snapshot with className 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -229,7 +229,7 @@ exports[`<ListHeader /> snapshot should match snapshot with id 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -288,7 +288,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outline 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -348,7 +348,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlineColor 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -408,7 +408,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 1`] 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -468,7 +468,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 2`] 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="separator"
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
@@ -541,7 +541,7 @@ exports[`<ListHeader /> snapshot should match snapshot with style 1`] = `
               "color": "pink",
             }
           }
-          tabIndex={0}
+          tabIndex={-1}
         />
       </FocusRing>
     </FocusRing>
