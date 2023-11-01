@@ -23,6 +23,7 @@ import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
 import {
   getKeyboardFocusableElements,
+  getListItemBaseTabIndex,
   handleLeftRightArrowNavigation,
   useDidUpdateEffect,
 } from './ListItemBase.utils';
@@ -127,6 +128,8 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
+
+  const listItemTabIndex = getListItemBaseTabIndex({ interactive, listContext, focus });
 
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
@@ -250,7 +253,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   return (
     <FocusRing isInset={shouldItemFocusBeInset}>
       <li
-        tabIndex={listContext ? (focus ? 0 : -1) : 0}
+        tabIndex={listItemTabIndex}
         style={style}
         ref={ref}
         data-size={size}

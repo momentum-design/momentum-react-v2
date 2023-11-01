@@ -1,5 +1,6 @@
 import { DependencyList, EffectCallback, useEffect, useRef } from 'react';
 import { KEYS } from './ListItemBase.constants';
+import { ListContextValue } from '../List/List.types';
 
 /**
  * Returns all focusable child elements as an Element Array
@@ -76,5 +77,24 @@ export const handleLeftRightArrowNavigation = (
     event.preventDefault();
     event.stopPropagation();
     newTarget.focus();
+  }
+};
+
+/**
+ * Returns the intended tabIndex for the ListItemBase
+ */
+export const getListItemBaseTabIndex = ({
+  interactive,
+  listContext,
+  focus,
+}: {
+  interactive: boolean;
+  listContext?: ListContextValue;
+  focus: boolean;
+}): number => {
+  if (!interactive || (listContext && !focus)) {
+    return -1;
+  } else {
+    return 0;
   }
 };
