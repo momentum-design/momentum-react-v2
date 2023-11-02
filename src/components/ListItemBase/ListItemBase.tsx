@@ -53,7 +53,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
 
   const internalRef = useRef<HTMLLIElement>();
   const ref = providedRef || internalRef;
-  const navigableChildren = useRef<Element[]>();
 
   if (shape === SHAPES.isPilled && (size === SIZES[40] || size === SIZES[70])) {
     console.warn(
@@ -94,13 +93,6 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     ...rest,
   });
 
-  // Update navigableChildren if children change
-  useEffect(() => {
-    if (children) {
-      navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
-    }
-  }, [ref, children]);
-
   // Prevent list item update because it can cause state lost in the focused component e.g. Menu
   const listItemPressProps = {
     ...pressProps,
@@ -110,11 +102,9 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
       }
 
       if (event.key === KEYS.RIGHT_KEY || event.key === KEYS.LEFT_KEY) {
-        if (!navigableChildren.current) {
-          navigableChildren.current = getKeyboardFocusableElements(ref.current, false);
-        }
-        if (navigableChildren.current.length > 0) {
-          handleLeftRightArrowNavigation(event, navigableChildren.current);
+        const navigableChildren = getKeyboardFocusableElements(ref.current, false);
+        if (navigableChildren.length > 0) {
+          handleLeftRightArrowNavigation(event, navigableChildren);
         }
       }
     },
