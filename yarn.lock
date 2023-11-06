@@ -2488,7 +2488,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/icons@npm:^0.0.68":
+"@momentum-design/icons@npm:0.0.68":
   version: 0.0.68
   resolution: "@momentum-design/icons@npm:0.0.68"
   checksum: 4a25045ff9795547b683dc8adce95df6527c27084592ff50effa1d079690bc25d49d4a0a547853935c53cf92088e1f01e880e3324bf6cb05e1d181520160f26f
@@ -2540,7 +2540,7 @@ __metadata:
     "@cypress/webpack-preprocessor": ^4.1.0
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/icons": ^0.0.68
+    "@momentum-design/icons": 0.0.68
     "@momentum-design/tokens": ^0.0.44
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
