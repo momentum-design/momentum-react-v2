@@ -120,19 +120,17 @@ exports[`<Card /> snapshot should match snapshot with isDisabled 1`] = `
 
 exports[`<Card /> snapshot should match snapshot with isStatic 1`] = `
 <div>
-  <button
-    class="md-card-wrapper md-button-simple-wrapper"
+  <div
+    class="md-card-wrapper"
     data-color="inactive"
     data-height="small"
     data-rounding="2"
     data-static="true"
-    disabled=""
-    type="button"
   >
     <div
       class="md-card-status-wrapper"
     />
-  </button>
+  </div>
 </div>
 `;
 
