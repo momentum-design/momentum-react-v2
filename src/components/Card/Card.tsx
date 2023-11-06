@@ -29,23 +29,36 @@ const Card: FC<Props> = (props: Props) => {
     ...otherProps
   } = props;
 
+  const wrapperProps = {
+    className: classnames(className, STYLE.wrapper),
+    'data-color': color,
+    'data-height': height,
+    'data-outline': outline,
+    'data-rounding': rounding,
+    'data-static': isStatic,
+    'data-disabled': isDisabled,
+    id: id,
+    style: style,
+  };
+
   return (
-    <ButtonSimple
-      className={classnames(className, STYLE.wrapper)}
-      data-color={color}
-      data-height={height}
-      data-outline={outline}
-      data-rounding={rounding}
-      data-static={isStatic}
-      data-disabled={isDisabled}
-      isDisabled={isStatic || isDisabled}
-      id={id}
-      style={style}
-      {...otherProps}
-    >
-      <CardStatus color={statusColor} striped={statusStriped} />
-      {children}
-    </ButtonSimple>
+    <>
+      {
+        isStatic ?
+          <div {...wrapperProps} {...otherProps}>
+            <CardStatus color={statusColor} striped={statusStriped} />
+            {children}
+          </div> :
+          <ButtonSimple
+            {...wrapperProps}
+            isDisabled={isDisabled}
+            {...otherProps}
+          >
+            <CardStatus color={statusColor} striped={statusStriped} />
+            {children}
+          </ButtonSimple>
+      }
+    </>
   );
 };
 
