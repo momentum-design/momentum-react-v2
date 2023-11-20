@@ -4,6 +4,7 @@
   src: url('../../fonts/Inter.var.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
+  font-weight: 1 1000; /* Required for Safari support */
 }
 
 .md-theme-provider-wrapper {
