@@ -35,4 +35,8 @@ export interface Props extends Omit<AriaTextFieldProps, 'errorMessage'> {
    * Array of Messages with message and type to display below the input
    */
   messageArr?: Message[];
+  /**
+   * Max amount of characters the input should allow
+   */
+  inputMaxLen?: number;
 }

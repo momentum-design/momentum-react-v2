@@ -252,6 +252,38 @@ exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
 </SSRProvider>
 `;
 
+exports[`<TextInput/> snapshot should match snapshot with inputMaxLen 1`] = `
+<SSRProvider>
+  <TextInput
+    aria-label="text-input"
+    inputMaxLen={4}
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-label="text-input"
+          disabled={false}
+          id="test-ID"
+          maxLength={4}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
 exports[`<TextInput/> snapshot should match snapshot with style 1`] = `
 <SSRProvider>
   <TextInput

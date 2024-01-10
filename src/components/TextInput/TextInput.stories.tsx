@@ -39,6 +39,10 @@ export default {
       description: 'The label for the input',
       control: { type: 'text' },
     },
+    inputMaxLen: {
+      description: 'The max amount of characters that this input should allow',
+      control: { type: 'number' },
+    },
     className: {
       description:
         'If present, the class name will be added to the underlying component. Used to override styles by consumers.',
