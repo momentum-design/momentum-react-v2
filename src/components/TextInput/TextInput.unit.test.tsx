@@ -74,6 +74,14 @@ describe('<TextInput/>', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with inputMaxLen', async () => {
+      expect.assertions(1);
+
+      const container = await mountComponent(<TextInput aria-label="text-input" inputMaxLen={4} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -124,6 +132,27 @@ describe('<TextInput/>', () => {
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should have provided inputMaxLen when inputMaxLen is provided', async () => {
+      expect.assertions(1);
+
+      const inputMaxLen = 8;
+      const inputClassName = 'fake-class-name';
+
+      const element = (
+        await mountAndWait(
+          <TextInput
+            aria-label="text-input"
+            inputMaxLen={inputMaxLen}
+            inputClassName={inputClassName}
+          />
+        )
+      )
+        .find(`.${inputClassName}`)
+        .getDOMNode();
+
+      expect(element.getAttribute('maxLength')).toBe(`${inputMaxLen}`);
     });
   });
 

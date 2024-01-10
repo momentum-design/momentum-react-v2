@@ -23,6 +23,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     isDisabled,
     style,
     id,
+    inputMaxLen,
   } = props;
 
   const componentRef = React.useRef<HTMLInputElement>();
@@ -73,6 +74,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           {...focusProps}
           className={inputClassName}
           ref={inputRef}
+          maxLength={inputMaxLen}
         />
         {!!state.value && (
           <ButtonSimple
