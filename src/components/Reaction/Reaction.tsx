@@ -1,6 +1,6 @@
 import React, { FC, useRef, useEffect } from 'react';
 import classnames from 'classnames';
-import lottie, { AnimationItem } from 'lottie-web';
+import lottie, { AnimationItem } from 'lottie-web/build/player/lottie_light';
 import { useDynamicJSONImport } from '../../hooks/useDynamicJSONImport';
 
 import { DEFAULTS, STYLE } from './Reaction.constants';

@@ -2,7 +2,7 @@ import React from 'react';
 import { mountAndWait } from '../../../test/utils';
 
 import Reaction, { REACTION_CONSTANTS as CONSTANTS } from './';
-import lottie from 'lottie-web';
+import lottie from 'lottie-web/build/player/lottie_light';
 import * as jsonImport from '../../hooks/useDynamicJSONImport';
 import { REACTIONS, STYLE } from './Reaction.constants';
 import { GLYPH_NOT_FOUND } from '../Icon/Icon.constants';
