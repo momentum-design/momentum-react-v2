@@ -12,6 +12,8 @@ const DEFAULTS = {
 };
 
 const STYLE = {
+  description: `${CLASS_PREFIX}-description`,
+  label: `${CLASS_PREFIX}-label`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
   inputSection: `${CLASS_PREFIX}-inputSection`,
   input: `${CLASS_PREFIX}-input`,
@@ -22,8 +24,6 @@ const STYLE = {
   selectionContainer: `${CLASS_PREFIX}-selectionContainer`,
   selection: `${CLASS_PREFIX}-selection`,
   noResultText: `${CLASS_PREFIX}-noResultText`,
-  description: `${CLASS_PREFIX}-description`,
-  label: `${CLASS_PREFIX}-label`,
 };
 
 const KEYS = {

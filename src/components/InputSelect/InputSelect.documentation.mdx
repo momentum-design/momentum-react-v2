@@ -1,9 +1,9 @@
 import { Story } from '@storybook/addon-docs';
 
-`<InputSelect />` component that utilizes
-The component is composed of three parts: Button, Menu, and Input. In the component, the items 
+`<InputSelect />`
+The component is composed of three parts: Button, Menu and Input. In the component, the items 
 passed in are filtered based on the value of the Input and then passed to the internal Menu 
-to implement the search function
+to implement the search function.
 
 ## Content
 
@@ -29,8 +29,7 @@ import { Item, Section } from '@react-stately/collections';
 
 An iterable list of sectionGroups is can be passed to the InputSelect using the items prop. 
 It should be noted that the outermost array is used to distinguish the group of sections, 
-and the items within the section accept an iterable list of options, Each item accepts a
-key prop, which is passed to the onSelectionChange handler to identify the Selected item.
+and the items within the section accept an iterable list of options.
 
 ```js
 import { Item } from '@react-stately/collections';
