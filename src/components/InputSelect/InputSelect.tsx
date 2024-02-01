@@ -30,7 +30,7 @@ const InputSelect:React.FC<Props> = (props: Props) => {
     iconScale = DEFAULTS.ICON_SCALE,
     error = DEFAULTS.ERROR,
     items: itemsPayload,
-    placeholder,
+    placeholder = '',
     className,
     id,
     style,
