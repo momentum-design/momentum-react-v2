@@ -89,7 +89,6 @@ Example.args = {
   disabledKeys: ['key3'],
   label:'WithoutSection',
   description:'Description text',
-  onAction:action('onAction'),
 };
 
 Example.argTypes = { ...argTypes };
@@ -102,7 +101,6 @@ Sections.args = {
   disabledKeys: ['key3','key6'],
   label:'WithSection',
   description:'Description text',
-  iconScale:12,
 };
 
 
