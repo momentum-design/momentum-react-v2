@@ -1,0 +1,1576 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputSelect snapshot should match snapshot label 1`] = `
+<InputSelect
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "menu1",
+          },
+          Object {
+            "key": "key5",
+            "label": "menu2",
+          },
+          Object {
+            "key": "key6",
+            "label": "menu3",
+          },
+        ],
+        "section": "",
+      },
+    ]
+  }
+  label="inputSelect_label"
+>
+  <div
+    className="md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "15rem",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-label"
+    >
+      inputSelect_label
+    </div>
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
+
+exports[`InputSelect snapshot should match snapshot with className 1`] = `
+<InputSelect
+  className="example-class"
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "menu1",
+          },
+          Object {
+            "key": "key5",
+            "label": "menu2",
+          },
+          Object {
+            "key": "key6",
+            "label": "menu3",
+          },
+        ],
+        "section": "",
+      },
+    ]
+  }
+>
+  <div
+    className="example-class md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "15rem",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
+
+exports[`InputSelect snapshot should match snapshot with height 1`] = `
+<InputSelect
+  height="2rem"
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "menu1",
+          },
+          Object {
+            "key": "key5",
+            "label": "menu2",
+          },
+          Object {
+            "key": "key6",
+            "label": "menu3",
+          },
+        ],
+        "section": "",
+      },
+    ]
+  }
+>
+  <div
+    className="md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "15rem",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
+
+exports[`InputSelect snapshot should match snapshot with noResultText 1`] = `
+<InputSelect
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "menu1",
+          },
+          Object {
+            "key": "key5",
+            "label": "menu2",
+          },
+          Object {
+            "key": "key6",
+            "label": "menu3",
+          },
+        ],
+        "section": "",
+      },
+    ]
+  }
+  noResultText="No result"
+>
+  <div
+    className="md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "15rem",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
+
+exports[`InputSelect snapshot should match snapshot with placeholder 1`] = `
+<InputSelect
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "menu1",
+          },
+          Object {
+            "key": "key5",
+            "label": "menu2",
+          },
+          Object {
+            "key": "key6",
+            "label": "menu3",
+          },
+        ],
+        "section": "",
+      },
+    ]
+  }
+  placeholder="InputSelect"
+>
+  <div
+    className="md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "15rem",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder="InputSelect"
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              placeholder="InputSelect"
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
+
+exports[`InputSelect snapshot should match snapshot with style 1`] = `
+<InputSelect
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "menu1",
+          },
+          Object {
+            "key": "key5",
+            "label": "menu2",
+          },
+          Object {
+            "key": "key6",
+            "label": "menu3",
+          },
+        ],
+        "section": "",
+      },
+    ]
+  }
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "15rem",
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
+
+exports[`InputSelect snapshot should match snapshot with width 1`] = `
+<InputSelect
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "menu1",
+          },
+          Object {
+            "key": "key5",
+            "label": "menu2",
+          },
+          Object {
+            "key": "key6",
+            "label": "menu3",
+          },
+        ],
+        "section": "",
+      },
+    ]
+  }
+  width="16rem"
+>
+  <div
+    className="md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "16rem",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
+
+exports[`InputSelect snapshot should match snapshot withSection 1`] = `
+<InputSelect
+  items={
+    Array [
+      Object {
+        "items": Array [
+          Object {
+            "key": "key1",
+            "label": "item1",
+            "popoverText": "item1",
+          },
+          Object {
+            "key": "key2",
+            "label": "item2",
+            "popoverText": "item2",
+          },
+          Object {
+            "key": "key3",
+            "label": "item3",
+            "popoverText": "item3",
+          },
+          Object {
+            "key": "key4",
+            "label": "item4",
+            "popoverText": "item4",
+          },
+        ],
+        "section": "section1",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "key": "key5",
+            "label": "item5",
+            "popoverText": "item5",
+          },
+          Object {
+            "key": "key6",
+            "label": "item6",
+            "popoverText": "item6",
+          },
+          Object {
+            "key": "key7",
+            "label": "item7",
+            "popoverText": "item7",
+          },
+          Object {
+            "key": "key8",
+            "label": "item8",
+            "popoverText": "item8",
+          },
+        ],
+        "section": "section2",
+      },
+    ]
+  }
+>
+  <div
+    className="md-inputSelect-wrapper"
+    data-error={false}
+    style={
+      Object {
+        "--height": "2rem",
+        "--width": "15rem",
+      }
+    }
+  >
+    <div
+      className="md-inputSelect-inputSection"
+    >
+      <Input
+        aria-label="md-inputSelect-input"
+        ariaDescribedBy={null}
+        ariaLabel={null}
+        autoComplete="off"
+        className="md-inputSelect-input"
+        clear={false}
+        clearAriaLabel={null}
+        containerSize=""
+        defaultValue=""
+        disabled={false}
+        helpText=""
+        htmlId={null}
+        id={null}
+        inputAfter={null}
+        inputBefore={null}
+        inputClassName=""
+        inputRef={null}
+        inputSize=""
+        isFilled={false}
+        label=""
+        messageArr={Array []}
+        multiline={false}
+        name={null}
+        nestedLevel={0}
+        onChange={[Function]}
+        onDoneEditing={null}
+        onFocus={null}
+        onKeyDown={null}
+        onMouseDown={null}
+        placeholder=""
+        readOnly={false}
+        secondaryLabel=""
+        shape=""
+        type="text"
+        value=""
+      >
+        <div
+          className="md-input-container md-inputSelect-input"
+        >
+          <div
+            className="md-input__wrapper"
+          >
+            <input
+              aria-label="md-inputSelect-input"
+              autoComplete="off"
+              className="md-input"
+              name={null}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </Input>
+      <div
+        className="md-inputSelect-divider"
+      />
+      <ButtonPill
+        className="md-inputSelect-button"
+        ghost={true}
+        onPress={[Function]}
+      >
+        <ButtonSimple
+          className="md-button-pill-wrapper md-inputSelect-button"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-inputSelect-button md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  className="md-inputSelect-arrowIcon"
+                  name="arrow-down"
+                  scale={12}
+                  weight="filled"
+                >
+                  <div
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-inputSelect-arrowIcon md-icon-no-shrink"
+                  >
+                    <svg
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="arrow-down"
+                      fill="currentColor"
+                      height="100%"
+                      style={Object {}}
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </div>
+</InputSelect>
+`;
