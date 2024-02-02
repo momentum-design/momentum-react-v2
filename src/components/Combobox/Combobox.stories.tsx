@@ -2,23 +2,22 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
 import { Item, Section } from '@react-stately/collections';
-import InputSelect from '.';
+import Combobox from '.';
 
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 
-import Documentation from './InputSelect.documentation.mdx';
+import Documentation from './Combobox.documentation.mdx';
 
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import argTypes from './InputSelect.stories.args';
+import argTypes from './Combobox.stories.args';
 
 import { Template } from '../../storybook/helper.stories.templates';
-import { IInputSelectGroup, IInputSelectItem, Props } from './InputSelect.types';
-import { action } from '@storybook/addon-actions';
+import { IComboboxGroup, IComboboxItem, Props } from './Combobox.types';
 
 
 export default {
-  title: 'Momentum UI/InputSelect',
-  component: InputSelect,
+  title: 'Momentum UI/Combobox',
+  component: Combobox,
   parameters: {
     expanded: true,
     docs: {
@@ -27,11 +26,11 @@ export default {
   },
 };
 
-const InputSelectWrapper = (props:Props) => {
+const ComboboxWrapper = (props:Props) => {
   return (
-      <InputSelect {...props}>
-        {(group: IInputSelectGroup) => {
-          const itemsEle = group?.items?.map((menuItem: IInputSelectItem) => {
+      <Combobox {...props}>
+        {(group: IComboboxGroup) => {
+          const itemsEle = group?.items?.map((menuItem: IComboboxItem) => {
             return (<Item key={menuItem.key} textValue={menuItem.label}>
                 <div>{menuItem.label}</div>
               </Item>);
@@ -45,11 +44,11 @@ const InputSelectWrapper = (props:Props) => {
             <Section key="noSection">{itemsEle}</Section>
           );
         }}
-      </InputSelect>
+      </Combobox>
   );
 };
 
-const withoutSection: IInputSelectGroup[] = [
+const withoutSection: IComboboxGroup[] = [
   {
     section:'',
     items:[
@@ -60,7 +59,7 @@ const withoutSection: IInputSelectGroup[] = [
   },
 ];
 
-const withSection: IInputSelectGroup[] = [
+const withSection: IComboboxGroup[] = [
   {
     section:'section1',
     items:[
@@ -81,7 +80,7 @@ const withSection: IInputSelectGroup[] = [
   },
 ];
 
-const Example = Template(InputSelectWrapper).bind({});
+const Example = Template(ComboboxWrapper).bind({});
 
 Example.args = {
   placeholder: 'placeholder',
@@ -93,11 +92,13 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const Sections = Template(InputSelectWrapper).bind({});
+const Sections = Template(ComboboxWrapper).bind({});
 
 Sections.args = {
   items: withSection,
   selectedKey: 'key1',
+  width:'25rem',
+  height:'2.5rem',
   disabledKeys: ['key3','key6'],
   label:'WithSection',
   description:'Description text',

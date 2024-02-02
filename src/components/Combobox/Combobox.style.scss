@@ -1,7 +1,7 @@
-.md-inputSelect-wrapper {
+.md-combobox-wrapper {
   position: relative;
-  width: var(--width);
-  height: var(--height);
+  width: var(--local-width);
+  height: var(--local-height);
   min-height: 1.71rem;
 
   :global {
@@ -21,9 +21,9 @@
       background-color: var(--mds-color-theme-background-solid-primary-normal);
       border: 1px solid var(--mds-color-theme-outline-input-normal);
       border-radius: 0 0.5rem 0.5rem 0;
-      line-height: var(--height);
-      width: var(--height);
-      height: var(--height);
+      line-height: var(--local-height);
+      width: var(--local-height);
+      height: var(--local-height);
     }
 
     .md-button-pill-wrapper[data-ghost=true][data-outline=false][data-inverted=false] {
@@ -66,7 +66,7 @@
       white-space: nowrap;
     }
 
-    .md-inputSelect-input:hover+div {
+    .md-combobox-input:hover+div {
       background: var(--mds-color-theme-background-primary-hover);
     }
   }
@@ -75,25 +75,25 @@
 
     .md-input:not(.md-select__filter--input),
     .md-button-pill-wrapper,
-    .md-inputSelect-divider {
+    .md-combobox-divider {
       border-color: var(--mds-color-theme-text-error-normal);
     }
 
-    .md-inputSelect-description {
+    .md-combobox-description {
       color: var(--mds-color-theme-text-error-normal);
     }
   }
 
-  .md-inputSelect-inputSection {
+  .md-combobox-inputSection {
     display: flex;
     height: 100%;
   }
 
-  .md-inputSelect-input {
+  .md-combobox-input {
     width: 100%;
   }
 
-  .md-inputSelect-selectionContainer {
+  .md-combobox-selectionContainer {
     width: 100%;
     max-height: 15.25rem;
     padding: 0.5rem 0.1rem 0.5rem 0.5rem;
@@ -107,17 +107,17 @@
 
   }
 
-  .md-inputSelect-noResultText {
+  .md-combobox-noResultText {
     color: var(--mds-color-theme-text-primary-normal);
   }
 
-  .md-inputSelect-button {
-    width: var(--height);
+  .md-combobox-button {
+    width: var(--local-height);
     height: 100%;
     min-height: 1.71rem;
     position: relative;
 
-    .md-inputSelect-arrowIcon {
+    .md-combobox-arrowIcon {
       position: absolute;
       top: 50%;
       right: 50%;
@@ -125,13 +125,13 @@
     }
   }
 
-  .md-inputSelect-label {
+  .md-combobox-label {
     margin-left: 0.75rem;
     margin-bottom: 0.5rem;
     letter-spacing: 0.01563rem;
   }
 
-  .md-inputSelect-description {
+  .md-combobox-description {
     font-size: 0.875rem;
     line-height: 1.375rem;
     fill: var(--mds-color-theme-text-secondary-normal);
@@ -142,7 +142,7 @@
     margin-top: 0.5rem;
   }
 
-  .md-inputSelect-divider {
+  .md-combobox-divider {
     width: 2px;
     height: 100%;
     border-top: 1px solid;

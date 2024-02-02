@@ -1,12 +1,12 @@
-import InputSelect from '.';
+import Combobox from '.';
 import React from 'react';
 import { Item, Section } from '@react-stately/collections';
-import { STYLE } from './InputSelect.constants';
+import { STYLE } from './Combobox.constants';
 import { mountAndWait } from '../../../test/utils';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
-import { IInputSelectGroup } from './InputSelect.types';
+import { IComboboxGroup } from './Combobox.types';
 import Icon from '../Icon';
 import { Input } from '@momentum-ui/react-collaboration';
 jest.mock('@react-aria/utils');
@@ -16,10 +16,10 @@ jest.mock('uuid', () => {
   };
 });
 
-describe('InputSelect', () => {
+describe('Combobox', () => {
   let container;
 
-  const withoutSection: IInputSelectGroup[] = [
+  const withoutSection: IComboboxGroup[] = [
     {
       section: '',
       items: [
@@ -33,7 +33,7 @@ describe('InputSelect', () => {
     },
   ];
 
-  const withSection: IInputSelectGroup[] = [
+  const withSection: IComboboxGroup[] = [
     {
       section: 'section1',
       items: [
@@ -75,9 +75,9 @@ describe('InputSelect', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <InputSelect label="inputSelect_label" items={withoutSection}>
+        <Combobox label="combobox_label" items={withoutSection}>
           {renderChildren}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -87,7 +87,7 @@ describe('InputSelect', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <InputSelect items={withSection}>
+        <Combobox items={withSection}>
           {(group) => {
             const itemsEle = group?.items?.map((menuItem) => {
               return menuItem.popoverText ? (
@@ -107,7 +107,7 @@ describe('InputSelect', () => {
               </Section>
             );
           }}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -119,9 +119,9 @@ describe('InputSelect', () => {
       const className = 'example-class';
 
       container = await mountAndWait(
-        <InputSelect className={className} items={withoutSection}>
+        <Combobox className={className} items={withoutSection}>
           {renderChildren}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -133,9 +133,9 @@ describe('InputSelect', () => {
       const style = { color: 'pink' };
 
       container = await mountAndWait(
-        <InputSelect style={style} items={withoutSection}>
+        <Combobox style={style} items={withoutSection}>
           {renderChildren}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -144,12 +144,12 @@ describe('InputSelect', () => {
     it('should match snapshot with placeholder', async () => {
       expect.assertions(1);
 
-      const placeholder = 'InputSelect';
+      const placeholder = 'Combobox';
 
       container = await mountAndWait(
-        <InputSelect placeholder={placeholder} items={withoutSection}>
+        <Combobox placeholder={placeholder} items={withoutSection}>
           {renderChildren}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -161,9 +161,9 @@ describe('InputSelect', () => {
       const noResultText = 'No result';
 
       container = await mountAndWait(
-        <InputSelect noResultText={noResultText} items={withoutSection}>
+        <Combobox noResultText={noResultText} items={withoutSection}>
           {renderChildren}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -175,9 +175,9 @@ describe('InputSelect', () => {
       const height = '2rem';
 
       container = await mountAndWait(
-        <InputSelect height={height} items={withoutSection}>
+        <Combobox height={height} items={withoutSection}>
           {renderChildren}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -189,9 +189,9 @@ describe('InputSelect', () => {
       const width = '16rem';
 
       container = await mountAndWait(
-        <InputSelect width={width} items={withoutSection}>
+        <Combobox width={width} items={withoutSection}>
           {renderChildren}
-        </InputSelect>
+        </Combobox>
       );
 
       expect(container).toMatchSnapshot();
@@ -200,9 +200,9 @@ describe('InputSelect', () => {
     describe('attributes', () => {
       it('should have its wrapper class', async () => {
         container = await mountAndWait(
-          <InputSelect items={withoutSection}>{renderChildren}</InputSelect>
+          <Combobox items={withoutSection}>{renderChildren}</Combobox>
         );
-        const element = container.find(InputSelect).getDOMNode();
+        const element = container.find(Combobox).getDOMNode();
 
         expect(element.classList.contains(STYLE.wrapper));
       });
@@ -212,12 +212,12 @@ describe('InputSelect', () => {
         const className = 'example-class';
 
         container = await mountAndWait(
-          <InputSelect className={className} items={withoutSection}>
+          <Combobox className={className} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
 
-        const element = container.find(InputSelect).getDOMNode();
+        const element = container.find(Combobox).getDOMNode();
 
         expect(element.classList.contains(className)).toBe(true);
       });
@@ -229,47 +229,47 @@ describe('InputSelect', () => {
         const styleString = 'color: pink;';
 
         const wrapper = await mountAndWait(
-          <InputSelect style={style} items={withoutSection}>
+          <Combobox style={style} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
-        const element = wrapper.find(InputSelect).getDOMNode();
+        const element = wrapper.find(Combobox).getDOMNode();
 
         expect(element.getAttribute('style')).toBe(
-          `${styleString} --height: 2rem; --width: 15rem;`
+          `--local-height: 2rem; --local-width: 100%; ${styleString}`
         );
       });
 
-      it('should have provided style when style is height', async () => {
+      it('should have provided style when style is height', async () => { 
         expect.assertions(1);
 
         const height = '3rem';
-        const styleString = '--height: 3rem;';
+        const styleString = '--local-height: 3rem;';
 
         const wrapper = await mountAndWait(
-          <InputSelect height={height} items={withoutSection}>
+          <Combobox height={height} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
-        const element = wrapper.find(InputSelect).getDOMNode();
+        const element = wrapper.find(Combobox).getDOMNode();
 
-        expect(element.getAttribute('style')).toBe(`${styleString} --width: 15rem;`);
+        expect(element.getAttribute('style')).toBe(`${styleString} --local-width: 100%;`);
       });
 
       it('should have provided style when style is width', async () => {
         expect.assertions(1);
 
         const width = '16rem';
-        const styleString = '--width: 16rem;';
+        const styleString = '--local-width: 16rem;';
 
         const wrapper = await mountAndWait(
-          <InputSelect width={width} items={withoutSection}>
+          <Combobox width={width} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
-        const element = wrapper.find(InputSelect).getDOMNode();
+        const element = wrapper.find(Combobox).getDOMNode();
 
-        expect(element.getAttribute('style')).toBe(`--height: 2rem; ${styleString}`);
+        expect(element.getAttribute('style')).toBe(`--local-height: 2rem; ${styleString}`);
       });
 
       it('should have provided error style when error is provided', async () => {
@@ -278,11 +278,11 @@ describe('InputSelect', () => {
         const error = true;
 
         const wrapper = await mountAndWait(
-          <InputSelect error={error} items={withoutSection}>
+          <Combobox error={error} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
-        const element = wrapper.find(InputSelect).getDOMNode();
+        const element = wrapper.find(Combobox).getDOMNode();
 
         expect(element.getAttribute('data-error')).toBe(`${error}`);
       });
@@ -290,18 +290,18 @@ describe('InputSelect', () => {
       it('should have provided label when label is provided', async () => {
         expect.assertions(1);
 
-        const label = 'Input Select';
+        const label = 'Combobox';
 
         const wrapper = await mountAndWait(
-          <InputSelect label={label} items={withoutSection}>
+          <Combobox label={label} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
 
-        const labelContainer = wrapper.find('div').filter({ className: 'md-inputSelect-label' });
+        const labelContainer = wrapper.find('div').filter({ className: 'md-combobox-label' });
 
         expect(labelContainer.props()).toEqual({
-          className: 'md-inputSelect-label',
+          className: 'md-combobox-label',
           children: label,
         });
       });
@@ -312,15 +312,15 @@ describe('InputSelect', () => {
         const iconScale = 32;
 
         const wrapper = await mountAndWait(
-          <InputSelect iconScale={iconScale} items={withoutSection}>
+          <Combobox iconScale={iconScale} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
 
         expect(
-          wrapper.find(Icon).filter({ className: 'md-inputSelect-arrowIcon' }).props()
+          wrapper.find(Icon).filter({ className: 'md-combobox-arrowIcon' }).props()
         ).toEqual({
-          className: 'md-inputSelect-arrowIcon',
+          className: 'md-combobox-arrowIcon',
           name: 'arrow-down',
           scale: iconScale,
           weight: 'filled',
@@ -330,20 +330,20 @@ describe('InputSelect', () => {
       it('should have provided description when description is provided', async () => {
         expect.assertions(1);
 
-        const description = 'Input Select description';
+        const description = 'Combobox description';
 
         const wrapper = await mountAndWait(
-          <InputSelect description={description} items={withoutSection}>
+          <Combobox description={description} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
 
         const descriptionContainer = wrapper
           .find('div')
-          .filter({ className: 'md-inputSelect-description' });
+          .filter({ className: 'md-combobox-description' });
 
         expect(descriptionContainer.props()).toEqual({
-          className: 'md-inputSelect-description',
+          className: 'md-combobox-description',
           children: description,
         });
       });
@@ -354,13 +354,13 @@ describe('InputSelect', () => {
         const selectedKey = 'key1';
 
         const wrapper = await mountAndWait(
-          <InputSelect selectedKey={selectedKey} items={withoutSection}>
+          <Combobox selectedKey={selectedKey} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
 
         expect(
-          wrapper.find(Input).filter({ className: 'md-inputSelect-input' }).props()
+          wrapper.find(Input).filter({ className: 'md-combobox-input' }).props()
         ).toHaveProperty('value', 'item1');
       });
 
@@ -370,13 +370,13 @@ describe('InputSelect', () => {
         const placeholder = 'please select';
 
         const wrapper = await mountAndWait(
-          <InputSelect placeholder={placeholder} items={withoutSection}>
+          <Combobox placeholder={placeholder} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
 
         expect(
-          wrapper.find(Input).filter({ className: 'md-inputSelect-input' }).props()
+          wrapper.find(Input).filter({ className: 'md-combobox-input' }).props()
         ).toHaveProperty('placeholder', placeholder);
       });
 
@@ -384,7 +384,7 @@ describe('InputSelect', () => {
         it('should show menu on click', async () => {
           const user = userEvent.setup();
 
-          render(<InputSelect items={withoutSection}>{renderChildren}</InputSelect>);
+          render(<Combobox items={withoutSection}>{renderChildren}</Combobox>);
 
           const menuItem = screen.queryByRole('menu');
           expect(menuItem).not.toBeInTheDocument();
@@ -399,9 +399,9 @@ describe('InputSelect', () => {
           const onPress = jest.fn();
 
           render(
-            <InputSelect onPress={onPress} items={withoutSection}>
+            <Combobox onPress={onPress} items={withoutSection}>
               {renderChildren}
-            </InputSelect>
+            </Combobox>
           );
 
           await user.click(screen.getByRole('button'));
@@ -413,12 +413,12 @@ describe('InputSelect', () => {
           const onInputChange = jest.fn();
 
           render(
-            <InputSelect onInputChange={onInputChange} items={withoutSection}>
+            <Combobox onInputChange={onInputChange} items={withoutSection}>
               {renderChildren}
-            </InputSelect>
+            </Combobox>
           );
 
-          await userEvent.type(screen.getByLabelText('md-inputSelect-input'), 'hello');
+          await userEvent.type(screen.getByLabelText('md-combobox-input'), 'hello');
 
           expect(onInputChange).toHaveBeenCalled();
         });
@@ -429,9 +429,9 @@ describe('InputSelect', () => {
           const onAction = jest.fn();
 
           render(
-            <InputSelect onAction={onAction} items={withoutSection}>
+            <Combobox onAction={onAction} items={withoutSection}>
               {renderChildren}
-            </InputSelect>
+            </Combobox>
           );
 
           await user.click(screen.getByRole('button'));
@@ -447,9 +447,9 @@ describe('InputSelect', () => {
           const disabledKeys = ['key1'];
 
           const { container } = render(
-            <InputSelect disabledKeys={disabledKeys} items={withoutSection}>
+            <Combobox disabledKeys={disabledKeys} items={withoutSection}>
               {renderChildren}
-            </InputSelect>
+            </Combobox>
           );
 
           await user.click(screen.getByRole('button'));
@@ -463,7 +463,7 @@ describe('InputSelect', () => {
         it('should show menu when focused and pressing enter', async () => {
           const user = userEvent.setup();
 
-          render(<InputSelect items={withoutSection}>{renderChildren}</InputSelect>);
+          render(<Combobox items={withoutSection}>{renderChildren}</Combobox>);
 
           const menuItem = screen.queryByRole('menu');
           expect(menuItem).not.toBeInTheDocument();
@@ -481,14 +481,14 @@ describe('InputSelect', () => {
 
           render(
             <>
-              <InputSelect items={withoutSection}>{renderChildren}</InputSelect>
+              <Combobox items={withoutSection}>{renderChildren}</Combobox>
               <button>button-outside</button>
             </>
           );
 
           const ele = screen
             .queryAllByRole('button')
-            .find((button) => button.classList.contains('md-inputSelect-button'));
+            .find((button) => button.classList.contains('md-combobox-button'));
 
           await user.click(ele);
           expect(screen.getByRole('menu')).toBeVisible();
@@ -504,17 +504,17 @@ describe('InputSelect', () => {
         const noResultText = 'empty result';
 
         render(
-          <InputSelect noResultText={noResultText} items={withoutSection}>
+          <Combobox noResultText={noResultText} items={withoutSection}>
             {renderChildren}
-          </InputSelect>
+          </Combobox>
         );
 
         const user = userEvent.setup();
         await user.click(screen.getByRole('button'));
 
-        await userEvent.type(screen.getByLabelText('md-inputSelect-input'), 'hello');
+        await userEvent.type(screen.getByLabelText('md-combobox-input'), 'hello');
 
-        expect(screen.getByLabelText('md-inputSelect-noResultText')).toHaveTextContent(
+        expect(screen.getByLabelText('md-combobox-noResultText')).toHaveTextContent(
           noResultText
         );
       });
