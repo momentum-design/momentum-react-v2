@@ -4,21 +4,21 @@ import { CSSProperties } from 'react';
 import { CollectionChildren } from '@react-types/shared/src/collections';
 
 
-export type IInputSelectItem = {
+export type IComboboxItem = {
   key: string;
   label: string;
   [propName: string]: any;
 };
 
-export type IInputSelectGroup = {
-  items: IInputSelectItem[];
+export type IComboboxGroup = {
+  items: IComboboxItem[];
   [propName: string]: any;
 };
 
 export interface Props {
-  onSelectionChange?: (item: IInputSelectItem) => void;
+  onSelectionChange?: (item: IComboboxItem) => void;
   onInputChange?: (event: InputEvent) => void;
-  onAction?: (item: IInputSelectItem) => void;
+  onAction?: (item: IComboboxItem) => void;
   onPress?: (event: PressEvent) => void;
   id?: string;
   style?: CSSProperties;
@@ -31,7 +31,7 @@ export interface Props {
   error?: boolean;
   placeholder?: string;
   noResultText?: string;
-  items: IInputSelectGroup[];
+  items: IComboboxGroup[];
   disabledKeys?: string[];
   selectedKey?: string; 
   children: CollectionChildren<any>;

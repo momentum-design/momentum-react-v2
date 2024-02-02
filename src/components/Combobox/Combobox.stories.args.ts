@@ -1,39 +1,39 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
-import { InputSelect_CONSTANTS as CONSTANTS } from '.';
+import { Combobox_CONSTANTS as CONSTANTS } from '.';
 import { ICON_CONSTANTS } from '../Icon';
 export default {
   ...commonStyles,
   width: {
-    defaultValue: CONSTANTS.DEFAULTS.WIDTH,
+    defaultValue: '15rem',
     description:
-      'To override the inputSelect container and selection list width.',
+      'To override the Combobox container and selection list width.',
     control: { type: 'text' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
-        summary: '15rem',
+        summary: CONSTANTS.DEFAULTS.WIDTH,
       },
     },
   },
   height: {
     defaultValue: CONSTANTS.DEFAULTS.HEIGHT,
     description:
-      'To override the inputSelect container height, It also affects the width of the arrowButton, which is used to ensure that the button is square',
+      'To override the Combobox container height, It also affects the width of the arrowButton, which is used to ensure that the button is square',
     control: { type: 'text' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
-        summary: '2rem',
+        summary: CONSTANTS.DEFAULTS.HEIGHT,
       },
     },
   },
   error: {
     defaultValue: false,
-    description: 'Sets whether the inputSelect is in error state',
+    description: 'Sets whether the Combobox is in error state',
     control: { type: 'boolean' },
     table: {
       type: {
@@ -141,7 +141,7 @@ export default {
     table: {
       category: 'React Aria - Select',
       type: {
-        summary: 'IInputSelectGroup[]',
+        summary: 'IComboboxGroup[]',
       },
       defaultValue: {
         summary: '[]',
@@ -180,7 +180,7 @@ export default {
     table: {
       category: 'React Aria - Select',
       type: {
-        summary: '(item: IInputSelectItem) => void',
+        summary: '(item: IComboboxItem) => void',
       },
       defaultValue: {
         summary: 'undefined',
@@ -195,7 +195,7 @@ export default {
     table: {
       category: 'React Aria - Select',
       type: {
-        summary: '(item: IInputSelectItem) => void',
+        summary: '(item: IComboboxItem) => void',
       },
       defaultValue: {
         summary: 'undefined',

@@ -1,8 +1,8 @@
-const CLASS_PREFIX = 'md-inputSelect';
+const CLASS_PREFIX = 'md-combobox';
 
 const DEFAULTS = {
   HEIGHT:'2rem',
-  WIDTH:'15rem',
+  WIDTH:'100%',
   ICON_SCALE:12 as const,
   PLACEHOLDER:'Search or select an option',
   NO_RESULT_TEXT:'No results found',

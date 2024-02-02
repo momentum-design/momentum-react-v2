@@ -1,33 +1,33 @@
 import { Story } from '@storybook/addon-docs';
 
-`<InputSelect />`
+`<Combobox />`
 The component is composed of three parts: Button, Menu and Input. In the component, the items 
 passed in are filtered based on the value of the Input and then passed to the internal Menu 
 to implement the search function.
 
 ## Content
 
-The InputSelect element follows the
+The Combobox element follows the
 [Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from
-the @react-stately library, accepting both static and dynamic collections. InputSelect accepts `<Item>`
-elements as children, each with a key prop. Basic usage of `InputSelect`, seen in the example below,
+the @react-stately library, accepting both static and dynamic collections. Combobox accepts `<Item>`
+elements as children, each with a key prop. Basic usage of `Combobox`, seen in the example below,
 shows multiple options populated with a string. Simple element with simple options as text.
 
 ```js
 import { Item, Section } from '@react-stately/collections';
 
-<InputSelect label="Single Value" onInputSelectionChange={(key) => console.log}>
+<Combobox label="Single Value" onComboboxionChange={(key) => console.log}>
   <Item>Red</Item>
   <Item>Blue</Item>
   <Item>Green</Item>
   <Item>Yellow</Item>
-</InputSelect>;
+</Combobox>;
 ```
 
 
 ## Dynamic Content
 
-An iterable list of sectionGroups is can be passed to the InputSelect using the items prop. 
+An iterable list of sectionGroups is can be passed to the Combobox using the items prop. 
 It should be noted that the outermost array is used to distinguish the group of sections, 
 and the items within the section accept an iterable list of options.
 
@@ -46,7 +46,7 @@ const items = [
   },
 ]
 
-<InputSelect onSelectionChange={(item) => console.log} items={items}>
+<Combobox onSelectionChange={(item) => console.log} items={items}>
  {(sectionGroup) => {
     return (
       <Section key="noSection">
@@ -60,18 +60,18 @@ const items = [
       </Section>
     );
   }}
-</InputSelect>
+</Combobox>
 ```
 
 ## Sections
 
-InputSelect supports sections in order to group options. Sections can be used by wrapping groups of items
+Combobox supports sections in order to group options. Sections can be used by wrapping groups of items
 in a `Section` element. Each `Section` takes a title and key prop.
 
 ```js
 import { Item, Section } from '@react-stately/collections';
 
-<InputSelect onInputSelectionChange={(key) => console.log}>
+<Combobox onComboboxionChange={(key) => console.log}>
   <Section title="Colors">
     <Item>Red</Item>
     <Item>Blue</Item>
@@ -82,7 +82,7 @@ import { Item, Section } from '@react-stately/collections';
     <Item>Dog</Item>
     <Item>Cat</Item>
   </Section>
-</InputSelect>;
+</Combobox>;
 
 
 
@@ -107,7 +107,7 @@ const items = [
   },
 ]
 
-<InputSelect onSelectionChange={(item) => console.log} items={items}>
+<Combobox onSelectionChange={(item) => console.log} items={items}>
   {(group: IGroup) => {
     return (
       <Section title={group.section} key={group.section}>
@@ -121,7 +121,7 @@ const items = [
       </Section>
     );
   }}
-</InputSelect>
+</Combobox>
 ```
 
 

@@ -9,13 +9,13 @@ import {
   KEYS,
   STYLE,
   DEFAULTS,
-} from './InputSelect.constants';
-import {IInputSelectGroup, Props, IInputSelectItem} from './InputSelect.types';
+} from './Combobox.constants';
+import {IComboboxGroup, Props, IComboboxItem} from './Combobox.types';
 
 import classnames from 'classnames';
-import './InputSelect.style.scss';
+import './Combobox.style.scss';
 
-const InputSelect:React.FC<Props> = (props: Props) => {
+const Combobox:React.FC<Props> = (props: Props) => {
 
   const {
     onAction: onActionCallback,
@@ -46,7 +46,7 @@ const InputSelect:React.FC<Props> = (props: Props) => {
 
   const wrapperProps = {
     className: classnames(className, STYLE.wrapper),
-    style: {...style,'--height':height,'--width':width},
+    style: {'--local-height':height,'--local-width':width,...style},
     id,
     'data-error': error,
   };
@@ -79,12 +79,12 @@ const InputSelect:React.FC<Props> = (props: Props) => {
   }, [isOpen]);
 
   const disabledKeys = [KEYS.INPUT_SEARCH_NO_RESULT, ...disabledKeysPayload];
-  const searchItem: (key: string) => IInputSelectItem | undefined = useCallback(
+  const searchItem: (key: string) => IComboboxItem | undefined = useCallback(
     (key: string) => {
       let target;
 
-      itemsPayload.some((group: IInputSelectGroup) => {
-        const foundItem = group.items.find((item: IInputSelectItem) => item.key === key);
+      itemsPayload.some((group: IComboboxGroup) => {
+        const foundItem = group.items.find((item: IComboboxItem) => item.key === key);
 
         if (foundItem) {
           // eslint-disable-next-line prefer-destructuring
@@ -120,13 +120,13 @@ const InputSelect:React.FC<Props> = (props: Props) => {
       const query = new RegExp(currentInputValue, 'i');
 
       const filterItem = itemsPayload
-        .map((group: IInputSelectGroup) => {
+        .map((group: IComboboxGroup) => {
           return {
             ...group,
-            items: group.items.filter((item: IInputSelectItem) => query.test(item.label)),
+            items: group.items.filter((item: IComboboxItem) => query.test(item.label)),
           };
         })
-        .filter((group: IInputSelectGroup) => group.items.length > 0);
+        .filter((group: IComboboxGroup) => group.items.length > 0);
 
       setItems(filterItem);
     } else {
@@ -138,7 +138,7 @@ const InputSelect:React.FC<Props> = (props: Props) => {
   };
 
   const onAction = (key: string) => {
-    const inputLable = ((searchItem(key) as unknown) as IInputSelectItem).label;
+    const inputLable = ((searchItem(key) as unknown) as IComboboxItem).label;
 
     const currentItem = searchItem(key);
 
@@ -213,4 +213,4 @@ const InputSelect:React.FC<Props> = (props: Props) => {
   );
 };
 
-export default InputSelect;
+export default Combobox;
