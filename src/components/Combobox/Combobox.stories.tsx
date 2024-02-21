@@ -13,6 +13,7 @@ import argTypes from './Combobox.stories.args';
 
 import { Template } from '../../storybook/helper.stories.templates';
 import { IComboboxGroup, IComboboxItem, Props } from './Combobox.types';
+import OverlayAlert from '../OverlayAlert';
 
 
 export default {
@@ -25,6 +26,7 @@ export default {
     },
   },
 };
+
 
 const ComboboxWrapper = (props:Props) => {
   return (
@@ -47,6 +49,9 @@ const ComboboxWrapper = (props:Props) => {
       </Combobox>
   );
 };
+
+
+
 
 const withoutSection: IComboboxGroup[] = [
   {
@@ -97,15 +102,33 @@ const Sections = Template(ComboboxWrapper).bind({});
 Sections.args = {
   items: withSection,
   selectedKey: 'key1',
-  width:'25rem',
-  height:'2.5rem',
-  disabledKeys: ['key3','key6'],
   label:'WithSection',
   description:'Description text',
+  disabledKeys: ['key3','key6'],
 };
 
 
 Sections.argTypes = { ...argTypes };
 
+const InListItemTemplate = (props:Props) => {
+  return (
+    <OverlayAlert>
+      <div style={{ overflowY: 'scroll' }}>
+        <ComboboxWrapper {...props} />
+      </div>
+    </OverlayAlert>
+  );
+};
 
-export { Example, Sections};
+const InListItem = Template(InListItemTemplate).bind({});
+
+InListItem.args = {
+  items: withSection,
+  label:'InListItem',
+};
+
+
+InListItem.argTypes = { ...argTypes };
+
+
+export { Example, Sections, InListItem };

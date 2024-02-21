@@ -7,7 +7,6 @@ import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
 import { IComboboxGroup } from './Combobox.types';
-import Icon from '../Icon';
 import { Input } from '@momentum-ui/react-collaboration';
 jest.mock('@react-aria/utils');
 jest.mock('uuid', () => {
@@ -37,19 +36,19 @@ describe('Combobox', () => {
     {
       section: 'section1',
       items: [
-        { key: 'key1', label: 'item1', popoverText: 'item1' },
-        { key: 'key2', label: 'item2', popoverText: 'item2' },
-        { key: 'key3', label: 'item3', popoverText: 'item3' },
-        { key: 'key4', label: 'item4', popoverText: 'item4' },
+        { key: 'key1', label: 'item1' },
+        { key: 'key2', label: 'item2' },
+        { key: 'key3', label: 'item3' },
+        { key: 'key4', label: 'item4' },
       ],
     },
     {
       section: 'section2',
       items: [
-        { key: 'key5', label: 'item5', popoverText: 'item5' },
-        { key: 'key6', label: 'item6', popoverText: 'item6' },
-        { key: 'key7', label: 'item7', popoverText: 'item7' },
-        { key: 'key8', label: 'item8', popoverText: 'item8' },
+        { key: 'key5', label: 'item5' },
+        { key: 'key6', label: 'item6' },
+        { key: 'key7', label: 'item7' },
+        { key: 'key8', label: 'item8' },
       ],
     },
   ];
@@ -169,19 +168,6 @@ describe('Combobox', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with height', async () => {
-      expect.assertions(1);
-
-      const height = '2rem';
-
-      container = await mountAndWait(
-        <Combobox height={height} items={withoutSection}>
-          {renderChildren}
-        </Combobox>
-      );
-
-      expect(container).toMatchSnapshot();
-    });
 
     it('should match snapshot with width', async () => {
       expect.assertions(1);
@@ -236,24 +222,8 @@ describe('Combobox', () => {
         const element = wrapper.find(Combobox).getDOMNode();
 
         expect(element.getAttribute('style')).toBe(
-          `--local-height: 2rem; --local-width: 100%; ${styleString}`
+          `--local-width: 16.25rem; ${styleString}`
         );
-      });
-
-      it('should have provided style when style is height', async () => { 
-        expect.assertions(1);
-
-        const height = '3rem';
-        const styleString = '--local-height: 3rem;';
-
-        const wrapper = await mountAndWait(
-          <Combobox height={height} items={withoutSection}>
-            {renderChildren}
-          </Combobox>
-        );
-        const element = wrapper.find(Combobox).getDOMNode();
-
-        expect(element.getAttribute('style')).toBe(`${styleString} --local-width: 100%;`);
       });
 
       it('should have provided style when style is width', async () => {
@@ -269,22 +239,7 @@ describe('Combobox', () => {
         );
         const element = wrapper.find(Combobox).getDOMNode();
 
-        expect(element.getAttribute('style')).toBe(`--local-height: 2rem; ${styleString}`);
-      });
-
-      it('should have provided error style when error is provided', async () => {
-        expect.assertions(1);
-
-        const error = true;
-
-        const wrapper = await mountAndWait(
-          <Combobox error={error} items={withoutSection}>
-            {renderChildren}
-          </Combobox>
-        );
-        const element = wrapper.find(Combobox).getDOMNode();
-
-        expect(element.getAttribute('data-error')).toBe(`${error}`);
+        expect(element.getAttribute('style')).toBe(`${styleString}`);
       });
 
       it('should have provided label when label is provided', async () => {
@@ -303,27 +258,6 @@ describe('Combobox', () => {
         expect(labelContainer.props()).toEqual({
           className: 'md-combobox-label',
           children: label,
-        });
-      });
-
-      it('should have expected props on icon', async () => {
-        expect.assertions(1);
-
-        const iconScale = 32;
-
-        const wrapper = await mountAndWait(
-          <Combobox iconScale={iconScale} items={withoutSection}>
-            {renderChildren}
-          </Combobox>
-        );
-
-        expect(
-          wrapper.find(Icon).filter({ className: 'md-combobox-arrowIcon' }).props()
-        ).toEqual({
-          className: 'md-combobox-arrowIcon',
-          name: 'arrow-down',
-          scale: iconScale,
-          weight: 'filled',
         });
       });
 

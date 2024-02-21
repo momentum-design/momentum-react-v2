@@ -1,7 +1,7 @@
 .md-combobox-wrapper {
   position: relative;
   width: var(--local-width);
-  height: var(--local-height);
+  height: 2rem;
   min-height: 1.71rem;
 
   :global {
@@ -21,9 +21,9 @@
       background-color: var(--mds-color-theme-background-solid-primary-normal);
       border: 1px solid var(--mds-color-theme-outline-input-normal);
       border-radius: 0 0.5rem 0.5rem 0;
-      line-height: var(--local-height);
-      width: var(--local-height);
-      height: var(--local-height);
+      line-height: 2rem;
+      width: 2rem;
+      height: 2rem;
     }
 
     .md-button-pill-wrapper[data-ghost=true][data-outline=false][data-inverted=false] {
@@ -71,19 +71,6 @@
     }
   }
 
-  &[data-error='true'] {
-
-    .md-input:not(.md-select__filter--input),
-    .md-button-pill-wrapper,
-    .md-combobox-divider {
-      border-color: var(--mds-color-theme-text-error-normal);
-    }
-
-    .md-combobox-description {
-      color: var(--mds-color-theme-text-error-normal);
-    }
-  }
-
   .md-combobox-inputSection {
     display: flex;
     height: 100%;
@@ -93,17 +80,22 @@
     width: 100%;
   }
 
+  .md-combobox-selectionPosition{
+    width: var(--local-width);
+    z-index: 9999;
+    position: fixed;
+  }
+
   .md-combobox-selectionContainer {
     width: 100%;
     max-height: 15.25rem;
     padding: 0.5rem 0.1rem 0.5rem 0.5rem;
     margin-top: 0.25rem;
-    overflow: auto scroll;
+    overflow: auto;
     background-color: var(--mds-color-theme-background-solid-primary-normal);
-    border: 0.0625rem solid var(--mds-color-theme-outline-input-normal);
+    border: 0.0625rem solid var(--mds-color-theme-outline-secondary-normal);
     border-radius: 0.5rem;
     box-sizing: border-box;
-
 
   }
 
@@ -125,23 +117,6 @@
     }
   }
 
-  .md-combobox-label {
-    margin-left: 0.75rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.01563rem;
-  }
-
-  .md-combobox-description {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    fill: var(--mds-color-theme-text-secondary-normal);
-    color: var(--mds-color-theme-text-secondary-normal);
-    letter-spacing: 0.01563rem;
-    font-style: normal;
-    margin-left: 0.75rem;
-    margin-top: 0.5rem;
-  }
-
   .md-combobox-divider {
     width: 2px;
     height: 100%;
@@ -150,4 +125,21 @@
     border-color: var(--mds-color-theme-outline-input-normal);
     background-color: var(--mds-color-theme-background-solid-primary-normal);
   }
+}
+
+.md-combobox-label {
+  margin-left: 0.75rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01563rem;
+}
+
+.md-combobox-description {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  fill: var(--mds-color-theme-text-secondary-normal);
+  color: var(--mds-color-theme-text-secondary-normal);
+  letter-spacing: 0.01563rem;
+  font-style: normal;
+  margin-left: 0.75rem;
+  margin-top: 0.5rem;
 }
