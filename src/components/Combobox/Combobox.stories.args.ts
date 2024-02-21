@@ -1,10 +1,12 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { Combobox_CONSTANTS as CONSTANTS } from '.';
-import { ICON_CONSTANTS } from '../Icon';
+import { DEFAULTS } from './Combobox.constants';
+
+
 export default {
   ...commonStyles,
   width: {
-    defaultValue: '15rem',
+    defaultValue: undefined,
     description:
       'To override the Combobox container and selection list width.',
     control: { type: 'text' },
@@ -14,33 +16,6 @@ export default {
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.WIDTH,
-      },
-    },
-  },
-  height: {
-    defaultValue: CONSTANTS.DEFAULTS.HEIGHT,
-    description:
-      'To override the Combobox container height, It also affects the width of the arrowButton, which is used to ensure that the button is square',
-    control: { type: 'text' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.HEIGHT,
-      },
-    },
-  },
-  error: {
-    defaultValue: false,
-    description: 'Sets whether the Combobox is in error state',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: false,
       },
     },
   },
@@ -87,21 +62,6 @@ export default {
         summary: 'undefined',
       },
     },  
-  },
-  iconScale: {
-    defaultValue: CONSTANTS.DEFAULTS.ICON_SCALE,
-    description: 'Size of the arrow icon.',
-    control: { type: 'select' },
-    options: [undefined, ...Object.values(ICON_CONSTANTS.SIZES)],
-    table: {
-      category: 'React Aria - Button',
-      type: {
-        summary: 'IconScale',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.ICON_SCALE,
-      },
-    },
   },
   selectedKey: {
     defaultValue: CONSTANTS.DEFAULTS.SELECTEDKEY,

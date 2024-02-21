@@ -1,14 +1,11 @@
 const CLASS_PREFIX = 'md-combobox';
 
 const DEFAULTS = {
-  HEIGHT:'2rem',
-  WIDTH:'100%',
-  ICON_SCALE:12 as const,
+  WIDTH:'16.25rem',
   PLACEHOLDER:'Search or select an option',
   NO_RESULT_TEXT:'No results found',
   SELECTEDKEY:'',
   DISABLEDKEYS:[],
-  ERROR:false,
 };
 
 const STYLE = {
@@ -21,6 +18,7 @@ const STYLE = {
   btnContainer: `${CLASS_PREFIX}-btnContainer`,
   button: `${CLASS_PREFIX}-button`,
   arrowIcon: `${CLASS_PREFIX}-arrowIcon`,
+  selectionPosition: `${CLASS_PREFIX}-selectionPosition`,
   selectionContainer: `${CLASS_PREFIX}-selectionContainer`,
   selection: `${CLASS_PREFIX}-selection`,
   noResultText: `${CLASS_PREFIX}-noResultText`,

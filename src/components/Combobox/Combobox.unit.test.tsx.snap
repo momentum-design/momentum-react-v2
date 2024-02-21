@@ -38,20 +38,18 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
   label="combobox_label"
 >
   <div
+    className="md-combobox-label"
+  >
+    combobox_label
+  </div>
+  <div
     className="md-combobox-wrapper"
-    data-error={false}
     style={
       Object {
-        "--local-height": "2rem",
-        "--local-width": "100%",
+        "--local-width": "16.25rem",
       }
     }
   >
-    <div
-      className="md-combobox-label"
-    >
-      combobox_label
-    </div>
     <div
       className="md-combobox-inputSection"
     >
@@ -72,7 +70,7 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
         inputAfter={null}
         inputBefore={null}
         inputClassName=""
-        inputRef={null}
+        inputRef={[Function]}
         inputSize=""
         isFilled={false}
         label=""
@@ -85,7 +83,7 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
         onFocus={null}
         onKeyDown={null}
         onMouseDown={null}
-        placeholder=""
+        placeholder="Search or select an option"
         readOnly={false}
         secondaryLabel=""
         shape=""
@@ -108,6 +106,7 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDown={[Function]}
+              placeholder="Search or select an option"
               tabIndex={0}
               type="text"
               value=""
@@ -237,11 +236,9 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
 >
   <div
     className="example-class md-combobox-wrapper"
-    data-error={false}
     style={
       Object {
-        "--local-height": "2rem",
-        "--local-width": "100%",
+        "--local-width": "16.25rem",
       }
     }
   >
@@ -265,7 +262,7 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
         inputAfter={null}
         inputBefore={null}
         inputClassName=""
-        inputRef={null}
+        inputRef={[Function]}
         inputSize=""
         isFilled={false}
         label=""
@@ -278,7 +275,7 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
         onFocus={null}
         onKeyDown={null}
         onMouseDown={null}
-        placeholder=""
+        placeholder="Search or select an option"
         readOnly={false}
         secondaryLabel=""
         shape=""
@@ -301,199 +298,7 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDown={[Function]}
-              tabIndex={0}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </Input>
-      <div
-        className="md-combobox-divider"
-      />
-      <ButtonPill
-        className="md-combobox-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
-            >
-              <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
-              >
-                <Icon
-                  className="md-combobox-arrowIcon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrowIcon md-icon-no-shrink"
-                  >
-                    <svg
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
-  </div>
-</Combobox>
-`;
-
-exports[`Combobox snapshot should match snapshot with height 1`] = `
-<Combobox
-  height="2rem"
-  items={
-    Array [
-      Object {
-        "items": Array [
-          Object {
-            "key": "key1",
-            "label": "item1",
-          },
-          Object {
-            "key": "key2",
-            "label": "item2",
-          },
-          Object {
-            "key": "key3",
-            "label": "item3",
-          },
-          Object {
-            "key": "key4",
-            "label": "menu1",
-          },
-          Object {
-            "key": "key5",
-            "label": "menu2",
-          },
-          Object {
-            "key": "key6",
-            "label": "menu3",
-          },
-        ],
-        "section": "",
-      },
-    ]
-  }
->
-  <div
-    className="md-combobox-wrapper"
-    data-error={false}
-    style={
-      Object {
-        "--local-height": "2rem",
-        "--local-width": "100%",
-      }
-    }
-  >
-    <div
-      className="md-combobox-inputSection"
-    >
-      <Input
-        aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
-        autoComplete="off"
-        className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={null}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
-        placeholder=""
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
-        value=""
-      >
-        <div
-          className="md-input-container md-combobox-input"
-        >
-          <div
-            className="md-input__wrapper"
-          >
-            <input
-              aria-label="md-combobox-input"
-              autoComplete="off"
-              className="md-input"
-              name={null}
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
+              placeholder="Search or select an option"
               tabIndex={0}
               type="text"
               value=""
@@ -623,11 +428,9 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
 >
   <div
     className="md-combobox-wrapper"
-    data-error={false}
     style={
       Object {
-        "--local-height": "2rem",
-        "--local-width": "100%",
+        "--local-width": "16.25rem",
       }
     }
   >
@@ -651,7 +454,7 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
         inputAfter={null}
         inputBefore={null}
         inputClassName=""
-        inputRef={null}
+        inputRef={[Function]}
         inputSize=""
         isFilled={false}
         label=""
@@ -664,7 +467,7 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
         onFocus={null}
         onKeyDown={null}
         onMouseDown={null}
-        placeholder=""
+        placeholder="Search or select an option"
         readOnly={false}
         secondaryLabel=""
         shape=""
@@ -687,6 +490,7 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDown={[Function]}
+              placeholder="Search or select an option"
               tabIndex={0}
               type="text"
               value=""
@@ -816,11 +620,9 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
 >
   <div
     className="md-combobox-wrapper"
-    data-error={false}
     style={
       Object {
-        "--local-height": "2rem",
-        "--local-width": "100%",
+        "--local-width": "16.25rem",
       }
     }
   >
@@ -844,7 +646,7 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
         inputAfter={null}
         inputBefore={null}
         inputClassName=""
-        inputRef={null}
+        inputRef={[Function]}
         inputSize=""
         isFilled={false}
         label=""
@@ -1014,11 +816,9 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
 >
   <div
     className="md-combobox-wrapper"
-    data-error={false}
     style={
       Object {
-        "--local-height": "2rem",
-        "--local-width": "100%",
+        "--local-width": "16.25rem",
         "color": "pink",
       }
     }
@@ -1043,7 +843,7 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
         inputAfter={null}
         inputBefore={null}
         inputClassName=""
-        inputRef={null}
+        inputRef={[Function]}
         inputSize=""
         isFilled={false}
         label=""
@@ -1056,7 +856,7 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
         onFocus={null}
         onKeyDown={null}
         onMouseDown={null}
-        placeholder=""
+        placeholder="Search or select an option"
         readOnly={false}
         secondaryLabel=""
         shape=""
@@ -1079,6 +879,7 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDown={[Function]}
+              placeholder="Search or select an option"
               tabIndex={0}
               type="text"
               value=""
@@ -1208,10 +1009,8 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
 >
   <div
     className="md-combobox-wrapper"
-    data-error={false}
     style={
       Object {
-        "--local-height": "2rem",
         "--local-width": "16rem",
       }
     }
@@ -1236,7 +1035,7 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
         inputAfter={null}
         inputBefore={null}
         inputClassName=""
-        inputRef={null}
+        inputRef={[Function]}
         inputSize=""
         isFilled={false}
         label=""
@@ -1249,7 +1048,7 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
         onFocus={null}
         onKeyDown={null}
         onMouseDown={null}
-        placeholder=""
+        placeholder="Search or select an option"
         readOnly={false}
         secondaryLabel=""
         shape=""
@@ -1272,6 +1071,7 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDown={[Function]}
+              placeholder="Search or select an option"
               tabIndex={0}
               type="text"
               value=""
@@ -1371,22 +1171,18 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
           Object {
             "key": "key1",
             "label": "item1",
-            "popoverText": "item1",
           },
           Object {
             "key": "key2",
             "label": "item2",
-            "popoverText": "item2",
           },
           Object {
             "key": "key3",
             "label": "item3",
-            "popoverText": "item3",
           },
           Object {
             "key": "key4",
             "label": "item4",
-            "popoverText": "item4",
           },
         ],
         "section": "section1",
@@ -1396,22 +1192,18 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
           Object {
             "key": "key5",
             "label": "item5",
-            "popoverText": "item5",
           },
           Object {
             "key": "key6",
             "label": "item6",
-            "popoverText": "item6",
           },
           Object {
             "key": "key7",
             "label": "item7",
-            "popoverText": "item7",
           },
           Object {
             "key": "key8",
             "label": "item8",
-            "popoverText": "item8",
           },
         ],
         "section": "section2",
@@ -1421,11 +1213,9 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
 >
   <div
     className="md-combobox-wrapper"
-    data-error={false}
     style={
       Object {
-        "--local-height": "2rem",
-        "--local-width": "100%",
+        "--local-width": "16.25rem",
       }
     }
   >
@@ -1449,7 +1239,7 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
         inputAfter={null}
         inputBefore={null}
         inputClassName=""
-        inputRef={null}
+        inputRef={[Function]}
         inputSize=""
         isFilled={false}
         label=""
@@ -1462,7 +1252,7 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
         onFocus={null}
         onKeyDown={null}
         onMouseDown={null}
-        placeholder=""
+        placeholder="Search or select an option"
         readOnly={false}
         secondaryLabel=""
         shape=""
@@ -1485,6 +1275,7 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDown={[Function]}
+              placeholder="Search or select an option"
               tabIndex={0}
               type="text"
               value=""
