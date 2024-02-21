@@ -198,7 +198,7 @@ const Combobox: React.FC<Props> = (props: Props) => {
     }
   }, []);
 
-  
+
   // subcomponent event
 
   const onInputChange = (event) => {
@@ -280,7 +280,6 @@ const Combobox: React.FC<Props> = (props: Props) => {
                 selectedKeys={[selectedKey]}
                 onSelectionChange={onSelectionChange}
                 disabledKeys={disabledKeys}
-
               >
                 {items.length ? children : (<Item key={KEYS.INPUT_SEARCH_NO_RESULT} textValue={noResultText}>
                   <div aria-label={STYLE.noResultText} className={STYLE.noResultText}>{noResultText}</div>
