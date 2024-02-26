@@ -49,13 +49,7 @@
     .md-menu-item-wrapper[aria-checked='false'] div[data-position='fill'] {
       width: calc(100% - 1.75rem);
     }
-
-    .md-menu-item-wrapper div[data-position='fill'] div:first-child {
-      overflow: unset, hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
+    
     .md-text-input-container {
       height: 100%;
       border-radius: 0.5rem 0 0 0.5rem;
