@@ -30,7 +30,7 @@
       line-height: 2rem;
     }
 
-    ul.md-menu-wrapper ul[role='presentation']:not(:first-child)>span {
+    ul.md-menu-wrapper ul[role='presentation']:not(:first-child) > span {
       display: block;
     }
 
@@ -46,7 +46,7 @@
       content: '';
     }
 
-    .md-menu-item-wrapper[aria-checked='false'] div[data-position='fill'] {
+    .md-menu-item-wrapper[aria-checked='false'] > div[data-position='fill'] {
       width: calc(100% - 1.75rem);
     }
     
