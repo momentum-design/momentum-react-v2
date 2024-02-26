@@ -16,7 +16,7 @@ shows multiple options populated with a string. Simple element with simple optio
 ```js
 import { Item, Section } from '@react-stately/collections';
 
-<Combobox label="Single Value" onComboboxionChange={(key) => console.log}>
+<Combobox label="Single Value" onSelectionChange={(item) => console.log}>
   <Item>Red</Item>
   <Item>Blue</Item>
   <Item>Green</Item>
@@ -36,7 +36,6 @@ import { Item } from '@react-stately/collections';
 
 const comboboxGroups = [
   { 
-    section: '',
     items: [ 
       { key: 'key1', label: 'item1' },
       { key: 'key2', label: 'item2' },
@@ -71,7 +70,7 @@ in a `Section` element. Each `Section` takes a title and key prop.
 ```js
 import { Item, Section } from '@react-stately/collections';
 
-<Combobox onSelectionChange={(key) => console.log}>
+<Combobox onSelectionChange={(item) => console.log}>
   <Section title="Colors">
     <Item>Red</Item>
     <Item>Blue</Item>
