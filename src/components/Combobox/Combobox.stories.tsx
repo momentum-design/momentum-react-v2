@@ -46,6 +46,7 @@ const ComboboxWrapper = (props:Props) => {
             <Section key="noSection">{itemsEle}</Section>
           );
         }}
+        
       </Combobox>
   );
 };
@@ -55,7 +56,6 @@ const ComboboxWrapper = (props:Props) => {
 
 const withoutSection: IComboboxGroup[] = [
   {
-    section:'',
     items:[
       {key:'key1',label:'item1'},
       {key:'key2',label:'item2'},
@@ -89,7 +89,7 @@ const Example = Template(ComboboxWrapper).bind({});
 
 Example.args = {
   placeholder: 'placeholder',
-  items: withoutSection,
+  comboboxGroups: withoutSection,
   disabledKeys: ['key3'],
   label:'WithoutSection',
   description:'Description text',
@@ -100,7 +100,7 @@ Example.argTypes = { ...argTypes };
 const Sections = Template(ComboboxWrapper).bind({});
 
 Sections.args = {
-  items: withSection,
+  comboboxGroups: withSection,
   selectedKey: 'key1',
   label:'WithSection',
   description:'Description text',
@@ -123,12 +123,31 @@ const InListItemTemplate = (props:Props) => {
 const InListItem = Template(InListItemTemplate).bind({});
 
 InListItem.args = {
-  items: withSection,
+  comboboxGroups: withSection,
   label:'InListItem',
+  placeholder:'long text overflow effect use case'
 };
 
 
 InListItem.argTypes = { ...argTypes };
 
+const MultipleComboboxTemplate = (props:Props) => {
+  return (
+    <>
+      <ComboboxWrapper {...props} />
+      <ComboboxWrapper {...props} />
+      <ComboboxWrapper {...props} />
+    </>
+  );
+};
 
-export { Example, Sections, InListItem };
+const MultipleCombobox = Template(MultipleComboboxTemplate).bind({});
+
+MultipleCombobox.args = {
+  comboboxGroups: withSection,
+  label:'MultipleCombobox',
+};
+
+MultipleCombobox.argTypes = { ...argTypes };
+
+export { Example, Sections, InListItem, MultipleCombobox };

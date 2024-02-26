@@ -10,12 +10,19 @@ export type IComboboxItem = {
 
 export type IComboboxGroup = {
   items: IComboboxItem[];
-  section: string;
+  // If there is no need to group items using section, this property is not required.
+  section?: string;
 };
 
 export interface Props {
   /**
-   * Handler that is called when the selection changes.
+   * Handler that is called when an item is selected in the list.
+   * If the selected item matches the selectedKey, the parameter is undefined.
+   */
+  onAction?: (item: IComboboxItem) => void;
+  /**
+   * Handler that is called when an item is selected in the list.
+   * Even if the selected item does not match the selectedKey, the parameter is still meaningful.
    */
   onSelectionChange?: (item: IComboboxItem) => void;
   /**
@@ -23,13 +30,9 @@ export interface Props {
    */
   onInputChange?: (event: InputEvent) => void;
   /**
-   * Handler that is called when the selection selected.
-   */
-  onAction?: (item: IComboboxItem) => void;
-  /**
    * Handler that is called when the arrowButton pressed.
    */
-  onPress?: (event: PressEvent) => void;
+  onArrowButtonPress?: (event: PressEvent) => void;
   /**
    * id: id of help message.
    */
@@ -51,7 +54,12 @@ export interface Props {
    */
   description?: string;
   /**
+   * Description associated with this component. Appears below the title.
+   */
+  error?: boolean;
+  /**
    * Override the list box width and combobox container width.
+   * defaultValue: 16.25rem
    */
   width?: string;
   /**
@@ -59,19 +67,24 @@ export interface Props {
    */
   placeholder?: string;
   /**
-   * Text to display inside the list box when there is no item.
+   * This property represents whether to filter based on the input value when click the arrowButton.
+   */
+  shouldFilterOnArrowButton?: boolean;
+  /**
+   * Text to display inside the list box when there are no items that match the user's input.
+   * defaultValue: No results found
    */
   noResultText?: string;
   /**
-   * The list of options for this select element.
+   * The list of options for this component.
    */
-  items: IComboboxGroup[];
+  comboboxGroups: IComboboxGroup[];
   /**
    * The currently disabled keys in the collection.
    */
   disabledKeys?: string[];
   /**
-   * The currently selected keys in the collection.
+   * The currently selected key in the collection.
    */
   selectedKey?: string; 
   /**

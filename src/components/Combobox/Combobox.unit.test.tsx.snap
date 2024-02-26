@@ -2,7 +2,7 @@
 
 exports[`Combobox snapshot should match snapshot label 1`] = `
 <Combobox
-  items={
+  comboboxGroups={
     Array [
       Object {
         "items": Array [
@@ -31,7 +31,6 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
             "label": "menu3",
           },
         ],
-        "section": "",
       },
     ]
   }
@@ -44,6 +43,8 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
   </div>
   <div
     className="md-combobox-wrapper"
+    data-error={false}
+    data-inputHaveValue={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -53,67 +54,41 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
     <div
       className="md-combobox-inputSection"
     >
-      <Input
+      <TextInput
         aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
         autoComplete="off"
         className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={[Function]}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
-        placeholder="Search or select an option"
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
+        onInput={[Function]}
+        placeholder=""
+        type="displayname"
         value=""
       >
         <div
-          className="md-input-container md-combobox-input"
+          className="md-text-input-wrapper md-combobox-input"
+          data-focus={false}
+          data-level="none"
+          onClick={[Function]}
         >
           <div
-            className="md-input__wrapper"
+            className="md-text-input-container"
           >
             <input
               aria-label="md-combobox-input"
               autoComplete="off"
-              className="md-input"
-              name={null}
+              disabled={false}
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              placeholder="Search or select an option"
-              tabIndex={0}
-              type="text"
+              onInput={[Function]}
+              placeholder=""
+              readOnly={false}
+              type="displayname"
               value=""
             />
           </div>
         </div>
-      </Input>
+      </TextInput>
       <div
         className="md-combobox-divider"
       />
@@ -200,7 +175,7 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
 exports[`Combobox snapshot should match snapshot with className 1`] = `
 <Combobox
   className="example-class"
-  items={
+  comboboxGroups={
     Array [
       Object {
         "items": Array [
@@ -229,13 +204,14 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
             "label": "menu3",
           },
         ],
-        "section": "",
       },
     ]
   }
 >
   <div
     className="example-class md-combobox-wrapper"
+    data-error={false}
+    data-inputHaveValue={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -245,67 +221,41 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
     <div
       className="md-combobox-inputSection"
     >
-      <Input
+      <TextInput
         aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
         autoComplete="off"
         className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={[Function]}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
-        placeholder="Search or select an option"
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
+        onInput={[Function]}
+        placeholder=""
+        type="displayname"
         value=""
       >
         <div
-          className="md-input-container md-combobox-input"
+          className="md-text-input-wrapper md-combobox-input"
+          data-focus={false}
+          data-level="none"
+          onClick={[Function]}
         >
           <div
-            className="md-input__wrapper"
+            className="md-text-input-container"
           >
             <input
               aria-label="md-combobox-input"
               autoComplete="off"
-              className="md-input"
-              name={null}
+              disabled={false}
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              placeholder="Search or select an option"
-              tabIndex={0}
-              type="text"
+              onInput={[Function]}
+              placeholder=""
+              readOnly={false}
+              type="displayname"
               value=""
             />
           </div>
         </div>
-      </Input>
+      </TextInput>
       <div
         className="md-combobox-divider"
       />
@@ -391,7 +341,7 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
 
 exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
 <Combobox
-  items={
+  comboboxGroups={
     Array [
       Object {
         "items": Array [
@@ -420,7 +370,6 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
             "label": "menu3",
           },
         ],
-        "section": "",
       },
     ]
   }
@@ -428,6 +377,8 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
 >
   <div
     className="md-combobox-wrapper"
+    data-error={false}
+    data-inputHaveValue={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -437,67 +388,41 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
     <div
       className="md-combobox-inputSection"
     >
-      <Input
+      <TextInput
         aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
         autoComplete="off"
         className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={[Function]}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
-        placeholder="Search or select an option"
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
+        onInput={[Function]}
+        placeholder=""
+        type="displayname"
         value=""
       >
         <div
-          className="md-input-container md-combobox-input"
+          className="md-text-input-wrapper md-combobox-input"
+          data-focus={false}
+          data-level="none"
+          onClick={[Function]}
         >
           <div
-            className="md-input__wrapper"
+            className="md-text-input-container"
           >
             <input
               aria-label="md-combobox-input"
               autoComplete="off"
-              className="md-input"
-              name={null}
+              disabled={false}
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              placeholder="Search or select an option"
-              tabIndex={0}
-              type="text"
+              onInput={[Function]}
+              placeholder=""
+              readOnly={false}
+              type="displayname"
               value=""
             />
           </div>
         </div>
-      </Input>
+      </TextInput>
       <div
         className="md-combobox-divider"
       />
@@ -583,7 +508,7 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
 
 exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
 <Combobox
-  items={
+  comboboxGroups={
     Array [
       Object {
         "items": Array [
@@ -612,7 +537,6 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
             "label": "menu3",
           },
         ],
-        "section": "",
       },
     ]
   }
@@ -620,6 +544,8 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
 >
   <div
     className="md-combobox-wrapper"
+    data-error={false}
+    data-inputHaveValue={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -629,67 +555,41 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
     <div
       className="md-combobox-inputSection"
     >
-      <Input
+      <TextInput
         aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
         autoComplete="off"
         className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={[Function]}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
+        onInput={[Function]}
         placeholder="Combobox"
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
+        type="displayname"
         value=""
       >
         <div
-          className="md-input-container md-combobox-input"
+          className="md-text-input-wrapper md-combobox-input"
+          data-focus={false}
+          data-level="none"
+          onClick={[Function]}
         >
           <div
-            className="md-input__wrapper"
+            className="md-text-input-container"
           >
             <input
               aria-label="md-combobox-input"
               autoComplete="off"
-              className="md-input"
-              name={null}
+              disabled={false}
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
+              onInput={[Function]}
               placeholder="Combobox"
-              tabIndex={0}
-              type="text"
+              readOnly={false}
+              type="displayname"
               value=""
             />
           </div>
         </div>
-      </Input>
+      </TextInput>
       <div
         className="md-combobox-divider"
       />
@@ -775,7 +675,7 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
 
 exports[`Combobox snapshot should match snapshot with style 1`] = `
 <Combobox
-  items={
+  comboboxGroups={
     Array [
       Object {
         "items": Array [
@@ -804,7 +704,6 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
             "label": "menu3",
           },
         ],
-        "section": "",
       },
     ]
   }
@@ -816,6 +715,8 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
 >
   <div
     className="md-combobox-wrapper"
+    data-error={false}
+    data-inputHaveValue={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -826,67 +727,41 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
     <div
       className="md-combobox-inputSection"
     >
-      <Input
+      <TextInput
         aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
         autoComplete="off"
         className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={[Function]}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
-        placeholder="Search or select an option"
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
+        onInput={[Function]}
+        placeholder=""
+        type="displayname"
         value=""
       >
         <div
-          className="md-input-container md-combobox-input"
+          className="md-text-input-wrapper md-combobox-input"
+          data-focus={false}
+          data-level="none"
+          onClick={[Function]}
         >
           <div
-            className="md-input__wrapper"
+            className="md-text-input-container"
           >
             <input
               aria-label="md-combobox-input"
               autoComplete="off"
-              className="md-input"
-              name={null}
+              disabled={false}
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              placeholder="Search or select an option"
-              tabIndex={0}
-              type="text"
+              onInput={[Function]}
+              placeholder=""
+              readOnly={false}
+              type="displayname"
               value=""
             />
           </div>
         </div>
-      </Input>
+      </TextInput>
       <div
         className="md-combobox-divider"
       />
@@ -972,7 +847,7 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
 
 exports[`Combobox snapshot should match snapshot with width 1`] = `
 <Combobox
-  items={
+  comboboxGroups={
     Array [
       Object {
         "items": Array [
@@ -1001,7 +876,6 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
             "label": "menu3",
           },
         ],
-        "section": "",
       },
     ]
   }
@@ -1009,6 +883,8 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
 >
   <div
     className="md-combobox-wrapper"
+    data-error={false}
+    data-inputHaveValue={false}
     style={
       Object {
         "--local-width": "16rem",
@@ -1018,67 +894,41 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
     <div
       className="md-combobox-inputSection"
     >
-      <Input
+      <TextInput
         aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
         autoComplete="off"
         className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={[Function]}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
-        placeholder="Search or select an option"
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
+        onInput={[Function]}
+        placeholder=""
+        type="displayname"
         value=""
       >
         <div
-          className="md-input-container md-combobox-input"
+          className="md-text-input-wrapper md-combobox-input"
+          data-focus={false}
+          data-level="none"
+          onClick={[Function]}
         >
           <div
-            className="md-input__wrapper"
+            className="md-text-input-container"
           >
             <input
               aria-label="md-combobox-input"
               autoComplete="off"
-              className="md-input"
-              name={null}
+              disabled={false}
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              placeholder="Search or select an option"
-              tabIndex={0}
-              type="text"
+              onInput={[Function]}
+              placeholder=""
+              readOnly={false}
+              type="displayname"
               value=""
             />
           </div>
         </div>
-      </Input>
+      </TextInput>
       <div
         className="md-combobox-divider"
       />
@@ -1164,7 +1014,7 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
 
 exports[`Combobox snapshot should match snapshot withSection 1`] = `
 <Combobox
-  items={
+  comboboxGroups={
     Array [
       Object {
         "items": Array [
@@ -1213,6 +1063,8 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
 >
   <div
     className="md-combobox-wrapper"
+    data-error={false}
+    data-inputHaveValue={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -1222,67 +1074,41 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
     <div
       className="md-combobox-inputSection"
     >
-      <Input
+      <TextInput
         aria-label="md-combobox-input"
-        ariaDescribedBy={null}
-        ariaLabel={null}
         autoComplete="off"
         className="md-combobox-input"
-        clear={false}
-        clearAriaLabel={null}
-        containerSize=""
-        defaultValue=""
-        disabled={false}
-        helpText=""
-        htmlId={null}
-        id={null}
-        inputAfter={null}
-        inputBefore={null}
-        inputClassName=""
-        inputRef={[Function]}
-        inputSize=""
-        isFilled={false}
-        label=""
-        messageArr={Array []}
-        multiline={false}
-        name={null}
-        nestedLevel={0}
-        onChange={[Function]}
-        onDoneEditing={null}
-        onFocus={null}
-        onKeyDown={null}
-        onMouseDown={null}
-        placeholder="Search or select an option"
-        readOnly={false}
-        secondaryLabel=""
-        shape=""
-        type="text"
+        onInput={[Function]}
+        placeholder=""
+        type="displayname"
         value=""
       >
         <div
-          className="md-input-container md-combobox-input"
+          className="md-text-input-wrapper md-combobox-input"
+          data-focus={false}
+          data-level="none"
+          onClick={[Function]}
         >
           <div
-            className="md-input__wrapper"
+            className="md-text-input-container"
           >
             <input
               aria-label="md-combobox-input"
               autoComplete="off"
-              className="md-input"
-              name={null}
+              disabled={false}
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              placeholder="Search or select an option"
-              tabIndex={0}
-              type="text"
+              onInput={[Function]}
+              placeholder=""
+              readOnly={false}
+              type="displayname"
               value=""
             />
           </div>
         </div>
-      </Input>
+      </TextInput>
       <div
         className="md-combobox-divider"
       />

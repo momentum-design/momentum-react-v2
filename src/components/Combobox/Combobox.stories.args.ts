@@ -1,12 +1,10 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { Combobox_CONSTANTS as CONSTANTS } from '.';
-import { DEFAULTS } from './Combobox.constants';
 
 
 export default {
   ...commonStyles,
   width: {
-    defaultValue: undefined,
     description:
       'To override the Combobox container and selection list width.',
     control: { type: 'text' },
@@ -19,8 +17,19 @@ export default {
       },
     },
   },
+  error: {
+    description: 'Sets whether the combobox is in error state',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
   placeholder: {
-    defaultValue: CONSTANTS.DEFAULTS.PLACEHOLDER,
     description: 'Text to display inside the input when there is no inputValue or item selected',
     control: { type: 'text' },
     table: {
@@ -29,7 +38,7 @@ export default {
         summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: CONSTANTS.DEFAULTS.PLACEHOLDER,
       },
     },
   },
@@ -48,7 +57,7 @@ export default {
       },
     },
   },
-  onPress: {
+  onArrowButtonPress: {
     defaultValue: undefined,
     description:
       'Handler that is called when the press is released over the arrowButton.',
@@ -63,8 +72,21 @@ export default {
       },
     },  
   },
+  shouldFilterOnArrowButton: {
+    description:
+      'This property represents whether to filter based on the input value when click the arrowButton.',
+    control: { type: 'boolean' },
+    table: {
+      category: 'React Aria - Button',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SHOULDFILTERONARROWBUTTON,
+      },
+    },  
+  },
   selectedKey: {
-    defaultValue: CONSTANTS.DEFAULTS.SELECTEDKEY,
     description:
       'It also affects the value of the input (displayed as the label of the corresponding item',
     control: { type: 'text' },
@@ -79,7 +101,6 @@ export default {
     },
   },
   disabledKeys: {
-    defaultValue: [],
     description:
       'List with disabled keys. (They must be exact type as the key)',
     control: { type: 'array' },
@@ -93,8 +114,7 @@ export default {
       },
     },
   },
-  items: {
-    defaultValue: [],
+  comboboxGroups: {
     description:
       'The options for this selection list element.',
     control: { type: 'array' },
@@ -104,7 +124,34 @@ export default {
         summary: 'IComboboxGroup[]',
       },
       defaultValue: {
-        summary: '[]',
+        summary: 'undefined',
+      },
+    },
+  },
+  noResultText: {
+    description: 'Text to display inside the dropdown when there is no results.',
+    control: { type: 'text' },
+    table: {
+      category: 'React Aria - Select',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.NO_RESULT_TEXT,
+      },
+    },
+  },
+  onSelectionChange: {
+    description:
+      'Handler that is called when an item is selected(if the selected item matches the selectedKey, the parameter is undefined).',
+    control: { type: 'function' },
+    table: {
+      category: 'React Aria - Select',
+      type: {
+        summary: '(item: IComboboxItem) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
       },
     },
   },
@@ -114,48 +161,6 @@ export default {
       category: 'React Aria - Select',
       type: {
         summary: 'CollectionChildren<any>',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  noResultText: {
-    defaultValue:'No results found',
-    description: 'Text to display inside the dropdown when there is no results.',
-    control: { type: 'text' },
-    table: {
-      category: 'React Aria - Select',
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  onAction: {
-    action: 'onAction',
-    description: 'Handler that is called when an item is selected.',
-    table: {
-      category: 'React Aria - Select',
-      type: {
-        summary: '(item: IComboboxItem) => void',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  onSelectionChange: {
-    defaultValue: undefined,
-    description:
-      'Handler that is called when the selection changes.',
-    control: { type: 'function' },
-    table: {
-      category: 'React Aria - Select',
-      type: {
-        summary: '(item: IComboboxItem) => void',
       },
       defaultValue: {
         summary: 'undefined',

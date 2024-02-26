@@ -5,16 +5,8 @@
   min-height: 1.71rem;
 
   :global {
-    .md-menu-wrapper {
-      width: 100%;
-    }
-
     .md-menu-item-wrapper {
       position: static;
-    }
-
-    .md-input-container {
-      margin-bottom: 0;
     }
 
     .md-button-pill-wrapper {
@@ -34,18 +26,16 @@
       background-color: var(--mds-color-theme-background-primary-hover);
     }
 
-    .md-input {
-      height: 100%;
-      border-radius: 0.5rem 0 0 0.5rem;
-      border-right: none;
-    }
-
     .md-menu-section-header-wrapper {
       line-height: 2rem;
     }
 
     ul.md-menu-wrapper ul[role='presentation']:not(:first-child)>span {
       display: block;
+    }
+
+    ul.md-menu-wrapper ul[role='group'] {
+      margin: 0;
     }
 
     ul.md-menu-wrapper ul[role='presentation']:not(:first-child)::before {
@@ -66,8 +56,41 @@
       white-space: nowrap;
     }
 
-    .md-combobox-input:hover+div {
-      background: var(--mds-color-theme-background-primary-hover);
+    .md-text-input-container {
+      height: 100%;
+      border-radius: 0.5rem 0 0 0.5rem;
+      border-right: 0px;
+    }
+
+    .md-text-input-container > input {
+      width: 100%;
+      padding-right: 0.75rem;
+    }
+
+    .clear-icon {
+      display: none;
+      width: 0;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
+  &[data-inputHaveValue='false'] { 
+    :global {
+      .md-text-input-container > input {
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &[data-error='true'] {
+    .md-text-input-container,
+    .md-button-pill-wrapper,
+    .md-combobox-divider {
+      border-color: var(--mds-color-theme-text-error-normal);
     }
   }
 
@@ -89,14 +112,13 @@
   .md-combobox-selectionContainer {
     width: 100%;
     max-height: 15.25rem;
-    padding: 0.5rem 0.1rem 0.5rem 0.5rem;
+    padding: 0.5rem;
     margin-top: 0.25rem;
     overflow: auto;
     background-color: var(--mds-color-theme-background-solid-primary-normal);
     border: 0.0625rem solid var(--mds-color-theme-outline-secondary-normal);
     border-radius: 0.5rem;
     box-sizing: border-box;
-
   }
 
   .md-combobox-noResultText {
