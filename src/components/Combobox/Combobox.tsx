@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Input } from '@momentum-ui/react-collaboration';
 import { Item } from '@react-stately/collections';
+import TextInput from '../TextInput';
 import Menu from '../Menu';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
@@ -15,19 +15,23 @@ import { IComboboxGroup, Props, IComboboxItem } from './Combobox.types';
 import classnames from 'classnames';
 import './Combobox.style.scss';
 
+import { handleFilter as handleFilterFunc } from '../../utils/combobox';
+
 const Combobox: React.FC<Props> = (props: Props) => {
 
   const {
-    onAction: onActionCallback,
-    onPress: onPressCallback,
+    onArrowButtonPress: onArrowButtonPressCallback,
     onInputChange: onInputChangeCallback,
+    onAction: onActionCallback,
     onSelectionChange: onSelectionChangeCallback,
     selectedKey: selectedKeyPayload = DEFAULTS.SELECTEDKEY,
     disabledKeys: disabledKeysPayload = DEFAULTS.DISABLEDKEYS,
     noResultText = DEFAULTS.NO_RESULT_TEXT,
     width = DEFAULTS.WIDTH,
     placeholder = DEFAULTS.PLACEHOLDER,
-    items: itemsPayload,
+    shouldFilterOnArrowButton = DEFAULTS.SHOULDFILTERONARROWBUTTON,
+    error = DEFAULTS.ERRPR,
+    comboboxGroups: originComboboxGroups,
     className,
     id,
     style,
@@ -38,18 +42,20 @@ const Combobox: React.FC<Props> = (props: Props) => {
 
   const menuRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [shouldFocusItem, setShouldFocusItem] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [selectedKey, setselectedKey] = useState('');
-  const [items, setItems] = useState(itemsPayload);
+  const [groups, setGroups] = useState(originComboboxGroups);
 
   const wrapperProps = {
     className: classnames(className, STYLE.wrapper),
     style: { '--local-width': width, ...style },
     id,
+    'data-inputHaveValue': inputValue !== '',
+    'data-error': error,
   };
 
   const disabledKeys = [KEYS.INPUT_SEARCH_NO_RESULT, ...disabledKeysPayload];
@@ -57,28 +63,15 @@ const Combobox: React.FC<Props> = (props: Props) => {
 
   // utils
 
-  const setInputRef = (ref: HTMLTextAreaElement) => {
-    inputRef.current = ref;
-  };
-
-  const handleFocusBackToInput = () => {
-    inputRef.current?.focus();
-  };
-
-  const isDescendant = (parent: Element, child: EventTarget) => {
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < parent.children.length; i++) {
-      if (parent.children[i] === child || isDescendant(parent.children[i], child)) {
-        return true;
-      }
-    }
-    return false;
-  };
+  const handleFocusBackToInput = useCallback(
+    () => {
+      inputRef.current?.focus();
+    },[inputRef?.current]);
 
   const searchItem: (key: string) => IComboboxItem | undefined = useCallback(
     (key: string) => {
       let target;
-      itemsPayload.some((group: IComboboxGroup) => {
+      originComboboxGroups.some((group: IComboboxGroup) => {
         const foundItem = group.items.find((item: IComboboxItem) => item.key === key);
         if (foundItem) {
           target = foundItem;
@@ -88,108 +81,92 @@ const Combobox: React.FC<Props> = (props: Props) => {
       });
       return target;
     },
-    [itemsPayload]
-  );
+    [originComboboxGroups]);
 
-  const handleFilter = () => {
-    const queryLowerCase = inputValue.toLowerCase().trim();
-    const filterItem = itemsPayload
-      .map((group: IComboboxGroup) => {
-        return {
-          ...group,
-          items: group.items.filter((item: IComboboxItem) => item.label?.toLowerCase()?.includes(queryLowerCase)),
-        };
-      })
-      .filter((group: IComboboxGroup) => group.items.length > 0);
+  const handleFilter = useCallback(
+    () => {
+      const filterGroup = handleFilterFunc(originComboboxGroups,inputValue);
+      setGroups(filterGroup);
+    },[originComboboxGroups,inputValue]);
 
-    setItems(filterItem);
-  };
-
-  const handleItemFocus = () => {
-    window.requestAnimationFrame(() => {
-      const listItems: NodeListOf<any> = containerRef?.current?.querySelectorAll('li[role="menuitemradio"][aria-disabled="false"]');
-      if (listItems?.length) {
-        const selectedItem = Array.from(listItems).find(item => item?.ariaChecked === 'true');
-        if (selectedItem) {
-          // prioritize focusing on the selected item
-          selectedItem.focus();
-        } else {
-          listItems[0].focus();
+  const handleItemFocus = useCallback(
+    () => {
+        const listItems: NodeListOf<any> = containerRef?.current?.querySelectorAll('li[role="menuitemradio"][aria-disabled="false"]');
+        if (listItems?.length) {
+          const selectedItem = Array.from(listItems).find(item => item?.ariaChecked === 'true');
+          if (selectedItem) {
+            // prioritize focusing on the selected item
+            selectedItem.focus();
+          } else {
+            listItems[0].focus();
+          }
         }
-      }
-      setShouldFocusItem(false);
-    });
-  };
+        setShouldFocusItem(false);
+    },[containerRef?.current]);
 
 
   // event
 
-  const handleClickOutside = (event) => {
-    if (containerRef.current && !isDescendant(containerRef.current, event.target)) {
-      if (isOpen) {
-        setIsOpen(false);
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
+        if(isOpen){
+          setIsOpen(false);
+        }
       }
     }
-  };
+  ,[isOpen,containerRef?.current]) ;
 
-  const handleItemFocusChange = (event) => {
-    const item = event.target;
-    const itemRect = item.getBoundingClientRect();
-    const ulRect = menuRef.current.getBoundingClientRect();
-    if (itemRect.top < ulRect.top || itemRect.bottom > ulRect.bottom) {
-      item.scrollIntoView();
-    }
-  };
-
-  const handleInputKeyDown = (event) => {
-    if (event.code === 'Escape') {
-      if (isOpen) {
-        setIsOpen(false);
-      } else {
-        setInputValue('');
+  const handleItemFocusChange = useCallback(
+    (event) => {
+      const item = event.target;
+      const itemRect = item.getBoundingClientRect();
+      const ulRect = menuRef.current.getBoundingClientRect();
+      if (itemRect.top < ulRect.top || itemRect.bottom > ulRect.bottom) {
+        item.scrollIntoView();
       }
     }
+  ,[]);
 
-    if ((event.code === 'Enter' && !isOpen) || event.code === 'ArrowDown' || event.code === 'ArrowUp') {
-      setShouldFocusItem(true);
-      if(!isOpen){
-        setIsOpen(true);
+  const handleInputKeyDown = useCallback(
+    (event) => {
+      if (event.code === 'Escape') {
+        if (isOpen) {
+          setIsOpen(false);
+        } else {
+          setInputValue('');
+        }
+      }
+  
+      if ((event.code === 'Enter' && !isOpen) || event.code === 'ArrowDown' || event.code === 'ArrowUp') {
+        setShouldFocusItem(true);
+        if(!isOpen){
+          setIsOpen(true);
+        }
       }
     }
-  };
+  ,[isOpen]);
+
+  const handleMenuKeyDown = useCallback(
+    (event) => {
+      if (event.code === 'Escape') {
+        if (isOpen) {
+          setIsOpen(false);
+          handleFocusBackToInput();
+        }
+      }
+    }
+  ,[isOpen]) ;
 
 
   // effect
-
-  useEffect(() => {
-
-    document.addEventListener('click', handleClickOutside);
-    menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
-    inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
-
-    if (!isOpen) {
-      handleFocusBackToInput();
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-      menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
-      inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
-    };
-  }, [isOpen]);
 
   useEffect(() => {
     handleFilter();
   }, [inputValue]);
 
   useEffect(() => {
-    if (shouldFocusItem) {
-      handleItemFocus();
-    }
-  }, [shouldFocusItem]);
-
-  useEffect(() => {
-    if (selectedKeyPayload) {
+    if (selectedKeyPayload?.length) {
       const defaultItem = searchItem(selectedKeyPayload);
       if (defaultItem) {
         setselectedKey(selectedKeyPayload);
@@ -199,67 +176,97 @@ const Combobox: React.FC<Props> = (props: Props) => {
   }, []);
 
 
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
+    menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
+    inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
+      menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
+      inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (shouldFocusItem && isOpen) {
+      handleItemFocus();
+    }
+  }, [shouldFocusItem,isOpen]);
+
+
   // subcomponent event
 
-  const onInputChange = (event) => {
-    const currentInputValue = event.target.value;
-
-    if (!isOpen) {
-      setIsOpen(true);
+  const onInputChange = useCallback(
+    (event) => {
+      const currentInputValue = event.target.value;
+      if (!isOpen) {
+        setIsOpen(true);
+      }
+      setInputValue(currentInputValue);
+      if (onInputChangeCallback) {
+        onInputChangeCallback(event);
+      }
     }
-    setInputValue(currentInputValue);
-    if (onInputChangeCallback) {
-      onInputChangeCallback(event);
+  ,[isOpen,onInputChangeCallback]);
+
+  const onSelectionChange = useCallback(
+    (event) => {
+      const { currentKey } = event;
+      const currentItem = currentKey && searchItem(currentKey);
+      setIsOpen(false);
+      if (onSelectionChangeCallback && currentKey) {
+        onSelectionChangeCallback(currentItem);
+      }
     }
-  };
+  ,[onSelectionChangeCallback]);
 
-  const onSelectionChange = (event) => {
-    const { currentKey } = event;
-    const currentItem = searchItem(currentKey);
-
-    setIsOpen(false);
-    if (onSelectionChangeCallback) {
-      onSelectionChangeCallback(currentItem!);
+  const onAction = useCallback(
+    (key: string) => {
+      const currentItem = searchItem(key);
+      setselectedKey(key);
+      setInputValue(currentItem.label);
+      handleFocusBackToInput();
+      if (onActionCallback) {
+        onActionCallback(currentItem);
+      }
     }
-  };
+  ,[onActionCallback]);
 
-  const onAction = (key: string) => {
-    const inputLable = ((searchItem(key) as unknown) as IComboboxItem).label;
-    const currentItem = searchItem(key);
-
-    setselectedKey(key);
-    setInputValue(inputLable);
-    if (onActionCallback) {
-      onActionCallback(currentItem!);
+  const onArrowButtonPress = useCallback((event) => {
+    if(!shouldFilterOnArrowButton){
+      setGroups(originComboboxGroups);
     }
-  };
-
-  const onPress = (event) => {
     if (!isOpen) {
       setShouldFocusItem(true);
     }
-    setIsOpen(!isOpen);
-    if (onPressCallback) {
-      onPressCallback(event);
+    setTimeout(()=>{
+      setIsOpen(!isOpen);
+    },0);
+    if (onArrowButtonPressCallback) {
+      onArrowButtonPressCallback(event);
     }
-  };
+  },[isOpen,onArrowButtonPressCallback,shouldFilterOnArrowButton,originComboboxGroups]);
 
   return (
     <>
       {label ? (<div className={STYLE.label}>{label}</div>) : null}
       <div {...wrapperProps} ref={containerRef}>
         <div className={STYLE.inputSection}>
-          <Input
+          <TextInput
             aria-label={STYLE.input}
             placeholder={placeholder}
-            className={STYLE.input}
             value={inputValue}
-            onChange={onInputChange}
+            className={STYLE.input}
+            onInput={onInputChange}
             autoComplete="off"
-            inputRef={setInputRef}
+            ref={inputRef}
+            type='displayname'
           />
           <div className={STYLE.divider} />
-          <ButtonPill ghost onPress={onPress} className={STYLE.button}>
+          <ButtonPill ghost onPress={onArrowButtonPress} className={STYLE.button}>
             <Icon
               className={STYLE.arrowIcon}
               name={isOpen ? 'arrow-up' : 'arrow-down'}
@@ -274,14 +281,14 @@ const Combobox: React.FC<Props> = (props: Props) => {
               <Menu
                 selectionMode="single"
                 aria-label={STYLE.selection}
-                items={items}
+                items={groups}
                 onAction={onAction}
                 className={STYLE.selection}
                 selectedKeys={[selectedKey]}
                 onSelectionChange={onSelectionChange}
                 disabledKeys={disabledKeys}
               >
-                {items.length ? children : (<Item key={KEYS.INPUT_SEARCH_NO_RESULT} textValue={noResultText}>
+                {groups.length ? children : (<Item key={KEYS.INPUT_SEARCH_NO_RESULT} textValue={noResultText}>
                   <div aria-label={STYLE.noResultText} className={STYLE.noResultText}>{noResultText}</div>
                 </Item>)}
               </Menu>

@@ -2,8 +2,10 @@ const CLASS_PREFIX = 'md-combobox';
 
 const DEFAULTS = {
   WIDTH:'16.25rem',
-  PLACEHOLDER:'Search or select an option',
+  PLACEHOLDER:'',
   NO_RESULT_TEXT:'No results found',
+  SHOULDFILTERONARROWBUTTON:true,
+  ERRPR:false,
   SELECTEDKEY:'',
   DISABLEDKEYS:[],
 };
