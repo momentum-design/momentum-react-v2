@@ -70,7 +70,7 @@
     }
   }
 
-  &[data-inputHaveValue='false'] { 
+  &[data-input-have-value='false'] { 
     :global {
       .md-text-input-container > input {
         overflow: hidden; 

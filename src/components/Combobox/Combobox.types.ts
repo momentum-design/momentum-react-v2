@@ -19,11 +19,6 @@ export interface Props {
    * Handler that is called when an item is selected in the list.
    * If the selected item matches the selectedKey, the parameter is undefined.
    */
-  onAction?: (item: IComboboxItem) => void;
-  /**
-   * Handler that is called when an item is selected in the list.
-   * Even if the selected item does not match the selectedKey, the parameter is still meaningful.
-   */
   onSelectionChange?: (item: IComboboxItem) => void;
   /**
    * Handler that is called when the ComboBox input value changes.
