@@ -44,7 +44,7 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
   <div
     className="md-combobox-wrapper"
     data-error={false}
-    data-inputHaveValue={false}
+    data-input-have-value={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -60,7 +60,6 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
         className="md-combobox-input"
         onInput={[Function]}
         placeholder=""
-        type="displayname"
         value=""
       >
         <div
@@ -83,7 +82,7 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
               onInput={[Function]}
               placeholder=""
               readOnly={false}
-              type="displayname"
+              type="text"
               value=""
             />
           </div>
@@ -211,7 +210,7 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
   <div
     className="example-class md-combobox-wrapper"
     data-error={false}
-    data-inputHaveValue={false}
+    data-input-have-value={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -227,7 +226,6 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
         className="md-combobox-input"
         onInput={[Function]}
         placeholder=""
-        type="displayname"
         value=""
       >
         <div
@@ -250,7 +248,7 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
               onInput={[Function]}
               placeholder=""
               readOnly={false}
-              type="displayname"
+              type="text"
               value=""
             />
           </div>
@@ -378,7 +376,7 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
   <div
     className="md-combobox-wrapper"
     data-error={false}
-    data-inputHaveValue={false}
+    data-input-have-value={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -394,7 +392,6 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
         className="md-combobox-input"
         onInput={[Function]}
         placeholder=""
-        type="displayname"
         value=""
       >
         <div
@@ -417,7 +414,7 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
               onInput={[Function]}
               placeholder=""
               readOnly={false}
-              type="displayname"
+              type="text"
               value=""
             />
           </div>
@@ -545,7 +542,7 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
   <div
     className="md-combobox-wrapper"
     data-error={false}
-    data-inputHaveValue={false}
+    data-input-have-value={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -561,7 +558,6 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
         className="md-combobox-input"
         onInput={[Function]}
         placeholder="Combobox"
-        type="displayname"
         value=""
       >
         <div
@@ -584,7 +580,7 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
               onInput={[Function]}
               placeholder="Combobox"
               readOnly={false}
-              type="displayname"
+              type="text"
               value=""
             />
           </div>
@@ -716,7 +712,7 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
   <div
     className="md-combobox-wrapper"
     data-error={false}
-    data-inputHaveValue={false}
+    data-input-have-value={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -733,7 +729,6 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
         className="md-combobox-input"
         onInput={[Function]}
         placeholder=""
-        type="displayname"
         value=""
       >
         <div
@@ -756,7 +751,7 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
               onInput={[Function]}
               placeholder=""
               readOnly={false}
-              type="displayname"
+              type="text"
               value=""
             />
           </div>
@@ -884,7 +879,7 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
   <div
     className="md-combobox-wrapper"
     data-error={false}
-    data-inputHaveValue={false}
+    data-input-have-value={false}
     style={
       Object {
         "--local-width": "16rem",
@@ -900,7 +895,6 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
         className="md-combobox-input"
         onInput={[Function]}
         placeholder=""
-        type="displayname"
         value=""
       >
         <div
@@ -923,7 +917,7 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
               onInput={[Function]}
               placeholder=""
               readOnly={false}
-              type="displayname"
+              type="text"
               value=""
             />
           </div>
@@ -1064,7 +1058,7 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
   <div
     className="md-combobox-wrapper"
     data-error={false}
-    data-inputHaveValue={false}
+    data-input-have-value={false}
     style={
       Object {
         "--local-width": "16.25rem",
@@ -1080,7 +1074,6 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
         className="md-combobox-input"
         onInput={[Function]}
         placeholder=""
-        type="displayname"
         value=""
       >
         <div
@@ -1103,7 +1096,7 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
               onInput={[Function]}
               placeholder=""
               readOnly={false}
-              type="displayname"
+              type="text"
               value=""
             />
           </div>

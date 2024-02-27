@@ -33,9 +33,9 @@ const ComboboxWrapper = (props:Props) => {
       <Combobox {...props}>
         {(group: IComboboxGroup) => {
           const itemsEle = group?.items?.map((menuItem: IComboboxItem) => {
-            return (<Item key={menuItem.key} textValue={menuItem.label}>
-                <div>{menuItem.label}</div>
-              </Item>);
+            return (<Item key={menuItem.key} textValue={menuItem.key}>
+                <div key={menuItem.key+'-label'}>{menuItem.label}</div>
+            </Item>);
           });
 
           return group.section ? (
@@ -46,7 +46,6 @@ const ComboboxWrapper = (props:Props) => {
             <Section key="noSection">{itemsEle}</Section>
           );
         }}
-        
       </Combobox>
   );
 };

@@ -370,13 +370,12 @@ describe('Combobox', () => {
           expect(onInputChange).toHaveBeenCalled();
         });
 
-        it('should call onSelectionChange and onAction when an item is selected', async () => {
+        it('should call onSelectionChange when an item is selected', async () => {
           const user = userEvent.setup();
           const onSelectionChange = jest.fn();
-          const onAction = jest.fn();
 
           render(
-            <Combobox onSelectionChange={onSelectionChange} onAction={onAction} comboboxGroups={withoutSection}>
+            <Combobox onSelectionChange={onSelectionChange} comboboxGroups={withoutSection}>
               {renderChildren}
             </Combobox>
           );
@@ -390,15 +389,12 @@ describe('Combobox', () => {
           expect(screen.getByRole('menu')).toBeVisible();
           
           const item = screen.getByText('item1').parentElement;
- 
           await waitFor(() => {
             expect(item.parentElement).toHaveFocus();
           });
           expect(onSelectionChange).not.toHaveBeenCalled();
-          expect(onAction).not.toHaveBeenCalled();
           await user.keyboard('{Enter}');
           expect(onSelectionChange).toHaveBeenCalled();
-          expect(onAction).toHaveBeenCalled();
         });
 
         it('should show disabledKeys when click', async () => {
@@ -536,7 +532,6 @@ describe('Combobox', () => {
         expect(screen.getByRole('menu')).toBeVisible();
 
         const item = screen.getByText('item2').parentElement;
- 
         await waitFor(() => {
           expect(item.parentElement).toHaveFocus();
         });
@@ -616,7 +611,6 @@ describe('Combobox', () => {
         expect(screen.getByRole('menu')).toBeVisible();
 
         const item = screen.getByText('item1').parentElement;
- 
         await waitFor(() => {
           expect(item.parentElement).toHaveFocus();
         });
