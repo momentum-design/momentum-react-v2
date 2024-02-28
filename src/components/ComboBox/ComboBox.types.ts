@@ -1,6 +1,6 @@
+import { CollectionChildren } from '@react-types/shared';
 import { PressEvent } from '@react-types/shared/src/events';
 import { CSSProperties } from 'react';
-import { CollectionChildren } from '@react-types/shared/src/collections';
 
 
 export type IComboBoxItem = {
