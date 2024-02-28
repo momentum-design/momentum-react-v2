@@ -470,7 +470,7 @@ describe('ComboBox', () => {
 
         await userEvent.type(screen.getByLabelText('md-combobox-input'), 'hello');
 
-        expect(screen.getByLabelText('md-combobox-noResultText')).toHaveTextContent(
+        expect(screen.getByLabelText('md-combobox-no-result-text')).toHaveTextContent(
           noResultText
         );
       });
