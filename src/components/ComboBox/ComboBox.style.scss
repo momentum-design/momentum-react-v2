@@ -88,7 +88,7 @@
     }
   }
 
-  .md-combobox-inputSection {
+  .md-combobox-input-section {
     display: flex;
     height: 100%;
   }
@@ -97,13 +97,13 @@
     width: 100%;
   }
 
-  .md-combobox-selectionPosition{
+  .md-combobox-selection-position{
     width: var(--local-width);
     z-index: 10000;
     position: fixed;
   }
 
-  .md-combobox-selectionContainer {
+  .md-combobox-selection-container {
     width: 100%;
     max-height: 15.25rem;
     padding: 0.5rem;
@@ -115,7 +115,7 @@
     box-sizing: border-box;
   }
 
-  .md-combobox-noResultText {
+  .md-combobox-no-result-text {
     color: var(--mds-color-theme-text-primary-normal);
   }
 
@@ -125,7 +125,7 @@
     min-height: 1.71rem;
     position: relative;
 
-    .md-combobox-arrowIcon {
+    .md-combobox-arrow-icon {
       position: absolute;
       top: 50%;
       right: 50%;
