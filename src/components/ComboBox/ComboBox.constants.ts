@@ -14,20 +14,19 @@ const STYLE = {
   description: `${CLASS_PREFIX}-description`,
   label: `${CLASS_PREFIX}-label`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  inputSection: `${CLASS_PREFIX}-inputSection`,
+  inputSection: `${CLASS_PREFIX}-input-section`,
   input: `${CLASS_PREFIX}-input`,
   divider: `${CLASS_PREFIX}-divider`,
-  btnContainer: `${CLASS_PREFIX}-btnContainer`,
   button: `${CLASS_PREFIX}-button`,
-  arrowIcon: `${CLASS_PREFIX}-arrowIcon`,
-  selectionPosition: `${CLASS_PREFIX}-selectionPosition`,
-  selectionContainer: `${CLASS_PREFIX}-selectionContainer`,
+  arrowIcon: `${CLASS_PREFIX}-arrow-icon`,
+  selectionPosition: `${CLASS_PREFIX}-selection-position`,
+  selectionContainer: `${CLASS_PREFIX}-selection-container`,
   selection: `${CLASS_PREFIX}-selection`,
-  noResultText: `${CLASS_PREFIX}-noResultText`,
+  noResultText: `${CLASS_PREFIX}-no-result-text`,
 };
 
 const KEYS = {
-  INPUT_SEARCH_NO_RESULT: 'inputSearch_noResult',
+  INPUT_SEARCH_NO_RESULT: 'input_search_no_result',
 };
 
 export{STYLE,DEFAULTS,KEYS};
