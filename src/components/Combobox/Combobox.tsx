@@ -9,15 +9,15 @@ import {
   KEYS,
   STYLE,
   DEFAULTS,
-} from './Combobox.constants';
-import { Props, IComboboxItem } from './Combobox.types';
+} from './ComboBox.constants';
+import { Props, IComboBoxItem, IComboBoxGroup } from './ComboBox.types';
 
 import classnames from 'classnames';
-import './Combobox.style.scss';
+import './ComboBox.style.scss';
 
-import { handleFilter as handleFilterFunc, searchItem as searchItemFunc } from './Combobox.utils';
+import { handleFilter as handleFilterFunc, searchItem as searchItemFunc } from './ComboBox.utils';
 
-const Combobox: React.FC<Props> = (props: Props) => {
+const ComboBox: React.FC<Props> = (props: Props) => {
 
   const {
     onArrowButtonPress: onArrowButtonPressCallback,
@@ -30,7 +30,7 @@ const Combobox: React.FC<Props> = (props: Props) => {
     placeholder = DEFAULTS.PLACEHOLDER,
     shouldFilterOnArrowButton = DEFAULTS.SHOULDFILTERONARROWBUTTON,
     error = DEFAULTS.ERRPR,
-    comboboxGroups: originComboboxGroups,
+    comboBoxGroups: originComboBoxGroups,
     className,
     id,
     style,
@@ -43,11 +43,11 @@ const Combobox: React.FC<Props> = (props: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [shouldFocusItem, setShouldFocusItem] = useState(false);
-  const [inputValue, setInputValue] = useState('');
-  const [selectedKey, setSelectedKey] = useState('');
-  const [groups, setGroups] = useState(originComboboxGroups);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
+  const [inputValue, setInputValue] = useState<string>('');
+  const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
+  const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
 
   const wrapperProps = {
     className: classnames(className, STYLE.wrapper),
@@ -67,15 +67,15 @@ const Combobox: React.FC<Props> = (props: Props) => {
       inputRef.current?.focus();
     },[inputRef?.current]);
 
-  const searchItem: (key: string) => IComboboxItem | undefined = useCallback(
-    (key: string) => searchItemFunc(key,originComboboxGroups)
-    ,[originComboboxGroups]);
+  const searchItem: (key: string) => IComboBoxItem | undefined = useCallback(
+    (key: string) => searchItemFunc(key,originComboBoxGroups)
+    ,[originComboBoxGroups]);
 
   const handleFilter = useCallback(
     () => {
-      const filterGroup = handleFilterFunc(originComboboxGroups,inputValue);
+      const filterGroup = handleFilterFunc(originComboBoxGroups,inputValue);
       setGroups(filterGroup);
-    },[originComboboxGroups,inputValue]);
+    },[originComboBoxGroups,inputValue]);
 
   const handleItemFocus = useCallback(
     () => {
@@ -146,22 +146,21 @@ const Combobox: React.FC<Props> = (props: Props) => {
     }
   ,[isOpen,handleFocusBackToInput]) ;
 
-
+  
   // effect
 
   useEffect(() => {
     handleFilter();
   }, [inputValue]);
 
-  useEffect(() => {
-    if (selectedKeyPayload?.length) {
-      const defaultItem = searchItem(selectedKeyPayload);
-      if (defaultItem) {
-        setSelectedKey(selectedKeyPayload);
-        setInputValue(defaultItem.label);
+  useEffect(()=>{
+    if(selectedKey){
+      const currentItem = searchItem(selectedKey);
+      if (currentItem.key) {
+        setInputValue(currentItem.label);
       }
     }
-  }, []);
+  },[originComboBoxGroups,selectedKey]);
 
 
   useEffect(() => {
@@ -203,9 +202,10 @@ const Combobox: React.FC<Props> = (props: Props) => {
   const onSelectionChange = useCallback(
     (event) => {
       const { currentKey } = event;
-      const currentItem = currentKey && searchItem(currentKey);
+      const currentItem = searchItem(currentKey);
+      console.log('onSelectionChange -------',currentItem,currentKey);
       setIsOpen(false);
-      if (onSelectionChangeCallback && currentKey) {
+      if (onSelectionChangeCallback) {
         onSelectionChangeCallback(currentItem);
       }
     }
@@ -213,16 +213,14 @@ const Combobox: React.FC<Props> = (props: Props) => {
 
   const onAction = useCallback(
     (key: string) => {
-      const currentItem = searchItem(key);
       setSelectedKey(key);
-      setInputValue(currentItem.label);
       handleFocusBackToInput();
     }
   ,[handleFocusBackToInput]);
 
   const onArrowButtonPress = useCallback((event) => {
     if(!shouldFilterOnArrowButton){
-      setGroups(originComboboxGroups);
+      setGroups(originComboBoxGroups);
     }
     if (!isOpen) {
       setShouldFocusItem(true);
@@ -233,7 +231,7 @@ const Combobox: React.FC<Props> = (props: Props) => {
     if (onArrowButtonPressCallback) {
       onArrowButtonPressCallback(event);
     }
-  },[isOpen,onArrowButtonPressCallback,shouldFilterOnArrowButton,originComboboxGroups]);
+  },[isOpen,onArrowButtonPressCallback,shouldFilterOnArrowButton,originComboBoxGroups]);
 
   return (
     <>
@@ -285,4 +283,4 @@ const Combobox: React.FC<Props> = (props: Props) => {
   );
 };
 
-export default Combobox;
+export default ComboBox;

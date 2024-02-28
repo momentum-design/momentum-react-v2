@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Combobox snapshot should match snapshot label 1`] = `
-<Combobox
-  comboboxGroups={
+exports[`ComboBox snapshot should match snapshot label 1`] = `
+<ComboBox
+  comboBoxGroups={
     Array [
       Object {
         "items": Array [
@@ -34,12 +34,12 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
       },
     ]
   }
-  label="combobox_label"
+  label="comboBox_label"
 >
   <div
     className="md-combobox-label"
   >
-    combobox_label
+    comboBox_label
   </div>
   <div
     className="md-combobox-wrapper"
@@ -168,13 +168,13 @@ exports[`Combobox snapshot should match snapshot label 1`] = `
       </ButtonPill>
     </div>
   </div>
-</Combobox>
+</ComboBox>
 `;
 
-exports[`Combobox snapshot should match snapshot with className 1`] = `
-<Combobox
+exports[`ComboBox snapshot should match snapshot with className 1`] = `
+<ComboBox
   className="example-class"
-  comboboxGroups={
+  comboBoxGroups={
     Array [
       Object {
         "items": Array [
@@ -334,12 +334,12 @@ exports[`Combobox snapshot should match snapshot with className 1`] = `
       </ButtonPill>
     </div>
   </div>
-</Combobox>
+</ComboBox>
 `;
 
-exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
-<Combobox
-  comboboxGroups={
+exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
+<ComboBox
+  comboBoxGroups={
     Array [
       Object {
         "items": Array [
@@ -500,12 +500,12 @@ exports[`Combobox snapshot should match snapshot with noResultText 1`] = `
       </ButtonPill>
     </div>
   </div>
-</Combobox>
+</ComboBox>
 `;
 
-exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
-<Combobox
-  comboboxGroups={
+exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
+<ComboBox
+  comboBoxGroups={
     Array [
       Object {
         "items": Array [
@@ -537,7 +537,7 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
       },
     ]
   }
-  placeholder="Combobox"
+  placeholder="ComboBox"
 >
   <div
     className="md-combobox-wrapper"
@@ -557,7 +557,7 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
         autoComplete="off"
         className="md-combobox-input"
         onInput={[Function]}
-        placeholder="Combobox"
+        placeholder="ComboBox"
         value=""
       >
         <div
@@ -578,7 +578,7 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
               onChange={[Function]}
               onFocus={[Function]}
               onInput={[Function]}
-              placeholder="Combobox"
+              placeholder="ComboBox"
               readOnly={false}
               type="text"
               value=""
@@ -666,12 +666,12 @@ exports[`Combobox snapshot should match snapshot with placeholder 1`] = `
       </ButtonPill>
     </div>
   </div>
-</Combobox>
+</ComboBox>
 `;
 
-exports[`Combobox snapshot should match snapshot with style 1`] = `
-<Combobox
-  comboboxGroups={
+exports[`ComboBox snapshot should match snapshot with style 1`] = `
+<ComboBox
+  comboBoxGroups={
     Array [
       Object {
         "items": Array [
@@ -837,12 +837,12 @@ exports[`Combobox snapshot should match snapshot with style 1`] = `
       </ButtonPill>
     </div>
   </div>
-</Combobox>
+</ComboBox>
 `;
 
-exports[`Combobox snapshot should match snapshot with width 1`] = `
-<Combobox
-  comboboxGroups={
+exports[`ComboBox snapshot should match snapshot with width 1`] = `
+<ComboBox
+  comboBoxGroups={
     Array [
       Object {
         "items": Array [
@@ -1003,12 +1003,12 @@ exports[`Combobox snapshot should match snapshot with width 1`] = `
       </ButtonPill>
     </div>
   </div>
-</Combobox>
+</ComboBox>
 `;
 
-exports[`Combobox snapshot should match snapshot withSection 1`] = `
-<Combobox
-  comboboxGroups={
+exports[`ComboBox snapshot should match snapshot withSection 1`] = `
+<ComboBox
+  comboBoxGroups={
     Array [
       Object {
         "items": Array [
@@ -1182,5 +1182,5 @@ exports[`Combobox snapshot should match snapshot withSection 1`] = `
       </ButtonPill>
     </div>
   </div>
-</Combobox>
+</ComboBox>
 `;

@@ -1,12 +1,12 @@
-import Combobox from '.';
+import ComboBox from '.';
 import React from 'react';
 import { Item, Section } from '@react-stately/collections';
-import { STYLE } from './Combobox.constants';
+import { STYLE } from './ComboBox.constants';
 import { mountAndWait } from '../../../test/utils';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
-import { IComboboxGroup } from './Combobox.types';
+import { IComboBoxGroup } from './ComboBox.types';
 jest.mock('@react-aria/utils');
 jest.mock('uuid', () => {
   return {
@@ -14,10 +14,10 @@ jest.mock('uuid', () => {
   };
 });
 
-describe('Combobox', () => {
+describe('ComboBox', () => {
   let container;
 
-  const withoutSection: IComboboxGroup[] = [
+  const withoutSection: IComboBoxGroup[] = [
     {
       items: [
         { key: 'key1', label: 'item1' },
@@ -30,7 +30,7 @@ describe('Combobox', () => {
     },
   ];
 
-  const withSection: IComboboxGroup[] = [
+  const withSection: IComboBoxGroup[] = [
     {
       section: 'section1',
       items: [
@@ -72,9 +72,9 @@ describe('Combobox', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <Combobox label="combobox_label" comboboxGroups={withoutSection}>
+        <ComboBox label="comboBox_label" comboBoxGroups={withoutSection}>
           {renderChildren}
-        </Combobox>
+        </ComboBox>
       );
 
       expect(container).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe('Combobox', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <Combobox comboboxGroups={withSection}>
+        <ComboBox comboBoxGroups={withSection}>
           {(group) => {
             const itemsEle = group?.items?.map((menuItem) => {
               return menuItem.popoverText ? (
@@ -104,7 +104,7 @@ describe('Combobox', () => {
               </Section>
             );
           }}
-        </Combobox>
+        </ComboBox>
       );
 
       expect(container).toMatchSnapshot();
@@ -116,9 +116,9 @@ describe('Combobox', () => {
       const className = 'example-class';
 
       container = await mountAndWait(
-        <Combobox className={className} comboboxGroups={withoutSection}>
+        <ComboBox className={className} comboBoxGroups={withoutSection}>
           {renderChildren}
-        </Combobox>
+        </ComboBox>
       );
 
       expect(container).toMatchSnapshot();
@@ -130,9 +130,9 @@ describe('Combobox', () => {
       const style = { color: 'pink' };
 
       container = await mountAndWait(
-        <Combobox style={style} comboboxGroups={withoutSection}>
+        <ComboBox style={style} comboBoxGroups={withoutSection}>
           {renderChildren}
-        </Combobox>
+        </ComboBox>
       );
 
       expect(container).toMatchSnapshot();
@@ -141,12 +141,12 @@ describe('Combobox', () => {
     it('should match snapshot with placeholder', async () => {
       expect.assertions(1);
 
-      const placeholder = 'Combobox';
+      const placeholder = 'ComboBox';
 
       container = await mountAndWait(
-        <Combobox placeholder={placeholder} comboboxGroups={withoutSection}>
+        <ComboBox placeholder={placeholder} comboBoxGroups={withoutSection}>
           {renderChildren}
-        </Combobox>
+        </ComboBox>
       );
 
       expect(container).toMatchSnapshot();
@@ -158,9 +158,9 @@ describe('Combobox', () => {
       const noResultText = 'No result';
 
       container = await mountAndWait(
-        <Combobox noResultText={noResultText} comboboxGroups={withoutSection}>
+        <ComboBox noResultText={noResultText} comboBoxGroups={withoutSection}>
           {renderChildren}
-        </Combobox>
+        </ComboBox>
       );
 
       expect(container).toMatchSnapshot();
@@ -173,9 +173,9 @@ describe('Combobox', () => {
       const width = '16rem';
 
       container = await mountAndWait(
-        <Combobox width={width} comboboxGroups={withoutSection}>
+        <ComboBox width={width} comboBoxGroups={withoutSection}>
           {renderChildren}
-        </Combobox>
+        </ComboBox>
       );
 
       expect(container).toMatchSnapshot();
@@ -184,9 +184,9 @@ describe('Combobox', () => {
     describe('attributes', () => {
       it('should have its wrapper class', async () => {
         container = await mountAndWait(
-          <Combobox comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+          <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
         );
-        const element = container.find(Combobox).getDOMNode();
+        const element = container.find(ComboBox).getDOMNode();
 
         expect(element.classList.contains(STYLE.wrapper));
       });
@@ -196,12 +196,12 @@ describe('Combobox', () => {
         const className = 'example-class';
 
         container = await mountAndWait(
-          <Combobox className={className} comboboxGroups={withoutSection}>
+          <ComboBox className={className} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
 
-        const element = container.find(Combobox).getDOMNode();
+        const element = container.find(ComboBox).getDOMNode();
 
         expect(element.classList.contains(className)).toBe(true);
       });
@@ -213,11 +213,11 @@ describe('Combobox', () => {
         const styleString = 'color: pink;';
 
         const wrapper = await mountAndWait(
-          <Combobox style={style} comboboxGroups={withoutSection}>
+          <ComboBox style={style} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
-        const element = wrapper.find(Combobox).getDOMNode();
+        const element = wrapper.find(ComboBox).getDOMNode();
 
         expect(element.getAttribute('style')).toBe(
           `--local-width: 16.25rem; ${styleString}`
@@ -231,11 +231,11 @@ describe('Combobox', () => {
         const styleString = '--local-width: 16rem;';
 
         const wrapper = await mountAndWait(
-          <Combobox width={width} comboboxGroups={withoutSection}>
+          <ComboBox width={width} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
-        const element = wrapper.find(Combobox).getDOMNode();
+        const element = wrapper.find(ComboBox).getDOMNode();
 
         expect(element.getAttribute('style')).toBe(`${styleString}`);
       });
@@ -243,12 +243,12 @@ describe('Combobox', () => {
       it('should have provided label when label is provided', async () => {
         expect.assertions(1);
 
-        const label = 'Combobox';
+        const label = 'ComboBox';
 
         const wrapper = await mountAndWait(
-          <Combobox label={label} comboboxGroups={withoutSection}>
+          <ComboBox label={label} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
 
         const labelContainer = wrapper.find('div').filter({ className: 'md-combobox-label' });
@@ -262,12 +262,12 @@ describe('Combobox', () => {
       it('should have provided description when description is provided', async () => {
         expect.assertions(1);
 
-        const description = 'Combobox description';
+        const description = 'ComboBox description';
 
         const wrapper = await mountAndWait(
-          <Combobox description={description} comboboxGroups={withoutSection}>
+          <ComboBox description={description} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
 
         const descriptionContainer = wrapper
@@ -286,11 +286,11 @@ describe('Combobox', () => {
         const error = true;
 
         const wrapper = await mountAndWait(
-          <Combobox error={error} comboboxGroups={withoutSection}>
+          <ComboBox error={error} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
-        const element = wrapper.find(Combobox).getDOMNode();
+        const element = wrapper.find(ComboBox).getDOMNode();
 
         expect(element.getAttribute('data-error')).toBe(`${error}`);
       });
@@ -301,9 +301,9 @@ describe('Combobox', () => {
         const selectedKey = 'key1';
 
         const wrapper = await mountAndWait(
-          <Combobox selectedKey={selectedKey} comboboxGroups={withoutSection}>
+          <ComboBox selectedKey={selectedKey} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
 
         expect(
@@ -317,9 +317,9 @@ describe('Combobox', () => {
         const placeholder = 'please select';
 
         const wrapper = await mountAndWait(
-          <Combobox placeholder={placeholder} comboboxGroups={withoutSection}>
+          <ComboBox placeholder={placeholder} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
 
         expect(
@@ -331,7 +331,7 @@ describe('Combobox', () => {
         it('should show menu on click', async () => {
           const user = userEvent.setup();
 
-          render(<Combobox comboboxGroups={withoutSection}>{renderChildren}</Combobox>);
+          render(<ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>);
 
           const menuItem = screen.queryByRole('menu');
           expect(menuItem).not.toBeInTheDocument();
@@ -346,9 +346,9 @@ describe('Combobox', () => {
           const onArrowButtonPress = jest.fn();
 
           render(
-            <Combobox onArrowButtonPress={onArrowButtonPress} comboboxGroups={withoutSection}>
+            <ComboBox onArrowButtonPress={onArrowButtonPress} comboBoxGroups={withoutSection}>
               {renderChildren}
-            </Combobox>
+            </ComboBox>
           );
 
           await user.click(screen.getByRole('button'));
@@ -360,9 +360,9 @@ describe('Combobox', () => {
           const onInputChange = jest.fn();
 
           render(
-            <Combobox onInputChange={onInputChange} comboboxGroups={withoutSection}>
+            <ComboBox onInputChange={onInputChange} comboBoxGroups={withoutSection}>
               {renderChildren}
-            </Combobox>
+            </ComboBox>
           );
 
           await userEvent.type(screen.getByLabelText('md-combobox-input'), 'hello');
@@ -375,9 +375,9 @@ describe('Combobox', () => {
           const onSelectionChange = jest.fn();
 
           render(
-            <Combobox onSelectionChange={onSelectionChange} comboboxGroups={withoutSection}>
+            <ComboBox onSelectionChange={onSelectionChange} comboBoxGroups={withoutSection}>
               {renderChildren}
-            </Combobox>
+            </ComboBox>
           );
 
           const button = screen
@@ -403,9 +403,9 @@ describe('Combobox', () => {
           const disabledKeys = ['key1'];
 
           const { container } = render(
-            <Combobox disabledKeys={disabledKeys} comboboxGroups={withoutSection}>
+            <ComboBox disabledKeys={disabledKeys} comboBoxGroups={withoutSection}>
               {renderChildren}
-            </Combobox>
+            </ComboBox>
           );
 
           await user.click(screen.getByRole('button'));
@@ -419,7 +419,7 @@ describe('Combobox', () => {
         it('should show menu when focused and pressing enter', async () => {
           const user = userEvent.setup();
 
-          render(<Combobox comboboxGroups={withoutSection}>{renderChildren}</Combobox>);
+          render(<ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>);
 
           const menuItem = screen.queryByRole('menu');
           expect(menuItem).not.toBeInTheDocument();
@@ -437,7 +437,7 @@ describe('Combobox', () => {
 
           render(
             <>
-              <Combobox comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+              <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
               <button>button-outside</button>
             </>
           );
@@ -460,9 +460,9 @@ describe('Combobox', () => {
         const noResultText = 'empty result';
 
         render(
-          <Combobox noResultText={noResultText} comboboxGroups={withoutSection}>
+          <ComboBox noResultText={noResultText} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
 
         const user = userEvent.setup();
@@ -478,9 +478,9 @@ describe('Combobox', () => {
       it('if shouldFilterOnArrowButton is false, should not filter when press arrowButton', async () => {
 
         render(
-          <Combobox shouldFilterOnArrowButton={false} comboboxGroups={withoutSection}>
+          <ComboBox shouldFilterOnArrowButton={false} comboBoxGroups={withoutSection}>
             {renderChildren}
-          </Combobox>
+          </ComboBox>
         );
 
         const user = userEvent.setup();
@@ -502,7 +502,7 @@ describe('Combobox', () => {
 
         render(
           <>
-            <Combobox comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+            <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
 
@@ -522,7 +522,7 @@ describe('Combobox', () => {
 
         render(
           <>
-            <Combobox selectedKey={'key2'} comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+            <ComboBox selectedKey={'key2'} comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
 
@@ -542,7 +542,7 @@ describe('Combobox', () => {
 
         render(
           <>
-            <Combobox comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+            <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
 
@@ -562,7 +562,7 @@ describe('Combobox', () => {
 
         render(
           <>
-            <Combobox comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+            <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
 
@@ -582,7 +582,7 @@ describe('Combobox', () => {
 
         render(
           <>
-            <Combobox selectedKey='key1' comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+            <ComboBox selectedKey='key1' comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
 
@@ -600,7 +600,7 @@ describe('Combobox', () => {
 
         render(
           <>
-            <Combobox  comboboxGroups={withoutSection}>{renderChildren}</Combobox>
+            <ComboBox  comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
         const button = screen.getByRole('button');
