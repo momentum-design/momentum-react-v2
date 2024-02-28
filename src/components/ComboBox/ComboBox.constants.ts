@@ -5,7 +5,7 @@ const DEFAULTS = {
   PLACEHOLDER:'',
   NO_RESULT_TEXT:'No results found',
   SHOULDFILTERONARROWBUTTON:true,
-  ERRPR:false,
+  ERROR:false,
   SELECTEDKEY:'',
   DISABLEDKEYS:[],
 };

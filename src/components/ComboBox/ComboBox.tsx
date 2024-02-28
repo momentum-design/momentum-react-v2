@@ -29,7 +29,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     width = DEFAULTS.WIDTH,
     placeholder = DEFAULTS.PLACEHOLDER,
     shouldFilterOnArrowButton = DEFAULTS.SHOULDFILTERONARROWBUTTON,
-    error = DEFAULTS.ERRPR,
+    error = DEFAULTS.ERROR,
     comboBoxGroups: originComboBoxGroups,
     className,
     id,
