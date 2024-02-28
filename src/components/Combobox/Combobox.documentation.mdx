@@ -1,40 +1,40 @@
 import { Story } from '@storybook/addon-docs';
 
-`<Combobox />`
-The component is composed of three parts: Button, Menu and Input. In the component, the comboboxGroups 
+`<ComboBox />`
+The component is composed of three parts: Button, Menu and Input. In the component, the comboBoxGroups 
 passed in are filtered based on the value of the Input and then passed to the internal Menu 
 to implement the search function.
 
 ## Content
 
-The Combobox element follows the
+The ComboBox element follows the
 [Collection Components API](https://react-spectrum.adobe.com/react-stately/collections.html) from
-the @react-stately library, accepting both static and dynamic collections. Combobox accepts `<Item>`
-elements as children, each with a key prop. Basic usage of `Combobox`, seen in the example below,
+the @react-stately library, accepting both static and dynamic collections. ComboBox accepts `<Item>`
+elements as children, each with a key prop. Basic usage of `ComboBox`, seen in the example below,
 shows multiple options populated with a string. Simple element with simple options as text.
 
 ```js
 import { Item, Section } from '@react-stately/collections';
 
-<Combobox label="Single Value" onSelectionChange={(item) => console.log}>
+<ComboBox label="Single Value" onSelectionChange={(item) => console.log}>
   <Item>Red</Item>
   <Item>Blue</Item>
   <Item>Green</Item>
   <Item>Yellow</Item>
-</Combobox>;
+</ComboBox>;
 ```
 
 
 ## Dynamic Content
 
-An iterable list of sectionGroups is can be passed to the Combobox using the comboboxGroups prop. 
+An iterable list of sectionGroups is can be passed to the ComboBox using the comboBoxGroups prop. 
 It should be noted that the outermost array is used to distinguish the group of sections, 
 and the items within the section accept an iterable list of options.
 
 ```js
 import { Item } from '@react-stately/collections';
 
-const comboboxGroups = [
+const comboBoxGroups = [
   { 
     items: [ 
       { key: 'key1', label: 'item1' },
@@ -45,7 +45,7 @@ const comboboxGroups = [
   },
 ]
 
-<Combobox onSelectionChange={(item) => console.log} comboboxGroups={comboboxGroups}>
+<ComboBox onSelectionChange={(item) => console.log} comboBoxGroups={comboBoxGroups}>
  {(sectionGroup) => {
     return (
       <Section key="noSection">
@@ -59,18 +59,18 @@ const comboboxGroups = [
       </Section>
     );
   }}
-</Combobox>
+</ComboBox>
 ```
 
 ## Sections
 
-Combobox supports sections in order to group options. Sections can be used by wrapping groups of items
+ComboBox supports sections in order to group options. Sections can be used by wrapping groups of items
 in a `Section` element. Each `Section` takes a title and key prop.
 
 ```js
 import { Item, Section } from '@react-stately/collections';
 
-<Combobox onSelectionChange={(item) => console.log}>
+<ComboBox onSelectionChange={(item) => console.log}>
   <Section title="Colors">
     <Item>Red</Item>
     <Item>Blue</Item>
@@ -81,11 +81,11 @@ import { Item, Section } from '@react-stately/collections';
     <Item>Dog</Item>
     <Item>Cat</Item>
   </Section>
-</Combobox>;
+</ComboBox>;
 
 
 
-const comboboxGroups = [
+const comboBoxGroups = [
   { 
     section: 'section1',
     items: [ 
@@ -106,7 +106,7 @@ const comboboxGroups = [
   },
 ]
 
-<Combobox onSelectionChange={(item) => console.log} comboboxGroups={comboboxGroups}>
+<ComboBox onSelectionChange={(item) => console.log} comboBoxGroups={comboBoxGroups}>
   {(group: IGroup) => {
     return (
       <Section title={group.section} key={group.section}>
@@ -120,7 +120,7 @@ const comboboxGroups = [
       </Section>
     );
   }}
-</Combobox>
+</ComboBox>
 ```
 
 

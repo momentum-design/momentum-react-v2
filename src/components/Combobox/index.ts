@@ -1,9 +1,9 @@
-import { default as Combobox } from './Combobox';
-import { Props } from './Combobox.types';
-import * as CONSTANTS from './Combobox.constants';
+import { default as ComboBox } from './ComboBox';
+import { Props } from './ComboBox.types';
+import * as CONSTANTS from './ComboBox.constants';
 
-export { CONSTANTS as Combobox_CONSTANTS };
+export { CONSTANTS as ComboBox_CONSTANTS };
 
-export type ComboboxProps = Props;
+export type ComboBoxProps = Props;
 
-export default Combobox;
+export default ComboBox;

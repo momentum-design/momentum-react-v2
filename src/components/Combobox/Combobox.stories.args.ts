@@ -1,12 +1,12 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
-import { Combobox_CONSTANTS as CONSTANTS } from '.';
+import { ComboBox_CONSTANTS as CONSTANTS } from '.';
 
 
 export default {
   ...commonStyles,
   width: {
     description:
-      'To override the Combobox container and selection list width.',
+      'To override the ComboBox container and selection list width.',
     control: { type: 'text' },
     table: {
       type: {
@@ -18,7 +18,7 @@ export default {
     },
   },
   error: {
-    description: 'Sets whether the combobox is in error state',
+    description: 'Sets whether the ComboBox is in error state',
     control: { type: 'boolean' },
     table: {
       type: {
@@ -114,14 +114,14 @@ export default {
       },
     },
   },
-  comboboxGroups: {
+  comboBoxGroups: {
     description:
       'The options for this selection list element.',
     control: { type: 'array' },
     table: {
       category: 'React Aria - Select',
       type: {
-        summary: 'IComboboxGroup[]',
+        summary: 'IComboBoxGroup[]',
       },
       defaultValue: {
         summary: 'undefined',
@@ -148,7 +148,7 @@ export default {
     table: {
       category: 'React Aria - Select',
       type: {
-        summary: '(item: IComboboxItem) => void',
+        summary: '(item: IComboBoxItem) => void',
       },
       defaultValue: {
         summary: 'undefined',

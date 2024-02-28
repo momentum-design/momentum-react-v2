@@ -3,13 +3,13 @@ import { CSSProperties } from 'react';
 import { CollectionChildren } from '@react-types/shared/src/collections';
 
 
-export type IComboboxItem = {
+export type IComboBoxItem = {
   key: string;
   label: string;
 };
 
-export type IComboboxGroup = {
-  items: IComboboxItem[];
+export type IComboBoxGroup = {
+  items: IComboBoxItem[];
   // If there is no need to group items using section, this property is not required.
   section?: string;
 };
@@ -19,7 +19,7 @@ export interface Props {
    * Handler that is called when an item is selected in the list.
    * If the selected item matches the selectedKey, the parameter is undefined.
    */
-  onSelectionChange?: (item: IComboboxItem) => void;
+  onSelectionChange?: (item: IComboBoxItem) => void;
   /**
    * Handler that is called when the ComboBox input value changes.
    */
@@ -53,7 +53,7 @@ export interface Props {
    */
   error?: boolean;
   /**
-   * Override the list box width and combobox container width.
+   * Override the list box width and ComboBox container width.
    * defaultValue: 16.25rem
    */
   width?: string;
@@ -73,7 +73,7 @@ export interface Props {
   /**
    * The list of options for this component.
    */
-  comboboxGroups: IComboboxGroup[];
+  comboBoxGroups: IComboBoxGroup[];
   /**
    * The currently disabled keys in the collection.
    */

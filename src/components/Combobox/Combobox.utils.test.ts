@@ -1,8 +1,8 @@
-import { handleFilter, searchItem } from './Combobox.utils';
+import { handleFilter, searchItem } from './ComboBox.utils';
 
-describe('Combobox utils', () => {
+describe('ComboBox utils', () => {
     describe('handleFilter', () => {
-        const comboboxGroupsWithSection = [
+        const comboBoxGroupsWithSection = [
             {section:'secitonA',items:[
                 {key:'keyA1',label:'itemA1'},
                 {key:'keyA2',label:'itemA2'},
@@ -15,7 +15,7 @@ describe('Combobox utils', () => {
             ]}
         ];
         
-            const comboboxGroupsWithoutSection = [
+            const comboBoxGroupsWithoutSection = [
             {items:[
                 {key:'keyA1',label:'itemA1'},
                 {key:'keyA2',label:'itemA2'},
@@ -27,7 +27,7 @@ describe('Combobox utils', () => {
         ];
         
         it('test case withSection', () => {
-            expect(handleFilter(comboboxGroupsWithSection, '1')).toEqual([
+            expect(handleFilter(comboBoxGroupsWithSection, '1')).toEqual([
                 {section:'secitonA',items:[
                     {key:'keyA1',label:'itemA1'},
                 ]},
@@ -35,7 +35,7 @@ describe('Combobox utils', () => {
                     {key:'keyB1',label:'itemB1'},
                 ]}
             ]);
-            expect(handleFilter(comboboxGroupsWithSection, 'A')).toEqual([
+            expect(handleFilter(comboBoxGroupsWithSection, 'A')).toEqual([
                 {section:'secitonA',items:[
                     {key:'keyA1',label:'itemA1'},
                     {key:'keyA2',label:'itemA2'},
@@ -45,14 +45,14 @@ describe('Combobox utils', () => {
         });
     
         it('test case withoutSection', () => {
-            expect(handleFilter(comboboxGroupsWithoutSection, '1')).toEqual([
+            expect(handleFilter(comboBoxGroupsWithoutSection, '1')).toEqual([
                 {items:[
                     {key:'keyA1',label:'itemA1'},
                     {key:'keyB1',label:'itemB1'},
                 ]},
             ]);
     
-            expect(handleFilter(comboboxGroupsWithoutSection, 'a')).toEqual([
+            expect(handleFilter(comboBoxGroupsWithoutSection, 'a')).toEqual([
                 {items:[
                     {key:'keyA1',label:'itemA1'},
                     {key:'keyA2',label:'itemA2'},
@@ -60,7 +60,7 @@ describe('Combobox utils', () => {
                 ]}
             ]);
     
-            expect(handleFilter(comboboxGroupsWithoutSection, 'A')).toEqual([
+            expect(handleFilter(comboBoxGroupsWithoutSection, 'A')).toEqual([
                 {items:[
                     {key:'keyA1',label:'itemA1'},
                     {key:'keyA2',label:'itemA2'},
@@ -70,12 +70,12 @@ describe('Combobox utils', () => {
         });
     
         it('test case not match any of the item labels', () => {
-            expect(handleFilter(comboboxGroupsWithoutSection, 'c')).toEqual([]);
+            expect(handleFilter(comboBoxGroupsWithoutSection, 'c')).toEqual([]);
         });
     });
 
     describe('searchItem', () => {
-        const comboboxGroupsWithSection = [
+        const comboBoxGroupsWithSection = [
             {section:'secitonA',items:[
                 {key:'keyA1',label:'itemA1'},
                 {key:'keyA2',label:'itemA2'},
@@ -88,7 +88,7 @@ describe('Combobox utils', () => {
             ]}
         ];
         
-            const comboboxGroupsWithoutSection = [
+            const comboBoxGroupsWithoutSection = [
             {items:[
                 {key:'keyA1',label:'itemA1'},
                 {key:'keyA2',label:'itemA2'},
@@ -100,15 +100,15 @@ describe('Combobox utils', () => {
         ];
 
         it('test case withSection', () => {
-            expect(searchItem('keyA1',comboboxGroupsWithSection)).toEqual({key:'keyA1',label:'itemA1'});
+            expect(searchItem('keyA1',comboBoxGroupsWithSection)).toEqual({key:'keyA1',label:'itemA1'});
         });
 
         it('test case withoutSection', () => {
-            expect(searchItem('keyB1',comboboxGroupsWithoutSection)).toEqual({key:'keyB1',label:'itemB1'});
+            expect(searchItem('keyB1',comboBoxGroupsWithoutSection)).toEqual({key:'keyB1',label:'itemB1'});
         });
 
         it('test case not match any of the item keys', () => {
-            expect(searchItem('key1',comboboxGroupsWithoutSection)).toEqual({key:undefined,label:undefined});
+            expect(searchItem('key1',comboBoxGroupsWithoutSection)).toEqual({key:undefined,label:undefined});
         });
     });
 });

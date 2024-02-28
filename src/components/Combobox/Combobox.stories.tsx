@@ -2,23 +2,23 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
 import { Item, Section } from '@react-stately/collections';
-import Combobox from '.';
+import ComboBox from '.';
 
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 
-import Documentation from './Combobox.documentation.mdx';
+import Documentation from './ComboBox.documentation.mdx';
 
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import argTypes from './Combobox.stories.args';
+import argTypes from './ComboBox.stories.args';
 
 import { Template } from '../../storybook/helper.stories.templates';
-import { IComboboxGroup, IComboboxItem, Props } from './Combobox.types';
+import { IComboBoxGroup, IComboBoxItem, Props } from './ComboBox.types';
 import OverlayAlert from '../OverlayAlert';
 
 
 export default {
-  title: 'Momentum UI/Combobox',
-  component: Combobox,
+  title: 'Momentum UI/ComboBox',
+  component: ComboBox,
   parameters: {
     expanded: true,
     docs: {
@@ -28,12 +28,12 @@ export default {
 };
 
 
-const ComboboxWrapper = (props:Props) => {
+const ComboBoxWrapper = (props:Props) => {
   return (
-      <Combobox {...props}>
-        {(group: IComboboxGroup) => {
-          const itemsEle = group?.items?.map((menuItem: IComboboxItem) => {
-            return (<Item key={menuItem.key} textValue={menuItem.key}>
+      <ComboBox {...props}>
+        {(group: IComboBoxGroup) => {
+          const itemsEle = group?.items?.map((menuItem: IComboBoxItem) => {
+            return (<Item key={menuItem.key} textValue={menuItem.label}>  
                 <div key={menuItem.key+'-label'}>{menuItem.label}</div>
             </Item>);
           });
@@ -46,14 +46,14 @@ const ComboboxWrapper = (props:Props) => {
             <Section key="noSection">{itemsEle}</Section>
           );
         }}
-      </Combobox>
+      </ComboBox>
   );
 };
 
 
 
 
-const withoutSection: IComboboxGroup[] = [
+const withoutSection: IComboBoxGroup[] = [
   {
     items:[
       {key:'key1',label:'item1'},
@@ -63,7 +63,7 @@ const withoutSection: IComboboxGroup[] = [
   },
 ];
 
-const withSection: IComboboxGroup[] = [
+const withSection: IComboBoxGroup[] = [
   {
     section:'section1',
     items:[
@@ -84,11 +84,11 @@ const withSection: IComboboxGroup[] = [
   },
 ];
 
-const Example = Template(ComboboxWrapper).bind({});
+const Example = Template(ComboBoxWrapper).bind({});
 
 Example.args = {
   placeholder: 'placeholder',
-  comboboxGroups: withoutSection,
+  comboBoxGroups: withoutSection,
   disabledKeys: ['key3'],
   label:'WithoutSection',
   description:'Description text',
@@ -96,10 +96,10 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const Sections = Template(ComboboxWrapper).bind({});
+const Sections = Template(ComboBoxWrapper).bind({});
 
 Sections.args = {
-  comboboxGroups: withSection,
+  comboBoxGroups: withSection,
   selectedKey: 'key1',
   label:'WithSection',
   description:'Description text',
@@ -113,7 +113,7 @@ const InListItemTemplate = (props:Props) => {
   return (
     <OverlayAlert>
       <div style={{ overflowY: 'scroll' }}>
-        <ComboboxWrapper {...props} />
+        <ComboBoxWrapper {...props} />
       </div>
     </OverlayAlert>
   );
@@ -122,7 +122,7 @@ const InListItemTemplate = (props:Props) => {
 const InListItem = Template(InListItemTemplate).bind({});
 
 InListItem.args = {
-  comboboxGroups: withSection,
+  comboBoxGroups: withSection,
   label:'InListItem',
   placeholder:'long text overflow effect use case'
 };
@@ -130,23 +130,23 @@ InListItem.args = {
 
 InListItem.argTypes = { ...argTypes };
 
-const MultipleComboboxTemplate = (props:Props) => {
+const MultipleComboBoxTemplate = (props:Props) => {
   return (
     <>
-      <ComboboxWrapper {...props} />
-      <ComboboxWrapper {...props} />
-      <ComboboxWrapper {...props} />
+      <ComboBoxWrapper {...props} />
+      <ComboBoxWrapper {...props} />
+      <ComboBoxWrapper {...props} />
     </>
   );
 };
 
-const MultipleCombobox = Template(MultipleComboboxTemplate).bind({});
+const MultipleComboBox = Template(MultipleComboBoxTemplate).bind({});
 
-MultipleCombobox.args = {
-  comboboxGroups: withSection,
-  label:'MultipleCombobox',
+MultipleComboBox.args = {
+  comboBoxGroups: withSection,
+  label:'MultipleComboBox',
 };
 
-MultipleCombobox.argTypes = { ...argTypes };
+MultipleComboBox.argTypes = { ...argTypes };
 
-export { Example, Sections, InListItem, MultipleCombobox };
+export { Example, Sections, InListItem, MultipleComboBox };

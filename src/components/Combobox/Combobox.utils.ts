@@ -1,21 +1,21 @@
-import {IComboboxGroup, IComboboxItem} from './Combobox.types'
+import {IComboBoxGroup, IComboBoxItem} from './ComboBox.types';
 
-export const handleFilter = (comboboxGroup:IComboboxGroup[],inputValue:string):IComboboxGroup[] => {
+export const handleFilter = (comboBoxGroup:IComboBoxGroup[],inputValue:string):IComboBoxGroup[] => {
     const queryLowerCase = inputValue.toLowerCase().trim();
-    const filterItem = Array.prototype.map.call(comboboxGroup,(group:IComboboxGroup) => {
+    const filterItem = Array.prototype.map.call(comboBoxGroup,(group:IComboBoxGroup) => {
         return {
             ...group,
             items: group.items.filter((item) => item.label?.toLowerCase()?.includes(queryLowerCase)),
         };
-    }).filter((group:IComboboxGroup) => group.items?.length > 0);
+    }).filter((group:IComboBoxGroup) => group.items?.length > 0);
 
     return filterItem;
 };
 
-export const searchItem = (key: string,originComboboxGroups:IComboboxGroup[]) : IComboboxItem | undefined => {
-    let target: IComboboxItem | undefined;
-    Array.prototype.some.call(originComboboxGroups,(group: IComboboxGroup) => {
-        const foundItem = group.items.find((item: IComboboxItem) => item.key === key);
+export const searchItem = (key: string,originComboBoxGroups:IComboBoxGroup[]) : IComboBoxItem | undefined => {
+    let target: IComboBoxItem | undefined;
+    key && Array.prototype.some.call(originComboBoxGroups,(group: IComboBoxGroup) => {
+        const foundItem = group.items.find((item: IComboBoxItem) => item.key === key);
         if (foundItem) {
             target = foundItem;
             return true;
