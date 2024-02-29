@@ -251,10 +251,10 @@ describe('ComboBox', () => {
           </ComboBox>
         );
 
-        const labelContainer = wrapper.find('div').filter({ className: 'md-combobox-label' });
+        const labelContainer = wrapper.find('div').filter({ className: 'md-combo-box-label' });
 
         expect(labelContainer.props()).toEqual({
-          className: 'md-combobox-label',
+          className: 'md-combo-box-label',
           children: label,
         });
       });
@@ -272,10 +272,10 @@ describe('ComboBox', () => {
 
         const descriptionContainer = wrapper
           .find('div')
-          .filter({ className: 'md-combobox-description' });
+          .filter({ className: 'md-combo-box-description' });
 
         expect(descriptionContainer.props()).toEqual({
-          className: 'md-combobox-description',
+          className: 'md-combo-box-description',
           children: description,
         });
       });
@@ -307,7 +307,7 @@ describe('ComboBox', () => {
         );
 
         expect(
-          wrapper.find('[aria-label="md-combobox-input"]').at(0).props()
+          wrapper.find('[aria-label="md-combo-box-input"]').at(0).props()
         ).toHaveProperty('value', 'item1');
       });
 
@@ -323,7 +323,7 @@ describe('ComboBox', () => {
         );
 
         expect(
-          wrapper.find('[aria-label="md-combobox-input"]').at(0).props()
+          wrapper.find('[aria-label="md-combo-box-input"]').at(0).props()
         ).toHaveProperty('placeholder', placeholder);
       });
 
@@ -365,7 +365,7 @@ describe('ComboBox', () => {
             </ComboBox>
           );
 
-          await userEvent.type(screen.getByLabelText('md-combobox-input'), 'hello');
+          await userEvent.type(screen.getByLabelText('md-combo-box-input'), 'hello');
 
           expect(onInputChange).toHaveBeenCalled();
         });
@@ -382,7 +382,7 @@ describe('ComboBox', () => {
 
           const button = screen
           .queryAllByRole('button')
-          .find((button) => button.classList.contains('md-combobox-button'));
+          .find((button) => button.classList.contains('md-combo-box-button'));
 
           button.focus();
           await user.keyboard('{Enter}');
@@ -444,7 +444,7 @@ describe('ComboBox', () => {
 
           const ele = screen
             .queryAllByRole('button')
-            .find((button) => button.classList.contains('md-combobox-button'));
+            .find((button) => button.classList.contains('md-combo-box-button'));
 
           await user.click(ele);
           expect(screen.getByRole('menu')).toBeVisible();
@@ -468,9 +468,9 @@ describe('ComboBox', () => {
         const user = userEvent.setup();
         await user.click(screen.getByRole('button'));
 
-        await userEvent.type(screen.getByLabelText('md-combobox-input'), 'hello');
+        await userEvent.type(screen.getByLabelText('md-combo-box-input'), 'hello');
 
-        expect(screen.getByLabelText('md-combobox-no-result-text')).toHaveTextContent(
+        expect(screen.getByLabelText('md-combo-box-no-result-text')).toHaveTextContent(
           noResultText
         );
       });
@@ -484,7 +484,7 @@ describe('ComboBox', () => {
         );
 
         const user = userEvent.setup();
-        const input = screen.getByLabelText('md-combobox-input');
+        const input = screen.getByLabelText('md-combo-box-input');
         const button = screen.getByRole('button');
 
         input.focus();
@@ -506,7 +506,7 @@ describe('ComboBox', () => {
           </>
         );
 
-        const input = screen.getByLabelText('md-combobox-input');
+        const input = screen.getByLabelText('md-combo-box-input');
 
         input.focus();
         await user.keyboard('{Enter}');
@@ -526,7 +526,7 @@ describe('ComboBox', () => {
           </>
         );
 
-        const input = screen.getByLabelText('md-combobox-input');
+        const input = screen.getByLabelText('md-combo-box-input');
         input.focus();
         await user.keyboard('{Enter}');
         expect(screen.getByRole('menu')).toBeVisible();
@@ -546,7 +546,7 @@ describe('ComboBox', () => {
           </>
         );
 
-        const input = screen.getByLabelText('md-combobox-input');
+        const input = screen.getByLabelText('md-combo-box-input');
         input.focus();
         await user.keyboard('{ArrowDown}');
         expect(screen.getByRole('menu')).toBeVisible();
@@ -566,7 +566,7 @@ describe('ComboBox', () => {
           </>
         );
 
-        const input = screen.getByLabelText('md-combobox-input');
+        const input = screen.getByLabelText('md-combo-box-input');
         input.focus();
         await user.keyboard('{i}');
         expect(screen.getByRole('menu')).toBeVisible();
@@ -586,7 +586,7 @@ describe('ComboBox', () => {
           </>
         );
 
-        const input = screen.getByLabelText('md-combobox-input');
+        const input = screen.getByLabelText('md-combo-box-input');
         expect(input).toHaveProperty('value','item1');
 
         input.focus();
@@ -604,7 +604,7 @@ describe('ComboBox', () => {
           </>
         );
         const button = screen.getByRole('button');
-        const input = screen.getByLabelText('md-combobox-input');
+        const input = screen.getByLabelText('md-combo-box-input');
 
         button.focus();
         await user.keyboard('{Enter}');

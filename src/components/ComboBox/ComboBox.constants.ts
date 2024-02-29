@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-combobox';
+const CLASS_PREFIX = 'md-combo-box';
 
 const DEFAULTS = {
   WIDTH:'16.25rem',
