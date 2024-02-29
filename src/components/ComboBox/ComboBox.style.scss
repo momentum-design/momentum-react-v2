@@ -4,7 +4,6 @@
   height: 2rem;
   min-height: 1.71rem;
 
-  :global {
     .md-menu-item-wrapper {
       position: static;
     }
@@ -68,15 +67,12 @@
       padding: 0;
       overflow: hidden;
     }
-  }
 
   &[data-input-have-value='false'] { 
-    :global {
-      .md-text-input-container > input {
-        overflow: hidden; 
-        text-overflow: ellipsis; 
-        white-space: nowrap;
-      }
+    .md-text-input-container > input {
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      white-space: nowrap;
     }
   }
 
