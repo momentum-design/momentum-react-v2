@@ -141,15 +141,6 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     }
   ,[]);
 
-  const handlePreventScroll = useCallback((event)=>{
-    if(isOpen){
-      let isOverSelection = event.target == selectionPositionRef?.current || selectionPositionRef?.current?.contains(event.target);
-      if(!isOverSelection){
-        event.preventDefault();
-      }
-    } 
-  },[isOpen,selectionPositionRef?.current]);
-
   const handleInputKeyDown = useCallback(
     (event) => {
       if (event.code === 'Escape') {
@@ -203,13 +194,11 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
-    window.addEventListener('mousewheel', handlePreventScroll,{passive: false});
     menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
     menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
     inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      window.removeEventListener('mousewheel', handlePreventScroll);
       menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
       menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
