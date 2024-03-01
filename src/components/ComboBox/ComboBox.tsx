@@ -42,10 +42,12 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const menuRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const selectionPositionRef = useRef<HTMLInputElement | null>(null);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
+  const [selectionPosition, setSelectionPosition] = useState<{x:number,y:number}>(null);
   const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
   const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
 
@@ -92,6 +94,14 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         setShouldFocusItem(false);
     },[containerRef?.current]);
 
+    const handleSelectionPosition = useCallback(()=>{
+      const inputRect = inputRef?.current?.getBoundingClientRect();
+
+      if(inputRect){
+        setSelectionPosition({x:inputRect.left,y:inputRect.bottom})
+      }
+    },[selectionPositionRef?.current,inputRef?.current,isOpen]);
+
 
   // event
 
@@ -115,6 +125,15 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     }
   ,[]);
+
+  const handlePreventScroll = useCallback((event)=>{
+    if(isOpen){
+      let isOverSelection = event.target == selectionPositionRef?.current || selectionPositionRef?.current?.contains(event.target);
+      if(!isOverSelection){
+        event.preventDefault();
+      }
+    } 
+  },[isOpen,selectionPositionRef?.current]);
 
   const handleInputKeyDown = useCallback(
     (event) => {
@@ -149,6 +168,10 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   
   // effect
 
+  useEffect(()=>{
+    handleSelectionPosition();
+  },[isOpen,setSelectionPosition])
+
   useEffect(() => {
     handleFilter();
   }, [inputValue]);
@@ -164,13 +187,14 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('mousewheel', handlePreventScroll,{passive: false});
     menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
     menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
     inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
-
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('mousewheel', handlePreventScroll);
       menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
       menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
@@ -257,8 +281,8 @@ const ComboBox: React.FC<Props> = (props: Props) => {
           </ButtonPill>
         </div>
         {isOpen ? (
-          <div className={STYLE.selectionPosition}>
-            <div className={STYLE.selectionContainer} ref={menuRef} >
+          <div className={STYLE.selectionPosition} ref={selectionPositionRef} style={{transform:`translate(${selectionPosition?.x}px, ${selectionPosition?.y}px)`}}>
+            <div className={STYLE.selectionContainer} ref={menuRef}>
               <Menu
                 selectionMode="single"
                 aria-label={STYLE.selection}

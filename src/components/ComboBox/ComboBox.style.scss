@@ -96,6 +96,7 @@
   .md-combo-box-selection-position{
     width: var(--local-width);
     z-index: 10000;
+    inset: 0px auto auto 0px;
     position: fixed;
   }
 
