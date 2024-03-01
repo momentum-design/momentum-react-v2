@@ -9,6 +9,7 @@ import {
   KEYS,
   STYLE,
   DEFAULTS,
+  ELEMENT
 } from './ComboBox.constants';
 import { Props, IComboBoxItem, IComboBoxGroup } from './ComboBox.types';
 
@@ -48,6 +49,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
   const [selectionPosition, setSelectionPosition] = useState<{x:number,y:number}>(null);
+  const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
   const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
   const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
 
@@ -100,15 +102,28 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       if(inputRect){
         setSelectionPosition({x:inputRect.left,y:inputRect.bottom})
       }
-    },[selectionPositionRef?.current,inputRef?.current,isOpen]);
+    },[inputRef?.current,isOpen]);
 
+  const handleSelectionContainerMaxHeight = useCallback(()=>{
+    const windowHeight = window.innerHeight;
+    const inputRect = inputRef?.current?.getBoundingClientRect();
+    
+    const inputDistanceFromViewportBottom = windowHeight - inputRect.bottom;
+    if(inputDistanceFromViewportBottom < ELEMENT.SELECTIONCONTAINERMAXHEIGHT + 8){
+      setSelectionContainerMaxHeight(inputDistanceFromViewportBottom - 8);
+    } else {
+      setSelectionContainerMaxHeight(ELEMENT.SELECTIONCONTAINERMAXHEIGHT);
+    }
 
+  },[inputRef?.current,isOpen]) 
+  
   // event
 
   const handleClickOutside = useCallback(
     (event) => {
-      if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
-        if(isOpen){
+      if(isOpen){
+        if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
+          event.preventDefault();
           setIsOpen(false);
         }
       }
@@ -164,13 +179,9 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     }
   ,[isOpen,handleFocusBackToInput]) ;
-
   
-  // effect
 
-  useEffect(()=>{
-    handleSelectionPosition();
-  },[isOpen,setSelectionPosition])
+  // effect
 
   useEffect(() => {
     handleFilter();
@@ -185,6 +196,10 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     }
   },[originComboBoxGroups,selectedKey]);
 
+  useEffect(()=>{
+    handleSelectionPosition();
+    handleSelectionContainerMaxHeight();
+  },[isOpen]);
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -200,6 +215,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
     };
   }, [isOpen]);
+
 
   useEffect(() => {
     if (shouldFocusItem && isOpen) {
@@ -248,13 +264,13 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     if (!isOpen) {
       setShouldFocusItem(true);
     }
-    setTimeout(()=>{
-      setIsOpen(!isOpen);
-    },0);
+    setIsOpen(!isOpen);
     if (onArrowButtonPressCallback) {
       onArrowButtonPressCallback(event);
     }
   },[isOpen,onArrowButtonPressCallback,shouldFilterOnArrowButton,originComboBoxGroups]);
+
+
 
   return (
     <>
@@ -282,7 +298,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         </div>
         {isOpen ? (
           <div className={STYLE.selectionPosition} ref={selectionPositionRef} style={{transform:`translate(${selectionPosition?.x}px, ${selectionPosition?.y}px)`}}>
-            <div className={STYLE.selectionContainer} ref={menuRef}>
+            <div className={STYLE.selectionContainer} ref={menuRef} style={{maxHeight:`${selectionContainerMaxHeight}px`}}>
               <Menu
                 selectionMode="single"
                 aria-label={STYLE.selection}
@@ -302,6 +318,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         ) : null}
       </div>
       {description && (<div className={STYLE.description}>{description}</div>)}
+      {isOpen && (<div className={STYLE.mask}/>)}
     </>
   );
 };

@@ -23,13 +23,18 @@ const STYLE = {
   selectionContainer: `${CLASS_PREFIX}-selection-container`,
   selection: `${CLASS_PREFIX}-selection`,
   noResultText: `${CLASS_PREFIX}-no-result-text`,
+  mask: `${CLASS_PREFIX}-mask`,
 };
 
 const KEYS = {
   INPUT_SEARCH_NO_RESULT: 'input_search_no_result',
 };
 
-export{STYLE,DEFAULTS,KEYS};
+const ELEMENT = {
+  SELECTIONCONTAINERMAXHEIGHT:244,
+}
+
+export{STYLE,DEFAULTS,KEYS,ELEMENT};
 
 
 
