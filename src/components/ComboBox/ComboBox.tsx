@@ -51,12 +51,10 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const [isPreFocused,setIsPreFocused] = useState<boolean>(false);
   const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
   const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
-  const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
+  const [groups, setGroups] = useState<IComboBoxGroup[]>();
 
   const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
   const [selectionPosition, setSelectionPosition] = useState<{x:number,y:number}>(null);
-
-
 
   const wrapperProps = useMemo(()=>({
     className: classnames(className, STYLE.wrapper),
@@ -147,9 +145,14 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   },[inputRef?.current,isOpen]) 
 
-
   
   // event
+
+  const handlerStopPropagation = useCallback((event)=>{
+    if(event.code === 'Escape'){
+      event.stopPropagation();
+    }
+  },[])
 
   const handleTriggerOutside = useCallback((event) => {
     if(isOpen){
@@ -206,6 +209,8 @@ const ComboBox: React.FC<Props> = (props: Props) => {
           setIsOpen(false);
           handleFocusBackToInput();
         }
+      }else if(event.code === 'Tab'){
+        event.preventDefault();
       }
     }
   ,[isOpen,handleFocusBackToInput]) ;
@@ -223,7 +228,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   useEffect(() => {
     handleFilter();
-  }, [inputValue]);
+  }, [inputValue,originComboBoxGroups]);
 
   useEffect(()=>{
     if(selectedKey){
@@ -240,22 +245,21 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[isOpen]);
 
   useEffect(() => {
-    document.addEventListener('click', handleTriggerOutside);
-    // to avoid some special cases
-    document.addEventListener('mousedown', handleTriggerOutside);
     document.addEventListener('focusin',handleGetFocusEle);
-    containerRef?.current?.addEventListener('focusout', handleGetPreFocusEle);
+    document.addEventListener('mousedown', handleTriggerOutside);
     window.addEventListener('mousewheel',handlePreventScroll,{ passive: false });
+    containerRef?.current?.addEventListener('focusout', handleGetPreFocusEle);
+    containerRef?.current?.addEventListener('keydown',handlerStopPropagation)
     menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
     menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
     inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
 
     return () => {
       document.removeEventListener('focusin',handleGetFocusEle);
-      containerRef?.current?.removeEventListener('focusout', handleGetPreFocusEle);
-      document.removeEventListener('click', handleTriggerOutside);
       document.removeEventListener('mousedown', handleTriggerOutside);
       window.removeEventListener('mousewheel',handlePreventScroll);
+      containerRef?.current?.removeEventListener('focusout', handleGetPreFocusEle);
+      containerRef?.current?.removeEventListener('keydown',handlerStopPropagation)
       menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
       menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
@@ -277,6 +281,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         } else {
           setInputValue('');
         }
+        setIsOpen(false);
       }
     }
   },[isPreFocused,isFocused,selectedKey])
@@ -368,7 +373,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
                 onSelectionChange={onSelectionChange}
                 disabledKeys={disabledKeys}
               >
-                {groups.length ? children : (<Item key={KEYS.INPUT_SEARCH_NO_RESULT} textValue={noResultText}>
+                {groups.length ? children : (<Item key={KEYS.INPUT_SEARCH_NO_RESULT}  textValue={noResultText}>
                   <div aria-label={STYLE.noResultText} className={STYLE.noResultText}>{noResultText}</div>
                 </Item>)}
               </Menu>
