@@ -1,5 +1,3 @@
-/* eslint-disable react/display-name */
-/* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
 import { Item, Section } from '@react-stately/collections';
 import ComboBox from '.';
@@ -112,7 +110,7 @@ Sections.argTypes = { ...argTypes };
 const InListItemTemplate = (props:Props) => {
   return (
     <OverlayAlert>
-      <div style={{ overflowY: 'scroll' }}>
+      <div style={{ overflowY: 'scroll', height:'50px',position:'fixed',top:'10rem'}}>
         <ComboBoxWrapper {...props} />
       </div>
     </OverlayAlert>
@@ -148,5 +146,6 @@ MultipleComboBox.args = {
 };
 
 MultipleComboBox.argTypes = { ...argTypes };
+
 
 export { Example, Sections, InListItem, MultipleComboBox };

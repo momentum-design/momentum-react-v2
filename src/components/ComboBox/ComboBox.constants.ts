@@ -23,7 +23,6 @@ const STYLE = {
   selectionContainer: `${CLASS_PREFIX}-selection-container`,
   selection: `${CLASS_PREFIX}-selection`,
   noResultText: `${CLASS_PREFIX}-no-result-text`,
-  mask: `${CLASS_PREFIX}-mask`,
 };
 
 const KEYS = {
@@ -32,9 +31,7 @@ const KEYS = {
 
 const ELEMENT = {
   SELECTIONCONTAINERMAXHEIGHT:244,
+  INPUTHEIGTH:32,
 }
 
 export{STYLE,DEFAULTS,KEYS,ELEMENT};
-
-
-

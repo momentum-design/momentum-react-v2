@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Item } from '@react-stately/collections';
 import TextInput from '../TextInput';
 import Menu from '../Menu';
@@ -40,26 +40,31 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     children,
   } = props;
 
-  const menuRef = useRef<HTMLDivElement | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const inputRef = useRef<HTMLInputElement | null>(null);
-  const selectionPositionRef = useRef<HTMLInputElement | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const selectionPositionRef = useRef<HTMLInputElement>(null);
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
-  const [selectionPosition, setSelectionPosition] = useState<{x:number,y:number}>(null);
-  const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isFocused,setIsFocused] = useState<boolean>(false);
+  const [isPreFocused,setIsPreFocused] = useState<boolean>(false);
+  const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
   const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
   const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
 
-  const wrapperProps = {
+  const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
+  const [selectionPosition, setSelectionPosition] = useState<{x:number,y:number}>(null);
+
+
+
+  const wrapperProps = useMemo(()=>({
     className: classnames(className, STYLE.wrapper),
     style: { '--local-width': width, ...style },
     id,
     'data-input-have-value': inputValue !== '',
     'data-error': error,
-  };
+  }),[className, width, style, id, inputValue, error]);
 
   const disabledKeys = [KEYS.INPUT_SEARCH_NO_RESULT, ...disabledKeysPayload];
 
@@ -81,6 +86,31 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       setGroups(filterGroup);
     },[originComboBoxGroups,inputValue]);
 
+
+  const getElementPagePosition = (element) => {
+    const position = { x: 0, y: 0 };
+
+    while (element) {
+        position.x += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        position.y += (element.offsetTop - element.scrollTop + element.clientTop);
+
+        const style = window.getComputedStyle(element);
+        if (style.transform && style.transform !== 'none') {
+            const match3d = /translate3d\(\s*([^,]*),\s*([^,]*),\s*([^,]*)\)/i.exec(style.transform);
+            const match2d = /translate\(\s*([^,]*),\s*([^,]*)\)/i.exec(style.transform);
+            if (match3d) {
+                position.x += parseFloat(match3d[1]);
+                position.y += parseFloat(match3d[2]);
+            } else if (match2d) {
+                position.x += parseFloat(match2d[1]);
+                position.y += parseFloat(match2d[2]);
+            }
+        }
+        element = element.offsetParent;
+    }
+    return position;
+  }
+
   const handleItemFocus = useCallback(
     () => {
         const listItems: NodeListOf<any> = containerRef?.current?.querySelectorAll('li[role="menuitemradio"][aria-disabled="false"]');
@@ -97,18 +127,18 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     },[containerRef?.current]);
 
     const handleSelectionPosition = useCallback(()=>{
-      const inputRect = inputRef?.current?.getBoundingClientRect();
-
-      if(inputRect){
-        setSelectionPosition({x:inputRect.left,y:inputRect.bottom})
+      const inputEle = inputRef?.current;
+      if(inputEle){
+        const {x,y} = getElementPagePosition(inputEle);
+        setSelectionPosition({x,y:y+ELEMENT.INPUTHEIGTH});
       }
     },[inputRef?.current,isOpen]);
 
   const handleSelectionContainerMaxHeight = useCallback(()=>{
     const windowHeight = window.innerHeight;
-    const inputRect = inputRef?.current?.getBoundingClientRect();
+    const {y} = getElementPagePosition(inputRef?.current)
     
-    const inputDistanceFromViewportBottom = windowHeight - inputRect.bottom;
+    const inputDistanceFromViewportBottom = windowHeight - (y + ELEMENT.INPUTHEIGTH);
     if(inputDistanceFromViewportBottom < ELEMENT.SELECTIONCONTAINERMAXHEIGHT + 8){
       setSelectionContainerMaxHeight(inputDistanceFromViewportBottom - 8);
     } else {
@@ -116,22 +146,21 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     }
 
   },[inputRef?.current,isOpen]) 
+
+
   
   // event
 
-  const handleClickOutside = useCallback(
-    (event) => {
-      if(isOpen){
-        if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
-          event.preventDefault();
-          setIsOpen(false);
-        }
+  const handleTriggerOutside = useCallback((event) => {
+    if(isOpen){
+      if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
+        setIsOpen(false);
       }
     }
-  ,[isOpen,containerRef?.current]) ;
+  }
+,[isOpen,containerRef?.current]);
 
-  const handleItemFocusChange = useCallback(
-    (event) => {
+  const handleItemFocusChange = useCallback((event) => {
       const item = event.target;
       const itemRect = item.getBoundingClientRect();
       const ulRect = menuRef.current.getBoundingClientRect();
@@ -140,6 +169,16 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     }
   ,[]);
+
+  const handlePreventScroll = useCallback((event)=>{
+
+    if(isOpen && selectionPositionRef?.current){
+      if(!selectionPositionRef?.current?.contains(event.target)){
+        event.preventDefault();
+      }
+    }
+  }
+  ,[isOpen,selectionPositionRef?.current])
 
   const handleInputKeyDown = useCallback(
     (event) => {
@@ -170,6 +209,14 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     }
   ,[isOpen,handleFocusBackToInput]) ;
+
+  const handleGetFocusEle = useCallback((event)=>{
+    setIsFocused(containerRef?.current?.contains(event.target));
+  },[containerRef?.current])
+
+  const handleGetPreFocusEle = useCallback((event)=>{
+    setIsPreFocused(containerRef?.current?.contains(event.target));
+  },[containerRef?.current])
   
 
   // effect
@@ -193,24 +240,46 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[isOpen]);
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('click', handleTriggerOutside);
+    // to avoid some special cases
+    document.addEventListener('mousedown', handleTriggerOutside);
+    document.addEventListener('focusin',handleGetFocusEle);
+    containerRef?.current?.addEventListener('focusout', handleGetPreFocusEle);
+    window.addEventListener('mousewheel',handlePreventScroll,{ passive: false });
     menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
     menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
     inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
+
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('focusin',handleGetFocusEle);
+      containerRef?.current?.removeEventListener('focusout', handleGetPreFocusEle);
+      document.removeEventListener('click', handleTriggerOutside);
+      document.removeEventListener('mousedown', handleTriggerOutside);
+      window.removeEventListener('mousewheel',handlePreventScroll);
       menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
       menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
     };
   }, [isOpen]);
 
-
   useEffect(() => {
     if (shouldFocusItem && isOpen) {
       handleItemFocus();
     }
   }, [shouldFocusItem,isOpen]);
+
+  useEffect(()=>{
+    if(containerRef?.current){
+      if(!isFocused && isPreFocused){
+        if(selectedKey){
+          const currentItem = searchItem(selectedKey);
+          setInputValue(currentItem.label);
+        } else {
+          setInputValue('');
+        }
+      }
+    }
+  },[isPreFocused,isFocused,selectedKey])
 
 
   // subcomponent event
@@ -249,16 +318,17 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const onArrowButtonPress = useCallback((event) => {
     if(!shouldFilterOnArrowButton){
       setGroups(originComboBoxGroups);
-    }
+    };
     if (!isOpen) {
       setShouldFocusItem(true);
-    }
-    setIsOpen(!isOpen);
+    };
+    setTimeout(()=>{
+      setIsOpen(!isOpen);
+    });
     if (onArrowButtonPressCallback) {
       onArrowButtonPressCallback(event);
-    }
+    };
   },[isOpen,onArrowButtonPressCallback,shouldFilterOnArrowButton,originComboBoxGroups]);
-
 
 
   return (
@@ -307,7 +377,6 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         ) : null}
       </div>
       {description && (<div className={STYLE.description}>{description}</div>)}
-      {isOpen && (<div className={STYLE.mask}/>)}
     </>
   );
 };

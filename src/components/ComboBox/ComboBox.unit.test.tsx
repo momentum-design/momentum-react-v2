@@ -7,6 +7,7 @@ import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
 import { IComboBoxGroup } from './ComboBox.types';
+import { act } from 'react-dom/test-utils';
 jest.mock('@react-aria/utils');
 jest.mock('uuid', () => {
   return {
@@ -603,10 +604,8 @@ describe('ComboBox', () => {
             <ComboBox  comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
-        const button = screen.getByRole('button');
         const input = screen.getByLabelText('md-combo-box-input');
-
-        button.focus();
+        input.focus();
         await user.keyboard('{Enter}');
         expect(screen.getByRole('menu')).toBeVisible();
 
@@ -618,6 +617,30 @@ describe('ComboBox', () => {
         await user.keyboard('{Escape}');
         await waitFor(() => {
           expect(input).toHaveFocus();
+        });
+      });
+
+      it('reset inputValue, when focus shifts from inside the component to outside', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <ComboBox  selectedKey='key1' comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <button>button-outside</button>
+          </>
+        );
+        const input = screen.getByLabelText('md-combo-box-input');
+        input.focus();
+        await user.keyboard('{Escape}');
+        expect(input).toHaveProperty('value','');
+
+        const button = screen.getByRole('button', { name: 'button-outside' });
+        act(()=>{
+          button.focus();
+        })
+
+        await waitFor(() => {
+          expect(input).toHaveProperty('value','item1');
         });
       });
     });     
