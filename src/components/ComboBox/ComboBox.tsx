@@ -16,7 +16,7 @@ import { Props, IComboBoxItem, IComboBoxGroup } from './ComboBox.types';
 import classnames from 'classnames';
 import './ComboBox.style.scss';
 
-import { handleFilter as handleFilterFunc, searchItem as searchItemFunc } from './ComboBox.utils';
+import { handleFilter as handleFilterFunc, searchItem as searchItemFunc, getSumScrollTop as getSumScrollTopFunc } from './ComboBox.utils';
 
 const ComboBox: React.FC<Props> = (props: Props) => {
 
@@ -54,7 +54,6 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const [groups, setGroups] = useState<IComboBoxGroup[]>();
 
   const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
-  const [selectionPosition, setSelectionPosition] = useState<{x:number,y:number}>(null);
 
   const wrapperProps = useMemo(()=>({
     className: classnames(className, STYLE.wrapper),
@@ -84,31 +83,6 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       setGroups(filterGroup);
     },[originComboBoxGroups,inputValue]);
 
-
-  const getElementPagePosition = (element) => {
-    const position = { x: 0, y: 0 };
-
-    while (element) {
-        position.x += (element.offsetLeft - element.scrollLeft + element.clientLeft);
-        position.y += (element.offsetTop - element.scrollTop + element.clientTop);
-
-        const style = window.getComputedStyle(element);
-        if (style.transform && style.transform !== 'none') {
-            const match3d = /translate3d\(\s*([^,]*),\s*([^,]*),\s*([^,]*)\)/i.exec(style.transform);
-            const match2d = /translate\(\s*([^,]*),\s*([^,]*)\)/i.exec(style.transform);
-            if (match3d) {
-                position.x += parseFloat(match3d[1]);
-                position.y += parseFloat(match3d[2]);
-            } else if (match2d) {
-                position.x += parseFloat(match2d[1]);
-                position.y += parseFloat(match2d[2]);
-            }
-        }
-        element = element.offsetParent;
-    }
-    return position;
-  }
-
   const handleItemFocus = useCallback(
     () => {
         const listItems: NodeListOf<any> = containerRef?.current?.querySelectorAll('li[role="menuitemradio"][aria-disabled="false"]');
@@ -124,26 +98,25 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         setShouldFocusItem(false);
     },[containerRef?.current]);
 
-    const handleSelectionPosition = useCallback(()=>{
-      const inputEle = inputRef?.current;
-      if(inputEle){
-        const {x,y} = getElementPagePosition(inputEle);
-        setSelectionPosition({x,y:y+ELEMENT.INPUTHEIGTH});
-      }
-    },[inputRef?.current,isOpen]);
-
   const handleSelectionContainerMaxHeight = useCallback(()=>{
     const windowHeight = window.innerHeight;
-    const {y} = getElementPagePosition(inputRef?.current)
+    const {bottom} = inputRef?.current?.getBoundingClientRect();
     
-    const inputDistanceFromViewportBottom = windowHeight - (y + ELEMENT.INPUTHEIGTH);
+    const inputDistanceFromViewportBottom = windowHeight - bottom;
     if(inputDistanceFromViewportBottom < ELEMENT.SELECTIONCONTAINERMAXHEIGHT + 8){
       setSelectionContainerMaxHeight(inputDistanceFromViewportBottom - 8);
     } else {
       setSelectionContainerMaxHeight(ELEMENT.SELECTIONCONTAINERMAXHEIGHT);
     }
 
-  },[inputRef?.current,isOpen]) 
+  },[inputRef?.current,isOpen]);
+
+  const handleSelectionTranslate = useCallback(()=>{
+    if (isOpen && inputRef.current && selectionPositionRef.current) {
+      const scrollTop = getSumScrollTopFunc(inputRef.current);
+      selectionPositionRef.current.style.transform = `translateY(${-scrollTop}px)`;
+    }
+  },[isOpen,inputRef?.current,selectionPositionRef?.current]);
 
   
   // event
@@ -152,7 +125,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     if(event.code === 'Escape'){
       event.stopPropagation();
     }
-  },[])
+  },[]);
 
   const handleTriggerOutside = useCallback((event) => {
     if(isOpen){
@@ -181,7 +154,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     }
   }
-  ,[isOpen,selectionPositionRef?.current])
+  ,[isOpen,selectionPositionRef?.current]);
 
   const handleInputKeyDown = useCallback(
     (event) => {
@@ -217,12 +190,12 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   const handleGetFocusEle = useCallback((event)=>{
     setIsFocused(containerRef?.current?.contains(event.target));
-  },[containerRef?.current])
+  },[containerRef?.current]);
 
   const handleGetPreFocusEle = useCallback((event)=>{
     setIsPreFocused(containerRef?.current?.contains(event.target));
-  },[containerRef?.current])
-  
+  },[containerRef?.current]);
+
 
   // effect
 
@@ -240,16 +213,16 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[originComboBoxGroups,selectedKey]);
 
   useEffect(()=>{
-    handleSelectionPosition();
+    handleSelectionTranslate();
     handleSelectionContainerMaxHeight();
-  },[isOpen]);
+  },[isOpen,handleSelectionContainerMaxHeight]);
 
   useEffect(() => {
     document.addEventListener('focusin',handleGetFocusEle);
     document.addEventListener('mousedown', handleTriggerOutside);
     window.addEventListener('mousewheel',handlePreventScroll,{ passive: false });
     containerRef?.current?.addEventListener('focusout', handleGetPreFocusEle);
-    containerRef?.current?.addEventListener('keydown',handlerStopPropagation)
+    containerRef?.current?.addEventListener('keydown',handlerStopPropagation);
     menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
     menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
     inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
@@ -259,7 +232,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       document.removeEventListener('mousedown', handleTriggerOutside);
       window.removeEventListener('mousewheel',handlePreventScroll);
       containerRef?.current?.removeEventListener('focusout', handleGetPreFocusEle);
-      containerRef?.current?.removeEventListener('keydown',handlerStopPropagation)
+      containerRef?.current?.removeEventListener('keydown',handlerStopPropagation);
       menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
       menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
@@ -284,7 +257,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         setIsOpen(false);
       }
     }
-  },[isPreFocused,isFocused,selectedKey])
+  },[isPreFocused,isFocused,selectedKey]);
 
 
   // subcomponent event
@@ -361,7 +334,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
           </ButtonPill>
         </div>
         {isOpen ? (
-          <div className={STYLE.selectionPosition} ref={selectionPositionRef} style={{transform:`translate(${selectionPosition?.x}px, ${selectionPosition?.y}px)`}}>
+          <div className={STYLE.selectionPosition} ref={selectionPositionRef} >
             <div className={STYLE.selectionContainer} ref={menuRef} style={{maxHeight:`${selectionContainerMaxHeight}px`}}>
               <Menu
                 selectionMode="single"
