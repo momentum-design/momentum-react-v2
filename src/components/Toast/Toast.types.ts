@@ -8,6 +8,12 @@ export type SupportedChildren = ToastContentProps | ToastDetailsProps;
 export type SupportedControlButtons = ButtonControlProps;
 
 export interface Props {
+
+  /**
+   * Aria-live prop as a string. This will be used by a screen reader for live changes.
+   */
+  ariaLive?: "off" | "polite" | "assertive";
+  
   /**
    * Child components of this Toast.
    */

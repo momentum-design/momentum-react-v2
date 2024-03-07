@@ -12,7 +12,7 @@ import './Toast.style.scss';
  * The `<Toast />` component.
  */
 const Toast: FC<Props> = (props: Props) => {
-  const { children, className, content, controls, details, id, style, title } = props;
+  const { ariaLive, children, className, content, controls, details, id, style, title } = props;
 
   const childrenArray = Children.toArray(children);
 
@@ -43,7 +43,7 @@ const Toast: FC<Props> = (props: Props) => {
   ) : null;
 
   return (
-    <div className={classnames(className, STYLE.wrapper)} id={id} style={style}>
+    <div className={classnames(className, STYLE.wrapper)} aria-live={ariaLive} id={id} style={style}>
       {titleComponent}
       {mutatedDetails}
       {contentComponent}
