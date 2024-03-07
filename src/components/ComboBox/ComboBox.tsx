@@ -275,23 +275,17 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     }
   ,[isOpen,onInputChangeCallback]);
 
-  const onSelectionChange = useCallback(
-    (event) => {
-      const { currentKey } = event;
-      const currentItem = searchItem(currentKey);
+  const onAction = useCallback(
+    (key: string) => {
+      setSelectedKey(key);
       setIsOpen(false);
+      handleFocusBackToInput();
+      const currentItem = searchItem(key);
       if (onSelectionChangeCallback) {
         onSelectionChangeCallback(currentItem);
       }
     }
-  ,[onSelectionChangeCallback]);
-
-  const onAction = useCallback(
-    (key: string) => {
-      setSelectedKey(key);
-      handleFocusBackToInput();
-    }
-  ,[handleFocusBackToInput]);
+  ,[handleFocusBackToInput,onSelectionChangeCallback]);
 
   const onArrowButtonPress = useCallback((event) => {
     if(!shouldFilterOnArrowButton){
@@ -343,7 +337,6 @@ const ComboBox: React.FC<Props> = (props: Props) => {
                 onAction={onAction}
                 className={STYLE.selection}
                 selectedKeys={[selectedKey]}
-                onSelectionChange={onSelectionChange}
                 disabledKeys={disabledKeys}
               >
                 {groups.length ? children : (<Item key={KEYS.INPUT_SEARCH_NO_RESULT}  textValue={noResultText}>
