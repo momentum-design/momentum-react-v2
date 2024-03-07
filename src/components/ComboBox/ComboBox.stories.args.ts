@@ -155,6 +155,20 @@ export default {
       },
     },
   },
+  openStateChange: {
+    description:
+      'Handler that is called when the selection list is expanded or collapsed.',
+    control: { type: 'function' },
+    table: {
+      category: 'React Aria - Select',
+      type: {
+        summary: '(isOpen: boolean) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   children: {
     description: 'Provides the items nodes for this selection list element.',
     table: {

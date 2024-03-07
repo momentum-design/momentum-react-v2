@@ -24,6 +24,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     onArrowButtonPress: onArrowButtonPressCallback,
     onInputChange: onInputChangeCallback,
     onSelectionChange: onSelectionChangeCallback,
+    openStateChange: openStateChangeCallBack,
     selectedKey: selectedKeyPayload = DEFAULTS.SELECTEDKEY,
     disabledKeys: disabledKeysPayload = DEFAULTS.DISABLEDKEYS,
     noResultText = DEFAULTS.NO_RESULT_TEXT,
@@ -198,6 +199,12 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
 
   // effect
+
+  useEffect(()=>{
+    if(openStateChangeCallBack){
+      openStateChangeCallBack(isOpen);
+    }
+  },[openStateChangeCallBack,isOpen]);
 
   useEffect(() => {
     handleFilter();

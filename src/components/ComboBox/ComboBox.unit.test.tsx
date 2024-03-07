@@ -398,6 +398,29 @@ describe('ComboBox', () => {
           expect(onSelectionChange).toHaveBeenCalled();
         });
 
+        it('should call openStateChange when list is expanded or collapsed', async () => {
+          const user = userEvent.setup();
+          const openStateChange = jest.fn();
+
+          render(
+            <ComboBox openStateChange={openStateChange} comboBoxGroups={withoutSection}>
+              {renderChildren}
+            </ComboBox>
+          );
+
+          const button = screen
+          .queryAllByRole('button')
+          .find((button) => button.classList.contains('md-combo-box-button'));
+
+          button.focus();
+          expect(openStateChange).toBeCalledWith(false);
+          await user.keyboard('{Enter}');
+          expect(screen.getByRole('menu')).toBeVisible();
+          expect(openStateChange).toBeCalledWith(true);
+          await user.keyboard('{Escape}');
+          expect(openStateChange).toBeCalledWith(false);
+        });
+
         it('should show disabledKeys when click', async () => {
           const user = userEvent.setup();
 

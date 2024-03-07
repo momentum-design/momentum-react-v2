@@ -29,6 +29,10 @@ export interface Props {
    */
   onArrowButtonPress?: (event: PressEvent) => void;
   /**
+   * Handler that is called when the arrowButton pressed.
+   */
+  openStateChange?: (isOpen: boolean) => void;
+  /**
    * id: id of help message.
    */
   id?: string;
