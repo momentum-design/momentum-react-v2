@@ -98,7 +98,7 @@ describe('<Toast />', () => {
     it('should match snapshot with aria-live', async () => {
       expect.assertions(1);
 
-      const ariaLive = "off";
+      const ariaLive = 'off';
 
       const container = await mountAndWait(
         <Toast ariaLive={ariaLive} content={content} controls={controls} details={details} />
