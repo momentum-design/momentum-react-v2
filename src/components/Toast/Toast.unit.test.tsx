@@ -95,6 +95,18 @@ describe('<Toast />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with aria-live', async () => {
+      expect.assertions(1);
+
+      const ariaLive = "off";
+
+      const container = await mountAndWait(
+        <Toast ariaLive={ariaLive} content={content} controls={controls} details={details} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with style', async () => {
       expect.assertions(1);
 
@@ -187,6 +199,17 @@ describe('<Toast />', () => {
       const element = wrapper.find(Toast).getDOMNode();
 
       expect(element.id).toBe(id);
+    });
+
+    it('should have provided aria-live when aria-live is provided', async () => {
+      expect.assertions(1);
+
+      const ariaLive = 'off';
+
+      const wrapper = await mountAndWait(<Toast ariaLive={ariaLive} />);
+      const element = wrapper.find(Toast).getDOMNode();
+
+      expect(element.getAttribute('aria-live')).toBe(ariaLive);
     });
 
     it('should have provided style when style is provided', async () => {
