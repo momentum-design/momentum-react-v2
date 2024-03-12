@@ -9,7 +9,8 @@ import {
   KEYS,
   STYLE,
   DEFAULTS,
-  ELEMENT
+  ELEMENT,
+  EVENT,
 } from './ComboBox.constants';
 import { Props, IComboBoxItem, IComboBoxGroup } from './ComboBox.types';
 
@@ -25,6 +26,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     onInputChange: onInputChangeCallback,
     onSelectionChange: onSelectionChangeCallback,
     openStateChange: openStateChangeCallBack,
+    comboBoxGroups: originComboBoxGroups,
     selectedKey: selectedKeyPayload = DEFAULTS.SELECTEDKEY,
     disabledKeys: disabledKeysPayload = DEFAULTS.DISABLEDKEYS,
     noResultText = DEFAULTS.NO_RESULT_TEXT,
@@ -32,7 +34,6 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     placeholder = DEFAULTS.PLACEHOLDER,
     shouldFilterOnArrowButton = DEFAULTS.SHOULDFILTERONARROWBUTTON,
     error = DEFAULTS.ERROR,
-    comboBoxGroups: originComboBoxGroups,
     className,
     id,
     style,
@@ -52,7 +53,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const [isPreFocused,setIsPreFocused] = useState<boolean>(false);
   const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
   const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
-  const [groups, setGroups] = useState<IComboBoxGroup[]>();
+  const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
 
   const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
 
@@ -60,7 +61,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     className: classnames(className, STYLE.wrapper),
     style: { '--local-width': width, ...style },
     id,
-    'data-input-have-value': inputValue !== '',
+    'data-input-have-value': !!inputValue,
     'data-error': error,
   }),[className, width, style, id, inputValue, error]);
 
@@ -69,133 +70,137 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   // utils
 
-  const handleFocusBackToInput = useCallback(
-    () => {
-      inputRef.current?.focus();
-    },[inputRef?.current]);
+  const searchItem: (key: string,groups:IComboBoxGroup[]) => IComboBoxItem | undefined = useCallback(
+    (key,groups) => searchItemFunc(key,groups)
+    ,[searchItemFunc]);
 
-  const searchItem: (key: string) => IComboBoxItem | undefined = useCallback(
-    (key: string) => searchItemFunc(key,originComboBoxGroups)
-    ,[originComboBoxGroups]);
+  const handleFocusBackToInput = useCallback(
+    ()=>{
+      inputRef.current?.focus();
+    },[inputRef.current]);
 
   const handleFilter = useCallback(
-    () => {
-      const filterGroup = handleFilterFunc(originComboBoxGroups,inputValue);
-      setGroups(filterGroup);
-    },[originComboBoxGroups,inputValue]);
+    (currentInputValue = '') => {
+      if(currentInputValue){
+        const filterGroup = handleFilterFunc(originComboBoxGroups,currentInputValue);
+        setGroups(filterGroup);
+      }else{
+        setGroups(originComboBoxGroups);
+      }
+    },[originComboBoxGroups,handleFilterFunc]);
 
   const handleItemFocus = useCallback(
-    () => {
-        const listItems: NodeListOf<any> = containerRef?.current?.querySelectorAll('li[role="menuitemradio"][aria-disabled="false"]');
-        if (listItems?.length) {
-          const selectedItem = Array.from(listItems).find(item => item?.ariaChecked === 'true');
-          if (selectedItem) {
-            // prioritize focusing on the selected item
-            selectedItem.focus();
-          } else {
-            listItems[0].focus();
-          }
+    ()=>{
+      const listItems: NodeListOf<any> = containerRef?.current?.querySelectorAll('li[role="menuitemradio"][aria-disabled="false"]');
+      if (listItems?.length) {
+        const selectedItem = Array.from(listItems).find(item => item?.ariaChecked === 'true');
+        if (selectedItem) {
+          // prioritize focusing on the selected item
+          selectedItem.focus();
+        } else {
+          listItems[0].focus();
         }
-        setShouldFocusItem(false);
-    },[containerRef?.current]);
+      }
+      setShouldFocusItem(false);
+    },[containerRef.current]);
 
-  const handleSelectionContainerMaxHeight = useCallback(()=>{
-    const windowHeight = window.innerHeight;
-    const {bottom} = inputRef?.current?.getBoundingClientRect();
-    
-    const inputDistanceFromViewportBottom = windowHeight - bottom;
-    if(inputDistanceFromViewportBottom < ELEMENT.SELECTIONCONTAINERMAXHEIGHT + 8){
-      setSelectionContainerMaxHeight(inputDistanceFromViewportBottom - 8);
-    } else {
-      setSelectionContainerMaxHeight(ELEMENT.SELECTIONCONTAINERMAXHEIGHT);
-    }
+  const handleSelectionContainerMaxHeight = useCallback(
+    ()=>{
+      const windowHeight = window.innerHeight;
+      const {bottom} = inputRef?.current?.getBoundingClientRect();
+      
+      const inputDistanceFromViewportBottom = windowHeight - bottom;
+      if(inputDistanceFromViewportBottom < ELEMENT.PROPS.SELECTIONCONTAINERMAXHEIGHT + 8){
+        setSelectionContainerMaxHeight(inputDistanceFromViewportBottom - 8);
+      } else {
+        setSelectionContainerMaxHeight(ELEMENT.PROPS.SELECTIONCONTAINERMAXHEIGHT);
+      }
+    },[inputRef.current,isOpen]);
 
-  },[inputRef?.current,isOpen]);
-
-  const handleSelectionTranslate = useCallback(()=>{
-    if (isOpen && inputRef.current && selectionPositionRef.current) {
-      const scrollTop = getSumScrollTopFunc(inputRef.current);
-      selectionPositionRef.current.style.transform = `translateY(${-scrollTop}px)`;
-    }
-  },[isOpen,inputRef?.current,selectionPositionRef?.current]);
+  const handleSelectionTranslate = useCallback(
+    ()=>{
+      if (isOpen && inputRef.current && selectionPositionRef.current) {
+        const scrollTop = getSumScrollTopFunc(inputRef.current);
+        selectionPositionRef.current.style.transform = `translateY(${-scrollTop}px)`;
+      }
+    },[isOpen,inputRef.current,selectionPositionRef.current,getSumScrollTopFunc]);
 
   
   // event
 
-  const handlerStopPropagation = useCallback((event)=>{
-    if(event.code === 'Escape'){
-      event.stopPropagation();
-    }
-  },[]);
-
-  const handleTriggerOutside = useCallback((event) => {
-    if(isOpen){
-      if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
-        setIsOpen(false);
+  const handlerStopPropagation = useCallback(
+    (event)=>{
+      if(event.code === EVENT.KEY.KEYCODE.ESCAPE){
+        event.stopPropagation();
       }
-    }
-  }
-,[isOpen,containerRef?.current]);
+    },[]);
 
-  const handleItemFocusChange = useCallback((event) => {
-      const item = event.target;
-      const itemRect = item.getBoundingClientRect();
-      const ulRect = menuRef.current.getBoundingClientRect();
-      if (itemRect.top < ulRect.top || itemRect.bottom > ulRect.bottom) {
-        item.scrollIntoView();
+  const handleTriggerOutside = useCallback(
+    (event) => {
+      if(isOpen){
+        if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
+          setIsOpen(false);
+        }
       }
-    }
-  ,[]);
+    },[isOpen,containerRef.current]);
 
-  const handlePreventScroll = useCallback((event)=>{
-
-    if(isOpen && selectionPositionRef?.current){
-      if(!selectionPositionRef?.current?.contains(event.target)){
-        event.preventDefault();
+  const handleItemFocusChange = useCallback(
+    (event) => {
+        const item = event.target;
+        const itemRect = item.getBoundingClientRect();
+        const ulRect = menuRef.current.getBoundingClientRect();
+        if (itemRect.top < ulRect.top || itemRect.bottom > ulRect.bottom) {
+          item.scrollIntoView();
+        }
       }
-    }
-  }
-  ,[isOpen,selectionPositionRef?.current]);
+    ,[menuRef.current]);
+
+  const handlePreventScroll = useCallback(
+    (event)=>{
+      if(isOpen && selectionPositionRef?.current){
+        if(!selectionPositionRef?.current?.contains(event.target)){
+          event.preventDefault();
+        }
+      }
+    },[isOpen,selectionPositionRef.current]);
 
   const handleInputKeyDown = useCallback(
     (event) => {
-      if (event.code === 'Escape') {
+      if (event.code === EVENT.KEY.KEYCODE.ESCAPE) {
         if (isOpen) {
           setIsOpen(false);
         } else {
           setInputValue('');
+          handleFilter();
         }
       }
   
-      if ((event.code === 'Enter' && !isOpen) || event.code === 'ArrowDown' || event.code === 'ArrowUp') {
+      if (!isOpen && event.code === EVENT.KEY.KEYCODE.ENTER || event.code === EVENT.KEY.KEYCODE.ARROWDOWN || event.code === EVENT.KEY.KEYCODE.ARROWUP) {
         setShouldFocusItem(true);
-        if(!isOpen){
-          setIsOpen(true);
-        }
+        setIsOpen(true);
       }
-    }
-  ,[isOpen]);
+    },[isOpen,handleFilter]);
 
   const handleMenuKeyDown = useCallback(
     (event) => {
-      if (event.code === 'Escape') {
-        if (isOpen) {
-          setIsOpen(false);
-          handleFocusBackToInput();
-        }
-      }else if(event.code === 'Tab'){
+      if (event.code === EVENT.KEY.KEYCODE.ESCAPE) {
+        setIsOpen(false);
+        handleFocusBackToInput();
+      }else if(event.code === EVENT.KEY.KEYCODE.TAB){
+        // when the focus is on the listItem, prevent focus escape
         event.preventDefault();
       }
-    }
-  ,[isOpen,handleFocusBackToInput]) ;
+    },[isOpen,handleFocusBackToInput]) ;
 
-  const handleGetFocusEle = useCallback((event)=>{
-    setIsFocused(containerRef?.current?.contains(event.target));
-  },[containerRef?.current]);
+  const handleGetFocusEle = useCallback(
+    (event)=>{
+      setIsFocused(containerRef?.current?.contains(event.target));
+    },[containerRef.current]);
 
-  const handleGetPreFocusEle = useCallback((event)=>{
-    setIsPreFocused(containerRef?.current?.contains(event.target));
-  },[containerRef?.current]);
+  const handleGetPreFocusEle = useCallback(
+    (event)=>{
+      setIsPreFocused(containerRef?.current?.contains(event.target));
+    },[containerRef.current]);
 
 
   // effect
@@ -206,108 +211,136 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     }
   },[openStateChangeCallBack,isOpen]);
 
-  useEffect(() => {
-    handleFilter();
-  }, [inputValue,originComboBoxGroups]);
-
   useEffect(()=>{
-    if(selectedKey){
-      const currentItem = searchItem(selectedKey);
-      if (currentItem.key) {
-        setInputValue(currentItem.label);
-      }
-    }
-  },[originComboBoxGroups,selectedKey]);
+    const currentItem = searchItem(selectedKey,originComboBoxGroups);
+    setInputValue(currentItem.label??''); 
+    handleFilter(currentItem.label);
+  },[originComboBoxGroups,selectedKey,handleFilter]);
 
   useEffect(()=>{
     handleSelectionTranslate();
     handleSelectionContainerMaxHeight();
-  },[isOpen,handleSelectionContainerMaxHeight]);
+  },[handleSelectionTranslate,handleSelectionContainerMaxHeight]);
 
-  useEffect(() => {
+  useEffect(()=>{
     document.addEventListener('focusin',handleGetFocusEle);
-    document.addEventListener('mousedown', handleTriggerOutside);
-    window.addEventListener('mousewheel',handlePreventScroll,{ passive: false });
     containerRef?.current?.addEventListener('focusout', handleGetPreFocusEle);
-    containerRef?.current?.addEventListener('keydown',handlerStopPropagation);
-    menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
-    menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
-    inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
-
-    return () => {
+    return()=>{
       document.removeEventListener('focusin',handleGetFocusEle);
-      document.removeEventListener('mousedown', handleTriggerOutside);
-      window.removeEventListener('mousewheel',handlePreventScroll);
       containerRef?.current?.removeEventListener('focusout', handleGetPreFocusEle);
+    };
+  },[containerRef.current,handleGetFocusEle,handleGetPreFocusEle]);
+
+  useEffect(()=>{
+    document.addEventListener('mousedown', handleTriggerOutside);
+    return()=>{
+      document.removeEventListener('mousedown', handleTriggerOutside);
+    };
+  },[handleTriggerOutside]);
+
+  useEffect(()=>{
+    window.addEventListener('mousewheel',handlePreventScroll,{ passive: false });
+    return()=>{
+      window.removeEventListener('mousewheel',handlePreventScroll);
+    };
+  },[handlePreventScroll]);
+
+  useEffect(()=>{
+    containerRef?.current?.addEventListener('keydown',handlerStopPropagation);
+    return()=>{
       containerRef?.current?.removeEventListener('keydown',handlerStopPropagation);
+    };
+  },[containerRef.current,handlerStopPropagation]);
+
+  useEffect(()=>{
+    menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
+
+    return()=>{
       menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
+    };
+  },[menuRef.current,handleItemFocusChange]);
+
+  useEffect(()=>{
+    menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
+
+    return()=>{
       menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
+    };
+  },[menuRef.current,handleMenuKeyDown]);
+
+  useEffect(()=>{
+    inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
+    return()=>{
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
     };
-  }, [isOpen]);
+  }, [inputRef.current,handleInputKeyDown]);
 
-  useEffect(() => {
-    if (shouldFocusItem && isOpen) {
+  useEffect(()=>{
+    if(shouldFocusItem && isOpen) {
       handleItemFocus();
     }
-  }, [shouldFocusItem,isOpen]);
+  },[shouldFocusItem,isOpen,handleItemFocus]);
 
   useEffect(()=>{
     if(containerRef?.current){
       if(!isFocused && isPreFocused){
         if(selectedKey){
-          const currentItem = searchItem(selectedKey);
+          const currentItem = searchItem(selectedKey,originComboBoxGroups);
           setInputValue(currentItem.label);
-        } else {
+          handleFilter(currentItem.label);
+        }else{
           setInputValue('');
+          handleFilter();
         }
         setIsOpen(false);
       }
     }
-  },[isPreFocused,isFocused,selectedKey]);
+  },[containerRef.current,isPreFocused,isFocused,selectedKey,originComboBoxGroups,searchItem]);
 
 
   // subcomponent event
 
   const onInputChange = useCallback(
-    (event) => {
+    (event)=>{
       const currentInputValue = event.target.value;
-      if (!isOpen) {
+      if(!isOpen){
         setIsOpen(true);
       }
       setInputValue(currentInputValue);
-      if (onInputChangeCallback) {
+      handleFilter(currentInputValue);
+      if(onInputChangeCallback){
         onInputChangeCallback(event);
       }
-    }
-  ,[isOpen,onInputChangeCallback]);
+    },[isOpen,onInputChangeCallback,handleFilter]);
 
   const onAction = useCallback(
     (key: string) => {
       setSelectedKey(key);
-      setIsOpen(false);
-      handleFocusBackToInput();
-      const currentItem = searchItem(key);
-      if (onSelectionChangeCallback) {
+      const currentItem = searchItem(key,originComboBoxGroups);
+      setInputValue(currentItem.label);
+      handleFilter(currentItem.label);
+      if(onSelectionChangeCallback){
         onSelectionChangeCallback(currentItem);
       }
-    }
-  ,[handleFocusBackToInput,onSelectionChangeCallback]);
+      setIsOpen(false);
+      handleFocusBackToInput();
+    },[handleFocusBackToInput,onSelectionChangeCallback,searchItem,handleFilter]);
 
-  const onArrowButtonPress = useCallback((event) => {
-    if(!shouldFilterOnArrowButton){
-      setGroups(originComboBoxGroups);
-    };
-    if (!isOpen) {
-      setShouldFocusItem(true);
-    };
-    setTimeout(()=>{
+  const onArrowButtonPress = useCallback(
+    (event)=>{
+      if(!isOpen){
+        setShouldFocusItem(true);
+        if(!shouldFilterOnArrowButton){
+            handleFilter();
+        }else{
+          handleFilter(inputValue);
+        }
+      };
+      if(onArrowButtonPressCallback){
+        onArrowButtonPressCallback(event);
+      }
       setIsOpen(!isOpen);
-    });
-    if (onArrowButtonPressCallback) {
-      onArrowButtonPressCallback(event);
-    };
-  },[isOpen,onArrowButtonPressCallback,shouldFilterOnArrowButton,originComboBoxGroups]);
+    },[isOpen,inputValue,shouldFilterOnArrowButton]);
 
 
   return (

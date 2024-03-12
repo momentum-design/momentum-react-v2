@@ -30,8 +30,22 @@ const KEYS = {
 };
 
 const ELEMENT = {
-  SELECTIONCONTAINERMAXHEIGHT:244,
-  INPUTHEIGTH:32,
-}
+  PROPS: {
+    SELECTIONCONTAINERMAXHEIGHT:244,
+    INPUTHEIGTH:32,
+  },
+};
 
-export{STYLE,DEFAULTS,KEYS,ELEMENT};
+const EVENT = {
+  KEY:{
+    KEYCODE:{
+      ESCAPE: 'Escape',
+      ENTER: 'Enter',
+      TAB: 'Tab',
+      ARROWDOWN: 'ArrowDown',
+      ARROWUP: 'ArrowUp',
+    }
+  }
+};
+
+export{STYLE,DEFAULTS,KEYS,ELEMENT,EVENT};

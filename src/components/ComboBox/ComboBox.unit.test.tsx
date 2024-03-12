@@ -385,7 +385,9 @@ describe('ComboBox', () => {
           .queryAllByRole('button')
           .find((button) => button.classList.contains('md-combo-box-button'));
 
-          button.focus();
+          act(()=>{
+            button.focus();
+          });
           await user.keyboard('{Enter}');
           expect(screen.getByRole('menu')).toBeVisible();
           

@@ -33,10 +33,6 @@
       margin: 0;
     } 
 
-    ul.md-menu-wrapper ul[role='presentation']:not(:first-child) {
-      margin-top: 0.5rem;
-    }
-
     ul.md-menu-wrapper ul[role='presentation']:not(:first-child)::before {
       display: block;
       width: 100%;
