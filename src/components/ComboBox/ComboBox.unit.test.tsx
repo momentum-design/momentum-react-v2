@@ -662,7 +662,7 @@ describe('ComboBox', () => {
         const button = screen.getByRole('button', { name: 'button-outside' });
         act(()=>{
           button.focus();
-        })
+        });
 
         await waitFor(() => {
           expect(input).toHaveProperty('value','item1');
