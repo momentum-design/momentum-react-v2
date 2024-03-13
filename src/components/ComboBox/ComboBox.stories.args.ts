@@ -18,7 +18,7 @@ export default {
     },
   },
   error: {
-    description: 'Sets whether the ComboBox is in error state',
+    description: 'Sets whether the ComboBox is in error state.',
     control: { type: 'boolean' },
     table: {
       type: {
@@ -30,7 +30,7 @@ export default {
     },
   },
   placeholder: {
-    description: 'Text to display inside the input when there is no inputValue or item selected',
+    description: 'Text to display inside the input when there is no inputValue or item selected.',
     control: { type: 'text' },
     table: {
       category: 'React Aria - Input',
@@ -88,7 +88,7 @@ export default {
   },
   selectedKey: {
     description:
-      'It also affects the value of the input (displayed as the label of the corresponding item',
+      'It also affects the value of the input (displayed as the label of the corresponding item.',
     control: { type: 'text' },
     table: {
       category: 'React Aria - Select',
@@ -143,7 +143,7 @@ export default {
   },
   onSelectionChange: {
     description:
-      'Handler that is called when an item is selected(if the selected item matches the selectedKey, the parameter is undefined).',
+      'Handler that is called when an item is selected. (if the selected item matches the selectedKey, the parameter is undefined)',
     control: { type: 'function' },
     table: {
       category: 'React Aria - Select',

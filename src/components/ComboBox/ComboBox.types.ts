@@ -29,7 +29,7 @@ export interface Props {
    */
   onArrowButtonPress?: (event: PressEvent) => void;
   /**
-   * Handler that is called when the arrowButton pressed.
+   * Handler that is called when isOpen state of list chanages.
    */
   openStateChange?: (isOpen: boolean) => void;
   /**

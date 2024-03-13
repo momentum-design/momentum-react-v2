@@ -1,10 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Item } from '@react-stately/collections';
 import TextInput from '../TextInput';
-import Menu from '../Menu';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
-
+import Menu from '../Menu';
 import {
   KEYS,
   STYLE,
@@ -18,6 +17,7 @@ import classnames from 'classnames';
 import './ComboBox.style.scss';
 
 import { handleFilter as handleFilterFunc, searchItem as searchItemFunc, getSumScrollTop as getSumScrollTopFunc } from './ComboBox.utils';
+
 
 const ComboBox: React.FC<Props> = (props: Props) => {
 
@@ -55,6 +55,8 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
   const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
 
+  const isInputFocused = useRef<boolean>(false);
+
   const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
 
   const wrapperProps = useMemo(()=>({
@@ -72,11 +74,11 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   const searchItem: (key: string,groups:IComboBoxGroup[]) => IComboBoxItem | undefined = useCallback(
     (key,groups) => searchItemFunc(key,groups)
-    ,[searchItemFunc]);
+    ,[]);
 
   const handleFocusBackToInput = useCallback(
     ()=>{
-      inputRef.current?.focus();
+      inputRef?.current?.focus();
     },[inputRef.current]);
 
   const handleFilter = useCallback(
@@ -87,7 +89,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }else{
         setGroups(originComboBoxGroups);
       }
-    },[originComboBoxGroups,handleFilterFunc]);
+    },[originComboBoxGroups]);
 
   const handleItemFocus = useCallback(
     ()=>{
@@ -115,15 +117,15 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       } else {
         setSelectionContainerMaxHeight(ELEMENT.PROPS.SELECTIONCONTAINERMAXHEIGHT);
       }
-    },[inputRef.current,isOpen]);
+    },[inputRef.current]);
 
   const handleSelectionTranslate = useCallback(
     ()=>{
-      if (isOpen && inputRef.current && selectionPositionRef.current) {
+      if (isOpen && inputRef?.current && selectionPositionRef.current) {
         const scrollTop = getSumScrollTopFunc(inputRef.current);
         selectionPositionRef.current.style.transform = `translateY(${-scrollTop}px)`;
       }
-    },[isOpen,inputRef.current,selectionPositionRef.current,getSumScrollTopFunc]);
+    },[inputRef.current,isOpen]);
 
   
   // event
@@ -142,13 +144,13 @@ const ComboBox: React.FC<Props> = (props: Props) => {
           setIsOpen(false);
         }
       }
-    },[isOpen,containerRef.current]);
+    },[containerRef.current,isOpen]);
 
   const handleItemFocusChange = useCallback(
     (event) => {
         const item = event.target;
         const itemRect = item.getBoundingClientRect();
-        const ulRect = menuRef.current.getBoundingClientRect();
+        const ulRect = menuRef?.current?.getBoundingClientRect();
         if (itemRect.top < ulRect.top || itemRect.bottom > ulRect.bottom) {
           item.scrollIntoView();
         }
@@ -162,7 +164,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
           event.preventDefault();
         }
       }
-    },[isOpen,selectionPositionRef.current]);
+    },[selectionPositionRef.current,isOpen]);
 
   const handleInputKeyDown = useCallback(
     (event) => {
@@ -190,7 +192,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         // when the focus is on the listItem, prevent focus escape
         event.preventDefault();
       }
-    },[isOpen,handleFocusBackToInput]) ;
+    },[handleFocusBackToInput]) ;
 
   const handleGetFocusEle = useCallback(
     (event)=>{
@@ -202,6 +204,11 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       setIsPreFocused(containerRef?.current?.contains(event.target));
     },[containerRef.current]);
 
+  const handleGetInputFocus = useCallback(
+    (event)=>{
+      isInputFocused.current = (inputRef?.current?.contains(event.target));
+  },[inputRef.current]);
+
 
   // effect
 
@@ -212,10 +219,19 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[openStateChangeCallBack,isOpen]);
 
   useEffect(()=>{
-    const currentItem = searchItem(selectedKey,originComboBoxGroups);
-    setInputValue(currentItem.label??''); 
-    handleFilter(currentItem.label);
-  },[originComboBoxGroups,selectedKey,handleFilter]);
+    if(isInputFocused.current){
+      handleFilter(inputValue);
+    }else {
+      const currentItem = searchItem(selectedKey,originComboBoxGroups);
+      if(currentItem.label){
+        handleFilter(currentItem.label);
+        setInputValue(currentItem.label); 
+      }else{
+        handleFilter();
+        setInputValue(''); 
+      }
+    }
+  },[originComboBoxGroups,selectedKey,inputValue,handleFilter,searchItem]);
 
   useEffect(()=>{
     handleSelectionTranslate();
@@ -253,6 +269,13 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[containerRef.current,handlerStopPropagation]);
 
   useEffect(()=>{
+    document.addEventListener('focusin',handleGetInputFocus);
+    return()=>{
+      document.removeEventListener('focusin',handleGetInputFocus);
+    };
+  },[handleGetInputFocus]);
+
+  useEffect(()=>{
     menuRef?.current?.addEventListener('focusin', handleItemFocusChange);
 
     return()=>{
@@ -273,7 +296,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     return()=>{
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
     };
-  }, [inputRef.current,handleInputKeyDown]);
+  }, [inputRef?.current,handleInputKeyDown]);
 
   useEffect(()=>{
     if(shouldFocusItem && isOpen) {
@@ -295,7 +318,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         setIsOpen(false);
       }
     }
-  },[containerRef.current,isPreFocused,isFocused,selectedKey,originComboBoxGroups,searchItem]);
+  },[containerRef.current,isPreFocused,isFocused,selectedKey,originComboBoxGroups,searchItem,handleFilter]);
 
 
   // subcomponent event
@@ -324,7 +347,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
       setIsOpen(false);
       handleFocusBackToInput();
-    },[handleFocusBackToInput,onSelectionChangeCallback,searchItem,handleFilter]);
+    },[originComboBoxGroups,handleFocusBackToInput,onSelectionChangeCallback,searchItem,handleFilter]);
 
   const onArrowButtonPress = useCallback(
     (event)=>{
@@ -335,12 +358,12 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         }else{
           handleFilter(inputValue);
         }
-      };
+      }
       if(onArrowButtonPressCallback){
         onArrowButtonPressCallback(event);
       }
       setIsOpen(!isOpen);
-    },[isOpen,inputValue,shouldFilterOnArrowButton]);
+    },[isOpen,inputValue,shouldFilterOnArrowButton,handleFilter,onArrowButtonPressCallback]);
 
 
   return (
