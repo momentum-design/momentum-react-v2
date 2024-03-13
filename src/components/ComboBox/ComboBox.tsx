@@ -47,17 +47,17 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const selectionPositionRef = useRef<HTMLInputElement>(null);
 
-  const [inputValue, setInputValue] = useState<string>('');
+  const [isInit, setIsInit] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isFocused,setIsFocused] = useState<boolean>(false);
   const [isPreFocused,setIsPreFocused] = useState<boolean>(false);
   const [shouldFocusItem, setShouldFocusItem] = useState<boolean>(false);
+  const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>();
+  const [inputValue, setInputValue] = useState<string>('');
   const [selectedKey, setSelectedKey] = useState<string>(selectedKeyPayload);
   const [groups, setGroups] = useState<IComboBoxGroup[]>(originComboBoxGroups);
 
   const isInputFocused = useRef<boolean>(false);
-
-  const [selectionContainerMaxHeight,setSelectionContainerMaxHeight] = useState<number>(null);
 
   const wrapperProps = useMemo(()=>({
     className: classnames(className, STYLE.wrapper),
@@ -219,19 +219,28 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[openStateChangeCallBack,isOpen]);
 
   useEffect(()=>{
-    if(isInputFocused.current){
-      handleFilter(inputValue);
-    }else {
-      const currentItem = searchItem(selectedKey,originComboBoxGroups);
-      if(currentItem.label){
-        handleFilter(currentItem.label);
-        setInputValue(currentItem.label); 
+    if(isInit){
+      if(selectedKey){
+        // If ‘selected’ exists, a matching item must be found to complete the initialization.
+        const currentItem = searchItem(selectedKey,originComboBoxGroups);
+        if(currentItem.label){
+          handleFilter(currentItem.label);
+          setInputValue(currentItem.label); 
+          setIsInit(false);
+        }
       }else{
-        handleFilter();
-        setInputValue(''); 
+        setIsInit(false);
+      }
+    }else{
+      if(isInputFocused.current){
+        handleFilter(inputValue);
+      }else {
+        const currentItem = searchItem(selectedKey,originComboBoxGroups);
+        handleFilter(currentItem.label);
+        setInputValue(currentItem.label??''); 
       }
     }
-  },[originComboBoxGroups,selectedKey,inputValue,handleFilter,searchItem]);
+  },[originComboBoxGroups,selectedKey,inputValue,isInit,handleFilter,searchItem]);
 
   useEffect(()=>{
     handleSelectionTranslate();
