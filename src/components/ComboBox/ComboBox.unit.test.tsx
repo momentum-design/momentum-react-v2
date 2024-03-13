@@ -414,7 +414,9 @@ describe('ComboBox', () => {
           .queryAllByRole('button')
           .find((button) => button.classList.contains('md-combo-box-button'));
 
-          button.focus();
+          act(()=>{
+            button.focus();
+          });;
           expect(openStateChange).toBeCalledWith(false);
           await user.keyboard('{Enter}');
           expect(screen.getByRole('menu')).toBeVisible();
@@ -451,7 +453,9 @@ describe('ComboBox', () => {
           expect(menuItem).not.toBeInTheDocument();
 
           const button = screen.getByRole('button');
-          button.focus();
+          act(()=>{
+            button.focus();
+          });;
           expect(button).toHaveFocus();
 
           await user.keyboard('{Enter}');
@@ -512,8 +516,9 @@ describe('ComboBox', () => {
         const user = userEvent.setup();
         const input = screen.getByLabelText('md-combo-box-input');
         const button = screen.getByRole('button');
-
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{4}');
         await user.keyboard('{Escape}');
         await user.click(button);
@@ -533,8 +538,9 @@ describe('ComboBox', () => {
         );
 
         const input = screen.getByLabelText('md-combo-box-input');
-
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{Enter}');
         expect(screen.getByRole('menu')).toBeVisible();
 
@@ -553,7 +559,9 @@ describe('ComboBox', () => {
         );
 
         const input = screen.getByLabelText('md-combo-box-input');
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{Enter}');
         expect(screen.getByRole('menu')).toBeVisible();
 
@@ -573,7 +581,9 @@ describe('ComboBox', () => {
         );
 
         const input = screen.getByLabelText('md-combo-box-input');
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{ArrowDown}');
         expect(screen.getByRole('menu')).toBeVisible();
 
@@ -593,7 +603,9 @@ describe('ComboBox', () => {
         );
 
         const input = screen.getByLabelText('md-combo-box-input');
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{i}');
         expect(screen.getByRole('menu')).toBeVisible();
 
@@ -614,8 +626,9 @@ describe('ComboBox', () => {
 
         const input = screen.getByLabelText('md-combo-box-input');
         expect(input).toHaveProperty('value','item1');
-
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{Escape}');
 
         expect(input).toHaveProperty('value','');
@@ -630,7 +643,9 @@ describe('ComboBox', () => {
           </>
         );
         const input = screen.getByLabelText('md-combo-box-input');
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{Enter}');
         expect(screen.getByRole('menu')).toBeVisible();
 
@@ -655,7 +670,9 @@ describe('ComboBox', () => {
           </>
         );
         const input = screen.getByLabelText('md-combo-box-input');
-        input.focus();
+        act(()=>{
+          input.focus();
+        });
         await user.keyboard('{Escape}');
         expect(input).toHaveProperty('value','');
 
