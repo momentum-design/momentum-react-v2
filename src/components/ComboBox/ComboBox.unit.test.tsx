@@ -660,6 +660,32 @@ describe('ComboBox', () => {
         });
       });
 
+      it('when listitem is focused, press Tab, The focus will not escape.', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <ComboBox  comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+          </>
+        );
+        const input = screen.getByLabelText('md-combo-box-input');
+        act(()=>{
+          input.focus();
+        });
+        await user.keyboard('{Enter}');
+        expect(screen.getByRole('menu')).toBeVisible();
+
+        const item = screen.getByText('item1').parentElement;
+        await waitFor(() => {
+          expect(item.parentElement).toHaveFocus();
+        });
+
+        await user.keyboard('{Tab}');
+        await waitFor(() => {
+          expect(item.parentElement).toHaveFocus();
+        });
+      });
+
       it('reset inputValue, when focus shifts from inside the component to outside', async () => {
         const user = userEvent.setup();
 

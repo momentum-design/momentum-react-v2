@@ -97,7 +97,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       if (listItems?.length) {
         const selectedItem = Array.from(listItems).find(item => item?.ariaChecked === 'true');
         if (selectedItem) {
-          // prioritize focusing on the selected item
+          // prioritize focusing on the selected item.
           selectedItem.focus();
         } else {
           listItems[0].focus();
@@ -106,6 +106,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       setShouldFocusItem(false);
     },[containerRef.current]);
 
+  // Used to prevent the bottom of the list from exceeding the window boundary.
   const handleSelectionContainerMaxHeight = useCallback(
     ()=>{
       const windowHeight = window.innerHeight;
@@ -119,6 +120,8 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     },[inputRef.current]);
 
+  // Since the positioning of the list uses ‘fix’, it is necessary to calculate the height of all scroll bars of the list’s ancestor elements, 
+  // and then set the translate to prevent the positioning of the list from being affected by the scroll bars of the ancestor elements.
   const handleSelectionTranslate = useCallback(
     ()=>{
       if (isOpen && inputRef?.current && selectionPositionRef.current) {
@@ -157,6 +160,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     ,[menuRef.current]);
 
+  // 
   const handlePreventScroll = useCallback(
     (event)=>{
       if(isOpen && selectionPositionRef?.current){
@@ -233,6 +237,8 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     }else{
       if(isInputFocused.current){
+        // If the focus is on the input, it indicates that the user may be operating the input, 
+        // so here we do not want the inputValue to change spontaneously.
         handleFilter(inputValue);
       }else {
         const currentItem = searchItem(selectedKey,originComboBoxGroups);
@@ -313,6 +319,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     }
   },[shouldFocusItem,isOpen,handleItemFocus]);
 
+  // Used to handle the logic of inputValue when the focus switches from inside the component to outside.
   useEffect(()=>{
     if(containerRef?.current){
       if(!isFocused && isPreFocused){
