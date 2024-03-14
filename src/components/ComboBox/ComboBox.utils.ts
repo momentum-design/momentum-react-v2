@@ -30,7 +30,7 @@ export const getSumScrollTop = (element:Element):number => {
     while (element) {
         element = element.parentElement;
         if (element) {
-            const scrollTop = Number.isNaN(element.scrollTop)?0:element.scrollTop;
+            const scrollTop = element.scrollTop ?? 0;
             sum += scrollTop ;
         }
     }

@@ -133,7 +133,7 @@
     background-color: var(--mds-color-theme-background-solid-primary-normal);
   }
 
-  .md-combo-box-input-section:hover .md-combo-box-divider {
+  .md-combo-box-input:hover ~.md-combo-box-divider {
     background-color: var(--mds-color-theme-background-primary-hover);
   }
 }

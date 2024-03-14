@@ -113,6 +113,7 @@ describe('ComboBox utils', () => {
     });
 
     describe('getSumScrollTop', () => {
+        
         const sampleElement1 = {
             scrollTop:0,
         };
@@ -132,11 +133,17 @@ describe('ComboBox utils', () => {
             parentElement:sampleElement3,
         };
 
-        it('test case', () => {
-            expect(getSumScrollTop(sampleElement4 as Element)).toEqual(18.5);
-            expect(getSumScrollTop(sampleElement3 as Element)).toEqual(0);
-            expect(getSumScrollTop(sampleElement2 as Element)).toEqual(0);
-            expect(getSumScrollTop(sampleElement1 as Element)).toEqual(0);
-        });
+        it.each`
+        element             | expectedSum              
+        ${sampleElement1}   | ${0}            
+        ${sampleElement2}   | ${0}             
+        ${sampleElement3}   | ${0} 
+        ${sampleElement4}   | ${18.5} 
+        `(
+            'correctly returns $expectedSum for $element',
+            ({element,expectedSum}) => {
+                expect(getSumScrollTop(element)).toEqual(expectedSum);
+            }
+        );
     });
 });
