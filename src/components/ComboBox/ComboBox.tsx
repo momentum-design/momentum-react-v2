@@ -160,7 +160,6 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     ,[menuRef.current]);
 
-  // 
   const handlePreventScroll = useCallback(
     (event)=>{
       if(isOpen && selectionPositionRef?.current){
@@ -224,6 +223,9 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   useEffect(()=>{
     if(isInit){
+      // isInit is used to solve the case where the input is focused by default during initialization. 
+      // Since isInputFocused is used in the logic as the basis for whether to setInputValue,
+      // special handling is needed if the focus is on the input during initialization.
       if(selectedKey){
         // If ‘selected’ exists, a matching item must be found to complete the initialization.
         const currentItem = searchItem(selectedKey,originComboBoxGroups);
