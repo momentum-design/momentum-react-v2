@@ -212,6 +212,13 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       isInputFocused.current = (inputRef?.current?.contains(event.target));
   },[inputRef.current]);
 
+  const handleInputFocus = useCallback(
+    ()=>{
+      if(!isOpen){
+        handleFilter(inputValue);
+      }
+    },[handleFilter,inputValue,isOpen]);
+
 
   // effect
 
@@ -263,6 +270,15 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       containerRef?.current?.removeEventListener('focusout', handleGetPreFocusEle);
     };
   },[containerRef.current,handleGetFocusEle,handleGetPreFocusEle]);
+
+  useEffect(()=>{
+    // Fix the issue where clicking the arrow button to display all items,
+    // and then focusing back on the input does not correctly filter the items.
+    inputRef?.current?.addEventListener('focus',handleInputFocus);
+    return()=>{
+      inputRef?.current?.removeEventListener('focus',handleInputFocus);
+    };
+  },[inputRef.current,handleInputFocus]);
 
   useEffect(()=>{
     document.addEventListener('mousedown', handleTriggerOutside);
