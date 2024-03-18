@@ -272,8 +272,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[containerRef.current,handleGetFocusEle,handleGetPreFocusEle]);
 
   useEffect(()=>{
-    // Fix the issue where clicking the arrow button to display all items,
-    // and then focusing back on the input does not correctly filter the items.
+    // Fix the issue where focusing on the input in certain situations does not correctly filter the expanded items
     inputRef?.current?.addEventListener('focus',handleInputFocus);
     return()=>{
       inputRef?.current?.removeEventListener('focus',handleInputFocus);

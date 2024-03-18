@@ -711,6 +711,37 @@ describe('ComboBox', () => {
           expect(input).toHaveProperty('value','item1');
         });
       });
+
+      it('reset inputValue, when focus shifts from inside the component to outside', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <ComboBox  selectedKey='key1' shouldFilterOnArrowButton={false} comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+          </>
+        );
+        const input = screen.getByLabelText('md-combo-box-input');
+        const button = screen
+        .queryAllByRole('button')
+        .find((button) => button.classList.contains('md-combo-box-button'));
+
+        await waitFor(() => {
+          expect(input).toHaveProperty('value','item1');
+        });
+        await user.click(button);
+        const menu = screen.getByRole('menu');
+        expect(menu).toBeVisible();
+        const item2 = screen.getByText('item2').parentElement;
+        await user.click(button);
+        await user.click(input);
+        await user.keyboard('{Enter}');
+        expect(input).toHaveProperty('value','item1');
+        const item1 = screen.getByText('item1').parentElement;
+        await waitFor(() => {
+          expect(item1.parentElement).toHaveFocus();
+          expect(item2).not.toBeInTheDocument();
+        });
+      });
     });     
   });
 });
