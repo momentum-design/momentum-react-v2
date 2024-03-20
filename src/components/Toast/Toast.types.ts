@@ -3,11 +3,18 @@ import { CSSProperties, ReactElement } from 'react';
 import { ButtonControlProps } from '../ButtonControl';
 import { ToastContentProps } from '../ToastContent';
 import { ToastDetailsProps } from '../ToastDetails';
+import type { AriaAttributes } from 'react';
 
 export type SupportedChildren = ToastContentProps | ToastDetailsProps;
 export type SupportedControlButtons = ButtonControlProps;
 
 export interface Props {
+
+  /**
+   * Aria-live prop as a string. This will be used by a screen reader for live changes.
+   */
+  ariaLive?: AriaAttributes['aria-live'];
+
   /**
    * Child components of this Toast.
    */
