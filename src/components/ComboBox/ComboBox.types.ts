@@ -1,6 +1,6 @@
 import { CollectionChildren } from '@react-types/shared';
 import { PressEvent } from '@react-types/shared/src/events';
-import { CSSProperties } from 'react';
+import { CSSProperties, RefObject } from 'react';
 
 
 export type IComboBoxItem = {
@@ -86,6 +86,10 @@ export interface Props {
    * The currently selected key in the collection.
    */
   selectedKey?: string; 
+  /**
+   * Used to get the input DOM within the component.
+   */
+  inputRef?: RefObject<HTMLInputElement>;
   /**
    * Child components of this component.
    */

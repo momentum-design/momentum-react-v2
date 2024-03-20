@@ -1,5 +1,5 @@
 import ComboBox from '.';
-import React from 'react';
+import React, { createRef } from 'react';
 import { Item, Section } from '@react-stately/collections';
 import { STYLE } from './ComboBox.constants';
 import { mountAndWait } from '../../../test/utils';
@@ -8,6 +8,7 @@ import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
 import { IComboBoxGroup } from './ComboBox.types';
 import { act } from 'react-dom/test-utils';
+import TextInput from '../TextInput';
 jest.mock('@react-aria/utils');
 jest.mock('uuid', () => {
   return {
@@ -326,6 +327,22 @@ describe('ComboBox', () => {
         expect(
           wrapper.find('[aria-label="md-combo-box-input"]').at(0).props()
         ).toHaveProperty('placeholder', placeholder);
+      });
+
+      it('should match inputRef props', async () => {
+        expect.assertions(1);
+
+        const inputRef = createRef<HTMLInputElement>();
+
+        const wrapper = await mountAndWait(
+          <ComboBox inputRef={inputRef} comboBoxGroups={withoutSection}>
+            {renderChildren}
+          </ComboBox>
+        );
+
+        expect(
+          wrapper.find(TextInput).props()['aria-label']
+        ).toEqual(inputRef.current.getAttribute('aria-label'));
       });
 
       describe('actions', () => {

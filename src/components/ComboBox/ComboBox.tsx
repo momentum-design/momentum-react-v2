@@ -34,6 +34,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     placeholder = DEFAULTS.PLACEHOLDER,
     shouldFilterOnArrowButton = DEFAULTS.SHOULDFILTERONARROWBUTTON,
     error = DEFAULTS.ERROR,
+    inputRef:inputRefProp,
     className,
     id,
     style,
@@ -42,9 +43,11 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     children,
   } = props;
 
+  const componentInputRef = useRef<HTMLInputElement>(null);
+
   const menuRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = inputRefProp || componentInputRef ;
   const selectionPositionRef = useRef<HTMLInputElement>(null);
 
   const [isInit, setIsInit] = useState<boolean>(true);
