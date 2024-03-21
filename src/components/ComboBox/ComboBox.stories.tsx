@@ -111,7 +111,9 @@ const InListItemTemplate = (props:Props) => {
   return (
     <OverlayAlert>
       <div style={{ overflowY: 'scroll', height:'50px'}}>
-        <ComboBoxWrapper {...props} />
+        <div style={{border:'2px solid transparent'}}>
+          <ComboBoxWrapper {...props} />
+        </div>
       </div>
     </OverlayAlert>
   );

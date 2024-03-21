@@ -32,7 +32,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     noResultText = DEFAULTS.NO_RESULT_TEXT,
     width = DEFAULTS.WIDTH,
     placeholder = DEFAULTS.PLACEHOLDER,
-    shouldFilterOnArrowButton = DEFAULTS.SHOULDFILTERONARROWBUTTON,
+    shouldFilterOnArrowButton = DEFAULTS.SHOULD_FILTER_ON_ARROW_BUTTON,
     error = DEFAULTS.ERROR,
     inputRef:inputRefProp,
     className,
@@ -116,10 +116,10 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       const {bottom} = inputRef?.current?.getBoundingClientRect();
       
       const inputDistanceFromViewportBottom = windowHeight - bottom;
-      if(inputDistanceFromViewportBottom < ELEMENT.PROPS.SELECTIONCONTAINERMAXHEIGHT + 8){
+      if(inputDistanceFromViewportBottom < ELEMENT.PROPS.SELECTION_CONTAINER_MAX_HEIGHT + 8){
         setSelectionContainerMaxHeight(inputDistanceFromViewportBottom - 8);
       } else {
-        setSelectionContainerMaxHeight(ELEMENT.PROPS.SELECTIONCONTAINERMAXHEIGHT);
+        setSelectionContainerMaxHeight(ELEMENT.PROPS.SELECTION_CONTAINER_MAX_HEIGHT);
       }
     },[inputRef.current]);
 
@@ -143,7 +143,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     },[]);
 
-  const handleTriggerOutside = useCallback(
+  const handleTriggerOutsideForList = useCallback(
     (event) => {
       if(isOpen){
         if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
@@ -151,6 +151,16 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         }
       }
     },[containerRef.current,isOpen]);
+  
+  const handleTriggerOutsideForInput = useCallback(
+    (event) => {
+        if (containerRef?.current && !containerRef?.current?.contains(event.target)) {
+          setIsOpen(false);
+          const currentItem = searchItem(selectedKey,originComboBoxGroups);
+          handleFilter(currentItem.label);
+          setInputValue(currentItem.label??''); 
+        }
+    },[containerRef.current,selectedKey,originComboBoxGroups,handleFilter,searchItem]);
 
   const handleItemFocusChange = useCallback(
     (event) => {
@@ -183,7 +193,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         }
       }
   
-      if (!isOpen && event.code === EVENT.KEY.KEYCODE.ENTER || event.code === EVENT.KEY.KEYCODE.ARROWDOWN || event.code === EVENT.KEY.KEYCODE.ARROWUP) {
+      if (!isOpen && event.code === EVENT.KEY.KEYCODE.ENTER || event.code === EVENT.KEY.KEYCODE.ARROW_DOWN || event.code === EVENT.KEY.KEYCODE.ARROW_UP) {
         setShouldFocusItem(true);
         setIsOpen(true);
       }
@@ -283,11 +293,18 @@ const ComboBox: React.FC<Props> = (props: Props) => {
   },[inputRef.current,handleInputFocus]);
 
   useEffect(()=>{
-    document.addEventListener('mousedown', handleTriggerOutside);
+    document.addEventListener('mousedown', handleTriggerOutsideForList);
     return()=>{
-      document.removeEventListener('mousedown', handleTriggerOutside);
+      document.removeEventListener('mousedown', handleTriggerOutsideForList);
     };
-  },[handleTriggerOutside]);
+  },[handleTriggerOutsideForList]);
+
+  useEffect(()=>{
+    document.addEventListener('mousedown', handleTriggerOutsideForInput);
+    return()=>{
+      document.removeEventListener('mousedown', handleTriggerOutsideForInput);
+    };
+  },[handleTriggerOutsideForInput]);
 
   useEffect(()=>{
     window.addEventListener('mousewheel',handlePreventScroll,{ passive: false });

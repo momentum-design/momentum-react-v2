@@ -4,7 +4,7 @@ const DEFAULTS = {
   WIDTH:'16.25rem',
   PLACEHOLDER:'',
   NO_RESULT_TEXT:'No results found',
-  SHOULDFILTERONARROWBUTTON:true,
+  SHOULD_FILTER_ON_ARROW_BUTTON:true,
   ERROR:false,
   SELECTEDKEY:'',
   DISABLEDKEYS:[],
@@ -31,8 +31,7 @@ const KEYS = {
 
 const ELEMENT = {
   PROPS: {
-    SELECTIONCONTAINERMAXHEIGHT:244,
-    INPUTHEIGTH:32,
+    SELECTION_CONTAINER_MAX_HEIGHT:244,
   },
 };
 
@@ -42,8 +41,8 @@ const EVENT = {
       ESCAPE: 'Escape',
       ENTER: 'Enter',
       TAB: 'Tab',
-      ARROWDOWN: 'ArrowDown',
-      ARROWUP: 'ArrowUp',
+      ARROW_DOWN: 'ArrowDown',
+      ARROW_UP: 'ArrowUp',
     }
   }
 };

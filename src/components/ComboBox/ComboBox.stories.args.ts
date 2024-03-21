@@ -82,7 +82,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SHOULDFILTERONARROWBUTTON,
+        summary: CONSTANTS.DEFAULTS.SHOULD_FILTER_ON_ARROW_BUTTON,
       },
     },  
   },

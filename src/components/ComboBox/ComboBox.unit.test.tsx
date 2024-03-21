@@ -729,7 +729,38 @@ describe('ComboBox', () => {
         });
       });
 
-      it('reset inputValue, when focus shifts from inside the component to outside', async () => {
+      it('reset inputValue, when mousedown outside the component', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <ComboBox  selectedKey='key1' comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <button>button-outside</button>
+          </>
+        );
+        const input = screen.getByLabelText('md-combo-box-input');
+
+
+        await waitFor(() => {
+          expect(input).toHaveProperty('value','item1');
+        });
+        act(()=>{
+          input.focus();
+        });
+        await user.keyboard('{1}');
+        await waitFor(() => {
+          expect(input).toHaveProperty('value','item11');
+        });
+
+        const button = screen.getByRole('button', { name: 'button-outside' });
+        await user.click(button);
+
+        await waitFor(() => {
+          expect(input).toHaveProperty('value','item1');
+        });
+      });
+
+      it('filter list when the input is focused', async () => {
         const user = userEvent.setup();
 
         render(
