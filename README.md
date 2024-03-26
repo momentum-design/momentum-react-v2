@@ -50,7 +50,6 @@ the most up-to-date changes.
   Testing
 - [storybook](https://github.com/storybookjs/storybook) /
   [webpack](https://github.com/webpack/webpack) - Documentation
-- [percy](https://percy.io/) / [cypress](https://github.com/cypress-io/cypress) - Visual Testing
 
 
 ## Copyright

@@ -30,7 +30,7 @@ module.exports = {
     'plugin:storybook/recommended',
     'prettier',
   ],
-  plugins: ['react', 'jsx-a11y', 'cypress', '@typescript-eslint'],
+  plugins: ['react', 'jsx-a11y', '@typescript-eslint'],
   ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -43,7 +43,6 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
-    'cypress/globals': true,
     node: true,
     jquery: true,
     jest: true,
