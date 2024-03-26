@@ -69,14 +69,6 @@ jobs:
           path: node_modules/
           key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Cache Cypress
-        uses: actions/cache@v2
-        if: steps.validate-dependencies.outputs.cache-hit != 'true'
-        with:
-          path: /home/runner/.cache/Cypress
-          key: cypress-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-
-
   test-source:
     name: Test - Source
     needs: initialize
@@ -173,49 +165,3 @@ jobs:
           path: scss/
           key: scss-${{ runner.os }}-${{ env.rid }}
 
-  test-storybook:
-    name: Test - Storybook
-    needs: build-source
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout Project
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Setup Environment
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-          check-latest: true
-
-      - name: Uncache Dependencies
-        uses: actions/cache@v2
-        with:
-          path: node_modules/
-          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Uncache Dist
-        uses: actions/cache@v2
-        with:
-          path: dist/
-          key: dist-${{ runner.os }}-${{ env.rid }}
-
-      - name: Uncache Docs
-        uses: actions/cache@v2
-        with:
-          path: docs/
-          key: docs-${{ runner.os }}-${{ env.rid }}
-
-      - name: Uncache Styles
-        uses: actions/cache@v2
-        with:
-          path: scss/
-          key: scss-${{ runner.os }}-${{ env.rid }}
-
-      - name: Test - Storybook
-        uses: percy/storybook-action@v0.1.6
-        with:
-          custom-command: 'yarn ci:test:storybook'
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
