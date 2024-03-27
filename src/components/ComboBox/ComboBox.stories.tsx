@@ -41,7 +41,7 @@ const ComboBoxWrapper = (props:Props) => {
               {itemsEle}
             </Section>
           ) : (
-            <Section key="noSection">{itemsEle}</Section>
+            <Section key="withoutSection">{itemsEle}</Section>
           );
         }}
       </ComboBox>
