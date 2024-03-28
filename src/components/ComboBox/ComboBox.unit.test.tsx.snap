@@ -37,12 +37,12 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
   label="comboBox_label"
 >
   <div
-    className="md-combobox-label"
+    className="md-combo-box-label"
   >
     comboBox_label
   </div>
   <div
-    className="md-combobox-wrapper"
+    className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
     style={
@@ -52,18 +52,18 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
     }
   >
     <div
-      className="md-combobox-input-section"
+      className="md-combo-box-input-section"
     >
       <TextInput
-        aria-label="md-combobox-input"
+        aria-label="md-combo-box-input"
         autoComplete="off"
-        className="md-combobox-input"
+        className="md-combo-box-input"
         onInput={[Function]}
         placeholder=""
         value=""
       >
         <div
-          className="md-text-input-wrapper md-combobox-input"
+          className="md-text-input-wrapper md-combo-box-input"
           data-focus={false}
           data-level="none"
           onClick={[Function]}
@@ -72,7 +72,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
             className="md-text-input-container"
           >
             <input
-              aria-label="md-combobox-input"
+              aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
               id="test-ID"
@@ -89,15 +89,15 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
         </div>
       </TextInput>
       <div
-        className="md-combobox-divider"
+        className="md-combo-box-divider"
       />
       <ButtonPill
-        className="md-combobox-button"
+        className="md-combo-box-button"
         ghost={true}
         onPress={[Function]}
       >
         <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
+          className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -114,7 +114,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
+                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={true}
@@ -140,13 +140,13 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                 type="button"
               >
                 <Icon
-                  className="md-combobox-arrow-icon"
+                  className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrow-icon md-icon-no-shrink"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
                   >
                     <svg
                       className=""
@@ -208,7 +208,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
   }
 >
   <div
-    className="example-class md-combobox-wrapper"
+    className="example-class md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
     style={
@@ -218,18 +218,18 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
     }
   >
     <div
-      className="md-combobox-input-section"
+      className="md-combo-box-input-section"
     >
       <TextInput
-        aria-label="md-combobox-input"
+        aria-label="md-combo-box-input"
         autoComplete="off"
-        className="md-combobox-input"
+        className="md-combo-box-input"
         onInput={[Function]}
         placeholder=""
         value=""
       >
         <div
-          className="md-text-input-wrapper md-combobox-input"
+          className="md-text-input-wrapper md-combo-box-input"
           data-focus={false}
           data-level="none"
           onClick={[Function]}
@@ -238,7 +238,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
             className="md-text-input-container"
           >
             <input
-              aria-label="md-combobox-input"
+              aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
               id="test-ID"
@@ -255,15 +255,15 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
         </div>
       </TextInput>
       <div
-        className="md-combobox-divider"
+        className="md-combo-box-divider"
       />
       <ButtonPill
-        className="md-combobox-button"
+        className="md-combo-box-button"
         ghost={true}
         onPress={[Function]}
       >
         <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
+          className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -280,7 +280,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
+                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={true}
@@ -306,13 +306,13 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                 type="button"
               >
                 <Icon
-                  className="md-combobox-arrow-icon"
+                  className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrow-icon md-icon-no-shrink"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
                   >
                     <svg
                       className=""
@@ -374,7 +374,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
   noResultText="No result"
 >
   <div
-    className="md-combobox-wrapper"
+    className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
     style={
@@ -384,18 +384,18 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
     }
   >
     <div
-      className="md-combobox-input-section"
+      className="md-combo-box-input-section"
     >
       <TextInput
-        aria-label="md-combobox-input"
+        aria-label="md-combo-box-input"
         autoComplete="off"
-        className="md-combobox-input"
+        className="md-combo-box-input"
         onInput={[Function]}
         placeholder=""
         value=""
       >
         <div
-          className="md-text-input-wrapper md-combobox-input"
+          className="md-text-input-wrapper md-combo-box-input"
           data-focus={false}
           data-level="none"
           onClick={[Function]}
@@ -404,7 +404,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
             className="md-text-input-container"
           >
             <input
-              aria-label="md-combobox-input"
+              aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
               id="test-ID"
@@ -421,15 +421,15 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
         </div>
       </TextInput>
       <div
-        className="md-combobox-divider"
+        className="md-combo-box-divider"
       />
       <ButtonPill
-        className="md-combobox-button"
+        className="md-combo-box-button"
         ghost={true}
         onPress={[Function]}
       >
         <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
+          className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -446,7 +446,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
+                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={true}
@@ -472,13 +472,13 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
                 type="button"
               >
                 <Icon
-                  className="md-combobox-arrow-icon"
+                  className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrow-icon md-icon-no-shrink"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
                   >
                     <svg
                       className=""
@@ -540,7 +540,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
   placeholder="ComboBox"
 >
   <div
-    className="md-combobox-wrapper"
+    className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
     style={
@@ -550,18 +550,18 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
     }
   >
     <div
-      className="md-combobox-input-section"
+      className="md-combo-box-input-section"
     >
       <TextInput
-        aria-label="md-combobox-input"
+        aria-label="md-combo-box-input"
         autoComplete="off"
-        className="md-combobox-input"
+        className="md-combo-box-input"
         onInput={[Function]}
         placeholder="ComboBox"
         value=""
       >
         <div
-          className="md-text-input-wrapper md-combobox-input"
+          className="md-text-input-wrapper md-combo-box-input"
           data-focus={false}
           data-level="none"
           onClick={[Function]}
@@ -570,7 +570,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
             className="md-text-input-container"
           >
             <input
-              aria-label="md-combobox-input"
+              aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
               id="test-ID"
@@ -587,15 +587,15 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
         </div>
       </TextInput>
       <div
-        className="md-combobox-divider"
+        className="md-combo-box-divider"
       />
       <ButtonPill
-        className="md-combobox-button"
+        className="md-combo-box-button"
         ghost={true}
         onPress={[Function]}
       >
         <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
+          className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -612,7 +612,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
+                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={true}
@@ -638,13 +638,13 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                 type="button"
               >
                 <Icon
-                  className="md-combobox-arrow-icon"
+                  className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrow-icon md-icon-no-shrink"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
                   >
                     <svg
                       className=""
@@ -710,7 +710,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
   }
 >
   <div
-    className="md-combobox-wrapper"
+    className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
     style={
@@ -721,18 +721,18 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
     }
   >
     <div
-      className="md-combobox-input-section"
+      className="md-combo-box-input-section"
     >
       <TextInput
-        aria-label="md-combobox-input"
+        aria-label="md-combo-box-input"
         autoComplete="off"
-        className="md-combobox-input"
+        className="md-combo-box-input"
         onInput={[Function]}
         placeholder=""
         value=""
       >
         <div
-          className="md-text-input-wrapper md-combobox-input"
+          className="md-text-input-wrapper md-combo-box-input"
           data-focus={false}
           data-level="none"
           onClick={[Function]}
@@ -741,7 +741,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
             className="md-text-input-container"
           >
             <input
-              aria-label="md-combobox-input"
+              aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
               id="test-ID"
@@ -758,15 +758,15 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
         </div>
       </TextInput>
       <div
-        className="md-combobox-divider"
+        className="md-combo-box-divider"
       />
       <ButtonPill
-        className="md-combobox-button"
+        className="md-combo-box-button"
         ghost={true}
         onPress={[Function]}
       >
         <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
+          className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -783,7 +783,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
+                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={true}
@@ -809,13 +809,13 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                 type="button"
               >
                 <Icon
-                  className="md-combobox-arrow-icon"
+                  className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrow-icon md-icon-no-shrink"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
                   >
                     <svg
                       className=""
@@ -877,7 +877,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
   width="16rem"
 >
   <div
-    className="md-combobox-wrapper"
+    className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
     style={
@@ -887,18 +887,18 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
     }
   >
     <div
-      className="md-combobox-input-section"
+      className="md-combo-box-input-section"
     >
       <TextInput
-        aria-label="md-combobox-input"
+        aria-label="md-combo-box-input"
         autoComplete="off"
-        className="md-combobox-input"
+        className="md-combo-box-input"
         onInput={[Function]}
         placeholder=""
         value=""
       >
         <div
-          className="md-text-input-wrapper md-combobox-input"
+          className="md-text-input-wrapper md-combo-box-input"
           data-focus={false}
           data-level="none"
           onClick={[Function]}
@@ -907,7 +907,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
             className="md-text-input-container"
           >
             <input
-              aria-label="md-combobox-input"
+              aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
               id="test-ID"
@@ -924,15 +924,15 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
         </div>
       </TextInput>
       <div
-        className="md-combobox-divider"
+        className="md-combo-box-divider"
       />
       <ButtonPill
-        className="md-combobox-button"
+        className="md-combo-box-button"
         ghost={true}
         onPress={[Function]}
       >
         <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
+          className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -949,7 +949,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
+                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={true}
@@ -975,13 +975,13 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
                 type="button"
               >
                 <Icon
-                  className="md-combobox-arrow-icon"
+                  className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrow-icon md-icon-no-shrink"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
                   >
                     <svg
                       className=""
@@ -1056,7 +1056,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
   }
 >
   <div
-    className="md-combobox-wrapper"
+    className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
     style={
@@ -1066,18 +1066,18 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
     }
   >
     <div
-      className="md-combobox-input-section"
+      className="md-combo-box-input-section"
     >
       <TextInput
-        aria-label="md-combobox-input"
+        aria-label="md-combo-box-input"
         autoComplete="off"
-        className="md-combobox-input"
+        className="md-combo-box-input"
         onInput={[Function]}
         placeholder=""
         value=""
       >
         <div
-          className="md-text-input-wrapper md-combobox-input"
+          className="md-text-input-wrapper md-combo-box-input"
           data-focus={false}
           data-level="none"
           onClick={[Function]}
@@ -1086,7 +1086,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
             className="md-text-input-container"
           >
             <input
-              aria-label="md-combobox-input"
+              aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
               id="test-ID"
@@ -1103,15 +1103,15 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
         </div>
       </TextInput>
       <div
-        className="md-combobox-divider"
+        className="md-combo-box-divider"
       />
       <ButtonPill
-        className="md-combobox-button"
+        className="md-combo-box-button"
         ghost={true}
         onPress={[Function]}
       >
         <ButtonSimple
-          className="md-button-pill-wrapper md-combobox-button"
+          className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
@@ -1128,7 +1128,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
-                className="md-button-pill-wrapper md-combobox-button md-button-simple-wrapper"
+                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
                 data-color="primary"
                 data-disabled={false}
                 data-ghost={true}
@@ -1154,13 +1154,13 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                 type="button"
               >
                 <Icon
-                  className="md-combobox-arrow-icon"
+                  className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
                   weight="filled"
                 >
                   <div
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combobox-arrow-icon md-icon-no-shrink"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
                   >
                     <svg
                       className=""

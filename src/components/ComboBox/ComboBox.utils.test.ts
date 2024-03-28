@@ -1,4 +1,4 @@
-import { handleFilter, searchItem } from './ComboBox.utils';
+import { handleFilter, searchItem, getSumScrollTop } from './ComboBox.utils';
 
 describe('ComboBox utils', () => {
     describe('handleFilter', () => {
@@ -111,5 +111,39 @@ describe('ComboBox utils', () => {
             expect(searchItem('key1',comboBoxGroupsWithoutSection)).toEqual({key:undefined,label:undefined});
         });
     });
-});
 
+    describe('getSumScrollTop', () => {
+        
+        const sampleElement1 = {
+            scrollTop:0,
+        };
+
+        const sampleElement2 = {
+            scrollTop:NaN,
+            parentElement:sampleElement1,
+        };
+
+        const sampleElement3 = {
+            scrollTop:18.5,
+            parentElement:sampleElement2,
+        };
+
+        const sampleElement4 = {
+            scrollTop:10.5,
+            parentElement:sampleElement3,
+        };
+
+        it.each`
+        element             | expectedSum              
+        ${sampleElement1}   | ${0}            
+        ${sampleElement2}   | ${0}             
+        ${sampleElement3}   | ${0} 
+        ${sampleElement4}   | ${18.5} 
+        `(
+            'correctly returns $expectedSum for $element',
+            ({element,expectedSum}) => {
+                expect(getSumScrollTop(element)).toEqual(expectedSum);
+            }
+        );
+    });
+});

@@ -1,10 +1,10 @@
-const CLASS_PREFIX = 'md-combobox';
+const CLASS_PREFIX = 'md-combo-box';
 
 const DEFAULTS = {
   WIDTH:'16.25rem',
   PLACEHOLDER:'',
   NO_RESULT_TEXT:'No results found',
-  SHOULDFILTERONARROWBUTTON:true,
+  SHOULD_FILTER_ON_ARROW_BUTTON:true,
   ERROR:false,
   SELECTEDKEY:'',
   DISABLEDKEYS:[],
@@ -29,7 +29,22 @@ const KEYS = {
   INPUT_SEARCH_NO_RESULT: 'input_search_no_result',
 };
 
-export{STYLE,DEFAULTS,KEYS};
+const ELEMENT = {
+  PROPS: {
+    SELECTION_CONTAINER_MAX_HEIGHT:244,
+  },
+};
 
+const EVENT = {
+  KEY:{
+    KEYCODE:{
+      ESCAPE: 'Escape',
+      ENTER: 'Enter',
+      TAB: 'Tab',
+      ARROW_DOWN: 'ArrowDown',
+      ARROW_UP: 'ArrowUp',
+    }
+  }
+};
 
-
+export{STYLE,DEFAULTS,KEYS,ELEMENT,EVENT};
