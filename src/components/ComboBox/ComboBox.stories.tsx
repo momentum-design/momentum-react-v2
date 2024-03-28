@@ -1,6 +1,4 @@
-/* eslint-disable react/display-name */
-/* eslint-disable @typescript-eslint/ban-types */
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Item, Section } from '@react-stately/collections';
 import ComboBox from '.';
 
@@ -43,7 +41,7 @@ const ComboBoxWrapper = (props:Props) => {
               {itemsEle}
             </Section>
           ) : (
-            <Section key="noSection">{itemsEle}</Section>
+            <Section key="withoutSection">{itemsEle}</Section>
           );
         }}
       </ComboBox>
@@ -112,8 +110,8 @@ Sections.argTypes = { ...argTypes };
 const InListItemTemplate = (props:Props) => {
   return (
     <OverlayAlert>
-      <div style={{ overflowY: 'scroll' }}>
-        <ComboBoxWrapper {...props} />
+      <div style={{ overflowY: 'scroll', height:'100px'}}>
+          <ComboBoxWrapper {...props} />
       </div>
     </OverlayAlert>
   );
@@ -143,10 +141,69 @@ const MultipleComboBoxTemplate = (props:Props) => {
 const MultipleComboBox = Template(MultipleComboBoxTemplate).bind({});
 
 MultipleComboBox.args = {
-  comboBoxGroups: withSection,
+  comboBoxGroups:withSection,
   label:'MultipleComboBox',
 };
 
 MultipleComboBox.argTypes = { ...argTypes };
 
-export { Example, Sections, InListItem, MultipleComboBox };
+const DynamicDataTemplate = (props:Props) => {
+  const mockDynamicData = [{section:'section1',items:[{key:'key-1',label:'label-1'}]},{section:'section2',items:[{key:'key-2',label:'label-2'}]}];
+  const [dynamicData,setDynamicData] = useState(mockDynamicData);
+  const [dynamicDataLength,setDynamicDataLength] = useState<number>(0);
+  const [comboBoxGroups,setComboBoxGroups] = useState<IComboBoxGroup[]>(dynamicData);
+  const [isListOpen,setIsListOpen] = useState<boolean>(false);
+
+  useEffect(()=>{
+    const timer = setInterval(()=>{
+      const randomText = Math.random().toString(36).substr(2, 10);
+      mockDynamicData[Math.round(Math.random())].items.push({key:'key-'+randomText,label:'label-'+randomText});
+      setDynamicData(JSON.parse(JSON.stringify(mockDynamicData)));
+    },2000);
+    return ()=>{
+      clearInterval(timer);
+    };
+  },[]);
+
+  useEffect(()=>{
+    const length = dynamicData.reduce((total, current) => {
+      return total + current.items.length;
+    }, 0);
+    setDynamicDataLength(length);
+  },[dynamicData]);
+
+  const openStateChange = useCallback((isOpen)=>{
+    setIsListOpen(isOpen);
+  },[]);
+
+  const onInputChange = useCallback(()=>{
+    setComboBoxGroups(dynamicData);
+  },[dynamicData]);
+
+  useEffect(()=>{
+    if(!isListOpen){
+      setComboBoxGroups(dynamicData);
+    }
+  },[isListOpen,dynamicData]);
+
+  return (
+    <>
+      <div style={{margin:'20px 12px'}}>DynamicDataLength:{dynamicDataLength}</div>
+      <div style={{margin:'20px 12px'}}>For dynamic data, it is relatively controllable to not re-render when the list is opened, and to re-render when input changes.</div>
+      <ComboBoxWrapper {...props} comboBoxGroups={comboBoxGroups} openStateChange={openStateChange} onInputChange={onInputChange}/>
+      <ComboBoxWrapper {...props} comboBoxGroups={comboBoxGroups} openStateChange={openStateChange} onInputChange={onInputChange}/>
+      <ComboBoxWrapper {...props} comboBoxGroups={comboBoxGroups} openStateChange={openStateChange} onInputChange={onInputChange}/>
+    </>
+  );
+};
+
+const DynamicData = Template(DynamicDataTemplate).bind({});
+
+DynamicData.args = {
+  label:'DynamicData',
+};
+
+DynamicData.argTypes = { ...argTypes };
+
+
+export { Example, Sections, InListItem, MultipleComboBox, DynamicData };

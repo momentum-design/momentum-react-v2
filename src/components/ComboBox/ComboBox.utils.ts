@@ -24,3 +24,15 @@ export const searchItem = (key: string,originComboBoxGroups:IComboBoxGroup[]) : 
     });
     return target ?? {key:undefined,label:undefined};
 };
+
+export const getSumScrollTop = (element:Element):number => {
+    let sum = 0;
+    while (element) {
+        element = element.parentElement;
+        if (element) {
+            const scrollTop = Number.isNaN(element.scrollTop) ? 0 : element.scrollTop;
+            sum += scrollTop ;
+        }
+    }
+    return sum;
+};
