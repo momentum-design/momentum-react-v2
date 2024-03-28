@@ -5,6 +5,14 @@ The component is composed of three parts: Button, Menu and Input. In the compone
 passed in are filtered based on the value of the Input and then passed to the internal Menu 
 to implement the search function.
 
+
+Tips:
+
+For dynamic data, it is recommended to render in conjunction with the ‘openStateChange’ property. 
+This is because when the list is open, dynamic data can affect the automatic rendering of the list. 
+If not controlled, it may confuse the user. Therefore, it is suggested to perform dynamic rendering only when the list is closed. 
+
+
 ## Content
 
 The ComboBox element follows the
