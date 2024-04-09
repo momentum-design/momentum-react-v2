@@ -39,6 +39,13 @@ export type PopoverCommonStyleProps = {
   showArrow?: boolean;
 
   /**
+   * Whether prevent popover overflow
+   * 
+   * @default true
+   */
+  isPreventOverflow?: boolean;
+
+  /**
    * Delay in ms once a trigger event is fired before the Popover shows or hides.
    *
    * [`showDelay`, `hideDelay`]

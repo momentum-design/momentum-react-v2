@@ -255,6 +255,23 @@ describe('<Popover />', () => {
         expect(container).toMatchSnapshot();
       }
     );
+
+    it('should match snapshot with isPreventOverflow = false', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover triggerComponent={<button>Click Me!</button>} isPreventOverflow={false}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

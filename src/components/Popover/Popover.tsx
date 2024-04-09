@@ -33,6 +33,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     placement = DEFAULTS.PLACEMENT,
     interactive = DEFAULTS.INTERACTIVE,
     showArrow = DEFAULTS.SHOW_ARROW,
+    isPreventOverflow = true,
     offsetDistance = DEFAULTS.OFFSET_DISTANCE,
     offsetSkidding = DEFAULTS.OFFSET_SKIDDING,
     color,
@@ -146,6 +147,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
             name: 'preventOverflow',
             options: {
               padding: 8,
+              enabled: isPreventOverflow,
               altAxis: true,
               boundariesElement: boundary,
             },
