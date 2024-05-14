@@ -179,5 +179,6 @@ export {
   NotificationSystem,
   AriaToolbar,
   Slider as SliderNext,
-  ComboBox as ComboBoxNext
+  ComboBox as ComboBoxNext,
+  AriaGroup,
 } from './components';

@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AriaGroup /> snapshot should match snapshot 1`] = `
+<AriaGroup>
+  <div
+    role="group"
+  />
+</AriaGroup>
+`;
+
+exports[`<AriaGroup /> snapshot should match snapshot with ariaLabel 1`] = `
+<AriaGroup
+  ariaLabel="example aria label"
+>
+  <div
+    aria-label="example aria label"
+    role="group"
+  />
+</AriaGroup>
+`;
+
+exports[`<AriaGroup /> snapshot should match snapshot with ariaLabelledby 1`] = `
+<AriaGroup
+  ariaLabelledby="example aria labelled by"
+>
+  <div
+    aria-labelledby="example aria labelled by"
+    role="group"
+  />
+</AriaGroup>
+`;
+
+exports[`<AriaGroup /> snapshot should match snapshot with children 1`] = `
+<AriaGroup>
+  <div
+    role="group"
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "start",
+          "width": "fit-content",
+        }
+      }
+    >
+      <ButtonSimple>
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                Button 1
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+      <ButtonSimple>
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                Button 2
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+      <ButtonSimple>
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                Button 3
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+    </div>
+  </div>
+</AriaGroup>
+`;
+
+exports[`<AriaGroup /> snapshot should match snapshot with className 1`] = `
+<AriaGroup
+  className="example-class"
+>
+  <div
+    className="example-class"
+    role="group"
+  />
+</AriaGroup>
+`;
