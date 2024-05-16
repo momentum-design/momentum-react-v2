@@ -5,6 +5,7 @@ import { mountAndWait } from '../../../test/utils';
 import Icon from '../Icon';
 import SearchInput, { SEARCH_INPUT_CONSTANTS as CONSTANTS } from '.';
 import { act } from 'react-dom/test-utils';
+import ButtonSimple from '../ButtonSimple';
 
 const testTranslations = {
   empty: 'empty',
@@ -214,6 +215,34 @@ describe('<SearchInput />', () => {
     it('should work with autofocus', async () => {
       // eslint-disable-next-line jsx-a11y/no-autofocus
       await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" />);
+    });
+
+    it('should not render ButtonSimple if there is no value', async () => {
+      const container = await mountAndWait(<SearchInput autoFocus aria-label="search" value="" isDisabled={false} clearButtonAriaLabel="clear search"/>);
+
+      expect(container.find(ButtonSimple).exists()).toBe(false);
+    });
+
+    it('should not render ButtonSimple if isDisabled is false', async () => {
+      const container = await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" isDisabled={true} clearButtonAriaLabel="clear search"/>);
+
+      expect(container.find(ButtonSimple).exists()).toBe(false);
+    });
+
+    it('should render ButtonSimple if there is a value and isDisabled is false', async () => {
+      const container = await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" isDisabled={false} clearButtonAriaLabel="clear search" />);
+
+      expect(container.find(ButtonSimple).exists()).toBe(true);
+
+      expect(container.find(ButtonSimple).props()).toMatchObject({
+        className: 'md-search-input-clear',
+        'aria-label': 'clear search',
+        excludeFromTabOrder: false,
+        preventFocusOnPress: true,
+        onPress: expect.any(Function),
+        onPressStart: expect.any(Function),
+        useNativeKeyDown: true,
+      })
     });
   });
 
