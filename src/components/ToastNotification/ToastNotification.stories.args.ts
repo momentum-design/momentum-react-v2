@@ -13,6 +13,18 @@ const toastNotificationArgTypes = {
       },
     },
   },
+  closeButtonLabel: {
+    description: 'Accessible name of the close button',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { toastNotificationArgTypes };
