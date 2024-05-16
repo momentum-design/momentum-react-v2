@@ -44,4 +44,9 @@ export interface Props {
    * Callback when user clicks on the close button.
    */
   onClose?: (event: PressEvent) => void;
+
+  /**
+   * Close button's aria-label
+   */
+  closeButtonLabel?: string;
 }

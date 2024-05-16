@@ -14,7 +14,8 @@ import Text from '../Text';
  * The ToastNotification component.
  */
 const ToastNotification: FC<Props> = (props: Props) => {
-  const { className, id, style, content, leadingVisual, buttonGroup, onClose } = props;
+  const { className, id, style, content, leadingVisual, buttonGroup, onClose, closeButtonLabel } =
+    props;
 
   return (
     <ModalContainer
@@ -37,7 +38,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
         )}
         {onClose && (
           <div className={classnames(className, STYLE.closeButton)}>
-            <ButtonCircle size={20} ghost onPress={onClose}>
+            <ButtonCircle size={20} ghost onPress={onClose} aria-label={closeButtonLabel}>
               <Icon name="cancel" weight="bold" scale={16} />
             </ButtonCircle>
           </div>
