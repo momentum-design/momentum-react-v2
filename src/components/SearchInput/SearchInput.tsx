@@ -77,6 +77,8 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
           className={STYLE.clear}
           {...clearButtonProps}
           aria-label={clearButtonAriaLabel}
+          excludeFromTabOrder={false}
+          useNativeKeyDown={true}
         >
           <Icon weight="bold" scale={ICON_HEIGHT_MAPPING[height]} name="cancel" />
         </ButtonSimple>

@@ -157,10 +157,11 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
       </div>
       <ButtonSimple
         className="md-search-input-clear"
-        excludeFromTabOrder={true}
+        excludeFromTabOrder={false}
         onPress={[Function]}
         onPressStart={[Function]}
         preventFocusOnPress={true}
+        useNativeKeyDown={true}
       >
         <FocusRing>
           <FocusRing
@@ -173,7 +174,6 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
               onClick={[Function]}
               onDragStart={[Function]}
               onFocus={[Function]}
-              onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onMouseEnter={[Function]}
@@ -183,7 +183,6 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
-              tabIndex={-1}
               type="button"
             >
               <Icon
