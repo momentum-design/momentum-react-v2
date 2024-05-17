@@ -1,6 +1,8 @@
 const CLASS_PREFIX = 'md-toast-notification';
 
-const DEFAULTS = {};
+const DEFAULTS = {
+  CLOSE_BUTTON_LABEL: 'Close notification',
+};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,

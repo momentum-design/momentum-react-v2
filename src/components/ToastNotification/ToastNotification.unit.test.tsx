@@ -169,7 +169,7 @@ describe('<ToastNotification />', () => {
       const button = wrapper.find('.md-toast-notification-close-button button');
 
       expect(element).toBeDefined();
-      expect(button.props()['aria-label']).toBe(undefined);
+      expect(button.props()['aria-label']).toBe(CONSTANTS.DEFAULTS.CLOSE_BUTTON_LABEL);
     });
 
     it('should have label of the close button when both onClose and closeButtonLabel defined', async () => {
