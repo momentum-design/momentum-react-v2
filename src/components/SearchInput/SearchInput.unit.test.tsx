@@ -218,19 +218,19 @@ describe('<SearchInput />', () => {
     });
 
     it('should not render ButtonSimple if there is no value', async () => {
-      const container = await mountAndWait(<SearchInput autoFocus aria-label="search" value="" isDisabled={false} clearButtonAriaLabel="clear search"/>);
+      const container = await mountAndWait(<SearchInput aria-label="search" value="" isDisabled={false} clearButtonAriaLabel="clear search"/>);
 
       expect(container.find(ButtonSimple).exists()).toBe(false);
     });
 
     it('should not render ButtonSimple if isDisabled is false', async () => {
-      const container = await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" isDisabled={true} clearButtonAriaLabel="clear search"/>);
+      const container = await mountAndWait(<SearchInput aria-label="search" value="test" isDisabled={true} clearButtonAriaLabel="clear search"/>);
 
       expect(container.find(ButtonSimple).exists()).toBe(false);
     });
 
     it('should render ButtonSimple if there is a value and isDisabled is false', async () => {
-      const container = await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" isDisabled={false} clearButtonAriaLabel="clear search" />);
+      const container = await mountAndWait(<SearchInput aria-label="search" value="test" isDisabled={false} clearButtonAriaLabel="clear search" />);
 
       expect(container.find(ButtonSimple).exists()).toBe(true);
 
