@@ -78,9 +78,16 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * Provides accessibility label when icon is hovered
+   * Provides visible accessibility label when icon is hovered
    */
   title?: string;
+
+  /**
+   * Provides the accessible name of the icon
+   * Only needed if icon has an informative non-redundant meaning.
+   * Reference: https://www.w3.org/WAI/tutorials/images/decision-tree/
+   */
+  ariaLabel?: string;
 
   /**
    * Represents the style of the icon.

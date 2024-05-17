@@ -5,13 +5,43 @@ exports[`<Icon /> snapshot should match snapshot 1`] = `
   name="accessibility"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
       data-test="accessibility"
+      fill="currentColor"
+      height="100%"
+      style={Object {}}
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with ariaLabel 1`] = `
+<Icon
+  ariaLabel="This participant is muted"
+  name="draft-indicator-bold"
+>
+  <div
+    aria-hidden="false"
+    aria-label="This participant is muted"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      className=""
+      data-autoscale={false}
+      data-scale={32}
+      data-test="draft-indicator-bold"
       fill="currentColor"
       height="100%"
       style={Object {}}
@@ -28,9 +58,12 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to 'true' 1`
   name="accessibility"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={true}
       data-scale={false}
@@ -51,9 +84,12 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to a percent
   name="accessibility"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={150}
       data-scale={false}
@@ -74,9 +110,12 @@ exports[`<Icon /> snapshot should match snapshot with className 1`] = `
   name="accessibility"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales example-class"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
@@ -97,9 +136,12 @@ exports[`<Icon /> snapshot should match snapshot with color 1`] = `
   name="accessibility"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
@@ -124,9 +166,12 @@ exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
   name="accessibility"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
@@ -150,10 +195,13 @@ exports[`<Icon /> snapshot should match snapshot with id 1`] = `
   name="accessibility"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
     id="example-id"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
@@ -192,9 +240,12 @@ exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
   scale={16}
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={16}
@@ -215,9 +266,12 @@ exports[`<Icon /> snapshot should match snapshot with small icons 1`] = `
   scale={14}
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={14}
@@ -238,9 +292,12 @@ exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
   strokeColor="red"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
@@ -269,7 +326,9 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
     style={
       Object {
         "color": "pink",
@@ -277,6 +336,7 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
     }
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
@@ -297,10 +357,14 @@ exports[`<Icon /> snapshot should match snapshot with title 1`] = `
   title="You have a draft message"
 >
   <div
+    aria-hidden="false"
+    aria-label="You have a draft message"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
     title="You have a draft message"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
@@ -321,9 +385,12 @@ exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
   weight="light"
 >
   <div
+    aria-hidden="true"
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
   >
     <svg
+      aria-hidden="true"
       className=""
       data-autoscale={false}
       data-scale={32}
