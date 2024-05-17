@@ -29,4 +29,8 @@ export interface Props {
    * disabled: whether code input is disabled
    */
   disabled?: boolean;
+  /**
+   * visibleLabelId: the name field to be passed through to the input
+   */
+  visibleLabelId?: string;
 }

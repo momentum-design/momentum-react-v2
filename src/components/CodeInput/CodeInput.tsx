@@ -20,6 +20,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
     messageArr = [],
     disabled = false,
     className,
+    visibleLabelId,
   } = props;
 
   const [internalMessageArray, setInternalMessageArray] = useState(messageArr);
@@ -48,7 +49,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   return (
     <div className={classnames(STYLE.wrapper, className)} data-level={messageType}>
       <VerificationInput
-        inputProps={{ 'aria-label': ariaLabel, disabled }}
+        inputProps={{ 'aria-label': ariaLabel, name: visibleLabelId, disabled }}
         length={numDigits}
         onChange={setValue}
         onFocus={() => {
