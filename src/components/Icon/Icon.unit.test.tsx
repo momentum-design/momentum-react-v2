@@ -56,6 +56,16 @@ describe('<Icon />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with ariaLabel', async () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'This participant is muted';
+
+      container = await mountAndWait(<Icon name="draft-indicator-bold" ariaLabel={ariaLabel} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with scale', async () => {
       expect.assertions(1);
 
@@ -190,6 +200,20 @@ describe('<Icon />', () => {
       expect(element.getAttribute('title')).toBe(title);
     });
 
+    it('should have ariaLabel when ariaLabel is provided', async () => {
+      expect.assertions(2);
+
+      const ariaLabel = 'This participant is muted';
+
+      const wrapper = await mountAndWait(
+        <Icon name="draft-indicator-bold" ariaLabel={ariaLabel} />
+      );
+      const element = wrapper.find(Icon).getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+      expect(element.getAttribute('aria-hidden')).toBe('false');
+    });
+
     it('should pass scale prop', async () => {
       const scale = 16;
 
@@ -204,6 +228,50 @@ describe('<Icon />', () => {
         'md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink'
       );
     });
+
+    it.each([
+      {
+        title: 'fake title',
+        ariaLabel: 'fake aria label',
+        expectedAriaLabel: 'fake aria label',
+        expectedAriaHidden: 'false',
+      },
+      {
+        title: 'fake title',
+        ariaLabel: undefined,
+        expectedAriaLabel: 'fake title',
+        expectedAriaHidden: 'false',
+      },
+      {
+        title: undefined,
+        ariaLabel: 'fake aria label',
+        expectedAriaLabel: 'fake aria label',
+        expectedAriaHidden: 'false',
+      },
+      {
+        title: undefined,
+        ariaLabel: undefined,
+        expectedAriaLabel: undefined,
+        expectedAriaHidden: 'true',
+      },
+    ])(
+      'should pass title and ariaLabel prop when %s',
+      async ({ title, ariaLabel, expectedAriaHidden, expectedAriaLabel }) => {
+        const wrapper = await mountAndWait(
+          <Icon name={'accessibility'} title={title} id={'fake-id'} ariaLabel={ariaLabel} />
+        );
+        const icon = wrapper.find('svg').getDOMNode();
+        const div = wrapper.find('div').filter({ id: 'fake-id' });
+
+        expect(div.props().className).toBe('md-icon-wrapper md-icon-auto-scales md-icon-scales');
+        expect(div.props().title).toBe(title);
+        expect(div.props().role).toBe('img');
+        expect(div.props()['aria-label']).toBe(expectedAriaLabel);
+        expect(div.props()['aria-hidden']).toBe(expectedAriaHidden);
+
+        expect(icon.getAttribute('aria-hidden')).toBe('true');
+      }
+    );
 
     it('should pass autoScale prop and disable scale prop', async () => {
       const autoScale = true;

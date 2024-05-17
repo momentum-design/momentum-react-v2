@@ -30,6 +30,7 @@ const Icon: React.FC<Props> = (props: Props) => {
     title,
     weight,
     weightless = DEFAULTS.WEIGHTLESS,
+    ariaLabel,
     ...otherProps
   } = props;
   const resolvedSVGName = getResolvedSVGName(name, weight, weightless);
@@ -80,6 +81,8 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   const { inheritedColors, styleColors } = getColors();
 
+  const accessibleName = ariaLabel || title;
+
   if (SvgIcon) {
     return (
       <div
@@ -89,11 +92,15 @@ const Icon: React.FC<Props> = (props: Props) => {
         id={id}
         style={style}
         title={title}
+        role="img"
+        aria-label={accessibleName}
+        aria-hidden={accessibleName ? 'false' : 'true'}
       >
         <SvgIcon
           // coloured class is added to avoid theming the fixed colours inside coloured icons
           data-test={name}
           className={classnames({ [STYLE.coloured]: isColoredIcon })}
+          aria-hidden="true"
           style={{ ...styleColors }}
           {...inheritedColors}
           viewBox={

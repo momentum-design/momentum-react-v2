@@ -111,4 +111,31 @@ export default {
       },
     },
   },
+  title: {
+    defaultValue: '',
+    description: 'Visible accessibility label when icon is hovered',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
+  ariaLabel: {
+    defaultValue: '',
+    description:
+      'Accessible name of the icon for screen reader in case icon is informative (not decorative)',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
 };
