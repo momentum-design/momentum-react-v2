@@ -22,9 +22,12 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
           weight="light"
         >
           <div
+            aria-hidden="true"
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-global-search-input-search md-icon-no-shrink"
+            role="img"
           >
             <svg
+              aria-hidden="true"
               className=""
               data-autoscale={false}
               data-scale={18}
@@ -114,9 +117,12 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
           weight="light"
         >
           <div
+            aria-hidden="true"
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-global-search-input-search md-icon-no-shrink"
+            role="img"
           >
             <svg
+              aria-hidden="true"
               className=""
               data-autoscale={false}
               data-scale={18}
@@ -203,9 +209,12 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
                 scale={18}
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={18}
@@ -250,9 +259,12 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
           weight="light"
         >
           <div
+            aria-hidden="true"
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-global-search-input-search md-icon-no-shrink"
+            role="img"
           >
             <svg
+              aria-hidden="true"
               className=""
               data-autoscale={false}
               data-scale={18}
@@ -314,9 +326,12 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
           weight="light"
         >
           <div
+            aria-hidden="true"
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-global-search-input-search md-icon-no-shrink"
+            role="img"
           >
             <svg
+              aria-hidden="true"
               className=""
               data-autoscale={false}
               data-scale={18}
@@ -379,9 +394,12 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
           weight="light"
         >
           <div
+            aria-hidden="true"
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-global-search-input-search md-icon-no-shrink"
+            role="img"
           >
             <svg
+              aria-hidden="true"
               className=""
               data-autoscale={false}
               data-scale={18}
@@ -452,9 +470,12 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
           weight="light"
         >
           <div
+            aria-hidden="true"
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-global-search-input-search md-icon-no-shrink"
+            role="img"
           >
             <svg
+              aria-hidden="true"
               className=""
               data-autoscale={false}
               data-scale={18}

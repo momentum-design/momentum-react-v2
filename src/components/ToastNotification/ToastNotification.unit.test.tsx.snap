@@ -309,9 +309,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={24}
@@ -470,9 +473,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={false}
                           data-scale={16}

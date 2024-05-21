@@ -42,9 +42,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -79,9 +82,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -154,9 +160,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -190,9 +199,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -265,9 +277,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -302,9 +317,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -377,9 +395,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -414,9 +435,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -489,9 +513,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -526,9 +553,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -601,9 +631,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -638,9 +671,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -713,9 +749,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -750,9 +789,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -821,9 +863,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -858,9 +903,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -926,9 +974,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -963,9 +1014,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -1042,9 +1096,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -1079,9 +1136,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -1154,9 +1214,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -1191,9 +1254,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -1266,9 +1332,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -1303,9 +1372,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -1378,9 +1450,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -1415,9 +1490,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -1490,9 +1568,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -1527,9 +1608,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"
@@ -1602,9 +1686,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                     class="md-toast-notification-leading-visual"
                   >
                     <div
+                      aria-hidden="true"
                       class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         class=""
                         data-autoscale="false"
                         data-scale="24"
@@ -1639,9 +1726,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                       type="button"
                     >
                       <div
+                        aria-hidden="true"
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           class=""
                           data-autoscale="false"
                           data-scale="16"

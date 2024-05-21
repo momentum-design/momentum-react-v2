@@ -204,9 +204,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                         weight="filled"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={false}
                             data-scale={14}
@@ -535,9 +538,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                           weight="bold"
                         >
                           <div
+                            aria-hidden="true"
                             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
                           >
                             <svg
+                              aria-hidden="true"
                               className=""
                               data-autoscale={false}
                               data-scale={16}
@@ -726,9 +732,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                           weight="bold"
                         >
                           <div
+                            aria-hidden="true"
                             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
                           >
                             <svg
+                              aria-hidden="true"
                               className=""
                               data-autoscale={false}
                               data-scale={16}
@@ -920,9 +929,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                           weight="bold"
                         >
                           <div
+                            aria-hidden="true"
                             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
                           >
                             <svg
+                              aria-hidden="true"
                               className=""
                               data-autoscale={false}
                               data-scale={16}
@@ -1270,9 +1282,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={16}
@@ -1408,9 +1423,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={16}
@@ -1546,9 +1564,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={16}
@@ -1684,9 +1705,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={16}

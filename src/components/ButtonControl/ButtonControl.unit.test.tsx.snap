@@ -36,9 +36,12 @@ exports[`<ButtonControl /> snapshot should match snapshot 1`] = `
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={true}
                 data-scale={false}
@@ -95,9 +98,12 @@ exports[`<ButtonControl /> snapshot should match snapshot with className 1`] = `
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={true}
                 data-scale={false}
@@ -156,9 +162,12 @@ exports[`<ButtonControl /> snapshot should match snapshot with id 1`] = `
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={true}
                 data-scale={false}
@@ -217,9 +226,12 @@ exports[`<ButtonControl /> snapshot should match snapshot with isCircular 1`] = 
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={true}
                 data-scale={false}
@@ -283,9 +295,12 @@ exports[`<ButtonControl /> snapshot should match snapshot with isDisabled 1`] = 
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={true}
                 data-scale={false}
@@ -356,9 +371,12 @@ exports[`<ButtonControl /> snapshot should match snapshot with style 1`] = `
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={true}
                 data-scale={false}

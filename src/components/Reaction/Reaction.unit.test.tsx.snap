@@ -467,9 +467,12 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
         weight="regular"
       >
         <div
+          aria-hidden="true"
           className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+          role="img"
         >
           <svg
+            aria-hidden="true"
             className=""
             data-autoscale={false}
             data-scale={16}
@@ -489,9 +492,12 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
         weight="regular"
       >
         <div
+          aria-hidden="true"
           className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
+          role="img"
         >
           <svg
+            aria-hidden="true"
             className=""
             data-autoscale={false}
             data-scale={16}

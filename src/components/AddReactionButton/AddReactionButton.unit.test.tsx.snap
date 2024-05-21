@@ -53,9 +53,12 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
               scale={12}
             >
               <div
+                aria-hidden="true"
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                role="img"
               >
                 <svg
+                  aria-hidden="true"
                   className=""
                   data-autoscale={false}
                   data-scale={12}
@@ -131,9 +134,12 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
               scale={12}
             >
               <div
+                aria-hidden="true"
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                role="img"
               >
                 <svg
+                  aria-hidden="true"
                   className=""
                   data-autoscale={false}
                   data-scale={12}
@@ -212,9 +218,12 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
               scale={12}
             >
               <div
+                aria-hidden="true"
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                role="img"
               >
                 <svg
+                  aria-hidden="true"
                   className=""
                   data-autoscale={false}
                   data-scale={12}
@@ -309,9 +318,12 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
               scale={12}
             >
               <div
+                aria-hidden="true"
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                role="img"
               >
                 <svg
+                  aria-hidden="true"
                   className=""
                   data-autoscale={false}
                   data-scale={12}
