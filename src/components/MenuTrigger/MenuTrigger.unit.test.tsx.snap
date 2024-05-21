@@ -48,6 +48,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -97,6 +98,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -151,6 +153,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -195,7 +198,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -204,7 +207,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -227,7 +230,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -269,6 +272,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -276,6 +281,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
+                  role="dialog"
                 >
                   <span
                     data-focus-scope-start="true"
@@ -444,6 +450,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -455,6 +462,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               showArrow={false}
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="primary"
@@ -463,6 +472,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 data-placement="bottom-start"
                 data-round={75}
                 onKeyDown={[Function]}
+                role="dialog"
               >
                 <FocusScope
                   contain={true}
@@ -2290,6 +2300,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -2339,6 +2350,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -2393,6 +2405,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -2437,7 +2450,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -2446,7 +2459,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -2469,7 +2482,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -2511,6 +2524,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="example-class md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -2518,6 +2533,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
+                  role="dialog"
                 >
                   <span
                     data-focus-scope-start="true"
@@ -2686,6 +2702,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="example-class md-menu-trigger-wrapper"
               color="primary"
@@ -2697,6 +2714,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               showArrow={false}
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="example-class md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="primary"
@@ -2705,6 +2724,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 data-placement="bottom-start"
                 data-round={75}
                 onKeyDown={[Function]}
+                role="dialog"
               >
                 <FocusScope
                   contain={true}
@@ -4532,6 +4552,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -4581,6 +4602,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -4635,6 +4657,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -4679,7 +4702,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -4688,7 +4711,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -4711,7 +4734,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -4753,6 +4776,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="secondary"
@@ -4760,6 +4785,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
+                  role="dialog"
                 >
                   <span
                     data-focus-scope-start="true"
@@ -4928,6 +4954,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="secondary"
@@ -4939,6 +4966,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               showArrow={false}
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="secondary"
@@ -4947,6 +4976,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 data-placement="bottom-start"
                 data-round={75}
                 onKeyDown={[Function]}
+                role="dialog"
               >
                 <FocusScope
                   contain={true}
@@ -6775,6 +6805,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -6824,6 +6855,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -6878,6 +6910,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -6922,7 +6955,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -6931,7 +6964,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -6954,7 +6987,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -6996,6 +7029,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -7004,6 +7039,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   data-placement="bottom-start"
                   data-round="75"
                   id="example-id"
+                  role="dialog"
                 >
                   <span
                     data-focus-scope-start="true"
@@ -7172,6 +7208,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -7184,6 +7221,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               showArrow={false}
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="primary"
@@ -7193,6 +7232,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 data-round={75}
                 id="example-id"
                 onKeyDown={[Function]}
+                role="dialog"
               >
                 <FocusScope
                   contain={true}
@@ -9020,6 +9060,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="top"
       plugins={
         Array [
@@ -9069,6 +9110,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="top"
         plugins={
           Array [
@@ -9123,6 +9165,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="top"
           plugins={
             Array [
@@ -9167,7 +9210,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -9176,7 +9219,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -9199,7 +9242,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -9241,6 +9284,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -9248,6 +9293,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-padded="true"
                   data-placement="top"
                   data-round="75"
+                  role="dialog"
                 >
                   <span
                     data-focus-scope-start="true"
@@ -9416,6 +9462,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -9427,6 +9474,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               showArrow={false}
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="primary"
@@ -9435,6 +9484,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 data-placement="top"
                 data-round={75}
                 onKeyDown={[Function]}
+                role="dialog"
               >
                 <FocusScope
                   contain={true}
@@ -11262,6 +11312,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -11311,6 +11362,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -11365,6 +11417,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -11409,7 +11462,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -11418,7 +11471,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -11441,7 +11494,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -11483,6 +11536,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -11490,6 +11545,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
+                  role="dialog"
                 >
                   <span
                     data-focus-scope-start="true"
@@ -11688,6 +11744,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -11699,6 +11756,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               showArrow={true}
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="primary"
@@ -11707,6 +11766,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 data-placement="bottom-start"
                 data-round={75}
                 onKeyDown={[Function]}
+                role="dialog"
               >
                 <FocusScope
                   contain={true}
@@ -13577,6 +13637,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -13626,6 +13687,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -13680,6 +13742,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -13724,7 +13787,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -13733,7 +13796,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -13756,7 +13819,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -13798,6 +13861,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -13805,6 +13870,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
+                  role="dialog"
                   style="color: pink;"
                 >
                   <span
@@ -13974,6 +14040,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -13990,6 +14057,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               }
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="primary"
@@ -13998,6 +14067,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 data-placement="bottom-start"
                 data-round={75}
                 onKeyDown={[Function]}
+                role="dialog"
                 style={
                   Object {
                     "color": "pink",
@@ -15830,6 +15900,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
       }
       onClickOutside={[Function]}
       onHide={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -15879,6 +15950,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         }
         onClickOutside={[Function]}
         onHide={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -15933,6 +16005,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           }
           onClickOutside={[Function]}
           onHide={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -15977,7 +16050,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
-            aria-haspopup={true}
+            aria-haspopup="dialog"
             id="test-ID"
             onPress={[Function]}
             onPressStart={[Function]}
@@ -15986,7 +16059,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             <ButtonSimple
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup={true}
+              aria-haspopup="dialog"
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -16009,7 +16082,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   <button
                     aria-controls="test-ID"
                     aria-expanded={true}
-                    aria-haspopup={true}
+                    aria-haspopup="dialog"
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
@@ -16051,6 +16124,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <div
+                  aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -16058,6 +16133,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="50"
+                  role="dialog"
                 >
                   <span
                     data-focus-scope-start="true"
@@ -16226,6 +16302,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             }
           >
             <ModalContainer
+              aria-labelledby="test-ID"
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -16237,6 +16314,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               showArrow={false}
             >
               <div
+                aria-labelledby="test-ID"
+                aria-modal={true}
                 className="md-menu-trigger-wrapper md-modal-container-wrapper"
                 data-arrow-orientation="vertical"
                 data-color="primary"
@@ -16245,6 +16324,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 data-placement="bottom-start"
                 data-round={50}
                 onKeyDown={[Function]}
+                role="dialog"
               >
                 <FocusScope
                   contain={true}

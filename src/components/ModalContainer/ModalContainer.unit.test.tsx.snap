@@ -3,11 +3,29 @@
 exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
 <ModalContainer>
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
+    role="dialog"
+  />
+</ModalContainer>
+`;
+
+exports[`<ModalContainer /> snapshot should match snapshot with aria-modal 1`] = `
+<ModalContainer
+  aria-modal={false}
+>
+  <div
+    aria-modal={false}
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -17,11 +35,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
   showArrow={true}
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
+    role="dialog"
   >
     <div
       className="md-modal-container-arrow-wrapper"
@@ -65,11 +85,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrowId 1`] = `
   arrowId="example-id"
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -77,11 +99,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrowId 1`] = `
 exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
 <ModalContainer>
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
+    role="dialog"
   >
     <div>
       Example Text
@@ -95,11 +119,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with className 1`] = 
   className="example-class"
 >
   <div
+    aria-modal={true}
     className="example-class md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -109,11 +135,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with color 1`] = `
   color="quaternary"
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="quaternary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -123,11 +151,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with elevation 1`] = 
   elevation={8}
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={8}
     data-padded={false}
     data-round={0}
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -137,12 +167,14 @@ exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
   id="example-id"
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
     id="example-id"
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -152,11 +184,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
   isPadded={true}
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={true}
     data-round={0}
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -166,11 +200,29 @@ exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
   round={150}
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={150}
+    role="dialog"
+  />
+</ModalContainer>
+`;
+
+exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
+<ModalContainer
+  role="dialog"
+>
+  <div
+    aria-modal={true}
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-padded={false}
+    data-round={0}
+    role="dialog"
   />
 </ModalContainer>
 `;
@@ -184,11 +236,13 @@ exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
+    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
     data-padded={false}
     data-round={0}
+    role="dialog"
     style={
       Object {
         "color": "pink",

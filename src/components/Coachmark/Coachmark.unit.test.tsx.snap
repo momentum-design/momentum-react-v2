@@ -4,6 +4,8 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
 <div>
   <div
     aria-expanded="true"
+    aria-haspopup="dialog"
+    id="test-ID"
   />
   <div
     data-tippy-root=""
@@ -11,6 +13,8 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
     style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
+      aria-labelledby="test-ID"
+      aria-modal="true"
       class="md-coachmark-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -18,6 +22,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
       data-padded="true"
       data-placement="top"
       data-round="50"
+      role="dialog"
     >
       <div
         class="md-coachmark-container"
@@ -175,6 +180,8 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
 <div>
   <div
     aria-expanded="true"
+    aria-haspopup="dialog"
+    id="test-ID"
   />
   <div
     data-tippy-root=""
@@ -182,6 +189,8 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
     style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
+      aria-labelledby="test-ID"
+      aria-modal="true"
       class="md-coachmark-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -189,6 +198,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
       data-padded="true"
       data-placement="top"
       data-round="50"
+      role="dialog"
     >
       <div
         class="md-coachmark-container"

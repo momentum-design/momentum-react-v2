@@ -43,6 +43,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-alert={true}
       data-color="primary"
@@ -50,6 +51,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
       data-padded={false}
       data-round={75}
       data-shape="square"
+      role="dialog"
     >
       <Avatar
         initials="CW"
@@ -271,11 +273,13 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -339,11 +343,13 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -539,11 +545,13 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="example-class md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -586,11 +594,13 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -635,11 +645,13 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -685,12 +697,14 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
       id="example-id"
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -737,11 +751,13 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Avatar
         initials="CW"
@@ -806,12 +822,14 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-alert={true}
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -855,12 +873,14 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
       data-shape="square"
+      role="dialog"
     >
       <Text
         className="md-banner-title"
@@ -912,11 +932,13 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
     }
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
       style={
         Object {
           "color": "pink",
@@ -964,11 +986,13 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
     round={75}
   >
     <div
+      aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={false}
       data-round={75}
+      role="dialog"
     >
       <Text
         className="md-banner-title"

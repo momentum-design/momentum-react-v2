@@ -18,6 +18,8 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
     isPadded = DEFAULTS.IS_PADDED,
     round = DEFAULTS.ROUND,
     color = DEFAULTS.COLOR,
+    role = DEFAULTS.ROLE,
+    ariaModal = true,
     id,
     className,
     style,
@@ -29,6 +31,8 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   return (
     <div
       ref={ref}
+      role={role}
+      aria-modal={ariaModal}
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}

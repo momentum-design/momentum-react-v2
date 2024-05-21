@@ -34,6 +34,26 @@ describe('<ModalContainer />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with role', () => {
+      expect.assertions(1);
+
+      const role = 'dialog';
+
+      const container = mount(<ModalContainer role={role} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-modal', () => {
+      expect.assertions(1);
+
+      const ariaModal = false;
+
+      const container = mount(<ModalContainer aria-modal={ariaModal} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with style', () => {
       expect.assertions(1);
 

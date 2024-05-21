@@ -39,6 +39,7 @@ const DEFAULTS = {
   ROUND: ROUNDS[0],
   SHOW_ARROW: false,
   PLACEMENT: PLACEMENTS.AUTO as string,
+  ROLE: 'dialog',
 };
 
 const STYLE = {

@@ -29,11 +29,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -142,11 +144,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -254,11 +258,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -367,11 +373,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -480,11 +488,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -593,11 +603,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -706,11 +718,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -815,11 +829,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -921,11 +937,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1038,11 +1056,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1151,11 +1171,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1264,11 +1286,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1377,11 +1401,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1490,11 +1516,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1603,11 +1631,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
           >
             <div>
               <div
+                aria-modal="true"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"

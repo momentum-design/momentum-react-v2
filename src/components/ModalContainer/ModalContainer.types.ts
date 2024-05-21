@@ -70,4 +70,14 @@ export interface Props {
    * Custom id for the arrow.
    */
   arrowId?: string;
+
+  /**
+   * Role for this modal.
+   */
+  role?: string;
+
+  /**
+   * Boolean for aria modal.
+   */
+  ariaModal?: boolean;
 }

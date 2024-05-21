@@ -16,6 +16,7 @@ jest.mock('uuid', () => {
   };
 });
 
+jest.unmock('@react-aria/utils');
 describe('<Popover />', () => {
   /**
    * Opens the popover by clicking on the trigger component, waits until
@@ -259,7 +260,7 @@ describe('<Popover />', () => {
 
   describe('attributes', () => {
     it('should have provided attributes when attributes are provided', async () => {
-      expect.assertions(6);
+      expect.assertions(7);
       const user = userEvent.setup();
 
       const className = 'example-class';
@@ -285,6 +286,99 @@ describe('<Popover />', () => {
       expect(content.parentElement.getAttribute('style')).toBe(styleString);
       expect(content.parentElement.getAttribute('data-color')).toBe(COLORS.TERTIARY);
       expect(content.parentElement.id).toBe(id);
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBeNull();
+    });
+
+    it('has aria-labelledby when interactive is true', async () => {
+      const user = userEvent.setup();
+      const id = 'example-id';
+
+      render(
+        <Popover
+          triggerComponent={<button id={id}>Click Me!</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe(id);
+    });
+
+    it('has aria-labelledby when interactive is true and id is not defined', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Popover
+          triggerComponent={<button>Click Me!</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe('1');
+    });
+
+    it('checks triggerComponent props when non interactive and id is undefined', async () => {
+      render(
+        <Popover
+          triggerComponent={<button>Popover 1</button>}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBeNull();
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+      expect(button1.getAttribute('aria-expanded')).toBe('false');
+    });
+
+    it('checks triggerComponent props when interactive and id is undefined', async () => {
+      render(
+        <Popover
+          triggerComponent={<button>Popover 1</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe('1');
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+      expect(button1.getAttribute('aria-expanded')).toBe('false');
+    });
+
+    it('checks triggerComponent props when interactive and id is defined', async () => {
+      const id = 'example-id';
+      render(
+        <Popover
+          triggerComponent={<button id={id}>Popover 1</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(id);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+      expect(button1.getAttribute('aria-expanded')).toBe('false');
+    });
+
+    
+    it('checks triggerComponent props when non interactive and id is defined', async () => {
+      const id = 'example-id';
+      render(
+        <Popover
+          triggerComponent={<button id={id}>Popover 1</button>}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(id);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+      expect(button1.getAttribute('aria-expanded')).toBe('false');
     });
 
     it('should not add useNativeKeyDown on the DOM button', async () => {
@@ -549,6 +643,7 @@ describe('<Popover />', () => {
         expect(props.onShow).not.toBeCalled();
         expect(props.onShown).not.toBeCalled();
         expect(props.onTrigger).not.toBeCalled();
+        expect(screen.getByRole('button', { name: 'Click Me!' }).getAttribute('aria-expanded')).toBe('false');
 
         // assert no popover on screen
         const contentBeforeClick = screen.queryByText('Content');
@@ -560,6 +655,7 @@ describe('<Popover />', () => {
         expect(props.onMount).toBeCalled();
         expect(props.onShow).toBeCalled();
         expect(props.onTrigger).toBeCalled();
+        expect(screen.getByRole('button', { name: 'Click Me!' }).getAttribute('aria-expanded')).toBe('true');
 
         expect(props.onHide).not.toBeCalled();
         expect(props.onHidden).not.toBeCalled();
@@ -575,6 +671,7 @@ describe('<Popover />', () => {
         expect(props.onHide).toBeCalled();
         expect(props.onHidden).toBeCalled();
         expect(props.onUntrigger).toBeCalled();
+        expect(screen.getByRole('button', { name: 'Click Me!' }).getAttribute('aria-expanded')).toBe('false');
 
         unmount();
 
