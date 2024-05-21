@@ -645,9 +645,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={14}
@@ -758,9 +761,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={14}
@@ -956,9 +962,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={14}
@@ -1069,9 +1078,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
                 weight="filled"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={14}
@@ -1182,9 +1194,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={14}
@@ -1468,9 +1483,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={14}
@@ -1581,9 +1599,12 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={14}

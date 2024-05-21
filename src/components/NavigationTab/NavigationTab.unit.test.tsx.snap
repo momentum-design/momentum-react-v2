@@ -255,9 +255,12 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
                 weight="filled"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={24}
@@ -580,9 +583,12 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                 weight="filled"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={24}
@@ -661,9 +667,12 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                 weight="filled"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={24}

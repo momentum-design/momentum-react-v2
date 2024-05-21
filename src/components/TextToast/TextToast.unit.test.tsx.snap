@@ -64,9 +64,12 @@ exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
       name="noise-removal"
     >
       <div
+        aria-hidden="true"
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+        role="img"
       >
         <svg
+          aria-hidden="true"
           className=""
           data-autoscale={false}
           data-scale={32}

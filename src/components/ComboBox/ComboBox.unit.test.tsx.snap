@@ -146,9 +146,12 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={false}
                       data-scale={12}
@@ -312,9 +315,12 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={false}
                       data-scale={12}
@@ -478,9 +484,12 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={false}
                       data-scale={12}
@@ -644,9 +653,12 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={false}
                       data-scale={12}
@@ -815,9 +827,12 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={false}
                       data-scale={12}
@@ -981,9 +996,12 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={false}
                       data-scale={12}
@@ -1160,9 +1178,12 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={false}
                       data-scale={12}

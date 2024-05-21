@@ -188,9 +188,12 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -247,9 +250,12 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -306,9 +312,12 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -456,9 +465,12 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -836,9 +848,12 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -895,9 +910,12 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -954,9 +972,12 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -1104,9 +1125,12 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -1483,9 +1507,12 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -1542,9 +1569,12 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -1601,9 +1631,12 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -1751,9 +1784,12 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -2086,9 +2122,12 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -2145,9 +2184,12 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -2204,9 +2246,12 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -2355,9 +2400,12 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -2677,9 +2725,12 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -2736,9 +2787,12 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -2795,9 +2849,12 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -2946,9 +3003,12 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -3311,9 +3371,12 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -3370,9 +3433,12 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -3429,9 +3495,12 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -3579,9 +3648,12 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -3959,9 +4031,12 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -4018,9 +4093,12 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -4077,9 +4155,12 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -4227,9 +4308,12 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -4615,9 +4699,12 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -4674,9 +4761,12 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -4733,9 +4823,12 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       weight="bold"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={true}
                           data-scale={false}
@@ -4883,9 +4976,12 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
@@ -5197,9 +5293,12 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     weight="bold"
                   >
                     <div
+                      aria-hidden="true"
                       className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         className=""
                         data-autoscale={true}
                         data-scale={false}
@@ -5253,9 +5352,12 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     weight="bold"
                   >
                     <div
+                      aria-hidden="true"
                       className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         className=""
                         data-autoscale={true}
                         data-scale={false}
@@ -5309,9 +5411,12 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     weight="bold"
                   >
                     <div
+                      aria-hidden="true"
                       className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                      role="img"
                     >
                       <svg
+                        aria-hidden="true"
                         className=""
                         data-autoscale={true}
                         data-scale={false}
@@ -5517,9 +5622,12 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         weight="bold"
                       >
                         <div
+                          aria-hidden="true"
                           className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                          role="img"
                         >
                           <svg
+                            aria-hidden="true"
                             className=""
                             data-autoscale={125}
                             data-scale={false}
