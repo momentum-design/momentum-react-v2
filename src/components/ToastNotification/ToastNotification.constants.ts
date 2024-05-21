@@ -1,7 +1,5 @@
 const CLASS_PREFIX = 'md-toast-notification';
 
-const DEFAULTS = {};
-
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   body: `${CLASS_PREFIX}-body`,
@@ -11,4 +9,4 @@ const STYLE = {
   buttonGroup: `${CLASS_PREFIX}-button-group`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE };
+export { CLASS_PREFIX, STYLE };

@@ -41,7 +41,12 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * Callback when user clicks on the close button.
+   * Callback when user clicks on the close button. If defined, please also pass closeButtonLabel property.
    */
   onClose?: (event: PressEvent) => void;
+
+  /**
+   * Close button's aria-label
+   */
+  closeButtonLabel?: string;
 }

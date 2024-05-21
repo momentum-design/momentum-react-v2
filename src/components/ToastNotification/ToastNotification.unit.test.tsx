@@ -13,6 +13,7 @@ describe('<ToastNotification />', () => {
   let buttonGroup: ReactElement<ButtonPillProps>;
   let onClose;
   const exampleContent = 'Example text';
+  const closeButtonLabel = 'Close toast';
 
   beforeEach(() => {
     leadingVisual = <Icon name="help-circle" scale={24} weight="bold" />;
@@ -65,7 +66,9 @@ describe('<ToastNotification />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<ToastNotification style={style} content={exampleContent} />);
+      const container = await mountAndWait(
+        <ToastNotification style={style} content={exampleContent} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -103,6 +106,20 @@ describe('<ToastNotification />', () => {
 
       const container = await mountAndWait(
         <ToastNotification content={exampleContent} buttonGroup={buttonGroup} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with onClose and closeButtonLabel', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(
+        <ToastNotification
+          content={exampleContent}
+          onClose={onClose}
+          closeButtonLabel={closeButtonLabel}
+        />
       );
 
       expect(container).toMatchSnapshot();
@@ -157,15 +174,30 @@ describe('<ToastNotification />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should wrap the onClose inside when onClose is provided', async () => {
-      expect.assertions(1);
+    it('should wrap the onClose inside when onClose is provided and closeButtonLabel is undefined', async () => {
+      expect.assertions(2);
 
       const wrapper = await mountAndWait(
         <ToastNotification onClose={onClose} content={exampleContent} />
       );
       const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
+      const button = wrapper.find('.md-toast-notification-close-button button');
 
       expect(element).toBeDefined();
+      expect(button.props()['aria-label']).toBe(undefined);
+    });
+
+    it('should have label of the close button when both onClose and closeButtonLabel defined', async () => {
+      expect.assertions(2);
+
+      const wrapper = await mountAndWait(
+        <ToastNotification onClose={onClose} closeButtonLabel={'close'} content={exampleContent} />
+      );
+      const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
+      const button = wrapper.find('.md-toast-notification-close-button button');
+
+      expect(element).toBeDefined();
+      expect(button.props()['aria-label']).toBe('close');
     });
 
     it('should wrap Icon inside leadingVisual when Icon is provided', async () => {
