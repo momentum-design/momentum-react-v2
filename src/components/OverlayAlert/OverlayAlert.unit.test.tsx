@@ -12,6 +12,12 @@ import OverlayAlert, { OVERLAY_ALERT_CONSTANTS as CONSTANTS, OVERLAY_ALERT_CONST
 import { STYLE as OVERLAY_STYLE } from '../Overlay/Overlay.constants';
 import Text from '../Text';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => 'test-ID',
+  };
+});
+
 describe('<OverlayAlert />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
@@ -318,7 +324,7 @@ describe('<OverlayAlert />', () => {
     it('should pass aria-label through to ModalContiner when ariaLabel is provided', () => {
       expect.assertions(1);
 
-      const ariaLabel = 'test-aria-label'
+      const ariaLabel = 'test-aria-label';
 
       const component = mount(<OverlayAlert ariaLabel={ariaLabel}/>).find(`.${OVERLAY_STYLE.wrapper}`);
 

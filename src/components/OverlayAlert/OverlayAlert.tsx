@@ -8,7 +8,7 @@ import Text from '../Text';
 import { DEFAULTS, STYLE } from './OverlayAlert.constants';
 import { Props } from './OverlayAlert.types';
 import './OverlayAlert.style.scss';
-import { useId } from 'react-aria';
+import { v4 as uuidV4 } from 'uuid';
 
 /**
  * The OverlayAlert component.
@@ -31,7 +31,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     ...other
   } = props;
 
-  const id = useId();
+  const id = uuidV4();
 
   const onKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
