@@ -2441,6 +2441,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                 data-fullscreen="false"
               >
                 <div
+                  aria-labelledby="test-ID"
                   class="md-modal-container-wrapper"
                   data-color="primary"
                   data-elevation="0"
@@ -2453,12 +2454,13 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                   <div
                     class="md-overlay-alert-title"
                   >
-                    <h3
+                    <h2
                       class="md-text-wrapper md-overlay-alert-title"
-                      data-type="header-primary"
+                      data-type="title"
+                      id="test-ID"
                     >
                       example-title
-                    </h3>
+                    </h2>
                   </div>
                   <div />
                   <div />
@@ -2484,6 +2486,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                   data-fullscreen="false"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
@@ -2496,12 +2499,13 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                     <div
                       class="md-overlay-alert-title"
                     >
-                      <h3
+                      <h2
                         class="md-text-wrapper md-overlay-alert-title"
-                        data-type="header-primary"
+                        data-type="title"
+                        id="test-ID"
                       >
                         example-title
-                      </h3>
+                      </h2>
                     </div>
                     <div />
                     <div />
@@ -2522,9 +2526,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
           onKeyDown={[Function]}
         >
           <ModalContainer
+            aria-labelledby="test-ID"
             round={75}
           >
             <div
+              aria-labelledby="test-ID"
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
@@ -2539,14 +2545,16 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
               >
                 <Text
                   className="md-overlay-alert-title"
-                  type="header-primary"
+                  id="test-ID"
+                  type="title"
                 >
-                  <h3
+                  <h2
                     className="md-text-wrapper md-overlay-alert-title"
-                    data-type="header-primary"
+                    data-type="title"
+                    id="test-ID"
                   >
                     example-title
-                  </h3>
+                  </h2>
                 </Text>
               </div>
               <div />

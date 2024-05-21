@@ -8,6 +8,7 @@ import Text from '../Text';
 import { DEFAULTS, STYLE } from './OverlayAlert.constants';
 import { Props } from './OverlayAlert.types';
 import './OverlayAlert.style.scss';
+import { useId } from 'react-aria';
 
 /**
  * The OverlayAlert component.
@@ -26,8 +27,11 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     title,
     focusLockProps = DEFAULTS.FOCUS_LOCK_PROPS,
     onClose,
+    ariaLabel,
     ...other
   } = props;
+
+  const id = useId();
 
   const onKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
@@ -43,13 +47,13 @@ const OverlayAlert: FC<Props> = (props: Props) => {
       onKeyDown={onKeyDown}
       {...other}
     >
-      <ModalContainer round={75} color={modalColor}>
+      <ModalContainer round={75} color={modalColor} aria-label={ariaLabel} aria-labelledby={title ? id : undefined}>
         <div>
           <div>{controls}</div>
         </div>
         {!!title && (
           <div className={classnames(STYLE.title)}>
-            <Text className={classnames(STYLE.title)} type="header-primary">
+            <Text className={classnames(STYLE.title)} type="title" id={id}>
               {title}
             </Text>
           </div>

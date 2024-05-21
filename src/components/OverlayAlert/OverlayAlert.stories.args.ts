@@ -95,6 +95,18 @@ const overlayAlertArgTypes = {
       },
     },
   },
+  ariaLabel: {
+    description: 'Provides the ariaLabel within this component as a `string`.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { overlayAlertArgTypes };
