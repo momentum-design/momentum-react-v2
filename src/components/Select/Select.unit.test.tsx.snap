@@ -173,7 +173,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             aria-haspopup="dialog"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
-            id="test-ID"
+            id="test-id"
             type="button"
           >
             <span
@@ -479,7 +479,7 @@ exports[`Select snapshot should match snapshot 1`] = `
               aria-haspopup="dialog"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -5050,7 +5050,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             aria-haspopup="dialog"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
-            id="test-ID"
+            id="example-id"
             type="button"
           >
             <span
@@ -5356,7 +5356,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               aria-haspopup="dialog"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
-              id="test-ID"
+              id="example-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
