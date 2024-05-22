@@ -68,6 +68,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const triggerComponentId = triggerComponent.props?.id || uuidV4();
+  // Add labelledby only when interactive
   const modalConditionalProps = interactive ? {'aria-labelledby': triggerComponentId} : {};
 
   // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):
