@@ -37,7 +37,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with role', () => {
       expect.assertions(1);
 
-      const role = 'dialog';
+      const role = 'tooltip';
 
       const container = mount(<ModalContainer role={role} />);
 

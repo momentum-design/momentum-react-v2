@@ -213,7 +213,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
 <ModalContainer
-  role="dialog"
+  role="tooltip"
 >
   <div
     aria-modal={true}
@@ -222,7 +222,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
     data-elevation={0}
     data-padded={false}
     data-round={0}
-    role="dialog"
+    role="tooltip"
   />
 </ModalContainer>
 `;
