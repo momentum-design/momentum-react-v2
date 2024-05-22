@@ -43,6 +43,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
   width={100}
 >
   <Displaced
+    aria-labelledby="test-ID"
     dialogClass="md-lightbox"
     focusDialog={true}
     getApplicationNode={[Function]}
@@ -60,7 +61,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
               class="md-lightbox__container"
             >
               <div
-                aria-labelledby="md-lightbox"
+                aria-labelledby="test-ID"
                 class="md-lightbox"
                 id="react-aria-modal-dialog"
                 role="dialog"
@@ -86,11 +87,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                   <div
                     class="md-lightbox__header-item--center"
                   >
-                    <div
+                    <h2
                       class="md-lightbox__header-name"
+                      id="test-ID"
                     >
                       test
-                    </div>
+                    </h2>
                   </div>
                   <div
                     class="md-lightbox__header-item--right"
@@ -204,6 +206,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
       }
     >
       <Modal
+        aria-labelledby="test-ID"
         dialogClass="md-lightbox"
         dialogId="react-aria-modal-dialog"
         escapeExits={true}
@@ -239,7 +242,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
               style={Object {}}
             >
               <div
-                aria-labelledby="md-lightbox"
+                aria-labelledby="test-ID"
                 className="md-lightbox"
                 id="react-aria-modal-dialog"
                 key="b"
@@ -267,11 +270,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                   <div
                     className="md-lightbox__header-item--center"
                   >
-                    <div
+                    <h2
                       className="md-lightbox__header-name"
+                      id="test-ID"
                     >
                       test
-                    </div>
+                    </h2>
                   </div>
                   <div
                     className="md-lightbox__header-item--right"

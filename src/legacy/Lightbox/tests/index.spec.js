@@ -2,6 +2,12 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { Lightbox } from '@momentum-ui/react-collaboration';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => 'test-ID',
+  };
+});
+
 describe('tests for <Lightbox />', () => {
   it('should match SnapShot', () => {
     const container = mount(
@@ -125,6 +131,8 @@ describe('tests for <Lightbox />', () => {
     const sharedBy = container.find('.md-lightbox__header-sharer');
     const timestamp = container.find('.md-lightbox__header-timestamp');
     const name = container.find('.md-lightbox__header-name');
+    expect(container.props()['aria-labelledby']).toStrictEqual(name.props().id);
+    expect(name.type()).toEqual('h2');
     expect(name.text()).toEqual('test');
     expect(timestamp.text()).toEqual('At 4/17/2018, 10:02 AM');
     expect(sharedBy.text()).toEqual('Shared by abcd');
