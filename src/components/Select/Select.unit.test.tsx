@@ -375,6 +375,7 @@ describe('Select', () => {
 
       expect(wrapper.find(Popover).props()).toEqual({
         interactive: true,
+        role: null,
         showArrow: false,
         triggerComponent: expect.any(Object),
         trigger: 'manual',
@@ -409,6 +410,7 @@ describe('Select', () => {
       expect(wrapperDiv.getAttribute('style')).toBe('--local-width: 200px;');
       expect(wrapper.find(Popover).props()).toEqual({
         interactive: true,
+        role: null,
         showArrow: false,
         triggerComponent: expect.any(Object),
         trigger: 'manual',

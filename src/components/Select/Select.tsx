@@ -160,6 +160,9 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
       <Popover
         interactive
         showArrow={false}
+        // remove role of Popover ModalContainer since the listbox role is passed through the ListBoxBase component via menuProps
+        // eslint-disable-next-line jsx-a11y/aria-role
+        role={null}
         triggerComponent={React.cloneElement(triggerComponent, {
           ref: selectRef,
         })}

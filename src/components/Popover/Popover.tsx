@@ -63,13 +63,15 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     firstFocusElement,
     ...rest
   } = props;
-
   const popoverInstance = React.useRef<PopoverInstance>(undefined);
-  const [isVisible, setIsVisible] = useState(false);
 
   const triggerComponentId = triggerComponent.props?.id || uuidV4();
-  // Add labelledby only when interactive
-  const modalConditionalProps = interactive ? {'aria-labelledby': triggerComponentId} : {};
+
+  const modalConditionalProps = {
+    ...(interactive && {'aria-labelledby': triggerComponentId}),
+  };
+  
+
 
   // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):
   const arrowId = React.useMemo(() => `${ARROW_ID}${uuidV4()}`, []);
@@ -87,7 +89,6 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   }, []);
 
   const handleOnPopoverHide = useCallback(() => {
-    setIsVisible(false);
     if (focusBackOnTrigger) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -95,17 +96,13 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     }
   }, [focusBackOnTrigger]);
 
-  const handleOnPopoverShow = useCallback(() => {
-    setIsVisible(true);
-  },[]);
-
   useEffect(() => {
     firstFocusElement?.focus();
   }, [firstFocusElement]);
 
+
   const triggerComponentCommonProps = {
-    'aria-haspopup': 'dialog',
-    'aria-expanded': isVisible,
+    'aria-haspopup': triggerComponent.props?.['aria-haspopup'] || 'dialog',
     'id': interactive ? triggerComponentId : triggerComponent.props?.id,
   };
   
@@ -199,12 +196,6 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         handleOnPopoverHide();
         if (onHide) {
           onHide(instance);
-        }
-      }}
-      onShow={(instance) => {
-        handleOnPopoverShow();
-        if (onShow) {
-          onShow(instance);
         }
       }}
       setInstance={popoverSetInstance}

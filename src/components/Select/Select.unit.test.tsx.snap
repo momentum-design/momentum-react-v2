@@ -170,7 +170,7 @@ exports[`Select snapshot should match snapshot 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-id"
@@ -263,6 +263,7 @@ exports[`Select snapshot should match snapshot 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -326,7 +327,6 @@ exports[`Select snapshot should match snapshot 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -376,7 +376,6 @@ exports[`Select snapshot should match snapshot 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -431,7 +430,6 @@ exports[`Select snapshot should match snapshot 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -476,7 +474,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-id"
@@ -716,7 +714,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
@@ -809,6 +807,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -872,7 +871,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -922,7 +920,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -977,7 +974,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -1022,7 +1018,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
@@ -1263,7 +1259,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
           "current": <button
             aria-controls="test-ID"
             aria-expanded="true"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
@@ -1356,6 +1352,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -1419,7 +1416,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -1469,7 +1465,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -1524,7 +1519,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -1569,7 +1563,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             <button
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
@@ -1637,7 +1631,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                     data-padded="true"
                     data-placement="bottom"
                     data-round="50"
-                    role="dialog"
                     style="max-height: none;"
                   >
                     <span
@@ -1711,6 +1704,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 isPadded={true}
                 onKeyDown={[Function]}
                 placement="bottom"
+                role={null}
                 round={50}
                 showArrow={false}
                 style={
@@ -1730,7 +1724,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   data-placement="bottom"
                   data-round={50}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role={null}
                   style={
                     Object {
                       "maxHeight": "none",
@@ -2328,7 +2322,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input borderLess"
             id="test-ID"
@@ -2421,6 +2415,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -2484,7 +2479,6 @@ exports[`Select snapshot should match snapshot with border 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -2534,7 +2528,6 @@ exports[`Select snapshot should match snapshot with border 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -2589,7 +2582,6 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -2634,7 +2626,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input borderLess"
               id="test-ID"
@@ -2875,7 +2867,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
@@ -2968,6 +2960,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -3031,7 +3024,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -3081,7 +3073,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -3136,7 +3127,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -3181,7 +3171,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
@@ -3422,7 +3412,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
@@ -3515,6 +3505,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="top"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -3578,7 +3569,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="top"
         plugins={
           Array [
@@ -3628,7 +3618,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="top"
           plugins={
             Array [
@@ -3683,7 +3672,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="top"
             plugins={
               Array [
@@ -3728,7 +3716,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
@@ -3979,7 +3967,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
           "current": <button
             aria-controls="test-ID"
             aria-expanded="true"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
@@ -4072,6 +4060,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -4135,7 +4124,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -4185,7 +4173,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -4240,7 +4227,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -4285,7 +4271,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             <button
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
@@ -4353,7 +4339,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                     data-padded="true"
                     data-placement="bottom"
                     data-round="50"
-                    role="dialog"
                     style="max-height: none;"
                   >
                     <span
@@ -4427,6 +4412,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                 isPadded={true}
                 onKeyDown={[Function]}
                 placement="bottom"
+                role={null}
                 round={50}
                 showArrow={false}
                 style={
@@ -4446,7 +4432,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   data-placement="bottom"
                   data-round={50}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role={null}
                   style={
                     Object {
                       "maxHeight": "none",
@@ -5047,7 +5033,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="example-id"
@@ -5140,6 +5126,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -5203,7 +5190,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -5253,7 +5239,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -5308,7 +5293,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -5353,7 +5337,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="example-id"
@@ -5457,6 +5441,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -5520,7 +5505,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -5570,7 +5554,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -5625,7 +5608,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -5670,7 +5652,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
@@ -5912,7 +5894,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
           "current": <button
             aria-controls="test-ID"
             aria-expanded="true"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
@@ -6005,6 +5987,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -6068,7 +6051,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -6118,7 +6100,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -6173,7 +6154,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -6218,7 +6198,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             <button
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
@@ -6286,7 +6266,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                     data-padded="true"
                     data-placement="bottom"
                     data-round="50"
-                    role="dialog"
                     style="max-height: none;"
                   >
                     <span
@@ -6360,6 +6339,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                 isPadded={true}
                 onKeyDown={[Function]}
                 placement="bottom"
+                role={null}
                 round={50}
                 showArrow={false}
                 style={
@@ -6379,7 +6359,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   data-placement="bottom"
                   data-round={50}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role={null}
                   style={
                     Object {
                       "maxHeight": "none",
@@ -6977,7 +6957,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
           "current": <button
             aria-controls="test-ID"
             aria-expanded="true"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
@@ -7070,6 +7050,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -7133,7 +7114,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -7183,7 +7163,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -7238,7 +7217,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -7283,7 +7261,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             <button
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
@@ -7351,7 +7329,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                     data-padded="true"
                     data-placement="bottom"
                     data-round="50"
-                    role="dialog"
                     style="max-height: 50px;"
                   >
                     <span
@@ -7425,6 +7402,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                 isPadded={true}
                 onKeyDown={[Function]}
                 placement="bottom"
+                role={null}
                 round={50}
                 showArrow={false}
                 style={
@@ -7444,7 +7422,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                   data-placement="bottom"
                   data-round={50}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role={null}
                   style={
                     Object {
                       "maxHeight": "50px",
@@ -8042,7 +8020,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
           "current": <button
             aria-controls="test-ID"
             aria-expanded="true"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
@@ -8135,6 +8113,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="fixed"
@@ -8198,7 +8177,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -8248,7 +8226,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -8303,7 +8280,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -8348,7 +8324,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             <button
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
@@ -8416,7 +8392,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                     data-padded="true"
                     data-placement="bottom"
                     data-round="50"
-                    role="dialog"
                     style="max-height: none;"
                   >
                     <span
@@ -8490,6 +8465,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                 isPadded={true}
                 onKeyDown={[Function]}
                 placement="bottom"
+                role={null}
                 round={50}
                 showArrow={false}
                 style={
@@ -8509,7 +8485,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                   data-placement="bottom"
                   data-round={50}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role={null}
                   style={
                     Object {
                       "maxHeight": "none",
@@ -9107,7 +9083,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
@@ -9202,6 +9178,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -9267,7 +9244,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -9317,7 +9293,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -9372,7 +9347,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -9417,7 +9391,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
@@ -9683,7 +9657,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-selected"
             id="test-ID"
@@ -9779,6 +9753,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -9845,7 +9820,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -9895,7 +9869,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -9950,7 +9923,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -9995,7 +9967,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-selected"
               id="test-ID"
@@ -10264,7 +10236,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           "current": <button
             aria-controls="test-ID"
             aria-expanded="true"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-selected md-select-open"
             id="test-ID"
@@ -10360,6 +10332,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -10426,7 +10399,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -10476,7 +10448,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -10531,7 +10502,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -10576,7 +10546,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             <button
               aria-controls="test-ID"
               aria-expanded={true}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-selected md-select-open"
               id="test-ID"
@@ -10647,7 +10617,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     data-padded="true"
                     data-placement="bottom"
                     data-round="50"
-                    role="dialog"
                     style="max-height: none;"
                   >
                     <span
@@ -10740,6 +10709,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 isPadded={true}
                 onKeyDown={[Function]}
                 placement="bottom"
+                role={null}
                 round={50}
                 showArrow={false}
                 style={
@@ -10759,7 +10729,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   data-placement="bottom"
                   data-round={50}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role={null}
                   style={
                     Object {
                       "maxHeight": "none",
@@ -11420,7 +11390,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
@@ -11513,6 +11483,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -11576,7 +11547,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -11626,7 +11596,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -11681,7 +11650,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -11726,7 +11694,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
@@ -11965,7 +11933,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
         Object {
           "current": <button
             aria-expanded="false"
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
@@ -12059,6 +12027,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
       onHide={[Function]}
       onKeyDown={[Function]}
       placement="bottom"
+      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -12123,7 +12092,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
         }
         onClickOutside={[Function]}
         onHide={[Function]}
-        onShow={[Function]}
         placement="bottom"
         plugins={
           Array [
@@ -12173,7 +12141,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           }
           onClickOutside={[Function]}
           onHide={[Function]}
-          onShow={[Function]}
           placement="bottom"
           plugins={
             Array [
@@ -12228,7 +12195,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             }
             onClickOutside={[Function]}
             onHide={[Function]}
-            onShow={[Function]}
             placement="bottom"
             plugins={
               Array [
@@ -12273,7 +12239,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             <button
               aria-controls={null}
               aria-expanded={false}
-              aria-haspopup="dialog"
+              aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
