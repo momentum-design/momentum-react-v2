@@ -42,6 +42,14 @@ describe('CodeInput', () => {
       expect(component.find('input').prop('aria-label')).toBe('enter 6 digit code');
     });
 
+    it('input accepts prop name and id', () => {
+      const component = mount(<CodeInput numDigits={6} visibleLabelId="test id" />).childAt(0);
+      expect(component.find('input').prop('name')).toBeDefined();
+      expect(component.find('input').prop('id')).toBeDefined();
+      expect(component.find('input').prop('name')).toBe('test id');
+      expect(component.find('input').prop('id')).toBe('test id');
+    });
+
     it('when a message array is passing in messages should be displayed', async () => {
       let component;
       await act(async () => {
