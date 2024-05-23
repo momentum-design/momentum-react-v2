@@ -58,4 +58,9 @@ export interface Props<T> extends AriaSelectProps<T> {
    * NOTE: if set, the popover strategy will be set to 'fixed'
    */
   listboxWidth?: string;
+
+  /**
+   * aria-label to pass to this component.
+   */
+  ariaLabel?: string;
 }

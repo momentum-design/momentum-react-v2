@@ -38,6 +38,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     listboxMaxHeight,
     isInForm = DEFAULTS.IS_IN_FORM,
     listboxWidth,
+    ariaLabel,
   } = props;
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
   const hasBeenOpened = useRef<boolean>(false);
@@ -47,9 +48,15 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
 
   const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
-  const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
+  const { buttonProps } = useButton(
+    { ...triggerProps, isDisabled, 'aria-label': ariaLabel },
+    selectRef
+  );
   delete buttonProps.color;
   delete buttonProps.onKeyDown;
+  // with aria-labelledby likned to the ID for the <label> below - SR announces frst selection as the label for the dropdown.
+  // aria-labelledby overrides aria-label so if custom aria-label needs to be passed thru cantina aria-labelledby needs to be deleted.
+  delete buttonProps['aria-labelledby'];
 
   const getArrowIcon = (isOpen: boolean) => (isOpen ? 'arrow-up' : 'arrow-down');
 
