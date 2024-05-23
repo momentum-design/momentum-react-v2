@@ -1,4 +1,4 @@
-import React, { ForwardedRef, forwardRef, useCallback, useEffect, useState } from 'react';
+import React, { ForwardedRef, forwardRef, useCallback, useEffect } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
