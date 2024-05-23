@@ -43,7 +43,7 @@ describe('CodeInput', () => {
     });
 
     it('input accepts prop name and id', () => {
-      const component = mount(<CodeInput numDigits={6} visibleLabelId="test id" />).childAt(0);
+      const component = mount(<CodeInput numDigits={6} inputId="test id" />).childAt(0);
       expect(component.find('input').prop('name')).toBeDefined();
       expect(component.find('input').prop('id')).toBeDefined();
       expect(component.find('input').prop('name')).toBe('test id');
