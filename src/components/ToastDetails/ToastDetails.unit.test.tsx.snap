@@ -330,9 +330,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                   weight="bold"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -389,9 +392,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                   weight="bold"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -449,9 +455,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -608,9 +617,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                   weight="bold"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -667,9 +679,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                   weight="bold"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -727,9 +742,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -853,9 +871,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                   weight="bold"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -912,9 +933,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                   weight="bold"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}
@@ -972,9 +996,12 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
                   weight="filled"
                 >
                   <div
+                    aria-hidden="true"
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                    role="img"
                   >
                     <svg
+                      aria-hidden="true"
                       className=""
                       data-autoscale={true}
                       data-scale={false}

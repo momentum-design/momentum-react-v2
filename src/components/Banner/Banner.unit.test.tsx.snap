@@ -169,9 +169,12 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                       name="camera"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={125}
                           data-scale={false}
@@ -239,9 +242,12 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                       name="cancel"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={125}
                           data-scale={false}
@@ -439,9 +445,12 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                       name="camera"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={125}
                           data-scale={false}
@@ -509,9 +518,12 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                       name="cancel"
                     >
                       <div
+                        aria-hidden="true"
                         className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                        role="img"
                       >
                         <svg
+                          aria-hidden="true"
                           className=""
                           data-autoscale={125}
                           data-scale={false}

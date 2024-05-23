@@ -10,6 +10,13 @@ import userEvent from '@testing-library/user-event';
 
 import OverlayAlert, { OVERLAY_ALERT_CONSTANTS as CONSTANTS, OVERLAY_ALERT_CONSTANTS } from './';
 import { STYLE as OVERLAY_STYLE } from '../Overlay/Overlay.constants';
+import Text from '../Text';
+
+jest.mock('uuid', () => {
+  return {
+    v4: () => 'test-ID',
+  };
+});
 
 describe('<OverlayAlert />', () => {
   describe('snapshot', () => {
@@ -129,6 +136,17 @@ describe('<OverlayAlert />', () => {
       const children = 'example-children';
 
       const container = mount(<OverlayAlert details={details}>{children}</OverlayAlert>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with ariaLabel', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'test-aria-label';
+      const children = 'example-children';
+
+      const container = mount(<OverlayAlert ariaLabel={ariaLabel}>{children}</OverlayAlert>);
 
       expect(container).toMatchSnapshot();
     });
@@ -264,6 +282,55 @@ describe('<OverlayAlert />', () => {
         .getElementsByClassName(OVERLAY_ALERT_CONSTANTS.STYLE.title)[0];
 
       expect(target.innerHTML.includes(title)).toBe(true);
+    });
+
+    it('should have correct text type for title when title provided', () => {
+      expect.assertions(1);
+
+      const title = 'title-example';
+
+      const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
+
+      const titleComponent = component.find(Text).filter({className: OVERLAY_ALERT_CONSTANTS.STYLE.title});
+
+      expect(titleComponent.props().type).toStrictEqual('title');
+    });
+
+    it('should have aria-labelledby and id when title is provided', () => {
+      expect.assertions(2);
+
+      const title = 'title-example';
+
+      const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
+
+      const titleComponent = component.find(Text).filter({type: 'title'});
+
+      const modalContainerComponent = component.find(ModalContainer);
+
+      expect(titleComponent.props().id).toStrictEqual('test-ID');
+      expect(modalContainerComponent.props()['aria-labelledby']).toStrictEqual('test-ID');
+    });
+
+    it('should not have aria-labelledby when title is not provided', () => {
+      expect.assertions(1);
+
+      const component = mount(<OverlayAlert />).find(`.${OVERLAY_STYLE.wrapper}`);
+
+      const modalContainerComponent = component.find(ModalContainer);
+
+      expect(modalContainerComponent.props()['aria-labelledby']).toBe(undefined);
+    });
+
+    it('should pass aria-label through to ModalContiner when ariaLabel is provided', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'test-aria-label';
+
+      const component = mount(<OverlayAlert ariaLabel={ariaLabel}/>).find(`.${OVERLAY_STYLE.wrapper}`);
+
+      const modalContainerComponent = component.find(ModalContainer);
+
+      expect(modalContainerComponent.props()['aria-label']).toBe(ariaLabel);
     });
 
     it('should not render an empty div when no title is provided', () => {

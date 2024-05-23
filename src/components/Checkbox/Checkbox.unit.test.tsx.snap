@@ -278,9 +278,12 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
         weight="bold"
       >
         <div
+          aria-hidden="true"
           className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
+          role="img"
         >
           <svg
+            aria-hidden="true"
             className=""
             data-autoscale={false}
             data-scale={12}
@@ -468,9 +471,12 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
         weight="bold"
       >
         <div
+          aria-hidden="true"
           className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
+          role="img"
         >
           <svg
+            aria-hidden="true"
             className=""
             data-autoscale={false}
             data-scale={12}

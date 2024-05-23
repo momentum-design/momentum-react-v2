@@ -4,6 +4,8 @@ Note that the render state of this component must be managed manually from withi
 
 The default `z-index` for this component is `1000`.
 
+Accessibility Note: If you provide a `title` to `<OverlayAlert />` we will provide the necessary `aria-labelledby` and `id` props for screen reader accessibility. If `title` is not provided, consider providing an `ariaLabel` prop with a meaningful label to ensure your component is accessible to screen reader users.
+
 Example:
 
 ```jsx

@@ -65,9 +65,12 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
           weight="filled"
         >
           <div
+            aria-hidden="true"
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+            role="img"
           >
             <svg
+              aria-hidden="true"
               className=""
               data-autoscale={false}
               data-scale={14}
@@ -132,9 +135,12 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
       weight="bold"
     >
       <div
+        aria-hidden="true"
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-avatar-wrapper-children md-avatar-icon-wrapper md-icon-no-shrink"
+        role="img"
       >
         <svg
+          aria-hidden="true"
           className=""
           data-autoscale={false}
           data-scale={16}
@@ -355,9 +361,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -418,9 +427,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -481,9 +493,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -544,9 +559,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -607,9 +625,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -670,9 +691,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -733,9 +757,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -796,9 +823,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -859,9 +889,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -922,9 +955,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="bold"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -985,9 +1021,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -1048,9 +1087,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}
@@ -1111,9 +1153,12 @@ exports[`Avatar snapshot should match snapshot with presence 1`] = `
             weight="filled"
           >
             <div
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              role="img"
             >
               <svg
+                aria-hidden="true"
                 className=""
                 data-autoscale={false}
                 data-scale={14}

@@ -5,7 +5,7 @@ import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
 
-import { STYLE, DEFAULTS } from './ToastNotification.constants';
+import { STYLE } from './ToastNotification.constants';
 import { Props } from './ToastNotification.types';
 import './ToastNotification.style.scss';
 import Text from '../Text';
@@ -14,16 +14,8 @@ import Text from '../Text';
  * The ToastNotification component.
  */
 const ToastNotification: FC<Props> = (props: Props) => {
-  const {
-    className,
-    id,
-    style,
-    content,
-    leadingVisual,
-    buttonGroup,
-    onClose,
-    closeButtonLabel = DEFAULTS.CLOSE_BUTTON_LABEL,
-  } = props;
+  const { className, id, style, content, leadingVisual, buttonGroup, onClose, closeButtonLabel } =
+    props;
 
   return (
     <ModalContainer

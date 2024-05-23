@@ -67,3 +67,4 @@ export { default as NotificationSystem } from './NotificationSystem';
 export { default as AriaToolbar } from './AriaToolbar';
 export { default as Slider } from './Slider';
 export { default as ComboBox } from './ComboBox';
+export { default as AriaGroup } from './AriaGroup';

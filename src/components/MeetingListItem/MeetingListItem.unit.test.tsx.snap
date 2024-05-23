@@ -451,9 +451,12 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                 weight="bold"
               >
                 <div
+                  aria-hidden="true"
                   className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  role="img"
                 >
                   <svg
+                    aria-hidden="true"
                     className=""
                     data-autoscale={false}
                     data-scale={12}

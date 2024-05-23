@@ -70,4 +70,9 @@ export interface Props extends OverlayProps {
    * Callback function to be fired when Escape key is pressed.
    */
   onClose?: () => void;
+
+  /**
+   * ariaLabel for this OverlayAlert which will be passed onto ModalContainer.
+   */
+  ariaLabel?: string;
 }
