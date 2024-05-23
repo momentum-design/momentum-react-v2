@@ -25,21 +25,29 @@ export default {
   },
 };
 
+const Divs = Template<RadioSimpleGroupProps>(RadioSimpleGroup).bind({});
+
+Divs.argTypes = { ...argTypes };
+
+Divs.args = {
+  children: [<div key="0">Hello</div>],
+  label: <div>Select your favorite color</div>,
+  description: 'Only choose one',
+};
+
 const Vertical = Template<RadioSimpleGroupProps>(RadioSimpleGroup).bind({});
 
 Vertical.argTypes = { ...argTypes };
 
 Vertical.args = {
-  children: (
-    <div style={{ display: 'flex', flexDirection: 'column', marginTop: '1rem', gap: '1rem' }}>
-      <RadioSimple value="red">
-        <ButtonSimple>Red</ButtonSimple>
-      </RadioSimple>
-      <RadioSimple value="blue">
-        <ButtonSimple>Blue</ButtonSimple>
-      </RadioSimple>
-    </div>
-  ),
+  children: [
+    <RadioSimple value="red" key="0">
+      <ButtonSimple>Red</ButtonSimple>
+    </RadioSimple>,
+    <RadioSimple value="blue" key="1">
+      <ButtonSimple>Blue</ButtonSimple>
+    </RadioSimple>,
+  ],
   label: <div>Select your favorite color</div>,
   description: 'Only choose one',
 };
@@ -62,4 +70,4 @@ Horizontal.args = {
   label: <div>Select your favorite color</div>,
   description: 'Only choose one',
 };
-export { Vertical, Horizontal };
+export { Divs, Vertical, Horizontal };

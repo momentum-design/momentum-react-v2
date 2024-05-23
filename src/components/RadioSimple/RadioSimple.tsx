@@ -1,7 +1,7 @@
 import React, { FC, useContext, useRef } from 'react';
 import classnames from 'classnames';
 import { useRadio } from '@react-aria/radio';
-import { useFocusRing, VisuallyHidden } from 'react-aria';
+import { useFocusRing, VisuallyHidden, mergeProps } from 'react-aria';
 import FocusRing from '../FocusRing';
 
 import { STYLE, DEFAULTS } from './RadioSimple.constants';
@@ -25,23 +25,24 @@ const RadioSimple: FC<Props> = (props: Props) => {
   } = props;
   const state = useContext(RadioSimpleGroupContext);
   const ref = useRef(null);
+  const { focusProps } = useFocusRing();
   const { inputProps } = useRadio(
     { 'aria-label': ariaLabel, 'aria-labelledby': ariaLabelledBy, ...props },
     state,
     ref
   );
+
   return (
-    <div
-      data-disabled={isDisabled}
-      className={classnames(STYLE.wrapper, className)}
-      style={style}
-      id={id}
-    >
+    <label>
+      {
+        // If you see in the example https://codesandbox.io/p/sandbox/recursing-night-pu6w2g?file=%2Fsrc%2FCardGroup.tsx%3A53%2C20
+        // They are faking the focus ring around the StyledCard label in line 50! because Description is a div and divs are not focusable
+      }
       <VisuallyHidden>
-        <input {...inputProps} ref={ref} />
+        <input {...mergeProps(inputProps, focusProps)} ref={ref} />
       </VisuallyHidden>
       {children}
-    </div>
+    </label>
   );
 };
 
