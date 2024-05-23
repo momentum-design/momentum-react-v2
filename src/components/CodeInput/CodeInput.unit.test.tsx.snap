@@ -23,6 +23,7 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
         Object {
           "aria-label": undefined,
           "disabled": false,
+          "id": undefined,
           "name": undefined,
         }
       }
