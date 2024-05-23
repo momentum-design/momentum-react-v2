@@ -518,11 +518,13 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
               >
                 <div
                   aria-label="test-aria-label"
+                  aria-modal="true"
                   class="md-modal-container-wrapper"
                   data-color="primary"
                   data-elevation="0"
                   data-padded="false"
                   data-round="75"
+                  role="dialog"
                 >
                   <div>
                     <div />
@@ -554,11 +556,13 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
                 >
                   <div
                     aria-label="test-aria-label"
+                    aria-modal="true"
                     class="md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
                     data-round="75"
+                    role="dialog"
                   >
                     <div>
                       <div />
@@ -589,11 +593,13 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
           >
             <div
               aria-label="test-aria-label"
+              aria-modal={true}
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
               data-round={75}
+              role="dialog"
             >
               <div>
                 <div />
@@ -2683,8 +2689,8 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                 data-fullscreen="false"
               >
                 <div
-                  aria-modal="true"
                   aria-labelledby="test-ID"
+                  aria-modal="true"
                   class="md-modal-container-wrapper"
                   data-color="primary"
                   data-elevation="0"
@@ -2730,8 +2736,8 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                   data-fullscreen="false"
                 >
                   <div
-                    aria-modal="true"
                     aria-labelledby="test-ID"
+                    aria-modal="true"
                     class="md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
@@ -2776,8 +2782,8 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
             round={75}
           >
             <div
-              aria-modal={true}
               aria-labelledby="test-ID"
+              aria-modal={true}
               className="md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}

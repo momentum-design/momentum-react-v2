@@ -405,11 +405,13 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
     round={50}
   >
     <div
+      aria-modal={true}
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-padded={true}
       data-round={50}
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
