@@ -1,3 +1,4 @@
+import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -7,6 +8,7 @@ import Radio from './Radio';
 import argTypes from './RadioGroup.stories.args';
 import Documentation from './RadioGroup.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
+import ButtonSimple from '../ButtonSimple';
 
 export default {
   title: 'Momentum UI/RadioGroup',
@@ -110,4 +112,20 @@ Common.parameters = {
   ],
 };
 
-export { Example, Common };
+const RadioSimpleGroup = Template<RadioGroupProps>(RadioGroup).bind({});
+
+RadioSimpleGroup.argTypes = { ...argTypes };
+
+RadioSimpleGroup.args = {
+  options: [
+    <div key="0">
+      <ButtonSimple key="1" >Theme 1</ButtonSimple>
+      <ButtonSimple key="2" >Theme 2</ButtonSimple>
+      <ButtonSimple key="3" >Theme 3</ButtonSimple>
+    </div>
+  ],
+  label: 'RadioSimpleGroup',
+  isRadioSimple: true,
+};
+
+export { Example, Common, RadioSimpleGroup };

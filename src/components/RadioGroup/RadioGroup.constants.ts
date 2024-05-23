@@ -7,6 +7,7 @@ const DEFAULTS = {
   GROUP_ORIENTATION: 'vertical',
   GROUP_ARIA_LABEL: 'radio button group',
   OPTION_DISABLED: false,
+  GROUP_IS_RADIO_SIMPLE: false,
 };
 
 const STYLE = {
