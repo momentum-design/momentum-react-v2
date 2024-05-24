@@ -40,7 +40,11 @@ const MenuTrigger: FC<Props> = (props: Props) => {
 
   const [...menus] = Children.toArray(children);
 
-  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: 'menu' }, state, buttonRef);
+  const menuTriggerType = triggerComponent.props?.['aria-haspopup'] || 'menu';
+
+  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: menuTriggerType }, state, buttonRef);
+
+  menuTriggerProps['aria-haspopup'] = menuTriggerProps['aria-haspopup'] || menuTriggerType;
 
   /**
    * For some reason restoreFocus prop on <FocusScope> doesn't

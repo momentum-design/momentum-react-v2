@@ -139,6 +139,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       expect(element.classList.contains(className)).toBe(true);
     });
 
+
     it('should have provided id when id is provided', async () => {
       expect.assertions(1);
 
@@ -333,6 +334,57 @@ describe('<MenuTrigger /> - React Testing Library', () => {
   });
 
   describe('keyboard accessibility', () => {
+
+    it('triggerComponent has aria-haspopup true by default', async () => {
+      const defaultProps = {
+        'aria-label': 'Label',
+        triggerComponent: <ButtonPill aria-label="Open Menu">Open Menu</ButtonPill>,
+        children: [
+          <Menu selectionMode="single" key="2" aria-label="Single Menu">
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+            <Item key="three">Three</Item>
+          </Menu>,
+          <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
+            <Item key="asd">Four</Item>
+            <Item key="ff">Five</Item>
+            <Item key="d">Six</Item>
+          </Menu>,
+        ],
+      };
+
+      render(<MenuTrigger {...defaultProps} />);
+
+      const button = await screen.findByRole('button', { name: 'Open Menu' });
+      expect(button).toBeVisible();
+      expect(button.getAttribute('aria-haspopup')).toBe('true');
+    });
+
+    it('triggerComponent can have aria-haspopup as passed in props', async () => {
+      const defaultProps = {
+        'aria-label': 'Label',
+        triggerComponent: <ButtonPill aria-haspopup='dialog' aria-label="Open Menu">Open Menu</ButtonPill>,
+        children: [
+          <Menu selectionMode="single" key="2" aria-label="Single Menu">
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+            <Item key="three">Three</Item>
+          </Menu>,
+          <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
+            <Item key="asd">Four</Item>
+            <Item key="ff">Five</Item>
+            <Item key="d">Six</Item>
+          </Menu>,
+        ],
+      };
+
+      render(<MenuTrigger {...defaultProps} />);
+
+      const button = await screen.findByRole('button', { name: 'Open Menu' });
+      expect(button).toBeVisible();
+      expect(button.getAttribute('aria-haspopup')).toBe('dialog');
+    });
+
     it('closes the menu on Escape', async () => {
       expect.assertions(2);
       const user = userEvent.setup();
@@ -343,6 +395,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
+      expect(menu.getAttribute('aria-haspopup')).toBe('menu');
 
       await user.keyboard('{Escape}');
 
