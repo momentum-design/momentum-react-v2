@@ -32,18 +32,18 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   children: [
-    <RadioSimple value="red" key="0" style={{ display: 'flex' }}>
-      <Icon name="accessibility" autoScale />
+    <RadioSimple value="red" key="0" style={{display: 'flex'}}>
+      <Icon name="accessibility" autoScale/>
       <Text>Red</Text>
     </RadioSimple>,
-    <RadioSimple value="blue" key="0" style={{ display: 'flex' }}>
-      <Icon name="search" autoScale />
+    <RadioSimple value="blue" key="0" style={{display: 'flex'}}>
+      <Icon name="search" autoScale/>
       <Text>Blue</Text>
     </RadioSimple>,
-    <RadioSimple value="yellow" key="0" style={{ display: 'flex' }}>
-      <Icon name="accessories" autoScale />
+    <RadioSimple value="yellow" key="0" style={{display: 'flex'}}>
+      <Icon name="accessories" autoScale/>
       <Text>Yellow</Text>
-    </RadioSimple>,
+    </RadioSimple>
   ],
   label: <div>Select your favorite color</div>,
   description: 'Only choose one',
