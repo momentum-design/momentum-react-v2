@@ -6,7 +6,8 @@ const DEFAULTS = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  button: `${CLASS_PREFIX}-button`,
+  focusRing: `${CLASS_PREFIX}-focusRing`,
+  selected: `${CLASS_PREFIX}-selected`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };

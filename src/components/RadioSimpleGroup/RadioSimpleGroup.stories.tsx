@@ -8,7 +8,8 @@ import RadioSimple from '../RadioSimple';
 import argTypes from './RadioSimpleGroup.stories.args';
 import Documentation from './RadioSimpleGroup.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
-import ButtonSimple from '../ButtonSimple';
+import Text from '../Text';
+import Icon from '../Icon';
 
 export default {
   title: 'Momentum UI/RadioSimpleGroup',
@@ -25,27 +26,23 @@ export default {
   },
 };
 
-const Divs = Template<RadioSimpleGroupProps>(RadioSimpleGroup).bind({});
+const Example = Template<RadioSimpleGroupProps>(RadioSimpleGroup).bind({});
 
-Divs.argTypes = { ...argTypes };
+Example.argTypes = { ...argTypes };
 
-Divs.args = {
-  children: [<div key="0">Hello</div>],
-  label: <div>Select your favorite color</div>,
-  description: 'Only choose one',
-};
-
-const Vertical = Template<RadioSimpleGroupProps>(RadioSimpleGroup).bind({});
-
-Vertical.argTypes = { ...argTypes };
-
-Vertical.args = {
+Example.args = {
   children: [
-    <RadioSimple value="red" key="0">
-      <ButtonSimple>Red</ButtonSimple>
+    <RadioSimple value="red" key="0" style={{ display: 'flex' }}>
+      <Icon name="accessibility" autoScale />
+      <Text>Red</Text>
     </RadioSimple>,
-    <RadioSimple value="blue" key="1">
-      <ButtonSimple>Blue</ButtonSimple>
+    <RadioSimple value="blue" key="0" style={{ display: 'flex' }}>
+      <Icon name="search" autoScale />
+      <Text>Blue</Text>
+    </RadioSimple>,
+    <RadioSimple value="yellow" key="0" style={{ display: 'flex' }}>
+      <Icon name="accessories" autoScale />
+      <Text>Yellow</Text>
     </RadioSimple>,
   ],
   label: <div>Select your favorite color</div>,
@@ -56,18 +53,4 @@ const Horizontal = Template<RadioSimpleGroupProps>(RadioSimpleGroup).bind({});
 
 Horizontal.argTypes = { ...argTypes };
 
-Horizontal.args = {
-  children: (
-    <div style={{ display: 'flex', flexDirection: 'row', marginTop: '1rem', gap: '1rem' }}>
-      <RadioSimple value="theme-1">
-        <ButtonSimple>Red</ButtonSimple>
-      </RadioSimple>
-      <RadioSimple value="theme-2">
-        <ButtonSimple>Blue</ButtonSimple>
-      </RadioSimple>
-    </div>
-  ),
-  label: <div>Select your favorite color</div>,
-  description: 'Only choose one',
-};
-export { Divs, Vertical, Horizontal };
+export { Example };

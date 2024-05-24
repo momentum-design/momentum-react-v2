@@ -1,5 +1,25 @@
 .md-radio-simple-wrapper {
-  > .md-radio-simple-button {
-    // display: none;
+  cursor: pointer;
+  display: flex;
+  border-radius: 0.25rem;
+  width: 6rem;
+  background-color: var(--mds-color-theme-background-primary-ghost);
+
+  &:hover {
+    background-color: var(--mds-color-theme-background-primary-hover);
+  }
+
+  &:active {
+    background-color: var(--mds-color-theme-background-primary-active);
+  }
+
+  &[data-selected='true'] {
+    background-color: var(--mds-color-theme-background-primary-active);
+  }
+
+  &[data-focused='true'] {
+    border-color: transparent;
+    outline: none;
+    box-shadow: var(--md-globals-focus-ring-box-shadow);
   }
 }
