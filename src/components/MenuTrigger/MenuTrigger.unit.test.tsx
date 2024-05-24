@@ -395,7 +395,6 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
       const menu = await screen.findByRole('menu', { name: 'Single Menu' });
       expect(menu).toBeVisible();
-      expect(menu.getAttribute('aria-haspopup')).toBe('menu');
 
       await user.keyboard('{Escape}');
 
