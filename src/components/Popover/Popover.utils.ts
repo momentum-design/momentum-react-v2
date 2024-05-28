@@ -1,5 +1,6 @@
 import type { Plugin } from 'tippy.js';
-import { addBackdropPlugin, hideOnEscPlugin } from './tippyPlugins';
+import { hideOnEscPlugin } from './tippy-plugins/hideOnEscPlugin';
+import { addBackdropPlugin } from './tippy-plugins/backdropPlugin';
 
 export const addTippyPlugins = (hideOnEsc: boolean, addBackdrop: boolean): Array<Plugin> => {
   const plugins = [];

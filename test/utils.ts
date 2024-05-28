@@ -56,3 +56,60 @@ export const simulateMouseLeave = (component: ReactWrapper): void => {
     type: 'hoverstart',
   });
 };
+
+/**
+ * Mock add/removeEventListener on any EventTarget object
+ *
+ * Most of the case we would like to spy on specific events only.
+ * For example, when spying on the window events but JSDom or other components add unexpected listeners
+ *
+ * When `spyOnEvents` is not specified, it will spy on all events
+ *
+ * Returns with the add/removeEventListener, they are spying only on the specified events
+ * and the eventHandlers object which contains the registered event handlers
+ *
+ * @param target - Event target
+ * @param spyOnEvents - List of event names to spy on
+ */
+export const sypOnEventListener = (target: EventTarget, spyOnEvents?: string[]) => {
+  const eventHandlers: Record<string, EventListener[]> = {};
+
+  const originalAEL = target.addEventListener;
+  const originalREL = target.removeEventListener;
+
+  const addEventListenerSpy = jest.fn().mockImplementation((event, handler) => {
+    eventHandlers[event] = (eventHandlers[event] ?? []).concat(handler);
+  });
+  const removeEventListenerSpy = jest.fn().mockImplementation((event, handler) => {
+    eventHandlers[event] = (eventHandlers[event] ?? []).filter((c) => c !== handler);
+  });
+
+  jest.spyOn(target, 'addEventListener').mockImplementation((eventName, ...args) => {
+    if (spyOnEvents === undefined || spyOnEvents.includes(eventName)) {
+      addEventListenerSpy(eventName, ...args);
+    } else {
+      originalAEL(eventName, ...args);
+    }
+  });
+
+  jest.spyOn(target, 'removeEventListener').mockImplementation((eventName, ...args) => {
+    if (spyOnEvents === undefined || spyOnEvents.includes(eventName)) {
+      removeEventListenerSpy(eventName, ...args);
+    } else {
+      originalREL(eventName, ...args);
+    }
+  });
+
+  afterEach(() => {
+    (target.addEventListener as any).mockRestore();
+    (target.removeEventListener as any).mockRestore();
+    target.addEventListener = originalAEL;
+    target.removeEventListener = originalREL;
+  });
+
+  return {
+    addEventListenerSpy,
+    removeEventListenerSpy,
+    eventHandlers,
+  };
+};
