@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import isNumber from 'lodash/isNumber';
 import round from 'lodash/round';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 const Spinner = (props) => {
   const { className, color, showCheck, percentage, showPercentage, size, ...otherHTMLProps } =
     props;

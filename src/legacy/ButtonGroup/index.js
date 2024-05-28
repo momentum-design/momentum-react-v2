@@ -8,6 +8,9 @@ import { UIDReset } from 'react-uid';
 import ButtonGroupContext from '../ButtonGroupContext';
 import SelectableContext from '../SelectableContext';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class ButtonGroup extends React.Component {
   static getDerivedStateFromProps({ active }, state) {
     return active

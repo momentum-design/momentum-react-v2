@@ -6,6 +6,9 @@ import iconNames from '@momentum-ui/icons/data/momentumUiIconsNames.json';
 import { Button } from '@momentum-ui/react-collaboration';
 import { getColorValue } from '../utils';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class Icon extends React.PureComponent {
   render() {
     const {

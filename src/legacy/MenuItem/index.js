@@ -11,6 +11,9 @@ import ListContext from '../ListContext';
 import SelectableContext from '../SelectableContext';
 import { prefix } from '../utils/index';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class MenuItem extends React.Component {
   constructor(props) {
     super(props);

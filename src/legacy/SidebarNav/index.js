@@ -6,6 +6,9 @@ import { List } from '@momentum-ui/react-collaboration';
 import { UIDFork } from 'react-uid';
 import SidebarNavContext from '../SidebarNavContext';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class SidebarNav extends React.PureComponent {
   render() {
     const { children, className, focusQuery, headerNode, title, ...props } = this.props;

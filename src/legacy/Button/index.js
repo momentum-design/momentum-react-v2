@@ -9,6 +9,9 @@ import ButtonGroupContext from '../ButtonGroupContext';
 import SelectableContext, { makeKeyboardKey } from '../SelectableContext';
 import mapContextToProps from '@restart/context/mapContextToProps';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class Button extends React.Component {
   handleKeyDown = (e, eventKey) => {
     const { onClick, parentOnSelect, parentKeyDown, preventKeyboardDoubleClick } = this.props;

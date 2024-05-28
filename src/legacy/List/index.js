@@ -8,6 +8,9 @@ import qsa from 'dom-helpers/query/querySelectorAll';
 import SelectableContext from '../SelectableContext';
 import ListContext from '../ListContext';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class List extends React.Component {
   static getDerivedStateFromProps({ active }, state) {
     return active

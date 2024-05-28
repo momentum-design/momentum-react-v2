@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /** Child component to display the slider pointer */
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class SliderPointer extends React.PureComponent {
   state = {
     previousPosition: null,

@@ -6,6 +6,9 @@ import { getDate, getMonth, isDayDisabled, isSameDay, now } from '../../utils/da
 import mapContextToProps from '@restart/context/mapContextToProps';
 import moment from 'moment';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class DatePickerDay extends React.Component {
   constructor(props) {
     super(props);

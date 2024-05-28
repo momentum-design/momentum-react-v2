@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { snakeCase } from '../../utils/snakeCase';
 import { Spinner } from '@momentum-ui/react-collaboration';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 const ChatContentItem = (props) => {
   const {
     actionNode,

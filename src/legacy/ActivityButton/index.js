@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import { Button, Icon } from '@momentum-ui/react-collaboration';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 const ActivityButton = (props) => {
   const { ariaLabel, className, disabled, onClick, size, type, ...otherHTMLProps } = props;
 

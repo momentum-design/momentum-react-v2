@@ -24,6 +24,9 @@ const filterMessagesByType = (array, value) => {
 };
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class Input extends React.Component {
   state = {
     isEditing: false,

@@ -4,6 +4,9 @@ import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class ToggleSwitch extends React.PureComponent {
   state = {
     isToggleOn: this.props.checked,

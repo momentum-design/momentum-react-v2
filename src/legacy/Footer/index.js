@@ -3,7 +3,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Footer extends React.Component {
+export default /**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
+class Footer extends React.Component {
   render() {
     const { color, logo, copyright, social, className, children } = this.props;
     const footerTopSection = children && <section className="md-footer__top">{children}</section>;

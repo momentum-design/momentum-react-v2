@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 // Library that manages Tabbing and Accessibility for Modal https://github.com/davidtheclark/react-aria-modal
 import AriaModal from 'react-aria-modal';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class Modal extends React.Component {
   static childContextTypes = {
     handleClose: PropTypes.func,
