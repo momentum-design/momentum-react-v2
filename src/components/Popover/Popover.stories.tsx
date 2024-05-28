@@ -181,6 +181,50 @@ MultiplePopovers.args = {
   ),
 };
 
+const NestedPopover = Template<PopoverProps>(Popover).bind({});
+
+NestedPopover.argTypes = { ...argTypes };
+
+NestedPopover.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: (
+    <p>
+      Popover level 1
+      <div>
+        <Popover
+          trigger="mouseenter"
+          placement={PLACEMENTS.BOTTOM}
+          showArrow
+          interactive
+          triggerComponent={<ButtonSimple>Hover or click me!</ButtonSimple>}
+        >
+          <p>
+            Popover level 2
+            <div>
+              <Popover
+                trigger="mouseenter"
+                placement={PLACEMENTS.BOTTOM}
+                showArrow
+                triggerComponent={<ButtonSimple>Hover or click me!</ButtonSimple>}
+              >
+                Popover level 3
+              </Popover>
+            </div>
+          </p>
+        </Popover>
+      </div>
+    </p>
+  ),
+  triggerComponent: (
+    <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+      Hover or click me!
+    </ButtonSimple>
+  ),
+};
+
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -241,5 +285,6 @@ export {
   WithCloseButton,
   Offset,
   MultiplePopovers,
+  NestedPopover,
   Common,
 };
