@@ -19,6 +19,7 @@ export default {
     description: 'The aria-label for clear button',
     table: {
       category: 'Props',
+      defaultValue: 'Clear',
     },
   },
   searching: {

@@ -110,6 +110,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
       onFiltersChange={handleFiltersChange}
       onChange={handleChange}
       label={initialLabel}
+      clearButtonAriaLabel='Clear'
       {...mutatedProps}
       searching={searching}
     />
