@@ -1,29 +1,6 @@
 import type { Plugin } from 'tippy.js';
-import { PopoverInstance } from '.';
-import { STYLE } from './Popover.constants';
-
-// Tippy plugin to add hiding on Esc to Popover:
-export const hideOnEscPlugin: Plugin = {
-  name: 'hideOnEsc',
-  defaultValue: true,
-  fn({ hide }) {
-    // hide popover when Escape key is pressed
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') {
-        hide();
-      }
-    }
-
-    return {
-      onShow() {
-        document.addEventListener('keydown', onKeyDown);
-      },
-      onHide() {
-        document.removeEventListener('keydown', onKeyDown);
-      },
-    };
-  },
-};
+import { PopoverInstance } from '..';
+import { STYLE } from '../Popover.constants';
 
 /**
  * Due to @react-aria's event abstraction layer, we add an invisible backdrop for all popovers
