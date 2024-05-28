@@ -197,7 +197,7 @@ const ListSearchWrapper = () => {
 
   return (
     <>
-      <SearchInput value={query} onChange={setQuery} />
+      <SearchInput value={query} onChange={setQuery} clearButtonAriaLabel='Clear'/>
       <List shouldItemFocusBeInset listSize={filtered.length}>
         {filtered &&
           filtered.map((item, index) => (

@@ -4,6 +4,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
 <SSRProvider>
   <SearchInput
     aria-label="search"
+    clearButtonAriaLabel="Clear"
   >
     <div
       className="md-search-input-wrapper"
@@ -84,6 +85,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
 <SSRProvider>
   <SearchInput
     aria-label="search"
+    clearButtonAriaLabel="Clear"
     filters={
       Array [
         Object {
@@ -162,6 +164,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
         />
       </div>
       <ButtonSimple
+        aria-label="Clear"
         className="md-search-input-clear"
         excludeFromTabOrder={false}
         onPress={[Function]}
@@ -175,6 +178,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="Clear"
               className="md-search-input-clear md-button-simple-wrapper"
               onBlur={[Function]}
               onClick={[Function]}
@@ -249,6 +253,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
 <SSRProvider>
   <SearchInput
     aria-label="search"
+    clearButtonAriaLabel="Clear"
     searching={true}
   >
     <div
@@ -363,6 +368,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
 <SSRProvider>
   <SearchInput
     aria-label="search"
+    clearButtonAriaLabel="Clear"
     label="search"
   >
     <div
@@ -452,6 +458,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
   <SearchInput
     aria-label="search"
     className="example-class"
+    clearButtonAriaLabel="Clear"
   >
     <div
       className="example-class md-search-input-wrapper"
@@ -532,6 +539,7 @@ exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
 <SSRProvider>
   <SearchInput
     aria-label="search"
+    clearButtonAriaLabel="Clear"
     height={28}
   >
     <div
@@ -613,6 +621,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
 <SSRProvider>
   <SearchInput
     aria-label="search"
+    clearButtonAriaLabel="Clear"
     id="example-id"
   >
     <div
@@ -695,6 +704,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
 <SSRProvider>
   <SearchInput
     aria-label="search"
+    clearButtonAriaLabel="Clear"
     style={
       Object {
         "color": "pink",
