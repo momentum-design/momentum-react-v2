@@ -6,6 +6,9 @@ import Modal from 'react-aria-modal';
 import { Spinner, Tooltip, Icon } from '@momentum-ui/react-collaboration';
 import { v4 as uuidv4 } from 'uuid';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class Lightbox extends React.Component {
   constructor(props) {
     super(props);

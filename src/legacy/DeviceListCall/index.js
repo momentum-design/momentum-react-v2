@@ -10,6 +10,9 @@ import {
   ListItemSection,
 } from '@momentum-ui/react-collaboration';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class DeviceListCall extends React.PureComponent {
   state = {
     selectedIndex: this.props.defaultSelected,

@@ -7,6 +7,9 @@ import PropTypes from 'prop-types';
  * FormContent helps organize the content within a form section and provides a S wrapper;
  **/
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 const FormContent = (props) => {
   const { children } = props;
 

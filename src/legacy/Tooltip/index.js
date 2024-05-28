@@ -4,6 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Popover } from '@momentum-ui/react-collaboration';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class Tooltip extends React.Component {
   render() {
     const { children, className, popoverProps, tooltip, tooltipTrigger, width, ...otherProps } =

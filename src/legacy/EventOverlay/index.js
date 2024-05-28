@@ -46,6 +46,9 @@ function eventPath(evt) {
   return [target].concat(getParents(target)).concat([window]);
 }
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class EventOverlay extends React.Component {
   static getDerivedStateFromProps({ isOpen }, state) {
     return {

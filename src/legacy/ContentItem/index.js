@@ -7,6 +7,9 @@ import FileContentItem from './FileContent';
 import IconContent from './IconContent';
 import omit from 'lodash/omit';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class ContentItem extends React.PureComponent {
   render() {
     const {

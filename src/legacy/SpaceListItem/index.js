@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
 import { Avatar, Icon, ListItem, ListItemSection } from '@momentum-ui/react-collaboration';
 
+/**
+* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+**/
 class SpaceListItem extends React.PureComponent {
   state = {
     id: this.props.id || uniqueId('md-space-list-item-'),
