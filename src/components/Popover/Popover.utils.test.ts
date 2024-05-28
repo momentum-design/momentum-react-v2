@@ -1,5 +1,6 @@
 import { addTippyPlugins } from './Popover.utils';
-import { addBackdropPlugin, hideOnEscPlugin } from './tippyPlugins';
+import { hideOnEscPlugin } from './tippy-plugins/hideOnEscPlugin';
+import { addBackdropPlugin } from './tippy-plugins/backdropPlugin';
 
 describe('addTippyPlugins', () => {
   it.each([
