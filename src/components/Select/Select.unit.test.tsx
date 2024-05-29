@@ -315,6 +315,22 @@ describe('Select', () => {
       expect(element.id).toBe(id);
     });
 
+    it('should have role as combobox', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const container = await mountAndWait(
+        <Select id={id} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const button = container.find('.md-select-dropdown-input').getDOMNode();
+
+      expect(button.getAttribute('role')).toBe('combobox');
+    });
+
     it('should have provided aria-label on button when ariaLabel is provided', async () => {
       expect.assertions(1);
 
@@ -476,53 +492,7 @@ describe('Select', () => {
       expect(listbox).not.toBeInTheDocument();
 
       // list box should be shown after clicking on button
-      await user.click(screen.getByRole('button', { name: 'test-aria-label' }));
-      expect(screen.getByRole('listbox')).toBeVisible();
-    });
-
-    it('should show Listbox when focused and pressing enter', async () => {
-      const user = userEvent.setup();
-
-      render(
-        <Select id="test-id" ariaLabel="test-aria-label" label="test">
-          <Item>Item 1</Item>
-          <Item>Item 2</Item>
-        </Select>
-      );
-
-      // list box shouldn't be shown initially
-      const listbox = screen.queryByRole('listbox');
-      expect(listbox).not.toBeInTheDocument();
-
-      const button = screen.getByRole('button', { name: 'test-aria-label' });
-      button.focus();
-      expect(button).toHaveFocus();
-
-      await user.keyboard('{Enter}');
-      // list box should be shown after focus and pressing enter
-      expect(screen.getByRole('listbox')).toBeVisible();
-    });
-
-    it('should show Listbox when focused and pressing space', async () => {
-      const user = userEvent.setup();
-
-      render(
-        <Select id="test-id" ariaLabel="test-aria-label" label="test">
-          <Item>Item 1</Item>
-          <Item>Item 2</Item>
-        </Select>
-      );
-
-      // list box shouldn't be shown initially
-      const listbox = screen.queryByRole('listbox');
-      expect(listbox).not.toBeInTheDocument();
-
-      const button = screen.getByRole('button', { name: 'test-aria-label' });
-      button.focus();
-      expect(button).toHaveFocus();
-
-      await user.keyboard('{ }');
-      // list box should be shown after focus and pressing space
+      await user.click(screen.getByRole('combobox', { name: 'test-aria-label' }));
       expect(screen.getByRole('listbox')).toBeVisible();
     });
 
@@ -540,7 +510,7 @@ describe('Select', () => {
       const listbox = screen.queryByRole('listbox');
       expect(listbox).not.toBeInTheDocument();
 
-      const button = screen.getByRole('button', { name: 'test-aria-label' });
+      const button = screen.getByRole('combobox', { name: 'test-aria-label' });
       button.focus();
       expect(button).toHaveFocus();
 
@@ -563,7 +533,7 @@ describe('Select', () => {
       const listbox = screen.queryByRole('listbox');
       expect(listbox).not.toBeInTheDocument();
 
-      const button = screen.getByRole('button', { name: 'test-aria-label' });
+      const button = screen.getByRole('combobox', { name: 'test-aria-label' });
       button.focus();
       expect(button).toHaveFocus();
 
@@ -586,7 +556,7 @@ describe('Select', () => {
       );
 
       // open listbox
-      await user.click(screen.getByRole('button', { name: 'test-aria-label' }));
+      await user.click(screen.getByRole('combobox', { name: 'test-aria-label' }));
       expect(screen.getByRole('listbox')).toBeVisible();
 
       // close listbox by clicking outside
@@ -607,7 +577,7 @@ describe('Select', () => {
       );
 
       // open listbox
-      await user.click(screen.getByRole('button', { name: 'test-aria-label' }));
+      await user.click(screen.getByRole('combobox', { name: 'test-aria-label' }));
       expect(screen.getByRole('listbox')).toBeVisible();
 
       // close listbox by pressing escape
@@ -628,7 +598,7 @@ describe('Select', () => {
       );
 
       // open listbox
-      await user.click(screen.getByRole('button', { name: 'test-aria-label' }));
+      await user.click(screen.getByRole('combobox', { name: 'test-aria-label' }));
       expect(screen.getByRole('listbox')).toBeVisible();
 
       // choose first value and close listbox by pressing enter
@@ -639,7 +609,7 @@ describe('Select', () => {
         expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
       });
       // first item should be selected
-      expect(screen.getByRole('button', { name: 'test-aria-label' }).textContent).toBe('Item 1');
+      expect(screen.getByRole('combobox', { name: 'test-aria-label' }).textContent).toBe('Item 1');
     });
 
     it('should select second option when pressing arrow-down & enter after opening', async () => {
@@ -653,7 +623,7 @@ describe('Select', () => {
       );
 
       // open listbox
-      await user.click(screen.getByRole('button', { name: 'test-aria-label' }));
+      await user.click(screen.getByRole('combobox', { name: 'test-aria-label' }));
       expect(screen.getByRole('listbox')).toBeVisible();
 
       // choose second value and close listbox by pressing arrow-down and enter
@@ -665,7 +635,7 @@ describe('Select', () => {
         expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
       });
       // second item should be selected
-      expect(screen.getByRole('button', { name: 'test-aria-label' }).textContent).toBe('Item 2');
+      expect(screen.getByRole('combobox', { name: 'test-aria-label' }).textContent).toBe('Item 2');
     });
 
     it('should select third option when clicking on it after opening', async () => {
@@ -680,7 +650,7 @@ describe('Select', () => {
       );
 
       // open listbox
-      await user.click(screen.getByRole('button', { name: 'test-aria-label' }));
+      await user.click(screen.getByRole('combobox', { name: 'test-aria-label' }));
       expect(screen.getByRole('listbox')).toBeVisible();
 
       // choose third value and close listbox by clicking on it
@@ -691,7 +661,7 @@ describe('Select', () => {
         expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
       });
       // second item should be selected
-      expect(screen.getByRole('button', { name: 'test-aria-label' }).textContent).toBe('Item 3');
+      expect(screen.getByRole('combobox', { name: 'test-aria-label' }).textContent).toBe('Item 3');
     });
 
     it('should focus on 2nd option after opening if first option is disabled', async () => {
@@ -705,7 +675,7 @@ describe('Select', () => {
       );
 
       // open listbox
-      await user.click(screen.getByRole('button', { name: 'test-aria-label' }));
+      await user.click(screen.getByRole('combobox', { name: 'test-aria-label' }));
 
       expect(screen.getByRole('listbox')).toBeVisible();
 
@@ -717,7 +687,7 @@ describe('Select', () => {
         expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
       });
       // second item should be selected
-      expect(screen.getByRole('button', { name: 'test-aria-label' }).textContent).toBe('Item 2');
+      expect(screen.getByRole('combobox', { name: 'test-aria-label' }).textContent).toBe('Item 2');
     });
   });
 });

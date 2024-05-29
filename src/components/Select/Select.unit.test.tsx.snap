@@ -169,10 +169,12 @@ exports[`Select snapshot should match snapshot 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="test-id"
+            role="combobox"
             type="button"
           >
             <span
@@ -277,7 +279,7 @@ exports[`Select snapshot should match snapshot 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -296,6 +298,7 @@ exports[`Select snapshot should match snapshot 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -476,7 +479,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -495,6 +498,7 @@ exports[`Select snapshot should match snapshot 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -719,10 +723,12 @@ exports[`Select snapshot should match snapshot before and after opening select d
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -827,7 +833,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -846,6 +852,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -1026,7 +1033,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -1045,6 +1052,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -1269,11 +1277,12 @@ exports[`Select snapshot should match snapshot before and after opening select d
       triggerRef={
         Object {
           "current": <button
-            aria-controls="test-ID"
+            aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -1378,7 +1387,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls="test-ID"
+          aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
           className="md-select-dropdown-input md-select-open"
@@ -1397,6 +1406,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -1577,7 +1587,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             trigger="manual"
           >
             <button
-              aria-controls="test-ID"
+              aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
               className="md-select-dropdown-input md-select-open"
@@ -1596,6 +1606,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -2351,6 +2362,7 @@ exports[`Select snapshot should match snapshot with aria-label 1`] = `
             aria-label="test-aria-label"
             class="md-select-dropdown-input"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -2454,7 +2466,6 @@ exports[`Select snapshot should match snapshot with aria-label 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
           aria-expanded={false}
           aria-haspopup="listbox"
           aria-label="test-aria-label"
@@ -2474,6 +2485,7 @@ exports[`Select snapshot should match snapshot with aria-label 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -2651,7 +2663,6 @@ exports[`Select snapshot should match snapshot with aria-label 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
               aria-expanded={false}
               aria-haspopup="listbox"
               aria-label="test-aria-label"
@@ -2671,6 +2682,7 @@ exports[`Select snapshot should match snapshot with aria-label 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -2896,10 +2908,12 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input borderLess"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -3004,7 +3018,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input borderLess"
@@ -3023,6 +3037,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -3203,7 +3218,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input borderLess"
@@ -3222,6 +3237,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -3447,10 +3463,12 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -3555,7 +3573,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -3574,6 +3592,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -3754,7 +3773,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -3773,6 +3792,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -3998,10 +4018,12 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -4106,7 +4128,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -4125,6 +4147,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -4305,7 +4328,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -4324,6 +4347,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -4558,11 +4582,12 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       triggerRef={
         Object {
           "current": <button
-            aria-controls="test-ID"
+            aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -4667,7 +4692,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls="test-ID"
+          aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
           className="md-select-dropdown-input md-select-open"
@@ -4686,6 +4711,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -4866,7 +4892,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls="test-ID"
+              aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
               className="md-select-dropdown-input md-select-open"
@@ -4885,6 +4911,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -5640,10 +5667,12 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-controls="example-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="example-id"
+            role="combobox"
             type="button"
           >
             <span
@@ -5748,7 +5777,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="example-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -5767,6 +5796,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -5947,7 +5977,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="example-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -5966,6 +5996,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -6067,7 +6098,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -6086,6 +6116,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -6266,7 +6297,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -6285,6 +6315,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -6510,11 +6541,12 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       triggerRef={
         Object {
           "current": <button
-            aria-controls="test-ID"
+            aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -6619,7 +6651,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls="test-ID"
+          aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
           className="md-select-dropdown-input md-select-open"
@@ -6638,6 +6670,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -6818,7 +6851,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls="test-ID"
+              aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
               className="md-select-dropdown-input md-select-open"
@@ -6837,6 +6870,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -7588,11 +7622,11 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       triggerRef={
         Object {
           "current": <button
-            aria-controls="test-ID"
             aria-expanded="true"
             aria-haspopup="listbox"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -7697,7 +7731,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls="test-ID"
           aria-expanded={true}
           aria-haspopup="listbox"
           className="md-select-dropdown-input md-select-open"
@@ -7716,6 +7749,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -7896,7 +7930,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls="test-ID"
               aria-expanded={true}
               aria-haspopup="listbox"
               className="md-select-dropdown-input md-select-open"
@@ -7915,6 +7948,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -8666,11 +8700,11 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       triggerRef={
         Object {
           "current": <button
-            aria-controls="test-ID"
             aria-expanded="true"
             aria-haspopup="listbox"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -8775,7 +8809,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls="test-ID"
           aria-expanded={true}
           aria-haspopup="listbox"
           className="md-select-dropdown-input md-select-open"
@@ -8794,6 +8827,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -8974,7 +9008,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls="test-ID"
               aria-expanded={true}
               aria-haspopup="listbox"
               className="md-select-dropdown-input md-select-open"
@@ -8993,6 +9026,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -9745,10 +9779,12 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -9855,7 +9891,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -9874,6 +9910,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -10056,7 +10093,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -10075,6 +10112,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -10325,10 +10363,12 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input md-select-selected"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -10436,7 +10476,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input md-select-selected"
@@ -10455,6 +10495,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -10638,7 +10679,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input md-select-selected"
@@ -10657,6 +10698,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -10909,11 +10951,12 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       triggerRef={
         Object {
           "current": <button
-            aria-controls="test-ID"
+            aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
             class="md-select-dropdown-input md-select-selected md-select-open"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -11021,7 +11064,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls="test-ID"
+          aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
           className="md-select-dropdown-input md-select-selected md-select-open"
@@ -11040,6 +11083,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -11223,7 +11267,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             trigger="manual"
           >
             <button
-              aria-controls="test-ID"
+              aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
               className="md-select-dropdown-input md-select-selected md-select-open"
@@ -11242,6 +11286,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -12085,10 +12130,12 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="test-ID"
+            role="combobox"
             type="button"
           >
             <span
@@ -12193,7 +12240,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
+          aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -12212,6 +12259,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           type="button"
         >
           <span
@@ -12392,7 +12440,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
+              aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -12411,6 +12459,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               type="button"
             >
               <span
@@ -12638,6 +12687,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             aria-haspopup="listbox"
             class="md-select-dropdown-input"
             id="test-ID"
+            role="combobox"
             title="Example text"
             type="button"
           >
@@ -12743,7 +12793,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
       trigger="manual"
       triggerComponent={
         <button
-          aria-controls={null}
           aria-expanded={false}
           aria-haspopup="listbox"
           className="md-select-dropdown-input"
@@ -12762,6 +12811,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          role="combobox"
           title="Example text"
           type="button"
         >
@@ -12943,7 +12993,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             trigger="manual"
           >
             <button
-              aria-controls={null}
               aria-expanded={false}
               aria-haspopup="listbox"
               className="md-select-dropdown-input"
@@ -12962,6 +13011,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
+              role="combobox"
               title="Example text"
               type="button"
             >
