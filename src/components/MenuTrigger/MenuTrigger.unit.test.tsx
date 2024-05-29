@@ -121,6 +121,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .find('[role="dialog"]')
         .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -134,6 +135,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} className={className} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .find('[role="dialog"]')
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -148,6 +150,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} id={id} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .find('[role="dialog"]')
         .getDOMNode();
 
       expect(element.id).toBe(id);
@@ -162,6 +165,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} style={style} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .find('[role="dialog"]')
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -235,14 +239,18 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     ],
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const openMenu = async (user: any) => {
-    await user.click(screen.getByRole('button', { name: 'Open Menu' }));
-  };
-
   describe('actions', () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const openMenu = async (user: any, screen: any) => {
+      await user.click(screen.getByRole('button', { name: 'Open Menu' }));
+      await waitFor(() => {
+        expect(screen.getByRole('menu', { name: 'Single Menu' } )).toBeInTheDocument();
+      });
+      const menu = screen.getByRole('menu', { name: 'Single Menu' } );
+      return menu;
+    };
+
     it('should callback correctly when onOpenChange is provided ', async () => {
-      expect.assertions(5);
       const user = userEvent.setup();
 
       const onOpenChangeMock = jest.fn();
@@ -250,8 +258,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       render(<MenuTrigger {...defaultProps} onOpenChange={onOpenChangeMock} />);
       expect(onOpenChangeMock).not.toHaveBeenCalled();
 
-      await openMenu(user);
-      await screen.findByRole('menu', { name: 'Single Menu' });
+      await openMenu(user, screen);
 
       expect(onOpenChangeMock).toHaveBeenCalledWith(true);
       expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
@@ -259,20 +266,21 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
       await user.keyboard('{Escape}');
 
+      await waitFor(() => {
+        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+      });
+
       expect(onOpenChangeMock).toHaveBeenCalledWith(false);
       expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
     });
 
     it('should close the menu when closeOnSelect is true', async () => {
-      expect.assertions(2);
       const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
 
-      await openMenu(user);
+      await openMenu(user, screen);
 
-      const menu = await screen.findByRole('menu', { name: 'Single Menu' });
-      expect(menu).toBeVisible();
       await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
       await waitFor(() => {
@@ -281,15 +289,12 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     });
 
     it('should not close the menu when closeOnSelect is false', async () => {
-      expect.assertions(2);
       const user = userEvent.setup();
 
       render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-      await openMenu(user);
+      await openMenu(user, screen);
 
-      const menu = await screen.findByRole('menu', { name: 'Single Menu' });
-      expect(menu).toBeVisible();
       await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
       await waitFor(() => {
@@ -298,7 +303,6 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     });
 
     it('should open and close if isOpen prop is provided (controlled)', async () => {
-      expect.assertions(3);
       const user = userEvent.setup();
 
       const ParentComponent = () => {
@@ -331,174 +335,149 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
       });
     });
-  });
 
-  describe('keyboard accessibility', () => {
+    describe('keyboard accessibility', () => {
+      it('triggerComponent has aria-haspopup true by default', async () => {
+        const defaultProps = {
+          'aria-label': 'Label',
+          triggerComponent: <ButtonPill aria-label="Open Menu">Open Menu</ButtonPill>,
+          children: [
+            <Menu selectionMode="single" key="2" aria-label="Single Menu">
+              <Item key="one">One</Item>
+              <Item key="two">Two</Item>
+              <Item key="three">Three</Item>
+            </Menu>,
+            <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
+              <Item key="asd">Four</Item>
+              <Item key="ff">Five</Item>
+              <Item key="d">Six</Item>
+            </Menu>,
+          ],
+        };
 
-    it('triggerComponent has aria-haspopup true by default', async () => {
-      const defaultProps = {
-        'aria-label': 'Label',
-        triggerComponent: <ButtonPill aria-label="Open Menu">Open Menu</ButtonPill>,
-        children: [
-          <Menu selectionMode="single" key="2" aria-label="Single Menu">
-            <Item key="one">One</Item>
-            <Item key="two">Two</Item>
-            <Item key="three">Three</Item>
-          </Menu>,
-          <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
-            <Item key="asd">Four</Item>
-            <Item key="ff">Five</Item>
-            <Item key="d">Six</Item>
-          </Menu>,
-        ],
-      };
+        render(<MenuTrigger {...defaultProps} />);
 
-      render(<MenuTrigger {...defaultProps} />);
-
-      const button = await screen.findByRole('button', { name: 'Open Menu' });
-      expect(button).toBeVisible();
-      expect(button.getAttribute('aria-haspopup')).toBe('true');
-    });
-
-    it('triggerComponent can have aria-haspopup as passed in props', async () => {
-      const defaultProps = {
-        'aria-label': 'Label',
-        triggerComponent: <ButtonPill aria-haspopup='dialog' aria-label="Open Menu">Open Menu</ButtonPill>,
-        children: [
-          <Menu selectionMode="single" key="2" aria-label="Single Menu">
-            <Item key="one">One</Item>
-            <Item key="two">Two</Item>
-            <Item key="three">Three</Item>
-          </Menu>,
-          <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
-            <Item key="asd">Four</Item>
-            <Item key="ff">Five</Item>
-            <Item key="d">Six</Item>
-          </Menu>,
-        ],
-      };
-
-      render(<MenuTrigger {...defaultProps} />);
-
-      const button = await screen.findByRole('button', { name: 'Open Menu' });
-      expect(button).toBeVisible();
-      expect(button.getAttribute('aria-haspopup')).toBe('dialog');
-    });
-
-    it('closes the menu on Escape', async () => {
-      expect.assertions(2);
-      const user = userEvent.setup();
-
-      render(<MenuTrigger {...defaultProps} />);
-
-      await openMenu(user);
-
-      const menu = await screen.findByRole('menu', { name: 'Single Menu' });
-      expect(menu).toBeVisible();
-
-      await user.keyboard('{Escape}');
-
-      await waitFor(() => {
-        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        const button = screen.getByRole('button', { name: 'Open Menu' });
+        expect(button).toBeVisible();
+        expect(button.getAttribute('aria-haspopup')).toBe('true');
       });
-    });
 
-    it('closes the menu on Tab if only one menu present', async () => {
-      expect.assertions(2);
-      const user = userEvent.setup();
+      it('triggerComponent can have aria-haspopup as passed in props', async () => {
+        const defaultProps = {
+          'aria-label': 'Label',
+          triggerComponent: <ButtonPill aria-haspopup='dialog' aria-label="Open Menu">Open Menu</ButtonPill>,
+          children: [
+            <Menu selectionMode="single" key="2" aria-label="Single Menu">
+              <Item key="one">One</Item>
+              <Item key="two">Two</Item>
+              <Item key="three">Three</Item>
+            </Menu>,
+            <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
+              <Item key="asd">Four</Item>
+              <Item key="ff">Five</Item>
+              <Item key="d">Six</Item>
+            </Menu>,
+          ],
+        };
 
-      render(<MenuTrigger {...defaultProps} children={[defaultProps.children[0]]} />);
+        render(<MenuTrigger {...defaultProps} />);
 
-      await openMenu(user);
-
-      const menu = await screen.findByRole('menu', { name: 'Single Menu' });
-      expect(menu).toBeVisible();
-
-      await user.tab();
-
-      await waitFor(() => {
-        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        const button = screen.getByRole('button', { name: 'Open Menu' });
+        expect(button).toBeVisible();
+        expect(button.getAttribute('aria-haspopup')).toBe('dialog');
       });
-    });
 
-    it("doesn't close the menu on Tab if more than one menu present", async () => {
-      expect.assertions(2);
-      const user = userEvent.setup();
+      it('closes the menu on Escape', async () => {
+        const user = userEvent.setup();
 
-      render(<MenuTrigger {...defaultProps} />);
+        render(<MenuTrigger {...defaultProps} />);
 
-      await openMenu(user);
+        await openMenu(user, screen);
 
-      const menu = await screen.findByRole('menu', { name: 'Single Menu' });
-      expect(menu).toBeVisible();
+        await user.keyboard('{Escape}');
 
-      await user.tab();
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        });
+      });
 
-      expect(menu).toBeVisible();
-    });
+      it("doesn't close the menu on Tab if only one menu present", async () => {
+        const user = userEvent.setup();
 
-    it('will focus back on trigger component after the menu trigger closes', async () => {
-      expect.assertions(1);
-      const user = userEvent.setup();
+        render(<MenuTrigger {...defaultProps} children={[defaultProps.children[0]]} />);
 
-      render(<MenuTrigger {...defaultProps} />);
+        const menu = await openMenu(user, screen);
 
-      await openMenu(user);
+        await user.tab();
 
-      await screen.findByRole('menu', { name: 'Single Menu' });
+        expect(menu).toBeVisible();
+      });
 
-      await user.keyboard('{escape}');
+      it("doesn't close the menu on Tab if more than one menu present", async () => {
+        const user = userEvent.setup();
 
-      expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
-    });
+        render(<MenuTrigger {...defaultProps} />);
 
-    it('will focus on the first menu option when menu trigger is opened', async () => {
-      expect.assertions(1);
-      const user = userEvent.setup();
+        const menu = await openMenu(user, screen);
 
-      render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
+        await user.tab();
 
-      await openMenu(user);
+        expect(menu).toBeVisible();
+      });
 
-      expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
-    });
+      it('will focus back on trigger component after the menu trigger closes', async () => {
+        const user = userEvent.setup();
 
-    it('selects option on Space', async () => {
-      expect.assertions(1);
-      const user = userEvent.setup();
+        render(<MenuTrigger {...defaultProps} />);
 
-      render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
+        await openMenu(user, screen);
 
-      await openMenu(user);
+        await user.keyboard('{escape}');
 
-      await screen.findByRole('menu', { name: 'Single Menu' });
+        expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
+      });
 
-      screen.getByRole('menuitemradio', { name: 'One' }).focus();
+      it('will focus on the first menu option when menu trigger is opened', async () => {
+        const user = userEvent.setup();
 
-      await user.keyboard('{space}');
+        render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
 
-      expect(
-        (await screen.findByRole('menuitemradio', { name: 'One' })).getAttribute('aria-checked')
-      ).toBeTruthy();
-    });
+        await openMenu(user, screen);
 
-    it('selects option on Enter', async () => {
-      expect.assertions(1);
-      const user = userEvent.setup();
+        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+      });
 
-      render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
+      it('selects option on Space', async () => {
+        const user = userEvent.setup();
 
-      await openMenu(user);
+        render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-      await screen.findByRole('menu', { name: 'Single Menu' });
+        await openMenu(user, screen);
 
-      screen.getByRole('menuitemradio', { name: 'Two' }).focus();
+        screen.getByRole('menuitemradio', { name: 'One' }).focus();
 
-      await user.keyboard('{enter}');
+        await user.keyboard('{space}');
 
-      expect(
-        (await screen.findByRole('menuitemradio', { name: 'Two' })).getAttribute('aria-checked')
-      ).toBeTruthy();
+        expect(
+          (await screen.findByRole('menuitemradio', { name: 'One' })).getAttribute('aria-checked')
+        ).toBeTruthy();
+      });
+
+      it('selects option on Enter', async () => {
+        const user = userEvent.setup();
+
+        render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
+
+        await openMenu(user, screen);
+
+        screen.getByRole('menuitemradio', { name: 'Two' }).focus();
+
+        await user.keyboard('{enter}');
+
+        expect(
+          (await screen.findByRole('menuitemradio', { name: 'Two' })).getAttribute('aria-checked')
+        ).toBeTruthy();
+      });
     });
   });
 });

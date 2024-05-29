@@ -17,6 +17,7 @@ const STYLE = {
   details: `${CLASS_PREFIX}-details`,
   title: `${CLASS_PREFIX}-title`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
+  modalContainer: `${CLASS_PREFIX}-modal-container`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };

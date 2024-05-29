@@ -68,10 +68,8 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   const triggerComponentId = triggerComponent.props?.id || uuidV4();
 
   const modalConditionalProps = {
-    ...(interactive && {'aria-labelledby': triggerComponentId}),
+    ...(interactive && { 'aria-labelledby': triggerComponentId, focusLockProps: { returnFocus: true,  } }),
   };
-  
-
 
   // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):
   const arrowId = React.useMemo(() => `${ARROW_ID}${uuidV4()}`, []);
@@ -105,9 +103,9 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     'aria-haspopup': triggerComponent.props?.['aria-haspopup'] || 'dialog',
     'id': interactive ? triggerComponentId : triggerComponent.props?.id,
   };
-  
-  const mrv2Props = isMRv2Button(triggerComponent) ? {useNativeKeyDown: true} : {};
-  
+
+  const mrv2Props = isMRv2Button(triggerComponent) ? { useNativeKeyDown: true } : {};
+
   const clonedTriggerComponent = React.cloneElement(triggerComponent, {
     ...triggerComponentCommonProps,
     ...mrv2Props,

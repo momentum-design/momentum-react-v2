@@ -138,7 +138,6 @@ Offset.args = {
   placement: PLACEMENTS.RIGHT,
   showArrow: true,
   variant: 'small',
-  closeButtonPlacement: 'top-right',
   focusBackOnTrigger: true,
   color: COLORS.TERTIARY,
   delay: [0, 0],
@@ -165,6 +164,7 @@ MultiplePopovers.args = {
   showArrow: true,
   interactive: true,
   children: 'Interactive content on click',
+  closeButtonPlacement: 'top-right',
   triggerComponent: (
     <Popover
       trigger="mouseenter"

@@ -62,7 +62,7 @@ export interface Props extends OverlayProps {
   title?: string;
 
   /**
-   * Props to be passed to Overlay for FocusLock
+   * Props to be passed to Overlay for FocusLock, default `{returnFocus: true}`
    */
   focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
 

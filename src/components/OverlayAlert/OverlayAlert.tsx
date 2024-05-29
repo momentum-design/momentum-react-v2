@@ -41,13 +41,19 @@ const OverlayAlert: FC<Props> = (props: Props) => {
 
   return (
     <Overlay
-      focusLockProps={focusLockProps}
       className={classnames(className, STYLE.wrapper)}
       color={overlayColor}
       onKeyDown={onKeyDown}
       {...other}
     >
-      <ModalContainer round={75} color={modalColor} aria-label={ariaLabel} aria-labelledby={title ? id : undefined}>
+      <ModalContainer
+        className={classnames(STYLE.modalContainer)}
+        round={75}
+        color={modalColor}
+        aria-label={ariaLabel}
+        aria-labelledby={title ? id : undefined}
+        focusLockProps={focusLockProps}
+      >
         <div>
           <div>{controls}</div>
         </div>
@@ -62,10 +68,10 @@ const OverlayAlert: FC<Props> = (props: Props) => {
           {children
             ? children
             : !!details && (
-                <Text className={classnames(STYLE.details)} type="body-primary">
-                  {details}
-                </Text>
-              )}
+              <Text className={classnames(STYLE.details)} type="body-primary">
+                {details}
+              </Text>
+            )}
         </div>
         <div>{actions}</div>
       </ModalContainer>

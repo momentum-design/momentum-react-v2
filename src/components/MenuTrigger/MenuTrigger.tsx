@@ -8,7 +8,6 @@ import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
 import { MenuContext } from '../Menu';
 import { DismissButton } from '@react-aria/overlays';
-import { FocusScope } from '@react-aria/focus';
 import { useKeyboard } from '@react-aria/interactions';
 import ContentSeparator from '../ContentSeparator';
 import Popover from '../Popover';
@@ -92,11 +91,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       if (event.key === 'Escape') {
         closeMenuTrigger();
       }
-      // When there are more than one menus inside the menu trigger, we should not close the overlay
-      // according to W-ARIA
-      if (state.isOpen && event.key === 'Tab' && menus.length === 1) {
-        closeMenuTrigger();
-      }
     },
   });
 
@@ -128,7 +122,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       hideOnEsc={false}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
-      <FocusScope restoreFocus contain>
         <DismissButton onDismiss={closeMenuTrigger} />
         {menus.map((menu: ReactElement, index) => {
           return (
@@ -147,7 +140,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
           );
         })}
         <DismissButton onDismiss={closeMenuTrigger} />
-      </FocusScope>
     </Popover>
   );
 };
