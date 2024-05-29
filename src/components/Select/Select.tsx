@@ -94,10 +94,9 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
    */
   const onKeyDown = useCallback((e) => {
     switch (e.key) {
-      case 'Enter':
-      case ' ':
-      case 'ArrowDown':
+      // useButton already provides Keyboard event support for Enter and Space
       case 'ArrowUp':
+      case 'ArrowDown':
         e.preventDefault();
         state.open();
         break;
@@ -108,6 +107,9 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     <button
       id={name}
       {...buttonProps}
+      role="combobox"
+      aria-expanded={!!state.isOpen}
+      aria-controls={id}
       className={classnames(
         STYLE.dropdownInput,
         { [STYLE.selected]: state.selectedItem },
