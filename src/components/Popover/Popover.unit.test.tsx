@@ -31,8 +31,12 @@ describe('<Popover />', () => {
     contentName = /Content/i
   ) => {
     await user.click(screen.getByRole('button', { name: buttonName }));
-    const content = await screen.findByText(contentName);
-    expect(content).toBeVisible();
+    
+    await waitFor(() => {
+      expect(screen.getByText(contentName)).toBeInTheDocument();
+    });
+
+    const content = screen.getByText(contentName);
     return content;
   };
 
@@ -318,6 +322,35 @@ describe('<Popover />', () => {
       );
       const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
       expect(content.parentElement.getAttribute('aria-labelledby')).toBe('1');
+    });
+
+    it('has focusLockProps when interactive is true', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Popover
+          triggerComponent={<button>Click Me!</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.parentElement.getAttribute('data-focus-lock-disabled')).toBe('false');
+    });
+
+    it('has no focusLockProps when interactive is false', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Popover
+          triggerComponent={<button>Click Me!</button>}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.parentElement.getAttribute('data-focus-lock-disabled')).toBe(null);
     });
 
     it('checks triggerComponent props when aria-haspopup is defined', async () => {

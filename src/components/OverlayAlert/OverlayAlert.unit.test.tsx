@@ -5,8 +5,9 @@ import ButtonControl from '../ButtonControl';
 import ButtonPill from '../ButtonPill';
 import ModalContainer, { MODAL_CONTAINER_CONSTANTS } from '../ModalContainer';
 import Overlay, { OVERLAY_CONSTANTS } from '../Overlay';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 
 import OverlayAlert, { OVERLAY_ALERT_CONSTANTS as CONSTANTS, OVERLAY_ALERT_CONSTANTS } from './';
 import { STYLE as OVERLAY_STYLE } from '../Overlay/Overlay.constants';
@@ -291,7 +292,7 @@ describe('<OverlayAlert />', () => {
 
       const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
-      const titleComponent = component.find(Text).filter({className: OVERLAY_ALERT_CONSTANTS.STYLE.title});
+      const titleComponent = component.find(Text).filter({ className: OVERLAY_ALERT_CONSTANTS.STYLE.title });
 
       expect(titleComponent.props().type).toStrictEqual('title');
     });
@@ -303,7 +304,7 @@ describe('<OverlayAlert />', () => {
 
       const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
-      const titleComponent = component.find(Text).filter({type: 'title'});
+      const titleComponent = component.find(Text).filter({ type: 'title' });
 
       const modalContainerComponent = component.find(ModalContainer);
 
@@ -326,7 +327,7 @@ describe('<OverlayAlert />', () => {
 
       const ariaLabel = 'test-aria-label';
 
-      const component = mount(<OverlayAlert ariaLabel={ariaLabel}/>).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert ariaLabel={ariaLabel} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
       const modalContainerComponent = component.find(ModalContainer);
 
@@ -376,5 +377,40 @@ describe('<OverlayAlert />', () => {
 
       expect(onCloseFn).toHaveBeenCalledTimes(1);
     });
+  });
+
+  it('should lock focus by default', async () => {
+    const Component = () => {
+      return (
+        <>
+          <button>button3</button>
+          <OverlayAlert>
+            <button>button1</button>
+            <button>button2</button>
+          </OverlayAlert>
+        </>
+      );
+    };
+
+    const user = userEvent.setup();
+
+    render(<Component />);
+
+    const button1 = screen.getByRole('button', {name: 'button1'});
+    const button2 = screen.getByRole('button', {name: 'button2'});
+    const button3 = screen.getByRole('button', {name: 'button3'});
+
+    expect(button1).toHaveFocus();
+    expect(button3).not.toHaveFocus();
+
+    await user.tab();
+
+    expect(button2).toHaveFocus();
+    expect(button3).not.toHaveFocus();
+
+    await user.tab();
+
+    expect(button1).toHaveFocus();
+    expect(button3).not.toHaveFocus();
   });
 });

@@ -1,5 +1,4 @@
-import { CSSProperties, ReactNode, ComponentProps } from 'react';
-import FocusLock from 'react-focus-lock';
+import { CSSProperties, ReactNode } from 'react';
 
 export type Color = 'primary' | 'secondary';
 
@@ -33,11 +32,6 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
-
-  /**
-   * Props to be passed to FocusLock
-   */
-  focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
 
   /**
    * Callback function for when the escape key is pressed on the container div

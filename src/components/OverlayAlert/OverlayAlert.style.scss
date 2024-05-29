@@ -1,5 +1,4 @@
-.md-overlay-alert-wrapper {
-  > :first-child {
+.md-overlay-alert-modal-container {
     max-width: 25rem;
     min-width: 20rem;
 
@@ -40,5 +39,4 @@
         margin-left: 0.5rem;
       }
     }
-  }
 }

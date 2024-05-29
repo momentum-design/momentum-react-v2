@@ -5,109 +5,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div />
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -121,26 +91,45 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div />
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -153,25 +142,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
               <div />
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -187,126 +176,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div />
-                  <div>
-                    <button
-                      class="md-button-pill-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="false"
-                      data-grown="false"
-                      data-inverted="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="40"
-                      type="button"
-                    >
-                      <span>
-                        Button Pill
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -337,26 +279,62 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div />
+                      <div>
+                        <button
+                          class="md-button-pill-wrapper md-button-simple-wrapper"
+                          data-color="primary"
+                          data-disabled="false"
+                          data-ghost="false"
+                          data-grown="false"
+                          data-inverted="false"
+                          data-outline="false"
+                          data-shallow-disabled="false"
+                          data-size="40"
+                          type="button"
+                        >
+                          <span>
+                            Button Pill
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -421,25 +399,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                 </ButtonPill>
               </div>
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -451,113 +429,81 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        aria-label="test-aria-label"
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-label="test-aria-label"
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div>
-                    example-children
-                  </div>
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-label="test-aria-label"
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -573,28 +519,49 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            aria-label="test-aria-label"
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-label="test-aria-label"
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div>
+                        example-children
+                      </div>
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-label="test-aria-label"
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -609,25 +576,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
               </div>
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -639,109 +606,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
   <Overlay
     className="example-class md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="example-class md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="example-class md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div />
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="example-class md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -755,26 +692,45 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="example-class md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div />
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -787,25 +743,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
               <div />
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -821,114 +777,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div>
-                      <button
-                        class="md-button-control-wrapper md-button-simple-wrapper"
-                        type="button"
-                      />
-                    </div>
-                  </div>
-                  <div />
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -947,26 +868,50 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div>
+                          <button
+                            class="md-button-control-wrapper md-button-simple-wrapper"
+                            type="button"
+                          />
+                        </div>
+                      </div>
+                      <div />
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -1019,25 +964,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
               <div />
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -1049,116 +994,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div>
-                    <p
-                      class="md-text-wrapper md-overlay-alert-details"
-                      data-type="body-primary"
-                    >
-                      example-details
-                    </p>
-                  </div>
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -1179,26 +1087,52 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div>
+                        <p
+                          class="md-text-wrapper md-overlay-alert-details"
+                          data-type="body-primary"
+                        >
+                          example-details
+                        </p>
+                      </div>
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -1223,25 +1157,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
               </div>
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -1253,111 +1187,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div>
-                    example-children
-                  </div>
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -1373,26 +1275,47 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div>
+                        example-children
+                      </div>
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -1407,25 +1330,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
               </div>
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -1437,112 +1360,81 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     id="example-id"
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      id="example-id"
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-                id="example-id"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div />
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
-                  id="example-id"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -1556,27 +1448,45 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          id="example-id"
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div />
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -1589,25 +1499,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
               <div />
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -1634,161 +1544,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div />
-                  <div>
-                    <button
-                      class="md-button-pill-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="false"
-                      data-grown="false"
-                      data-inverted="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="40"
-                      type="button"
-                    >
-                      <span>
-                        Button Pill
-                      </span>
-                    </button>
-                    ,
-                    <button
-                      class="md-button-pill-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="false"
-                      data-grown="false"
-                      data-inverted="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="40"
-                      type="button"
-                    >
-                      <span>
-                        Button Pill
-                      </span>
-                    </button>
-                    ,
-                    <button
-                      class="md-button-pill-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="false"
-                      data-grown="false"
-                      data-inverted="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="40"
-                      type="button"
-                    >
-                      <span>
-                        Button Pill
-                      </span>
-                    </button>
-                    ,
-                  </div>
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -1854,26 +1682,97 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                     </div>
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div />
+                      <div>
+                        <button
+                          class="md-button-pill-wrapper md-button-simple-wrapper"
+                          data-color="primary"
+                          data-disabled="false"
+                          data-ghost="false"
+                          data-grown="false"
+                          data-inverted="false"
+                          data-outline="false"
+                          data-shallow-disabled="false"
+                          data-size="40"
+                          type="button"
+                        >
+                          <span>
+                            Button Pill
+                          </span>
+                        </button>
+                        ,
+                        <button
+                          class="md-button-pill-wrapper md-button-simple-wrapper"
+                          data-color="primary"
+                          data-disabled="false"
+                          data-ghost="false"
+                          data-grown="false"
+                          data-inverted="false"
+                          data-outline="false"
+                          data-shallow-disabled="false"
+                          data-size="40"
+                          type="button"
+                        >
+                          <span>
+                            Button Pill
+                          </span>
+                        </button>
+                        ,
+                        <button
+                          class="md-button-pill-wrapper md-button-simple-wrapper"
+                          data-color="primary"
+                          data-disabled="false"
+                          data-ghost="false"
+                          data-grown="false"
+                          data-inverted="false"
+                          data-outline="false"
+                          data-shallow-disabled="false"
+                          data-size="40"
+                          type="button"
+                        >
+                          <span>
+                            Button Pill
+                          </span>
+                        </button>
+                        ,
+                      </div>
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -2049,25 +1948,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                 ,
               </div>
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -2094,125 +1993,79 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div>
-                      <button
-                        class="md-button-control-wrapper md-button-simple-wrapper"
-                        type="button"
-                      />
-                      ,
-                      <button
-                        class="md-button-control-wrapper md-button-simple-wrapper"
-                        type="button"
-                      />
-                      ,
-                      <button
-                        class="md-button-control-wrapper md-button-simple-wrapper"
-                        type="button"
-                      />
-                      ,
-                    </div>
-                  </div>
-                  <div />
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -2242,26 +2095,61 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div>
+                          <button
+                            class="md-button-control-wrapper md-button-simple-wrapper"
+                            type="button"
+                          />
+                          ,
+                          <button
+                            class="md-button-control-wrapper md-button-simple-wrapper"
+                            type="button"
+                          />
+                          ,
+                          <button
+                            class="md-button-control-wrapper md-button-simple-wrapper"
+                            type="button"
+                          />
+                          ,
+                        </div>
+                      </div>
+                      <div />
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -2399,25 +2287,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
               <div />
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -2433,11 +2321,6 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
     style={
       Object {
@@ -2445,104 +2328,82 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-                style="color: pink;"
-              >
-                <div
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div />
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
-                  style="color: pink;"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -2556,31 +2417,45 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-          style={
-            Object {
-              "color": "pink",
-            }
-          }
-        >
-          <ModalContainer
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div />
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -2593,25 +2468,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
               <div />
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;
@@ -2623,122 +2498,81 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
   <Overlay
     className="md-overlay-alert-wrapper"
     color="secondary"
-    focusLockProps={
-      Object {
-        "returnFocus": true,
-      }
-    }
     onKeyDown={[Function]}
   >
-    <FocusLock
-      as="div"
-      autoFocus={true}
-      disabled={false}
-      lockProps={Object {}}
-      noFocusGuards={false}
-      persistentFocus={false}
-      returnFocus={true}
+    <div
+      className="md-overlay-alert-wrapper md-overlay-wrapper"
+      data-color="secondary"
+      data-fullscreen={false}
+      onKeyDown={[Function]}
     >
-      <div
-        data-focus-guard={true}
-        key="guard-first"
-        style={
+      <ModalContainer
+        aria-labelledby="test-ID"
+        className="md-overlay-alert-modal-container"
+        focusLockProps={
           Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
+            "returnFocus": true,
           }
         }
-        tabIndex={0}
-      />
-      <div
-        data-focus-guard={true}
-        key="guard-nearest"
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={1}
-      />
-      <div
-        data-focus-lock-disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        round={75}
       >
-        <SideEffect(FocusWatcher)
+        <FocusLock
+          as="div"
           autoFocus={true}
           disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                class="md-overlay-alert-wrapper md-overlay-wrapper"
-                data-color="secondary"
-                data-fullscreen="false"
-              >
-                <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
-                  class="md-modal-container-wrapper"
-                  data-color="primary"
-                  data-elevation="0"
-                  data-padded="false"
-                  data-round="75"
-                  role="dialog"
-                >
-                  <div>
-                    <div />
-                  </div>
-                  <div
-                    class="md-overlay-alert-title"
-                  >
-                    <h2
-                      class="md-text-wrapper md-overlay-alert-title"
-                      data-type="title"
-                      id="test-ID"
-                    >
-                      example-title
-                    </h2>
-                  </div>
-                  <div />
-                  <div />
-                </div>
-              </div>
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
+          lockProps={Object {}}
+          noFocusGuards={false}
           persistentFocus={false}
-          shards={Array []}
+          returnFocus={true}
         >
-          <FocusWatcher
-            autoFocus={true}
-            disabled={false}
-            observed={
-              <div
-                data-focus-lock-disabled="false"
-              >
+          <div
+            data-focus-guard={true}
+            key="guard-first"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            data-focus-guard={true}
+            key="guard-nearest"
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={1}
+          />
+          <div
+            data-focus-lock-disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <SideEffect(FocusWatcher)
+              autoFocus={true}
+              disabled={false}
+              observed={
                 <div
-                  class="md-overlay-alert-wrapper md-overlay-wrapper"
-                  data-color="secondary"
-                  data-fullscreen="false"
+                  data-focus-lock-disabled="false"
                 >
                   <div
                     aria-labelledby="test-ID"
                     aria-modal="true"
-                    class="md-modal-container-wrapper"
+                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
                     data-color="primary"
                     data-elevation="0"
                     data-padded="false"
@@ -2763,28 +2597,58 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                     <div />
                   </div>
                 </div>
-              </div>
-            }
-            onActivation={[Function]}
-            onDeactivation={[Function]}
-            persistentFocus={false}
-            shards={Array []}
-          />
-        </SideEffect(FocusWatcher)>
-        <div
-          className="md-overlay-alert-wrapper md-overlay-wrapper"
-          data-color="secondary"
-          data-fullscreen={false}
-          onKeyDown={[Function]}
-        >
-          <ModalContainer
-            aria-labelledby="test-ID"
-            round={75}
-          >
+              }
+              onActivation={[Function]}
+              onDeactivation={[Function]}
+              persistentFocus={false}
+              shards={Array []}
+            >
+              <FocusWatcher
+                autoFocus={true}
+                disabled={false}
+                observed={
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      aria-labelledby="test-ID"
+                      aria-modal="true"
+                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
+                      data-color="primary"
+                      data-elevation="0"
+                      data-padded="false"
+                      data-round="75"
+                      role="dialog"
+                    >
+                      <div>
+                        <div />
+                      </div>
+                      <div
+                        class="md-overlay-alert-title"
+                      >
+                        <h2
+                          class="md-text-wrapper md-overlay-alert-title"
+                          data-type="title"
+                          id="test-ID"
+                        >
+                          example-title
+                        </h2>
+                      </div>
+                      <div />
+                      <div />
+                    </div>
+                  </div>
+                }
+                onActivation={[Function]}
+                onDeactivation={[Function]}
+                persistentFocus={false}
+                shards={Array []}
+              />
+            </SideEffect(FocusWatcher)>
             <div
               aria-labelledby="test-ID"
               aria-modal={true}
-              className="md-modal-container-wrapper"
+              className="md-overlay-alert-modal-container md-modal-container-wrapper"
               data-color="primary"
               data-elevation={0}
               data-padded={false}
@@ -2814,25 +2678,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
               <div />
               <div />
             </div>
-          </ModalContainer>
-        </div>
-      </div>
-      <div
-        data-focus-guard={true}
-        style={
-          Object {
-            "height": "0px",
-            "left": "1px",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "fixed",
-            "top": "1px",
-            "width": "1px",
-          }
-        }
-        tabIndex={0}
-      />
-    </FocusLock>
+          </div>
+          <div
+            data-focus-guard={true}
+            style={
+              Object {
+                "height": "0px",
+                "left": "1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": "1px",
+                "width": "1px",
+              }
+            }
+            tabIndex={0}
+          />
+        </FocusLock>
+      </ModalContainer>
+    </div>
   </Overlay>
 </OverlayAlert>
 `;

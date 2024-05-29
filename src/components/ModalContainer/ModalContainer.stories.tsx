@@ -7,6 +7,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import ModalContainer, { ModalContainerProps, MODAL_CONTAINER_CONSTANTS as CONSTANTS } from './';
 import argTypes from './ModalContainer.stories.args';
 import Documentation from './ModalContainer.stories.docs.mdx';
+import ButtonPill from '../ButtonPill';
 
 export default {
   title: 'Momentum UI/ModalContainer',
@@ -129,4 +130,14 @@ Common.parameters = {
   ],
 };
 
-export { Example, Colors, Elevations, Padding, Rounding, Common };
+
+const WithFocusLock = Template<ModalContainerProps>(ModalContainer).bind({});
+
+WithFocusLock.argTypes = { ...argTypes };
+WithFocusLock.args = {
+  children: <div><ButtonPill>Test1</ButtonPill><ButtonPill>Test2</ButtonPill></div>,
+  isPadded: true,
+  focusLockProps: { returnFocus: true }
+};
+
+export { Example, Colors, Elevations, Padding, Rounding, WithFocusLock, Common };

@@ -1,5 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import userEvent from '@testing-library/user-event';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 import ModalContainer, { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from './';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
@@ -126,6 +129,14 @@ describe('<ModalContainer />', () => {
       const children = <div>Example Text</div>;
 
       const container = mount(<ModalContainer>{children}</ModalContainer>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with focusLockProps', () => {
+      expect.assertions(1);
+
+      const container = mount(<ModalContainer focusLockProps={{ returnFocus: true }} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -273,6 +284,80 @@ describe('<ModalContainer />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('id')).toBe(arrowId);
+    });
+  });
+
+  describe('actions', () => {
+    it('should not lock focus if no focusLockProps are supplied', async () => {
+      expect.assertions(5);
+
+      const Component = () => {
+        return (
+          <>
+            <button>button</button>
+            <ModalContainer>
+              <button>button</button>
+              <button>button</button>
+            </ModalContainer>
+          </>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      render(<Component />);
+
+      const buttons = await screen.findAllByText('button');
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[0]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[1]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[2]).toHaveFocus();
+
+      await user.tab();
+
+      expect(document.body).toHaveFocus();
+    });
+
+    it('should lock focus around the children', async () => {
+      expect.assertions(3);
+
+      const Component = () => {
+        return (
+          <>
+            <button>button</button>
+            <ModalContainer focusLockProps={{}}>
+              <button>button</button>
+              <button>button</button>
+            </ModalContainer>
+          </>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      render(<Component />);
+
+      const buttons = await screen.findAllByText('button');
+
+      expect(buttons[1]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[2]).toHaveFocus();
+
+      await user.tab();
+
+      expect(buttons[1]).toHaveFocus();
     });
   });
 });

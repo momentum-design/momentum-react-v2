@@ -1,5 +1,6 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode, ComponentProps } from 'react';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
+import FocusLock from 'react-focus-lock';
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
@@ -80,4 +81,9 @@ export interface Props {
    * Boolean for aria modal.
    */
   ariaModal?: boolean;
+
+  /**
+   * Props to be passed to FocusLock
+   */
+  focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
 }

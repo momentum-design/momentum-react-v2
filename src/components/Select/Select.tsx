@@ -15,7 +15,6 @@ import { Props } from './Select.types';
 import { DEFAULTS, STYLE } from './Select.constants';
 import { useSelectState } from '@react-stately/select';
 import { useButton } from '@react-aria/button';
-import { FocusScope } from '@react-aria/focus';
 import { useKeyboard } from '@react-aria/interactions';
 import { HiddenSelect, useSelect } from '@react-aria/select';
 import Icon from '../Icon';
@@ -177,7 +176,6 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         className={STYLE.popover}
         strategy={listboxWidth ? 'fixed' : 'absolute'}
       >
-        <FocusScope contain>
           <ListBoxBase
             {...menuProps}
             ref={boxRef}
@@ -187,7 +185,6 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
             autoFocus={state.focusStrategy || DEFAULTS.FOCUS_STRATEGY}
             className={STYLE.menuListBox}
           />
-        </FocusScope>
       </Popover>
     </div>
   );
