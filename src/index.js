@@ -181,4 +181,6 @@ export {
   Slider as SliderNext,
   ComboBox as ComboBoxNext,
   AriaGroup,
+  RadioSimple,
+  RadioSimpleGroup,
 } from './components';
