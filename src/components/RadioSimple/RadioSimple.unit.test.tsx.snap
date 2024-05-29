@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioSimple /> snapshot should match snapshot 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper"
+    data-disabled="false"
+    data-focused="false"
+    data-selected="false"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        tabindex="0"
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<RadioSimple /> snapshot should match snapshot with ariaLabel 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper"
+    data-disabled="false"
+    data-focused="false"
+    data-selected="false"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        aria-label="example-ariaLabel"
+        tabindex="0"
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<RadioSimple /> snapshot should match snapshot with ariaLabelledBy 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper"
+    data-disabled="false"
+    data-focused="false"
+    data-selected="false"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        aria-labelledby="example-ariaLabel"
+        tabindex="0"
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<RadioSimple /> snapshot should match snapshot with className 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper example-className"
+    data-disabled="false"
+    data-focused="false"
+    data-selected="false"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        tabindex="0"
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<RadioSimple /> snapshot should match snapshot with id 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper"
+    data-disabled="false"
+    data-focused="false"
+    data-selected="false"
+    id="example-id"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        id="example-id"
+        tabindex="0"
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<RadioSimple /> snapshot should match snapshot with isDisabled 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper"
+    data-disabled="true"
+    data-focused="false"
+    data-selected="false"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        disabled=""
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<RadioSimple /> snapshot should match snapshot with style 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper"
+    data-disabled="false"
+    data-focused="false"
+    data-selected="false"
+    style="color: red;"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        tabindex="0"
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
