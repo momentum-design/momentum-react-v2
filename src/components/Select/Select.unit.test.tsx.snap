@@ -1725,6 +1725,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             >
               <ModalContainer
                 aria-labelledby="test-ID"
+                ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
                 elevation={3}
@@ -4477,6 +4478,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             >
               <ModalContainer
                 aria-labelledby="test-ID"
+                ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
                 elevation={3}
@@ -6436,6 +6438,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             >
               <ModalContainer
                 aria-labelledby="test-ID"
+                ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
                 elevation={3}
@@ -7516,6 +7519,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             >
               <ModalContainer
                 aria-labelledby="test-ID"
+                ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
                 elevation={3}
@@ -8596,6 +8600,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             >
               <ModalContainer
                 aria-labelledby="test-ID"
+                ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
                 elevation={3}
@@ -10878,6 +10883,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             >
               <ModalContainer
                 aria-labelledby="test-ID"
+                ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
                 elevation={3}

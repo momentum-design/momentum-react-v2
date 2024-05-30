@@ -39,7 +39,11 @@ const MenuTrigger: FC<Props> = (props: Props) => {
 
   const menuTriggerType = triggerComponent.props?.['aria-haspopup'] || 'menu';
 
-  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: menuTriggerType }, state, buttonRef);
+  const { menuTriggerProps, menuProps } = useMenuTrigger(
+    { type: menuTriggerType },
+    state,
+    buttonRef
+  );
 
   menuTriggerProps['aria-haspopup'] = menuTriggerProps['aria-haspopup'] || menuTriggerType;
 
@@ -112,6 +116,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       // MenuContext.Provider should take care of the auto focusing
       // eslint-disable-next-line jsx-a11y/no-autofocus
       autoFocus={false}
+      role="menu"
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
       {menus.map((menu: ReactElement, index) => {
