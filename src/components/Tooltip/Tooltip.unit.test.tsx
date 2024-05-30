@@ -449,7 +449,7 @@ describe('<Tooltip />', () => {
         expect(props.onCreate).not.toBeCalled();
 
         const { unmount } = render(
-          <Tooltip ref={ref} triggerComponent={<button>Hover Me!</button>} {...props}>
+          <Tooltip ref={ref} isDescription triggerComponent={<button>Hover Me!</button>} {...props}>
             <p>Content</p>
           </Tooltip>
         );
@@ -498,7 +498,7 @@ describe('<Tooltip />', () => {
         const user = userEvent.setup();
 
         render(
-          <Tooltip ref={ref} triggerComponent={<button>Hover Me!</button>}>
+          <Tooltip ref={ref} isDescription triggerComponent={<button>Hover Me!</button>}>
             <p>Content</p>
           </Tooltip>
         );
