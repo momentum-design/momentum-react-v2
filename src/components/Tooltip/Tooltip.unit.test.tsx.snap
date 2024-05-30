@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Popover /> snapshot should display only one popover at all time 1`] = `
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 1`] = `
 <div>
   <button
     class="md-button-simple-wrapper"
     type="button"
   >
     <span>
-      Popover 1
+      Tooltip 1
     </span>
   </button>
   <button
@@ -15,7 +15,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 1`] = 
     type="button"
   >
     <span>
-      Popover 2
+      Tooltip 2
     </span>
   </button>
   <button
@@ -29,15 +29,15 @@ exports[`<Popover /> snapshot should display only one popover at all time 1`] = 
 </div>
 `;
 
-exports[`<Popover /> snapshot should display only one popover at all time 2`] = `
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 2`] = `
 <div>
   <button
-    aria-describedby="tippy-11"
+    aria-labelledby="tippy-10"
     class="md-button-simple-wrapper"
     type="button"
   >
     <span>
-      Popover 1
+      Tooltip 1
     </span>
   </button>
   <button
@@ -45,7 +45,88 @@ exports[`<Popover /> snapshot should display only one popover at all time 2`] = 
     type="button"
   >
     <span>
-      Popover 2
+      Tooltip 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+  <div
+    data-tippy-root=""
+    id="tippy-10"
+    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="tooltip"
+    >
+      <p>
+        Content 1
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 3`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 1
+    </span>
+  </button>
+  <button
+    aria-labelledby="tippy-11"
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 2
     </span>
   </button>
   <button
@@ -62,7 +143,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 2`] = 
     style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -70,92 +151,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 2`] = 
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
-    >
-      <p>
-        Content 1
-      </p>
-      <div
-        class="md-modal-container-arrow-wrapper"
-        data-popper-arrow="true"
-        id="arrow1"
-        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
-      >
-        <svg
-          class="md-modal-arrow-svg"
-          data-placement="top"
-          height="12"
-          viewBox="0 0 24 12"
-          width="24"
-          xmlns="http://www.w3.org/svg/2000"
-        >
-          <defs>
-            <clippath
-              id="modal-arrow-cut-stroke-top"
-            >
-              <path
-                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-              />
-            </clippath>
-          </defs>
-          <path
-            clip-path="url(#modal-arrow-cut-stroke-top)"
-            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-            data-color="primary"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
-</div>
-`;
-
-exports[`<Popover /> snapshot should display only one popover at all time 3`] = `
-<div>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 1
-    </span>
-  </button>
-  <button
-    aria-describedby="tippy-12"
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 2
-    </span>
-  </button>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Other button
-    </span>
-  </button>
-  <div
-    data-tippy-root=""
-    id="tippy-12"
-    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
-  >
-    <div
-      aria-modal="true"
-      class="md-modal-container-wrapper"
-      data-arrow-orientation="vertical"
-      data-color="primary"
-      data-elevation="3"
-      data-padded="true"
-      data-placement="top"
-      data-round="50"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content 2
@@ -192,88 +188,165 @@ exports[`<Popover /> snapshot should display only one popover at all time 3`] = 
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 4`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 1
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 5`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 1
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 6`] = `
+<div>
+  <button
+    aria-labelledby="tippy-12"
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 1
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Tooltip 2
+    </span>
+  </button>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
   <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
+    data-tippy-root=""
+    id="tippy-12"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="tooltip"
+    >
+      <p>
+        Content 1
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`<Popover /> snapshot should display only one popover at all time 4`] = `
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 7`] = `
 <div>
   <button
     class="md-button-simple-wrapper"
     type="button"
   >
     <span>
-      Popover 1
+      Tooltip 1
     </span>
   </button>
   <button
+    aria-labelledby="tippy-13"
     class="md-button-simple-wrapper"
     type="button"
   >
     <span>
-      Popover 2
-    </span>
-  </button>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Other button
-    </span>
-  </button>
-</div>
-`;
-
-exports[`<Popover /> snapshot should display only one popover at all time 5`] = `
-<div>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 1
-    </span>
-  </button>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 2
-    </span>
-  </button>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Other button
-    </span>
-  </button>
-</div>
-`;
-
-exports[`<Popover /> snapshot should display only one popover at all time 6`] = `
-<div>
-  <button
-    aria-describedby="tippy-13"
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 1
-    </span>
-  </button>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 2
+      Tooltip 2
     </span>
   </button>
   <button
@@ -290,7 +363,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 6`] = 
     style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -298,92 +371,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 6`] = 
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
-    >
-      <p>
-        Content 1
-      </p>
-      <div
-        class="md-modal-container-arrow-wrapper"
-        data-popper-arrow="true"
-        id="arrow1"
-        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
-      >
-        <svg
-          class="md-modal-arrow-svg"
-          data-placement="top"
-          height="12"
-          viewBox="0 0 24 12"
-          width="24"
-          xmlns="http://www.w3.org/svg/2000"
-        >
-          <defs>
-            <clippath
-              id="modal-arrow-cut-stroke-top"
-            >
-              <path
-                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-              />
-            </clippath>
-          </defs>
-          <path
-            clip-path="url(#modal-arrow-cut-stroke-top)"
-            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-            data-color="primary"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
-</div>
-`;
-
-exports[`<Popover /> snapshot should display only one popover at all time 7`] = `
-<div>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 1
-    </span>
-  </button>
-  <button
-    aria-describedby="tippy-14"
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Popover 2
-    </span>
-  </button>
-  <button
-    class="md-button-simple-wrapper"
-    type="button"
-  >
-    <span>
-      Other button
-    </span>
-  </button>
-  <div
-    data-tippy-root=""
-    id="tippy-14"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
-  >
-    <div
-      aria-modal="true"
-      class="md-modal-container-wrapper"
-      data-arrow-orientation="vertical"
-      data-color="primary"
-      data-elevation="3"
-      data-padded="true"
-      data-placement="top"
-      data-round="50"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content 2
@@ -420,21 +408,17 @@ exports[`<Popover /> snapshot should display only one popover at all time 7`] = 
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
 
-exports[`<Popover /> snapshot should display only one popover at all time 8`] = `
+exports[`<Tooltip /> snapshot should display only one tooltip at all time 8`] = `
 <div>
   <button
     class="md-button-simple-wrapper"
     type="button"
   >
     <span>
-      Popover 1
+      Tooltip 1
     </span>
   </button>
   <button
@@ -442,7 +426,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 8`] = 
     type="button"
   >
     <span>
-      Popover 2
+      Tooltip 2
     </span>
   </button>
   <button
@@ -456,20 +440,20 @@ exports[`<Popover /> snapshot should display only one popover at all time 8`] = 
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot 1`] = `
+exports[`<Tooltip /> snapshot should match snapshot 1`] = `
 <div>
   <button>
-    Click Me!
+    Hover Me!
   </button>
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot 2`] = `
+exports[`<Tooltip /> snapshot should match snapshot 2`] = `
 <div>
   <button
-    aria-describedby="tippy-1"
+    aria-labelledby="tippy-1"
   >
-    Click Me!
+    Hover Me!
   </button>
   <div
     data-tippy-root=""
@@ -477,7 +461,7 @@ exports[`<Popover /> snapshot should match snapshot 2`] = `
     style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -485,7 +469,7 @@ exports[`<Popover /> snapshot should match snapshot 2`] = `
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content
@@ -522,27 +506,23 @@ exports[`<Popover /> snapshot should match snapshot 2`] = `
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with className 1`] = `
+exports[`<Tooltip /> snapshot should match snapshot with className 1`] = `
 <div>
   <button>
-    Click Me!
+    Hover Me!
   </button>
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with className 2`] = `
+exports[`<Tooltip /> snapshot should match snapshot with className 2`] = `
 <div>
   <button
-    aria-describedby="tippy-2"
+    aria-labelledby="tippy-2"
   >
-    Click Me!
+    Hover Me!
   </button>
   <div
     data-tippy-root=""
@@ -550,7 +530,7 @@ exports[`<Popover /> snapshot should match snapshot with className 2`] = `
     style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="example-class md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -558,7 +538,7 @@ exports[`<Popover /> snapshot should match snapshot with className 2`] = `
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content
@@ -595,131 +575,23 @@ exports[`<Popover /> snapshot should match snapshot with className 2`] = `
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 1`] = `
+exports[`<Tooltip /> snapshot should match snapshot with color 1`] = `
 <div>
   <button>
-    Click Me!
+    Hover Me!
   </button>
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`] = `
+exports[`<Tooltip /> snapshot should match snapshot with color 2`] = `
 <div>
   <button
-    aria-describedby="tippy-6"
+    aria-labelledby="tippy-5"
   >
-    Click Me!
-  </button>
-  <div
-    data-tippy-root=""
-    id="tippy-6"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
-  >
-    <div
-      aria-modal="true"
-      class="md-modal-container-wrapper"
-      data-arrow-orientation="vertical"
-      data-color="primary"
-      data-elevation="3"
-      data-padded="true"
-      data-placement="top"
-      data-round="50"
-      role="dialog"
-    >
-      <button
-        class="md-button-circle-wrapper md-popover-close-button md-button-simple-wrapper"
-        data-color="primary"
-        data-disabled="false"
-        data-ghost="true"
-        data-inverted="false"
-        data-multiple-children="false"
-        data-outline="false"
-        data-placement="top-right"
-        data-shallow-disabled="false"
-        data-size="20"
-        type="button"
-      >
-        <div
-          aria-hidden="true"
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          role="img"
-        >
-          <svg
-            aria-hidden="true"
-            class=""
-            data-autoscale="false"
-            data-scale="16"
-            data-test="cancel"
-            fill="currentColor"
-            height="100%"
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
-      </button>
-      <p>
-        Content
-      </p>
-      <div
-        class="md-modal-container-arrow-wrapper"
-        data-popper-arrow="true"
-        id="arrow1"
-        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
-      >
-        <svg
-          class="md-modal-arrow-svg"
-          data-placement="top"
-          height="12"
-          viewBox="0 0 24 12"
-          width="24"
-          xmlns="http://www.w3.org/svg/2000"
-        >
-          <defs>
-            <clippath
-              id="modal-arrow-cut-stroke-top"
-            >
-              <path
-                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-              />
-            </clippath>
-          </defs>
-          <path
-            clip-path="url(#modal-arrow-cut-stroke-top)"
-            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-            data-color="primary"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
-</div>
-`;
-
-exports[`<Popover /> snapshot should match snapshot with color 1`] = `
-<div>
-  <button>
-    Click Me!
-  </button>
-</div>
-`;
-
-exports[`<Popover /> snapshot should match snapshot with color 2`] = `
-<div>
-  <button
-    aria-describedby="tippy-5"
-  >
-    Click Me!
+    Hover Me!
   </button>
   <div
     data-tippy-root=""
@@ -727,7 +599,7 @@ exports[`<Popover /> snapshot should match snapshot with color 2`] = `
     style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="tertiary"
@@ -735,7 +607,7 @@ exports[`<Popover /> snapshot should match snapshot with color 2`] = `
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content
@@ -772,27 +644,23 @@ exports[`<Popover /> snapshot should match snapshot with color 2`] = `
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with id 1`] = `
+exports[`<Tooltip /> snapshot should match snapshot with id 1`] = `
 <div>
   <button>
-    Click Me!
+    Hover Me!
   </button>
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with id 2`] = `
+exports[`<Tooltip /> snapshot should match snapshot with id 2`] = `
 <div>
   <button
-    aria-describedby="tippy-3"
+    aria-labelledby="tippy-3"
   >
-    Click Me!
+    Hover Me!
   </button>
   <div
     data-tippy-root=""
@@ -800,7 +668,7 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
     style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -809,7 +677,7 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
       data-placement="top"
       data-round="50"
       id="example-id"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content
@@ -846,100 +714,23 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with offsetDistance 1`] = `
+exports[`<Tooltip /> snapshot should match snapshot with offsetDistance 1`] = `
 <div>
   <button>
-    Click Me!
+    Hover Me!
   </button>
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with offsetDistance 2`] = `
+exports[`<Tooltip /> snapshot should match snapshot with offsetDistance 2`] = `
 <div>
   <button
-    aria-describedby="tippy-9"
+    aria-labelledby="tippy-8"
   >
-    Click Me!
-  </button>
-  <div
-    data-tippy-root=""
-    id="tippy-9"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
-  >
-    <div
-      aria-modal="true"
-      class="md-modal-container-wrapper"
-      data-arrow-orientation="vertical"
-      data-color="primary"
-      data-elevation="3"
-      data-padded="true"
-      data-placement="top"
-      data-round="50"
-      role="dialog"
-    >
-      <p>
-        Content
-      </p>
-      <div
-        class="md-modal-container-arrow-wrapper"
-        data-popper-arrow="true"
-        id="arrow1"
-        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
-      >
-        <svg
-          class="md-modal-arrow-svg"
-          data-placement="top"
-          height="12"
-          viewBox="0 0 24 12"
-          width="24"
-          xmlns="http://www.w3.org/svg/2000"
-        >
-          <defs>
-            <clippath
-              id="modal-arrow-cut-stroke-top"
-            >
-              <path
-                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-              />
-            </clippath>
-          </defs>
-          <path
-            clip-path="url(#modal-arrow-cut-stroke-top)"
-            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-            data-color="primary"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
-</div>
-`;
-
-exports[`<Popover /> snapshot should match snapshot with offsetSkidding 1`] = `
-<div>
-  <button>
-    Click Me!
-  </button>
-</div>
-`;
-
-exports[`<Popover /> snapshot should match snapshot with offsetSkidding 2`] = `
-<div>
-  <button
-    aria-describedby="tippy-8"
-  >
-    Click Me!
+    Hover Me!
   </button>
   <div
     data-tippy-root=""
@@ -947,7 +738,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding 2`] = `
     style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -955,7 +746,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding 2`] = `
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content
@@ -992,108 +783,31 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding 2`] = `
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with offsetSkidding and offsetDistance 1`] = `
+exports[`<Tooltip /> snapshot should match snapshot with offsetSkidding 1`] = `
 <div>
   <button>
-    Click Me!
+    Hover Me!
   </button>
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with offsetSkidding and offsetDistance 2`] = `
+exports[`<Tooltip /> snapshot should match snapshot with offsetSkidding 2`] = `
 <div>
   <button
-    aria-describedby="tippy-10"
+    aria-labelledby="tippy-7"
   >
-    Click Me!
-  </button>
-  <div
-    data-tippy-root=""
-    id="tippy-10"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
-  >
-    <div
-      aria-modal="true"
-      class="md-modal-container-wrapper"
-      data-arrow-orientation="vertical"
-      data-color="primary"
-      data-elevation="3"
-      data-padded="true"
-      data-placement="top"
-      data-round="50"
-      role="dialog"
-    >
-      <p>
-        Content
-      </p>
-      <div
-        class="md-modal-container-arrow-wrapper"
-        data-popper-arrow="true"
-        id="arrow1"
-        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
-      >
-        <svg
-          class="md-modal-arrow-svg"
-          data-placement="top"
-          height="12"
-          viewBox="0 0 24 12"
-          width="24"
-          xmlns="http://www.w3.org/svg/2000"
-        >
-          <defs>
-            <clippath
-              id="modal-arrow-cut-stroke-top"
-            >
-              <path
-                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-              />
-            </clippath>
-          </defs>
-          <path
-            clip-path="url(#modal-arrow-cut-stroke-top)"
-            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-            data-color="primary"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
-</div>
-`;
-
-exports[`<Popover /> snapshot should match snapshot with strategy = fixed 1`] = `
-<div>
-  <button>
-    Click Me!
-  </button>
-</div>
-`;
-
-exports[`<Popover /> snapshot should match snapshot with strategy = fixed 2`] = `
-<div>
-  <button
-    aria-describedby="tippy-7"
-  >
-    Click Me!
+    Hover Me!
   </button>
   <div
     data-tippy-root=""
     id="tippy-7"
-    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1101,7 +815,7 @@ exports[`<Popover /> snapshot should match snapshot with strategy = fixed 2`] = 
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
+      role="tooltip"
     >
       <p>
         Content
@@ -1138,27 +852,161 @@ exports[`<Popover /> snapshot should match snapshot with strategy = fixed 2`] = 
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with style 1`] = `
+exports[`<Tooltip /> snapshot should match snapshot with offsetSkidding and offsetDistance 1`] = `
 <div>
   <button>
-    Click Me!
+    Hover Me!
   </button>
 </div>
 `;
 
-exports[`<Popover /> snapshot should match snapshot with style 2`] = `
+exports[`<Tooltip /> snapshot should match snapshot with offsetSkidding and offsetDistance 2`] = `
 <div>
   <button
-    aria-describedby="tippy-4"
+    aria-labelledby="tippy-9"
   >
-    Click Me!
+    Hover Me!
+  </button>
+  <div
+    data-tippy-root=""
+    id="tippy-9"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="tooltip"
+    >
+      <p>
+        Content
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should match snapshot with strategy = fixed 1`] = `
+<div>
+  <button>
+    Hover Me!
+  </button>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should match snapshot with strategy = fixed 2`] = `
+<div>
+  <button
+    aria-labelledby="tippy-6"
+  >
+    Hover Me!
+  </button>
+  <div
+    data-tippy-root=""
+    id="tippy-6"
+    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="tooltip"
+    >
+      <p>
+        Content
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should match snapshot with style 1`] = `
+<div>
+  <button>
+    Hover Me!
+  </button>
+</div>
+`;
+
+exports[`<Tooltip /> snapshot should match snapshot with style 2`] = `
+<div>
+  <button
+    aria-labelledby="tippy-4"
+  >
+    Hover Me!
   </button>
   <div
     data-tippy-root=""
@@ -1166,7 +1014,7 @@ exports[`<Popover /> snapshot should match snapshot with style 2`] = `
     style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
-      aria-modal="true"
+      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1174,7 +1022,7 @@ exports[`<Popover /> snapshot should match snapshot with style 2`] = `
       data-padded="true"
       data-placement="top"
       data-round="50"
-      role="dialog"
+      role="tooltip"
       style="color: pink;"
     >
       <p>
@@ -1212,9 +1060,5 @@ exports[`<Popover /> snapshot should match snapshot with style 2`] = `
       </div>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
 </div>
 `;
