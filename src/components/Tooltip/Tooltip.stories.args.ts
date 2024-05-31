@@ -5,7 +5,7 @@ import { DEFAULTS } from './Tooltip.constants';
 import { BOUNDARIES } from '../Popover/Popover.constants';
 
 const popoverArgTypes = {
-  isDescendant: {
+  isDescription: {
     description: `Whether the tooltips be a description or a label of the trigger component`,
     control: { type: 'boolean' },
     table: {

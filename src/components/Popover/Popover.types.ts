@@ -189,7 +189,7 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
   autoFocus?: boolean;
 
   /**
-   * Role os the popup
+   * Role of the popover content
    */
   role?: string;
 }

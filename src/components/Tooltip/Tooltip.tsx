@@ -13,6 +13,7 @@ const Tooltip = forwardRef(
     const updateInstance = useCallback(
       (popoverInstance: PopoverInstance | undefined) => {
         popoverInstance?.setProps({
+          // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
           aria: {
             expanded: false,
             content: isDescription ? 'describedby' : 'labelledby',
