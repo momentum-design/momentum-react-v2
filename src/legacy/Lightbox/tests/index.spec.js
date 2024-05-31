@@ -321,4 +321,25 @@ describe('tests for <Lightbox />', () => {
     const spinner = container.find('Spinner');
     expect(spinner.length).toEqual(0);
   });
+
+  it('should render theme provider as a wrapper inside the modal content', () => {
+    const container = shallow(
+      <Lightbox
+        applicationId="app"
+        name="test"
+        height={100}
+        width={100}
+        theme="lightWebex"
+        pages={[
+          {
+            decrypting: false,
+            image: 'testImage',
+            thumb: 'testImage',
+          },
+        ]}
+      />
+    );
+    const themeProvider = container.find('ThemeProvider');
+    expect(themeProvider.props()).toEqual({ theme: 'lightWebex', children: expect.any(Object) });
+  });
 });
