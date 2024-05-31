@@ -44,7 +44,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
     addBackdrop = DEFAULTS.ADD_BACKDROP,
-    focusBackOnTrigger = DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT,
+    focusBackOnTrigger: focusBackOnTriggerTemp,
     closeButtonPlacement = DEFAULTS.CLOSE_BUTTON_PLACEMENT,
     closeButtonProps,
     strategy = DEFAULTS.STRATEGY,
@@ -63,12 +63,16 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     firstFocusElement,
     ...rest
   } = props;
+
+  const focusBackOnTrigger = focusBackOnTriggerTemp ?? 
+    (interactive ? DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_INTERACTIVE : DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_NON_INTERACTIVE);
+    
   const popoverInstance = React.useRef<PopoverInstance>(undefined);
 
   const triggerComponentId = triggerComponent.props?.id || uuidV4();
 
   const modalConditionalProps = {
-    ...(interactive && { 'aria-labelledby': triggerComponentId, focusLockProps: { returnFocus: true,  } }),
+    ...(interactive && { 'aria-labelledby': triggerComponentId, focusLockProps: { returnFocus: focusBackOnTrigger } }),
   };
 
   // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):

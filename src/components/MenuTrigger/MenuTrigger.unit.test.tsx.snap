@@ -293,14 +293,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     data-round="75"
                     role="dialog"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -439,14 +431,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                         </div>
                       </li>
                     </ul>
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div
@@ -539,14 +523,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-round="75"
                           role="dialog"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -685,14 +661,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                               </div>
                             </li>
                           </ul>
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                         </div>
                       </div>
                     }
@@ -720,14 +688,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             data-round="75"
                             role="dialog"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -866,14 +826,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 </div>
                               </li>
                             </ul>
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                           </div>
                         </div>
                       }
@@ -896,35 +848,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     onKeyDown={[Function]}
                     role="dialog"
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -2622,34 +2547,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                   </div>
                 </div>
                 <div
@@ -2971,14 +2868,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     data-round="75"
                     role="dialog"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -3117,14 +3006,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                         </div>
                       </li>
                     </ul>
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div
@@ -3217,14 +3098,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-round="75"
                           role="dialog"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -3363,14 +3236,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                               </div>
                             </li>
                           </ul>
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                         </div>
                       </div>
                     }
@@ -3398,14 +3263,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             data-round="75"
                             role="dialog"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -3544,14 +3401,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 </div>
                               </li>
                             </ul>
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                           </div>
                         </div>
                       }
@@ -3574,35 +3423,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     onKeyDown={[Function]}
                     role="dialog"
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -5300,34 +5122,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                   </div>
                 </div>
                 <div
@@ -5649,14 +5443,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     data-round="75"
                     role="dialog"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -5795,14 +5581,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                         </div>
                       </li>
                     </ul>
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div
@@ -5895,14 +5673,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-round="75"
                           role="dialog"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -6041,14 +5811,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                               </div>
                             </li>
                           </ul>
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                         </div>
                       </div>
                     }
@@ -6076,14 +5838,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             data-round="75"
                             role="dialog"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -6222,14 +5976,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 </div>
                               </li>
                             </ul>
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                           </div>
                         </div>
                       }
@@ -6252,35 +5998,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     onKeyDown={[Function]}
                     role="dialog"
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -7978,34 +7697,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                   </div>
                 </div>
                 <div
@@ -8329,14 +8020,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     id="example-id"
                     role="dialog"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -8475,14 +8158,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                         </div>
                       </li>
                     </ul>
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div
@@ -8577,14 +8252,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           id="example-id"
                           role="dialog"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -8723,14 +8390,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                               </div>
                             </li>
                           </ul>
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                         </div>
                       </div>
                     }
@@ -8759,14 +8418,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             id="example-id"
                             role="dialog"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -8905,14 +8556,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 </div>
                               </li>
                             </ul>
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                           </div>
                         </div>
                       }
@@ -8936,35 +8579,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     onKeyDown={[Function]}
                     role="dialog"
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -10662,34 +10278,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                   </div>
                 </div>
                 <div
@@ -11011,14 +10599,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     data-round="75"
                     role="dialog"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -11157,14 +10737,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                         </div>
                       </li>
                     </ul>
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div
@@ -11257,14 +10829,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-round="75"
                           role="dialog"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -11403,14 +10967,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                               </div>
                             </li>
                           </ul>
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                         </div>
                       </div>
                     }
@@ -11438,14 +10994,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             data-round="75"
                             role="dialog"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -11584,14 +11132,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 </div>
                               </li>
                             </ul>
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                           </div>
                         </div>
                       }
@@ -11614,35 +11154,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     onKeyDown={[Function]}
                     role="dialog"
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -13340,34 +12853,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                   </div>
                 </div>
                 <div
@@ -13689,14 +13174,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     data-round="75"
                     role="dialog"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -13836,14 +13313,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       </li>
                     </ul>
                     <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
-                    <div
                       class="md-modal-container-arrow-wrapper"
                       data-popper-arrow="true"
                       id="arrow1"
@@ -13965,14 +13434,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-round="75"
                           role="dialog"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -14112,14 +13573,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             </li>
                           </ul>
                           <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
-                          <div
                             class="md-modal-container-arrow-wrapper"
                             data-popper-arrow="true"
                             id="arrow1"
@@ -14176,14 +13629,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             data-round="75"
                             role="dialog"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -14323,14 +13768,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                               </li>
                             </ul>
                             <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
-                            <div
                               class="md-modal-container-arrow-wrapper"
                               data-popper-arrow="true"
                               id="arrow1"
@@ -14382,35 +13819,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     onKeyDown={[Function]}
                     role="dialog"
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -16108,34 +15518,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <div
                       className="md-modal-container-arrow-wrapper"
                       data-popper-arrow={true}
@@ -16501,14 +15883,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     role="dialog"
                     style="color: pink;"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -16647,14 +16021,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                         </div>
                       </li>
                     </ul>
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div
@@ -16753,14 +16119,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           role="dialog"
                           style="color: pink;"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -16899,14 +16257,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                               </div>
                             </li>
                           </ul>
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                         </div>
                       </div>
                     }
@@ -16935,14 +16285,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             role="dialog"
                             style="color: pink;"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -17081,14 +16423,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 </div>
                               </li>
                             </ul>
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                           </div>
                         </div>
                       }
@@ -17116,35 +16450,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       }
                     }
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -18842,34 +18149,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                   </div>
                 </div>
                 <div
@@ -19191,14 +18470,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     data-round="50"
                     role="dialog"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                     <ul
                       class="md-menu-wrapper"
                       id="test-ID"
@@ -19337,14 +18608,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                         </div>
                       </li>
                     </ul>
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <button
-                        aria-label="Dismiss"
-                        tabindex="-1"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div
@@ -19437,14 +18700,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-round="50"
                           role="dialog"
                         >
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                           <ul
                             class="md-menu-wrapper"
                             id="test-ID"
@@ -19583,14 +18838,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                               </div>
                             </li>
                           </ul>
-                          <div
-                            style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                          >
-                            <button
-                              aria-label="Dismiss"
-                              tabindex="-1"
-                            />
-                          </div>
                         </div>
                       </div>
                     }
@@ -19618,14 +18865,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             data-round="50"
                             role="dialog"
                           >
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                             <ul
                               class="md-menu-wrapper"
                               id="test-ID"
@@ -19764,14 +19003,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 </div>
                               </li>
                             </ul>
-                            <div
-                              style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                            >
-                              <button
-                                aria-label="Dismiss"
-                                tabindex="-1"
-                              />
-                            </div>
                           </div>
                         </div>
                       }
@@ -19794,35 +19025,8 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     onKeyDown={[Function]}
                     role="dialog"
                   >
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                     <_Menu
+                      allowsTabNavigation={true}
                       key=".$2"
                       selectionMode="single"
                     >
@@ -21520,34 +20724,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                         </MenuItem>
                       </ul>
                     </_Menu>
-                    <DismissButton
-                      onDismiss={[Function]}
-                    >
-                      <VisuallyHidden>
-                        <div
-                          style={
-                            Object {
-                              "border": 0,
-                              "clip": "rect(0 0 0 0)",
-                              "clipPath": "inset(50%)",
-                              "height": 1,
-                              "margin": "0 -1px -1px 0",
-                              "overflow": "hidden",
-                              "padding": 0,
-                              "position": "absolute",
-                              "whiteSpace": "nowrap",
-                              "width": 1,
-                            }
-                          }
-                        >
-                          <button
-                            aria-label="Dismiss"
-                            onClick={[Function]}
-                            tabIndex={-1}
-                          />
-                        </div>
-                      </VisuallyHidden>
-                    </DismissButton>
                   </div>
                 </div>
                 <div

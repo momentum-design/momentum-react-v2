@@ -7,7 +7,6 @@ import './MenuTrigger.style.scss';
 import { useMenuTriggerState } from '@react-stately/menu';
 import { useMenuTrigger } from '@react-aria/menu';
 import { MenuContext } from '../Menu';
-import { DismissButton } from '@react-aria/overlays';
 import { useKeyboard } from '@react-aria/interactions';
 import ContentSeparator from '../ContentSeparator';
 import Popover from '../Popover';
@@ -35,7 +34,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
 
   const buttonRef = useRef<HTMLButtonElement>();
-  const menuRef = useRef<HTMLUListElement>();
 
   const [...menus] = Children.toArray(children);
 
@@ -46,27 +44,17 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   menuTriggerProps['aria-haspopup'] = menuTriggerProps['aria-haspopup'] || menuTriggerType;
 
   /**
-   * For some reason restoreFocus prop on <FocusScope> doesn't
-   * work. We focus back to trigger manually.
-   */
-  const handleFocusBackOnTrigger = useCallback(() => {
-    buttonRef.current?.focus();
-  }, []);
-
-  /**
    * Handle closeOnSelect from @react-aria manually
    */
   const closeMenuTrigger = () => {
     state.close();
     popoverInstance.hide();
-    handleFocusBackOnTrigger();
   };
 
   const menuContext = {
     ...menuProps,
     onClose: closeMenuTrigger,
     closeOnSelect,
-    ref: menuRef,
   };
 
   /**
@@ -122,24 +110,27 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       hideOnEsc={false}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
-        <DismissButton onDismiss={closeMenuTrigger} />
-        {menus.map((menu: ReactElement, index) => {
-          return (
-            <MenuContext.Provider
-              value={
-                // when we have multiple menus inside the menu trigger, we want only the first menu
-                // to autoFocus on open. If we add autoFocus for all Menus, the last menu in the menu
-                // trigger will have the first focus, which is wrong
-                index === 0 ? { ...menuContext, autoFocus: 'first' as FocusStrategy } : menuContext
-              }
-              key={`{context-${index}}`}
-            >
-              {menu}
-              {index !== menus.length - 1 && <ContentSeparator key={`separator-${index}`} />}
-            </MenuContext.Provider>
-          );
-        })}
-        <DismissButton onDismiss={closeMenuTrigger} />
+      {menus.map((menu: ReactElement, index) => {
+        return (
+          <MenuContext.Provider
+            value={
+              // when we have multiple menus inside the menu trigger, we want only the first menu
+              // to autoFocus on open. If we add autoFocus for all Menus, the last menu in the menu
+              // trigger will have the first focus, which is wrong
+              index === 0 ? { ...menuContext, autoFocus: 'first' as FocusStrategy } : menuContext
+            }
+            key={`{context-${index}}`}
+          >
+            {/* If first menu and there are multiple menus, pass allowsTabNavigation to it for keyboard accessibility 
+              (allowsTabNavigation in React-aria allows to Shift+Tab with multiple menus) */}
+            {(index === 0 && menus.length > 1) ? React.cloneElement(menu, {
+              allowsTabNavigation: true
+            }) : menu}
+            {/* If index not the last item, add a content separator after as a dividing line */}
+            {index !== menus.length - 1 && <ContentSeparator key={`separator-${index}`} />}
+          </MenuContext.Provider>
+        );
+      })}
     </Popover>
   );
 };
