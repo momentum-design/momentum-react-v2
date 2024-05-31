@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
 
-    > .#{$prefix}-lightbox {
+    > .#{$prefix}-lightbox, > .#{$prefix}-lightbox > div.md-theme-provider-wrapper {
       display: flex;
       width: 100%;
       height: 100%;
@@ -50,7 +50,7 @@
         }
       }
 
-      > .#{$prefix}-lightbox__header {
+      > div.md-theme-provider-wrapper > .#{$prefix}-lightbox__header {
         display: flex;
         height: $lightbox-control__size;
         font-family: $brand-font-extra-light;
@@ -110,7 +110,7 @@
         }
       }
 
-      > .#{$prefix}-lightbox__body {
+      > div.md-theme-provider-wrapper > .#{$prefix}-lightbox__body {
         display: flex;
         height: 100%;
         overflow: auto;

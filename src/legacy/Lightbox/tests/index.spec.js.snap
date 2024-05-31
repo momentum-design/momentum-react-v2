@@ -30,6 +30,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
       "isContained": true,
     }
   }
+  theme="darkWebex"
   tooltips={
     Object {
       "download": "Download",
@@ -69,132 +70,136 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                 tabindex="-1"
               >
                 <div
-                  class="md-lightbox__header"
+                  class="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex mds-theme-stable-darkWebex"
                 >
                   <div
-                    class="md-lightbox__header-item--left"
+                    class="md-lightbox__header"
                   >
                     <div
-                      class="md-lightbox__header-meta"
+                      class="md-lightbox__header-item--left"
                     >
                       <div
-                        class="md-lightbox__header-sharer"
-                      />
-                      <div
-                        class="md-lightbox__header-timestamp"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="md-lightbox__header-item--center"
-                  >
-                    <h2
-                      class="md-lightbox__header-name"
-                      id="test-ID"
-                    >
-                      test
-                    </h2>
-                  </div>
-                  <div
-                    class="md-lightbox__header-item--right"
-                  >
-                    <div
-                      class="md-lightbox__control"
-                      role="button"
-                      tabindex="0"
-                    >
-                      <i
-                        class="md-icon icon icon-cancel_16"
-                        style="font-size: 16px;"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="md-lightbox__body"
-                >
-                  <div
-                    class="md-lightbox__content"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="md-lightbox__viewport md-lightbox__viewport--decrypting"
-                    >
-                      <i
-                        class="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
-                      />
-                      <div
-                        class="md-lightbox__viewport-wrapper"
-                        style="width: 0px; height: 0px;"
+                        class="md-lightbox__header-meta"
                       >
-                        <img
-                          alt="test"
-                          class="md-lightbox__viewport-image"
-                          draggable="false"
-                          src="testImage"
+                        <div
+                          class="md-lightbox__header-sharer"
+                        />
+                        <div
+                          class="md-lightbox__header-timestamp"
                         />
                       </div>
                     </div>
                     <div
-                      class="md-lightbox__viewer-controls"
+                      class="md-lightbox__header-item--center"
+                    >
+                      <h2
+                        class="md-lightbox__header-name"
+                        id="test-ID"
+                      >
+                        test
+                      </h2>
+                    </div>
+                    <div
+                      class="md-lightbox__header-item--right"
+                    >
+                      <div
+                        class="md-lightbox__control"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <i
+                          class="md-icon icon icon-cancel_16"
+                          style="font-size: 16px;"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="md-lightbox__body"
+                  >
+                    <div
+                      class="md-lightbox__content"
                       role="button"
                       tabindex="0"
                     >
                       <div
-                        class="md-lightbox__controls"
+                        class="md-lightbox__viewport md-lightbox__viewport--decrypting"
                       >
-                        <div
-                          class="md-lightbox__control"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <i
-                            class="md-icon icon icon-zoom-out_16"
-                            style="font-size: 16px;"
-                          />
-                        </div>
-                        <span
-                          class="md-lightbox__control-value"
-                        >
-                          0
-                          %
-                        </span>
-                        <div
-                          class="md-lightbox__control"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <i
-                            class="md-icon icon icon-zoom-in_16"
-                            style="font-size: 16px;"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="md-lightbox__controls"
-                      >
-                        <span
-                          class="md-lightbox__control-value"
-                        >
-                          1
-                        </span>
-                      </div>
-                      <div
-                        class="md-lightbox__controls"
-                      >
-                        <span
-                          class="md-lightbox__control-value"
+                        <i
+                          class="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
                         />
                         <div
-                          class="md-lightbox__control md-lightbox__control-download"
-                          role="button"
-                          tabindex="0"
+                          class="md-lightbox__viewport-wrapper"
+                          style="width: 0px; height: 0px;"
                         >
-                          <i
-                            class="md-icon icon icon-download_16"
-                            style="font-size: 16px;"
+                          <img
+                            alt=""
+                            class="md-lightbox__viewport-image"
+                            draggable="false"
+                            src="testImage"
                           />
+                        </div>
+                      </div>
+                      <div
+                        class="md-lightbox__viewer-controls"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="md-lightbox__controls"
+                        >
+                          <div
+                            class="md-lightbox__control"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <i
+                              class="md-icon icon icon-zoom-out_16"
+                              style="font-size: 16px;"
+                            />
+                          </div>
+                          <span
+                            class="md-lightbox__control-value"
+                          >
+                            0
+                            %
+                          </span>
+                          <div
+                            class="md-lightbox__control"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <i
+                              class="md-icon icon icon-zoom-in_16"
+                              style="font-size: 16px;"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="md-lightbox__controls"
+                        >
+                          <span
+                            class="md-lightbox__control-value"
+                          >
+                            1
+                          </span>
+                        </div>
+                        <div
+                          class="md-lightbox__controls"
+                        >
+                          <span
+                            class="md-lightbox__control-value"
+                          />
+                          <div
+                            class="md-lightbox__control md-lightbox__control-download"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <i
+                              class="md-icon icon icon-download_16"
+                              style="font-size: 16px;"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -251,417 +256,425 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                 style={Object {}}
                 tabIndex="-1"
               >
-                <div
-                  className="md-lightbox__header"
+                <ThemeProvider
+                  theme="darkWebex"
                 >
                   <div
-                    className="md-lightbox__header-item--left"
+                    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex mds-theme-stable-darkWebex"
                   >
                     <div
-                      className="md-lightbox__header-meta"
+                      className="md-lightbox__header"
                     >
                       <div
-                        className="md-lightbox__header-sharer"
-                      />
-                      <div
-                        className="md-lightbox__header-timestamp"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="md-lightbox__header-item--center"
-                  >
-                    <h2
-                      className="md-lightbox__header-name"
-                      id="test-ID"
-                    >
-                      test
-                    </h2>
-                  </div>
-                  <div
-                    className="md-lightbox__header-item--right"
-                  >
-                    <Tooltip
-                      className=""
-                      popoverProps={
-                        Object {
-                          "direction": "bottom-right",
-                          "isContained": true,
-                        }
-                      }
-                      tooltip="Exit"
-                      tooltipTrigger="MouseEnter"
-                      width={null}
-                    >
-                      <Popover
-                        autoFocusOnFirstElt={false}
-                        className="md-tooltip"
-                        closeOnFocusLeavesContent={false}
-                        content={
-                          <span
-                            className="md-tooltip__text"
-                          >
-                            Exit
-                          </span>
-                        }
-                        delay={0}
-                        direction="bottom-right"
-                        doesAnchorToggle={true}
-                        hideDelay={0}
-                        hoverDelay={500}
-                        includeFocusOnHover={true}
-                        isContained={true}
-                        onClose={null}
-                        overflowType="auto"
-                        popoverTrigger="MouseEnter"
-                        showArrow={true}
-                        showDelay={0}
-                        startOpen={false}
+                        className="md-lightbox__header-item--left"
                       >
                         <div
-                          className="md-lightbox__control"
-                          key="child-1"
-                          onBlur={[Function]}
+                          className="md-lightbox__header-meta"
+                        >
+                          <div
+                            className="md-lightbox__header-sharer"
+                          />
+                          <div
+                            className="md-lightbox__header-timestamp"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="md-lightbox__header-item--center"
+                      >
+                        <h2
+                          className="md-lightbox__header-name"
+                          id="test-ID"
+                        >
+                          test
+                        </h2>
+                      </div>
+                      <div
+                        className="md-lightbox__header-item--right"
+                      >
+                        <Tooltip
+                          className=""
+                          popoverProps={
+                            Object {
+                              "direction": "bottom-right",
+                              "isContained": true,
+                            }
+                          }
+                          tooltip="Exit"
+                          tooltipTrigger="MouseEnter"
+                          width={null}
+                        >
+                          <Popover
+                            autoFocusOnFirstElt={false}
+                            className="md-tooltip"
+                            closeOnFocusLeavesContent={false}
+                            content={
+                              <span
+                                className="md-tooltip__text"
+                              >
+                                Exit
+                              </span>
+                            }
+                            delay={0}
+                            direction="bottom-right"
+                            doesAnchorToggle={true}
+                            hideDelay={0}
+                            hoverDelay={500}
+                            includeFocusOnHover={true}
+                            isContained={true}
+                            onClose={null}
+                            overflowType="auto"
+                            popoverTrigger="MouseEnter"
+                            showArrow={true}
+                            showDelay={0}
+                            startOpen={false}
+                          >
+                            <div
+                              className="md-lightbox__control"
+                              key="child-1"
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onFocus={[Function]}
+                              onKeyPress={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              role="button"
+                              tabIndex="0"
+                            >
+                              <Icon
+                                append={false}
+                                ariaLabel={null}
+                                buttonClassName=""
+                                buttonProps={null}
+                                className=""
+                                color=""
+                                description=""
+                                name="cancel_16"
+                                onClick={null}
+                                prepend={false}
+                                size={null}
+                                sizeOverride={false}
+                                style={null}
+                                title=""
+                                type=""
+                              >
+                                <i
+                                  aria-label={null}
+                                  className="md-icon icon icon-cancel_16"
+                                  style={
+                                    Object {
+                                      "fontSize": 16,
+                                    }
+                                  }
+                                />
+                              </Icon>
+                            </div>
+                          </Popover>
+                        </Tooltip>
+                      </div>
+                    </div>
+                    <div
+                      className="md-lightbox__body"
+                    >
+                      <div
+                        className="md-lightbox__content"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="md-lightbox__viewport md-lightbox__viewport--decrypting"
+                        >
+                          <Spinner
+                            className="md-lightbox__decrypting-spinner"
+                            color="black"
+                            percentage={null}
+                            showCheck={false}
+                            showPercentage={false}
+                            size={36}
+                          >
+                            <i
+                              className="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
+                            />
+                          </Spinner>
+                          <div
+                            className="md-lightbox__viewport-wrapper"
+                            style={
+                              Object {
+                                "height": "0px",
+                                "width": "0px",
+                              }
+                            }
+                          >
+                            <img
+                              alt=""
+                              className="md-lightbox__viewport-image"
+                              draggable="false"
+                              onClick={[Function]}
+                              onDoubleClick={[Function]}
+                              onDragStart={[Function]}
+                              onKeyPress={[Function]}
+                              src="testImage"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="md-lightbox__viewer-controls"
                           onClick={[Function]}
-                          onFocus={[Function]}
                           onKeyPress={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
                           role="button"
                           tabIndex="0"
                         >
-                          <Icon
-                            append={false}
-                            ariaLabel={null}
-                            buttonClassName=""
-                            buttonProps={null}
-                            className=""
-                            color=""
-                            description=""
-                            name="cancel_16"
-                            onClick={null}
-                            prepend={false}
-                            size={null}
-                            sizeOverride={false}
-                            style={null}
-                            title=""
-                            type=""
+                          <div
+                            className="md-lightbox__controls"
+                            style={Object {}}
                           >
-                            <i
-                              aria-label={null}
-                              className="md-icon icon icon-cancel_16"
-                              style={
-                                Object {
-                                  "fontSize": 16,
+                            <Tooltip
+                              className=""
+                              popoverProps={Object {}}
+                              tooltip="Zoom out"
+                              tooltipTrigger="MouseEnter"
+                              width={null}
+                            >
+                              <Popover
+                                autoFocusOnFirstElt={false}
+                                className="md-tooltip"
+                                closeOnFocusLeavesContent={false}
+                                content={
+                                  <span
+                                    className="md-tooltip__text"
+                                  >
+                                    Zoom out
+                                  </span>
                                 }
-                              }
+                                delay={0}
+                                doesAnchorToggle={true}
+                                hideDelay={0}
+                                hoverDelay={500}
+                                includeFocusOnHover={true}
+                                onClose={null}
+                                overflowType="auto"
+                                popoverTrigger="MouseEnter"
+                                showArrow={true}
+                                showDelay={0}
+                                startOpen={false}
+                              >
+                                <div
+                                  className="md-lightbox__control"
+                                  key="child-1"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyPress={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  role="button"
+                                  tabIndex="0"
+                                >
+                                  <Icon
+                                    append={false}
+                                    ariaLabel={null}
+                                    buttonClassName=""
+                                    buttonProps={null}
+                                    className=""
+                                    color=""
+                                    description=""
+                                    name="zoom-out_16"
+                                    onClick={null}
+                                    prepend={false}
+                                    size={null}
+                                    sizeOverride={false}
+                                    style={null}
+                                    title=""
+                                    type=""
+                                  >
+                                    <i
+                                      aria-label={null}
+                                      className="md-icon icon icon-zoom-out_16"
+                                      style={
+                                        Object {
+                                          "fontSize": 16,
+                                        }
+                                      }
+                                    />
+                                  </Icon>
+                                </div>
+                              </Popover>
+                            </Tooltip>
+                            <span
+                              className="md-lightbox__control-value"
+                            >
+                              0
+                              %
+                            </span>
+                            <Tooltip
+                              className=""
+                              popoverProps={Object {}}
+                              tooltip="Zoom in"
+                              tooltipTrigger="MouseEnter"
+                              width={null}
+                            >
+                              <Popover
+                                autoFocusOnFirstElt={false}
+                                className="md-tooltip"
+                                closeOnFocusLeavesContent={false}
+                                content={
+                                  <span
+                                    className="md-tooltip__text"
+                                  >
+                                    Zoom in
+                                  </span>
+                                }
+                                delay={0}
+                                doesAnchorToggle={true}
+                                hideDelay={0}
+                                hoverDelay={500}
+                                includeFocusOnHover={true}
+                                onClose={null}
+                                overflowType="auto"
+                                popoverTrigger="MouseEnter"
+                                showArrow={true}
+                                showDelay={0}
+                                startOpen={false}
+                              >
+                                <div
+                                  className="md-lightbox__control"
+                                  key="child-1"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyPress={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  role="button"
+                                  tabIndex="0"
+                                >
+                                  <Icon
+                                    append={false}
+                                    ariaLabel={null}
+                                    buttonClassName=""
+                                    buttonProps={null}
+                                    className=""
+                                    color=""
+                                    description=""
+                                    name="zoom-in_16"
+                                    onClick={null}
+                                    prepend={false}
+                                    size={null}
+                                    sizeOverride={false}
+                                    style={null}
+                                    title=""
+                                    type=""
+                                  >
+                                    <i
+                                      aria-label={null}
+                                      className="md-icon icon icon-zoom-in_16"
+                                      style={
+                                        Object {
+                                          "fontSize": 16,
+                                        }
+                                      }
+                                    />
+                                  </Icon>
+                                </div>
+                              </Popover>
+                            </Tooltip>
+                          </div>
+                          <div
+                            className="md-lightbox__controls"
+                          >
+                            <span
+                              className="md-lightbox__control-value"
+                            >
+                              1
+                            </span>
+                          </div>
+                          <div
+                            className="md-lightbox__controls"
+                            style={Object {}}
+                          >
+                            <span
+                              className="md-lightbox__control-value"
                             />
-                          </Icon>
+                            <Tooltip
+                              className=""
+                              popoverProps={Object {}}
+                              tooltip="Download"
+                              tooltipTrigger="MouseEnter"
+                              width={null}
+                            >
+                              <Popover
+                                autoFocusOnFirstElt={false}
+                                className="md-tooltip"
+                                closeOnFocusLeavesContent={false}
+                                content={
+                                  <span
+                                    className="md-tooltip__text"
+                                  >
+                                    Download
+                                  </span>
+                                }
+                                delay={0}
+                                doesAnchorToggle={true}
+                                hideDelay={0}
+                                hoverDelay={500}
+                                includeFocusOnHover={true}
+                                onClose={null}
+                                overflowType="auto"
+                                popoverTrigger="MouseEnter"
+                                showArrow={true}
+                                showDelay={0}
+                                startOpen={false}
+                              >
+                                <div
+                                  className="md-lightbox__control md-lightbox__control-download"
+                                  key="child-1"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyPress={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  role="button"
+                                  tabIndex="0"
+                                >
+                                  <Icon
+                                    append={false}
+                                    ariaLabel={null}
+                                    buttonClassName=""
+                                    buttonProps={null}
+                                    className=""
+                                    color=""
+                                    description=""
+                                    name="download_16"
+                                    onClick={null}
+                                    prepend={false}
+                                    size={null}
+                                    sizeOverride={false}
+                                    style={null}
+                                    title=""
+                                    type=""
+                                  >
+                                    <i
+                                      aria-label={null}
+                                      className="md-icon icon icon-download_16"
+                                      style={
+                                        Object {
+                                          "fontSize": 16,
+                                        }
+                                      }
+                                    />
+                                  </Icon>
+                                </div>
+                              </Popover>
+                            </Tooltip>
+                          </div>
                         </div>
-                      </Popover>
-                    </Tooltip>
-                  </div>
-                </div>
-                <div
-                  className="md-lightbox__body"
-                >
-                  <div
-                    className="md-lightbox__content"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    <div
-                      className="md-lightbox__viewport md-lightbox__viewport--decrypting"
-                    >
-                      <Spinner
-                        className="md-lightbox__decrypting-spinner"
-                        color="black"
-                        percentage={null}
-                        showCheck={false}
-                        showPercentage={false}
-                        size={36}
-                      >
-                        <i
-                          className="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
-                        />
-                      </Spinner>
-                      <div
-                        className="md-lightbox__viewport-wrapper"
-                        style={
-                          Object {
-                            "height": "0px",
-                            "width": "0px",
-                          }
-                        }
-                      >
-                        <img
-                          alt="test"
-                          className="md-lightbox__viewport-image"
-                          draggable="false"
-                          onClick={[Function]}
-                          onDoubleClick={[Function]}
-                          onDragStart={[Function]}
-                          onKeyPress={[Function]}
-                          src="testImage"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="md-lightbox__viewer-controls"
-                      onClick={[Function]}
-                      onKeyPress={[Function]}
-                      role="button"
-                      tabIndex="0"
-                    >
-                      <div
-                        className="md-lightbox__controls"
-                        style={Object {}}
-                      >
-                        <Tooltip
-                          className=""
-                          popoverProps={Object {}}
-                          tooltip="Zoom out"
-                          tooltipTrigger="MouseEnter"
-                          width={null}
-                        >
-                          <Popover
-                            autoFocusOnFirstElt={false}
-                            className="md-tooltip"
-                            closeOnFocusLeavesContent={false}
-                            content={
-                              <span
-                                className="md-tooltip__text"
-                              >
-                                Zoom out
-                              </span>
-                            }
-                            delay={0}
-                            doesAnchorToggle={true}
-                            hideDelay={0}
-                            hoverDelay={500}
-                            includeFocusOnHover={true}
-                            onClose={null}
-                            overflowType="auto"
-                            popoverTrigger="MouseEnter"
-                            showArrow={true}
-                            showDelay={0}
-                            startOpen={false}
-                          >
-                            <div
-                              className="md-lightbox__control"
-                              key="child-1"
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onFocus={[Function]}
-                              onKeyPress={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              role="button"
-                              tabIndex="0"
-                            >
-                              <Icon
-                                append={false}
-                                ariaLabel={null}
-                                buttonClassName=""
-                                buttonProps={null}
-                                className=""
-                                color=""
-                                description=""
-                                name="zoom-out_16"
-                                onClick={null}
-                                prepend={false}
-                                size={null}
-                                sizeOverride={false}
-                                style={null}
-                                title=""
-                                type=""
-                              >
-                                <i
-                                  aria-label={null}
-                                  className="md-icon icon icon-zoom-out_16"
-                                  style={
-                                    Object {
-                                      "fontSize": 16,
-                                    }
-                                  }
-                                />
-                              </Icon>
-                            </div>
-                          </Popover>
-                        </Tooltip>
-                        <span
-                          className="md-lightbox__control-value"
-                        >
-                          0
-                          %
-                        </span>
-                        <Tooltip
-                          className=""
-                          popoverProps={Object {}}
-                          tooltip="Zoom in"
-                          tooltipTrigger="MouseEnter"
-                          width={null}
-                        >
-                          <Popover
-                            autoFocusOnFirstElt={false}
-                            className="md-tooltip"
-                            closeOnFocusLeavesContent={false}
-                            content={
-                              <span
-                                className="md-tooltip__text"
-                              >
-                                Zoom in
-                              </span>
-                            }
-                            delay={0}
-                            doesAnchorToggle={true}
-                            hideDelay={0}
-                            hoverDelay={500}
-                            includeFocusOnHover={true}
-                            onClose={null}
-                            overflowType="auto"
-                            popoverTrigger="MouseEnter"
-                            showArrow={true}
-                            showDelay={0}
-                            startOpen={false}
-                          >
-                            <div
-                              className="md-lightbox__control"
-                              key="child-1"
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onFocus={[Function]}
-                              onKeyPress={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              role="button"
-                              tabIndex="0"
-                            >
-                              <Icon
-                                append={false}
-                                ariaLabel={null}
-                                buttonClassName=""
-                                buttonProps={null}
-                                className=""
-                                color=""
-                                description=""
-                                name="zoom-in_16"
-                                onClick={null}
-                                prepend={false}
-                                size={null}
-                                sizeOverride={false}
-                                style={null}
-                                title=""
-                                type=""
-                              >
-                                <i
-                                  aria-label={null}
-                                  className="md-icon icon icon-zoom-in_16"
-                                  style={
-                                    Object {
-                                      "fontSize": 16,
-                                    }
-                                  }
-                                />
-                              </Icon>
-                            </div>
-                          </Popover>
-                        </Tooltip>
-                      </div>
-                      <div
-                        className="md-lightbox__controls"
-                      >
-                        <span
-                          className="md-lightbox__control-value"
-                        >
-                          1
-                        </span>
-                      </div>
-                      <div
-                        className="md-lightbox__controls"
-                        style={Object {}}
-                      >
-                        <span
-                          className="md-lightbox__control-value"
-                        />
-                        <Tooltip
-                          className=""
-                          popoverProps={Object {}}
-                          tooltip="Download"
-                          tooltipTrigger="MouseEnter"
-                          width={null}
-                        >
-                          <Popover
-                            autoFocusOnFirstElt={false}
-                            className="md-tooltip"
-                            closeOnFocusLeavesContent={false}
-                            content={
-                              <span
-                                className="md-tooltip__text"
-                              >
-                                Download
-                              </span>
-                            }
-                            delay={0}
-                            doesAnchorToggle={true}
-                            hideDelay={0}
-                            hoverDelay={500}
-                            includeFocusOnHover={true}
-                            onClose={null}
-                            overflowType="auto"
-                            popoverTrigger="MouseEnter"
-                            showArrow={true}
-                            showDelay={0}
-                            startOpen={false}
-                          >
-                            <div
-                              className="md-lightbox__control md-lightbox__control-download"
-                              key="child-1"
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onFocus={[Function]}
-                              onKeyPress={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              role="button"
-                              tabIndex="0"
-                            >
-                              <Icon
-                                append={false}
-                                ariaLabel={null}
-                                buttonClassName=""
-                                buttonProps={null}
-                                className=""
-                                color=""
-                                description=""
-                                name="download_16"
-                                onClick={null}
-                                prepend={false}
-                                size={null}
-                                sizeOverride={false}
-                                style={null}
-                                title=""
-                                type=""
-                              >
-                                <i
-                                  aria-label={null}
-                                  className="md-icon icon icon-download_16"
-                                  style={
-                                    Object {
-                                      "fontSize": 16,
-                                    }
-                                  }
-                                />
-                              </Icon>
-                            </div>
-                          </Popover>
-                        </Tooltip>
                       </div>
                     </div>
                   </div>
-                </div>
+                </ThemeProvider>
               </div>
             </div>
           </div>

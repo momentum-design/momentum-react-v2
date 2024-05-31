@@ -4,11 +4,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-aria-modal';
 import { Spinner, Tooltip, Icon } from '@momentum-ui/react-collaboration';
+import MomentumThemeProvider from '../../components/ThemeProvider';
+
 import { v4 as uuidv4 } from 'uuid';
 
 /**
-* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
-**/
+ * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+ **/
 class Lightbox extends React.Component {
   constructor(props) {
     super(props);
@@ -496,54 +498,59 @@ class Lightbox extends React.Component {
         underlayClass="md-lightbox__container"
         aria-labelledby={this.nameId}
       >
-        <div className="md-lightbox__header" ref={(ref) => (this.lightBox = ref)}>
-          <div className="md-lightbox__header-item--left">
-            <div className="md-lightbox__header-meta">
-              <div className="md-lightbox__header-sharer">{info.sharedBy}</div>
-              <div className="md-lightbox__header-timestamp">{info.sharedOn}</div>
-            </div>
-          </div>
-          <div className="md-lightbox__header-item--center">
-            <h2 className="md-lightbox__header-name" id={this.nameId}>{name}</h2>
-          </div>
-          <div className="md-lightbox__header-item--right">
-            <Tooltip popoverProps={popoverProps} tooltip={tooltips.exit}>
-              <div
-                className="md-lightbox__control"
-                onClick={this.handleClose}
-                role="button"
-                tabIndex="0"
-                onKeyPress={this.handleClose}
-              >
-                <Icon name="cancel_16" />
+        {/* adding this so that focus styling applies to components inside the modal. */}
+        <MomentumThemeProvider theme={this.props.theme}>
+          <div className="md-lightbox__header" ref={(ref) => (this.lightBox = ref)}>
+            <div className="md-lightbox__header-item--left">
+              <div className="md-lightbox__header-meta">
+                <div className="md-lightbox__header-sharer">{info.sharedBy}</div>
+                <div className="md-lightbox__header-timestamp">{info.sharedOn}</div>
               </div>
-            </Tooltip>
-          </div>
-        </div>
-        <div className="md-lightbox__body">
-          {showColumn && getThumbnails()}
-          <div
-            className="md-lightbox__content"
-            onClick={this.handleClose}
-            onKeyPress={this.handleClose}
-            role="button"
-            tabIndex="0"
-          >
-            <div
-              className={
-                `md-lightbox__viewport` +
-                `${(!!currentPage.decrypting && ` md-lightbox__viewport--decrypting`) || ''}`
-              }
-              ref={(ref) => (this.viewport = ref)}
-            >
-              {pages[index].decrypting && <Spinner className="md-lightbox__decrypting-spinner" />}
-              {getViewport()}
             </div>
-            {showColumn && leftArrowControl}
-            {showColumn && rightArrowControl}
-            {viewportControls()}
+            <div className="md-lightbox__header-item--center">
+              <h2 className="md-lightbox__header-name" id={this.nameId}>
+                {name}
+              </h2>
+            </div>
+            <div className="md-lightbox__header-item--right">
+              <Tooltip popoverProps={popoverProps} tooltip={tooltips.exit}>
+                <div
+                  className="md-lightbox__control"
+                  onClick={this.handleClose}
+                  role="button"
+                  tabIndex="0"
+                  onKeyPress={this.handleClose}
+                >
+                  <Icon name="cancel_16" />
+                </div>
+              </Tooltip>
+            </div>
           </div>
-        </div>
+          <div className="md-lightbox__body">
+            {showColumn && getThumbnails()}
+            <div
+              className="md-lightbox__content"
+              onClick={this.handleClose}
+              onKeyPress={this.handleClose}
+              role="button"
+              tabIndex="0"
+            >
+              <div
+                className={
+                  `md-lightbox__viewport` +
+                  `${(!!currentPage.decrypting && ` md-lightbox__viewport--decrypting`) || ''}`
+                }
+                ref={(ref) => (this.viewport = ref)}
+              >
+                {pages[index].decrypting && <Spinner className="md-lightbox__decrypting-spinner" />}
+                {getViewport()}
+              </div>
+              {showColumn && leftArrowControl}
+              {showColumn && rightArrowControl}
+              {viewportControls()}
+            </div>
+          </div>
+        </MomentumThemeProvider>
       </Modal>
     );
   }
@@ -582,6 +589,8 @@ Lightbox.propTypes = {
   pages: PropTypes.array.isRequired,
   /** @prop tooltip style | {isContained:true, direction: 'bottom-right'} */
   popoverProps: PropTypes.object,
+  /** @prop theme -- used to pass down to the ThemeProvider */
+  theme: PropTypes.string,
   /** @prop Collection of predefined tootips for various Lightbox actions | { download: 'Download', etc } */
   tooltips: PropTypes.shape({
     download: PropTypes.string,
@@ -611,6 +620,7 @@ Lightbox.defaultProps = {
     isContained: true,
     direction: 'bottom-right',
   },
+  theme: 'darkWebex',
   tooltips: {
     download: 'Download',
     downloading: 'Downloading...',
