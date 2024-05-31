@@ -239,14 +239,36 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     ],
   };
 
+  describe('accessibility properties', () => {
+    it('triggerComponent has aria-haspopup true by default', async () => {
+      render(<MenuTrigger {...defaultProps} />);
+
+      const button = screen.getByRole('button', { name: 'Open Menu' });
+      expect(button).toBeVisible();
+      expect(button.getAttribute('aria-haspopup')).toBe('true');
+    });
+
+    it('triggerComponent can have aria-haspopup as passed in props', async () => {
+      render(<MenuTrigger
+        {...defaultProps}
+        triggerComponent={<ButtonPill aria-haspopup='dialog' aria-label="Open Menu">Open Menu</ButtonPill>}
+      />
+      );
+
+      const button = screen.getByRole('button', { name: 'Open Menu' });
+      expect(button).toBeVisible();
+      expect(button.getAttribute('aria-haspopup')).toBe('dialog');
+    });
+  });
+
   describe('actions', () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const openMenu = async (user: any, screen: any) => {
       await user.click(screen.getByRole('button', { name: 'Open Menu' }));
       await waitFor(() => {
-        expect(screen.getByRole('menu', { name: 'Single Menu' } )).toBeInTheDocument();
+        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeInTheDocument();
       });
-      const menu = screen.getByRole('menu', { name: 'Single Menu' } );
+      const menu = screen.getByRole('menu', { name: 'Single Menu' });
       return menu;
     };
 
@@ -337,56 +359,6 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     });
 
     describe('keyboard accessibility', () => {
-      it('triggerComponent has aria-haspopup true by default', async () => {
-        const defaultProps = {
-          'aria-label': 'Label',
-          triggerComponent: <ButtonPill aria-label="Open Menu">Open Menu</ButtonPill>,
-          children: [
-            <Menu selectionMode="single" key="2" aria-label="Single Menu">
-              <Item key="one">One</Item>
-              <Item key="two">Two</Item>
-              <Item key="three">Three</Item>
-            </Menu>,
-            <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
-              <Item key="asd">Four</Item>
-              <Item key="ff">Five</Item>
-              <Item key="d">Six</Item>
-            </Menu>,
-          ],
-        };
-
-        render(<MenuTrigger {...defaultProps} />);
-
-        const button = screen.getByRole('button', { name: 'Open Menu' });
-        expect(button).toBeVisible();
-        expect(button.getAttribute('aria-haspopup')).toBe('true');
-      });
-
-      it('triggerComponent can have aria-haspopup as passed in props', async () => {
-        const defaultProps = {
-          'aria-label': 'Label',
-          triggerComponent: <ButtonPill aria-haspopup='dialog' aria-label="Open Menu">Open Menu</ButtonPill>,
-          children: [
-            <Menu selectionMode="single" key="2" aria-label="Single Menu">
-              <Item key="one">One</Item>
-              <Item key="two">Two</Item>
-              <Item key="three">Three</Item>
-            </Menu>,
-            <Menu selectionMode="multiple" key="4" aria-label="Multi Menu">
-              <Item key="asd">Four</Item>
-              <Item key="ff">Five</Item>
-              <Item key="d">Six</Item>
-            </Menu>,
-          ],
-        };
-
-        render(<MenuTrigger {...defaultProps} />);
-
-        const button = screen.getByRole('button', { name: 'Open Menu' });
-        expect(button).toBeVisible();
-        expect(button.getAttribute('aria-haspopup')).toBe('dialog');
-      });
-
       it('closes the menu on Escape', async () => {
         const user = userEvent.setup();
 
@@ -401,7 +373,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         });
       });
 
-      it("doesn't close the menu on Tab if only one menu present", async () => {
+      it("doesn't close the menu on Tab & Shift+Tab if only one menu present", async () => {
         const user = userEvent.setup();
 
         render(<MenuTrigger {...defaultProps} children={[defaultProps.children[0]]} />);
@@ -409,6 +381,10 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         const menu = await openMenu(user, screen);
 
         await user.tab();
+
+        expect(menu).toBeVisible();
+
+        await user.tab({shift: true});
 
         expect(menu).toBeVisible();
       });
@@ -421,6 +397,10 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         const menu = await openMenu(user, screen);
 
         await user.tab();
+
+        expect(menu).toBeVisible();
+
+        await user.tab({shift: true});
 
         expect(menu).toBeVisible();
       });
@@ -477,6 +457,51 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         expect(
           (await screen.findByRole('menuitemradio', { name: 'Two' })).getAttribute('aria-checked')
         ).toBeTruthy();
+      });
+
+      it('allows cycling through multiple menus with tab / shift+tab', async () => {
+        const user = userEvent.setup();
+
+        render(<MenuTrigger {...defaultProps} />);
+
+        await openMenu(user, screen);
+        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+
+        await user.tab();
+        expect(await screen.findByRole('menuitemcheckbox', { name: 'Four' })).toHaveFocus();
+
+        await user.tab();
+        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+
+        await user.tab({shift: true});
+        expect(await screen.findByRole('menuitemcheckbox', { name: 'Four' })).toHaveFocus();
+
+        await user.tab({shift: true});
+        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+      });
+
+      it('allows cycling through multiple menus with tab / shift+tab & persists focus of menuitems inside', async () => {
+        const user = userEvent.setup();
+
+        render(<MenuTrigger {...defaultProps} />);
+
+        await openMenu(user, screen);
+        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+
+        await user.keyboard('{ArrowDown}');
+        expect(await screen.findByRole('menuitemradio', { name: 'Two' })).toHaveFocus();
+
+        await user.tab();
+        expect(await screen.findByRole('menuitemcheckbox', { name: 'Four' })).toHaveFocus();
+
+        await user.keyboard('{ArrowDown}');
+        expect(await screen.findByRole('menuitemcheckbox', { name: 'Five' })).toHaveFocus();
+
+        await user.tab();
+        expect(await screen.findByRole('menuitemradio', { name: 'Two' })).toHaveFocus();
+
+        await user.tab({shift: true});
+        expect(await screen.findByRole('menuitemcheckbox', { name: 'Five' })).toHaveFocus();
       });
     });
   });

@@ -31,7 +31,7 @@ describe('<Popover />', () => {
     contentName = /Content/i
   ) => {
     await user.click(screen.getByRole('button', { name: buttonName }));
-    
+
     await waitFor(() => {
       expect(screen.getByText(contentName)).toBeInTheDocument();
     });
@@ -408,7 +408,7 @@ describe('<Popover />', () => {
       expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
     });
 
-    
+
     it('checks triggerComponent props when non interactive and id is defined', async () => {
       const id = 'example-id';
       render(
@@ -1058,6 +1058,47 @@ describe('<Popover />', () => {
         const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
 
         await user.click(backdrop);
+
+        // content should be hidden
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
+
+      it('it should close popover and move focus to the next focusable element if Tab is pressed, interactive=false, focusBackOnTrigger=undefined', async () => {
+        // expect.assertions(6);
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <Popover
+              ref={ref}
+              triggerComponent={<button>Hover Me!</button>}
+              interactive={false}
+              closeButtonPlacement="top-right"
+              trigger="mouseenter"
+              hideOnEsc={false}
+            >
+              <p>Content</p>
+            </Popover>
+            <button>Outside Button</button>
+          </>
+        );
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after Tab to the triggerButton, popover should be shown
+        await user.tab();
+        expect(screen.getByRole('button', { name: 'Hover Me!' })).toHaveFocus();
+
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+
+        // after Tab again, popover should be hidden and outside button should have focus
+        await user.tab();
+        expect(screen.getByRole('button', { name: 'Outside Button' })).toHaveFocus();
 
         // content should be hidden
         await waitFor(() => {
