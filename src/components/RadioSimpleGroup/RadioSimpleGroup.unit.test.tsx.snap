@@ -95,7 +95,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<RadioSimpleGroup /> snapshot should match snapshot when rendered with RadioSimple passed to children 1`] = `
+exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats selected 1`] = `
 <DocumentFragment>
   <div
     aria-orientation="vertical"
@@ -107,12 +107,13 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot when rendered with 
       class="md-radio-simple-wrapper"
       data-disabled="false"
       data-focused="false"
-      data-selected="false"
+      data-selected="true"
     >
       <div
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          checked=""
           name="test-ID"
           tabindex="0"
           type="radio"
@@ -176,7 +177,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot when rendered with 
 </DocumentFragment>
 `;
 
-exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats selected 1`] = `
+exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] = `
 <DocumentFragment>
   <div
     aria-orientation="vertical"
@@ -188,13 +189,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
       class="md-radio-simple-wrapper"
       data-disabled="false"
       data-focused="false"
-      data-selected="true"
+      data-selected="false"
     >
       <div
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
-          checked=""
           name="test-ID"
           tabindex="0"
           type="radio"
