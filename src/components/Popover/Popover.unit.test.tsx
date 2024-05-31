@@ -593,13 +593,18 @@ describe('<Popover />', () => {
   });
 
   it('should change the modal container role with the role attribute', async () => {
-    expect.assertions(2);
+    expect.assertions(3);
     const user = userEvent.setup();
     render(
       <Popover triggerComponent={<button>Click Me!</button>} role="tooltip">
         <p>Content</p>
       </Popover>
     );
+
+    // assert no popover on screen
+    const contentBeforeClick = screen.queryByText('Content');
+    expect(contentBeforeClick).not.toBeInTheDocument();
+
     await openPopoverByClickingOnTriggerAndCheckContent(user);
 
     // assert no popover on screen
