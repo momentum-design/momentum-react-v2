@@ -5,6 +5,7 @@ import { mountAndWait } from '../../../test/utils';
 import Icon from '../Icon';
 import GlobalSearchInput, { GLOBAL_SEARCH_INPUT_CONSTANTS as CONSTANTS } from './';
 import { act } from 'react-dom/test-utils';
+import ButtonSimple from '../ButtonSimple';
 
 const testTranslations = {
   empty: 'empty',
@@ -174,7 +175,7 @@ describe('<GlobalSearchInput />', () => {
           <GlobalSearchInput
             aria-label="global search"
             style={style}
-            clearButtonAriaLabel="search"
+            clearButtonAriaLabel="clear"
           />
         )
       )
@@ -192,7 +193,7 @@ describe('<GlobalSearchInput />', () => {
           <GlobalSearchInput
             aria-label="global search"
             searching={true}
-            clearButtonAriaLabel="search"
+            clearButtonAriaLabel="clear"
           />
         )
       )
@@ -210,7 +211,7 @@ describe('<GlobalSearchInput />', () => {
           <GlobalSearchInput
             aria-label="global search"
             searching={true}
-            clearButtonAriaLabel="search"
+            clearButtonAriaLabel="clear"
           />
         )
       )
@@ -218,6 +219,31 @@ describe('<GlobalSearchInput />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe('global search');
+    });
+
+    it('should pass the correct properties to the clear button', async () => {
+      expect.assertions(1);
+
+      const element = (
+        await mountAndWait(
+          <GlobalSearchInput
+            aria-label="global search"
+            searching={true}
+            clearButtonAriaLabel="clear"
+            value="hello"
+          />
+        )
+      ).find(ButtonSimple);
+
+      expect(element.props()).toStrictEqual({
+        className: 'md-global-search-input-clear',
+        excludeFromTabOrder: false,
+        'aria-label': 'clear',
+        children: expect.any(Object),
+        onPress: expect.any(Function),
+        onPressStart: expect.any(Function),
+        preventFocusOnPress: true,
+      });
     });
   });
 
@@ -241,7 +267,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="ab"
             filters={filters}
-            clearButtonAriaLabel="search"
+            clearButtonAriaLabel="clear"
           />
         );
       };
@@ -278,7 +304,7 @@ describe('<GlobalSearchInput />', () => {
           aria-label="global search"
           value="ab"
           filters={[{ term: 'from', value: '', translations: testTranslations }]}
-          clearButtonAriaLabel="search"
+          clearButtonAriaLabel="clear"
         />
       );
       const inputElement = wrapper.find('input');
@@ -313,7 +339,7 @@ describe('<GlobalSearchInput />', () => {
           aria-label="global search"
           value=""
           filters={[]}
-          clearButtonAriaLabel="search"
+          clearButtonAriaLabel="clear"
         />
       );
       const inputElement = wrapper.find('input');
@@ -346,7 +372,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="ab"
             filters={[{ term: 'from', value: '', translations: testTranslations }]}
-            clearButtonAriaLabel="search"
+            clearButtonAriaLabel="clear"
           />
         )
       ).find('input');
@@ -382,7 +408,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="ab cd"
             filters={filters}
-            clearButtonAriaLabel="search"
+            clearButtonAriaLabel="clear"
           />
         )
       ).find('input');
@@ -414,7 +440,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="abc"
             filters={[{ term: 'from', value: '', translations: testTranslations }]}
-            clearButtonAriaLabel="search"
+            clearButtonAriaLabel="clear"
           />
         )
       ).find('input');
@@ -435,7 +461,7 @@ describe('<GlobalSearchInput />', () => {
       expect.assertions(1);
 
       const wrapper = await mountAndWait(
-        <GlobalSearchInput aria-label="global search" clearButtonAriaLabel="search" />
+        <GlobalSearchInput aria-label="global search" clearButtonAriaLabel="clear" />
       );
 
       const inputElement = wrapper.find('input');
