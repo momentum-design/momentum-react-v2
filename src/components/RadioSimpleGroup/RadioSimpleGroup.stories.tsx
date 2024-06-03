@@ -80,7 +80,7 @@ Example.args = {
     </div>
   ),
   label: <div style={{padding: '16px 0'}}>Select your favorite color</div>,
-  description: 'Only choose one',
+  description: <div style={{padding: '16px 0'}}>Only choose one color</div>,
 };
 
 const Layout = MultiTemplate<RadioSimpleGroupProps>(RadioSimpleGroup).bind({});

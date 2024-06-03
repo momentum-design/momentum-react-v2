@@ -24,7 +24,7 @@ export default {
 
 const Example = Template<RadioSimpleProps>((args: RadioSimpleProps) => {
   return (
-    <RadioSimpleGroup >
+    <RadioSimpleGroup label="Example" description="Value of the group is 'red'" value={'red'}>
       <RadioSimple {...args} />
     </RadioSimpleGroup>
   );
