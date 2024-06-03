@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -154,7 +154,21 @@ Offset.args = {
   ),
 };
 
-const MultiplePopovers = Template<PopoverProps>(Popover).bind({});
+const MultiplePopovers = Template<PopoverProps>((args: PopoverProps) => {
+  const triggerComponent = (<Popover
+    trigger="mouseenter"
+    placement={PLACEMENTS.BOTTOM}
+    showArrow
+    triggerComponent={
+      <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+        Hover or click me!
+      </ButtonSimple>
+    }
+  >
+    Description tooltip on hover
+  </Popover>);
+  return <Popover {...args} triggerComponent={triggerComponent}/>;
+}).bind({});
 
 MultiplePopovers.argTypes = { ...argTypes };
 
@@ -165,20 +179,6 @@ MultiplePopovers.args = {
   interactive: true,
   children: 'Interactive content on click',
   closeButtonPlacement: 'top-right',
-  triggerComponent: (
-    <Popover
-      trigger="mouseenter"
-      placement={PLACEMENTS.BOTTOM}
-      showArrow
-      triggerComponent={
-        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-          Hover or click me!
-        </ButtonSimple>
-      }
-    >
-      Description tooltip on hover
-    </Popover>
-  ),
 };
 
 const NestedPopover = Template<PopoverProps>(Popover).bind({});
@@ -195,7 +195,7 @@ NestedPopover.args = {
       Popover level 1
       <div>
         <Popover
-          trigger="mouseenter"
+          trigger="click"
           placement={PLACEMENTS.BOTTOM}
           showArrow
           interactive

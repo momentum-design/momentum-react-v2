@@ -17,148 +17,40 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div />
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div />
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div />
+            <div>
               <div />
             </div>
+            <div />
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -188,234 +80,92 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
+            <div>
+              <div />
+            </div>
+            <div />
+            <div>
+              <ButtonPill>
+                <ButtonSimple
+                  className="md-button-pill-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={false}
+                  data-grown={false}
+                  data-inverted={false}
+                  data-outline={false}
+                  data-shallow-disabled={false}
+                  data-size={40}
                 >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div />
-                    <div>
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
                       <button
-                        class="md-button-pill-wrapper md-button-simple-wrapper"
+                        className="md-button-pill-wrapper md-button-simple-wrapper"
                         data-color="primary"
-                        data-disabled="false"
-                        data-ghost="false"
-                        data-grown="false"
-                        data-inverted="false"
-                        data-outline="false"
-                        data-shallow-disabled="false"
-                        data-size="40"
+                        data-disabled={false}
+                        data-ghost={false}
+                        data-grown={false}
+                        data-inverted={false}
+                        data-outline={false}
+                        data-shallow-disabled={false}
+                        data-size={40}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
                         type="button"
                       >
                         <span>
                           Button Pill
                         </span>
                       </button>
-                    </div>
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div />
-                      <div>
-                        <button
-                          class="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled="false"
-                          data-ghost="false"
-                          data-grown="false"
-                          data-inverted="false"
-                          data-outline="false"
-                          data-shallow-disabled="false"
-                          data-size="40"
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div />
-              <div>
-                <ButtonPill>
-                  <ButtonSimple
-                    className="md-button-pill-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                  >
-                    <FocusRing>
-                      <FocusRing
-                        focusClass="md-focus-ring-wrapper children"
-                        focusRingClass="md-focus-ring-wrapper children"
-                      >
-                        <button
-                          className="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled={false}
-                          data-ghost={false}
-                          data-grown={false}
-                          data-inverted={false}
-                          data-outline={false}
-                          data-shallow-disabled={false}
-                          data-size={40}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDragStart={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          onMouseDown={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseUp={[Function]}
-                          onTouchCancel={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                      </FocusRing>
                     </FocusRing>
-                  </ButtonSimple>
-                </ButtonPill>
-              </div>
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonPill>
             </div>
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -442,157 +192,43 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-label="test-aria-label"
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-label="test-aria-label"
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div>
-                      example-children
-                    </div>
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-label="test-aria-label"
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div>
-                        example-children
-                      </div>
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-label="test-aria-label"
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div>
-                example-children
-              </div>
+            <div>
               <div />
             </div>
+            <div>
+              example-children
+            </div>
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -618,148 +254,40 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div />
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div />
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div />
+            <div>
               <div />
             </div>
+            <div />
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -789,198 +317,80 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div>
-                        <button
-                          class="md-button-control-wrapper md-button-simple-wrapper"
-                          type="button"
-                        />
-                      </div>
-                    </div>
-                    <div />
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div>
-                          <button
-                            class="md-button-control-wrapper md-button-simple-wrapper"
-                            type="button"
-                          />
-                        </div>
-                      </div>
-                      <div />
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
+            <div>
               <div>
-                <div>
-                  <ButtonControl
-                    control="close"
+                <ButtonControl
+                  control="close"
+                >
+                  <ButtonSimple
+                    className="md-button-control-wrapper"
                   >
-                    <ButtonSimple
-                      className="md-button-control-wrapper"
-                    >
-                      <FocusRing>
-                        <FocusRing
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
+                    <FocusRing>
+                      <FocusRing
+                        focusClass="md-focus-ring-wrapper children"
+                        focusRingClass="md-focus-ring-wrapper children"
+                      >
+                        <button
+                          className="md-button-control-wrapper md-button-simple-wrapper"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          type="button"
                         >
-                          <button
-                            className="md-button-control-wrapper md-button-simple-wrapper"
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Icon
-                              autoScale={true}
-                              name="cancel"
-                              weight="bold"
-                            />
-                          </button>
-                        </FocusRing>
+                          <Icon
+                            autoScale={true}
+                            name="cancel"
+                            weight="bold"
+                          />
+                        </button>
                       </FocusRing>
-                    </ButtonSimple>
-                  </ButtonControl>
-                </div>
+                    </FocusRing>
+                  </ButtonSimple>
+                </ButtonControl>
               </div>
-              <div />
-              <div />
             </div>
+            <div />
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -1006,174 +416,52 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div>
-                      <p
-                        class="md-text-wrapper md-overlay-alert-details"
-                        data-type="body-primary"
-                      >
-                        example-details
-                      </p>
-                    </div>
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div>
-                        <p
-                          class="md-text-wrapper md-overlay-alert-details"
-                          data-type="body-primary"
-                        >
-                          example-details
-                        </p>
-                      </div>
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div>
-                <Text
-                  className="md-overlay-alert-details"
-                  type="body-primary"
-                >
-                  <p
-                    className="md-text-wrapper md-overlay-alert-details"
-                    data-type="body-primary"
-                  >
-                    example-details
-                  </p>
-                </Text>
-              </div>
+            <div>
               <div />
             </div>
+            <div>
+              <Text
+                className="md-overlay-alert-details"
+                type="body-primary"
+              >
+                <p
+                  className="md-text-wrapper md-overlay-alert-details"
+                  data-type="body-primary"
+                >
+                  example-details
+                </p>
+              </Text>
+            </div>
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -1199,154 +487,42 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div>
-                      example-children
-                    </div>
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div>
-                        example-children
-                      </div>
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div>
-                example-children
-              </div>
+            <div>
               <div />
             </div>
+            <div>
+              example-children
+            </div>
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -1374,148 +550,40 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div />
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div />
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div />
+            <div>
               <div />
             </div>
+            <div />
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -1556,415 +624,203 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div />
-                    <div>
-                      <button
-                        class="md-button-pill-wrapper md-button-simple-wrapper"
-                        data-color="primary"
-                        data-disabled="false"
-                        data-ghost="false"
-                        data-grown="false"
-                        data-inverted="false"
-                        data-outline="false"
-                        data-shallow-disabled="false"
-                        data-size="40"
-                        type="button"
-                      >
-                        <span>
-                          Button Pill
-                        </span>
-                      </button>
-                      ,
-                      <button
-                        class="md-button-pill-wrapper md-button-simple-wrapper"
-                        data-color="primary"
-                        data-disabled="false"
-                        data-ghost="false"
-                        data-grown="false"
-                        data-inverted="false"
-                        data-outline="false"
-                        data-shallow-disabled="false"
-                        data-size="40"
-                        type="button"
-                      >
-                        <span>
-                          Button Pill
-                        </span>
-                      </button>
-                      ,
-                      <button
-                        class="md-button-pill-wrapper md-button-simple-wrapper"
-                        data-color="primary"
-                        data-disabled="false"
-                        data-ghost="false"
-                        data-grown="false"
-                        data-inverted="false"
-                        data-outline="false"
-                        data-shallow-disabled="false"
-                        data-size="40"
-                        type="button"
-                      >
-                        <span>
-                          Button Pill
-                        </span>
-                      </button>
-                      ,
-                    </div>
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div />
-                      <div>
-                        <button
-                          class="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled="false"
-                          data-ghost="false"
-                          data-grown="false"
-                          data-inverted="false"
-                          data-outline="false"
-                          data-shallow-disabled="false"
-                          data-size="40"
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                        ,
-                        <button
-                          class="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled="false"
-                          data-ghost="false"
-                          data-grown="false"
-                          data-inverted="false"
-                          data-outline="false"
-                          data-shallow-disabled="false"
-                          data-size="40"
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                        ,
-                        <button
-                          class="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled="false"
-                          data-ghost="false"
-                          data-grown="false"
-                          data-inverted="false"
-                          data-outline="false"
-                          data-shallow-disabled="false"
-                          data-size="40"
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                        ,
-                      </div>
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
+            <div>
               <div />
-              <div>
-                <ButtonPill
-                  key="0"
+            </div>
+            <div />
+            <div>
+              <ButtonPill
+                key="0"
+              >
+                <ButtonSimple
+                  className="md-button-pill-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={false}
+                  data-grown={false}
+                  data-inverted={false}
+                  data-outline={false}
+                  data-shallow-disabled={false}
+                  data-size={40}
                 >
-                  <ButtonSimple
-                    className="md-button-pill-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                  >
-                    <FocusRing>
-                      <FocusRing
-                        focusClass="md-focus-ring-wrapper children"
-                        focusRingClass="md-focus-ring-wrapper children"
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
+                      <button
+                        className="md-button-pill-wrapper md-button-simple-wrapper"
+                        data-color="primary"
+                        data-disabled={false}
+                        data-ghost={false}
+                        data-grown={false}
+                        data-inverted={false}
+                        data-outline={false}
+                        data-shallow-disabled={false}
+                        data-size={40}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
                       >
-                        <button
-                          className="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled={false}
-                          data-ghost={false}
-                          data-grown={false}
-                          data-inverted={false}
-                          data-outline={false}
-                          data-shallow-disabled={false}
-                          data-size={40}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDragStart={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          onMouseDown={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseUp={[Function]}
-                          onTouchCancel={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                      </FocusRing>
+                        <span>
+                          Button Pill
+                        </span>
+                      </button>
                     </FocusRing>
-                  </ButtonSimple>
-                </ButtonPill>
-                ,
-                <ButtonPill
-                  key="1"
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonPill>
+              ,
+              <ButtonPill
+                key="1"
+              >
+                <ButtonSimple
+                  className="md-button-pill-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={false}
+                  data-grown={false}
+                  data-inverted={false}
+                  data-outline={false}
+                  data-shallow-disabled={false}
+                  data-size={40}
                 >
-                  <ButtonSimple
-                    className="md-button-pill-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                  >
-                    <FocusRing>
-                      <FocusRing
-                        focusClass="md-focus-ring-wrapper children"
-                        focusRingClass="md-focus-ring-wrapper children"
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
+                      <button
+                        className="md-button-pill-wrapper md-button-simple-wrapper"
+                        data-color="primary"
+                        data-disabled={false}
+                        data-ghost={false}
+                        data-grown={false}
+                        data-inverted={false}
+                        data-outline={false}
+                        data-shallow-disabled={false}
+                        data-size={40}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
                       >
-                        <button
-                          className="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled={false}
-                          data-ghost={false}
-                          data-grown={false}
-                          data-inverted={false}
-                          data-outline={false}
-                          data-shallow-disabled={false}
-                          data-size={40}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDragStart={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          onMouseDown={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseUp={[Function]}
-                          onTouchCancel={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                      </FocusRing>
+                        <span>
+                          Button Pill
+                        </span>
+                      </button>
                     </FocusRing>
-                  </ButtonSimple>
-                </ButtonPill>
-                ,
-                <ButtonPill
-                  key="2"
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonPill>
+              ,
+              <ButtonPill
+                key="2"
+              >
+                <ButtonSimple
+                  className="md-button-pill-wrapper"
+                  data-color="primary"
+                  data-disabled={false}
+                  data-ghost={false}
+                  data-grown={false}
+                  data-inverted={false}
+                  data-outline={false}
+                  data-shallow-disabled={false}
+                  data-size={40}
                 >
-                  <ButtonSimple
-                    className="md-button-pill-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                  >
-                    <FocusRing>
-                      <FocusRing
-                        focusClass="md-focus-ring-wrapper children"
-                        focusRingClass="md-focus-ring-wrapper children"
+                  <FocusRing>
+                    <FocusRing
+                      focusClass="md-focus-ring-wrapper children"
+                      focusRingClass="md-focus-ring-wrapper children"
+                    >
+                      <button
+                        className="md-button-pill-wrapper md-button-simple-wrapper"
+                        data-color="primary"
+                        data-disabled={false}
+                        data-ghost={false}
+                        data-grown={false}
+                        data-inverted={false}
+                        data-outline={false}
+                        data-shallow-disabled={false}
+                        data-size={40}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onDragStart={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        type="button"
                       >
-                        <button
-                          className="md-button-pill-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled={false}
-                          data-ghost={false}
-                          data-grown={false}
-                          data-inverted={false}
-                          data-outline={false}
-                          data-shallow-disabled={false}
-                          data-size={40}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDragStart={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          onMouseDown={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseUp={[Function]}
-                          onTouchCancel={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          type="button"
-                        >
-                          <span>
-                            Button Pill
-                          </span>
-                        </button>
-                      </FocusRing>
+                        <span>
+                          Button Pill
+                        </span>
+                      </button>
                     </FocusRing>
-                  </ButtonSimple>
-                </ButtonPill>
-                ,
-              </div>
+                  </FocusRing>
+                </ButtonSimple>
+              </ButtonPill>
+              ,
             </div>
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -2005,305 +861,165 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div>
-                        <button
-                          class="md-button-control-wrapper md-button-simple-wrapper"
-                          type="button"
-                        />
-                        ,
-                        <button
-                          class="md-button-control-wrapper md-button-simple-wrapper"
-                          type="button"
-                        />
-                        ,
-                        <button
-                          class="md-button-control-wrapper md-button-simple-wrapper"
-                          type="button"
-                        />
-                        ,
-                      </div>
-                    </div>
-                    <div />
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div>
-                          <button
-                            class="md-button-control-wrapper md-button-simple-wrapper"
-                            type="button"
-                          />
-                          ,
-                          <button
-                            class="md-button-control-wrapper md-button-simple-wrapper"
-                            type="button"
-                          />
-                          ,
-                          <button
-                            class="md-button-control-wrapper md-button-simple-wrapper"
-                            type="button"
-                          />
-                          ,
-                        </div>
-                      </div>
-                      <div />
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
+            <div>
               <div>
-                <div>
-                  <ButtonControl
-                    control="close"
-                    key="0"
+                <ButtonControl
+                  control="close"
+                  key="0"
+                >
+                  <ButtonSimple
+                    className="md-button-control-wrapper"
                   >
-                    <ButtonSimple
-                      className="md-button-control-wrapper"
-                    >
-                      <FocusRing>
-                        <FocusRing
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
+                    <FocusRing>
+                      <FocusRing
+                        focusClass="md-focus-ring-wrapper children"
+                        focusRingClass="md-focus-ring-wrapper children"
+                      >
+                        <button
+                          className="md-button-control-wrapper md-button-simple-wrapper"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          type="button"
                         >
-                          <button
-                            className="md-button-control-wrapper md-button-simple-wrapper"
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Icon
-                              autoScale={true}
-                              name="cancel"
-                              weight="bold"
-                            />
-                          </button>
-                        </FocusRing>
+                          <Icon
+                            autoScale={true}
+                            name="cancel"
+                            weight="bold"
+                          />
+                        </button>
                       </FocusRing>
-                    </ButtonSimple>
-                  </ButtonControl>
-                  ,
-                  <ButtonControl
-                    control="favorite"
-                    key="1"
+                    </FocusRing>
+                  </ButtonSimple>
+                </ButtonControl>
+                ,
+                <ButtonControl
+                  control="favorite"
+                  key="1"
+                >
+                  <ButtonSimple
+                    className="md-button-control-wrapper"
                   >
-                    <ButtonSimple
-                      className="md-button-control-wrapper"
-                    >
-                      <FocusRing>
-                        <FocusRing
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
+                    <FocusRing>
+                      <FocusRing
+                        focusClass="md-focus-ring-wrapper children"
+                        focusRingClass="md-focus-ring-wrapper children"
+                      >
+                        <button
+                          className="md-button-control-wrapper md-button-simple-wrapper"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          type="button"
                         >
-                          <button
-                            className="md-button-control-wrapper md-button-simple-wrapper"
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Icon
-                              autoScale={true}
-                              color="var(--mds-color-theme-text-warning-normal)"
-                              name="favorite"
-                              weight="filled"
-                            />
-                          </button>
-                        </FocusRing>
+                          <Icon
+                            autoScale={true}
+                            color="var(--mds-color-theme-text-warning-normal)"
+                            name="favorite"
+                            weight="filled"
+                          />
+                        </button>
                       </FocusRing>
-                    </ButtonSimple>
-                  </ButtonControl>
-                  ,
-                  <ButtonControl
-                    control="maximize"
-                    key="2"
+                    </FocusRing>
+                  </ButtonSimple>
+                </ButtonControl>
+                ,
+                <ButtonControl
+                  control="maximize"
+                  key="2"
+                >
+                  <ButtonSimple
+                    className="md-button-control-wrapper"
                   >
-                    <ButtonSimple
-                      className="md-button-control-wrapper"
-                    >
-                      <FocusRing>
-                        <FocusRing
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
+                    <FocusRing>
+                      <FocusRing
+                        focusClass="md-focus-ring-wrapper children"
+                        focusRingClass="md-focus-ring-wrapper children"
+                      >
+                        <button
+                          className="md-button-control-wrapper md-button-simple-wrapper"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          type="button"
                         >
-                          <button
-                            className="md-button-control-wrapper md-button-simple-wrapper"
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Icon
-                              autoScale={true}
-                              name="arrow-up"
-                              weight="bold"
-                            />
-                          </button>
-                        </FocusRing>
+                          <Icon
+                            autoScale={true}
+                            name="arrow-up"
+                            weight="bold"
+                          />
+                        </button>
                       </FocusRing>
-                    </ButtonSimple>
-                  </ButtonControl>
-                  ,
-                </div>
+                    </FocusRing>
+                  </ButtonSimple>
+                </ButtonControl>
+                ,
               </div>
-              <div />
-              <div />
             </div>
+            <div />
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -2343,148 +1059,40 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div />
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div />
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div />
+            <div>
               <div />
             </div>
+            <div />
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>
@@ -2511,190 +1119,58 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
-            "returnFocus": true,
+            "restoreFocus": true,
           }
         }
         round={75}
       >
-        <FocusLock
-          as="div"
+        <FocusScope
           autoFocus={true}
-          disabled={false}
-          lockProps={Object {}}
-          noFocusGuards={false}
-          persistentFocus={false}
-          returnFocus={true}
+          contain={true}
+          restoreFocus={true}
         >
-          <div
-            data-focus-guard={true}
-            key="guard-first"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-start={true}
+            hidden={true}
           />
           <div
-            data-focus-guard={true}
-            key="guard-nearest"
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={1}
-          />
-          <div
-            data-focus-lock-disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
+            aria-labelledby="test-ID"
+            aria-modal={true}
+            className="md-overlay-alert-modal-container md-modal-container-wrapper"
+            data-color="primary"
+            data-elevation={0}
+            data-padded={false}
+            data-round={75}
+            role="dialog"
           >
-            <SideEffect(FocusWatcher)
-              autoFocus={true}
-              disabled={false}
-              observed={
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    aria-labelledby="test-ID"
-                    aria-modal="true"
-                    class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                    data-color="primary"
-                    data-elevation="0"
-                    data-padded="false"
-                    data-round="75"
-                    role="dialog"
-                  >
-                    <div>
-                      <div />
-                    </div>
-                    <div
-                      class="md-overlay-alert-title"
-                    >
-                      <h2
-                        class="md-text-wrapper md-overlay-alert-title"
-                        data-type="title"
-                        id="test-ID"
-                      >
-                        example-title
-                      </h2>
-                    </div>
-                    <div />
-                    <div />
-                  </div>
-                </div>
-              }
-              onActivation={[Function]}
-              onDeactivation={[Function]}
-              persistentFocus={false}
-              shards={Array []}
-            >
-              <FocusWatcher
-                autoFocus={true}
-                disabled={false}
-                observed={
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      aria-labelledby="test-ID"
-                      aria-modal="true"
-                      class="md-overlay-alert-modal-container md-modal-container-wrapper"
-                      data-color="primary"
-                      data-elevation="0"
-                      data-padded="false"
-                      data-round="75"
-                      role="dialog"
-                    >
-                      <div>
-                        <div />
-                      </div>
-                      <div
-                        class="md-overlay-alert-title"
-                      >
-                        <h2
-                          class="md-text-wrapper md-overlay-alert-title"
-                          data-type="title"
-                          id="test-ID"
-                        >
-                          example-title
-                        </h2>
-                      </div>
-                      <div />
-                      <div />
-                    </div>
-                  </div>
-                }
-                onActivation={[Function]}
-                onDeactivation={[Function]}
-                persistentFocus={false}
-                shards={Array []}
-              />
-            </SideEffect(FocusWatcher)>
-            <div
-              aria-labelledby="test-ID"
-              aria-modal={true}
-              className="md-overlay-alert-modal-container md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation={0}
-              data-padded={false}
-              data-round={75}
-              role="dialog"
-            >
-              <div>
-                <div />
-              </div>
-              <div
-                className="md-overlay-alert-title"
-              >
-                <Text
-                  className="md-overlay-alert-title"
-                  id="test-ID"
-                  type="title"
-                >
-                  <h2
-                    className="md-text-wrapper md-overlay-alert-title"
-                    data-type="title"
-                    id="test-ID"
-                  >
-                    example-title
-                  </h2>
-                </Text>
-              </div>
-              <div />
+            <div>
               <div />
             </div>
+            <div
+              className="md-overlay-alert-title"
+            >
+              <Text
+                className="md-overlay-alert-title"
+                id="test-ID"
+                type="title"
+              >
+                <h2
+                  className="md-text-wrapper md-overlay-alert-title"
+                  data-type="title"
+                  id="test-ID"
+                >
+                  example-title
+                </h2>
+              </Text>
+            </div>
+            <div />
+            <div />
           </div>
-          <div
-            data-focus-guard={true}
-            style={
-              Object {
-                "height": "0px",
-                "left": "1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "fixed",
-                "top": "1px",
-                "width": "1px",
-              }
-            }
-            tabIndex={0}
+          <span
+            data-focus-scope-end={true}
+            hidden={true}
           />
-        </FocusLock>
+        </FocusScope>
       </ModalContainer>
     </div>
   </Overlay>

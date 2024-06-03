@@ -44,7 +44,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
     addBackdrop = DEFAULTS.ADD_BACKDROP,
-    focusBackOnTrigger: focusBackOnTriggerTemp,
+    focusBackOnTrigger: focusBackOnTriggerFromProps,
     closeButtonPlacement = DEFAULTS.CLOSE_BUTTON_PLACEMENT,
     closeButtonProps,
     strategy = DEFAULTS.STRATEGY,
@@ -61,18 +61,19 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     onUntrigger,
     onClickOutside,
     firstFocusElement,
+    autoFocus = DEFAULTS.AUTO_FOCUS,
     ...rest
   } = props;
 
-  const focusBackOnTrigger = focusBackOnTriggerTemp ?? 
+  const focusBackOnTrigger = focusBackOnTriggerFromProps ??
     (interactive ? DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_INTERACTIVE : DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_NON_INTERACTIVE);
-    
+
   const popoverInstance = React.useRef<PopoverInstance>(undefined);
 
   const triggerComponentId = triggerComponent.props?.id || uuidV4();
 
   const modalConditionalProps = {
-    ...(interactive && { 'aria-labelledby': triggerComponentId, focusLockProps: { returnFocus: focusBackOnTrigger } }),
+    ...(interactive && { 'aria-labelledby': triggerComponentId, focusLockProps: { restoreFocus: focusBackOnTrigger, autoFocus } }),
   };
 
   // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):
@@ -90,7 +91,9 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     popoverInstance.current?.hide();
   }, []);
 
-  const handleOnPopoverHide = useCallback(() => {
+  // needs special handling since FocusScope doesn't work with the Popover from Tippy
+  // needs to focus back to the reference item when the popover is completely hidden
+  const handleOnPopoverHidden = useCallback(() => {
     if (focusBackOnTrigger) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -101,7 +104,6 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   useEffect(() => {
     firstFocusElement?.focus();
   }, [firstFocusElement]);
-
 
   const triggerComponentCommonProps = {
     'aria-haspopup': triggerComponent.props?.['aria-haspopup'] || 'dialog',
@@ -186,7 +188,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         onBeforeUpdate,
         onCreate,
         onDestroy,
-        onHidden,
+        onHide,
         onMount,
         onShow,
         onShown,
@@ -194,11 +196,9 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         onUntrigger,
         onClickOutside,
       }}
-      onHide={(instance) => {
-        handleOnPopoverHide();
-        if (onHide) {
-          onHide(instance);
-        }
+      onHidden={(instance) => {
+        handleOnPopoverHidden();
+        onHidden?.(instance);
       }}
       setInstance={popoverSetInstance}
     >

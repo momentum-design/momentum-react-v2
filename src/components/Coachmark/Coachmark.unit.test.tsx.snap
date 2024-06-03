@@ -12,103 +12,217 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
     id="tippy-2"
     style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
-    <div
-      data-focus-guard="true"
-      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-      tabindex="0"
+    <span
+      data-focus-scope-start="true"
+      hidden=""
     />
     <div
-      data-focus-guard="true"
-      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-      tabindex="1"
-    />
-    <div
-      data-focus-lock-disabled="false"
+      aria-labelledby="1"
+      aria-modal="true"
+      class="md-coachmark-wrapper md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="dialog"
     >
       <div
-        aria-labelledby="1"
-        aria-modal="true"
-        class="md-coachmark-wrapper md-modal-container-wrapper"
-        data-arrow-orientation="vertical"
-        data-color="primary"
-        data-elevation="3"
-        data-padded="true"
-        data-placement="top"
-        data-round="50"
-        role="dialog"
+        class="md-coachmark-container"
+        data-header="true"
       >
         <div
-          class="md-coachmark-container"
-          data-header="true"
+          class="md-coachmark-header"
         >
           <div
-            class="md-coachmark-header"
+            aria-hidden="true"
+            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+            role="img"
           >
-            <div
+            <svg
               aria-hidden="true"
-              class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
-            >
-              <svg
-                aria-hidden="true"
-                class=""
-                data-autoscale="false"
-                data-scale="18"
-                data-test="placeholder"
-                data-testid="placeholder"
-                fill="currentColor"
-                height="100%"
-                viewBox="0, 0, 32, 32"
-                width="100%"
-              />
-            </div>
-            <h3
-              class="md-text-wrapper md-coachmark-title"
-              data-type="header-primary"
-            >
-              Title
-            </h3>
-            <div
-              class="md-button-group-wrapper"
-              data-compressed="false"
-              data-orientation="horizontal"
-              data-round="true"
-              data-separator="false"
-              data-spaced="false"
-            >
-              <button
-                aria-label="dismiss"
-                class="md-button-control-wrapper md-button-simple-wrapper md-focus-ring-wrapper children"
-                type="button"
-              >
-                <div
-                  aria-hidden="true"
-                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                  role="img"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class=""
-                    data-autoscale="true"
-                    data-scale="false"
-                    data-test="cancel"
-                    fill="currentColor"
-                    height="100%"
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </button>
-            </div>
-          </div>
-          <div
-            class="md-coachmark-image"
-          >
-            <img
-              alt="example"
-              src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
+              class=""
+              data-autoscale="false"
+              data-scale="18"
+              data-test="placeholder"
+              data-testid="placeholder"
+              fill="currentColor"
+              height="100%"
+              viewBox="0, 0, 32, 32"
+              width="100%"
             />
           </div>
+          <h3
+            class="md-text-wrapper md-coachmark-title"
+            data-type="header-primary"
+          >
+            Title
+          </h3>
+          <div
+            class="md-button-group-wrapper"
+            data-compressed="false"
+            data-orientation="horizontal"
+            data-round="true"
+            data-separator="false"
+            data-spaced="false"
+          >
+            <button
+              aria-label="dismiss"
+              class="md-button-control-wrapper md-button-simple-wrapper md-focus-ring-wrapper children"
+              type="button"
+            >
+              <div
+                aria-hidden="true"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  class=""
+                  data-autoscale="true"
+                  data-scale="false"
+                  data-test="cancel"
+                  fill="currentColor"
+                  height="100%"
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="md-coachmark-image"
+        >
+          <img
+            alt="example"
+            src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
+          />
+        </div>
+        <div
+          class="md-coachmark-content"
+        >
+          Children
+        </div>
+        <div
+          class="md-button-group-wrapper"
+          data-compressed="false"
+          data-orientation="horizontal"
+          data-round="true"
+          data-separator="false"
+          data-spaced="true"
+        >
+          <button
+            class="md-button-pill-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled="false"
+            data-ghost="false"
+            data-grown="false"
+            data-inverted="false"
+            data-outline="false"
+            data-shallow-disabled="false"
+            data-size="40"
+            type="button"
+          >
+            <span>
+              Button A
+            </span>
+          </button>
+          <button
+            class="md-button-pill-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled="false"
+            data-ghost="false"
+            data-grown="false"
+            data-inverted="false"
+            data-outline="false"
+            data-shallow-disabled="false"
+            data-size="40"
+            type="button"
+          >
+            <span>
+              Button B
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+    <span
+      data-focus-scope-end="true"
+      hidden=""
+    />
+  </div>
+  <div
+    aria-hidden="true"
+    class="md-popover-backdrop"
+  />
+</div>
+`;
+
+exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
+<div>
+  <div
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    id="1"
+  />
+  <div
+    data-tippy-root=""
+    id="tippy-1"
+    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <span
+      data-focus-scope-start="true"
+      hidden=""
+    />
+    <div
+      aria-labelledby="1"
+      aria-modal="true"
+      class="md-coachmark-wrapper md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="dialog"
+    >
+      <div
+        class="md-coachmark-container"
+        data-header="false"
+      >
+        <div>
           <div
             class="md-coachmark-content"
           >
@@ -123,7 +237,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
             data-spaced="true"
           >
             <button
-              class="md-button-pill-wrapper md-button-simple-wrapper"
+              class="md-button-pill-wrapper md-button-simple-wrapper md-focus-ring-wrapper children"
               data-color="primary"
               data-disabled="false"
               data-ghost="false"
@@ -157,208 +271,72 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
           </div>
         </div>
         <div
-          class="md-modal-container-arrow-wrapper"
-          data-popper-arrow="true"
-          id="arrow1"
-          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+          class="md-button-group-wrapper md-coachmark-controls"
+          data-compressed="false"
+          data-orientation="horizontal"
+          data-round="true"
+          data-separator="false"
+          data-spaced="false"
         >
-          <svg
-            class="md-modal-arrow-svg"
-            data-placement="top"
-            height="12"
-            viewBox="0 0 24 12"
-            width="24"
-            xmlns="http://www.w3.org/svg/2000"
+          <button
+            aria-label="dismiss"
+            class="md-button-control-wrapper md-button-simple-wrapper"
+            type="button"
           >
-            <defs>
-              <clippath
-                id="modal-arrow-cut-stroke-top"
-              >
-                <path
-                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-                />
-              </clippath>
-            </defs>
-            <path
-              clip-path="url(#modal-arrow-cut-stroke-top)"
-              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-              data-color="primary"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div
-      data-focus-guard="true"
-      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-      tabindex="0"
-    />
-  </div>
-  <div
-    aria-hidden="true"
-    class="md-popover-backdrop"
-  />
-</div>
-`;
-
-exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
-<div>
-  <div
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    id="1"
-  />
-  <div
-    data-tippy-root=""
-    id="tippy-1"
-    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
-  >
-    <div
-      data-focus-guard="true"
-      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-      tabindex="0"
-    />
-    <div
-      data-focus-guard="true"
-      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-      tabindex="1"
-    />
-    <div
-      data-focus-lock-disabled="false"
-    >
-      <div
-        aria-labelledby="1"
-        aria-modal="true"
-        class="md-coachmark-wrapper md-modal-container-wrapper"
-        data-arrow-orientation="vertical"
-        data-color="primary"
-        data-elevation="3"
-        data-padded="true"
-        data-placement="top"
-        data-round="50"
-        role="dialog"
-      >
-        <div
-          class="md-coachmark-container"
-          data-header="false"
-        >
-          <div>
             <div
-              class="md-coachmark-content"
+              aria-hidden="true"
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
             >
-              Children
-            </div>
-            <div
-              class="md-button-group-wrapper"
-              data-compressed="false"
-              data-orientation="horizontal"
-              data-round="true"
-              data-separator="false"
-              data-spaced="true"
-            >
-              <button
-                class="md-button-pill-wrapper md-button-simple-wrapper md-focus-ring-wrapper children"
-                data-color="primary"
-                data-disabled="false"
-                data-ghost="false"
-                data-grown="false"
-                data-inverted="false"
-                data-outline="false"
-                data-shallow-disabled="false"
-                data-size="40"
-                type="button"
-              >
-                <span>
-                  Button A
-                </span>
-              </button>
-              <button
-                class="md-button-pill-wrapper md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled="false"
-                data-ghost="false"
-                data-grown="false"
-                data-inverted="false"
-                data-outline="false"
-                data-shallow-disabled="false"
-                data-size="40"
-                type="button"
-              >
-                <span>
-                  Button B
-                </span>
-              </button>
-            </div>
-          </div>
-          <div
-            class="md-button-group-wrapper md-coachmark-controls"
-            data-compressed="false"
-            data-orientation="horizontal"
-            data-round="true"
-            data-separator="false"
-            data-spaced="false"
-          >
-            <button
-              aria-label="dismiss"
-              class="md-button-control-wrapper md-button-simple-wrapper"
-              type="button"
-            >
-              <div
+              <svg
                 aria-hidden="true"
-                class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                role="img"
-              >
-                <svg
-                  aria-hidden="true"
-                  class=""
-                  data-autoscale="true"
-                  data-scale="false"
-                  data-test="cancel"
-                  fill="currentColor"
-                  height="100%"
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
-                />
-              </div>
-            </button>
-          </div>
-        </div>
-        <div
-          class="md-modal-container-arrow-wrapper"
-          data-popper-arrow="true"
-          id="arrow1"
-          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
-        >
-          <svg
-            class="md-modal-arrow-svg"
-            data-placement="top"
-            height="12"
-            viewBox="0 0 24 12"
-            width="24"
-            xmlns="http://www.w3.org/svg/2000"
-          >
-            <defs>
-              <clippath
-                id="modal-arrow-cut-stroke-top"
-              >
-                <path
-                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-                />
-              </clippath>
-            </defs>
-            <path
-              clip-path="url(#modal-arrow-cut-stroke-top)"
-              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
-              data-color="primary"
-            />
-          </svg>
+                class=""
+                data-autoscale="true"
+                data-scale="false"
+                data-test="cancel"
+                fill="currentColor"
+                height="100%"
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+          </button>
         </div>
       </div>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
     </div>
-    <div
-      data-focus-guard="true"
-      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-      tabindex="0"
+    <span
+      data-focus-scope-end="true"
+      hidden=""
     />
   </div>
   <div

@@ -196,13 +196,13 @@ Common.parameters = {
           defaultSelectedKeys={['one', 'two']}
           key="2"
         >
-          <Item textValue="Cisco">
+          <Item textValue="Cisco" key="one">
             <Flex alignItems="center" xgap="0.875rem">
               <Avatar initials="C" size={32} presence={PresenceType.Active} />
               <span>Cisco Webex</span>
             </Flex>
           </Item>
-          <Item textValue="Josh">
+          <Item textValue="Josh" key="two">
             <Flex alignItems="center" xgap="0.875rem">
               <Avatar initials="J" size={32} presence={PresenceType.Meet} />
               <span>Josh Webex</span>
