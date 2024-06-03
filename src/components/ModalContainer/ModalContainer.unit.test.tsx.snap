@@ -166,14 +166,14 @@ exports[`<ModalContainer /> snapshot should match snapshot with focusLockProps 1
 <ModalContainer
   focusLockProps={
     Object {
-      "returnFocus": true,
+      "restoreFocus": true,
     }
   }
 >
   <FocusScope
     autoFocus={true}
     contain={true}
-    returnFocus={true}
+    restoreFocus={true}
   >
     <span
       data-focus-scope-start={true}

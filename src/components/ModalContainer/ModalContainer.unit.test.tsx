@@ -136,7 +136,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with focusLockProps', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer focusLockProps={{ returnFocus: true }} />);
+      const container = mount(<ModalContainer focusLockProps={{ restoreFocus: true }} />);
 
       expect(container).toMatchSnapshot();
     });
