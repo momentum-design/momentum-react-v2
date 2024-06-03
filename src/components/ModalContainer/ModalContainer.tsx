@@ -1,6 +1,6 @@
 import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import {FocusScope} from 'react-aria';
+import {FocusScope} from '@react-aria/focus';
 
 import ModalArrow from '../ModalArrow';
 
