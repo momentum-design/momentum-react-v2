@@ -9,7 +9,6 @@ import Documentation from './RadioSimpleGroup.stories.docs.mdx';
 import RadioSimple from '../RadioSimple';
 import Text from '../Text';
 import Icon from '../Icon';
-import { Description } from '@storybook/addon-docs';
 
 export default {
   title: 'Momentum UI/RadioSimpleGroup',
