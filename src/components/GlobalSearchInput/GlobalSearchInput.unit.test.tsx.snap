@@ -4,6 +4,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
 <SSRProvider>
   <GlobalSearchInput
     aria-label="global search"
+    clearButtonAriaLabel="search"
   >
     <div
       className="md-global-search-input-wrapper"
@@ -70,6 +71,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
 <SSRProvider>
   <GlobalSearchInput
     aria-label="global search"
+    clearButtonAriaLabel="search"
     filters={
       Array [
         Object {
@@ -174,6 +176,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
         />
       </div>
       <ButtonSimple
+        aria-label="search"
         className="md-global-search-input-clear"
         excludeFromTabOrder={true}
         onPress={[Function]}
@@ -186,6 +189,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="search"
               className="md-global-search-input-clear md-button-simple-wrapper"
               onBlur={[Function]}
               onClick={[Function]}
@@ -240,6 +244,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
 <SSRProvider>
   <GlobalSearchInput
     aria-label="global search"
+    clearButtonAriaLabel="search"
     searching={true}
   >
     <div
@@ -308,6 +313,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
   <GlobalSearchInput
     aria-label="global search"
     className="example-class"
+    clearButtonAriaLabel="search"
   >
     <div
       className="example-class md-global-search-input-wrapper"
@@ -374,6 +380,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
 <SSRProvider>
   <GlobalSearchInput
     aria-label="global search"
+    clearButtonAriaLabel="search"
     id="example-id"
   >
     <div
@@ -442,6 +449,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
 <SSRProvider>
   <GlobalSearchInput
     aria-label="global search"
+    clearButtonAriaLabel="search"
     style={
       Object {
         "color": "pink",

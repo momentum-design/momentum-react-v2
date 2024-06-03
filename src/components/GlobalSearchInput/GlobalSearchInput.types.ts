@@ -75,7 +75,7 @@ export interface Props extends AriaSearchFieldProps {
   /**
    * aria-label for clear button
    */
-  clearButtonAriaLabel?: string;
+  clearButtonAriaLabel: string;
 
   /**
    * Initial text for accessible label

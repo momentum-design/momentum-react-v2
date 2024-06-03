@@ -24,7 +24,9 @@ describe('<GlobalSearchInput />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<GlobalSearchInput aria-label="global search" />);
+      const container = await mountComponent(
+        <GlobalSearchInput aria-label="global search" clearButtonAriaLabel="search" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -35,7 +37,11 @@ describe('<GlobalSearchInput />', () => {
       const className = 'example-class';
 
       const container = await mountComponent(
-        <GlobalSearchInput aria-label="global search" className={className} />
+        <GlobalSearchInput
+          aria-label="global search"
+          className={className}
+          clearButtonAriaLabel="search"
+        />
       );
 
       expect(container).toMatchSnapshot();
@@ -47,7 +53,7 @@ describe('<GlobalSearchInput />', () => {
       const id = 'example-id';
 
       const container = await mountComponent(
-        <GlobalSearchInput aria-label="global search" id={id} />
+        <GlobalSearchInput aria-label="global search" id={id} clearButtonAriaLabel="search" />
       );
 
       expect(container).toMatchSnapshot();
@@ -59,7 +65,7 @@ describe('<GlobalSearchInput />', () => {
       const style = { color: 'pink' };
 
       const container = await mountComponent(
-        <GlobalSearchInput aria-label="global search" style={style} />
+        <GlobalSearchInput aria-label="global search" style={style} clearButtonAriaLabel="search" />
       );
 
       expect(container).toMatchSnapshot();
@@ -69,7 +75,11 @@ describe('<GlobalSearchInput />', () => {
       expect.assertions(1);
 
       const container = await mountComponent(
-        <GlobalSearchInput aria-label="global search" searching={true} />
+        <GlobalSearchInput
+          aria-label="global search"
+          searching={true}
+          clearButtonAriaLabel="search"
+        />
       );
 
       expect(container).toMatchSnapshot();
@@ -94,6 +104,7 @@ describe('<GlobalSearchInput />', () => {
               translations: testTranslations,
             },
           ]}
+          clearButtonAriaLabel="search"
         />
       );
 
@@ -105,7 +116,11 @@ describe('<GlobalSearchInput />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<GlobalSearchInput aria-label="global search" />))
+      const element = (
+        await mountAndWait(
+          <GlobalSearchInput aria-label="global search" clearButtonAriaLabel="search" />
+        )
+      )
         .find(GlobalSearchInput)
         .getDOMNode();
 
@@ -118,7 +133,13 @@ describe('<GlobalSearchInput />', () => {
       const className = 'example-class';
 
       const element = (
-        await mountAndWait(<GlobalSearchInput aria-label="global search" className={className} />)
+        await mountAndWait(
+          <GlobalSearchInput
+            aria-label="global search"
+            className={className}
+            clearButtonAriaLabel="search"
+          />
+        )
       )
         .find(GlobalSearchInput)
         .getDOMNode();
@@ -131,7 +152,11 @@ describe('<GlobalSearchInput />', () => {
 
       const id = 'example-id-2';
 
-      const element = (await mountAndWait(<GlobalSearchInput aria-label="global search" id={id} />))
+      const element = (
+        await mountAndWait(
+          <GlobalSearchInput aria-label="global search" id={id} clearButtonAriaLabel="search" />
+        )
+      )
         .find(GlobalSearchInput)
         .getDOMNode();
 
@@ -145,7 +170,13 @@ describe('<GlobalSearchInput />', () => {
       const styleString = 'color: pink;';
 
       const element = (
-        await mountAndWait(<GlobalSearchInput aria-label="global search" style={style} />)
+        await mountAndWait(
+          <GlobalSearchInput
+            aria-label="global search"
+            style={style}
+            clearButtonAriaLabel="search"
+          />
+        )
       )
         .find(GlobalSearchInput)
         .getDOMNode();
@@ -157,7 +188,13 @@ describe('<GlobalSearchInput />', () => {
       expect.assertions(1);
 
       const element = (
-        await mountAndWait(<GlobalSearchInput aria-label="global search" searching={true} />)
+        await mountAndWait(
+          <GlobalSearchInput
+            aria-label="global search"
+            searching={true}
+            clearButtonAriaLabel="search"
+          />
+        )
       )
         .find('input')
         .getDOMNode();
@@ -169,7 +206,13 @@ describe('<GlobalSearchInput />', () => {
       expect.assertions(1);
 
       const element = (
-        await mountAndWait(<GlobalSearchInput aria-label="global search" searching={true} />)
+        await mountAndWait(
+          <GlobalSearchInput
+            aria-label="global search"
+            searching={true}
+            clearButtonAriaLabel="search"
+          />
+        )
       )
         .find('input')
         .getDOMNode();
@@ -198,6 +241,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="ab"
             filters={filters}
+            clearButtonAriaLabel="search"
           />
         );
       };
@@ -234,6 +278,7 @@ describe('<GlobalSearchInput />', () => {
           aria-label="global search"
           value="ab"
           filters={[{ term: 'from', value: '', translations: testTranslations }]}
+          clearButtonAriaLabel="search"
         />
       );
       const inputElement = wrapper.find('input');
@@ -268,6 +313,7 @@ describe('<GlobalSearchInput />', () => {
           aria-label="global search"
           value=""
           filters={[]}
+          clearButtonAriaLabel="search"
         />
       );
       const inputElement = wrapper.find('input');
@@ -300,6 +346,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="ab"
             filters={[{ term: 'from', value: '', translations: testTranslations }]}
+            clearButtonAriaLabel="search"
           />
         )
       ).find('input');
@@ -335,6 +382,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="ab cd"
             filters={filters}
+            clearButtonAriaLabel="search"
           />
         )
       ).find('input');
@@ -366,6 +414,7 @@ describe('<GlobalSearchInput />', () => {
             aria-label="global search"
             value="abc"
             filters={[{ term: 'from', value: '', translations: testTranslations }]}
+            clearButtonAriaLabel="search"
           />
         )
       ).find('input');
@@ -385,7 +434,9 @@ describe('<GlobalSearchInput />', () => {
     it('clicking on another part of the component gives focus to the input', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<GlobalSearchInput aria-label="global search" />);
+      const wrapper = await mountAndWait(
+        <GlobalSearchInput aria-label="global search" clearButtonAriaLabel="search" />
+      );
 
       const inputElement = wrapper.find('input');
       const icon = wrapper.find(Icon);
