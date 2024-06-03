@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode, ComponentProps } from 'react';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
-import { FocusScope } from 'react-aria';
+import { FocusScope } from '@react-aria/focus';
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
