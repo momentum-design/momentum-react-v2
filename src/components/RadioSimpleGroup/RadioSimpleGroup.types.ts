@@ -13,12 +13,12 @@ export interface RadioSimpleGroupProps extends AriaRadioGroupProps {
   children: ReactNode;
 
   /**
-   * The optional description for the RadioGroup.
+   *  The RadioSimpleGroup description element, if any.
    */
-  description?: string;
+  description?: ReactNode;
 
   /**
-   * The optional visible RadioSimpleGroup label
+   * 	The RadioSimpleGroup's visible label (if any).
    */
   label?: ReactNode;
 

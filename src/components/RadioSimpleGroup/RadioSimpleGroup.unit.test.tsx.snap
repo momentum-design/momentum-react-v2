@@ -16,12 +16,9 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
         Select your favorite color
       </div>
     </span>
-    <small
-      class="md-text-wrapper"
-      data-type="body-secondary"
-    >
+    <div>
       Only choose one
-    </small>
+    </div>
     <label
       class="md-radio-simple-wrapper"
       data-disabled="false"
@@ -514,12 +511,9 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`
     data-disabled="false"
     role="radiogroup"
   >
-    <small
-      class="md-text-wrapper"
-      data-type="body-secondary"
-    >
+    <div>
       Only choose one
-    </small>
+    </div>
     <label
       class="md-radio-simple-wrapper"
       data-disabled="false"
