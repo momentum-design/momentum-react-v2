@@ -56,6 +56,11 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
     ref
   );
 
+  // react aria useSearchField is setting excludeFromTabOrder to true
+  // check https://github.com/adobe/react-spectrum/blob/02f242f41f0347b3f11e50b019c197127b7d0a08/packages/%40react-aria/searchfield/src/useSearchField.ts#L118
+  // but clear button should be focusable, so we overwrite clearButtonProps.excludeFromTabOrder = false to false
+  clearButtonProps.excludeFromTabOrder = false;
+
   const handleClick = () => {
     if (ref.current) {
       ref.current.focus();
