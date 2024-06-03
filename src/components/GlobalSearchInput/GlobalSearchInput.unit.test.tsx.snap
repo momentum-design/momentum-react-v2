@@ -178,7 +178,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
       <ButtonSimple
         aria-label="search"
         className="md-global-search-input-clear"
-        excludeFromTabOrder={true}
+        excludeFromTabOrder={false}
         onPress={[Function]}
         onPressStart={[Function]}
         preventFocusOnPress={true}
@@ -205,7 +205,6 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
-              tabIndex={-1}
               type="button"
             >
               <Icon
