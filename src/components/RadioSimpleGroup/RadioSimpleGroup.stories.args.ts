@@ -3,7 +3,7 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 const radioSimpleGroupArgTypes = {
   children: {
     description:
-      'children is a prop that is used to render the RadioSimple components inside the RadioSimpleGroup.',
+      'The children is used to render the RadioSimple components inside the RadioSimpleGroup.',
     control: { type: 'ReactNode', required: true },
     table: {
       type: {
@@ -14,18 +14,18 @@ const radioSimpleGroupArgTypes = {
   },
   description: {
     description:
-      'The description attached to the RadioSimpleGroup. This is typically used to provide additional context to the user.',
-    control: { type: 'text', required: false },
+      'The description is used to provide additional context to the user.',
+    control: { type: 'ReactNode', required: false },
     table: {
       type: {
-        summary: 'string',
+        summary: 'ReactNode',
       },
       defaultValue: undefined,
     },
   },
   label: {
     description:
-      'The label for the RadioSimpleGroup. This is typically used to provide a title for the group of RadioSimpleGroup.',
+      'The label is used to provide a title for the group of RadioSimpleGroup.',
     control: { type: 'ReactNode', required: false },
     table: {
       type: {
@@ -57,7 +57,7 @@ const radioSimpleGroupArgTypes = {
     },
   },
   isDisabled: {
-    description: 'Whether the input is disabled.',
+    description: 'Whether the group input is disabled.',
     control: { type: 'boolean' },
     table: {
       type: {

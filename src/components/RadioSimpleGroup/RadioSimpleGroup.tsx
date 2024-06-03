@@ -6,7 +6,6 @@ import { useRadioGroupState } from '@react-stately/radio';
 import { STYLE } from './RadioSimpleGroup.constants';
 import { RadioSimpleGroupProps } from './RadioSimpleGroup.types';
 import './RadioSimpleGroup.style.scss';
-import Text, { TEXT_CONSTANTS } from '../Text';
 
 /**
  * The RadioSimpleGroup component.
@@ -28,7 +27,7 @@ const RadioSimpleGroup: FC<RadioSimpleGroupProps> = (props: RadioSimpleGroupProp
       style={style}
     >
       {label && <span {...labelProps}>{label}</span>}
-      {description && <Text type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>{description}</Text>}
+      {description}
       <RadioSimpleGroupContext.Provider value={state}>{children}</RadioSimpleGroupContext.Provider>
     </div>
   );

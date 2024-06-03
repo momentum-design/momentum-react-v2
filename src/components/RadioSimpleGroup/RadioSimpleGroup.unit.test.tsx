@@ -25,7 +25,7 @@ describe('<RadioSimpleGroup />', () => {
     </RadioSimple>
   ];
   const label = (<div>Select your favorite color</div>);
-  const description = 'Only choose one';
+  const description = (<div>Only choose one</div>);
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
