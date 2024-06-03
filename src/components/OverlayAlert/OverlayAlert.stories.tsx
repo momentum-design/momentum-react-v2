@@ -76,7 +76,7 @@ function Template(): Story<OverlayAlertProps> {
         }}
       >
         <ButtonPill onPress={open}>Open</ButtonPill>
-        {isOpen && <OverlayAlert actions={<>{actions}</>} controls={<>{controls}</>} {...args} />}
+        {isOpen && <OverlayAlert actions={<>{actions}</>} controls={<>{controls}</>} {...args} onClose={close}/>}
       </div>
     );
   };

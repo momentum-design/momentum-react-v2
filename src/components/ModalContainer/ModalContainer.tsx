@@ -1,6 +1,6 @@
 import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import FocusLock from 'react-focus-lock';
+import {FocusScope} from 'react-aria';
 
 import ModalArrow from '../ModalArrow';
 
@@ -60,7 +60,8 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
     return content;
   }
 
-  return <FocusLock {...focusLockProps}>{content}</FocusLock>;
+  // eslint-disable-next-line jsx-a11y/no-autofocus
+  return <FocusScope contain autoFocus {...focusLockProps}>{content}</FocusScope>;
 };
 
 const _ModalContainer = forwardRef(ModalContainer);

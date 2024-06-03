@@ -324,35 +324,6 @@ describe('<Popover />', () => {
       expect(content.parentElement.getAttribute('aria-labelledby')).toBe('1');
     });
 
-    it('has focusLockProps when interactive is true', async () => {
-      const user = userEvent.setup();
-
-      render(
-        <Popover
-          triggerComponent={<button>Click Me!</button>}
-          interactive
-        >
-          <p>Content</p>
-        </Popover>
-      );
-      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
-      expect(content.parentElement.parentElement.getAttribute('data-focus-lock-disabled')).toBe('false');
-    });
-
-    it('has no focusLockProps when interactive is false', async () => {
-      const user = userEvent.setup();
-
-      render(
-        <Popover
-          triggerComponent={<button>Click Me!</button>}
-        >
-          <p>Content</p>
-        </Popover>
-      );
-      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
-      expect(content.parentElement.parentElement.getAttribute('data-focus-lock-disabled')).toBe(null);
-    });
-
     it('checks triggerComponent props when aria-haspopup is defined', async () => {
       render(
         <Popover
@@ -1102,6 +1073,151 @@ describe('<Popover />', () => {
 
         // content should be hidden
         await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+      });
+
+
+      it('should focusLock when interactive is true', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <Popover
+              triggerComponent={<button>Click Me!</button>}
+              interactive
+            >
+              <div>
+                <p>Content</p>
+                <button>Button within popover</button>
+              </div>
+            </Popover>
+            <button>Button which should not be focused</button>
+          </>
+        );
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        await user.tab({ shift: true });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        await user.tab({ shift: true });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+      });
+
+      it('should not focusLock when interactive is false', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <Popover
+              triggerComponent={<button>Click Me!</button>}
+              interactive={false}
+            >
+              <div>
+                <p>Content</p>
+                <button>Button within popover</button>
+              </div>
+            </Popover>
+            <button>Button which should not be focused</button>
+          </>
+        );
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+        expect(await screen.findByRole('button', { name: 'Click Me!' })).toHaveFocus();
+
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Button which should not be focused' })).toHaveFocus();
+
+        await user.tab({ shift: true });
+        expect(await screen.findByRole('button', { name: 'Click Me!' })).toHaveFocus();
+      });
+
+      it('should open multiple popovers with same triggerComponent as expected (tooltip + popover example)', async () => {
+        /**
+         * Expected behavior for this test:
+         * 1. Tab to TriggerButton, Tooltip should open
+         * 2. Press Enter, tooltip should close, popover should open and focus should go inside popover
+         * 3. Popover locks focus within
+         * 4. Press Esc, Popover closes, Tooltip opens again and focus moves back to TriggerButton
+         * 5. Press Esc, Tooltip closes and focus stays on TriggerButton
+         */
+        const user = userEvent.setup();
+
+        const triggerComponent = (<Popover
+          trigger="mouseenter"
+          showArrow
+          triggerComponent={
+            <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+              Hover or click me!
+            </ButtonSimple>
+          }
+        >
+          Description tooltip on hover
+        </Popover>);
+
+        render(
+          <Popover
+            triggerComponent={triggerComponent}
+            interactive
+          >
+            <div>
+              <p>Content</p>
+              <button>Button within popover</button>
+            </div>
+          </Popover>
+        );
+
+        // press tab
+        await user.tab();
+
+        // trigger button should be focused, tooltip should be shown & popover hidden
+        expect(await screen.findByRole('button', { name: 'Hover or click me!' })).toHaveFocus();
+        await waitFor(() => {
+          expect(screen.getByText('Description tooltip on hover')).toBeInTheDocument();
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+
+        // press enter
+        await user.keyboard('{Enter}');
+
+        // button inside popover should be focused, popover should be shown & tooltip hidden
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+          expect(screen.queryByText('Description tooltip on hover')).not.toBeInTheDocument();
+        });
+
+        // focus lock inside popover should work
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+        await user.tab({ shift: true });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        // press Escape
+        await user.keyboard('{Escape}');
+
+        // trigger button should be focused again, tooltip should be shown & popover hidden
+        expect(await screen.findByRole('button', { name: 'Hover or click me!' })).toHaveFocus();
+        await waitFor(() => {
+          expect(screen.getByText('Description tooltip on hover')).toBeInTheDocument();
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+
+        // press Escape 2nd time
+        await user.keyboard('{Escape}');
+
+        // trigger button should be focused again, tooltip & popover should be hidden
+        expect(await screen.findByRole('button', { name: 'Hover or click me!' })).toHaveFocus();
+        await waitFor(() => {
+          expect(screen.queryByText('Description tooltip on hover')).not.toBeInTheDocument();
           expect(screen.queryByText('Content')).not.toBeInTheDocument();
         });
       });

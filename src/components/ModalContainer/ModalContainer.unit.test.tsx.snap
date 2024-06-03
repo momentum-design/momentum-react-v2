@@ -170,125 +170,29 @@ exports[`<ModalContainer /> snapshot should match snapshot with focusLockProps 1
     }
   }
 >
-  <FocusLock
-    as="div"
+  <FocusScope
     autoFocus={true}
-    disabled={false}
-    lockProps={Object {}}
-    noFocusGuards={false}
-    persistentFocus={false}
+    contain={true}
     returnFocus={true}
   >
-    <div
-      data-focus-guard={true}
-      key="guard-first"
-      style={
-        Object {
-          "height": "0px",
-          "left": "1px",
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "fixed",
-          "top": "1px",
-          "width": "1px",
-        }
-      }
-      tabIndex={0}
+    <span
+      data-focus-scope-start={true}
+      hidden={true}
     />
     <div
-      data-focus-guard={true}
-      key="guard-nearest"
-      style={
-        Object {
-          "height": "0px",
-          "left": "1px",
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "fixed",
-          "top": "1px",
-          "width": "1px",
-        }
-      }
-      tabIndex={1}
+      aria-modal={true}
+      className="md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={false}
+      data-round={0}
+      role="dialog"
     />
-    <div
-      data-focus-lock-disabled={false}
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <SideEffect(FocusWatcher)
-        autoFocus={true}
-        disabled={false}
-        observed={
-          <div
-            data-focus-lock-disabled="false"
-          >
-            <div
-              aria-modal="true"
-              class="md-modal-container-wrapper"
-              data-color="primary"
-              data-elevation="0"
-              data-padded="false"
-              data-round="0"
-              role="dialog"
-            />
-          </div>
-        }
-        onActivation={[Function]}
-        onDeactivation={[Function]}
-        persistentFocus={false}
-        shards={Array []}
-      >
-        <FocusWatcher
-          autoFocus={true}
-          disabled={false}
-          observed={
-            <div
-              data-focus-lock-disabled="false"
-            >
-              <div
-                aria-modal="true"
-                class="md-modal-container-wrapper"
-                data-color="primary"
-                data-elevation="0"
-                data-padded="false"
-                data-round="0"
-                role="dialog"
-              />
-            </div>
-          }
-          onActivation={[Function]}
-          onDeactivation={[Function]}
-          persistentFocus={false}
-          shards={Array []}
-        />
-      </SideEffect(FocusWatcher)>
-      <div
-        aria-modal={true}
-        className="md-modal-container-wrapper"
-        data-color="primary"
-        data-elevation={0}
-        data-padded={false}
-        data-round={0}
-        role="dialog"
-      />
-    </div>
-    <div
-      data-focus-guard={true}
-      style={
-        Object {
-          "height": "0px",
-          "left": "1px",
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "fixed",
-          "top": "1px",
-          "width": "1px",
-        }
-      }
-      tabIndex={0}
+    <span
+      data-focus-scope-end={true}
+      hidden={true}
     />
-  </FocusLock>
+  </FocusScope>
 </ModalContainer>
 `;
 

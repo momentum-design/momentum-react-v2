@@ -108,6 +108,10 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       onClickOutside={closeMenuTrigger}
       setInstance={setPopoverInstance}
       hideOnEsc={false}
+      // Set autofocus to false if there are multiple menus, since the FocusScope in Popover shouldn't automatically focus anywhere, but the
+      // MenuContext.Provider should take care of the auto focusing
+      // eslint-disable-next-line jsx-a11y/no-autofocus
+      autoFocus={false}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
       {menus.map((menu: ReactElement, index) => {
@@ -121,11 +125,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
             }
             key={`{context-${index}}`}
           >
-            {/* If first menu and there are multiple menus, pass allowsTabNavigation to it for keyboard accessibility 
-              (allowsTabNavigation in React-aria allows to Shift+Tab with multiple menus) */}
-            {(index === 0 && menus.length > 1) ? React.cloneElement(menu, {
-              allowsTabNavigation: true
-            }) : menu}
+            {menu}
             {/* If index not the last item, add a content separator after as a dividing line */}
             {index !== menus.length - 1 && <ContentSeparator key={`separator-${index}`} />}
           </MenuContext.Provider>
