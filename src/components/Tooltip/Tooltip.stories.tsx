@@ -8,12 +8,10 @@ import Text from '../Text';
 import Tooltip, { TooltipProps } from './';
 import ButtonPill from '../ButtonPill';
 import ButtonSimple from '../ButtonSimple';
-import Menu from '../Menu';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Tooltip.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Flex from '../Flex';
-import AriaToolbar from '../AriaToolbar';
 
 export default {
   title: 'Momentum UI/Tooltip',
@@ -64,57 +62,4 @@ Offset.args = {
   ),
 };
 
-const Common = MultiTemplate<TooltipProps>(Tooltip).bind({});
-
-Common.argTypes = { ...argTypes };
-
-Common.args = {};
-Common.parameters = {
-  variants: [
-    {
-      children: <p>Non-interactive Content on TERTIARY color, variant medium</p>,
-      trigger: 'click',
-      triggerComponent: (
-        <ButtonSimple
-          style={{ height: '50px', width: '100px', margin: '10rem auto', display: 'flex' }}
-        >
-          Click me!
-        </ButtonSimple>
-      ),
-      placement: PLACEMENTS.RIGHT,
-      interactive: false,
-      variant: 'medium',
-      color: COLORS.TERTIARY,
-    },
-    {
-      children: <p>Non-interactive Content on PRIMARY color, variant small, without arrow</p>,
-      trigger: 'mouseenter',
-      triggerComponent: (
-        <ButtonSimple
-          style={{ height: '50px', width: '100px', margin: '10rem auto', display: 'flex' }}
-        >
-          Hover me!
-        </ButtonSimple>
-      ),
-      placement: PLACEMENTS.BOTTOM_START,
-      interactive: false,
-      variant: 'small',
-      color: COLORS.PRIMARY,
-      showArrow: false,
-    },
-    {
-      children: <p>Interactive Content on SECONDARY color, variant medium, showDelay 500ms</p>,
-      trigger: 'click mouseenter',
-      triggerComponent: (
-        <ButtonSimple style={{ height: '50px', width: '200px' }}>Click or hover me!</ButtonSimple>
-      ),
-      placement: PLACEMENTS.LEFT_START,
-      interactive: true,
-      delay: [500],
-      variant: 'medium',
-      color: COLORS.SECONDARY,
-    },
-  ],
-};
-
-export { Example, Common, Offset };
+export { Example, Offset };
