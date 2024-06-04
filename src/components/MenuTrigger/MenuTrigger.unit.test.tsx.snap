@@ -433,6 +433,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -446,6 +447,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
+              role="dialog"
               round={75}
               showArrow={false}
             >
@@ -2618,6 +2620,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="example-class md-menu-trigger-wrapper"
               color="primary"
@@ -2631,6 +2634,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
+              role="dialog"
               round={75}
               showArrow={false}
             >
@@ -4803,6 +4807,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="secondary"
@@ -4816,6 +4821,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
+              role="dialog"
               round={75}
               showArrow={false}
             >
@@ -6990,6 +6996,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -7004,6 +7011,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
+              role="dialog"
               round={75}
               showArrow={false}
             >
@@ -9177,6 +9185,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -9190,6 +9199,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               isPadded={true}
               onKeyDown={[Function]}
               placement="top"
+              role="dialog"
               round={75}
               showArrow={false}
             >
@@ -11392,6 +11402,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -11405,6 +11416,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
+              role="dialog"
               round={75}
               showArrow={true}
             >
@@ -13621,6 +13633,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -13634,6 +13647,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
+              role="dialog"
               round={75}
               showArrow={false}
               style={
@@ -15816,6 +15830,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           >
             <ModalContainer
               aria-labelledby="test-ID"
+              ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
               color="primary"
@@ -15829,6 +15844,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
+              role="dialog"
               round={50}
               showArrow={false}
             >
