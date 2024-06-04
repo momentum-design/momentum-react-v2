@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import React from 'react';
+import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Documentation from './Tooltip.stories.docs.mdx';
-import { Item } from '@react-stately/collections';
 import Text from '../Text';
 import Tooltip, { TooltipProps } from './';
 import ButtonPill from '../ButtonPill';
