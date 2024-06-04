@@ -21,7 +21,7 @@ export default {
 };
 
 const ChildWrapper = ({ children }: { children: string }) => (
-  <div style={{ marginRight: '0.5rem', display: 'flex', alignItems: 'center' }}>{children}</div>
+  <div style={{ margin: '0.5rem', display: 'flex', alignItems: 'center' }}>{children}</div>
 );
 
 const Example = Template<CardProps>(Card).bind({});
@@ -30,7 +30,7 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   children: (
-    <div style={{ marginRight: '0.5rem', display: 'flex', alignItems: 'center' }}>Example Text</div>
+    <div style={{ margin: '0.5rem', display: 'flex', alignItems: 'center' }}>Example Text</div>
   ),
 };
 
