@@ -31,6 +31,10 @@ const AriaToolbar: FC<Props> = (props: Props) => {
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (e) => {
+      // for the escape key (and other key presses), continue propagation to let Popovers / Modals know that
+      // they should close
+      e.continuePropagation();
+      
       switch (e.key) {
         case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
           e.preventDefault();
@@ -89,6 +93,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
               child.props.onPress();
             }
           },
+          useNativeKeyDown: true,
           ...keyboardProps,
         });
       })}

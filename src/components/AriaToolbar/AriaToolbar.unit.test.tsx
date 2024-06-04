@@ -234,21 +234,41 @@ describe('<AriaToolbar />', () => {
 
       expect(onTabPress).toBeCalled();
     });
-  });
 
-  it('child onPress is still called', () => {
-    expect.assertions(1);
+    it('child onPress is still called', () => {
+      expect.assertions(1);
 
-    const onPress = jest.fn();
+      const onPress = jest.fn();
 
-    const element = mount(
-      <AriaToolbar ariaLabel="test">
-        <ButtonSimple onPress={onPress}>test button</ButtonSimple>
-      </AriaToolbar>
-    );
+      const element = mount(
+        <AriaToolbar ariaLabel="test">
+          <ButtonSimple onPress={onPress}>test button</ButtonSimple>
+        </AriaToolbar>
+      );
 
-    triggerPress(element.find(ButtonSimple));
+      triggerPress(element.find(ButtonSimple));
 
-    expect(onPress).toBeCalled();
+      expect(onPress).toBeCalled();
+    });
+
+    it('keydown events propagate up', () => {
+      const onKeyDown = jest.fn();
+
+      const element = mount(
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+        <div onKeyDown={onKeyDown}>
+          <AriaToolbar ariaLabel="test" >
+            <ButtonSimple>test button</ButtonSimple>
+          </AriaToolbar>
+        </div>
+
+      );
+
+      element.find(ButtonSimple).simulate('keyDown', { key: 'Escape' });
+      element.find(ButtonSimple).simulate('keyDown', { key: 'Tab' });
+
+      expect(onKeyDown.mock.calls[0][0].key).toBe('Escape');
+      expect(onKeyDown.mock.calls[1][0].key).toBe('Tab');
+    });
   });
 });
