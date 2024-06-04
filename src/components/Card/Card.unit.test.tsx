@@ -255,13 +255,26 @@ describe('<Card />', () => {
       expect(target.getAttribute(attribute)).toBe(statusColor);
     });
 
+    it('should not render CardStatus if no statusColor prop is provided', async () => {
+      expect.assertions(1);
+
+      const children = <div>Hello</div>;
+
+      render(<Card data-testid={testid} children={children} />);
+
+      const component = await screen.findByTestId(testid);
+      const target = component.firstElementChild;
+
+      expect(target.classList.contains('md-card-status-wrapper')).toBe(false);
+    });
+
     it('should have status with data-striped attribute when statusStriped prop is provided', async () => {
       expect.assertions(1);
 
       const attribute = 'data-striped';
       const statusStriped = true;
 
-      render(<Card statusStriped={statusStriped} data-testid={testid} />);
+      render(<Card statusStriped={statusStriped} statusColor="inactive" data-testid={testid} />);
 
       const component = await screen.findByTestId(testid);
       const target = component.firstElementChild;

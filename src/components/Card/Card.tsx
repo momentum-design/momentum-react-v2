@@ -43,21 +43,17 @@ const Card: FC<Props> = (props: Props) => {
 
   return (
     <>
-      {
-        isStatic ?
-          <div {...wrapperProps} {...otherProps}>
-            <CardStatus color={statusColor} striped={statusStriped} />
-            {children}
-          </div> :
-          <ButtonSimple
-            {...wrapperProps}
-            isDisabled={isDisabled}
-            {...otherProps}
-          >
-            <CardStatus color={statusColor} striped={statusStriped} />
-            {children}
-          </ButtonSimple>
-      }
+      {isStatic ? (
+        <div {...wrapperProps} {...otherProps}>
+          <CardStatus color={statusColor} striped={statusStriped} />
+          {children}
+        </div>
+      ) : (
+        <ButtonSimple {...wrapperProps} isDisabled={isDisabled} {...otherProps}>
+          {statusColor && <CardStatus color={statusColor} striped={statusStriped} />}
+          {children}
+        </ButtonSimple>
+      )}
     </>
   );
 };

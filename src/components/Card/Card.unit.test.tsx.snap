@@ -8,11 +8,7 @@ exports[`<Card /> snapshot should match snapshot 1`] = `
     data-height="small"
     data-rounding="2"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -25,9 +21,6 @@ exports[`<Card /> snapshot should match snapshot with children 1`] = `
     data-rounding="2"
     type="button"
   >
-    <div
-      class="md-card-status-wrapper"
-    />
     <div>
       example child
     </div>
@@ -43,11 +36,7 @@ exports[`<Card /> snapshot should match snapshot with class name 1`] = `
     data-height="small"
     data-rounding="2"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -59,11 +48,7 @@ exports[`<Card /> snapshot should match snapshot with color 1`] = `
     data-height="small"
     data-rounding="2"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -75,11 +60,7 @@ exports[`<Card /> snapshot should match snapshot with height 1`] = `
     data-height="tiny"
     data-rounding="2"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -92,11 +73,7 @@ exports[`<Card /> snapshot should match snapshot with id 1`] = `
     data-rounding="2"
     id="example-id"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -110,11 +87,7 @@ exports[`<Card /> snapshot should match snapshot with isDisabled 1`] = `
     data-rounding="2"
     disabled=""
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -143,11 +116,7 @@ exports[`<Card /> snapshot should match snapshot with outline 1`] = `
     data-outline="true"
     data-rounding="2"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -159,11 +128,7 @@ exports[`<Card /> snapshot should match snapshot with rounding 1`] = `
     data-height="small"
     data-rounding="2"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -192,12 +157,7 @@ exports[`<Card /> snapshot should match snapshot with statusStriped 1`] = `
     data-height="small"
     data-rounding="2"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-      data-striped="true"
-    />
-  </button>
+  />
 </div>
 `;
 
@@ -210,10 +170,6 @@ exports[`<Card /> snapshot should match snapshot with style 1`] = `
     data-rounding="2"
     style="color: pink;"
     type="button"
-  >
-    <div
-      class="md-card-status-wrapper"
-    />
-  </button>
+  />
 </div>
 `;
