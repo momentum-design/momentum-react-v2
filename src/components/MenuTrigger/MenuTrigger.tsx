@@ -116,7 +116,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       // MenuContext.Provider should take care of the auto focusing
       // eslint-disable-next-line jsx-a11y/no-autofocus
       autoFocus={false}
-      role="menu"
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
       {menus.map((menu: ReactElement, index) => {
