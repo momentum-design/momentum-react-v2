@@ -121,6 +121,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .children()
         .find('[role="dialog"]')
         .getDOMNode();
 
@@ -135,12 +136,12 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} className={className} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .children()
         .find('[role="dialog"]')
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
-
 
     it('should have provided id when id is provided', async () => {
       expect.assertions(1);
@@ -150,6 +151,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} id={id} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .children()
         .find('[role="dialog"]')
         .getDOMNode();
 
@@ -165,6 +167,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const element = (await mountAndWait(<MenuTrigger {...defaultProps} style={style} />))
         .find(MenuTrigger)
         .find(ModalContainer)
+        .children()
         .find('[role="dialog"]')
         .getDOMNode();
 
@@ -249,10 +252,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     });
 
     it('triggerComponent can have aria-haspopup as passed in props', async () => {
-      render(<MenuTrigger
-        {...defaultProps}
-        triggerComponent={<ButtonPill aria-haspopup='dialog' aria-label="Open Menu">Open Menu</ButtonPill>}
-      />
+      render(
+        <MenuTrigger
+          {...defaultProps}
+          triggerComponent={
+            <ButtonPill aria-haspopup="dialog" aria-label="Open Menu">
+              Open Menu
+            </ButtonPill>
+          }
+        />
       );
 
       const button = screen.getByRole('button', { name: 'Open Menu' });
@@ -384,7 +392,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
         expect(menu).toBeVisible();
 
-        await user.tab({shift: true});
+        await user.tab({ shift: true });
 
         expect(menu).toBeVisible();
       });
@@ -400,7 +408,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
         expect(menu).toBeVisible();
 
-        await user.tab({shift: true});
+        await user.tab({ shift: true });
 
         expect(menu).toBeVisible();
       });
@@ -473,10 +481,10 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         await user.tab();
         expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
 
-        await user.tab({shift: true});
+        await user.tab({ shift: true });
         expect(await screen.findByRole('menuitemcheckbox', { name: 'Four' })).toHaveFocus();
 
-        await user.tab({shift: true});
+        await user.tab({ shift: true });
         expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
       });
 
@@ -500,7 +508,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         await user.tab();
         expect(await screen.findByRole('menuitemradio', { name: 'Two' })).toHaveFocus();
 
-        await user.tab({shift: true});
+        await user.tab({ shift: true });
         expect(await screen.findByRole('menuitemcheckbox', { name: 'Five' })).toHaveFocus();
       });
     });
