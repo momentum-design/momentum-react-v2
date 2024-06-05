@@ -293,42 +293,50 @@ describe('<Popover />', () => {
       expect(content.parentElement.getAttribute('aria-labelledby')).toBeNull();
     });
 
-    it('has aria-labelledby when interactive is true', async () => {
+    it('has aria-labelledby and aria-modal true when interactive is true', async () => {
       const user = userEvent.setup();
       const id = 'example-id';
 
       render(
-        <Popover
-          triggerComponent={<button id={id}>Click Me!</button>}
-          interactive
-        >
+        <Popover triggerComponent={<button id={id}>Click Me!</button>} interactive>
           <p>Content</p>
         </Popover>
       );
       const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
       expect(content.parentElement.getAttribute('aria-labelledby')).toBe(id);
+      expect(content.parentElement.getAttribute('aria-modal')).toBe('true');
+    });
+
+    it('has aria-modal false when non interactive', async () => {
+      const user = userEvent.setup();
+      const id = 'example-id';
+
+      render(
+        <Popover triggerComponent={<button id={id}>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe(null);
+      expect(content.parentElement.getAttribute('aria-modal')).toBe('false');
     });
 
     it('has aria-labelledby when interactive is true and id is not defined', async () => {
       const user = userEvent.setup();
 
       render(
-        <Popover
-          triggerComponent={<button>Click Me!</button>}
-          interactive
-        >
+        <Popover triggerComponent={<button>Click Me!</button>} interactive>
           <p>Content</p>
         </Popover>
       );
       const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
       expect(content.parentElement.getAttribute('aria-labelledby')).toBe('1');
+      expect(content.parentElement.getAttribute('aria-modal')).toBe('true');
     });
 
     it('checks triggerComponent props when aria-haspopup is defined', async () => {
       render(
-        <Popover
-          triggerComponent={<button aria-haspopup={'grid'}>Popover 1</button>}
-        >
+        <Popover triggerComponent={<button aria-haspopup={'grid'}>Popover 1</button>}>
           <p>Content</p>
         </Popover>
       );
@@ -339,23 +347,18 @@ describe('<Popover />', () => {
 
     it('checks triggerComponent props when non interactive and id is undefined', async () => {
       render(
-        <Popover
-          triggerComponent={<button>Popover 1</button>}
-        >
+        <Popover triggerComponent={<button>Popover 1</button>}>
           <p>Content</p>
         </Popover>
       );
       const button1 = screen.getByRole('button', { name: /Popover 1/i });
       expect(button1.getAttribute('id')).toBeNull();
-      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+      expect(button1.getAttribute('aria-haspopup')).toBe(null);
     });
 
     it('checks triggerComponent props when interactive and id is undefined', async () => {
       render(
-        <Popover
-          triggerComponent={<button>Popover 1</button>}
-          interactive
-        >
+        <Popover triggerComponent={<button>Popover 1</button>} interactive>
           <p>Content</p>
         </Popover>
       );
@@ -367,10 +370,7 @@ describe('<Popover />', () => {
     it('checks triggerComponent props when interactive and id is defined', async () => {
       const id = 'example-id';
       render(
-        <Popover
-          triggerComponent={<button id={id}>Popover 1</button>}
-          interactive
-        >
+        <Popover triggerComponent={<button id={id}>Popover 1</button>} interactive>
           <p>Content</p>
         </Popover>
       );
@@ -379,19 +379,16 @@ describe('<Popover />', () => {
       expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
     });
 
-
     it('checks triggerComponent props when non interactive and id is defined', async () => {
       const id = 'example-id';
       render(
-        <Popover
-          triggerComponent={<button id={id}>Popover 1</button>}
-        >
+        <Popover triggerComponent={<button id={id}>Popover 1</button>}>
           <p>Content</p>
         </Popover>
       );
       const button1 = screen.getByRole('button', { name: /Popover 1/i });
       expect(button1.getAttribute('id')).toBe(id);
-      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+      expect(button1.getAttribute('aria-haspopup')).toBe(null);
     });
 
     it('should not add useNativeKeyDown on the DOM button', async () => {
@@ -593,6 +590,26 @@ describe('<Popover />', () => {
       const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
       expect(backdrop).not.toBeInTheDocument();
     });
+  });
+
+  it('should change the modal container role with the role attribute', async () => {
+    expect.assertions(3);
+    const user = userEvent.setup();
+    render(
+      <Popover triggerComponent={<button>Click Me!</button>} role="tooltip">
+        <p>Content</p>
+      </Popover>
+    );
+
+    // assert no popover on screen
+    const contentBeforeClick = screen.queryByText('Content');
+    expect(contentBeforeClick).not.toBeInTheDocument();
+
+    await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+    // assert popover on screen
+    const modalContainer = screen.queryByRole('tooltip');
+    expect(modalContainer).toBeInTheDocument();
   });
 
   const nullRef = null;
@@ -1077,16 +1094,12 @@ describe('<Popover />', () => {
         });
       });
 
-
       it('should focusLock when interactive is true', async () => {
         const user = userEvent.setup();
 
         render(
           <>
-            <Popover
-              triggerComponent={<button>Click Me!</button>}
-              interactive
-            >
+            <Popover triggerComponent={<button>Click Me!</button>} interactive>
               <div>
                 <p>Content</p>
                 <button>Button within popover</button>
@@ -1117,10 +1130,7 @@ describe('<Popover />', () => {
 
         render(
           <>
-            <Popover
-              triggerComponent={<button>Click Me!</button>}
-              interactive={false}
-            >
+            <Popover triggerComponent={<button>Click Me!</button>} interactive={false}>
               <div>
                 <p>Content</p>
                 <button>Button within popover</button>
@@ -1134,7 +1144,9 @@ describe('<Popover />', () => {
         expect(await screen.findByRole('button', { name: 'Click Me!' })).toHaveFocus();
 
         await user.tab();
-        expect(await screen.findByRole('button', { name: 'Button which should not be focused' })).toHaveFocus();
+        expect(
+          await screen.findByRole('button', { name: 'Button which should not be focused' })
+        ).toHaveFocus();
 
         await user.tab({ shift: true });
         expect(await screen.findByRole('button', { name: 'Click Me!' })).toHaveFocus();
@@ -1151,23 +1163,22 @@ describe('<Popover />', () => {
          */
         const user = userEvent.setup();
 
-        const triggerComponent = (<Popover
-          trigger="mouseenter"
-          showArrow
-          triggerComponent={
-            <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-              Hover or click me!
-            </ButtonSimple>
-          }
-        >
-          Description tooltip on hover
-        </Popover>);
+        const triggerComponent = (
+          <Popover
+            trigger="mouseenter"
+            showArrow
+            triggerComponent={
+              <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+                Hover or click me!
+              </ButtonSimple>
+            }
+          >
+            Description tooltip on hover
+          </Popover>
+        );
 
         render(
-          <Popover
-            triggerComponent={triggerComponent}
-            interactive
-          >
+          <Popover triggerComponent={triggerComponent} interactive>
             <div>
               <p>Content</p>
               <button>Button within popover</button>

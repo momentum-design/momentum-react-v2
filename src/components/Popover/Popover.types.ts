@@ -12,6 +12,7 @@ export type CloseButtonPlacement = 'top-left' | 'top-right' | 'none';
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
 export type PositioningStrategy = TippyProps['popperOptions']['strategy'];
+export type PopoverAria = TippyProps['aria'];
 
 /**
  * Popover instance interface abstracted from Tippy.js
@@ -180,10 +181,15 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
 
   /**
    * Whether to auto focus the first focusable element in the focus scope of the Popover on mount.
-   * 
+   *
    * Example: set to false if the Popover Content itself wants to handle the auto focusing (i.e. MenuTrigger)
-   * 
+   *
    * Defaults: true
    */
   autoFocus?: boolean;
+
+  /**
+   * Role of the popover content
+   */
+  role?: string;
 }

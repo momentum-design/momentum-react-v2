@@ -1,5 +1,6 @@
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
+import { MODAL_CONTAINER_CONSTANTS } from '../ModalContainer/index';
 
 const CLASS_PREFIX = 'md-popover';
 const BACKDROP_CLASS = 'tippy-backdrop';
@@ -33,6 +34,7 @@ const DEFAULTS = {
   AUTO_FOCUS: true,
   STRATEGY: 'absolute' as const,
   ADD_BACKDROP: true,
+  ROLE: MODAL_CONTAINER_CONSTANTS.DEFAULTS.ROLE,
 };
 
 const STYLE = {
