@@ -14,6 +14,7 @@ describe('tests for <Lightbox />', () => {
       <Lightbox
         applicationId="app"
         name="test"
+        alt="test"
         height={100}
         width={100}
         pages={[

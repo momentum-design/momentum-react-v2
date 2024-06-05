@@ -2,6 +2,7 @@
 
 exports[`tests for <Lightbox /> should match SnapShot 1`] = `
 <Lightbox
+  alt="test"
   applicationId="app"
   decrypting={false}
   downloading={false}
@@ -128,7 +129,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                         style="width: 0px; height: 0px;"
                       >
                         <img
-                          alt=""
+                          alt="test"
                           class="md-lightbox__viewport-image"
                           draggable="false"
                           src="testImage"
@@ -396,7 +397,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                         }
                       >
                         <img
-                          alt=""
+                          alt="test"
                           className="md-lightbox__viewport-image"
                           draggable="false"
                           onClick={[Function]}
