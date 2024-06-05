@@ -607,7 +607,7 @@ describe('<Popover />', () => {
 
     await openPopoverByClickingOnTriggerAndCheckContent(user);
 
-    // assert no popover on screen
+    // assert popover on screen
     const modalContainer = screen.queryByRole('tooltip');
     expect(modalContainer).toBeInTheDocument();
   });
@@ -1094,16 +1094,12 @@ describe('<Popover />', () => {
         });
       });
 
-
       it('should focusLock when interactive is true', async () => {
         const user = userEvent.setup();
 
         render(
           <>
-            <Popover
-              triggerComponent={<button>Click Me!</button>}
-              interactive
-            >
+            <Popover triggerComponent={<button>Click Me!</button>} interactive>
               <div>
                 <p>Content</p>
                 <button>Button within popover</button>
@@ -1134,10 +1130,7 @@ describe('<Popover />', () => {
 
         render(
           <>
-            <Popover
-              triggerComponent={<button>Click Me!</button>}
-              interactive={false}
-            >
+            <Popover triggerComponent={<button>Click Me!</button>} interactive={false}>
               <div>
                 <p>Content</p>
                 <button>Button within popover</button>
@@ -1151,7 +1144,9 @@ describe('<Popover />', () => {
         expect(await screen.findByRole('button', { name: 'Click Me!' })).toHaveFocus();
 
         await user.tab();
-        expect(await screen.findByRole('button', { name: 'Button which should not be focused' })).toHaveFocus();
+        expect(
+          await screen.findByRole('button', { name: 'Button which should not be focused' })
+        ).toHaveFocus();
 
         await user.tab({ shift: true });
         expect(await screen.findByRole('button', { name: 'Click Me!' })).toHaveFocus();
@@ -1168,23 +1163,22 @@ describe('<Popover />', () => {
          */
         const user = userEvent.setup();
 
-        const triggerComponent = (<Popover
-          trigger="mouseenter"
-          showArrow
-          triggerComponent={
-            <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-              Hover or click me!
-            </ButtonSimple>
-          }
-        >
-          Description tooltip on hover
-        </Popover>);
+        const triggerComponent = (
+          <Popover
+            trigger="mouseenter"
+            showArrow
+            triggerComponent={
+              <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+                Hover or click me!
+              </ButtonSimple>
+            }
+          >
+            Description tooltip on hover
+          </Popover>
+        );
 
         render(
-          <Popover
-            triggerComponent={triggerComponent}
-            interactive
-          >
+          <Popover triggerComponent={triggerComponent} interactive>
             <div>
               <p>Content</p>
               <button>Button within popover</button>

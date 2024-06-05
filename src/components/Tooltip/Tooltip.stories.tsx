@@ -1,5 +1,5 @@
 import React from 'react';
-import { Template } from '../../storybook/helper.stories.templates';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import Documentation from './Tooltip.stories.docs.mdx';
@@ -11,6 +11,7 @@ import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Tooltip.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Flex from '../Flex';
+import Popover, { PopoverProps } from '../Popover';
 
 export default {
   title: 'Momentum UI/Tooltip',
@@ -39,6 +40,50 @@ Example.args = {
   ),
 };
 
+const Common = MultiTemplate<TooltipProps>(Tooltip).bind({});
+
+Common.argTypes = { ...argTypes };
+
+Common.args = {};
+Common.parameters = {
+  variants: [
+    {
+      children: <p>Label tooltip TERTIARY color, variant medium</p>,
+      triggerComponent: (
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+          Hover me for label!
+        </ButtonSimple>
+      ),
+      placement: PLACEMENTS.RIGHT,
+      variant: 'medium',
+      color: COLORS.TERTIARY,
+    },
+    {
+      children: <p>Description tooltip, PRIMARY color, variant small</p>,
+      triggerComponent: (
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+          Hover me for description!
+        </ButtonSimple>
+      ),
+      placement: PLACEMENTS.BOTTOM_START,
+      variant: 'small',
+      color: COLORS.PRIMARY,
+    },
+    {
+      children: <p>Description tooltip, SECONDARY color, variant medium, showDelay 500ms</p>,
+      triggerComponent: (
+        <ButtonSimple>
+          Hover me for description! <br /> With delay
+        </ButtonSimple>
+      ),
+      placement: PLACEMENTS.LEFT_START,
+      delay: [500],
+      variant: 'medium',
+      color: COLORS.SECONDARY,
+    },
+  ],
+};
+
 const Offset = Template<TooltipProps>(Tooltip).bind({});
 
 Offset.argTypes = { ...argTypes };
@@ -61,4 +106,28 @@ Offset.args = {
   ),
 };
 
-export { Example, Offset };
+const MultiplePopovers = Template<TooltipProps>((args: TooltipProps) => {
+  const triggerComponent = (
+    <Tooltip
+      placement={PLACEMENTS.BOTTOM}
+      isDescription
+      triggerComponent={
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+          Hover or click me!
+        </ButtonSimple>
+      }
+    >
+      Description tooltip on hover
+    </Tooltip>
+  );
+  return <Popover {...args} triggerComponent={triggerComponent} />;
+}).bind({});
+
+MultiplePopovers.argTypes = { ...argTypes };
+
+MultiplePopovers.args = {
+  placement: PLACEMENTS.TOP,
+  children: 'Popover content on click',
+};
+
+export { Example, Common, Offset, MultiplePopovers };

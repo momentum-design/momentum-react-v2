@@ -30,7 +30,7 @@ export interface Props
     | 'variant'
   > {
   /**
-   * When it is false it pass aria-labelledby prop to the trigger component, otherwise pass aria-describedby
+   * When it is false it passes aria-labelledby prop to the trigger component, otherwise pass aria-describedby
    */
   isDescription?: boolean;
 }
