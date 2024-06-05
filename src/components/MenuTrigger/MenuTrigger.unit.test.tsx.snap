@@ -11359,6 +11359,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     style="position: absolute; left: 0px; transform: translate(5px, 0px);"
                   >
                     <svg
+                      aria-hidden="true"
                       class="md-modal-arrow-svg"
                       data-placement="bottom-start"
                       height="12"
@@ -13138,6 +13139,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       placement="bottom-start"
                     >
                       <svg
+                        aria-hidden="true"
                         className="md-modal-arrow-svg"
                         data-placement="bottom-start"
                         height={12}

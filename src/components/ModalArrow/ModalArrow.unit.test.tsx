@@ -25,6 +25,16 @@ describe('<ModalArrow />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with aira-hidden', () => {
+      expect.assertions(1);
+
+      const ariaHidden = 'true';
+
+      const container = mount(<ModalArrow placement={placement} aria-hidden={ariaHidden} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with id', () => {
       expect.assertions(1);
 
@@ -65,6 +75,18 @@ describe('<ModalArrow />', () => {
         .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.svg)).toBe(true);
+    });
+
+    it('should have ariaHidden prop in svg', () => {
+      expect.assertions(1);
+
+      const ariaHidden = 'true';
+
+      const element = mount(<ModalArrow placement={placement} />)
+        .find(ModalArrow)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-hidden')).toBe(ariaHidden);
     });
 
     it('should have provided class when className is provided', () => {

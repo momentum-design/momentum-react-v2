@@ -5,6 +5,39 @@ exports[`<ModalArrow /> snapshot should match snapshot 1`] = `
   placement="bottom"
 >
   <svg
+    aria-hidden="true"
+    className="md-modal-arrow-svg"
+    data-placement="bottom"
+    height={12}
+    viewBox="0 0 24 12"
+    width={24}
+    xmlns="http://www.w3.org/svg/2000"
+  >
+    <defs>
+      <clipPath
+        id="modal-arrow-cut-stroke-bottom"
+      >
+        <path
+          d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
+        />
+      </clipPath>
+    </defs>
+    <path
+      clipPath="url(#modal-arrow-cut-stroke-bottom)"
+      d="m 0 12 l 10 -10 q 2 -2 4 0 l 10 10"
+      data-color="primary"
+    />
+  </svg>
+</ModalArrow>
+`;
+
+exports[`<ModalArrow /> snapshot should match snapshot with aira-hidden 1`] = `
+<ModalArrow
+  aria-hidden="true"
+  placement="bottom"
+>
+  <svg
+    aria-hidden="true"
     className="md-modal-arrow-svg"
     data-placement="bottom"
     height={12}
@@ -36,6 +69,7 @@ exports[`<ModalArrow /> snapshot should match snapshot with className 1`] = `
   placement="bottom"
 >
   <svg
+    aria-hidden="true"
     className="md-modal-arrow-svg example-class"
     data-placement="bottom"
     height={12}
@@ -67,6 +101,7 @@ exports[`<ModalArrow /> snapshot should match snapshot with color 1`] = `
   placement="bottom"
 >
   <svg
+    aria-hidden="true"
     className="md-modal-arrow-svg"
     data-placement="bottom"
     height={12}
@@ -98,6 +133,7 @@ exports[`<ModalArrow /> snapshot should match snapshot with id 1`] = `
   placement="bottom"
 >
   <svg
+    aria-hidden="true"
     className="md-modal-arrow-svg"
     data-placement="bottom"
     height={12}
@@ -134,6 +170,7 @@ exports[`<ModalArrow /> snapshot should match snapshot with style 1`] = `
   }
 >
   <svg
+    aria-hidden="true"
     className="md-modal-arrow-svg"
     data-placement="bottom"
     height={12}
