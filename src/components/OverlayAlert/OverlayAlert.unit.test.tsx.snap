@@ -110,6 +110,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
             <div>
               <ButtonPill>
                 <ButtonSimple
+                  aria-disabled={false}
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -656,6 +657,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                 key="0"
               >
                 <ButtonSimple
+                  aria-disabled={false}
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -710,6 +712,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                 key="1"
               >
                 <ButtonSimple
+                  aria-disabled={false}
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -764,6 +767,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                 key="2"
               >
                 <ButtonSimple
+                  aria-disabled={false}
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}

@@ -39,6 +39,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
           size={32}
         >
           <ButtonSimple
+            aria-disabled={false}
             className="md-button-circle-wrapper md-reaction-button-wrapper"
             data-color="primary"
             data-disabled={false}

@@ -8,6 +8,7 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
     size={32}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -78,6 +79,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
     size={32}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-circle-wrapper example-class md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -149,6 +151,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
     size={32}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -221,6 +224,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
     size={32}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -300,6 +304,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
     }
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       data-color="primary"
       data-disabled={false}

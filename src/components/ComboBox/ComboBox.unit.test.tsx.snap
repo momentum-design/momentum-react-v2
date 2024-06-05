@@ -97,6 +97,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
         onPress={[Function]}
       >
         <ButtonSimple
+          aria-disabled={false}
           className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
@@ -266,6 +267,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
         onPress={[Function]}
       >
         <ButtonSimple
+          aria-disabled={false}
           className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
@@ -435,6 +437,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
         onPress={[Function]}
       >
         <ButtonSimple
+          aria-disabled={false}
           className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
@@ -604,6 +607,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
         onPress={[Function]}
       >
         <ButtonSimple
+          aria-disabled={false}
           className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
@@ -778,6 +782,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
         onPress={[Function]}
       >
         <ButtonSimple
+          aria-disabled={false}
           className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
@@ -947,6 +952,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
         onPress={[Function]}
       >
         <ButtonSimple
+          aria-disabled={false}
           className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}
@@ -1129,6 +1135,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
         onPress={[Function]}
       >
         <ButtonSimple
+          aria-disabled={false}
           className="md-button-pill-wrapper md-combo-box-button"
           data-color="primary"
           data-disabled={false}

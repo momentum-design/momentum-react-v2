@@ -167,6 +167,7 @@ exports[`<ToastContent /> snapshot should match snapshot with complex props 1`] 
       >
         <ButtonPill>
           <ButtonSimple
+            aria-disabled={false}
             className="md-button-pill-wrapper"
             data-color="primary"
             data-disabled={false}

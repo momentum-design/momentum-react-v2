@@ -12,6 +12,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
     size={40}
   >
     <ButtonSimple
+      aria-disabled={false}
       aria-pressed={false}
       className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
       data-color="primary"
@@ -84,6 +85,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
     size={40}
   >
     <ButtonSimple
+      aria-disabled={false}
       aria-pressed={false}
       className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
       data-color="primary"
@@ -156,6 +158,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ghost being 
     size={40}
   >
     <ButtonSimple
+      aria-disabled={false}
       aria-pressed={false}
       className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
       data-color="primary"
@@ -229,6 +232,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
     size={40}
   >
     <ButtonSimple
+      aria-disabled={false}
       aria-pressed={false}
       className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
       data-color="primary"
@@ -303,6 +307,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
     size={40}
   >
     <ButtonSimple
+      aria-disabled={false}
       aria-pressed={true}
       className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
       data-color="primary"
@@ -377,6 +382,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
     size={40}
   >
     <ButtonSimple
+      aria-disabled={false}
       aria-pressed={false}
       className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
       data-color="primary"
@@ -450,6 +456,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
     size={40}
   >
     <ButtonSimple
+      aria-disabled={false}
       aria-pressed={false}
       className="md-button-circle-wrapper md-button-circle-toggle-wrapper"
       data-color="primary"

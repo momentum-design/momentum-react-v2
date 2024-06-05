@@ -489,6 +489,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                       size={28}
                     >
                       <ButtonSimple
+                        aria-disabled={false}
                         className="md-button-circle-wrapper"
                         data-color="join"
                         data-disabled={false}
@@ -546,6 +547,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                       size={28}
                     >
                       <ButtonSimple
+                        aria-disabled={false}
                         className="md-button-circle-wrapper"
                         data-color="join"
                         data-disabled={false}
@@ -603,6 +605,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                       size={28}
                     >
                       <ButtonSimple
+                        aria-disabled={false}
                         className="md-button-circle-wrapper"
                         data-color="join"
                         data-disabled={false}
@@ -1071,6 +1074,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                       size={28}
                     >
                       <ButtonSimple
+                        aria-disabled={false}
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
@@ -1131,6 +1135,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                       size={28}
                     >
                       <ButtonSimple
+                        aria-disabled={false}
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
@@ -1450,6 +1455,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                       size={28}
                     >
                       <ButtonSimple
+                        aria-disabled={false}
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
@@ -1510,6 +1516,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                       size={28}
                     >
                       <ButtonSimple
+                        aria-disabled={false}
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
