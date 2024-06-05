@@ -172,6 +172,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-id"
             role="combobox"
@@ -281,6 +282,7 @@ exports[`Select snapshot should match snapshot 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-id"
           onBlur={[Function]}
@@ -478,6 +480,7 @@ exports[`Select snapshot should match snapshot 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-id"
               onBlur={[Function]}
@@ -722,6 +725,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -831,6 +835,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -1028,6 +1033,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -1272,6 +1278,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -1381,6 +1388,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -1578,6 +1586,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -2161,555 +2170,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
 </Select>
 `;
 
-exports[`Select snapshot should match snapshot with aria-label 1`] = `
-<Select
-  ariaLabel="test-aria-label"
-  label="test"
->
-  <div
-    className="md-select-wrapper"
-    style={
-      Object {
-        "--local-width": "100%",
-      }
-    }
-  >
-    <label
-      id="test-ID"
-      onClick={[Function]}
-    >
-      <Text>
-        <p
-          className="md-text-wrapper"
-          data-type="body-primary"
-        >
-          test
-        </p>
-      </Text>
-    </label>
-    <HiddenSelect
-      label="test"
-      state={
-        Object {
-          "close": [Function],
-          "collection": ListCollection {
-            "firstKey": "$.0",
-            "iterable": Object {
-              Symbol(Symbol.iterator): [Function],
-            },
-            "keyMap": Map {
-              "$.0" => Object {
-                "aria-label": undefined,
-                "childNodes": Object {
-                  Symbol(Symbol.iterator): [Function],
-                },
-                "hasChildNodes": false,
-                "index": 0,
-                "key": "$.0",
-                "level": 0,
-                "nextKey": "$.1",
-                "parentKey": null,
-                "prevKey": undefined,
-                "props": Object {
-                  "children": "Item 1",
-                },
-                "rendered": "Item 1",
-                "shouldInvalidate": undefined,
-                "textValue": "Item 1",
-                "type": "item",
-                "value": undefined,
-                "wrapper": undefined,
-              },
-              "$.1" => Object {
-                "aria-label": undefined,
-                "childNodes": Object {
-                  Symbol(Symbol.iterator): [Function],
-                },
-                "hasChildNodes": false,
-                "index": 1,
-                "key": "$.1",
-                "level": 0,
-                "nextKey": undefined,
-                "parentKey": null,
-                "prevKey": "$.0",
-                "props": Object {
-                  "children": "Item 2",
-                },
-                "rendered": "Item 2",
-                "shouldInvalidate": undefined,
-                "textValue": "Item 2",
-                "type": "item",
-                "value": undefined,
-                "wrapper": undefined,
-              },
-            },
-            "lastKey": "$.1",
-          },
-          "disabledKeys": Set {},
-          "focusStrategy": null,
-          "isFocused": false,
-          "isOpen": false,
-          "open": [Function],
-          "selectedItem": null,
-          "selectedKey": null,
-          "selectionManager": SelectionManager {
-            "_isSelectAll": null,
-            "allowsCellSelection": false,
-            "collection": ListCollection {
-              "firstKey": "$.0",
-              "iterable": Object {
-                Symbol(Symbol.iterator): [Function],
-              },
-              "keyMap": Map {
-                "$.0" => Object {
-                  "aria-label": undefined,
-                  "childNodes": Object {
-                    Symbol(Symbol.iterator): [Function],
-                  },
-                  "hasChildNodes": false,
-                  "index": 0,
-                  "key": "$.0",
-                  "level": 0,
-                  "nextKey": "$.1",
-                  "parentKey": null,
-                  "prevKey": undefined,
-                  "props": Object {
-                    "children": "Item 1",
-                  },
-                  "rendered": "Item 1",
-                  "shouldInvalidate": undefined,
-                  "textValue": "Item 1",
-                  "type": "item",
-                  "value": undefined,
-                  "wrapper": undefined,
-                },
-                "$.1" => Object {
-                  "aria-label": undefined,
-                  "childNodes": Object {
-                    Symbol(Symbol.iterator): [Function],
-                  },
-                  "hasChildNodes": false,
-                  "index": 1,
-                  "key": "$.1",
-                  "level": 0,
-                  "nextKey": undefined,
-                  "parentKey": null,
-                  "prevKey": "$.0",
-                  "props": Object {
-                    "children": "Item 2",
-                  },
-                  "rendered": "Item 2",
-                  "shouldInvalidate": undefined,
-                  "textValue": "Item 2",
-                  "type": "item",
-                  "value": undefined,
-                  "wrapper": undefined,
-                },
-              },
-              "lastKey": "$.1",
-            },
-            "state": Object {
-              "childFocusStrategy": null,
-              "disabledKeys": Set {},
-              "disallowEmptySelection": true,
-              "focusedKey": null,
-              "isFocused": false,
-              "selectedKeys": Set {},
-              "selectionMode": "single",
-              "setFocused": [Function],
-              "setFocusedKey": [Function],
-              "setSelectedKeys": [Function],
-            },
-          },
-          "setFocused": [Function],
-          "setSelectedKey": [Function],
-          "toggle": [Function],
-        }
-      }
-      triggerRef={
-        Object {
-          "current": <button
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-label="test-aria-label"
-            class="md-select-dropdown-input"
-            id="test-ID"
-            role="combobox"
-            type="button"
-          >
-            <span
-              class="md-select-selected-item-wrapper"
-              id="test-ID"
-            />
-            <span
-              aria-hidden="true"
-              class="md-select-icon-wrapper"
-            >
-              <div
-                aria-hidden="true"
-                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                role="img"
-              >
-                <svg
-                  aria-hidden="true"
-                  class=""
-                  data-autoscale="false"
-                  data-scale="16"
-                  data-test="arrow-down"
-                  fill="currentColor"
-                  height="100%"
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
-                />
-              </div>
-            </span>
-          </button>,
-        }
-      }
-    >
-      <div
-        aria-hidden={true}
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
-          }
-        }
-      >
-        <input
-          onFocus={[Function]}
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-          tabIndex={-1}
-          type="text"
-        />
-        <label>
-          test
-          <select
-            onChange={[Function]}
-            size={2}
-            tabIndex={-1}
-            value=""
-          >
-            <option />
-            <option
-              key="$.0"
-              value="$.0"
-            >
-              Item 1
-            </option>
-            <option
-              key="$.1"
-              value="$.1"
-            >
-              Item 2
-            </option>
-          </select>
-        </label>
-      </div>
-    </HiddenSelect>
-    <Popover
-      className="md-select-popover"
-      hideOnEsc={false}
-      interactive={true}
-      onClickOutside={[Function]}
-      onHide={[Function]}
-      onKeyDown={[Function]}
-      placement="bottom"
-      setInstance={[Function]}
-      showArrow={false}
-      strategy="absolute"
-      style={
-        Object {
-          "maxHeight": "none",
-        }
-      }
-      trigger="manual"
-      triggerComponent={
-        <button
-          aria-expanded={false}
-          aria-haspopup="listbox"
-          aria-label="test-aria-label"
-          className="md-select-dropdown-input"
-          id="test-ID"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="combobox"
-          type="button"
-        >
-          <span
-            className="md-select-selected-item-wrapper"
-            id="test-ID"
-          />
-          <span
-            aria-hidden="true"
-            className="md-select-icon-wrapper"
-          >
-            <Icon
-              name="arrow-down"
-              scale={16}
-              weight="bold"
-            />
-          </span>
-        </button>
-      }
-    >
-      <LazyTippy
-        animation={false}
-        appendTo="parent"
-        hideOnClick={false}
-        interactive={true}
-        offset={
-          Array [
-            0,
-            5,
-          ]
-        }
-        onClickOutside={[Function]}
-        onHide={[Function]}
-        placement="bottom"
-        plugins={
-          Array [
-            Object {
-              "fn": [Function],
-              "name": "addBackdropPlugin",
-            },
-          ]
-        }
-        popperOptions={
-          Object {
-            "modifiers": Array [
-              Object {
-                "enabled": false,
-                "name": "arrow",
-                "options": Object {
-                  "element": "#arrow1",
-                  "padding": 5,
-                },
-              },
-              Object {
-                "name": "preventOverflow",
-                "options": Object {
-                  "altAxis": true,
-                  "boundariesElement": "scrollParent",
-                  "padding": 8,
-                },
-              },
-            ],
-            "strategy": "absolute",
-          }
-        }
-        render={[Function]}
-        setInstance={[Function]}
-        trigger="manual"
-      >
-        <ForwardRef(TippyWrapper)
-          animation={false}
-          appendTo="parent"
-          hideOnClick={false}
-          interactive={true}
-          offset={
-            Array [
-              0,
-              5,
-            ]
-          }
-          onClickOutside={[Function]}
-          onHide={[Function]}
-          placement="bottom"
-          plugins={
-            Array [
-              Object {
-                "fn": [Function],
-              },
-              Object {
-                "fn": [Function],
-              },
-              Object {
-                "fn": [Function],
-                "name": "addBackdropPlugin",
-              },
-            ]
-          }
-          popperOptions={
-            Object {
-              "modifiers": Array [
-                Object {
-                  "enabled": false,
-                  "name": "arrow",
-                  "options": Object {
-                    "element": "#arrow1",
-                    "padding": 5,
-                  },
-                },
-                Object {
-                  "name": "preventOverflow",
-                  "options": Object {
-                    "altAxis": true,
-                    "boundariesElement": "scrollParent",
-                    "padding": 8,
-                  },
-                },
-              ],
-              "strategy": "absolute",
-            }
-          }
-          render={[Function]}
-          trigger="manual"
-        >
-          <Tippy
-            animation={false}
-            appendTo="parent"
-            hideOnClick={false}
-            interactive={true}
-            offset={
-              Array [
-                0,
-                5,
-              ]
-            }
-            onClickOutside={[Function]}
-            onHide={[Function]}
-            placement="bottom"
-            plugins={
-              Array [
-                Object {
-                  "fn": [Function],
-                },
-                Object {
-                  "fn": [Function],
-                },
-                Object {
-                  "fn": [Function],
-                  "name": "addBackdropPlugin",
-                },
-              ]
-            }
-            popperOptions={
-              Object {
-                "modifiers": Array [
-                  Object {
-                    "enabled": false,
-                    "name": "arrow",
-                    "options": Object {
-                      "element": "#arrow1",
-                      "padding": 5,
-                    },
-                  },
-                  Object {
-                    "name": "preventOverflow",
-                    "options": Object {
-                      "altAxis": true,
-                      "boundariesElement": "scrollParent",
-                      "padding": 8,
-                    },
-                  },
-                ],
-                "strategy": "absolute",
-              }
-            }
-            render={[Function]}
-            trigger="manual"
-          >
-            <button
-              aria-expanded={false}
-              aria-haspopup="listbox"
-              aria-label="test-aria-label"
-              className="md-select-dropdown-input"
-              id="test-ID"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              role="combobox"
-              type="button"
-            >
-              <span
-                className="md-select-selected-item-wrapper"
-                id="test-ID"
-              />
-              <span
-                aria-hidden="true"
-                className="md-select-icon-wrapper"
-              >
-                <Icon
-                  name="arrow-down"
-                  scale={16}
-                  weight="bold"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                    role="img"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={16}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </span>
-            </button>
-            <Portal
-              containerInfo={
-                <div
-                  data-tippy-root=""
-                  id="tippy-13"
-                  style="z-index: 9999;"
-                >
-                  
-                </div>
-              }
-            />
-          </Tippy>
-        </ForwardRef(TippyWrapper)>
-      </LazyTippy>
-    </Popover>
-  </div>
-</Select>
-`;
-
 exports[`Select snapshot should match snapshot with border 1`] = `
 <Select
   id="test-id"
@@ -2883,6 +2343,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input borderLess"
             id="test-ID"
             role="combobox"
@@ -2992,6 +2453,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input borderLess"
           id="test-ID"
           onBlur={[Function]}
@@ -3189,6 +2651,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input borderLess"
               id="test-ID"
               onBlur={[Function]}
@@ -3434,6 +2897,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -3543,6 +3007,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -3740,6 +3205,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -3985,6 +3451,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -4094,6 +3561,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -4291,6 +3759,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -4545,6 +4014,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -4654,6 +4124,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -4851,6 +4322,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -5610,6 +5082,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             aria-controls="example-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="example-id"
             role="combobox"
@@ -5719,6 +5192,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
           aria-controls="example-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="example-id"
           onBlur={[Function]}
@@ -5916,6 +5390,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               aria-controls="example-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="example-id"
               onBlur={[Function]}
@@ -6035,6 +5510,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
         <button
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -6231,6 +5707,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             <button
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -6288,7 +5765,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
               containerInfo={
                 <div
                   data-tippy-root=""
-                  id="tippy-16"
+                  id="tippy-15"
                   style="z-index: 9999;"
                 >
                   
@@ -6476,6 +5953,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -6585,6 +6063,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -6782,6 +6261,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -7536,6 +7016,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
           "current": <button
             aria-expanded="true"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -7644,6 +7125,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
         <button
           aria-expanded={true}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -7840,6 +7322,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             <button
               aria-expanded={true}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -7897,7 +7380,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
               containerInfo={
                 <div
                   data-tippy-root=""
-                  id="tippy-15"
+                  id="tippy-14"
                   style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
                 >
                   <div
@@ -8594,6 +8077,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
           "current": <button
             aria-expanded="true"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -8702,6 +8186,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
         <button
           aria-expanded={true}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -8898,6 +8383,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             <button
               aria-expanded={true}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -8955,7 +8441,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
               containerInfo={
                 <div
                   data-tippy-root=""
-                  id="tippy-17"
+                  id="tippy-16"
                   style="z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
                 >
                   <div
@@ -9654,6 +9140,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -9765,6 +9252,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -9964,6 +9452,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -10234,6 +9723,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-selected"
             id="test-ID"
             role="combobox"
@@ -10346,6 +9836,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-selected"
           id="test-ID"
           onBlur={[Function]}
@@ -10546,6 +10037,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-selected"
               id="test-ID"
               onBlur={[Function]}
@@ -10818,6 +10310,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-selected md-select-open"
             id="test-ID"
             role="combobox"
@@ -10930,6 +10423,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-selected md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -11130,6 +10624,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-selected md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -11977,6 +11472,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -12086,6 +11582,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -12283,6 +11780,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -12525,6 +12023,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           "current": <button
             aria-expanded="false"
             aria-haspopup="listbox"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -12634,6 +12133,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
         <button
           aria-expanded={false}
           aria-haspopup="listbox"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -12831,6 +12331,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             <button
               aria-expanded={false}
               aria-haspopup="listbox"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -12889,7 +12390,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
               containerInfo={
                 <div
                   data-tippy-root=""
-                  id="tippy-14"
+                  id="tippy-13"
                   style="z-index: 9999;"
                 >
                   
