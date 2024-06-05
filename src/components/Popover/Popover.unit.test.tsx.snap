@@ -82,6 +82,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 2`] = 
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -167,6 +168,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 3`] = 
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -310,6 +312,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 6`] = 
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -395,6 +398,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 7`] = 
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -497,6 +501,7 @@ exports[`<Popover /> snapshot should match snapshot 2`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -570,6 +575,7 @@ exports[`<Popover /> snapshot should match snapshot with className 2`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -674,6 +680,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -747,6 +754,7 @@ exports[`<Popover /> snapshot should match snapshot with color 2`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -821,6 +829,7 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -894,6 +903,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetDistance 2`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -967,6 +977,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding 2`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -1040,6 +1051,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding and offs
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -1113,6 +1125,7 @@ exports[`<Popover /> snapshot should match snapshot with strategy = fixed 2`] = 
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -1187,6 +1200,7 @@ exports[`<Popover /> snapshot should match snapshot with style 2`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"

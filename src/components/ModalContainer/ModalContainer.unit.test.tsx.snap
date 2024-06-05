@@ -52,6 +52,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
         color="primary"
       >
         <svg
+          aria-hidden="true"
           className="md-modal-arrow-svg"
           data-placement="auto"
           height={24}

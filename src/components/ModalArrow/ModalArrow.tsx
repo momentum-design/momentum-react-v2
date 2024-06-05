@@ -76,6 +76,7 @@ const ModalArrow: FC<Props> = (props: Props) => {
       id={id}
       className={classnames(STYLE.svg, className)}
       style={style}
+      aria-hidden='true'
       xmlns="http://www.w3.org/svg/2000"
       width={viewBoxWidth}
       height={viewBoxHeight}

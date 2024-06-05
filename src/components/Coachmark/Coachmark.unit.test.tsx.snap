@@ -154,6 +154,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
@@ -310,6 +311,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
+          aria-hidden="true"
           class="md-modal-arrow-svg"
           data-placement="top"
           height="12"
