@@ -183,4 +183,5 @@ export {
   AriaGroup,
   RadioSimple,
   RadioSimpleGroup,
+  Tooltip as TooltipNext,
 } from './components';
