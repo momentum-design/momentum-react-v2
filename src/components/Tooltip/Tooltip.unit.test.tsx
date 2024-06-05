@@ -15,11 +15,9 @@ jest.mock('uuid', () => {
   };
 });
 
-jest.unmock('@react-aria/utils');
-
 describe('<Tooltip />', () => {
   /**
-   * Opens the tooltip by hoer on the trigger component, waits until
+   * Opens the tooltip by hover on the trigger component, waits until
    * content gets displayed, expects it to be visible and returns the content.
    * expect() statements count: 1
    * @returns {HTMLElement}
@@ -277,6 +275,20 @@ describe('<Tooltip />', () => {
 
       render(
         <Tooltip triggerComponent={<button>Hover Me!</button>}>
+          <p>Content</p>
+        </Tooltip>
+      );
+      await openTooltipByHoveringOnTriggerAndCheckContent(user);
+      const trigger = await screen.findByText(/hover me!/i);
+      expect(trigger.getAttribute('aria-labelledby')).toMatch(/tippy-\d+/);
+      expect(trigger.getAttribute('aria-haspopup')).toBe(null);
+    });
+
+    it('add aria-labelledby to trigger component  when isDescription is false', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Tooltip isDescription={false} triggerComponent={<button>Hover Me!</button>}>
           <p>Content</p>
         </Tooltip>
       );

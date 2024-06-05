@@ -6,7 +6,7 @@ import { BOUNDARIES } from '../Popover/Popover.constants';
 
 const popoverArgTypes = {
   isDescription: {
-    description: `Whether the tooltips be a description or a label of the trigger component`,
+    description: `Determines, whether the tooltip is the description or the label of the trigger component`,
     control: { type: 'boolean' },
     table: {
       type: {
