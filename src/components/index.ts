@@ -70,3 +70,4 @@ export { default as ComboBox } from './ComboBox';
 export { default as AriaGroup } from './AriaGroup';
 export { default as RadioSimple } from './RadioSimple';
 export { default as RadioSimpleGroup } from './RadioSimpleGroup';
+export { default as Tooltip } from './Tooltip';
