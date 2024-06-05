@@ -14,6 +14,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
       key="0"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-pill-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -67,6 +68,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
       key="1"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -136,6 +138,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
       key="0"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-pill-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -189,6 +192,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
       key="1"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -247,6 +251,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
   className="example-class"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper example-class"
     data-color="primary"
     data-disabled={false}
@@ -299,6 +304,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
   id="example-id"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -364,6 +370,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
       key="0"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-pill-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -417,6 +424,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
       key="1"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -487,6 +495,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
       key="0"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-pill-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -540,6 +549,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
       key="1"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -609,6 +619,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
       key="0"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-pill-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -662,6 +673,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
       key="1"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -731,6 +743,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
       key="0"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-pill-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -784,6 +797,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
       key="1"
     >
       <ButtonSimple
+        aria-disabled={false}
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -846,6 +860,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}

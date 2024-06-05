@@ -491,6 +491,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 size={28}
               >
                 <ButtonSimple
+                  aria-disabled={false}
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -683,6 +684,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 size={28}
               >
                 <ButtonSimple
+                  aria-disabled={false}
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -880,6 +882,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 size={28}
               >
                 <ButtonSimple
+                  aria-disabled={false}
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}

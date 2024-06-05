@@ -15,6 +15,7 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={true}
@@ -105,6 +106,7 @@ exports[`<Chip /> snapshot it should match snapshot with error 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -193,6 +195,7 @@ exports[`<Chip /> snapshot it should match snapshot with mulitline color 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       chipColor="cobalt"
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
@@ -280,6 +283,7 @@ exports[`<Chip /> snapshot it should match snapshot with multiline 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -366,6 +370,7 @@ exports[`<Chip /> snapshot it should match snapshot with outline 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -451,6 +456,7 @@ exports[`<Chip /> snapshot it should match snapshot with search 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -534,6 +540,7 @@ exports[`<Chip /> snapshot should match snapshot 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -627,6 +634,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       avatar={
         <Avatar>
           AA
@@ -728,6 +736,7 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper example-class"
       data-color="primary"
       data-disabled={false}
@@ -813,6 +822,7 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -910,6 +920,7 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -1020,6 +1031,7 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
     size={28}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -1127,6 +1139,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
     }
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}
@@ -1222,6 +1235,7 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
     text="Some chip text"
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-chip-wrapper"
       data-color="primary"
       data-disabled={false}

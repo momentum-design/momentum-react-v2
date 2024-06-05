@@ -15,6 +15,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
     size={20}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-reaction-badge-wrapper"
       data-color="primary"
       data-count={1}
@@ -96,6 +97,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
     size={20}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper example-class md-reaction-badge-wrapper"
       data-color="primary"
       data-count={1}
@@ -177,6 +179,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
     size={20}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-reaction-badge-wrapper"
       data-color="primary"
       data-count={1}
@@ -261,6 +264,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
     size={20}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-reaction-badge-wrapper"
       data-color="primary"
       data-count={1}
@@ -344,6 +348,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
     size={20}
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-reaction-badge-wrapper"
       data-color="primary"
       data-count={1}
@@ -434,6 +439,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
     }
   >
     <ButtonSimple
+      aria-disabled={false}
       className="md-button-pill-wrapper md-reaction-badge-wrapper"
       data-color="primary"
       data-count={1}

@@ -204,6 +204,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
@@ -2391,6 +2392,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
@@ -4578,6 +4580,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
@@ -6766,6 +6769,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
@@ -8956,6 +8960,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
@@ -11143,6 +11148,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
@@ -13405,6 +13411,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
@@ -15603,6 +15610,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           >
             <ButtonSimple
               aria-controls="test-ID"
+              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"

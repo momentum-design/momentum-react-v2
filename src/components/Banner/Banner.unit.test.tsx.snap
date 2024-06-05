@@ -123,6 +123,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
             color="join"
           >
             <ButtonSimple
+              aria-disabled={false}
               className="md-button-circle-wrapper"
               data-color="join"
               data-disabled={false}
@@ -196,6 +197,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
             color="cancel"
           >
             <ButtonSimple
+              aria-disabled={false}
               className="md-button-circle-wrapper"
               data-color="cancel"
               data-disabled={false}
@@ -399,6 +401,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
             color="join"
           >
             <ButtonSimple
+              aria-disabled={false}
               className="md-button-circle-wrapper"
               data-color="join"
               data-disabled={false}
@@ -472,6 +475,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
             color="cancel"
           >
             <ButtonSimple
+              aria-disabled={false}
               className="md-button-circle-wrapper"
               data-color="cancel"
               data-disabled={false}

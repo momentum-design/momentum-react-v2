@@ -93,6 +93,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
           size={28}
         >
           <ButtonSimple
+            aria-disabled={false}
             className="md-button-pill-wrapper"
             data-color="primary"
             data-disabled={false}
@@ -147,6 +148,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
           size={28}
         >
           <ButtonSimple
+            aria-disabled={false}
             className="md-button-pill-wrapper"
             data-color="primary"
             data-disabled={false}
@@ -437,6 +439,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
             size={20}
           >
             <ButtonSimple
+              aria-disabled={false}
               aria-label="Close toast"
               className="md-button-circle-wrapper"
               data-color="primary"

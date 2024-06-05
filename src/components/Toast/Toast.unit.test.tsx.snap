@@ -418,6 +418,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -493,6 +494,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -547,6 +549,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -601,6 +604,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -1078,6 +1082,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -1153,6 +1158,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -1207,6 +1213,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -1261,6 +1268,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -1737,6 +1745,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -1812,6 +1821,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -1866,6 +1876,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -1920,6 +1931,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -2353,6 +2365,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -2428,6 +2441,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -2482,6 +2496,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -2536,6 +2551,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -2956,6 +2972,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -3031,6 +3048,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -3085,6 +3103,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -3139,6 +3158,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -3601,6 +3621,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -3676,6 +3697,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -3730,6 +3752,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -3784,6 +3807,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -4261,6 +4285,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -4336,6 +4361,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -4390,6 +4416,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -4444,6 +4471,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -4929,6 +4957,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -5004,6 +5033,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -5058,6 +5088,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -5112,6 +5143,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
@@ -5575,6 +5607,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -5650,6 +5683,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="message"
                 data-disabled={false}
@@ -5704,6 +5738,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="cancel"
                 data-disabled={false}
@@ -5758,6 +5793,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
               size={28}
             >
               <ButtonSimple
+                aria-disabled={false}
                 className="md-button-pill-wrapper"
                 data-color="join"
                 data-disabled={false}
