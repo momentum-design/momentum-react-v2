@@ -38,6 +38,7 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
       data-inverted={inverted || DEFAULTS.INVERTED}
       data-disabled={disabled || DEFAULTS.DISABLED}
       data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
+      aria-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
       isDisabled={disabled}
       {...otherProps}
     >

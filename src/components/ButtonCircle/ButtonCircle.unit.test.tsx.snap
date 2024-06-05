@@ -3,6 +3,7 @@
 exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
 <ButtonCircle>
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -55,6 +56,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
   ghost={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -112,6 +114,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
   ghost={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={true}
@@ -173,6 +176,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
   outline={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -230,6 +234,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
   outline={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -282,6 +287,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
   disabled={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={true}
@@ -343,6 +349,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
   shallowDisabled={true}
 >
   <ButtonSimple
+    aria-disabled={true}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -359,6 +366,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-disabled={true}
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -399,6 +407,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
   className="example-class"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper example-class"
     data-color="primary"
     data-disabled={false}
@@ -451,6 +460,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
   color="message"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="message"
     data-disabled={false}
@@ -507,6 +517,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
   id="example-id"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -559,6 +570,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
 exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 1`] = `
 <ButtonCircle>
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -618,6 +630,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
   size={64}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -678,6 +691,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -740,6 +754,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
   title="Example Text"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}

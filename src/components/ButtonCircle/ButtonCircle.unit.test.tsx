@@ -308,6 +308,19 @@ describe('<ButtonCircle />', () => {
 
       expect(container.find(ButtonSimple).exists()).toBe(true);
     });
+
+    it('should pass shallow disabled prop', () => {
+      expect.assertions(2);
+
+      const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
+
+      const element = mount(<ButtonCircle shallowDisabled={shallowDisabled} />)
+        .find(ButtonCircle)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
+      expect(element.getAttribute('aria-disabled')).toBe('true');
+    });
   });
 
   describe('actions', () => {

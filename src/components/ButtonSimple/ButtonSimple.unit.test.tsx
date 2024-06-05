@@ -83,6 +83,14 @@ describe('<ButtonSimple />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with aria-disabled', () => {
+      expect.assertions(1);
+
+      const container = mount(<ButtonSimple aria-disabled={true} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -157,6 +165,16 @@ describe('<ButtonSimple />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('tabIndex')).toBe(`${tabIndex}`);
+    });
+
+    it('should have aria-disabled when provided', () => {
+      expect.assertions(1);
+
+      const element = mount(<ButtonSimple aria-disabled={true} />)
+        .find(ButtonSimple)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-disabled')).toBe('true');
     });
   });
 

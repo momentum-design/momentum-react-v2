@@ -3,6 +3,7 @@
 exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
 <ButtonPill>
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -59,6 +60,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
   ghost={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -116,6 +118,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled
   ghost={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={true}
@@ -177,6 +180,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
   outline={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -234,6 +238,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined an
   outline={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -290,6 +295,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
   disabled={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={true}
@@ -351,6 +357,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when shallow disabled 1`]
   shallowDisabled={true}
 >
   <ButtonSimple
+    aria-disabled={true}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -367,6 +374,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when shallow disabled 1`]
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-disabled={true}
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -407,6 +415,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when width is grown 1`] =
   grown={true}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -463,6 +472,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
   className="example-class"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper example-class"
     data-color="primary"
     data-disabled={false}
@@ -515,6 +525,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
   color="message"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="message"
     data-disabled={false}
@@ -571,6 +582,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
   id="example-id"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -625,6 +637,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
   size={40}
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -685,6 +698,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -747,6 +761,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
   title="Example Text"
 >
   <ButtonSimple
+    aria-disabled={false}
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
