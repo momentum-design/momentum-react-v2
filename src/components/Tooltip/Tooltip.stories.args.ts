@@ -1,10 +1,9 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
-import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
-import { COLORS } from '../ModalContainer/ModalContainer.constants';
-import { DEFAULTS } from './Tooltip.constants';
-import { BOUNDARIES } from '../Popover/Popover.constants';
+import { popoverArgTypes } from '../Popover/Popover.stories.args';
 
-const popoverArgTypes = {
+import { DEFAULTS } from './Tooltip.constants';
+
+const tooltipArgTypes = {
   isDescription: {
     description: `Determines, whether the tooltip is the description or the label of the trigger component`,
     control: { type: 'boolean' },
@@ -19,94 +18,37 @@ const popoverArgTypes = {
   },
   placement: {
     description: `Placement of the Tooltip relative to the trigger component`,
-    options: [...Object.values(PLACEMENTS as Record<string, string>)],
-    control: { type: 'select' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: DEFAULTS.PLACEMENT,
-      },
-    },
+    ...popoverArgTypes['placement'],
   },
   offsetSkidding: {
     description: `The offset skidding (in px) along the reference.`,
-    control: { type: 'number' },
-    table: {
-      type: {
-        summary: 'number',
-      },
-      defaultValue: {
-        summary: DEFAULTS.OFFSET_SKIDDING,
-      },
-    },
+    ...popoverArgTypes['offsetSkidding'],
   },
   offsetDistance: {
     description: `The offset distance (in px) from the reference.`,
-    control: { type: 'number' },
-    table: {
-      type: {
-        summary: 'number',
-      },
-      defaultValue: {
-        summary: DEFAULTS.OFFSET_DISTANCE,
-      },
-    },
+    ...popoverArgTypes['offsetDistance'],
   },
   variant: {
     description: `Variant of the Tooltip - can be either small or medium`,
-    options: ['small', 'medium'],
-    control: { type: 'select' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: DEFAULTS.VARIANT,
-      },
-    },
+    ...popoverArgTypes['variant'],
   },
   children: {
     description: 'Provides the child nodes for this element.',
-    control: { type: 'text' },
-    table: {
-      type: {
-        summary: 'ReactNode',
-      },
-    },
+    ...popoverArgTypes['children'],
   },
   color: {
     description: 'What color to render this `<Tooltip />` as.',
-    control: { type: 'select' },
-    options: [...Object.values(COLORS)],
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: DEFAULTS.COLOR,
-      },
-    },
+    ...popoverArgTypes['color'],
   },
   boundary: {
     description: 'The overflow boundary of the tooltip element.',
-    control: { type: 'select' },
-    options: [undefined, ...Object.values(BOUNDARIES)],
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: DEFAULTS.BOUNDARY,
-      },
-    },
+    ...popoverArgTypes['boundary'],
   },
 };
 
-export { popoverArgTypes };
+export { tooltipArgTypes };
 
 export default {
   ...commonStyles,
-  ...popoverArgTypes,
+  ...tooltipArgTypes,
 };
