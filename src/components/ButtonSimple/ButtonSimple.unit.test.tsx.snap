@@ -30,6 +30,39 @@ exports[`<ButtonSimple /> snapshot should match snapshot 1`] = `
 </ButtonSimple>
 `;
 
+exports[`<ButtonSimple /> snapshot should match snapshot with aria-disabled 1`] = `
+<ButtonSimple
+  aria-disabled={true}
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <button
+        aria-disabled={true}
+        className="md-button-simple-wrapper"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        type="button"
+      />
+    </FocusRing>
+  </FocusRing>
+</ButtonSimple>
+`;
+
 exports[`<ButtonSimple /> snapshot should match snapshot with children 1`] = `
 <ButtonSimple>
   <FocusRing>

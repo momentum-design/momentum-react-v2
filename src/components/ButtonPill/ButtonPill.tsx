@@ -31,6 +31,7 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
       data-color={color || DEFAULTS.COLOR}
       data-disabled={disabled || DEFAULTS.DISABLED}
       data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
+      aria-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
       data-ghost={ghost || DEFAULTS.GHOST}
       data-grown={grown || DEFAULTS.GROWN}
       data-outline={outline || DEFAULTS.OUTLINE}

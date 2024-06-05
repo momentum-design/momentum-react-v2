@@ -27,6 +27,12 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
     ? { ...buttonProps, ...hoverProps, role, tabIndex }
     : { ...buttonProps, ...hoverProps, role };
 
+  // props should override buttonProps for aria-disabled because react-aria has it's own logic for aria-disabled.
+  // so if we want to pass it in via props, we need to make sure it's not overridden.
+  if (props['aria-disabled'] === true) {
+    otherProps['aria-disabled'] = true;
+  }
+
   return (
     <FocusRing disabled={isDisabled}>
       <button
