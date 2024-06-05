@@ -436,158 +436,142 @@ describe('<Tooltip />', () => {
     },
   ];
 
-  refCases.forEach(({ description, ref, checkRef, resetRef }) => {
-    describe(`actions (${description} ref)`, () => {
-      beforeEach(() => {
-        resetRef();
-      });
+  it('should show/hide Tooltip on hover', async () => {
+    const user = userEvent.setup();
 
-      it('should show/hide Tooltip on hover', async () => {
-        const user = userEvent.setup();
+    const props = {
+      onCreate: jest.fn(),
+      onDestroy: jest.fn(),
+      onHidden: jest.fn(),
+      onHide: jest.fn(),
+      onMount: jest.fn(),
+      onShow: jest.fn(),
+      onShown: jest.fn(),
+      onTrigger: jest.fn(),
+      onUntrigger: jest.fn(),
+    };
 
-        const props = {
-          onCreate: jest.fn(),
-          onDestroy: jest.fn(),
-          onHidden: jest.fn(),
-          onHide: jest.fn(),
-          onMount: jest.fn(),
-          onShow: jest.fn(),
-          onShown: jest.fn(),
-          onTrigger: jest.fn(),
-          onUntrigger: jest.fn(),
-        };
+    expect(props.onMount).not.toBeCalled();
+    expect(props.onCreate).not.toBeCalled();
 
-        expect(props.onMount).not.toBeCalled();
-        expect(props.onCreate).not.toBeCalled();
+    const { unmount } = render(
+      <Tooltip isDescription triggerComponent={<button>Hover Me!</button>} {...props}>
+        <p>Content</p>
+      </Tooltip>
+    );
 
-        const { unmount } = render(
-          <Tooltip ref={ref} isDescription triggerComponent={<button>Hover Me!</button>} {...props}>
-            <p>Content</p>
-          </Tooltip>
-        );
+    expect(props.onCreate).toBeCalled();
 
-        checkRef(screen.getByRole('button', { name: /hover me!/i }));
+    expect(props.onShow).not.toBeCalled();
+    expect(props.onShown).not.toBeCalled();
+    expect(props.onTrigger).not.toBeCalled();
 
-        expect(props.onCreate).toBeCalled();
+    // assert no tooltip on screen
+    const contentBeforeHover = screen.queryByText('Content');
+    expect(contentBeforeHover).not.toBeInTheDocument();
 
-        expect(props.onShow).not.toBeCalled();
-        expect(props.onShown).not.toBeCalled();
-        expect(props.onTrigger).not.toBeCalled();
+    // after hover, tooltip should be shown
+    await openTooltipByHoveringOnTriggerAndCheckContent(user);
 
-        // assert no tooltip on screen
-        const contentBeforeHover = screen.queryByText('Content');
-        expect(contentBeforeHover).not.toBeInTheDocument();
+    expect(props.onMount).toBeCalled();
+    expect(props.onShow).toBeCalled();
+    expect(props.onTrigger).toBeCalled();
 
-        // after hover, tooltip should be shown
-        await openTooltipByHoveringOnTriggerAndCheckContent(user);
+    expect(props.onHide).not.toBeCalled();
+    expect(props.onHidden).not.toBeCalled();
+    expect(props.onUntrigger).not.toBeCalled();
+    expect(props.onDestroy).not.toBeCalled();
 
-        expect(props.onMount).toBeCalled();
-        expect(props.onShow).toBeCalled();
-        expect(props.onTrigger).toBeCalled();
+    // after un-hover, tooltip should be hidden again
+    await user.unhover(screen.getByRole('button', { name: /hover me!/i }));
+    await waitFor(() => {
+      expect(screen.queryByText('Content')).not.toBeInTheDocument();
+    });
 
-        expect(props.onHide).not.toBeCalled();
-        expect(props.onHidden).not.toBeCalled();
-        expect(props.onUntrigger).not.toBeCalled();
-        expect(props.onDestroy).not.toBeCalled();
+    expect(props.onHide).toBeCalled();
+    expect(props.onHidden).toBeCalled();
+    expect(props.onUntrigger).toBeCalled();
 
-        // after another hover, tooltip should be hidden again
-        await user.unhover(screen.getByRole('button', { name: /hover me!/i }));
-        await waitFor(() => {
-          expect(screen.queryByText('Content')).not.toBeInTheDocument();
-        });
+    unmount();
 
-        expect(props.onHide).toBeCalled();
-        expect(props.onHidden).toBeCalled();
-        expect(props.onUntrigger).toBeCalled();
+    expect(props.onDestroy).toBeCalled();
+  });
 
-        unmount();
+  it('should show Tooltip on mouseenter', async () => {
+    expect.assertions(4);
+    const user = userEvent.setup();
 
-        expect(props.onDestroy).toBeCalled();
-      });
+    render(
+      <Tooltip isDescription triggerComponent={<button>Hover Me!</button>}>
+        <p>Content</p>
+      </Tooltip>
+    );
 
-      it('should show Tooltip on mouseenter', async () => {
-        expect.assertions(5);
-        const user = userEvent.setup();
+    // assert no tooltip on screen
+    const contentBeforeHover = screen.queryByText('Content');
+    expect(contentBeforeHover).not.toBeInTheDocument();
 
-        render(
-          <Tooltip ref={ref} isDescription triggerComponent={<button>Hover Me!</button>}>
-            <p>Content</p>
-          </Tooltip>
-        );
+    // after hover, tooltip should be shown
+    await user.hover(screen.getByRole('button', { name: /hover me!/i }));
+    const content = await screen.findByText('Content');
+    expect(content).toBeVisible();
 
-        checkRef(screen.getByRole('button', { name: /hover me!/i }));
+    // after unhover, tooltip should be hidden again
+    await user.unhover(screen.getByRole('button', { name: /hover me!/i }));
 
-        // assert no tooltip on screen
-        const contentBeforeHover = screen.queryByText('Content');
-        expect(contentBeforeHover).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('Content')).not.toBeInTheDocument();
+    });
+  });
 
-        // after hover, tooltip should be shown
-        await user.hover(screen.getByRole('button', { name: /hover me!/i }));
-        const content = await screen.findByText('Content');
-        expect(content).toBeVisible();
+  it('should show Tooltip on focusin', async () => {
+    expect.assertions(4);
+    const user = userEvent.setup();
 
-        // after unhover, tooltip should be hidden again
-        await user.unhover(screen.getByRole('button', { name: /hover me!/i }));
+    render(
+      <Tooltip triggerComponent={<button>Focus Me!</button>}>
+        <p>Content</p>
+      </Tooltip>
+    );
 
-        await waitFor(() => {
-          expect(screen.queryByText('Content')).not.toBeInTheDocument();
-        });
-      });
+    // assert no tooltip on screen
+    const contentBeforeHover = screen.queryByText('Content');
+    expect(contentBeforeHover).not.toBeInTheDocument();
 
-      it('should show Tooltip on focusin', async () => {
-        expect.assertions(5);
-        const user = userEvent.setup();
+    // after tabbing to it, tooltip should be shown
+    await user.tab();
+    const content = await screen.findByText('Content');
+    expect(content).toBeVisible();
 
-        render(
-          <Tooltip ref={ref} triggerComponent={<button>Focus Me!</button>}>
-            <p>Content</p>
-          </Tooltip>
-        );
+    // after tabbing away, tooltip should be hidden again
+    await user.tab();
+    await waitFor(() => {
+      expect(screen.queryByText('Content')).not.toBeInTheDocument();
+    });
+  });
 
-        checkRef(screen.getByRole('button', { name: 'Focus Me!' }));
+  it('should hide Tooltip after pressing Esc by default', async () => {
+    expect.assertions(3);
+    const user = userEvent.setup();
 
-        // assert no tooltip on screen
-        const contentBeforeHover = screen.queryByText('Content');
-        expect(contentBeforeHover).not.toBeInTheDocument();
+    render(
+      <Tooltip triggerComponent={<button>Hover Me!</button>}>
+        <p>Content</p>
+      </Tooltip>
+    );
 
-        // after tabbing to it, tooltip should be shown
-        await user.tab();
-        const content = await screen.findByText('Content');
-        expect(content).toBeVisible();
+    // assert no tooltip on screen
+    const contentBeforeHover = screen.queryByText('Content');
+    expect(contentBeforeHover).not.toBeInTheDocument();
 
-        // after tabbing away, tooltip should be hidden again
-        await user.tab();
-        await waitFor(() => {
-          expect(screen.queryByText('Content')).not.toBeInTheDocument();
-        });
-      });
+    // after hover, tooltip should be shown
+    await openTooltipByHoveringOnTriggerAndCheckContent(user);
 
-      it('should hide Tooltip after pressing Esc by default', async () => {
-        expect.assertions(4);
-        const user = userEvent.setup();
+    await user.keyboard('{Escape}');
 
-        render(
-          <Tooltip ref={ref} triggerComponent={<button>Hover Me!</button>}>
-            <p>Content</p>
-          </Tooltip>
-        );
-
-        checkRef(screen.getByRole('button', { name: 'Hover Me!' }));
-
-        // assert no tooltip on screen
-        const contentBeforeHover = screen.queryByText('Content');
-        expect(contentBeforeHover).not.toBeInTheDocument();
-
-        // after hover, tooltip should be shown
-        await openTooltipByHoveringOnTriggerAndCheckContent(user);
-
-        await user.keyboard('{Escape}');
-
-        // content should be hidden
-        await waitFor(() => {
-          expect(screen.queryByText('Content')).not.toBeInTheDocument();
-        });
-      });
+    // content should be hidden
+    await waitFor(() => {
+      expect(screen.queryByText('Content')).not.toBeInTheDocument();
     });
   });
 });
