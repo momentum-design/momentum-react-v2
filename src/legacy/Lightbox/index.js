@@ -208,7 +208,7 @@ class Lightbox extends React.Component {
         } else {
           body = (
             <img
-              alt=""
+              alt={name}
               className={
                 `md-lightbox__thumbnail` +
                 `${(!!page.decrypting && ` md-lightbox__thumbnail--decrypting`) || ''}`
@@ -287,7 +287,7 @@ class Lightbox extends React.Component {
           /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
           viewport = (
             <img
-              alt=""
+              alt={name}
               className={
                 'md-lightbox__viewport-image' + `${(imgClassName && ` ${imgClassName}`) || ''}`
               }
@@ -311,7 +311,7 @@ class Lightbox extends React.Component {
           newWidth = dimensions.width * zoom;
           viewport = (
             <img
-              alt=""
+              alt={name}
               className={
                 'md-lightbox__viewport-image' + `${(imgClassName && ` ${imgClassName}`) || ''}`
               }
