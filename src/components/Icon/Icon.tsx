@@ -81,7 +81,9 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   const { inheritedColors, styleColors } = getColors();
 
-  const accessibleName = ariaLabel || title;
+  const accessibleName = ariaLabel || otherProps['aria-label'] || title;
+
+  delete otherProps['aria-label'];
 
   if (SvgIcon) {
     return (

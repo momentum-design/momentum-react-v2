@@ -25,6 +25,33 @@ exports[`<Icon /> snapshot should match snapshot 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> snapshot should match snapshot with aria-label 1`] = `
+<Icon
+  aria-label="This participant is muted"
+  name="draft-indicator-bold"
+>
+  <div
+    aria-hidden="false"
+    aria-label="This participant is muted"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      className=""
+      data-autoscale={false}
+      data-scale={32}
+      data-test="draft-indicator-bold"
+      fill="currentColor"
+      height="100%"
+      style={Object {}}
+      viewBox="0, 0, 32, 32"
+      width="100%"
+    />
+  </div>
+</Icon>
+`;
+
 exports[`<Icon /> snapshot should match snapshot with ariaLabel 1`] = `
 <Icon
   ariaLabel="This participant is muted"

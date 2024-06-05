@@ -66,6 +66,16 @@ describe('<Icon />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with aria-label', async () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'This participant is muted';
+
+      container = await mountAndWait(<Icon name="draft-indicator-bold" aria-label={ariaLabel} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with scale', async () => {
       expect.assertions(1);
 
@@ -200,13 +210,27 @@ describe('<Icon />', () => {
       expect(element.getAttribute('title')).toBe(title);
     });
 
-    it('should have ariaLabel when ariaLabel is provided', async () => {
+    it('should have aria-label when ariaLabel is provided', async () => {
       expect.assertions(2);
 
       const ariaLabel = 'This participant is muted';
 
       const wrapper = await mountAndWait(
         <Icon name="draft-indicator-bold" ariaLabel={ariaLabel} />
+      );
+      const element = wrapper.find(Icon).getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+      expect(element.getAttribute('aria-hidden')).toBe('false');
+    });
+
+    it('should have aria-label when aria-label is provided', async () => {
+      expect.assertions(2);
+
+      const ariaLabel = 'This participant is muted';
+
+      const wrapper = await mountAndWait(
+        <Icon name="draft-indicator-bold" aria-label={ariaLabel} />
       );
       const element = wrapper.find(Icon).getDOMNode();
 
@@ -231,40 +255,79 @@ describe('<Icon />', () => {
 
     it.each([
       {
-        title: 'fake title',
-        ariaLabel: 'fake aria label',
+        props: {
+          title: undefined,
+          ariaLabel: 'fake aria label',
+          'aria-label': 'fake-aria-label',
+        },
         expectedAriaLabel: 'fake aria label',
         expectedAriaHidden: 'false',
       },
       {
-        title: 'fake title',
-        ariaLabel: undefined,
+        props: {
+          title: 'fake title',
+          ariaLabel: undefined,
+          'aria-label': 'fake aria-label',
+        },
+        expectedAriaLabel: 'fake aria-label',
+        expectedAriaHidden: 'false',
+      },
+      {
+        props: {
+          title: 'fake title',
+          ariaLabel: 'fake aria label',
+          'aria-label': undefined,
+        },
+        expectedAriaLabel: 'fake aria label',
+        expectedAriaHidden: 'false',
+      },
+      {
+        props: {
+          title: undefined,
+          ariaLabel: 'fake aria label',
+          'aria-label': undefined,
+        },
+        expectedAriaLabel: 'fake aria label',
+        expectedAriaHidden: 'false',
+      },
+      {
+        props: {
+          title: 'fake title',
+          ariaLabel: undefined,
+          'aria-label': undefined,
+        },
         expectedAriaLabel: 'fake title',
         expectedAriaHidden: 'false',
       },
       {
-        title: undefined,
-        ariaLabel: 'fake aria label',
-        expectedAriaLabel: 'fake aria label',
+        props: {
+          title: undefined,
+          ariaLabel: undefined,
+          'aria-label': 'fake aria-label',
+        },
+        expectedAriaLabel: 'fake aria-label',
         expectedAriaHidden: 'false',
       },
       {
-        title: undefined,
-        ariaLabel: undefined,
+        props: {
+          title: undefined,
+          ariaLabel: undefined,
+          'aria-label': undefined,
+        },
         expectedAriaLabel: undefined,
         expectedAriaHidden: 'true',
       },
     ])(
       'should pass title and ariaLabel prop when %s',
-      async ({ title, ariaLabel, expectedAriaHidden, expectedAriaLabel }) => {
+      async ({ props, expectedAriaHidden, expectedAriaLabel }) => {
         const wrapper = await mountAndWait(
-          <Icon name={'accessibility'} title={title} id={'fake-id'} ariaLabel={ariaLabel} />
+          <Icon name={'accessibility'} id={'fake-id'} {...props} />
         );
         const icon = wrapper.find('svg').getDOMNode();
         const div = wrapper.find('div').filter({ id: 'fake-id' });
 
         expect(div.props().className).toBe('md-icon-wrapper md-icon-auto-scales md-icon-scales');
-        expect(div.props().title).toBe(title);
+        expect(div.props().title).toBe(props.title);
         expect(div.props().role).toBe('img');
         expect(div.props()['aria-label']).toBe(expectedAriaLabel);
         expect(div.props()['aria-hidden']).toBe(expectedAriaHidden);
