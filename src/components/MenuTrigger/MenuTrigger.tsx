@@ -39,11 +39,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
 
   const menuTriggerType = triggerComponent.props?.['aria-haspopup'] || 'menu';
 
-  const { menuTriggerProps, menuProps } = useMenuTrigger(
-    { type: menuTriggerType },
-    state,
-    buttonRef
-  );
+  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: menuTriggerType }, state, buttonRef);
 
   menuTriggerProps['aria-haspopup'] = menuTriggerProps['aria-haspopup'] || menuTriggerType;
 
