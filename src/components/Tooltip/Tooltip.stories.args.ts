@@ -16,6 +16,18 @@ const tooltipArgTypes = {
       },
     },
   },
+  isToggletip: {
+    description: `Determines, whether the tooltip opened with focus/mouseover or click`,
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.IS_TOGGLETIP,
+      },
+    },
+  },
   placement: {
     description: `Placement of the Tooltip relative to the trigger component`,
     ...popoverArgTypes['placement'],

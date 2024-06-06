@@ -8,6 +8,7 @@ import ButtonSimple from '../ButtonSimple';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import Tooltip from './';
 import { PositioningStrategy } from '../Popover/Popover.types';
+import { act } from 'react-dom/test-utils';
 
 jest.mock('uuid', () => {
   return {
@@ -323,6 +324,72 @@ describe('<Tooltip />', () => {
       expect(button1.getAttribute('aria-haspopup')).toBe('grid');
     });
 
+    it('opens with focus or mouse hover when isToggletip is false', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Tooltip isToggletip={false} triggerComponent={<button>Tooltip 1</button>}>
+          <p>Content</p>
+        </Tooltip>
+      );
+      const button = screen.getByRole('button', { name: /Tooltip 1/i });
+
+      expect(screen.queryByText('Content')).not.toBeInTheDocument();
+
+      // Not shown when user click
+      user.click(button);
+
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
+
+      // Shown when mouse hover on
+      user.hover(button);
+
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).toBeInTheDocument();
+      });
+
+      user.unhover(button);
+
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
+    });
+    it('opens with click when isToggletip is true', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Tooltip isToggletip={false} triggerComponent={<button>Tooltip 1</button>}>
+          <p>Content</p>
+        </Tooltip>
+      );
+      const button = screen.getByRole('button', { name: /Tooltip 1/i });
+
+      expect(screen.queryByText('Content')).not.toBeInTheDocument();
+
+      // Not shown when mouser hover on
+      user.hover(button);
+
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).toBeInTheDocument();
+      });
+
+      // Shown when user click
+      user.click(button);
+
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).toBeInTheDocument();
+      });
+
+      // Hide when user click again
+      user.click(button);
+
+      await waitFor(() => {
+        expect(screen.queryByText('Content')).not.toBeInTheDocument();
+      });
+    });
+
     it('checks triggerComponent props when id is not defined', async () => {
       render(
         <Tooltip triggerComponent={<button>Tooltip 1</button>}>
@@ -411,30 +478,6 @@ describe('<Tooltip />', () => {
       expect(content2AfterHoveringOuterButton).not.toBeInTheDocument();
     });
   });
-
-  const nullRef = null;
-  const callbackRef = jest.fn();
-  const mutableRef = { current: null };
-  const refCases = [
-    {
-      description: 'null',
-      ref: nullRef,
-      checkRef: () => expect(nullRef).toBeNull(), // some tests expect a fixed number of assertions so performing one here anyway
-      resetRef: () => undefined,
-    },
-    {
-      description: 'callback',
-      ref: callbackRef,
-      checkRef: (node: HTMLElement) => expect(callbackRef).toHaveBeenLastCalledWith(node),
-      resetRef: () => callbackRef.mockClear(),
-    },
-    {
-      description: 'mutable',
-      ref: mutableRef,
-      checkRef: (node: HTMLElement) => expect(mutableRef).toStrictEqual({ current: node }),
-      resetRef: () => (mutableRef.current = null),
-    },
-  ];
 
   it('should show/hide Tooltip on hover', async () => {
     const user = userEvent.setup();

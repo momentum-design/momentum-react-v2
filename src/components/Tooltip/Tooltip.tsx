@@ -3,9 +3,23 @@ import Popover, { PopoverInstance } from '../Popover';
 import { Props } from './Tooltip.types';
 import { DEFAULTS } from './Tooltip.constants';
 
+/**
+ * Tooltip/Toggletip component
+ *
+ * Shows a non-interactable popover component with `tooltip` role, and update the aria label/description of the trigger component
+ *
+ * @see [WCAG - Tooltip pattern]{@link https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/}
+ * @see [Tooltips & Toggletips]{@link https://inclusive-components.design/tooltips-toggletips/}
+ */
 const Tooltip = forwardRef(
   (
-    { isDescription = DEFAULTS.IS_DESCRIPTION, triggerComponent, children, ...otherProps }: Props,
+    {
+      isDescription = DEFAULTS.IS_DESCRIPTION,
+      isToggletip = DEFAULTS.IS_TOGGLETIP,
+      triggerComponent,
+      children,
+      ...otherProps
+    }: Props,
     ref: ForwardedRef<HTMLElement>
   ) => {
     // Update aria props manually, because
@@ -23,11 +37,13 @@ const Tooltip = forwardRef(
       [isDescription]
     );
 
+    const trigger = isToggletip ? 'click' : 'mouseenter focus';
+
     return (
       <Popover
         ref={ref}
         interactive={false}
-        trigger="mouseenter focus"
+        trigger={trigger}
         triggerComponent={triggerComponent}
         showArrow
         addBackdrop={false}
