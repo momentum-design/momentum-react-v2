@@ -10,8 +10,10 @@ import ButtonSimple from '../ButtonSimple';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Tooltip.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
+import Icon from '../Icon';
 import Flex from '../Flex';
 import Popover from '../Popover';
+import ButtonCircle from '../ButtonCircle';
 
 export default {
   title: 'Momentum UI/Tooltip',
@@ -37,6 +39,30 @@ Example.args = {
   isDescription: true,
   triggerComponent: (
     <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Hover me!</ButtonSimple>
+  ),
+};
+
+const Toggletip = Template<TooltipProps>(Tooltip).bind({});
+
+Toggletip.argTypes = { ...argTypes };
+
+Toggletip.args = {
+  placement: PLACEMENTS.AUTO,
+  variant: 'small',
+  color: COLORS.PRIMARY,
+  delay: [0, 0],
+  children: <p>Toggletip</p>,
+  isDescription: true,
+  isToggletip: true,
+  triggerComponent: (
+    <ButtonCircle
+      ghost
+      size={64}
+      aria-label="About toggletip"
+      style={{ margin: '10rem auto', display: 'flex' }}
+    >
+      <Icon name="info-badge" weight="filled" scale={32} />
+    </ButtonCircle>
   ),
 };
 
@@ -70,7 +96,7 @@ Common.parameters = {
       color: COLORS.PRIMARY,
     },
     {
-      children: <p>Description tooltip, SECONDARY color, variant medium, showDelay 500ms</p>,
+      children: <p>Description toggletip, SECONDARY color, variant medium, showDelay 500ms</p>,
       triggerComponent: (
         <ButtonSimple>
           Hover me for description! <br /> With delay
@@ -80,6 +106,7 @@ Common.parameters = {
       delay: [500],
       variant: 'medium',
       color: COLORS.SECONDARY,
+      isToggletip: true,
     },
   ],
 };
@@ -130,4 +157,4 @@ MultiplePopovers.args = {
   children: 'Popover content on click',
 };
 
-export { Example, Common, Offset, MultiplePopovers };
+export { Example, Toggletip, Common, Offset, MultiplePopovers };
