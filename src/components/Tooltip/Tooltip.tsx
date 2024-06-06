@@ -24,7 +24,7 @@ const Tooltip = forwardRef(
   ) => {
     // Update aria props manually, because
     // "The `aria` attribute is reserved for future use in React."
-    const updateInstance = useCallback(
+    const setInstance = useCallback(
       (popoverInstance: PopoverInstance | undefined) => {
         popoverInstance?.setProps({
           // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
@@ -33,8 +33,9 @@ const Tooltip = forwardRef(
             content: isDescription ? 'describedby' : 'labelledby',
           },
         });
+        otherProps?.setInstance?.(popoverInstance);
       },
-      [isDescription]
+      [isDescription, otherProps?.setInstance]
     );
 
     const trigger = isToggletip ? 'click' : 'mouseenter focus';
@@ -47,9 +48,9 @@ const Tooltip = forwardRef(
         triggerComponent={triggerComponent}
         showArrow
         addBackdrop={false}
-        setInstance={updateInstance}
         role="tooltip"
         {...otherProps}
+        setInstance={setInstance}
       >
         {children}
       </Popover>
