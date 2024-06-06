@@ -324,7 +324,7 @@ describe('<Tooltip />', () => {
       expect(button1.getAttribute('aria-haspopup')).toBe('grid');
     });
 
-    it('opens with focus or mouse hover when isToggletip is false', async () => {
+    it('opens with mouse hover when isToggletip is false', async () => {
       const user = userEvent.setup();
 
       render(
