@@ -286,6 +286,44 @@ describe('<Popover />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with aria-label', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover
+          aria-label="test-aria-label"
+          interactive={true}
+          triggerComponent={<button>Click Me!</button>}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with zIndex', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover zIndex={9998} triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -349,6 +387,47 @@ describe('<Popover />', () => {
       );
       const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
       expect(content.parentElement.getAttribute('aria-labelledby')).toBe(labelId);
+      expect(content.parentElement.getAttribute('aria-label')).toEqual(null);
+    });
+
+    it('uses aria-label from props instead adding aria-labelledby if present', async () => {
+      const user = userEvent.setup();
+      const id = 'example-id';
+      const label = 'label string';
+
+      render(
+        <Popover
+          aria-label={label}
+          triggerComponent={<button id={id}>Click Me!</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe(null);
+      expect(content.parentElement.getAttribute('aria-label')).toEqual(label);
+    });
+
+    it('uses aria-label and aria-labelledby from props if present (should not happen)', async () => {
+      const user = userEvent.setup();
+      const id = 'example-id';
+      const labelId = 'label-id';
+      const label = 'label string';
+
+      render(
+        <Popover
+          aria-labelledby={labelId}
+          aria-label={label}
+          triggerComponent={<button id={id}>Click Me!</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe(labelId);
+      expect(content.parentElement.getAttribute('aria-label')).toEqual(label);
     });
 
     it('has aria-modal false when non interactive', async () => {
@@ -467,6 +546,33 @@ describe('<Popover />', () => {
       render(
         <Popover
           aria-labelledby="dummy-id"
+          triggerComponent={<button id={id}>Popover 1</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(id);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+    });
+
+    it('triggerComponent id is not set when aria-label is passed in (interactive and triggerComponent id undefined)', async () => {
+      render(
+        <Popover aria-label="some label" triggerComponent={<button>Popover 1</button>} interactive>
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(null);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+    });
+
+    it('triggerComponent id is not set when aria-label is passed in (interactive and triggerComponent id defined)', async () => {
+      const id = 'example-id';
+      render(
+        <Popover
+          aria-label="some label"
           triggerComponent={<button id={id}>Popover 1</button>}
           interactive
         >
@@ -676,6 +782,30 @@ describe('<Popover />', () => {
       // assert no backdrop has been rendered
       const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
       expect(backdrop).not.toBeInTheDocument();
+    });
+
+    it('tippy popover should have default z-index of 9999 if not provided', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Popover triggerComponent={<button>Click Me!</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.parentElement.getAttribute('style')).toContain('z-index: 9999');
+    });
+
+    it('tippy popover should have z-index set if provided', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Popover triggerComponent={<button>Click Me!</button>} zIndex={9998}>
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.parentElement.getAttribute('style')).toContain('z-index: 9998');
     });
   });
 

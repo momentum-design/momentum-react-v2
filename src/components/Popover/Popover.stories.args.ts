@@ -153,9 +153,34 @@ const popoverArgTypes = {
       },
     },
   },
+  zIndex: {
+    description: `The z-index of the tippy popover. If not supplied, tippy will default to 9999`,
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   'aria-labelledby': {
     description:
       'aria-labelledby for an interactive popover only, defaults to the trigger component id',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-label': {
+    description:
+      'The aria-label for interactive popover. If not supplied, Popover will be labelled by the triggerComponent',
     control: { type: 'text' },
     table: {
       type: {

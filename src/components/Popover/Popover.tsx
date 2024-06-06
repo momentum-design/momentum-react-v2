@@ -66,6 +66,8 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     appendTo = DEFAULTS.APPEND_TO,
     continuePropagationOnTrigger,
     'aria-labelledby': providedAriaLabelledby,
+    zIndex,
+    'aria-label': ariaLabel,
     ...rest
   } = props;
 
@@ -84,7 +86,8 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
 
   const modalConditionalProps = {
     ...(interactive && {
-      'aria-labelledby': ariaLabelledby,
+      ...((providedAriaLabelledby || !ariaLabel) && { 'aria-labelledby': ariaLabelledby }),
+      ...(ariaLabel && { 'aria-label': ariaLabel }),
       focusLockProps: { restoreFocus: focusBackOnTrigger, autoFocus },
     }),
   };
@@ -123,7 +126,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   if (interactive) {
     triggerComponentCommonProps['aria-haspopup'] =
       triggerComponent?.props?.['aria-haspopup'] || 'dialog';
-    if (!providedAriaLabelledby) {
+    if (!providedAriaLabelledby && !ariaLabel) {
       triggerComponentCommonProps['id'] = ariaLabelledby;
     }
   }
@@ -235,6 +238,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         onHidden?.(instance);
       }}
       setInstance={popoverSetInstance}
+      zIndex={zIndex}
     >
       {clonedTriggerComponent}
     </LazyTippy>
