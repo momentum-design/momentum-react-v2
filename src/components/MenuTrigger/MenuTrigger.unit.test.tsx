@@ -5,7 +5,7 @@ import MenuTrigger, { MENU_TRIGGER_CONSTANTS as CONSTANTS } from './';
 import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { mountAndWait } from '../../../test/utils';
-import { ModalContainer } from '..';
+import { ModalContainer, Popover } from '..';
 import { ROUNDS } from '../ModalContainer/ModalContainer.constants';
 
 import { render, screen, waitFor } from '@testing-library/react';
@@ -109,6 +109,16 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const placement = 'top';
 
       const container = await mountAndWait(<MenuTrigger {...defaultProps} placement={placement} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with zIndex', async () => {
+      expect.assertions(1);
+
+      const zIndex = 9998;
+
+      const container = await mountAndWait(<MenuTrigger {...defaultProps} zIndex={zIndex} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -220,6 +230,18 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(ModalContainer);
 
       expect(element.prop('placement')).toBe(placement);
+    });
+
+    it('should have provided zIndex to Popover when zIndex is provided', async () => {
+      expect.assertions(1);
+
+      const zIndex = 9998;
+
+      const element = (await mountAndWait(<MenuTrigger {...defaultProps} zIndex={zIndex} />))
+        .find(MenuTrigger)
+        .find(Popover);
+
+      expect(element.prop('zIndex')).toBe(zIndex);
     });
   });
 });
