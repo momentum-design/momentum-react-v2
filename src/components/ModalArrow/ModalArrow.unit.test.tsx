@@ -25,7 +25,7 @@ describe('<ModalArrow />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with aira-hidden', () => {
+    it('should match snapshot with aria-hidden', () => {
       expect.assertions(1);
 
       const ariaHidden = 'true';

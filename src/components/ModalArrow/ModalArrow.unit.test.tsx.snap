@@ -31,7 +31,7 @@ exports[`<ModalArrow /> snapshot should match snapshot 1`] = `
 </ModalArrow>
 `;
 
-exports[`<ModalArrow /> snapshot should match snapshot with aira-hidden 1`] = `
+exports[`<ModalArrow /> snapshot should match snapshot with aria-hidden 1`] = `
 <ModalArrow
   aria-hidden="true"
   placement="bottom"
