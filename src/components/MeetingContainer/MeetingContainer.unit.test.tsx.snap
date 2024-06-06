@@ -38,11 +38,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -151,11 +146,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -271,11 +261,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -412,11 +397,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -704,11 +684,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -853,11 +828,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -1240,11 +1210,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -1373,11 +1338,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -1616,11 +1576,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -1728,11 +1683,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -1839,11 +1789,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -1956,11 +1901,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -2079,11 +2019,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -2257,11 +2192,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
             }
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
@@ -2375,11 +2305,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
             onTouchStart={[Function]}
             type="button"
           >
-            <CardStatus>
-              <div
-                className="md-card-status-wrapper"
-              />
-            </CardStatus>
             <div
               className="md-meeting-container-container"
             >
