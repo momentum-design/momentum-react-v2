@@ -58,7 +58,6 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       data-level={messageType}
       data-focus={isFocused}
       data-disabled={isDisabled}
-      id={id}
       style={style}
       onClick={handleClick}
       className={classnames(STYLE.wrapper, className)}
