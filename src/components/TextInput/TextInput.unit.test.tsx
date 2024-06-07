@@ -109,6 +109,17 @@ describe('<TextInput/>', () => {
       expect(element.classList.contains(className)).toBe(true);
     });
 
+    it('should have provided id when id is provided', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id-2';
+
+      const element = (await mountAndWait(<TextInput aria-label="text-input" id={id} />))
+        .find(TextInput);
+      
+      expect(element.props()).toMatchObject({ 'aria-label': 'text-input', id: 'example-id-2' });
+    });
+
     it('should have provided style when style is provided', async () => {
       expect.assertions(1);
 
