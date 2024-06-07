@@ -233,7 +233,6 @@ exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
       className="md-text-input-wrapper"
       data-focus={false}
       data-level="none"
-      id="example-id"
       onClick={[Function]}
     >
       <div
