@@ -230,19 +230,26 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
             <Popover
               addBackdrop={false}
               aria-haspopup="dialog"
+              boundary="scrollParent"
+              color="primary"
               id="1"
               interactive={false}
+              offsetDistance={5}
+              offsetSkidding={0}
               onHide={[Function]}
               onShow={[Function]}
+              placement="auto"
               role="tooltip"
               setInstance={[Function]}
               showArrow={true}
+              strategy="absolute"
               trigger="mouseenter focus"
               triggerComponent={
                 <button>
                   Example button
                 </button>
               }
+              variant="small"
             >
               <LazyTippy
                 animation={false}
@@ -681,20 +688,26 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
             <Popover
               addBackdrop={false}
               aria-haspopup="dialog"
+              boundary="scrollParent"
+              color="primary"
               id="1"
               interactive={false}
+              offsetDistance={5}
+              offsetSkidding={0}
               onHide={[Function]}
               onShow={[Function]}
               placement="bottom"
               role="tooltip"
               setInstance={[Function]}
               showArrow={true}
+              strategy="absolute"
               trigger="mouseenter focus"
               triggerComponent={
                 <button>
                   Example button
                 </button>
               }
+              variant="small"
             >
               <LazyTippy
                 animation={false}
@@ -1133,20 +1146,26 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
             <Popover
               addBackdrop={false}
               aria-haspopup="dialog"
+              boundary="scrollParent"
+              color="primary"
               id="1"
               interactive={false}
+              offsetDistance={5}
+              offsetSkidding={0}
               onHide={[Function]}
               onShow={[Function]}
               placement="top"
               role="tooltip"
               setInstance={[Function]}
               showArrow={true}
+              strategy="absolute"
               trigger="mouseenter focus"
               triggerComponent={
                 <button>
                   Example button
                 </button>
               }
+              variant="small"
             >
               <LazyTippy
                 animation={false}

@@ -34,9 +34,4 @@ export interface Props
    * When it is false it passes aria-labelledby prop to the trigger component, otherwise pass aria-describedby
    */
   isDescription?: boolean;
-
-  /**
-   * When it is true the tooltip can be opened/closed with click event, otherwise it will be activated with mouseenter/focus
-   */
-  isToggletip?: boolean;
 }

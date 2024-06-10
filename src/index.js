@@ -185,4 +185,5 @@ export {
   RadioSimpleGroup,
   Tooltip as TooltipNext,
   TooltipPopoverCombo,
+  Toggletip,
 } from './components';

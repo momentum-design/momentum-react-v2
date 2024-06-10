@@ -2,13 +2,13 @@ import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import Documentation from './Tooltip.stories.docs.mdx';
+import Documentation from './Toggletip.stories.docs.mdx';
+import Toggletip, { ToggletipProps } from './';
 import Text from '../Text';
-import Tooltip, { TooltipProps } from './';
 import ButtonPill from '../ButtonPill';
 import ButtonSimple from '../ButtonSimple';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
-import argTypes from './Tooltip.stories.args';
+import argTypes from './Toggletip.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Icon from '../Icon';
 import Flex from '../Flex';
@@ -16,8 +16,8 @@ import Popover from '../Popover';
 import ButtonCircle from '../ButtonCircle';
 
 export default {
-  title: 'Momentum UI/Tooltip',
-  component: Tooltip,
+  title: 'Momentum UI/Toggletip',
+  component: Toggletip,
   parameters: {
     expanded: true,
     docs: {
@@ -26,7 +26,7 @@ export default {
   },
 };
 
-const Example = Template<TooltipProps>(Tooltip).bind({});
+const Example = Template<ToggletipProps>(Toggletip).bind({});
 
 Example.argTypes = { ...argTypes };
 
@@ -35,14 +35,20 @@ Example.args = {
   variant: 'small',
   color: COLORS.PRIMARY,
   delay: [0, 0],
-  children: <p>Tooltip</p>,
-  isDescription: true,
+  children: <p>Toggletip</p>,
   triggerComponent: (
-    <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Hover me!</ButtonSimple>
+    <ButtonCircle
+      ghost
+      size={64}
+      aria-label="About toggletip"
+      style={{ margin: '10rem auto', display: 'flex' }}
+    >
+      <Icon name="info-badge" weight="filled" scale={32} />
+    </ButtonCircle>
   ),
 };
 
-const Common = MultiTemplate<TooltipProps>(Tooltip).bind({});
+const Common = MultiTemplate<ToggletipProps>(Toggletip).bind({});
 
 Common.argTypes = { ...argTypes };
 
@@ -50,32 +56,28 @@ Common.args = {};
 Common.parameters = {
   variants: [
     {
-      children: <p>Label tooltip TERTIARY color, variant medium</p>,
+      children: <p>Label toggletip TERTIARY color, variant medium</p>,
       triggerComponent: (
-        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-          Hover me for label!
-        </ButtonSimple>
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonSimple>
       ),
       placement: PLACEMENTS.RIGHT,
       variant: 'medium',
       color: COLORS.TERTIARY,
     },
     {
-      children: <p>Description tooltip, PRIMARY color, variant small</p>,
+      children: <p>Toggletip, PRIMARY color, variant small</p>,
       triggerComponent: (
-        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-          Hover me for description!
-        </ButtonSimple>
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonSimple>
       ),
       placement: PLACEMENTS.BOTTOM_START,
       variant: 'small',
       color: COLORS.PRIMARY,
     },
     {
-      children: <p>Description tooltip, SECONDARY color, variant medium, showDelay 500ms</p>,
+      children: <p>Toggletip, SECONDARY color, variant medium, showDelay 500ms</p>,
       triggerComponent: (
         <ButtonSimple>
-          Hover me for description! <br /> With delay
+          Click me! <br /> Open with delay
         </ButtonSimple>
       ),
       placement: PLACEMENTS.LEFT_START,
@@ -86,7 +88,7 @@ Common.parameters = {
   ],
 };
 
-const Offset = Template<TooltipProps>(Tooltip).bind({});
+const Offset = Template<ToggletipProps>(Toggletip).bind({});
 
 Offset.argTypes = { ...argTypes };
 
@@ -98,7 +100,7 @@ Offset.args = {
   offsetDistance: -150,
   triggerComponent: (
     <ButtonPill style={{ margin: '10rem auto', display: 'flex', width: '30rem' }}>
-      Hover me!
+      Click me!
     </ButtonPill>
   ),
   children: (
@@ -108,19 +110,16 @@ Offset.args = {
   ),
 };
 
-const MultiplePopovers = Template<TooltipProps>((args: TooltipProps) => {
+const MultiplePopovers = Template<ToggletipProps>((args: ToggletipProps) => {
   const triggerComponent = (
-    <Tooltip
+    <Toggletip
       placement={PLACEMENTS.BOTTOM}
-      isDescription
       triggerComponent={
-        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-          Hover or click me!
-        </ButtonSimple>
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonSimple>
       }
     >
-      Description tooltip on hover
-    </Tooltip>
+      Description toggletip on click
+    </Toggletip>
   );
   return <Popover {...args} triggerComponent={triggerComponent} />;
 }).bind({});

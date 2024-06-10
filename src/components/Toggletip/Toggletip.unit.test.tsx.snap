@@ -1,0 +1,1170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 1`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 2`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-10"
+      style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content 1
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 3`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-11"
+      style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content 2
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 4`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 5`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 6`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-12"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content 1
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 7`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-13"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content 2
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should display only one toggletip at all time 8`] = `
+<div>
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 1
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Toggletip 2
+    </span>
+  </button>
+  <div
+    role="status"
+  />
+  <button
+    class="md-button-simple-wrapper"
+    type="button"
+  >
+    <span>
+      Other button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-1"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with className 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with className 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-2"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="example-class md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with color 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with color 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-5"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="tertiary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="tertiary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with id 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with id 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-3"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        id="example-id"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-8"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-7"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and offsetDistance 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and offsetDistance 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-9"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-6"
+      style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with style 1`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  />
+</div>
+`;
+
+exports[`<Toggletip /> snapshot should match snapshot with style 2`] = `
+<div>
+  <button>
+    Click Me!
+  </button>
+  <div
+    role="status"
+  >
+    <div
+      data-tippy-root=""
+      id="tippy-4"
+      style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    >
+      <div
+        aria-modal="false"
+        class="md-modal-container-wrapper"
+        data-arrow-orientation="vertical"
+        data-color="primary"
+        data-elevation="3"
+        data-padded="true"
+        data-placement="top"
+        data-round="50"
+        role="generic"
+        style="color: pink;"
+      >
+        <p>
+          Content
+        </p>
+        <div
+          class="md-modal-container-arrow-wrapper"
+          data-popper-arrow="true"
+          id="arrow1"
+          style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+        >
+          <svg
+            aria-hidden="true"
+            class="md-modal-arrow-svg"
+            data-placement="top"
+            height="12"
+            viewBox="0 0 24 12"
+            width="24"
+            xmlns="http://www.w3.org/svg/2000"
+          >
+            <defs>
+              <clippath
+                id="modal-arrow-cut-stroke-top"
+              >
+                <path
+                  d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+                />
+              </clippath>
+            </defs>
+            <path
+              clip-path="url(#modal-arrow-cut-stroke-top)"
+              d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              data-color="primary"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
