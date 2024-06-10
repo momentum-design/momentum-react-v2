@@ -1,23 +1,9 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { popoverArgTypes } from '../Popover/Popover.stories.args';
 
-import { DEFAULTS } from './Tooltip.constants';
-
-const tooltipArgTypes = {
-  isDescription: {
-    description: `Determines, whether the tooltip is the description or the label of the trigger component`,
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: DEFAULTS.IS_DESCRIPTION,
-      },
-    },
-  },
+const toggletipArgTypes = {
   placement: {
-    description: `Placement of the Tooltip relative to the trigger component`,
+    description: `Placement of the Toggletip relative to the trigger component`,
     ...popoverArgTypes['placement'],
   },
   offsetSkidding: {
@@ -29,7 +15,7 @@ const tooltipArgTypes = {
     ...popoverArgTypes['offsetDistance'],
   },
   variant: {
-    description: `Variant of the Tooltip - can be either small or medium`,
+    description: `Variant of the Toggletip - can be either small or medium`,
     ...popoverArgTypes['variant'],
   },
   children: {
@@ -37,18 +23,18 @@ const tooltipArgTypes = {
     ...popoverArgTypes['children'],
   },
   color: {
-    description: 'What color to render this `<Tooltip />` as.',
+    description: 'What color to render this `<Toggletip />` as.',
     ...popoverArgTypes['color'],
   },
   boundary: {
-    description: 'The overflow boundary of the tooltip element.',
+    description: 'The overflow boundary of the toggletip element.',
     ...popoverArgTypes['boundary'],
   },
 };
 
-export { tooltipArgTypes };
+export { toggletipArgTypes };
 
 export default {
   ...commonStyles,
-  ...tooltipArgTypes,
+  ...toggletipArgTypes,
 };

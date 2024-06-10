@@ -63,18 +63,25 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     onClickOutside,
     firstFocusElement,
     autoFocus = DEFAULTS.AUTO_FOCUS,
+    appendTo = DEFAULTS.APPEND_TO,
     ...rest
   } = props;
 
-  const focusBackOnTrigger = focusBackOnTriggerFromProps ??
-    (interactive ? DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_INTERACTIVE : DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_NON_INTERACTIVE);
+  const focusBackOnTrigger =
+    focusBackOnTriggerFromProps ??
+    (interactive
+      ? DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_INTERACTIVE
+      : DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_NON_INTERACTIVE);
 
   const popoverInstance = React.useRef<PopoverInstance>(undefined);
 
   const triggerComponentId = triggerComponent.props?.id || uuidV4();
 
   const modalConditionalProps = {
-    ...(interactive && { 'aria-labelledby': triggerComponentId , focusLockProps: { restoreFocus: focusBackOnTrigger, autoFocus } }),
+    ...(interactive && {
+      'aria-labelledby': triggerComponentId,
+      focusLockProps: { restoreFocus: focusBackOnTrigger, autoFocus },
+    }),
   };
 
   // memoize arrow id to avoid memory leak (arrow will be different, but JS still tries to find old ones):
@@ -163,7 +170,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       /* add focusin automatically if only mouseenter is passed in as a trigger - this is for accessibility reasons */
       trigger={trigger === 'mouseenter' ? 'mouseenter focusin' : trigger}
       interactive={interactive}
-      appendTo="parent"
+      appendTo={appendTo}
       popperOptions={{
         modifiers: [
           {

@@ -71,4 +71,5 @@ export { default as AriaGroup } from './AriaGroup';
 export { default as RadioSimple } from './RadioSimple';
 export { default as RadioSimpleGroup } from './RadioSimpleGroup';
 export { default as Tooltip } from './Tooltip';
-export { default as TooltipPopoverCombo} from './TooltipPopoverCombo';
+export { default as TooltipPopoverCombo } from './TooltipPopoverCombo';
+export { default as Toggletip } from './Toggletip';

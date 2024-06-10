@@ -9,7 +9,7 @@ const BOUNDARIES = {
   VIEWPORT: 'viewport',
   WINDOW: 'window',
   PARENT: 'scrollParent',
-};
+} as const;
 
 const CLOSE_BUTTON_PLACEMENTS = {
   TOP_LEFT: 'top-left',
@@ -35,6 +35,7 @@ const DEFAULTS = {
   STRATEGY: 'absolute' as const,
   ADD_BACKDROP: true,
   ROLE: MODAL_CONTAINER_CONSTANTS.DEFAULTS.ROLE,
+  APPEND_TO: 'parent' as const,
 };
 
 const STYLE = {

@@ -142,14 +142,14 @@ const popoverArgTypes = {
     },
   },
   focusBackOnTrigger: {
-    description: `Determines wether the focus should return to the trigger element when the popover is closed`,
+    description: `Determines whether the focus should return to the trigger element when the popover is closed`,
     control: { type: 'boolean' },
     table: {
       type: {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT,
+        summary: DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_NON_INTERACTIVE,
       },
     },
   },
