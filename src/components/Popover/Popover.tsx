@@ -114,7 +114,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   }, [firstFocusElement]);
 
   const triggerComponentCommonProps = {
-    id: interactive ? triggerComponentId : triggerComponent.props?.id,
+    id: interactive ? triggerComponentId : triggerComponent.props?.id || id,
   };
 
   if (interactive) {
