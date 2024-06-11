@@ -356,6 +356,18 @@ describe('<Popover />', () => {
       expect(button1.getAttribute('aria-haspopup')).toBe(null);
     });
 
+    it('checks triggerComponent props when non interactive and parent has id', async () => {
+      const id = 'example-id';
+      render(
+        <Popover id={id} triggerComponent={<button>Popover 1</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(id);
+      expect(button1.getAttribute('aria-haspopup')).toBe(null);
+    });
+
     it('checks triggerComponent props when interactive and id is undefined', async () => {
       render(
         <Popover triggerComponent={<button>Popover 1</button>} interactive>
