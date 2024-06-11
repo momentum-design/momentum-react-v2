@@ -656,7 +656,9 @@ exports[`<Tooltip /> snapshot should match snapshot with color 2`] = `
 
 exports[`<Tooltip /> snapshot should match snapshot with id 1`] = `
 <div>
-  <button>
+  <button
+    id="example-id"
+  >
     Hover Me!
   </button>
 </div>
@@ -666,6 +668,7 @@ exports[`<Tooltip /> snapshot should match snapshot with id 2`] = `
 <div>
   <button
     aria-labelledby="tippy-3"
+    id="example-id"
   >
     Hover Me!
   </button>

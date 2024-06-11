@@ -414,7 +414,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                     render={[Function]}
                     trigger="mouseenter focus"
                   >
-                    <button>
+                    <button
+                      id="1"
+                    >
                       Example button
                     </button>
                     <Portal
@@ -872,7 +874,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                     render={[Function]}
                     trigger="mouseenter focus"
                   >
-                    <button>
+                    <button
+                      id="1"
+                    >
                       Example button
                     </button>
                     <Portal
@@ -1330,7 +1334,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                     render={[Function]}
                     trigger="mouseenter focus"
                   >
-                    <button>
+                    <button
+                      id="1"
+                    >
                       Example button
                     </button>
                     <Portal
