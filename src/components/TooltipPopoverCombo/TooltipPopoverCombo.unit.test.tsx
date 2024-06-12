@@ -19,7 +19,7 @@ jest.mock('uuid', () => {
 });
 
 describe('<TooltipPopoverCombo />', () => {
-  const triggerComponent = <button>Example button</button>;
+  const triggerComponent = <button id="test-id">Example button</button>;
   const tooltipContent = <Text>Example tooltip content</Text>;
   const popoverContent = <button>Example popover content button</button>;
 
@@ -76,7 +76,7 @@ describe('<TooltipPopoverCombo />', () => {
         setInstance: expect.any(Function),
         triggerComponent: triggerComponent,
         'aria-haspopup': 'dialog',
-        'id': '1',
+        'id': 'test-id',
       });
     });
 
@@ -114,7 +114,7 @@ describe('<TooltipPopoverCombo />', () => {
         setInstance: expect.any(Function),
         triggerComponent: triggerComponent,
         'aria-haspopup': 'dialog',
-        'id': '1',
+        'id': 'test-id',
         'placement': 'top',
       });
     });

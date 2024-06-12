@@ -1,10 +1,11 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
 
 import { Props } from './TooltipPopoverCombo.types';
 import Popover from '../Popover';
 import { TooltipPopoverComboProps } from '.';
 import Tooltip from '../Tooltip/Tooltip';
 import { PopoverInstance } from '../Popover/Popover.types';
+import { v4 as uuidV4 } from 'uuid';
 
 /**
  * The TooltipPopoverCombo component.
@@ -20,6 +21,10 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
   const [tooltipInstance, setTooltipInstance] = useState<PopoverInstance>();
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+
+  const triggerComponentId = useRef(triggerComponent.props?.id || uuidV4());
+
+  const clonedTriggerComponent = React.cloneElement(triggerComponent, {id: triggerComponentId.current});
 
   // Modified tooltipSetInstance to call both setInstance and updateInstance
   const setMergedTooltipInstances = useCallback(
@@ -64,14 +69,15 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
       interactive
       triggerComponent={
         <Tooltip    
-        triggerComponent={triggerComponent}              
-        {...otherTooltipProps}
-        onHide={handleOnHideTooltip}
-        onShow={handleOnShowTooltip}
-        setInstance={setMergedTooltipInstances}        
-      >
-        {tooltipContent}
-      </Tooltip>
+          triggerComponent={clonedTriggerComponent}              
+          {...otherTooltipProps}
+          onHide={handleOnHideTooltip}
+          onShow={handleOnShowTooltip}
+          setInstance={setMergedTooltipInstances}
+          id={triggerComponentId.current}
+        >
+          {tooltipContent}
+        </Tooltip>
       }
       {...otherPopoverProps}
       onHide={handleOnHidePopover}
