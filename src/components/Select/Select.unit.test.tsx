@@ -124,7 +124,6 @@ describe('Select', () => {
       expect(container).toMatchSnapshot();
     });
 
-    // this one
     it('should match snapshot with listbox opened', async () => {
       expect.assertions(1);
 
