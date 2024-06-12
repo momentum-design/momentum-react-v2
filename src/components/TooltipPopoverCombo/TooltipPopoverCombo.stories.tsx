@@ -36,6 +36,7 @@ const Example: Story<TooltipPopoverComboProps> = () => {
         margin: '10rem auto', 
         display: 'flex'
       }}
+      id="storybook-id-example"
     >
       <Icon name='cancel' weight='bold' strokeColor="transparent" />
     </ButtonCircle>);

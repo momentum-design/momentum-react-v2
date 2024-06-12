@@ -21,10 +21,10 @@ export interface Props {
   /**
    * An object of Popover props to be passed through to the Popover component.
    */
-  otherPopoverProps?: Partial<PopoverProps>;
+  otherPopoverProps?: Partial<Omit<PopoverProps, 'id'>>;
 
   /**
    * An object of Tooltip props to be passed through to the Tooltip component.
    */
-  otherTooltipProps?: Partial<TooltipProps>;
+  otherTooltipProps?: Partial<Omit<TooltipProps, 'id'>>;
 }
