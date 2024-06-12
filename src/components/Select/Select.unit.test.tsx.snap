@@ -280,6 +280,7 @@ exports[`Select snapshot should match snapshot 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -481,6 +482,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -837,6 +839,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -1038,6 +1041,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -1283,6 +1287,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
       triggerRef={
         Object {
           "current": <button
+            aria-activedescendant="test-ID-option-$.0"
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
@@ -1394,6 +1399,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant="test-ID-option-$.0"
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
@@ -1595,6 +1601,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             trigger="manual"
           >
             <button
+              aria-activedescendant="test-ID-option-$.0"
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
@@ -2479,6 +2486,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -2680,6 +2688,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -3037,6 +3046,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -3238,6 +3248,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -3595,6 +3606,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -3796,6 +3808,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -4051,6 +4064,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-activedescendant="test-ID-option-$.1"
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
@@ -4162,6 +4176,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant="test-ID-option-$.1"
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
@@ -4363,6 +4378,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant="test-ID-option-$.1"
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
@@ -5250,6 +5266,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="example-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -5451,6 +5468,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="example-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -5573,6 +5591,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-expanded={false}
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
@@ -5773,6 +5792,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-expanded={false}
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
@@ -6018,6 +6038,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-activedescendant="test-ID-option-$.0"
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
@@ -6129,6 +6150,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant="test-ID-option-$.0"
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
@@ -6330,6 +6352,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant="test-ID-option-$.0"
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
@@ -7102,6 +7125,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-activedescendant="test-ID-option-$.0"
             aria-expanded="true"
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
@@ -7212,6 +7236,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant="test-ID-option-$.0"
           aria-expanded={true}
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
@@ -7412,6 +7437,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant="test-ID-option-$.0"
               aria-expanded={true}
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
@@ -8183,6 +8209,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       triggerRef={
         Object {
           "current": <button
+            aria-activedescendant="test-ID-option-$.0"
             aria-expanded="true"
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
@@ -8293,6 +8320,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant="test-ID-option-$.0"
           aria-expanded={true}
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
@@ -8493,6 +8521,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant="test-ID-option-$.0"
               aria-expanded={true}
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
@@ -9378,6 +9407,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -9581,6 +9611,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -9966,6 +9997,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -10170,6 +10202,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -10443,6 +10476,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       triggerRef={
         Object {
           "current": <button
+            aria-activedescendant="test-ID-option-$.0"
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
@@ -10557,6 +10591,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant="test-ID-option-$.0"
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
@@ -10761,6 +10796,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             trigger="manual"
           >
             <button
+              aria-activedescendant="test-ID-option-$.0"
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
@@ -11736,6 +11772,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
@@ -11937,6 +11974,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
@@ -12292,6 +12330,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
       trigger="manual"
       triggerComponent={
         <button
+          aria-activedescendant={null}
           aria-expanded={false}
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
@@ -12493,6 +12532,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             trigger="manual"
           >
             <button
+              aria-activedescendant={null}
               aria-expanded={false}
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"

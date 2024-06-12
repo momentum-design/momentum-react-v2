@@ -124,6 +124,7 @@ describe('Select', () => {
       expect(container).toMatchSnapshot();
     });
 
+    // this one
     it('should match snapshot with listbox opened', async () => {
       expect.assertions(1);
 
@@ -658,5 +659,39 @@ describe('Select', () => {
       // second item should be selected
       expect(screen.getByRole('combobox', { name: 'test' }).textContent).toBe('Item 2');
     });
+  });
+
+  it('should properly handle aria activedescendant when dropdown is expanded', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Select id="test-id" label="test">
+        <Item>Item 1</Item>
+        <Item>Item 2</Item>
+      </Select>
+    );
+
+    // list box shouldn't be shown initially
+    let listbox = screen.queryByRole('listbox');
+    expect(listbox).not.toBeInTheDocument();
+
+    let button = screen.getByRole('combobox', { name: 'test' });
+    button.focus();
+    expect(button).toHaveFocus();
+    expect(button).not.toHaveAttribute('aria-activedescendant');
+
+    await user.keyboard('{ArrowUp}');
+    // list box should be shown after focus and pressing space
+
+    button = screen.getByRole('combobox', { name: 'test' });
+    expect(button).toHaveAttribute('aria-activedescendant', 'test-ID-option-$.0');
+
+    listbox = screen.getByRole('listbox');
+    expect(listbox).toBeVisible();
+
+    await user.keyboard('{ArrowDown}');
+
+    button = screen.getByRole('combobox', { name: 'test' });
+    expect(button).toHaveAttribute('aria-activedescendant', 'test-ID-option-$.1');
   });
 });
