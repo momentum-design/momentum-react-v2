@@ -40,6 +40,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
             Example button
           </button>
         }
+        type="label"
       >
         <Text>
           Example tooltip content
@@ -236,10 +237,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                 Example button
               </button>
             }
+            type="label"
           >
             <Popover
               addBackdrop={false}
               aria-haspopup="dialog"
+              aria-hidden={false}
               boundary="scrollParent"
               color="primary"
               id="test-id"
@@ -257,6 +260,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
+                  aria-labelledby="test-ID"
                   id="test-id"
                 >
                   Example button
@@ -429,6 +433,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   >
                     <button
                       aria-haspopup="dialog"
+                      aria-labelledby="test-ID"
                       id="test-id"
                     >
                       Example button
@@ -448,6 +453,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                 </ForwardRef(TippyWrapper)>
               </LazyTippy>
             </Popover>
+            <div
+              className="md-tooltip-label"
+              id="test-ID"
+            >
+              <Text>
+                <p
+                  className="md-text-wrapper"
+                  data-type="body-primary"
+                >
+                  Example tooltip content
+                </p>
+              </Text>
+            </div>
           </Tooltip>
           <Portal
             containerInfo={
@@ -513,6 +531,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
             Example button
           </button>
         }
+        type="label"
       >
         <Text>
           Example tooltip content
@@ -710,10 +729,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                 Example button
               </button>
             }
+            type="label"
           >
             <Popover
               addBackdrop={false}
               aria-haspopup="dialog"
+              aria-hidden={false}
               boundary="scrollParent"
               color="primary"
               id="test-id"
@@ -731,6 +752,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
+                  aria-labelledby="test-ID"
                   id="test-id"
                 >
                   Example button
@@ -903,6 +925,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   >
                     <button
                       aria-haspopup="dialog"
+                      aria-labelledby="test-ID"
                       id="test-id"
                     >
                       Example button
@@ -922,6 +945,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                 </ForwardRef(TippyWrapper)>
               </LazyTippy>
             </Popover>
+            <div
+              className="md-tooltip-label"
+              id="test-ID"
+            >
+              <Text>
+                <p
+                  className="md-text-wrapper"
+                  data-type="body-primary"
+                >
+                  Example tooltip content
+                </p>
+              </Text>
+            </div>
           </Tooltip>
           <Portal
             containerInfo={
@@ -987,6 +1023,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
             Example button
           </button>
         }
+        type="label"
       >
         <Text>
           Example tooltip content
@@ -1184,10 +1221,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                 Example button
               </button>
             }
+            type="label"
           >
             <Popover
               addBackdrop={false}
               aria-haspopup="dialog"
+              aria-hidden={false}
               boundary="scrollParent"
               color="primary"
               id="test-id"
@@ -1205,6 +1244,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
+                  aria-labelledby="test-ID"
                   id="test-id"
                 >
                   Example button
@@ -1377,6 +1417,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   >
                     <button
                       aria-haspopup="dialog"
+                      aria-labelledby="test-ID"
                       id="test-id"
                     >
                       Example button
@@ -1396,6 +1437,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                 </ForwardRef(TippyWrapper)>
               </LazyTippy>
             </Popover>
+            <div
+              className="md-tooltip-label"
+              id="test-ID"
+            >
+              <Text>
+                <p
+                  className="md-text-wrapper"
+                  data-type="body-primary"
+                >
+                  Example tooltip content
+                </p>
+              </Text>
+            </div>
           </Tooltip>
           <Portal
             containerInfo={

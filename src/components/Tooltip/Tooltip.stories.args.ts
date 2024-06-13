@@ -6,13 +6,14 @@ import { DEFAULTS } from './Tooltip.constants';
 const tooltipArgTypes = {
   isDescription: {
     description: `Determines, whether the tooltip is the description or the label of the trigger component`,
-    control: { type: 'boolean' },
+    options: ['none', 'label', 'description'],
+    control: { type: 'select' },
     table: {
       type: {
-        summary: 'boolean',
+        summary: 'string',
       },
       defaultValue: {
-        summary: DEFAULTS.IS_DESCRIPTION,
+        summary: 'description',
       },
     },
   },
