@@ -19,7 +19,7 @@ jest.mock('uuid', () => {
 });
 
 describe('<TooltipPopoverCombo />', () => {
-  const triggerComponent = <button id="test-id">Example button</button>;
+  const triggerComponent = <button id="test-id" aria-haspopup="dialog">Example button</button>;
   const tooltipContent = <Text>Example tooltip content</Text>;
   const popoverContent = <button>Example popover content button</button>;
 
