@@ -1,8 +1,11 @@
 import React, { ForwardedRef, forwardRef, useCallback } from 'react';
 import Popover, { PopoverInstance } from '../Popover';
 import { Props } from './Tooltip.types';
-import { DEFAULTS } from './Tooltip.constants';
+import { DEFAULTS, STYLE } from './Tooltip.constants';
 import { BoundaryType, PlacementType } from '../Popover/Popover.types';
+import { useId } from '@react-aria/utils';
+
+import './Tooltip.style.scss';
 
 /**
  * Tooltip component
@@ -14,7 +17,7 @@ import { BoundaryType, PlacementType } from '../Popover/Popover.types';
 const Tooltip = forwardRef(
   (
     {
-      isDescription = DEFAULTS.IS_DESCRIPTION,
+      type,
       boundary = DEFAULTS.BOUNDARY as BoundaryType,
       color = DEFAULTS.COLOR,
       offsetDistance = DEFAULTS.OFFSET_DISTANCE,
@@ -28,6 +31,10 @@ const Tooltip = forwardRef(
     }: Props,
     ref: ForwardedRef<HTMLElement>
   ) => {
+    const id = useId();
+    const isLabelTooltip = type === 'label';
+    const isDescription = type === 'description';
+
     // Update aria props manually, because
     // "The `aria` attribute is reserved for future use in React."
     const setInstance = useCallback(
@@ -36,35 +43,57 @@ const Tooltip = forwardRef(
           // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
           aria: {
             expanded: false,
-            content: isDescription ? 'describedby' : 'labelledby',
+            // we add `aria-labelledby` manually, see below
+            content: isLabelTooltip ? null : 'describedby',
           },
         });
         otherProps?.setInstance?.(popoverInstance);
       },
-      [isDescription, otherProps?.setInstance]
+      [isLabelTooltip, otherProps?.setInstance]
     );
 
-    return (
-      <Popover
-        ref={ref}
-        interactive={false}
-        trigger="mouseenter focus"
-        triggerComponent={triggerComponent}
-        showArrow
-        addBackdrop={false}
-        role="tooltip"
-        boundary={boundary}
-        color={color}
-        offsetDistance={offsetDistance}
-        offsetSkidding={offsetSkidding}
-        placement={placement}
-        strategy={strategy}
-        variant={variant}
-        {...otherProps}
-        setInstance={setInstance}
-      >
+    const newTriggerComponent = isLabelTooltip
+      ? React.cloneElement(triggerComponent, { 'aria-labelledby': id })
+      : triggerComponent;
+
+    // In label mode we must render tooltip content twice
+    // First inside the popover, second in a hidden div for Screen Readers (SR)
+    // because Tippy does not render the content until the user focus on the button, so the trigger
+    // component does not have a label before tooltip appears
+    // With SR the user can Read the page content without changing the focus so we need to provide a
+    // always accessible label for the button.
+    // We use aria-labelledby because the `children` might contains HTML elements
+    const triggerLabel = isLabelTooltip ? (
+      <div className={STYLE.label} id={id}>
         {children}
-      </Popover>
+      </div>
+    ) : null;
+
+    return (
+      <>
+        <Popover
+          ref={ref}
+          interactive={false}
+          trigger="mouseenter focus"
+          triggerComponent={newTriggerComponent}
+          showArrow
+          addBackdrop={false}
+          role="tooltip"
+          boundary={boundary}
+          color={color}
+          offsetDistance={offsetDistance}
+          offsetSkidding={offsetSkidding}
+          placement={placement}
+          strategy={strategy}
+          variant={variant}
+          aria-hidden={!isLabelTooltip}
+          {...otherProps}
+          setInstance={setInstance}
+        >
+          {children}
+        </Popover>
+        {triggerLabel}
+      </>
     );
   }
 );

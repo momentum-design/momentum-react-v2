@@ -3,6 +3,8 @@ import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import { BOUNDARIES } from '../Popover/Popover.constants';
 import { BoundaryType } from '../Popover/Popover.types';
 
+const CLASS_PREFIX = 'md-tooltip';
+
 export const DEFAULTS = {
   BOUNDARY: BOUNDARIES.PARENT as BoundaryType,
   COLOR: COLORS.PRIMARY,
@@ -13,3 +15,7 @@ export const DEFAULTS = {
   STRATEGY: 'absolute' as const,
   VARIANT: 'small',
 } as const;
+
+export const STYLE = {
+  label: `${CLASS_PREFIX}-label`,
+};

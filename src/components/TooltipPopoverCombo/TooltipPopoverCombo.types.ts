@@ -26,5 +26,5 @@ export interface Props {
   /**
    * An object of Tooltip props to be passed through to the Tooltip component.
    */
-  otherTooltipProps?: Partial<Omit<TooltipProps, 'id'>>;
+  otherTooltipProps?: Partial<Omit<TooltipProps, 'id' | 'type'>>;
 }

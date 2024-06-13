@@ -11,20 +11,17 @@ import { v4 as uuidV4 } from 'uuid';
  * The TooltipPopoverCombo component.
  */
 const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
-  const { 
-    triggerComponent, 
-    tooltipContent, 
-    popoverContent, 
-    otherPopoverProps,
-    otherTooltipProps,
-   } = props;
+  const { triggerComponent, tooltipContent, popoverContent, otherPopoverProps, otherTooltipProps } =
+    props;
   const [tooltipInstance, setTooltipInstance] = useState<PopoverInstance>();
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
   const triggerComponentId = useRef(triggerComponent.props?.id || uuidV4());
 
-  const clonedTriggerComponent = React.cloneElement(triggerComponent, {id: triggerComponentId.current, 'aria-haspopup': triggerComponent?.props?.['aria-haspopup'] || 'dialog'});
+  const clonedTriggerComponent = React.cloneElement(triggerComponent, {
+    id: triggerComponentId.current, 'aria-haspopup': triggerComponent?.props?.['aria-haspopup'] || 'dialog'
+  });
 
   // Modified tooltipSetInstance to call both setInstance and updateInstance
   const setMergedTooltipInstances = useCallback(
@@ -35,25 +32,37 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
     [otherTooltipProps?.setInstance, setTooltipInstance]
   );
 
-  const handleOnShowPopover = useCallback((instance: PopoverInstance | undefined) => {
-    otherPopoverProps?.onShow?.(instance);
-    setIsPopoverOpen(true);
-  }, [otherPopoverProps?.onShow, setIsPopoverOpen]);
+  const handleOnShowPopover = useCallback(
+    (instance: PopoverInstance | undefined) => {
+      otherPopoverProps?.onShow?.(instance);
+      setIsPopoverOpen(true);
+    },
+    [otherPopoverProps?.onShow, setIsPopoverOpen]
+  );
 
-  const handleOnHidePopover = useCallback((instance: PopoverInstance | undefined) => {
-    otherPopoverProps?.onHide?.(instance);
-    setIsPopoverOpen(false);
-  }, [otherPopoverProps?.onHide, setIsPopoverOpen]);
+  const handleOnHidePopover = useCallback(
+    (instance: PopoverInstance | undefined) => {
+      otherPopoverProps?.onHide?.(instance);
+      setIsPopoverOpen(false);
+    },
+    [otherPopoverProps?.onHide, setIsPopoverOpen]
+  );
 
-  const handleOnHideTooltip = useCallback((instance: PopoverInstance | undefined) => {
-    otherTooltipProps?.onHide?.(instance);
-    setIsTooltipOpen(false);
-  }, [otherTooltipProps?.onHide, setIsTooltipOpen]);
+  const handleOnHideTooltip = useCallback(
+    (instance: PopoverInstance | undefined) => {
+      otherTooltipProps?.onHide?.(instance);
+      setIsTooltipOpen(false);
+    },
+    [otherTooltipProps?.onHide, setIsTooltipOpen]
+  );
 
-  const handleOnShowTooltip = useCallback((instance: PopoverInstance | undefined) => {
-    otherTooltipProps?.onShow?.(instance);
-    setIsTooltipOpen(true);
-  }, [otherTooltipProps?.onShow, setIsTooltipOpen]);
+  const handleOnShowTooltip = useCallback(
+    (instance: PopoverInstance | undefined) => {
+      otherTooltipProps?.onShow?.(instance);
+      setIsTooltipOpen(true);
+    },
+    [otherTooltipProps?.onShow, setIsTooltipOpen]
+  );
 
   // if the tooltip and popover are both open at the same time we close the tooltip to avoid them overlapping
   useEffect(() => {
@@ -62,14 +71,14 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
     }
   }, [isPopoverOpen, isTooltipOpen]);
 
-
   return (
     <Popover
       trigger="click"
       interactive
       triggerComponent={
-        <Tooltip    
-          triggerComponent={clonedTriggerComponent}              
+        <Tooltip
+          type="label"
+          triggerComponent={clonedTriggerComponent}
           {...otherTooltipProps}
           onHide={handleOnHideTooltip}
           onShow={handleOnShowTooltip}
@@ -85,7 +94,7 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
     >
       {popoverContent}
     </Popover>
-);
+  );
 };
 
 export default TooltipPopoverCombo;
