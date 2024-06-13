@@ -24,7 +24,7 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
 
   const triggerComponentId = useRef(triggerComponent.props?.id || uuidV4());
 
-  const clonedTriggerComponent = React.cloneElement(triggerComponent, {id: triggerComponentId.current});
+  const clonedTriggerComponent = React.cloneElement(triggerComponent, {id: triggerComponentId.current, 'aria-haspopup': triggerComponent?.props?.['aria-haspopup'] || 'dialog'});
 
   // Modified tooltipSetInstance to call both setInstance and updateInstance
   const setMergedTooltipInstances = useCallback(

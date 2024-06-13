@@ -14,6 +14,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
   }
   triggerComponent={
     <button
+      aria-haspopup="dialog"
       id="test-id"
     >
       Example button
@@ -33,6 +34,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
         setInstance={[Function]}
         triggerComponent={
           <button
+            aria-haspopup="dialog"
             id="test-id"
           >
             Example button
@@ -228,6 +230,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
             setInstance={[Function]}
             triggerComponent={
               <button
+                aria-haspopup="dialog"
                 id="test-id"
               >
                 Example button
@@ -253,6 +256,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               trigger="mouseenter focus"
               triggerComponent={
                 <button
+                  aria-haspopup="dialog"
                   id="test-id"
                 >
                   Example button
@@ -424,6 +428,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                     trigger="mouseenter focus"
                   >
                     <button
+                      aria-haspopup="dialog"
                       id="test-id"
                     >
                       Example button
@@ -481,6 +486,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
   }
   triggerComponent={
     <button
+      aria-haspopup="dialog"
       id="test-id"
     >
       Example button
@@ -501,6 +507,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         setInstance={[Function]}
         triggerComponent={
           <button
+            aria-haspopup="dialog"
             id="test-id"
           >
             Example button
@@ -697,6 +704,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
             setInstance={[Function]}
             triggerComponent={
               <button
+                aria-haspopup="dialog"
                 id="test-id"
               >
                 Example button
@@ -722,6 +730,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               trigger="mouseenter focus"
               triggerComponent={
                 <button
+                  aria-haspopup="dialog"
                   id="test-id"
                 >
                   Example button
@@ -893,6 +902,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                     trigger="mouseenter focus"
                   >
                     <button
+                      aria-haspopup="dialog"
                       id="test-id"
                     >
                       Example button
@@ -950,6 +960,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
   }
   triggerComponent={
     <button
+      aria-haspopup="dialog"
       id="test-id"
     >
       Example button
@@ -970,6 +981,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         setInstance={[Function]}
         triggerComponent={
           <button
+            aria-haspopup="dialog"
             id="test-id"
           >
             Example button
@@ -1166,6 +1178,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
             setInstance={[Function]}
             triggerComponent={
               <button
+                aria-haspopup="dialog"
                 id="test-id"
               >
                 Example button
@@ -1191,6 +1204,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               trigger="mouseenter focus"
               triggerComponent={
                 <button
+                  aria-haspopup="dialog"
                   id="test-id"
                 >
                   Example button
@@ -1362,6 +1376,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                     trigger="mouseenter focus"
                   >
                     <button
+                      aria-haspopup="dialog"
                       id="test-id"
                     >
                       Example button
