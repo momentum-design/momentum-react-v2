@@ -1,7 +1,7 @@
 import React, { forwardRef, useRef, RefObject } from 'react';
 import { useButton } from '@react-aria/button';
 import FocusRing from '../FocusRing';
-import {useLink} from '@react-aria/link';
+import { useLink } from '@react-aria/link';
 
 import { DEFAULTS, STYLE } from './ButtonHyperlink.constants';
 import { Props } from './ButtonHyperlink.types';
@@ -24,12 +24,12 @@ const ButtonHyperlink = forwardRef((props: Props, providedRef: RefObject<HTMLAnc
 
   let aProps;
 
-  if(role === 'link') {
-    const {linkProps} = useLink({ ...mutatedProps, elementType: 'a' }, ref);
-    aProps = {...linkProps};
+  if (role === 'link') {
+    const { linkProps } = useLink({ ...mutatedProps, elementType: 'a' }, ref);
+    aProps = { ...linkProps };
   } else {
     const { buttonProps } = useButton({ ...mutatedProps, elementType: 'a' }, ref);
-    aProps = {...buttonProps};
+    aProps = { ...buttonProps };
   }
 
   return (

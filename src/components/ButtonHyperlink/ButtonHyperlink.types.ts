@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 import { AriaButtonProps } from '@react-types/button';
-import {AriaLinkProps} from '@react-types/link';
+import { AriaLinkProps } from '@react-types/link';
 import { roleType } from './ButtonHyperlink.constants';
 
-type myProps = AriaLinkProps & AriaButtonProps<'a'>
+type myProps = AriaLinkProps & AriaButtonProps<'a'>;
 export interface Props extends myProps {
   /**
    * Custom class to be able to override the component's CSS
@@ -32,5 +32,5 @@ export interface Props extends myProps {
   /**
    * role to be 'button' or 'link'
    */
-  role?: roleType; 
+  role?: roleType;
 }

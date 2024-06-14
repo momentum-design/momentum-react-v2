@@ -24,7 +24,7 @@ export default {
 
 const Example = Template<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
 
-Example.argTypes = { ...argTypes};
+Example.argTypes = { ...argTypes };
 
 const States = MultiTemplateWithPseudoStates<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
 

@@ -144,7 +144,7 @@ describe('ButtonHyperlink', () => {
         ctrlKey: false,
         metaKey: false,
         target: component.getDOMNode(),
-        continuePropagation: expect.any(Function)
+        continuePropagation: expect.any(Function),
       });
 
       expect(mockCallback).toBeCalledTimes(1);
