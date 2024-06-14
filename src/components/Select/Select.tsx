@@ -101,6 +101,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     <button
       id={name}
       {...buttonProps}
+      aria-labelledby={menuProps?.['aria-labelledby']}
       role="combobox"
       aria-expanded={!!state.isOpen}
       aria-controls={id}
