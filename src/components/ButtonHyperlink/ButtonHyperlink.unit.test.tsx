@@ -114,6 +114,18 @@ describe('ButtonHyperlink', () => {
 
       expect(element.getAttribute('title')).toBe(title);
     });
+
+    it('should have provided role when role is provided', () => {
+      expect.assertions(1);
+
+      const role = 'link';
+
+      const element = mount(<ButtonHyperlink role={role} />)
+        .find(ButtonHyperlink)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe(`${role}`);
+    });
   });
 
   describe('actions', () => {
@@ -132,6 +144,7 @@ describe('ButtonHyperlink', () => {
         ctrlKey: false,
         metaKey: false,
         target: component.getDOMNode(),
+        continuePropagation: expect.any(Function)
       });
 
       expect(mockCallback).toBeCalledTimes(1);

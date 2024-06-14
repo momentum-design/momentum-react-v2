@@ -24,7 +24,7 @@ export default {
 
 const Example = Template<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
 
-Example.argTypes = { ...argTypes };
+Example.argTypes = { ...argTypes};
 
 const States = MultiTemplateWithPseudoStates<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
 
@@ -36,4 +36,20 @@ States.argTypes = { ...argTypes };
 delete States.argTypes.disabled;
 delete States.argTypes.inverted;
 
-export { Example, States };
+const Link = Template<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
+
+Link.args = {
+  role: 'link',
+  children: 'This is a link role button',
+  href: 'https://www.webex.com/',
+  target: '_blank',
+};
+
+Link.argTypes = {
+  ...argTypes,
+};
+
+delete Link.argTypes.disabled;
+delete Link.argTypes.inverted;
+
+export { Example, States, Link };

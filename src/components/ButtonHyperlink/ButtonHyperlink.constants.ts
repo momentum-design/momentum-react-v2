@@ -10,4 +10,6 @@ const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
 };
 
+export type roleType = 'button' | 'link';
+
 export { CLASS_PREFIX, DEFAULTS, STYLE };

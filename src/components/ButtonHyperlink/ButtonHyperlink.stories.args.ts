@@ -22,6 +22,18 @@ export default {
       },
     },
   },
+  role: {
+    description: 'Provides `link` or `button` role for this element.',
+    control: { type: 'none' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'button',
+      },
+    },
+  },
   disabled: {
     description: 'Whether to render the `<ButtonHyperlink />` as disabled.',
     options: [true, false],
