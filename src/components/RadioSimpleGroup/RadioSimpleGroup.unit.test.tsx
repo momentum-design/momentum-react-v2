@@ -9,6 +9,12 @@ import RadioSimple from '../RadioSimple';
 import Text from '../Text';
 import Icon from '../Icon';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<RadioSimpleGroup />', () => {
   const children = [
     <RadioSimple value="red" key="0">
@@ -83,6 +89,7 @@ describe('<RadioSimpleGroup />', () => {
         <RadioSimpleGroup
           children={children}
           description={description}
+          id='example-id'
         />
       );
 
@@ -138,6 +145,16 @@ describe('<RadioSimpleGroup />', () => {
       const radioGroup = screen.getByRole('radiogroup');
 
       expect(radioGroup).toHaveClass(STYLE.wrapper);
+    });
+
+    it('should have provided aria-describedby when description is provided', () => {
+      expect.assertions(1);
+
+      render(<RadioSimpleGroup children={children} description={description} id='example-id' />);
+
+      const radioGroup = screen.getByRole('radiogroup');
+
+      expect(radioGroup).toHaveAttribute('aria-describedby', 'radio-simple-group-description-example-id');
     });
 
     it('should have provided class when className is provided', () => {

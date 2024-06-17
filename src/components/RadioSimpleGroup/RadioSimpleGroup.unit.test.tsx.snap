@@ -3,10 +3,12 @@
 exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
 <DocumentFragment>
   <div
+    aria-describedby="radio-simple-group-description-1"
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-simple-group-wrapper"
     data-disabled="false"
+    id="1"
     role="radiogroup"
   >
     <span
@@ -16,9 +18,13 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
         Select your favorite color
       </div>
     </span>
-    <div>
-      Only choose one
-    </div>
+    <span
+      id="radio-simple-group-description-1"
+    >
+      <div>
+        Only choose one
+      </div>
+    </span>
     <label
       class="md-radio-simple-wrapper"
       data-disabled="false"
@@ -98,6 +104,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
     aria-orientation="vertical"
     class="md-radio-simple-group-wrapper"
     data-disabled="false"
+    id="1"
     role="radiogroup"
   >
     <label
@@ -180,6 +187,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] =
     aria-orientation="vertical"
     class="md-radio-simple-group-wrapper"
     data-disabled="false"
+    id="1"
     role="radiogroup"
   >
     <label
@@ -262,6 +270,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
     aria-orientation="vertical"
     class="md-radio-simple-group-wrapper"
     data-disabled="true"
+    id="1"
     role="radiogroup"
   >
     <label
@@ -344,6 +353,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
     aria-readonly="true"
     class="md-radio-simple-group-wrapper"
     data-disabled="false"
+    id="1"
     role="radiogroup"
   >
     <label
@@ -428,6 +438,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
     aria-orientation="vertical"
     class="example-className md-radio-simple-group-wrapper"
     data-disabled="false"
+    id="1"
     role="radiogroup"
   >
     <label
@@ -506,14 +517,20 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
 exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`] = `
 <DocumentFragment>
   <div
+    aria-describedby="radio-simple-group-description-example-id"
     aria-orientation="vertical"
     class="md-radio-simple-group-wrapper"
     data-disabled="false"
+    id="example-id"
     role="radiogroup"
   >
-    <div>
-      Only choose one
-    </div>
+    <span
+      id="radio-simple-group-description-example-id"
+    >
+      <div>
+        Only choose one
+      </div>
+    </span>
     <label
       class="md-radio-simple-wrapper"
       data-disabled="false"
@@ -675,6 +692,7 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with style 1`] = `
     aria-orientation="vertical"
     class="md-radio-simple-group-wrapper"
     data-disabled="false"
+    id="1"
     role="radiogroup"
     style="color: pink;"
   >
