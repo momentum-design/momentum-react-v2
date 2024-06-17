@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 import { AriaLinkProps } from '@react-types/link';
-import { roleType } from './ButtonHyperlink.constants';
 
 type myProps = AriaLinkProps & AriaButtonProps<'a'>;
 export interface Props extends myProps {
@@ -34,3 +33,5 @@ export interface Props extends myProps {
    */
   role?: roleType;
 }
+
+export type roleType = 'button' | 'link';
