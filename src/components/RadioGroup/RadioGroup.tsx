@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
+import { v4 as uuidV4 } from 'uuid';
 import { useRadioGroup } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
 
@@ -27,11 +28,23 @@ const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
 
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
+  const radioGroupId = id || uuidV4();
+  const descriptionId = description ? `radio-group-description-${radioGroupId}` : undefined;
 
   return (
-    <div {...radioGroupProps} className={classnames(className, STYLE.group)} id={id} style={style}>
+    <div
+      {...radioGroupProps}
+      className={classnames(className, STYLE.group)}
+      id={radioGroupId}
+      style={style}
+      aria-describedby={description ? descriptionId : undefined}
+    >
       <span {...labelProps}>{label}</span>
-      {description && <Text type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>{description}</Text>}
+      {description &&
+        <Text id={descriptionId} type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>
+          {description}
+        </Text>
+      }
       <RadioContext.Provider value={state}>
         {options &&
           options.map((option: string | RadioProps) => {
