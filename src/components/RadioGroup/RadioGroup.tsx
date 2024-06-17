@@ -23,13 +23,19 @@ const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
     label = DEFAULTS.GROUP_LABEL,
     options,
     style,
+    ariaDescribedby,
   } = props;
 
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 
   return (
-    <div {...radioGroupProps} className={classnames(className, STYLE.group)} id={id} style={style}>
+    <div
+      {...radioGroupProps}
+      className={classnames(className, STYLE.group)}
+      id={id} style={style}
+      aria-describedby={ariaDescribedby}
+    >
       <span {...labelProps}>{label}</span>
       {description && <Text type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>{description}</Text>}
       <RadioContext.Provider value={state}>

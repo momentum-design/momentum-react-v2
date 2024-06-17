@@ -20,8 +20,12 @@ export interface RadioGroupProps extends Omit<AriaRadioGroupProps, 'children'> {
   /**
    * The description for the RadioGroup.
    */
-
   description?: string;
+
+  /**
+   * The aria-describedby attribute for the RadioSimpleGroup.
+   */
+  ariaDescribedby?: string;
 }
 
 export interface RadioProps extends Omit<AriaRadioProps, 'children'> {

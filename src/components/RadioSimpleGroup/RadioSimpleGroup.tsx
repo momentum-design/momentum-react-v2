@@ -13,7 +13,7 @@ import './RadioSimpleGroup.style.scss';
 export const RadioSimpleGroupContext = React.createContext(null);
 
 const RadioSimpleGroup: FC<RadioSimpleGroupProps> = (props: RadioSimpleGroupProps) => {
-  const { className, description, id, label, children, style } = props;
+  const { className, description, ariaDescribedby, id, label, children, style } = props;
 
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
@@ -25,6 +25,7 @@ const RadioSimpleGroup: FC<RadioSimpleGroupProps> = (props: RadioSimpleGroupProp
       data-disabled={state.isDisabled}
       id={id}
       style={style}
+      aria-describedby={ariaDescribedby}
     >
       {label && <span {...labelProps}>{label}</span>}
       {description}

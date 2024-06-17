@@ -3,6 +3,11 @@ import { AriaRadioGroupProps } from '@react-types/radio';
 
 export interface RadioSimpleGroupProps extends AriaRadioGroupProps {
   /**
+   * The aria-describedby attribute for the RadioSimpleGroup.
+   */
+    ariaDescribedby?: string;
+
+  /**
    * Custom class for overriding this component's CSS.
    */
   className?: string;
