@@ -59,5 +59,8 @@ export interface Props<T> extends AriaSelectProps<T> {
    */
   listboxWidth?: string;
 
+  /**
+   * Callback for handling escape keyboard action while dropdown is collapsed
+   */
   escapeOnTriggerCallback?: (e: KeyboardEvent) => void;
 }
