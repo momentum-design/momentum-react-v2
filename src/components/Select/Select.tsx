@@ -38,6 +38,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     listboxMaxHeight,
     isInForm = DEFAULTS.IS_IN_FORM,
     listboxWidth,
+    escapeOnTriggerCallback,
   } = props;
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
   const hasBeenOpened = useRef<boolean>(false);
@@ -88,6 +89,11 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
    */
   const onKeyDown = useCallback((e) => {
     switch (e.key) {
+      case 'Escape':
+        if (escapeOnTriggerCallback) {
+          escapeOnTriggerCallback(e);
+        }
+        break;
       // useButton already provides Keyboard event support for Enter and Space
       case 'ArrowUp':
       case 'ArrowDown':

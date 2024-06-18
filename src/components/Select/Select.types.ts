@@ -58,4 +58,6 @@ export interface Props<T> extends AriaSelectProps<T> {
    * NOTE: if set, the popover strategy will be set to 'fixed'
    */
   listboxWidth?: string;
+
+  escapeOnTriggerCallback?: (e: KeyboardEvent) => void;
 }
