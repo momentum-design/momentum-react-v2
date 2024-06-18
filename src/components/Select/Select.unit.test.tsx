@@ -693,4 +693,19 @@ describe('Select', () => {
     button = screen.getByRole('combobox', { name: 'test' });
     expect(button).toHaveAttribute('aria-activedescendant', 'test-ID-option-$.1');
   });
+
+  it('should set aria-labelledby correctly', async () => {
+    render(
+      <Select id="test-id" label="test">
+        <Item>Item 1</Item>
+        <Item>Item 2</Item>
+      </Select>
+    );
+
+    const button = screen.getByRole('combobox', { name: 'test' });
+    button.focus();
+    expect(button).toHaveFocus();
+
+    expect(button).toHaveAttribute('aria-labelledby', 'test-ID');
+  });
 });
