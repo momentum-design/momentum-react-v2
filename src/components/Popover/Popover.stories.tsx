@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -14,6 +14,7 @@ import argTypes from './Popover.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Flex from '../Flex';
 import AriaToolbar from '../AriaToolbar';
+import Avatar from '../Avatar';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -58,6 +59,76 @@ InteractiveContent.args = {
   delay: [0, 0],
   triggerComponent: (
     <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
+  ),
+  children: (
+    <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
+      <Item key="one">One</Item>
+      <Item key="two">Two</Item>
+      <Item key="three">Three</Item>
+      <Item key="four">Four</Item>
+      <Item key="five">Five</Item>
+      <Item key="six">Six</Item>
+    </Menu>
+  ),
+};
+
+const InteractiveHover = Template<PopoverProps>(Popover).bind({});
+
+InteractiveHover.argTypes = { ...argTypes };
+
+InteractiveHover.args = {
+  trigger: 'mouseenter',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Hover me!</ButtonPill>
+  ),
+  children: (
+    <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
+      <Item key="one">One</Item>
+      <Item key="two">Two</Item>
+      <Item key="three">Three</Item>
+      <Item key="four">Four</Item>
+      <Item key="five">Five</Item>
+      <Item key="six">Six</Item>
+    </Menu>
+  ),
+};
+
+const AvatarExample = Template<PopoverProps>(Popover).bind({});
+
+AvatarExample.argTypes = { ...argTypes };
+
+AvatarExample.args = {
+  trigger: 'mouseenter',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <ButtonSimple useNativeKeyDown
+      style={{
+        height: '24px',
+        borderRadius: '12px',
+        width: '24px',
+        display: 'flex',
+        backgroundColor: 'unset',
+        padding: 0,
+        margin: 0,
+        border: 'unset',
+      }}
+    >
+      <Avatar
+        icon={'participant-unknown'}
+        type={'person'}
+      />
+    </ButtonSimple>
   ),
   children: (
     <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
@@ -167,7 +238,7 @@ const MultiplePopovers = Template<PopoverProps>((args: PopoverProps) => {
   >
     Description tooltip on hover
   </Popover>);
-  return <Popover {...args} triggerComponent={triggerComponent}/>;
+  return <Popover {...args} triggerComponent={triggerComponent} />;
 }).bind({});
 
 MultiplePopovers.argTypes = { ...argTypes };
@@ -281,10 +352,12 @@ Common.parameters = {
 export {
   Example,
   InteractiveContent,
+  InteractiveHover,
   InteractiveFocus,
   WithCloseButton,
   Offset,
   MultiplePopovers,
   NestedPopover,
+  AvatarExample,
   Common,
 };

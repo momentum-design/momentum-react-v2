@@ -1244,6 +1244,91 @@ describe('<Popover />', () => {
           expect(screen.queryByText('Content')).not.toBeInTheDocument();
         });
       });
+
+      it('should behave as expected when interactive and trigger="mouseenter"', async () => {
+        /**
+         * Expected behavior for this test:
+         * 1. Hover to TriggerButton, Popover should open and focus inside
+         * 2. Press Esc, Popover should close and focus should go back to trigger
+         * 3. Press Enter, Popover should open again and focus should go inside
+         * 4. Press Esc, Popover should close and focus should go back to trigger
+         * 5. Press Tab, focus should go away from trigger
+         * 6. Press Shift+Tab, focus should go back to trigger (popover should not open)
+         * 7. Press Space, Popover should open again and focus should go inside
+         */
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <Popover triggerComponent={<button>Hover Me!</button>} interactive={true} trigger="mouseenter">
+              <div>
+                <p>Content</p>
+                <button>Button within popover</button>
+              </div>
+            </Popover>
+            <button>Button which should not be focused</button>
+          </>
+        );
+
+        /**
+         * Hover to TriggerButton, Popover should open and focus inside
+         */
+        const hoverMeButton = await screen.findByRole('button', { name: 'Hover Me!' });
+        await user.hover(hoverMeButton);
+        
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        /**
+         * Press Esc, Popover should close and focus should go back to trigger
+         */
+        await user.keyboard('{Escape}');
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+        expect(hoverMeButton).toHaveFocus();
+
+        /**
+         * Press Enter, Popover should open again and focus should go inside
+         */
+        await user.keyboard('{Enter}');
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        /**
+         * Press Esc, Popover should close and focus should go back to trigger
+         */
+        await user.keyboard('{Escape}');
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+        expect(hoverMeButton).toHaveFocus();
+
+        /**
+         * Press Tab, focus should go away from trigger
+         */
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Button which should not be focused' })).toHaveFocus();
+        
+        /**
+         * Press Shift+Tab, focus should go back to trigger (popover should not open)
+         */
+        await user.tab({ shift: true });
+        expect(hoverMeButton).toHaveFocus();
+
+        /**
+         * Press Space, Popover should open again and focus should go inside
+         */
+        await user.keyboard(' ');
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+      });
     });
   });
 });
