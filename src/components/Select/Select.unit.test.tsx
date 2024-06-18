@@ -708,4 +708,30 @@ describe('Select', () => {
 
     expect(button).toHaveAttribute('aria-labelledby', 'test-ID');
   });
+
+  it('should call escape callback if prop is passed', async () => {
+    const user = userEvent.setup();
+    const escapeOnTriggerCallbackMock = jest.fn();
+
+    render(
+      <Select id="test-id" label="test" escapeOnTriggerCallback={escapeOnTriggerCallbackMock}>
+        <Item>Item 1</Item>
+        <Item>Item 2</Item>
+      </Select>
+    );
+
+    const button = screen.getByRole('combobox', { name: 'test' });
+    button.focus();
+    expect(button).toHaveFocus();
+
+    await user.keyboard('{Escape}');
+
+    expect(escapeOnTriggerCallbackMock).toBeCalledTimes(1);
+
+    await user.keyboard('{ArrowDown}');
+    await user.keyboard('{Escape}');
+
+    // ensure that callback is only triggered when dropdown is collapsed and focus is on the trigger button
+    expect(escapeOnTriggerCallbackMock).toBeCalledTimes(1);
+  });
 });
