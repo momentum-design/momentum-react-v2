@@ -414,6 +414,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
       onKeyDown={[Function]}
     >
       <ModalContainer
+        aria-describedby="test-ID"
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
@@ -432,6 +433,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
             hidden={true}
           />
           <div
+            aria-describedby="test-ID"
             aria-modal={true}
             className="md-overlay-alert-modal-container md-modal-container-wrapper"
             data-color="primary"
@@ -446,11 +448,13 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
             <div>
               <Text
                 className="md-overlay-alert-details"
+                id="test-ID"
                 type="body-primary"
               >
                 <p
                   className="md-text-wrapper md-overlay-alert-details"
                   data-type="body-primary"
+                  id="test-ID"
                 >
                   example-details
                 </p>

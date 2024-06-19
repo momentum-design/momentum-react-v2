@@ -322,6 +322,43 @@ describe('<OverlayAlert />', () => {
       expect(modalContainerComponent.props()['aria-labelledby']).toBe(undefined);
     });
 
+    it('should have aria-describedby and id when details is provided', () => {
+      expect.assertions(2);
+
+      const details = 'details-example';
+
+      const component = mount(<OverlayAlert details={details} />).find(`.${OVERLAY_STYLE.wrapper}`);
+
+      const detailsComponent = component.find(Text).filter({ type: 'body-primary' });
+
+      const modalContainerComponent = component.find(ModalContainer);
+
+      expect(detailsComponent.props().id).toStrictEqual('test-ID');
+      expect(modalContainerComponent.props()['aria-describedby']).toStrictEqual('test-ID');
+    });
+
+    it('should not have aria-labelledby when details is not provided', () => {
+      expect.assertions(1);
+
+      const component = mount(<OverlayAlert />).find(`.${OVERLAY_STYLE.wrapper}`);
+
+      const modalContainerComponent = component.find(ModalContainer);
+
+      expect(modalContainerComponent.props()['aria-describedby']).toBe(undefined);
+    });
+
+    it('should not have aria-labelledby when details is provided but children is also provided', () => {
+      expect.assertions(1);
+      const children = 'children-example';
+      const details = 'details-example';
+
+      const component = mount(<OverlayAlert details={details}>{children}</OverlayAlert>);
+
+      const modalContainerComponent = component.find(ModalContainer);
+
+      expect(modalContainerComponent.props()['aria-describedby']).toBe(undefined);
+    });
+
     it('should pass aria-label through to ModalContiner when ariaLabel is provided', () => {
       expect.assertions(1);
 

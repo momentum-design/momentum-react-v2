@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import classnames from 'classnames';
 
 import ModalContainer from '../ModalContainer';
@@ -31,7 +31,8 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     ...other
   } = props;
 
-  const id = uuidV4();
+  const id = useRef(uuidV4());
+  const detailsId = useRef(uuidV4());
 
   const onKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
@@ -51,7 +52,8 @@ const OverlayAlert: FC<Props> = (props: Props) => {
         round={75}
         color={modalColor}
         aria-label={ariaLabel}
-        aria-labelledby={title ? id : undefined}
+        aria-labelledby={title ? id.current : undefined}
+        aria-describedby={details && !children ? detailsId.current : undefined}
         focusLockProps={focusLockProps}
       >
         <div>
@@ -59,7 +61,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
         </div>
         {!!title && (
           <div className={classnames(STYLE.title)}>
-            <Text className={classnames(STYLE.title)} type="title" id={id}>
+            <Text className={classnames(STYLE.title)} type="title" id={id.current}>
               {title}
             </Text>
           </div>
@@ -68,7 +70,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
           {children
             ? children
             : !!details && (
-              <Text className={classnames(STYLE.details)} type="body-primary">
+              <Text className={classnames(STYLE.details)} type="body-primary" id={detailsId.current}>
                 {details}
               </Text>
             )}
