@@ -73,3 +73,4 @@ export { default as RadioSimpleGroup } from './RadioSimpleGroup';
 export { default as Tooltip } from './Tooltip';
 export { default as TooltipPopoverCombo } from './TooltipPopoverCombo';
 export { default as Toggletip } from './Toggletip';
+export { default as Link } from './Link';
