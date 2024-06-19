@@ -42,9 +42,11 @@
         display: none;
       }
     }
+  }
 
-    &:hover,
-    &:focus {
+  &:hover {
+    // when it is not a button
+    .md-avatar-icon-on-hover-wrapper {
       background-color: var(--mds-color-theme-common-overlay-secondary-normal);
 
       .md-avatar-icon-wrapper {
@@ -267,6 +269,20 @@
   padding: 0;
   margin: 0;
   background: transparent;
+
+  &:hover,
+  &:focus {
+    // when it is a button
+    .md-avatar-icon-on-hover-wrapper {
+      background-color: var(--mds-color-theme-common-overlay-secondary-normal);
+
+      .md-avatar-icon-wrapper {
+        svg {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .md-avatar-animation-wrapper {
