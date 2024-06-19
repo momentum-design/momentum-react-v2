@@ -113,6 +113,20 @@ export default {
       },
     },
   },
+  iconOnHover: {
+    defaultValue: undefined,
+    description:
+      'Name of the icon to be displayed inside the Avatar when hovered or focused. Must be a valid icon name.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
   type: {
     defaultValue: DEFAULTS.TYPE,
     description: 'Determines whether the avatar is for a person or a space.',

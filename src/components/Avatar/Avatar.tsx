@@ -26,6 +26,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
     type = DEFAULTS.TYPE,
     hideDefaultTooltip = DEFAULTS.HIDE_DEFAULT_TOOLTIP,
     icon,
+    iconOnHover,
     isTyping,
     onPress,
     failureBadge,
@@ -75,6 +76,17 @@ const Avatar: React.FC<Props> = (props: Props) => {
           scale={AVATAR_ICON_SIZE_MAPPING[size].scale}
           weight={AVATAR_ICON_SIZE_MAPPING[size].weight}
         />
+      )}
+
+      {iconOnHover && (
+        <div className={classnames(STYLE.wrapperChildren, STYLE.iconOnHoverWrapper)}>
+          <Icon
+            className={classnames(STYLE.wrapperChildren, STYLE.iconWrapper)}
+            name={iconOnHover}
+            scale={AVATAR_ICON_SIZE_MAPPING[size].scale}
+            weight={AVATAR_ICON_SIZE_MAPPING[size].weight}
+          />
+        </div>
       )}
 
       {/* //TODO: Temporary fix for typing animation. This should be re-implemented */}
