@@ -74,6 +74,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           className={inputClassName}
           ref={inputRef}
           maxLength={inputMaxLen}
+          aria-describedby="message-description"
         />
         {!!state.value && (
           <ButtonSimple
@@ -101,6 +102,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
               message={m}
               key={`input-message-${i}`}
               level={messageType}
+              id="message-description"
             />
           ))}
         </div>
