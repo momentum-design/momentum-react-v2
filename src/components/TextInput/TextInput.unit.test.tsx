@@ -5,6 +5,7 @@ import { mountAndWait } from '../../../test/utils';
 import TextInput, { TEXT_INPUT_CONSTANTS as CONSTANTS } from './';
 import { act } from 'react-dom/test-utils';
 import { Message } from '../InputMessage/InputMessage.types';
+import InputMessage from '../InputMessage';
 
 describe('<TextInput/>', () => {
   describe('snapshot', () => {
@@ -152,6 +153,20 @@ describe('<TextInput/>', () => {
         .getDOMNode();
 
       expect(element.getAttribute('maxLength')).toBe(`${inputMaxLen}`);
+    });
+
+    it('should have aria-describedby and id when message is provided', async () => {
+      expect.assertions(2);
+
+      const id = 'example-id';
+
+      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" aria-describedby={id} />))
+        .find(TextInput);
+
+      const inputMessageComponent = (await mountAndWait(<InputMessage className='error' level="error" id={id} />)).find(InputMessage);
+
+      expect(inputMessageComponent.props().id).toStrictEqual(id);
+      expect(textInputComponent.props()).toMatchObject({ 'aria-label': 'text-input', 'aria-describedby': 'example-id' });
     });
   });
 
