@@ -588,6 +588,97 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
 </div>
 `;
 
+exports[`<Tooltip type"description /> snapshot should match snapshot with aria-haspopup 1`] = `
+<div>
+  <button
+    aria-describedby="test-ID"
+    aria-haspopup="grid"
+  >
+    Hover Me!
+  </button>
+  <div
+    class="md-tooltip-label"
+    id="test-ID"
+  >
+    <p>
+      Content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip type"description /> snapshot should match snapshot with aria-haspopup 2`] = `
+<div>
+  <button
+    aria-describedby="test-ID"
+    aria-haspopup="grid"
+  >
+    Hover Me!
+  </button>
+  <div
+    class="md-tooltip-label"
+    id="test-ID"
+  >
+    <p>
+      Content
+    </p>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-18"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-hidden="true"
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="tooltip"
+    >
+      <p>
+        Content
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Tooltip type"description /> snapshot should match snapshot with className 1`] = `
 <div>
   <button
@@ -770,7 +861,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with id 1`]
 <div>
   <button
     aria-describedby="test-ID"
-    id="example-id"
   >
     Hover Me!
   </button>
@@ -789,7 +879,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with id 2`]
 <div>
   <button
     aria-describedby="test-ID"
-    id="example-id"
   >
     Hover Me!
   </button>
@@ -817,6 +906,184 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with id 2`]
       data-placement="top"
       data-round="50"
       id="example-id"
+      role="tooltip"
+    >
+      <p>
+        Content
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip type"description /> snapshot should match snapshot with labelOrDescriptionId and type description 1`] = `
+<div>
+  <button
+    aria-describedby="test-description-id"
+  >
+    Hover Me!
+  </button>
+  <div
+    class="md-tooltip-label"
+    id="test-description-id"
+  >
+    <p>
+      Content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip type"description /> snapshot should match snapshot with labelOrDescriptionId and type description 2`] = `
+<div>
+  <button
+    aria-describedby="test-description-id"
+  >
+    Hover Me!
+  </button>
+  <div
+    class="md-tooltip-label"
+    id="test-description-id"
+  >
+    <p>
+      Content
+    </p>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-17"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-hidden="true"
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
+      role="tooltip"
+    >
+      <p>
+        Content
+      </p>
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; left: 0px; transform: translate(5px, 0px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="md-modal-arrow-svg"
+          data-placement="top"
+          height="12"
+          viewBox="0 0 24 12"
+          width="24"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-top"
+            >
+              <path
+                d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-top)"
+            d="m 24 0 l -10 10 q -2 2 -4 0 l -10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip type"description /> snapshot should match snapshot with labelOrDescriptionId and type label 1`] = `
+<div>
+  <button
+    aria-labelledby="test-label-id"
+  >
+    Hover Me!
+  </button>
+  <div
+    class="md-tooltip-label"
+    id="test-label-id"
+  >
+    <p>
+      Content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip type"description /> snapshot should match snapshot with labelOrDescriptionId and type label 2`] = `
+<div>
+  <button
+    aria-labelledby="test-label-id"
+  >
+    Hover Me!
+  </button>
+  <div
+    class="md-tooltip-label"
+    id="test-label-id"
+  >
+    <p>
+      Content
+    </p>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-16"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-hidden="false"
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="vertical"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="top"
+      data-round="50"
       role="tooltip"
     >
       <p>

@@ -17,7 +17,7 @@ jest.mock('uuid', () => {
 });
 
 describe('<TooltipPopoverCombo />', () => {
-  const triggerComponent = <button id="test-id" aria-haspopup="dialog">Example button</button>;
+  const triggerComponent = <button>Example button</button>;
   const tooltipContent = <Text>Example tooltip content</Text>;
   const popoverContent = <button>Example popover content button</button>;
 
@@ -82,6 +82,7 @@ describe('<TooltipPopoverCombo />', () => {
       const popover = comboElement.find(Popover).first();
 
       expect(popover.props()).toStrictEqual({
+        'aria-labelledby': '1',
         children: popoverContent,
         interactive: true,
         onHide: expect.any(Function),
@@ -100,7 +101,7 @@ describe('<TooltipPopoverCombo />', () => {
         triggerComponent: triggerComponent,
         type: 'label',
         'aria-haspopup': 'dialog',
-        id: 'test-id',
+        labelOrDescriptionId: '1',
       });
     });
 
@@ -119,6 +120,7 @@ describe('<TooltipPopoverCombo />', () => {
       const popover = comboElement.find(Popover).first();
 
       expect(popover.props()).toStrictEqual({
+        'aria-labelledby': '1',
         children: popoverContent,
         interactive: true,
         onHide: expect.any(Function),
@@ -151,7 +153,7 @@ describe('<TooltipPopoverCombo />', () => {
         triggerComponent: triggerComponent,
         type: 'label',
         'aria-haspopup': 'dialog',
-        id: 'test-id',
+        labelOrDescriptionId: '1',
         placement: 'top',
       });
     });

@@ -1,4 +1,4 @@
-import React, { ForwardedRef, forwardRef, useCallback, useEffect } from 'react';
+import React, { ForwardedRef, forwardRef, useCallback, useEffect, useRef } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
@@ -65,6 +65,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     autoFocus = DEFAULTS.AUTO_FOCUS,
     appendTo = DEFAULTS.APPEND_TO,
     continuePropagationOnTrigger,
+    'aria-labelledby': providedAriaLabelledby,
     ...rest
   } = props;
 
@@ -76,11 +77,14 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
 
   const popoverInstance = React.useRef<PopoverInstance>(undefined);
 
-  const triggerComponentId = triggerComponent.props?.id || uuidV4();
+  const generatedTriggerIdRef = useRef(uuidV4());
+  const generatedTriggerId = generatedTriggerIdRef.current;
+
+  const ariaLabelledby = providedAriaLabelledby || triggerComponent.props?.id || generatedTriggerId;
 
   const modalConditionalProps = {
     ...(interactive && {
-      'aria-labelledby': triggerComponentId,
+      'aria-labelledby': ariaLabelledby,
       focusLockProps: { restoreFocus: focusBackOnTrigger, autoFocus },
     }),
   };
@@ -114,13 +118,14 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     firstFocusElement?.focus();
   }, [firstFocusElement]);
 
-  const triggerComponentCommonProps = {
-    id: interactive ? triggerComponentId : triggerComponent.props?.id || id,
-  };
+  const triggerComponentCommonProps = {};
 
   if (interactive) {
     triggerComponentCommonProps['aria-haspopup'] =
       triggerComponent?.props?.['aria-haspopup'] || 'dialog';
+    if (!providedAriaLabelledby) {
+      triggerComponentCommonProps['id'] = ariaLabelledby;
+    }
   }
 
   const mrv2Props = isMRv2Button(triggerComponent) ? { useNativeKeyDown: true } : {};

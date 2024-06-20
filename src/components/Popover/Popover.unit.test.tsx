@@ -265,6 +265,27 @@ describe('<Popover />', () => {
         expect(container).toMatchSnapshot();
       }
     );
+
+    it('should match snapshot with aria-labelledby', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Popover
+          aria-labelledby="test-aria-labelledby"
+          interactive={true}
+          triggerComponent={<button>Click Me!</button>}
+        >
+          <p>Content</p>
+        </Popover>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -310,6 +331,24 @@ describe('<Popover />', () => {
       const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
       expect(content.parentElement.getAttribute('aria-labelledby')).toBe(id);
       expect(content.parentElement.getAttribute('aria-modal')).toBe('true');
+    });
+
+    it('uses aria-labelledby from props instead of id if present, (used for trigger with aria-labelledby)', async () => {
+      const user = userEvent.setup();
+      const id = 'example-id';
+      const labelId = 'label-id';
+
+      render(
+        <Popover
+          aria-labelledby={labelId}
+          triggerComponent={<button id={id}>Click Me!</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const content = await openPopoverByClickingOnTriggerAndCheckContent(user);
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe(labelId);
     });
 
     it('has aria-modal false when non interactive', async () => {
@@ -369,7 +408,7 @@ describe('<Popover />', () => {
         </Popover>
       );
       const button1 = screen.getByRole('button', { name: /Popover 1/i });
-      expect(button1.getAttribute('id')).toBe(id);
+      expect(button1.getAttribute('id')).toBe(null);
       expect(button1.getAttribute('aria-haspopup')).toBe(null);
     });
 
@@ -406,6 +445,37 @@ describe('<Popover />', () => {
       const button1 = screen.getByRole('button', { name: /Popover 1/i });
       expect(button1.getAttribute('id')).toBe(id);
       expect(button1.getAttribute('aria-haspopup')).toBe(null);
+    });
+
+    it('triggerComponent id is not set when aria-labelledby is passed in (interactive and triggerComponent id undefined)', async () => {
+      render(
+        <Popover
+          aria-labelledby="dummy-id"
+          triggerComponent={<button>Popover 1</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(null);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
+    });
+
+    it('triggerComponent id is not set when aria-labelledby is passed in (interactive and triggerComponent id defined)', async () => {
+      const id = 'example-id';
+      render(
+        <Popover
+          aria-labelledby="dummy-id"
+          triggerComponent={<button id={id}>Popover 1</button>}
+          interactive
+        >
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(id);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
     });
 
     it('should not add useNativeKeyDown on the DOM button', async () => {
