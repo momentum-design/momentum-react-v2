@@ -15,6 +15,7 @@ import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Flex from '../Flex';
 import AriaToolbar from '../AriaToolbar';
 import Avatar from '../Avatar';
+import MeetingListItem from '../MeetingListItem';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -112,7 +113,8 @@ AvatarExample.args = {
   color: COLORS.TERTIARY,
   delay: [0, 0],
   triggerComponent: (
-    <ButtonSimple useNativeKeyDown
+    <ButtonSimple
+      useNativeKeyDown
       style={{
         height: '24px',
         borderRadius: '12px',
@@ -124,10 +126,7 @@ AvatarExample.args = {
         border: 'unset',
       }}
     >
-      <Avatar
-        icon={'participant-unknown'}
-        type={'person'}
-      />
+      <Avatar icon={'participant-unknown'} type={'person'} />
     </ButtonSimple>
   ),
   children: (
@@ -226,18 +225,20 @@ Offset.args = {
 };
 
 const MultiplePopovers = Template<PopoverProps>((args: PopoverProps) => {
-  const triggerComponent = (<Popover
-    trigger="mouseenter"
-    placement={PLACEMENTS.BOTTOM}
-    showArrow
-    triggerComponent={
-      <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-        Hover or click me!
-      </ButtonSimple>
-    }
-  >
-    Description tooltip on hover
-  </Popover>);
+  const triggerComponent = (
+    <Popover
+      trigger="mouseenter"
+      placement={PLACEMENTS.BOTTOM}
+      showArrow
+      triggerComponent={
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+          Hover or click me!
+        </ButtonSimple>
+      }
+    >
+      Description tooltip on hover
+    </Popover>
+  );
   return <Popover {...args} triggerComponent={triggerComponent} />;
 }).bind({});
 
@@ -295,6 +296,34 @@ NestedPopover.args = {
     </ButtonSimple>
   ),
 };
+
+const WithMeetingListItem = Template<PopoverProps>(Popover).bind({});
+
+WithMeetingListItem.argTypes = { ...argTypes };
+
+WithMeetingListItem.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: (
+    <div>
+      <ButtonSimple>hi</ButtonSimple>
+    </div>
+  ),
+  triggerComponent: (
+    <MeetingListItem
+      onPress={() => {
+        alert('pressed by onPress');
+      }}
+      style={{ margin: '10rem auto', display: 'flex' }}
+    >
+      Hover or click me!
+    </MeetingListItem>
+  ),
+};
+
+// TODO: add a button inside the meeting list item which opens a popover
 
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
 
@@ -360,4 +389,5 @@ export {
   NestedPopover,
   AvatarExample,
   Common,
+  WithMeetingListItem,
 };
