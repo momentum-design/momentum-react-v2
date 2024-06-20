@@ -55,3 +55,12 @@
     cursor: auto;
   }
 }
+
+.md-link-container {
+  display: flex;
+  align-items: center;
+
+  .md-link-icon {
+    margin-left: 5px;
+  }
+}
