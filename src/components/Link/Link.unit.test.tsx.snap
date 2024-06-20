@@ -7,26 +7,35 @@ exports[`Link snapshot should match snapshot 1`] = `
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
-      <a
-        className="md-link-wrapper"
-        data-disabled={false}
-        data-inverted={false}
+      <div
+        className="md-link-container"
         onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
         onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
       >
-        LinkNext
-      </a>
+        <a
+          className="md-link-wrapper"
+          data-disabled={false}
+          data-inverted={false}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          LinkNext
+        </a>
+      </div>
     </FocusRing>
   </FocusRing>
 </Link>
@@ -44,27 +53,36 @@ exports[`Link snapshot should match snapshot when disabled 1`] = `
       focusClass="md-focus-ring-wrapper-disabled"
       focusRingClass="md-focus-ring-wrapper-disabled"
     >
-      <a
-        aria-disabled={true}
-        className="md-link-wrapper"
-        data-disabled={true}
-        data-inverted={false}
+      <div
+        className="md-link-container"
         onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
         onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
       >
-        LinkNext
-      </a>
+        <a
+          aria-disabled={true}
+          className="md-link-wrapper"
+          data-disabled={true}
+          data-inverted={false}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          LinkNext
+        </a>
+      </div>
     </FocusRing>
   </FocusRing>
 </Link>
@@ -79,26 +97,81 @@ exports[`Link snapshot should match snapshot when inverted 1`] = `
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
-      <a
-        className="md-link-wrapper"
-        data-disabled={false}
-        data-inverted={true}
+      <div
+        className="md-link-container"
         onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
         onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
       >
-        Hyperlink
-      </a>
+        <a
+          className="md-link-wrapper"
+          data-disabled={false}
+          data-inverted={true}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          Hyperlink
+        </a>
+      </div>
+    </FocusRing>
+  </FocusRing>
+</Link>
+`;
+
+exports[`Link snapshot should match snapshot with icon 1`] = `
+<Link
+  isWithIcon={true}
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <div
+        className="md-link-container"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <a
+          className="md-link-wrapper"
+          data-disabled={false}
+          data-inverted={false}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        />
+        <Icon
+          className="md-link-icon"
+          name="pop-out"
+          scale={16}
+        />
+      </div>
     </FocusRing>
   </FocusRing>
 </Link>
@@ -113,25 +186,34 @@ exports[`Link snapshot should match snapshot with title 1`] = `
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
-      <a
-        className="md-link-wrapper"
-        data-disabled={false}
-        data-inverted={false}
+      <div
+        className="md-link-container"
         onBlur={[Function]}
-        onClick={[Function]}
-        onDragStart={[Function]}
         onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchCancel={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        title="Example Text"
-      />
+      >
+        <a
+          className="md-link-wrapper"
+          data-disabled={false}
+          data-inverted={false}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+          title="Example Text"
+        />
+      </div>
     </FocusRing>
   </FocusRing>
 </Link>
