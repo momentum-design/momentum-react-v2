@@ -7,6 +7,12 @@ import { act } from 'react-dom/test-utils';
 import { Message } from '../InputMessage/InputMessage.types';
 import InputMessage from '../InputMessage';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => 'desc-test-ID',
+  };
+});
+
 describe('<TextInput/>', () => {
   describe('snapshot', () => {
     const mountComponent = async (component) => {
@@ -158,15 +164,13 @@ describe('<TextInput/>', () => {
     it('should have aria-describedby and id when message is provided', async () => {
       expect.assertions(2);
 
-      const id = 'example-id';
-
-      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" aria-describedby={id} />))
+      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" aria-describedby={'desc-test-ID'} />))
         .find(TextInput);
 
-      const inputMessageComponent = (await mountAndWait(<InputMessage className='error' level="error" id={id} />)).find(InputMessage);
+      const inputMessageComponent = (await mountAndWait(<InputMessage className='error' level="error" id={'desc-test-ID'} />)).find(InputMessage);
 
-      expect(inputMessageComponent.props().id).toStrictEqual(id);
-      expect(textInputComponent.props()).toMatchObject({ 'aria-label': 'text-input', 'aria-describedby': 'example-id' });
+      expect(inputMessageComponent.props().id).toStrictEqual('desc-test-ID');
+      expect(textInputComponent.props()).toMatchObject({ 'aria-label': 'text-input', 'aria-describedby': 'desc-test-ID' });
     });
 
     it('should not have aria-labelledby when message is not provided', async () => {

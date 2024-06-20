@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { ReactElement, InputHTMLAttributes, RefObject, forwardRef } from 'react';
+import React, { ReactElement, InputHTMLAttributes, RefObject, forwardRef, useRef } from 'react';
 import { useTextField } from '@react-aria/textfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
 import classnames from 'classnames';
@@ -11,6 +11,7 @@ import InputMessage, { getFilteredMessages } from '../InputMessage';
 import { ButtonSimple, Icon } from '..';
 import { STYLE } from './TextInput.constants';
 import { useFocusState } from '../../hooks/useFocusState';
+import { v4 as uuidV4 } from 'uuid';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
@@ -39,6 +40,8 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
 
   const { isFocused, focusProps } = useFocusState(props);
   const state = useSearchFieldState(props);
+
+  const messageId = useRef(uuidV4());
 
   const onClearButtonPress = () => {
     state.setValue('');
@@ -74,7 +77,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           className={inputClassName}
           ref={inputRef}
           maxLength={inputMaxLen}
-          aria-describedby={messages && !!messages.length ? "message-description" : undefined}
+          aria-describedby={messages && !!messages.length ? messageId.current : undefined}
         />
         {!!state.value && (
           <ButtonSimple
@@ -102,7 +105,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
               message={m}
               key={`input-message-${i}`}
               level={messageType}
-              id="message-description"
+              id={messageId.current}
             />
           ))}
         </div>
