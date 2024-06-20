@@ -17,11 +17,8 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
-  const triggerComponentId = useRef(triggerComponent.props?.id || uuidV4());
-
-  const clonedTriggerComponent = React.cloneElement(triggerComponent, {
-    id: triggerComponentId.current, 'aria-haspopup': triggerComponent?.props?.['aria-haspopup'] || 'dialog'
-  });
+  const labelIdRef = useRef(uuidV4());
+  const labelId = labelIdRef.current;
 
   // Modified tooltipSetInstance to call both setInstance and updateInstance
   const setMergedTooltipInstances = useCallback(
@@ -75,15 +72,16 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
     <Popover
       trigger="click"
       interactive
+      aria-labelledby={labelId}
       triggerComponent={
         <Tooltip
           type="label"
-          triggerComponent={clonedTriggerComponent}
+          triggerComponent={triggerComponent}
           {...otherTooltipProps}
           onHide={handleOnHideTooltip}
           onShow={handleOnShowTooltip}
           setInstance={setMergedTooltipInstances}
-          id={triggerComponentId.current}
+          labelOrDescriptionId={labelId}
         >
           {tooltipContent}
         </Tooltip>

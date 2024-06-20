@@ -153,6 +153,19 @@ const popoverArgTypes = {
       },
     },
   },
+  'aria-labelledby': {
+    description:
+      'aria-labelledby for an interactive popover only, defaults to the trigger component id',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { popoverArgTypes };

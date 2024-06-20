@@ -27,11 +27,14 @@ const Tooltip = forwardRef(
       variant = DEFAULTS.VARIANT,
       triggerComponent,
       children,
+      labelOrDescriptionId: providedLabelId,
+      'aria-haspopup': ariaHaspopup,
       ...otherProps
     }: Props,
     ref: ForwardedRef<HTMLElement>
   ) => {
-    const id = useId();
+    const generatedLabelId = useId();
+    const labelId = providedLabelId || generatedLabelId;
     const isLabelTooltip = type === 'label';
     const isDescription = type === 'description';
 
@@ -51,11 +54,11 @@ const Tooltip = forwardRef(
       [isLabelTooltip, otherProps?.setInstance]
     );
 
-    const newTriggerComponent = isLabelTooltip
-      ? React.cloneElement(triggerComponent, { 'aria-labelledby': id })
-      : isDescription
-      ? React.cloneElement(triggerComponent, { 'aria-describedby': id })
-      : triggerComponent;
+    const newTriggerComponent = React.cloneElement(triggerComponent, {
+      ...(isLabelTooltip && { 'aria-labelledby': labelId }),
+      ...(isDescription && { 'aria-describedby': labelId }),
+      ...(ariaHaspopup && { 'aria-haspopup': ariaHaspopup }),
+    });
 
     // In label and description mode we must render tooltip content twice
     // First inside the popover, second in a hidden div for Screen Readers (SR)
@@ -66,7 +69,7 @@ const Tooltip = forwardRef(
     // We use aria-labelledby and aria-describedby because the `children` might contains HTML elements
     const triggerLabel =
       isLabelTooltip || isDescription ? (
-        <div className={STYLE.label} id={id}>
+        <div className={STYLE.label} id={labelId}>
           {children}
         </div>
       ) : null;

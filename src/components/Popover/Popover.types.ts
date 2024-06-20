@@ -202,4 +202,9 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * Whether to allow the trigger event to continue to propagate after the Popover is triggered.
    */
   continuePropagationOnTrigger?: boolean;
+
+  /**
+   * aria-labelledby for an interactive popover only, defaults to the trigger component id
+   */
+  'aria-labelledby'?: string;
 }
