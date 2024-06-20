@@ -168,6 +168,15 @@ describe('<TextInput/>', () => {
       expect(inputMessageComponent.props().id).toStrictEqual(id);
       expect(textInputComponent.props()).toMatchObject({ 'aria-label': 'text-input', 'aria-describedby': 'example-id' });
     });
+
+    it('should not have aria-labelledby when message is not provided', async () => {
+      expect.assertions(1);
+
+      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" />))
+        .find(TextInput);
+
+      expect(textInputComponent.props()['aria-describedby']).toBe(undefined);
+    });
   });
 
   describe('actions', () => {

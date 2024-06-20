@@ -15,7 +15,6 @@ exports[`<TextInput/> snapshot should match snapshot 1`] = `
         className="md-text-input-container"
       >
         <input
-          aria-describedby="message-description"
           aria-label="text-input"
           disabled={false}
           id="test-ID"
@@ -47,7 +46,6 @@ exports[`<TextInput/> snapshot should match snapshot with className 1`] = `
         className="md-text-input-container"
       >
         <input
-          aria-describedby="message-description"
           aria-label="text-input"
           disabled={false}
           id="test-ID"
@@ -79,7 +77,6 @@ exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
         className="md-text-input-container"
       >
         <input
-          aria-describedby="message-description"
           aria-label="text-input"
           disabled={false}
           id="test-ID"
@@ -245,7 +242,6 @@ exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
         className="md-text-input-container"
       >
         <input
-          aria-describedby="message-description"
           aria-label="text-input"
           disabled={false}
           id="example-id"
@@ -277,7 +273,6 @@ exports[`<TextInput/> snapshot should match snapshot with inputMaxLen 1`] = `
         className="md-text-input-container"
       >
         <input
-          aria-describedby="message-description"
           aria-label="text-input"
           disabled={false}
           id="test-ID"
@@ -319,7 +314,6 @@ exports[`<TextInput/> snapshot should match snapshot with style 1`] = `
         className="md-text-input-container"
       >
         <input
-          aria-describedby="message-description"
           aria-label="text-input"
           disabled={false}
           id="test-ID"
