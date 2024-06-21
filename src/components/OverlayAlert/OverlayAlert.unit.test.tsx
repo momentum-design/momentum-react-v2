@@ -13,6 +13,7 @@ import OverlayAlert, { OVERLAY_ALERT_CONSTANTS as CONSTANTS, OVERLAY_ALERT_CONST
 import { STYLE as OVERLAY_STYLE } from '../Overlay/Overlay.constants';
 import Text from '../Text';
 import Tooltip from '../Tooltip';
+import Popover from '../Popover';
 
 jest.mock('uuid', () => {
   return {
@@ -415,97 +416,266 @@ describe('<OverlayAlert />', () => {
 
       expect(onCloseFn).toHaveBeenCalledTimes(1);
     });
-  });
 
-  it('should lock focus by default', async () => {
-    const Component = () => {
-      return (
-        <>
-          <button>button3</button>
-          <OverlayAlert>
-            <button>button1</button>
-            <button>button2</button>
-          </OverlayAlert>
-        </>
-      );
-    };
+    it('should lock focus by default', async () => {
+      const Component = () => {
+        return (
+          <>
+            <button>button3</button>
+            <OverlayAlert>
+              <button>button1</button>
+              <button>button2</button>
+            </OverlayAlert>
+          </>
+        );
+      };
 
-    const user = userEvent.setup();
+      const user = userEvent.setup();
 
-    render(<Component />);
+      render(<Component />);
 
-    const button1 = screen.getByRole('button', {name: 'button1'});
-    const button2 = screen.getByRole('button', {name: 'button2'});
-    const button3 = screen.getByRole('button', {name: 'button3'});
+      const button1 = screen.getByRole('button', {name: 'button1'});
+      const button2 = screen.getByRole('button', {name: 'button2'});
+      const button3 = screen.getByRole('button', {name: 'button3'});
 
-    expect(button1).toHaveFocus();
-    expect(button3).not.toHaveFocus();
+      expect(button1).toHaveFocus();
+      expect(button3).not.toHaveFocus();
 
-    await user.tab();
+      await user.tab();
 
-    expect(button2).toHaveFocus();
-    expect(button3).not.toHaveFocus();
+      expect(button2).toHaveFocus();
+      expect(button3).not.toHaveFocus();
 
-    await user.tab();
+      await user.tab();
 
-    expect(button1).toHaveFocus();
-    expect(button3).not.toHaveFocus();
-  });
+      expect(button1).toHaveFocus();
+      expect(button3).not.toHaveFocus();
+    });
 
-  it('should not close on Esc press while a tooltip is open inside the overlay alert', async () => {
-    const onCloseMock = jest.fn();
+    it('should not close on Esc press while a tooltip is open inside the overlay alert', async () => {
+      const onCloseMock = jest.fn();
 
-    const Component = () => {
-      return (
-        <>
-          <OverlayAlert
-            onClose={onCloseMock}
-          >
-            <Tooltip 
-              triggerComponent={
-                <button>button1</button>
-              } 
-              type="none"
+      const Component = () => {
+        return (
+          <>
+            <OverlayAlert
+              onClose={onCloseMock}
             >
-              Tooltip text
-            </Tooltip>
-          </OverlayAlert>
-        </>
-      );
-    };
+              <Tooltip 
+                triggerComponent={
+                  <button>button1</button>
+                } 
+                type="none"
+              >
+                Tooltip text
+              </Tooltip>
+            </OverlayAlert>
+          </>
+        );
+      };
 
-    const user = userEvent.setup();
+      const user = userEvent.setup();
 
-    render(<Component />);
+      render(<Component />);
 
-    // press tab
-    await user.tab();
+      // press tab
+      await user.tab();
 
-    const button1 = screen.getByRole('button', {name: 'button1'});
+      const button1 = screen.getByRole('button', {name: 'button1'});
 
-    // trigger button should be focused, tooltip should be shown
-    expect(button1).toHaveFocus();
+      // trigger button should be focused, tooltip should be shown
+      expect(button1).toHaveFocus();
 
-    const tooltip = screen.getByRole('tooltip', { hidden: true });
+      const tooltip = screen.getByRole('tooltip', { hidden: true });
 
-    await waitFor(() => {
-      expect(getByText(tooltip, 'Tooltip text')).toBeInTheDocument();
+      await waitFor(() => {
+        expect(getByText(tooltip, 'Tooltip text')).toBeInTheDocument();
+      });
+
+      // press Escape
+      await user.keyboard('{Escape}');
+
+      // trigger button should be focused, tooltip should be hidden and onClose should not have been called
+      expect(button1).toHaveFocus();
+      await waitFor(() => {
+        expect(queryByText(tooltip, 'Tooltip text')).not.toBeInTheDocument();
+        expect(onCloseMock).not.toBeCalled();
+      });
+
+      // press Escape
+      await user.keyboard('{Escape}');
+
+      // onClose is called on the next Escape press
+      expect(onCloseMock).toBeCalledTimes(1);
     });
 
-    // press Escape
-    await user.keyboard('{Escape}');
+    it('should close on Esc press while a tooltip with hideOnEsc = false is open inside the overlay alert', async () => {
+      const onCloseMock = jest.fn();
 
-    // trigger button should be focused, tooltip should be hidden and onClose should not have been called
-    expect(button1).toHaveFocus();
-    await waitFor(() => {
-      expect(queryByText(tooltip, 'Tooltip text')).not.toBeInTheDocument();
-      expect(onCloseMock).not.toBeCalled();
+      const Component = () => {
+        return (
+          <>
+            <OverlayAlert
+              onClose={onCloseMock}
+            >
+              <Popover 
+                triggerComponent={
+                  <button>button1</button>
+                } 
+                hideOnEsc={false}
+                role="tooltip"
+                trigger="mouseenter focusin"
+              >
+                Tooltip text
+              </Popover>
+            </OverlayAlert>
+          </>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      render(<Component />);
+
+      // press tab
+      await user.tab();
+
+      const button1 = screen.getByRole('button', {name: 'button1'});
+
+      // trigger button should be focused, tooltip should be shown
+      expect(button1).toHaveFocus();
+
+      const tooltip = screen.getByRole('tooltip', { hidden: true });
+
+      await waitFor(() => {
+        expect(getByText(tooltip, 'Tooltip text')).toBeInTheDocument();
+      });
+
+      // press Escape
+      await user.keyboard('{Escape}');
+
+      // onClose is called on the next Escape press, tooltip did not close
+      await waitFor(() => {
+        expect(getByText(tooltip, 'Tooltip text')).toBeInTheDocument();
+        expect(onCloseMock).toBeCalledTimes(1);
+      });
     });
 
-    // press Escape
-    await user.keyboard('{Escape}');
+    it('should close on Esc press while a popover is open inside the overlay alert', async () => {
+      const onCloseMock = jest.fn();
 
-    // onClose is called on the next Escape press
-    expect(onCloseMock).toBeCalledTimes(1);
+      const Component = () => {
+        return (
+          <>
+            <OverlayAlert
+              onClose={onCloseMock}
+            >
+              <Popover 
+                triggerComponent={
+                  <button>button1</button>
+                } 
+                interactive
+              >
+                <button>button2</button>
+              </Popover>
+            </OverlayAlert>
+          </>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      render(<Component />);
+
+      // press tab
+      await user.tab();
+
+      const button1 = screen.getByRole('button', {name: 'button1'});
+
+      // trigger button should be focused
+      expect(button1).toHaveFocus();
+
+      // press Enter
+      await user.keyboard('{Enter}');
+
+      const button2 = screen.getByRole('button', {name: 'button2'});
+
+      // popover should be shown with button2 focused
+      await waitFor(() => {
+        expect(button2).toHaveFocus();
+      });
+
+      // press Escape
+      await user.keyboard('{Escape}');
+
+      // trigger button should be focused, popover should be hidden (button2 is not in doc) and onClose should not have been called
+      expect(button1).toHaveFocus();
+      await waitFor(() => {
+        expect(button1).toHaveFocus();
+        expect(button2).not.toBeInTheDocument();
+        expect(onCloseMock).not.toBeCalled();
+      });
+
+      // press Escape
+      await user.keyboard('{Escape}');
+
+      // onClose is called on the next Escape press
+      expect(onCloseMock).toBeCalledTimes(1);
+    });
+
+    it('should not close on Esc press while a popover with hideOnEsc = false is open inside the overlay alert', async () => {
+      const onCloseMock = jest.fn();
+
+      const Component = () => {
+        return (
+          <>
+            <OverlayAlert
+              onClose={onCloseMock}
+            >
+              <Popover 
+                triggerComponent={
+                  <button>button1</button>
+                } 
+                interactive
+                hideOnEsc={false}
+              >
+                <button>button2</button>
+              </Popover>
+            </OverlayAlert>
+          </>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      render(<Component />);
+
+      // press tab
+      await user.tab();
+
+      const button1 = screen.getByRole('button', {name: 'button1'});
+
+      // trigger button should be focused
+      expect(button1).toHaveFocus();
+
+      // press Enter
+      await user.keyboard('{Enter}');
+
+      const button2 = screen.getByRole('button', {name: 'button2'});
+
+      // popover should be shown with button2 focused
+      await waitFor(() => {
+        expect(button2).toHaveFocus();
+      });
+
+      // press Escape
+      await user.keyboard('{Escape}');
+
+      // onClose is called on the next Escape press, popover is still open with button2 focused
+      expect(onCloseMock).toBeCalledTimes(1);
+      await waitFor(() => {
+        expect(button2).toHaveFocus();
+      });
+    });
   });
 });
