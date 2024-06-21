@@ -245,6 +245,7 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
     aria-label="Cisco Webex"
     className="md-avatar-button-wrapper"
     onPress={[Function]}
+    useNativeKeyDown={true}
   >
     <FocusRing>
       <FocusRing
@@ -258,7 +259,6 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
           onClick={[Function]}
           onDragStart={[Function]}
           onFocus={[Function]}
-          onKeyDown={[Function]}
           onKeyUp={[Function]}
           onMouseDown={[Function]}
           onMouseEnter={[Function]}

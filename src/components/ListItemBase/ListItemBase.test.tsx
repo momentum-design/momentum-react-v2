@@ -7,7 +7,7 @@ import '@testing-library/jest-dom';
 import { STYLE } from './ListItemBase.constants';
 import * as listUtils from '../List/List.utils';
 import userEvent from '@testing-library/user-event';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import List from '../List/List';
 import { ListContextValue } from '../List/List.types';
 
@@ -404,5 +404,27 @@ describe('ListItemBase', () => {
       />
     );
     expect(getByTestId('list-item-1')).not.toHaveFocus();
+  });
+
+  it('onPress should work when Enter key is pressed', async () => {
+    const mockCallback = jest.fn();
+    const mockClick = jest.fn();
+
+    const user = userEvent.setup();
+
+    render(<ListItemBase data-testid="list-item-1" key="1" itemIndex={0} onPress={mockCallback} />);
+
+    const listItemBase = await screen.findByTestId('list-item-1');
+
+    listItemBase.onclick = mockClick;
+
+    listItemBase.focus();
+
+    expect(listItemBase).toHaveFocus();
+
+    await user.keyboard('{Enter}');
+
+    expect(mockCallback).toBeCalledTimes(1);
+    expect(mockClick).toBeCalledTimes(1);
   });
 });
