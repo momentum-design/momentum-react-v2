@@ -16,6 +16,7 @@ import Flex from '../Flex';
 import AriaToolbar from '../AriaToolbar';
 import Avatar from '../Avatar';
 import MeetingListItem from '../MeetingListItem';
+import SearchInput from '../SearchInput';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -323,6 +324,33 @@ WithMeetingListItem.args = {
   ),
 };
 
+const WithSearchInput = Template<PopoverProps>(Popover).bind({});
+
+const SearchInputComponent = () => {
+  const [val, setVal] = useState('');
+
+  return (
+    <SearchInput
+      clearButtonAriaLabel="Clear"
+      onChange={(e) => {
+        setVal(e);
+      }}
+      value={val}
+     />
+  );
+};
+
+WithSearchInput.argTypes = { ...argTypes };
+
+WithSearchInput.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: <SearchInputComponent />,
+  triggerComponent: <ButtonSimple>Open Search</ButtonSimple>,
+};
+
 // TODO: add a button inside the meeting list item which opens a popover
 
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
@@ -390,4 +418,5 @@ export {
   AvatarExample,
   Common,
   WithMeetingListItem,
+  WithSearchInput,
 };

@@ -34,7 +34,30 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   const inputRef = ref || componentRef;
   const { focusProps, isFocused } = useFocusState(props);
 
-  const { inputProps, clearButtonProps, labelProps } = useSearchField(props, state, inputRef);
+  const containerRef = useRef(null);
+
+  const {
+    inputProps: ariaInputProps,
+    clearButtonProps,
+    labelProps,
+  } = useSearchField(props, state, inputRef);
+
+  const { onKeyDown, ...otherAriaInputProps } = ariaInputProps;
+
+  const internalOnKeyDown = (e) => {
+    // When the input is empty, pressing escape should be
+    // propagated to the parent so that popovers can close
+    if (e.key === 'Escape' && !state.value) {
+      containerRef.current.dispatchEvent(new KeyboardEvent('keydown', e));
+    }
+
+    onKeyDown(e);
+  };
+
+  const inputProps = {
+    ...otherAriaInputProps,
+    onKeyDown: internalOnKeyDown,
+  };
 
   const handleClick = () => {
     if (inputRef.current) {
@@ -51,6 +74,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       data-disabled={isDisabled}
       data-focus={isFocused}
       data-height={height}
+      ref={containerRef}
     >
       {label && (
         <label htmlFor={labelProps.htmlFor} {...labelProps}>
