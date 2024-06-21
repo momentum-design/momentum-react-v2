@@ -114,21 +114,13 @@ AvatarExample.args = {
   color: COLORS.TERTIARY,
   delay: [0, 0],
   triggerComponent: (
-    <ButtonSimple
-      useNativeKeyDown
-      style={{
-        height: '24px',
-        borderRadius: '12px',
-        width: '24px',
-        display: 'flex',
-        backgroundColor: 'unset',
-        padding: 0,
-        margin: 0,
-        border: 'unset',
+    <Avatar
+      onPress={() => {
+        alert('avatar on press');
       }}
-    >
-      <Avatar icon={'participant-unknown'} type={'person'} />
-    </ButtonSimple>
+      icon={'participant-unknown'}
+      type={'person'}
+    />
   ),
   children: (
     <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
@@ -324,6 +316,42 @@ WithMeetingListItem.args = {
   ),
 };
 
+const WithMeetingListItemWithButtonsWithPopover = Template<PopoverProps>(Popover).bind({});
+
+WithMeetingListItemWithButtonsWithPopover.argTypes = { ...argTypes };
+
+WithMeetingListItemWithButtonsWithPopover.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: (
+    <div>
+      <Popover
+        interactive
+        trigger="click"
+        triggerComponent={
+          <Avatar
+            onPress={() => {
+              alert('avatar on press');
+            }}
+            initials="AB"
+          >
+            Hover or click me!
+          </Avatar>
+        }
+      >
+        <ButtonSimple>hi</ButtonSimple>
+      </Popover>
+    </div>
+  ),
+  triggerComponent: (
+    <MeetingListItem style={{ margin: '10rem auto', display: 'flex' }}>
+      Hover or click me!
+    </MeetingListItem>
+  ),
+};
+
 const WithSearchInput = Template<PopoverProps>(Popover).bind({});
 
 const SearchInputComponent = () => {
@@ -336,7 +364,7 @@ const SearchInputComponent = () => {
         setVal(e);
       }}
       value={val}
-     />
+    />
   );
 };
 
@@ -350,8 +378,6 @@ WithSearchInput.args = {
   children: <SearchInputComponent />,
   triggerComponent: <ButtonSimple>Open Search</ButtonSimple>,
 };
-
-// TODO: add a button inside the meeting list item which opens a popover
 
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
 
@@ -418,5 +444,6 @@ export {
   AvatarExample,
   Common,
   WithMeetingListItem,
+  WithMeetingListItemWithButtonsWithPopover,
   WithSearchInput,
 };
