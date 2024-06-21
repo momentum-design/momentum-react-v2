@@ -117,7 +117,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     if (event.pointerType === 'keyboard') {
       ref.current.click();
     }
-    onPress(event);
+    if (onPress) {
+      onPress(event);
+    }
   }, []);
 
   const { pressProps, isPressed } = usePress({
