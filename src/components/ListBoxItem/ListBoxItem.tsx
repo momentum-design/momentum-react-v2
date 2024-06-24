@@ -32,7 +32,7 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
   );
 
   return (
-    <ListItemBase isPadded key={item.key} ref={ref} {...optionProps} isDisabled={isDisabled}>
+    <ListItemBase isPadded key={item.key} ref={ref} {...optionProps} isDisabled={isDisabled} lang={item.props?.lang}>
       <ListItemBaseSection position="fill" title={item.textValue}>
         {item.rendered}
       </ListItemBaseSection>
