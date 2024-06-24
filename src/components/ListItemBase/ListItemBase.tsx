@@ -49,6 +49,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     contextMenuActions,
     interactive = DEFAULTS.INTERACTIVE,
     onPress,
+    lang,
     ...rest
   } = props;
 
@@ -288,7 +289,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         data-interactive={interactive}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         role={role}
+        lang={lang}
         {...listItemPressProps}
+
       >
         {content}
         {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}

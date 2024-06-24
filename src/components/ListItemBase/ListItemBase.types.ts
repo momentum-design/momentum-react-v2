@@ -92,4 +92,9 @@ export interface Props extends PressEvents, ContextMenu {
    * @default true
    */
   interactive?: boolean;
+
+  /**
+   * lang attribute if necessary.
+   */
+  lang?: string;
 }
