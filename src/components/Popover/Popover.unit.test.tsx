@@ -1185,7 +1185,7 @@ describe('<Popover />', () => {
             trigger="mouseenter"
             showArrow
             triggerComponent={
-              <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+              <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }} role='button'>
                 Hover or click me!
               </ButtonSimple>
             }
@@ -1441,6 +1441,10 @@ describe('<Popover />', () => {
                       () => {}
                     }
                     initials="AB"
+<<<<<<< HEAD
+=======
+                    data-testid="AB"
+>>>>>>> c10e37daa (feat(avatar): resolve conflict)
                   />
                 }
                 interactive
@@ -1455,7 +1459,7 @@ describe('<Popover />', () => {
           );
 
           // 1.
-          const avatarButton = await screen.findByRole('button', { name: 'AB' });
+          const avatarButton = await screen.findByTestId('AB');
 
           if (triggerDevice === 'mouse') {
             await user.click(avatarButton);
