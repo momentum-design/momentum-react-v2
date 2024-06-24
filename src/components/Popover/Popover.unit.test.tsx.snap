@@ -789,7 +789,9 @@ exports[`<Popover /> snapshot should match snapshot with color 2`] = `
 
 exports[`<Popover /> snapshot should match snapshot with id 1`] = `
 <div>
-  <button>
+  <button
+    id="example-id"
+  >
     Click Me!
   </button>
 </div>
@@ -799,6 +801,7 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
 <div>
   <button
     aria-describedby="tippy-3"
+    id="example-id"
   >
     Click Me!
   </button>

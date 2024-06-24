@@ -6,6 +6,12 @@ import userEvent from '@testing-library/user-event';
 import RadioGroup from './';
 import { STYLE } from './RadioGroup.constants';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<RadioGroup />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
@@ -85,6 +91,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           description="The radio group description"
           style={style}
+          id='example-id'
         />
       );
 
@@ -347,6 +354,16 @@ describe('<RadioGroup />', () => {
       const radioGroup = screen.getByRole('radiogroup');
 
       expect(radioGroup).toHaveClass(STYLE.group);
+    });
+
+    it('should have provided aria-describedby when description is provided', () => {
+      expect.assertions(1);
+
+      render(<RadioGroup label="Test Radio Group" description="The radio group description" id='example-id' />);
+
+      const radioGroup = screen.getByRole('radiogroup');
+
+      expect(radioGroup).toHaveAttribute('aria-describedby', 'radio-group-description-example-id');
     });
 
     it('should have provided class when className is provided', () => {

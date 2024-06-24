@@ -27,7 +27,7 @@ import { PopoverInstance } from '.';
 const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   const {
     children,
-    trigger = DEFAULTS.TRIGGER,
+    trigger: triggerFromProps = DEFAULTS.TRIGGER,
     triggerComponent,
     variant = DEFAULTS.VARIANT,
     placement = DEFAULTS.PLACEMENT,
@@ -114,7 +114,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   }, [firstFocusElement]);
 
   const triggerComponentCommonProps = {
-    id: interactive ? triggerComponentId : triggerComponent.props?.id,
+    id: interactive ? triggerComponentId : triggerComponent.props?.id || id,
   };
 
   if (interactive) {
@@ -128,6 +128,20 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     ...triggerComponentCommonProps,
     ...mrv2Props,
   });
+
+  let trigger = triggerFromProps;
+  if (triggerFromProps === 'mouseenter') {
+    if (interactive) {
+      // if the popover is interactive, there is interactive content inside the popover
+      // so we can't use the focusin trigger, since after closing with escape key, the
+      // popover keeps opening. So we need to use the click trigger instead.
+      trigger = 'mouseenter click';
+    } else {
+      // non-interactive popovers with trigger mouseenter (like a tooltip) should also open
+      // when focusing to the trigger element
+      trigger = 'mouseenter focusin';
+    }
+  }
 
   return (
     <LazyTippy
@@ -167,8 +181,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         </ModalContainer>
       )}
       placement={placement as PlacementType}
-      /* add focusin automatically if only mouseenter is passed in as a trigger - this is for accessibility reasons */
-      trigger={trigger === 'mouseenter' ? 'mouseenter focusin' : trigger}
+      trigger={trigger}
       interactive={interactive}
       appendTo={appendTo}
       popperOptions={{

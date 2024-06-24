@@ -7,10 +7,8 @@ import Text from '../Text';
 import { STYLE as POPOVER_STYLE } from '../Popover/Popover.constants';
 import Tooltip from '../Tooltip/Tooltip';
 import userEvent from '@testing-library/user-event';
-import { render, screen, waitFor } from '@testing-library/react';
+import { getByText, queryByText, render, screen, waitFor } from '@testing-library/react';
 import Popover from '../Popover';
-
-
 
 jest.mock('uuid', () => {
   return {
@@ -19,7 +17,7 @@ jest.mock('uuid', () => {
 });
 
 describe('<TooltipPopoverCombo />', () => {
-  const triggerComponent = <button>Example button</button>;
+  const triggerComponent = <button id="test-id" aria-haspopup="dialog">Example button</button>;
   const tooltipContent = <Text>Example tooltip content</Text>;
   const popoverContent = <button>Example popover content button</button>;
 
@@ -27,7 +25,13 @@ describe('<TooltipPopoverCombo />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<TooltipPopoverCombo triggerComponent={triggerComponent} tooltipContent={tooltipContent} popoverContent={popoverContent}/>);
+      const container = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+        />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -35,7 +39,14 @@ describe('<TooltipPopoverCombo />', () => {
     it('should match snapshot with otherTooltipProps ', () => {
       expect.assertions(1);
 
-      const container = mount(<TooltipPopoverCombo triggerComponent={triggerComponent} tooltipContent={tooltipContent} popoverContent={popoverContent} otherTooltipProps={{placement: 'top'}}/>);
+      const container = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ placement: 'top' }}
+        />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -43,7 +54,14 @@ describe('<TooltipPopoverCombo />', () => {
     it('should match snapshot with otherPopoverProps ', () => {
       expect.assertions(1);
 
-      const container = mount(<TooltipPopoverCombo triggerComponent={triggerComponent} tooltipContent={tooltipContent} popoverContent={popoverContent} otherTooltipProps={{placement: 'bottom'}}/>);
+      const container = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ placement: 'bottom' }}
+        />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -53,8 +71,13 @@ describe('<TooltipPopoverCombo />', () => {
     it('should have popover with correct props', () => {
       expect.assertions(2);
 
-      const comboElement = mount(<TooltipPopoverCombo triggerComponent={triggerComponent} tooltipContent={tooltipContent} popoverContent={popoverContent}/>)
-        .find(TooltipPopoverCombo);
+      const comboElement = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+        />
+      ).find(TooltipPopoverCombo);
 
       const popover = comboElement.find(Popover).first();
 
@@ -75,16 +98,23 @@ describe('<TooltipPopoverCombo />', () => {
         onShow: expect.any(Function),
         setInstance: expect.any(Function),
         triggerComponent: triggerComponent,
+        type: 'label',
         'aria-haspopup': 'dialog',
-        'id': '1',
+        id: 'test-id',
       });
     });
 
     it('should have provided otherPopoverProps on popover when provided', () => {
       expect.assertions(1);
 
-      const comboElement = mount(<TooltipPopoverCombo triggerComponent={triggerComponent} tooltipContent={tooltipContent} popoverContent={popoverContent} otherPopoverProps={{placement: 'top'}}/>)
-        .find(TooltipPopoverCombo);
+      const comboElement = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherPopoverProps={{ placement: 'top' }}
+        />
+      ).find(TooltipPopoverCombo);
 
       const popover = comboElement.find(Popover).first();
 
@@ -95,17 +125,23 @@ describe('<TooltipPopoverCombo />', () => {
         onShow: expect.any(Function),
         trigger: 'click',
         triggerComponent: expect.anything(),
-        'placement': 'top',
+        placement: 'top',
       });
     });
 
     it('should have provided otherTooltipProps on tooltip when provided', () => {
       expect.assertions(1);
 
-      const comboElement = mount(<TooltipPopoverCombo triggerComponent={triggerComponent} tooltipContent={tooltipContent} popoverContent={popoverContent} otherTooltipProps={{placement: 'top'}}/>)
-        .find(TooltipPopoverCombo);
+      const comboElement = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ placement: 'top' }}
+        />
+      ).find(TooltipPopoverCombo);
 
-        const tooltip = comboElement.find(Tooltip);
+      const tooltip = comboElement.find(Tooltip);
 
       expect(tooltip.props()).toStrictEqual({
         children: tooltipContent,
@@ -113,9 +149,10 @@ describe('<TooltipPopoverCombo />', () => {
         onShow: expect.any(Function),
         setInstance: expect.any(Function),
         triggerComponent: triggerComponent,
+        type: 'label',
         'aria-haspopup': 'dialog',
-        'id': '1',
-        'placement': 'top',
+        id: 'test-id',
+        placement: 'top',
       });
     });
   });
@@ -126,10 +163,11 @@ describe('<TooltipPopoverCombo />', () => {
       const user = userEvent.setup();
 
       render(
-        <TooltipPopoverCombo 
-          triggerComponent={triggerComponent} 
-          tooltipContent={tooltipContent} 
-          popoverContent={popoverContent} />
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+        />
       );
 
       // press tab
@@ -137,8 +175,10 @@ describe('<TooltipPopoverCombo />', () => {
 
       // trigger button should be focused, tooltip should be shown & popover hidden
       expect(screen.getByText('Example button')).toHaveFocus();
+
+      let tooltip = screen.getByRole('tooltip', { hidden: true });
       await waitFor(() => {
-        expect(screen.getByText('Example tooltip content')).toBeInTheDocument();
+        expect(getByText(tooltip, 'Example tooltip content')).toBeInTheDocument();
         expect(screen.queryByText('Example popover content button')).not.toBeInTheDocument();
       });
 
@@ -148,7 +188,7 @@ describe('<TooltipPopoverCombo />', () => {
       // button inside popover should be focused, popover should be shown & tooltip hidden
       expect(screen.getByText('Example popover content button')).toHaveFocus();
       await waitFor(() => {
-        expect(screen.queryByText('Example tooltip content')).not.toBeInTheDocument();
+        expect(queryByText(tooltip, 'Example tooltip content')).not.toBeInTheDocument();
       });
 
       // focus lock inside popover should work
@@ -162,8 +202,9 @@ describe('<TooltipPopoverCombo />', () => {
 
       // trigger button should be focused once again, tooltip should be shown & popover hidden
       expect(screen.getByText('Example button')).toHaveFocus();
+      tooltip = screen.getByRole('tooltip', { hidden: true });
       await waitFor(() => {
-        expect(screen.getByText('Example tooltip content')).toBeInTheDocument();
+        expect(getByText(tooltip, 'Example tooltip content')).toBeInTheDocument();
         expect(screen.queryByText('Example popover content button')).not.toBeInTheDocument();
       });
 
@@ -173,7 +214,7 @@ describe('<TooltipPopoverCombo />', () => {
       // trigger button should be focused still, tooltip & popover both hidden
       expect(screen.getByText('Example button')).toHaveFocus();
       await waitFor(() => {
-        expect(screen.queryByText('Example tooltip content')).not.toBeInTheDocument();
+        expect(queryByText(tooltip, 'Example tooltip content')).not.toBeInTheDocument();
         expect(screen.queryByText('Example popover content button')).not.toBeInTheDocument();
       });
     });
@@ -183,18 +224,21 @@ describe('<TooltipPopoverCombo />', () => {
       const user = userEvent.setup();
 
       const { container } = render(
-        <TooltipPopoverCombo 
-          triggerComponent={triggerComponent} 
-          tooltipContent={tooltipContent} 
-          popoverContent={popoverContent} />
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+        />
       );
 
       // user hovers over Example button
       await user.hover(screen.getByText('Example button'));
 
       // tooltip should be shown but popover remains hidden
+
+      const tooltip = screen.getByRole('tooltip', { hidden: true });
       await waitFor(() => {
-        expect(screen.getByText('Example tooltip content')).toBeInTheDocument();
+        expect(getByText(tooltip, 'Example tooltip content')).toBeInTheDocument();
         expect(screen.queryByText('Example popover content button')).not.toBeInTheDocument();
       });
 
@@ -203,7 +247,7 @@ describe('<TooltipPopoverCombo />', () => {
 
       // tooltip should be hidden and popover shown
       await waitFor(() => {
-        expect(screen.queryByText('Example tooltip content')).not.toBeInTheDocument();
+        expect(queryByText(tooltip, 'Example tooltip content')).not.toBeInTheDocument();
         expect(screen.getByText('Example popover content button')).toBeInTheDocument();
       });
 
@@ -214,7 +258,7 @@ describe('<TooltipPopoverCombo />', () => {
 
       // tooltip & popover both hidden
       await waitFor(() => {
-        expect(screen.queryByText('Example tooltip content')).not.toBeInTheDocument();
+        expect(queryByText(tooltip, 'Example tooltip content')).not.toBeInTheDocument();
         expect(screen.queryByText('Example popover content button')).not.toBeInTheDocument();
       });
     });

@@ -9,6 +9,9 @@ import Popover from './';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import { STYLE as POPOVER_STYLE } from './Popover.constants';
 import { PopoverInstance, PositioningStrategy } from './Popover.types';
+import SearchInput from '../SearchInput';
+import Avatar from '../Avatar';
+import MeetingListItem from '../MeetingListItem';
 
 jest.mock('uuid', () => {
   return {
@@ -353,6 +356,18 @@ describe('<Popover />', () => {
       );
       const button1 = screen.getByRole('button', { name: /Popover 1/i });
       expect(button1.getAttribute('id')).toBeNull();
+      expect(button1.getAttribute('aria-haspopup')).toBe(null);
+    });
+
+    it('checks triggerComponent props when non interactive and parent has id', async () => {
+      const id = 'example-id';
+      render(
+        <Popover id={id} triggerComponent={<button>Popover 1</button>}>
+          <p>Content</p>
+        </Popover>
+      );
+      const button1 = screen.getByRole('button', { name: /Popover 1/i });
+      expect(button1.getAttribute('id')).toBe(id);
       expect(button1.getAttribute('aria-haspopup')).toBe(null);
     });
 
@@ -1232,6 +1247,311 @@ describe('<Popover />', () => {
           expect(screen.queryByText('Content')).not.toBeInTheDocument();
         });
       });
+
+      it('should behave as expected when interactive and trigger="mouseenter"', async () => {
+        /**
+         * Expected behavior for this test:
+         * 1. Hover to TriggerButton, Popover should open and focus inside
+         * 2. Press Esc, Popover should close and focus should go back to trigger
+         * 3. Press Enter, Popover should open again and focus should go inside
+         * 4. Press Esc, Popover should close and focus should go back to trigger
+         * 5. Press Tab, focus should go away from trigger
+         * 6. Press Shift+Tab, focus should go back to trigger (popover should not open)
+         * 7. Press Space, Popover should open again and focus should go inside
+         */
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <Popover
+              triggerComponent={<button>Hover Me!</button>}
+              interactive={true}
+              trigger="mouseenter"
+            >
+              <div>
+                <p>Content</p>
+                <button>Button within popover</button>
+              </div>
+            </Popover>
+            <button>Button which should not be focused</button>
+          </>
+        );
+
+        /**
+         * Hover to TriggerButton, Popover should open and focus inside
+         */
+        const hoverMeButton = await screen.findByRole('button', { name: 'Hover Me!' });
+        await user.hover(hoverMeButton);
+
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        /**
+         * Press Esc, Popover should close and focus should go back to trigger
+         */
+        await user.keyboard('{Escape}');
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+        expect(hoverMeButton).toHaveFocus();
+
+        /**
+         * Press Enter, Popover should open again and focus should go inside
+         */
+        await user.keyboard('{Enter}');
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        /**
+         * Press Esc, Popover should close and focus should go back to trigger
+         */
+        await user.keyboard('{Escape}');
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+        expect(hoverMeButton).toHaveFocus();
+
+        /**
+         * Press Tab, focus should go away from trigger
+         */
+        await user.tab();
+        expect(
+          await screen.findByRole('button', { name: 'Button which should not be focused' })
+        ).toHaveFocus();
+
+        /**
+         * Press Shift+Tab, focus should go back to trigger (popover should not open)
+         */
+        await user.tab({ shift: true });
+        expect(hoverMeButton).toHaveFocus();
+
+        /**
+         * Press Space, Popover should open again and focus should go inside
+         */
+        await user.keyboard(' ');
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+      });
+
+      it.each([
+        {
+          triggerDevice: 'mouse',
+        },
+        {
+          triggerDevice: 'keyboard',
+        },
+      ])(
+        'should behave as expected when a SearchInput is in the popover',
+        async ({ triggerDevice }) => {
+          /**
+           * Expected behavior for this test:
+           * 1. When the trigger button is pressed, the popover containing the search input opens
+           * 2. When the search input contains text, pressing escape should clear the text
+           * 3. When the search input is empty, pressing text should close the popover
+           * 4. Once the popover has closed, the focus should return to the trigger button
+           */
+
+          const user = userEvent.setup();
+
+          const SearchInputContainer = () => {
+            const [searchText, setSearchText] = useState('');
+
+            return (
+              <SearchInput
+                label="test search"
+                clearButtonAriaLabel="search"
+                value={searchText}
+                onChange={(e) => setSearchText(e)}
+              />
+            );
+          };
+
+          render(
+            <>
+              <Popover triggerComponent={<button>Click Me!</button>} interactive>
+                <SearchInputContainer />
+              </Popover>
+              <button>Button which should not be focused</button>
+            </>
+          );
+
+          // step 1
+          const clickMeButton = await screen.findByRole('button', { name: 'Click Me!' });
+
+          if (triggerDevice === 'mouse') {
+            await user.click(clickMeButton);
+          } else {
+            clickMeButton.focus();
+            await user.keyboard('{Enter}');
+          }
+          const searchInputLabel = await screen.findByLabelText('test search');
+          await waitFor(() => {
+            expect(searchInputLabel).toHaveFocus();
+          });
+
+          // step 2
+          await user.type(searchInputLabel, 'test');
+          expect(searchInputLabel).toHaveValue('test');
+          await user.keyboard('{Escape}');
+          expect(searchInputLabel).toHaveValue('');
+
+          // step 3
+          await user.keyboard('{Escape}');
+          expect(screen.queryByLabelText('test search')).not.toBeInTheDocument();
+
+          // step 4
+          expect(clickMeButton).toHaveFocus();
+        }
+      );
+
+      it.each([
+        {
+          triggerDevice: 'mouse',
+        },
+        {
+          triggerDevice: 'keyboard',
+        },
+      ])(
+        'should behave as expected when an Avatar component is used as the trigger',
+        async ({ triggerDevice }) => {
+          /**
+           * Expected behavior for this test:
+           * 1. When the avatar trigger button is pressed, the popover opens
+           * 2. When the popover is open, the focus should be on the first focusable element within the popover
+           * 3. When Escape is pressed, the popover closes
+           * 4. The focus returns to the avatar trigger button
+           */
+          const user = userEvent.setup();
+
+          render(
+            <>
+              <Popover
+                triggerComponent={
+                  <Avatar
+                    onPress={
+                      // eslint-disable-next-line
+                      () => {}
+                    }
+                    initials="AB"
+                  />
+                }
+                interactive
+              >
+                <div>
+                  <p>Content</p>
+                  <button>Button within popover</button>
+                </div>
+              </Popover>
+              <button>Button which should not be focused</button>
+            </>
+          );
+
+          // 1.
+          const avatarButton = await screen.findByRole('button', { name: 'AB' });
+
+          if (triggerDevice === 'mouse') {
+            await user.click(avatarButton);
+          } else {
+            avatarButton.focus();
+            await user.keyboard('{Enter}');
+          }
+
+          await waitFor(() => {
+            expect(screen.getByText('Content')).toBeInTheDocument();
+          });
+
+          // 2.
+          const buttonWithinPopover = await screen.findByRole('button', {
+            name: 'Button within popover',
+          });
+          await waitFor(() => {
+            expect(buttonWithinPopover).toHaveFocus();
+          });
+
+          // 3.
+          await user.keyboard('{Escape}');
+          await waitFor(() => {
+            expect(screen.queryByText('Content')).not.toBeInTheDocument();
+          });
+
+          // 4.
+          expect(avatarButton).toHaveFocus();
+        }
+      );
+
+      it.each([
+        {
+          triggerDevice: 'mouse',
+        },
+        {
+          triggerDevice: 'keyboard',
+        },
+      ])(
+        'should behave as expected when a MeetingListItem is the trigger component',
+        async ({ triggerDevice }) => {
+          /**
+           * Expected behavior for this test:
+           * 1. When the MeetingListItem is pressed, the popover opens
+           * 2. When the popover is open, the focus should be on the first focusable element within the popover
+           * 3. When Escape is pressed, the popover closes
+           * 4. The focus returns to the MeetingListItem
+           */
+
+          const user = userEvent.setup();
+
+          render(
+            <>
+              <Popover
+                triggerComponent={<MeetingListItem>list item content</MeetingListItem>}
+                interactive
+              >
+                <div>
+                  <p>Content</p>
+                  <button>Button within popover</button>
+                </div>
+              </Popover>
+              <button>Button which should not be focused</button>
+            </>
+          );
+
+          // 1.
+          const meetingListItem = await screen.findByRole('listitem');
+
+          if (triggerDevice === 'mouse') {
+            await user.click(meetingListItem);
+          } else {
+            meetingListItem.focus();
+            await user.keyboard('{Enter}');
+          }
+
+          await waitFor(() => {
+            expect(screen.getByText('Content')).toBeInTheDocument();
+          });
+
+          // 2.
+          const buttonWithinPopover = await screen.findByRole('button', {
+            name: 'Button within popover',
+          });
+          await waitFor(() => {
+            expect(buttonWithinPopover).toHaveFocus();
+          });
+
+          // 3.
+          await user.keyboard('{Escape}');
+          await waitFor(() => {
+            expect(screen.queryByText('Content')).not.toBeInTheDocument();
+          });
+
+          // 4.
+          expect(meetingListItem).toHaveFocus();
+        }
+      );
     });
   });
 });

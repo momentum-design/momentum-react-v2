@@ -719,7 +719,9 @@ exports[`<Toggletip /> snapshot should match snapshot with color 2`] = `
 
 exports[`<Toggletip /> snapshot should match snapshot with id 1`] = `
 <div>
-  <button>
+  <button
+    id="example-id"
+  >
     Click Me!
   </button>
   <div
@@ -730,7 +732,9 @@ exports[`<Toggletip /> snapshot should match snapshot with id 1`] = `
 
 exports[`<Toggletip /> snapshot should match snapshot with id 2`] = `
 <div>
-  <button>
+  <button
+    id="example-id"
+  >
     Click Me!
   </button>
   <div

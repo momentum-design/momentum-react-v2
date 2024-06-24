@@ -1,6 +1,6 @@
 import Avatar from '.';
 import { mount } from 'enzyme';
-import React from 'react';
+import React, { createRef } from 'react';
 import { MAX_INITIALS_SPACE, SIZES, STYLE, AVATAR_COLORS } from './Avatar.constants';
 import { AvatarColor, AvatarSize, PresenceType } from './Avatar.types';
 import { mountAndWait } from '../../../test/utils';
@@ -229,16 +229,22 @@ describe('Avatar', () => {
     });
 
     it('should wrap inside button the onPress is provided', async () => {
-      expect.assertions(1);
+      expect.assertions(2);
 
       const onPress = () => {
         return 'hi';
       };
 
-      const container = await mountAndWait(<Avatar onPress={onPress} title="Cisco Webex" />);
+      const ref = createRef<HTMLButtonElement>();
+
+      const container = await mountAndWait(
+        <Avatar ref={ref} onPress={onPress} title="Cisco Webex" />
+      );
       const element = container.find('button').getDOMNode();
 
       expect(element).toBeDefined();
+
+      expect(ref.current).toEqual(element);
     });
 
     it('should pass warning icon when failureBadge is provided', async () => {

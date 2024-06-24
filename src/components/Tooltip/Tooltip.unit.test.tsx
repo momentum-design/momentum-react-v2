@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { findByText, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
@@ -8,7 +8,6 @@ import ButtonSimple from '../ButtonSimple';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import Tooltip from './';
 import { PositioningStrategy } from '../Popover/Popover.types';
-import { act } from 'react-dom/test-utils';
 
 jest.mock('uuid', () => {
   return {
@@ -16,12 +15,12 @@ jest.mock('uuid', () => {
   };
 });
 
-describe('<Tooltip />', () => {
+describe('<Tooltip type"description />', () => {
   /**
    * Opens the tooltip by hover on the trigger component, waits until
    * content gets displayed, expects it to be visible and returns the content.
    * expect() statements count: 1
-   * @returns {HTMLElement}
+   * @returns
    */
   const openTooltipByHoveringOnTriggerAndCheckContent = async (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -30,18 +29,53 @@ describe('<Tooltip />', () => {
     contentName = /Content/i
   ) => {
     await user.hover(screen.getByRole('button', { name: buttonName }));
-    const content = await screen.findByText(contentName);
+    const tooltip = await screen.findByRole('tooltip', { hidden: true });
+    const content = await findByText(tooltip, contentName);
     expect(content).toBeVisible();
     return content;
   };
 
   describe('snapshot', () => {
-    it('should match snapshot', async () => {
+    it('should match snapshot with type none', async () => {
       expect.assertions(3);
       const user = userEvent.setup();
 
       const { container } = render(
-        <Tooltip triggerComponent={<button>Hover Me!</button>}>
+        <Tooltip type="none" triggerComponent={<button>Hover Me!</button>}>
+          <p>Content</p>
+        </Tooltip>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openTooltipByHoveringOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with type label', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Tooltip type="label" triggerComponent={<button>Hover Me!</button>}>
+          <p>Content</p>
+        </Tooltip>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openTooltipByHoveringOnTriggerAndCheckContent(user, /content/i);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with type description', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
           <p>Content</p>
         </Tooltip>
       );
@@ -60,7 +94,11 @@ describe('<Tooltip />', () => {
       const className = 'example-class';
 
       const { container } = render(
-        <Tooltip triggerComponent={<button>Hover Me!</button>} className={className}>
+        <Tooltip
+          type="description"
+          triggerComponent={<button>Hover Me!</button>}
+          className={className}
+        >
           <p>Content</p>
         </Tooltip>
       );
@@ -79,7 +117,7 @@ describe('<Tooltip />', () => {
       const id = 'example-id';
 
       const { container } = render(
-        <Tooltip triggerComponent={<button>Hover Me!</button>} id={id}>
+        <Tooltip type="description" triggerComponent={<button>Hover Me!</button>} id={id}>
           <p>Content</p>
         </Tooltip>
       );
@@ -98,7 +136,7 @@ describe('<Tooltip />', () => {
       const style = { color: 'pink' };
 
       const { container } = render(
-        <Tooltip triggerComponent={<button>Hover Me!</button>} style={style}>
+        <Tooltip type="description" triggerComponent={<button>Hover Me!</button>} style={style}>
           <p>Content</p>
         </Tooltip>
       );
@@ -115,7 +153,11 @@ describe('<Tooltip />', () => {
       const user = userEvent.setup();
 
       const { container } = render(
-        <Tooltip triggerComponent={<button>Hover Me!</button>} color={COLORS.TERTIARY}>
+        <Tooltip
+          type="description"
+          triggerComponent={<button>Hover Me!</button>}
+          color={COLORS.TERTIARY}
+        >
           <p>Content</p>
         </Tooltip>
       );
@@ -132,7 +174,7 @@ describe('<Tooltip />', () => {
       const user = userEvent.setup();
 
       const { container } = render(
-        <Tooltip triggerComponent={<button>Hover Me!</button>} strategy="fixed">
+        <Tooltip type="description" triggerComponent={<button>Hover Me!</button>} strategy="fixed">
           <p>Content</p>
         </Tooltip>
       );
@@ -149,7 +191,11 @@ describe('<Tooltip />', () => {
       const user = userEvent.setup();
 
       const { container } = render(
-        <Tooltip offsetSkidding={2} triggerComponent={<button>Hover Me!</button>}>
+        <Tooltip
+          type="description"
+          offsetSkidding={2}
+          triggerComponent={<button>Hover Me!</button>}
+        >
           <p>Content</p>
         </Tooltip>
       );
@@ -166,7 +212,11 @@ describe('<Tooltip />', () => {
       const user = userEvent.setup();
 
       const { container } = render(
-        <Tooltip offsetDistance={3} triggerComponent={<button>Hover Me!</button>}>
+        <Tooltip
+          type="description"
+          offsetDistance={3}
+          triggerComponent={<button>Hover Me!</button>}
+        >
           <p>Content</p>
         </Tooltip>
       );
@@ -184,6 +234,7 @@ describe('<Tooltip />', () => {
 
       const { container } = render(
         <Tooltip
+          type="description"
           offsetDistance={3}
           offsetSkidding={10}
           triggerComponent={<button>Hover Me!</button>}
@@ -208,12 +259,14 @@ describe('<Tooltip />', () => {
         const { container } = render(
           <>
             <Tooltip
+              type="description"
               triggerComponent={<ButtonSimple>Tooltip 1</ButtonSimple>}
               strategy={strategy as PositioningStrategy}
             >
               <p>Content 1</p>
             </Tooltip>
             <Tooltip
+              type="description"
               triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}
               strategy={strategy as PositioningStrategy}
             >
@@ -252,6 +305,7 @@ describe('<Tooltip />', () => {
 
       render(
         <Tooltip
+          type="description"
           triggerComponent={<button>Hover Me!</button>}
           className={className}
           style={style}
@@ -271,39 +325,49 @@ describe('<Tooltip />', () => {
       expect(content.parentElement.getAttribute('aria-labelledby')).toBeNull();
     });
 
-    it('add aria-labelledby to trigger component by default', async () => {
+    it('add aria-labelledby to trigger component when type is label and overwriteAccessibleLabel true', async () => {
       const user = userEvent.setup();
 
       render(
-        <Tooltip triggerComponent={<button>Hover Me!</button>}>
+        <Tooltip type="label" triggerComponent={<button>Hover Me!</button>}>
           <p>Content</p>
         </Tooltip>
       );
-      await openTooltipByHoveringOnTriggerAndCheckContent(user);
+
+      // Button has the correct label before tooltip opened
+      expect(screen.getByRole('button', { name: /Content/i })).toBeVisible();
+
+      // Testing library use the accessible name for query not the actual label
+      await openTooltipByHoveringOnTriggerAndCheckContent(user, /Content/i);
       const trigger = await screen.findByText(/hover me!/i);
-      expect(trigger.getAttribute('aria-labelledby')).toMatch(/tippy-\d+/);
+      expect(trigger.getAttribute('aria-labelledby')).toEqual('test-ID');
       expect(trigger.getAttribute('aria-haspopup')).toBe(null);
     });
 
-    it('add aria-labelledby to trigger component  when isDescription is false', async () => {
+    it('add aria-labelledby to trigger component when type is none', async () => {
       const user = userEvent.setup();
 
       render(
-        <Tooltip isDescription={false} triggerComponent={<button>Hover Me!</button>}>
+        <Tooltip type="none" triggerComponent={<button>Hover Me!</button>}>
           <p>Content</p>
         </Tooltip>
       );
+
+      // Button has the correct label before tooltip opened
+      expect(screen.getByRole('button', { name: /Hover Me!/i })).toBeVisible();
+
+      // Testing library use the accessible name for query not the actual label
       await openTooltipByHoveringOnTriggerAndCheckContent(user);
       const trigger = await screen.findByText(/hover me!/i);
-      expect(trigger.getAttribute('aria-labelledby')).toMatch(/tippy-\d+/);
+      expect(trigger.getAttribute('aria-labelledby')).toEqual(null);
       expect(trigger.getAttribute('aria-haspopup')).toBe(null);
     });
 
-    it('add aria-describedby to trigger component when isDescription is true', async () => {
+    it('add aria-describedby to trigger component when type is description', async () => {
       const user = userEvent.setup();
 
       render(
-        <Tooltip isDescription triggerComponent={<button>Hover Me!</button>}>
+        <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
           <p>Content</p>
         </Tooltip>
       );
@@ -315,7 +379,10 @@ describe('<Tooltip />', () => {
 
     it('checks triggerComponent props when aria-haspopup is defined', async () => {
       render(
-        <Tooltip triggerComponent={<button aria-haspopup={'grid'}>Tooltip 1</button>}>
+        <Tooltip
+          type="description"
+          triggerComponent={<button aria-haspopup={'grid'}>Tooltip 1</button>}
+        >
           <p>Content</p>
         </Tooltip>
       );
@@ -326,7 +393,7 @@ describe('<Tooltip />', () => {
 
     it('checks triggerComponent props when id is not defined', async () => {
       render(
-        <Tooltip triggerComponent={<button>Tooltip 1</button>}>
+        <Tooltip type="description" triggerComponent={<button>Tooltip 1</button>}>
           <p>Content</p>
         </Tooltip>
       );
@@ -338,7 +405,7 @@ describe('<Tooltip />', () => {
     it('checks triggerComponent props when id is defined', async () => {
       const id = 'example-id';
       render(
-        <Tooltip triggerComponent={<button id={id}>Tooltip 1</button>}>
+        <Tooltip type="description" triggerComponent={<button id={id}>Tooltip 1</button>}>
           <p>Content</p>
         </Tooltip>
       );
@@ -352,10 +419,18 @@ describe('<Tooltip />', () => {
 
       render(
         <>
-          <Tooltip triggerComponent={<button>Tooltip 1</button>} strategy="fixed">
+          <Tooltip
+            type="description"
+            triggerComponent={<button>Tooltip 1</button>}
+            strategy="fixed"
+          >
             <p>Content 1</p>
           </Tooltip>
-          <Tooltip triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>} strategy="fixed">
+          <Tooltip
+            type="description"
+            triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}
+            strategy="fixed"
+          >
             <p>Content 2</p>
           </Tooltip>
           <ButtonSimple>Other button</ButtonSimple>
@@ -375,10 +450,10 @@ describe('<Tooltip />', () => {
 
       render(
         <>
-          <Tooltip triggerComponent={<ButtonSimple>Tooltip 1</ButtonSimple>}>
+          <Tooltip type="description" triggerComponent={<ButtonSimple>Tooltip 1</ButtonSimple>}>
             <p>Content 1</p>
           </Tooltip>
-          <Tooltip triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}>
+          <Tooltip type="description" triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}>
             <p>Content 2</p>
           </Tooltip>
           <ButtonSimple>Other button</ButtonSimple>
@@ -432,7 +507,7 @@ describe('<Tooltip />', () => {
     expect(props.onCreate).not.toBeCalled();
 
     const { unmount } = render(
-      <Tooltip isDescription triggerComponent={<button>Hover Me!</button>} {...props}>
+      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>} {...props}>
         <p>Content</p>
       </Tooltip>
     );
@@ -479,7 +554,7 @@ describe('<Tooltip />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip isDescription triggerComponent={<button>Hover Me!</button>}>
+      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );
@@ -506,7 +581,7 @@ describe('<Tooltip />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip triggerComponent={<button>Focus Me!</button>}>
+      <Tooltip type="description" triggerComponent={<button>Focus Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );
@@ -532,7 +607,7 @@ describe('<Tooltip />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip triggerComponent={<button>Hover Me!</button>}>
+      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );

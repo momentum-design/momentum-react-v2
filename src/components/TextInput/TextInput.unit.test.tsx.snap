@@ -144,6 +144,7 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
         className="md-text-input-container"
       >
         <input
+          aria-describedby="desc-test-ID"
           aria-label="text-input"
           disabled={false}
           id="test-ID"
@@ -159,12 +160,14 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
       >
         <InputMessage
           className="md-text-input-error"
+          id="desc-test-ID"
           key="input-message-0"
           level="error"
           message="test"
         >
           <div
             className="md-input-message-wrapper md-text-input-error"
+            id="desc-test-ID"
           >
             <div
               className="md-input-message-message"

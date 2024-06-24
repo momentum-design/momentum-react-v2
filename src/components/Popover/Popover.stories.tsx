@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -14,6 +14,9 @@ import argTypes from './Popover.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Flex from '../Flex';
 import AriaToolbar from '../AriaToolbar';
+import Avatar from '../Avatar';
+import MeetingListItem from '../MeetingListItem';
+import SearchInput from '../SearchInput';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -58,6 +61,66 @@ InteractiveContent.args = {
   delay: [0, 0],
   triggerComponent: (
     <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
+  ),
+  children: (
+    <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
+      <Item key="one">One</Item>
+      <Item key="two">Two</Item>
+      <Item key="three">Three</Item>
+      <Item key="four">Four</Item>
+      <Item key="five">Five</Item>
+      <Item key="six">Six</Item>
+    </Menu>
+  ),
+};
+
+const InteractiveHover = Template<PopoverProps>(Popover).bind({});
+
+InteractiveHover.argTypes = { ...argTypes };
+
+InteractiveHover.args = {
+  trigger: 'mouseenter',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Hover me!</ButtonPill>
+  ),
+  children: (
+    <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
+      <Item key="one">One</Item>
+      <Item key="two">Two</Item>
+      <Item key="three">Three</Item>
+      <Item key="four">Four</Item>
+      <Item key="five">Five</Item>
+      <Item key="six">Six</Item>
+    </Menu>
+  ),
+};
+
+const AvatarExample = Template<PopoverProps>(Popover).bind({});
+
+AvatarExample.argTypes = { ...argTypes };
+
+AvatarExample.args = {
+  trigger: 'mouseenter',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <Avatar
+      onPress={() => {
+        alert('avatar on press');
+      }}
+      icon={'participant-unknown'}
+      type={'person'}
+    />
   ),
   children: (
     <Menu selectionMode="single" key="2" style={{ width: '200px' }}>
@@ -155,19 +218,21 @@ Offset.args = {
 };
 
 const MultiplePopovers = Template<PopoverProps>((args: PopoverProps) => {
-  const triggerComponent = (<Popover
-    trigger="mouseenter"
-    placement={PLACEMENTS.BOTTOM}
-    showArrow
-    triggerComponent={
-      <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-        Hover or click me!
-      </ButtonSimple>
-    }
-  >
-    Description tooltip on hover
-  </Popover>);
-  return <Popover {...args} triggerComponent={triggerComponent}/>;
+  const triggerComponent = (
+    <Popover
+      trigger="mouseenter"
+      placement={PLACEMENTS.BOTTOM}
+      showArrow
+      triggerComponent={
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+          Hover or click me!
+        </ButtonSimple>
+      }
+    >
+      Description tooltip on hover
+    </Popover>
+  );
+  return <Popover {...args} triggerComponent={triggerComponent} />;
 }).bind({});
 
 MultiplePopovers.argTypes = { ...argTypes };
@@ -223,6 +288,95 @@ NestedPopover.args = {
       Hover or click me!
     </ButtonSimple>
   ),
+};
+
+const WithMeetingListItem = Template<PopoverProps>(Popover).bind({});
+
+WithMeetingListItem.argTypes = { ...argTypes };
+
+WithMeetingListItem.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: (
+    <div>
+      <ButtonSimple>hi</ButtonSimple>
+    </div>
+  ),
+  triggerComponent: (
+    <MeetingListItem
+      onPress={() => {
+        alert('pressed by onPress');
+      }}
+      style={{ margin: '10rem auto', display: 'flex' }}
+    >
+      Hover or click me!
+    </MeetingListItem>
+  ),
+};
+
+const WithMeetingListItemWithButtonsWithPopover = Template<PopoverProps>(Popover).bind({});
+
+WithMeetingListItemWithButtonsWithPopover.argTypes = { ...argTypes };
+
+WithMeetingListItemWithButtonsWithPopover.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: (
+    <div>
+      <Popover
+        interactive
+        trigger="click"
+        triggerComponent={
+          <Avatar
+            onPress={() => {
+              alert('avatar on press');
+            }}
+            initials="AB"
+          >
+            Hover or click me!
+          </Avatar>
+        }
+      >
+        <ButtonSimple>hi</ButtonSimple>
+      </Popover>
+    </div>
+  ),
+  triggerComponent: (
+    <MeetingListItem style={{ margin: '10rem auto', display: 'flex' }}>
+      Hover or click me!
+    </MeetingListItem>
+  ),
+};
+
+const WithSearchInput = Template<PopoverProps>(Popover).bind({});
+
+const SearchInputComponent = () => {
+  const [val, setVal] = useState('');
+
+  return (
+    <SearchInput
+      clearButtonAriaLabel="Clear"
+      onChange={(e) => {
+        setVal(e);
+      }}
+      value={val}
+    />
+  );
+};
+
+WithSearchInput.argTypes = { ...argTypes };
+
+WithSearchInput.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: <SearchInputComponent />,
+  triggerComponent: <ButtonSimple>Open Search</ButtonSimple>,
 };
 
 const Common = MultiTemplate<PopoverProps>(Popover).bind({});
@@ -281,10 +435,15 @@ Common.parameters = {
 export {
   Example,
   InteractiveContent,
+  InteractiveHover,
   InteractiveFocus,
   WithCloseButton,
   Offset,
   MultiplePopovers,
   NestedPopover,
+  AvatarExample,
   Common,
+  WithMeetingListItem,
+  WithMeetingListItemWithButtonsWithPopover,
+  WithSearchInput,
 };

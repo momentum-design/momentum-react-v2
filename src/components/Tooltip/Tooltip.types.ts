@@ -1,5 +1,13 @@
 import { Props as PopoverProps } from '../Popover/Popover.types';
 
+/**
+ * When it is
+ * - 'none' not passing any aria props to the trigger component and hiding the tooltip's content from the screen reader
+ * - 'label' passing content of the tooltip as aria-label prop to the trigger component
+ * - 'description' passing aria-describedby to the trigger component which refers to the tooltip's content
+ */
+export type TooltipTypes = 'none' | 'label' | 'description';
+
 export interface Props
   extends Pick<
     PopoverProps,
@@ -30,8 +38,5 @@ export interface Props
     | 'variant'
     | 'setInstance'
   > {
-  /**
-   * When it is false it passes aria-labelledby prop to the trigger component, otherwise pass aria-describedby
-   */
-  isDescription?: boolean;
+  type: TooltipTypes;
 }

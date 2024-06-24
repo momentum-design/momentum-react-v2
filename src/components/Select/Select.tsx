@@ -48,6 +48,8 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
   const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
+  const ariaActivedesecendant = menuProps?.id && state?.selectionManager?.focusedKey && `${menuProps.id}-option-${state.selectionManager.focusedKey}`;
+
   delete buttonProps.color;
   delete buttonProps.onKeyDown;
 
@@ -99,9 +101,11 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     <button
       id={name}
       {...buttonProps}
+      aria-labelledby={menuProps?.['aria-labelledby']}
       role="combobox"
       aria-expanded={!!state.isOpen}
       aria-controls={id}
+      aria-activedescendant={ariaActivedesecendant}
       className={classnames(
         STYLE.dropdownInput,
         { [STYLE.selected]: state.selectedItem },

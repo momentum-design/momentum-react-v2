@@ -6,6 +6,7 @@ import React, {
   useEffect,
   useState,
   useCallback,
+  useLayoutEffect,
 } from 'react';
 import classnames from 'classnames';
 
@@ -30,8 +31,10 @@ import {
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 
+type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
+
 //TODO: Implement multi-line
-const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
+const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const {
     className,
     children,
@@ -45,6 +48,7 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     itemIndex,
     contextMenuActions,
     interactive = DEFAULTS.INTERACTIVE,
+    onPress,
     ...rest
   } = props;
 
@@ -53,7 +57,26 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
   const listContext = useListContext();
 
   const internalRef = useRef<HTMLLIElement>();
-  const ref = providedRef || internalRef;
+
+  let ref = internalRef;
+
+  if (providedRef && typeof providedRef !== 'function') {
+    ref = providedRef;
+  }
+
+  // When used in a popover, the ref will be a callback.
+  // We need to update this callback ref, so the popover
+  // knows about the dom element, but we can't use the callback
+  // ref directly because we want it to be a useRef style ref
+  // We useLayoutEffect so that it happens in time for tippy
+  // to use the ref when adding event handlers
+  useLayoutEffect(() => {
+    if (providedRef) {
+      if (typeof providedRef === 'function') {
+        providedRef(ref.current);
+      }
+    }
+  });
 
   if (shape === SHAPES.isPilled && (size === SIZES[40] || size === SIZES[70])) {
     console.warn(
@@ -88,9 +111,21 @@ const ListItemBase = (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     content = children;
   }
 
+  // The keyboard press events are not propagated
+  // To make popovers work with click, we manually call the click event
+  const internalOnPress = useCallback((event) => {
+    if (event.pointerType === 'keyboard') {
+      ref.current.click();
+    }
+    if (onPress) {
+      onPress(event);
+    }
+  }, []);
+
   const { pressProps, isPressed } = usePress({
     preventFocusOnPress: true, // we handle it ourselves
     isDisabled: !interactive,
+    onPress: internalOnPress,
     ...rest,
   });
 

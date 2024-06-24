@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import './Avatar.style.scss';
@@ -13,7 +13,7 @@ import { getInitials } from './Avatar.utils';
 import { getPresenceIconColor } from './Presence.utils';
 import { useAvatarImage } from './Avatar.hooks';
 
-const Avatar: React.FC<Props> = (props: Props) => {
+const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
   const {
     className,
     src,
@@ -99,7 +99,14 @@ const Avatar: React.FC<Props> = (props: Props) => {
 
   if (onPress) {
     return (
-      <ButtonSimple aria-label={title} className={STYLE.buttonWrapper} onPress={onPress} {...rest}>
+      <ButtonSimple
+        useNativeKeyDown
+        ref={ref}
+        aria-label={title}
+        className={STYLE.buttonWrapper}
+        onPress={onPress}
+        {...rest}
+      >
         {content}
       </ButtonSimple>
     );
@@ -110,4 +117,8 @@ const Avatar: React.FC<Props> = (props: Props) => {
  * Avatar component that can contain an image or initials
  */
 
-export default Avatar;
+const _Avatar = forwardRef(Avatar);
+
+_Avatar.displayName = 'Avatar';
+
+export default _Avatar;
