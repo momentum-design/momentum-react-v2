@@ -103,6 +103,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                       class="md-lightbox__header-item--right"
                     >
                       <div
+                        aria-label="Exit"
                         class="md-lightbox__control"
                         role="button"
                         tabindex="0"
@@ -142,13 +143,13 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                       </div>
                       <div
                         class="md-lightbox__viewer-controls"
-                        role="button"
-                        tabindex="0"
+                        role="group"
                       >
                         <div
                           class="md-lightbox__controls"
                         >
                           <div
+                            aria-label="Zoom out"
                             class="md-lightbox__control"
                             role="button"
                             tabindex="0"
@@ -165,6 +166,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                             %
                           </span>
                           <div
+                            aria-label="Zoom in"
                             class="md-lightbox__control"
                             role="button"
                             tabindex="0"
@@ -191,6 +193,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                             class="md-lightbox__control-value"
                           />
                           <div
+                            aria-label="Download"
                             class="md-lightbox__control md-lightbox__control-download"
                             role="button"
                             tabindex="0"
@@ -330,6 +333,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                             startOpen={false}
                           >
                             <div
+                              aria-label="Exit"
                               className="md-lightbox__control"
                               key="child-1"
                               onBlur={[Function]}
@@ -423,8 +427,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                           className="md-lightbox__viewer-controls"
                           onClick={[Function]}
                           onKeyPress={[Function]}
-                          role="button"
-                          tabIndex="0"
+                          role="group"
                         >
                           <div
                             className="md-lightbox__controls"
@@ -461,6 +464,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 startOpen={false}
                               >
                                 <div
+                                  aria-label="Zoom out"
                                   className="md-lightbox__control"
                                   key="child-1"
                                   onBlur={[Function]}
@@ -539,6 +543,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 startOpen={false}
                               >
                                 <div
+                                  aria-label="Zoom in"
                                   className="md-lightbox__control"
                                   key="child-1"
                                   onBlur={[Function]}
@@ -628,6 +633,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 startOpen={false}
                               >
                                 <div
+                                  aria-label="Download"
                                   className="md-lightbox__control md-lightbox__control-download"
                                   key="child-1"
                                   onBlur={[Function]}
