@@ -72,6 +72,7 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   src: 'https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2855&q=80',
   initials: 'AS',
+  onPress: () => 1,
 };
 
 const PresenceTypes = MultiTemplate.bind({});

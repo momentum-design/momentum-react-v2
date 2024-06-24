@@ -71,6 +71,11 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   icon?: string;
 
   /**
+   * The icon to display when Avatar is hovered or focused
+   */
+  iconOnHover?: string;
+
+  /**
    * Set the visibility of Avatar's default tooltip
    */
   hideDefaultTooltip?: boolean;
