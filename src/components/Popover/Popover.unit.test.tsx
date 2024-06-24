@@ -1441,10 +1441,7 @@ describe('<Popover />', () => {
                       () => {}
                     }
                     initials="AB"
-<<<<<<< HEAD
-=======
                     data-testid="AB"
->>>>>>> c10e37daa (feat(avatar): resolve conflict)
                   />
                 }
                 interactive
