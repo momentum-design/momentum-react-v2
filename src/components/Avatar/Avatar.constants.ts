@@ -41,6 +41,7 @@ const STYLE = {
   outerWrapper: `${CLASS_PREFIX}-outer-wrapper`,
   wrapperChildren: `${CLASS_PREFIX}-wrapper-children`,
   iconWrapper: `${CLASS_PREFIX}-icon-wrapper`,
+  iconOnHoverWrapper: `${CLASS_PREFIX}-icon-on-hover-wrapper`,
   imageHidden: `${CLASS_PREFIX}-image-hidden`,
   presenceIconWrapper: `${CLASS_PREFIX}-presence-icon-wrapper`,
   buttonWrapper: `${CLASS_PREFIX}-button-wrapper`,
@@ -53,6 +54,7 @@ const DEFAULTS = {
   COLOR: AVATAR_COLORS.default,
   TYPE: TYPES.person,
   HIDE_DEFAULT_TOOLTIP: false,
+  LABEL: '' as const,
 };
 
 export {

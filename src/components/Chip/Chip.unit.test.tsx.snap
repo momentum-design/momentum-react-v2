@@ -695,9 +695,11 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
             >
               <Avatar>
                 <div
+                  aria-label=""
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={24}
+                  role="group"
                 />
               </Avatar>
             </div>

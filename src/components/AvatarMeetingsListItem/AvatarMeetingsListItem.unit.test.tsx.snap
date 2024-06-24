@@ -53,9 +53,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -64,6 +66,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -170,9 +173,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                 title="Cisco"
               >
                 <div
+                  aria-label="Cisco"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="Cisco"
                 >
                   <Initials
@@ -181,12 +186,14 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
                     </span>
                   </Initials>
                   <Presence
+                    ariaLabel=""
                     isCircularWrapper={true}
                     presenceColor="var(--mds-color-theme-indicator-stable)"
                     presenceIcon="unread"
@@ -197,6 +204,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                       data-shape={true}
                     >
                       <Icon
+                        ariaLabel=""
                         fillColor="var(--mds-color-theme-indicator-stable)"
                         name="unread"
                         scale={14}
@@ -323,9 +331,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -334,6 +344,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -438,9 +449,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -449,6 +462,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -631,9 +645,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -642,6 +658,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -829,9 +846,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -840,6 +859,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1023,9 +1043,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1034,6 +1056,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1138,9 +1161,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1149,6 +1174,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1249,9 +1275,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1260,6 +1288,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1390,9 +1419,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1401,6 +1432,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1531,9 +1563,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1542,6 +1576,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1672,9 +1707,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1683,6 +1720,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1813,9 +1851,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1824,6 +1864,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C
@@ -1948,9 +1989,11 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
                 title="C"
               >
                 <div
+                  aria-label="C"
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
+                  role="group"
                   title="C"
                 >
                   <Initials
@@ -1959,6 +2002,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
                     type="person"
                   >
                     <span
+                      aria-hidden="true"
                       className="md-avatar-wrapper-children"
                     >
                       C

@@ -17,7 +17,6 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
   const {
     className,
     src,
-    alt,
     title,
     initials,
     size = DEFAULTS.SIZE,
@@ -26,18 +25,21 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
     type = DEFAULTS.TYPE,
     hideDefaultTooltip = DEFAULTS.HIDE_DEFAULT_TOOLTIP,
     icon,
+    iconOnHover,
     isTyping,
     onPress,
     failureBadge,
+    actionLabel = DEFAULTS.LABEL,
+    pictureLabel = DEFAULTS.LABEL,
+    presenceLabel = DEFAULTS.LABEL,
+    typingLabel = DEFAULTS.LABEL,
     ...rest
   } = props;
-
   const initialsText = initials ? initials : title ? getInitials(title, type) : undefined;
   const { presenceColor, presenceIcon, isCircularWrapper } = getPresenceIconColor(
     presence,
     failureBadge
   );
-
   const { imageLoaded, handleOnLoad, handleOnError } = useAvatarImage(src);
 
   if (src && icon) {
@@ -46,12 +48,46 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
     );
   }
 
+  const avatarLabels = [];
+  const nameLabels = [];
+
+  if(onPress){
+    if(actionLabel){
+      nameLabels.push(actionLabel);
+    }
+  } else {
+    if(pictureLabel){
+      nameLabels.push(pictureLabel);
+    }
+  }
+
+  if(title){
+    nameLabels.push(title);
+  }
+
+  if(nameLabels.length){
+    avatarLabels.push(nameLabels.join(' '));
+  }
+
+  if(presence && presenceLabel){
+    avatarLabels.push(presenceLabel);
+  }
+
+  if(isTyping && typingLabel){
+    avatarLabels.push(typingLabel);
+  }
+
+  const containerAriaLabel = rest['aria-label'] || avatarLabels.join(', ');
+  delete rest['aria-label'];
+  
   const content = (
     <div
       className={classnames(STYLE.wrapper, className)}
       data-size={size}
       data-color={color}
+      aria-label={onPress ? undefined : containerAriaLabel}
       title={!hideDefaultTooltip ? title : ''}
+      role='group'
       {...(!onPress && { ...rest })}
     >
       {!imageLoaded && !icon && initialsText && (
@@ -61,7 +97,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
       {src && (
         <img
           src={src}
-          alt={alt}
+          alt=''
           onLoad={handleOnLoad}
           onError={handleOnError}
           className={classnames(STYLE.wrapperChildren, { [STYLE.imageHidden]: !imageLoaded })}
@@ -77,9 +113,19 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
         />
       )}
 
+      {iconOnHover && (
+        <div className={classnames(STYLE.wrapperChildren, STYLE.iconOnHoverWrapper)}>
+          <Icon
+            className={classnames(STYLE.wrapperChildren, STYLE.iconWrapper)}
+            name={iconOnHover}
+            scale={AVATAR_ICON_SIZE_MAPPING[size].scale}
+            weight={AVATAR_ICON_SIZE_MAPPING[size].weight}
+          />
+        </div>
+      )}
       {/* //TODO: Temporary fix for typing animation. This should be re-implemented */}
       {isTyping && (
-        <span className={classnames(STYLE.wrapperChildren, STYLE.animationWrapper)}>
+        <span className={classnames(STYLE.wrapperChildren, STYLE.animationWrapper)} aria-hidden='true'>
           <div style={{ transform: 'scale(0.4)' }}>
             <Loading />
           </div>
@@ -92,6 +138,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
           presenceIcon={presenceIcon}
           isCircularWrapper={isCircularWrapper}
           size={size}
+          ariaLabel={presenceLabel}
         />
       )}
     </div>
@@ -100,9 +147,9 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
   if (onPress) {
     return (
       <ButtonSimple
+        aria-label={containerAriaLabel}
         useNativeKeyDown
         ref={ref}
-        aria-label={title}
         className={STYLE.buttonWrapper}
         onPress={onPress}
         {...rest}

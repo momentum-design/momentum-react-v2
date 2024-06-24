@@ -27,6 +27,36 @@
     position: absolute;
   }
 
+  .md-avatar-icon-on-hover-wrapper {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 100vh;
+    width: 1.125rem;
+    height: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .md-avatar-icon-wrapper {
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  &:hover {
+    // when it is not a button
+    .md-avatar-icon-on-hover-wrapper {
+      background-color: var(--mds-color-theme-common-overlay-secondary-normal);
+
+      .md-avatar-icon-wrapper {
+        svg {
+          display: block;
+        }
+      }
+    }
+  }
+
   span {
     font-weight: 550;
     color: var(--mds-color-theme-common-text-white);
@@ -111,6 +141,11 @@
 
     width: 1.5rem;
     height: 1.5rem;
+
+    .md-avatar-icon-on-hover-wrapper {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
   &[data-size='32'] {
@@ -125,6 +160,11 @@
 
     width: 2rem;
     height: 2rem;
+
+    .md-avatar-icon-on-hover-wrapper {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   &[data-size='48'] {
@@ -139,6 +179,11 @@
 
     width: 3rem;
     height: 3rem;
+
+    .md-avatar-icon-on-hover-wrapper {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &[data-size='64'] {
@@ -153,6 +198,11 @@
 
     width: 4rem;
     height: 4rem;
+
+    .md-avatar-icon-on-hover-wrapper {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 
   &[data-size='72'] {
@@ -167,6 +217,11 @@
 
     width: 4.5rem;
     height: 4.5rem;
+
+    .md-avatar-icon-on-hover-wrapper {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
   }
 
   &[data-size='88'] {
@@ -181,6 +236,11 @@
 
     width: 5.5rem;
     height: 5.5rem;
+
+    .md-avatar-icon-on-hover-wrapper {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
   }
 
   &[data-size='124'] {
@@ -195,6 +255,11 @@
 
     width: 7.75rem;
     height: 7.75rem;
+
+    .md-avatar-icon-on-hover-wrapper {
+      width: 7.75rem;
+      height: 7.75rem;
+    }
   }
 }
 
@@ -204,6 +269,20 @@
   padding: 0;
   margin: 0;
   background: transparent;
+
+  &:hover,
+  &:focus {
+    // when it is a button
+    .md-avatar-icon-on-hover-wrapper {
+      background-color: var(--mds-color-theme-common-overlay-secondary-normal);
+
+      .md-avatar-icon-wrapper {
+        svg {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .md-avatar-animation-wrapper {

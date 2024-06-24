@@ -74,7 +74,7 @@ export default {
   title: {
     defaultValue: undefined,
     description:
-      'Name of person/space. The component will extract initials from this value and display accordingly',
+      "Name of person/space. The component will extract initials from this value and display accordingly, it is used in the aria-label of this component.  e.g 'John Doe'",
     control: { type: 'text', required: true },
     table: {
       type: {
@@ -103,6 +103,20 @@ export default {
   icon: {
     defaultValue: undefined,
     description: 'Name of the icon to be displayed inside the Avatar. Must be a valid icon name.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
+  iconOnHover: {
+    defaultValue: undefined,
+    description:
+      'Name of the icon to be displayed inside the Avatar when hovered or focused. Must be a valid icon name.',
     control: { type: 'text' },
     table: {
       type: {
@@ -150,6 +164,58 @@ export default {
       },
       defaultValue: {
         summary: false,
+      },
+    },
+  },  
+  actionLabel: {
+    defaultValue: DEFAULTS.LABEL,
+    description: "The name of the action to be performed by this Avatar onPress, so that it is used in the aria-label of this component. e.g 'Open contact card of ' ",
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.LABEL,
+      },
+    },
+  },
+  pictureLabel: {
+    defaultValue: DEFAULTS.LABEL,
+    description: "The name of the graphic of the avatar in case there it does not trigger any action, so that it is used in the aria-label of this component. e.g 'Avatar picture of ' ",
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.LABEL,
+      },
+    },
+  },
+  presenceLabel: {
+    defaultValue: DEFAULTS.LABEL,
+    description: "The name of the presence of the avatar's person, so that it is used in the aria-label of this component. e.g 'Busy' ",
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.LABEL,
+      },
+    },
+  },
+  typingLabel: {
+    defaultValue: DEFAULTS.LABEL,
+    description: "The label that represents the user is typing,  so that it is used in the aria-label of the container, as part of it. e.g 'is typing' ",
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.LABEL,
       },
     },
   },
