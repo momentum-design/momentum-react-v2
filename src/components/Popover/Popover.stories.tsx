@@ -17,6 +17,7 @@ import AriaToolbar from '../AriaToolbar';
 import Avatar from '../Avatar';
 import MeetingListItem from '../MeetingListItem';
 import SearchInput from '../SearchInput';
+import List from '../List';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -352,6 +353,52 @@ WithMeetingListItemWithButtonsWithPopover.args = {
   ),
 };
 
+const PopoverInList = (props: PopoverProps) => {
+  return (
+    <List listSize={3}>
+      <Popover {...props} />
+    </List>
+  );
+};
+
+const WithMeetingListItemWithButtonsWithPopoverInList = Template<PopoverProps>(PopoverInList).bind(
+  {}
+);
+
+WithMeetingListItemWithButtonsWithPopoverInList.argTypes = { ...argTypes };
+
+WithMeetingListItemWithButtonsWithPopoverInList.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: (
+    <div>
+      <Popover
+        interactive
+        trigger="click"
+        triggerComponent={
+          <Avatar
+            onPress={() => {
+              alert('avatar on press');
+            }}
+            initials="AB"
+          >
+            Hover or click me!
+          </Avatar>
+        }
+      >
+        <ButtonSimple>hi</ButtonSimple>
+      </Popover>
+    </div>
+  ),
+  triggerComponent: (
+    <MeetingListItem style={{ margin: '10rem auto', display: 'flex' }}>
+      Hover or click me!
+    </MeetingListItem>
+  ),
+};
+
 const WithSearchInput = Template<PopoverProps>(Popover).bind({});
 
 const SearchInputComponent = () => {
@@ -446,4 +493,5 @@ export {
   WithMeetingListItem,
   WithMeetingListItemWithButtonsWithPopover,
   WithSearchInput,
+  WithMeetingListItemWithButtonsWithPopoverInList,
 };

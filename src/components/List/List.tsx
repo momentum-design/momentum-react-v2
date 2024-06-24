@@ -37,6 +37,9 @@ const List: FC<Props> = (props: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (e) => {
       switch (e.key) {
+        case 'Escape':
+          e.continuePropagation();
+          break;
         case 'ArrowUp':
         case 'ArrowLeft':
           e.preventDefault();

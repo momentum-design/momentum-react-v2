@@ -12,6 +12,7 @@ import { PopoverInstance, PositioningStrategy } from './Popover.types';
 import SearchInput from '../SearchInput';
 import Avatar from '../Avatar';
 import MeetingListItem from '../MeetingListItem';
+import List from '../List';
 
 jest.mock('uuid', () => {
   return {
@@ -1552,6 +1553,57 @@ describe('<Popover />', () => {
           expect(meetingListItem).toHaveFocus();
         }
       );
+
+      it('should behave as expected when it is rendered inside a List', async () => {
+        /**
+         * Expected behavior for this test:
+         * 1. When the MeetingListItem is pressed, the popover opens
+         * 2. When the popover is open, the focus should be on the first focusable element within the popover
+         * 3. When Escape is pressed, the popover closes
+         * 4. The focus returns to the MeetingListItem
+         */
+
+        const user = userEvent.setup();
+
+        render(
+          <List listSize={1}>
+            <Popover
+              triggerComponent={<MeetingListItem>list item content</MeetingListItem>}
+              interactive
+            >
+              <div>
+                <p>Content</p>
+                <button>Button within popover</button>
+              </div>
+            </Popover>
+          </List>
+        );
+
+        // 1.
+        const meetingListItem = await screen.findByRole('listitem');
+        await user.click(meetingListItem);
+
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+
+        // 2.
+        const buttonWithinPopover = await screen.findByRole('button', {
+          name: 'Button within popover',
+        });
+        await waitFor(() => {
+          expect(buttonWithinPopover).toHaveFocus();
+        });
+
+        // 3.
+        await user.keyboard('{Escape}');
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+
+        // 4.
+        expect(meetingListItem).toHaveFocus();
+      });
     });
   });
 });
