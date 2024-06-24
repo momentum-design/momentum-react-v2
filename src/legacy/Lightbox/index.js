@@ -356,6 +356,7 @@ class Lightbox extends React.Component {
           className="md-lightbox__page-control md-lightbox__page-control-icon md-lightbox__page-controls--left"
           role="button"
           tabIndex="0"
+          aria-label={tooltips.previous}
           onKeyPress={(e) => this.triggerPageChange(index - 1, e)}
           onClick={(e) => this.triggerPageChange(index - 1, e)}
           style={{ transform: 'rotate(-180deg)' }}
@@ -374,6 +375,7 @@ class Lightbox extends React.Component {
           className="md-lightbox__page-control md-lightbox__page-control-icon md-lightbox__page-controls--right"
           role="button"
           tabIndex="0"
+          aria-label={tooltips.next}
           onKeyPress={(e) => this.triggerPageChange(index + 1, e)}
           onClick={(e) => this.triggerPageChange(index + 1, e)}
         >
@@ -387,6 +389,7 @@ class Lightbox extends React.Component {
         <div
           className="md-lightbox__control md-lightbox__control-download"
           tabIndex="0"
+          aria-label={tooltips.download}
           role="button"
           onClick={this.handleDownload}
           onKeyPress={this.handleDownload}
@@ -410,6 +413,7 @@ class Lightbox extends React.Component {
                 onClick={(e) => this.triggerPageChange(index - 1, e)}
                 role="button"
                 tabIndex="0"
+                aria-label={tooltips.previous}
                 onKeyPress={(e) => this.triggerPageChange(index - 1, e)}
                 style={{ transform: 'rotate(-180deg)' }}
               >
@@ -423,6 +427,7 @@ class Lightbox extends React.Component {
                 role="button"
                 onClick={(e) => this.triggerPageChange(index + 1, e)}
                 tabIndex="0"
+                aria-label={tooltips.next}
                 onKeyPress={(e) => this.triggerPageChange(index + 1, e)}
               >
                 <Icon name="arrow-right_16" />
@@ -440,8 +445,7 @@ class Lightbox extends React.Component {
           className="md-lightbox__viewer-controls"
           onClick={this.stopPropagation}
           onKeyPress={this.stopPropagation}
-          role="button"
-          tabIndex="0"
+          role="group"
         >
           <div className="md-lightbox__controls" style={controlStyle}>
             <Tooltip tooltip={tooltips.zoomOut}>
@@ -450,6 +454,7 @@ class Lightbox extends React.Component {
                 onClick={() => this.setZoom(-0.25)}
                 role="button"
                 tabIndex="0"
+                aria-label={tooltips.zoomOut}
                 onKeyPress={() => this.setZoom(-0.25)}
               >
                 <Icon name="zoom-out_16" />
@@ -464,6 +469,7 @@ class Lightbox extends React.Component {
                 role="button"
                 onClick={() => this.setZoom(0.25)}
                 tabIndex="0"
+                aria-label={tooltips.zoomIn}
                 onKeyPress={() => this.setZoom(0.25)}
               >
                 <Icon name="zoom-in_16" />
@@ -476,7 +482,10 @@ class Lightbox extends React.Component {
               <span className="md-lightbox__control-value">{info.size}</span>
               <Tooltip tooltip={downloading ? tooltips.downloading : tooltips.download}>
                 {downloading ? (
-                  <div className="md-lightbox__control md-lightbox__control-spinner">
+                  <div
+                    className="md-lightbox__control md-lightbox__control-spinner"
+                    aria-label={tooltips.downloading}
+                  >
                     <Spinner size={28} />
                   </div>
                 ) : (
@@ -521,6 +530,7 @@ class Lightbox extends React.Component {
                   onClick={this.handleClose}
                   role="button"
                   tabIndex="0"
+                  aria-label={tooltips.exit}
                   onKeyPress={this.handleClose}
                 >
                   <Icon name="cancel_16" />
