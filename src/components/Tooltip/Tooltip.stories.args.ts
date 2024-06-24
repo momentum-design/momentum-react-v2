@@ -4,8 +4,8 @@ import { popoverArgTypes } from '../Popover/Popover.stories.args';
 import { DEFAULTS } from './Tooltip.constants';
 
 const tooltipArgTypes = {
-  isDescription: {
-    description: `Determines, whether the tooltip is the description or the label of the trigger component`,
+  type: {
+    description: `Determines, whether the tooltip is the description or the label of the trigger component, or none`,
     options: ['none', 'label', 'description'],
     control: { type: 'select' },
     table: {
