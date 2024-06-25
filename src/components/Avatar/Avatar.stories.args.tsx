@@ -208,7 +208,20 @@ export default {
   },
   typingLabel: {
     defaultValue: DEFAULTS.LABEL,
-    description: "The label that represents the user is typing,  so that it is used in the aria-label of the container, as part of it. e.g 'is typing' ",
+    description: "The label that represents the user is typing,  so it is used in the aria-label of the container. e.g 'is typing' ",
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: DEFAULTS.LABEL,
+      },
+    },
+  },
+  extraLabel: {
+    defaultValue: DEFAULTS.LABEL,
+    description: "The label that represents additional description, it will be spliced to the end of the container aria-label ",
     control: { type: 'text' },
     table: {
       type: {

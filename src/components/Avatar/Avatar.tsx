@@ -33,6 +33,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
     pictureLabel = DEFAULTS.LABEL,
     presenceLabel = DEFAULTS.LABEL,
     typingLabel = DEFAULTS.LABEL,
+    extraLabel = DEFAULTS.LABEL,
     ...rest
   } = props;
   const initialsText = initials ? initials : title ? getInitials(title, type) : undefined;
@@ -75,6 +76,10 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
 
   if(isTyping && typingLabel){
     avatarLabels.push(typingLabel);
+  }
+
+  if(extraLabel){
+    avatarLabels.push(extraLabel);
   }
 
   const containerAriaLabel = rest['aria-label'] || avatarLabels.join(', ');
