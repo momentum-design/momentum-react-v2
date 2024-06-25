@@ -3,7 +3,10 @@ import type { Instance as TippyInstance } from 'tippy.js';
 
 import Tippy, { TippyProps } from '@tippyjs/react';
 
-export type LazyTippyProps = TippyProps & { setInstance?: (instance?: TippyInstance) => void };
+export type LazyTippyProps = TippyProps & {
+  setInstance?: (instance?: TippyInstance) => void;
+  continuePropagationOnTrigger?: boolean;
+};
 
 /**
  * The LazyTippy component is used to "lazify" the Popover.
@@ -12,8 +15,18 @@ export type LazyTippyProps = TippyProps & { setInstance?: (instance?: TippyInsta
  * lazified so that it will only be mounted to the DOM, whenever it is triggered to do so.
  */
 export const LazyTippy: FC<LazyTippyProps> = React.forwardRef(
-  ({ setInstance, ...props }: LazyTippyProps, ref) => {
+  ({ setInstance, continuePropagationOnTrigger, ...props }: LazyTippyProps, ref) => {
     const [mounted, setMounted] = React.useState(false);
+
+    const stopPropagationPlugin = {
+      fn: () => ({
+        onTrigger: (instance: TippyInstance, event: Event) => {
+          if (!continuePropagationOnTrigger) {
+            event.stopPropagation();
+          }
+        },
+      }),
+    };
 
     const lazyPlugin = {
       fn: () => ({
@@ -34,7 +47,12 @@ export const LazyTippy: FC<LazyTippyProps> = React.forwardRef(
 
     const computedProps = { ...props };
 
-    computedProps.plugins = [instancePlugin, lazyPlugin, ...(props.plugins || [])];
+    computedProps.plugins = [
+      instancePlugin,
+      lazyPlugin,
+      stopPropagationPlugin,
+      ...(props.plugins || []),
+    ];
 
     if (props.render) {
       computedProps.render = (...args) => (mounted ? props.render(...args) : '');
