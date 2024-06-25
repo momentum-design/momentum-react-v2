@@ -197,4 +197,9 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * The element to append the popover to.
    */
   appendTo?: AppendToType;
+
+  /**
+   * Whether to allow the trigger event to continue to propagate after the Popover is triggered.
+   */
+  continuePropagationOnTrigger?: boolean;
 }
