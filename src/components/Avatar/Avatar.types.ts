@@ -92,10 +92,15 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
 
 
   /**
-   * The label that represents the user is typing,  so that it is used in the aria-label of the container, as the end part of it.
+   * The label that represents the user is typing,  so it is used in the aria-label of the container.
    * e.g 'is typing'
    */
   typingLabel?: string;
+
+  /**
+   * The label that represents additional description, it will be spliced to the end of the container aria-label.
+   */
+  extraLabel?: string;
 
   /**
    * Set the visibility of Avatar's default tooltip

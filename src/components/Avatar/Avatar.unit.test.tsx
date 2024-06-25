@@ -461,6 +461,17 @@ describe('Avatar', () => {
       expect(element.props()['aria-label']).toEqual(typingLabel);
     });
 
+    it('should pass the extraLabel prop', () => {
+      expect.assertions(1);
+
+      const extraLabel = 'extraLabel';
+
+      const element = mount(<Avatar isTyping={true} extraLabel={extraLabel} />)
+        .find('.md-avatar-wrapper');
+
+      expect(element.props()['aria-label']).toEqual(extraLabel);
+    });
+
     it('aria-label has a higher priority', () => {
       expect.assertions(1);
 
