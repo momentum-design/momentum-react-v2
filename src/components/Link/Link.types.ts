@@ -30,11 +30,16 @@ export interface Props extends AriaLinkProps {
   /**
    * whether or not this component has icon【name = pop-out】 in the right
    */
-  isWithIcon?: boolean;
+  hasIcon?: boolean;
 
   /**
    * icon props
    * When use iconProps isWithIcon is necessary
    */
   iconProps?: Partial<IconProps>;
+
+  /**
+   * Used for tooltip content
+   */
+  opensNewTabIndicatorLabel?: string;
 }

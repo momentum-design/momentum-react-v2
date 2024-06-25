@@ -48,7 +48,7 @@ export default {
       },
     },
   },
-  isWithIcon: {
+  hasIcon: {
     description: 'whether this component has icon `name = pop-out` in the right',
     options: [true, false],
     control: { type: 'boolean' },
@@ -57,7 +57,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: undefined,
+        summary: false,
       },
     },
   },
@@ -66,6 +66,18 @@ export default {
     table: {
       type: {
         summary: 'IconNextProps',
+      },
+    },
+  },
+  opensNewTabIndicatorLabel: {
+    description: 'Used for tooltip content',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
       },
     },
   },

@@ -772,6 +772,19 @@ const commonHTMLAttributes = {
 };
 
 const commonAriaLink = {
+  href: {
+    control: { type: 'text' },
+    description: 'A URL to link to if elementType="a".',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   hrefLang: {
     control: { type: 'text' },
     description: 'Hints at the human language of the linked URL.',
@@ -1007,19 +1020,6 @@ const commonAriaLink = {
       category: 'React Aria - Link',
       type: {
         summary: '(e: KeyboardEvent) => void',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  href: {
-    control: { type: 'text' },
-    description: 'A URL to link to if elementType="a".',
-    table: {
-      category: 'React Aria - Link',
-      type: {
-        summary: 'string',
       },
       defaultValue: {
         summary: 'undefined',
