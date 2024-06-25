@@ -9,12 +9,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { IComboBoxGroup } from './ComboBox.types';
 import { act } from 'react-dom/test-utils';
 import TextInput from '../TextInput';
-jest.mock('@react-aria/utils');
-jest.mock('uuid', () => {
-  return {
-    v4: () => '1',
-  };
-});
+jest.unmock('@react-aria/utils');
 
 describe('ComboBox', () => {
   let container;

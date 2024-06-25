@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { List, ListItem, SelectOption, SpaceListItem } from '@momentum-ui/react-collaboration';
+jest.unmock('@react-aria/utils');
 
 describe('tests for <List />', () => {
   beforeEach(() => {
