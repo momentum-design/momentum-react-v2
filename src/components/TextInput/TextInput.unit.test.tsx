@@ -50,6 +50,28 @@ describe('<TextInput/>', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with label', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const container = await mountComponent(<TextInput label="Password" id={id} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with clearAriaLabel', async () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const container = await mountComponent(
+        <TextInput label="Password" clearAriaLabel="Clear this input" id={id} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with style', async () => {
       expect.assertions(1);
 
@@ -121,9 +143,10 @@ describe('<TextInput/>', () => {
 
       const id = 'example-id-2';
 
-      const element = (await mountAndWait(<TextInput aria-label="text-input" id={id} />))
-        .find(TextInput);
-      
+      const element = (await mountAndWait(<TextInput aria-label="text-input" id={id} />)).find(
+        TextInput
+      );
+
       expect(element.props()).toMatchObject({ 'aria-label': 'text-input', id: 'example-id-2' });
     });
 
@@ -164,20 +187,27 @@ describe('<TextInput/>', () => {
     it('should have aria-describedby and id when message is provided', async () => {
       expect.assertions(2);
 
-      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" aria-describedby={'desc-test-ID'} />))
-        .find(TextInput);
+      const textInputComponent = (
+        await mountAndWait(<TextInput aria-label="text-input" aria-describedby={'desc-test-ID'} />)
+      ).find(TextInput);
 
-      const inputMessageComponent = (await mountAndWait(<InputMessage className='error' level="error" id={'desc-test-ID'} />)).find(InputMessage);
+      const inputMessageComponent = (
+        await mountAndWait(<InputMessage className="error" level="error" id={'desc-test-ID'} />)
+      ).find(InputMessage);
 
       expect(inputMessageComponent.props().id).toStrictEqual('desc-test-ID');
-      expect(textInputComponent.props()).toMatchObject({ 'aria-label': 'text-input', 'aria-describedby': 'desc-test-ID' });
+      expect(textInputComponent.props()).toMatchObject({
+        'aria-label': 'text-input',
+        'aria-describedby': 'desc-test-ID',
+      });
     });
 
     it('should not have aria-labelledby when message is not provided', async () => {
       expect.assertions(1);
 
-      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" />))
-        .find(TextInput);
+      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" />)).find(
+        TextInput
+      );
 
       expect(textInputComponent.props()['aria-describedby']).toBe(undefined);
     });
