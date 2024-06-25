@@ -432,6 +432,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
             onInput={onInputChange}
             autoComplete="off"
             ref={inputRef}
+            id={id ? `ComboBox_TextInput_${id}`: undefined}
           />
           <div className={STYLE.divider} />
           <ButtonPill ghost onPress={onArrowButtonPress} className={STYLE.button}>
