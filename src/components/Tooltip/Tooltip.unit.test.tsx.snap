@@ -1492,9 +1492,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type n
 
 exports[`<Tooltip type"description /> snapshot should match snapshot with type none 2`] = `
 <div>
-  <button
-    aria-describedby="tippy-1"
-  >
+  <button>
     Hover Me!
   </button>
   <div

@@ -371,6 +371,12 @@ describe('<Tooltip type"description />', () => {
           <p>Content</p>
         </Tooltip>
       );
+
+      // Button has the correct description before tooltip opened
+      const button = screen.getByRole('button', { name: /Hover Me!/i });
+      expect(button.getAttribute('aria-describedby')).toEqual('test-ID');
+      expect(button).toBeVisible();
+
       await openTooltipByHoveringOnTriggerAndCheckContent(user);
       const trigger = await screen.findByText(/hover me!/i);
       expect(trigger.getAttribute('aria-describedby')).toMatch('test-ID');
