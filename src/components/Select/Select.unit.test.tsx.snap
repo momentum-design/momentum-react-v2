@@ -396,6 +396,9 @@ exports[`Select snapshot should match snapshot 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -443,6 +446,9 @@ exports[`Select snapshot should match snapshot 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -955,6 +961,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -1002,6 +1011,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -1515,6 +1527,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -1562,6 +1577,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -2602,6 +2620,9 @@ exports[`Select snapshot should match snapshot with border 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -2649,6 +2670,9 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -3162,6 +3186,9 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -3209,6 +3236,9 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -3722,6 +3752,9 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -3769,6 +3802,9 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             placement="top"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -4292,6 +4328,9 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -4339,6 +4378,9 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -5382,6 +5424,9 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -5429,6 +5474,9 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -5706,6 +5754,9 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -5753,6 +5804,9 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -6266,6 +6320,9 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -6313,6 +6370,9 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -7351,6 +7411,9 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -7398,6 +7461,9 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -8435,6 +8501,9 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -8482,6 +8551,9 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -9525,6 +9597,9 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -9572,6 +9647,9 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -10116,6 +10194,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -10163,6 +10244,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -10710,6 +10794,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -10757,6 +10844,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -11888,6 +11978,9 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -11935,6 +12028,9 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
@@ -12446,6 +12542,9 @@ exports[`Select snapshot should match snapshot with title 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -12493,6 +12592,9 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             placement="bottom"
             plugins={
               Array [
+                Object {
+                  "fn": [Function],
+                },
                 Object {
                   "fn": [Function],
                 },
