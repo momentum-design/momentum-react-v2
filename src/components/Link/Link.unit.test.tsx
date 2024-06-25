@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { DEFAULTS, STYLE } from './Link.constants';
-import { IconNext, LinkNext } from '@momentum-ui/react-collaboration';
+import { IconNext, LinkNext, TooltipNext,  } from '@momentum-ui/react-collaboration';
 import { mountAndWait } from '../../../test/utils';
 jest.unmock('@react-aria/utils');
 describe('Link', () => {
@@ -46,15 +46,6 @@ describe('Link', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with icon', () => {
-      expect.assertions(1);
-
-      const isWithIcon = true;
-
-      const container = mount(<LinkNext isWithIcon={isWithIcon} />);
-
-      expect(container).toMatchSnapshot();
-    });
   });
 
   describe('attributes', () => {
@@ -65,13 +56,13 @@ describe('Link', () => {
         .find(LinkNext)
         .getDOMNode();
 
-      expect(element.classList.contains(STYLE.container)).toBe(true);
+      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
     it('should have custom class if provided', async () => {
       const testClass = 'testClass';
 
-      const wrapper = await mountAndWait(<LinkNext className={testClass} />);
+      const wrapper = await mount(<LinkNext className={testClass} />);
 
       const element = wrapper.find('a').getDOMNode();
 
@@ -125,10 +116,29 @@ describe('Link', () => {
       expect(element.getAttribute('title')).toBe(title);
     });
 
+    it('should have Tooltip when opensNewTabIndicatorLabel is provided', async () => {
+      expect.assertions(1);
+
+      const opensNewTabIndicatorLabel = 'open a new window';
+
+      const wrapper = await mountAndWait(<LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} />);
+
+      const element = wrapper.find(TooltipNext);
+
+      expect(element.props()).toEqual({
+        type: 'description',
+        placement: 'bottom',
+        triggerComponent: expect.any(Object),
+        children: opensNewTabIndicatorLabel,
+      });
+    });
+
     it('should have icon when isWithIcon is provided', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<LinkNext isWithIcon={true} />);
+      const opensNewTabIndicatorLabel = 'open a new window';
+
+      const wrapper = await mountAndWait(<LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} hasIcon={true} />);
 
       const element = wrapper.find(IconNext);
 
@@ -141,7 +151,9 @@ describe('Link', () => {
     it('should have icon props when iconProps is provided', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<LinkNext isWithIcon={true} iconProps={{ id: '1123' }} />);
+      const opensNewTabIndicatorLabel = 'open a new window';
+
+      const wrapper = await mountAndWait(<LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} hasIcon={true} iconProps={{ id: '1123' }} />);
 
       const element = wrapper.find(IconNext);
 
