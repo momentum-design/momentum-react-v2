@@ -127,6 +127,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               "fn": [Function],
             },
             Object {
+              "fn": [Function],
+            },
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
@@ -180,6 +183,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
           placement="auto"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -343,6 +349,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                         "fn": [Function],
                       },
                       Object {
+                        "fn": [Function],
+                      },
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -392,6 +401,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                     placement="auto"
                     plugins={
                       Array [
+                        Object {
+                          "fn": [Function],
+                        },
                         Object {
                           "fn": [Function],
                         },
@@ -618,6 +630,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               "fn": [Function],
             },
             Object {
+              "fn": [Function],
+            },
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
@@ -671,6 +686,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
           placement="auto"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -835,6 +853,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                         "fn": [Function],
                       },
                       Object {
+                        "fn": [Function],
+                      },
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -884,6 +905,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                     placement="bottom"
                     plugins={
                       Array [
+                        Object {
+                          "fn": [Function],
+                        },
                         Object {
                           "fn": [Function],
                         },
@@ -1110,6 +1134,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               "fn": [Function],
             },
             Object {
+              "fn": [Function],
+            },
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
@@ -1163,6 +1190,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
           placement="auto"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -1327,6 +1357,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                         "fn": [Function],
                       },
                       Object {
+                        "fn": [Function],
+                      },
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -1376,6 +1409,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                     placement="top"
                     plugins={
                       Array [
+                        Object {
+                          "fn": [Function],
+                        },
                         Object {
                           "fn": [Function],
                         },

@@ -109,6 +109,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -155,6 +158,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -2297,6 +2303,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -2343,6 +2352,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -4485,6 +4497,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -4531,6 +4546,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -6674,6 +6692,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -6720,6 +6741,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -8865,6 +8889,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -8911,6 +8938,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           placement="top"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -11053,6 +11083,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -11099,6 +11132,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -13316,6 +13352,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -13362,6 +13401,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },
@@ -15515,6 +15557,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             },
             Object {
               "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
@@ -15561,6 +15606,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           placement="bottom-start"
           plugins={
             Array [
+              Object {
+                "fn": [Function],
+              },
               Object {
                 "fn": [Function],
               },

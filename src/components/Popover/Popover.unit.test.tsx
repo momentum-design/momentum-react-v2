@@ -12,6 +12,8 @@ import { PopoverInstance, PositioningStrategy } from './Popover.types';
 import SearchInput from '../SearchInput';
 import Avatar from '../Avatar';
 import MeetingListItem from '../MeetingListItem';
+import List from '../List';
+import ButtonPill from '../ButtonPill';
 
 jest.mock('uuid', () => {
   return {
@@ -1550,6 +1552,128 @@ describe('<Popover />', () => {
 
           // 4.
           expect(meetingListItem).toHaveFocus();
+        }
+      );
+
+      it('should behave as expected when it is rendered inside a List', async () => {
+        /**
+         * Expected behavior for this test:
+         * 1. When the MeetingListItem is pressed, the popover opens
+         * 2. When the popover is open, the focus should be on the first focusable element within the popover
+         * 3. When Escape is pressed, the popover closes
+         * 4. The focus returns to the MeetingListItem
+         */
+
+        const user = userEvent.setup();
+
+        render(
+          <List listSize={1}>
+            <Popover
+              triggerComponent={<MeetingListItem>list item content</MeetingListItem>}
+              interactive
+            >
+              <div>
+                <p>Content</p>
+                <button>Button within popover</button>
+              </div>
+            </Popover>
+          </List>
+        );
+
+        // 1.
+        const meetingListItem = await screen.findByRole('listitem');
+        await user.click(meetingListItem);
+
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+
+        // 2.
+        const buttonWithinPopover = await screen.findByRole('button', {
+          name: 'Button within popover',
+        });
+        await waitFor(() => {
+          expect(buttonWithinPopover).toHaveFocus();
+        });
+
+        // 3.
+        await user.keyboard('{Escape}');
+        await waitFor(() => {
+          expect(screen.queryByText('Content')).not.toBeInTheDocument();
+        });
+
+        // 4.
+        expect(meetingListItem).toHaveFocus();
+      });
+
+      it.each([
+        { continuePropagationOnTrigger: true },
+        { continuePropagationOnTrigger: false },
+        { continuePropagationOnTrigger: undefined },
+      ])(
+        'should behave as expected when the trigger is nested',
+        async ({ continuePropagationOnTrigger }) => {
+          const user = userEvent.setup();
+          const args = {
+            trigger: 'mouseenter',
+            interactive: true,
+          };
+
+          render(
+            <Popover
+              {...args}
+              triggerComponent={
+                <MeetingListItem style={{ margin: '10rem auto', display: 'flex' }}>
+                  <Popover
+                    continuePropagationOnTrigger={continuePropagationOnTrigger}
+                    {...args}
+                    triggerComponent={
+                      <Avatar
+                        data-testid="avatar"
+                        // eslint-disable-next-line
+                        onPress={() => {}}
+                        initials="AB"
+                      >
+                        Hover or click me!
+                      </Avatar>
+                    }
+                  >
+                    <div>
+                      <ButtonPill>test 1</ButtonPill>
+                      <ButtonPill>test 2</ButtonPill>
+                      <ButtonPill>test 3</ButtonPill>
+                    </div>
+                  </Popover>
+                  test
+                </MeetingListItem>
+              }
+              trigger="click"
+              interactive
+            >
+              <div>
+                <ButtonPill>test 4</ButtonPill>
+                <ButtonPill>test 5</ButtonPill>
+                <ButtonPill>test 6</ButtonPill>
+              </div>
+            </Popover>
+          );
+
+          // When space is pressed while focused on the avatar, only one popover opens
+          const avatarButton = await screen.findByRole('button', { name: 'AB' });
+
+          await avatarButton.focus();
+
+          await user.keyboard('{Enter}');
+
+          await waitFor(() => {
+            expect(screen.getByText('test 1')).toBeInTheDocument();
+          });
+
+          if (continuePropagationOnTrigger) {
+            expect(screen.getByText('test 4')).toBeInTheDocument();
+          } else {
+            expect(screen.queryByText('test 4')).not.toBeInTheDocument();
+          }
         }
       );
     });

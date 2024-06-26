@@ -64,6 +64,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     firstFocusElement,
     autoFocus = DEFAULTS.AUTO_FOCUS,
     appendTo = DEFAULTS.APPEND_TO,
+    continuePropagationOnTrigger,
     ...rest
   } = props;
 
@@ -148,6 +149,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       ref={ref}
       /* needed to prevent the popover from closing when the focus is changed via click events */
       hideOnClick={!trigger.includes('manual')}
+      continuePropagationOnTrigger={continuePropagationOnTrigger}
       render={(attrs) => (
         <ModalContainer
           id={id}

@@ -371,9 +371,15 @@ describe('<Tooltip type"description />', () => {
           <p>Content</p>
         </Tooltip>
       );
+
+      // Button has the correct description before tooltip opened
+      const button = screen.getByRole('button', { name: /Hover Me!/i });
+      expect(button.getAttribute('aria-describedby')).toEqual('test-ID');
+      expect(button).toBeVisible();
+
       await openTooltipByHoveringOnTriggerAndCheckContent(user);
       const trigger = await screen.findByText(/hover me!/i);
-      expect(trigger.getAttribute('aria-describedby')).toMatch(/tippy-\d+/);
+      expect(trigger.getAttribute('aria-describedby')).toMatch('test-ID');
       expect(trigger.getAttribute('aria-haspopup')).toBe(null);
     });
 
@@ -450,10 +456,10 @@ describe('<Tooltip type"description />', () => {
 
       render(
         <>
-          <Tooltip type="description" triggerComponent={<ButtonSimple>Tooltip 1</ButtonSimple>}>
+          <Tooltip type="none" triggerComponent={<ButtonSimple>Tooltip 1</ButtonSimple>}>
             <p>Content 1</p>
           </Tooltip>
-          <Tooltip type="description" triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}>
+          <Tooltip type="none" triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}>
             <p>Content 2</p>
           </Tooltip>
           <ButtonSimple>Other button</ButtonSimple>
@@ -507,7 +513,7 @@ describe('<Tooltip type"description />', () => {
     expect(props.onCreate).not.toBeCalled();
 
     const { unmount } = render(
-      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>} {...props}>
+      <Tooltip type="none" triggerComponent={<button>Hover Me!</button>} {...props}>
         <p>Content</p>
       </Tooltip>
     );
@@ -554,7 +560,7 @@ describe('<Tooltip type"description />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
+      <Tooltip type="none" triggerComponent={<button>Hover Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );
@@ -581,7 +587,7 @@ describe('<Tooltip type"description />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip type="description" triggerComponent={<button>Focus Me!</button>}>
+      <Tooltip type="none" triggerComponent={<button>Focus Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );
@@ -607,7 +613,7 @@ describe('<Tooltip type"description />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
+      <Tooltip type="none" triggerComponent={<button>Hover Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );

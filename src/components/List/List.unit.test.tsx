@@ -161,6 +161,29 @@ describe('<List />', () => {
   });
 
   describe('list focus', () => {
+    it('should handle escape being pressed', async () => {
+      const keyDownHandler = jest.fn();
+
+      const { getByRole } = render(
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+        <div onKeyDown={keyDownHandler}>
+          <List listSize={1}>
+            <ListItemBase key="0" itemIndex={0}>
+              ListItemBase 1
+            </ListItemBase>
+          </List>
+        </div>
+      );
+
+      const listItem = getByRole('listitem');
+
+      await userEvent.tab();
+      expect(listItem).toHaveFocus();
+
+      await userEvent.keyboard('{Escape}');
+      expect(keyDownHandler).toHaveBeenCalled();
+    });
+
     it('should handle up/down arrow keys correctly', async () => {
       expect.assertions(8);
       const user = userEvent.setup();

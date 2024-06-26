@@ -12,6 +12,8 @@ import Icon from '../Icon';
 import OverlayAlert, { OverlayAlertProps } from './';
 import argTypes from './OverlayAlert.stories.args';
 import Documentation from './OverlayAlert.stories.docs.mdx';
+import Tooltip from '../Tooltip';
+import TooltipPopoverCombo from '../TooltipPopoverCombo';
 
 export default {
   title: 'Momentum UI/OverlayAlert',
@@ -186,4 +188,68 @@ const FigmaExample: Story<OverlayAlertProps> = (args: OverlayAlertProps) => {
 
 FigmaExample.argTypes = { ...argTypes };
 
-export { Example, WithoutActions, WithoutControls, WithoutTitle, FigmaExample };
+const ContainsPopovers: Story<OverlayAlertProps> = (args: OverlayAlertProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const open = () => {
+    setIsOpen(true);
+  };
+
+  const close = () => {
+    setIsOpen(false);
+  };
+
+  const actions = [
+    <ButtonPill key={0} outline inverted onPress={close} size={32}>
+      Secondary
+    </ButtonPill>,
+    <ButtonPill key={1} onPress={close} size={32}>
+      Primary
+    </ButtonPill>,
+  ];
+
+  const controls = [<ButtonControl key={2} onPress={close} control="close" />];
+
+  return (
+    <div
+      style={{
+        alignItems: 'center',
+        backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
+        border:
+          '1px var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal)',
+        display: 'flex',
+        height: '80%',
+        paddingLeft: '4rem',
+        position: 'relative',
+        width: '80%',
+      }}
+    >
+      <ButtonPill onPress={open}>Open</ButtonPill>
+      {isOpen && (
+        <OverlayAlert
+          details="In ultrices dapibus tortor in posuere. Sed rhoncus mi sem."
+          title="Title"
+          actions={<>{actions}</>}
+          controls={<>{controls}</>}
+          onClose={close}
+          {...args}
+        >
+          <div           
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          > 
+            Focus on this button. Closing the tooltip using Esc will not close the OverlayAlert.
+            <Tooltip placement="top" triggerComponent={<ButtonCircle><Icon name="accessibility"/></ButtonCircle>} type="label">Tooltip content</Tooltip>
+          </div>
+        </OverlayAlert>
+      )}
+    </div>
+  );
+};
+
+ContainsPopovers.argTypes = { ...argTypes };
+
+export { Example, WithoutActions, WithoutControls, WithoutTitle, FigmaExample, ContainsPopovers };
