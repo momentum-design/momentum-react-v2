@@ -19,7 +19,9 @@ const RadioSimpleGroup: FC<RadioSimpleGroupProps> = (props: RadioSimpleGroupProp
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
   const radioSimpleGroupId = id || uuidV4();
-  const descriptionId = description ? `radio-simple-group-description-${radioSimpleGroupId}` : undefined;
+  const descriptionId = description
+    ? `radio-simple-group-description-${radioSimpleGroupId}`
+    : undefined;
 
   return (
     <div

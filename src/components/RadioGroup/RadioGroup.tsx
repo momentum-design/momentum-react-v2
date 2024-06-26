@@ -40,11 +40,11 @@ const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
       aria-describedby={description ? descriptionId : undefined}
     >
       <span {...labelProps}>{label}</span>
-      {description &&
+      {description && (
         <Text id={descriptionId} type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>
           {description}
         </Text>
-      }
+      )}
       <RadioContext.Provider value={state}>
         {options &&
           options.map((option: string | RadioProps) => {

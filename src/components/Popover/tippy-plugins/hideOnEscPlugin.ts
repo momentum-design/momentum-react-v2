@@ -1,6 +1,6 @@
 import type { Instance as TippyInstance, Plugin } from 'tippy.js';
 
-import {dispatchEvent, EventType} from '../Popover.events';
+import { dispatchEvent, EventType } from '../Popover.events';
 
 const openedTippyInstances: TippyInstance[] = [];
 

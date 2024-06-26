@@ -33,13 +33,16 @@ const OverlayAlert: FC<Props> = (props: Props) => {
   } = props;
   const id = useRef(uuidV4());
   const detailsId = useRef(uuidV4());
-  const {shouldCloseOnEsc} = useShouldCloseOnEsc();
+  const { shouldCloseOnEsc } = useShouldCloseOnEsc();
 
-  const onKeyDown = useCallback((event: React.KeyboardEvent) => {
-    if (event.key === 'Escape' && shouldCloseOnEsc) {
-      onClose?.();
-    }
-  }, [shouldCloseOnEsc]);
+  const onKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      if (event.key === 'Escape' && shouldCloseOnEsc) {
+        onClose?.();
+      }
+    },
+    [shouldCloseOnEsc]
+  );
 
   return (
     <Overlay
@@ -71,10 +74,14 @@ const OverlayAlert: FC<Props> = (props: Props) => {
           {children
             ? children
             : !!details && (
-              <Text className={classnames(STYLE.details)} type="body-primary" id={detailsId.current}>
-                {details}
-              </Text>
-            )}
+                <Text
+                  className={classnames(STYLE.details)}
+                  type="body-primary"
+                  id={detailsId.current}
+                >
+                  {details}
+                </Text>
+              )}
         </div>
         <div>{actions}</div>
       </ModalContainer>
