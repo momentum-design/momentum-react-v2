@@ -41,9 +41,12 @@ describe('hideOnEscPlugin', () => {
     plugin1.onShow(tippy1);
     expect(addEventListenerSpy).toHaveBeenNthCalledWith(1, 'keydown', expect.any(Function));
     await waitFor(() => {
-        expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(1, 'tippyInstanceAdded', tippy1);
-      }
-    );
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceAdded',
+        tippy1
+      );
+    });
 
     addEventListenerSpy.mockReset();
     popoverEventsDispatchEventSpy.mockReset();
@@ -52,18 +55,24 @@ describe('hideOnEscPlugin', () => {
     expect(addEventListenerSpy).toBeCalledTimes(0);
     expect(eventHandlers.keydown.length).toBe(1);
     await waitFor(() => {
-      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(1, 'tippyInstanceAdded', tippy2);
-      }
-    );
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceAdded',
+        tippy2
+      );
+    });
 
     popoverEventsDispatchEventSpy.mockReset();
 
     plugin1.onHide(tippy1);
     expect(removeEventListenerSpy).toBeCalledTimes(0);
     await waitFor(() => {
-      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(1, 'tippyInstanceRemoved', tippy1);
-      }
-    );
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceRemoved',
+        tippy1
+      );
+    });
 
     popoverEventsDispatchEventSpy.mockReset();
 
@@ -71,9 +80,12 @@ describe('hideOnEscPlugin', () => {
     expect(removeEventListenerSpy).toHaveBeenNthCalledWith(1, 'keydown', expect.any(Function));
     expect(eventHandlers.keydown.length).toBe(0);
     await waitFor(() => {
-      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(1, 'tippyInstanceRemoved', tippy2);
-      }
-    );
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceRemoved',
+        tippy2
+      );
+    });
   });
 
   it('should trigger hide when user press esc', async () => {

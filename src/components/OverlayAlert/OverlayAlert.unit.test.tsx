@@ -294,7 +294,9 @@ describe('<OverlayAlert />', () => {
 
       const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
-      const titleComponent = component.find(Text).filter({ className: OVERLAY_ALERT_CONSTANTS.STYLE.title });
+      const titleComponent = component
+        .find(Text)
+        .filter({ className: OVERLAY_ALERT_CONSTANTS.STYLE.title });
 
       expect(titleComponent.props().type).toStrictEqual('title');
     });
@@ -366,7 +368,9 @@ describe('<OverlayAlert />', () => {
 
       const ariaLabel = 'test-aria-label';
 
-      const component = mount(<OverlayAlert ariaLabel={ariaLabel} />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert ariaLabel={ariaLabel} />).find(
+        `.${OVERLAY_STYLE.wrapper}`
+      );
 
       const modalContainerComponent = component.find(ModalContainer);
 
@@ -434,9 +438,9 @@ describe('<OverlayAlert />', () => {
 
       render(<Component />);
 
-      const button1 = screen.getByRole('button', {name: 'button1'});
-      const button2 = screen.getByRole('button', {name: 'button2'});
-      const button3 = screen.getByRole('button', {name: 'button3'});
+      const button1 = screen.getByRole('button', { name: 'button1' });
+      const button2 = screen.getByRole('button', { name: 'button2' });
+      const button3 = screen.getByRole('button', { name: 'button3' });
 
       expect(button1).toHaveFocus();
       expect(button3).not.toHaveFocus();
@@ -458,15 +462,8 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert
-              onClose={onCloseMock}
-            >
-              <Tooltip 
-                triggerComponent={
-                  <button>button1</button>
-                } 
-                type="none"
-              >
+            <OverlayAlert onClose={onCloseMock}>
+              <Tooltip triggerComponent={<button>button1</button>} type="none">
                 Tooltip text
               </Tooltip>
             </OverlayAlert>
@@ -481,7 +478,7 @@ describe('<OverlayAlert />', () => {
       // press tab
       await user.tab();
 
-      const button1 = screen.getByRole('button', {name: 'button1'});
+      const button1 = screen.getByRole('button', { name: 'button1' });
 
       // trigger button should be focused, tooltip should be shown
       expect(button1).toHaveFocus();
@@ -515,13 +512,9 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert
-              onClose={onCloseMock}
-            >
-              <Popover 
-                triggerComponent={
-                  <button>button1</button>
-                } 
+            <OverlayAlert onClose={onCloseMock}>
+              <Popover
+                triggerComponent={<button>button1</button>}
                 hideOnEsc={false}
                 role="tooltip"
                 trigger="mouseenter focusin"
@@ -540,7 +533,7 @@ describe('<OverlayAlert />', () => {
       // press tab
       await user.tab();
 
-      const button1 = screen.getByRole('button', {name: 'button1'});
+      const button1 = screen.getByRole('button', { name: 'button1' });
 
       // trigger button should be focused, tooltip should be shown
       expect(button1).toHaveFocus();
@@ -567,15 +560,8 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert
-              onClose={onCloseMock}
-            >
-              <Popover 
-                triggerComponent={
-                  <button>button1</button>
-                } 
-                interactive
-              >
+            <OverlayAlert onClose={onCloseMock}>
+              <Popover triggerComponent={<button>button1</button>} interactive>
                 <button>button2</button>
               </Popover>
             </OverlayAlert>
@@ -590,7 +576,7 @@ describe('<OverlayAlert />', () => {
       // press tab
       await user.tab();
 
-      const button1 = screen.getByRole('button', {name: 'button1'});
+      const button1 = screen.getByRole('button', { name: 'button1' });
 
       // trigger button should be focused
       expect(button1).toHaveFocus();
@@ -598,7 +584,7 @@ describe('<OverlayAlert />', () => {
       // press Enter
       await user.keyboard('{Enter}');
 
-      const button2 = screen.getByRole('button', {name: 'button2'});
+      const button2 = screen.getByRole('button', { name: 'button2' });
 
       // popover should be shown with button2 focused
       await waitFor(() => {
@@ -629,16 +615,8 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert
-              onClose={onCloseMock}
-            >
-              <Popover 
-                triggerComponent={
-                  <button>button1</button>
-                } 
-                interactive
-                hideOnEsc={false}
-              >
+            <OverlayAlert onClose={onCloseMock}>
+              <Popover triggerComponent={<button>button1</button>} interactive hideOnEsc={false}>
                 <button>button2</button>
               </Popover>
             </OverlayAlert>
@@ -653,7 +631,7 @@ describe('<OverlayAlert />', () => {
       // press tab
       await user.tab();
 
-      const button1 = screen.getByRole('button', {name: 'button1'});
+      const button1 = screen.getByRole('button', { name: 'button1' });
 
       // trigger button should be focused
       expect(button1).toHaveFocus();
@@ -661,7 +639,7 @@ describe('<OverlayAlert />', () => {
       // press Enter
       await user.keyboard('{Enter}');
 
-      const button2 = screen.getByRole('button', {name: 'button2'});
+      const button2 = screen.getByRole('button', { name: 'button2' });
 
       // popover should be shown with button2 focused
       await waitFor(() => {

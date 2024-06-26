@@ -1,5 +1,5 @@
 import React from 'react';
-import { Template , MultiTemplate } from '../../storybook/helper.stories.templates';
+import { Template, MultiTemplate } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
@@ -28,7 +28,7 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   children: (
-    <div style={{display: 'flex', flexDirection: 'row'}}>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
       <RadioSimple
         value="red"
         key="0"
@@ -38,10 +38,10 @@ Example.args = {
           alignItems: 'center',
           border: '1px solid red',
           padding: '8px',
-          margin: '8px 8px'
+          margin: '8px 8px',
         }}
       >
-        <Icon name="accessibility" autoScale/>
+        <Icon name="accessibility" autoScale />
         <Text>Red</Text>
         <Text>My value is 'red'</Text>
       </RadioSimple>
@@ -54,10 +54,10 @@ Example.args = {
           alignItems: 'center',
           border: '1px solid blue',
           padding: '8px',
-          margin: '8px 8px'
+          margin: '8px 8px',
         }}
       >
-        <Icon name="search" autoScale/>
+        <Icon name="search" autoScale />
         <Text>Blue</Text>
         <Text>My value is 'blue'</Text>
       </RadioSimple>
@@ -70,17 +70,17 @@ Example.args = {
           alignItems: 'center',
           border: '1px solid yellow',
           padding: '8px',
-          margin: '8px 8px'
+          margin: '8px 8px',
         }}
       >
-        <Icon name="search" autoScale/>
+        <Icon name="search" autoScale />
         <Text>Yellow</Text>
         <Text>My value is 'yellow'</Text>
       </RadioSimple>
     </div>
   ),
-  label: <div style={{padding: '16px 0'}}>Select your favorite color</div>,
-  description: <div style={{padding: '16px 0'}}>Only choose one color</div>,
+  label: <div style={{ padding: '16px 0' }}>Select your favorite color</div>,
+  description: <div style={{ padding: '16px 0' }}>Only choose one color</div>,
   id: 'select-color-radio-simple-group',
 };
 
@@ -94,7 +94,7 @@ Layout.parameters = {
   variants: [
     {
       children: (
-        <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
           <RadioSimple
             value="grid"
             key="0"
@@ -105,10 +105,10 @@ Layout.parameters = {
               alignItems: 'center',
               border: '1px solid white',
               padding: '4px',
-              margin: '4px 4px'
+              margin: '4px 4px',
             }}
           >
-            <Icon name="video-layout-equal" autoScale/>
+            <Icon name="video-layout-equal" autoScale />
             <Text>Grid</Text>
             <Text>My value is 'grid'</Text>
           </RadioSimple>
@@ -122,10 +122,10 @@ Layout.parameters = {
               alignItems: 'center',
               border: '1px solid white',
               padding: '4px',
-              margin: '4px 4px'
+              margin: '4px 4px',
             }}
           >
-            <Icon name="video-layout-stack" autoScale/>
+            <Icon name="video-layout-stack" autoScale />
             <Text>Stack</Text>
             <Text>My value is 'stack'</Text>
           </RadioSimple>
@@ -139,17 +139,17 @@ Layout.parameters = {
               alignItems: 'center',
               border: '1px solid white',
               padding: '4px',
-              margin: '4px 4px'
+              margin: '4px 4px',
             }}
           >
-            <Icon name="layout-side-by-side-vertical" autoScale/>
+            <Icon name="layout-side-by-side-vertical" autoScale />
             <Text>SideBySide</Text>
             <Text>My value is 'sideBySide'</Text>
           </RadioSimple>
         </div>
       ),
-      label: <div style={{padding: '16px 0'}}>Layout</div>,
-      description: <div style={{padding: '16px 0'}}>Please choose your favorite layout</div>,
+      label: <div style={{ padding: '16px 0' }}>Layout</div>,
+      description: <div style={{ padding: '16px 0' }}>Please choose your favorite layout</div>,
       id: 'select-layout-radio-simple-group',
     },
   ],

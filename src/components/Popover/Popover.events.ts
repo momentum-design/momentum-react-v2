@@ -5,7 +5,7 @@ import { v4 as uuidV4 } from 'uuid';
  * This will enable us to keep track of Popover instances (specifically those with hideOnEsc = true)
  * which are opened while an OverlayAlert is rendered. While such Popover instances remain open, the OverlayAlert
  * will not close on Esc.
- * 
+ *
  * This operates on the assumption that any Popover instance that is opened after an OverlayAlert is
  * rendered on the screen is part of the content of said OverlayAlert and should be closed before the OverlayAlert
  * itself.
@@ -13,7 +13,7 @@ import { v4 as uuidV4 } from 'uuid';
 
 export enum EventType {
   TIPPY_INSTANCE_ADDED = 'tippyInstanceAdded',
-  TIPPY_INSTANCE_REMOVED = 'tippyInstanceRemoved'
+  TIPPY_INSTANCE_REMOVED = 'tippyInstanceRemoved',
 }
 
 type CustomEventHandler = (event: CustomEvent) => void;
@@ -35,7 +35,7 @@ const eventTarget = new EventTarget();
  * @param data The data associated with the event (provided in the custom event detail)
  */
 const dispatchEvent = (eventType: EventType, data?: unknown): void => {
-  eventTarget.dispatchEvent(new CustomEvent(eventType, {detail: {data}}));
+  eventTarget.dispatchEvent(new CustomEvent(eventType, { detail: { data } }));
 };
 
 /**
@@ -48,7 +48,7 @@ const dispatchEvent = (eventType: EventType, data?: unknown): void => {
  */
 const addListener = (eventType: EventType, handler: EventHandler): string => {
   const id = uuidV4();
-  const eventHandler = ({detail: {data}}: CustomEvent) => {
+  const eventHandler = ({ detail: { data } }: CustomEvent) => {
     handler(data);
   };
 
@@ -76,4 +76,4 @@ const removeListener = (eventType: EventType, id: string): void => {
   delete eventHandlers[eventType][id];
 };
 
-export {dispatchEvent, addListener, removeListener};
+export { dispatchEvent, addListener, removeListener };
