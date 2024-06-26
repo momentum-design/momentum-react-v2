@@ -221,7 +221,7 @@ export default {
   },
   extraLabel: {
     defaultValue: DEFAULTS.LABEL,
-    description: "The label that represents additional description, it will be spliced to the end of the container aria-label ",
+    description: 'The label that represents additional description, it will be spliced to the end of the container aria-label',
     control: { type: 'text' },
     table: {
       type: {
