@@ -21,7 +21,8 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       debug={false}
       inputProps={
         Object {
-          "aria-label": undefined,
+          "aria-describedby": "undefined",
+          "aria-label": ", field 1 of 6",
           "disabled": false,
           "id": undefined,
           "name": undefined,
@@ -39,6 +40,8 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
         className="vi__wrapper"
       >
         <input
+          aria-describedby="undefined"
+          aria-label=", field 1 of 6"
           className="vi"
           disabled={false}
           onBlur={[Function]}
