@@ -1255,7 +1255,7 @@ describe('<Popover />', () => {
             trigger="mouseenter"
             showArrow
             triggerComponent={
-              <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }} role='button'>
+              <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }} role="button">
                 Hover or click me!
               </ButtonSimple>
             }
@@ -1703,7 +1703,7 @@ describe('<Popover />', () => {
                         data-testid="avatar"
                         // eslint-disable-next-line
                         onPress={() => {}}
-                        initials="AB"
+                        aria-label="AB"
                       >
                         Hover or click me!
                       </Avatar>
