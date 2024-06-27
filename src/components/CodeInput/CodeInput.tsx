@@ -17,6 +17,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
       /* Optional */
     },
     ariaLabel,
+    ariaDescribedby,
     messageArr = [],
     disabled = false,
     className,
@@ -49,7 +50,13 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   return (
     <div className={classnames(STYLE.wrapper, className)} data-level={messageType}>
       <VerificationInput
-        inputProps={{ 'aria-label': ariaLabel, id: inputId, name: inputId, disabled }}
+        inputProps={{
+          'aria-label': `${ariaLabel ? ariaLabel : ''}, field ${value.length + 1} of ${numDigits}`,
+          'aria-describedby': `${ariaDescribedby}`,
+          id: inputId,
+          name: inputId,
+          disabled,
+        }}
         length={numDigits}
         onChange={setValue}
         onFocus={() => {
