@@ -3,7 +3,6 @@ import * as PopoverEvents from '../components/Popover/Popover.events';
 import { useShouldCloseOnEsc } from './useShouldCloseOnEsc';
 
 describe('useShouldCloseOnEsc', () => {
-
   const addPopoverInstance = (id: string) => {
     // Simulate adding a Popover instance
     act(() => {

@@ -78,7 +78,14 @@ function Template(): Story<OverlayAlertProps> {
         }}
       >
         <ButtonPill onPress={open}>Open</ButtonPill>
-        {isOpen && <OverlayAlert actions={<>{actions}</>} controls={<>{controls}</>} {...args} onClose={close}/>}
+        {isOpen && (
+          <OverlayAlert
+            actions={<>{actions}</>}
+            controls={<>{controls}</>}
+            {...args}
+            onClose={close}
+          />
+        )}
       </div>
     );
   };
@@ -234,15 +241,25 @@ const ContainsPopovers: Story<OverlayAlertProps> = (args: OverlayAlertProps) => 
           onClose={close}
           {...args}
         >
-          <div           
+          <div
             style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}
-          > 
+          >
             Focus on this button. Closing the tooltip using Esc will not close the OverlayAlert.
-            <Tooltip placement="top" triggerComponent={<ButtonCircle><Icon name="accessibility"/></ButtonCircle>} type="label">Tooltip content</Tooltip>
+            <Tooltip
+              placement="top"
+              triggerComponent={
+                <ButtonCircle>
+                  <Icon name="accessibility" />
+                </ButtonCircle>
+              }
+              type="label"
+            >
+              Tooltip content
+            </Tooltip>
           </div>
         </OverlayAlert>
       )}
