@@ -44,10 +44,14 @@ class Menu extends React.Component {
 
     if (prevState.listContext !== listContext) {
       if (activeElement && this._selectRefocus) {
-        const activeNode = ReactDOM.findDOMNode(activeElement);
+        let activeNode = [];
+        try {
+          activeNode = ReactDOM.findDOMNode(activeElement);
+        } catch (error) {
+          activeNode = ReactDOM.findDOMNode(prevState.activeElement);
+        }
         const overlayItems = this.getFocusableItems(activeNode, '.md-menu-item-container');
         const items = overlayItems.length && this.getFocusableItems(overlayItems[0]);
-
         this._selectRefocus = false;
         items.length && this.setFocus(items[0], false, true);
       } else if (listContext.focus !== prevState.listContext.focus) {
