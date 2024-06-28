@@ -123,6 +123,7 @@ class Lightbox extends React.Component {
     }
     e.stopPropagation();
     target && target.scrollIntoViewIfNeeded();
+    target && target.parentElement.focus();
   };
 
   stopPropagation = (e) => {
@@ -232,8 +233,9 @@ class Lightbox extends React.Component {
             key={key}
             onClick={() => this.handleThumbnailClick(idx)}
             onKeyPress={() => this.handleThumbnailClick(idx)}
-            role="button"
+            role="tab"
             tabIndex="0"
+            aria-selected={idx === index ? true : false}
           >
             {body}
             <div>{idx + 1}</div>
@@ -500,7 +502,7 @@ class Lightbox extends React.Component {
       >
         {/* adding this so that focus styling applies to components inside the modal. */}
         <MomentumThemeProvider theme={this.props.theme}>
-          <div className="md-lightbox__header" ref={(ref) => (this.lightBox = ref)}>
+          <div className="md-lightbox__header">
             <div className="md-lightbox__header-item--left">
               <div className="md-lightbox__header-meta">
                 <div className="md-lightbox__header-sharer">{info.sharedBy}</div>
@@ -526,7 +528,7 @@ class Lightbox extends React.Component {
               </Tooltip>
             </div>
           </div>
-          <div className="md-lightbox__body">
+          <div className="md-lightbox__body"  ref={(ref) => (this.lightBox = ref)} role='tablist'>
             {showColumn && getThumbnails()}
             <div
               className="md-lightbox__content"
