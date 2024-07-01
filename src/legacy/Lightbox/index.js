@@ -107,7 +107,7 @@ class Lightbox extends React.Component {
       default:
         return;
     }
-    this.triggerPageChange(newIndex, e);
+    this.triggerPageChange(newIndex, e, true);
   };
 
   handleThumbnailClick = (index) => {
@@ -115,7 +115,7 @@ class Lightbox extends React.Component {
     onChange && onChange(index);
   };
 
-  triggerPageChange = (index, e) => {
+  triggerPageChange = (index, e, needFocus) => {
     const { onChange, pages } = this.props;
     const target = this.lightBox && this.lightBox.querySelector(`[data-index="${index}"]`);
     if (index >= 0 && index <= pages.length - 1) {
@@ -123,7 +123,7 @@ class Lightbox extends React.Component {
     }
     e.stopPropagation();
     target && target.scrollIntoViewIfNeeded();
-    target && target.parentElement.focus();
+    target && needFocus && target.parentElement.focus();
   };
 
   stopPropagation = (e) => {
