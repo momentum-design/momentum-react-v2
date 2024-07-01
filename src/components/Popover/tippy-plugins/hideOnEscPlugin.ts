@@ -30,11 +30,7 @@ const addInstance = (instance: TippyInstance) => {
   openedTippyInstances.push(instance);
 
   // Send custom event that tippy instance is shown on screen. This event is listened for in instances of OverlayAlert to prevent it from closing unintentionally.
-  //
-  // We do this in the next event cycle because, if we don't, and the first element focused in an OverlayAlert is the trigger of a tooltip, then the event is
-  // dispatched before the OverlayAlert is mounted. (Use setTimeout without delay to execute code in the
-  // next event cycle, see https://developer.mozilla.org/en-US/docs/Web/API/setTimeout#delay)
-  setTimeout(() => dispatchEvent(EventType.TIPPY_INSTANCE_ADDED, instance));
+  dispatchEvent(EventType.TIPPY_INSTANCE_ADDED, instance);
 };
 
 /**

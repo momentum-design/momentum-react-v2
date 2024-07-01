@@ -462,7 +462,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert onClose={onCloseMock} controls={<ButtonControl control='close' onPress={onCloseMock}/>}>
               <Tooltip triggerComponent={<button>button1</button>} type="none">
                 Tooltip text
               </Tooltip>
@@ -512,7 +512,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert onClose={onCloseMock} controls={<ButtonControl control='close' onPress={onCloseMock}/>}>
               <Popover
                 triggerComponent={<button>button1</button>}
                 hideOnEsc={false}
@@ -560,7 +560,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert onClose={onCloseMock}controls={<ButtonControl control='close' onPress={onCloseMock}/>}>
               <Popover triggerComponent={<button>button1</button>} interactive>
                 <button>button2</button>
               </Popover>
@@ -615,7 +615,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert onClose={onCloseMock} controls={<ButtonControl control='close' onPress={onCloseMock}/>}>
               <Popover triggerComponent={<button>button1</button>} interactive hideOnEsc={false}>
                 <button>button2</button>
               </Popover>
