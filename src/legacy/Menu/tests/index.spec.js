@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { Menu, MenuItem, SubMenu } from '@momentum-ui/react-collaboration';
+import Icon from '../../../components/Icon';
+import ListItemBaseSection from '../../../components/ListItemBaseSection';
 
 describe('tests for <Menu />', () => {
   beforeEach(() => {
@@ -87,6 +89,46 @@ describe('tests for <Menu />', () => {
 
     expect(selectedIndex).toEqual('test-1-1');
     expect(instance.state.listContext.active).toEqual(['test-1-1']);
+
+    expect(wrapper.find('SubMenu').at(0).props().isOpen).toEqual(false);
+  });
+
+  it('should open/select the customize menuItem in submenu ', () => {
+    let selectedIndex;
+    const onSelect = (e, i) => (selectedIndex = i.eventKey);
+    const wrapper = mount(
+      <Menu onSelect={onSelect}>
+        <SubMenu label="one" eventKey="test-1">
+          <MenuItem label="one-one" key="0" eventKey="test-1-1" />
+          <MenuItem eventKey="customized-submenu-item" >
+            <ListItemBaseSection position="left">
+              customized subMenu item
+            </ListItemBaseSection> 
+            <ListItemBaseSection position="middle">
+              <Icon name="pop-out" scale={16} />
+            </ListItemBaseSection>  
+          </MenuItem>
+        </SubMenu>
+        <MenuItem label="two" eventKey="test-2" />
+        <MenuItem label="three" eventKey="test-3" />
+      </Menu>
+    );
+    let menuItem = wrapper.find('SubMenu').at(0);
+    // click first menu item
+    menuItem.find('.md-list-item').simulate('click');
+    const instance = wrapper.find('Menu').instance();
+
+    expect(selectedIndex).toEqual('test-1');
+    expect(instance.state.listContext.active).toEqual(['test-1']);
+
+    // click on first subMenu Item
+    menuItem = wrapper.find('.md-menu-item').at(0);
+
+    // click on second menuItem in subMenu which is customized
+    menuItem.find('.md-event-overlay__children .md-list-item').at(1).simulate('click');
+
+    expect(selectedIndex).toEqual('customized-submenu-item');
+    expect(instance.state.listContext.active).toEqual(['customized-submenu-item']);
 
     expect(wrapper.find('SubMenu').at(0).props().isOpen).toEqual(false);
   });
