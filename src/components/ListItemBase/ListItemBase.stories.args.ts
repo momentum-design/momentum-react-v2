@@ -1,10 +1,9 @@
-import { commonStyles, commonHTMLAttributes } from '../../storybook/helper.stories.argtypes';
+import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { LIST_ITEM_BASE_CONSTANTS as CONSTANTS } from '.';
 
 export default {
   ...commonStyles,
-  ...commonHTMLAttributes,
   isDisabled: {
     defaultValue: CONSTANTS.DEFAULTS.IS_DISABLED,
     description: 'Determines if this item is disabled',

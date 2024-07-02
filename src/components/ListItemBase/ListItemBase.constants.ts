@@ -20,7 +20,6 @@ const DEFAULTS = {
   ROLE: 'listitem',
   SHOULD_ITEM_FOCUS_BE_INSET: false,
   INTERACTIVE: true,
-  TITLE: 'title',
 };
 
 const STYLE = {

@@ -63,16 +63,6 @@ describe('ListItemBase', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with title', () => {
-      expect.assertions(1);
-
-      const title = 'some title';
-
-      container = mount(<ListItemBase title={title}>Test</ListItemBase>);
-
-      expect(container).toMatchSnapshot();
-    });
-
     it('should match snapshot with isDisabled', () => {
       expect.assertions(1);
 
@@ -188,18 +178,6 @@ describe('ListItemBase', () => {
       const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
-    });
-
-    it('should have provided title when title is provided', () => {
-      expect.assertions(1);
-
-      const title = 'some title';
-
-      container = mount(<ListItemBase title={title}>Test</ListItemBase>);
-
-      const element = container.find(ListItemBase).getDOMNode();
-
-      expect(element.getAttribute('title')).toBe(title);
     });
 
     it('should have provided data-disabled when isDisabled is provided', () => {
