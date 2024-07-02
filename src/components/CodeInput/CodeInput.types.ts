@@ -34,4 +34,8 @@ export interface Props {
    * referencing to htmlFor attribute of <label> tag in cantina.
    */
   inputId?: string;
+  /**
+   * ariaDescribedby: the aria-describedby attribute to be passed to the input
+   */
+  ariaDescribedby?: string;
 }
