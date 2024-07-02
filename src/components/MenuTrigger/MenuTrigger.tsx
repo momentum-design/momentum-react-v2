@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useRef, Children, useState, useEffect, useCallback } from 'react';
+import React, { ReactElement, useRef, Children, useState, useEffect, useImperativeHandle, forwardRef, ForwardedRef, RefObject } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './MenuTrigger.constants';
@@ -14,7 +14,7 @@ import type { PopoverInstance, VariantType } from '../Popover/Popover.types';
 import type { FocusStrategy } from '@react-types/shared';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
-const MenuTrigger: FC<Props> = (props: Props) => {
+const MenuTrigger = forwardRef((props: Props, ref: ForwardedRef<{triggerComponentRef: RefObject<HTMLButtonElement>}>) => {
   const {
     className,
     id,
@@ -35,6 +35,10 @@ const MenuTrigger: FC<Props> = (props: Props) => {
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
 
   const buttonRef = useRef<HTMLButtonElement>();
+
+  useImperativeHandle(ref, () => ({
+      triggerComponentRef: buttonRef,
+    }), []);
 
   const [...menus] = Children.toArray(children);
 
@@ -139,6 +143,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       })}
     </Popover>
   );
-};
+});
 
 export default MenuTrigger;
