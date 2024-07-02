@@ -273,6 +273,23 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       expect(button.getAttribute('aria-haspopup')).toBe('true');
     });
 
+    it('exposes triggerComponentRef which references the button element', async () => {
+      const ref = {
+        current: {
+          triggerComponentRef: {
+            current: null,
+          },
+        },
+      };
+
+      render(<MenuTrigger {...defaultProps} ref={ref} />);
+
+      const button = screen.getByRole('button', { name: 'Open Menu' });
+      
+      // Assert that the triggerComponentRef in the ref is the same as the button element
+      expect(ref.current.triggerComponentRef.current).toBe(button);
+    });
+
     it('triggerComponent can have aria-haspopup as passed in props', async () => {
       render(
         <MenuTrigger
