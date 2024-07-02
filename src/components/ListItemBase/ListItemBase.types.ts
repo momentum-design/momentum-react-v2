@@ -97,4 +97,9 @@ export interface Props extends PressEvents, ContextMenu {
    * Title to show tooltip.
    */
    title?: string;
+
+  /**
+   * lang attribute if necessary.
+   */
+  lang?: string;
 }

@@ -116,6 +116,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                   </div>
                   <div
                     class="md-lightbox__body"
+                    role="tablist"
                   >
                     <div
                       class="md-lightbox__content"
@@ -375,6 +376,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                     </div>
                     <div
                       className="md-lightbox__body"
+                      role="tablist"
                     >
                       <div
                         className="md-lightbox__content"

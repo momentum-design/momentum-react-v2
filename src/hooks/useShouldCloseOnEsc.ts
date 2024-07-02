@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 import * as PopoverEvents from '../components/Popover/Popover.events';
 
@@ -41,7 +41,7 @@ export const useShouldCloseOnEsc = (): { shouldCloseOnEsc: boolean } => {
     });
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const addId = PopoverEvents.addListener(PopoverEvents.EventType.TIPPY_INSTANCE_ADDED, add);
     const removeId = PopoverEvents.addListener(
       PopoverEvents.EventType.TIPPY_INSTANCE_REMOVED,
