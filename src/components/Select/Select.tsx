@@ -48,7 +48,10 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
   const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
-  const ariaActivedesecendant = menuProps?.id && state?.selectionManager?.focusedKey && `${menuProps.id}-option-${state.selectionManager.focusedKey}`;
+  const ariaActivedesecendant =
+    menuProps?.id &&
+    state?.selectionManager?.focusedKey &&
+    `${menuProps.id}-option-${state.selectionManager.focusedKey}`;
 
   delete buttonProps.color;
   delete buttonProps.onKeyDown;
@@ -137,7 +140,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
 
   // delete color prop which is passed down and used in the ModalContainer
   // because it conflicts with the HTML color property
-  delete keyboardProps.color;
+  // delete keyboardProps.color;
 
   return (
     <div
@@ -181,15 +184,15 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         className={STYLE.popover}
         strategy={listboxWidth ? 'fixed' : 'absolute'}
       >
-          <ListBoxBase
-            {...menuProps}
-            ref={boxRef}
-            state={state}
-            disallowEmptySelection
-            // eslint-disable-next-line jsx-a11y/no-autofocus
-            autoFocus={state.focusStrategy || DEFAULTS.FOCUS_STRATEGY}
-            className={STYLE.menuListBox}
-          />
+        <ListBoxBase
+          {...menuProps}
+          ref={boxRef}
+          state={state}
+          disallowEmptySelection
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus={state.focusStrategy || DEFAULTS.FOCUS_STRATEGY}
+          className={STYLE.menuListBox}
+        />
       </Popover>
     </div>
   );

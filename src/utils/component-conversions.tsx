@@ -7,7 +7,7 @@ export interface PrimativeConverterProps {
   /**
    * Item to be tested for conversion.
    */
-  children;
+  children: React.ReactNode | React.ReactElement;
 
   /**
    * Class to amend to this primative or component.
@@ -34,7 +34,7 @@ const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConvert
   const addedProps: { className?: string } = {};
 
   if (className) {
-    addedProps.className = isElement ? classNames(children.classNames, className) : className;
+    addedProps.className = isElement ? classNames(children.props.className, className) : className;
   }
 
   return isElement ? (

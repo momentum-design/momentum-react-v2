@@ -38,7 +38,7 @@ export interface Props<T> extends AriaMenuProps<T> {
   isTickOnLeftSide?: boolean;
 }
 
-export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
+export interface MenuContextValue extends Omit<HTMLAttributes<HTMLElement>, 'autoFocus'> {
   onClose?: () => void;
   closeOnSelect?: boolean;
   shouldFocusWrap?: boolean;

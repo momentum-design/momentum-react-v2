@@ -1,9 +1,12 @@
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
-import type { MenuTriggerProps } from '@react-types/menu';
+import type { SpectrumMenuTriggerProps } from '@react-types/menu';
 import type { PopoverCommonStyleProps, PlacementType } from '../Popover/Popover.types';
 
 export interface Props
-  extends Omit<MenuTriggerProps, 'align' | 'direction' | 'shouldFlip' | 'defaultOpen'>,
+  extends Omit<
+      SpectrumMenuTriggerProps,
+      'align' | 'direction' | 'shouldFlip' | 'defaultOpen' | 'children'
+    >,
     Omit<PopoverCommonStyleProps, 'placement'> {
   /**
    * Child components of this Popover (what will be shown within the Popover)

@@ -39,7 +39,11 @@ const MenuTrigger: FC<Props> = (props: Props) => {
 
   const menuTriggerType = triggerComponent.props?.['aria-haspopup'] || 'menu';
 
-  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: menuTriggerType }, state, buttonRef);
+  const { menuTriggerProps, menuProps } = useMenuTrigger(
+    { type: menuTriggerType },
+    state,
+    buttonRef
+  );
 
   menuTriggerProps['aria-haspopup'] = menuTriggerProps['aria-haspopup'] || menuTriggerType;
 
@@ -84,7 +88,8 @@ const MenuTrigger: FC<Props> = (props: Props) => {
 
   // delete color prop which is passed down and used in the ModalContainer
   // because it conflicts with the HTML color property
-  delete keyboardProps.color;
+  // delete keyboardProps.color;
+
   // delete the onKeyDown provided by Aria because Popover component will add
   // appropriate keyboard accessibility instead.
   delete menuTriggerProps.onKeyDown;

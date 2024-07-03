@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC, ForwardedRef, useMemo } from 'react';
 import type { Instance as TippyInstance } from 'tippy.js';
 
 import Tippy, { TippyProps } from '@tippyjs/react';
@@ -11,8 +11,8 @@ export type LazyTippyProps = TippyProps & { setInstance?: (instance?: TippyInsta
  * (which means that it could, if its used a lot, polute the DOM tree). Therefore the Popover has to be
  * lazified so that it will only be mounted to the DOM, whenever it is triggered to do so.
  */
-export const LazyTippy: FC<LazyTippyProps> = React.forwardRef(
-  ({ setInstance, ...props }: LazyTippyProps, ref) => {
+export const LazyTippy = React.forwardRef(
+  ({ setInstance, ...props }: LazyTippyProps, ref: ForwardedRef<Element>) => {
     const [mounted, setMounted] = React.useState(false);
 
     const lazyPlugin = {

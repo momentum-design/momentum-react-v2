@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from 'react';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
 
 import { ButtonCircleProps } from '../ButtonCircle';
 import { ButtonPillProps } from '../ButtonPill';
@@ -16,10 +16,10 @@ export interface Props {
    *
    * `data-compressed` is also required to be set on the wrapper, if `compressed` is set to true on the button group.
    */
-  children?:
-    | ReactElement<SupportedComponents>
-    | Array<ReactElement<SupportedComponents>>
-    | Array<HTMLElement>;
+  children: ReactNode;
+  // | ReactElement<SupportedComponents>
+  // | Array<ReactElement<SupportedComponents>>
+  // | Array<HTMLElement>;
 
   /**
    * Custom class for overriding this component's CSS.
