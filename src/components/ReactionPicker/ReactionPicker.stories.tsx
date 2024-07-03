@@ -5,14 +5,26 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import ReactionPicker, { ReactionPickerProps } from './';
 import Reaction from '../Reaction';
+import Tooltip from '../Tooltip';
 import ReactionButton from '../ReactionButton';
 import argTypes from './ReactionPicker.stories.args';
 import Documentation from './ReactionPicker.stories.docs.mdx';
+import Text from '../Text';
 
 const reactionChildren = [
-  <ReactionButton key="1">
-    <Reaction name="celebrate" autoPlay />
-  </ReactionButton>,
+  <Tooltip
+    type="label"
+    placement="top"
+    variant="small"
+    triggerComponent={
+      <ReactionButton key="1">
+        <Reaction name="celebrate" autoPlay />
+      </ReactionButton>
+    }
+  >
+    <Text type="body-compact">Celebrate!</Text>
+  </Tooltip>,
+
   <ReactionButton key="2">
     <Reaction name="heart" autoPlay />
   </ReactionButton>,

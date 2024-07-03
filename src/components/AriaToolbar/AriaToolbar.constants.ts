@@ -2,6 +2,7 @@ const CLASS_PREFIX = 'md-aria-toolbar';
 
 const DEFAULTS = {
   ORIENTATION: 'horizontal',
+  SHOULD_RENDER_AS_BUTTON_GROUP: false,
 };
 
 const STYLE = {
