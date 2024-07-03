@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from 'react';
+import { ButtonGroupProps } from '../ButtonGroup';
 
 export interface Props {
   /**
@@ -43,5 +44,15 @@ export interface Props {
    * This handler is called when tab is pressed by one of the elements
    * within the toolbar.
    */
-  onTabPress?: () => void;
+  onTabPress?: (e: React.KeyboardEvent) => void;
+
+  /**
+   * This prop is used to determine if the toolbar should render as a button group.
+   */
+  shouldRenderAsButtonGroup?: boolean;
+
+  /**
+   * Props to pass to the ButtonGroup component
+   */
+  buttonGroupProps?: ButtonGroupProps;
 }
