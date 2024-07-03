@@ -45,12 +45,8 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   const { onKeyDown, ...otherAriaInputProps } = ariaInputProps;
 
   const internalOnKeyDown = (e) => {
-    // When the input is empty, pressing escape should be
-    // propagated to the parent so that popovers can close
-    if (e.key === 'Escape' && !state.value) {
-      containerRef.current.dispatchEvent(new KeyboardEvent('keydown', e));
-    }
-
+    // for propagating events to parent components
+    e.continuePropagation();
     onKeyDown(e);
   };
 
