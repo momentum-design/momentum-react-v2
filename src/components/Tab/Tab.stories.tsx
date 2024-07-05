@@ -23,7 +23,7 @@ export default {
   },
 };
 
-const Example = Template<TabProps>(Tab).bind({});
+const Example = Template<TabProps>(Tab);
 
 Example.args = {
   children: 'This is some primitive text',
@@ -33,7 +33,7 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const States = MultiTemplate<TabProps>(Tab).bind({});
+const States = MultiTemplate<TabProps>(Tab);
 
 States.argTypes = { ...argTypes };
 delete States.argTypes.active;
@@ -50,7 +50,7 @@ States.parameters = {
   ],
 };
 
-const Children = MultiTemplate<TabProps>(Tab).bind({});
+const Children = MultiTemplate<TabProps>(Tab);
 
 Children.args = {
   active: false,

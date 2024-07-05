@@ -7,7 +7,7 @@ import { buttonSimpleArgTypes } from '../ButtonSimple/ButtonSimple.stories.args'
 const cardArgTypes = {
   children: {
     description: 'Provides the child nodes for this element.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ReactNode',

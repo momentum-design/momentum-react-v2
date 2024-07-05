@@ -42,7 +42,7 @@ export default {
   },
 };
 
-const Example = Template<ListProps>(List).bind({});
+const Example = Template<ListProps>(List);
 
 Example.argTypes = { ...argTypes };
 
@@ -55,7 +55,7 @@ Example.args = {
   )),
 };
 
-const Common = MultiTemplate<ListProps>(List).bind({});
+const Common = MultiTemplate<ListProps>(List);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
@@ -130,7 +130,7 @@ Common.parameters = {
   ],
 };
 
-const CalendarList = MultiTemplate<ListProps>(List).bind({});
+const CalendarList = MultiTemplate<ListProps>(List);
 
 CalendarList.argTypes = { ...argTypes };
 delete CalendarList.argTypes.children;
@@ -197,7 +197,7 @@ const ListSearchWrapper = () => {
 
   return (
     <>
-      <SearchInput value={query} onChange={setQuery} clearButtonAriaLabel='Clear'/>
+      <SearchInput value={query} onChange={setQuery} clearButtonAriaLabel="Clear" />
       <List shouldItemFocusBeInset listSize={filtered.length}>
         {filtered &&
           filtered.map((item, index) => (
@@ -262,7 +262,7 @@ const DynamicListWrapper = () => {
   );
 };
 
-const DynamicList = Template<unknown>(DynamicListWrapper).bind({});
-const Search = Template<unknown>(ListSearchWrapper).bind({});
+const DynamicList = Template<unknown>(DynamicListWrapper);
+const Search = Template<unknown>(ListSearchWrapper);
 
 export { Example, Common, CalendarList, DynamicList, Search };

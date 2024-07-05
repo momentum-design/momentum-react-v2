@@ -27,7 +27,7 @@ const Example = Template((args) => {
       <ListItemBaseSection {...args} style={{ border: '1px solid blue' }} />
     </ListItemBase>
   );
-}).bind({});
+});
 
 Example.argTypes = { ...argTypes };
 
@@ -41,7 +41,7 @@ const Positions = MultiTemplate((args) => {
       <ListItemBaseSection {...args} style={{ border: '1px solid blue' }} />
     </ListItemBase>
   );
-}).bind({});
+});
 
 Positions.argTypes = { ...argTypes };
 delete Positions.argTypes.position;

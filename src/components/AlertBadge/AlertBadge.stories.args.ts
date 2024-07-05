@@ -3,10 +3,11 @@ import {
   commonHTMLAttributes,
   commonStyles,
 } from '../../storybook/helper.stories.argtypes';
+import { ArgTypes } from '@storybook/react';
 
 import { ALERT_BADGE_CONSTANTS as CONSTANTS } from './';
 
-export default {
+const argTypes: ArgTypes = {
   ...commonAriaButton,
   ...commonHTMLAttributes,
   ...commonStyles,
@@ -37,7 +38,6 @@ export default {
   },
   image: {
     description: 'Provides the image for this component.',
-    control: { type: 'none' },
     table: {
       type: {
         summary: 'ReactNode',
@@ -60,3 +60,5 @@ export default {
     },
   },
 };
+
+export default argTypes;

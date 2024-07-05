@@ -17,13 +17,13 @@ export default {
   },
 };
 
-const Example = Template<AddReactionButtonProps>(AddReactionButton).bind({});
+const Example = Template<AddReactionButtonProps>(AddReactionButton);
 
 Example.argTypes = { ...argTypes };
 
 Example.args = {};
 
-const Common = MultiTemplate<AddReactionButtonProps>(AddReactionButton).bind({});
+const Common = MultiTemplate<AddReactionButtonProps>(AddReactionButton);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

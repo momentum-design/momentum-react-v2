@@ -32,7 +32,7 @@ export default {
   },
   reaction: {
     description: '`<Reaction />` for this `<ReactionBadge />`.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'Reaction',

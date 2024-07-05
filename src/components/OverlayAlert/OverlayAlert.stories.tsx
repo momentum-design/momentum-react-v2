@@ -76,7 +76,14 @@ function Template(): Story<OverlayAlertProps> {
         }}
       >
         <ButtonPill onPress={open}>Open</ButtonPill>
-        {isOpen && <OverlayAlert actions={<>{actions}</>} controls={<>{controls}</>} {...args} onClose={close}/>}
+        {isOpen && (
+          <OverlayAlert
+            actions={<>{actions}</>}
+            controls={<>{controls}</>}
+            {...args}
+            onClose={close}
+          />
+        )}
       </div>
     );
   };
@@ -90,7 +97,7 @@ const coreArgs = {
   title: 'This is a Title',
 };
 
-const Example = Template().bind({});
+const Example = Template();
 
 Example.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
@@ -101,7 +108,7 @@ Example.parameters = {
 
 Example.args = { ...coreArgs };
 
-const WithoutActions = Template().bind({});
+const WithoutActions = Template();
 
 WithoutActions.argTypes = { ...argTypes };
 
@@ -112,7 +119,7 @@ WithoutActions.parameters = {
 
 WithoutActions.args = { ...coreArgs };
 
-const WithoutControls = Template().bind({});
+const WithoutControls = Template();
 
 WithoutControls.argTypes = { ...argTypes };
 
@@ -123,7 +130,7 @@ WithoutControls.parameters = {
 
 WithoutControls.args = { ...coreArgs };
 
-const WithoutTitle = Template().bind({});
+const WithoutTitle = Template();
 
 WithoutTitle.argTypes = { ...argTypes };
 

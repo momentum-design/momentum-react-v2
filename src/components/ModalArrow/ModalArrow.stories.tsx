@@ -17,7 +17,7 @@ export default {
   },
 };
 
-const Example = Template<ModalArrowProps>(ModalArrow).bind({});
+const Example = Template<ModalArrowProps>(ModalArrow);
 
 Example.argTypes = { ...argTypes };
 
@@ -26,7 +26,7 @@ Example.args = {
   placement: CONSTANTS.PLACEMENTS.BOTTOM,
 };
 
-const Colors = MultiTemplate<ModalArrowProps>(ModalArrow).bind({});
+const Colors = MultiTemplate<ModalArrowProps>(ModalArrow);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.color;
@@ -41,7 +41,7 @@ Colors.parameters = {
   ],
 };
 
-const Placements = MultiTemplate<ModalArrowProps>(ModalArrow).bind({});
+const Placements = MultiTemplate<ModalArrowProps>(ModalArrow);
 
 Placements.argTypes = { ...argTypes };
 delete Placements.argTypes.placement;
@@ -59,7 +59,7 @@ Placements.parameters = {
   ],
 };
 
-const Common = MultiTemplate<ModalArrowProps>(ModalArrow).bind({});
+const Common = MultiTemplate<ModalArrowProps>(ModalArrow);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.color;

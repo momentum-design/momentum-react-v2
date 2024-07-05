@@ -6,7 +6,7 @@ export default {
   ...commonAriaPressProps,
   children: {
     description: 'Provides the child nodes for this element.', // Description of this prop.
-    control: { type: 'none' }, // Control
+    // Control
     table: {
       type: {
         summary: 'ReactNode', // Explicit type of this prop.
@@ -32,7 +32,7 @@ export default {
   buttonGroup: {
     defaultValue: undefined,
     description: 'Provides the nodes for the end of the item',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ReactNode',
@@ -59,7 +59,7 @@ export default {
   image: {
     defaultValue: undefined,
     description: 'Provides the nodes for the start of the item',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ReactNode',

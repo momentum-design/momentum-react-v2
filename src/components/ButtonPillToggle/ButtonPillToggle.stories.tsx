@@ -20,7 +20,7 @@ export default {
   },
 };
 
-const Example = Template<ButtonPillToggleProps>(ButtonPillToggle).bind({});
+const Example = Template<ButtonPillToggleProps>(ButtonPillToggle);
 
 Example.argTypes = { ...argTypes };
 
@@ -28,7 +28,7 @@ Example.args = {
   children: 'Example text',
 };
 
-const Outline = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle).bind({});
+const Outline = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle);
 
 Outline.argTypes = { ...argTypes };
 delete Outline.argTypes.children;
@@ -47,7 +47,7 @@ Outline.parameters = {
   ],
 };
 
-const Ghost = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle).bind({});
+const Ghost = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle);
 
 Ghost.argTypes = { ...argTypes };
 delete Ghost.argTypes.children;

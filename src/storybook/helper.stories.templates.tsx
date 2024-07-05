@@ -2,15 +2,18 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
 import React, { FC, ReactElement } from 'react';
-import { Story } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
+type Story<T> = StoryObj<T>;
 
 /**
  * Generate a Story Template with the provided component. See the [Storybook Documentation]{@link https://storybook.js.org/docs/react/writing-stories/introduction#using-args}.
  * @param Component - Functional Component to generate a template from.
  * @returns - A Story Template from the provided Component.
  */
-function Template<Props>(Component: FC): Story<Props> {
-  const LocalTemplate: Story<Props> = (args: Props) => <Component {...args} />;
+function Template<Props>(Component: FC): Story<typeof Component> {
+  const LocalTemplate: Story<typeof Component> = {
+    render: (args: Props) => <Component {...args} />,
+  };
 
   return LocalTemplate;
 }
@@ -20,15 +23,17 @@ function Template<Props>(Component: FC): Story<Props> {
  * @param Component - Functional Component to generate multiple templates from.
  * @returns - A Story Template with multiple variants of the provided Component.
  */
-function MultiTemplate<Props>(Component: FC<Props>): Story<Props> {
-  const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
-    const { variants } = parameters;
+function MultiTemplate<Props>(Component: FC<Props>): Story<typeof Component> {
+  const LocalTemplate: Story<typeof Component> = {
+    render: (args: Props, { parameters }) => {
+      const { variants } = parameters;
 
-    const items = variants.map((variant, index: number) => (
-      <Component key={index} {...args} {...variant} />
-    ));
+      const items = variants.map((variant, index: number) => (
+        <Component key={index} {...args} {...variant} />
+      ));
 
-    return <>{items}</>;
+      return <>{items}</>;
+    },
   };
 
   return LocalTemplate;
@@ -88,18 +93,20 @@ export const getComponentStates = (Component: FC, args: any, variant: any): Reac
  * @param Component - Functional Component to generate multiple templates from.
  * @returns - A Story Template with multiple variants of the provided Component's states.
  */
-function MultiTemplateWithPseudoStates<Props>(Component: FC): Story<Props> {
-  const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
-    const { variants } = parameters;
+function MultiTemplateWithPseudoStates<Props>(Component: FC): Story<typeof Component> {
+  const LocalTemplate: Story<typeof Component> = {
+    render: (args: Props, { parameters }) => {
+      const { variants } = parameters;
 
-    const items = variants.map((variant, index) => (
-      <div key={index}>
-        <div style={{ padding: '0 1rem' }}>{variant.label}</div>
-        {getComponentStates(Component, args, variant)}
-      </div>
-    ));
+      const items = variants.map((variant, index) => (
+        <div key={index}>
+          <div style={{ padding: '0 1rem' }}>{variant.label}</div>
+          {getComponentStates(Component, args, variant)}
+        </div>
+      ));
 
-    return <>{items}</>;
+      return <>{items}</>;
+    },
   };
 
   return LocalTemplate;

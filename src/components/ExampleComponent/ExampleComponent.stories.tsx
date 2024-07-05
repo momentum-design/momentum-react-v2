@@ -15,7 +15,7 @@ export default {
 
 const Template: Story<Props> = (args) => <ExampleComponent {...args} />;
 
-const Demo = Template.bind({});
+const Demo = Template;
 
 Demo.args = {
   param: 'Demonstration Text',

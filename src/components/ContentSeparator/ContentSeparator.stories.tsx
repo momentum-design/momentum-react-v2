@@ -45,7 +45,7 @@ const Template: Story<ContentSeparatorProps> = (args) => {
   );
 };
 
-const Example = Template.bind({});
+const Example = Template;
 
 Example.args = {
   children: 'Some separator text',

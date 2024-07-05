@@ -20,7 +20,7 @@ export default {
   },
 };
 
-const Example = Template<ChipProps>(Chip).bind({});
+const Example = Template<ChipProps>(Chip);
 
 Example.argTypes = { ...argTypes };
 
@@ -32,7 +32,7 @@ Example.args = {
 const exampleIcon = <Icon name="placeholder" scale={16} />;
 const exampleRightIcon = <Icon name="cancel" scale={16} />;
 const exampleAvatar = <Avatar initials="AA" size={24} />;
-const Common = MultiTemplate<ChipProps>(Chip).bind({});
+const Common = MultiTemplate<ChipProps>(Chip);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
@@ -108,7 +108,7 @@ Common.parameters = {
   ],
 };
 
-const Colors = MultiTemplate<ChipProps>(Chip).bind({});
+const Colors = MultiTemplate<ChipProps>(Chip);
 
 Colors.args = {
   style: { margin: '1rem' },

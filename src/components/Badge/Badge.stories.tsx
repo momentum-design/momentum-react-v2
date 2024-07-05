@@ -1,27 +1,8 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
-
 import Badge, { BadgeProps, BADGE_CONSTANTS as CONSTANTS } from './';
 import Documentation from './Badge.documentation.mdx';
-
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { ArgTypes } from '@storybook/react';
 
 export default {
   title: 'Momentum UI/Badge',
@@ -29,12 +10,12 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation),
     },
   },
 };
 
-const argTypes = {
+const argTypes: ArgTypes = {
   children: {
     description: 'Provides the child text for this element.',
     control: { type: 'text' },
@@ -56,36 +37,16 @@ const argTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE,
+        summary: CONSTANTS.DEFAULTS.SIZE.toString(),
       },
     },
   },
 };
 
-const Template: Story<BadgeProps> = (args: BadgeProps) => {
-  return <Badge {...args}>{args.children}</Badge>;
-};
-
-const MultiTemplate: Story<BadgeProps> = (args: BadgeProps, { parameters }) => {
-  const mutatedArgs = { ...args };
-  const { children } = mutatedArgs;
-  delete mutatedArgs.children;
-
-  const { variants } = parameters;
-
-  const items = variants.map((variant, index: number) => (
-    <Badge key={index} {...variant} {...args}>
-      {children}
-    </Badge>
-  ));
-
-  return <>{items}</>;
-};
-
-const Example = Template.bind({});
+const Example = Template<BadgeProps>(Badge);
 Example.argTypes = { ...argTypes };
 
-const Sizes = MultiTemplate.bind({});
+const Sizes = MultiTemplate<BadgeProps>(Badge);
 Sizes.parameters = {
   variants: [{}, { size: 18 }, { size: 12 }],
 };

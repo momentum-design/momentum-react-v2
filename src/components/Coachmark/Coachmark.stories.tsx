@@ -31,7 +31,7 @@ const Template: Story<CoachmarkProps> = (args: CoachmarkProps) => {
   );
 };
 
-const Example = Template.bind({});
+const Example = Template;
 
 Example.argTypes = { ...argTypes };
 
@@ -118,7 +118,7 @@ const TemplateCommon: Story = () => {
   );
 };
 
-const Common = TemplateCommon.bind({});
+const Common = TemplateCommon;
 
 Common.argTypes = Object.entries({ ...argTypes }).reduce((types, entry) => {
   const [key, value] = entry;

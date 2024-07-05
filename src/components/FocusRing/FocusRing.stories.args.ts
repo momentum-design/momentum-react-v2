@@ -1,7 +1,7 @@
 export default {
   children: {
     description: 'Child element to apply CSS classes to.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ReactElement',

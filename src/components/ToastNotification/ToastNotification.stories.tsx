@@ -22,7 +22,7 @@ export default {
   },
 };
 
-const Example = Template<ToastNotificationProps>(ToastNotification).bind({});
+const Example = Template<ToastNotificationProps>(ToastNotification);
 
 Example.argTypes = {
   ...argTypes,
@@ -42,7 +42,7 @@ Example.args = {
   content: 'Example text',
 };
 
-const LeadingVisual = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
+const LeadingVisual = MultiTemplate<ToastNotificationProps>(ToastNotification);
 
 LeadingVisual.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
@@ -78,7 +78,7 @@ LeadingVisual.parameters = {
   ],
 };
 
-const ButtonGroup = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
+const ButtonGroup = MultiTemplate<ToastNotificationProps>(ToastNotification);
 
 ButtonGroup.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 
@@ -127,7 +127,7 @@ ButtonGroup.parameters = {
   ],
 };
 
-const Common = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
+const Common = MultiTemplate<ToastNotificationProps>(ToastNotification);
 
 Common.argTypes = { ...argTypes, onClose: { action: 'closed' } };
 

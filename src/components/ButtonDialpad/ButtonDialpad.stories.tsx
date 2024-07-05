@@ -23,11 +23,11 @@ export default {
   },
 };
 
-const Example = Template<ButtonDialpadProps>(ButtonDialpad).bind({});
+const Example = Template<ButtonDialpadProps>(ButtonDialpad);
 
 Example.argTypes = { ...argTypes };
 
-const Sizes = MultiTemplate<ButtonDialpadProps>(ButtonDialpad).bind({});
+const Sizes = MultiTemplate<ButtonDialpadProps>(ButtonDialpad);
 
 Sizes.parameters = {
   variants: [{}, { size: 52 }],
@@ -36,7 +36,7 @@ Sizes.parameters = {
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
-const States = MultiTemplate<ButtonDialpadProps>(ButtonDialpad).bind({});
+const States = MultiTemplate<ButtonDialpadProps>(ButtonDialpad);
 
 States.parameters = {
   variants: [{}, { disabled: true }],
@@ -45,7 +45,7 @@ States.parameters = {
 States.argTypes = { ...argTypes };
 delete States.argTypes.disabled;
 
-const Common = MultiTemplate<ButtonDialpadProps>(ButtonDialpad).bind({});
+const Common = MultiTemplate<ButtonDialpadProps>(ButtonDialpad);
 
 Common.parameters = {
   variants: [

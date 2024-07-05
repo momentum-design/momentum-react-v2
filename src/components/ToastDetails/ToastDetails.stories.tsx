@@ -22,7 +22,7 @@ export default {
   },
 };
 
-const Example = Template<ToastDetailsProps>(ToastDetails).bind({});
+const Example = Template<ToastDetailsProps>(ToastDetails);
 
 Example.args = {
   controls: [
@@ -39,7 +39,7 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const Colors = MultiTemplate<ToastDetailsProps>(ToastDetails).bind({});
+const Colors = MultiTemplate<ToastDetailsProps>(ToastDetails);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.infoColor;
@@ -65,7 +65,7 @@ Colors.parameters = {
   ],
 };
 
-const Common = MultiTemplate<ToastDetailsProps>(ToastDetails).bind({});
+const Common = MultiTemplate<ToastDetailsProps>(ToastDetails);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.badges;

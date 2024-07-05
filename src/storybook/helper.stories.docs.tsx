@@ -1,12 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
+import { Title, Subtitle, Description, Primary, PRIMARY_STORY } from '@storybook/addon-docs';
 
 /**
  * Generate the documentation page within a story.
@@ -23,7 +16,6 @@ function DocumentationPage(...documentation: Array<FC>): FC {
       <Description />
       {docs}
       <Primary />
-      <ArgsTable story={PRIMARY_STORY} />
     </>
   );
 

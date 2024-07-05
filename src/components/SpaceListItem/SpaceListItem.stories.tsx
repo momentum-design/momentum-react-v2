@@ -27,7 +27,7 @@ export default {
   },
 };
 
-const Example = Template<SpaceListItemProps>(SpaceListItem).bind({});
+const Example = Template<SpaceListItemProps>(SpaceListItem);
 
 Example.argTypes = { ...argTypes };
 
@@ -37,7 +37,7 @@ Example.args = {
   onPress: action(`Space List Item Press`),
 };
 
-const Common = MultiTemplate<SpaceListItemProps>(SpaceListItem).bind({});
+const Common = MultiTemplate<SpaceListItemProps>(SpaceListItem);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

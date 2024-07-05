@@ -22,11 +22,11 @@ export default {
   },
 };
 
-const Example = Template<ButtonSimpleProps>(ButtonSimple).bind({});
+const Example = Template<ButtonSimpleProps>(ButtonSimple);
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplate<ButtonSimpleProps>(ButtonSimple).bind({});
+const Common = MultiTemplate<ButtonSimpleProps>(ButtonSimple);
 
 Common.argTypes = { ...argTypes };
 

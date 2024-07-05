@@ -59,11 +59,11 @@ const MultiTemplate: Story<FlexProps> = (args: FlexProps, { parameters }) => {
   );
 };
 
-const Example = Template.bind({});
+const Example = Template;
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplate.bind({});
+const Common = MultiTemplate;
 
 Common.parameters = {
   variants: [

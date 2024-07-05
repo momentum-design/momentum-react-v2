@@ -60,7 +60,7 @@ const manyItems: SelectData[] = [
   { id: 13, value: 'Blue' },
 ];
 
-const Example = Template(Select).bind({});
+const Example = Template(Select);
 
 Example.args = {
   label: 'Single Value',
@@ -77,7 +77,7 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const Sections = Template(Select).bind({});
+const Sections = Template(Select);
 
 Sections.args = {
   label: 'With Sections',
@@ -102,7 +102,7 @@ delete Sections.argTypes.label;
 delete Sections.argTypes.placeholder;
 delete Sections.argTypes.onSelectionChange;
 
-const DisabledOptions = Template(Select).bind({});
+const DisabledOptions = Template(Select);
 
 DisabledOptions.args = {
   label: 'With Disabled Options',
@@ -132,7 +132,7 @@ delete DisabledOptions.argTypes.placeholder;
 delete DisabledOptions.argTypes.onSelectionChange;
 delete DisabledOptions.argTypes.disabledKeys;
 
-const Common = MultiTemplate(Select).bind({});
+const Common = MultiTemplate(Select);
 
 Common.argTypes = { ...argTypes };
 

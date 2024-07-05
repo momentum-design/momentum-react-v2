@@ -141,7 +141,7 @@ const FormExample: FC<FormProps> = (props: FormProps) => {
   );
 };
 
-const Example = Template<StoryProps>(BetterExample).bind({});
+const Example = Template<StoryProps>(BetterExample);
 
 Example.args = {};
 
@@ -160,7 +160,7 @@ const Forms = Template<FormProps>(() => {
 
 Forms.args = {};
 
-const Common = MultiTemplate<TextInputProps>(PaddedExample).bind({});
+const Common = MultiTemplate<TextInputProps>(PaddedExample);
 Common.args = {};
 Common.parameters = {
   variants: [

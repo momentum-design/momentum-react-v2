@@ -29,11 +29,11 @@ export default {
 /**
  * Primary story. This renders a single component with all external props.
  */
-const Example = Template<ReactionBadgeProps>(ReactionBadge).bind({});
+const Example = Template<ReactionBadgeProps>(ReactionBadge);
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplate<ReactionBadgeProps>(ReactionBadge).bind({});
+const Common = MultiTemplate<ReactionBadgeProps>(ReactionBadge);
 
 Common.argTypes = { ...argTypes };
 

@@ -31,7 +31,7 @@ export default {
   },
 };
 
-const Example = Template<ButtonCircleProps>(ButtonCircle).bind({});
+const Example = Template<ButtonCircleProps>(ButtonCircle);
 
 Example.argTypes = { ...argTypes };
 
@@ -39,9 +39,8 @@ Example.args = {
   children: <Icon name="chat-group" autoScale={150} />,
 };
 
-const NotGhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
-  ButtonCircle
-).bind({});
+const NotGhostNotOutlineNotInverted =
+  MultiTemplateWithPseudoStates<ButtonCircleProps>(ButtonCircle);
 
 NotGhostNotOutlineNotInverted.argTypes = { ...argTypes };
 delete NotGhostNotOutlineNotInverted.argTypes.children;
@@ -64,9 +63,7 @@ NotGhostNotOutlineNotInverted.parameters = {
   ],
 };
 
-const GhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
-  ButtonCircle
-).bind({});
+const GhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(ButtonCircle);
 
 GhostNotOutlineNotInverted.argTypes = { ...argTypes };
 delete GhostNotOutlineNotInverted.argTypes.children;
@@ -89,9 +86,7 @@ GhostNotOutlineNotInverted.parameters = {
   ],
 };
 
-const NotGhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
-  ButtonCircle
-).bind({});
+const NotGhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(ButtonCircle);
 
 NotGhostOutlineNotInverted.argTypes = { ...argTypes };
 delete NotGhostOutlineNotInverted.argTypes.children;
@@ -114,9 +109,7 @@ NotGhostOutlineNotInverted.parameters = {
   ],
 };
 
-const NotGhostNotOutlineInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(
-  ButtonCircle
-).bind({});
+const NotGhostNotOutlineInverted = MultiTemplateWithPseudoStates<ButtonCircleProps>(ButtonCircle);
 
 NotGhostNotOutlineInverted.argTypes = { ...argTypes };
 delete NotGhostNotOutlineInverted.argTypes.children;
@@ -189,7 +182,7 @@ NotGhostOutlineInverted.parameters = {
   ],
 };
 
-const Sizes = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
+const Sizes = MultiTemplate<ButtonCircleProps>(ButtonCircle);
 
 Sizes.parameters = {
   variants: [
@@ -239,7 +232,7 @@ Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.children;
 delete Sizes.argTypes.size;
 
-const Common = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
+const Common = MultiTemplate<ButtonCircleProps>(ButtonCircle);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

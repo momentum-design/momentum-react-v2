@@ -23,7 +23,7 @@ export default {
   },
 };
 
-const Example = Template<RadioGroupProps>(RadioGroup).bind({});
+const Example = Template<RadioGroupProps>(RadioGroup);
 
 Example.argTypes = { ...argTypes };
 
@@ -45,7 +45,7 @@ Example.args = {
   label: 'Example',
 };
 
-const Common = MultiTemplate(RadioGroup).bind({});
+const Common = MultiTemplate(RadioGroup);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.isSelected;

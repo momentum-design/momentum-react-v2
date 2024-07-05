@@ -25,7 +25,7 @@ export default {
   },
 };
 
-const Example = Template<MeetingContainerProps>(MeetingContainer).bind({});
+const Example = Template<MeetingContainerProps>(MeetingContainer);
 
 const tags = [<Tag key={0}>Messages</Tag>, <Tag key={1}>Recording</Tag>];
 
@@ -63,7 +63,7 @@ Example.args = {
   },
 };
 
-const Common = MultiTemplate<MeetingContainerProps>(MeetingContainer).bind({});
+const Common = MultiTemplate<MeetingContainerProps>(MeetingContainer);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

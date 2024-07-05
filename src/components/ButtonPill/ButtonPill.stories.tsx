@@ -33,11 +33,11 @@ export default {
   },
 };
 
-const Example = Template<ButtonPillProps>(ButtonPill).bind({});
+const Example = Template<ButtonPillProps>(ButtonPill);
 
 Example.argTypes = { ...argTypes };
 
-const Overflow = Template<ButtonPillProps>(ButtonPill).bind({});
+const Overflow = Template<ButtonPillProps>(ButtonPill);
 
 Overflow.args = {
   children: 'This is a very long label',
@@ -49,7 +49,7 @@ Overflow.argTypes = {
   ...argTypes,
 };
 
-const Grown = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
+const Grown = MultiTemplate<ButtonPillProps>(ButtonPill);
 
 Grown.parameters = {
   variants: [
@@ -109,7 +109,7 @@ Grown.argTypes = { ...argTypes };
 delete Grown.argTypes.color;
 delete Grown.argTypes.grown;
 
-const Sizes = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
+const Sizes = MultiTemplate<ButtonPillProps>(ButtonPill);
 
 Sizes.parameters = {
   variants: [{}, { size: 32 }, { size: 28 }, { size: 24 }],
@@ -118,7 +118,7 @@ Sizes.parameters = {
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
-const Disabled = MultiTemplate<PopoverProps>(Popover).bind({});
+const Disabled = MultiTemplate<PopoverProps>(Popover);
 
 Disabled.parameters = {
   variants: [
@@ -225,9 +225,7 @@ Disabled.parameters = {
   ],
 };
 
-const NotGhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(
-  ButtonPill
-).bind({});
+const NotGhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill);
 
 NotGhostNotOutlineNotInverted.argTypes = { ...argTypes };
 delete NotGhostNotOutlineNotInverted.argTypes.children;
@@ -325,7 +323,7 @@ NotGhostNotOutlineInverted.parameters = {
   ],
 };
 
-const GhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill).bind({});
+const GhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill);
 
 GhostOutlineNotInverted.argTypes = { ...argTypes };
 delete GhostOutlineNotInverted.argTypes.children;
@@ -348,7 +346,7 @@ GhostOutlineNotInverted.parameters = {
   ],
 };
 
-const NotGhostOutlineInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill).bind({});
+const NotGhostOutlineInverted = MultiTemplateWithPseudoStates<ButtonPillProps>(ButtonPill);
 
 NotGhostOutlineInverted.argTypes = { ...argTypes };
 delete NotGhostOutlineInverted.argTypes.children;
@@ -371,7 +369,7 @@ NotGhostOutlineInverted.parameters = {
   ],
 };
 
-const Common = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
+const Common = MultiTemplate<ButtonPillProps>(ButtonPill);
 
 Common.argTypes = { ...argTypes };
 

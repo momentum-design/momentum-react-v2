@@ -19,7 +19,7 @@ export default {
   },
 };
 
-const Example = Template<DividerDotProps>(DividerDot).bind({});
+const Example = Template<DividerDotProps>(DividerDot);
 
 Example.argTypes = { ...argTypes };
 
@@ -34,7 +34,7 @@ const WrappedDividerDot = () => {
     </>
   );
 };
-const Common = WrappedDividerDot.bind({});
+const Common = WrappedDividerDot;
 
 Common.parameters = {
   variants: [{ id: 'divider-dot-1' }],

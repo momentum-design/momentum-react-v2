@@ -5,7 +5,7 @@ import { OVERLAY_CONSTANTS as CONSTANTS } from '.';
 const overlayArgTypes = {
   children: {
     description: 'Provides the child nodes for this element.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ReactNode',

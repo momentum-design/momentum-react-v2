@@ -24,7 +24,7 @@ export default {
   },
 };
 
-const Example = Template<ToastContentProps>(ToastContent).bind({});
+const Example = Template<ToastContentProps>(ToastContent);
 
 Example.argTypes = { ...argTypes };
 
@@ -51,7 +51,7 @@ Example.args = {
   info: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing. \n\n- Example Bullet\n- Example Bullet',
 };
 
-const Colors = MultiTemplate<ToastContentProps>(ToastContent).bind({});
+const Colors = MultiTemplate<ToastContentProps>(ToastContent);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.actionColor;
@@ -72,7 +72,7 @@ Colors.parameters = {
   ],
 };
 
-const Common = MultiTemplate<ToastContentProps>(ToastContent).bind({});
+const Common = MultiTemplate<ToastContentProps>(ToastContent);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

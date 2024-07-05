@@ -55,7 +55,7 @@ const Example = Template((args) => (
       {}
     )}
   </>
-)).bind({});
+));
 
 Example.argTypes = { ...argTypes };
 
@@ -89,7 +89,7 @@ Example.args = {
 /**
  * Common variants story. This renders multiple variants of a single component.
  */
-const Common = MultiTemplateWithPseudoStates(MeetingListItem).bind({});
+const Common = MultiTemplateWithPseudoStates(MeetingListItem);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
@@ -288,7 +288,7 @@ Common.parameters = {
   ],
 };
 
-const Colors = MultiTemplate<MeetingListItemProps>(MeetingListItem).bind({});
+const Colors = MultiTemplate<MeetingListItemProps>(MeetingListItem);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.children;
@@ -368,7 +368,7 @@ Colors.parameters = {
   ],
 };
 
-const Sizes = MultiTemplate<MeetingListItemProps>(MeetingListItem).bind({});
+const Sizes = MultiTemplate<MeetingListItemProps>(MeetingListItem);
 
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.children;

@@ -17,7 +17,7 @@ export default {
   },
 };
 
-const Example = Template<TagProps>(Tag).bind({});
+const Example = Template<TagProps>(Tag);
 
 Example.argTypes = { ...argTypes };
 
@@ -26,7 +26,7 @@ Example.args = {
   onPress: () => alert('Pressed'),
 };
 
-const Colors = MultiTemplate<TagProps>(Tag).bind({});
+const Colors = MultiTemplate<TagProps>(Tag);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.children;
@@ -39,7 +39,7 @@ Colors.parameters = {
   })),
 };
 
-const Formats = MultiTemplate<TagProps>(Tag).bind({});
+const Formats = MultiTemplate<TagProps>(Tag);
 
 Formats.argTypes = { ...argTypes };
 delete Formats.argTypes.children;

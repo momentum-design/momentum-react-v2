@@ -5,7 +5,7 @@ import { popoverArgTypes } from '../Popover/Popover.stories.args';
 const coachmarkArgTypes = {
   actions: {
     description: 'Action buttons to use with this component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ReactElement<ButtonSimpleProps> | Array<ReactElement<ButtonSimpleProps>>',
@@ -29,7 +29,7 @@ const coachmarkArgTypes = {
   },
   onDismiss: {
     description: 'Event handler that is triggered when the user dismisses this component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: '() => void',
@@ -53,7 +53,7 @@ const coachmarkArgTypes = {
   },
   image: {
     description: 'Image to display on this component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'HTMLImageElement',
@@ -77,7 +77,7 @@ const coachmarkArgTypes = {
   },
   target: {
     description: 'The element this component should target when rendering its location.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ReactElement',

@@ -9,7 +9,7 @@ const overlayAlertArgTypes = {
   actions: {
     description:
       'Provides a collection of action components to this component. These appear at the bottom of this component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ButtonSimple | Array<ButtonSimple> | ButtonGroup | Array<ButtonGroup>',
@@ -34,7 +34,7 @@ const overlayAlertArgTypes = {
   controls: {
     description:
       'Provides a collection of control components to this component. These appear at the top of this component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ButtonControl | Array<ButtonControl>',

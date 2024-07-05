@@ -5,7 +5,7 @@ export default {
   children: {
     description:
       '`<ToastDetails />` and `<ToastContent />` for this component. This will be overwritten by the content and details props. While a `<ToastDetails />` is required, `<ToastContent />` is not.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: '[ToastDetails, ToastContent?]',
@@ -18,7 +18,7 @@ export default {
   content: {
     description:
       '`<ToastContent />` for this `<Toast />`. This overrides the second child component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ToastContent',
@@ -31,7 +31,7 @@ export default {
   controls: {
     description:
       'Controls for this `<Toast />`. These appear in the top-right corner of this `<Toast />`, or permeate to the nested `<ToastDetails />`.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'Array<ButtonControl>',
@@ -44,7 +44,7 @@ export default {
   details: {
     description:
       '`<ToastDetails />` for this `<Toast />`. This overrides the first child component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ToastDetails',

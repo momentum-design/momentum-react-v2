@@ -24,7 +24,7 @@ export default {
   },
 };
 
-const Example = Template<TooltipProps>(Tooltip).bind({});
+const Example = Template<TooltipProps>(Tooltip);
 
 Example.argTypes = { ...argTypes };
 
@@ -40,7 +40,7 @@ Example.args = {
   ),
 };
 
-const Common = MultiTemplate<TooltipProps>(Tooltip).bind({});
+const Common = MultiTemplate<TooltipProps>(Tooltip);
 
 Common.argTypes = { ...argTypes };
 
@@ -99,7 +99,7 @@ Common.parameters = {
   ],
 };
 
-const Offset = Template<TooltipProps>(Tooltip).bind({});
+const Offset = Template<TooltipProps>(Tooltip);
 
 Offset.argTypes = { ...argTypes };
 
@@ -137,7 +137,7 @@ const MultiplePopovers = Template<TooltipProps>((args: TooltipProps) => {
     </Tooltip>
   );
   return <Popover {...args} triggerComponent={triggerComponent} />;
-}).bind({});
+});
 
 MultiplePopovers.argTypes = { ...argTypes };
 

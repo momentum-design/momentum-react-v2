@@ -24,7 +24,7 @@ export default {
   },
 };
 
-const Example = Template<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
+const Example = Template<ButtonCircleToggleProps>(ButtonCircleToggle);
 
 Example.argTypes = { ...argTypes };
 
@@ -34,7 +34,7 @@ Example.args = {
   onPress: action('onPress'),
 };
 
-const Outline = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
+const Outline = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle);
 
 Outline.argTypes = { ...argTypes };
 delete Outline.argTypes.children;
@@ -53,7 +53,7 @@ Outline.parameters = {
   ],
 };
 
-const Ghost = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
+const Ghost = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle);
 
 Ghost.argTypes = { ...argTypes };
 delete Ghost.argTypes.children;

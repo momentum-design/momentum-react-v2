@@ -27,7 +27,7 @@ export default {
   },
 };
 
-const Example = Template<MenuTriggerProps>(MenuTrigger).bind({});
+const Example = Template<MenuTriggerProps>(MenuTrigger);
 
 Example.argTypes = { ...argTypes };
 
@@ -52,7 +52,7 @@ Example.args = {
   ],
 };
 
-const Common = MultiTemplate<MenuTriggerProps>(MenuTrigger).bind({});
+const Common = MultiTemplate<MenuTriggerProps>(MenuTrigger);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

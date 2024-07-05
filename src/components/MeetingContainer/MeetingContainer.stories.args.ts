@@ -45,7 +45,7 @@ const meetingContainerArgTypes = {
   },
   avatar: {
     description: 'User avatar supplied by the consumer.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'Avatar',
@@ -57,7 +57,7 @@ const meetingContainerArgTypes = {
   },
   actionButtons: {
     description: 'Group of action buttons supplied by the consumer.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'Array<ButtonPill | ButtonCircle>',
@@ -125,7 +125,7 @@ const meetingContainerArgTypes = {
   },
   tags: {
     description: 'Group of tags supplied by the consumer.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'Array<Tag>',
@@ -137,7 +137,7 @@ const meetingContainerArgTypes = {
   },
   spaceLink: {
     description: 'Link to meeting space or conversation supplied by the consumer.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ButtonHyperLink',

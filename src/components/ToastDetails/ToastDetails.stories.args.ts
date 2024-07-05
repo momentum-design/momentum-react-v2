@@ -32,7 +32,7 @@ export default {
   controls: {
     description:
       'Controls for this `<ToastDetails />`. These appear in the top-right corner of this `<ToastDetails />`.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ButtonControl | Array<ButtonControl>',
@@ -45,7 +45,7 @@ export default {
   image: {
     description:
       'Image for this `<ToastDetails />`. Appears on the left-side of this `<ToastDetails />`.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'Avatar',

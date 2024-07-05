@@ -31,7 +31,7 @@ const commonButtons = [
   </ButtonSimple>,
 ];
 
-const Example = Template<AlertBannerProps>(AlertBanner).bind({});
+const Example = Template<AlertBannerProps>(AlertBanner);
 
 Example.argTypes = { ...argTypes };
 
@@ -41,7 +41,7 @@ Example.args = {
   label: 'Example Label',
 };
 
-const Centering = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+const Centering = MultiTemplate<AlertBannerProps>(AlertBanner);
 
 Centering.argTypes = { ...argTypes };
 delete Centering.argTypes.isCentered;
@@ -78,7 +78,7 @@ Centering.parameters = {
   ],
 };
 
-const Colors = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+const Colors = MultiTemplate<AlertBannerProps>(AlertBanner);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.color;
@@ -117,7 +117,7 @@ Colors.parameters = {
   ],
 };
 
-const Growing = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+const Growing = MultiTemplate<AlertBannerProps>(AlertBanner);
 
 Growing.argTypes = { ...argTypes };
 delete Growing.argTypes.isGrown;
@@ -154,7 +154,7 @@ Growing.parameters = {
   ],
 };
 
-const Pilling = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+const Pilling = MultiTemplate<AlertBannerProps>(AlertBanner);
 
 Pilling.argTypes = { ...argTypes };
 delete Pilling.argTypes.isPilled;
@@ -191,7 +191,7 @@ Pilling.parameters = {
   ],
 };
 
-const Sizes = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+const Sizes = MultiTemplate<AlertBannerProps>(AlertBanner);
 
 Sizes.argTypes = { ...argTypes };
 delete Colors.argTypes.size;
@@ -212,7 +212,7 @@ Sizes.parameters = {
   ],
 };
 
-const Static = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+const Static = MultiTemplate<AlertBannerProps>(AlertBanner);
 
 Static.argTypes = { ...argTypes };
 delete Static.argTypes.isStatic;
@@ -227,7 +227,7 @@ Static.parameters = {
   variants: [{}, { isStatic: true }],
 };
 
-const Common = MultiTemplate<AlertBannerProps>(AlertBanner).bind({});
+const Common = MultiTemplate<AlertBannerProps>(AlertBanner);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.buttons;

@@ -20,7 +20,7 @@ export default {
   },
 };
 
-const Example = Template<ListHeaderProps>(ListHeader).bind({});
+const Example = Template<ListHeaderProps>(ListHeader);
 
 Example.argTypes = { ...argTypes };
 delete Example.argTypes.children;
@@ -38,7 +38,7 @@ Example.args = {
   ),
 };
 
-const Common = MultiTemplate<ListHeaderProps>(ListHeader).bind({});
+const Common = MultiTemplate<ListHeaderProps>(ListHeader);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

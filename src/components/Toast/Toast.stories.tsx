@@ -45,7 +45,7 @@ const commonButtons = (
   </ButtonGroup>
 );
 
-const Example = Template<ToastProps>(Toast).bind({});
+const Example = Template<ToastProps>(Toast);
 
 Example.argTypes = { ...argTypes };
 
@@ -73,7 +73,7 @@ Example.args = {
   title: 'Toast Title',
 };
 
-const Layouts = MultiTemplate<ToastProps>(Toast).bind({});
+const Layouts = MultiTemplate<ToastProps>(Toast);
 
 Layouts.argTypes = { ...argTypes };
 delete Layouts.argTypes.title;
@@ -105,7 +105,7 @@ Layouts.parameters = {
   variants: [{}, { title: 'Toast Title' }],
 };
 
-const Common = MultiTemplate<ToastProps>(Toast).bind({});
+const Common = MultiTemplate<ToastProps>(Toast);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

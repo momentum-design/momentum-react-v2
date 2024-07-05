@@ -1,28 +1,11 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
-
 import AvatarCompact, { AvatarCompactProps } from './';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
 
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
+import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
+import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
 import Documentation from './AvatarCompact.documentation.mdx';
-
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
 
 export default {
   title: 'Momentum UI/AvatarCompact',
@@ -30,7 +13,7 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation, StyleDocs, HTMLGlobalAttributes, AriaButtonDocs),
     },
   },
   argTypes: {
@@ -64,39 +47,13 @@ export default {
   },
 };
 
-const MultiTemplate: Story<AvatarCompactProps> = (args: AvatarCompactProps, { parameters }) => {
-  const { variants } = parameters;
-
-  const items = variants.map((variant, index: number) => (
-    <div key={index}>
-      <AvatarCompact {...args} {...variant} />
-      <p>{variant.label}</p>
-    </div>
-  ));
-
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: `repeat(4, auto)`,
-        gap: '1.5rem',
-        alignItems: 'end',
-      }}
-    >
-      {items}
-    </div>
-  );
-};
-
-const Template: Story<AvatarCompactProps> = (args) => <AvatarCompact {...args} />;
-
-const Example = Template.bind({});
+const Example = Template<AvatarCompactProps>(AvatarCompact);
 
 Example.args = {
   count: 200,
 };
 
-const Common = MultiTemplate.bind({});
+const Common = MultiTemplate<AvatarCompactProps>(AvatarCompact);
 
 Common.parameters = {
   variants: [

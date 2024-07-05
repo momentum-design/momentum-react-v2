@@ -17,11 +17,11 @@ export default {
   },
 };
 
-const Example = Template<NavigationTabProps>(NavigationTab).bind({});
+const Example = Template<NavigationTabProps>(NavigationTab);
 
 Example.argTypes = { ...argTypes };
 
-const Sizes = MultiTemplate<NavigationTabProps>(NavigationTab).bind({});
+const Sizes = MultiTemplate<NavigationTabProps>(NavigationTab);
 
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
@@ -30,7 +30,7 @@ Sizes.parameters = {
   variants: [{ size: undefined }, { size: 40 }, { size: 48 }, { size: 200 }],
 };
 
-const Active = MultiTemplate<NavigationTabProps>(NavigationTab).bind({});
+const Active = MultiTemplate<NavigationTabProps>(NavigationTab);
 
 Active.argTypes = { ...argTypes };
 delete Active.argTypes.active;

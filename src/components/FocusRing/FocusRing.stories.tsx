@@ -18,7 +18,7 @@ export default {
   },
 };
 
-const Example = Template<FocusRingProps>(FocusRing).bind({});
+const Example = Template<FocusRingProps>(FocusRing);
 
 Example.argTypes = { ...argTypes };
 
@@ -26,7 +26,7 @@ Example.args = {
   children: <button>Simple Button</button>,
 };
 
-const Common = MultiTemplate<FocusRingProps>(FocusRing).bind({});
+const Common = MultiTemplate<FocusRingProps>(FocusRing);
 
 Common.argTypes = { ...argTypes };
 

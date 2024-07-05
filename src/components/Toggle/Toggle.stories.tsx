@@ -28,7 +28,7 @@ const ToggleWithLabel = ({ label, ...props }: ToggleWithLabelProps) => (
   </div>
 );
 
-const Example = Template<ToggleProps>(Toggle).bind({});
+const Example = Template<ToggleProps>(Toggle);
 
 Example.argTypes = { ...argTypes };
 
@@ -37,7 +37,7 @@ Example.args = {
   isDisabled: TOGGLE_CONSTANTS.DEFAULTS.IS_DISABLED,
 };
 
-const Common = MultiTemplate<ToggleWithLabelProps>(ToggleWithLabel).bind({});
+const Common = MultiTemplate<ToggleWithLabelProps>(ToggleWithLabel);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.defaultSelected;

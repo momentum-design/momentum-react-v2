@@ -22,10 +22,10 @@ export default {
   },
 };
 
-const Example = Template<TextProps>(Text).bind({});
+const Example = Template<TextProps>(Text);
 Example.argTypes = { ...argTypes };
 
-const Types = MultiTemplate<TextProps>(Text).bind({});
+const Types = MultiTemplate<TextProps>(Text);
 
 Types.argTypes = { ...argTypes };
 delete Types.argTypes.type;
@@ -41,7 +41,7 @@ Types.parameters = {
   ],
 };
 
-const Fonts = MultiTemplate<TextProps>(Text).bind({});
+const Fonts = MultiTemplate<TextProps>(Text);
 
 Fonts.argTypes = { ...argTypes };
 delete Types.argTypes.type;
@@ -76,7 +76,7 @@ Fonts.parameters = {
   ],
 };
 
-const FontsLegacy = MultiTemplate<TextProps>(Text).bind({});
+const FontsLegacy = MultiTemplate<TextProps>(Text);
 
 FontsLegacy.argTypes = { ...argTypes };
 delete FontsLegacy.argTypes.type;

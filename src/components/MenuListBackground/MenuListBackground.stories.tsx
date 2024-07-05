@@ -28,7 +28,7 @@ const Example = Template<MenuListBackgroundProps>((args) => (
       This is a Menu Background
     </Flex>
   </MenuListBackground>
-)).bind({});
+));
 
 Example.argTypes = { ...argTypes };
 
@@ -38,7 +38,7 @@ const Colors = MultiTemplate<MenuListBackgroundProps>((args) => (
       This is a Menu Background
     </Flex>
   </MenuListBackground>
-)).bind({});
+));
 
 Colors.parameters = {
   variants: [{ color: 'primary' }, { color: 'secondary' }, { color: 'tertiary' }],

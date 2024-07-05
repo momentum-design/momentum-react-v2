@@ -18,11 +18,11 @@ export default {
   },
 };
 
-const Example = Template<LoadingSpinnerProps>(LoadingSpinner).bind({});
+const Example = Template<LoadingSpinnerProps>(LoadingSpinner);
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplate<LoadingSpinnerProps>(LoadingSpinner).bind({});
+const Common = MultiTemplate<LoadingSpinnerProps>(LoadingSpinner);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.scale;

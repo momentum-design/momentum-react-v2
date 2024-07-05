@@ -24,7 +24,7 @@ export default {
   },
 };
 
-const Example = Template<MenuProps<unknown>>(Menu).bind({});
+const Example = Template<MenuProps<unknown>>(Menu);
 
 Example.argTypes = { ...argTypes };
 
@@ -38,7 +38,7 @@ Example.args = {
     <Item key="three">Three</Item>,
   ],
 };
-const Sections = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
+const Sections = MultiTemplate<MenuProps<unknown>>(Menu);
 
 Sections.argTypes = { ...argTypes };
 delete Sections.argTypes.children;
@@ -98,7 +98,7 @@ Sections.parameters = {
   ],
 };
 
-const Common = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
+const Common = MultiTemplate<MenuProps<unknown>>(Menu);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

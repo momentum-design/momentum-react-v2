@@ -18,7 +18,7 @@ export default {
   },
 };
 
-const Example = Template<ButtonControlProps>(ButtonControl).bind({});
+const Example = Template<ButtonControlProps>(ButtonControl);
 
 Example.argTypes = { ...argTypes };
 
@@ -26,7 +26,7 @@ Example.args = {
   control: CONSTANTS.CONTROLS.CLOSE,
 };
 
-const Common = MultiTemplate<ButtonControlProps>(ButtonControl).bind({});
+const Common = MultiTemplate<ButtonControlProps>(ButtonControl);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

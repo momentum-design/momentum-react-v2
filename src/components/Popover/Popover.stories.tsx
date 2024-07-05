@@ -26,7 +26,7 @@ export default {
   },
 };
 
-const Example = Template<PopoverProps>(Popover).bind({});
+const Example = Template<PopoverProps>(Popover);
 
 Example.argTypes = { ...argTypes };
 
@@ -44,7 +44,7 @@ Example.args = {
   ),
 };
 
-const InteractiveContent = Template<PopoverProps>(Popover).bind({});
+const InteractiveContent = Template<PopoverProps>(Popover);
 
 InteractiveContent.argTypes = { ...argTypes };
 
@@ -88,7 +88,7 @@ const PopoverWithFirstFocus = (props) => {
   );
 };
 
-const InteractiveFocus = Template<PopoverProps>(PopoverWithFirstFocus).bind({});
+const InteractiveFocus = Template<PopoverProps>(PopoverWithFirstFocus);
 
 InteractiveFocus.argTypes = { ...argTypes };
 
@@ -105,7 +105,7 @@ InteractiveFocus.args = {
   ),
 };
 
-const WithCloseButton = Template<PopoverProps>(Popover).bind({});
+const WithCloseButton = Template<PopoverProps>(Popover);
 
 WithCloseButton.argTypes = { ...argTypes };
 
@@ -129,7 +129,7 @@ WithCloseButton.args = {
   ),
 };
 
-const Offset = Template<PopoverProps>(Popover).bind({});
+const Offset = Template<PopoverProps>(Popover);
 
 Offset.argTypes = { ...argTypes };
 
@@ -155,20 +155,22 @@ Offset.args = {
 };
 
 const MultiplePopovers = Template<PopoverProps>((args: PopoverProps) => {
-  const triggerComponent = (<Popover
-    trigger="mouseenter"
-    placement={PLACEMENTS.BOTTOM}
-    showArrow
-    triggerComponent={
-      <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-        Hover or click me!
-      </ButtonSimple>
-    }
-  >
-    Description tooltip on hover
-  </Popover>);
-  return <Popover {...args} triggerComponent={triggerComponent}/>;
-}).bind({});
+  const triggerComponent = (
+    <Popover
+      trigger="mouseenter"
+      placement={PLACEMENTS.BOTTOM}
+      showArrow
+      triggerComponent={
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
+          Hover or click me!
+        </ButtonSimple>
+      }
+    >
+      Description tooltip on hover
+    </Popover>
+  );
+  return <Popover {...args} triggerComponent={triggerComponent} />;
+});
 
 MultiplePopovers.argTypes = { ...argTypes };
 
@@ -181,7 +183,7 @@ MultiplePopovers.args = {
   closeButtonPlacement: 'top-right',
 };
 
-const NestedPopover = Template<PopoverProps>(Popover).bind({});
+const NestedPopover = Template<PopoverProps>(Popover);
 
 NestedPopover.argTypes = { ...argTypes };
 
@@ -225,7 +227,7 @@ NestedPopover.args = {
   ),
 };
 
-const Common = MultiTemplate<PopoverProps>(Popover).bind({});
+const Common = MultiTemplate<PopoverProps>(Popover);
 
 Common.argTypes = { ...argTypes };
 

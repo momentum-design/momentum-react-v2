@@ -24,7 +24,7 @@ const ChildWrapper = ({ children }: { children: string }) => (
   <div style={{ margin: '0.5rem', display: 'flex', alignItems: 'center' }}>{children}</div>
 );
 
-const Example = Template<CardProps>(Card).bind({});
+const Example = Template<CardProps>(Card);
 
 Example.argTypes = { ...argTypes };
 
@@ -34,7 +34,7 @@ Example.args = {
   ),
 };
 
-const Colors = MultiTemplate<CardProps>(Card).bind({});
+const Colors = MultiTemplate<CardProps>(Card);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.color;
@@ -46,7 +46,7 @@ Colors.parameters = {
   })),
 };
 
-const Heights = MultiTemplate<CardProps>(Card).bind({});
+const Heights = MultiTemplate<CardProps>(Card);
 
 Heights.argTypes = { ...argTypes };
 delete Heights.argTypes.height;
@@ -58,7 +58,7 @@ Heights.parameters = {
   })),
 };
 
-const Outlines = MultiTemplate<CardProps>(Card).bind({});
+const Outlines = MultiTemplate<CardProps>(Card);
 
 Outlines.argTypes = { ...argTypes };
 delete Outlines.argTypes.outline;
@@ -70,7 +70,7 @@ Outlines.parameters = {
   })),
 };
 
-const Roundings = MultiTemplate<CardProps>(Card).bind({});
+const Roundings = MultiTemplate<CardProps>(Card);
 
 Roundings.argTypes = { ...argTypes };
 delete Roundings.argTypes.rounding;
@@ -82,7 +82,7 @@ Roundings.parameters = {
   })),
 };
 
-const StatusColors = MultiTemplate<CardProps>(Card).bind({});
+const StatusColors = MultiTemplate<CardProps>(Card);
 
 StatusColors.argTypes = { ...argTypes };
 delete StatusColors.argTypes.statusColor;
@@ -94,7 +94,7 @@ StatusColors.parameters = {
   })),
 };
 
-const StatusStripes = MultiTemplate<CardProps>(Card).bind({});
+const StatusStripes = MultiTemplate<CardProps>(Card);
 
 StatusStripes.argTypes = { ...argTypes };
 delete StatusStripes.argTypes.statusStriped;

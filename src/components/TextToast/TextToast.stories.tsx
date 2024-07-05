@@ -17,7 +17,7 @@ export default {
   },
 };
 
-const Example = Template<TextToastProps>(TextToast).bind({});
+const Example = Template<TextToastProps>(TextToast);
 
 Example.argTypes = { ...argTypes };
 
@@ -27,7 +27,7 @@ Example.args = {
   iconProps: undefined,
 };
 
-const Common = MultiTemplate<TextToastProps>(TextToast).bind({});
+const Common = MultiTemplate<TextToastProps>(TextToast);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

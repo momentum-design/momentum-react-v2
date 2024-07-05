@@ -7,7 +7,7 @@ import { BANNER_CONSTANTS as CONSTANTS } from '.';
 const bannerArgTypes = {
   actions: {
     description: 'Provides the actions for this element.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: '<ButtonGroup />',
@@ -43,7 +43,7 @@ const bannerArgTypes = {
   },
   image: {
     description: 'Provides the image for this element.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: '<Avatar />',

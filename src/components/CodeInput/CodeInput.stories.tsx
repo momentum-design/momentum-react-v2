@@ -93,7 +93,7 @@ const Template: Story<StoryProps> = (args) => {
   );
 };
 
-const Example = Template.bind({});
+const Example = Template;
 
 Example.args = {
   numDigits: 6,

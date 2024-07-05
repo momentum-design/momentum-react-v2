@@ -1,15 +1,17 @@
 const path = require('path');
-const { COMPONENTS_DIR, LEGACY_COMPONENTS_DIR } = require('./constants');
-
 const REPO_ROOT = path.resolve(__dirname, '../../');
+
+const { COMPONENTS_DIR, LEGACY_COMPONENTS_DIR } = require('./constants');
 
 const generateMain = (dir) => {
   return {
+    framework: '@storybook/react-webpack5',
     stories: [
-      path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
+      path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx|mdx)'),
       path.join(REPO_ROOT, dir, LEGACY_COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
     ],
     addons: [
+      '@storybook/addon-webpack5-compiler-swc',
       '@storybook/addon-docs',
       '@storybook/addon-links',
       '@storybook/addon-essentials',
@@ -18,9 +20,10 @@ const generateMain = (dir) => {
       '@storybook/addon-a11y',
     ],
     typescript: {
-      reactDocgen: 'none',
+      reactDocgen: 'react-docgen-typescript',
     },
-    webpackFinal: (config) => {
+    autodocs: true,
+    webpackFinal: async (config) => {
       config.resolve.alias['@momentum-ui/react-collaboration'] = path.resolve(
         REPO_ROOT,
         dir,
@@ -61,6 +64,7 @@ const generateMain = (dir) => {
         nodeModulesRule.include,
         /[\\/]node_modules[\\/](@react-aria|react-verification-input)/,
       ];
+
       return config;
     },
   };

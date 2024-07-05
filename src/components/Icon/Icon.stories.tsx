@@ -19,7 +19,7 @@ export default {
   },
 };
 
-const Example = Template<IconProps>(Icon).bind({});
+const Example = Template<IconProps>(Icon);
 
 Example.argTypes = { ...argTypes };
 
@@ -27,7 +27,7 @@ Example.args = {
   name: 'accessibility',
 };
 
-const Sizes = MultiTemplate<IconProps>(Icon).bind({});
+const Sizes = MultiTemplate<IconProps>(Icon);
 
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.autoScale;
@@ -47,7 +47,7 @@ Sizes.parameters = {
   ],
 };
 
-const Weights = MultiTemplate<IconProps>(Icon).bind({});
+const Weights = MultiTemplate<IconProps>(Icon);
 
 Weights.argTypes = { ...argTypes };
 delete Weights.argTypes.weight;
@@ -66,7 +66,7 @@ Weights.parameters = {
   ],
 };
 
-const Common = MultiTemplate<IconProps>(Icon).bind({});
+const Common = MultiTemplate<IconProps>(Icon);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.autoScale;

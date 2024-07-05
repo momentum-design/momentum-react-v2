@@ -39,7 +39,7 @@ const Example = Template<NotificationSystemProps>((args) => {
       <NotificationSystem {...args} limit={3} />
     </>
   );
-}).bind({});
+});
 
 Example.argTypes = { ...argTypes };
 
@@ -66,7 +66,7 @@ const Important = Template<NotificationSystemProps>((args) => {
       <NotificationSystem {...args} />
     </>
   );
-}).bind({});
+});
 
 Important.argTypes = { ...argTypes };
 
@@ -104,7 +104,7 @@ const Mixed = Template<NotificationSystemProps>((args) => {
       <NotificationSystem {...args} />
     </>
   );
-}).bind({});
+});
 
 Mixed.argTypes = { ...argTypes };
 
@@ -161,7 +161,7 @@ const UpdateContent = Template<NotificationSystemProps>(() => {
       <NotificationSystem />
     </>
   );
-}).bind({});
+});
 
 UpdateContent.argTypes = { ...argTypes };
 delete UpdateContent.argTypes.position;
@@ -213,7 +213,7 @@ const ResetTimer = Template<NotificationSystemProps>(() => {
       <NotificationSystem />
     </>
   );
-}).bind({});
+});
 
 ResetTimer.argTypes = { ...argTypes };
 delete ResetTimer.argTypes.position;
@@ -249,7 +249,7 @@ const MultipleSystems = Template<NotificationSystemProps>(() => {
       <NotificationSystem position={POSITION.BOTTOM_LEFT} id={POSITION.BOTTOM_LEFT} />
     </>
   );
-}).bind({});
+});
 
 MultipleSystems.argTypes = { ...argTypes };
 delete MultipleSystems.argTypes.position;

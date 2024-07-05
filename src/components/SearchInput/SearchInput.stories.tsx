@@ -110,7 +110,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
       onFiltersChange={handleFiltersChange}
       onChange={handleChange}
       label={initialLabel}
-      clearButtonAriaLabel='Clear'
+      clearButtonAriaLabel="Clear"
       {...mutatedProps}
       searching={searching}
     />
@@ -120,7 +120,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
 /**
  * Primary story. This renders a single component with all external props.
  */
-const Example = Template<SearchInputExampleProps>(BetterExample).bind({});
+const Example = Template<SearchInputExampleProps>(BetterExample);
 
 Example.argTypes = { ...argTypes };
 delete Example.argTypes.searching;
@@ -137,7 +137,7 @@ const PaddedExample: FC<SearchInputProps> = (props: SearchInputProps) => {
   );
 };
 
-const Common = MultiTemplate<SearchInputProps>(PaddedExample).bind({});
+const Common = MultiTemplate<SearchInputProps>(PaddedExample);
 
 Common.argTypes = { ...argTypes };
 

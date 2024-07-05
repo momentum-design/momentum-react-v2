@@ -24,11 +24,11 @@ export default {
   },
 };
 
-const Example = Template<ReactionButtonProps>(ReactionButton).bind({});
+const Example = Template<ReactionButtonProps>(ReactionButton);
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplate<ReactionButtonProps>(ReactionButton).bind({});
+const Common = MultiTemplate<ReactionButtonProps>(ReactionButton);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

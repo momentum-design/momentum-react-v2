@@ -114,7 +114,7 @@ const BetterExample: FC<GlobalSearchInputExampleProps> = (props: GlobalSearchInp
 /**
  * Primary story. This renders a single component with all external props.
  */
-const Example = Template<GlobalSearchInputExampleProps>(BetterExample).bind({});
+const Example = Template<GlobalSearchInputExampleProps>(BetterExample);
 
 Example.argTypes = { ...argTypes };
 
@@ -130,7 +130,7 @@ const PaddedExample: FC<GlobalSearchInputProps> = (props: GlobalSearchInputProps
   );
 };
 
-const Common = MultiTemplate<GlobalSearchInputProps>(PaddedExample).bind({});
+const Common = MultiTemplate<GlobalSearchInputProps>(PaddedExample);
 
 Common.argTypes = { ...argTypes };
 

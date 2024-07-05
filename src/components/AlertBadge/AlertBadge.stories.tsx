@@ -5,7 +5,6 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
 import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
-
 import Icon from '../Icon';
 
 import AlertBadge, { AlertBadgeProps } from './';
@@ -23,7 +22,7 @@ export default {
   },
 };
 
-const Example = Template<AlertBadgeProps>(AlertBadge).bind({});
+const Example = Template<AlertBadgeProps>(AlertBadge);
 
 Example.argTypes = { ...argTypes };
 
@@ -32,7 +31,7 @@ Example.args = {
   label: <div>Example</div>,
 };
 
-const Colors = MultiTemplate<AlertBadgeProps>(AlertBadge).bind({});
+const Colors = MultiTemplate<AlertBadgeProps>(AlertBadge);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.color;
@@ -47,7 +46,7 @@ Colors.parameters = {
   ],
 };
 
-const Common = MultiTemplate<AlertBadgeProps>(AlertBadge).bind({});
+const Common = MultiTemplate<AlertBadgeProps>(AlertBadge);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

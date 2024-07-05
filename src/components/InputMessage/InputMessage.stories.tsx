@@ -37,7 +37,7 @@ const Template: Story<InputMessageProps> = (args) => (
   </ThemeProvider>
 );
 
-const Example = Template.bind({});
+const Example = Template;
 
 Example.args = {
   message: 'This is a message',

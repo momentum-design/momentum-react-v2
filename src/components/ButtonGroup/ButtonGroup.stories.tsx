@@ -37,7 +37,7 @@ const commonChildren = [
   </ButtonCircle>,
 ];
 
-const Example = Template<ButtonGroupProps>(ButtonGroup).bind({});
+const Example = Template<ButtonGroupProps>(ButtonGroup);
 
 Example.args = {
   children: [...commonChildren],
@@ -45,7 +45,7 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const Rounding = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+const Rounding = MultiTemplate<ButtonGroupProps>(ButtonGroup);
 
 Rounding.args = {
   children: [...commonChildren],
@@ -58,7 +58,7 @@ Rounding.parameters = {
 Rounding.argTypes = { ...argTypes };
 delete Rounding.argTypes.round;
 
-const Spacing = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+const Spacing = MultiTemplate<ButtonGroupProps>(ButtonGroup);
 
 Spacing.args = {
   children: [...commonChildren],
@@ -71,7 +71,7 @@ Spacing.parameters = {
 Spacing.argTypes = { ...argTypes };
 delete Spacing.argTypes.spaced;
 
-const Separator = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+const Separator = MultiTemplate<ButtonGroupProps>(ButtonGroup);
 
 const separatorCommonChildren = [
   <ButtonPill ghost key="0">
@@ -174,7 +174,7 @@ delete Separator.argTypes.round;
 delete Separator.argTypes.compressed;
 delete Separator.argTypes.spaced;
 
-const AudioVideoControls = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+const AudioVideoControls = MultiTemplate<ButtonGroupProps>(ButtonGroup);
 AudioVideoControls.argTypes = { ...argTypes };
 delete AudioVideoControls.argTypes.round;
 delete AudioVideoControls.argTypes.spaced;
@@ -296,7 +296,7 @@ AudioVideoControls.parameters = {
   ],
 };
 
-const Common = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
+const Common = MultiTemplate<ButtonGroupProps>(ButtonGroup);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

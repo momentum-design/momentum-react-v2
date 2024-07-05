@@ -28,17 +28,15 @@ const Example = Template<RadioSimpleProps>((args: RadioSimpleProps) => {
       <RadioSimple {...args} />
     </RadioSimpleGroup>
   );
-}).bind({});
+});
 
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  children: (
-    [
-      <Icon key="1" name="accessibility" autoScale />,
-      <Text key="2">My value is 'red'</Text>
-    ]
-  ),
+  children: [
+    <Icon key="1" name="accessibility" autoScale />,
+    <Text key="2">My value is 'red'</Text>,
+  ],
   className: 'example-className',
   id: 'example-id',
   style: {
@@ -47,7 +45,7 @@ Example.args = {
     alignItems: 'center',
     border: '1px solid red',
     padding: '8px',
-    margin: '8px 8px'
+    margin: '8px 8px',
   },
 };
 

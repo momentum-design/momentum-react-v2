@@ -54,11 +54,11 @@ const Example = Template((args) => (
       {}
     )}
   </>
-)).bind({});
+));
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplateWithPseudoStates(ListItemBase).bind({});
+const Common = MultiTemplateWithPseudoStates(ListItemBase);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.isDisabled;
@@ -116,7 +116,7 @@ Common.parameters = {
   ],
 };
 
-const Sizes = MultiTemplateWithPseudoStates(ListItemBase).bind({});
+const Sizes = MultiTemplateWithPseudoStates(ListItemBase);
 
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
@@ -142,7 +142,7 @@ Sizes.parameters = {
   ],
 };
 
-const Shapes = MultiTemplateWithPseudoStates(ListItemBase).bind({});
+const Shapes = MultiTemplateWithPseudoStates(ListItemBase);
 
 Shapes.argTypes = { ...argTypes };
 delete Shapes.argTypes.shape;
@@ -293,7 +293,7 @@ const ListItemWithChangingContent = () => {
   );
 };
 
-const ChangingContent = Template(ListItemWithChangingContent).bind({});
+const ChangingContent = Template(ListItemWithChangingContent);
 
 ChangingContent.argTypes = { ...argTypes };
 

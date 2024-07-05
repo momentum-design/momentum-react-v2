@@ -48,11 +48,11 @@ export default {
   },
 };
 
-const Example = Template<ReactionPickerProps>(ReactionPicker).bind({});
+const Example = Template<ReactionPickerProps>(ReactionPicker);
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplate<ReactionPickerProps>(ReactionPicker).bind({});
+const Common = MultiTemplate<ReactionPickerProps>(ReactionPicker);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

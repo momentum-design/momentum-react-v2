@@ -24,7 +24,7 @@ export default {
   },
 };
 
-const Example = Template<BannerProps>(Banner).bind({});
+const Example = Template<BannerProps>(Banner);
 
 Example.argTypes = { ...argTypes };
 
@@ -46,7 +46,7 @@ Example.args = {
   title: 'Title',
 };
 
-const Alerting = MultiTemplate<BannerProps>(Banner).bind({});
+const Alerting = MultiTemplate<BannerProps>(Banner);
 
 Alerting.argTypes = { ...argTypes };
 delete Alerting.argTypes.isAlert;
@@ -63,7 +63,7 @@ Alerting.parameters = {
   })),
 };
 
-const Shapes = MultiTemplate<BannerProps>(Banner).bind({});
+const Shapes = MultiTemplate<BannerProps>(Banner);
 
 Shapes.argTypes = { ...argTypes };
 delete Shapes.argTypes.color;
@@ -80,7 +80,7 @@ Shapes.parameters = {
   })),
 };
 
-const Common = MultiTemplate<BannerProps>(Banner).bind({});
+const Common = MultiTemplate<BannerProps>(Banner);
 
 Common.argTypes = { ...argTypes };
 

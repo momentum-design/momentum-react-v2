@@ -1,8 +1,9 @@
 import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 import { DEFAULTS, SIZES, TYPES } from './Avatar.constants';
 import { PresenceType } from './Avatar.types';
+import { ArgTypes } from '@storybook/react';
 
-export default {
+const argTypes: ArgTypes = {
   className: {
     defaultValue: undefined,
     description:
@@ -27,7 +28,7 @@ export default {
         summary: 'number',
       },
       defaultValue: {
-        summary: DEFAULTS.SIZE,
+        summary: DEFAULTS.SIZE.toString(),
       },
     },
   },
@@ -136,7 +137,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: false,
+        summary: 'false',
       },
     },
   },
@@ -149,8 +150,10 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: false,
+        summary: 'false',
       },
     },
   },
 };
+
+export default argTypes;

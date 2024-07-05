@@ -4,9 +4,11 @@ import {
   commonStyles,
 } from '../../storybook/helper.stories.argtypes';
 
+import { ArgTypes } from '@storybook/react';
+
 import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from './';
 
-const buttonCircleArgTypes = {
+const buttonCircleArgTypes: ArgTypes = {
   /**
    * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
    */
@@ -44,7 +46,7 @@ const buttonCircleArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.DISABLED,
+        summary: CONSTANTS.DEFAULTS.DISABLED.toString(),
       },
     },
   },
@@ -58,7 +60,7 @@ const buttonCircleArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED.toString(),
       },
     },
   },
@@ -71,7 +73,7 @@ const buttonCircleArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.GHOST,
+        summary: CONSTANTS.DEFAULTS.GHOST.toString(),
       },
     },
   },
@@ -84,7 +86,7 @@ const buttonCircleArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.OUTLINE,
+        summary: CONSTANTS.DEFAULTS.OUTLINE.toString(),
       },
     },
   },
@@ -98,7 +100,7 @@ const buttonCircleArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.INVERTED,
+        summary: CONSTANTS.DEFAULTS.INVERTED.toString(),
       },
     },
   },
@@ -111,7 +113,7 @@ const buttonCircleArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE,
+        summary: CONSTANTS.DEFAULTS.SIZE.toString(),
       },
     },
   },

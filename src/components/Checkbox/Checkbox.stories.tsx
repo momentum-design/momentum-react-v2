@@ -21,11 +21,11 @@ export default {
   },
 };
 
-const Example = Template<CheckboxProps>(Checkbox).bind({});
+const Example = Template<CheckboxProps>(Checkbox);
 
 Example.argTypes = { ...argTypes };
 
-const States = MultiTemplateWithPseudoStates(Checkbox).bind({});
+const States = MultiTemplateWithPseudoStates(Checkbox);
 
 States.argTypes = { ...argTypes };
 delete States.argTypes.isSelected;

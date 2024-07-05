@@ -19,7 +19,7 @@ export default {
   },
 };
 
-const Example = Template<ThemeProviderProps>(ThemeProvider).bind({});
+const Example = Template<ThemeProviderProps>(ThemeProvider);
 
 Example.argTypes = { ...argTypes };
 

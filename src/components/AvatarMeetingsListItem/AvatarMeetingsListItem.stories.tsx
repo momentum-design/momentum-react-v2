@@ -20,7 +20,7 @@ export default {
   },
 };
 
-const Example = Template<AvatarMeetingsListItemProps>(AvatarMeetingsListItem).bind({});
+const Example = Template<AvatarMeetingsListItemProps>(AvatarMeetingsListItem);
 
 Example.args = {
   firstLine: 'This is a first line',
@@ -33,9 +33,7 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const Common = MultiTemplateWithPseudoStates<AvatarMeetingsListItemProps>(
-  AvatarMeetingsListItem
-).bind({});
+const Common = MultiTemplateWithPseudoStates<AvatarMeetingsListItemProps>(AvatarMeetingsListItem);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

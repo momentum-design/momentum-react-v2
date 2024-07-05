@@ -32,7 +32,7 @@ export default {
   actions: {
     description:
       'Selectable actions that can be taken on behalf of the scope of this `<ToastDetails />`.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ButtonGroup',

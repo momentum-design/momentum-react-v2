@@ -28,7 +28,7 @@ export default {
   },
 };
 
-const Example = Template<ReactionProps>(Reaction).bind({});
+const Example = Template<ReactionProps>(Reaction);
 
 Example.argTypes = { ...argTypes };
 
@@ -39,14 +39,14 @@ const ReactionWithLabel = (props: ReactionProps) => (
   </Flex>
 );
 
-const Sizes = MultiTemplate<ReactionProps>(Reaction).bind({});
+const Sizes = MultiTemplate<ReactionProps>(Reaction);
 Sizes.parameters = {
   variants: [...Object.values(ICON_CONSTANTS.SIZES).map((size) => ({ name: 'haha', size }))],
 };
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
-const Original = MultiTemplate<ReactionProps>(ReactionWithLabel).bind({});
+const Original = MultiTemplate<ReactionProps>(ReactionWithLabel);
 
 Original.argTypes = { ...argTypes };
 delete Original.argTypes.children;
@@ -55,7 +55,7 @@ Original.parameters = {
   variants: [...Object.values(ORIGINAL_REACTIONS).map((name) => ({ name, size: 'auto' }))],
 };
 
-const OnVideo = MultiTemplate<ReactionProps>(ReactionWithLabel).bind({});
+const OnVideo = MultiTemplate<ReactionProps>(ReactionWithLabel);
 
 OnVideo.argTypes = { ...argTypes };
 delete OnVideo.argTypes.children;

@@ -32,7 +32,7 @@ const Example = Template<SliderProps>((args: any) => {
   }, [args.value]);
 
   return <Slider {...args} value={value} onChange={handleChange} />;
-}).bind({});
+});
 
 Example.argTypes = { ...argTypes };
 Example.args = {
@@ -58,7 +58,7 @@ const Common = MultiTemplate<SliderProps>((args: SliderProps) => {
   }, [args.value]);
 
   return <Slider {...args} value={value} onChange={handleChange} />;
-}).bind({});
+});
 
 Common.argTypes = { ...argTypes };
 

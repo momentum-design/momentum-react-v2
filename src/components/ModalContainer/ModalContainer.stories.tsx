@@ -22,7 +22,7 @@ export default {
 
 const commonChildren = <div>Example Text</div>;
 
-const Example = Template<ModalContainerProps>(ModalContainer).bind({});
+const Example = Template<ModalContainerProps>(ModalContainer);
 
 Example.argTypes = { ...argTypes };
 Example.args = {
@@ -30,7 +30,7 @@ Example.args = {
   isPadded: true,
 };
 
-const Colors = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
+const Colors = MultiTemplate<ModalContainerProps>(ModalContainer);
 
 Colors.argTypes = { ...argTypes };
 delete Colors.argTypes.color;
@@ -47,7 +47,7 @@ Colors.args = {
   isPadded: true,
 };
 
-const Elevations = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
+const Elevations = MultiTemplate<ModalContainerProps>(ModalContainer);
 
 Elevations.argTypes = { ...argTypes };
 delete Elevations.argTypes.elevation;
@@ -63,7 +63,7 @@ Elevations.args = {
   isPadded: true,
 };
 
-const Padding = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
+const Padding = MultiTemplate<ModalContainerProps>(ModalContainer);
 
 Padding.argTypes = { ...argTypes };
 delete Padding.argTypes.isPadded;
@@ -80,7 +80,7 @@ Padding.parameters = {
   ],
 };
 
-const Rounding = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
+const Rounding = MultiTemplate<ModalContainerProps>(ModalContainer);
 
 Rounding.argTypes = { ...argTypes };
 delete Rounding.argTypes.round;
@@ -97,7 +97,7 @@ Rounding.args = {
   color: 'tertiary',
 };
 
-const Common = MultiTemplate<ModalContainerProps>(ModalContainer).bind({});
+const Common = MultiTemplate<ModalContainerProps>(ModalContainer);
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
@@ -130,14 +130,18 @@ Common.parameters = {
   ],
 };
 
-
-const WithFocusLock = Template<ModalContainerProps>(ModalContainer).bind({});
+const WithFocusLock = Template<ModalContainerProps>(ModalContainer);
 
 WithFocusLock.argTypes = { ...argTypes };
 WithFocusLock.args = {
-  children: <div><ButtonPill>Test1</ButtonPill><ButtonPill>Test2</ButtonPill></div>,
+  children: (
+    <div>
+      <ButtonPill>Test1</ButtonPill>
+      <ButtonPill>Test2</ButtonPill>
+    </div>
+  ),
   isPadded: true,
-  focusLockProps: { returnFocus: true }
+  focusLockProps: { returnFocus: true },
 };
 
 export { Example, Colors, Elevations, Padding, Rounding, WithFocusLock, Common };

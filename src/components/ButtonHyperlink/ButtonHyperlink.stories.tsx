@@ -22,11 +22,11 @@ export default {
   },
 };
 
-const Example = Template<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
+const Example = Template<ButtonHyperlinkProps>(ButtonHyperlink);
 
 Example.argTypes = { ...argTypes };
 
-const States = MultiTemplateWithPseudoStates<ButtonHyperlinkProps>(ButtonHyperlink).bind({});
+const States = MultiTemplateWithPseudoStates<ButtonHyperlinkProps>(ButtonHyperlink);
 
 States.parameters = {
   variants: [{ label: 'Default hyperlink' }, { inverted: true }],

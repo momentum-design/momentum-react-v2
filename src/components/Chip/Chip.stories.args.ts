@@ -28,7 +28,7 @@ const chipArgTypes = {
   },
   rightIcon: {
     description: 'The icon displayed on the right if it exists',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'SupportedIcon',
@@ -40,7 +40,7 @@ const chipArgTypes = {
   },
   avatar: {
     description: 'Avatar supplied by consumer, overrides leftIcon',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'SupportedAvatar',

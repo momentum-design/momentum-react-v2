@@ -26,7 +26,7 @@ export default {
   },
 };
 
-const Example = Template<ToggletipProps>(Toggletip).bind({});
+const Example = Template<ToggletipProps>(Toggletip);
 
 Example.argTypes = { ...argTypes };
 
@@ -48,7 +48,7 @@ Example.args = {
   ),
 };
 
-const Common = MultiTemplate<ToggletipProps>(Toggletip).bind({});
+const Common = MultiTemplate<ToggletipProps>(Toggletip);
 
 Common.argTypes = { ...argTypes };
 
@@ -88,7 +88,7 @@ Common.parameters = {
   ],
 };
 
-const Offset = Template<ToggletipProps>(Toggletip).bind({});
+const Offset = Template<ToggletipProps>(Toggletip);
 
 Offset.argTypes = { ...argTypes };
 
@@ -122,7 +122,7 @@ const MultiplePopovers = Template<ToggletipProps>((args: ToggletipProps) => {
     </Toggletip>
   );
   return <Popover {...args} triggerComponent={triggerComponent} />;
-}).bind({});
+});
 
 MultiplePopovers.argTypes = { ...argTypes };
 

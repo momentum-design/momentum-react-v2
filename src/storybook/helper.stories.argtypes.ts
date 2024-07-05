@@ -21,7 +21,7 @@ function extendArgTypes(
   );
 }
 
-const commonAriaDialog = {
+const commonAriaDialog: ArgTypes = {
   role: {
     control: { type: 'select' },
     description: 'The accessibility role for the dialog.',
@@ -91,7 +91,7 @@ const commonAriaDialog = {
   },
 };
 
-const commonAriaFocusScope = {
+const commonAriaFocusScope: ArgTypes = {
   autoFocus: {
     control: { type: 'boolean' },
     description: 'Whether to auto focus the first focusable element in the focus scope on mount.',
@@ -135,7 +135,7 @@ const commonAriaFocusScope = {
   },
 };
 
-const commonAriaHover = {
+const commonAriaHover: ArgTypes = {
   isDisabled: {
     control: { type: 'boolean' },
     description: 'Whether this components events should be disabled.',
@@ -150,7 +150,6 @@ const commonAriaHover = {
     },
   },
   onHoverStart: {
-    control: { type: 'none' },
     description: 'Handler that is called when the hover interaction starts',
     table: {
       category: 'React Aria - Hover',
@@ -163,7 +162,6 @@ const commonAriaHover = {
     },
   },
   onHoverEnd: {
-    control: { type: 'none' },
     description: 'Handler that is called when the hover interaction ends',
     table: {
       category: 'React Aria - Hover',
@@ -176,7 +174,6 @@ const commonAriaHover = {
     },
   },
   onHoverChange: {
-    control: { type: 'none' },
     description: 'Handler that is called when the hover state changes',
     table: {
       category: 'React Aria - Hover',
@@ -190,7 +187,7 @@ const commonAriaHover = {
   },
 };
 
-const commonAriaOverlay = {
+const commonAriaOverlay: ArgTypes = {
   isOpen: {
     control: { type: 'boolean' },
     description: 'Whether the overlay is currently open.',
@@ -271,7 +268,7 @@ const commonAriaOverlay = {
   },
 };
 
-const commonAriaModal = {
+const commonAriaModal: ArgTypes = {
   isDisabled: {
     control: { type: 'boolean' },
     description: 'Sets the element to disabled.',
@@ -287,7 +284,7 @@ const commonAriaModal = {
   },
 };
 
-const commonAriaPressProps = {
+const commonAriaPressProps: ArgTypes = {
   onPress: {
     action: 'onPress',
     description:
@@ -304,7 +301,7 @@ const commonAriaPressProps = {
   },
 };
 
-const commonAriaButton = {
+const commonAriaButton: ArgTypes = {
   isDisabled: {
     control: { type: 'boolean' },
     description: 'Whether the button is disabled',
@@ -504,7 +501,6 @@ const commonAriaButton = {
     },
   },
   elementType: {
-    control: { type: 'none' },
     description:
       "The HTML element or React element used to render the button, e.g. 'div', 'a', or RouterLink.",
     table: {
@@ -573,7 +569,7 @@ const commonAriaButton = {
     },
   },
   type: {
-    control: { type: 'string' },
+    control: { type: 'text' },
     description: 'The behavior of the button when used in an HTML form.',
     table: {
       category: 'React Aria - Button',
@@ -668,7 +664,7 @@ const commonAriaButton = {
   },
 };
 
-const commonAriaButtonToggle = {
+const commonAriaButtonToggle: ArgTypes = {
   isSelected: {
     description: 'Whether the element should be selected (controlled).',
     options: [true, false],
@@ -710,7 +706,7 @@ const commonAriaButtonToggle = {
   },
 };
 
-const commonStyles = {
+const commonStyles: ArgTypes = {
   className: {
     description: "If present, this value will be added to the rendered element's `class` attribute",
     control: { type: 'text' },
@@ -754,7 +750,7 @@ const commonStyles = {
   },
 };
 
-const commonHTMLAttributes = {
+const commonHTMLAttributes: ArgTypes = {
   title: {
     description:
       "If present, this value will be this component's the rendered element's `title` attribute",

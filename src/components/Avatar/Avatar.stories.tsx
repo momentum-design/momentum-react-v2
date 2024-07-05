@@ -1,32 +1,11 @@
-import React, { FC } from 'react';
-import { Story } from '@storybook/react';
-
 import Avatar, { AvatarProps } from './';
-
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
 
 import Documentation from './Avatar.documentation.mdx';
 import argTypes from './Avatar.stories.args';
 import { PresenceType } from './Avatar.types';
 import { AVATAR_COLORS, SIZES } from './Avatar.constants';
-
-const DocsPage: FC = () => (
-  <>
-    <Title />
-    <Subtitle />
-    <Description />
-    <Documentation />
-    <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
-  </>
-);
+import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
+import { DocumentationPage } from '../../storybook/helper.stories.docs';
 
 export default {
   title: 'Momentum UI/Avatar',
@@ -34,38 +13,12 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocsPage,
+      page: DocumentationPage(Documentation),
     },
   },
 };
 
-const Template: Story<AvatarProps> = (args) => <Avatar title="Cisco Webex" {...args} />;
-
-const MultiTemplate: Story<AvatarProps> = (args: AvatarProps, { parameters }) => {
-  const { variants } = parameters;
-
-  const items = variants.map((variant, index: number) => (
-    <div key={index}>
-      <Avatar title="Cisco Webex" {...args} {...variant} />
-      <p>{variant.label}</p>
-    </div>
-  ));
-
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: `repeat(7, auto)`,
-        gap: '1.5rem',
-        alignItems: 'end',
-      }}
-    >
-      {items}
-    </div>
-  );
-};
-
-const Example = Template.bind({});
+const Example = Template<AvatarProps>(Avatar);
 
 Example.argTypes = { ...argTypes };
 
@@ -74,7 +27,7 @@ Example.args = {
   initials: 'AS',
 };
 
-const PresenceTypes = MultiTemplate.bind({});
+const PresenceTypes = MultiTemplate<AvatarProps>(Avatar);
 
 PresenceTypes.argTypes = { ...argTypes };
 delete PresenceTypes.argTypes.presence;
@@ -93,7 +46,7 @@ PresenceTypes.parameters = {
   ],
 };
 
-const Sizes = MultiTemplate.bind({});
+const Sizes = MultiTemplate<AvatarProps>(Avatar);
 
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
@@ -114,7 +67,7 @@ Sizes.parameters = {
   ],
 };
 
-const Icons = MultiTemplate.bind({});
+const Icons = MultiTemplate<AvatarProps>(Avatar);
 
 Icons.argTypes = { ...argTypes };
 
@@ -134,7 +87,7 @@ Icons.parameters = {
   ],
 };
 
-const Color = MultiTemplate.bind({});
+const Color = MultiTemplate<AvatarProps>(Avatar);
 
 Color.argTypes = { ...argTypes };
 delete Color.argTypes.color;
@@ -155,7 +108,7 @@ Color.parameters = {
   ],
 };
 
-const Common = MultiTemplate.bind({});
+const Common = MultiTemplate<AvatarProps>(Avatar);
 
 const cartesian = <T extends (string | number)[][]>(...arr: T) =>
   arr.reduce((a, b) => a.flatMap((c) => b.map((d) => [...c, d])), [[]]);

@@ -18,7 +18,7 @@ export default {
 };
 
 // NOTE: Primary story. This renders a single component with all external props.
-const Example = Template<{{componentName}}Props>({{componentName}}).bind({});
+const Example = Template<{{componentName}}Props>({{componentName}})
 
 Example.argTypes = { ...argTypes };
 
@@ -30,7 +30,7 @@ Example.args = {
 // TODO: Inject additional stories here.
 
 // NOTE: Common variants story. This renders multiple variants of a single component.
-const Common = MultiTemplate<{{componentName}}Props>({{componentName}}).bind({});
+const Common = MultiTemplate<{{componentName}}Props>({{componentName}})
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;

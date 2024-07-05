@@ -6,7 +6,7 @@ export default {
   ...commonStyles,
   buttons: {
     description: 'Buttons available on this component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'ButtonCircle | Array<ButtonCircle>',
@@ -92,7 +92,7 @@ export default {
   },
   image: {
     description: 'Icon to display on this component.',
-    control: { type: 'none' },
+
     table: {
       type: {
         summary: 'Icon',
