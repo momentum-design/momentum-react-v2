@@ -60,6 +60,21 @@ describe('Text', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should match snapshot with type and tagName override', async () => {
+    expect.assertions(1);
+
+    const texts = Object.values(TYPES).map((type, index) => {
+      return (
+        <Text key={index} type={type as FontStyle} tagName="div">
+          Example Text
+        </Text>
+      );
+    });
+    container = await mount(<div>{texts}</div>);
+
+    expect(container).toMatchSnapshot();
+  });
+
   describe('attributes', () => {
     it('should have its main class', () => {
       expect.assertions(1);

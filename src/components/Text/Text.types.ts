@@ -20,6 +20,10 @@ export interface Props {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+  /**
+   * Override the tag used to surround the text
+   */
+  tagName?: keyof JSX.IntrinsicElements;
 }
 
 export type FontStyle =
