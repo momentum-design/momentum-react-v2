@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Text from '.';
-import { FontStyle } from './Text.types';
+import { AllowedTagNames, FontStyle } from './Text.types';
 
 import { TYPES, STYLE } from './Text.constants';
 
@@ -60,20 +60,23 @@ describe('Text', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should match snapshot with type and tagName override', async () => {
-    expect.assertions(1);
+  it.each(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'small'])(
+    'should match snapshot with type and tagName override',
+    async (tagName) => {
+      expect.assertions(1);
 
-    const texts = Object.values(TYPES).map((type, index) => {
-      return (
-        <Text key={index} type={type as FontStyle} tagName="p">
-          Example Text
-        </Text>
-      );
-    });
-    container = await mount(<div>{texts}</div>);
+      const texts = Object.values(TYPES).map((type, index) => {
+        return (
+          <Text key={index} type={type as FontStyle} tagName={tagName as AllowedTagNames}>
+            Example Text
+          </Text>
+        );
+      });
+      container = await mount(<div>{texts}</div>);
 
-    expect(container).toMatchSnapshot();
-  });
+      expect(container).toMatchSnapshot();
+    }
+  );
 
   describe('attributes', () => {
     it('should have its main class', () => {
