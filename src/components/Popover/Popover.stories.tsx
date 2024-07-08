@@ -18,6 +18,7 @@ import Avatar from '../Avatar';
 import MeetingListItem from '../MeetingListItem';
 import SearchInput from '../SearchInput';
 import List from '../List';
+import AriaToolbarItem from '../AriaToolbarItem';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -140,13 +141,21 @@ const PopoverWithFirstFocus = (props) => {
 
   return (
     <Popover firstFocusElement={ref} {...props}>
-      <AriaToolbar ariaLabel="toolbar">
-        <ButtonPill key={1}>1</ButtonPill>
-        <ButtonPill key={2} ref={setRef}>
-          2
-        </ButtonPill>
-        <ButtonPill key={3}>3</ButtonPill>
-        <ButtonPill key={4}>4</ButtonPill>
+      <AriaToolbar ariaToolbarItemsSize={4} ariaLabel="toolbar">
+        <AriaToolbarItem itemIndex={0}>
+          <ButtonPill key={1}>1</ButtonPill>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonPill key={2} ref={setRef}>
+            2
+          </ButtonPill>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonPill key={3}>3</ButtonPill>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={3}>
+          <ButtonPill key={4}>4</ButtonPill>
+        </AriaToolbarItem>
       </AriaToolbar>
     </Popover>
   );

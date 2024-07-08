@@ -1,11 +1,15 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, MutableRefObject, ReactElement } from 'react';
 import { ButtonGroupProps } from '../ButtonGroup';
+import { SupportedComponents } from '../ButtonGroup/ButtonGroup.types';
 
 export interface Props {
   /**
    * Child components of this AriaToolbar.
    */
-  children?: ReactNode;
+  children?:
+    | ReactElement<SupportedComponents>
+    | Array<ReactElement<SupportedComponents>>
+    | Array<HTMLElement>;
 
   /**
    * Custom class for overriding this component's CSS.
@@ -55,4 +59,19 @@ export interface Props {
    * Props to pass to the ButtonGroup component
    */
   buttonGroupProps?: ButtonGroupProps;
+
+  /**
+   * Provides context on how many toolbar items are in the aria toolbar. This information is used
+   * to calculate the correct item focus.
+   */
+  ariaToolbarItemsSize: number;
+}
+
+export interface AriaToolbarContextValue {
+  currentFocus?: number;
+  setCurrentFocus?: (newFocus: number) => void;
+  buttonRefs?: MutableRefObject<Record<string, HTMLButtonElement>>;
+  orientation: Props['orientation'];
+  onTabPress: Props['onTabPress'];
+  ariaToolbarItemsSize: number;
 }

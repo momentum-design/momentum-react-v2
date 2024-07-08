@@ -10,6 +10,8 @@ import ButtonSimple from '../ButtonSimple';
 import Popover from '../Popover';
 
 import argTypes from './AriaToolbar.stories.args';
+import { Props } from './AriaToolbar.types';
+import AriaToolbarItem from '../AriaToolbarItem';
 
 export default {
   title: 'Momentum UI/AriaToolbar',
@@ -27,18 +29,25 @@ const onPressHandler = () => {
   input.value = input.value + 'a';
 };
 
-const Horizontal = (props) => {
+const Horizontal = (props: Partial<Props>) => {
   return (
     <>
       <AriaToolbar
         ariaLabel="toolbar 1"
         ariaControls="textInput"
         style={{ display: 'flex', columnGap: '0.5rem', marginBottom: '1rem' }}
+        ariaToolbarItemsSize={3}
         {...props}
       >
-        <ButtonPill onPress={onPressHandler}>Item 1</ButtonPill>
-        <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
-        <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+        <AriaToolbarItem itemIndex={0}>
+          <ButtonPill onPress={onPressHandler}>Item 1</ButtonPill>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+        </AriaToolbarItem>
       </AriaToolbar>
       <input type="text" id="textInput" aria-label="A text input" />
     </>
@@ -55,10 +64,19 @@ const Vertical = () => {
         ariaControls="textInput"
         ariaLabel="toolbar 1"
         style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
+        ariaToolbarItemsSize={3}
       >
-        <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
-        <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
-        <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+        <AriaToolbarItem itemIndex={0}>
+          <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+        </AriaToolbarItem>
       </AriaToolbar>
       <AriaToolbar
         orientation="vertical"
@@ -71,10 +89,19 @@ const Vertical = () => {
           marginTop: '1rem',
           marginBottom: '1rem',
         }}
+        ariaToolbarItemsSize={3}
       >
-        <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
-        <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
-        <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+        <AriaToolbarItem itemIndex={0}>
+          <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+        </AriaToolbarItem>
       </AriaToolbar>
       <input type="text" id="textInput" aria-label="A text input" />
     </>
@@ -83,16 +110,32 @@ const Vertical = () => {
 
 const WithinPopover = () => {
   return (
-    <Popover trigger="click" interactive triggerComponent={<ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonSimple>}>
+    <>
+      <Popover
+        trigger="click"
+        interactive
+        triggerComponent={
+          <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonSimple>
+        }
+      >
         <AriaToolbar
           orientation="vertical"
           ariaControls="textInput"
           ariaLabel="toolbar 1"
           style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
+          ariaToolbarItemsSize={3}
         >
-          <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
-          <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
-          <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+          <AriaToolbarItem itemIndex={0}>
+            <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
+          </AriaToolbarItem>
+
+          <AriaToolbarItem itemIndex={1}>
+            <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+          </AriaToolbarItem>
+
+          <AriaToolbarItem itemIndex={2}>
+            <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+          </AriaToolbarItem>
         </AriaToolbar>
         <AriaToolbar
           orientation="vertical"
@@ -105,14 +148,61 @@ const WithinPopover = () => {
             marginTop: '1rem',
             marginBottom: '1rem',
           }}
+          ariaToolbarItemsSize={3}
         >
-          <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
-          <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
-          <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
-        </AriaToolbar>
-    </Popover>
+          <AriaToolbarItem itemIndex={0}>
+            <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
+          </AriaToolbarItem>
 
+          <AriaToolbarItem itemIndex={1}>
+            <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+          </AriaToolbarItem>
+
+          <AriaToolbarItem itemIndex={2}>
+            <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+          </AriaToolbarItem>
+        </AriaToolbar>
+      </Popover>
+      <input type="text" id="textInput" aria-label="A text input" />
+    </>
   );
 };
 
-export { Horizontal, Vertical, WithinPopover };
+const IncludesPopoverAndTooltips = () => {
+  return (
+    <>
+      <AriaToolbar
+        orientation="vertical"
+        ariaControls="textInput"
+        ariaLabel="toolbar 1"
+        style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
+        ariaToolbarItemsSize={3}
+      >
+        <Popover
+          trigger="click"
+          interactive
+          triggerComponent={
+            <AriaToolbarItem itemIndex={0}>
+              <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
+            </AriaToolbarItem>
+          }
+        >
+          This is some content.
+        </Popover>
+
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonCircle onPress={onPressHandler}>2</ButtonCircle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonCircle onPress={onPressHandler}>3</ButtonCircle>
+        </AriaToolbarItem>
+      </AriaToolbar>
+      <input type="text" id="textInput" aria-label="A text input" />
+    </>
+  );
+};
+
+IncludesPopoverAndTooltips.argTypes = argTypes;
+
+export { Horizontal, Vertical, WithinPopover, IncludesPopoverAndTooltips };
