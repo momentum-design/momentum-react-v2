@@ -30,6 +30,7 @@ import {
 } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
+import Tooltip from '../Tooltip';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -50,6 +51,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     interactive = DEFAULTS.INTERACTIVE,
     onPress,
     lang,
+    showTooltip = DEFAULTS.SHOWTOOLTIP,
+    tooltipContent,
     ...rest
   } = props;
 
@@ -276,8 +279,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     };
   }, []);
 
-  return (
-    <FocusRing isInset={shouldItemFocusBeInset}>
+  const listItem = (
       <li
         tabIndex={listItemTabIndex}
         style={style}
@@ -296,8 +298,14 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         {content}
         {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}
       </li>
+  );
+
+  return (
+    <FocusRing isInset={shouldItemFocusBeInset}>
+      {showTooltip && tooltipContent ? (<Tooltip type="description" placement="right" triggerComponent={listItem}>{tooltipContent}</Tooltip>) : listItem}
     </FocusRing>
   );
+  
 };
 
 /**

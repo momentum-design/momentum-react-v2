@@ -24,6 +24,7 @@ import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
 import ButtonCircle from '../ButtonCircle';
 import Popover from '../Popover';
+import Tooltip from '../Tooltip';
 
 export default {
   title: 'Momentum UI/ListItemBase',
@@ -293,8 +294,33 @@ const ListItemWithChangingContent = () => {
   );
 };
 
+const ListItemwithToolTip = () => {
+  return (
+    <div
+      style={{
+        width: '40rem',
+        height: '4rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '0.5rem',
+      }}
+    >
+      <Text>Example with tooltip - try it out!</Text>
+      <ListItemBase showTooltip tooltipContent='tooltip'>
+       hover me
+      </ListItemBase>
+    </div>
+  );
+};
+
 const ChangingContent = Template(ListItemWithChangingContent).bind({});
 
 ChangingContent.argTypes = { ...argTypes };
 
-export { Example, Sizes, Shapes, Common, ChangingContent };
+const WithTooltip = Template(ListItemwithToolTip).bind({});
+
+WithTooltip.argTypes = { ...argTypes };
+
+export { Example, Sizes, Shapes, Common, ChangingContent, WithTooltip };

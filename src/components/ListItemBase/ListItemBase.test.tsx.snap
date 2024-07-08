@@ -214,9 +214,9 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
 </ListItemBase>
 `;
 
-exports[`ListItemBase snapshot should match snapshot with lang 1`] = `
+exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
 <ListItemBase
-  lang="en-US"
+  isSelected={true}
 >
   <FocusRing
     isInset={false}
@@ -227,13 +227,12 @@ exports[`ListItemBase snapshot should match snapshot with lang 1`] = `
       isInset={false}
     >
       <li
-        className="md-list-item-base-wrapper"
+        className="md-list-item-base-wrapper active"
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
-        lang="en-US"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -258,9 +257,9 @@ exports[`ListItemBase snapshot should match snapshot with lang 1`] = `
 </ListItemBase>
 `;
 
-exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
+exports[`ListItemBase snapshot should match snapshot with lang 1`] = `
 <ListItemBase
-  isSelected={true}
+  lang="en-US"
 >
   <FocusRing
     isInset={false}
@@ -271,12 +270,13 @@ exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
       isInset={false}
     >
       <li
-        className="md-list-item-base-wrapper active"
+        className="md-list-item-base-wrapper"
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        lang="en-US"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -385,6 +385,105 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
     </FocusRing>
   </FocusRing>
 </ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with showTooltip=true and tooltipContent is exist 1`] = `
+<div>
+  <li
+    aria-describedby="test-ID"
+    class="md-list-item-base-wrapper"
+    data-disabled="false"
+    data-interactive="true"
+    data-padded="false"
+    data-shape="rectangle"
+    data-size="40"
+    role="listitem"
+    tabindex="-1"
+  >
+    Hover me
+  </li>
+  <div
+    class="md-tooltip-label"
+    id="test-ID"
+  >
+    tooltip content
+  </div>
+</div>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with showTooltip=true and tooltipContent is exist 2`] = `
+<div>
+  <li
+    aria-describedby="test-ID"
+    class="md-list-item-base-wrapper"
+    data-disabled="false"
+    data-interactive="true"
+    data-padded="false"
+    data-shape="rectangle"
+    data-size="40"
+    role="listitem"
+    tabindex="-1"
+  >
+    Hover me
+  </li>
+  <div
+    class="md-tooltip-label"
+    id="test-ID"
+  >
+    tooltip content
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-1"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+  >
+    <div
+      aria-hidden="true"
+      aria-modal="false"
+      class="md-modal-container-wrapper"
+      data-arrow-orientation="horizontal"
+      data-color="primary"
+      data-elevation="3"
+      data-padded="true"
+      data-placement="right"
+      data-round="50"
+      role="tooltip"
+    >
+      tooltip content
+      <div
+        class="md-modal-container-arrow-wrapper"
+        data-popper-arrow="true"
+        id="arrow1"
+        style="position: absolute; top: 0px; transform: translate(0px, 5px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="md-modal-arrow-svg"
+          data-placement="right"
+          height="24"
+          viewBox="0 0 12 24"
+          width="12"
+          xmlns="http://www.w3.org/svg/2000"
+        >
+          <defs>
+            <clippath
+              id="modal-arrow-cut-stroke-right"
+            >
+              <path
+                d="m 12 24 l -10 -10 q -2 -2 0 -4 l 10 -10"
+              />
+            </clippath>
+          </defs>
+          <path
+            clip-path="url(#modal-arrow-cut-stroke-right)"
+            d="m 12 24 l -10 -10 q -2 -2 0 -4 l 10 -10"
+            data-color="primary"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ListItemBase snapshot should match snapshot with size 1`] = `

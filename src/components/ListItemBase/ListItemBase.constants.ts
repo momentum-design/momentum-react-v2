@@ -20,6 +20,7 @@ const DEFAULTS = {
   ROLE: 'listitem',
   SHOULD_ITEM_FOCUS_BE_INSET: false,
   INTERACTIVE: true,
+  SHOWTOOLTIP: false,
 };
 
 const STYLE = {

@@ -7,10 +7,16 @@ import '@testing-library/jest-dom';
 import { STYLE } from './ListItemBase.constants';
 import * as listUtils from '../List/List.utils';
 import userEvent from '@testing-library/user-event';
-import { render, screen } from '@testing-library/react';
+import { findByText, render, screen } from '@testing-library/react';
 import List from '../List/List';
 import { ListContextValue } from '../List/List.types';
+import Tooltip from '../Tooltip';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
 describe('ListItemBase', () => {
   let container;
 
@@ -130,6 +136,28 @@ describe('ListItemBase', () => {
 
       container = mount(<ListItemBase interactive={interactive}>Test</ListItemBase>);
 
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with showTooltip=true and tooltipContent is exist', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const showTooltip = true;
+
+      const tooltipContent = 'tooltip content';
+
+      const {container} = render(<ListItemBase showTooltip={showTooltip} tooltipContent={tooltipContent}>Hover me</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+
+      const hoverElement = await screen.getByRole('listitem');
+
+      await user.hover(hoverElement);
+
+      const tooltip = await screen.findByRole('tooltip', { hidden: true });
+      const content = await findByText(tooltip, tooltipContent);
+      expect(content).toBeVisible();
       expect(container).toMatchSnapshot();
     });
   });
@@ -275,6 +303,19 @@ describe('ListItemBase', () => {
 
       expect(element.getAttribute('data-interactive')).toBe(`${interactive}`);
       expect(element.getAttribute('tabIndex')).toBe('-1');
+    });
+
+    it('should have provided data-tooltip when showTooltip is provided', () => {
+      expect.assertions(1);
+
+      const showTooltip = true;
+      const tooltipContent = 'tooltip content';
+
+      container = mount(<ListItemBase showTooltip={showTooltip} tooltipContent={tooltipContent}>Test</ListItemBase>);
+
+      const tooltip = container.find(ListItemBase).find(Tooltip);
+
+      expect(tooltip.props().children).toBe(tooltipContent);
     });
   });
 

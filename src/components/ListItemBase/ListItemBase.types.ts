@@ -97,4 +97,15 @@ export interface Props extends PressEvents, ContextMenu {
    * lang attribute if necessary.
    */
   lang?: string;
+
+    /**
+   * Determines if the list item will show tooltip
+   * @default false
+   */
+  showTooltip?: boolean;
+
+  /**
+   * show tooltip with content.
+   */
+  tooltipContent?: string;
 }
