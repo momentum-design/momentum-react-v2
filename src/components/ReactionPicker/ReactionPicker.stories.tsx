@@ -10,6 +10,7 @@ import ReactionButton from '../ReactionButton';
 import argTypes from './ReactionPicker.stories.args';
 import Documentation from './ReactionPicker.stories.docs.mdx';
 import Text from '../Text';
+import AriaToolbarItem from '../AriaToolbarItem';
 
 const reactionChildren = [
   <Tooltip
@@ -17,32 +18,46 @@ const reactionChildren = [
     placement="top"
     variant="small"
     triggerComponent={
-      <ReactionButton key="1">
-        <Reaction name="celebrate" autoPlay />
-      </ReactionButton>
+      <AriaToolbarItem itemIndex={0}>
+        <ReactionButton key="1">
+          <Reaction name="celebrate" autoPlay />
+        </ReactionButton>
+      </AriaToolbarItem>
     }
   >
     <Text type="body-compact">Celebrate!</Text>
   </Tooltip>,
+  <AriaToolbarItem itemIndex={1}>
+    <ReactionButton key="2">
+      <Reaction name="heart" autoPlay />
+    </ReactionButton>
+  </AriaToolbarItem>,
 
-  <ReactionButton key="2">
-    <Reaction name="heart" autoPlay />
-  </ReactionButton>,
-  <ReactionButton key="3">
-    <Reaction name="thumb_up_yellow" autoPlay />
-  </ReactionButton>,
-  <ReactionButton reacted key="4">
-    <Reaction name="smile" autoPlay />
-  </ReactionButton>,
-  <ReactionButton key="5">
-    <Reaction name="haha" autoPlay />
-  </ReactionButton>,
-  <ReactionButton key="6">
-    <Reaction name="wow" autoPlay />
-  </ReactionButton>,
-  <ReactionButton key="7">
-    <Reaction name="sad" autoPlay />
-  </ReactionButton>,
+  <AriaToolbarItem itemIndex={2}>
+    <ReactionButton key="3">
+      <Reaction name="thumb_up_yellow" autoPlay />
+    </ReactionButton>
+  </AriaToolbarItem>,
+  <AriaToolbarItem itemIndex={3}>
+    <ReactionButton reacted key="4">
+      <Reaction name="smile" autoPlay />
+    </ReactionButton>
+  </AriaToolbarItem>,
+  <AriaToolbarItem itemIndex={4}>
+    <ReactionButton key="5">
+      <Reaction name="haha" autoPlay />
+    </ReactionButton>
+  </AriaToolbarItem>,
+  <AriaToolbarItem itemIndex={5}>
+    <ReactionButton key="6">
+      <Reaction name="wow" autoPlay />
+    </ReactionButton>
+  </AriaToolbarItem>,
+  <AriaToolbarItem itemIndex={6}>
+    <ReactionButton key="7">
+      <Reaction name="sad" autoPlay />
+    </ReactionButton>
+  </AriaToolbarItem>,
 ];
 
 export default {
@@ -57,6 +72,8 @@ export default {
   subComponents: { ReactionButton },
   args: {
     children: reactionChildren,
+    // 7 because there are 7 reactions at the top.
+    ariaToolbarItemsSize: 7,
   },
 };
 

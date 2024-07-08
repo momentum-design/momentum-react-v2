@@ -3,6 +3,7 @@
 exports[`<AriaToolbar /> snapshot should match snapshot 1`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={0}
 >
   <div
     aria-label="test"
@@ -15,6 +16,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot 1`] = `
 exports[`<AriaToolbar /> snapshot should match snapshot with className 1`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={0}
   className="example-class"
 >
   <div
@@ -28,6 +30,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with className 1`] = `
 exports[`<AriaToolbar /> snapshot should match snapshot with id 1`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={0}
   id="example-id"
 >
   <div
@@ -42,6 +45,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with id 1`] = `
 exports[`<AriaToolbar /> snapshot should match snapshot with style 1`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={0}
   style={
     Object {
       "color": "pink",
@@ -61,167 +65,129 @@ exports[`<AriaToolbar /> snapshot should match snapshot with style 1`] = `
 </AriaToolbar>
 `;
 
-exports[`<AriaToolbar /> snapshot should not render invalid elements 1`] = `
-<AriaToolbar
-  ariaLabel="test"
-  orientation="vertical"
->
-  <div
-    aria-label="test"
-    className="md-aria-toolbar-wrapper"
-    role="toolbar"
-  >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-  </div>
-</AriaToolbar>
-`;
-
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 1`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
 >
   <div
     aria-label="test"
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
@@ -229,116 +195,126 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 2`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
 >
   <div
     aria-label="test"
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
@@ -346,116 +322,126 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 3`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
 >
   <div
     aria-label="test"
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
@@ -463,116 +449,126 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 4`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
 >
   <div
     aria-label="test"
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
@@ -580,6 +576,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 1`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
   orientation="vertical"
 >
   <div
@@ -587,110 +584,119 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
@@ -698,6 +704,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 2`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
   orientation="vertical"
 >
   <div
@@ -705,110 +712,119 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
@@ -816,6 +832,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 3`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
   orientation="vertical"
 >
   <div
@@ -823,110 +840,119 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
@@ -934,6 +960,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 4`] = `
 <AriaToolbar
   ariaLabel="test"
+  ariaToolbarItemsSize={3}
   orientation="vertical"
 >
   <div
@@ -941,110 +968,119 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
     className="md-aria-toolbar-wrapper"
     role="toolbar"
   >
-    <ButtonSimple
-      key=".0"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+    <ForwardRef
+      itemIndex={0}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".1"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={-1}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={1}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={-1}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-    <ButtonSimple
-      key=".2"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onPress={[Function]}
-      tabIndex={0}
-      useNativeKeyDown={true}
+      </ButtonSimple>
+    </ForwardRef>
+    <ForwardRef
+      itemIndex={2}
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-button-simple-wrapper"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          />
+      <ButtonSimple
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onPress={[Function]}
+        tabIndex={0}
+        useNativeKeyDown={true}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-simple-wrapper"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            />
+          </FocusRing>
         </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+      </ButtonSimple>
+    </ForwardRef>
   </div>
 </AriaToolbar>
 `;
