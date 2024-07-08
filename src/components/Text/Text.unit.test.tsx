@@ -65,7 +65,7 @@ describe('Text', () => {
 
     const texts = Object.values(TYPES).map((type, index) => {
       return (
-        <Text key={index} type={type as FontStyle} tagName="div">
+        <Text key={index} type={type as FontStyle} tagName="p">
           Example Text
         </Text>
       );
