@@ -13,7 +13,6 @@ import OverlayAlert, { OverlayAlertProps } from './';
 import argTypes from './OverlayAlert.stories.args';
 import Documentation from './OverlayAlert.stories.docs.mdx';
 import Tooltip from '../Tooltip';
-import TooltipPopoverCombo from '../TooltipPopoverCombo';
 
 export default {
   title: 'Momentum UI/OverlayAlert',
