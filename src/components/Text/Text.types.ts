@@ -1,4 +1,14 @@
 import { CSSProperties, ReactNode } from 'react';
+
+export type AllowedTagNames =
+  | (keyof JSX.IntrinsicElements & 'h1')
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'p'
+  | 'small';
 export interface Props {
   /**
    * Custom class to be able to override the component's CSS
@@ -23,7 +33,7 @@ export interface Props {
   /**
    * Override the tag used to surround the text
    */
-  tagName?: keyof JSX.IntrinsicElements;
+  tagName?: AllowedTagNames;
 }
 
 export type FontStyle =

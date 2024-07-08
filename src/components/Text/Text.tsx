@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 
 import { DEFAULTS, STYLE, TYPES } from './Text.constants';
-import { Props } from './Text.types';
+import { AllowedTagNames, Props } from './Text.types';
 import './Text.style.scss';
 import classnames from 'classnames';
 
 const Text: FC<Props> = (props: Props) => {
   const { children, type = DEFAULTS.TYPE, className, id, style, tagName, ...rest } = props;
 
-  const getTagName = (): keyof JSX.IntrinsicElements => {
+  const getTagName = (): AllowedTagNames => {
     switch (type) {
       case TYPES.DISPLAY:
       case TYPES.BANNER_TERTIARY:
