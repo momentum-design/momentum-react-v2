@@ -52,7 +52,7 @@ TypesWithTagName.parameters = {
       return {
         type,
         children: type,
-        tagName: 'div',
+        tagName: 'small',
       };
     }),
   ],
