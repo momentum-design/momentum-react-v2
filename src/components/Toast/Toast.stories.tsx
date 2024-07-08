@@ -45,6 +45,37 @@ const commonButtons = (
   </ButtonGroup>
 );
 
+const ExampleWithTagName = Template<ToastProps>(Toast).bind({});
+
+ExampleWithTagName.argTypes = { ...argTypes };
+
+ExampleWithTagName.args = {
+  content: (
+    <ToastContent action="Action" actionColor="success" actions={commonButtons} actor="Actor">
+      Lorem ipsum dolor site aw aetns ctetuer adipiscing
+    </ToastContent>
+  ),
+  controls: [
+    <ButtonControl key={0} control="close" />,
+    <ButtonControl key={1} control="maximize" />,
+    <ButtonControl key={2} control="minimize" />,
+  ],
+  details: (
+    <ToastDetails
+      image={<Avatar initials="T" />}
+      info="Information"
+      infoColor="join"
+      subject="Subject"
+    >
+      Details Title
+    </ToastDetails>
+  ),
+  title: 'Toast Title',
+  titleTagName: 'h3',
+};
+
+
+
 const Example = Template<ToastProps>(Toast).bind({});
 
 Example.argTypes = { ...argTypes };
@@ -262,4 +293,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Layouts, Common };
+export { Example, Layouts, Common, ExampleWithTagName };

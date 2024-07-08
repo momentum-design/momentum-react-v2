@@ -3,6 +3,7 @@ import { CSSProperties, ReactElement } from 'react';
 import { ButtonControlProps } from '../ButtonControl';
 import { ToastContentProps } from '../ToastContent';
 import { ToastDetailsProps } from '../ToastDetails';
+import { AllowedTagNames } from '../Text/Text.types';
 import type { AriaAttributes } from 'react';
 
 export type SupportedChildren = ToastContentProps | ToastDetailsProps;
@@ -54,4 +55,9 @@ export interface Props {
    * Title for the header-bar of this Toast.
    */
   title?: string;
+
+  /**
+ * Override the tag used to surround the text
+ */
+  titleTagName?: AllowedTagNames;
 }

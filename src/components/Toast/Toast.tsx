@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 import ToastContent, { ToastContentProps } from '../ToastContent';
 import ToastDetails, { ToastDetailsProps } from '../ToastDetails';
+import Text from '../Text';
 
 import { STYLE } from './Toast.constants';
 import { Props } from './Toast.types';
@@ -12,7 +13,7 @@ import './Toast.style.scss';
  * The `<Toast />` component.
  */
 const Toast: FC<Props> = (props: Props) => {
-  const { ariaLive, children, className, content, controls, details, id, style, title } = props;
+  const { ariaLive, children, className, content, controls, details, id, style, title, titleTagName } = props;
 
   const childrenArray = Children.toArray(children);
 
@@ -37,7 +38,9 @@ const Toast: FC<Props> = (props: Props) => {
 
   const titleComponent = title ? (
     <div className={STYLE.header}>
-      <div className={STYLE.title}>{title}</div>
+      <Text tagName={titleTagName || 'h2'} type="label-compact" className={STYLE.title}>
+      {title}
+      </Text>
       {controlsComponent}
     </div>
   ) : null;

@@ -66,4 +66,16 @@ export default {
       },
     },
   },
+  titleTagName: {
+    description: '`<Toast />` title. This overrides header tag.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'h2',
+      },
+    },
+  },
 };
