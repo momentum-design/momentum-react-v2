@@ -65,6 +65,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
             data-disabled={props.disabled || DEFAULTS.DISABLED}
             data-inverted={props.inverted || DEFAULTS.INVERTED}
             title={title}
+            tabIndex={0}
           >
             {props.children}
           </a>
