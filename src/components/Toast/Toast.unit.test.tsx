@@ -262,7 +262,7 @@ describe('<Toast />', () => {
     });
 
     it('should have provided controls when controls and title props are provided', async () => {
-      // expect.assertions(1);
+      expect.assertions(1);
 
       const wrapper = await mountAndWait(
         <Toast controls={controls} title="Toast Title">
