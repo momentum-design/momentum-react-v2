@@ -65,6 +65,7 @@ export { default as Chip } from './Chip';
 export { default as RadioGroup } from './RadioGroup';
 export { default as NotificationSystem } from './NotificationSystem';
 export { default as AriaToolbar } from './AriaToolbar';
+export { default as AriaToolbarItem } from './AriaToolbarItem';
 export { default as Slider } from './Slider';
 export { default as ComboBox } from './ComboBox';
 export { default as AriaGroup } from './AriaGroup';

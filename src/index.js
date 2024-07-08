@@ -178,6 +178,7 @@ export {
   Chip as ChipNext,
   NotificationSystem,
   AriaToolbar,
+  AriaToolbarItem,
   Slider as SliderNext,
   ComboBox as ComboBoxNext,
   AriaGroup,
