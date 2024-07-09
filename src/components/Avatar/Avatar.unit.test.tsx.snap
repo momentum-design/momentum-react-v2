@@ -31,12 +31,12 @@ exports[`Avatar snapshot should match snapshot 1`] = `
 exports[`Avatar snapshot should match snapshot with actionLabel 1`] = `
 <Avatar
   actionLabel="Action"
-  onPress={[Function]}
+  onPress={[MockFunction]}
 >
   <ButtonSimple
     aria-label="Action"
     className="md-avatar-button-wrapper"
-    onPress={[Function]}
+    onPress={[MockFunction]}
     useNativeKeyDown={true}
   >
     <FocusRing>

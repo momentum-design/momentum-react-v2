@@ -178,8 +178,7 @@ describe('Avatar', () => {
       const actionLabel = 'Action';
 
       const container = await mountAndWait(
-        // eslint-disable-next-line no-console
-        <Avatar  actionLabel={actionLabel} onPress={()=>{console.log('onPress');}}/>
+        <Avatar actionLabel={actionLabel} onPress={jest.fn()} />
       );
 
       expect(container).toMatchSnapshot();
