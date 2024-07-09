@@ -220,17 +220,17 @@ RenderedAsButtonGroup.args = {
     separator: true,
   },
   children: [
-    <AriaToolbarItem itemIndex={0}>
+    <AriaToolbarItem itemIndex={0} key={'item 0'}>
       <ButtonCircle ghost onPress={action('press item 0')}>
         1
       </ButtonCircle>
     </AriaToolbarItem>,
-    <AriaToolbarItem itemIndex={1}>
+    <AriaToolbarItem itemIndex={1} key={'item 1'}>
       <ButtonCircle ghost onPress={action('press item 1')}>
         2
       </ButtonCircle>
     </AriaToolbarItem>,
-    <AriaToolbarItem itemIndex={2}>
+    <AriaToolbarItem itemIndex={2} key={'item 2'}>
       <ButtonCircle ghost onPress={action('press item 2')}>
         3
       </ButtonCircle>
