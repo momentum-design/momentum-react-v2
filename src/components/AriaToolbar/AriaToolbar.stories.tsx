@@ -2,7 +2,7 @@ import React from 'react';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import AriaToolbar from './';
+import AriaToolbar, { AriaToolbarProps } from './';
 import Documentation from './AriaToolbar.stories.docs.mdx';
 import ButtonCircle from '../ButtonCircle';
 import ButtonPill from '../ButtonPill';
@@ -12,6 +12,8 @@ import Popover from '../Popover';
 import argTypes from './AriaToolbar.stories.args';
 import { Props } from './AriaToolbar.types';
 import AriaToolbarItem from '../AriaToolbarItem';
+import { Template } from '../../storybook/helper.stories.templates';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/AriaToolbar',
@@ -205,4 +207,35 @@ const IncludesPopoverAndTooltips = () => {
 
 IncludesPopoverAndTooltips.argTypes = argTypes;
 
-export { Horizontal, Vertical, WithinPopover, IncludesPopoverAndTooltips };
+const RenderedAsButtonGroup = Template<AriaToolbarProps>(AriaToolbar).bind({});
+
+RenderedAsButtonGroup.argTypes = { ...argTypes };
+RenderedAsButtonGroup.args = {
+  ariaToolbarItemsSize: 3,
+  orientation: 'horizontal',
+  ariaLabel: 'Example aria toolbar rendered as button group.',
+  shouldRenderAsButtonGroup: true,
+  buttonGroupProps: {
+    round: true,
+    separator: true,
+  },
+  children: [
+    <AriaToolbarItem itemIndex={0}>
+      <ButtonCircle ghost onPress={action('press item 0')}>
+        1
+      </ButtonCircle>
+    </AriaToolbarItem>,
+    <AriaToolbarItem itemIndex={1}>
+      <ButtonCircle ghost onPress={action('press item 1')}>
+        2
+      </ButtonCircle>
+    </AriaToolbarItem>,
+    <AriaToolbarItem itemIndex={2}>
+      <ButtonCircle ghost onPress={action('press item 2')}>
+        3
+      </ButtonCircle>
+    </AriaToolbarItem>,
+  ],
+};
+
+export { Horizontal, Vertical, WithinPopover, IncludesPopoverAndTooltips, RenderedAsButtonGroup };

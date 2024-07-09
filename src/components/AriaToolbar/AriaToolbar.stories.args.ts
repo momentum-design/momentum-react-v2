@@ -25,6 +25,55 @@ const ariaToolbarArgTypes = {
       },
     },
   },
+  ariaToolbarItemsSize: {
+    description: 'The number of items in the toolbar',
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  shouldRenderAsButtonGroup: {
+    description: 'Determines if the toolbar should render as a button group',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
+  buttonGroupProps: {
+    description: 'Props to pass to the ButtonGroup component',
+    control: { type: 'object' },
+    table: {
+      type: {
+        summary: 'ButtonGroupProps',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  orientation: {
+    description: 'The orientation of the toolbar',
+    options: ['horizontal', 'vertical'],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'horizontal',
+      },
+    },
+  },
 };
 
 export { ariaToolbarArgTypes };
