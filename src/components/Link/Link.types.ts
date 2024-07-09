@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { AriaLinkProps } from '@react-types/link';
 import { Props as IconProps } from '../Icon/Icon.types';
+import { TooltipTypes } from '../Tooltip/Tooltip.types';
 
 export interface Props extends AriaLinkProps {
   /**
@@ -29,7 +30,7 @@ export interface Props extends AriaLinkProps {
 
   /**
    * whether or not this component has icon【name = pop-out】 in the right
-   * icon display needed opensNewTabIndicatorLabel 
+   * icon display needed tooltipContent 
    */
   hasIcon?: boolean;
 
@@ -42,5 +43,11 @@ export interface Props extends AriaLinkProps {
   /**
    * Used for tooltip content
    */
-  opensNewTabIndicatorLabel?: string;
+  tooltipContent?: string;
+
+  /**
+   * Determines, whether the tooltip is the description or the label of the trigger component, or none
+   * `label`、`description`、`none`
+   */
+  type?: TooltipTypes;
 }
