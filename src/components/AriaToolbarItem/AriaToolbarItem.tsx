@@ -4,43 +4,39 @@ import React, { forwardRef, useCallback } from 'react';
 
 import { useKeyboard } from '@react-aria/interactions';
 import { useAriaToolbarContext } from '../AriaToolbar/AriaToolbar.utils';
+import { useProvidedRef } from '../../utils/useProvidedRef';
 
 const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
   const { children, itemIndex } = props;
 
   const ariaToolbarContext = useAriaToolbarContext();
 
+  const ref = useProvidedRef<HTMLButtonElement>(providedRef, null);
+
   const { keyboardProps } = useKeyboard({
     onKeyDown: (e) => {
+      if (!ariaToolbarContext) return;
+
+      const { orientation, setCurrentFocus, ariaToolbarItemsSize, currentFocus, onTabPress } =
+        ariaToolbarContext;
+
       // for the escape key (and other key presses), continue propagation to let Popovers / Modals know that
       // they should close
       e.continuePropagation();
 
       switch (e.key) {
-        case ariaToolbarContext?.orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
+        case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
           e.preventDefault();
-          ariaToolbarContext?.setCurrentFocus(
-            (ariaToolbarContext?.ariaToolbarItemsSize +
-              (ariaToolbarContext?.currentFocus || 0) -
-              1) %
-              ariaToolbarContext?.ariaToolbarItemsSize
-          );
+          setCurrentFocus((ariaToolbarItemsSize + (currentFocus || 0) - 1) % ariaToolbarItemsSize);
           break;
 
-        case ariaToolbarContext?.orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
+        case orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
           e.preventDefault();
-          ariaToolbarContext?.setCurrentFocus(
-            (ariaToolbarContext?.ariaToolbarItemsSize +
-              (ariaToolbarContext?.currentFocus || 0) +
-              1) %
-              ariaToolbarContext?.ariaToolbarItemsSize
-          );
+          setCurrentFocus((ariaToolbarItemsSize + (currentFocus || 0) + 1) % ariaToolbarItemsSize);
           break;
 
         case 'Tab': {
-          if (ariaToolbarContext?.onTabPress) {
-            ariaToolbarContext?.onTabPress(e);
-          }
+          onTabPress?.(e);
           break;
         }
 
@@ -52,29 +48,23 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
 
   const getPropsForChildren = useCallback(
     (child, index) => {
+      if (!ariaToolbarContext) return;
+
+      const { setCurrentFocus, buttonRefs, currentFocus } = ariaToolbarContext;
+
       return {
-        tabIndex: index === (ariaToolbarContext?.currentFocus || 0) ? 0 : -1,
-        ref: (e: HTMLButtonElement) => {
-          if (ariaToolbarContext.buttonRefs.current) {
-            ariaToolbarContext.buttonRefs.current[index] = e;
-            if (providedRef) {
-              if (typeof providedRef === 'function') {
-                providedRef(e);
-              }
-            }
-          }
+        tabIndex: index === (currentFocus || 0) ? 0 : -1,
+        ref: (element: HTMLButtonElement) => {
+          buttonRefs.current[index] = element;
+          ref.current = element;
         },
-        onFocus: (e) => {
-          ariaToolbarContext?.setCurrentFocus(index);
-          if (child.props.onFocus) {
-            child.props.onFocus(e);
-          }
+        onFocus: (event) => {
+          setCurrentFocus?.(index);
+          child.props?.onFocus?.(event);
         },
         onPress: () => {
-          ariaToolbarContext?.setCurrentFocus(index);
-          if (child.props.onPress) {
-            child.props.onPress();
-          }
+          setCurrentFocus?.(index);
+          child.props?.onPress?.();
         },
         useNativeKeyDown: true,
         ...keyboardProps,
