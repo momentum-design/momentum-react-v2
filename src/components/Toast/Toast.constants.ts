@@ -1,6 +1,10 @@
+import { AllowedTagNames } from '../Text/Text.types';
+
 const CLASS_PREFIX = 'md-toast';
 
-const DEFAULTS = {};
+const DEFAULTS = {
+  HEADING_LEVEL_2: 'h2' as AllowedTagNames,
+};
 
 const STYLE = {
   controls: `${CLASS_PREFIX}-controls`,

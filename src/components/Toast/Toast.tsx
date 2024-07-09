@@ -5,7 +5,7 @@ import ToastContent, { ToastContentProps } from '../ToastContent';
 import ToastDetails, { ToastDetailsProps } from '../ToastDetails';
 import Text from '../Text';
 
-import { STYLE } from './Toast.constants';
+import { STYLE, DEFAULTS } from './Toast.constants';
 import { Props } from './Toast.types';
 import './Toast.style.scss';
 
@@ -38,9 +38,7 @@ const Toast: FC<Props> = (props: Props) => {
 
   const titleComponent = title ? (
     <div className={STYLE.header}>
-      <Text tagName={titleTagName || 'h2'} type="label-compact" className={STYLE.title}>
-      {title}
-      </Text>
+      <Text tagName={titleTagName || DEFAULTS.HEADING_LEVEL_2} type="label-compact" className={STYLE.title}>{title}</Text>
       {controlsComponent}
     </div>
   ) : null;
