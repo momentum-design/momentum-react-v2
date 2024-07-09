@@ -67,7 +67,7 @@ export default {
     },
   },
   titleTagName: {
-    description: '`<Toast />` title. This overrides header tag.',
+    description: '`<Toast />` title tag name to be used instead of the default',
     control: { type: 'text' },
     table: {
       type: {
