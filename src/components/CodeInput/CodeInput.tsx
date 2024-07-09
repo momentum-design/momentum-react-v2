@@ -51,8 +51,8 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
     <div className={classnames(STYLE.wrapper, className)} data-level={messageType}>
       <VerificationInput
         inputProps={{
-          'aria-label': `${ariaLabel ? ariaLabel : ''}, field ${value.length + 1} of ${numDigits}`,
-          'aria-describedby': `${ariaDescribedby}`,
+          'aria-label': ariaLabel,
+          'aria-describedby': ariaDescribedby,
           id: inputId,
           name: inputId,
           disabled,
