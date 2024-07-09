@@ -8,14 +8,7 @@ import { useAriaToolbarContext } from '../AriaToolbar/AriaToolbar.utils';
 const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
   const { children, itemIndex } = props;
 
-  const {
-    currentFocus,
-    setCurrentFocus,
-    buttonRefs,
-    orientation,
-    onTabPress,
-    ariaToolbarItemsSize,
-  } = useAriaToolbarContext();
+  const ariaToolbarContext = useAriaToolbarContext();
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (e) => {
@@ -24,19 +17,29 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
       e.continuePropagation();
 
       switch (e.key) {
-        case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
+        case ariaToolbarContext?.orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
           e.preventDefault();
-          setCurrentFocus((ariaToolbarItemsSize + (currentFocus || 0) - 1) % ariaToolbarItemsSize);
+          ariaToolbarContext?.setCurrentFocus(
+            (ariaToolbarContext?.ariaToolbarItemsSize +
+              (ariaToolbarContext?.currentFocus || 0) -
+              1) %
+              ariaToolbarContext?.ariaToolbarItemsSize
+          );
           break;
 
-        case orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
+        case ariaToolbarContext?.orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
           e.preventDefault();
-          setCurrentFocus((ariaToolbarItemsSize + (currentFocus || 0) + 1) % ariaToolbarItemsSize);
+          ariaToolbarContext?.setCurrentFocus(
+            (ariaToolbarContext?.ariaToolbarItemsSize +
+              (ariaToolbarContext?.currentFocus || 0) +
+              1) %
+              ariaToolbarContext?.ariaToolbarItemsSize
+          );
           break;
 
         case 'Tab': {
-          if (onTabPress) {
-            onTabPress(e);
+          if (ariaToolbarContext?.onTabPress) {
+            ariaToolbarContext?.onTabPress(e);
           }
           break;
         }
@@ -50,23 +53,25 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
   const getPropsForChildren = useCallback(
     (child, index) => {
       return {
-        tabIndex: index === (currentFocus || 0) ? 0 : -1,
+        tabIndex: index === (ariaToolbarContext?.currentFocus || 0) ? 0 : -1,
         ref: (e: HTMLButtonElement) => {
-          buttonRefs.current[index] = e;
-          if (providedRef) {
-            if (typeof providedRef === 'function') {
-              providedRef(e);
+          if (ariaToolbarContext.buttonRefs.current) {
+            ariaToolbarContext.buttonRefs.current[index] = e;
+            if (providedRef) {
+              if (typeof providedRef === 'function') {
+                providedRef(e);
+              }
             }
           }
         },
         onFocus: (e) => {
-          setCurrentFocus(index);
+          ariaToolbarContext?.setCurrentFocus(index);
           if (child.props.onFocus) {
             child.props.onFocus(e);
           }
         },
         onPress: () => {
-          setCurrentFocus(index);
+          ariaToolbarContext?.setCurrentFocus(index);
           if (child.props.onPress) {
             child.props.onPress();
           }
@@ -75,7 +80,7 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
         ...keyboardProps,
       };
     },
-    [currentFocus]
+    [ariaToolbarContext?.currentFocus]
   );
 
   return React.cloneElement(children, getPropsForChildren(children, itemIndex));
