@@ -39,7 +39,7 @@ describe('CodeInput', () => {
         0
       );
       expect(component.find('input').prop('aria-label')).toBeDefined();
-      expect(component.find('input').prop('aria-label')).toBe('enter 6 digit code, field 1 of 6');
+      expect(component.find('input').prop('aria-label')).toBe('enter 6 digit code');
     });
 
     it('input accepts prop ariaDescribedby', () => {
