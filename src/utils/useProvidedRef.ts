@@ -7,7 +7,10 @@ import React, { useRef, useLayoutEffect } from 'react';
  * @param initialValue
  * @returns
  */
-export const useProvidedRef = <T>(providedRef: React.ForwardedRef<T>, initialValue: T = null) => {
+export const useProvidedRef = <T>(
+  providedRef: React.ForwardedRef<T>,
+  initialValue: T = null
+): React.MutableRefObject<T> => {
   let ref = useRef<T>(initialValue);
 
   if (providedRef && typeof providedRef !== 'function') {
