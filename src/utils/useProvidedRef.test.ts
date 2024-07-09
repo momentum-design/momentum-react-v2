@@ -20,7 +20,6 @@ describe('useProvidedRef', () => {
     const { result } = renderHook(() => useProvidedRef(refCallback, 'initial'));
 
     expect(refCallback).toHaveBeenCalledWith('initial');
-    expect(result.current).toBe({ current: 'initial' });
     expect(result.current.current).toBe('initial');
   });
 });
