@@ -13,6 +13,7 @@ exports[`Link snapshot should match snapshot 1`] = `
         data-inverted={false}
         elementType="a"
         onPress={[MockFunction]}
+        rel=""
       >
         LinkNext
       </a>
@@ -40,6 +41,7 @@ exports[`Link snapshot should match snapshot when disabled 1`] = `
         elementType="a"
         isDisabled={true}
         onPress={[MockFunction]}
+        rel=""
       >
         LinkNext
       </a>
@@ -62,9 +64,9 @@ exports[`Link snapshot should match snapshot when inverted 1`] = `
         data-disabled={false}
         data-inverted={true}
         elementType="a"
-        inverted={true}
         isInverted={true}
         onPress={[MockFunction]}
+        rel=""
       >
         Hyperlink
       </a>
@@ -88,6 +90,7 @@ exports[`Link snapshot should match snapshot with title 1`] = `
         data-inverted={false}
         elementType="a"
         onPress={[MockFunction]}
+        rel=""
         title="Example Text"
       />
     </FocusRing>
