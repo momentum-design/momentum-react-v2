@@ -57,7 +57,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   const renderBody = () => {
     if (shouldRenderAsButtonGroup) {
       return (
-        <ButtonGroup {...buttonGroupProps} {...commonProps}>
+        <ButtonGroup {...buttonGroupProps} {...commonProps} orientation={orientation}>
           {children}
         </ButtonGroup>
       );
