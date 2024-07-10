@@ -16,7 +16,7 @@ import Icon from '../Icon';
  * The Checkbox component.
  */
 const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
-  const { className, isDisabled, label, isIndeterminate, id, style } = props;
+  const { className, isDisabled, label, isIndeterminate, id, style, ariaLabel} = props;
 
   const state = useToggleState(props);
   const internalRef = useRef<HTMLInputElement>();
@@ -60,7 +60,7 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
       style={style}
     >
       <VisuallyHidden>
-        <input {...inputProps} {...focusProps} aria-label={label} ref={ref} />
+        <input {...inputProps} {...focusProps} aria-label={ariaLabel || label} ref={ref} />
       </VisuallyHidden>
       {checkbox}
       {label}
