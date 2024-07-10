@@ -15,7 +15,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     hasIcon,
     iconProps,
     tooltipContent,
-    type,
+    tooltipType,
     disabled,
     inverted,
     ...otherProps
@@ -50,7 +50,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
       <>
         {tooltipContent && (
           <Tooltip
-            type={type}
+            type={tooltipType}
             placement="bottom"
             triggerComponent={
               <a {...commonProps}>
