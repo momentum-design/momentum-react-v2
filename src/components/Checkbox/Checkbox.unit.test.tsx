@@ -153,11 +153,11 @@ describe('<Checkbox />', () => {
 
       expect(element.getAttribute('aria-label')).toBe(label);
     });
-    it('should use ariaLabel prop when label prop not provided', async () => {
+    it('should use aria-label prop when label prop not provided', async () => {
       expect.assertions(1);
 
       const ariaLabel = 'test aria label';
-      const wrapper = await mountAndWait(<Checkbox ariaLabel={ariaLabel} />);
+      const wrapper = await mountAndWait(<Checkbox aria-label={ariaLabel} />);
       const element = wrapper.find('input').getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
