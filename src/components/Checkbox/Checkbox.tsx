@@ -16,7 +16,7 @@ import Icon from '../Icon';
  * The Checkbox component.
  */
 const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
-  const { className, isDisabled, label, isIndeterminate, id, style, ariaLabel} = props;
+  const { className, isDisabled, label, isIndeterminate, id, style } = props;
 
   const state = useToggleState(props);
   const internalRef = useRef<HTMLInputElement>();
