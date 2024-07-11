@@ -8,6 +8,8 @@
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   display: inline-block;
 
+  // have based a:focus style on momentum-ui.css.
+  // need to overwright focus style
   &:focus,
   &.focus {
     color: var(--mds-color-theme-text-accent-normal);
