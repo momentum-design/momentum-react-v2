@@ -36,7 +36,7 @@ const States = MultiTemplateWithPseudoStates<LinkProps>(Link).bind({});
 States.parameters = {
   variants: [
     { label: 'Default link', href: 'https://www.webex.com/' },
-    { inverted: true, href: 'https://www.webex.com/' },
+    { label: 'inverted', inverted: true, href: 'https://www.webex.com/' },
   ],
 };
 
