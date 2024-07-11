@@ -181,8 +181,7 @@ const IncludesPopoverAndTooltips = () => {
         ariaToolbarItemsSize={3}
       >
         <Popover
-          trigger="click"
-          interactive
+          trigger="mouseenter focus"
           triggerComponent={
             <AriaToolbarItem itemIndex={0}>
               <ButtonCircle onPress={onPressHandler}>1</ButtonCircle>
