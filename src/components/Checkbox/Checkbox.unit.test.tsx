@@ -143,24 +143,24 @@ describe('<Checkbox />', () => {
 
       expect(element.getAttribute('data-disabled')).toBe(disabled.toString());
     });
-    it('should use ariaLabel prop when provided', async () => {
-      expect.assertions(1);
-
-      const ariaLabel = 'test aria label';
-
-      const wrapper = await mountAndWait(<Checkbox ariaLabel={ariaLabel} />);
-      const element = wrapper.find('input').getDOMNode();
-
-      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
-    });
-    it('should use label prop when ariaLabel prop not provided', async () => {
+    it('should use label prop for aria-label when provided', async () => {
       expect.assertions(1);
 
       const label = 'test label';
+
       const wrapper = await mountAndWait(<Checkbox label={label} />);
       const element = wrapper.find('input').getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(label);
+    });
+    it('should use ariaLabel prop when label prop not provided', async () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'test aria label';
+      const wrapper = await mountAndWait(<Checkbox ariaLabel={ariaLabel} />);
+      const element = wrapper.find('input').getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
   });
 
