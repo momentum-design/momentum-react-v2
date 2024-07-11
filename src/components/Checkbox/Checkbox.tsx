@@ -60,7 +60,7 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
       style={style}
     >
       <VisuallyHidden>
-        <input {...inputProps} {...focusProps} aria-label={ariaLabel || label} ref={ref} />
+        <input {...inputProps} {...focusProps} aria-label={label || ariaLabel} ref={ref} />
       </VisuallyHidden>
       {checkbox}
       {label}
