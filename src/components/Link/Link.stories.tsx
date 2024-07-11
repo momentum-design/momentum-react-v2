@@ -31,7 +31,19 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const States = MultiTemplateWithPseudoStates<LinkProps>(Link).bind({});
+const LinkContainer = (props) => {
+  if (props.inverted) {
+    return (
+      <div style={{ backgroundColor: 'var(--mds-color-theme-teaching-background-normal)' }}>
+        <Link {...props} />
+      </div>
+    );
+  } else {
+    return <Link {...props} />;
+  }
+};
+
+const States = MultiTemplateWithPseudoStates<LinkProps>(LinkContainer).bind({});
 
 States.parameters = {
   variants: [
@@ -66,7 +78,7 @@ ButtonCircleLink.args = {
   tooltipContent: 'opens a new tab',
   tooltipType: 'description',
   children: (
-    <div className='md-link-button-wrapper' style={{width: '2.5rem', height: '2.5rem'}}>
+    <div className="md-link-button-wrapper" style={{ width: '2.5rem', height: '2.5rem' }}>
       <Icon name="chat-group" autoScale={150} />
     </div>
   ),
@@ -84,8 +96,11 @@ ButtonPillLink.args = {
   tooltipType: 'description',
   className: 'md-link-ButtonPillLink',
   children: (
-    <div className='md-button-pill-wrapper' style={{ display: 'flex', height: '2.5rem', padding: '0 1rem', lineHeight: '2.5rem' }}>
-      <Text >Go to Download page</Text>
+    <div
+      className="md-button-pill-wrapper"
+      style={{ display: 'flex', height: '2.5rem', padding: '0 1rem', lineHeight: '2.5rem' }}
+    >
+      <Text>Go to Download page</Text>
       <Icon name="chat-group" autoScale={150} />
     </div>
   ),
