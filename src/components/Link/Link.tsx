@@ -18,6 +18,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     tooltipType,
     disabled,
     inverted,
+    style,
     ...otherProps
   } = props;
   const internalRef = useRef();
@@ -37,6 +38,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
 
   const commonProps = {
     ...linkProps,
+    style,
     ref: ref,
     title: title,
     rel: isExternalLinkl ? 'noopener noreferrer' : '',
