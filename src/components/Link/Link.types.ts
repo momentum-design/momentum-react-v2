@@ -45,7 +45,7 @@ export interface Props extends AriaLinkProps {
 
   /**
    * icon props
-   * When use iconProps isWithIcon is necessary
+   * When use iconProps hasExternalLinkIcon is necessary
    */
   iconProps?: Partial<IconProps>;
 
