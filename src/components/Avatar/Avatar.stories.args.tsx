@@ -167,22 +167,9 @@ export default {
       },
     },
   },  
-  actionLabel: {
+  mainLabel: {
     defaultValue: DEFAULTS.LABEL,
-    description: "The name of the action to be performed by this Avatar onPress, so that it is used in the aria-label of this component. e.g 'Open contact card of ' ",
-    control: { type: 'text' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: DEFAULTS.LABEL,
-      },
-    },
-  },
-  pictureLabel: {
-    defaultValue: DEFAULTS.LABEL,
-    description: "The name of the graphic of the avatar in case there it does not trigger any action, so that it is used in the aria-label of this component. e.g 'Avatar picture of ' ",
+    description: "The main description of the Avatar, which will be the first part of its aria-label. e.g 'Avatar of Bob'",
     control: { type: 'text' },
     table: {
       type: {
