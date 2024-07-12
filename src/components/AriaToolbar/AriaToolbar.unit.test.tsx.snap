@@ -27,6 +27,21 @@ exports[`<AriaToolbar /> snapshot should match snapshot with className 1`] = `
 </AriaToolbar>
 `;
 
+exports[`<AriaToolbar /> snapshot should match snapshot with data-test 1`] = `
+<AriaToolbar
+  ariaLabel="test"
+  ariaToolbarItemsSize={0}
+  data-test="data-test"
+>
+  <div
+    aria-label="test"
+    className="md-aria-toolbar-wrapper"
+    data-test="data-test"
+    role="toolbar"
+  />
+</AriaToolbar>
+`;
+
 exports[`<AriaToolbar /> snapshot should match snapshot with id 1`] = `
 <AriaToolbar
   ariaLabel="test"

@@ -23,6 +23,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     ariaControls,
     buttonGroupProps,
     ariaToolbarItemsSize,
+    ...rest
   } = props;
 
   const [currentFocus, setCurrentFocus] = useState(undefined);
@@ -52,6 +53,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     'aria-label': ariaLabel,
     'aria-controls': ariaControls,
     role: 'toolbar',
+    ...rest,
   };
 
   const renderBody = () => {
