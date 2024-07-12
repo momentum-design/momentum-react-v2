@@ -48,7 +48,7 @@ const States = MultiTemplateWithPseudoStates<LinkProps>(LinkContainer).bind({});
 States.parameters = {
   variants: [
     { label: 'Default link', href: 'https://www.webex.com/' },
-    { label: 'inverted', inverted: true, href: 'https://www.webex.com/' },
+    { label: 'Inverted', inverted: true, href: 'https://www.webex.com/' },
   ],
 };
 
@@ -61,7 +61,7 @@ const LinkHasIcon = Template<LinkProps>(Link).bind({});
 LinkHasIcon.args = {
   href: 'https://www.webex.com/',
   target: '_blank',
-  hasIcon: true,
+  hasExternalLinkIcon: true,
   iconProps: { id: 'icon' },
   tooltipContent: 'opens a new window',
   tooltipType: 'description',
