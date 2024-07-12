@@ -5,12 +5,11 @@ exports[`Avatar snapshot should match snapshot 1`] = `
   title="Cisco Webex"
 >
   <div
-    aria-label="Cisco Webex"
+    aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
     role="group"
-    title="Cisco Webex"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -25,53 +24,6 @@ exports[`Avatar snapshot should match snapshot 1`] = `
       </span>
     </Initials>
   </div>
-</Avatar>
-`;
-
-exports[`Avatar snapshot should match snapshot with actionLabel 1`] = `
-<Avatar
-  actionLabel="Action"
-  onPress={[MockFunction]}
->
-  <ButtonSimple
-    aria-label="Action"
-    className="md-avatar-button-wrapper"
-    onPress={[MockFunction]}
-    useNativeKeyDown={true}
-  >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          aria-label="Action"
-          className="md-avatar-button-wrapper md-button-simple-wrapper"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <div
-            className="md-avatar-wrapper"
-            data-color="default"
-            data-size={24}
-            role="group"
-          />
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
 </Avatar>
 `;
 
@@ -95,12 +47,11 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
   title="Cisco Webex"
 >
   <div
-    aria-label="Cisco Webex"
+    aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
     role="group"
-    title="Cisco Webex"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -158,35 +109,6 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
         </Icon>
       </div>
     </Presence>
-  </div>
-</Avatar>
-`;
-
-exports[`Avatar snapshot should match snapshot with hideDefaultTooltip 1`] = `
-<Avatar
-  hideDefaultTooltip={true}
-  title="Cisco Webex"
->
-  <div
-    aria-label="Cisco Webex"
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={24}
-    role="group"
-    title=""
-  >
-    <Initials
-      className="md-avatar-wrapper-children"
-      initials="CW"
-      type="person"
-    >
-      <span
-        aria-hidden="true"
-        className="md-avatar-wrapper-children"
-      >
-        CW
-      </span>
-    </Initials>
   </div>
 </Avatar>
 `;
@@ -309,12 +231,11 @@ exports[`Avatar snapshot should match snapshot with isTyping and typingLabel 1`]
   typingLabel="isTyping"
 >
   <div
-    aria-label="Cisco Webex, isTyping"
+    aria-label="isTyping"
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
     role="group"
-    title="Cisco Webex"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -362,15 +283,15 @@ exports[`Avatar snapshot should match snapshot with isTyping and typingLabel 1`]
 </Avatar>
 `;
 
-exports[`Avatar snapshot should match snapshot with onPress 1`] = `
+exports[`Avatar snapshot should match snapshot with mainLabel 1`] = `
 <Avatar
-  onPress={[Function]}
-  title="Cisco Webex"
+  mainLabel="mainLabel"
+  onPress={[MockFunction]}
 >
   <ButtonSimple
-    aria-label="Cisco Webex"
+    aria-label="mainLabel"
     className="md-avatar-button-wrapper"
-    onPress={[Function]}
+    onPress={[MockFunction]}
     useNativeKeyDown={true}
   >
     <FocusRing>
@@ -379,7 +300,7 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
-          aria-label="Cisco Webex"
+          aria-label="mainLabel"
           className="md-avatar-button-wrapper md-button-simple-wrapper"
           onBlur={[Function]}
           onClick={[Function]}
@@ -401,7 +322,53 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
             data-color="default"
             data-size={24}
             role="group"
-            title="Cisco Webex"
+          />
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Avatar>
+`;
+
+exports[`Avatar snapshot should match snapshot with onPress 1`] = `
+<Avatar
+  onPress={[Function]}
+  title="Cisco Webex"
+>
+  <ButtonSimple
+    aria-label=""
+    className="md-avatar-button-wrapper"
+    onPress={[Function]}
+    useNativeKeyDown={true}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          aria-label=""
+          className="md-avatar-button-wrapper md-button-simple-wrapper"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <div
+            className="md-avatar-wrapper"
+            data-color="default"
+            data-size={24}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -423,20 +390,6 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
 </Avatar>
 `;
 
-exports[`Avatar snapshot should match snapshot with pictureLabel 1`] = `
-<Avatar
-  pictureLabel="Picture"
->
-  <div
-    aria-label="Picture"
-    className="md-avatar-wrapper"
-    data-color="default"
-    data-size={24}
-    role="group"
-  />
-</Avatar>
-`;
-
 exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1`] = `
 <div>
   <Avatar
@@ -446,12 +399,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, default"
+      aria-label="default"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -474,12 +426,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, active"
+      aria-label="active"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -547,12 +498,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, meet"
+      aria-label="meet"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -620,12 +570,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, schedule"
+      aria-label="schedule"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -693,12 +642,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, call"
+      aria-label="call"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -766,12 +714,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, DND"
+      aria-label="DND"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -839,12 +786,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, presenting"
+      aria-label="presenting"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -912,12 +858,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, quietHours"
+      aria-label="quietHours"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -985,12 +930,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, away"
+      aria-label="away"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1058,12 +1002,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, OOO"
+      aria-label="OOO"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1131,12 +1074,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, busy"
+      aria-label="busy"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1204,12 +1146,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, onMobile"
+      aria-label="onMobile"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1277,12 +1218,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, onDevice"
+      aria-label="onDevice"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1350,12 +1290,11 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
-      aria-label="Cisco Webex, onHold"
+      aria-label="onHold"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
       role="group"
-      title="Cisco Webex"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1425,12 +1364,11 @@ exports[`Avatar snapshot should match snapshot with size 1`] = `
   title="CW"
 >
   <div
-    aria-label="CW"
+    aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
     data-size={124}
     role="group"
-    title="CW"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -1454,12 +1392,11 @@ exports[`Avatar snapshot should match snapshot with src & title 1`] = `
   title="title"
 >
   <div
-    aria-label="title"
+    aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
     role="group"
-    title="title"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -1490,12 +1427,11 @@ exports[`Avatar snapshot should match snapshot with type 1`] = `
   type="space"
 >
   <div
-    aria-label="Cisco Webex"
+    aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
     role="group"
-    title="Cisco Webex"
   >
     <Initials
       className="md-avatar-wrapper-children"

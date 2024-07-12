@@ -23,14 +23,12 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
     color = DEFAULTS.COLOR,
     presence,
     type = DEFAULTS.TYPE,
-    hideDefaultTooltip = DEFAULTS.HIDE_DEFAULT_TOOLTIP,
     icon,
     iconOnHover,
     isTyping,
     onPress,
     failureBadge,
-    actionLabel = DEFAULTS.LABEL,
-    pictureLabel = DEFAULTS.LABEL,
+    mainLabel = DEFAULTS.LABEL,
     presenceLabel = DEFAULTS.LABEL,
     typingLabel = DEFAULTS.LABEL,
     extraLabel = DEFAULTS.LABEL,
@@ -50,24 +48,9 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
   }
 
   const avatarLabels = [];
-  const nameLabels = [];
 
-  if(onPress){
-    if(actionLabel){
-      nameLabels.push(actionLabel);
-    }
-  } else {
-    if(pictureLabel){
-      nameLabels.push(pictureLabel);
-    }
-  }
-
-  if(title){
-    nameLabels.push(title);
-  }
-
-  if(nameLabels.length){
-    avatarLabels.push(nameLabels.join(' '));
+  if(mainLabel){
+    avatarLabels.push(mainLabel);
   }
 
   if(presence && presenceLabel){
@@ -91,7 +74,6 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
       data-size={size}
       data-color={color}
       aria-label={onPress ? undefined : containerAriaLabel}
-      title={!hideDefaultTooltip ? title : ''}
       role='group'
       {...(!onPress && { ...rest })}
     >

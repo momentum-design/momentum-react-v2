@@ -11,8 +11,7 @@ describe('Avatar', () => {
   const sampleProps = {
     type: 'person',
     title: 'Name',
-    pictureLabel: 'Picture for',
-    actionLabel: 'Open card of',
+    mainLabel: 'Avatar of Name',
     presenceLabel: 'Active',
     presence: PresenceType.Active,
     src: 'src',
@@ -36,8 +35,7 @@ describe('Avatar', () => {
   
     const mockAvatar = mount(
       <Avatar
-        actionLabel={withOnPress ? sampleProps.actionLabel : ''}
-        pictureLabel={withOnPress ? '' : sampleProps.pictureLabel}
+        mainLabel={sampleProps.mainLabel}
         type={isPerson ? 'person' : 'space'}
         title={sampleProps.title}
         onPress={onPress}
@@ -50,7 +48,7 @@ describe('Avatar', () => {
       />,
     );
   
-    let assertCount = 2;
+    let assertCount = 1;
 
     if (withPresence) {
       assertCount += 1;
@@ -59,7 +57,6 @@ describe('Avatar', () => {
     expect.assertions(assertCount);
   
     const wrapper = mockAvatar.find('.md-avatar-wrapper');
-    expect(wrapper.props().title).toEqual(sampleProps.title);
   
     if (withOnPress) {
       const button = mockAvatar.find('button');
@@ -172,26 +169,13 @@ describe('Avatar', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with actionLabel', async () => {
+    it('should match snapshot with mainLabel', async () => {
       expect.assertions(1);
 
-      const actionLabel = 'Action';
+      const mainLabel = 'mainLabel';
 
       const container = await mountAndWait(
-        <Avatar actionLabel={actionLabel} onPress={jest.fn()} />
-      );
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with pictureLabel', async () => {
-      expect.assertions(1);
-
-      const pictureLabel = 'Picture';
-
-      const container = await mountAndWait(
-        // eslint-disable-next-line no-console
-        <Avatar  pictureLabel={pictureLabel}/>
+        <Avatar  mainLabel={mainLabel} onPress={jest.fn()}/>
       );
 
       expect(container).toMatchSnapshot();
@@ -203,7 +187,6 @@ describe('Avatar', () => {
       const ariaLabel = 'ariaLabel';
 
       const container = await mountAndWait(
-        // eslint-disable-next-line no-console
         <Avatar  aria-label={ariaLabel}/>
       );
 
@@ -221,17 +204,6 @@ describe('Avatar', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with hideDefaultTooltip', async () => {
-      expect.assertions(1);
-
-      const hideDefaultTooltip = true;
-
-      const container = await mountAndWait(
-        <Avatar  hideDefaultTooltip={hideDefaultTooltip} title="Cisco Webex" />
-      );
-
-      expect(container).toMatchSnapshot();
-    });
   });
 
   describe('attributes', () => {
@@ -398,20 +370,6 @@ describe('Avatar', () => {
       expect(element).toBeDefined();
     });
 
-    it('should match snapshot with hideDefaultTooltip', async () => {
-      expect.assertions(1);
-
-      const hideDefaultTooltip = true;
-
-      const container = await mountAndWait(
-        <Avatar  hideDefaultTooltip={hideDefaultTooltip} title="Cisco Webex" />
-      );
-
-      const title = container.getDOMNode().getAttribute('title');
-
-      expect(title).toBe('');
-    });
-
     it('container has the default role - group', async () => {
       expect.assertions(1);
 
@@ -424,29 +382,16 @@ describe('Avatar', () => {
       expect(title).toBe('group');
     });
 
-    it('should pass the actionLabel prop', () => {
+    it('should pass the mainLabel prop', () => {
       expect.assertions(1);
 
-      const actionLabel = 'Open card of';
-      const onPress = () => {
-        return 'hi';
-      };
+      const mainLabel = 'avatar of Bob';
+      const onPress = () => 'h1'
 
-      const element = mount(<Avatar  onPress={onPress} actionLabel={actionLabel} />)
+      const element = mount(<Avatar mainLabel={mainLabel} onPress={onPress}/>)
         .find('button');
 
-      expect(element.props()['aria-label']).toEqual(actionLabel);
-    });
-
-    it('should pass the pictureLabel prop', () => {
-      expect.assertions(1);
-
-      const pictureLabel = 'Picture for';
-
-      const element = mount(<Avatar  pictureLabel={pictureLabel} />)
-        .find('.md-avatar-wrapper');
-
-      expect(element.props()['aria-label']).toEqual(pictureLabel);
+      expect(element.props()['aria-label']).toEqual(mainLabel);
     });
 
     it('should pass the typingLabel prop', () => {
@@ -475,9 +420,9 @@ describe('Avatar', () => {
       expect.assertions(1);
 
       const ariaLabel = 'aria-label';
-      const pictureLabel = 'pictureLabel';
+      const mainLabel = 'mainLabel';
 
-      const element = mount(<Avatar  aria-label={ariaLabel} pictureLabel={pictureLabel} />)
+      const element = mount(<Avatar  aria-label={ariaLabel} mainLabel={mainLabel} />)
         .find('.md-avatar-wrapper');
 
       expect(element.props()['aria-label']).toBe(ariaLabel);
@@ -487,64 +432,64 @@ describe('Avatar', () => {
       expect.assertions(1);
 
       const ariaLabel = '';
-      const pictureLabel = 'pictureLabel';
+      const mainLabel = 'mainLabel';
 
-      const element = mount(<Avatar  aria-label={ariaLabel} pictureLabel={pictureLabel} />)
+      const element = mount(<Avatar  aria-label={ariaLabel} mainLabel={mainLabel} />)
         .find('.md-avatar-wrapper');
 
-      expect(element.props()['aria-label']).toBe(pictureLabel);
+      expect(element.props()['aria-label']).toBe(mainLabel);
     });
 
       it.each`
       withOnPress | withPresence  | isPerson    | avatarType   | isTyping  | expectedLabel
-      ${true}     | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'Open card of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'Open card of Name, Active, is typing'}
-      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'Open card of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'Open card of Name, Active, is typing'}
-      ${true}     | ${true}       | ${true}     | ${null}      | ${true}   | ${'Open card of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${null}      | ${true}   | ${'Open card of Name, Active, is typing'}
-      ${true}     | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'Open card of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'Open card of Name, is typing'}
-      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'Open card of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'Open card of Name, is typing'}
-      ${true}     | ${false}      | ${true}     | ${null}      | ${true}   | ${'Open card of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${null}      | ${true}   | ${'Open card of Name, is typing'}
-      ${false}    | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'Picture for Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'Picture for Name, Active, is typing'}
-      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'Picture for Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'Picture for Name, Active, is typing'}
-      ${false}    | ${true}       | ${true}     | ${null}      | ${true}   | ${'Picture for Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${null}      | ${true}   | ${'Picture for Name, Active, is typing'}
-      ${false}    | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'Picture for Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'Picture for Name, is typing'}
-      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'Picture for Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'Picture for Name, is typing'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${true}   | ${'Picture for Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${null}      | ${true}   | ${'Picture for Name, is typing'}
-      ${true}     | ${true}       | ${true}     | ${'src'}     | ${false}   | ${'Open card of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${'src'}     | ${false}   | ${'Open card of Name, Active'}
-      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${false}   | ${'Open card of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${false}   | ${'Open card of Name, Active'}
-      ${true}     | ${true}       | ${true}     | ${null}      | ${false}   | ${'Open card of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${null}      | ${false}   | ${'Open card of Name, Active'}
-      ${true}     | ${false}      | ${true}     | ${'src'}     | ${false}   | ${'Open card of Name'}
-      ${true}     | ${false}      | ${false}    | ${'src'}     | ${false}   | ${'Open card of Name'}
-      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${false}   | ${'Open card of Name'}
-      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${false}   | ${'Open card of Name'}
-      ${true}     | ${false}      | ${true}     | ${null}      | ${false}   | ${'Open card of Name'}
-      ${true}     | ${false}      | ${false}    | ${null}      | ${false}   | ${'Open card of Name'}
-      ${false}    | ${true}       | ${true}     | ${'src'}     | ${false}   | ${'Picture for Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${'src'}     | ${false}   | ${'Picture for Name, Active'}
-      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${false}   | ${'Picture for Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${false}   | ${'Picture for Name, Active'}
-      ${false}    | ${true}       | ${true}     | ${null}      | ${false}   | ${'Picture for Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${null}      | ${false}   | ${'Picture for Name, Active'}
-      ${false}    | ${false}      | ${true}     | ${'src'}     | ${false}   | ${'Picture for Name'}
-      ${false}    | ${false}      | ${false}    | ${'src'}     | ${false}   | ${'Picture for Name'}
-      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${false}   | ${'Picture for Name'}
-      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${false}   | ${'Picture for Name'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${false}   | ${'Picture for Name'}
-      ${false}    | ${false}      | ${false}    | ${null}      | ${false}   | ${'Picture for Name'}
+      ${true}     | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
+      ${false}    | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
+      ${true}     | ${true}       | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${true}     | ${null}      | ${false}   | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${false}    | ${null}      | ${false}   | ${'Avatar of Name, Active'}
+      ${true}     | ${false}      | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${true}     | ${null}      | ${false}   | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${false}    | ${null}      | ${false}   | ${'Avatar of Name'}
+      ${false}    | ${true}       | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${true}     | ${null}      | ${false}   | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${false}    | ${null}      | ${false}   | ${'Avatar of Name, Active'}
+      ${false}    | ${false}      | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${true}     | ${null}      | ${false}   | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${null}      | ${false}   | ${'Avatar of Name'}
     `(
       'Test accessibility of Avatar',
       ({withOnPress, withPresence, isPerson, avatarType, isTyping ,expectedLabel}) => {

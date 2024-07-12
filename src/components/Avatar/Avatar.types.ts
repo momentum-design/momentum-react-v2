@@ -73,23 +73,16 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   iconOnHover?: string;
 
   /**
-   * The name of the action to be performed by this Avatar onPress, so that it is used in the aria-label of this component.
-   * e.g 'Open contact card of '
+   * The main description of the Avatar, which will be the first part of its aria-label. 
+   * e.g 'Avatar of Bob'
    */
-  actionLabel?: string;
-
-  /**
-   * The name of the graphic of the avatar in case there it does not trigger any action, so that it is used in the aria-label of this component.
-   * e.g 'Avatar picture of '
-   */
-  pictureLabel?: string;
+  mainLabel?: string;
 
   /**
    * The name of the presence of the avatar's person, so that it is used in the aria-label of this component.
    * e.g 'Busy'
    */
   presenceLabel?: string;
-
 
   /**
    * The label that represents the user is typing,  so it is used in the aria-label of the container.
@@ -101,11 +94,6 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
    * The label that represents additional description, it will be spliced to the end of the container aria-label.
    */
   extraLabel?: string;
-
-  /**
-   * Set the visibility of Avatar's default tooltip
-   */
-  hideDefaultTooltip?: boolean;
 
   /**
    * Determines whether the user is typing.

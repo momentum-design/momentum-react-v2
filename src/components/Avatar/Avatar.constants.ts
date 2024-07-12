@@ -53,7 +53,6 @@ const DEFAULTS = {
   SIZE: 24 as const,
   COLOR: AVATAR_COLORS.default,
   TYPE: TYPES.person,
-  HIDE_DEFAULT_TOOLTIP: false,
   LABEL: '' as const,
 };
 
