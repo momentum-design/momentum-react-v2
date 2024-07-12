@@ -153,6 +153,18 @@ describe('<AriaToolbar />', () => {
       expect(buttons[2]).toHaveFocus();
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with data-test', () => {
+      expect.assertions(1);
+
+      const dataTest = 'data-test';
+
+      const container = mount(
+        <AriaToolbar ariaLabel="test" data-test={dataTest} ariaToolbarItemsSize={0} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
