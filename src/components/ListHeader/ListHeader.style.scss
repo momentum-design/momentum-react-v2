@@ -6,11 +6,6 @@
     margin-right: 0.5rem;
   }
 
-  &[data-outline-only='true'] {
-    height: 1px;
-    margin-bottom: 0.25rem;
-  }
-
   // ListItemBase with size 32 is preventing text to be bold (by design).
   // We need to revert this in the ListHeader component. (see bold prop).
   &[data-bold='true'] {
@@ -19,6 +14,14 @@
     .md-text-wrapper {
       font-weight: 750;
     }
+  }
+}
+
+.list-header-separator {
+
+  &[data-outline-only='true'] {
+    height: 1px;
+    margin-bottom: 0.25rem;
   }
 
   &[data-outline='true'] {
