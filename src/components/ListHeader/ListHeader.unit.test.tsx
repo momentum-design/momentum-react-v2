@@ -149,7 +149,7 @@ describe('<ListHeader />', () => {
       const outline = true;
 
       const element = mount(<ListHeader outline={outline} />)
-        .find('.list-header-separator')
+        .find(ListHeader)
         .getDOMNode();
 
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
@@ -160,8 +160,8 @@ describe('<ListHeader />', () => {
       const outline = true;
       const outlinePosition = OUTLINE_POSITION.TOP;
 
-      const element = mount(<ListHeader outlinePosition={outlinePosition} outline={outline}/>)
-        .find('.list-header-separator')
+      const element = mount(<ListHeader outlinePosition={outlinePosition} outline={outline} />)
+        .find(ListHeader)
         .getDOMNode();
 
       expect(element.getAttribute('data-outline-position')).toBe(`${outlinePosition}`);
@@ -172,8 +172,8 @@ describe('<ListHeader />', () => {
       const outline = true;
       const outlineColor = OUTLINE_COLOR.SECONDARY;
 
-      const element = mount(<ListHeader outlineColor={outlineColor} outline={outline}/>)
-        .find('.list-header-separator')
+      const element = mount(<ListHeader outlineColor={outlineColor} outline={outline} />)
+        .find(ListHeader)
         .getDOMNode();
 
       expect(element.getAttribute('data-outline-color')).toBe(`${outlineColor}`);

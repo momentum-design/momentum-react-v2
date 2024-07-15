@@ -1,6 +1,29 @@
 .md-list-header-wrapper {
-  color: var(--mds-color-theme-text-secondary-normal);
-  font-size: 0.875rem;
+  > * {
+    color: var(--mds-color-theme-text-secondary-normal);
+    font-size: 0.875rem;
+  }
+
+  &[data-outline-only='true'] {
+    .md-list-header-list-item-base {
+      height: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    &[data-outline-position='bottom'] {
+      // the separator is drawn after the list item
+      // so need to move it back up a bit
+      .md-list-header-list-header-separator {
+        margin-top: calc(-0.25rem - 1px);
+      }
+    }
+  }
+
+  &[data-outline-only='true'] {
+    height: 1px;
+    margin-bottom: 0.25rem;
+  }
+
   // Override margin between start section and middle/fill sections
   div[data-position='start'] {
     margin-right: 0.5rem;
@@ -15,14 +38,6 @@
       font-weight: 750;
     }
   }
-}
-
-.list-header-separator {
-
-  &[data-outline-only='true'] {
-    height: 1px;
-    margin-bottom: 0.25rem;
-  }
 
   &[data-outline='true'] {
     border-radius: 0;
@@ -30,21 +45,29 @@
 
     &[data-outline-position='bottom'] {
       &[data-outline-color='primary'] {
-        border-bottom: 1px solid var(--mds-color-theme-outline-primary-normal);
+        .md-list-header-list-header-separator {
+          border-bottom: 1px solid var(--mds-color-theme-outline-primary-normal);
+        }
       }
 
       &[data-outline-color='secondary'] {
-        border-bottom: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        .md-list-header-list-header-separator {
+          border-bottom: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        }
       }
     }
 
     &[data-outline-position='top'] {
       &[data-outline-color='primary'] {
-        border-top: 1px solid var(--mds-color-theme-outline-primary-normal);
+        .md-list-header-list-header-separator {
+          border-top: 1px solid var(--mds-color-theme-outline-primary-normal);
+        }
       }
 
       &[data-outline-color='secondary'] {
-        border-top: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        .md-list-header-list-header-separator {
+          border-top: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        }
       }
     }
   }
