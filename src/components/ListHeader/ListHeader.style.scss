@@ -1,7 +1,12 @@
 .md-list-header-wrapper {
-  > * {
+  .md-list-header-list-item-base {
     color: var(--mds-color-theme-text-secondary-normal);
     font-size: 0.875rem;
+  }
+
+  // Override margin between start section and middle/fill sections
+  div[data-position='start'] {
+    margin-right: 0.5rem;
   }
 
   &[data-outline-only='true'] {
@@ -22,11 +27,6 @@
   &[data-outline-only='true'] {
     height: 1px;
     margin-bottom: 0.25rem;
-  }
-
-  // Override margin between start section and middle/fill sections
-  div[data-position='start'] {
-    margin-right: 0.5rem;
   }
 
   // ListItemBase with size 32 is preventing text to be bold (by design).
