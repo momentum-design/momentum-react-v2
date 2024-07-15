@@ -44,7 +44,7 @@ const ListHeader: FC<Props> = (props: Props) => {
       size={32}
       style={style}
     >
-      {children}  
+      {children}
     </ListItemBase>
     {outline && outlinePosition === 'bottom' && <Separator />}
     </>
