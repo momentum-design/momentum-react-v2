@@ -21,7 +21,8 @@ const DEFAULTS = {
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  separator: 'list-header-separator'
+  separator: `${CLASS_PREFIX}-list-header-separator`,
+  listItemBase: `${CLASS_PREFIX}-list-item-base`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE, OUTLINE_POSITION, OUTLINE_COLOR };
