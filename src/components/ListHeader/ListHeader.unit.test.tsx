@@ -149,31 +149,31 @@ describe('<ListHeader />', () => {
       const outline = true;
 
       const element = mount(<ListHeader outline={outline} />)
-        .find(ListHeader)
+        .find('.list-header-separator')
         .getDOMNode();
 
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
     });
 
-    it('should have provided data-outline-position when outlinePosition is provided', () => {
+    it('should have provided data-outline-position when outlinePosition is provided and outline is true', () => {
       expect.assertions(1);
-
+      const outline = true;
       const outlinePosition = OUTLINE_POSITION.TOP;
 
-      const element = mount(<ListHeader outlinePosition={outlinePosition} />)
-        .find(ListHeader)
+      const element = mount(<ListHeader outlinePosition={outlinePosition} outline={outline}/>)
+        .find('.list-header-separator')
         .getDOMNode();
 
       expect(element.getAttribute('data-outline-position')).toBe(`${outlinePosition}`);
     });
 
-    it('should have provided data-outline-color when outlineColor is provided', () => {
+    it('should have provided data-outline-color when outlineColor is provided and outline is true', () => {
       expect.assertions(1);
-
+      const outline = true;
       const outlineColor = OUTLINE_COLOR.SECONDARY;
 
-      const element = mount(<ListHeader outlineColor={outlineColor} />)
-        .find(ListHeader)
+      const element = mount(<ListHeader outlineColor={outlineColor} outline={outline}/>)
+        .find('.list-header-separator')
         .getDOMNode();
 
       expect(element.getAttribute('data-outline-color')).toBe(`${outlineColor}`);
