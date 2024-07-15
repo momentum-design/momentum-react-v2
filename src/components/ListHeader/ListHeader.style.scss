@@ -24,18 +24,15 @@
     }
   }
 
-  &[data-outline-only='true'] {
-    height: 1px;
-    margin-bottom: 0.25rem;
-  }
-
   // ListItemBase with size 32 is preventing text to be bold (by design).
   // We need to revert this in the ListHeader component. (see bold prop).
   &[data-bold='true'] {
-    &[data-position='fill'],
-    &[data-position='middle'] > *,
-    .md-text-wrapper {
-      font-weight: 750;
+    .md-list-header-list-item-base {
+      &[data-position='fill'],
+      &[data-position='middle'] > *,
+      .md-text-wrapper {
+        font-weight: 750;
+      }
     }
   }
 
