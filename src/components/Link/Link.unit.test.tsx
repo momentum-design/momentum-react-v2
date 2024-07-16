@@ -168,13 +168,13 @@ describe('Link', () => {
         name: 'pop-out',
       });
     });
-    it('should have icon props when iconProps is provided', async () => {
+    it('should have icon props when externalLinkIconProps is provided', async () => {
       expect.assertions(1);
 
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} hasExternalLinkIcon={true} iconProps={{ id: '1123' }} />
+        <LinkNext tooltipContent={tooltipContent} hasExternalLinkIcon={true} externalLinkIconProps={{ autoScale: true}} />
       );
 
       const element = wrapper.find(IconNext);
@@ -183,7 +183,7 @@ describe('Link', () => {
         className: STYLE.icon,
         scale: 16,
         name: 'pop-out',
-        id: '1123',
+        autoScale: true,
       });
     });
 
