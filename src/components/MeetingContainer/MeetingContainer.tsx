@@ -28,6 +28,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
     isDisabled,
     statusColor,
     titleType = DEFAULTS.TITLE_TYPE,
+    titleTagName,
     ...otherProps
   } = props;
   const title = meetingTitle || children;
@@ -64,7 +65,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
         )}
         <div className={STYLE.details}>
           <div>
-            <Text type={titleType} data-disabled={isDisabled}>
+            <Text tagName={titleTagName} type={titleType} data-disabled={isDisabled}>
               {title}
             </Text>
             {changedSpaceLink && <DividerDot />}

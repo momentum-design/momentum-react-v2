@@ -5,7 +5,7 @@ import type { ButtonPillProps } from '../ButtonPill';
 import type { TagProps } from '../Tag';
 import type { AvatarProps } from '../Avatar';
 import type { ButtonHyperlinkProps } from '../ButtonHyperlink';
-import type { FontStyle } from '../Text/Text.types';
+import type { AllowedTagNames, FontStyle } from '../Text/Text.types';
 
 export type SupportedActionButton = ReactElement<ButtonPillProps | ButtonCircleProps>;
 export type SupportedTag = ReactElement<TagProps>;
@@ -78,4 +78,9 @@ export interface Props extends CardProps {
    * Takes title type
    */
   titleType?: FontStyle;
+
+  /**
+   * The tag name to use for the title
+   */
+  titleTagName?: AllowedTagNames;
 }
