@@ -134,4 +134,9 @@ export interface Props {
    * Add optional classes to the container
    */
   containerClassName?: string;
+
+  /**
+   * Required ariaLabel for the notification system container section to be a region (a11y requirement)
+   */
+  ariaLabel: string
 }

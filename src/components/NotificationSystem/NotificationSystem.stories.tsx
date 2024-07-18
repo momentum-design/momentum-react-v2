@@ -24,7 +24,7 @@ export default {
   },
 };
 
-const Example = Template<NotificationSystemProps>((args) => {
+const Example = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
   return (
     <>
       <ButtonPill
@@ -45,9 +45,10 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   position: POSITION.TOP_RIGHT,
+  ariaLabel: 'Notification System',
 };
 
-const Important = Template<NotificationSystemProps>((args) => {
+const Important = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
   return (
     <>
       <ButtonPill
@@ -72,9 +73,10 @@ Important.argTypes = { ...argTypes };
 
 Important.args = {
   position: POSITION.TOP_RIGHT,
+  ariaLabel: 'Notification System',
 };
 
-const Mixed = Template<NotificationSystemProps>((args) => {
+const Mixed = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
   return (
     <>
       <ButtonPill
@@ -112,7 +114,7 @@ Mixed.args = {
   position: POSITION.TOP_RIGHT,
 };
 
-const UpdateContent = Template<NotificationSystemProps>(() => {
+const UpdateContent = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
   const toastId = React.useRef<Id>(null);
 
   const [numberRaisedHand, setNumberRaisedHand] = React.useState(0);
@@ -158,16 +160,18 @@ const UpdateContent = Template<NotificationSystemProps>(() => {
     <>
       <ButtonPill onPress={increaseCount}>Increase number raised hand</ButtonPill>
       <ButtonPill onPress={decreaseCount}>Decrease number raised hand</ButtonPill>
-      <NotificationSystem />
+      <NotificationSystem {...args} />
     </>
   );
 }).bind({});
 
 UpdateContent.argTypes = { ...argTypes };
 delete UpdateContent.argTypes.position;
-UpdateContent.args = {};
+UpdateContent.args = {
+  ariaLabel: 'Notification System',
+};
 
-const ResetTimer = Template<NotificationSystemProps>(() => {
+const ResetTimer = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
   const toastId = React.useRef<Id>(null);
 
   const [currentTime, setCurrentTime] = React.useState(new Date());
@@ -210,16 +214,18 @@ const ResetTimer = Template<NotificationSystemProps>(() => {
       <ButtonPill onPress={resetTimer}>Reset Timer</ButtonPill>
       <Text>Verify the reset with the help of this clock:</Text>
       <Text>{currentTime.toLocaleTimeString()}</Text>
-      <NotificationSystem />
+      <NotificationSystem {...args} />
     </>
   );
 }).bind({});
 
 ResetTimer.argTypes = { ...argTypes };
 delete ResetTimer.argTypes.position;
-ResetTimer.args = {};
+ResetTimer.args = {
+  ariaLabel: 'Notification System',
+};
 
-const MultipleSystems = Template<NotificationSystemProps>(() => {
+const MultipleSystems = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
   const toastId = React.useRef<Id>(null);
   const { POSITION } = NotificationSystem;
 
@@ -244,15 +250,17 @@ const MultipleSystems = Template<NotificationSystemProps>(() => {
       <ButtonPill onPress={() => showNotification(POSITION.BOTTOM_LEFT)}>
         Show Notification on bottom-left
       </ButtonPill>
-      <NotificationSystem position={POSITION.TOP_RIGHT} id={POSITION.TOP_RIGHT} />
-      <NotificationSystem position={POSITION.BOTTOM_RIGHT} id={POSITION.BOTTOM_RIGHT} />
-      <NotificationSystem position={POSITION.BOTTOM_LEFT} id={POSITION.BOTTOM_LEFT} />
+      <NotificationSystem {...args} position={POSITION.TOP_RIGHT} id={POSITION.TOP_RIGHT} />
+      <NotificationSystem {...args} position={POSITION.BOTTOM_RIGHT} id={POSITION.BOTTOM_RIGHT} />
+      <NotificationSystem {...args} position={POSITION.BOTTOM_LEFT} id={POSITION.BOTTOM_LEFT} />
     </>
   );
 }).bind({});
 
 MultipleSystems.argTypes = { ...argTypes };
 delete MultipleSystems.argTypes.position;
-MultipleSystems.args = {};
+MultipleSystems.args = {
+  ariaLabel: 'Notification System',
+};
 
 export { Example, Important, Mixed, UpdateContent, ResetTimer, MultipleSystems };
