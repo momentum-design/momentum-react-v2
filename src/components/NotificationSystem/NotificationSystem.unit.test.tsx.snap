@@ -2,7 +2,8 @@
 
 exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -116,13 +117,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot if notification content is a free string 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -235,13 +237,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot if notification content is not a free string 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -355,13 +358,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot when limit is set to notifications 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -475,13 +479,135 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
         </div>
       </div>
     </div>
-  </div>
+  </section>
+</div>
+`;
+
+exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel provided 1`] = `
+<div>
+  <section
+    aria-label="test"
+    class="md-notification-system-wrapper"
+    data-position="top-right"
+    style="z-index: 10000;"
+  >
+    <div
+      class="Toastify"
+      id="medium_notification_container"
+    />
+    <div
+      class="Toastify"
+      id="low_notification_container"
+    >
+      <div
+        class="Toastify__toast-container Toastify__toast-container--top-right"
+      >
+        <div
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default slideInRight"
+          id="123456"
+          style="--nth: 1; --len: 1;"
+        >
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div>
+              <div
+                aria-modal="true"
+                class="md-toast-notification-wrapper md-modal-container-wrapper"
+                data-color="primary"
+                data-elevation="0"
+                data-padded="true"
+                data-round="50"
+                role="dialog"
+              >
+                <div
+                  class="md-toast-notification-body"
+                >
+                  <div
+                    class="md-toast-notification-leading-visual"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="24"
+                        data-test="info-circle"
+                        height="100%"
+                        style="fill: lightblue;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-toast-notification-content"
+                  >
+                    <button>
+                      This is a test
+                    </button>
+                  </div>
+                  <div
+                    class="md-toast-notification-close-button"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-inverted="false"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-shallow-disabled="false"
+                      data-size="20"
+                      type="button"
+                    >
+                      <div
+                        aria-hidden="true"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="cancel"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: 3000ms; animation-play-state: paused; opacity: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with body class name 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -595,13 +721,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with className 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper example-class"
     data-position="top-right"
     style="z-index: 10000;"
@@ -715,13 +842,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with container class name 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -835,13 +963,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with different attention type than default 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -948,13 +1077,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
       class="Toastify"
       id="low_notification_container"
     />
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with different position than default 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="bottom-right"
     style="z-index: 10000;"
@@ -1068,13 +1198,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
       class="Toastify"
       id="medium_notification_container"
     />
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with different zIndex than default 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 9898;"
@@ -1188,13 +1319,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with enter animation 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -1308,13 +1440,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -1428,13 +1561,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with newest on top 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -1548,13 +1682,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="color: pink; z-index: 10000;"
@@ -1668,13 +1803,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<NotificationSystem /> snapshot should match snapshot with toast class name 1`] = `
 <div>
-  <div
+  <section
+    aria-label="notification system"
     class="md-notification-system-wrapper"
     data-position="top-right"
     style="z-index: 10000;"
@@ -1788,6 +1924,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;

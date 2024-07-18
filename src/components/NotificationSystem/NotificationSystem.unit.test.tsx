@@ -22,11 +22,13 @@ type PrepareForSnapshotProps = {
   containerClassName?: string;
   bodyClassName?: string;
   toastClassName?: string;
+  ariaLabel: string;
 };
 
 // pin the toast id to make the snapshots reliable:
 const fixedToastId = '123456';
 const textContent = 'This is a test';
+const ariaLabelMock = 'notification system';
 const content = <button>{textContent}</button>;
 
 describe('<NotificationSystem />', () => {
@@ -44,6 +46,7 @@ describe('<NotificationSystem />', () => {
     containerClassName,
     bodyClassName,
     toastClassName,
+    ariaLabel
   }: PrepareForSnapshotProps) => {
     const { container } = render(
       <NotificationSystem
@@ -58,6 +61,7 @@ describe('<NotificationSystem />', () => {
         containerClassName={containerClassName}
         bodyClassName={bodyClassName}
         toastClassName={toastClassName}
+        ariaLabel={ariaLabel}
       />
     );
 
@@ -82,7 +86,7 @@ describe('<NotificationSystem />', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
-      const { container } = await waitForNotificationToAppear({ content });
+      const { container } = await waitForNotificationToAppear({ content, ariaLabel: ariaLabelMock });
 
       expect(container).toMatchSnapshot();
     });
@@ -91,7 +95,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
       const className = 'example-class';
 
-      const { container } = await waitForNotificationToAppear({ content, className });
+      const { container } = await waitForNotificationToAppear({ content, className, ariaLabel: ariaLabelMock });
 
       expect(container).toMatchSnapshot();
     });
@@ -100,7 +104,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const id = 'example-id';
-      const { container } = await waitForNotificationToAppear({ content, id });
+      const { container } = await waitForNotificationToAppear({ content, id, ariaLabel: ariaLabelMock });
 
       expect(container).toMatchSnapshot();
     });
@@ -109,7 +113,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
-      const { container } = await waitForNotificationToAppear({ content, style });
+      const { container } = await waitForNotificationToAppear({ content, style, ariaLabel: ariaLabelMock });
 
       expect(container).toMatchSnapshot();
     });
@@ -120,6 +124,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         position: NotificationSystem.POSITION.BOTTOM_RIGHT,
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -131,6 +136,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         attention: NotificationSystem.ATTENTION.MEDIUM,
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -142,6 +148,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         zIndex: 9898,
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -153,6 +160,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         enterAnimation: 'slideInBottom',
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -164,6 +172,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         newestOnTop: false,
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -175,6 +184,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         toastClassName: 'toast',
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -186,6 +196,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         bodyClassName: 'body-toast',
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -197,6 +208,7 @@ describe('<NotificationSystem />', () => {
       const { container } = await waitForNotificationToAppear({
         content,
         bodyClassName: 'container',
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -207,7 +219,8 @@ describe('<NotificationSystem />', () => {
 
       const { container } = await waitForNotificationToAppear({
         content,
-        limit: 5,
+        limit: 5, 
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -217,7 +230,8 @@ describe('<NotificationSystem />', () => {
       expect.assertions(1);
 
       const { container } = await waitForNotificationToAppear({
-        content: textContent,
+        content: textContent, 
+        ariaLabel: ariaLabelMock
       });
 
       expect(container).toMatchSnapshot();
@@ -226,7 +240,17 @@ describe('<NotificationSystem />', () => {
     it('should match snapshot if notification content is not a free string', async () => {
       expect.assertions(1);
       const { container } = await waitForNotificationToAppear({
-        content,
+        content, 
+        ariaLabel: ariaLabelMock
+      });
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with ariaLabel provided', async () => {
+      expect.assertions(1);
+      const { container } = await waitForNotificationToAppear({
+        content, 
+        ariaLabel: 'test'
       });
       expect(container).toMatchSnapshot();
     });
@@ -234,7 +258,7 @@ describe('<NotificationSystem />', () => {
 
   describe('attributes', () => {
     it('should have provided attributes when attributes are provided', async () => {
-      expect.assertions(6);
+      expect.assertions(7);
       const { ATTENTION, POSITION } = NotificationSystem;
       const className = 'example-class';
       const style = { color: 'pink' };
@@ -252,12 +276,14 @@ describe('<NotificationSystem />', () => {
         position,
         attention,
         zIndex,
+        ariaLabel: ariaLabelMock
       });
 
-      const notificationContainer = container.querySelector(`[data-position="${position}"]`);
+      const notificationContainer = container.querySelector(`section[data-position="${position}"]`);
       expect(notificationContainer.classList.contains(STYLE.wrapper)).toBe(true);
       expect(notificationContainer.classList.contains(className)).toBe(true);
       expect(notificationContainer.getAttribute('style')).toBe(styleString);
+      expect(notificationContainer.getAttribute('aria-label')).toBe(ariaLabelMock);
       expect(notificationContainer.getAttribute('data-position')).toBe(position);
 
       const firstChild = notificationContainer.childNodes[0] as HTMLElement;
@@ -276,6 +302,7 @@ describe('<NotificationSystem />', () => {
         content,
         limit: toastLimit,
         id: '1234567',
+        ariaLabel: ariaLabelMock
       });
 
       act(() => {
@@ -311,7 +338,7 @@ describe('<NotificationSystem />', () => {
     it('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
       expect.assertions(4);
 
-      render(<NotificationSystem />);
+      render(<NotificationSystem ariaLabel='test'/>);
 
       const toastId = '12345';
       act(() => {
@@ -342,7 +369,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(5);
       const user = userEvent.setup();
 
-      render(<NotificationSystem />);
+      render(<NotificationSystem ariaLabel='test' />);
 
       const closeButtonText = 'Close';
       const toastId = '12345';
@@ -376,7 +403,7 @@ describe('<NotificationSystem />', () => {
     });
 
     it('should update an existing notification', async () => {
-      render(<NotificationSystem />);
+      render(<NotificationSystem ariaLabel='test' />);
 
       const toastId = '12345';
       const newcontent = 'this is a new text';
@@ -412,8 +439,8 @@ describe('<NotificationSystem />', () => {
       const secondSystemId = 'id234';
       render(
         <>
-          <NotificationSystem id={firstSystemId} />
-          <NotificationSystem id={secondSystemId} />
+          <NotificationSystem id={firstSystemId} ariaLabel='test' />
+          <NotificationSystem id={secondSystemId} ariaLabel='test' />
         </>
       );
 
