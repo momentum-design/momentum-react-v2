@@ -6,6 +6,7 @@ exports[`<List /> snapshot should match snapshot 1`] = `
   listSize={2}
 >
   <ul
+    aria-label="test"
     className="md-list-wrapper"
     onKeyDown={[Function]}
   >
@@ -100,6 +101,7 @@ exports[`<List /> snapshot should match snapshot with className 1`] = `
   listSize={2}
 >
   <ul
+    aria-label="test"
     className="example-class md-list-wrapper"
     onKeyDown={[Function]}
   >
@@ -194,6 +196,7 @@ exports[`<List /> snapshot should match snapshot with id 1`] = `
   listSize={2}
 >
   <ul
+    aria-label="test"
     className="md-list-wrapper"
     id="example-id"
     onKeyDown={[Function]}
@@ -289,6 +292,7 @@ exports[`<List /> snapshot should match snapshot with role 1`] = `
   role="tablist"
 >
   <ul
+    aria-label="test"
     className="md-list-wrapper"
     onKeyDown={[Function]}
     role="tablist"
@@ -388,6 +392,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ul
+    aria-label="test"
     className="md-list-wrapper"
     onKeyDown={[Function]}
     style={
