@@ -2,12 +2,13 @@
 
 exports[`tests for <AlertContainer /> should match SnapShot 1`] = `
 <AlertContainer
+  ariaLabel="test aria label"
   className=""
   position="bottom-right"
 >
-  <div
+  <section
+    aria-label="test aria label"
     className="md-alert__container md-alert__container--bottom-right"
-    role="alert"
   />
 </AlertContainer>
 `;

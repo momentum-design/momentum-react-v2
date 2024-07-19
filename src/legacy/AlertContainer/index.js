@@ -8,20 +8,20 @@ import PropTypes from 'prop-types';
 **/
 class AlertContainer extends React.Component {
   render() {
-    const { children, className, position, ...otherProps } = this.props;
+    const { children, className, position, ariaLabel, ...otherProps } = this.props;
 
     return (
-      <div
+      <section
         className={
           'md-alert__container' +
           ` md-alert__container--${position}` +
           `${(className && ` ${className}`) || ''}`
         }
+        aria-label={ariaLabel}
         {...otherProps}
-        role="alert"
       >
         {children}
-      </div>
+      </section>
     );
   }
 }
@@ -33,6 +33,8 @@ AlertContainer.defaultProps = {
 };
 
 AlertContainer.propTypes = {
+  /** @prop Required aria-label */
+  ariaLabel: PropTypes.string.isRequired,
   /** @prop Children Nodes to Render inside container | null */
   children: PropTypes.node,
   /** @prop Optional css class string | '' */
