@@ -162,10 +162,10 @@ describe('<List />', () => {
     it('should have provided aria-label when aria-label is provided', () => {
       expect.assertions(1);
 
-      const title = 'test';
+      const label = 'test';
 
       const element = mount(
-        <List aria-label={title} {...commonProps}>
+        <List aria-label={label} {...commonProps}>
           <ListItemBase key="1">ListItemBase 1</ListItemBase>
           <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
@@ -174,6 +174,23 @@ describe('<List />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe('test');
+    });
+
+    it('should have provided aria-labelledby when aria-labelledby is provided', () => {
+      expect.assertions(1);
+
+      const labelBy = 'test';
+
+      const element = mount(
+        <List aria-labelledby={labelBy} {...commonProps}>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
+        </List>
+      )
+        .find(List)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-labelledby')).toBe('test');
     });
   });
 
