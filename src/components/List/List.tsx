@@ -18,6 +18,7 @@ const List: FC<Props> = (props: Props) => {
     role,
     shouldItemFocusBeInset,
     noLoop,
+    ...rest
   } = props;
 
   const [currentFocus, setCurrentFocus] = useState<number>(0);
@@ -69,6 +70,7 @@ const List: FC<Props> = (props: Props) => {
         id={id}
         role={role}
         {...keyboardProps}
+        {...rest}
       >
         {children}
       </ul>
