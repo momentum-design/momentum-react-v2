@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { DEFAULTS, STYLE } from './Link.constants';
-import { IconNext, LinkNext, TooltipNext } from '@momentum-ui/react-collaboration';
+import { IconNext, LinkNext, TooltipNext,  } from '@momentum-ui/react-collaboration';
 import { mountAndWait } from '../../../test/utils';
-
+jest.unmock('@react-aria/utils');
 describe('Link', () => {
   describe('snapshot', () => {
     let container;
@@ -45,6 +45,7 @@ describe('Link', () => {
 
       expect(container).toMatchSnapshot();
     });
+
   });
 
   describe('attributes', () => {
@@ -120,9 +121,7 @@ describe('Link', () => {
 
       const opensNewTabIndicatorLabel = 'open a new window';
 
-      const wrapper = await mountAndWait(
-        <LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} />
-      );
+      const wrapper = await mountAndWait(<LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} />);
 
       const element = wrapper.find(TooltipNext);
 
@@ -139,9 +138,7 @@ describe('Link', () => {
 
       const opensNewTabIndicatorLabel = 'open a new window';
 
-      const wrapper = await mountAndWait(
-        <LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} hasIcon={true} />
-      );
+      const wrapper = await mountAndWait(<LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} hasIcon={true} />);
 
       const element = wrapper.find(IconNext);
 
@@ -156,13 +153,7 @@ describe('Link', () => {
 
       const opensNewTabIndicatorLabel = 'open a new window';
 
-      const wrapper = await mountAndWait(
-        <LinkNext
-          opensNewTabIndicatorLabel={opensNewTabIndicatorLabel}
-          hasIcon={true}
-          iconProps={{ id: '1123' }}
-        />
-      );
+      const wrapper = await mountAndWait(<LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} hasIcon={true} iconProps={{ id: '1123' }} />);
 
       const element = wrapper.find(IconNext);
 
