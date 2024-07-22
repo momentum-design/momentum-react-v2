@@ -11,8 +11,17 @@ exports[`Link snapshot should match snapshot 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={false}
-        elementType="a"
-        onPress={[MockFunction]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
       >
         LinkNext
       </a>
@@ -34,12 +43,21 @@ exports[`Link snapshot should match snapshot when disabled 1`] = `
       focusRingClass="md-focus-ring-wrapper-disabled"
     >
       <a
+        aria-disabled={true}
         className="md-link-wrapper"
         data-disabled={true}
         data-inverted={false}
-        elementType="a"
-        isDisabled={true}
-        onPress={[MockFunction]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
       >
         LinkNext
       </a>
@@ -61,13 +79,579 @@ exports[`Link snapshot should match snapshot when inverted 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={true}
-        elementType="a"
-        inverted={true}
-        isInverted={true}
-        onPress={[MockFunction]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
       >
         Hyperlink
       </a>
+    </FocusRing>
+  </FocusRing>
+</Link>
+`;
+
+exports[`Link snapshot should match snapshot with icon and opensNewTabIndicatorLabel 1`] = `
+<Link
+  hasIcon={true}
+  opensNewTabIndicatorLabel="open a new window"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <Tooltip
+        triggerComponent={
+          <a
+            className="md-link-wrapper"
+            data-disabled={false}
+            data-inverted={false}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="md-link-container"
+            >
+              <Icon
+                className="md-link-icon"
+                name="pop-out"
+                scale={16}
+              />
+            </div>
+          </a>
+        }
+        type="description"
+      >
+        <Popover
+          addBackdrop={false}
+          aria-hidden={true}
+          boundary="scrollParent"
+          color="primary"
+          interactive={false}
+          offsetDistance={5}
+          offsetSkidding={0}
+          placement="auto"
+          role="tooltip"
+          setInstance={[Function]}
+          showArrow={true}
+          strategy="absolute"
+          trigger="mouseenter focus"
+          triggerComponent={
+            <a
+              className="md-link-wrapper"
+              data-disabled={false}
+              data-inverted={false}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="md-link-container"
+              >
+                <Icon
+                  className="md-link-icon"
+                  name="pop-out"
+                  scale={16}
+                />
+              </div>
+            </a>
+          }
+          variant="small"
+        >
+          <LazyTippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={true}
+            interactive={false}
+            offset={
+              Array [
+                0,
+                17,
+              ]
+            }
+            onHidden={[Function]}
+            placement="auto"
+            plugins={
+              Array [
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": true,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrowb9e7fffa-80f5-4b59-bce8-757ffd54c589",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            setInstance={[Function]}
+            trigger="mouseenter focus"
+          >
+            <ForwardRef(TippyWrapper)
+              animation={false}
+              appendTo="parent"
+              hideOnClick={true}
+              interactive={false}
+              offset={
+                Array [
+                  0,
+                  17,
+                ]
+              }
+              onHidden={[Function]}
+              placement="auto"
+              plugins={
+                Array [
+                  Object {
+                    "fn": [Function],
+                  },
+                  Object {
+                    "fn": [Function],
+                  },
+                  Object {
+                    "defaultValue": true,
+                    "fn": [Function],
+                    "name": "hideOnEsc",
+                  },
+                ]
+              }
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": true,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": "#arrowb9e7fffa-80f5-4b59-bce8-757ffd54c589",
+                        "padding": 5,
+                      },
+                    },
+                    Object {
+                      "name": "preventOverflow",
+                      "options": Object {
+                        "altAxis": true,
+                        "boundariesElement": "scrollParent",
+                        "padding": 8,
+                      },
+                    },
+                  ],
+                  "strategy": "absolute",
+                }
+              }
+              render={[Function]}
+              trigger="mouseenter focus"
+            >
+              <Tippy
+                animation={false}
+                appendTo="parent"
+                hideOnClick={true}
+                interactive={false}
+                offset={
+                  Array [
+                    0,
+                    17,
+                  ]
+                }
+                onHidden={[Function]}
+                placement="auto"
+                plugins={
+                  Array [
+                    Object {
+                      "fn": [Function],
+                    },
+                    Object {
+                      "fn": [Function],
+                    },
+                    Object {
+                      "defaultValue": true,
+                      "fn": [Function],
+                      "name": "hideOnEsc",
+                    },
+                  ]
+                }
+                popperOptions={
+                  Object {
+                    "modifiers": Array [
+                      Object {
+                        "enabled": true,
+                        "name": "arrow",
+                        "options": Object {
+                          "element": "#arrowb9e7fffa-80f5-4b59-bce8-757ffd54c589",
+                          "padding": 5,
+                        },
+                      },
+                      Object {
+                        "name": "preventOverflow",
+                        "options": Object {
+                          "altAxis": true,
+                          "boundariesElement": "scrollParent",
+                          "padding": 8,
+                        },
+                      },
+                    ],
+                    "strategy": "absolute",
+                  }
+                }
+                render={[Function]}
+                trigger="mouseenter focus"
+              >
+                <a
+                  className="md-link-wrapper"
+                  data-disabled={false}
+                  data-inverted={false}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  <div
+                    className="md-link-container"
+                  >
+                    <Icon
+                      className="md-link-icon"
+                      name="pop-out"
+                      scale={16}
+                    />
+                  </div>
+                </a>
+                <Portal
+                  containerInfo={
+                    <div
+                      data-tippy-root=""
+                      id="tippy-2"
+                      style="pointer-events: none; z-index: 9999;"
+                    >
+                      
+                    </div>
+                  }
+                />
+              </Tippy>
+            </ForwardRef(TippyWrapper)>
+          </LazyTippy>
+        </Popover>
+      </Tooltip>
+    </FocusRing>
+  </FocusRing>
+</Link>
+`;
+
+exports[`Link snapshot should match snapshot with opensNewTabIndicatorLabel 1`] = `
+<Link
+  opensNewTabIndicatorLabel="open a new window"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <Tooltip
+        triggerComponent={
+          <a
+            className="md-link-wrapper"
+            data-disabled={false}
+            data-inverted={false}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="md-link-container"
+            />
+          </a>
+        }
+        type="description"
+      >
+        <Popover
+          addBackdrop={false}
+          aria-hidden={true}
+          boundary="scrollParent"
+          color="primary"
+          interactive={false}
+          offsetDistance={5}
+          offsetSkidding={0}
+          placement="auto"
+          role="tooltip"
+          setInstance={[Function]}
+          showArrow={true}
+          strategy="absolute"
+          trigger="mouseenter focus"
+          triggerComponent={
+            <a
+              className="md-link-wrapper"
+              data-disabled={false}
+              data-inverted={false}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="md-link-container"
+              />
+            </a>
+          }
+          variant="small"
+        >
+          <LazyTippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={true}
+            interactive={false}
+            offset={
+              Array [
+                0,
+                17,
+              ]
+            }
+            onHidden={[Function]}
+            placement="auto"
+            plugins={
+              Array [
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": true,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow5da9f70f-c53a-4dad-9731-3ba4cfaeb2e3",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            setInstance={[Function]}
+            trigger="mouseenter focus"
+          >
+            <ForwardRef(TippyWrapper)
+              animation={false}
+              appendTo="parent"
+              hideOnClick={true}
+              interactive={false}
+              offset={
+                Array [
+                  0,
+                  17,
+                ]
+              }
+              onHidden={[Function]}
+              placement="auto"
+              plugins={
+                Array [
+                  Object {
+                    "fn": [Function],
+                  },
+                  Object {
+                    "fn": [Function],
+                  },
+                  Object {
+                    "defaultValue": true,
+                    "fn": [Function],
+                    "name": "hideOnEsc",
+                  },
+                ]
+              }
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": true,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": "#arrow5da9f70f-c53a-4dad-9731-3ba4cfaeb2e3",
+                        "padding": 5,
+                      },
+                    },
+                    Object {
+                      "name": "preventOverflow",
+                      "options": Object {
+                        "altAxis": true,
+                        "boundariesElement": "scrollParent",
+                        "padding": 8,
+                      },
+                    },
+                  ],
+                  "strategy": "absolute",
+                }
+              }
+              render={[Function]}
+              trigger="mouseenter focus"
+            >
+              <Tippy
+                animation={false}
+                appendTo="parent"
+                hideOnClick={true}
+                interactive={false}
+                offset={
+                  Array [
+                    0,
+                    17,
+                  ]
+                }
+                onHidden={[Function]}
+                placement="auto"
+                plugins={
+                  Array [
+                    Object {
+                      "fn": [Function],
+                    },
+                    Object {
+                      "fn": [Function],
+                    },
+                    Object {
+                      "defaultValue": true,
+                      "fn": [Function],
+                      "name": "hideOnEsc",
+                    },
+                  ]
+                }
+                popperOptions={
+                  Object {
+                    "modifiers": Array [
+                      Object {
+                        "enabled": true,
+                        "name": "arrow",
+                        "options": Object {
+                          "element": "#arrow5da9f70f-c53a-4dad-9731-3ba4cfaeb2e3",
+                          "padding": 5,
+                        },
+                      },
+                      Object {
+                        "name": "preventOverflow",
+                        "options": Object {
+                          "altAxis": true,
+                          "boundariesElement": "scrollParent",
+                          "padding": 8,
+                        },
+                      },
+                    ],
+                    "strategy": "absolute",
+                  }
+                }
+                render={[Function]}
+                trigger="mouseenter focus"
+              >
+                <a
+                  className="md-link-wrapper"
+                  data-disabled={false}
+                  data-inverted={false}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  <div
+                    className="md-link-container"
+                  />
+                </a>
+                <Portal
+                  containerInfo={
+                    <div
+                      data-tippy-root=""
+                      id="tippy-1"
+                      style="pointer-events: none; z-index: 9999;"
+                    >
+                      
+                    </div>
+                  }
+                />
+              </Tippy>
+            </ForwardRef(TippyWrapper)>
+          </LazyTippy>
+        </Popover>
+      </Tooltip>
     </FocusRing>
   </FocusRing>
 </Link>
@@ -86,8 +670,17 @@ exports[`Link snapshot should match snapshot with title 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={false}
-        elementType="a"
-        onPress={[MockFunction]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         title="Example Text"
       />
     </FocusRing>
