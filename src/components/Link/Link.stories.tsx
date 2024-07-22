@@ -1,12 +1,14 @@
 import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
+
 import Link, { LinkProps } from './';
 import argTypes from './Link.stories.args';
 import Documentation from './Link.stories.docs.mdx';
+import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
-import Text from '../Text';
 import React from 'react';
+import ButtonPill from '../ButtonPill';
 
 export default {
   title: 'Momentum UI/Link',
@@ -52,7 +54,7 @@ LinkHasIcon.args = {
   hasIcon: true,
   iconProps: { id: 'icon' },
   tooltipContent: 'opens a new window',
-  tooltipType: 'description',
+  type: 'description',
 };
 
 LinkHasIcon.argTypes = { ...argTypes };
@@ -64,11 +66,11 @@ ButtonCircleLink.args = {
   target: '_blank',
   iconProps: { id: 'icon' },
   tooltipContent: 'opens a new tab',
-  tooltipType: 'description',
+  type: 'description',
   children: (
-    <div className='md-link-button-wrapper' style={{width: '2.5rem', height: '2.5rem'}}>
+    <ButtonCircle>
       <Icon name="chat-group" autoScale={150} />
-    </div>
+    </ButtonCircle>
   ),
 };
 
@@ -81,14 +83,8 @@ ButtonPillLink.args = {
   target: '_blank',
   iconProps: { id: 'icon' },
   tooltipContent: 'opens a new tab',
-  tooltipType: 'description',
-  className: 'md-link-ButtonPillLink',
-  children: (
-    <div className='md-button-pill-wrapper' style={{ display: 'flex', height: '2.5rem', padding: '0 1rem', lineHeight: '2.5rem' }}>
-      <Text >Go to Download page</Text>
-      <Icon name="chat-group" autoScale={150} />
-    </div>
-  ),
+  type: 'description',
+  children: <ButtonPill>example</ButtonPill>,
 };
 
 ButtonPillLink.argTypes = { ...argTypes };
