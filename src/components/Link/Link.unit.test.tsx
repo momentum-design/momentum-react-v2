@@ -1,8 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { DEFAULTS, STYLE } from './Link.constants';
-import { IconNext, LinkNext } from '@momentum-ui/react-collaboration';
-import { mountAndWait } from '../../../test/utils';
+import { LinkNext } from '@momentum-ui/react-collaboration';
 jest.unmock('@react-aria/utils');
 describe('Link', () => {
   describe('snapshot', () => {
@@ -45,16 +44,6 @@ describe('Link', () => {
 
       expect(container).toMatchSnapshot();
     });
-
-    it('should match snapshot with icon', () => {
-      expect.assertions(1);
-
-      const isWithIcon = true;
-
-      const container = mount(<LinkNext isWithIcon={isWithIcon} />);
-
-      expect(container).toMatchSnapshot();
-    });
   });
 
   describe('attributes', () => {
@@ -65,92 +54,64 @@ describe('Link', () => {
         .find(LinkNext)
         .getDOMNode();
 
-      expect(element.classList.contains(STYLE.container)).toBe(true);
+      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
-    it('should have custom class if provided', async () => {
+    it('should have custom class if provided', () => {
       const testClass = 'testClass';
 
-      const wrapper = await mountAndWait(<LinkNext className={testClass} />);
+      const wrapper = mount(<LinkNext className={testClass} />);
+      const element = wrapper.find(LinkNext).getDOMNode();
 
-      const element = wrapper.find('a').getDOMNode();
-
-      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
       expect(element.classList.contains(testClass)).toBe(true);
     });
 
-    it('should pass disabled prop', async () => {
+    it('should pass disabled prop', () => {
       expect.assertions(1);
 
       const disabled = !DEFAULTS.DISABLED;
-      const wrapper = await mountAndWait(<LinkNext disabled={disabled} />);
 
-      const element = wrapper.find('a').getDOMNode();
+      const element = mount(<LinkNext disabled={disabled} />)
+        .find(LinkNext)
+        .getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
     });
 
-    it('should pass inverted prop', async () => {
+    it('should pass inverted prop', () => {
       expect.assertions(1);
 
       const inverted = !DEFAULTS.INVERTED;
-      const wrapper = await mountAndWait(<LinkNext inverted={inverted} />);
 
-      const element = wrapper.find('a').getDOMNode();
+      const element = mount(<LinkNext inverted={inverted} />)
+        .find(LinkNext)
+        .getDOMNode();
 
       expect(element.getAttribute('data-inverted')).toBe(`${inverted}`);
     });
 
-    it('should pass child prop', async () => {
+    it('should pass child prop', () => {
       expect.assertions(1);
 
       const child = '1';
 
-      const wrapper = await mountAndWait(<LinkNext>{child}</LinkNext>);
-
-      const element = wrapper.find('a').getDOMNode();
+      const element = mount(<LinkNext>{child}</LinkNext>)
+        .find(LinkNext)
+        .getDOMNode();
 
       expect(element.innerHTML).toBe(child);
     });
 
-    it('should have provided title when title is provided', async () => {
+    it('should have provided title when title is provided', () => {
       expect.assertions(1);
 
       const title = 'Example Text';
 
-      const wrapper = await mountAndWait(<LinkNext title={title} />);
-
-      const element = wrapper.find('a').getDOMNode();
+      const element = mount(<LinkNext title={title} />)
+        .find(LinkNext)
+        .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
-    });
-
-    it('should have icon when isWithIcon is provided', async () => {
-      expect.assertions(1);
-
-      const wrapper = await mountAndWait(<LinkNext isWithIcon={true} />);
-
-      const element = wrapper.find(IconNext);
-
-      expect(element.props()).toEqual({
-        className: STYLE.icon,
-        scale: 16,
-        name: 'pop-out',
-      });
-    });
-    it('should have icon props when iconProps is provided', async () => {
-      expect.assertions(1);
-
-      const wrapper = await mountAndWait(<LinkNext isWithIcon={true} iconProps={{ id: '1123' }} />);
-
-      const element = wrapper.find(IconNext);
-
-      expect(element.props()).toEqual({
-        className: STYLE.icon,
-        scale: 16,
-        name: 'pop-out',
-        id: '1123',
-      });
     });
   });
 

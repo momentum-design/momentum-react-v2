@@ -29,6 +29,7 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
+
 const States = MultiTemplateWithPseudoStates<LinkProps>(Link).bind({});
 
 States.parameters = {
@@ -39,15 +40,4 @@ States.argTypes = { ...argTypes };
 delete States.argTypes.disabled;
 delete States.argTypes.inverted;
 
-const LinkWithIcon = Template<LinkProps>(Link).bind({});
-
-LinkWithIcon.args = {
-  href: 'https://www.webex.com/',
-  target: '_blank',
-  isWithIcon: true,
-  iconProps: { id: 'icon' },
-};
-
-LinkWithIcon.argTypes = { ...argTypes };
-
-export { Example, States, LinkWithIcon };
+export { Example, States };

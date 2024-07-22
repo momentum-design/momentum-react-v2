@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import { AriaLinkProps } from '@react-types/link';
-import { Props as IconPrpos } from '../Icon/Icon.types';
 
 export interface Props extends AriaLinkProps {
   /**
@@ -27,14 +26,4 @@ export interface Props extends AriaLinkProps {
    */
   title?: string;
 
-  /**
-   * whether or not this component has icon【name = pop-out】 in the right
-   */
-  isWithIcon?: boolean;
-
-  /**
-   * icon props
-   * When use iconProps isWithIcon is necessary
-   */
-  iconProps?: Partial<IconPrpos>;
 }

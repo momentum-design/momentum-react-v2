@@ -48,25 +48,4 @@ export default {
       },
     },
   },
-  isWithIcon: {
-    description: 'whether this component has icon `name = pop-out` in the right',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: undefined,
-      },
-    },
-  },
-  iconProps: {
-    description: 'icon props',
-    table: {
-      type: {
-        summary: 'IconNextProps',
-      },
-    },
-  },
 };

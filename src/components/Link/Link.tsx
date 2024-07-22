@@ -5,39 +5,35 @@ import { DEFAULTS, STYLE } from './Link.constants';
 import { Props } from './Link.types';
 import './Link.style.scss';
 import classnames from 'classnames';
-import Icon from '../Icon';
 
 const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
-  const { className, title, isWithIcon, iconProps, ...restProps } = props;
+  const { className, title } = props;
   const internalRef = useRef();
   const ref = providedRef || internalRef;
 
   const mutatedProps = {
-    ...restProps,
-    title,
+    ...props,
     isDisabled: props.disabled,
     isInverted: props.inverted,
   };
 
   delete mutatedProps.disabled;
+  delete mutatedProps.className;
 
   const { linkProps } = useLink({ ...mutatedProps, elementType: 'a' }, ref);
 
   return (
     <FocusRing disabled={props.disabled}>
-      <div className={STYLE.container}>
-        <a
-          className={classnames(STYLE.wrapper, className)}
-          {...linkProps}
-          ref={ref}
-          data-disabled={props.disabled || DEFAULTS.DISABLED}
-          data-inverted={props.inverted || DEFAULTS.INVERTED}
-          title={title}
-        >
-          {props.children}
-        </a>
-        {isWithIcon && <Icon className={STYLE.icon} scale={16} name="pop-out" {...iconProps} />}
-      </div>
+      <a
+        className={classnames(STYLE.wrapper, className)}
+        {...linkProps}
+        ref={ref}
+        data-disabled={props.disabled || DEFAULTS.DISABLED}
+        data-inverted={props.inverted || DEFAULTS.INVERTED}
+        title={title}
+      >
+        {props.children}
+      </a>
     </FocusRing>
   );
 });
