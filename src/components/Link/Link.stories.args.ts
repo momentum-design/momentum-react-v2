@@ -72,10 +72,9 @@ export default {
         summary: 'undefined',
       },
     },
-  },
+},
   tooltipContent: {
-    description:
-      'Used for tooltip content that gets triggered when the link is hovered; e.g Opens a new tab',
+    description: 'Used for tooltip content',
     control: { type: 'text' },
     table: {
       type: {

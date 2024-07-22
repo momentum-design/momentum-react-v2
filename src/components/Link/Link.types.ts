@@ -39,15 +39,15 @@ export interface Props extends AriaLinkProps {
 
   /**
    * whether or not this component has icon【default icon name = pop-out】 in the right
-   * icon display needed tooltipContent
+   * icon display needed tooltipContent 
    */
   hasExternalLinkIcon?: boolean;
 
-  /**
+    /**
    * icon props (scale and autoscale)
    * for the externalLinkIcon
    */
-  externalLinkIconProps?: Pick<IconProps, 'scale' | 'autoScale'>;
+    externalLinkIconProps?: Pick<IconProps, 'scale' | 'autoScale'>;
 
   /**
    * Used for tooltip content that gets triggered when the link is hovered; e.g 'Opens a new tab'
