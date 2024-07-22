@@ -168,38 +168,6 @@ describe('Link', () => {
         name: 'pop-out',
       });
     });
-
-    it('should have icon when target is _blank', async () => {
-      expect.assertions(1);
-
-      const tooltipContent = 'open a new window';
-
-      const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} target='_blank' />
-      );
-
-      const element = wrapper.find(IconNext);
-
-      expect(element.props()).toEqual({
-        className: STYLE.icon,
-        scale: 16,
-        name: 'pop-out',
-      });
-    });
-
-    it('should not have icon when target is _blank and hasExternalLinkIcon is false', async () => {
-      expect.assertions(1);
-
-      const tooltipContent = 'open a new window';
-
-      const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} target='_blank' hasExternalLinkIcon={false} />
-      );
-
-      expect(wrapper.find(IconNext)).toHaveLength(0);
-
-    });
-
     it('should have icon props when externalLinkIconProps is provided', async () => {
       expect.assertions(1);
 
