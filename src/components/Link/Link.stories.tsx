@@ -59,7 +59,6 @@ delete States.argTypes.inverted;
 const LinkHasIcon = Template<LinkProps>(Link).bind({});
 
 LinkHasIcon.args = {
-  href: 'https://www.webex.com/',
   target: '_blank',
   tooltipContent: 'opens a new window',
   tooltipType: 'description',
@@ -70,10 +69,8 @@ LinkHasIcon.argTypes = { ...argTypes };
 const ButtonCircleLink = Template<LinkProps>(Link).bind({});
 
 ButtonCircleLink.args = {
-  href: 'https://www.webex.com/',
   tooltipContent: 'opens a new tab',
   tooltipType: 'description',
-  style: { borderRadius: '100vh' },
   children: (
     <div
       style={{
@@ -102,15 +99,14 @@ ButtonCircleLink.args = {
 ButtonCircleLink.argTypes = { ...argTypes };
 delete ButtonCircleLink.argTypes.children;
 delete ButtonCircleLink.argTypes.disabled;
-delete ButtonCircleLink.argTypes.inverted;
+delete ButtonCircleLink.argTypes.disabled;
 
 const ButtonPillLink = Template<LinkProps>(Link).bind({});
 
 ButtonPillLink.args = {
-  href: 'https://www.webex.com/',
   tooltipContent: 'opens a new tab',
   tooltipType: 'description',
-  style: { textDecoration: 'none', borderRadius: '100vh' },
+  style: {textDecoration: 'none'},
   children: (
     <div
       style={{
@@ -141,6 +137,6 @@ ButtonPillLink.args = {
 ButtonPillLink.argTypes = { ...argTypes };
 delete ButtonPillLink.argTypes.children;
 delete ButtonPillLink.argTypes.disabled;
-delete ButtonPillLink.argTypes.inverted;
+delete ButtonPillLink.argTypes.disabled;
 
 export { Example, States, LinkHasIcon, ButtonCircleLink, ButtonPillLink };

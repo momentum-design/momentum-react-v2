@@ -38,10 +38,12 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
 
   let isShowIcon = false;
 
-  if (hasExternalLinkIcon === undefined && props.target === '_blank') {
+  if(hasExternalLinkIcon === undefined && props.target === '_blank') {
     isShowIcon = true;
   } else if (hasExternalLinkIcon) {
     isShowIcon = true;
+  } else {
+    isShowIcon = false;
   }
 
   const commonProps = {
@@ -67,12 +69,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
                 <div className={STYLE.container}>
                   {props.children}
                   {isShowIcon && (
-                    <Icon
-                      className={STYLE.icon}
-                      scale={16}
-                      name="pop-out"
-                      {...externalLinkIconProps}
-                    />
+                    <Icon className={STYLE.icon} scale={16} name="pop-out" {...externalLinkIconProps} />
                   )}
                 </div>
               </a>
