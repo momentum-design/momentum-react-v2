@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { AriaLinkProps } from '@react-types/link';
-import { Props as IconProps } from '../Icon/Icon.types';
+import { Props as IconPrpos } from '../Icon/Icon.types';
 
 export interface Props extends AriaLinkProps {
   /**
@@ -36,5 +36,5 @@ export interface Props extends AriaLinkProps {
    * icon props
    * When use iconProps isWithIcon is necessary
    */
-  iconProps?: Partial<IconProps>;
+  iconProps?: Partial<IconPrpos>;
 }
