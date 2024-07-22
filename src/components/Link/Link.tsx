@@ -6,15 +6,14 @@ import { Props } from './Link.types';
 import './Link.style.scss';
 import classnames from 'classnames';
 import Icon from '../Icon';
-import Tooltip from '../Tooltip';
 
 const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
-  const { className, title, hasIcon, iconProps, opensNewTabIndicatorLabel, ...otherProps } = props;
+  const { className, title, isWithIcon, iconProps, ...restProps } = props;
   const internalRef = useRef();
   const ref = providedRef || internalRef;
 
   const mutatedProps = {
-    ...otherProps,
+    ...restProps,
     title,
     isDisabled: props.disabled,
     isInverted: props.inverted,
@@ -26,50 +25,19 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
 
   return (
     <FocusRing disabled={props.disabled}>
-      <>
-        {opensNewTabIndicatorLabel && (
-          <Tooltip
-            type="description"
-            placement='bottom'
-            triggerComponent={
-              <a
-                className={classnames(STYLE.wrapper, className)}
-                {...linkProps}
-                ref={ref}
-                data-disabled={props.disabled || DEFAULTS.DISABLED}
-                data-inverted={props.inverted || DEFAULTS.INVERTED}
-                title={title}
-              >
-                <div className={STYLE.container}>
-                  {props.children}
-                  {hasIcon && (
-                    <Icon
-                      className={STYLE.icon}
-                      scale={16}
-                      name="pop-out"
-                      {...iconProps}
-                    />
-                  )}
-                </div>
-              </a>
-            }
-          >
-            {opensNewTabIndicatorLabel}
-          </Tooltip>
-        )}
-        {!opensNewTabIndicatorLabel && (
-          <a
-            className={classnames(STYLE.wrapper, className)}
-            {...linkProps}
-            ref={ref}
-            data-disabled={props.disabled || DEFAULTS.DISABLED}
-            data-inverted={props.inverted || DEFAULTS.INVERTED}
-            title={title}
-          >
-            {props.children}
-          </a>
-        )}
-      </>
+      <div className={STYLE.container}>
+        <a
+          className={classnames(STYLE.wrapper, className)}
+          {...linkProps}
+          ref={ref}
+          data-disabled={props.disabled || DEFAULTS.DISABLED}
+          data-inverted={props.inverted || DEFAULTS.INVERTED}
+          title={title}
+        >
+          {props.children}
+        </a>
+        {isWithIcon && <Icon className={STYLE.icon} scale={16} name="pop-out" {...iconProps} />}
+      </div>
     </FocusRing>
   );
 });
