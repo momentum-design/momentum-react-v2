@@ -43,14 +43,14 @@ export interface Props extends AriaLinkProps {
    */
   hasExternalLinkIcon?: boolean;
 
-    /**
-   * icon props (scale and autoscale)
-   * for the externalLinkIcon
+  /**
+   * icon props
+   * When use iconProps hasExternalLinkIcon is necessary
    */
-    externalLinkIconProps?: Pick<IconProps, 'scale' | 'autoScale'>;
+  iconProps?: Partial<IconProps>;
 
   /**
-   * Used for tooltip content that gets triggered when the link is hovered; e.g 'Opens a new tab'
+   * Used for tooltip content
    */
   tooltipContent?: string;
 
