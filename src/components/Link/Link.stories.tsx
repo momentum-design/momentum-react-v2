@@ -7,7 +7,6 @@ import Documentation from './Link.stories.docs.mdx';
 import Icon from '../Icon';
 import Text from '../Text';
 import React from 'react';
-import {omit} from 'lodash';
 
 export default {
   title: 'Momentum UI/Link',
@@ -54,7 +53,8 @@ States.parameters = {
 };
 
 States.argTypes = { ...argTypes };
-States.argTypes = omit(States.argTypes, ['disabled', 'inverted']);
+delete States.argTypes.disabled;
+delete States.argTypes.inverted;
 
 const LinkHasIcon = Template<LinkProps>(Link).bind({});
 
@@ -100,7 +100,9 @@ ButtonCircleLink.args = {
 };
 
 ButtonCircleLink.argTypes = { ...argTypes };
-ButtonCircleLink.argTypes = omit(ButtonCircleLink.argTypes, ['children', 'disabled', 'inverted']);
+delete ButtonCircleLink.argTypes.children;
+delete ButtonCircleLink.argTypes.disabled;
+delete ButtonCircleLink.argTypes.inverted;
 
 const ButtonPillLink = Template<LinkProps>(Link).bind({});
 
@@ -137,6 +139,8 @@ ButtonPillLink.args = {
 };
 
 ButtonPillLink.argTypes = { ...argTypes };
-ButtonPillLink.argTypes = omit(ButtonPillLink.argTypes, ['children', 'disabled', 'inverted']);
+delete ButtonPillLink.argTypes.children;
+delete ButtonPillLink.argTypes.disabled;
+delete ButtonPillLink.argTypes.inverted;
 
 export { Example, States, LinkHasIcon, ButtonCircleLink, ButtonPillLink };

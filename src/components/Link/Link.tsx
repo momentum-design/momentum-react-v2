@@ -38,7 +38,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
 
   let isShowIcon = false;
 
-  if (hasExternalLinkIcon === undefined && isExternalLink) {
+  if (hasExternalLinkIcon === undefined && props.target === '_blank') {
     isShowIcon = true;
   } else if (hasExternalLinkIcon) {
     isShowIcon = true;
