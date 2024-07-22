@@ -13,7 +13,6 @@ jest.unmock('@react-aria/utils');
 
 describe('ComboBox', () => {
   let container;
-  const id = '123';
 
   const withoutSection: IComboBoxGroup[] = [
     {
@@ -70,7 +69,7 @@ describe('ComboBox', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <ComboBox id={id} label="comboBox_label" comboBoxGroups={withoutSection}>
+        <ComboBox label="comboBox_label" comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -82,7 +81,7 @@ describe('ComboBox', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <ComboBox id={id} comboBoxGroups={withSection}>
+        <ComboBox comboBoxGroups={withSection}>
           {(group) => {
             const itemsEle = group?.items?.map((menuItem) => {
               return menuItem.popoverText ? (
@@ -114,7 +113,7 @@ describe('ComboBox', () => {
       const className = 'example-class';
 
       container = await mountAndWait(
-        <ComboBox id={id} className={className} comboBoxGroups={withoutSection}>
+        <ComboBox className={className} comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -128,7 +127,7 @@ describe('ComboBox', () => {
       const style = { color: 'pink' };
 
       container = await mountAndWait(
-        <ComboBox id={id} style={style} comboBoxGroups={withoutSection}>
+        <ComboBox style={style} comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -142,7 +141,7 @@ describe('ComboBox', () => {
       const placeholder = 'ComboBox';
 
       container = await mountAndWait(
-        <ComboBox id={id} placeholder={placeholder} comboBoxGroups={withoutSection}>
+        <ComboBox placeholder={placeholder} comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -156,7 +155,7 @@ describe('ComboBox', () => {
       const noResultText = 'No result';
 
       container = await mountAndWait(
-        <ComboBox id={id} noResultText={noResultText} comboBoxGroups={withoutSection}>
+        <ComboBox noResultText={noResultText} comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -171,7 +170,7 @@ describe('ComboBox', () => {
       const width = '16rem';
 
       container = await mountAndWait(
-        <ComboBox id={id} width={width} comboBoxGroups={withoutSection}>
+        <ComboBox width={width} comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
