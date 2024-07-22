@@ -132,13 +132,13 @@ describe('Link', () => {
       });
     });
 
-    it('should have Tooltip when tooltipContent and tooltipType is provided', async () => {
+    it('should have Tooltip when tooltipContent and type is provided', async () => {
       expect.assertions(1);
 
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} tooltipType={'description'} />
+        <LinkNext tooltipContent={tooltipContent} type={'description'} />
       );
 
       const element = wrapper.find(TooltipNext);
