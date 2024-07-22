@@ -151,13 +151,13 @@ describe('Link', () => {
       });
     });
 
-    it('should have icon when hasExternalLinkIcon is provided', async () => {
+    it('should have icon when hasIcon is provided', async () => {
       expect.assertions(1);
 
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} hasExternalLinkIcon={true} />
+        <LinkNext tooltipContent={tooltipContent} hasIcon={true} />
       );
 
       const element = wrapper.find(IconNext);
@@ -174,7 +174,7 @@ describe('Link', () => {
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} hasExternalLinkIcon={true} iconProps={{ id: '1123' }} />
+        <LinkNext tooltipContent={tooltipContent} hasIcon={true} iconProps={{ id: '1123' }} />
       );
 
       const element = wrapper.find(IconNext);
