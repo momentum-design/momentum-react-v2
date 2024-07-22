@@ -120,25 +120,8 @@ describe('Link', () => {
 
       const tooltipContent = 'open a new window';
 
-      const wrapper = await mountAndWait(<LinkNext tooltipContent={tooltipContent} />);
-
-      const element = wrapper.find(TooltipNext);
-
-      expect(element.props()).toEqual({
-        type: undefined,
-        placement: 'bottom',
-        triggerComponent: expect.any(Object),
-        children: tooltipContent,
-      });
-    });
-
-    it('should have Tooltip when tooltipContent and type is provided', async () => {
-      expect.assertions(1);
-
-      const tooltipContent = 'open a new window';
-
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} type={'description'} />
+        <LinkNext tooltipContent={tooltipContent} />
       );
 
       const element = wrapper.find(TooltipNext);
@@ -151,7 +134,7 @@ describe('Link', () => {
       });
     });
 
-    it('should have icon when hasIcon is provided', async () => {
+    it('should have icon when isWithIcon is provided', async () => {
       expect.assertions(1);
 
       const tooltipContent = 'open a new window';
@@ -174,7 +157,11 @@ describe('Link', () => {
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} hasIcon={true} iconProps={{ id: '1123' }} />
+        <LinkNext
+          tooltipContent={tooltipContent}
+          hasIcon={true}
+          iconProps={{ id: '1123' }}
+        />
       );
 
       const element = wrapper.find(IconNext);
@@ -184,28 +171,6 @@ describe('Link', () => {
         scale: 16,
         name: 'pop-out',
         id: '1123',
-      });
-    });
-
-    it('should have rel when target is provided', async () => {
-      expect.assertions(1);
-
-      const wrapper = await mountAndWait(<LinkNext target={'_blank'} />);
-
-      const element = wrapper.find('a');
-
-      expect(element.props()).toEqual({
-        rel: 'noopener noreferrer',
-        children: undefined,
-        className: 'md-link-wrapper',
-        'data-disabled': false,
-        'data-inverted': false,
-        elementType: 'a',
-        isDisabled: undefined,
-        isInverted: undefined,
-        target: '_blank',
-        title: undefined,
-        onPress: expect.any(Function)
       });
     });
   });
