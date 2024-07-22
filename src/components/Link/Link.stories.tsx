@@ -44,9 +44,8 @@ const LinkWithIcon = Template<LinkProps>(Link).bind({});
 LinkWithIcon.args = {
   href: 'https://www.webex.com/',
   target: '_blank',
-  hasIcon: true,
+  isWithIcon: true,
   iconProps: { id: 'icon' },
-  opensNewTabIndicatorLabel: 'open a new window'
 };
 
 LinkWithIcon.argTypes = { ...argTypes };
