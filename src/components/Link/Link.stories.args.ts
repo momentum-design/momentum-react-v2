@@ -61,18 +61,14 @@ export default {
       },
     },
   },
-  externalLinkIconProps: {
-    description: `IconProps (scale and autoscale only) for the 'pop-out' icon which is shown on the right side of the link.`,
-    control: { type: 'object' },
+  iconProps: {
+    description: 'icon props',
     table: {
       type: {
-        summary: 'object',
-      },
-      defaultValue: {
-        summary: 'undefined',
+        summary: 'IconNextProps',
       },
     },
-},
+  },
   tooltipContent: {
     description: 'Used for tooltip content',
     control: { type: 'text' },
@@ -85,7 +81,7 @@ export default {
       },
     },
   },
-  tooltipType: {
+  type: {
     description: `Determines, whether the tooltip is the description or the label of the trigger component, or none`,
     options: ['none', 'label', 'description'],
     control: { type: 'select' },

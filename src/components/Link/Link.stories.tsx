@@ -59,7 +59,10 @@ delete States.argTypes.inverted;
 const LinkHasIcon = Template<LinkProps>(Link).bind({});
 
 LinkHasIcon.args = {
+  href: 'https://www.webex.com/',
   target: '_blank',
+  hasExternalLinkIcon: true,
+  iconProps: { id: 'icon' },
   tooltipContent: 'opens a new window',
   tooltipType: 'description',
 };
@@ -69,64 +72,33 @@ LinkHasIcon.argTypes = { ...argTypes };
 const ButtonCircleLink = Template<LinkProps>(Link).bind({});
 
 ButtonCircleLink.args = {
+  href: 'https://www.webex.com/',
+  target: '_blank',
+  iconProps: { id: 'icon' },
   tooltipContent: 'opens a new tab',
   tooltipType: 'description',
   children: (
-    <div
-      style={{
-        width: '2.5rem',
-        height: '2.5rem',
-        border: 'var(--md-globals-border-clear)',
-        borderWidth: '0.0625rem',
-        cursor: 'pointer',
-        fontFamily: 'var(--md-globals-font-default)',
-        outline: 'none !important',
-        transition: 'background-color 0.2s, color 0.2s, border-color 0.2s',
-        backgroundColor: 'var(--mds-color-theme-button-primary-normal)',
-        color: 'var(--mds-color-theme-text-inverted-normal)',
-        alignItems: 'center',
-        borderRadius: '100vh',
-        display: 'flex',
-        flexShrink: 0,
-        justifyContent: 'space-evenly',
-      }}
-    >
+    <div className="md-link-button-wrapper" style={{ width: '2.5rem', height: '2.5rem' }}>
       <Icon name="chat-group" autoScale={150} />
     </div>
   ),
 };
 
 ButtonCircleLink.argTypes = { ...argTypes };
-delete ButtonCircleLink.argTypes.children;
-delete ButtonCircleLink.argTypes.disabled;
-delete ButtonCircleLink.argTypes.disabled;
 
 const ButtonPillLink = Template<LinkProps>(Link).bind({});
 
 ButtonPillLink.args = {
+  href: 'https://www.webex.com/',
+  target: '_blank',
+  iconProps: { id: 'icon' },
   tooltipContent: 'opens a new tab',
   tooltipType: 'description',
-  style: {textDecoration: 'none'},
+  className: 'md-link-ButtonPillLink',
   children: (
     <div
-      style={{
-        height: '2.5rem',
-        padding: '0 1rem',
-        lineHeight: '2.5rem',
-        border: 'var(--md-globals-border-clear)',
-        borderWidth: '0.0625rem',
-        cursor: 'pointer',
-        fontFamily: 'var(--md-globals-font-default)',
-        outline: 'none !important',
-        transition: 'background-color 0.2s, color 0.2s, border-color 0.2s',
-        backgroundColor: 'var(--mds-color-theme-button-primary-normal)',
-        color: 'var(--mds-color-theme-text-inverted-normal)',
-        alignItems: 'center',
-        borderRadius: '100vh',
-        display: 'flex',
-        flexShrink: 0,
-        justifyContent: 'space-evenly',
-      }}
+      className="md-button-pill-wrapper"
+      style={{ display: 'flex', height: '2.5rem', padding: '0 1rem', lineHeight: '2.5rem' }}
     >
       <Text>Go to Download page</Text>
       <Icon name="chat-group" autoScale={150} />
@@ -135,8 +107,5 @@ ButtonPillLink.args = {
 };
 
 ButtonPillLink.argTypes = { ...argTypes };
-delete ButtonPillLink.argTypes.children;
-delete ButtonPillLink.argTypes.disabled;
-delete ButtonPillLink.argTypes.disabled;
 
 export { Example, States, LinkHasIcon, ButtonCircleLink, ButtonPillLink };
