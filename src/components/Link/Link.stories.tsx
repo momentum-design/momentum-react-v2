@@ -46,7 +46,7 @@ LinkWithIcon.args = {
   target: '_blank',
   hasIcon: true,
   iconProps: { id: 'icon' },
-  opensNewTabIndicatorLabel: 'opens a new window'
+  opensNewTabIndicatorLabel: 'open a new window'
 };
 
 LinkWithIcon.argTypes = { ...argTypes };
