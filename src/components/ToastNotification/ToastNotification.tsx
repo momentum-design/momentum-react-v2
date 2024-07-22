@@ -24,6 +24,8 @@ const ToastNotification: FC<Props> = (props: Props) => {
       id={id}
       style={style}
       round={50}
+      role="generic"
+      ariaModal={false}
     >
       <div className={STYLE.body}>
         {leadingVisual && (
