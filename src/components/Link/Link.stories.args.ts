@@ -69,7 +69,7 @@ export default {
       },
     },
   },
-  tooltipContent: {
+  opensNewTabIndicatorLabel: {
     description: 'Used for tooltip content',
     control: { type: 'text' },
     table: {
@@ -78,19 +78,6 @@ export default {
       },
       defaultValue: {
         summary: undefined,
-      },
-    },
-  },
-  type: {
-    description: `Determines, whether the tooltip is the description or the label of the trigger component, or none`,
-    options: ['none', 'label', 'description'],
-    control: { type: 'select' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'description',
       },
     },
   },
