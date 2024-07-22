@@ -115,13 +115,13 @@ describe('Link', () => {
       expect(element.getAttribute('title')).toBe(title);
     });
 
-    it('should have Tooltip when tooltipContent is provided', async () => {
+    it('should have Tooltip when opensNewTabIndicatorLabel is provided', async () => {
       expect.assertions(1);
 
-      const tooltipContent = 'open a new window';
+      const opensNewTabIndicatorLabel = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} />
+        <LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} />
       );
 
       const element = wrapper.find(TooltipNext);
@@ -130,17 +130,17 @@ describe('Link', () => {
         type: 'description',
         placement: 'bottom',
         triggerComponent: expect.any(Object),
-        children: tooltipContent,
+        children: opensNewTabIndicatorLabel,
       });
     });
 
     it('should have icon when isWithIcon is provided', async () => {
       expect.assertions(1);
 
-      const tooltipContent = 'open a new window';
+      const opensNewTabIndicatorLabel = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} hasIcon={true} />
+        <LinkNext opensNewTabIndicatorLabel={opensNewTabIndicatorLabel} hasIcon={true} />
       );
 
       const element = wrapper.find(IconNext);
@@ -154,11 +154,11 @@ describe('Link', () => {
     it('should have icon props when iconProps is provided', async () => {
       expect.assertions(1);
 
-      const tooltipContent = 'open a new window';
+      const opensNewTabIndicatorLabel = 'open a new window';
 
       const wrapper = await mountAndWait(
         <LinkNext
-          tooltipContent={tooltipContent}
+          opensNewTabIndicatorLabel={opensNewTabIndicatorLabel}
           hasIcon={true}
           iconProps={{ id: '1123' }}
         />
