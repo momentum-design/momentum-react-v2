@@ -1,7 +1,9 @@
 .md-link-wrapper {
+  background-color: rgba(0, 0, 0, 0);
   border: var(--md-globals-border-clear);
   color: var(--mds-color-theme-text-accent-normal);
   cursor: pointer;
+  font-family: var(--md-globals-font-default);
   outline: none !important;
   padding: 0;
   text-decoration: underline;
@@ -60,6 +62,6 @@
   align-items: center;
 
   .md-link-icon {
-    margin-left: 0.3125rem;
+    margin-left: 5px;
   }
 }
