@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link snapshot should match snapshot 1`] = `
+<Link>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <a
+        className="md-link-wrapper"
+        data-disabled={false}
+        data-inverted={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        LinkNext
+      </a>
+    </FocusRing>
+  </FocusRing>
+</Link>
+`;
+
+exports[`Link snapshot should match snapshot when disabled 1`] = `
+<Link
+  disabled={true}
+>
+  <FocusRing
+    disabled={true}
+  >
+    <FocusRing
+      disabled={true}
+      focusClass="md-focus-ring-wrapper-disabled"
+      focusRingClass="md-focus-ring-wrapper-disabled"
+    >
+      <a
+        aria-disabled={true}
+        className="md-link-wrapper"
+        data-disabled={true}
+        data-inverted={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        LinkNext
+      </a>
+    </FocusRing>
+  </FocusRing>
+</Link>
+`;
+
+exports[`Link snapshot should match snapshot when inverted 1`] = `
+<Link
+  inverted={true}
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <a
+        className="md-link-wrapper"
+        data-disabled={false}
+        data-inverted={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        Hyperlink
+      </a>
+    </FocusRing>
+  </FocusRing>
+</Link>
+`;
+
+exports[`Link snapshot should match snapshot with title 1`] = `
+<Link
+  title="Example Text"
+>
+  <FocusRing>
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+    >
+      <a
+        className="md-link-wrapper"
+        data-disabled={false}
+        data-inverted={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        title="Example Text"
+      />
+    </FocusRing>
+  </FocusRing>
+</Link>
+`;

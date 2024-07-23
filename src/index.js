@@ -127,6 +127,7 @@ export {
   ExampleComponent,
   Icon as IconNext,
   Tab as TabNext,
+  Link as LinkNext,
   MeetingListItem,
   MeetingMarker,
   ModalArrow,
