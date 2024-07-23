@@ -1,9 +1,18 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { AriaLinkProps } from '@react-types/link';
 import { Props as IconProps } from '../Icon/Icon.types';
 import { TooltipTypes } from '../Tooltip/Tooltip.types';
 
 export interface Props extends AriaLinkProps {
+  /**
+   * Custom id for overriding this component's CSS.
+   */
+  id?: string;
+
+  /**
+   * Custom style for overriding this component's CSS.
+   */
+  style?: CSSProperties;
   /**
    * Custom class to be able to override the component's CSS
    */
