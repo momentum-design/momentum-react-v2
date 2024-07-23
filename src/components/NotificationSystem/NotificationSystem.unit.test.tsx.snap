@@ -26,7 +26,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -147,7 +147,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -186,6 +186,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   <p
                     class="md-text-wrapper md-toast-notification-content"
                     data-type="body-primary"
+                    role="alert"
                   >
                     This is a test
                   </p>
@@ -267,7 +268,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -388,7 +389,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -509,7 +510,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -630,7 +631,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
         >
           <div
             class="Toastify__toast-body body-toast"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -751,7 +752,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -872,7 +873,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
         >
           <div
             class="Toastify__toast-body container"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -989,7 +990,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -1103,7 +1104,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -1228,7 +1229,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -1349,7 +1350,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -1470,7 +1471,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -1591,7 +1592,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -1712,7 +1713,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
@@ -1833,7 +1834,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
               <div
