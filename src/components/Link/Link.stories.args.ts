@@ -48,7 +48,7 @@ export default {
       },
     },
   },
-  hasIcon: {
+  hasExternalLinkIcon: {
     description: 'whether this component has icon `name = pop-out` in the right',
     options: [true, false],
     control: { type: 'boolean' },

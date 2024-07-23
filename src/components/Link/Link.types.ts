@@ -41,7 +41,7 @@ export interface Props extends AriaLinkProps {
    * whether or not this component has icon【default icon name = pop-out】 in the right
    * icon display needed tooltipContent 
    */
-  hasIcon?: boolean;
+  hasExternalLinkIcon?: boolean;
 
   /**
    * icon props

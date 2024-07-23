@@ -12,7 +12,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
   const {
     className,
     title,
-    hasIcon,
+    hasExternalLinkIcon,
     iconProps,
     tooltipContent,
     tooltipType,
@@ -32,7 +32,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
   };
 
   // prevent change the window.opener.location to some phishing page
-  const isExternalLinkl = props.target === '_blank';
+  const isExternalLink = props.target === '_blank';
 
   const { linkProps } = useLink({ ...mutatedProps, elementType: 'a' }, ref);
 
@@ -41,7 +41,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     style,
     ref: ref,
     title: title,
-    rel: isExternalLinkl ? 'noopener noreferrer' : '',
+    rel: isExternalLink ? 'noopener noreferrer' : '',
     className: classnames(STYLE.wrapper, className),
     'data-disabled': disabled || DEFAULTS.DISABLED,
     'data-inverted': inverted || DEFAULTS.INVERTED,
@@ -58,7 +58,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
               <a {...commonProps}>
                 <div className={STYLE.container}>
                   {props.children}
-                  {hasIcon && (
+                  {hasExternalLinkIcon && (
                     <Icon className={STYLE.icon} scale={16} name="pop-out" {...iconProps} />
                   )}
                 </div>
