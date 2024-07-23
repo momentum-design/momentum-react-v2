@@ -64,6 +64,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -306,6 +307,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -427,6 +429,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -548,6 +551,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -669,6 +673,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -790,6 +795,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -911,6 +917,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1028,6 +1035,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1142,6 +1150,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1267,6 +1276,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1388,6 +1398,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1509,6 +1520,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1630,6 +1642,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1751,6 +1764,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test
@@ -1872,6 +1886,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                   </div>
                   <div
                     class="md-toast-notification-content"
+                    role="alert"
                   >
                     <button>
                       This is a test

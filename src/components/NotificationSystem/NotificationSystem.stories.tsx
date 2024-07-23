@@ -56,7 +56,7 @@ const NonStringContent = Template<NotificationSystemProps>((args: NotificationSy
           NotificationSystem.notify(
             <NotificationTemplate
               ariaLabel="Non String Content Notification"
-              content={<div role="alert">I am the notification</div>}
+              content={<div>This is a notification</div>}
             />,
             { attention: ATTENTION.MEDIUM }
           )

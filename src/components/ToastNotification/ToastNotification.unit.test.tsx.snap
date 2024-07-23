@@ -400,6 +400,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
       >
         <div
           className="md-toast-notification-content"
+          role="alert"
         >
           <button>
             Example text

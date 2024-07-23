@@ -45,7 +45,9 @@ const ToastNotification: FC<Props> = (props: Props) => {
             {content}
           </Text>
         ) : (
-          <div className={classnames(className, STYLE.content)}>{content}</div>
+          <div role="alert" className={classnames(className, STYLE.content)}>
+            {content}
+          </div>
         )}
         {onClose && (
           <div className={classnames(className, STYLE.closeButton)}>
