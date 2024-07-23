@@ -13,7 +13,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     className,
     title,
     hasExternalLinkIcon,
-    iconProps,
+    externalLinkIconProps,
     tooltipContent,
     tooltipType,
     disabled,
@@ -35,6 +35,16 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
   const isExternalLink = props.target === '_blank';
 
   const { linkProps } = useLink({ ...mutatedProps, elementType: 'a' }, ref);
+
+  let isShowIcon = false;
+
+  if(hasExternalLinkIcon === undefined && props.target === '_blank') {
+    isShowIcon = true;
+  } else if (hasExternalLinkIcon) {
+    isShowIcon = true;
+  } else {
+    isShowIcon = false;
+  }
 
   const commonProps = {
     ...linkProps,
@@ -58,8 +68,8 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
               <a {...commonProps}>
                 <div className={STYLE.container}>
                   {props.children}
-                  {hasExternalLinkIcon && (
-                    <Icon className={STYLE.icon} scale={16} name="pop-out" {...iconProps} />
+                  {isShowIcon && (
+                    <Icon className={STYLE.icon} scale={16} name="pop-out" {...externalLinkIconProps} />
                   )}
                 </div>
               </a>
