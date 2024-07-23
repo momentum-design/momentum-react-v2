@@ -8,7 +8,6 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -18,7 +17,7 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -63,7 +62,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -73,7 +71,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -217,7 +215,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
     ariaModal={false}
     className="example-class md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -227,7 +224,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -259,7 +256,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
     className="md-toast-notification-wrapper"
     id="example-id"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -270,7 +266,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
       data-padded={true}
       data-round={50}
       id="example-id"
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -307,7 +303,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -317,7 +312,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -379,7 +374,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -389,7 +383,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -417,7 +411,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -427,7 +420,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -542,7 +535,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
   >
     <div
@@ -552,7 +544,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
     >
       <div
         className="md-toast-notification-body"
@@ -587,7 +579,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
-    role="generic"
     round={50}
     style={
       Object {
@@ -602,7 +593,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
       data-elevation={0}
       data-padded={true}
       data-round={50}
-      role="generic"
+      role="dialog"
       style={
         Object {
           "color": "pink",
