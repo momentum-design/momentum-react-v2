@@ -34,7 +34,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
       },
     ]
   }
-  id="123"
   label="comboBox_label"
 >
   <div
@@ -46,7 +45,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
     className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
-    id="123"
     style={
       Object {
         "--local-width": "16.25rem",
@@ -60,7 +58,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
         aria-label="md-combo-box-input"
         autoComplete="off"
         className="md-combo-box-input"
-        id="ComboBox_TextInput_123"
         onInput={[Function]}
         placeholder=""
         value=""
@@ -78,7 +75,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
               aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
-              id="ComboBox_TextInput_123"
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -213,13 +210,11 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
       },
     ]
   }
-  id="123"
 >
   <div
     className="example-class md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
-    id="123"
     style={
       Object {
         "--local-width": "16.25rem",
@@ -233,7 +228,6 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
         aria-label="md-combo-box-input"
         autoComplete="off"
         className="md-combo-box-input"
-        id="ComboBox_TextInput_123"
         onInput={[Function]}
         placeholder=""
         value=""
@@ -251,7 +245,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
               aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
-              id="ComboBox_TextInput_123"
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -385,14 +379,12 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
       },
     ]
   }
-  id="123"
   noResultText="No result"
 >
   <div
     className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
-    id="123"
     style={
       Object {
         "--local-width": "16.25rem",
@@ -406,7 +398,6 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
         aria-label="md-combo-box-input"
         autoComplete="off"
         className="md-combo-box-input"
-        id="ComboBox_TextInput_123"
         onInput={[Function]}
         placeholder=""
         value=""
@@ -424,7 +415,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
               aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
-              id="ComboBox_TextInput_123"
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -558,14 +549,12 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
       },
     ]
   }
-  id="123"
   placeholder="ComboBox"
 >
   <div
     className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
-    id="123"
     style={
       Object {
         "--local-width": "16.25rem",
@@ -579,7 +568,6 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
         aria-label="md-combo-box-input"
         autoComplete="off"
         className="md-combo-box-input"
-        id="ComboBox_TextInput_123"
         onInput={[Function]}
         placeholder="ComboBox"
         value=""
@@ -597,7 +585,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
               aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
-              id="ComboBox_TextInput_123"
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -731,7 +719,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
       },
     ]
   }
-  id="123"
   style={
     Object {
       "color": "pink",
@@ -742,7 +729,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
     className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
-    id="123"
     style={
       Object {
         "--local-width": "16.25rem",
@@ -757,7 +743,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
         aria-label="md-combo-box-input"
         autoComplete="off"
         className="md-combo-box-input"
-        id="ComboBox_TextInput_123"
         onInput={[Function]}
         placeholder=""
         value=""
@@ -775,7 +760,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
               aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
-              id="ComboBox_TextInput_123"
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -909,14 +894,12 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
       },
     ]
   }
-  id="123"
   width="16rem"
 >
   <div
     className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
-    id="123"
     style={
       Object {
         "--local-width": "16rem",
@@ -930,7 +913,6 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
         aria-label="md-combo-box-input"
         autoComplete="off"
         className="md-combo-box-input"
-        id="ComboBox_TextInput_123"
         onInput={[Function]}
         placeholder=""
         value=""
@@ -948,7 +930,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
               aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
-              id="ComboBox_TextInput_123"
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -1096,13 +1078,11 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
       },
     ]
   }
-  id="123"
 >
   <div
     className="md-combo-box-wrapper"
     data-error={false}
     data-input-have-value={false}
-    id="123"
     style={
       Object {
         "--local-width": "16.25rem",
@@ -1116,7 +1096,6 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
         aria-label="md-combo-box-input"
         autoComplete="off"
         className="md-combo-box-input"
-        id="ComboBox_TextInput_123"
         onInput={[Function]}
         placeholder=""
         value=""
@@ -1134,7 +1113,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
               aria-label="md-combo-box-input"
               autoComplete="off"
               disabled={false}
-              id="ComboBox_TextInput_123"
+              id="test-ID"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
