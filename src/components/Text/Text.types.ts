@@ -34,6 +34,10 @@ export interface Props {
    * Override the tag used to surround the text
    */
   tagName?: AllowedTagNames;
+  /**
+   * role of the component
+   */
+  role?: string;
 }
 
 export type FontStyle =

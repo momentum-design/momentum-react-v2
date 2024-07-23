@@ -48,6 +48,34 @@ Example.args = {
   ariaLabel: 'Notification System',
 };
 
+const NonStringContent = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
+  return (
+    <>
+      <ButtonPill
+        onPress={() =>
+          NotificationSystem.notify(
+            <NotificationTemplate
+              ariaLabel="Non String Content Notification"
+              content={<div role="alert">I am the notification</div>}
+            />,
+            { attention: ATTENTION.MEDIUM }
+          )
+        }
+      >
+        Trigger a new low attention notification
+      </ButtonPill>
+      <NotificationSystem {...args} limit={3} />
+    </>
+  );
+}).bind({});
+
+NonStringContent.argTypes = { ...argTypes };
+
+NonStringContent.args = {
+  position: POSITION.TOP_RIGHT,
+  ariaLabel: 'Notification System',
+};
+
 const Important = Template<NotificationSystemProps>((args: NotificationSystemProps) => {
   return (
     <>
@@ -263,4 +291,4 @@ MultipleSystems.args = {
   ariaLabel: 'Notification System',
 };
 
-export { Example, Important, Mixed, UpdateContent, ResetTimer, MultipleSystems };
+export { Example, Important, Mixed, UpdateContent, ResetTimer, MultipleSystems, NonStringContent };

@@ -49,4 +49,9 @@ export interface Props {
    * Close button's aria-label
    */
   closeButtonLabel?: string;
+
+  /**
+   * aria-label used for the toast notification.
+   */
+  ariaLabel?: string;
 }
