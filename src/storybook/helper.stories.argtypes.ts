@@ -832,7 +832,7 @@ const commonAriaLink = {
     table: {
       category: 'React Aria - Link',
       type: {
-        summary:`string | boolean`,
+        summary: `string | boolean`,
       },
       defaultValue: {
         summary: 'undefined',
@@ -869,8 +869,7 @@ const commonAriaLink = {
   },
   routerOptions: {
     control: { type: 'text' },
-    description:
-      'Options for the configured client side router.',
+    description: 'Options for the configured client side router.',
     table: {
       category: 'React Aria - Link',
       type: {
@@ -1093,5 +1092,5 @@ export {
   commonStyles,
   extendArgTypes,
   commonAriaPressProps,
-  commonAriaLink
+  commonAriaLink,
 };
