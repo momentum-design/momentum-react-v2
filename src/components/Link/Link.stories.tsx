@@ -7,7 +7,7 @@ import Documentation from './Link.stories.docs.mdx';
 import Icon from '../Icon';
 import Text from '../Text';
 import React from 'react';
-import {omit} from 'lodash';
+import { omit } from 'lodash';
 
 export default {
   title: 'Momentum UI/Link',

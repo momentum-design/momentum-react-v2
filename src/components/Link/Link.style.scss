@@ -9,7 +9,7 @@
   display: inline-block;
 
   // have based a:focus style on momentum-ui.css.
-  // need to overwright focus style and src
+  // need to overwrite focus style and src
   &:focus,
   &.focus {
     color: var(--mds-color-theme-text-accent-normal);

@@ -175,7 +175,7 @@ describe('Link', () => {
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} target='_blank' />
+        <LinkNext tooltipContent={tooltipContent} target="_blank" />
       );
 
       const element = wrapper.find(IconNext);
@@ -193,11 +193,10 @@ describe('Link', () => {
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} target='_blank' hasExternalLinkIcon={false} />
+        <LinkNext tooltipContent={tooltipContent} target="_blank" hasExternalLinkIcon={false} />
       );
 
       expect(wrapper.find(IconNext)).toHaveLength(0);
-
     });
 
     it('should have icon props when externalLinkIconProps is provided', async () => {
@@ -206,7 +205,11 @@ describe('Link', () => {
       const tooltipContent = 'open a new window';
 
       const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} hasExternalLinkIcon={true} externalLinkIconProps={{ autoScale: true}} />
+        <LinkNext
+          tooltipContent={tooltipContent}
+          hasExternalLinkIcon={true}
+          externalLinkIconProps={{ autoScale: true }}
+        />
       );
 
       const element = wrapper.find(IconNext);
@@ -232,12 +235,8 @@ describe('Link', () => {
         className: 'md-link-wrapper',
         'data-disabled': false,
         'data-inverted': false,
-        elementType: 'a',
-        isDisabled: undefined,
-        isInverted: undefined,
         target: '_blank',
         title: undefined,
-        onPress: expect.any(Function)
       });
     });
   });

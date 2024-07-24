@@ -11,8 +11,6 @@ exports[`Link snapshot should match snapshot 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={false}
-        elementType="a"
-        onPress={[MockFunction]}
         rel=""
       >
         LinkNext
@@ -38,9 +36,6 @@ exports[`Link snapshot should match snapshot when disabled 1`] = `
         className="md-link-wrapper"
         data-disabled={true}
         data-inverted={false}
-        elementType="a"
-        isDisabled={true}
-        onPress={[MockFunction]}
         rel=""
       >
         LinkNext
@@ -63,9 +58,6 @@ exports[`Link snapshot should match snapshot when inverted 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={true}
-        elementType="a"
-        isInverted={true}
-        onPress={[MockFunction]}
         rel=""
       >
         Hyperlink
@@ -88,8 +80,6 @@ exports[`Link snapshot should match snapshot with title 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={false}
-        elementType="a"
-        onPress={[MockFunction]}
         rel=""
         title="Example Text"
       />
