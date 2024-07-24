@@ -103,6 +103,16 @@ describe('<ButtonGroup />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with aria-label', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'my aria label';
+
+      container = mount(<ButtonGroup aria-label={ariaLabel}>{childrenTemplate}</ButtonGroup>);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -211,6 +221,18 @@ describe('<ButtonGroup />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-orientation')).toBe(`${orientation}`);
+    });
+
+    it('should pass aria-label prop', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'my aria label';
+
+      const element = mount(<ButtonGroup aria-label={ariaLabel}>{childrenTemplate}</ButtonGroup>)
+        .find(ButtonGroup)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(`${ariaLabel}`);
     });
   });
 });

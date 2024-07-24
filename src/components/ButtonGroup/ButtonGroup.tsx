@@ -24,6 +24,7 @@ const ButtonGroup: FC<Props> & CompoundProps = (props: Props) => {
     style,
     role,
     orientation,
+    ...rest
   } = props;
 
   return (
@@ -37,6 +38,7 @@ const ButtonGroup: FC<Props> & CompoundProps = (props: Props) => {
       id={id}
       style={style}
       role={role}
+      {...rest}
     >
       {children}
     </div>
