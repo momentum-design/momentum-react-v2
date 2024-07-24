@@ -13,6 +13,47 @@ exports[`<AriaToolbar /> snapshot should match snapshot 1`] = `
 </AriaToolbar>
 `;
 
+exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button group render 1`] = `
+<AriaToolbar
+  ariaLabel="test"
+  ariaToolbarItemsSize={0}
+  shouldRenderAsButtonGroup={true}
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <ButtonGroup
+    aria-label="test"
+    className="md-aria-toolbar-wrapper"
+    orientation="horizontal"
+    role="toolbar"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      aria-label="test"
+      className="md-button-group-wrapper md-aria-toolbar-wrapper"
+      data-compressed={false}
+      data-orientation="horizontal"
+      data-round={false}
+      data-separator={false}
+      data-spaced={false}
+      role="toolbar"
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    />
+  </ButtonGroup>
+</AriaToolbar>
+`;
+
 exports[`<AriaToolbar /> snapshot should match snapshot with className 1`] = `
 <AriaToolbar
   ariaLabel="test"
