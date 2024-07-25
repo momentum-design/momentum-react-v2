@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { DEFAULTS, STYLE } from './Link.constants';
 import { IconNext, LinkNext, TooltipNext } from '@momentum-ui/react-collaboration';
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, triggerPress } from '../../../test/utils';
 
 describe('Link', () => {
   describe('snapshot', () => {
@@ -243,7 +243,7 @@ describe('Link', () => {
 
   describe('actions', () => {
     it('should handle mouse press events', () => {
-      expect.assertions(1);
+      expect.assertions(2);
       const mockCallback = jest.fn();
       const component = mount(<LinkNext onPress={mockCallback} />).find(LinkNext);
       component.props().onPress({
@@ -258,6 +258,10 @@ describe('Link', () => {
       });
 
       expect(mockCallback).toBeCalledTimes(1);
+
+      triggerPress(component);
+
+      expect(mockCallback).toBeCalledTimes(2);
     });
   });
 });
