@@ -771,6 +771,183 @@ const commonHTMLAttributes = {
   },
 };
 
+const commonAriaLink = {
+  href: {
+    control: { type: 'text' },
+    description: 'A URL to link to if elementType="a".',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  hrefLang: {
+    control: { type: 'text' },
+    description: 'Hints at the human language of the linked URL.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  target: {
+    control: { type: 'text' },
+    description: 'The target window for the link.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'HTMLAttributeAnchorTarget',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  rel: {
+    control: { type: 'text' },
+    description:
+      'The relationship between the linked resource and the current page. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel).',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  download: {
+    control: { type: 'text' },
+    description:
+      'Causes the browser to download the linked URL. A string may be provided to suggest a file name. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#download).',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: `string | boolean`,
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  ping: {
+    control: { type: 'text' },
+    description:
+      'A space-separated list of URLs to ping when the link is followed. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#ping).',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  referrerPolicy: {
+    control: { type: 'text' },
+    description:
+      'How much of the referrer to send when following the link. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#referrerpolicy).',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'HTMLAttributeReferrerPolicy',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  routerOptions: {
+    control: { type: 'text' },
+    description: 'Options for the configured client side router.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'RouterOptions',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onPress: {
+    action: 'onPress',
+    description: 'Handler that is called when the press is released over the target.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: '(e: PressEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-label': {
+    control: { type: 'text' },
+    description: 'Defines a string value that labels the current element.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-labelledby': {
+    control: { type: 'text' },
+    description: 'Identifies the element (or elements) that labels the current element.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-describedby': {
+    control: { type: 'text' },
+    description: 'Identifies the element (or elements) that describes the object.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-details': {
+    control: { type: 'text' },
+    description:
+      'Identifies the element (or elements) that provide a detailed, extended description for the object.',
+    table: {
+      category: 'React Aria - Link',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+};
+
 export {
   commonAriaButton,
   commonAriaButtonToggle,
@@ -783,4 +960,5 @@ export {
   commonStyles,
   extendArgTypes,
   commonAriaPressProps,
+  commonAriaLink,
 };
