@@ -7,7 +7,7 @@ import { useAriaToolbarContext } from '../AriaToolbar/AriaToolbar.utils';
 import { useProvidedRef } from '../../utils/useProvidedRef';
 
 const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
-  const { children, itemIndex, ...rest } = props;
+  const { children, itemIndex } = props;
 
   const ariaToolbarContext = useAriaToolbarContext();
 
@@ -53,7 +53,6 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
       const { setCurrentFocus, buttonRefs, currentFocus } = ariaToolbarContext;
 
       return {
-        ...rest,
         tabIndex: index === (currentFocus || 0) ? 0 : -1,
         ref: (element: HTMLButtonElement) => {
           buttonRefs.current[index] = element;

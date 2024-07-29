@@ -35,23 +35,5 @@ describe('<AriaToolbarItem />', () => {
     });
   });
 
-  describe('behaviour', () => {
-    it('passes extra props to children', () => {
-      const container = mountWithContext(<TestComponent extra="prop" more="extra props" />);
-
-      expect(container.find('ButtonPill').props()).toEqual({
-        children: 'Test',
-        extra: 'prop',
-        more: 'extra props',
-        onFocus: expect.any(Function),
-        onKeyDown: expect.any(Function),
-        onKeyUp: undefined,
-        onPress: expect.any(Function),
-        tabIndex: 0,
-        useNativeKeyDown: true,
-      });
-    });
-  });
-
   // keyboard interaction is tested in AriaToolbar.unit.test.tsx
 });
