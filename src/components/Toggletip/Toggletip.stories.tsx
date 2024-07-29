@@ -31,11 +31,20 @@ const Example = Template<ToggletipProps>(Toggletip).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  placement: PLACEMENTS.AUTO,
-  variant: 'small',
-  color: COLORS.PRIMARY,
-  delay: [0, 0],
-  children: <p>Toggletip</p>,
+  children: (
+    <div>
+      <h2>About toggletip</h2>
+      <p style={{ maxWidth: '50vw' }}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin leo vel
+        condimentum sollicitudin. Cras nec felis pulvinar, hendrerit lectus nec, ullamcorper risus.
+        Mauris at risus ut libero vehicula rhoncus. Suspendisse vestibulum interdum felis.
+        Pellentesque tempus lectus a mattis feugiat. Donec purus nulla, gravida nec arcu a,
+        hendrerit tincidunt sem. Sed mollis sodales nulla, et posuere nisl tristique et. Mauris ac
+        risus eros. Aenean tristique, lectus eu posuere pellentesque, diam arcu eleifend felis, nec
+        cursus mi lacus at felis. Proin nec lectus a ex elementum tempus.
+      </p>
+    </div>
+  ),
   triggerComponent: (
     <ButtonCircle
       ghost

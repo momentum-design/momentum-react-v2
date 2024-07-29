@@ -23,22 +23,24 @@ const ListHeader: FC<Props> = (props: Props) => {
   } = props;
 
   return (
-    <ListItemBase
-      interactive={false}
+    <div
       className={classnames(className, STYLE.wrapper)}
+      style={style}
       data-outline={outline}
       data-outline-position={outlinePosition}
       data-outline-color={outlineColor}
       data-outline-only={!children}
       data-bold={bold}
       id={id}
-      isPadded={true}
-      size={32}
-      style={style}
-      role="separator"
     >
-      {children}
-    </ListItemBase>
+      {outline && outlinePosition === 'top' && <div role="separator" className={STYLE.separator} />}
+      <ListItemBase interactive={false} isPadded={true} size={32} className={STYLE.listItemBase}>
+        {children}
+      </ListItemBase>
+      {outline && outlinePosition === 'bottom' && (
+        <div role="separator" className={STYLE.separator} />
+      )}
+    </div>
   );
 };
 

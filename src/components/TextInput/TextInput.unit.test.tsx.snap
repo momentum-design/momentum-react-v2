@@ -61,6 +61,44 @@ exports[`<TextInput/> snapshot should match snapshot with className 1`] = `
 </SSRProvider>
 `;
 
+exports[`<TextInput/> snapshot should match snapshot with clearAriaLabel 1`] = `
+<SSRProvider>
+  <TextInput
+    clearAriaLabel="Clear this input"
+    id="example-id"
+    label="Password"
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        Password
+      </label>
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-labelledby="test-ID"
+          disabled={false}
+          id="example-id"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
 exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
 <SSRProvider>
   <TextInput
@@ -277,6 +315,43 @@ exports[`<TextInput/> snapshot should match snapshot with inputMaxLen 1`] = `
           disabled={false}
           id="test-ID"
           maxLength={4}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
+exports[`<TextInput/> snapshot should match snapshot with label 1`] = `
+<SSRProvider>
+  <TextInput
+    id="example-id"
+    label="Password"
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        Password
+      </label>
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-labelledby="test-ID"
+          disabled={false}
+          id="example-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}

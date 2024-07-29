@@ -172,7 +172,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-id"
             role="combobox"
@@ -284,7 +284,7 @@ exports[`Select snapshot should match snapshot 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-id"
           onBlur={[Function]}
@@ -396,6 +396,9 @@ exports[`Select snapshot should match snapshot 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -451,6 +454,9 @@ exports[`Select snapshot should match snapshot 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -486,7 +492,7 @@ exports[`Select snapshot should match snapshot 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-id"
               onBlur={[Function]}
@@ -731,7 +737,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -843,7 +849,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -955,6 +961,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -1010,6 +1019,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -1045,7 +1057,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -1291,7 +1303,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -1403,7 +1415,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -1515,6 +1527,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -1570,6 +1585,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -1605,7 +1623,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -2378,7 +2396,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input borderLess"
             id="test-ID"
             role="combobox"
@@ -2490,7 +2508,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input borderLess"
           id="test-ID"
           onBlur={[Function]}
@@ -2602,6 +2620,9 @@ exports[`Select snapshot should match snapshot with border 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -2657,6 +2678,9 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -2692,7 +2716,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input borderLess"
               id="test-ID"
               onBlur={[Function]}
@@ -2938,7 +2962,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -3050,7 +3074,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -3162,6 +3186,9 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -3217,6 +3244,9 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -3252,7 +3282,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -3498,7 +3528,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -3610,7 +3640,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -3722,6 +3752,9 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -3777,6 +3810,9 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -3812,7 +3848,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -4068,7 +4104,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -4180,7 +4216,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -4292,6 +4328,9 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -4347,6 +4386,9 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -4382,7 +4424,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -5158,7 +5200,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             aria-controls="example-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="example-id"
             role="combobox"
@@ -5270,7 +5312,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
           aria-controls="example-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="example-id"
           onBlur={[Function]}
@@ -5382,6 +5424,9 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -5437,6 +5482,9 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -5472,7 +5520,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
               aria-controls="example-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="example-id"
               onBlur={[Function]}
@@ -5594,7 +5642,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
           aria-activedescendant={null}
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -5706,6 +5754,9 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -5761,6 +5812,9 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -5795,7 +5849,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
               aria-activedescendant={null}
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -6042,7 +6096,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -6154,7 +6208,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -6266,6 +6320,9 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -6321,6 +6378,9 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -6356,7 +6416,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -7128,7 +7188,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             aria-activedescendant="test-ID-option-$.0"
             aria-expanded="true"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -7239,7 +7299,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
           aria-activedescendant="test-ID-option-$.0"
           aria-expanded={true}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -7351,6 +7411,9 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -7406,6 +7469,9 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -7440,7 +7506,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
               aria-activedescendant="test-ID-option-$.0"
               aria-expanded={true}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -8212,7 +8278,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             aria-activedescendant="test-ID-option-$.0"
             aria-expanded="true"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
             id="test-ID"
             role="combobox"
@@ -8323,7 +8389,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
           aria-activedescendant="test-ID-option-$.0"
           aria-expanded={true}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -8435,6 +8501,9 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -8490,6 +8559,9 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -8524,7 +8596,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
               aria-activedescendant="test-ID-option-$.0"
               aria-expanded={true}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -9297,7 +9369,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -9411,7 +9483,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -9525,6 +9597,9 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -9580,6 +9655,9 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -9615,7 +9693,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -9886,7 +9964,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-selected"
             id="test-ID"
             role="combobox"
@@ -10001,7 +10079,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-selected"
           id="test-ID"
           onBlur={[Function]}
@@ -10116,6 +10194,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -10171,6 +10252,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -10206,7 +10290,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-selected"
               id="test-ID"
               onBlur={[Function]}
@@ -10480,7 +10564,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             aria-controls="test-id"
             aria-expanded="true"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-selected md-select-open"
             id="test-ID"
             role="combobox"
@@ -10595,7 +10679,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           aria-controls="test-id"
           aria-expanded={true}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-selected md-select-open"
           id="test-ID"
           onBlur={[Function]}
@@ -10710,6 +10794,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -10765,6 +10852,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -10800,7 +10890,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               aria-controls="test-id"
               aria-expanded={true}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-selected md-select-open"
               id="test-ID"
               onBlur={[Function]}
@@ -11664,7 +11754,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             aria-controls="test-id"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -11776,7 +11866,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
           aria-controls="test-id"
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -11888,6 +11978,9 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -11943,6 +12036,9 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -11978,7 +12074,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               aria-controls="test-id"
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}
@@ -12221,7 +12317,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           "current": <button
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="test-ID"
+            aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
             id="test-ID"
             role="combobox"
@@ -12333,7 +12429,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           aria-activedescendant={null}
           aria-expanded={false}
           aria-haspopup="listbox"
-          aria-labelledby="test-ID"
+          aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
           id="test-ID"
           onBlur={[Function]}
@@ -12446,6 +12542,9 @@ exports[`Select snapshot should match snapshot with title 1`] = `
               },
               Object {
                 "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
@@ -12501,6 +12600,9 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
@@ -12535,7 +12637,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
               aria-activedescendant={null}
               aria-expanded={false}
               aria-haspopup="listbox"
-              aria-labelledby="test-ID"
+              aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
               id="test-ID"
               onBlur={[Function]}

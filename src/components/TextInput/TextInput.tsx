@@ -42,6 +42,8 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const state = useSearchFieldState(props);
 
   const messageId = useRef(uuidV4());
+  const labelId = useRef(uuidV4());
+  const clearButtonId = useRef(uuidV4());
 
   const onClearButtonPress = () => {
     state.setValue('');
@@ -66,7 +68,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       className={classnames(STYLE.wrapper, className)}
     >
       {label && (
-        <label {...labelProps} htmlFor={labelProps.htmlFor}>
+        <label {...labelProps} htmlFor={labelProps.htmlFor} id={labelId.current}>
           {label}
         </label>
       )}
@@ -84,6 +86,17 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
             className="clear-icon"
             aria-label={clearAriaLabel}
             onPress={onClearButtonPress}
+            id={clearButtonId.current}
+            // If there is a visible label, then sr should read for this x button "clearAriaLabel (Ex. 'Clear input') + visible label (Ex. 'Password')"
+            // Else, if input was given an id and ideally has an aria-label, then sr should read for this x button "clearAriaLabel (Ex. 'Clear input') + input aria-label (Ex. 'Password')"
+            // Else, sr should read for this x button "clearAriaLabel (Ex. 'Clear input')"
+            aria-labelledby={
+              label
+                ? `${clearButtonId.current} ${labelId.current}`
+                : id
+                ? `${clearButtonId.current} ${id}`
+                : clearButtonId.current
+            }
           >
             <Icon scale={18} name="cancel" />
           </ButtonSimple>

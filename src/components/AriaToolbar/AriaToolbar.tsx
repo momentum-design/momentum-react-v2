@@ -1,13 +1,13 @@
-import React, { FC, useRef, useState, useEffect } from 'react';
+import React, { FC, useRef, useState, useEffect, useCallback } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './AriaToolbar.constants';
 import { Props } from './AriaToolbar.types';
-import { useKeyboard } from '@react-aria/interactions';
-import { map } from 'lodash';
+import ButtonGroup from '../ButtonGroup';
+import { AriaToolbarContext } from './AriaToolbar.utils';
 
 /**
- * The AriaToolbar component. A style-less component implementing the Aria Toolbar pattern
+ * The AriaToolbar component. A style-less by default or button-group styled component implementing the Aria Toolbar pattern
  * see https://www.w3.org/WAI/ARIA/apg/patterns/toolbar
  */
 const AriaToolbar: FC<Props> = (props: Props) => {
@@ -17,87 +17,59 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     id,
     style,
     children,
-    orientation = DEFAULTS.ORIENTATION,
+    orientation = DEFAULTS.ORIENTATION as Props['orientation'],
+    shouldRenderAsButtonGroup = DEFAULTS.SHOULD_RENDER_AS_BUTTON_GROUP,
     onTabPress,
     ariaControls,
+    buttonGroupProps,
+    ariaToolbarItemsSize,
+    ...rest
   } = props;
 
   const [currentFocus, setCurrentFocus] = useState(undefined);
 
-  const validChildren = React.Children.toArray(children);
-  const numChildren = validChildren.length;
-
   const buttonRefs = useRef({});
-
-  const { keyboardProps } = useKeyboard({
-    onKeyDown: (e) => {
-      // for the escape key (and other key presses), continue propagation to let Popovers / Modals know that
-      // they should close
-      e.continuePropagation();
-      
-      switch (e.key) {
-        case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
-          e.preventDefault();
-          setCurrentFocus((numChildren + (currentFocus || 0) - 1) % numChildren);
-          break;
-
-        case orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
-          e.preventDefault();
-          setCurrentFocus((numChildren + (currentFocus || 0) + 1) % numChildren);
-          break;
-
-        case 'Tab': {
-          if (onTabPress) {
-            onTabPress();
-          }
-          break;
-        }
-
-        default:
-          break;
-      }
-    },
-  });
 
   useEffect(() => {
     buttonRefs.current[currentFocus]?.focus();
   }, [currentFocus]);
 
+  const getContext = useCallback(
+    () => ({
+      currentFocus,
+      setCurrentFocus,
+      orientation,
+      onTabPress,
+      ariaToolbarItemsSize,
+      buttonRefs,
+    }),
+    [currentFocus, setCurrentFocus, orientation, onTabPress, ariaToolbarItemsSize, buttonRefs]
+  );
+
+  const commonProps = {
+    className: classnames(className, STYLE.wrapper),
+    id: id,
+    style: style,
+    'aria-label': ariaLabel,
+    'aria-controls': ariaControls,
+    role: 'toolbar',
+    ...rest,
+  };
+
+  const renderBody = () => {
+    if (shouldRenderAsButtonGroup) {
+      return (
+        <ButtonGroup {...buttonGroupProps} {...commonProps} orientation={orientation}>
+          {children}
+        </ButtonGroup>
+      );
+    } else {
+      return <div {...commonProps}>{children}</div>;
+    }
+  };
+
   return (
-    <div
-      aria-label={ariaLabel}
-      aria-controls={ariaControls}
-      role="toolbar"
-      className={classnames(className, STYLE.wrapper)}
-      id={id}
-      style={style}
-    >
-      {map(validChildren, (child, index) => {
-        return React.cloneElement(child, {
-          tabIndex: index === (currentFocus || 0) ? 0 : -1,
-          ref: (e) => {
-            buttonRefs.current[index] = e;
-            if (child.ref) {
-              child.ref(e);
-            }
-          },
-          onFocus: (e) => {
-            setCurrentFocus(index);
-            if (child.props.onFocus) {
-              child.props.onFocus(e);
-            }
-          },
-          onPress: () => {
-            setCurrentFocus(index);
-            if (child.props.onPress) {
-              child.props.onPress();
-            }
-          },
-          useNativeKeyDown: true,
-          ...keyboardProps,
-        });
-      })}
-    </div>
+    <AriaToolbarContext.Provider value={getContext()}>{renderBody()}</AriaToolbarContext.Provider>
   );
 };
 

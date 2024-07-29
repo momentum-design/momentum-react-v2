@@ -34,12 +34,20 @@ describe('CodeInput', () => {
       expect(component.find('input').props().disabled).toBeTruthy();
     });
 
-    it('input accepts prop aria-label', () => {
+    it('input accepts prop ariaLabel', () => {
       const component = mount(<CodeInput numDigits={6} ariaLabel="enter 6 digit code" />).childAt(
         0
       );
       expect(component.find('input').prop('aria-label')).toBeDefined();
       expect(component.find('input').prop('aria-label')).toBe('enter 6 digit code');
+    });
+
+    it('input accepts prop ariaDescribedby', () => {
+      const component = mount(
+        <CodeInput numDigits={6} ariaDescribedby="invalid input code" />
+      ).childAt(0);
+      expect(component.find('input').prop('aria-describedby')).toBeDefined();
+      expect(component.find('input').prop('aria-describedby')).toBe('invalid input code');
     });
 
     it('input accepts prop name and id', () => {

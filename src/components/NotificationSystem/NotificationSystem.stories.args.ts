@@ -40,6 +40,18 @@ const notificationSystemArgTypes = {
       },
     },
   },
+  ariaLabel: {
+    description: `Aria label for the Notification system`,
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'Notification System',
+      },
+    },
+  },
 };
 
 export { notificationSystemArgTypes };

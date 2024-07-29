@@ -17,6 +17,8 @@ import AriaToolbar from '../AriaToolbar';
 import Avatar from '../Avatar';
 import MeetingListItem from '../MeetingListItem';
 import SearchInput from '../SearchInput';
+import List from '../List';
+import AriaToolbarItem from '../AriaToolbarItem';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -139,13 +141,21 @@ const PopoverWithFirstFocus = (props) => {
 
   return (
     <Popover firstFocusElement={ref} {...props}>
-      <AriaToolbar ariaLabel="toolbar">
-        <ButtonPill key={1}>1</ButtonPill>
-        <ButtonPill key={2} ref={setRef}>
-          2
-        </ButtonPill>
-        <ButtonPill key={3}>3</ButtonPill>
-        <ButtonPill key={4}>4</ButtonPill>
+      <AriaToolbar ariaToolbarItemsSize={4} ariaLabel="toolbar">
+        <AriaToolbarItem itemIndex={0}>
+          <ButtonPill key={1}>1</ButtonPill>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonPill key={2} ref={setRef}>
+            2
+          </ButtonPill>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonPill key={3}>3</ButtonPill>
+        </AriaToolbarItem>
+        <AriaToolbarItem itemIndex={3}>
+          <ButtonPill key={4}>4</ButtonPill>
+        </AriaToolbarItem>
       </AriaToolbar>
     </Popover>
   );
@@ -352,6 +362,52 @@ WithMeetingListItemWithButtonsWithPopover.args = {
   ),
 };
 
+const PopoverInList = (props: PopoverProps) => {
+  return (
+    <List listSize={3}>
+      <Popover {...props} />
+    </List>
+  );
+};
+
+const WithMeetingListItemWithButtonsWithPopoverInList = Template<PopoverProps>(PopoverInList).bind(
+  {}
+);
+
+WithMeetingListItemWithButtonsWithPopoverInList.argTypes = { ...argTypes };
+
+WithMeetingListItemWithButtonsWithPopoverInList.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  children: (
+    <div>
+      <Popover
+        interactive
+        trigger="click"
+        triggerComponent={
+          <Avatar
+            onPress={() => {
+              alert('avatar on press');
+            }}
+            initials="AB"
+          >
+            Hover or click me!
+          </Avatar>
+        }
+      >
+        <ButtonSimple>hi</ButtonSimple>
+      </Popover>
+    </div>
+  ),
+  triggerComponent: (
+    <MeetingListItem style={{ margin: '10rem auto', display: 'flex' }}>
+      Hover or click me!
+    </MeetingListItem>
+  ),
+};
+
 const WithSearchInput = Template<PopoverProps>(Popover).bind({});
 
 const SearchInputComponent = () => {
@@ -432,6 +488,55 @@ Common.parameters = {
   ],
 };
 
+const WithMeetingListItemWithAvatarWithPopover = Template<PopoverProps>((args) => {
+  return (
+    <Popover
+      {...args}
+      triggerComponent={
+        <MeetingListItem style={{ margin: '10rem auto', display: 'flex' }}>
+          <Popover
+            {...args}
+            triggerComponent={
+              <Avatar
+                // eslint-disable-next-line
+                onPress={() => {}}
+                initials="AB"
+              >
+                Hover or click me!
+              </Avatar>
+            }
+          >
+            <div>
+              <ButtonPill>test 1</ButtonPill>
+              <ButtonPill>test 2</ButtonPill>
+              <ButtonPill>test 3</ButtonPill>
+            </div>
+          </Popover>
+          test
+        </MeetingListItem>
+      }
+      trigger="click"
+      interactive
+    >
+      <div>
+        <ButtonPill>test 4</ButtonPill>
+        <ButtonPill>test 5</ButtonPill>
+        <ButtonPill>test 6</ButtonPill>
+      </div>
+    </Popover>
+  );
+}).bind({});
+
+WithMeetingListItemWithAvatarWithPopover.argTypes = { ...argTypes };
+
+WithMeetingListItemWithAvatarWithPopover.args = {
+  trigger: 'mouseenter',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  appendTo: () => document.querySelector('#theme-provider'),
+};
+
 export {
   Example,
   InteractiveContent,
@@ -446,4 +551,6 @@ export {
   WithMeetingListItem,
   WithMeetingListItemWithButtonsWithPopover,
   WithSearchInput,
+  WithMeetingListItemWithButtonsWithPopoverInList,
+  WithMeetingListItemWithAvatarWithPopover,
 };

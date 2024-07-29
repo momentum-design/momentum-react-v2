@@ -18,26 +18,28 @@ jest.mock('uuid', () => {
 describe('<RadioSimpleGroup />', () => {
   const children = [
     <RadioSimple value="red" key="0">
-      <Icon key="0" name="accessibility" autoScale/>
+      <Icon key="0" name="accessibility" autoScale />
       <Text key="1">Red</Text>
     </RadioSimple>,
     <RadioSimple value="blue" key="1">
-      <Icon key="0" name="search" autoScale/>
+      <Icon key="0" name="search" autoScale />
       <Text key="1">Blue</Text>
     </RadioSimple>,
     <RadioSimple value="yellow" key="2">
-      <Icon key="0" name="accessories" autoScale/>
+      <Icon key="0" name="accessories" autoScale />
       <Text key="1">Yellow</Text>
-    </RadioSimple>
+    </RadioSimple>,
   ];
-  const label = (<div>Select your favorite color</div>);
-  const description = (<div>Only choose one</div>);
+  const label = <div>Select your favorite color</div>;
+  const description = <div>Only choose one</div>;
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const { asFragment } = render(<RadioSimpleGroup children={children} label={label} description={description} />);
+      const { asFragment } = render(
+        <RadioSimpleGroup children={children} label={label} description={description} />
+      );
 
       expect(asFragment()).toMatchSnapshot();
     });
@@ -45,9 +47,7 @@ describe('<RadioSimpleGroup />', () => {
     it('should match snapshot with children', () => {
       expect.assertions(1);
 
-      const { asFragment } = render(
-        <RadioSimpleGroup children={children} />
-      );
+      const { asFragment } = render(<RadioSimpleGroup children={children} />);
 
       expect(asFragment()).toMatchSnapshot();
     });
@@ -86,11 +86,7 @@ describe('<RadioSimpleGroup />', () => {
       expect.assertions(1);
 
       const { asFragment } = render(
-        <RadioSimpleGroup
-          children={children}
-          description={description}
-          id='example-id'
-        />
+        <RadioSimpleGroup children={children} description={description} id="example-id" />
       );
 
       expect(asFragment()).toMatchSnapshot();
@@ -99,12 +95,7 @@ describe('<RadioSimpleGroup />', () => {
     it('should match snapshot with child thats selected', () => {
       expect.assertions(1);
 
-      const { asFragment } = render(
-        <RadioSimpleGroup
-          children={children}
-          defaultValue="red"
-        />
-      );
+      const { asFragment } = render(<RadioSimpleGroup children={children} defaultValue="red" />);
 
       expect(asFragment()).toMatchSnapshot();
     });
@@ -112,12 +103,7 @@ describe('<RadioSimpleGroup />', () => {
     it('should match snapshot with children with group disabled', () => {
       expect.assertions(1);
 
-      const { asFragment } = render(
-        <RadioSimpleGroup
-          children={children}
-          isDisabled={true}
-        />
-      );
+      const { asFragment } = render(<RadioSimpleGroup children={children} isDisabled={true} />);
 
       expect(asFragment()).toMatchSnapshot();
     });
@@ -125,12 +111,7 @@ describe('<RadioSimpleGroup />', () => {
     it('should match snapshot with children with read only', () => {
       expect.assertions(1);
 
-      const { asFragment } = render(
-        <RadioSimpleGroup
-          children={children}
-          isReadOnly={true}
-        />
-      );
+      const { asFragment } = render(<RadioSimpleGroup children={children} isReadOnly={true} />);
 
       expect(asFragment()).toMatchSnapshot();
     });
@@ -150,11 +131,14 @@ describe('<RadioSimpleGroup />', () => {
     it('should have provided aria-describedby when description is provided', () => {
       expect.assertions(1);
 
-      render(<RadioSimpleGroup children={children} description={description} id='example-id' />);
+      render(<RadioSimpleGroup children={children} description={description} id="example-id" />);
 
       const radioGroup = screen.getByRole('radiogroup');
 
-      expect(radioGroup).toHaveAttribute('aria-describedby', 'radio-simple-group-description-example-id');
+      expect(radioGroup).toHaveAttribute(
+        'aria-describedby',
+        'radio-simple-group-description-example-id'
+      );
     });
 
     it('should have provided class when className is provided', () => {
@@ -203,7 +187,6 @@ describe('<RadioSimpleGroup />', () => {
 
       expect(radioGroup).toHaveAttribute('aria-readonly', 'true');
     });
-
 
     it('should have provided isDisabled when isDisabled is provided', () => {
       expect.assertions(1);
@@ -281,7 +264,11 @@ describe('<RadioSimpleGroup />', () => {
 
       const onChange = jest.fn();
 
-      render(<RadioSimpleGroup defaultValue={'red'} onChange={onChange}>{children}</RadioSimpleGroup>);
+      render(
+        <RadioSimpleGroup defaultValue={'red'} onChange={onChange}>
+          {children}
+        </RadioSimpleGroup>
+      );
 
       const optionRed = screen.getByText('Red');
 
@@ -312,7 +299,11 @@ describe('<RadioSimpleGroup />', () => {
 
       const onChange = jest.fn();
 
-      render(<RadioSimpleGroup isReadOnly={true} onChange={onChange}>{children}</RadioSimpleGroup>);
+      render(
+        <RadioSimpleGroup isReadOnly={true} onChange={onChange}>
+          {children}
+        </RadioSimpleGroup>
+      );
 
       const optionRed = screen.getByText('Red');
 
@@ -327,7 +318,11 @@ describe('<RadioSimpleGroup />', () => {
 
       const onChange = jest.fn();
 
-      render(<RadioSimpleGroup isDisabled={true} onChange={onChange}>{children}</RadioSimpleGroup>);
+      render(
+        <RadioSimpleGroup isDisabled={true} onChange={onChange}>
+          {children}
+        </RadioSimpleGroup>
+      );
 
       const optionRed = screen.getByText('Red');
 
@@ -342,20 +337,24 @@ describe('<RadioSimpleGroup />', () => {
 
       const onChange = jest.fn();
 
-      render(<RadioSimpleGroup onChange={onChange}>
-        <RadioSimple value="red" key="0" isDisabled={true}>
-          <Icon name="accessibility" autoScale/>
-          <Text>Red</Text>
-        </RadioSimple>,
-        <RadioSimple value="blue" key="1">
-          <Icon name="search" autoScale/>
-          <Text>Blue</Text>
-        </RadioSimple>,
-        <RadioSimple value="yellow" key="2">
-          <Icon name="accessories" autoScale/>
-          <Text>Yellow</Text>
-        </RadioSimple>
-      </RadioSimpleGroup>);
+      render(
+        <RadioSimpleGroup onChange={onChange}>
+          <RadioSimple value="red" key="0" isDisabled={true}>
+            <Icon name="accessibility" autoScale />
+            <Text>Red</Text>
+          </RadioSimple>
+          ,
+          <RadioSimple value="blue" key="1">
+            <Icon name="search" autoScale />
+            <Text>Blue</Text>
+          </RadioSimple>
+          ,
+          <RadioSimple value="yellow" key="2">
+            <Icon name="accessories" autoScale />
+            <Text>Yellow</Text>
+          </RadioSimple>
+        </RadioSimpleGroup>
+      );
 
       const optionRed = screen.getByLabelText('Red');
 
@@ -380,7 +379,11 @@ describe('<RadioSimpleGroup />', () => {
 
       const onChange = jest.fn();
 
-      render(<RadioSimpleGroup onChange={onChange} defaultValue="red">{children}</RadioSimpleGroup>);
+      render(
+        <RadioSimpleGroup onChange={onChange} defaultValue="red">
+          {children}
+        </RadioSimpleGroup>
+      );
 
       const optionRed = screen.getByLabelText('Red');
       const optionBlue = screen.getByLabelText('Blue');
@@ -397,7 +400,6 @@ describe('<RadioSimpleGroup />', () => {
       await user.type(optionYellow, '{arrowdown}');
 
       expect(onChange).toHaveBeenLastCalledWith('red');
-
 
       await user.type(optionYellow, '{arrowup}');
 

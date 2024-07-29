@@ -108,9 +108,11 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -118,6 +120,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -772,9 +775,11 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -782,6 +787,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -1435,9 +1441,11 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -1445,6 +1453,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -2054,9 +2063,11 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -2064,6 +2075,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -2661,9 +2673,11 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -2671,6 +2685,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -3311,9 +3326,11 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -3321,6 +3338,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -3975,9 +3993,11 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -3985,6 +4005,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -4647,9 +4668,11 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -4657,6 +4680,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T
@@ -5281,11 +5305,18 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
     <div
       className="md-toast-header"
     >
-      <div
+      <Text
         className="md-toast-title"
+        tagName="h2"
+        type="label-compact"
       >
-        Title
-      </div>
+        <h2
+          className="md-text-wrapper md-toast-title"
+          data-type="label-compact"
+        >
+          Title
+        </h2>
+      </Text>
       <div
         className="md-toast-controls"
       >
@@ -5487,9 +5518,11 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
           size={32}
         >
           <div
+            aria-label=""
             className="md-avatar-wrapper md-toast-details-image"
             data-color="default"
             data-size={32}
+            role="group"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -5497,6 +5530,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
               type="person"
             >
               <span
+                aria-hidden="true"
                 className="md-avatar-wrapper-children"
               >
                 T

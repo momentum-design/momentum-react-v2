@@ -59,4 +59,5 @@ export default {
   color: popoverArgTypes.color,
   variant: popoverArgTypes.variant,
   showArrow: popoverArgTypes.showArrow,
+  zIndex: popoverArgTypes.zIndex,
 };

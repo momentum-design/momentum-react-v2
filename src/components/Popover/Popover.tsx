@@ -1,4 +1,4 @@
-import React, { ForwardedRef, forwardRef, useCallback, useEffect } from 'react';
+import React, { ForwardedRef, forwardRef, useCallback, useEffect, useRef } from 'react';
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
@@ -64,6 +64,10 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     firstFocusElement,
     autoFocus = DEFAULTS.AUTO_FOCUS,
     appendTo = DEFAULTS.APPEND_TO,
+    continuePropagationOnTrigger,
+    'aria-labelledby': providedAriaLabelledby,
+    zIndex,
+    'aria-label': ariaLabel,
     ...rest
   } = props;
 
@@ -75,11 +79,15 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
 
   const popoverInstance = React.useRef<PopoverInstance>(undefined);
 
-  const triggerComponentId = triggerComponent.props?.id || uuidV4();
+  const generatedTriggerIdRef = useRef(uuidV4());
+  const generatedTriggerId = generatedTriggerIdRef.current;
+
+  const ariaLabelledby = providedAriaLabelledby || triggerComponent.props?.id || generatedTriggerId;
 
   const modalConditionalProps = {
     ...(interactive && {
-      'aria-labelledby': triggerComponentId,
+      ...((providedAriaLabelledby || !ariaLabel) && { 'aria-labelledby': ariaLabelledby }),
+      ...(ariaLabel && { 'aria-label': ariaLabel }),
       focusLockProps: { restoreFocus: focusBackOnTrigger, autoFocus },
     }),
   };
@@ -113,13 +121,14 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     firstFocusElement?.focus();
   }, [firstFocusElement]);
 
-  const triggerComponentCommonProps = {
-    id: interactive ? triggerComponentId : triggerComponent.props?.id || id,
-  };
+  const triggerComponentCommonProps = {};
 
   if (interactive) {
     triggerComponentCommonProps['aria-haspopup'] =
       triggerComponent?.props?.['aria-haspopup'] || 'dialog';
+    if (!providedAriaLabelledby && !ariaLabel) {
+      triggerComponentCommonProps['id'] = ariaLabelledby;
+    }
   }
 
   const mrv2Props = isMRv2Button(triggerComponent) ? { useNativeKeyDown: true } : {};
@@ -148,6 +157,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       ref={ref}
       /* needed to prevent the popover from closing when the focus is changed via click events */
       hideOnClick={!trigger.includes('manual')}
+      continuePropagationOnTrigger={continuePropagationOnTrigger}
       render={(attrs) => (
         <ModalContainer
           id={id}
@@ -228,6 +238,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         onHidden?.(instance);
       }}
       setInstance={popoverSetInstance}
+      zIndex={zIndex}
     >
       {clonedTriggerComponent}
     </LazyTippy>

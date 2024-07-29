@@ -1,3 +1,4 @@
+import { AriaBaseButtonProps } from '@react-types/button';
 import { Props as PopoverProps } from '../Popover/Popover.types';
 
 /**
@@ -38,5 +39,20 @@ export interface Props
     | 'variant'
     | 'setInstance'
   > {
+  /**
+   * Whether the tooltip content should provide the aria label, description or neither to the trigger component.
+   * Possible values: 'label', 'description', 'none'.
+   * Usually 'label' is used for buttons with no text, 'description' is used for buttons with text. 'none' is rarely used.
+   */
   type: TooltipTypes;
+  /**
+   * When type is 'label' or 'desription', you can optionally use labelOrDescriptionId specify the id to use for labelling/describing.
+   * This enables you to use the same id to label or describe e.g. a dialog, as is used by TooltipPopoverCombo.
+   */
+  labelOrDescriptionId?: string;
+  /**
+   * aria-haspopup will be passed through to the trigger component if provided.
+   * This is only really useful for a nested component structure as in TooltipPopoverCombo.
+   */
+  'aria-haspopup'?: AriaBaseButtonProps['aria-haspopup'];
 }

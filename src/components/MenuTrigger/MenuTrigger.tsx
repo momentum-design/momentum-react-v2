@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useRef, Children, useState, useEffect, useCallback } from 'react';
+import React, { ReactElement, useRef, Children, useState, useEffect, useImperativeHandle, forwardRef, ForwardedRef, RefObject } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './MenuTrigger.constants';
@@ -14,7 +14,7 @@ import type { PopoverInstance, VariantType } from '../Popover/Popover.types';
 import type { FocusStrategy } from '@react-types/shared';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 
-const MenuTrigger: FC<Props> = (props: Props) => {
+const MenuTrigger = forwardRef((props: Props, ref: ForwardedRef<{triggerComponentRef: RefObject<HTMLButtonElement>}>) => {
   const {
     className,
     id,
@@ -28,6 +28,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
     showArrow = DEFAULTS.SHOW_ARROW,
     placement = DEFAULTS.PLACEMENT,
     triggerComponent,
+    zIndex,
   } = props;
 
   const state = useMenuTriggerState(props);
@@ -35,11 +36,19 @@ const MenuTrigger: FC<Props> = (props: Props) => {
 
   const buttonRef = useRef<HTMLButtonElement>();
 
+  useImperativeHandle(ref, () => ({
+      triggerComponentRef: buttonRef,
+    }), []);
+
   const [...menus] = Children.toArray(children);
 
   const menuTriggerType = triggerComponent.props?.['aria-haspopup'] || 'menu';
 
-  const { menuTriggerProps, menuProps } = useMenuTrigger({ type: menuTriggerType }, state, buttonRef);
+  const { menuTriggerProps, menuProps } = useMenuTrigger(
+    { type: menuTriggerType },
+    state,
+    buttonRef
+  );
 
   menuTriggerProps['aria-haspopup'] = menuTriggerProps['aria-haspopup'] || menuTriggerType;
 
@@ -112,6 +121,7 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       // MenuContext.Provider should take care of the auto focusing
       // eslint-disable-next-line jsx-a11y/no-autofocus
       autoFocus={false}
+      zIndex={zIndex}
       {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
     >
       {menus.map((menu: ReactElement, index) => {
@@ -133,6 +143,6 @@ const MenuTrigger: FC<Props> = (props: Props) => {
       })}
     </Popover>
   );
-};
+});
 
 export default MenuTrigger;

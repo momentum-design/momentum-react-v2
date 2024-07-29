@@ -28,6 +28,7 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
     toastClassName,
     bodyClassName,
     containerClassName,
+    ariaLabel
   } = props;
 
   const slideAndBlur = cssTransition({
@@ -54,10 +55,11 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
     : [ATTENTION.LOW, ATTENTION.MEDIUM];
 
   return (
-    <div
+    <section
       data-position={position}
       className={classnames(STYLE.wrapper, className)}
       style={{ ...style, zIndex: zIndex }}
+      aria-label={ariaLabel}
     >
       <ToastContainer
         {...commonProps}
@@ -71,7 +73,7 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
         limit={limit}
         containerId={getContainerID(id, attentionOrder[1])}
       />
-    </div>
+    </section>
   );
 };
 

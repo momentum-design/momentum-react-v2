@@ -1,5 +1,7 @@
 import type { Instance as TippyInstance, Plugin } from 'tippy.js';
 
+import { dispatchEvent, EventType } from '../Popover.events';
+
 const openedTippyInstances: TippyInstance[] = [];
 
 // hide the last opened popover when Escape key is pressed
@@ -26,6 +28,9 @@ const addInstance = (instance: TippyInstance) => {
   }
 
   openedTippyInstances.push(instance);
+
+  // Send custom event that tippy instance is shown on screen. This event is listened for in instances of OverlayAlert to prevent it from closing unintentionally.
+  dispatchEvent(EventType.TIPPY_INSTANCE_ADDED, instance);
 };
 
 /**
@@ -38,6 +43,9 @@ const removeInstance = (instance: TippyInstance) => {
   if (openedTippyInstances.length === 0) {
     window.removeEventListener('keydown', onKeyDown);
   }
+  // Send custom event that tippy instance is no longer shown on screen. This event is listened for in instances of OverlayAlert to allow it to close once there are no tippy instances
+  // still shown on screen that were opened after the render of the OverlayAlert.
+  dispatchEvent(EventType.TIPPY_INSTANCE_REMOVED, instance);
 };
 
 /**

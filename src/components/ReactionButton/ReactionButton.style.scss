@@ -3,14 +3,9 @@
   background-color: rgba(0, 0, 0, 1);
   background-color: var(--mds-color-theme-groupedbackground-primary-normal);
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.07);
-    background-color: var(--mds-color-theme-button-secondary-hover);
-  }
-
   &[data-reacted='true'] {
-    background-color: rgba(255, 255, 255, 0.11);
-    background-color: var(--mds-color-theme-background-primary-active);
+    background-color: rgba(255, 255, 255, 0.11) !important;
+    background-color: var(--mds-color-theme-background-primary-active) !important;
   }
 
   .md-reaction-wrapper {

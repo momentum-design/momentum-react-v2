@@ -1,151 +1,182 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReactionPicker /> snapshot should match snapshot 1`] = `
-<ReactionPicker>
-  <ButtonGroup
+<ReactionPicker
+  ariaLabel="test-aria-label"
+  ariaToolbarItemsSize={0}
+>
+  <AriaToolbar
+    ariaLabel="test-aria-label"
+    ariaToolbarItemsSize={0}
     className="md-reaction-picker-wrapper"
-    round={true}
+    orientation="horizontal"
   >
     <div
-      className="md-button-group-wrapper md-reaction-picker-wrapper"
-      data-compressed={false}
-      data-orientation="horizontal"
-      data-round={true}
-      data-separator={false}
-      data-spaced={false}
+      aria-label="test-aria-label"
+      className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
+      role="toolbar"
     />
-  </ButtonGroup>
+  </AriaToolbar>
 </ReactionPicker>
 `;
 
 exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
-<ReactionPicker>
-  <ButtonGroup
+<ReactionPicker
+  ariaLabel="test-aria-label"
+  ariaToolbarItemsSize={1}
+>
+  <AriaToolbar
+    ariaLabel="test-aria-label"
+    ariaToolbarItemsSize={1}
     className="md-reaction-picker-wrapper"
-    round={true}
+    orientation="horizontal"
   >
     <div
-      className="md-button-group-wrapper md-reaction-picker-wrapper"
-      data-compressed={false}
-      data-orientation="horizontal"
-      data-round={true}
-      data-separator={false}
-      data-spaced={false}
+      aria-label="test-aria-label"
+      className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
+      role="toolbar"
     >
-      <ReactionButton>
-        <ButtonCircle
-          className="md-reaction-button-wrapper"
-          data-reacted={false}
-          size={32}
+      <ForwardRef
+        itemIndex={0}
+      >
+        <ReactionButton
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onPress={[Function]}
+          tabIndex={0}
+          useNativeKeyDown={true}
         >
-          <ButtonSimple
-            aria-disabled={false}
-            className="md-button-circle-wrapper md-reaction-button-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-ghost={false}
-            data-inverted={false}
-            data-multiple-children={false}
-            data-outline={false}
+          <ButtonCircle
+            className="md-reaction-button-wrapper"
             data-reacted={false}
-            data-shallow-disabled={false}
-            data-size={32}
+            ghost={true}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            size={32}
+            tabIndex={0}
+            useNativeKeyDown={true}
           >
-            <FocusRing>
-              <FocusRing
-                focusClass="md-focus-ring-wrapper children"
-                focusRingClass="md-focus-ring-wrapper children"
-              >
-                <button
-                  className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
-                  data-color="primary"
-                  data-disabled={false}
-                  data-ghost={false}
-                  data-inverted={false}
-                  data-multiple-children={false}
-                  data-outline={false}
-                  data-reacted={false}
-                  data-shallow-disabled={false}
-                  data-size={32}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDragStart={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchCancel={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  type="button"
-                />
+            <ButtonSimple
+              aria-disabled={false}
+              className="md-button-circle-wrapper md-reaction-button-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-ghost={true}
+              data-inverted={false}
+              data-multiple-children={false}
+              data-outline={false}
+              data-reacted={false}
+              data-shallow-disabled={false}
+              data-size={32}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onPress={[Function]}
+              tabIndex={0}
+              useNativeKeyDown={true}
+            >
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
+                >
+                  <button
+                    className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
+                    data-color="primary"
+                    data-disabled={false}
+                    data-ghost={true}
+                    data-inverted={false}
+                    data-multiple-children={false}
+                    data-outline={false}
+                    data-reacted={false}
+                    data-shallow-disabled={false}
+                    data-size={32}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
+                  />
+                </FocusRing>
               </FocusRing>
-            </FocusRing>
-          </ButtonSimple>
-        </ButtonCircle>
-      </ReactionButton>
+            </ButtonSimple>
+          </ButtonCircle>
+        </ReactionButton>
+      </ForwardRef>
     </div>
-  </ButtonGroup>
+  </AriaToolbar>
 </ReactionPicker>
 `;
 
 exports[`<ReactionPicker /> snapshot should match snapshot with className 1`] = `
 <ReactionPicker
+  ariaLabel="test-aria-label"
+  ariaToolbarItemsSize={0}
   className="example-class"
 >
-  <ButtonGroup
+  <AriaToolbar
+    ariaLabel="test-aria-label"
+    ariaToolbarItemsSize={0}
     className="example-class md-reaction-picker-wrapper"
-    round={true}
+    orientation="horizontal"
   >
     <div
-      className="md-button-group-wrapper example-class md-reaction-picker-wrapper"
-      data-compressed={false}
-      data-orientation="horizontal"
-      data-round={true}
-      data-separator={false}
-      data-spaced={false}
+      aria-label="test-aria-label"
+      className="example-class md-reaction-picker-wrapper md-aria-toolbar-wrapper"
+      role="toolbar"
     />
-  </ButtonGroup>
+  </AriaToolbar>
 </ReactionPicker>
 `;
 
 exports[`<ReactionPicker /> snapshot should match snapshot with id 1`] = `
 <ReactionPicker
+  ariaLabel="test-aria-label"
+  ariaToolbarItemsSize={0}
   id="example-id"
 >
-  <ButtonGroup
+  <AriaToolbar
+    ariaLabel="test-aria-label"
+    ariaToolbarItemsSize={0}
     className="md-reaction-picker-wrapper"
     id="example-id"
-    round={true}
+    orientation="horizontal"
   >
     <div
-      className="md-button-group-wrapper md-reaction-picker-wrapper"
-      data-compressed={false}
-      data-orientation="horizontal"
-      data-round={true}
-      data-separator={false}
-      data-spaced={false}
+      aria-label="test-aria-label"
+      className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
       id="example-id"
+      role="toolbar"
     />
-  </ButtonGroup>
+  </AriaToolbar>
 </ReactionPicker>
 `;
 
 exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
 <ReactionPicker
+  ariaLabel="test-aria-label"
+  ariaToolbarItemsSize={0}
   style={
     Object {
       "color": "pink",
     }
   }
 >
-  <ButtonGroup
+  <AriaToolbar
+    ariaLabel="test-aria-label"
+    ariaToolbarItemsSize={0}
     className="md-reaction-picker-wrapper"
-    round={true}
+    orientation="horizontal"
     style={
       Object {
         "color": "pink",
@@ -153,18 +184,15 @@ exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
     }
   >
     <div
-      className="md-button-group-wrapper md-reaction-picker-wrapper"
-      data-compressed={false}
-      data-orientation="horizontal"
-      data-round={true}
-      data-separator={false}
-      data-spaced={false}
+      aria-label="test-aria-label"
+      className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
+      role="toolbar"
       style={
         Object {
           "color": "pink",
         }
       }
     />
-  </ButtonGroup>
+  </AriaToolbar>
 </ReactionPicker>
 `;

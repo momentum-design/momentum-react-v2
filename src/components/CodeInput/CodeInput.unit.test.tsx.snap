@@ -21,6 +21,7 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       debug={false}
       inputProps={
         Object {
+          "aria-describedby": undefined,
           "aria-label": undefined,
           "disabled": false,
           "id": undefined,

@@ -291,6 +291,69 @@ describe('<Tooltip type"description />', () => {
         expect(container).toMatchSnapshot();
       }
     );
+
+    it('should match snapshot with labelOrDescriptionId and type label', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Tooltip
+          type="label"
+          labelOrDescriptionId="test-label-id"
+          triggerComponent={<button>Hover Me!</button>}
+        >
+          <p>Content</p>
+        </Tooltip>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openTooltipByHoveringOnTriggerAndCheckContent(user, /content/i);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with labelOrDescriptionId and type description', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Tooltip
+          type="description"
+          labelOrDescriptionId="test-description-id"
+          triggerComponent={<button>Hover Me!</button>}
+        >
+          <p>Content</p>
+        </Tooltip>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openTooltipByHoveringOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-haspopup', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <Tooltip
+          type="description"
+          aria-haspopup="grid"
+          triggerComponent={<button>Hover Me!</button>}
+        >
+          <p>Content</p>
+        </Tooltip>
+      );
+
+      expect(container).toMatchSnapshot();
+
+      await openTooltipByHoveringOnTriggerAndCheckContent(user);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -325,7 +388,7 @@ describe('<Tooltip type"description />', () => {
       expect(content.parentElement.getAttribute('aria-labelledby')).toBeNull();
     });
 
-    it('add aria-labelledby to trigger component when type is label and overwriteAccessibleLabel true', async () => {
+    it('add aria-labelledby to trigger component when type is label', async () => {
       const user = userEvent.setup();
 
       render(
@@ -341,10 +404,34 @@ describe('<Tooltip type"description />', () => {
       await openTooltipByHoveringOnTriggerAndCheckContent(user, /Content/i);
       const trigger = await screen.findByText(/hover me!/i);
       expect(trigger.getAttribute('aria-labelledby')).toEqual('test-ID');
+      expect(trigger.getAttribute('aria-describedby')).toBe(null);
       expect(trigger.getAttribute('aria-haspopup')).toBe(null);
     });
 
-    it('add aria-labelledby to trigger component when type is none', async () => {
+    it('add correct aria-labelledby to trigger component when type is label and labelOrDescriptionId is provided', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Tooltip
+          labelOrDescriptionId="test-label-id"
+          type="label"
+          triggerComponent={<button>Hover Me!</button>}
+        >
+          <p>Content</p>
+        </Tooltip>
+      );
+
+      // Button has the correct label before tooltip opened
+      expect(screen.getByRole('button', { name: /Content/i })).toBeVisible();
+
+      // Testing library use the accessible name for query not the actual label
+      await openTooltipByHoveringOnTriggerAndCheckContent(user, /Content/i);
+      const trigger = await screen.findByText(/hover me!/i);
+      expect(trigger.getAttribute('aria-labelledby')).toEqual('test-label-id');
+      expect(trigger.getAttribute('aria-describedby')).toBe(null);
+      expect(trigger.getAttribute('aria-haspopup')).toBe(null);
+    });
+    it('add nothing to trigger component when type is none', async () => {
       const user = userEvent.setup();
 
       render(
@@ -353,13 +440,13 @@ describe('<Tooltip type"description />', () => {
         </Tooltip>
       );
 
-      // Button has the correct label before tooltip opened
+      // Button has the inbuilt label before tooltip opened
       expect(screen.getByRole('button', { name: /Hover Me!/i })).toBeVisible();
 
-      // Testing library use the accessible name for query not the actual label
       await openTooltipByHoveringOnTriggerAndCheckContent(user);
       const trigger = await screen.findByText(/hover me!/i);
-      expect(trigger.getAttribute('aria-labelledby')).toEqual(null);
+      expect(trigger.getAttribute('aria-labelledby')).toBe(null);
+      expect(trigger.getAttribute('aria-describedby')).toBe(null);
       expect(trigger.getAttribute('aria-haspopup')).toBe(null);
     });
 
@@ -371,13 +458,45 @@ describe('<Tooltip type"description />', () => {
           <p>Content</p>
         </Tooltip>
       );
+
+      // Button has the inbuilt label and the correct description before tooltip opened
+      const button = screen.getByRole('button', { name: /Hover Me!/i });
+      expect(button).toBeVisible();
+      expect(button.getAttribute('aria-describedby')).toEqual('test-ID');
+
       await openTooltipByHoveringOnTriggerAndCheckContent(user);
       const trigger = await screen.findByText(/hover me!/i);
-      expect(trigger.getAttribute('aria-describedby')).toMatch(/tippy-\d+/);
+      expect(trigger.getAttribute('aria-labelledby')).toBe(null);
+      expect(trigger.getAttribute('aria-describedby')).toMatch('test-ID');
       expect(trigger.getAttribute('aria-haspopup')).toBe(null);
     });
 
-    it('checks triggerComponent props when aria-haspopup is defined', async () => {
+    it('add correct aria-labelledby to trigger component when type is description and labelOrDescriptionId is provided', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Tooltip
+          labelOrDescriptionId="test-description-id"
+          type="description"
+          triggerComponent={<button>Hover Me!</button>}
+        >
+          <p>Content</p>
+        </Tooltip>
+      );
+
+      // Button has the inbuilt label and the correct description before tooltip opened
+      const button = screen.getByRole('button', { name: /Hover Me!/i });
+      expect(button).toBeVisible();
+      expect(button.getAttribute('aria-describedby')).toEqual('test-description-id');
+
+      await openTooltipByHoveringOnTriggerAndCheckContent(user);
+      const trigger = await screen.findByText(/hover me!/i);
+      expect(trigger.getAttribute('aria-labelledby')).toBe(null);
+      expect(trigger.getAttribute('aria-describedby')).toMatch('test-description-id');
+      expect(trigger.getAttribute('aria-haspopup')).toBe(null);
+    });
+
+    it("doesn't affect aria-haspopup and id on triggerComponent when aria-haspopup is defined on triggerComponent", async () => {
       render(
         <Tooltip
           type="description"
@@ -391,7 +510,7 @@ describe('<Tooltip type"description />', () => {
       expect(button1.getAttribute('aria-haspopup')).toBe('grid');
     });
 
-    it('checks triggerComponent props when id is not defined', async () => {
+    it("doesn't affect aria-haspopup and id on triggerComponent when aria-haspopup and id are not defined on triggerComponent", async () => {
       render(
         <Tooltip type="description" triggerComponent={<button>Tooltip 1</button>}>
           <p>Content</p>
@@ -402,7 +521,7 @@ describe('<Tooltip type"description />', () => {
       expect(button1.getAttribute('aria-haspopup')).toBe(null);
     });
 
-    it('checks triggerComponent props when id is defined', async () => {
+    it("doesn't affect aria-haspopup and id on triggerComponent when id is defined on triggerComponent", async () => {
       const id = 'example-id';
       render(
         <Tooltip type="description" triggerComponent={<button id={id}>Tooltip 1</button>}>
@@ -412,6 +531,29 @@ describe('<Tooltip type"description />', () => {
       const button1 = screen.getByRole('button', { name: /Tooltip 1/i });
       expect(button1.getAttribute('id')).toBe(id);
       expect(button1.getAttribute('aria-haspopup')).toBe(null);
+    });
+
+    it('passes through aria-haspopup to triggerComponent when defined', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Tooltip
+          type="description"
+          aria-haspopup="grid"
+          triggerComponent={<button>Tooltip 1</button>}
+        >
+          <p>Content</p>
+        </Tooltip>
+      );
+      const button1 = screen.getByRole('button', { name: /Tooltip 1/i });
+      expect(button1.getAttribute('aria-haspopup')).toBe('grid');
+
+      const content = await openTooltipByHoveringOnTriggerAndCheckContent(
+        user,
+        /Tooltip 1/i,
+        /Content/i
+      );
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBeNull();
     });
 
     it('should not add useNativeKeyDown on the DOM button', async () => {
@@ -450,10 +592,10 @@ describe('<Tooltip type"description />', () => {
 
       render(
         <>
-          <Tooltip type="description" triggerComponent={<ButtonSimple>Tooltip 1</ButtonSimple>}>
+          <Tooltip type="none" triggerComponent={<ButtonSimple>Tooltip 1</ButtonSimple>}>
             <p>Content 1</p>
           </Tooltip>
-          <Tooltip type="description" triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}>
+          <Tooltip type="none" triggerComponent={<ButtonSimple>Tooltip 2</ButtonSimple>}>
             <p>Content 2</p>
           </Tooltip>
           <ButtonSimple>Other button</ButtonSimple>
@@ -507,7 +649,7 @@ describe('<Tooltip type"description />', () => {
     expect(props.onCreate).not.toBeCalled();
 
     const { unmount } = render(
-      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>} {...props}>
+      <Tooltip type="none" triggerComponent={<button>Hover Me!</button>} {...props}>
         <p>Content</p>
       </Tooltip>
     );
@@ -554,7 +696,7 @@ describe('<Tooltip type"description />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
+      <Tooltip type="none" triggerComponent={<button>Hover Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );
@@ -581,7 +723,7 @@ describe('<Tooltip type"description />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip type="description" triggerComponent={<button>Focus Me!</button>}>
+      <Tooltip type="none" triggerComponent={<button>Focus Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );
@@ -607,7 +749,7 @@ describe('<Tooltip type"description />', () => {
     const user = userEvent.setup();
 
     render(
-      <Tooltip type="description" triggerComponent={<button>Hover Me!</button>}>
+      <Tooltip type="none" triggerComponent={<button>Hover Me!</button>}>
         <p>Content</p>
       </Tooltip>
     );

@@ -1,11 +1,9 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { popoverArgTypes } from '../Popover/Popover.stories.args';
 
-import { DEFAULTS } from './Tooltip.constants';
-
 const tooltipArgTypes = {
-  isDescription: {
-    description: `Determines, whether the tooltip is the description or the label of the trigger component`,
+  type: {
+    description: `Determines, whether the tooltip is the description or the label of the trigger component, or none`,
     options: ['none', 'label', 'description'],
     control: { type: 'select' },
     table: {
@@ -14,6 +12,33 @@ const tooltipArgTypes = {
       },
       defaultValue: {
         summary: 'description',
+      },
+    },
+  },
+  labelOrDescriptionId: {
+    description:
+      'the id to use for the invisible div providing the label or description for the trigger, defaults to generated uuid',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-haspopup': {
+    defaultValue: undefined,
+    description: 'aria-haspopup will be passed through to the trigger component if provided',
+    options: [undefined, 'dialog', 'menu', 'grid'],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
       },
     },
   },

@@ -27,11 +27,14 @@ const Tooltip = forwardRef(
       variant = DEFAULTS.VARIANT,
       triggerComponent,
       children,
+      labelOrDescriptionId: providedLabelId,
+      'aria-haspopup': ariaHaspopup,
       ...otherProps
     }: Props,
     ref: ForwardedRef<HTMLElement>
   ) => {
-    const id = useId();
+    const generatedLabelId = useId();
+    const labelId = providedLabelId || generatedLabelId;
     const isLabelTooltip = type === 'label';
     const isDescription = type === 'description';
 
@@ -43,8 +46,7 @@ const Tooltip = forwardRef(
           // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
           aria: {
             expanded: false,
-            // we add `aria-labelledby` manually, see below
-            content: isLabelTooltip ? null : 'describedby',
+            content: null,
           },
         });
         otherProps?.setInstance?.(popoverInstance);
@@ -52,22 +54,25 @@ const Tooltip = forwardRef(
       [isLabelTooltip, otherProps?.setInstance]
     );
 
-    const newTriggerComponent = isLabelTooltip
-      ? React.cloneElement(triggerComponent, { 'aria-labelledby': id })
-      : triggerComponent;
+    const newTriggerComponent = React.cloneElement(triggerComponent, {
+      ...(isLabelTooltip && { 'aria-labelledby': labelId }),
+      ...(isDescription && { 'aria-describedby': labelId }),
+      ...(ariaHaspopup && { 'aria-haspopup': ariaHaspopup }),
+    });
 
-    // In label mode we must render tooltip content twice
+    // In label and description mode we must render tooltip content twice
     // First inside the popover, second in a hidden div for Screen Readers (SR)
     // because Tippy does not render the content until the user focus on the button, so the trigger
-    // component does not have a label before tooltip appears
+    // component does not have a label or description before tooltip appears
     // With SR the user can Read the page content without changing the focus so we need to provide a
-    // always accessible label for the button.
-    // We use aria-labelledby because the `children` might contains HTML elements
-    const triggerLabel = isLabelTooltip ? (
-      <div className={STYLE.label} id={id}>
-        {children}
-      </div>
-    ) : null;
+    // always accessible label and description for the button.
+    // We use aria-labelledby and aria-describedby because the `children` might contains HTML elements
+    const triggerLabel =
+      isLabelTooltip || isDescription ? (
+        <div className={STYLE.label} id={labelId}>
+          {children}
+        </div>
+      ) : null;
 
     return (
       <>

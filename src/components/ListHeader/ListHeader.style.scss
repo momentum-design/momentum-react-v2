@@ -1,23 +1,38 @@
 .md-list-header-wrapper {
-  color: var(--mds-color-theme-text-secondary-normal);
-  font-size: 0.875rem;
+  .md-list-header-list-item-base {
+    color: var(--mds-color-theme-text-secondary-normal);
+    font-size: 0.875rem;
+  }
+
   // Override margin between start section and middle/fill sections
   div[data-position='start'] {
     margin-right: 0.5rem;
   }
 
   &[data-outline-only='true'] {
-    height: 1px;
-    margin-bottom: 0.25rem;
+    .md-list-header-list-item-base {
+      height: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    &[data-outline-position='bottom'] {
+      // the separator is drawn after the list item
+      // so need to move it back up a bit
+      .md-list-header-list-header-separator {
+        margin-top: calc(-0.25rem - 1px);
+      }
+    }
   }
 
   // ListItemBase with size 32 is preventing text to be bold (by design).
   // We need to revert this in the ListHeader component. (see bold prop).
   &[data-bold='true'] {
-    &[data-position='fill'],
-    &[data-position='middle'] > *,
-    .md-text-wrapper {
-      font-weight: 750;
+    .md-list-header-list-item-base {
+      &[data-position='fill'],
+      &[data-position='middle'] > *,
+      .md-text-wrapper {
+        font-weight: 750;
+      }
     }
   }
 
@@ -27,21 +42,29 @@
 
     &[data-outline-position='bottom'] {
       &[data-outline-color='primary'] {
-        border-bottom: 1px solid var(--mds-color-theme-outline-primary-normal);
+        .md-list-header-list-header-separator {
+          border-bottom: 1px solid var(--mds-color-theme-outline-primary-normal);
+        }
       }
 
       &[data-outline-color='secondary'] {
-        border-bottom: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        .md-list-header-list-header-separator {
+          border-bottom: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        }
       }
     }
 
     &[data-outline-position='top'] {
       &[data-outline-color='primary'] {
-        border-top: 1px solid var(--mds-color-theme-outline-primary-normal);
+        .md-list-header-list-header-separator {
+          border-top: 1px solid var(--mds-color-theme-outline-primary-normal);
+        }
       }
 
       &[data-outline-color='secondary'] {
-        border-top: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        .md-list-header-list-header-separator {
+          border-top: 1px solid var(--mds-color-theme-outline-secondary-normal);
+        }
       }
     }
   }

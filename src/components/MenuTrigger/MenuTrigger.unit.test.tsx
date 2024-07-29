@@ -5,7 +5,7 @@ import MenuTrigger, { MENU_TRIGGER_CONSTANTS as CONSTANTS } from './';
 import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { mountAndWait } from '../../../test/utils';
-import { ModalContainer } from '..';
+import { ModalContainer, Popover } from '..';
 import { ROUNDS } from '../ModalContainer/ModalContainer.constants';
 
 import { render, screen, waitFor } from '@testing-library/react';
@@ -109,6 +109,16 @@ describe('<MenuTrigger /> - Enzyme', () => {
       const placement = 'top';
 
       const container = await mountAndWait(<MenuTrigger {...defaultProps} placement={placement} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with zIndex', async () => {
+      expect.assertions(1);
+
+      const zIndex = 9998;
+
+      const container = await mountAndWait(<MenuTrigger {...defaultProps} zIndex={zIndex} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -221,6 +231,18 @@ describe('<MenuTrigger /> - Enzyme', () => {
 
       expect(element.prop('placement')).toBe(placement);
     });
+
+    it('should have provided zIndex to Popover when zIndex is provided', async () => {
+      expect.assertions(1);
+
+      const zIndex = 9998;
+
+      const element = (await mountAndWait(<MenuTrigger {...defaultProps} zIndex={zIndex} />))
+        .find(MenuTrigger)
+        .find(Popover);
+
+      expect(element.prop('zIndex')).toBe(zIndex);
+    });
   });
 });
 
@@ -249,6 +271,23 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       const button = screen.getByRole('button', { name: 'Open Menu' });
       expect(button).toBeVisible();
       expect(button.getAttribute('aria-haspopup')).toBe('true');
+    });
+
+    it('exposes triggerComponentRef which references the button element', async () => {
+      const ref = {
+        current: {
+          triggerComponentRef: {
+            current: null,
+          },
+        },
+      };
+
+      render(<MenuTrigger {...defaultProps} ref={ref} />);
+
+      const button = screen.getByRole('button', { name: 'Open Menu' });
+      
+      // Assert that the triggerComponentRef in the ref is the same as the button element
+      expect(ref.current.triggerComponentRef.current).toBe(button);
     });
 
     it('triggerComponent can have aria-haspopup as passed in props', async () => {

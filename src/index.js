@@ -178,6 +178,7 @@ export {
   Chip as ChipNext,
   NotificationSystem,
   AriaToolbar,
+  AriaToolbarItem,
   Slider as SliderNext,
   ComboBox as ComboBoxNext,
   AriaGroup,
@@ -186,4 +187,5 @@ export {
   Tooltip as TooltipNext,
   TooltipPopoverCombo,
   Toggletip,
+  Link as LinkNext
 } from './components';

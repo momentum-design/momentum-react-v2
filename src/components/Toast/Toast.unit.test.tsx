@@ -9,6 +9,7 @@ import ButtonPill from '../ButtonPill';
 import Icon from '../Icon';
 import ToastContent, { ToastContentProps } from '../ToastContent';
 import ToastDetails, { ToastDetailsProps, TOAST_DETAILS_CONSTANTS } from '../ToastDetails';
+import Text from '../Text';
 
 import Toast, { TOAST_CONSTANTS as CONSTANTS } from './';
 
@@ -274,6 +275,40 @@ describe('<Toast />', () => {
       const target = element.getElementsByClassName(CONSTANTS.STYLE.controls)[0];
 
       expect(target.childNodes.length === controls.length).toBe(true);
+    });
+
+    it('checks that default titleTagName is h2', async () => {
+
+      const wrapper = await mountAndWait(
+        <Toast controls={controls} title="Toast Title">
+          {content}
+          {details}
+        </Toast>
+      );
+
+      expect(wrapper.find(Text).props()).toEqual({
+        tagName: 'h2',
+        type: 'label-compact',
+        className: 'md-toast-title',
+        children: 'Toast Title'
+      });
+    });
+
+    it('checks provided titleTagName', async () => {
+
+      const wrapper = await mountAndWait(
+        <Toast controls={controls} title="Toast Title" titleTagName='h3'>
+          {content}
+          {details}
+        </Toast>
+      );
+
+      expect(wrapper.find(Text).props()).toEqual({
+        tagName: 'h3',
+        type: 'label-compact',
+        className: 'md-toast-title',
+        children: 'Toast Title'
+      });
     });
 
     it('should pass provided controls to ToastDetails when controls prop is provided without title', async () => {

@@ -5,26 +5,12 @@
   border: 0.0625rem solid rgba(255, 255, 255, 0.2);
   border: 0.0625rem solid var(--mds-color-theme-outline-secondary-normal);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.16), 0 0 0.0625rem rgba(0, 0, 0, 0.16);
-  overflow: hidden;
-
-  .md-reaction-button-wrapper {
-    margin: 0 0.125rem;
-    border-radius: 100vh;
-  }
-
-  &[data-round='true'] {
-    border-radius: 100vh;
-
-    &[data-spaced='false'] {
-      > * {
-        &:first-child {
-          border-radius: 100vh;
-        }
-
-        &:last-child {
-          border-radius: 100vh;
-        }
-      }
-    }
-  }
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 0.125rem;
+  border-radius: 100vh;
 }

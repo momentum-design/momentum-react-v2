@@ -41,10 +41,27 @@ Types.parameters = {
   ],
 };
 
+const TypesWithTagName = MultiTemplate<TextProps>(Text).bind({});
+
+TypesWithTagName.argTypes = { ...argTypes };
+delete TypesWithTagName.argTypes.type;
+
+TypesWithTagName.parameters = {
+  variants: [
+    ...Object.values(TYPES).map((type) => {
+      return {
+        type,
+        children: type,
+        tagName: 'small',
+      };
+    }),
+  ],
+};
+
 const Fonts = MultiTemplate<TextProps>(Text).bind({});
 
 Fonts.argTypes = { ...argTypes };
-delete Types.argTypes.type;
+delete Fonts.argTypes.type;
 
 Fonts.parameters = {
   variants: [
@@ -112,4 +129,4 @@ FontsLegacy.parameters = {
   ],
 };
 
-export { Example, Types, Fonts, FontsLegacy };
+export { Example, Types, Fonts, FontsLegacy, TypesWithTagName };

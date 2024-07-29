@@ -91,7 +91,7 @@ describe('<RadioGroup />', () => {
           label="Test Radio Group"
           description="The radio group description"
           style={style}
-          id='example-id'
+          id="example-id"
         />
       );
 
@@ -359,7 +359,13 @@ describe('<RadioGroup />', () => {
     it('should have provided aria-describedby when description is provided', () => {
       expect.assertions(1);
 
-      render(<RadioGroup label="Test Radio Group" description="The radio group description" id='example-id' />);
+      render(
+        <RadioGroup
+          label="Test Radio Group"
+          description="The radio group description"
+          id="example-id"
+        />
+      );
 
       const radioGroup = screen.getByRole('radiogroup');
 

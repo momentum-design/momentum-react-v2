@@ -267,7 +267,7 @@ describe('<Toggletip />', () => {
       expect(content.parentElement.getAttribute('style')).toBe(styleString);
       expect(content.parentElement.getAttribute('data-color')).toBe(COLORS.TERTIARY);
       expect(content.parentElement.id).toBe(id);
-      expect(content.parentElement.getAttribute('aria-labelledby')).toBeNull();
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe('1');
     });
 
     it('checks triggerComponent props when id is not defined', async () => {
@@ -277,8 +277,7 @@ describe('<Toggletip />', () => {
         </Toggletip>
       );
       const button1 = screen.getByRole('button', { name: /Toggletip 1/i });
-      expect(button1.getAttribute('id')).toBeNull();
-      expect(button1.getAttribute('aria-haspopup')).toBe(null);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
     });
 
     it('checks triggerComponent props when id is defined', async () => {
@@ -290,7 +289,7 @@ describe('<Toggletip />', () => {
       );
       const button1 = screen.getByRole('button', { name: /Toggletip 1/i });
       expect(button1.getAttribute('id')).toBe(id);
-      expect(button1.getAttribute('aria-haspopup')).toBe(null);
+      expect(button1.getAttribute('aria-haspopup')).toBe('dialog');
     });
 
     it('should not add useNativeKeyDown on the DOM button', async () => {
@@ -436,7 +435,7 @@ describe('<Toggletip />', () => {
 
     await openToggletipByClickingOnTriggerAndCheckContent(user);
 
-    // after tabbing to it, toggletip should disappear
+    // after tabbing away, toggletip should close
     await user.tab();
     await waitFor(() => {
       expect(screen.queryByText('Content')).not.toBeInTheDocument();

@@ -1,12 +1,20 @@
+import { waitFor } from '@testing-library/react';
 import { sypOnEventListener } from '../../../../test/utils';
+import * as PopoverEvents from '../Popover.events';
 
 const createTippyInstance = () => {
   return { hide: jest.fn(), show: jest.fn() };
 };
 
 describe('hideOnEscPlugin', () => {
+  let popoverEventsDispatchEventSpy;
+
+  beforeEach(() => {
+    popoverEventsDispatchEventSpy = jest.spyOn(PopoverEvents, 'dispatchEvent');
+  });
+
   afterEach(() => {
-    jest.resetModules();
+    popoverEventsDispatchEventSpy.mockRestore();
   });
 
   it('should return plugin correctly', async () => {
@@ -32,16 +40,52 @@ describe('hideOnEscPlugin', () => {
 
     plugin1.onShow(tippy1);
     expect(addEventListenerSpy).toHaveBeenNthCalledWith(1, 'keydown', expect.any(Function));
+    await waitFor(() => {
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceAdded',
+        tippy1
+      );
+    });
+
     addEventListenerSpy.mockReset();
+    popoverEventsDispatchEventSpy.mockReset();
+
     plugin2.onShow(tippy2);
     expect(addEventListenerSpy).toBeCalledTimes(0);
     expect(eventHandlers.keydown.length).toBe(1);
+    await waitFor(() => {
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceAdded',
+        tippy2
+      );
+    });
+
+    popoverEventsDispatchEventSpy.mockReset();
 
     plugin1.onHide(tippy1);
     expect(removeEventListenerSpy).toBeCalledTimes(0);
+    await waitFor(() => {
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceRemoved',
+        tippy1
+      );
+    });
+
+    popoverEventsDispatchEventSpy.mockReset();
+
     plugin2.onHide(tippy2);
     expect(removeEventListenerSpy).toHaveBeenNthCalledWith(1, 'keydown', expect.any(Function));
     expect(eventHandlers.keydown.length).toBe(0);
+    await waitFor(() => {
+      expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
+        1,
+        'tippyInstanceRemoved',
+        tippy2
+      );
+    });
   });
 
   it('should trigger hide when user press esc', async () => {
@@ -58,6 +102,8 @@ describe('hideOnEscPlugin', () => {
   });
 
   it('should hide tippy instances in reverse order of opening', async () => {
+    jest.resetModules();
+
     const { hideOnEscPlugin } = await import('./hideOnEscPlugin');
     const { eventHandlers } = sypOnEventListener(window, ['keydown']);
 

@@ -2,58 +2,56 @@
 
 exports[`<ListHeader /> snapshot should match snapshot 1`] = `
 <ListHeader>
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={false}
     data-outline={false}
     data-outline-color="primary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={false}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+  </div>
 </ListHeader>
 `;
 
@@ -62,58 +60,60 @@ exports[`<ListHeader /> snapshot should match snapshot with bold 1`] = `
   bold={true}
   outline={true}
 >
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={true}
     data-outline={true}
     data-outline-color="primary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={true}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={true}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+    <div
+      className="md-list-header-list-header-separator"
+      role="separator"
+    />
+  </div>
 </ListHeader>
 `;
 
@@ -121,58 +121,56 @@ exports[`<ListHeader /> snapshot should match snapshot with className 1`] = `
 <ListHeader
   className="example-class"
 >
-  <ListItemBase
+  <div
     className="example-class md-list-header-wrapper"
     data-bold={false}
     data-outline={false}
     data-outline-color="primary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="example-class md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={false}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+  </div>
 </ListHeader>
 `;
 
@@ -180,7 +178,7 @@ exports[`<ListHeader /> snapshot should match snapshot with id 1`] = `
 <ListHeader
   id="example-id"
 >
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={false}
     data-outline={false}
@@ -188,52 +186,49 @@ exports[`<ListHeader /> snapshot should match snapshot with id 1`] = `
     data-outline-only={true}
     data-outline-position="bottom"
     id="example-id"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={false}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          id="example-id"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+  </div>
 </ListHeader>
 `;
 
@@ -241,58 +236,60 @@ exports[`<ListHeader /> snapshot should match snapshot with outline 1`] = `
 <ListHeader
   outline={true}
 >
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={false}
     data-outline={true}
     data-outline-color="primary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={true}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+    <div
+      className="md-list-header-list-header-separator"
+      role="separator"
+    />
+  </div>
 </ListHeader>
 `;
 
@@ -301,58 +298,60 @@ exports[`<ListHeader /> snapshot should match snapshot with outlineColor 1`] = `
   outline={true}
   outlineColor="secondary"
 >
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={false}
     data-outline={true}
     data-outline-color="secondary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={true}
-          data-outline-color="secondary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+    <div
+      className="md-list-header-list-header-separator"
+      role="separator"
+    />
+  </div>
 </ListHeader>
 `;
 
@@ -361,58 +360,60 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 1`] 
   outline={true}
   outlinePosition="bottom"
 >
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={false}
     data-outline={true}
     data-outline-color="primary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={true}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+    <div
+      className="md-list-header-list-header-separator"
+      role="separator"
+    />
+  </div>
 </ListHeader>
 `;
 
@@ -421,58 +422,60 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 2`] 
   outline={true}
   outlinePosition="bottom"
 >
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={false}
     data-outline={true}
     data-outline-color="primary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={true}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+    <div
+      className="md-list-header-list-header-separator"
+      role="separator"
+    />
+  </div>
 </ListHeader>
 `;
 
@@ -484,67 +487,60 @@ exports[`<ListHeader /> snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <ListItemBase
+  <div
     className="md-list-header-wrapper"
     data-bold={false}
     data-outline={false}
     data-outline-color="primary"
     data-outline-only={true}
     data-outline-position="bottom"
-    interactive={false}
-    isPadded={true}
-    role="separator"
-    size={32}
     style={
       Object {
         "color": "pink",
       }
     }
   >
-    <FocusRing
-      isInset={false}
+    <ListItemBase
+      className="md-list-header-list-item-base"
+      interactive={false}
+      isPadded={true}
+      size={32}
     >
       <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
         isInset={false}
       >
-        <li
-          className="md-list-header-wrapper md-list-item-base-wrapper"
-          data-bold={false}
-          data-disabled={false}
-          data-interactive={false}
-          data-outline={false}
-          data-outline-color="primary"
-          data-outline-only={true}
-          data-outline-position="bottom"
-          data-padded={true}
-          data-shape="rectangle"
-          data-size={32}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="separator"
-          style={
-            Object {
-              "color": "pink",
-            }
-          }
-          tabIndex={-1}
-        />
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <li
+            className="md-list-header-list-item-base md-list-item-base-wrapper"
+            data-disabled={false}
+            data-interactive={false}
+            data-padded={true}
+            data-shape="rectangle"
+            data-size={32}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="listitem"
+            tabIndex={-1}
+          />
+        </FocusRing>
       </FocusRing>
-    </FocusRing>
-  </ListItemBase>
+    </ListItemBase>
+  </div>
 </ListHeader>
 `;

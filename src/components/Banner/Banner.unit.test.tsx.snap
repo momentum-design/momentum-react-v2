@@ -58,9 +58,11 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
         size={88}
       >
         <div
+          aria-label=""
           className="md-avatar-wrapper"
           data-color="default"
           data-size={88}
+          role="group"
         >
           <Initials
             className="md-avatar-wrapper-children"
@@ -68,6 +70,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
             type="person"
           >
             <span
+              aria-hidden="true"
               className="md-avatar-wrapper-children"
             >
               CW
@@ -779,9 +782,11 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
         initials="CW"
       >
         <div
+          aria-label=""
           className="md-avatar-wrapper"
           data-color="default"
           data-size={24}
+          role="group"
         >
           <Initials
             className="md-avatar-wrapper-children"
@@ -789,6 +794,7 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
             type="person"
           >
             <span
+              aria-hidden="true"
               className="md-avatar-wrapper-children"
             >
               CW

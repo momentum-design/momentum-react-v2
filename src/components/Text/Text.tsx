@@ -1,43 +1,23 @@
 import React, { FC } from 'react';
 
 import { DEFAULTS, STYLE, TYPES } from './Text.constants';
-import { Props } from './Text.types';
+import { AllowedTagNames, Props } from './Text.types';
 import './Text.style.scss';
 import classnames from 'classnames';
 
 const Text: FC<Props> = (props: Props) => {
-  const { children, type = DEFAULTS.TYPE, className, id, style, ...rest } = props;
+  const { children, type = DEFAULTS.TYPE, className, id, style, tagName, ...rest } = props;
 
-  const getElement = () => {
+  const getTagName = (): AllowedTagNames => {
     switch (type) {
       case TYPES.DISPLAY:
       case TYPES.BANNER_TERTIARY:
       case TYPES.BANNER_SECONDARY:
       case TYPES.BANNER_PRIMARY:
-        return (
-          <h1
-            className={classnames(STYLE.wrapper, className)}
-            data-type={type}
-            id={id}
-            style={style}
-            {...rest}
-          >
-            {children}
-          </h1>
-        );
+        return 'h1';
 
       case TYPES.TITLE:
-        return (
-          <h2
-            className={classnames(STYLE.wrapper, className)}
-            data-type={type}
-            id={id}
-            style={style}
-            {...rest}
-          >
-            {children}
-          </h2>
-        );
+        return 'h2';
 
       case TYPES.HEADER_PRIMARY:
       case TYPES.HIGHLIGHT_PRIMARY:
@@ -45,65 +25,37 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.HEADER_SECONDARY:
       case TYPES.HIGHLIGHT_SECONDARY:
       case TYPES.SUBHEADER_SECONDARY:
-        return (
-          <h3
-            className={classnames(STYLE.wrapper, className)}
-            data-type={type}
-            id={id}
-            style={style}
-            {...rest}
-          >
-            {children}
-          </h3>
-        );
+        return 'h3';
 
       case TYPES.BODY_PRIMARY:
       case TYPES.HYPERLINK_PRIMARY:
-        return (
-          <p
-            className={classnames(STYLE.wrapper, className)}
-            data-type={type}
-            id={id}
-            style={style}
-            {...rest}
-          >
-            {children}
-          </p>
-        );
+        return 'p';
 
       case TYPES.BODY_SECONDARY:
       case TYPES.HYPERLINK_SECONDARY:
       case TYPES.HIGHLIGHT_COMPACT:
       case TYPES.BODY_COMPACT:
       case TYPES.LABEL_COMPACT:
-        return (
-          <small
-            className={classnames(STYLE.wrapper, className)}
-            data-type={type}
-            id={id}
-            style={style}
-            {...rest}
-          >
-            {children}
-          </small>
-        );
+        return 'small';
 
       default:
-        return (
-          <p
-            className={classnames(STYLE.wrapper, className)}
-            data-type={type}
-            id={id}
-            style={style}
-            {...rest}
-          >
-            {children}
-          </p>
-        );
+        return 'p';
     }
   };
 
-  return getElement();
+  const TagName = tagName || getTagName();
+
+  return (
+    <TagName
+      className={classnames(STYLE.wrapper, className)}
+      data-type={type}
+      id={id}
+      style={style}
+      {...rest}
+    >
+      {children}
+    </TagName>
+  );
 };
 
 export default Text;

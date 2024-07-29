@@ -18,6 +18,7 @@ const List: FC<Props> = (props: Props) => {
     role,
     shouldItemFocusBeInset,
     noLoop,
+    ...rest
   } = props;
 
   const [currentFocus, setCurrentFocus] = useState<number>(0);
@@ -37,6 +38,9 @@ const List: FC<Props> = (props: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (e) => {
       switch (e.key) {
+        case 'Escape':
+          e.continuePropagation();
+          break;
         case 'ArrowUp':
         case 'ArrowLeft':
           e.preventDefault();
@@ -66,6 +70,7 @@ const List: FC<Props> = (props: Props) => {
         id={id}
         role={role}
         {...keyboardProps}
+        {...rest}
       >
         {children}
       </ul>

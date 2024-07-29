@@ -13,30 +13,25 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
     </Text>
   }
   triggerComponent={
-    <button
-      aria-haspopup="dialog"
-      id="test-id"
-    >
+    <button>
       Example button
     </button>
   }
 >
   <Popover
+    aria-labelledby="1"
     interactive={true}
     onHide={[Function]}
     onShow={[Function]}
     trigger="click"
     triggerComponent={
       <Tooltip
-        id="test-id"
+        labelOrDescriptionId="1"
         onHide={[Function]}
         onShow={[Function]}
         setInstance={[Function]}
         triggerComponent={
-          <button
-            aria-haspopup="dialog"
-            id="test-id"
-          >
+          <button>
             Example button
           </button>
         }
@@ -127,6 +122,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               "fn": [Function],
             },
             Object {
+              "fn": [Function],
+            },
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
@@ -187,6 +185,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                 "fn": [Function],
               },
               Object {
+                "fn": [Function],
+              },
+              Object {
                 "defaultValue": true,
                 "fn": [Function],
                 "name": "hideOnEsc",
@@ -225,15 +226,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
         >
           <Tooltip
             aria-haspopup="dialog"
-            id="test-id"
+            labelOrDescriptionId="1"
             onHide={[Function]}
             onShow={[Function]}
             setInstance={[Function]}
             triggerComponent={
-              <button
-                aria-haspopup="dialog"
-                id="test-id"
-              >
+              <button>
                 Example button
               </button>
             }
@@ -241,11 +239,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
           >
             <Popover
               addBackdrop={false}
-              aria-haspopup="dialog"
               aria-hidden={false}
               boundary="scrollParent"
               color="primary"
-              id="test-id"
               interactive={false}
               offsetDistance={5}
               offsetSkidding={0}
@@ -260,8 +256,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
-                  aria-labelledby="test-ID"
-                  id="test-id"
+                  aria-labelledby="1"
                 >
                   Example button
                 </button>
@@ -343,6 +338,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                         "fn": [Function],
                       },
                       Object {
+                        "fn": [Function],
+                      },
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -399,6 +397,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                           "fn": [Function],
                         },
                         Object {
+                          "fn": [Function],
+                        },
+                        Object {
                           "defaultValue": true,
                           "fn": [Function],
                           "name": "hideOnEsc",
@@ -433,8 +434,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   >
                     <button
                       aria-haspopup="dialog"
-                      aria-labelledby="test-ID"
-                      id="test-id"
+                      aria-labelledby="1"
                     >
                       Example button
                     </button>
@@ -455,7 +455,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
             </Popover>
             <div
               className="md-tooltip-label"
-              id="test-ID"
+              id="1"
             >
               <Text>
                 <p
@@ -503,31 +503,26 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
     </Text>
   }
   triggerComponent={
-    <button
-      aria-haspopup="dialog"
-      id="test-id"
-    >
+    <button>
       Example button
     </button>
   }
 >
   <Popover
+    aria-labelledby="1"
     interactive={true}
     onHide={[Function]}
     onShow={[Function]}
     trigger="click"
     triggerComponent={
       <Tooltip
-        id="test-id"
+        labelOrDescriptionId="1"
         onHide={[Function]}
         onShow={[Function]}
         placement="bottom"
         setInstance={[Function]}
         triggerComponent={
-          <button
-            aria-haspopup="dialog"
-            id="test-id"
-          >
+          <button>
             Example button
           </button>
         }
@@ -618,6 +613,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               "fn": [Function],
             },
             Object {
+              "fn": [Function],
+            },
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
@@ -678,6 +676,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                 "fn": [Function],
               },
               Object {
+                "fn": [Function],
+              },
+              Object {
                 "defaultValue": true,
                 "fn": [Function],
                 "name": "hideOnEsc",
@@ -716,16 +717,13 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         >
           <Tooltip
             aria-haspopup="dialog"
-            id="test-id"
+            labelOrDescriptionId="1"
             onHide={[Function]}
             onShow={[Function]}
             placement="bottom"
             setInstance={[Function]}
             triggerComponent={
-              <button
-                aria-haspopup="dialog"
-                id="test-id"
-              >
+              <button>
                 Example button
               </button>
             }
@@ -733,11 +731,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
           >
             <Popover
               addBackdrop={false}
-              aria-haspopup="dialog"
               aria-hidden={false}
               boundary="scrollParent"
               color="primary"
-              id="test-id"
               interactive={false}
               offsetDistance={5}
               offsetSkidding={0}
@@ -752,8 +748,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
-                  aria-labelledby="test-ID"
-                  id="test-id"
+                  aria-labelledby="1"
                 >
                   Example button
                 </button>
@@ -835,6 +830,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                         "fn": [Function],
                       },
                       Object {
+                        "fn": [Function],
+                      },
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -891,6 +889,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                           "fn": [Function],
                         },
                         Object {
+                          "fn": [Function],
+                        },
+                        Object {
                           "defaultValue": true,
                           "fn": [Function],
                           "name": "hideOnEsc",
@@ -925,8 +926,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   >
                     <button
                       aria-haspopup="dialog"
-                      aria-labelledby="test-ID"
-                      id="test-id"
+                      aria-labelledby="1"
                     >
                       Example button
                     </button>
@@ -947,7 +947,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
             </Popover>
             <div
               className="md-tooltip-label"
-              id="test-ID"
+              id="1"
             >
               <Text>
                 <p
@@ -995,31 +995,26 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
     </Text>
   }
   triggerComponent={
-    <button
-      aria-haspopup="dialog"
-      id="test-id"
-    >
+    <button>
       Example button
     </button>
   }
 >
   <Popover
+    aria-labelledby="1"
     interactive={true}
     onHide={[Function]}
     onShow={[Function]}
     trigger="click"
     triggerComponent={
       <Tooltip
-        id="test-id"
+        labelOrDescriptionId="1"
         onHide={[Function]}
         onShow={[Function]}
         placement="top"
         setInstance={[Function]}
         triggerComponent={
-          <button
-            aria-haspopup="dialog"
-            id="test-id"
-          >
+          <button>
             Example button
           </button>
         }
@@ -1110,6 +1105,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               "fn": [Function],
             },
             Object {
+              "fn": [Function],
+            },
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
@@ -1170,6 +1168,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                 "fn": [Function],
               },
               Object {
+                "fn": [Function],
+              },
+              Object {
                 "defaultValue": true,
                 "fn": [Function],
                 "name": "hideOnEsc",
@@ -1208,16 +1209,13 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         >
           <Tooltip
             aria-haspopup="dialog"
-            id="test-id"
+            labelOrDescriptionId="1"
             onHide={[Function]}
             onShow={[Function]}
             placement="top"
             setInstance={[Function]}
             triggerComponent={
-              <button
-                aria-haspopup="dialog"
-                id="test-id"
-              >
+              <button>
                 Example button
               </button>
             }
@@ -1225,11 +1223,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
           >
             <Popover
               addBackdrop={false}
-              aria-haspopup="dialog"
               aria-hidden={false}
               boundary="scrollParent"
               color="primary"
-              id="test-id"
               interactive={false}
               offsetDistance={5}
               offsetSkidding={0}
@@ -1244,8 +1240,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
-                  aria-labelledby="test-ID"
-                  id="test-id"
+                  aria-labelledby="1"
                 >
                   Example button
                 </button>
@@ -1327,6 +1322,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                         "fn": [Function],
                       },
                       Object {
+                        "fn": [Function],
+                      },
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -1383,6 +1381,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                           "fn": [Function],
                         },
                         Object {
+                          "fn": [Function],
+                        },
+                        Object {
                           "defaultValue": true,
                           "fn": [Function],
                           "name": "hideOnEsc",
@@ -1417,8 +1418,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   >
                     <button
                       aria-haspopup="dialog"
-                      aria-labelledby="test-ID"
-                      id="test-id"
+                      aria-labelledby="1"
                     >
                       Example button
                     </button>
@@ -1439,7 +1439,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
             </Popover>
             <div
               className="md-tooltip-label"
-              id="test-ID"
+              id="1"
             >
               <Text>
                 <p

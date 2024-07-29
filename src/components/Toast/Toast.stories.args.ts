@@ -66,4 +66,16 @@ export default {
       },
     },
   },
+  titleTagName: {
+    description: '`<Toast />` title tag name to be used instead of the default',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'h2',
+      },
+    },
+  },
 };

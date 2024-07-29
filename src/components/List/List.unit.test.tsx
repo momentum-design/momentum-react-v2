@@ -158,9 +158,66 @@ describe('<List />', () => {
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
+
+    it('should have provided aria-label when aria-label is provided', () => {
+      expect.assertions(1);
+
+      const label = 'test';
+
+      const element = mount(
+        <List aria-label={label} {...commonProps}>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
+        </List>
+      )
+        .find(List)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe('test');
+    });
+
+    it('should have provided aria-labelledby when aria-labelledby is provided', () => {
+      expect.assertions(1);
+
+      const labelBy = 'test';
+
+      const element = mount(
+        <List aria-labelledby={labelBy} {...commonProps}>
+          <ListItemBase key="1">ListItemBase 1</ListItemBase>
+          <ListItemBase key="2">ListItemBase 2</ListItemBase>
+        </List>
+      )
+        .find(List)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-labelledby')).toBe('test');
+    });
   });
 
   describe('list focus', () => {
+    it('should handle escape being pressed', async () => {
+      const keyDownHandler = jest.fn();
+
+      const { getByRole } = render(
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+        <div onKeyDown={keyDownHandler}>
+          <List listSize={1}>
+            <ListItemBase key="0" itemIndex={0}>
+              ListItemBase 1
+            </ListItemBase>
+          </List>
+        </div>
+      );
+
+      const listItem = getByRole('listitem');
+
+      await userEvent.tab();
+      expect(listItem).toHaveFocus();
+
+      await userEvent.keyboard('{Escape}');
+      expect(keyDownHandler).toHaveBeenCalled();
+    });
+
     it('should handle up/down arrow keys correctly', async () => {
       expect.assertions(8);
       const user = userEvent.setup();

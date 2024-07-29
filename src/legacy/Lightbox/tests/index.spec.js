@@ -182,6 +182,58 @@ describe('tests for <Lightbox />', () => {
     expect(onChangeFn).toHaveBeenCalledWith(0);
   });
 
+  it.each([true, false])('check scrollIntoViewIfNeeded and focus trigger when needFocus is %s', (needFocus) => {
+    const onChangeFn = jest.fn();
+    const container = shallow(<Lightbox
+      applicationId="app"
+      name="test"
+      height={100}
+      width={100}
+      info={{
+        sharedBy: 'Shared by abcd',
+        sharedOn: 'At 4/17/2018, 10:02 AM',
+        size: '34.4 KB',
+      }}
+      pages={[
+        {
+          decrypting: true,
+          image: 'testImage',
+          thumb: 'testImage',
+        },
+        {
+          decrypting: true,
+          image: 'testImage',
+          thumb: 'testImage',
+        },
+      ]}
+      onChange={onChangeFn}
+      onDownload={jest.fn()}
+    />);
+
+    container.instance().lightBox = {
+      querySelector: jest.fn().mockReturnValue({
+        scrollIntoViewIfNeeded: jest.fn(),
+        parentElement: {
+          focus: jest.fn(),
+        },
+      }),
+    };
+
+    const index = 1;
+    const mockEvent = { stopPropagation: jest.fn() };
+
+    container.instance().triggerPageChange(index, mockEvent, needFocus);
+
+    expect(mockEvent.stopPropagation).toHaveBeenCalled();
+    expect(container.instance().lightBox.querySelector).toHaveBeenCalledWith(`[data-index="${index}"]`);
+    expect(container.instance().lightBox.querySelector().scrollIntoViewIfNeeded).toHaveBeenCalled();
+    if(needFocus){
+      expect(container.instance().lightBox.querySelector().parentElement.focus).toHaveBeenCalled();
+    } else {
+      expect(container.instance().lightBox.querySelector().parentElement.focus).not.toHaveBeenCalled();
+    }
+  });
+
   it('should close the lightbox onClose', () => {
     const onCloseFn = jest.fn();
     const container = shallow(

@@ -73,6 +73,16 @@ describe('ListItemBase', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with lang', () => {
+      expect.assertions(1);
+
+      const lang = 'en-US';
+
+      container = mount(<ListItemBase lang={lang}>Test</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with size', () => {
       expect.assertions(1);
 
@@ -180,6 +190,18 @@ describe('ListItemBase', () => {
       const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe('true');
+    });
+
+    it('should have provided data-disabled when isDisabled is provided', () => {
+      expect.assertions(1);
+
+      const lang = 'en-US';
+
+      container = mount(<ListItemBase lang={lang}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase).getDOMNode();
+
+      expect(element.getAttribute('lang')).toBe('en-US');
     });
 
     it('should have provided data-padding when isPadded is provided', () => {

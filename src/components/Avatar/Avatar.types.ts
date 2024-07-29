@@ -46,15 +46,12 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
    */
   src?: string;
   /**
-   * Alternative text when image cannot be rendered
-   */
-  alt?: string;
-  /**
    * Initials to be displayed on the avatar
    */
   initials?: string;
   /**
-   * Name of person/space this avatar is for
+   * Name of person/space. The component will extract initials from this value and display accordingly, it is used in the aria-label of this component.
+   * e.g 'John Doe'
    */
   title?: string;
   /**
@@ -71,9 +68,32 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   icon?: string;
 
   /**
-   * Set the visibility of Avatar's default tooltip
+   * The icon to display when Avatar is hovered or focused
    */
-  hideDefaultTooltip?: boolean;
+  iconOnHover?: string;
+
+  /**
+   * The main description of the Avatar, which will be the first part of its aria-label. 
+   * e.g 'Avatar of Bob'
+   */
+  mainLabel?: string;
+
+  /**
+   * The name of the presence of the avatar's person, so that it is used in the aria-label of this component.
+   * e.g 'Busy'
+   */
+  presenceLabel?: string;
+
+  /**
+   * The label that represents the user is typing,  so it is used in the aria-label of the container.
+   * e.g 'is typing'
+   */
+  typingLabel?: string;
+
+  /**
+   * The label that represents additional description, it will be spliced to the end of the container aria-label.
+   */
+  extraLabel?: string;
 
   /**
    * Determines whether the user is typing.
