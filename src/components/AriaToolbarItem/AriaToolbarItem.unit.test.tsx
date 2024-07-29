@@ -35,14 +35,13 @@ describe('<AriaToolbarItem />', () => {
     });
   });
 
-  describe('behaviour', () => {
+  describe('attributes', () => {
     it('passes extra props to children', () => {
-      const container = mountWithContext(<TestComponent extra="prop" more="extra props" />);
+      const container = mountWithContext(<TestComponent aria-haspopup="dialog" />);
 
       expect(container.find('ButtonPill').props()).toEqual({
         children: 'Test',
-        extra: 'prop',
-        more: 'extra props',
+        'aria-haspopup': 'dialog',
         onFocus: expect.any(Function),
         onKeyDown: expect.any(Function),
         onKeyUp: undefined,
