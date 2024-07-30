@@ -356,37 +356,41 @@ describe('<NotificationSystem />', () => {
         return 0;
       });
     });
-
-    // it.only('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
-    //   // expect.assertions(4);
-
-    //   render(<NotificationSystem ariaLabel="test" />);
-
-    //   const toastId = '12345';
-    //   act(() => {
-    //     NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
-    //       autoClose: false,
-    //       toastId,
-    //     });
-    //   });
-
-    //   // wait till the toast shows up on the screen:
-    //   const toast = await screen.findByRole('alert');
-    //   expect(toast).toBeVisible();
-    //   expect(toast).toHaveTextContent(textContent);
-
-    //   expect(NotificationSystem.isActive(toastId)).toBeTruthy();
-
-    //   // dismiss the toast again
-    //   act(() => {
-    //    NotificationSystem.dismiss(toastId);
-    //   });
+    
+    it('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
+      jest.useFakeTimers();
       
-    //   fireEvent.animationEnd(screen.getByText(textContent));
-    //   // check if toast got removed and the toast is not active anymore
-    //   await waitForElementToBeRemoved(screen.getByText(textContent));
-    //   // expect(NotificationSystem.isActive(toastId)).toBeFalsy();
-    // });
+      render(<NotificationSystem ariaLabel="test" />);
+
+      const toastId = '12345';
+      act(() => {
+        NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
+          autoClose: false,
+          toastId,
+        });
+      });
+
+      // wait till the toast shows up on the screen:
+      const toast = await screen.findByRole('alert');
+      expect(toast).toBeVisible();
+      expect(toast).toHaveTextContent(textContent);
+
+      expect(NotificationSystem.isActive(toastId)).toBeTruthy();
+      
+      // dismiss the toast again
+      act(() => {
+       NotificationSystem.dismiss(toastId);
+      });
+      
+      jest.advanceTimersByTime(1000);
+      fireEvent.animationEnd(screen.getByText(textContent));
+
+      // check if toast got removed and the toast is not active anymore
+      await waitForElementToBeRemoved(screen.getByText(textContent));
+      expect(NotificationSystem.isActive(toastId)).toBeFalsy();
+      jest.clearAllTimers();
+      jest.useRealTimers();
+    });
 
     it('should close the `medium attention` notification after clicking on the close button', async () => {
       expect.assertions(4);
