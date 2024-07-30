@@ -359,7 +359,6 @@ describe('<NotificationSystem />', () => {
     
     it('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
       jest.useFakeTimers();
-      
       render(<NotificationSystem ariaLabel="test" />);
 
       const toastId = '12345';
@@ -376,12 +375,10 @@ describe('<NotificationSystem />', () => {
       expect(toast).toHaveTextContent(textContent);
 
       expect(NotificationSystem.isActive(toastId)).toBeTruthy();
-      
       // dismiss the toast again
       act(() => {
        NotificationSystem.dismiss(toastId);
-      });
-      
+      }); 
       jest.advanceTimersByTime(1000);
       fireEvent.animationEnd(screen.getByText(textContent));
 
