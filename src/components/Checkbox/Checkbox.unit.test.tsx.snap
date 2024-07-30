@@ -193,7 +193,6 @@ exports[`<Checkbox /> snapshot should match snapshot with id 1`] = `
           aria-checked={false}
           checked={false}
           disabled={false}
-          id="example-id"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
