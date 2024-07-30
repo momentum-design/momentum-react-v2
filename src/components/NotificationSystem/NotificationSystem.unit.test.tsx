@@ -383,7 +383,7 @@ describe('<NotificationSystem />', () => {
       fireEvent.animationEnd(screen.getByText(textContent));
 
       // check if toast got removed and the toast is not active anymore
-      await waitForElementToBeRemoved(screen.getByText(textContent));
+      await waitForElementToBeRemoved(() => screen.queryByText(textContent));
       expect(NotificationSystem.isActive(toastId)).toBeFalsy();
       jest.clearAllTimers();
       jest.useRealTimers();
@@ -422,7 +422,7 @@ describe('<NotificationSystem />', () => {
       fireEvent.animationEnd(screen.getByText(textContent));
 
       // check if toast got removed and the toast is not active anymore
-      await waitForElementToBeRemoved(screen.getByText(textContent));
+      await waitForElementToBeRemoved(() => screen.queryByText(textContent));
       expect(NotificationSystem.isActive(toastId)).toBeFalsy();
     });
 
