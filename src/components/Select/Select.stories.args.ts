@@ -134,4 +134,18 @@ export default {
       },
     },
   },
+  shallowDisabled: {
+    defaultValue: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+    description: 'If this component should appear disabled.',
+    control: { type: 'boolean' },
+    options: [true, false],
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+      },
+    },
+  },
 };
