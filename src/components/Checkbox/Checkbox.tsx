@@ -52,6 +52,9 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
     </div>
   );
 
+  // remove id from input to only apply it to the label
+  delete inputProps.id;
+
   return (
     <label
       className={classnames(STYLE.wrapper, className)}
