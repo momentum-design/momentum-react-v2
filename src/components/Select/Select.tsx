@@ -38,6 +38,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     listboxMaxHeight,
     isInForm = DEFAULTS.IS_IN_FORM,
     listboxWidth,
+    shallowDisabled,
   } = props;
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
   const hasBeenOpened = useRef<boolean>(false);
@@ -48,7 +49,10 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
   const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
-  const ariaActivedesecendant = menuProps?.id && state?.selectionManager?.focusedKey && `${menuProps.id}-option-${state.selectionManager.focusedKey}`;
+  const ariaActivedesecendant =
+    menuProps?.id &&
+    state?.selectionManager?.focusedKey &&
+    `${menuProps.id}-option-${state.selectionManager.focusedKey}`;
 
   delete buttonProps.color;
   delete buttonProps.onKeyDown;
@@ -97,6 +101,24 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     }
   }, []);
 
+  const otherProps = shallowDisabled
+    ? {
+        'aria-disabled': true,
+        'data-shallow-disabled': true,
+        onMouseDown: (e: any) => {
+          e.currentTarget.focus();
+        },
+        onKeyDown: (e: any) => {
+          if (e.key !== 'Tab') {
+            e.preventDefault();
+          }
+        },
+        onPointerDown: () => {},
+      }
+    : {
+        onKeyDown,
+      };
+
   const triggerComponent = (
     <button
       id={name}
@@ -112,7 +134,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         { [STYLE.borderLess]: !showBorder }
       )}
       title={title}
-      onKeyDown={onKeyDown}
+      {...otherProps}
     >
       <span
         title={state.selectedItem?.textValue}
@@ -181,15 +203,15 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         className={STYLE.popover}
         strategy={listboxWidth ? 'fixed' : 'absolute'}
       >
-          <ListBoxBase
-            {...menuProps}
-            ref={boxRef}
-            state={state}
-            disallowEmptySelection
-            // eslint-disable-next-line jsx-a11y/no-autofocus
-            autoFocus={state.focusStrategy || DEFAULTS.FOCUS_STRATEGY}
-            className={STYLE.menuListBox}
-          />
+        <ListBoxBase
+          {...menuProps}
+          ref={boxRef}
+          state={state}
+          disallowEmptySelection
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus={state.focusStrategy || DEFAULTS.FOCUS_STRATEGY}
+          className={STYLE.menuListBox}
+        />
       </Popover>
     </div>
   );
