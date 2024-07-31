@@ -1,6 +1,8 @@
 const CLASS_PREFIX = 'md-accordion';
 
-const DEFAULTS = {};
+const DEFAULTS = {
+  DEFAULT_EXPANDED: true,
+};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
