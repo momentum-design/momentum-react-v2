@@ -23,6 +23,7 @@ const Accordion: FC<Props> = (props: Props) => {
     headingRightContent,
     defaultExpanded = DEFAULTS.DEFAULT_EXPANDED,
     ariaLevel,
+    buttonProps,
   } = props;
 
   const [expanded, setExpanded] = useState(defaultExpanded);
@@ -48,6 +49,7 @@ const Accordion: FC<Props> = (props: Props) => {
             aria-expanded={expanded}
             aria-controls={panelId}
             onPress={onClick}
+            {...buttonProps}
           >
             <Icon name={expanded ? 'arrow-down' : 'arrow-right'} scale={12} />
             {typeof heading === 'string' ? <Text type="body-secondary">{heading}</Text> : heading}
