@@ -1,7 +1,7 @@
 import React, { FC, useMemo, useState } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './Accordion.constants';
+import { STYLE, DEFAULTS } from './Accordion.constants';
 import {
   STYLE as LIST_ITEM_BASE_STYLE,
   SHAPES as LIST_ITEM_BASE_SHAPES,
@@ -21,7 +21,7 @@ const Accordion: FC<Props> = (props: Props) => {
     style,
     heading,
     headingRightContent,
-    defaultExpanded = true,
+    defaultExpanded = DEFAULTS.DEFAULT_EXPANDED,
     ariaLevel,
   } = props;
 

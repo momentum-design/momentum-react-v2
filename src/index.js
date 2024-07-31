@@ -100,6 +100,7 @@ export {
 
 /** V2 Components [TypeScript] */
 export {
+  Accordion as AccordionNext,
   AlertBadge,
   AlertBanner as AlertBannerNext,
   Badge as BadgeNext,
