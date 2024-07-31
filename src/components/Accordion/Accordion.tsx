@@ -6,7 +6,7 @@ import {
   STYLE as LIST_ITEM_BASE_STYLE,
   SHAPES as LIST_ITEM_BASE_SHAPES,
 } from '../ListItemBase/ListItemBase.constants';
-import type { Props } from './Accordion.types';
+import type { ButtonCustomProps, Props } from './Accordion.types';
 import './Accordion.style.scss';
 import Icon from '../Icon';
 import { v4 as uuidV4 } from 'uuid';
@@ -36,21 +36,22 @@ const Accordion: FC<Props> = (props: Props) => {
     setExpanded(!expanded);
   };
 
+  const buttonCustomProps: ButtonCustomProps = {
+    className: classnames(STYLE.headerButton, LIST_ITEM_BASE_STYLE.wrapper),
+    'data-interactive': true,
+    'data-shape': LIST_ITEM_BASE_SHAPES.isPilled,
+    'data-padded': true,
+    id: headerButtonId,
+    'aria-expanded': expanded,
+    'aria-controls': panelId,
+    onPress: onClick,
+  };
+
   return (
     <div className={classnames(className, STYLE.wrapper)} id={accordionId} style={style}>
       <div className={STYLE.headerRow}>
         <div className={STYLE.headerHeading} role="heading" aria-level={ariaLevel}>
-          <ButtonSimple
-            className={classnames(STYLE.headerButton, LIST_ITEM_BASE_STYLE.wrapper)}
-            data-interactive
-            data-shape={LIST_ITEM_BASE_SHAPES.isPilled}
-            data-padded
-            id={headerButtonId}
-            aria-expanded={expanded}
-            aria-controls={panelId}
-            onPress={onClick}
-            {...buttonProps}
-          >
+          <ButtonSimple {...buttonCustomProps} {...buttonProps}>
             <Icon name={expanded ? 'arrow-down' : 'arrow-right'} scale={12} />
             {typeof heading === 'string' ? <Text type="body-secondary">{heading}</Text> : heading}
           </ButtonSimple>

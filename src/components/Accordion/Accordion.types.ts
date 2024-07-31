@@ -1,6 +1,23 @@
 import { CSSProperties, ReactNode } from 'react';
 import { ButtonSimpleProps } from '../ButtonSimple';
 
+type ButtonSimpleCustomPropKeys =
+  | 'className'
+  | 'id'
+  | 'aria-expanded'
+  | 'aria-controls'
+  | 'onPress';
+
+// props applied on the button, defined by the accordion component
+export type ButtonCustomProps = Required<Pick<ButtonSimpleProps, ButtonSimpleCustomPropKeys>> & {
+  'data-interactive': boolean;
+  'data-shape': string;
+  'data-padded': boolean;
+};
+
+// additional props applied on the button, user-specified, not allowed to overlap with accordion-defined props
+export type ButtonAllowedProps = Omit<ButtonSimpleProps, ButtonSimpleCustomPropKeys>;
+
 export interface Props {
   /**
    * Child components of this Accordion.
@@ -45,5 +62,5 @@ export interface Props {
   /**
    * Extra props to be added to the header button.
    */
-  buttonProps?: ButtonSimpleProps;
+  buttonProps?: ButtonAllowedProps;
 }
