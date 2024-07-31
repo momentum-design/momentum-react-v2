@@ -11,6 +11,7 @@ import { chain } from '@react-aria/utils';
 
 const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const {
+    ariaStateKey = DEFAULTS.ARIA_STATE_KEY,
     children,
     className,
     ghost = DEFAULTS.GHOST,
@@ -39,7 +40,7 @@ const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<HTMLBu
       size={size}
       data-selected={state.isSelected || DEFAULTS.SELECTED}
       onPress={chain(state.toggle, onPress)}
-      aria-pressed={state.isSelected}
+      {...{ [ariaStateKey]: state.isSelected }}
       {...otherProps}
       ref={ref}
     >

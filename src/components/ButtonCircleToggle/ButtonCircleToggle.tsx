@@ -12,6 +12,7 @@ import { chain } from '@react-aria/utils';
 
 const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const {
+    ariaStateKey = DEFAULTS.ARIA_STATE_KEY,
     children,
     className,
     ghost = DEFAULTS.GHOST,
@@ -40,7 +41,7 @@ const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTML
       size={size as ButtonCircleSize}
       data-selected={state.isSelected || DEFAULTS.SELECTED}
       onPress={chain(state.toggle, onPress)}
-      aria-pressed={state.isSelected}
+      {...{ [ariaStateKey]: state.isSelected }}
       {...otherProps}
       ref={ref}
     >

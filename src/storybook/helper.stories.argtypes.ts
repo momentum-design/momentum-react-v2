@@ -708,6 +708,19 @@ const commonAriaButtonToggle = {
       },
     },
   },
+  ariaStateKey: {
+    description: "Whether pressed state should set 'aria-pressed' or 'aria-expanded'",
+    options: ['aria-pressed', 'aria-expanded'],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'aria-pressed',
+      },
+    },
+  },
 };
 
 const commonStyles = {
