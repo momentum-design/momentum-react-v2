@@ -113,7 +113,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
             e.preventDefault();
           }
         },
-        onPointerDown: () => {},
+        onPointerDown: undefined,
       }
     : {
         onKeyDown,
