@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ForwardedRef, ReactNode } from 'react';
 import { ButtonSimpleProps } from '../ButtonSimple';
 
 type ButtonSimpleCustomPropKeys =
@@ -13,10 +13,11 @@ export type ButtonCustomProps = Required<Pick<ButtonSimpleProps, ButtonSimpleCus
   'data-interactive': boolean;
   'data-shape': string;
   'data-padded': boolean;
+  ref?: ForwardedRef<HTMLButtonElement>;
 };
 
 // additional props applied on the button, user-specified, not allowed to overlap with accordion-defined props
-export type ButtonAllowedProps = Omit<ButtonSimpleProps, ButtonSimpleCustomPropKeys>;
+export type ButtonAllowedProps = Omit<ButtonSimpleProps, keyof ButtonCustomProps>;
 
 export interface Props {
   /**

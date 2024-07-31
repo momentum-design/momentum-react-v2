@@ -1,4 +1,4 @@
-import React, { FC, useMemo, useState } from 'react';
+import React, { FC, forwardRef, useMemo, useState } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Accordion.constants';
@@ -13,7 +13,7 @@ import { v4 as uuidV4 } from 'uuid';
 import Text from '../Text';
 import ButtonSimple from '../ButtonSimple';
 
-const Accordion: FC<Props> = (props: Props) => {
+const Accordion: FC<Props> = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
   const {
     children,
     className,
@@ -45,6 +45,7 @@ const Accordion: FC<Props> = (props: Props) => {
     'aria-expanded': expanded,
     'aria-controls': panelId,
     onPress: onClick,
+    ref: providedRef,
   };
 
   return (
@@ -65,6 +66,6 @@ const Accordion: FC<Props> = (props: Props) => {
       ) : null}
     </div>
   );
-};
+});
 
 export default Accordion;
