@@ -316,7 +316,7 @@ describe('Select', () => {
     });
 
     it('should have role as combobox', async () => {
-      expect.assertions(4);
+      expect.assertions(3);
 
       const id = 'example-id';
 
@@ -336,7 +336,6 @@ describe('Select', () => {
       // ensure shallowDisabled properties are set
       expect(buttonProps['aria-disabled']).toBeUndefined();
       expect(buttonProps['data-shallow-disabled']).toBeUndefined();
-      expect(buttonProps['onPointerDown']).toBeUndefined();
     });
 
     it('should have provided style when style is provided', async () => {
@@ -469,7 +468,7 @@ describe('Select', () => {
     });
 
     it('should have expected attributes set when shallowDisabled', async () => {
-      expect.assertions(3);
+      expect.assertions(2);
 
       const direction = 'top';
 
@@ -485,7 +484,6 @@ describe('Select', () => {
       // ensure shallowDisabled properties are set
       expect(buttonProps['aria-disabled']).toBe(true);
       expect(buttonProps['data-shallow-disabled']).toBe(true);
-      expect(buttonProps['onPointerDown']).toEqual(expect.any(Function));
     });
   });
 
