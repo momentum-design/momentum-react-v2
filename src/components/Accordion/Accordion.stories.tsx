@@ -24,6 +24,7 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   children: 'Example',
   heading: 'Accordion title',
+  ariaLevel: 1,
 };
 
 const Common = MultiTemplate<AccordionProps>(Accordion).bind({});
@@ -32,6 +33,7 @@ Common.argTypes = { ...argTypes };
 
 Common.args = {
   children: 'Example',
+  ariaLevel: 1,
 };
 
 Common.parameters = {
