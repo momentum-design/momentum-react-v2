@@ -1,3 +1,4 @@
+export { default as Accordion } from './Accordion';
 export { default as AlertBadge } from './AlertBadge';
 export { default as AlertBanner } from './AlertBanner';
 export { default as Avatar, PresenceType } from './Avatar';
