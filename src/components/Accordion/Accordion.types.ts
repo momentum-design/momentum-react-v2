@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from 'react';
+import { ButtonSimpleProps } from '../ButtonSimple';
 
 export interface Props {
   /**
@@ -40,4 +41,9 @@ export interface Props {
    * Hierarchical level of the accordion within a structure.
    */
   ariaLevel: number;
+
+  /**
+   * Extra props to be added to the header button.
+   */
+  buttonProps?: ButtonSimpleProps;
 }
