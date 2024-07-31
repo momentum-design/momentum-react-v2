@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> snapshot should match snapshot 1`] = `
-<Accordion
+<ForwardRef
   ariaLevel={5}
   heading="Heading text"
   id="accordion-id"
@@ -83,11 +83,11 @@ exports[`<Accordion /> snapshot should match snapshot 1`] = `
       role="region"
     />
   </div>
-</Accordion>
+</ForwardRef>
 `;
 
 exports[`<Accordion /> snapshot should match snapshot with className 1`] = `
-<Accordion
+<ForwardRef
   ariaLevel={5}
   className="example-class"
   heading="Heading text"
@@ -170,11 +170,11 @@ exports[`<Accordion /> snapshot should match snapshot with className 1`] = `
       role="region"
     />
   </div>
-</Accordion>
+</ForwardRef>
 `;
 
 exports[`<Accordion /> snapshot should match snapshot with headingRightContent 1`] = `
-<Accordion
+<ForwardRef
   ariaLevel={5}
   heading="Heading text"
   headingRightContent="Some content on the right"
@@ -258,11 +258,11 @@ exports[`<Accordion /> snapshot should match snapshot with headingRightContent 1
       role="region"
     />
   </div>
-</Accordion>
+</ForwardRef>
 `;
 
 exports[`<Accordion /> snapshot should match snapshot with id 1`] = `
-<Accordion
+<ForwardRef
   ariaLevel={5}
   heading="Heading text"
   id="example-id"
@@ -344,11 +344,11 @@ exports[`<Accordion /> snapshot should match snapshot with id 1`] = `
       role="region"
     />
   </div>
-</Accordion>
+</ForwardRef>
 `;
 
 exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
-<Accordion
+<ForwardRef
   ariaLevel={5}
   heading="Heading text"
   id="accordion-id"
@@ -440,5 +440,5 @@ exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
       role="region"
     />
   </div>
-</Accordion>
+</ForwardRef>
 `;
