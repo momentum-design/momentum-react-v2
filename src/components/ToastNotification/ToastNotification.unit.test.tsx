@@ -51,6 +51,18 @@ describe('<ToastNotification />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with aria-label', async () => {
+      expect.assertions(1);
+      const className = 'example-class';
+      const ariaLabel = 'test';
+
+      const container = await mountAndWait(
+        <ToastNotification className={className} content={exampleContent} ariaLabel={ariaLabel} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with id', async () => {
       expect.assertions(1);
 
@@ -148,6 +160,20 @@ describe('<ToastNotification />', () => {
 
       expect(element.classList.contains(className)).toBe(true);
     });
+
+    it('should have provided aria-label when ariaLabel is provided', async () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'test';
+
+      const wrapper = await mountAndWait(
+        <ToastNotification ariaLabel={ariaLabel} content={exampleContent} />
+      );
+      const element = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+    });
+
 
     it('should have provided id when id is provided', async () => {
       expect.assertions(1);

@@ -33,13 +33,18 @@ interface NotificationTemplateProps {
    * Custom class for overriding this component's CSS.
    */
   className?: string;
+  
+  /**
+   * aria-label used for the toast notification.
+   */
+  ariaLabel?: string;
 }
 
 /**
  * NOTE: this component is only used for the stories
  */
 const NotificationTemplate: FC<NotificationTemplateProps> = (props: NotificationTemplateProps) => {
-  const { content, closeToast, closeButtonText, className } = props;
+  const { content, closeToast, closeButtonText, className, ariaLabel  } = props;
 
   const handleClose = React.useCallback((e: PressEvent) => {
     closeToast?.(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
@@ -49,6 +54,7 @@ const NotificationTemplate: FC<NotificationTemplateProps> = (props: Notification
     <ToastNotification
       content={content}
       onClose={handleClose}
+      ariaLabel={ariaLabel}
       leadingVisual={
         <Icon
           name="info-circle"
