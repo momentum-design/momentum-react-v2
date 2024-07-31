@@ -40,6 +40,50 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
 </ToastNotification>
 `;
 
+exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`] = `
+<ToastNotification
+  ariaLabel="test"
+  className="example-class"
+  content="Example text"
+>
+  <ModalContainer
+    aria-label="test"
+    ariaModal={false}
+    className="example-class md-toast-notification-wrapper"
+    isPadded={true}
+    role="generic"
+    round={50}
+  >
+    <div
+      aria-label="test"
+      aria-modal={false}
+      className="example-class md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-padded={true}
+      data-round={50}
+      role="generic"
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <Text
+          className="example-class md-toast-notification-content"
+          type="body-primary"
+        >
+          <p
+            className="md-text-wrapper example-class md-toast-notification-content"
+            data-type="body-primary"
+          >
+            Example text
+          </p>
+        </Text>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
 exports[`<ToastNotification /> snapshot should match snapshot with button group 1`] = `
 <ToastNotification
   buttonGroup={

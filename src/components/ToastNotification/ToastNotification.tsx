@@ -14,7 +14,7 @@ import Text from '../Text';
  * The ToastNotification component.
  */
 const ToastNotification: FC<Props> = (props: Props) => {
-  const { className, id, style, content, leadingVisual, buttonGroup, onClose, closeButtonLabel } =
+  const { className, id, style, content, leadingVisual, buttonGroup, onClose, closeButtonLabel, ariaLabel } =
     props;
 
   return (
@@ -26,6 +26,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
       round={50}
       role="generic"
       ariaModal={false}
+      aria-label={ariaLabel}
     >
       <div className={STYLE.body}>
         {leadingVisual && (
