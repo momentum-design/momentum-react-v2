@@ -113,6 +113,18 @@ describe('<Accordion />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
+    it('should have extra button props when provided', () => {
+      expect.assertions(1);
+
+      const buttonProps = { 'aria-label': 'some label text' };
+
+      const element = mount(<Accordion {...defaultProps} buttonProps={buttonProps} />)
+        .find('button')
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe('some label text');
+    });
+
     it('should populate the ids (default) and their references correctly', () => {
       const component = mount(<Accordion {...defaultProps} id="undefined" />).find(Accordion);
 
