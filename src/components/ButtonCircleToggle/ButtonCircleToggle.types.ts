@@ -3,4 +3,9 @@ import { AriaButtonProps, AriaToggleButtonProps } from '@react-types/button';
 
 export interface Props
   extends Omit<ButtonCircleProps, keyof AriaButtonProps>,
-    AriaToggleButtonProps {}
+    AriaToggleButtonProps {
+  /**
+   * Whether pressed state should set 'aria-pressed' (default) or 'aria-expanded'
+   */
+  ariaStateKey?: 'aria-pressed' | 'aria-expanded';
+}
