@@ -164,6 +164,7 @@ describe('<Accordion />', () => {
 
   describe('actions', () => {
     it('should toggle between expanded and not when the header is clicked on', async () => {
+      const user = userEvent.setup();
       render(<Accordion {...defaultProps} />);
 
       const button = screen.getByRole('button');
@@ -172,19 +173,50 @@ describe('<Accordion />', () => {
       expect(button.getAttribute('aria-expanded')).toBe('true');
       expect(screen.queryByRole('region')).not.toBeNull();
 
-      await userEvent.click(button);
+      await user.click(button);
 
       // after click: close
       expect(button.getAttribute('aria-expanded')).toBe('false');
       expect(screen.queryByRole('region')).toBeNull();
 
-      await userEvent.click(button);
+      await user.click(button);
 
       // after click: open
       expect(button.getAttribute('aria-expanded')).toBe('true');
       expect(screen.queryByRole('region')).not.toBeNull();
 
-      await userEvent.click(button);
+      await user.click(button);
+
+      // after click: close
+      expect(button.getAttribute('aria-expanded')).toBe('false');
+      expect(screen.queryByRole('region')).toBeNull();
+    });
+
+    it('should toggle between expanded and not when an "enter" keydown event is sent to the header', async () => {
+      const user = userEvent.setup();
+      render(<Accordion {...defaultProps} />);
+
+      const button = screen.getByRole('button');
+
+      button.focus();
+
+      // initial: open
+      expect(button.getAttribute('aria-expanded')).toBe('true');
+      expect(screen.queryByRole('region')).not.toBeNull();
+
+      await user.keyboard('[Enter]');
+
+      // after click: close
+      expect(button.getAttribute('aria-expanded')).toBe('false');
+      expect(screen.queryByRole('region')).toBeNull();
+
+      await user.keyboard('[Enter]');
+
+      // after click: open
+      expect(button.getAttribute('aria-expanded')).toBe('true');
+      expect(screen.queryByRole('region')).not.toBeNull();
+
+      await user.keyboard('[Enter]');
 
       // after click: close
       expect(button.getAttribute('aria-expanded')).toBe('false');
