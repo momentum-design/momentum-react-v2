@@ -14,8 +14,17 @@ import Text from '../Text';
  * The ToastNotification component.
  */
 const ToastNotification: FC<Props> = (props: Props) => {
-  const { className, id, style, content, leadingVisual, buttonGroup, onClose, closeButtonLabel } =
-    props;
+  const {
+    className,
+    id,
+    style,
+    content,
+    leadingVisual,
+    buttonGroup,
+    onClose,
+    closeButtonLabel,
+    ariaLabel,
+  } = props;
 
   return (
     <ModalContainer
@@ -24,19 +33,21 @@ const ToastNotification: FC<Props> = (props: Props) => {
       id={id}
       style={style}
       round={50}
-      role="generic"
       ariaModal={false}
+      aria-label={ariaLabel}
     >
       <div className={STYLE.body}>
         {leadingVisual && (
           <div className={classnames(className, STYLE.leadingVisual)}>{leadingVisual}</div>
         )}
         {isString(content) ? (
-          <Text className={classnames(className, STYLE.content)} type="body-primary">
+          <Text role="alert" className={classnames(className, STYLE.content)} type="body-primary">
             {content}
           </Text>
         ) : (
-          <div className={classnames(className, STYLE.content)}>{content}</div>
+          <div role="alert" className={classnames(className, STYLE.content)}>
+            {content}
+          </div>
         )}
         {onClose && (
           <div className={classnames(className, STYLE.closeButton)}>
