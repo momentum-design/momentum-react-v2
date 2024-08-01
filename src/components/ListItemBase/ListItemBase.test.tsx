@@ -228,6 +228,18 @@ describe('ListItemBase', () => {
       expect(element.getAttribute('data-size')).toBe(size.toString());
     });
 
+    it('should have provided data-size auto when size auto is provided', () => {
+      expect.assertions(1);
+
+      const size = 'auto';
+
+      container = mount(<ListItemBase size={size}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase).getDOMNode();
+
+      expect(element.getAttribute('data-size')).toBe(size.toString());
+    });
+
     it('should have provided data-shape when shape is provided', () => {
       expect.assertions(1);
 
