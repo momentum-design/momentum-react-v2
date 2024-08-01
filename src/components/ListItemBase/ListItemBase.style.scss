@@ -109,6 +109,10 @@
     height: 4.375rem;
   }
 
+  &[data-size='auto'] {
+    height: auto;
+  }
+
   &[data-shape='rectangle'] {
     border-radius: 0.5rem;
   }
@@ -126,6 +130,10 @@
 
     &[data-size='50'] {
       padding: 0 0.75rem 0 0.5rem;
+    }
+
+    &[data-size='auto'] {
+      height: auto;
     }
   }
 }
