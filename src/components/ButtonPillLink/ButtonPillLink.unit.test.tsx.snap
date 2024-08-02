@@ -1,0 +1,663 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonPillLink /> snapshot should match snapshot 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        />
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot when a ghost 1`] = `
+<ButtonPillLink
+  ghost={true}
+  href="https://www.webex.com"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={true}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          Example Text
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot when a ghost and disabled 1`] = `
+<ButtonPillLink
+  disabled={true}
+  ghost={true}
+  href="https://www.webex.com"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={true}
+    data-ghost={true}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    disabled={true}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing
+      disabled={true}
+    >
+      <FocusRing
+        disabled={true}
+        focusClass="md-focus-ring-wrapper-disabled"
+        focusRingClass="md-focus-ring-wrapper-disabled"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={true}
+          data-ghost={true}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          Example Text
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot when color is outlined 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+  outline={true}
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={true}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={true}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          Example Text
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot when color is outlined and inverted is set 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+  inverted={true}
+  outline={true}
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={true}
+    data-outline={true}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+    inverted={true}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={true}
+          data-outline={true}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          Example Text
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot when disabled 1`] = `
+<ButtonPillLink
+  disabled={true}
+  href="https://www.webex.com"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={true}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    disabled={true}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing
+      disabled={true}
+    >
+      <FocusRing
+        disabled={true}
+        focusClass="md-focus-ring-wrapper-disabled"
+        focusRingClass="md-focus-ring-wrapper-disabled"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={true}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          Example Text
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot when shallow disabled 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+  shallowDisabled={true}
+>
+  <Link
+    aria-disabled={true}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={true}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={true}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={true}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          Example Text
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot when width is grown 1`] = `
+<ButtonPillLink
+  grown={true}
+  href="https://www.webex.com"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={true}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={true}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          Example Text
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot with className 1`] = `
+<ButtonPillLink
+  className="example-class"
+  href="https://www.webex.com"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper example-class"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper example-class"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        />
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot with color 1`] = `
+<ButtonPillLink
+  color="message"
+  href="https://www.webex.com"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="message"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="message"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          X
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot with id 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+  id="example-id"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+    id="example-id"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          id="example-id"
+          rel=""
+        />
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot with size 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+  size={40}
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+        >
+          X
+        </a>
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot with style 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+          style={
+            Object {
+              "color": "pink",
+            }
+          }
+        />
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;
+
+exports[`<ButtonPillLink /> snapshot should match snapshot with title 1`] = `
+<ButtonPillLink
+  href="https://www.webex.com"
+  title="Example Text"
+>
+  <Link
+    aria-disabled={false}
+    className="md-button-pill-link-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+    hasExternalLinkIcon={false}
+    href="https://www.webex.com"
+    title="Example Text"
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <a
+          aria-disabled={false}
+          className="md-link-wrapper md-button-pill-link-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          href="https://www.webex.com"
+          rel=""
+          title="Example Text"
+        />
+      </FocusRing>
+    </FocusRing>
+  </Link>
+</ButtonPillLink>
+`;

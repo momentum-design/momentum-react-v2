@@ -1,18 +1,18 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import ButtonCircleLink, { BUTTON_CIRCLE_LINK_CONSTANTS as CONSTANTS } from './';
-import { COLORS, DEFAULTS, SIZES } from '../ButtonCircle/ButtonCircle.constants';
+import ButtonPillLink, { BUTTON_PILL_LINK_CONSTANTS as CONSTANTS } from './';
+import { COLORS, DEFAULTS, SIZES } from '../ButtonPill/ButtonPill.constants';
 import { triggerPress } from '../../../test/utils';
 
 const href = 'https://www.webex.com';
 
-describe('<ButtonCircleLink />', () => {
+describe('<ButtonPillLink />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<ButtonCircleLink href={href} />);
+      const container = mount(<ButtonPillLink href={href} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -22,7 +22,7 @@ describe('<ButtonCircleLink />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<ButtonCircleLink href={href} className={className} />);
+      const container = mount(<ButtonPillLink href={href} className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -32,7 +32,7 @@ describe('<ButtonCircleLink />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<ButtonCircleLink href={href} id={id} />);
+      const container = mount(<ButtonPillLink href={href} id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -42,7 +42,7 @@ describe('<ButtonCircleLink />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<ButtonCircleLink href={href} style={style} />);
+      const container = mount(<ButtonPillLink href={href} style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -53,9 +53,9 @@ describe('<ButtonCircleLink />', () => {
       const color = COLORS[Object.keys(COLORS)[Object.keys(COLORS).length - 1]];
 
       const container = mount(
-        <ButtonCircleLink href={href} color={color}>
+        <ButtonPillLink href={href} color={color}>
           X
-        </ButtonCircleLink>
+        </ButtonPillLink>
       );
 
       expect(container).toMatchSnapshot();
@@ -67,9 +67,9 @@ describe('<ButtonCircleLink />', () => {
       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
       const container = mount(
-        <ButtonCircleLink href={href} size={size}>
+        <ButtonPillLink href={href} size={size}>
           X
-        </ButtonCircleLink>
+        </ButtonPillLink>
       );
 
       expect(container).toMatchSnapshot();
@@ -81,9 +81,23 @@ describe('<ButtonCircleLink />', () => {
       const disabled = !DEFAULTS.DISABLED;
 
       const container = mount(
-        <ButtonCircleLink href={href} disabled={disabled}>
-          X
-        </ButtonCircleLink>
+        <ButtonPillLink href={href} disabled={disabled}>
+          Example Text
+        </ButtonPillLink>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when shallow disabled', () => {
+      expect.assertions(1);
+
+      const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
+
+      const container = mount(
+        <ButtonPillLink href={href} shallowDisabled={shallowDisabled}>
+          Example Text
+        </ButtonPillLink>
       );
 
       expect(container).toMatchSnapshot();
@@ -95,9 +109,9 @@ describe('<ButtonCircleLink />', () => {
       const ghost = !DEFAULTS.GHOST;
 
       const container = mount(
-        <ButtonCircleLink href={href} ghost={ghost}>
-          X
-        </ButtonCircleLink>
+        <ButtonPillLink href={href} ghost={ghost}>
+          Example Text
+        </ButtonPillLink>
       );
 
       expect(container).toMatchSnapshot();
@@ -110,9 +124,9 @@ describe('<ButtonCircleLink />', () => {
       const disabled = !DEFAULTS.DISABLED;
 
       const container = mount(
-        <ButtonCircleLink href={href} ghost={ghost} disabled={disabled}>
-          X
-        </ButtonCircleLink>
+        <ButtonPillLink href={href} ghost={ghost} disabled={disabled}>
+          Example Text
+        </ButtonPillLink>
       );
 
       expect(container).toMatchSnapshot();
@@ -124,20 +138,24 @@ describe('<ButtonCircleLink />', () => {
       const outline = !DEFAULTS.OUTLINE;
 
       const container = mount(
-        <ButtonCircleLink href={href} outline={outline}>
-          X
-        </ButtonCircleLink>
+        <ButtonPillLink href={href} outline={outline}>
+          Example Text
+        </ButtonPillLink>
       );
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with title', () => {
+    it('should match snapshot when width is grown', () => {
       expect.assertions(1);
 
-      const title = 'Example Text';
+      const grown = !DEFAULTS.GROWN;
 
-      const container = mount(<ButtonCircleLink href={href} title={title} />);
+      const container = mount(
+        <ButtonPillLink href={href} grown={grown}>
+          Example Text
+        </ButtonPillLink>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -149,8 +167,20 @@ describe('<ButtonCircleLink />', () => {
       const inverted = !DEFAULTS.INVERTED;
 
       const container = mount(
-        <ButtonCircleLink href={href} outline={outline} inverted={inverted} />
+        <ButtonPillLink href={href} outline={outline} inverted={inverted}>
+          Example Text
+        </ButtonPillLink>
       );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with title', () => {
+      expect.assertions(1);
+
+      const title = 'Example Text';
+
+      const container = mount(<ButtonPillLink href={href} title={title} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -160,8 +190,8 @@ describe('<ButtonCircleLink />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<ButtonCircleLink href={href} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -172,8 +202,8 @@ describe('<ButtonCircleLink />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<ButtonCircleLink href={href} className={className} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} className={className} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -184,8 +214,8 @@ describe('<ButtonCircleLink />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<ButtonCircleLink href={href} id={id} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} id={id} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.id).toBe(id);
@@ -197,8 +227,8 @@ describe('<ButtonCircleLink />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<ButtonCircleLink href={href} style={style} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} style={style} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -209,8 +239,8 @@ describe('<ButtonCircleLink />', () => {
 
       const disabled = !DEFAULTS.DISABLED;
 
-      const element = mount(<ButtonCircleLink href={href} disabled={disabled} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} disabled={disabled} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
@@ -221,8 +251,8 @@ describe('<ButtonCircleLink />', () => {
 
       const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
 
-      const element = mount(<ButtonCircleLink href={href} shallowDisabled={shallowDisabled} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} shallowDisabled={shallowDisabled} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
@@ -234,8 +264,8 @@ describe('<ButtonCircleLink />', () => {
 
       const ghost = !DEFAULTS.GHOST;
 
-      const element = mount(<ButtonCircleLink href={href} ghost={ghost} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} ghost={ghost} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('data-ghost')).toBe(`${ghost}`);
@@ -246,8 +276,8 @@ describe('<ButtonCircleLink />', () => {
 
       const outline = !DEFAULTS.OUTLINE;
 
-      const element = mount(<ButtonCircleLink href={href} outline={outline} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} outline={outline} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
@@ -258,8 +288,8 @@ describe('<ButtonCircleLink />', () => {
 
       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
-      const element = mount(<ButtonCircleLink href={href} size={size} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} size={size} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('data-size')).toBe(`${size}`);
@@ -270,8 +300,8 @@ describe('<ButtonCircleLink />', () => {
 
       const title = 'Example Text';
 
-      const element = mount(<ButtonCircleLink href={href} title={title} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} title={title} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
@@ -282,8 +312,8 @@ describe('<ButtonCircleLink />', () => {
 
       const inverted = !DEFAULTS.INVERTED;
 
-      const element = mount(<ButtonCircleLink href={href} inverted={inverted} />)
-        .find(ButtonCircleLink)
+      const element = mount(<ButtonPillLink href={href} inverted={inverted} />)
+        .find(ButtonPillLink)
         .getDOMNode();
 
       expect(element.getAttribute('data-inverted')).toBe(`${inverted}`);
@@ -296,8 +326,8 @@ describe('<ButtonCircleLink />', () => {
 
       const mockCallback = jest.fn();
 
-      const component = mount(<ButtonCircleLink href={href} onPress={mockCallback} />).find(
-        ButtonCircleLink
+      const component = mount(<ButtonPillLink href={href} onPress={mockCallback} />).find(
+        ButtonPillLink
       );
 
       component.props().onPress({
@@ -324,8 +354,8 @@ describe('<ButtonCircleLink />', () => {
       const mockCallback = jest.fn();
 
       const component = mount(
-        <ButtonCircleLink href={href} shallowDisabled onPress={mockCallback} />
-      ).find(ButtonCircleLink);
+        <ButtonPillLink href={href} shallowDisabled onPress={mockCallback} />
+      ).find(ButtonPillLink);
 
       component.props().onPress({
         type: 'press',

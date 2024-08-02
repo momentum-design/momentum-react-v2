@@ -1,10 +1,10 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { BUTTON_PILL_CONSTANTS as CONSTANTS } from '../ButtonPill';
 import LinkArgTypes from '../Link/Link.stories.args';
-import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from '../ButtonCircle';
 
-const buttonCircleLinkArgTypes = {
+const buttonPillLinkArgTypes = {
   color: {
-    description: 'Modifies the color of this component.',
+    description: 'Modifies the color of this `<ButtonPillLink />`.',
     options: [undefined, ...Object.values(CONSTANTS.COLORS)],
     control: { type: 'select' },
     table: {
@@ -17,7 +17,7 @@ const buttonCircleLinkArgTypes = {
     },
   },
   disabled: {
-    description: 'Whether to render the component is disabled.',
+    description: 'Whether to render the `<ButtonPillLink />` as disabled.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -31,7 +31,7 @@ const buttonCircleLinkArgTypes = {
   },
   shallowDisabled: {
     description:
-      'Whether to render the component looking as if disabled, but allowing onPress actions to still be passed.',
+      'Whether to render the `<ButtonPillLink />` looking as if disabled, but allowing onPress actions to still be passed.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -53,6 +53,19 @@ const buttonCircleLinkArgTypes = {
       },
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.GHOST,
+      },
+    },
+  },
+  grown: {
+    description: 'If this component should grow its width to the parent container.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.GROWN,
       },
     },
   },
@@ -84,7 +97,7 @@ const buttonCircleLinkArgTypes = {
     },
   },
   size: {
-    description: 'Modifies the size of this component.',
+    description: 'Modifies the size of this `<ButtonPillLink />`.',
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     control: { type: 'select' },
     table: {
@@ -101,5 +114,5 @@ const buttonCircleLinkArgTypes = {
 export default {
   ...commonStyles,
   ...LinkArgTypes,
-  ...buttonCircleLinkArgTypes,
+  ...buttonPillLinkArgTypes,
 };

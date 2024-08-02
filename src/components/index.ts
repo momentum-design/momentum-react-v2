@@ -75,3 +75,5 @@ export { default as Tooltip } from './Tooltip';
 export { default as TooltipPopoverCombo } from './TooltipPopoverCombo';
 export { default as Toggletip } from './Toggletip';
 export { default as Link } from './Link';
+export { default as ButtonCircleLink } from './ButtonCircleLink';
+export { default as ButtonPillLink } from './ButtonPillLink';

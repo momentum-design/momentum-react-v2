@@ -11,6 +11,7 @@ import argTypes from './ButtonCircleLink.stories.args';
 import Documentation from './ButtonCircleLink.stories.docs.mdx';
 import Icon from '../Icon';
 import React from 'react';
+import { omit } from 'lodash';
 
 export default {
   title: 'Momentum UI/ButtonCircleLink',
@@ -52,16 +53,12 @@ const NotGhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircle
 ).bind({});
 
 NotGhostNotOutlineNotInverted.argTypes = { ...argTypes };
-delete NotGhostNotOutlineNotInverted.argTypes.children;
-delete NotGhostNotOutlineNotInverted.argTypes.outline;
-delete NotGhostNotOutlineNotInverted.argTypes.ghost;
-delete NotGhostNotOutlineNotInverted.argTypes.inverted;
-
-NotGhostNotOutlineNotInverted.args = {
-  outline: false,
-  ghost: false,
-  inverted: false,
-};
+NotGhostNotOutlineNotInverted.argTypes = omit(NotGhostNotOutlineNotInverted.argTypes, [
+  'children',
+  'outline',
+  'ghost',
+  'inverted',
+]);
 
 NotGhostNotOutlineNotInverted.parameters = {
   variants: [
@@ -77,10 +74,12 @@ const GhostNotOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleLin
 ).bind({});
 
 GhostNotOutlineNotInverted.argTypes = { ...argTypes };
-delete GhostNotOutlineNotInverted.argTypes.children;
-delete GhostNotOutlineNotInverted.argTypes.outline;
-delete GhostNotOutlineNotInverted.argTypes.ghost;
-delete GhostNotOutlineNotInverted.argTypes.inverted;
+GhostNotOutlineNotInverted.argTypes = omit(GhostNotOutlineNotInverted.argTypes, [
+  'children',
+  'outline',
+  'ghost',
+  'inverted',
+]);
 
 GhostNotOutlineNotInverted.args = {
   outline: false,
@@ -102,10 +101,12 @@ const NotGhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleLin
 ).bind({});
 
 NotGhostOutlineNotInverted.argTypes = { ...argTypes };
-delete NotGhostOutlineNotInverted.argTypes.children;
-delete NotGhostOutlineNotInverted.argTypes.outline;
-delete NotGhostOutlineNotInverted.argTypes.ghost;
-delete NotGhostOutlineNotInverted.argTypes.inverted;
+NotGhostOutlineNotInverted.argTypes = omit(NotGhostOutlineNotInverted.argTypes, [
+  'children',
+  'outline',
+  'ghost',
+  'inverted',
+]);
 
 NotGhostOutlineNotInverted.args = {
   outline: true,
@@ -127,10 +128,12 @@ const NotGhostNotOutlineInverted = MultiTemplateWithPseudoStates<ButtonCircleLin
 ).bind({});
 
 NotGhostNotOutlineInverted.argTypes = { ...argTypes };
-delete NotGhostNotOutlineInverted.argTypes.children;
-delete NotGhostNotOutlineInverted.argTypes.outline;
-delete NotGhostNotOutlineInverted.argTypes.ghost;
-delete NotGhostNotOutlineInverted.argTypes.inverted;
+NotGhostNotOutlineInverted.argTypes = omit(NotGhostNotOutlineInverted.argTypes, [
+  'children',
+  'outline',
+  'ghost',
+  'inverted',
+]);
 
 NotGhostNotOutlineInverted.args = {
   outline: false,
@@ -152,10 +155,12 @@ const GhostOutlineNotInverted = MultiTemplateWithPseudoStates<ButtonCircleLinkPr
 ).bind({});
 
 GhostOutlineNotInverted.argTypes = { ...argTypes };
-delete GhostOutlineNotInverted.argTypes.children;
-delete GhostOutlineNotInverted.argTypes.outline;
-delete GhostOutlineNotInverted.argTypes.ghost;
-delete GhostOutlineNotInverted.argTypes.inverted;
+GhostOutlineNotInverted.argTypes = omit(GhostOutlineNotInverted.argTypes, [
+  'children',
+  'outline',
+  'ghost',
+  'inverted',
+]);
 
 GhostOutlineNotInverted.args = {
   outline: true,
@@ -177,10 +182,12 @@ const NotGhostOutlineInverted = MultiTemplateWithPseudoStates<ButtonCircleLinkPr
 ).bind({});
 
 NotGhostOutlineInverted.argTypes = { ...argTypes };
-delete NotGhostOutlineInverted.argTypes.children;
-delete NotGhostOutlineInverted.argTypes.outline;
-delete NotGhostOutlineInverted.argTypes.ghost;
-delete NotGhostOutlineInverted.argTypes.inverted;
+NotGhostOutlineInverted.argTypes = omit(NotGhostOutlineInverted.argTypes, [
+  'children',
+  'outline',
+  'ghost',
+  'inverted',
+]);
 
 NotGhostOutlineInverted.args = {
   outline: true,
@@ -244,8 +251,7 @@ Sizes.parameters = {
 };
 
 Sizes.argTypes = { ...argTypes };
-delete Sizes.argTypes.children;
-delete Sizes.argTypes.size;
+Sizes.argTypes = omit(Sizes.argTypes, ['children', 'size']);
 
 const Common = MultiTemplate<ButtonCircleLinkProps>(ButtonCircleLink).bind({});
 

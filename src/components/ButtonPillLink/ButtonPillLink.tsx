@@ -1,12 +1,13 @@
-import React, { Children, RefObject, forwardRef, useRef } from 'react';
+import React, { RefObject, forwardRef, useRef } from 'react';
 import classnames from 'classnames';
-import { STYLE } from './ButtonCircleLink.constants';
-import { DEFAULTS } from '../ButtonCircle/ButtonCircle.constants';
-import { Props } from './ButtonCircleLink.types';
-import './ButtonCircleLink.style.scss';
+
+import { STYLE } from './ButtonPillLink.constants';
+import { Props } from './ButtonPillLink.types';
+import './ButtonPillLink.style.scss';
+import { DEFAULTS } from '../ButtonPill/ButtonPill.constants';
 import Link from '../Link';
 
-const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
+const ButtonPillLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
   const {
     id,
     children,
@@ -14,6 +15,7 @@ const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAn
     color,
     disabled,
     shallowDisabled,
+    grown,
     ghost,
     outline,
     inverted,
@@ -26,14 +28,12 @@ const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAn
     ...otherProps
   } = props;
 
-  const buttonCircleRef = useRef();
-  const ref = providedRef || buttonCircleRef;
+  const buttonPillRef = useRef();
+  const ref = providedRef || buttonPillRef;
 
   if (ghost && inverted) {
-    console.warn('MRV2: Momentum does not support a ghost inverted ButtonCircleLink.');
+    console.warn('MRV2: Momentum does not support a ghost inverted ButtonPillLink.');
   }
-
-  const multipleChildren = Children.count(children) > 1;
 
   return (
     <Link
@@ -48,15 +48,15 @@ const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAn
       hasExternalLinkIcon={false}
       tooltipContent={tooltipContent}
       data-color={color || DEFAULTS.COLOR}
+      data-disabled={disabled || DEFAULTS.DISABLED}
+      data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
+      aria-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
       data-ghost={ghost || DEFAULTS.GHOST}
-      data-multiple-children={multipleChildren}
+      data-grown={grown || DEFAULTS.GROWN}
       data-outline={outline || DEFAULTS.OUTLINE}
       data-size={size || DEFAULTS.SIZE}
       data-inverted={inverted || DEFAULTS.INVERTED}
       className={classnames(STYLE.wrapper, className)}
-      data-disabled={disabled || DEFAULTS.DISABLED}
-      data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
-      aria-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
       {...otherProps}
     >
       {children}
@@ -64,6 +64,6 @@ const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAn
   );
 });
 
-ButtonCircleLink.displayName = 'ButtonCircleLink';
+ButtonPillLink.displayName = 'ButtonPillLink';
 
-export default ButtonCircleLink;
+export default ButtonPillLink;
