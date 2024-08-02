@@ -77,12 +77,6 @@ export interface Props extends PressEvents, ContextMenu {
   role?: string;
 
   /**
-   * Determines wether the focus for this item should be inset or outset
-   * @default false
-   */
-  shouldItemFocusBeInset?: boolean;
-
-  /**
    * Indicates wether this item is currently focusable
    */
   itemIndex?: number;
