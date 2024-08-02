@@ -27,6 +27,7 @@ import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { MenuTrigger, SearchInput } from '..';
+import { omit } from 'lodash';
 
 const TEST_LIST_SIZE = 30;
 
@@ -57,8 +58,7 @@ Example.args = {
 
 const Common = MultiTemplate<ListProps>(List).bind({});
 
-Common.argTypes = { ...argTypes };
-delete Common.argTypes.children;
+Common.argTypes = omit({ ...argTypes }, ['children']);
 
 Common.args = {
   listSize: TEST_LIST_SIZE,
@@ -130,10 +130,44 @@ Common.parameters = {
   ],
 };
 
+const HorizontalList = MultiTemplate<ListProps>(List).bind({});
+
+HorizontalList.argTypes = omit({ ...argTypes }, ['children']);
+
+HorizontalList.args = {
+  listSize: TEST_LIST_SIZE,
+  shouldItemFocusBeInset: true,
+  shouldFocusOnPress: true,
+  orientation: 'horizontal',
+
+  style: {
+    display: 'flex',
+    gap: '1rem',
+    flexWrap: 'wrap',
+  },
+};
+
+HorizontalList.parameters = {
+  variants: [
+    {
+      children: Array.from(Array(TEST_LIST_SIZE).keys()).map((index) => {
+        return (
+          <ListItemBase
+            itemIndex={index}
+            key={index}
+            style={{ display: 'inline-block', width: '11rem', padding: '0.5rem', height: 'auto' }}
+          >
+            <ButtonPill style={{ width: '100%' }}>Item {index + 1}</ButtonPill>
+          </ListItemBase>
+        );
+      }),
+    },
+  ],
+};
+
 const CalendarList = MultiTemplate<ListProps>(List).bind({});
 
-CalendarList.argTypes = { ...argTypes };
-delete CalendarList.argTypes.children;
+CalendarList.argTypes = omit({ ...argTypes }, ['children']);
 
 CalendarList.args = {
   listSize: TEST_LIST_SIZE,
@@ -197,7 +231,7 @@ const ListSearchWrapper = () => {
 
   return (
     <>
-      <SearchInput value={query} onChange={setQuery} clearButtonAriaLabel='Clear'/>
+      <SearchInput value={query} onChange={setQuery} clearButtonAriaLabel="Clear" />
       <List shouldItemFocusBeInset listSize={filtered.length}>
         {filtered &&
           filtered.map((item, index) => (
@@ -265,4 +299,4 @@ const DynamicListWrapper = () => {
 const DynamicList = Template<unknown>(DynamicListWrapper).bind({});
 const Search = Template<unknown>(ListSearchWrapper).bind({});
 
-export { Example, Common, CalendarList, DynamicList, Search };
+export { Example, Common, HorizontalList, CalendarList, DynamicList, Search };

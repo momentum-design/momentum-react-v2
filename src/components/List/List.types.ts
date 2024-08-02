@@ -1,5 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
 
+export type ListOrientation = 'horizontal' | 'vertical';
+
 export interface Props {
   /**
    * Custom class for overriding this component's CSS.
@@ -42,10 +44,22 @@ export interface Props {
   shouldFocusOnPress?: boolean;
 
   /**
-   * Determines wether the focus around list-items should be inset or outset
+   * Determines whether the focus around list-items should be inset or outset
    * This is needed for virtualized lists
    */
   shouldItemFocusBeInset?: boolean;
+
+  /**
+   * Determines the orientation of the list
+   *
+   * The orientation of the list change the keyboard navigation in the list:
+   *
+   * - vertical: up and down arrow keys
+   * - horizontal: left and right arrow keys
+   *
+   * @default 'vertical'
+   */
+  orientation?: ListOrientation;
 }
 
 export interface ListContextValue {

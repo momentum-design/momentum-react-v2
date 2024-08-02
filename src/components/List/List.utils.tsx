@@ -6,15 +6,15 @@ export const ListContext = React.createContext<ListContextValue>(null);
 export const useListContext = (): ListContextValue => useContext(ListContext);
 
 export const setNextFocus = (
-  isUp: boolean,
+  isBackward: boolean,
   listSize: number,
   currentFocus: number,
   noLoop: boolean,
   setFocus: Dispatch<SetStateAction<number>>
 ): void => {
-  let nextIndex;
+  let nextIndex: number;
 
-  if (isUp) {
+  if (isBackward) {
     nextIndex = (listSize + currentFocus - 1) % listSize;
 
     if (noLoop && nextIndex > currentFocus) {

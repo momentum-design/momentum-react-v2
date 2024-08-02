@@ -1,6 +1,10 @@
+import { ListOrientation } from './List.types';
+
 const CLASS_PREFIX = 'md-list';
 
-const DEFAULTS = {};
+const DEFAULTS = {
+  ORIENTATION: 'vertical' as ListOrientation,
+};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,

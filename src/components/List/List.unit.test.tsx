@@ -218,7 +218,7 @@ describe('<List />', () => {
       expect(keyDownHandler).toHaveBeenCalled();
     });
 
-    it('should handle up/down arrow keys correctly', async () => {
+    it('should handle up/down arrow keys correctly for vertical lists', async () => {
       expect.assertions(8);
       const user = userEvent.setup();
 
@@ -264,12 +264,43 @@ describe('<List />', () => {
       expect(listItems[2]).toHaveFocus();
     });
 
-    it('should handle up/down arrow keys correctly - no loop', async () => {
+    it('is vertically oriented by default', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { getAllByRole } = render(
+        <List listSize={3}>
+          <ListItemBase key="0" itemIndex={0}>
+            ListItemBase 1
+          </ListItemBase>
+          <ListItemBase key="1" itemIndex={1}>
+            ListItemBase 2
+          </ListItemBase>
+          <ListItemBase key="2" itemIndex={2}>
+            ListItemBase 3
+          </ListItemBase>
+        </List>
+      );
+
+      const listItems = getAllByRole('listitem');
+
+      await user.tab();
+
+      expect(listItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+      expect(listItems[1]).toHaveFocus();
+
+      await user.keyboard('{ArrowUp}');
+      expect(listItems[0]).toHaveFocus();
+    });
+
+    it('should handle up/down arrow keys correctly - no loop for vertical lists', async () => {
       expect.assertions(5);
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3} noLoop>
+        <List listSize={3} noLoop orientation="vertical">
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -301,12 +332,12 @@ describe('<List />', () => {
       expect(listItems[2]).toHaveFocus();
     });
 
-    it('should handle left/right arrow keys correctly', async () => {
+    it('should handle left/right arrow keys correctly for horizontal lists', async () => {
       expect.assertions(8);
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3}>
+        <List listSize={3} orientation="horizontal">
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -346,12 +377,12 @@ describe('<List />', () => {
       expect(listItems[2]).toHaveFocus();
     });
 
-    it('should handle left/right arrow keys correctly - no loop', async () => {
+    it('should handle left/right arrow keys correctly - no loop for horizontal lists', async () => {
       expect.assertions(5);
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3} noLoop>
+        <List listSize={3} noLoop orientation="horizontal">
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -383,7 +414,7 @@ describe('<List />', () => {
     });
 
     it('should handle focus on tabbable elements in the list row', async () => {
-      expect.assertions(10);
+      expect.assertions(11);
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
@@ -406,39 +437,49 @@ describe('<List />', () => {
       const inputs = getAllByRole('textbox');
       const buttons = getAllByRole('button');
 
+      // Move focus to the list
       await user.tab();
-
       expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
+      // Move focus to the first interactive element in the first list item
+      await user.tab();
       expect(inputs[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
+      // Second interactable
+      await user.tab();
       expect(buttons[0]).toHaveFocus();
 
+      // Move focus to the next interactable element after the list, when
+      // no more interactable elements are in the selected list item
       await user.tab();
       expect(document.body).toHaveFocus();
 
+      // Move focus to the last interactable element of the last selected list item
+      await user.tab({ shift: true });
+      expect(buttons[0]).toHaveFocus();
+
+      // Second last interactable
+      await user.tab({ shift: true });
+      expect(inputs[0]).toHaveFocus();
+
+      // Move focus to the selected list item
       await user.tab({ shift: true });
       expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
-
-      expect(inputs[0]).toHaveFocus();
-
+      // Second list item
       await user.keyboard('{ArrowDown}');
       expect(listItems[1]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
-
+      // Second list item first interactable
+      await user.tab();
       expect(inputs[1]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
-
+      // Second list item second interactable
+      await user.tab();
       expect(buttons[1]).toHaveFocus();
 
-      await user.keyboard('{ArrowLeft}');
-
+      // Second list item first interactable again
+      await user.tab({ shift: true });
       expect(inputs[1]).toHaveFocus();
     });
 
@@ -465,7 +506,7 @@ describe('<List />', () => {
 
       expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
+      await user.tab();
       await user.keyboard('{Enter}');
 
       const firstMenuItem = (await findAllByText('menu item 1'))[0].closest('li');
@@ -504,7 +545,7 @@ describe('<List />', () => {
 
       expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
+      await user.tab();
       expect(buttons[0]).toHaveFocus();
 
       const updatedButton = await findAllByText('muted');

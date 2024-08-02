@@ -356,58 +356,37 @@ describe('ListItemBase', () => {
       );
     };
 
-    it('should handle right arrow key', async () => {
+    it('should handle tab key', async () => {
       const user = userEvent.setup();
 
       const { getByTestId } = renderWithNButtons(2);
       await user.tab();
-      await user.keyboard('{ArrowRight}');
+      await user.tab();
       expect(getByTestId('first-button-1')).toHaveFocus();
-      await user.keyboard('{ArrowRight}');
+      await user.tab();
       expect(getByTestId('second-button-1')).toHaveFocus();
-      // loop back
-      await user.keyboard('{ArrowRight}');
-      expect(getByTestId('first-button-1')).toHaveFocus();
+
+      // no loop back
+      await user.tab();
+      expect(document.body).toHaveFocus();
     });
 
-    it('should handle left arrow key', async () => {
+    it('should handle shift+tab key', async () => {
       const user = userEvent.setup();
       const { getByTestId } = renderWithNButtons(2);
 
       await user.tab();
-      await user.keyboard('{ArrowLeft}');
-      expect(getByTestId('second-button-1')).toHaveFocus();
-      await user.keyboard('{ArrowLeft}');
-      expect(getByTestId('first-button-1')).toHaveFocus();
-      // loop back
-      await user.keyboard('{ArrowLeft}');
-      expect(getByTestId('second-button-1')).toHaveFocus();
-    });
 
-    it('should keep focus on the child when there is only one', async () => {
-      const user = userEvent.setup();
-      const { getByTestId } = renderWithNButtons(1);
-
+      // move focus to the last interactable
       await user.tab();
-      await user.keyboard('{ArrowLeft}');
-      expect(getByTestId('first-button-1')).toHaveFocus();
-      await user.keyboard('{ArrowLeft}');
-      expect(getByTestId('first-button-1')).toHaveFocus();
-      await user.keyboard('{ArrowRight}');
-      expect(getByTestId('first-button-1')).toHaveFocus();
-      await user.keyboard('{ArrowRight}');
-      expect(getByTestId('first-button-1')).toHaveFocus();
-    });
-
-    it('moves between list items when there are no interactive child elements', async () => {
-      const user = userEvent.setup();
-      const { getByTestId } = renderWithNButtons(0);
-
       await user.tab();
-      expect(getByTestId('list-item-1')).toHaveFocus();
-      await user.keyboard('{ArrowRight}');
-      expect(getByTestId('list-item-2')).toHaveFocus();
-      await user.keyboard('{ArrowLeft}');
+      expect(getByTestId('second-button-1')).toHaveFocus();
+
+      await user.tab({ shift: true });
+      expect(getByTestId('first-button-1')).toHaveFocus();
+
+      // no loop back - focus should be on the list item
+      await user.tab({ shift: true });
       expect(getByTestId('list-item-1')).toHaveFocus();
     });
   });
