@@ -24,9 +24,15 @@ function MultiTemplate<Props>(Component: FC<Props>): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
     const { variants } = parameters;
 
-    const items = variants.map((variant, index: number) => (
-      <Component key={index} {...args} {...variant} />
-    ));
+    const items = variants.map(({ Wrapper, ...props }, index: number) =>
+      Wrapper ? (
+        <Wrapper key={index}>
+          <Component {...args} {...props} />
+        </Wrapper>
+      ) : (
+        <Component key={index} {...args} {...props} />
+      )
+    );
 
     return <>{items}</>;
   };
@@ -39,11 +45,18 @@ const COMPONENT_STATES = ['', 'Hover', 'Active', 'Disable', 'Focus'];
 /**
  * Component utility function that returns all component states for a variant
  * @param Component
+ * @param args
  * @param variant
+ * @param Wrapper
  * @returns ReactElement
  */
 
-export const getComponentStates = (Component: FC, args: any, variant: any): ReactElement => {
+export const getComponentStates = (
+  Component: FC,
+  args: any,
+  variant: any,
+  Wrapper: any = 'div'
+): ReactElement => {
   const items = COMPONENT_STATES.map((state, index) => {
     const getChildren = () => {
       if (variant.children) {
@@ -56,12 +69,14 @@ export const getComponentStates = (Component: FC, args: any, variant: any): Reac
     return (
       <div key={index}>
         <p>{state || 'Normal'}</p>
-        <Component
-          {...variant}
-          {...args}
-          children={getChildren()}
-          className={state.toLowerCase()}
-        />
+        <Wrapper>
+          <Component
+            {...variant}
+            {...args}
+            children={getChildren()}
+            className={state.toLowerCase()}
+          />
+        </Wrapper>
       </div>
     );
   });
@@ -92,10 +107,10 @@ function MultiTemplateWithPseudoStates<Props>(Component: FC): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
     const { variants } = parameters;
 
-    const items = variants.map((variant, index) => (
+    const items = variants.map(({ Wrapper, ...variant }, index) => (
       <div key={index}>
         <div style={{ padding: '0 1rem' }}>{variant.label}</div>
-        {getComponentStates(Component, args, variant)}
+        {getComponentStates(Component, args, variant, Wrapper)}
       </div>
     ));
 

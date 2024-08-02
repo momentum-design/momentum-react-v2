@@ -30,7 +30,9 @@ export const useMutationObservable = (
   }, [callback, config]);
 
   useEffect(() => {
-    observer?.observe(targetEl, config);
+    if (targetEl) {
+      observer?.observe(targetEl, config);
+    }
     return () => {
       observer?.disconnect();
     };

@@ -78,3 +78,5 @@ export { default as Toggletip } from './Toggletip';
 export { default as Link } from './Link';
 export { default as ButtonCircleLink } from './ButtonCircleLink';
 export { default as ButtonPillLink } from './ButtonPillLink';
+export { default as Tree, useTreeContext } from './Tree';
+export { default as TreeNodeBase } from './TreeNodeBase';

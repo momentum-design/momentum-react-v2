@@ -1,0 +1,133 @@
+The `<Tree />` component implements the basic tree navigation based on the WAI-ARIA specification,
+see [WCAG Tree Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) for more details.
+
+`<Tree />` does not render the tree nodes automatically. It makes it more flexible to customize the tree nodes and
+make it possible to use it with Virtualized trees.
+
+Tree nodes must be wrapped in a `<TreeNodeBase />` component to ensure proper keyboard navigation and focus management.
+
+Any node inside the `<Tree />` can access to the tree context using the `useTreeContext` hook.
+
+## Nested VS Flat tree
+
+There is 2 ways to represent the tree structure in the DOM:
+
+### 1) Nested elements
+
+Simple static trees usually represented as nested elements. It's easy to understand and implement and
+most of the semantics are implicitly set. But hard to render it automatically especially in virtualized trees.
+
+```html
+<ul role="tree" aria-labelledby="tree_label">
+    <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> Level 1 </span>
+        <ul role="group">
+            <li role="treeitem" aria-selected="false">Level 2.1</li>
+            <li role="treeitem" aria-selected="false">Level 2.2</li>
+            <li role="treeitem" aria-selected="false">Level 2.3</li>
+            <li role="treeitem" aria-expanded="false" aria-selected="false">
+                <span> Level 2.4 </span>
+                <ul role="group">
+                    <li role="treeitem" aria-selected="false">Level 3.1</li>
+                    <li role="treeitem" aria-selected="false">Level 3.2</li>
+                </ul>
+            </li>
+            <li role="treeitem" aria-selected="false">Level 2.5</li>
+        </ul>
+    </li>
+</ul>
+
+```
+
+### 2) Flat elements
+
+Flat tree structure is more flexible and can be used with virtualized trees. It requires more explicit semantics.
+
+```html
+<h3 id="tree_label_2">Tree with flat DOM</h3>
+<ul role="tree" aria-labelledby="tree_label_2">
+    <li
+            role="treeitem"
+            aria-level="1"
+            aria-expanded="true"
+            aria-selected="false"
+            class="level-1"
+    >
+        <span> Level 1 </span>
+        <div role="group" aria-owns="level-2.1 level-2.2 level-2.3 level-2.4 level-2.5"></div>
+    </li>
+    <li
+            id="level-2.1"
+            aria-setsize="5"
+            aria-posinset="1"
+            role="treeitem"
+            aria-level="2"
+            class="level-2"
+    >
+        <span>  Level 2.1</span>
+    </li>
+    <li
+            id="level-2.2"
+            aria-setsize="5"
+            aria-posinset="2"
+            role="treeitem"
+            aria-level="2"
+            class="level-2"
+    >
+        <span>  Level 2.2</span>
+    </li>
+    <li
+            id="level-2.3"
+            aria-setsize="5"
+            aria-posinset="3"
+            role="treeitem"
+            aria-level="2"
+            class="level-2"
+    >
+        <span>  Level 2.3</span>
+    </li>
+    <li
+            id="level-2.4"
+            aria-setsize="5"
+            aria-posinset="4"
+            role="treeitem"
+            aria-level="2"
+            class="level-2"
+            aria-expanded="true"
+
+    >
+        Level 2.4
+        <div role="group" aria-owns="level-3.1 level-3.2"></div>
+    </li>
+    <li
+            id="level-3.1"
+            aria-setsize="2"
+            aria-posinset="1"
+            role="treeitem"
+            aria-level="3"
+            class="level-3"
+    >
+        <span>  Level 3.1</span>
+    </li>
+    <li
+            id="level-3.2"
+            aria-setsize="2"
+            aria-posinset="2"
+            role="treeitem"
+            aria-level="3"
+            class="level-3"
+    >
+        <span>  Level 3.2</span>
+    </li>
+    <li
+            id="level-2.5"
+            aria-setsize="5"
+            aria-posinset="5"
+            role="treeitem"
+            aria-level="2"
+            class="level-2"
+    >
+        <span>  Level 2.5</span>
+    </li>
+</ul>
+```

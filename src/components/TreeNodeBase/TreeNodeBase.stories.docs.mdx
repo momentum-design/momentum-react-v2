@@ -1,0 +1,60 @@
+[INTERNAL] `<TreeNodeBase />` component should be the base of any Tree Item component that the
+Momentum Library requires. This component acts like a skeleton that helps you develop more complex TreeNodes.
+It manages many features of the tree, such as focus, keyboard navigation, open/close nodes, etc.
+
+`<TreeNodeBase />` uses the TreeContext from the `<Tree />` component to manage the state of the tree.
+If the `<TreeNodeBase />` can not access ot the context, it will throw an error.
+
+`<TreeNodeBase />` allows to navigate into the node itself when there are interactive elements inside it.
+After the node selected the user can use the `Tab` key to select the first, second, etc. interactive element.
+When the last interactable element is selected, the next tab will move the focus to the next interactable
+element after the tree.
+
+Below are a few examples on how to use it and what you can achieve.
+
+## Structure
+
+`<TreeNodeBase />` is compatible with the `<ListItemBaseSection />` component, it can be used the same way as in the
+ListItem component.
+
+The structure of the component is as follows:
+
+```
++---------------+----------------+-------------+
+| Start Section | Middle Section | End Section |
++---------------+----------------+-------------+
+
+or
+
++---------------+----------------+-------------+
+|                  Fill Section                |
++---------------+----------------+-------------+
+```
+
+The 4 sections can be mixed together as needed. We provide a `<ListItemBaseSection />` component
+that will handle spacing and padding accordingly.
+
+## Simple example
+
+```js
+<TreeNodeBase>
+  <ListItemBaseSection position="start">
+    <Avatar title="Webex User" />
+  </ListItemBaseSection>
+  <ListItemBaseSection position="fill">Webex User</ListItemBaseSection>
+</TreeNodeBase>
+```
+
+## Complex example
+
+```js
+<TreeNodeBase size={50} shape="isPilled">
+  <ListItemBaseSection position="start">
+    <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
+  </ListItemBaseSection>
+  <ListItemBaseSection position="fill">Text goes here</ListItemBaseSection>
+  <ListItemBaseSection position="end">
+    <Icon name="placeholder" scale={16} />
+  </ListItemBaseSection>
+</TreeNodeBase>
+```

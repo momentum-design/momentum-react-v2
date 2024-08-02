@@ -1,0 +1,622 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreeNodeBase snapshot should match snapshot 1`] = `
+<TreeNodeBase
+  nodeId="42"
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        className="md-tree-node-base-wrapper"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should match snapshot with className 1`] = `
+<TreeNodeBase
+  className="example-class"
+  nodeId="42"
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        className="example-class md-tree-node-base-wrapper"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should match snapshot with id 1`] = `
+<TreeNodeBase
+  id="example-id"
+  nodeId="42"
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        className="md-tree-node-base-wrapper"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        id="example-id"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should match snapshot with isSelected 1`] = `
+<TreeNodeBase
+  isSelected={true}
+  nodeId="42"
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        aria-selected={true}
+        className="md-tree-node-base-wrapper active"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should match snapshot with lang 1`] = `
+<TreeNodeBase
+  lang="en-US"
+  nodeId="42"
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        className="md-tree-node-base-wrapper"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        lang="en-US"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should match snapshot with shape 1`] = `
+<TreeNodeBase
+  nodeId="42"
+  shape="isPilled"
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        className="md-tree-node-base-wrapper"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="isPilled"
+        data-size={50}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should match snapshot with size 1`] = `
+<TreeNodeBase
+  nodeId="42"
+  size={40}
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        className="md-tree-node-base-wrapper"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
+<TreeNodeBase
+  nodeId="42"
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <div
+        className="md-tree-node-base-wrapper"
+        data-nodeid="42"
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+        tabIndex={0}
+      >
+        Test
+      </div>
+    </FocusRing>
+  </FocusRing>
+</TreeNodeBase>
+`;
+
+exports[`TreeNodeBase snapshot should not render the content of the hidden nodes 1`] = `
+<Tree
+  excludeTreeRoot={false}
+  isRenderedFlat={true}
+  treeStructure={
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [],
+          "id": "1",
+          "isOpenByDefault": undefined,
+        },
+        Object {
+          "children": Array [],
+          "id": "2",
+          "isOpenByDefault": undefined,
+        },
+      ],
+      "id": "root",
+      "isOpenByDefault": false,
+    }
+  }
+>
+  <div
+    className="md-tree-wrapper"
+    onKeyDown={[Function]}
+    role="tree"
+  >
+    <TreeNodeBase
+      data-testid="node-root"
+      key="root"
+      nodeId="root"
+    >
+      <FocusRing
+        isInset={false}
+      >
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <div
+            aria-expanded="false"
+            aria-level={1}
+            aria-posinset={1}
+            aria-setsize={1}
+            className="md-tree-node-base-wrapper"
+            data-nodeid="root"
+            data-padded={false}
+            data-shape="rectangle"
+            data-size={40}
+            data-testid="node-root"
+            id="root"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="treeitem"
+            tabIndex={0}
+          >
+            <div
+              className="node-content"
+            >
+              root
+            </div>
+            <div
+              aria-owns="1 2"
+              role="group"
+            />
+          </div>
+        </FocusRing>
+      </FocusRing>
+    </TreeNodeBase>
+    <TreeNodeBase
+      data-testid="node-1"
+      key="1"
+      nodeId="1"
+    />
+    <TreeNodeBase
+      data-testid="node-2"
+      key="2"
+      nodeId="2"
+    />
+  </div>
+</Tree>
+`;
+
+exports[`TreeNodeBase snapshot should render grouping element when the tree is flat 1`] = `
+<Tree
+  excludeTreeRoot={false}
+  isRenderedFlat={true}
+  treeStructure={
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [],
+          "id": "1",
+          "isOpenByDefault": undefined,
+        },
+        Object {
+          "children": Array [],
+          "id": "2",
+          "isOpenByDefault": undefined,
+        },
+      ],
+      "id": "root",
+      "isOpenByDefault": true,
+    }
+  }
+>
+  <div
+    className="md-tree-wrapper"
+    onKeyDown={[Function]}
+    role="tree"
+  >
+    <TreeNodeBase
+      data-testid="node-root"
+      key="root"
+      nodeId="root"
+    >
+      <FocusRing
+        isInset={false}
+      >
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <div
+            aria-expanded="true"
+            aria-level={1}
+            aria-posinset={1}
+            aria-setsize={1}
+            className="md-tree-node-base-wrapper"
+            data-nodeid="root"
+            data-padded={false}
+            data-shape="rectangle"
+            data-size={40}
+            data-testid="node-root"
+            id="root"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="treeitem"
+            tabIndex={0}
+          >
+            root
+            <div
+              aria-owns="1 2"
+              role="group"
+            />
+          </div>
+        </FocusRing>
+      </FocusRing>
+    </TreeNodeBase>
+    <TreeNodeBase
+      data-testid="node-1"
+      key="1"
+      nodeId="1"
+    >
+      <FocusRing
+        isInset={false}
+      >
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <div
+            aria-expanded="false"
+            aria-level={2}
+            aria-posinset={1}
+            aria-setsize={2}
+            className="md-tree-node-base-wrapper"
+            data-nodeid="1"
+            data-padded={false}
+            data-shape="rectangle"
+            data-size={40}
+            data-testid="node-1"
+            id="1"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="treeitem"
+            tabIndex={-1}
+          >
+            1
+          </div>
+        </FocusRing>
+      </FocusRing>
+    </TreeNodeBase>
+    <TreeNodeBase
+      data-testid="node-2"
+      key="2"
+      nodeId="2"
+    >
+      <FocusRing
+        isInset={false}
+      >
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+          isInset={false}
+        >
+          <div
+            aria-expanded="false"
+            aria-level={2}
+            aria-posinset={2}
+            aria-setsize={2}
+            className="md-tree-node-base-wrapper"
+            data-nodeid="2"
+            data-padded={false}
+            data-shape="rectangle"
+            data-size={40}
+            data-testid="node-2"
+            id="2"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="treeitem"
+            tabIndex={-1}
+          >
+            2
+          </div>
+        </FocusRing>
+      </FocusRing>
+    </TreeNodeBase>
+  </div>
+</Tree>
+`;
