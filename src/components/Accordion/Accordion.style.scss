@@ -1,0 +1,21 @@
+.md-accordion-wrapper {
+    .md-accordion-header-row {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .md-accordion-header-heading {
+        width: 100%;
+    }
+
+    .md-accordion-header-button {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        background: none;
+        border: none;
+        justify-content: flex-start;
+    }
+}

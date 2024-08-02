@@ -35,5 +35,29 @@ describe('<AriaToolbarItem />', () => {
     });
   });
 
+  describe('attributes', () => {
+    it('passes extra props to children', () => {
+      const container = mountWithContext(
+        <AriaToolbarItem itemIndex={0} aria-haspopup="tree">
+          <ButtonPill aria-haspopup="dialog" aria-label="label text">
+            Test
+          </ButtonPill>
+        </AriaToolbarItem>
+      );
+
+      expect(container.find('ButtonPill').props()).toEqual({
+        children: 'Test',
+        'aria-haspopup': 'dialog', // item has "tree", but children has "dialog", children's props takes precedent
+        'aria-label': 'label text',
+        onFocus: expect.any(Function),
+        onKeyDown: expect.any(Function),
+        onKeyUp: undefined,
+        onPress: expect.any(Function),
+        tabIndex: 0,
+        useNativeKeyDown: true,
+      });
+    });
+  });
+
   // keyboard interaction is tested in AriaToolbar.unit.test.tsx
 });

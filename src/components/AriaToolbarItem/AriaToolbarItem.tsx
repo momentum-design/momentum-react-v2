@@ -5,9 +5,10 @@ import React, { forwardRef, useCallback } from 'react';
 import { useKeyboard } from '@react-aria/interactions';
 import { useAriaToolbarContext } from '../AriaToolbar/AriaToolbar.utils';
 import { useProvidedRef } from '../../utils/useProvidedRef';
+import { defaults } from 'lodash';
 
 const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
-  const { children, itemIndex } = props;
+  const { children, itemIndex, ...rest } = props;
 
   const ariaToolbarContext = useAriaToolbarContext();
 
@@ -52,25 +53,29 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
 
       const { setCurrentFocus, buttonRefs, currentFocus } = ariaToolbarContext;
 
-      return {
-        tabIndex: index === (currentFocus || 0) ? 0 : -1,
-        ref: (element: HTMLButtonElement) => {
-          buttonRefs.current[index] = element;
-          ref.current = element;
+      return defaults(
+        {
+          tabIndex: index === (currentFocus || 0) ? 0 : -1,
+          ref: (element: HTMLButtonElement) => {
+            buttonRefs.current[index] = element;
+            ref.current = element;
+          },
+          onFocus: (event) => {
+            setCurrentFocus?.(index);
+            child.props?.onFocus?.(event);
+          },
+          onPress: () => {
+            setCurrentFocus?.(index);
+            child.props?.onPress?.();
+          },
+          useNativeKeyDown: true,
+          ...keyboardProps,
         },
-        onFocus: (event) => {
-          setCurrentFocus?.(index);
-          child.props?.onFocus?.(event);
-        },
-        onPress: () => {
-          setCurrentFocus?.(index);
-          child.props?.onPress?.();
-        },
-        useNativeKeyDown: true,
-        ...keyboardProps,
-      };
+        children?.props, // specified props of children should take precedent over drilled props from parent
+        rest
+      );
     },
-    [ariaToolbarContext?.currentFocus]
+    [ariaToolbarContext?.currentFocus, rest, children]
   );
 
   return React.cloneElement(children, getPropsForChildren(children, itemIndex));

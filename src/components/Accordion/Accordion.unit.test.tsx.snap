@@ -1,0 +1,444 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> snapshot should match snapshot 1`] = `
+<Accordion
+  ariaLevel={5}
+  heading="Heading text"
+  id="accordion-id"
+>
+  <div
+    className="md-accordion-wrapper"
+    id="accordion-id"
+  >
+    <div
+      className="md-accordion-header-row"
+    >
+      <div
+        aria-level={5}
+        className="md-accordion-header-heading"
+        role="heading"
+      >
+        <ButtonSimple
+          aria-controls="accordion-id-panel"
+          aria-expanded={true}
+          className="md-accordion-header-button md-list-item-base-wrapper"
+          data-interactive={true}
+          data-padded={true}
+          data-shape="isPilled"
+          id="accordion-id-header-button"
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                aria-controls="accordion-id-panel"
+                aria-expanded={true}
+                className="md-accordion-header-button md-list-item-base-wrapper md-button-simple-wrapper"
+                data-interactive={true}
+                data-padded={true}
+                data-shape="isPilled"
+                id="accordion-id-header-button"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  name="arrow-down"
+                  scale={12}
+                />
+                <Text
+                  type="body-secondary"
+                >
+                  <small
+                    className="md-text-wrapper"
+                    data-type="body-secondary"
+                  >
+                    Heading text
+                  </small>
+                </Text>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </div>
+    </div>
+    <div
+      aria-labelledby="accordion-id-header-button"
+      id="accordion-id-panel"
+      role="region"
+    />
+  </div>
+</Accordion>
+`;
+
+exports[`<Accordion /> snapshot should match snapshot with className 1`] = `
+<Accordion
+  ariaLevel={5}
+  className="example-class"
+  heading="Heading text"
+  id="accordion-id"
+>
+  <div
+    className="example-class md-accordion-wrapper"
+    id="accordion-id"
+  >
+    <div
+      className="md-accordion-header-row"
+    >
+      <div
+        aria-level={5}
+        className="md-accordion-header-heading"
+        role="heading"
+      >
+        <ButtonSimple
+          aria-controls="accordion-id-panel"
+          aria-expanded={true}
+          className="md-accordion-header-button md-list-item-base-wrapper"
+          data-interactive={true}
+          data-padded={true}
+          data-shape="isPilled"
+          id="accordion-id-header-button"
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                aria-controls="accordion-id-panel"
+                aria-expanded={true}
+                className="md-accordion-header-button md-list-item-base-wrapper md-button-simple-wrapper"
+                data-interactive={true}
+                data-padded={true}
+                data-shape="isPilled"
+                id="accordion-id-header-button"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  name="arrow-down"
+                  scale={12}
+                />
+                <Text
+                  type="body-secondary"
+                >
+                  <small
+                    className="md-text-wrapper"
+                    data-type="body-secondary"
+                  >
+                    Heading text
+                  </small>
+                </Text>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </div>
+    </div>
+    <div
+      aria-labelledby="accordion-id-header-button"
+      id="accordion-id-panel"
+      role="region"
+    />
+  </div>
+</Accordion>
+`;
+
+exports[`<Accordion /> snapshot should match snapshot with headingRightContent 1`] = `
+<Accordion
+  ariaLevel={5}
+  heading="Heading text"
+  headingRightContent="Some content on the right"
+  id="accordion-id"
+>
+  <div
+    className="md-accordion-wrapper"
+    id="accordion-id"
+  >
+    <div
+      className="md-accordion-header-row"
+    >
+      <div
+        aria-level={5}
+        className="md-accordion-header-heading"
+        role="heading"
+      >
+        <ButtonSimple
+          aria-controls="accordion-id-panel"
+          aria-expanded={true}
+          className="md-accordion-header-button md-list-item-base-wrapper"
+          data-interactive={true}
+          data-padded={true}
+          data-shape="isPilled"
+          id="accordion-id-header-button"
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                aria-controls="accordion-id-panel"
+                aria-expanded={true}
+                className="md-accordion-header-button md-list-item-base-wrapper md-button-simple-wrapper"
+                data-interactive={true}
+                data-padded={true}
+                data-shape="isPilled"
+                id="accordion-id-header-button"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  name="arrow-down"
+                  scale={12}
+                />
+                <Text
+                  type="body-secondary"
+                >
+                  <small
+                    className="md-text-wrapper"
+                    data-type="body-secondary"
+                  >
+                    Heading text
+                  </small>
+                </Text>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </div>
+      Some content on the right
+    </div>
+    <div
+      aria-labelledby="accordion-id-header-button"
+      id="accordion-id-panel"
+      role="region"
+    />
+  </div>
+</Accordion>
+`;
+
+exports[`<Accordion /> snapshot should match snapshot with id 1`] = `
+<Accordion
+  ariaLevel={5}
+  heading="Heading text"
+  id="example-id"
+>
+  <div
+    className="md-accordion-wrapper"
+    id="example-id"
+  >
+    <div
+      className="md-accordion-header-row"
+    >
+      <div
+        aria-level={5}
+        className="md-accordion-header-heading"
+        role="heading"
+      >
+        <ButtonSimple
+          aria-controls="example-id-panel"
+          aria-expanded={true}
+          className="md-accordion-header-button md-list-item-base-wrapper"
+          data-interactive={true}
+          data-padded={true}
+          data-shape="isPilled"
+          id="example-id-header-button"
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                aria-controls="example-id-panel"
+                aria-expanded={true}
+                className="md-accordion-header-button md-list-item-base-wrapper md-button-simple-wrapper"
+                data-interactive={true}
+                data-padded={true}
+                data-shape="isPilled"
+                id="example-id-header-button"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  name="arrow-down"
+                  scale={12}
+                />
+                <Text
+                  type="body-secondary"
+                >
+                  <small
+                    className="md-text-wrapper"
+                    data-type="body-secondary"
+                  >
+                    Heading text
+                  </small>
+                </Text>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </div>
+    </div>
+    <div
+      aria-labelledby="example-id-header-button"
+      id="example-id-panel"
+      role="region"
+    />
+  </div>
+</Accordion>
+`;
+
+exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
+<Accordion
+  ariaLevel={5}
+  heading="Heading text"
+  id="accordion-id"
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-accordion-wrapper"
+    id="accordion-id"
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div
+      className="md-accordion-header-row"
+    >
+      <div
+        aria-level={5}
+        className="md-accordion-header-heading"
+        role="heading"
+      >
+        <ButtonSimple
+          aria-controls="accordion-id-panel"
+          aria-expanded={true}
+          className="md-accordion-header-button md-list-item-base-wrapper"
+          data-interactive={true}
+          data-padded={true}
+          data-shape="isPilled"
+          id="accordion-id-header-button"
+          onPress={[Function]}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                aria-controls="accordion-id-panel"
+                aria-expanded={true}
+                className="md-accordion-header-button md-list-item-base-wrapper md-button-simple-wrapper"
+                data-interactive={true}
+                data-padded={true}
+                data-shape="isPilled"
+                id="accordion-id-header-button"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <Icon
+                  name="arrow-down"
+                  scale={12}
+                />
+                <Text
+                  type="body-secondary"
+                >
+                  <small
+                    className="md-text-wrapper"
+                    data-type="body-secondary"
+                  >
+                    Heading text
+                  </small>
+                </Text>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </div>
+    </div>
+    <div
+      aria-labelledby="accordion-id-header-button"
+      id="accordion-id-panel"
+      role="region"
+    />
+  </div>
+</Accordion>
+`;

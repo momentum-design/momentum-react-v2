@@ -53,6 +53,23 @@ describe('<AriaToolbar />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with aria label + button group render', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      const container = mount(
+        <AriaToolbar
+          shouldRenderAsButtonGroup={true}
+          ariaLabel="test"
+          style={style}
+          ariaToolbarItemsSize={0}
+        />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should set tab index appropriately - horizontal orientation', () => {
       expect.assertions(4);
 
@@ -237,6 +254,20 @@ describe('<AriaToolbar />', () => {
       const ariaLabel = 'test label';
 
       const element = mount(<AriaToolbar ariaLabel={ariaLabel} ariaToolbarItemsSize={0} />)
+        .find(AriaToolbar)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+    });
+
+    it('should have provided aria-label when ariaLabel is provided for button group render', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'test label';
+
+      const element = mount(
+        <AriaToolbar shouldRenderAsButtonGroup ariaLabel={ariaLabel} ariaToolbarItemsSize={0} />
+      )
         .find(AriaToolbar)
         .getDOMNode();
 
