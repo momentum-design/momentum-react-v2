@@ -33,7 +33,7 @@ class Lightbox extends React.Component {
     window.addEventListener('keydown', this.handleKeyDown, true);
     window.addEventListener('resize', this.handleResize, true);
     const { viewport } = this;
-    if (viewport) {
+    if (viewport && viewport.clientWidth && viewport.clientHeight) {
       // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({
         viewportDimensions: {
@@ -126,7 +126,7 @@ class Lightbox extends React.Component {
       onChange && onChange(index);
     }
     e.stopPropagation();
-    target && target.scrollIntoViewIfNeeded();
+    target && target.scrollIntoViewIfNeeded && target.scrollIntoViewIfNeeded();
     target && needFocus && target.parentElement.focus();
   };
 
@@ -433,7 +433,7 @@ class Lightbox extends React.Component {
               placement="top"
               triggerComponent={
                 <ButtonSimple
-                  className="md-lightbox__control md-lightbox__control-download"
+                  className="md-lightbox__control md-lightbox__control-left"
                   onPress={(e) => this.triggerPageChange(index - 1, e)}
                 >
                   <IconNext
@@ -453,7 +453,7 @@ class Lightbox extends React.Component {
               placement="top"
               triggerComponent={
                 <ButtonSimple
-                  className="md-lightbox__control md-lightbox__control-download"
+                  className="md-lightbox__control md-lightbox__control-right"
                   onPress={(e) => this.triggerPageChange(index + 1, e)}
                 >
                   <IconNext
@@ -486,7 +486,11 @@ class Lightbox extends React.Component {
               type="label"
               placement="top"
               triggerComponent={
-                <ButtonSimple className="md-lightbox__control" onPress={() => this.setZoom(-0.25)}>
+                <ButtonSimple
+                  className="md-lightbox__control"
+                  data-test="zoom-out-button"
+                  onPress={() => this.setZoom(-0.25)}
+                >
                   <IconNext
                     name="zoom-out"
                     color="var(--mds-color-theme-common-text-white)"
@@ -498,14 +502,18 @@ class Lightbox extends React.Component {
             >
               {tooltips.zoomOut}
             </TooltipNext>
-            <span className="md-lightbox__control-value">
-              {Math.round(((newHeight * 1.0) / height) * 100)}%
+            <span className="md-lightbox__control-value md-lightbox__control-zoom-level">
+              {`${Math.round(((newHeight * 1.0) / height) * 100)}%`}
             </span>
             <TooltipNext
               type="label"
               placement="top"
               triggerComponent={
-                <ButtonSimple className="md-lightbox__control" onPress={() => this.setZoom(0.25)}>
+                <ButtonSimple
+                  className="md-lightbox__control"
+                  data-test="zoom-in-button"
+                  onPress={() => this.setZoom(0.25)}
+                >
                   <IconNext
                     name="zoom-in"
                     color="var(--mds-color-theme-common-text-white)"
@@ -554,7 +562,10 @@ class Lightbox extends React.Component {
                 type="label"
                 placement="bottom-start"
                 triggerComponent={
-                  <ButtonSimple className="md-lightbox__control" onPress={this.handleClose}>
+                  <ButtonSimple
+                    className="md-lightbox__control md-lightbox__control-close"
+                    onPress={this.handleClose}
+                  >
                     <IconNext
                       name="cancel"
                       color="var(--mds-color-theme-common-text-white)"

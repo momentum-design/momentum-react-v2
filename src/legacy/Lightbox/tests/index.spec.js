@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { Lightbox } from '@momentum-ui/react-collaboration';
+import IconNext from '../../../components/Icon';
+import ButtonSimple from '../../../components/ButtonSimple';
 
 jest.mock('uuid', () => {
   return {
@@ -31,7 +33,7 @@ describe('tests for <Lightbox />', () => {
   });
 
   it('when downloading is true the download button should turn to spinner', () => {
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"
@@ -48,14 +50,14 @@ describe('tests for <Lightbox />', () => {
         onDownload={jest.fn()}
       />
     );
-    const downloadButton = container.find('.md-lightbox__download-button .icon-download_16');
+    const downloadButton = container.find(IconNext).filter({ name: 'download' });
     expect(downloadButton.length).toEqual(0);
-    const spinner = container.find('Spinner');
+    const spinner = container.find('.md-loading-spinner-wrapper');
     expect(spinner.length).toEqual(1);
   });
 
   it('when downloading is false the download button should be visible', () => {
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"
@@ -72,9 +74,9 @@ describe('tests for <Lightbox />', () => {
         onDownload={jest.fn()}
       />
     );
-    const downloadButton = container.find('.md-lightbox__control-download');
+    const downloadButton = container.find(IconNext).filter({ name: 'download' });
     expect(downloadButton.length).toEqual(1);
-    const spinner = container.find('.md-lightbox__control-spinner');
+    const spinner = container.find('.md-loading-spinner-wrapper');
     expect(spinner.length).toEqual(0);
   });
 
@@ -108,7 +110,7 @@ describe('tests for <Lightbox />', () => {
   });
 
   it('should display file meta data and name', () => {
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"
@@ -132,7 +134,9 @@ describe('tests for <Lightbox />', () => {
     const sharedBy = container.find('.md-lightbox__header-sharer');
     const timestamp = container.find('.md-lightbox__header-timestamp');
     const name = container.find('.md-lightbox__header-name');
-    expect(container.props()['aria-labelledby']).toStrictEqual(name.props().id);
+    expect(
+      container.find('.md-lightbox__container').props().children[0].props['aria-labelledby']
+    ).toStrictEqual(name.props().id);
     expect(name.type()).toEqual('h2');
     expect(name.text()).toEqual('test');
     expect(timestamp.text()).toEqual('At 4/17/2018, 10:02 AM');
@@ -141,7 +145,7 @@ describe('tests for <Lightbox />', () => {
 
   it('should change pages on click of next and previous', () => {
     const onChangeFn = jest.fn();
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"
@@ -174,69 +178,83 @@ describe('tests for <Lightbox />', () => {
         onDownload={jest.fn()}
       />
     );
-    const rightControl = container.find('.md-lightbox__page-controls--right');
-    const leftControl = container.find('.md-lightbox__page-controls--left');
-    rightControl.simulate('click', { stopPropagation: () => {} });
+    const rightControl = container.find(ButtonSimple).filter('.md-lightbox__page-controls--right');
+    const leftControl = container.find(ButtonSimple).filter('.md-lightbox__page-controls--left');
+    rightControl.props().onPress({ stopPropagation: () => {} });
     expect(onChangeFn).toHaveBeenCalledWith(2);
-    leftControl.simulate('click', { stopPropagation: () => {} });
+
+    leftControl.props().onPress({ stopPropagation: () => {} });
     expect(onChangeFn).toHaveBeenCalledWith(0);
   });
 
-  it.each([true, false])('check scrollIntoViewIfNeeded and focus trigger when needFocus is %s', (needFocus) => {
-    const onChangeFn = jest.fn();
-    const container = shallow(<Lightbox
-      applicationId="app"
-      name="test"
-      height={100}
-      width={100}
-      info={{
-        sharedBy: 'Shared by abcd',
-        sharedOn: 'At 4/17/2018, 10:02 AM',
-        size: '34.4 KB',
-      }}
-      pages={[
-        {
-          decrypting: true,
-          image: 'testImage',
-          thumb: 'testImage',
-        },
-        {
-          decrypting: true,
-          image: 'testImage',
-          thumb: 'testImage',
-        },
-      ]}
-      onChange={onChangeFn}
-      onDownload={jest.fn()}
-    />);
+  it.each([true, false])(
+    'check scrollIntoViewIfNeeded and focus trigger when needFocus is %s',
+    (needFocus) => {
+      const onChangeFn = jest.fn();
+      const container = shallow(
+        <Lightbox
+          applicationId="app"
+          name="test"
+          height={100}
+          width={100}
+          info={{
+            sharedBy: 'Shared by abcd',
+            sharedOn: 'At 4/17/2018, 10:02 AM',
+            size: '34.4 KB',
+          }}
+          pages={[
+            {
+              decrypting: true,
+              image: 'testImage',
+              thumb: 'testImage',
+            },
+            {
+              decrypting: true,
+              image: 'testImage',
+              thumb: 'testImage',
+            },
+          ]}
+          onChange={onChangeFn}
+          onDownload={jest.fn()}
+        />
+      );
 
-    container.instance().lightBox = {
-      querySelector: jest.fn().mockReturnValue({
-        scrollIntoViewIfNeeded: jest.fn(),
-        parentElement: {
-          focus: jest.fn(),
-        },
-      }),
-    };
+      container.instance().lightBox = {
+        querySelector: jest.fn().mockReturnValue({
+          scrollIntoViewIfNeeded: jest.fn(),
+          parentElement: {
+            focus: jest.fn(),
+          },
+        }),
+      };
 
-    const index = 1;
-    const mockEvent = { stopPropagation: jest.fn() };
+      const index = 1;
+      const mockEvent = { stopPropagation: jest.fn() };
 
-    container.instance().triggerPageChange(index, mockEvent, needFocus);
+      container.instance().triggerPageChange(index, mockEvent, needFocus);
 
-    expect(mockEvent.stopPropagation).toHaveBeenCalled();
-    expect(container.instance().lightBox.querySelector).toHaveBeenCalledWith(`[data-index="${index}"]`);
-    expect(container.instance().lightBox.querySelector().scrollIntoViewIfNeeded).toHaveBeenCalled();
-    if(needFocus){
-      expect(container.instance().lightBox.querySelector().parentElement.focus).toHaveBeenCalled();
-    } else {
-      expect(container.instance().lightBox.querySelector().parentElement.focus).not.toHaveBeenCalled();
+      expect(mockEvent.stopPropagation).toHaveBeenCalled();
+      expect(container.instance().lightBox.querySelector).toHaveBeenCalledWith(
+        `[data-index="${index}"]`
+      );
+      expect(
+        container.instance().lightBox.querySelector().scrollIntoViewIfNeeded
+      ).toHaveBeenCalled();
+      if (needFocus) {
+        expect(
+          container.instance().lightBox.querySelector().parentElement.focus
+        ).toHaveBeenCalled();
+      } else {
+        expect(
+          container.instance().lightBox.querySelector().parentElement.focus
+        ).not.toHaveBeenCalled();
+      }
     }
-  });
+  );
 
   it('should close the lightbox onClose', () => {
     const onCloseFn = jest.fn();
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"
@@ -258,13 +276,13 @@ describe('tests for <Lightbox />', () => {
         onDownload={jest.fn()}
       />
     );
-    const closeIcon = container.find('.md-lightbox__header-item--right .md-lightbox__control');
-    closeIcon.simulate('click');
+    const closeIcon = container.find(ButtonSimple).filter('.md-lightbox__control-close');
+    closeIcon.props().onPress();
     expect(onCloseFn).toHaveBeenCalled();
   });
 
   it('should zoom-in and zoom-out', () => {
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"
@@ -285,15 +303,15 @@ describe('tests for <Lightbox />', () => {
         onDownload={jest.fn()}
       />
     );
-    const zoomIn = container.find('.md-lightbox__viewer-controls .md-lightbox__control').at(1);
-    const zoomOut = container.find('.md-lightbox__viewer-controls .md-lightbox__control').at(0);
-    let zoomValue = container.find('.md-lightbox__controls .md-lightbox__control-value').at(0);
+    const zoomIn = container.find(ButtonSimple).filter({ 'data-test': 'zoom-in-button' });
+    const zoomOut = container.find(ButtonSimple).filter({ 'data-test': 'zoom-out-button' });
+    let zoomValue = container.find('.md-lightbox__controls .md-lightbox__control-zoom-level');
     expect(zoomValue.text()).toEqual('100%');
-    zoomIn.simulate('click');
-    zoomValue = container.find('.md-lightbox__controls .md-lightbox__control-value').at(0);
+    zoomIn.props().onPress();
+    zoomValue = container.find('.md-lightbox__controls .md-lightbox__control-zoom-level');
     expect(zoomValue.text()).toEqual('125%');
-    zoomOut.simulate('click');
-    zoomValue = container.find('.md-lightbox__controls .md-lightbox__control-value').at(0);
+    zoomOut.props().onPress();
+    zoomValue = container.find('.md-lightbox__controls .md-lightbox__control-zoom-level');
     expect(zoomValue.text()).toEqual('100%');
   });
 
@@ -325,7 +343,7 @@ describe('tests for <Lightbox />', () => {
 
   it('onDownload should be called when downloading the file', () => {
     const onDownloadFn = jest.fn();
-    const container = shallow(
+    const container = mount(
       <Lightbox
         applicationId="app"
         name="test"
@@ -346,8 +364,8 @@ describe('tests for <Lightbox />', () => {
         onDownload={onDownloadFn}
       />
     );
-    const downloadIcon = container.find('.md-lightbox__control-download');
-    downloadIcon.simulate('click');
+    const downloadIcon = container.find(ButtonSimple).filter('.md-lightbox__control-download');
+    downloadIcon.props().onPress();
     expect(onDownloadFn).toHaveBeenCalled();
   });
 
@@ -368,9 +386,9 @@ describe('tests for <Lightbox />', () => {
         ]}
       />
     );
-    const downloadButton = container.find('.md-lightbox__download-button .icon-download_16');
+    const downloadButton = container.find(IconNext).filter({ name: 'download' });
     expect(downloadButton.length).toEqual(0);
-    const spinner = container.find('Spinner');
+    const spinner = container.find('.md-loading-spinner-wrapper');
     expect(spinner.length).toEqual(0);
   });
 
