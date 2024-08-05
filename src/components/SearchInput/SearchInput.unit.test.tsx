@@ -25,7 +25,9 @@ describe('<SearchInput />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<SearchInput aria-label="search" clearButtonAriaLabel='Clear' />);
+      const container = await mountComponent(
+        <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -36,7 +38,7 @@ describe('<SearchInput />', () => {
       const className = 'example-class';
 
       const container = await mountComponent(
-        <SearchInput aria-label="search" className={className} clearButtonAriaLabel='Clear' />
+        <SearchInput aria-label="search" className={className} clearButtonAriaLabel="Clear" />
       );
 
       expect(container).toMatchSnapshot();
@@ -47,7 +49,9 @@ describe('<SearchInput />', () => {
 
       const id = 'example-id';
 
-      const container = await mountComponent(<SearchInput aria-label="search" id={id} clearButtonAriaLabel='Clear'/>);
+      const container = await mountComponent(
+        <SearchInput aria-label="search" id={id} clearButtonAriaLabel="Clear" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -55,7 +59,9 @@ describe('<SearchInput />', () => {
     it('should match snapshot with a label', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<SearchInput label="search" aria-label="search" clearButtonAriaLabel='Clear'/>);
+      const container = await mountComponent(
+        <SearchInput label="search" aria-label="search" clearButtonAriaLabel="Clear" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -65,7 +71,9 @@ describe('<SearchInput />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountComponent(<SearchInput aria-label="search" style={style} clearButtonAriaLabel='Clear'/>);
+      const container = await mountComponent(
+        <SearchInput aria-label="search" style={style} clearButtonAriaLabel="Clear" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -73,7 +81,9 @@ describe('<SearchInput />', () => {
     it('should match snapshot when searching', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<SearchInput aria-label="search" searching={true} clearButtonAriaLabel='Clear'/>);
+      const container = await mountComponent(
+        <SearchInput aria-label="search" searching={true} clearButtonAriaLabel="Clear" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -81,7 +91,9 @@ describe('<SearchInput />', () => {
     it('should match snapshot with height', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<SearchInput aria-label="search" height={28} clearButtonAriaLabel='Clear'/>);
+      const container = await mountComponent(
+        <SearchInput aria-label="search" height={28} clearButtonAriaLabel="Clear" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -93,7 +105,7 @@ describe('<SearchInput />', () => {
         <SearchInput
           aria-label="search"
           value="From: someone"
-          clearButtonAriaLabel='Clear'
+          clearButtonAriaLabel="Clear"
           filters={[
             {
               term: 'from',
@@ -117,7 +129,9 @@ describe('<SearchInput />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<SearchInput aria-label="search" clearButtonAriaLabel='Clear'/>))
+      const element = (
+        await mountAndWait(<SearchInput aria-label="search" clearButtonAriaLabel="Clear" />)
+      )
         .find(SearchInput)
         .getDOMNode();
 
@@ -130,7 +144,9 @@ describe('<SearchInput />', () => {
       const className = 'example-class';
 
       const element = (
-        await mountAndWait(<SearchInput aria-label="search" className={className} clearButtonAriaLabel='Clear'/>)
+        await mountAndWait(
+          <SearchInput aria-label="search" className={className} clearButtonAriaLabel="Clear" />
+        )
       )
         .find(SearchInput)
         .getDOMNode();
@@ -143,7 +159,9 @@ describe('<SearchInput />', () => {
 
       const id = 'example-id-2';
 
-      const element = (await mountAndWait(<SearchInput aria-label="search" id={id} clearButtonAriaLabel='Clear'/>))
+      const element = (
+        await mountAndWait(<SearchInput aria-label="search" id={id} clearButtonAriaLabel="Clear" />)
+      )
         .find(SearchInput)
         .getDOMNode();
 
@@ -156,7 +174,11 @@ describe('<SearchInput />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = (await mountAndWait(<SearchInput aria-label="search" style={style} clearButtonAriaLabel='Clear'/>))
+      const element = (
+        await mountAndWait(
+          <SearchInput aria-label="search" style={style} clearButtonAriaLabel="Clear" />
+        )
+      )
         .find(SearchInput)
         .getDOMNode();
 
@@ -166,7 +188,11 @@ describe('<SearchInput />', () => {
     it('should have provided height when height is provided', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<SearchInput aria-label="search" height={28} clearButtonAriaLabel='Clear'/>))
+      const element = (
+        await mountAndWait(
+          <SearchInput aria-label="search" height={28} clearButtonAriaLabel="Clear" />
+        )
+      )
         .find(SearchInput)
         .getDOMNode();
 
@@ -176,7 +202,9 @@ describe('<SearchInput />', () => {
     it('should have default height when height is not provided', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<SearchInput aria-label="search" clearButtonAriaLabel='Clear' />))
+      const element = (
+        await mountAndWait(<SearchInput aria-label="search" clearButtonAriaLabel="Clear" />)
+      )
         .find(SearchInput)
         .getDOMNode();
 
@@ -186,17 +214,49 @@ describe('<SearchInput />', () => {
     it('should pass the aria label to the input', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<SearchInput aria-label="search" searching={true} clearButtonAriaLabel='Clear'/>))
+      const element = (
+        await mountAndWait(
+          <SearchInput aria-label="search" searching={true} clearButtonAriaLabel="Clear" />
+        )
+      )
         .find('input')
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe('search');
     });
+    it('should have the aria controls attribute when provided', async () => {
+      expect.assertions(1);
+
+      const element = (
+        await mountAndWait(
+          <SearchInput aria-controls="list-element" searching={true} clearButtonAriaLabel="Clear" />
+        )
+      )
+        .find(SearchInput)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-controls')).toBe('list-element');
+    });
+    it('should have the aria expanded attribute when provided', async () => {
+      expect.assertions(1);
+
+      const element = (
+        await mountAndWait(
+          <SearchInput aria-expanded={false} searching={true} clearButtonAriaLabel="Clear" />
+        )
+      )
+        .find(SearchInput)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-expanded')).toBeFalsy();
+    });
 
     it('should pass label to the label', async () => {
       expect.assertions(2);
 
-      const wrapper = await mountAndWait(<SearchInput aria-label="search" label="a label" clearButtonAriaLabel='Clear'/>);
+      const wrapper = await mountAndWait(
+        <SearchInput aria-label="search" label="a label" clearButtonAriaLabel="Clear" />
+      );
       const label = wrapper.find('label');
       const realInputId = wrapper.find('input').getDOMNode().getAttribute('id');
 
@@ -207,7 +267,9 @@ describe('<SearchInput />', () => {
     it('should forward a ref if provided', async () => {
       const ref = React.createRef<HTMLInputElement>();
 
-      await mountAndWait(<SearchInput ref={ref} aria-label="search" value="test" clearButtonAriaLabel='Clear'/>);
+      await mountAndWait(
+        <SearchInput ref={ref} aria-label="search" value="test" clearButtonAriaLabel="Clear" />
+      );
 
       expect(ref.current).toBeInstanceOf(HTMLInputElement);
       expect(ref.current.value).toEqual('test');
@@ -215,23 +277,46 @@ describe('<SearchInput />', () => {
 
     it('should work with autofocus', async () => {
       // eslint-disable-next-line jsx-a11y/no-autofocus
-      await mountAndWait(<SearchInput autoFocus aria-label="search" value="test" clearButtonAriaLabel='Clear' />);
+      await mountAndWait(
+        <SearchInput autoFocus aria-label="search" value="test" clearButtonAriaLabel="Clear" />
+      );
     });
 
     it('should not render ButtonSimple if there is no value', async () => {
-      const container = await mountAndWait(<SearchInput aria-label="search" value="" isDisabled={false} clearButtonAriaLabel="clear search"/>);
+      const container = await mountAndWait(
+        <SearchInput
+          aria-label="search"
+          value=""
+          isDisabled={false}
+          clearButtonAriaLabel="clear search"
+        />
+      );
 
       expect(container.find(ButtonSimple).exists()).toBe(false);
     });
 
     it('should not render ButtonSimple if isDisabled is false', async () => {
-      const container = await mountAndWait(<SearchInput aria-label="search" value="test" isDisabled={true} clearButtonAriaLabel="clear search"/>);
+      const container = await mountAndWait(
+        <SearchInput
+          aria-label="search"
+          value="test"
+          isDisabled={true}
+          clearButtonAriaLabel="clear search"
+        />
+      );
 
       expect(container.find(ButtonSimple).exists()).toBe(false);
     });
 
     it('should render ButtonSimple if there is a value and isDisabled is false', async () => {
-      const container = await mountAndWait(<SearchInput aria-label="search" value="test" isDisabled={false} clearButtonAriaLabel="clear search" />);
+      const container = await mountAndWait(
+        <SearchInput
+          aria-label="search"
+          value="test"
+          isDisabled={false}
+          clearButtonAriaLabel="clear search"
+        />
+      );
 
       expect(container.find(ButtonSimple).exists()).toBe(true);
 
@@ -251,7 +336,9 @@ describe('<SearchInput />', () => {
     it('clicking on another part of the component gives focus to the input', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<SearchInput aria-label="search" clearButtonAriaLabel='Clear'/>);
+      const wrapper = await mountAndWait(
+        <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
+      );
 
       const inputElement = wrapper.find('input');
       const icon = wrapper.find(Icon);
