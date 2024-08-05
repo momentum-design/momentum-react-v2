@@ -699,7 +699,7 @@ exports[`<Chip /> snapshot should match snapshot with avatar 1`] = `
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={24}
-                  role="group"
+                  role="img"
                 />
               </Avatar>
             </div>

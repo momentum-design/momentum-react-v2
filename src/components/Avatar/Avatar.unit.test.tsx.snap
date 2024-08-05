@@ -9,7 +9,7 @@ exports[`Avatar snapshot should match snapshot 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -36,7 +36,7 @@ exports[`Avatar snapshot should match snapshot with aria-label 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   />
 </Avatar>
 `;
@@ -122,7 +122,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Icon
       className="md-avatar-wrapper-children md-avatar-icon-wrapper"
@@ -162,7 +162,7 @@ exports[`Avatar snapshot should match snapshot with iconOnHover 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <div
       className="md-avatar-wrapper-children md-avatar-icon-on-hover-wrapper"
@@ -206,7 +206,7 @@ exports[`Avatar snapshot should match snapshot with initials 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -235,7 +235,7 @@ exports[`Avatar snapshot should match snapshot with isTyping and typingLabel 1`]
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -321,7 +321,7 @@ exports[`Avatar snapshot should match snapshot with mainLabel 1`] = `
             className="md-avatar-wrapper"
             data-color="default"
             data-size={24}
-            role="group"
+            role="img"
           />
         </button>
       </FocusRing>
@@ -368,7 +368,7 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
             className="md-avatar-wrapper"
             data-color="default"
             data-size={24}
-            role="group"
+            role="img"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -403,7 +403,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1368,7 +1368,7 @@ exports[`Avatar snapshot should match snapshot with size 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={124}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -1396,7 +1396,7 @@ exports[`Avatar snapshot should match snapshot with src & title 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -1431,7 +1431,7 @@ exports[`Avatar snapshot should match snapshot with type 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"

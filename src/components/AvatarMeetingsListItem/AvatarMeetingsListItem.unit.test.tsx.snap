@@ -57,7 +57,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -333,7 +333,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -450,7 +450,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -645,7 +645,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -845,7 +845,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1041,7 +1041,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1158,7 +1158,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1271,7 +1271,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1414,7 +1414,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1557,7 +1557,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1700,7 +1700,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1843,7 +1843,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"
@@ -1980,7 +1980,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
                   className="md-avatar-wrapper"
                   data-color="default"
                   data-size={32}
-                  role="group"
+                  role="img"
                 >
                   <Initials
                     className="md-avatar-wrapper-children"

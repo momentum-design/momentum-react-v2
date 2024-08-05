@@ -62,7 +62,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
           className="md-avatar-wrapper"
           data-color="default"
           data-size={88}
-          role="group"
+          role="img"
         >
           <Initials
             className="md-avatar-wrapper-children"
@@ -786,7 +786,7 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
           className="md-avatar-wrapper"
           data-color="default"
           data-size={24}
-          role="group"
+          role="img"
         >
           <Initials
             className="md-avatar-wrapper-children"
