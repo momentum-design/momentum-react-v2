@@ -28,6 +28,8 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
     label,
     isDisabled,
     height = DEFAULTS.HEIGHT,
+    ariaControls,
+    ariaExpanded,
   } = props;
   const state = useSearchFieldState(props);
   const componentRef = useRef(null);
@@ -75,6 +77,8 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       data-focus={isFocused}
       data-height={height}
       ref={containerRef}
+      aria-controls={ariaControls}
+      aria-expanded={ariaExpanded}
     >
       {label && (
         <label htmlFor={labelProps.htmlFor} {...labelProps}>
