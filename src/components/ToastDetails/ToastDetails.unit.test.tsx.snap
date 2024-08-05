@@ -21,7 +21,7 @@ exports[`<ToastDetails /> snapshot should match snapshot 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -77,7 +77,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with badges 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -148,7 +148,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with children 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -200,7 +200,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with className 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -266,7 +266,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -546,7 +546,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -826,7 +826,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -1072,7 +1072,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with id 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -1122,7 +1122,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with info 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -1178,7 +1178,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with infoColor 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -1243,7 +1243,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with style 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -1293,7 +1293,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with subject 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
@@ -1348,7 +1348,7 @@ exports[`<ToastDetails /> snapshot should match snapshot with title 1`] = `
         className="md-avatar-wrapper md-toast-details-image"
         data-color="default"
         data-size={32}
-        role="group"
+        role="img"
       >
         <Initials
           className="md-avatar-wrapper-children"
