@@ -242,13 +242,13 @@ describe('<SearchInput />', () => {
 
       const element = (
         await mountAndWait(
-          <SearchInput ariaExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput ariaExpanded={true} searching={true} clearButtonAriaLabel="Clear" />
         )
       )
         .find(SearchInput)
         .getDOMNode();
 
-      expect(element.getAttribute('aria-expanded')).toBe(false);
+      expect(element.getAttribute('aria-expanded')).toBe(true);
     });
 
     it('should pass label to the label', async () => {
@@ -276,8 +276,8 @@ describe('<SearchInput />', () => {
     });
 
     it('should work with autofocus', async () => {
-      // eslint-disable-next-line jsx-a11y/no-autofocus
       await mountAndWait(
+        // eslint-disable-next-line jsx-a11y/no-autofocus
         <SearchInput autoFocus aria-label="search" value="test" clearButtonAriaLabel="Clear" />
       );
     });
