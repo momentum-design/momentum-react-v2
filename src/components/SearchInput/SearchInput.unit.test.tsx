@@ -229,7 +229,7 @@ describe('<SearchInput />', () => {
 
       const element = (
         await mountAndWait(
-          <SearchInput aria-controls="list-element" searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput ariaControls="list-element" searching={true} clearButtonAriaLabel="Clear" />
         )
       )
         .find(SearchInput)
@@ -242,7 +242,7 @@ describe('<SearchInput />', () => {
 
       const element = (
         await mountAndWait(
-          <SearchInput aria-expanded={false} searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput ariaExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
         )
       )
         .find(SearchInput)
