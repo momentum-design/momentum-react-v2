@@ -19,6 +19,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     disabled,
     inverted,
     style,
+    tabIndex,
     ...otherProps
   } = props;
   const internalRef = useRef();
@@ -48,6 +49,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     ...linkProps,
     style,
     ref: ref,
+    tabIndex,
     title: title,
     rel: isExternalLink ? 'noopener noreferrer' : '',
     className: classnames(STYLE.wrapper, className),
