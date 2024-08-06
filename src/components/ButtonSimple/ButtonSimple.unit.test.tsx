@@ -176,6 +176,16 @@ describe('<ButtonSimple />', () => {
 
       expect(element.getAttribute('aria-disabled')).toBe('true');
     });
+
+    it('should have aria-selected when provided', () => {
+      expect.assertions(1);
+
+      const element = mount(<ButtonSimple aria-selected={true} />)
+        .find(ButtonSimple)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-selected')).toBe('true');
+    });
   });
 
   describe('actions', () => {
