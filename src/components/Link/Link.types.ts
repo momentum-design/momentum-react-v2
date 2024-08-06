@@ -61,4 +61,9 @@ export interface Props extends AriaLinkProps {
    * `label`、`description`、`none`
    */
   tooltipType?: TooltipTypes;
+
+  /**
+   * tabIndex for <a> tag
+   */
+  tabIndex?: number;
 }
