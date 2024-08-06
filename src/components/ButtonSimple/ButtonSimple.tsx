@@ -15,7 +15,7 @@ import './ButtonSimple.style.scss';
  */
 
 const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { children, className, isDisabled, id, style, title, useNativeKeyDown, role, tabIndex } =
+  const { children, className, isDisabled, id, style, title, useNativeKeyDown, role, tabIndex, ...restProps } =
     props;
   const internalRef = useRef();
   const ref = providedRef || internalRef;
@@ -23,9 +23,13 @@ const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButton
   const { buttonProps } = useButton(props, ref);
   const { hoverProps } = useHover(props);
 
+  const ariaProps = {
+    'aria-selected': restProps['aria-selected']
+  };
+
   const otherProps = tabIndex
-    ? { ...buttonProps, ...hoverProps, role, tabIndex }
-    : { ...buttonProps, ...hoverProps, role };
+    ? { ...buttonProps, ...hoverProps, ...ariaProps , role, tabIndex}
+    : { ...buttonProps, ...hoverProps, ...ariaProps , role };
 
   // props should override buttonProps for aria-disabled because react-aria has it's own logic for aria-disabled.
   // so if we want to pass it in via props, we need to make sure it's not overridden.
