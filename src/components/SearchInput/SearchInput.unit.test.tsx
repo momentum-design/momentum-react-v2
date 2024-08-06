@@ -248,7 +248,7 @@ describe('<SearchInput />', () => {
         .find(SearchInput)
         .getDOMNode();
 
-      expect(element.getAttribute('aria-expanded')).toBeFalsy();
+      expect(element.getAttribute('aria-expanded')).toBe(false);
     });
 
     it('should pass label to the label', async () => {
