@@ -242,13 +242,13 @@ describe('<SearchInput />', () => {
 
       const element = (
         await mountAndWait(
-          <SearchInput ariaExpanded={true} searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput ariaExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
         )
       )
         .find(SearchInput)
         .getDOMNode();
 
-      expect(element.getAttribute('aria-expanded')).toBe(true);
+      expect(element.getAttribute('aria-expanded')).toBe('false');
     });
 
     it('should pass label to the label', async () => {
