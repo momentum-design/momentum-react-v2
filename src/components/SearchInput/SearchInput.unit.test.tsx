@@ -237,18 +237,76 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-controls')).toBe('list-element');
     });
-    it('should have the aria expanded attribute when provided', async () => {
+    it('should have the aria expanded attribute when isExpanded are provided', async () => {
       expect.assertions(1);
 
       const element = (
         await mountAndWait(
-          <SearchInput ariaExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput isExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
         )
       )
         .find(SearchInput)
         .getDOMNode();
 
       expect(element.getAttribute('aria-expanded')).toBe('false');
+    });
+    it('should console warn when isCombobox is provided without isExpanded', async () => {
+      expect.assertions(1);
+      const logSpy = jest.spyOn(global.console, 'warn');
+
+      await mountAndWait(
+        <SearchInput isCombobox={true} searching={true} clearButtonAriaLabel="Clear" />
+      );
+
+      expect(logSpy).toHaveBeenCalledWith(
+        'MRV2: Momentum requires the isExpanded prop for SearchInput with Combobox for accessibiltity compliance.'
+      );
+
+      logSpy.mockRestore();
+    });
+    it('should console warn when isExpanded is provided without isCombobox', async () => {
+      expect.assertions(1);
+      const logSpy = jest.spyOn(global.console, 'warn');
+
+      await mountAndWait(
+        <SearchInput isExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
+      );
+
+      expect(logSpy).toHaveBeenCalledWith(
+        'MRV2: Momentum requires isCombobox set to true if using the isExpanded prop.'
+      );
+
+      logSpy.mockRestore();
+    });
+
+    it('should have the combobox role attribute when isCombobox is provided', async () => {
+      expect.assertions(1);
+
+      const element = (
+        await mountAndWait(
+          <SearchInput
+            isCombobox={true}
+            isExpanded={false}
+            searching={true}
+            clearButtonAriaLabel="Clear"
+          />
+        )
+      )
+        .find(SearchInput)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe('combobox');
+    });
+    it('should have the searchbox role attribute when isCombobox is not provided', async () => {
+      expect.assertions(1);
+
+      const element = (
+        await mountAndWait(<SearchInput searching={true} clearButtonAriaLabel="Clear" />)
+      )
+        .find(SearchInput)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe('searchbox');
     });
 
     it('should pass label to the label', async () => {

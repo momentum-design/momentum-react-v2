@@ -11,6 +11,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
       data-focus={false}
       data-height={32}
       onClick={[Function]}
+      role="searchbox"
     >
       <div>
         <Icon
@@ -119,6 +120,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
       data-focus={false}
       data-height={32}
       onClick={[Function]}
+      role="searchbox"
     >
       <div>
         <Icon
@@ -261,6 +263,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
       data-focus={false}
       data-height={32}
       onClick={[Function]}
+      role="searchbox"
     >
       <div>
         <LoadingSpinner
@@ -376,6 +379,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
       data-focus={false}
       data-height={32}
       onClick={[Function]}
+      role="searchbox"
     >
       <label
         htmlFor="test-ID"
@@ -465,6 +469,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
       data-focus={false}
       data-height={32}
       onClick={[Function]}
+      role="searchbox"
     >
       <div>
         <Icon
@@ -547,6 +552,7 @@ exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
       data-focus={false}
       data-height={28}
       onClick={[Function]}
+      role="searchbox"
     >
       <div>
         <Icon
@@ -630,6 +636,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
       data-height={32}
       id="example-id"
       onClick={[Function]}
+      role="searchbox"
     >
       <div>
         <Icon
@@ -716,6 +723,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
       data-focus={false}
       data-height={32}
       onClick={[Function]}
+      role="searchbox"
       style={
         Object {
           "color": "pink",
