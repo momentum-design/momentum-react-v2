@@ -219,4 +219,10 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * Only required in the unusual circumstance where the popover label cannot match the trigger.
    */
   'aria-label'?: string;
+
+  /**
+   * If true, the focus lock will be disabled for the Popover content.
+   * @default `false`
+   */
+  disableFocusLock?: boolean;
 }
