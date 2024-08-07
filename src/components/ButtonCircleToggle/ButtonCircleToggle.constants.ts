@@ -7,6 +7,7 @@ const DEFAULTS = {
   OUTLINE: undefined,
   GHOST: true,
   DISABLED: false,
+  ARIA_STATE_KEY: 'aria-pressed',
 };
 
 const STYLE = {

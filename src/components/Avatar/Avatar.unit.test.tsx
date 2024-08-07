@@ -25,6 +25,7 @@ describe('Avatar', () => {
     isPerson,
     avatarType,
     isTyping,
+    expectedRole,
     expectedLabel,
   }) => {
     const onPress = withOnPress
@@ -48,7 +49,7 @@ describe('Avatar', () => {
       />,
     );
   
-    let assertCount = 1;
+    let assertCount = 2;
 
     if (withPresence) {
       assertCount += 1;
@@ -56,13 +57,14 @@ describe('Avatar', () => {
 
     expect.assertions(assertCount);
   
-    const wrapper = mockAvatar.find('.md-avatar-wrapper');
+    const container = mockAvatar.find('.md-avatar-wrapper');
+
+    expect(container.props().role).toEqual(expectedRole);
   
     if (withOnPress) {
       const button = mockAvatar.find('button');
       expect(button.props()['aria-label']).toEqual(expectedLabel);
     } else {
-      const container = mockAvatar.find('.md-avatar-wrapper');
       expect(container.props()['aria-label']).toEqual(expectedLabel);
     }
 
@@ -370,23 +372,11 @@ describe('Avatar', () => {
       expect(element).toBeDefined();
     });
 
-    it('container has the default role - group', async () => {
-      expect.assertions(1);
-
-      const container = await mountAndWait(
-        <Avatar title="Cisco Webex" />
-      );
-
-      const title = container.getDOMNode().getAttribute('role');
-
-      expect(title).toBe('group');
-    });
-
     it('should pass the mainLabel prop', () => {
       expect.assertions(1);
 
       const mainLabel = 'avatar of Bob';
-      const onPress = () => 'h1'
+      const onPress = () => 'h1';
 
       const element = mount(<Avatar mainLabel={mainLabel} onPress={onPress}/>)
         .find('button');
@@ -440,61 +430,69 @@ describe('Avatar', () => {
       expect(element.props()['aria-label']).toBe(mainLabel);
     });
 
+
       it.each`
-      withOnPress | withPresence  | isPerson    | avatarType   | isTyping  | expectedLabel
-      ${true}     | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
-      ${false}    | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${null}      | ${true}   | ${'Avatar of Name, is typing'}
-      ${true}     | ${true}       | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${true}     | ${null}      | ${false}   | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${null}      | ${false}   | ${'Avatar of Name, Active'}
-      ${true}     | ${false}      | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${true}     | ${null}      | ${false}   | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${false}    | ${null}      | ${false}   | ${'Avatar of Name'}
-      ${false}    | ${true}       | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${true}     | ${null}      | ${false}   | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${null}      | ${false}   | ${'Avatar of Name, Active'}
-      ${false}    | ${false}      | ${true}     | ${'src'}     | ${false}   | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${'src'}     | ${false}   | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${false}   | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${false}   | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${false}   | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${null}      | ${false}   | ${'Avatar of Name'}
+      withOnPress | withPresence  | isPerson    | avatarType   | isTyping  | expectedRole  | expectedLabel
+      ${true}     | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${true}     | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}       | ${false}    | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${true}     | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}      | ${false}    | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${false}    | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${true}     | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}       | ${false}    | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${true}     | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}      | ${false}    | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
+      ${true}     | ${true}       | ${true}     | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${false}    | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${true}     | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${true}     | ${true}       | ${false}    | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${true}     | ${false}      | ${true}     | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${false}    | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${true}     | ${false}      | ${false}    | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${true}       | ${true}     | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${false}    | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${true}     | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${false}    | ${true}       | ${false}    | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
+      ${false}    | ${false}      | ${true}     | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
+      ${false}    | ${false}      | ${false}    | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
     `(
-      'Test accessibility of Avatar',
-      ({withOnPress, withPresence, isPerson, avatarType, isTyping ,expectedLabel}) => {
-        checkAvatarAccessibility({withOnPress,withPresence,isPerson,avatarType,isTyping,expectedLabel});
+      `Test accessibility of Avatar when onPress is passed ? $withOnPress, presence is passed ? $withPresence, is person ? $isPerson,
+      avatar is $avatarType type, is typing ? $isTyping,containerRole should be $expectedRole , contaierLabel should be $expectedLabel`,
+      ({withOnPress, withPresence, isPerson, avatarType, isTyping,expectedRole ,expectedLabel}) => {
+        checkAvatarAccessibility({withOnPress,withPresence,isPerson,avatarType,isTyping,expectedRole,expectedLabel});
       }
     );
   });
 });
+

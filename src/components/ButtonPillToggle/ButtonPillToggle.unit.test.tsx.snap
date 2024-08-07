@@ -71,6 +71,158 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
 </ButtonPillToggle>
 `;
 
+exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being false 1`] = `
+<ButtonPillToggle
+  ariaStateKey="aria-expanded"
+  isSelected={false}
+>
+  <ButtonPill
+    aria-expanded={false}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={false}
+    disabled={false}
+    ghost={true}
+    isSelected={false}
+    onPress={[Function]}
+    size={40}
+  >
+    <ButtonSimple
+      aria-disabled={false}
+      aria-expanded={false}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-inverted={false}
+      data-outline={false}
+      data-selected={false}
+      data-shallow-disabled={false}
+      data-size={40}
+      isDisabled={false}
+      isSelected={false}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-expanded={false}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-inverted={false}
+            data-outline={false}
+            data-selected={false}
+            data-shallow-disabled={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
+exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being true 1`] = `
+<ButtonPillToggle
+  ariaStateKey="aria-expanded"
+  isSelected={true}
+>
+  <ButtonPill
+    aria-expanded={true}
+    className="md-button-pill-toggle-wrapper"
+    data-selected={true}
+    disabled={false}
+    ghost={true}
+    isSelected={true}
+    onPress={[Function]}
+    size={40}
+  >
+    <ButtonSimple
+      aria-disabled={false}
+      aria-expanded={true}
+      className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
+      data-color="primary"
+      data-disabled={false}
+      data-ghost={true}
+      data-grown={false}
+      data-inverted={false}
+      data-outline={false}
+      data-selected={true}
+      data-shallow-disabled={false}
+      data-size={40}
+      isDisabled={false}
+      isSelected={true}
+      onPress={[Function]}
+    >
+      <FocusRing
+        disabled={false}
+      >
+        <FocusRing
+          disabled={false}
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            aria-expanded={true}
+            className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
+            data-color="primary"
+            data-disabled={false}
+            data-ghost={true}
+            data-grown={false}
+            data-inverted={false}
+            data-outline={false}
+            data-selected={true}
+            data-shallow-disabled={false}
+            data-size={40}
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          />
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </ButtonPill>
+</ButtonPillToggle>
+`;
+
 exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being false 1`] = `
 <ButtonPillToggle
   ghost={false}

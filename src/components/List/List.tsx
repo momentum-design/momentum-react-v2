@@ -1,7 +1,7 @@
 import React, { FC, useRef, useState, useCallback } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './List.constants';
+import { DEFAULTS, STYLE } from './List.constants';
 import { Props } from './List.types';
 import './List.style.scss';
 import { ListContext, setNextFocus } from './List.utils';
@@ -18,6 +18,7 @@ const List: FC<Props> = (props: Props) => {
     role,
     shouldItemFocusBeInset,
     noLoop,
+    orientation = DEFAULTS.ORIENTATION,
     ...rest
   } = props;
 
@@ -36,20 +37,21 @@ const List: FC<Props> = (props: Props) => {
   );
 
   const { keyboardProps } = useKeyboard({
-    onKeyDown: (e) => {
-      switch (e.key) {
+    onKeyDown: (evt) => {
+      const forwardKey = orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown';
+      const backwardKey = orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp';
+
+      switch (evt.key) {
         case 'Escape':
-          e.continuePropagation();
+          evt.continuePropagation();
           break;
-        case 'ArrowUp':
-        case 'ArrowLeft':
-          e.preventDefault();
+        case backwardKey:
+          evt.preventDefault();
           setNextFocus(true, listSize, currentFocus, noLoop, setCurrentFocus);
           break;
 
-        case 'ArrowDown':
-        case 'ArrowRight':
-          e.preventDefault();
+        case forwardKey:
+          evt.preventDefault();
           setNextFocus(false, listSize, currentFocus, noLoop, setCurrentFocus);
           break;
 

@@ -3,8 +3,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-aria-modal';
-import { Spinner, Tooltip, Icon } from '@momentum-ui/react-collaboration';
+import { Spinner, Icon } from '@momentum-ui/react-collaboration';
+import ButtonSimple from '../../components/ButtonSimple';
+import TooltipNext from '../../components/Tooltip';
+import IconNext from '../../components/Icon';
 import MomentumThemeProvider from '../../components/ThemeProvider';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -29,7 +33,7 @@ class Lightbox extends React.Component {
     window.addEventListener('keydown', this.handleKeyDown, true);
     window.addEventListener('resize', this.handleResize, true);
     const { viewport } = this;
-    if (viewport) {
+    if (viewport && viewport.clientWidth && viewport.clientHeight) {
       // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({
         viewportDimensions: {
@@ -122,7 +126,7 @@ class Lightbox extends React.Component {
       onChange && onChange(index);
     }
     e.stopPropagation();
-    target && target.scrollIntoViewIfNeeded();
+    target && target.scrollIntoViewIfNeeded && target.scrollIntoViewIfNeeded();
     target && needFocus && target.parentElement.focus();
   };
 
@@ -160,7 +164,6 @@ class Lightbox extends React.Component {
       applicationId,
       imgClassName,
       isImageRotated,
-      popoverProps,
     } = this.props;
     const { zoom, viewportDimensions } = this.state;
     const currentPage = pages[index];
@@ -348,51 +351,72 @@ class Lightbox extends React.Component {
     };
 
     const leftArrowControl = (
-      <Tooltip
-        tooltip={tooltips.previous}
-        popoverProps={{ direction: 'right-center', isContained: true }}
+      <TooltipNext
+        type="label"
+        placement="right"
+        triggerComponent={
+          <ButtonSimple
+            className="md-lightbox__page-control md-lightbox__page-control-icon md-lightbox__page-controls--left"
+            onPress={(e) => this.triggerPageChange(index - 1, e)}
+          >
+            <IconNext
+              name="arrow-left"
+              color="var(--mds-color-theme-common-text-white)"
+              scale={16}
+            />
+          </ButtonSimple>
+        }
       >
-        <div
-          className="md-lightbox__page-control md-lightbox__page-control-icon md-lightbox__page-controls--left"
-          role="button"
-          tabIndex="0"
-          onKeyPress={(e) => this.triggerPageChange(index - 1, e)}
-          onClick={(e) => this.triggerPageChange(index - 1, e)}
-          style={{ transform: 'rotate(-180deg)' }}
-        >
-          <Icon name="arrow-right_16" />
-        </div>
-      </Tooltip>
+        {tooltips.previous}
+      </TooltipNext>
     );
 
     const rightArrowControl = (
-      <Tooltip
-        tooltip={tooltips.next}
-        popoverProps={{ direction: 'left-center', isContained: true }}
+      <TooltipNext
+        type="label"
+        placement="left"
+        triggerComponent={
+          <ButtonSimple
+            className="md-lightbox__page-control md-lightbox__page-control-icon md-lightbox__page-controls--right"
+            onPress={(e) => this.triggerPageChange(index + 1, e)}
+          >
+            <IconNext
+              name="arrow-right"
+              color="var(--mds-color-theme-common-text-white)"
+              scale={16}
+            />
+          </ButtonSimple>
+        }
       >
-        <div
-          className="md-lightbox__page-control md-lightbox__page-control-icon md-lightbox__page-controls--right"
-          role="button"
-          tabIndex="0"
-          onKeyPress={(e) => this.triggerPageChange(index + 1, e)}
-          onClick={(e) => this.triggerPageChange(index + 1, e)}
-        >
-          <Icon name="arrow-right_16" />
-        </div>
-      </Tooltip>
+        {tooltips.next}
+      </TooltipNext>
     );
 
     const viewportControls = () => {
       const downloadButton = (
-        <div
-          className="md-lightbox__control md-lightbox__control-download"
-          tabIndex="0"
-          role="button"
-          onClick={this.handleDownload}
-          onKeyPress={this.handleDownload}
+        <TooltipNext
+          type="label"
+          placement="top"
+          triggerComponent={
+            <ButtonSimple
+              className="md-lightbox__control md-lightbox__control-download"
+              onPress={this.handleDownload}
+            >
+              {downloading ? (
+                <LoadingSpinner />
+              ) : (
+                <IconNext
+                  name="download"
+                  color="var(--mds-color-theme-common-text-white)"
+                  scale={20}
+                  weight="light"
+                />
+              )}
+            </ButtonSimple>
+          }
         >
-          <Icon name="download_16" />
-        </div>
+          {downloading ? tooltips.downloading : tooltips.download}
+        </TooltipNext>
       );
 
       const controlStyle = currentPage.content
@@ -404,30 +428,45 @@ class Lightbox extends React.Component {
       const pageControl =
         pages.length > 1 ? (
           <div className="md-lightbox__controls md-lightbox__controls--center">
-            <Tooltip tooltip={tooltips.previous}>
-              <div
-                className="md-lightbox__control"
-                onClick={(e) => this.triggerPageChange(index - 1, e)}
-                role="button"
-                tabIndex="0"
-                onKeyPress={(e) => this.triggerPageChange(index - 1, e)}
-                style={{ transform: 'rotate(-180deg)' }}
-              >
-                <Icon name="arrow-right_16" />
-              </div>
-            </Tooltip>
+            <TooltipNext
+              type="label"
+              placement="top"
+              triggerComponent={
+                <ButtonSimple
+                  className="md-lightbox__control md-lightbox__control-left"
+                  onPress={(e) => this.triggerPageChange(index - 1, e)}
+                >
+                  <IconNext
+                    name="arrow-left"
+                    color="var(--mds-color-theme-common-text-white)"
+                    scale={20}
+                    weight="light"
+                  />
+                </ButtonSimple>
+              }
+            >
+              {tooltips.previous}
+            </TooltipNext>
             <span className="md-lightbox__control-value">{`${index + 1} / ${pages.length}`}</span>
-            <Tooltip tooltip={tooltips.next}>
-              <div
-                className="md-lightbox__control"
-                role="button"
-                onClick={(e) => this.triggerPageChange(index + 1, e)}
-                tabIndex="0"
-                onKeyPress={(e) => this.triggerPageChange(index + 1, e)}
-              >
-                <Icon name="arrow-right_16" />
-              </div>
-            </Tooltip>
+            <TooltipNext
+              type="label"
+              placement="top"
+              triggerComponent={
+                <ButtonSimple
+                  className="md-lightbox__control md-lightbox__control-right"
+                  onPress={(e) => this.triggerPageChange(index + 1, e)}
+                >
+                  <IconNext
+                    name="arrow-right"
+                    color="var(--mds-color-theme-common-text-white)"
+                    scale={20}
+                    weight="light"
+                  />
+                </ButtonSimple>
+              }
+            >
+              {tooltips.next}
+            </TooltipNext>
           </div>
         ) : (
           <div className="md-lightbox__controls">
@@ -440,51 +479,55 @@ class Lightbox extends React.Component {
           className="md-lightbox__viewer-controls"
           onClick={this.stopPropagation}
           onKeyPress={this.stopPropagation}
-          role="button"
-          tabIndex="0"
+          role="group"
         >
           <div className="md-lightbox__controls" style={controlStyle}>
-            <Tooltip tooltip={tooltips.zoomOut}>
-              <div
-                className="md-lightbox__control"
-                onClick={() => this.setZoom(-0.25)}
-                role="button"
-                tabIndex="0"
-                onKeyPress={() => this.setZoom(-0.25)}
-              >
-                <Icon name="zoom-out_16" />
-              </div>
-            </Tooltip>
-            <span className="md-lightbox__control-value">
-              {Math.round(((newHeight * 1.0) / height) * 100)}%
+            <TooltipNext
+              type="label"
+              placement="top"
+              triggerComponent={
+                <ButtonSimple
+                  className="md-lightbox__control"
+                  data-test="zoom-out-button"
+                  onPress={() => this.setZoom(-0.25)}
+                >
+                  <IconNext
+                    name="zoom-out"
+                    color="var(--mds-color-theme-common-text-white)"
+                    scale={20}
+                    weight="light"
+                  />
+                </ButtonSimple>
+              }
+            >
+              {tooltips.zoomOut}
+            </TooltipNext>
+            <span className="md-lightbox__control-value md-lightbox__control-zoom-level">
+              {`${Math.round(((newHeight * 1.0) / height) * 100)}%`}
             </span>
-            <Tooltip tooltip={tooltips.zoomIn}>
-              <div
-                className="md-lightbox__control"
-                role="button"
-                onClick={() => this.setZoom(0.25)}
-                tabIndex="0"
-                onKeyPress={() => this.setZoom(0.25)}
-              >
-                <Icon name="zoom-in_16" />
-              </div>
-            </Tooltip>
+            <TooltipNext
+              type="label"
+              placement="top"
+              triggerComponent={
+                <ButtonSimple
+                  className="md-lightbox__control"
+                  data-test="zoom-in-button"
+                  onPress={() => this.setZoom(0.25)}
+                >
+                  <IconNext
+                    name="zoom-in"
+                    color="var(--mds-color-theme-common-text-white)"
+                    scale={20}
+                    weight="light"
+                  />
+                </ButtonSimple>
+              }
+            >
+              {tooltips.zoomIn}
+            </TooltipNext>
           </div>
           {pageControl}
-          {this.props.onDownload && (
-            <div className="md-lightbox__controls" style={controlStyle}>
-              <span className="md-lightbox__control-value">{info.size}</span>
-              <Tooltip tooltip={downloading ? tooltips.downloading : tooltips.download}>
-                {downloading ? (
-                  <div className="md-lightbox__control md-lightbox__control-spinner">
-                    <Spinner size={28} />
-                  </div>
-                ) : (
-                  downloadButton
-                )}
-              </Tooltip>
-            </div>
-          )}
+          {this.props.onDownload && downloadButton}
         </div>
       );
     };
@@ -515,20 +558,28 @@ class Lightbox extends React.Component {
               </h2>
             </div>
             <div className="md-lightbox__header-item--right">
-              <Tooltip popoverProps={popoverProps} tooltip={tooltips.exit}>
-                <div
-                  className="md-lightbox__control"
-                  onClick={this.handleClose}
-                  role="button"
-                  tabIndex="0"
-                  onKeyPress={this.handleClose}
-                >
-                  <Icon name="cancel_16" />
-                </div>
-              </Tooltip>
+              <TooltipNext
+                type="label"
+                placement="bottom-start"
+                triggerComponent={
+                  <ButtonSimple
+                    className="md-lightbox__control md-lightbox__control-close"
+                    onPress={this.handleClose}
+                  >
+                    <IconNext
+                      name="cancel"
+                      color="var(--mds-color-theme-common-text-white)"
+                      scale={20}
+                      weight="light"
+                    />
+                  </ButtonSimple>
+                }
+              >
+                {tooltips.exit}
+              </TooltipNext>
             </div>
           </div>
-          <div className="md-lightbox__body"  ref={(ref) => (this.lightBox = ref)} role='tablist'>
+          <div className="md-lightbox__body" ref={(ref) => (this.lightBox = ref)} role="tablist">
             {showColumn && getThumbnails()}
             <div
               className="md-lightbox__content"

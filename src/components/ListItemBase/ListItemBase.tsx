@@ -25,7 +25,6 @@ import Text from '../Text';
 import {
   getKeyboardFocusableElements,
   getListItemBaseTabIndex,
-  handleLeftRightArrowNavigation,
   useDidUpdateEffect,
 } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
@@ -137,13 +136,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
         pressProps.onKeyDown(event);
       }
-
-      if (event.key === KEYS.RIGHT_KEY || event.key === KEYS.LEFT_KEY) {
-        const navigableChildren = getKeyboardFocusableElements(ref.current, false);
-        if (navigableChildren.length > 0) {
-          handleLeftRightArrowNavigation(event, navigableChildren);
-        }
-      }
     },
   };
 
@@ -166,10 +158,10 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   }, [isPressed]);
 
   const updateTabIndexes = useCallback(() => {
-    getKeyboardFocusableElements(ref.current)
+    getKeyboardFocusableElements(ref.current, false)
       .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
-      .forEach((el) => el.setAttribute('tabindex', '-1'));
-  }, [ref]);
+      .forEach((el) => el.setAttribute('tabindex', listItemTabIndex.toString()));
+  }, [ref, listItemTabIndex]);
 
   const lastCurrentFocus = usePrevious(listContext?.currentFocus);
   useDidUpdateEffect(() => {
@@ -291,7 +283,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         role={role}
         lang={lang}
         {...listItemPressProps}
-
       >
         {content}
         {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}

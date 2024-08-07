@@ -13,6 +13,7 @@ const DEFAULTS = {
   FOCUS_STRATEGY: 'first' as FocusStrategy,
   SHOULD_SHOW_BORDER: true,
   IS_IN_FORM: true,
+  SHALLOW_DISABLED: false,
 };
 
 const STYLE = {

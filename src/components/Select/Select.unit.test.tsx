@@ -253,6 +253,21 @@ describe('Select', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with shallowDisabled', async () => {
+      expect.assertions(1);
+
+      const shallowDisabled = true;
+
+      container = await mountAndWait(
+        <Select shallowDisabled={shallowDisabled} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -301,7 +316,7 @@ describe('Select', () => {
     });
 
     it('should have role as combobox', async () => {
-      expect.assertions(1);
+      expect.assertions(3);
 
       const id = 'example-id';
 
@@ -314,6 +329,13 @@ describe('Select', () => {
       const button = container.find('.md-select-dropdown-input').getDOMNode();
 
       expect(button.getAttribute('role')).toBe('combobox');
+
+      // ensure shallowDisabled props are not set
+      const buttonProps = container.find('.md-select-dropdown-input').props();
+
+      // ensure shallowDisabled properties are set
+      expect(buttonProps['aria-disabled']).toBeUndefined();
+      expect(buttonProps['data-shallow-disabled']).toBeUndefined();
     });
 
     it('should have provided style when style is provided', async () => {
@@ -424,6 +446,7 @@ describe('Select', () => {
       const wrapperDiv = wrapper.find('.md-select-wrapper').getDOMNode();
 
       expect(wrapperDiv.getAttribute('style')).toBe('--local-width: 200px;');
+
       expect(wrapper.find(Popover).props()).toEqual({
         interactive: true,
         role: null,
@@ -442,6 +465,25 @@ describe('Select', () => {
         onKeyUp: undefined,
         strategy: 'fixed',
       });
+    });
+
+    it('should have expected attributes set when shallowDisabled', async () => {
+      expect.assertions(2);
+
+      const direction = 'top';
+
+      const wrapper = await mountAndWait(
+        <Select shallowDisabled={true} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      const buttonProps = wrapper.find('.md-select-dropdown-input').props();
+
+      // ensure shallowDisabled properties are set
+      expect(buttonProps['aria-disabled']).toBe(true);
+      expect(buttonProps['data-shallow-disabled']).toBe(true);
     });
   });
 

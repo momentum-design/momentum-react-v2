@@ -237,20 +237,23 @@
               font-size: 0.875rem;
               line-height: 11px;
               background: $lightbox-page-control__background;
-              border-bottom-left-radius: 54px;
-              border-top-left-radius: 54px;
               align-items: center;
-              justify-content: flex-end;
             }
 
             &.#{$prefix}-lightbox__page-controls--left {
               position: absolute;
               left: 0;
+              border-bottom-right-radius: 54px;
+              border-top-right-radius: 54px;
+              justify-content: flex-start;
             }
 
             &.#{$prefix}-lightbox__page-controls--right {
               position: absolute;
               right: 0;
+              border-bottom-left-radius: 54px;
+              border-top-left-radius: 54px;
+              justify-content: flex-end;
             }
           }
 

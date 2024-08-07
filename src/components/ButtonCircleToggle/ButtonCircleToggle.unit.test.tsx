@@ -73,6 +73,32 @@ describe('<ButtonCircleToggle />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it("should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being true", () => {
+      expect.assertions(1);
+
+      const ariaStateKey = 'aria-expanded';
+      const isSelected = true;
+
+      const container = mount(
+        <ButtonCircleToggle ariaStateKey={ariaStateKey} isSelected={isSelected} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it("should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being false", () => {
+      expect.assertions(1);
+
+      const ariaStateKey = 'aria-expanded';
+      const isSelected = false;
+
+      const container = mount(
+        <ButtonCircleToggle ariaStateKey={ariaStateKey} isSelected={isSelected} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -121,6 +147,38 @@ describe('<ButtonCircleToggle />', () => {
 
       expect(element.getAttribute('data-selected')).toBe(`${isSelected}`);
     });
+
+    it.each([[false], [true]])(
+      'should use default ariaStateKey when ariaStateKey is not provided (isSelected=%s)',
+      (isSelected) => {
+        expect.assertions(2);
+
+        const element = mount(<ButtonCircleToggle isSelected={isSelected} />)
+          .find(ButtonCircleToggle)
+          .getDOMNode();
+
+        expect(element.getAttribute('aria-pressed')).toBe(`${isSelected}`);
+        expect(element.getAttribute('aria-expanded')).toBe(null);
+      }
+    );
+
+    it.each([[false], [true]])(
+      'should use provided ariaStateKey when ariaStateKey is provided (isSelected=%s)',
+      (isSelected) => {
+        expect.assertions(2);
+
+        const ariaStateKey = 'aria-expanded';
+
+        const element = mount(
+          <ButtonCircleToggle ariaStateKey={ariaStateKey} isSelected={isSelected} />
+        )
+          .find(ButtonCircleToggle)
+          .getDOMNode();
+
+        expect(element.getAttribute('aria-pressed')).toBe(null);
+        expect(element.getAttribute('aria-expanded')).toBe(`${isSelected}`);
+      }
+    );
   });
 
   describe('actions', () => {
