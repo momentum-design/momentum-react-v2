@@ -97,7 +97,19 @@ export interface Props extends AriaSearchFieldProps {
   ariaControls?: string;
 
   /**
-   * aria-expanded attribute, indicates if the controlled element is expanded/collapsed
+   * Whether SearchInput is being used with a role of combobox or not
    */
-  ariaExpanded?: boolean;
+  isCombobox?: boolean;
+
+  /**
+   * While isCombobox=true, whether the combobox is expanded/collapsed,
+   * used for the aria-expanded attribute
+   */
+  isExpanded?: boolean;
+
+  /**
+   * Aria role for accessibility, custom prop or else it will be
+   * 'searchbox' by default or 'combobox' if isCombobox=true
+   */
+  role?: string;
 }
