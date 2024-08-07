@@ -36,6 +36,7 @@ const DEFAULTS = {
   ADD_BACKDROP: true,
   ROLE: MODAL_CONTAINER_CONSTANTS.DEFAULTS.ROLE,
   APPEND_TO: 'parent' as const,
+  DISABLE_FOCUS_LOCK: false,
 };
 
 const STYLE = {

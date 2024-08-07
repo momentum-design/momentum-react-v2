@@ -1450,6 +1450,63 @@ describe('<Popover />', () => {
         });
       });
 
+      it('should not trap focus as expected when interactive and disableFocusLock="true"', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <Popover
+              triggerComponent={<button>Click Me!</button>}
+              interactive={true}
+              trigger="click"
+              disableFocusLock={true}
+            >
+              <div>
+                <p>Content</p>
+                <button tabIndex={0}>Button within popover</button>
+              </div>
+            </Popover>
+            <button tabIndex={0}>Button outside the popover</button>
+          </>
+        );
+
+        /**
+         * Click to TriggerButton, Popover should open
+         */
+        const clickMeButton = await screen.findByRole('button', { name: 'Click Me!' });
+        await user.click(clickMeButton);
+
+        await waitFor(() => {
+          expect(screen.getByText('Content')).toBeInTheDocument();
+        });
+        /**
+         * focus is expected to be on the trigger still, because focusLock is disabled (and it also controls auto focus)
+         */
+        expect(await screen.findByRole('button', { name: 'Click Me!' })).toHaveFocus();
+
+        /**
+         * Press Tab, focus should go to the button outside the popover
+         */
+        await user.tab();
+        expect(
+          await screen.findByRole('button', { name: 'Button outside the popover' })
+        ).toHaveFocus();
+
+        /**
+         * Press Tab, focus should go inside the popover
+         */
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Button within popover' })).toHaveFocus();
+
+        /**
+         * Press Tab, focus should not be on the button inside the popover (focus lock is disabled)
+         */
+        await user.tab();
+        expect(
+          await screen.findByRole('button', { name: 'Button within popover' })
+        ).not.toHaveFocus();
+      });
+
       it('should behave as expected when interactive and trigger="mouseenter"', async () => {
         /**
          * Expected behavior for this test:

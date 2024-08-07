@@ -46,6 +46,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     addBackdrop = DEFAULTS.ADD_BACKDROP,
     focusBackOnTrigger: focusBackOnTriggerFromProps,
     closeButtonPlacement = DEFAULTS.CLOSE_BUTTON_PLACEMENT,
+    disableFocusLock = DEFAULTS.DISABLE_FOCUS_LOCK,
     closeButtonProps,
     strategy = DEFAULTS.STRATEGY,
     role = DEFAULTS.ROLE,
@@ -88,7 +89,9 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     ...(interactive && {
       ...((providedAriaLabelledby || !ariaLabel) && { 'aria-labelledby': ariaLabelledby }),
       ...(ariaLabel && { 'aria-label': ariaLabel }),
-      focusLockProps: { restoreFocus: focusBackOnTrigger, autoFocus },
+      focusLockProps: !disableFocusLock
+        ? { restoreFocus: focusBackOnTrigger, autoFocus }
+        : undefined, // if we pass in undefined, the ModalContainer will not use FocusScope
     }),
   };
 
