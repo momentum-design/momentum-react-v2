@@ -188,7 +188,5 @@ export {
   Tooltip as TooltipNext,
   TooltipPopoverCombo,
   Toggletip,
-  Link as LinkNext,
-  ButtonPillLink,
-  ButtonCircleLink,
+  Link as LinkNext
 } from './components';
