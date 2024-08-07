@@ -191,4 +191,6 @@ export {
   Link as LinkNext,
   ButtonCircleLink,
   ButtonPillLink,
+  Tree,
+  TreeNodeBase,
 } from './components';

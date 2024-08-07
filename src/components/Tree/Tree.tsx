@@ -1,10 +1,10 @@
-import React, { FC, useRef, useState, useCallback } from 'react';
+import React, { FC, useRef, useState, useCallback, HTMLAttributes } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './Tree.constants';
-import { ActiveTreeNode, Props } from './Tree.types';
+import { STYLE, DEFAULTS, THREE_ROOT } from './Tree.constants';
+import { FlatTree, Props, TreeContextValue, TreeNodeId } from './Tree.types';
 import './Tree.style.scss';
-import { getNextActiveNode, TreeContext } from './Tree.utils';
+import { convertTreeToFlatTree, getNextActiveNode, TreeContext } from './Tree.utils';
 import { useKeyboard } from '@react-aria/interactions';
 
 const Tree: FC<Props> = (props: Props) => {
@@ -16,26 +16,96 @@ const Tree: FC<Props> = (props: Props) => {
     shouldFocusOnPress,
     shouldItemFocusBeInset,
     treeStructure,
+    isRenderedFlat = DEFAULTS.IS_RENDERED_FLAT,
     ...rest
   } = props;
+  const [flatTree, setFlatTree] = useState<FlatTree>(convertTreeToFlatTree(treeStructure));
+  const [activeNodeId, setActiveNodeId] = useState<TreeNodeId>(
+    flatTree.get(THREE_ROOT)?.children?.[0]
+  );
 
-  const [tree] = useState(treeStructure);
-  const [activeNode, setActiveNode] = useState<ActiveTreeNode>({
-    current: tree?.children?.[0],
-    reverseParentPath: [],
-    selectedIndex: 0,
-  });
+  const toggleTreeNode = useCallback(
+    (id: TreeNodeId) => {
+      const newTree = new Map(flatTree.entries());
+      const current = flatTree.get(id);
+      const isOpen = !flatTree.get(id).isOpen;
+      newTree.set(id, { ...current, isOpen });
 
-  const setContext = useCallback(
-    (newFocus) => {
-      setActiveNode(newFocus);
+      const traversWhileOpen = (nodeId: TreeNodeId) => {
+        const node = newTree.get(nodeId);
+
+        node.children.forEach((childId) => {
+          const child = newTree.get(childId);
+          newTree.set(childId, { ...child, isHidden: !node.isOpen || node.isHidden });
+          traversWhileOpen(childId);
+        });
+      };
+      traversWhileOpen(id);
+
+      setFlatTree(newTree);
     },
-    [activeNode, setActiveNode, treeStructure]
+    [flatTree]
+  );
+
+  const getNodeDetails = useCallback((id: TreeNodeId) => flatTree.get(id), [flatTree]);
+
+  const getNodeProps = useCallback(
+    (id: TreeNodeId): Partial<HTMLAttributes<HTMLElement>> => {
+      const node = flatTree.get(id);
+      const parent = flatTree.get(node.parent);
+      const isSelected = activeNodeId === node.id;
+
+      // tabindex depends on the treeNodeBase params as well
+      const props = {
+        id: node.id,
+        'aria-setsize': parent.children.length,
+        'aria-level': node.level + 1,
+        'aria-posinset': node.index + 1,
+        'aria-selected': isSelected,
+        role: 'treeitem',
+      };
+      if (node.isOpen !== undefined) {
+        props['aria-expanded'] = node.isOpen.toString();
+      }
+      return props;
+    },
+    [flatTree]
+  );
+
+  const getNodeGroupProps = useCallback(
+    (id: TreeNodeId): Partial<HTMLAttributes<HTMLElement>> => {
+      const node = flatTree.get(id);
+
+      return {
+        role: 'group',
+        'aria-owns': node.children.join(' '),
+      };
+    },
+    [flatTree]
   );
 
   const getContext = useCallback(
-    () => ({ treeStructure, shouldFocusOnPress, shouldItemFocusBeInset, activeNode, setContext }),
-    [activeNode, setActiveNode, treeStructure]
+    (): TreeContextValue => ({
+      getNodeProps,
+      getNodeGroupProps,
+      getNodeDetails,
+      isRenderedFlat,
+      shouldFocusOnPress,
+      shouldItemFocusBeInset,
+      activeNodeId,
+      setActiveNodeId,
+      toggleTreeNode,
+    }),
+    [
+      activeNodeId,
+      getNodeGroupProps,
+      getNodeProps,
+      getNodeDetails,
+      isRenderedFlat,
+      shouldFocusOnPress,
+      shouldItemFocusBeInset,
+      toggleTreeNode,
+    ]
   );
 
   const { keyboardProps } = useKeyboard({
@@ -48,13 +118,11 @@ const Tree: FC<Props> = (props: Props) => {
         case 'ArrowDown':
         case 'ArrowRight':
         case 'ArrowLeft':
+        case 'Enter': {
           evt.preventDefault();
-
-          setActiveNode(getNextActiveNode(evt.key, activeNode));
+          setActiveNodeId(getNextActiveNode(flatTree, activeNodeId, evt.key, toggleTreeNode));
           break;
-
-        default:
-          break;
+        }
       }
     },
   });
