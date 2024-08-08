@@ -106,10 +106,4 @@ export interface Props extends AriaSearchFieldProps {
    * used for the aria-expanded attribute
    */
   isExpanded?: boolean;
-
-  /**
-   * Aria role for accessibility, custom prop or else it will be
-   * 'searchbox' by default or 'combobox' if isCombobox=true
-   */
-  role?: string;
 }
