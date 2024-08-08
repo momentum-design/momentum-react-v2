@@ -36,7 +36,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -157,7 +157,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -277,7 +277,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -398,7 +398,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -519,7 +519,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -640,7 +640,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -761,7 +761,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -882,7 +882,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -999,7 +999,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1113,7 +1113,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1238,7 +1238,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1359,7 +1359,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1480,7 +1480,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1601,7 +1601,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1722,7 +1722,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
@@ -1843,7 +1843,7 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                 data-elevation="0"
                 data-padded="true"
                 data-round="50"
-                role="generic"
+                role="dialog"
               >
                 <div
                   class="md-toast-notification-body"
