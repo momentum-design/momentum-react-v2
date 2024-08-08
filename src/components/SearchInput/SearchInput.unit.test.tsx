@@ -224,7 +224,7 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-label')).toBe('search');
     });
-    it('should have the aria controls attribute when provided', async () => {
+    it('should have the aria-controls attribute when ariaControls is provided', async () => {
       expect.assertions(1);
 
       const element = (
@@ -237,7 +237,7 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-controls')).toBe('list-element');
     });
-    it('should have the aria expanded attribute when isExpanded are provided', async () => {
+    it('should have the aria-expanded attribute when isExpanded is provided', async () => {
       expect.assertions(1);
 
       const element = (
