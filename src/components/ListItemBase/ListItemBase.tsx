@@ -29,6 +29,7 @@ import {
 } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
+import { useMenuContext } from '../Menu/Menu';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -55,6 +56,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
   const listContext = useListContext();
+  const { onClose, closeOnSelect } = useMenuContext();
 
   const internalRef = useRef<HTMLLIElement>();
 
@@ -135,6 +137,10 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     onKeyDown: (event) => {
       if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
         pressProps.onKeyDown(event);
+      }
+
+      if (closeOnSelect && (event.key === KEYS.SPACE_KEY || event.key === KEYS.ENTER_KEY)) {
+        onClose();
       }
     },
   };

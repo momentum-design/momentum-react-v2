@@ -12,6 +12,8 @@ import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import { ListContext } from '../List/List.utils';
+import { DEFAULTS as LIST_DEFAULTS } from '../List/List.constants';
+
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -33,7 +35,9 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     isTickOnLeftSide = DEFAULTS.IS_TICK_ON_LEFT_SIDE,
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
+    orientation = LIST_DEFAULTS.ORIENTATION,
   } = props;
+
   const contextProps = useMenuContext();
 
   const _props = {
@@ -50,7 +54,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
       if (item.type === 'section') {
-        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
+        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} orientation={orientation} />;
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
         // and we don't want to render items twice

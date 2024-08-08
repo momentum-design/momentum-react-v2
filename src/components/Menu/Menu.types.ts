@@ -2,6 +2,7 @@ import { CSSProperties, HTMLAttributes, MutableRefObject } from 'react';
 import { AriaMenuProps } from '@react-types/menu';
 import { FocusStrategy } from '@react-types/shared';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+import { ListOrientation } from '../List/List.types';
 
 export interface Props<T> extends AriaMenuProps<T> {
   /**
@@ -36,6 +37,18 @@ export interface Props<T> extends AriaMenuProps<T> {
    * @default false
    */
   isTickOnLeftSide?: boolean;
+
+  /**
+   * Determines the orientation of the list
+   *
+   * The orientation of the list change the keyboard navigation in the list:
+   *
+   * - vertical: up and down arrow keys
+   * - horizontal: left and right arrow keys
+   *
+   * @default 'vertical'
+   */
+  orientation?: ListOrientation
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
