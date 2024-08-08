@@ -33,6 +33,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     isTickOnLeftSide = DEFAULTS.IS_TICK_ON_LEFT_SIDE,
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
+    isGroupRole,
   } = props;
   const contextProps = useMenuContext();
 
@@ -50,7 +51,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
       if (item.type === 'section') {
-        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
+        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction}/>;
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
         // and we don't want to render items twice
@@ -88,6 +89,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           style={style}
           ref={ref}
           {...menuProps}
+          role={!!isGroupRole ? 'group' : menuProps.role}
         >
           {Array.from(state.collection.getKeys()).map((key) => {
             const item = state.collection.getItem(key) as Node<T>;

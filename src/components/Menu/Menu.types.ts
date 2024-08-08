@@ -36,6 +36,12 @@ export interface Props<T> extends AriaMenuProps<T> {
    * @default false
    */
   isTickOnLeftSide?: boolean;
+
+  /**
+   * Wether it is part of nested menu items.
+   * @default false
+   */
+  isGroupRole?: boolean;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {

@@ -21,6 +21,11 @@ export interface Props
   id?: string;
 
   /**
+   * Role for adding accessibility
+   */
+  role?: string;
+
+  /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
