@@ -107,6 +107,36 @@ describe('<Menu />', () => {
       expect(element.id).toBe(id);
     });
 
+    it('should have role of group when isGroupRole is true', () => {
+      expect.assertions(1);
+
+      const element = mount(<Menu {...defaultProps} isGroupRole />)
+        .find(Menu)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe('group');
+    });
+
+    it('should have role of menu when isGroupRole is false', () => {
+      expect.assertions(1);
+
+      const element = mount(<Menu {...defaultProps} isGroupRole={false} />)
+        .find(Menu)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe('menu');
+    });
+
+    it('should have role of menu when isGroupRole is undefined', () => {
+      expect.assertions(1);
+
+      const element = mount(<Menu {...defaultProps} isGroupRole={undefined} />)
+        .find(Menu)
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe('menu');
+    });
+
     it('should have provided style when style is provided', () => {
       expect.assertions(1);
 

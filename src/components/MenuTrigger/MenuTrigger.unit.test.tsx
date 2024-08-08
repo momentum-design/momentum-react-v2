@@ -285,7 +285,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       render(<MenuTrigger {...defaultProps} ref={ref} />);
 
       const button = screen.getByRole('button', { name: 'Open Menu' });
-      
+
       // Assert that the triggerComponentRef in the ref is the same as the button element
       expect(ref.current.triggerComponentRef.current).toBe(button);
     });

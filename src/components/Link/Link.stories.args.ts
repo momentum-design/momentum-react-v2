@@ -99,4 +99,16 @@ export default {
       },
     },
   },
+  tabIndex: {
+    description: 'tabIndex for `<a>` tag',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
 };

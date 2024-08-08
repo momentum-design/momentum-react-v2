@@ -3,6 +3,7 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import { Item, Section } from '@react-stately/collections';
+import { Story } from '@storybook/react';
 
 import Menu, { MenuProps } from './';
 import argTypes from './Menu.stories.args';
@@ -98,6 +99,57 @@ Sections.parameters = {
   ],
 };
 
+const MultiMenu: Story = () => {
+  return (
+    <div role="menu">
+      <Menu isGroupRole aria-label="Speaker" onAction={action('onAction')} selectionMode="single">
+        <Section
+          key="0"
+          title={
+            <ListHeader outline={false}>
+              <ListItemBaseSection position="start">
+                <Icon scale={16} name="speaker" strokeColor="none" />
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Speaker</ListItemBaseSection>
+            </ListHeader>
+          }
+        >
+          <Item key="00">Use system setting (internal speakers)</Item>
+          <Item key="01">Internal speaker</Item>
+          <Item key="02">Bose Headset 100</Item>
+        </Section>
+      </Menu>
+      <Menu
+        isGroupRole
+        aria-label="Microphone"
+        onAction={action('onAction')}
+        selectionMode="single"
+      >
+        <Section
+          key="1"
+          title={
+            <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
+              <ListItemBaseSection position="start">
+                <Icon scale={16} name="microphone" strokeColor="none" />
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Microphone</ListItemBaseSection>
+            </ListHeader>
+          }
+        >
+          <Item key="10">Use system setting (internal microphone)</Item>
+          <Item key="11">Bose Headset 100</Item>
+        </Section>
+      </Menu>
+      <Section title={<ListHeader outline outlineColor="secondary" />} key="2">
+        <Item key="20">No title in the section</Item>
+      </Section>
+      <Section title={<ListHeader outline outlineColor="secondary" />} key="3">
+        <Item key="30">No title in the section</Item>
+      </Section>
+    </div>
+  );
+};
+
 const Common = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -171,4 +223,4 @@ Common.parameters = {
 delete Common.argTypes.onAction;
 delete Common.argTypes.disabledKeys;
 
-export { Example, Sections, Common };
+export { Example, Sections, MultiMenu, Common };
