@@ -31,7 +31,6 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
     ariaControls,
     isCombobox = DEFAULTS.IS_COMBOBOX,
     isExpanded,
-    role = isCombobox ? ARIA_ROLES.COMBOBOX : ARIA_ROLES.SEARCHBOX,
   } = props;
 
   if (isCombobox && isExpanded === undefined) {
@@ -91,7 +90,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       ref={containerRef}
       aria-controls={ariaControls}
       aria-expanded={isExpanded}
-      role={role}
+      role={isCombobox ? ARIA_ROLES.COMBOBOX : ARIA_ROLES.SEARCHBOX}
     >
       {label && (
         <label htmlFor={labelProps.htmlFor} {...labelProps}>
