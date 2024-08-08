@@ -168,6 +168,21 @@ describe('<MenuTrigger /> - Enzyme', () => {
       expect(element.id).toBe(id);
     });
 
+    it('should have provided role when role is provided', async () => {
+      expect.assertions(1);
+
+      const role = 'dialog';
+
+      const element = (await mountAndWait(<MenuTrigger {...defaultProps} role={role} />))
+        .find(MenuTrigger)
+        .find(ModalContainer)
+        .children()
+        .find('[role="dialog"]')
+        .getDOMNode();
+
+      expect(element.getAttribute('role')).toBe(role);
+    });
+
     it('should have provided style when style is provided', async () => {
       expect.assertions(1);
 

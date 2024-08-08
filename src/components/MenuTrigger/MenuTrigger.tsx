@@ -29,6 +29,7 @@ const MenuTrigger = forwardRef((props: Props, ref: ForwardedRef<{triggerComponen
     placement = DEFAULTS.PLACEMENT,
     triggerComponent,
     zIndex,
+    role,
   } = props;
 
   const state = useMenuTriggerState(props);
@@ -107,6 +108,7 @@ const MenuTrigger = forwardRef((props: Props, ref: ForwardedRef<{triggerComponen
       className={classnames(className, STYLE.wrapper)}
       trigger="click"
       id={id}
+      role={role}
       style={style}
       placement={placement as PlacementType}
       interactive={true}
