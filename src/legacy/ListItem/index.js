@@ -10,8 +10,8 @@ import ListContext from '../ListContext';
 import mapContextToProps from '@restart/context/mapContextToProps';
 
 /**
-* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
-**/
+ * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+ **/
 class ListItem extends React.Component {
   componentDidMount() {
     const { focus, refName, focusOnLoad } = this.props;
@@ -272,9 +272,6 @@ class ListItem extends React.Component {
         tabIndex: !disabled && cxtProps.focus ? 0 : -1,
       }),
       'data-md-event-key': cxtProps.uniqueKey,
-      ...(!cxtProps?.ariaConfig?.disableAriaCurrent && {
-        ...(cxtProps.focus && { 'aria-current': `${cxtProps.focus}` }),
-      }),
       ...(keyboardNavKey && { 'data-md-keyboard-key': keyboardNavKey }),
       ...((title || label) && { title: title || label }),
       ...otherProps,
