@@ -474,6 +474,38 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
       });
 
+      it('should close the menu when closeOnSelect is true via Keyboard', async () => {
+        const user = userEvent.setup();
+  
+        render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
+  
+        await openMenu(user, screen);
+  
+        screen.getByRole('menuitemradio', { name: 'One' }).focus();
+  
+        await user.keyboard('{enter}');
+  
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        });
+      });
+
+      it('should not close the menu when closeOnSelect is false via Keyboard', async () => {
+        const user = userEvent.setup();
+  
+        render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
+  
+        await openMenu(user, screen);
+  
+        screen.getByRole('menuitemradio', { name: 'One' }).focus();
+  
+        await user.keyboard('{enter}');
+  
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).toBeInTheDocument();
+        });
+      });
+
       it('selects option on Space', async () => {
         const user = userEvent.setup();
 
