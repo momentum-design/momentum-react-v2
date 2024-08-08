@@ -222,6 +222,7 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
 
   /**
    * If true, the focus lock will be disabled for the Popover content.
+   * This is useful when you want to handle focus lock mechanism yourself, and to avoid having multiple focus locks.
    * @default `false`
    */
   disableFocusLock?: boolean;
