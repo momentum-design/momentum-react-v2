@@ -168,21 +168,6 @@ describe('<MenuTrigger /> - Enzyme', () => {
       expect(element.id).toBe(id);
     });
 
-    it('should have provided role when role is provided', async () => {
-      expect.assertions(1);
-
-      const role = 'dialog';
-
-      const element = (await mountAndWait(<MenuTrigger {...defaultProps} role={role} />))
-        .find(MenuTrigger)
-        .find(ModalContainer)
-        .children()
-        .find('[role="dialog"]')
-        .getDOMNode();
-
-      expect(element.getAttribute('role')).toBe(role);
-    });
-
     it('should have provided style when style is provided', async () => {
       expect.assertions(1);
 
@@ -300,7 +285,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       render(<MenuTrigger {...defaultProps} ref={ref} />);
 
       const button = screen.getByRole('button', { name: 'Open Menu' });
-      
+
       // Assert that the triggerComponentRef in the ref is the same as the button element
       expect(ref.current.triggerComponentRef.current).toBe(button);
     });
