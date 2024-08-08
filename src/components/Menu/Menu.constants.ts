@@ -12,4 +12,6 @@ const DEFAULTS = {
   IS_TICK_ON_LEFT_SIDE: false,
 };
 
-export { CLASS_PREFIX, STYLE, DEFAULTS };
+const GROUP = 'group';
+
+export { CLASS_PREFIX, STYLE, DEFAULTS, GROUP };
