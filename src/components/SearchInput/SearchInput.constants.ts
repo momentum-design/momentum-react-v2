@@ -5,6 +5,11 @@ const CLASS_PREFIX = 'md-search-input';
 
 const HEIGHTS = [28, 32] as const;
 
+const ARIA_ROLES = {
+  COMBOBOX: 'combobox',
+  SEARCHBOX: 'searchbox',
+};
+
 const ICON_HEIGHT_MAPPING: Record<SearchFieldHeight, IconScale> = {
   28: 12,
   32: 16,
@@ -12,6 +17,7 @@ const ICON_HEIGHT_MAPPING: Record<SearchFieldHeight, IconScale> = {
 
 const DEFAULTS = {
   HEIGHT: 32,
+  IS_COMBOBOX: false,
 } as const;
 
 const STYLE = {
@@ -22,4 +28,4 @@ const STYLE = {
   clear: `${CLASS_PREFIX}-clear`,
 };
 
-export { CLASS_PREFIX, HEIGHTS, ICON_HEIGHT_MAPPING, DEFAULTS, STYLE };
+export { CLASS_PREFIX, ARIA_ROLES, HEIGHTS, ICON_HEIGHT_MAPPING, DEFAULTS, STYLE };
