@@ -581,13 +581,7 @@ class Lightbox extends React.Component {
           </div>
           <div className="md-lightbox__body" ref={(ref) => (this.lightBox = ref)} role="tablist">
             {showColumn && getThumbnails()}
-            <div
-              className="md-lightbox__content"
-              onClick={this.handleClose}
-              onKeyPress={this.handleClose}
-              role="button"
-              tabIndex="0"
-            >
+            <div className="md-lightbox__content">
               <div
                 className={
                   `md-lightbox__viewport` +
