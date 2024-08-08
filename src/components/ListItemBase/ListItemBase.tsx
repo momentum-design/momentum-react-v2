@@ -22,13 +22,11 @@ import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
-import {
-  getKeyboardFocusableElements,
-  getListItemBaseTabIndex,
-  useDidUpdateEffect,
-} from './ListItemBase.utils';
+import { getListItemBaseTabIndex } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
+import { getKeyboardFocusableElements } from '../../utils/navigation';
+import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
