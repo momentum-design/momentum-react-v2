@@ -28,7 +28,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
     label,
     isDisabled,
     height = DEFAULTS.HEIGHT,
-    ariaControls,
+    controls,
     isCombobox = DEFAULTS.IS_COMBOBOX,
     isExpanded,
   } = props;
@@ -88,7 +88,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       data-focus={isFocused}
       data-height={height}
       ref={containerRef}
-      aria-controls={ariaControls}
+      aria-controls={controls}
       aria-expanded={isExpanded}
       role={isCombobox ? ARIA_ROLES.COMBOBOX : ARIA_ROLES.SEARCHBOX}
     >
