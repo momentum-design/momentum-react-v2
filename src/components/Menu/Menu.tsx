@@ -3,7 +3,7 @@ import { Node } from '@react-types/shared';
 import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCallback } from 'react';
 import classnames from 'classnames';
 
-import { STYLE, DEFAULTS } from './Menu.constants';
+import { STYLE, DEFAULTS, GROUP } from './Menu.constants';
 import { MenuAppearanceContextValue, MenuContextValue, Props } from './Menu.types';
 import './Menu.style.scss';
 import { useMenu } from '@react-aria/menu';
@@ -89,7 +89,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           style={style}
           ref={ref}
           {...menuProps}
-          role={isGroupRole ? 'group' : menuProps.role}
+          role={isGroupRole ? GROUP : menuProps.role}
         >
           {Array.from(state.collection.getKeys()).map((key) => {
             const item = state.collection.getItem(key) as Node<T>;
