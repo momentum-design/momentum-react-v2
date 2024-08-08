@@ -140,6 +140,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       }
 
       if (closeOnSelect && (event.key === KEYS.SPACE_KEY || event.key === KEYS.ENTER_KEY)) {
+
         onClose();
       }
     },

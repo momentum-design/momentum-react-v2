@@ -17,6 +17,4 @@ export interface Props<T> {
    * Handler to be called when this element is selected
    */
   onAction?: (key: Key) => void;
-
-  itemIndex?: number;
 }
