@@ -22,7 +22,6 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
     ));
   }, [state]);
 
-
   return (
     <ul {...itemProps}>
       {!React.isValidElement(item.rendered) && item.rendered ? (
@@ -32,9 +31,9 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
       ) : (
         item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
       )}
-        <ul {...groupProps} className={STYLE.wrapper}>
-          {renderItems()}
-        </ul>
+      <ul {...groupProps} className={STYLE.wrapper}>
+        {renderItems()}
+      </ul>
     </ul>
   );
 };

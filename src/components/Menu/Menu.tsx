@@ -13,7 +13,6 @@ import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import { ListContext } from '../List/List.utils';
 
-
 export const MenuContext = React.createContext<MenuContextValue>({});
 
 export function useMenuContext(): MenuContextValue {
@@ -35,7 +34,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
   } = props;
-
   const contextProps = useMenuContext();
 
   const _props = {
