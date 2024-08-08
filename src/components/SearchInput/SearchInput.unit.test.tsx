@@ -224,12 +224,12 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-label')).toBe('search');
     });
-    it('should have the aria-controls attribute when ariaControls is provided', async () => {
+    it('should have the aria-controls attribute when controls is provided', async () => {
       expect.assertions(1);
 
       const element = (
         await mountAndWait(
-          <SearchInput ariaControls="list-element" searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput controls="list-element" searching={true} clearButtonAriaLabel="Clear" />
         )
       )
         .find(SearchInput)

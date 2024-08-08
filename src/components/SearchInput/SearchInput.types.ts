@@ -94,7 +94,7 @@ export interface Props extends AriaSearchFieldProps {
   /**
    * aria-controls attribute, the HTML ID of the element that this SearchInput relates to
    */
-  ariaControls?: string;
+  controls?: string;
 
   /**
    * Whether SearchInput is being used with a role of combobox or not
