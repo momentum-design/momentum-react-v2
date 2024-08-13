@@ -92,12 +92,13 @@ export interface Props extends AriaSearchFieldProps {
   height?: SearchFieldHeight;
 
   /**
-   * aria-controls attribute, the HTML ID of the element that this SearchInput relates to
+   * While isCombobox=true, the HTML ID of the element that this SearchInput relates to,
+   * used for the aria-controls attribute
    */
   controls?: string;
 
   /**
-   * Whether SearchInput is being used with a role of combobox or not
+   * Whether SearchInput is being used with a role of combobox or else searchbox
    */
   isCombobox?: boolean;
 
