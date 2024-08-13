@@ -98,7 +98,7 @@ export interface Props extends AriaSearchFieldProps {
   controls?: string;
 
   /**
-   * Whether SearchInput is being used with a role of combobox or else searchbox
+   * Whether SearchInput is being used with a role of combobox or not
    */
   isCombobox?: boolean;
 

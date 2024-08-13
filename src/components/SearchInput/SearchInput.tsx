@@ -4,7 +4,13 @@ import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
-import { STYLE, DEFAULTS, ICON_HEIGHT_MAPPING, ARIA_ROLES } from './SearchInput.constants';
+import {
+  STYLE,
+  DEFAULTS,
+  ICON_HEIGHT_MAPPING,
+  ARIA_ROLES,
+  WARNINGS,
+} from './SearchInput.constants';
 import { Props } from './SearchInput.types';
 import './SearchInput.style.scss';
 import { useSearchField } from '@react-aria/searchfield';
@@ -29,17 +35,18 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
     isDisabled,
     height = DEFAULTS.HEIGHT,
     controls,
-    isCombobox = DEFAULTS.IS_COMBOBOX,
+    isCombobox = DEFAULTS.ISCOMBOBOX,
     isExpanded,
   } = props;
 
   if (isCombobox && isExpanded === undefined) {
-    console.warn(
-      'MRV2: Momentum requires the isExpanded prop for SearchInput with Combobox for accessibiltity compliance.'
-    );
+    console.warn(WARNINGS.ISCOMBOBOX_1_ISEXPANDED_0);
+  }
+  if (!isCombobox && !!controls) {
+    console.warn(WARNINGS.ISCOMBOBOX_0_CONTROLS_1);
   }
   if (!isCombobox && typeof isExpanded === 'boolean') {
-    console.warn('MRV2: Momentum requires isCombobox set to true if using the isExpanded prop.');
+    console.warn(WARNINGS.ISCOMBOBOX_0_ISEXPANDED_1);
   }
 
   const state = useSearchFieldState(props);
@@ -88,7 +95,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       ref={inputRef}
     />
   ) : (
-    <input role={ARIA_ROLES.SEARCHBOX} {...inputProps} {...focusProps} ref={inputRef} />
+    <input {...inputProps} {...focusProps} ref={inputRef} />
   );
 
   return (
