@@ -251,7 +251,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
 </SSRProvider>
 `;
 
-exports[`<SearchInput /> snapshot should match snapshot when iscombobox is true 1`] = `
+exports[`<SearchInput /> snapshot should match snapshot when isCombobox is true 1`] = `
 <SSRProvider>
   <SearchInput
     clearButtonAriaLabel="Clear"
