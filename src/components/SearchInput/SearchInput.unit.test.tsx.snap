@@ -251,6 +251,89 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
 </SSRProvider>
 `;
 
+exports[`<SearchInput /> snapshot should match snapshot when iscombobox is true 1`] = `
+<SSRProvider>
+  <SearchInput
+    clearButtonAriaLabel="Clear"
+    isCombobox={true}
+    isExpanded={false}
+  >
+    <div
+      className="md-search-input-wrapper"
+      data-focus={false}
+      data-height={32}
+      onClick={[Function]}
+    >
+      <div>
+        <Icon
+          className="md-search-input-search"
+          name="search"
+          scale={16}
+          weight="bold"
+        >
+          <div
+            aria-hidden="true"
+            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-search-input-search md-icon-no-shrink"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-autoscale={false}
+              data-scale={16}
+              data-test="search"
+              fill="currentColor"
+              height="100%"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+      <div
+        className="md-search-input-container"
+      >
+        <input
+          aria-expanded={false}
+          disabled={false}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          readOnly={false}
+          role="combobox"
+          type="search"
+          value=""
+        />
+      </div>
+      <InputMessage>
+        <div
+          className="md-input-message-wrapper"
+        >
+          <div
+            className="md-input-message-message"
+            message-level="none"
+            role="alert"
+          >
+            <Text
+              className="md-input-message--text"
+              type="body-secondary"
+            >
+              <small
+                className="md-text-wrapper md-input-message--text"
+                data-type="body-secondary"
+              />
+            </Text>
+          </div>
+        </div>
+      </InputMessage>
+    </div>
+  </SearchInput>
+</SSRProvider>
+`;
+
 exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
 <SSRProvider>
   <SearchInput

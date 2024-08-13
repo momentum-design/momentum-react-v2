@@ -123,6 +123,15 @@ describe('<SearchInput />', () => {
 
       expect(container).toMatchSnapshot();
     });
+    it('should match snapshot when isCombobox is true', async () => {
+      expect.assertions(1);
+
+      const container = await mountComponent(
+        <SearchInput isCombobox={true} isExpanded={false} clearButtonAriaLabel="Clear" />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
