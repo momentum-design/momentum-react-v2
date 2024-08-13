@@ -224,28 +224,38 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-label')).toBe('search');
     });
-    it('should have the aria-controls attribute when controls is provided', async () => {
+    it('should have the aria-controls attribute when isComboxbox=true and controls is provided', async () => {
       expect.assertions(1);
 
       const element = (
         await mountAndWait(
-          <SearchInput controls="list-element" searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput
+            isCombobox={true}
+            controls="list-element"
+            searching={true}
+            clearButtonAriaLabel="Clear"
+          />
         )
       )
-        .find(SearchInput)
+        .find('input')
         .getDOMNode();
 
       expect(element.getAttribute('aria-controls')).toBe('list-element');
     });
-    it('should have the aria-expanded attribute when isExpanded is provided', async () => {
+    it('should have the aria-expanded attribute when isComboxbox=true and isExpanded is provided', async () => {
       expect.assertions(1);
 
       const element = (
         await mountAndWait(
-          <SearchInput isExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
+          <SearchInput
+            isCombobox={true}
+            isExpanded={false}
+            searching={true}
+            clearButtonAriaLabel="Clear"
+          />
         )
       )
-        .find(SearchInput)
+        .find('input')
         .getDOMNode();
 
       expect(element.getAttribute('aria-expanded')).toBe('false');
@@ -292,7 +302,7 @@ describe('<SearchInput />', () => {
           />
         )
       )
-        .find(SearchInput)
+        .find('input')
         .getDOMNode();
 
       expect(element.getAttribute('role')).toBe('combobox');
@@ -303,7 +313,7 @@ describe('<SearchInput />', () => {
       const element = (
         await mountAndWait(<SearchInput searching={true} clearButtonAriaLabel="Clear" />)
       )
-        .find(SearchInput)
+        .find('input')
         .getDOMNode();
 
       expect(element.getAttribute('role')).toBe('searchbox');

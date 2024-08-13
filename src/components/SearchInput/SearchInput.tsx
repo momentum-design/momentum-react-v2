@@ -78,6 +78,19 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
     }
   };
 
+  const inputElement = isCombobox ? (
+    <input
+      aria-controls={controls}
+      aria-expanded={isExpanded}
+      role={ARIA_ROLES.COMBOBOX}
+      {...inputProps}
+      {...focusProps}
+      ref={inputRef}
+    />
+  ) : (
+    <input role={ARIA_ROLES.SEARCHBOX} {...inputProps} {...focusProps} ref={inputRef} />
+  );
+
   return (
     <div
       className={classnames(className, STYLE.wrapper)}
@@ -88,9 +101,6 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       data-focus={isFocused}
       data-height={height}
       ref={containerRef}
-      aria-controls={controls}
-      aria-expanded={isExpanded}
-      role={isCombobox ? ARIA_ROLES.COMBOBOX : ARIA_ROLES.SEARCHBOX}
     >
       {label && (
         <label htmlFor={labelProps.htmlFor} {...labelProps}>
@@ -109,9 +119,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
           />
         )}
       </div>
-      <div className={STYLE.container}>
-        <input {...inputProps} {...focusProps} ref={inputRef} />
-      </div>
+      <div className={STYLE.container}>{inputElement}</div>
       {!!state.value && !isDisabled && (
         <ButtonSimple
           className={STYLE.clear}
