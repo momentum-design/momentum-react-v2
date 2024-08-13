@@ -7,7 +7,15 @@ const HEIGHTS = [28, 32] as const;
 
 const ARIA_ROLES = {
   COMBOBOX: 'combobox',
-  SEARCHBOX: 'searchbox',
+};
+
+const WARNINGS = {
+  ISCOMBOBOX_1_ISEXPANDED_0:
+    'MRV2: Momentum requires the isExpanded prop for SearchInput with Combobox for accessibiltity compliance.',
+  ISCOMBOBOX_0_CONTROLS_1:
+    'MRV2: Momentum requires isCombobox set to true if using the controls prop.',
+  ISCOMBOBOX_0_ISEXPANDED_1:
+    'MRV2: Momentum requires isCombobox set to true if using the isExpanded prop.',
 };
 
 const ICON_HEIGHT_MAPPING: Record<SearchFieldHeight, IconScale> = {
@@ -17,7 +25,7 @@ const ICON_HEIGHT_MAPPING: Record<SearchFieldHeight, IconScale> = {
 
 const DEFAULTS = {
   HEIGHT: 32,
-  IS_COMBOBOX: false,
+  ISCOMBOBOX: false,
 } as const;
 
 const STYLE = {
@@ -28,4 +36,4 @@ const STYLE = {
   clear: `${CLASS_PREFIX}-clear`,
 };
 
-export { CLASS_PREFIX, ARIA_ROLES, HEIGHTS, ICON_HEIGHT_MAPPING, DEFAULTS, STYLE };
+export { CLASS_PREFIX, ARIA_ROLES, WARNINGS, HEIGHTS, ICON_HEIGHT_MAPPING, DEFAULTS, STYLE };

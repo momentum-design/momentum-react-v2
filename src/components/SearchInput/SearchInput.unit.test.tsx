@@ -6,6 +6,7 @@ import Icon from '../Icon';
 import SearchInput, { SEARCH_INPUT_CONSTANTS as CONSTANTS } from '.';
 import { act } from 'react-dom/test-utils';
 import ButtonSimple from '../ButtonSimple';
+import { WARNINGS } from './SearchInput.constants';
 
 const testTranslations = {
   empty: 'empty',
@@ -269,6 +270,45 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-expanded')).toBe('false');
     });
+    it('should have no aria-controls or aria-expanded attributes when isCombobox is not provided', async () => {
+      expect.assertions(2);
+
+      const element = (
+        await mountAndWait(
+          <SearchInput
+            controls="list-element"
+            isExpanded={false}
+            searching={true}
+            clearButtonAriaLabel="Clear"
+          />
+        )
+      )
+        .find('input')
+        .getDOMNode();
+
+      expect(element.getAttribute('controls')).toBeNull();
+      expect(element.getAttribute('isExpanded')).toBeNull();
+    });
+    it('should have no aria-controls or aria-expanded attributes when isCombobox=false', async () => {
+      expect.assertions(2);
+
+      const element = (
+        await mountAndWait(
+          <SearchInput
+            isCombobox={false}
+            controls="list-element"
+            isExpanded={false}
+            searching={true}
+            clearButtonAriaLabel="Clear"
+          />
+        )
+      )
+        .find('input')
+        .getDOMNode();
+
+      expect(element.getAttribute('controls')).toBeNull();
+      expect(element.getAttribute('isExpanded')).toBeNull();
+    });
     it('should console warn when isCombobox is provided without isExpanded', async () => {
       expect.assertions(1);
       const logSpy = jest.spyOn(global.console, 'warn');
@@ -277,9 +317,24 @@ describe('<SearchInput />', () => {
         <SearchInput isCombobox={true} searching={true} clearButtonAriaLabel="Clear" />
       );
 
-      expect(logSpy).toHaveBeenCalledWith(
-        'MRV2: Momentum requires the isExpanded prop for SearchInput with Combobox for accessibiltity compliance.'
+      expect(logSpy).toHaveBeenCalledWith(WARNINGS.ISCOMBOBOX_1_ISEXPANDED_0);
+
+      logSpy.mockRestore();
+    });
+    it('should console warn when controls is provided without isCombobox', async () => {
+      expect.assertions(1);
+      const logSpy = jest.spyOn(global.console, 'warn');
+
+      await mountAndWait(
+        <SearchInput
+          isExpanded={false}
+          controls={'list-element'}
+          searching={true}
+          clearButtonAriaLabel="Clear"
+        />
       );
+
+      expect(logSpy).toHaveBeenCalledWith(WARNINGS.ISCOMBOBOX_0_CONTROLS_1);
 
       logSpy.mockRestore();
     });
@@ -288,16 +343,18 @@ describe('<SearchInput />', () => {
       const logSpy = jest.spyOn(global.console, 'warn');
 
       await mountAndWait(
-        <SearchInput isExpanded={false} searching={true} clearButtonAriaLabel="Clear" />
+        <SearchInput
+          isExpanded={false}
+          controls={'list-element'}
+          searching={true}
+          clearButtonAriaLabel="Clear"
+        />
       );
 
-      expect(logSpy).toHaveBeenCalledWith(
-        'MRV2: Momentum requires isCombobox set to true if using the isExpanded prop.'
-      );
+      expect(logSpy).toHaveBeenCalledWith(WARNINGS.ISCOMBOBOX_0_ISEXPANDED_1);
 
       logSpy.mockRestore();
     });
-
     it('should have the combobox role attribute when isCombobox is provided', async () => {
       expect.assertions(1);
 
@@ -315,17 +372,6 @@ describe('<SearchInput />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('role')).toBe('combobox');
-    });
-    it('should have the searchbox role attribute when isCombobox is not provided', async () => {
-      expect.assertions(1);
-
-      const element = (
-        await mountAndWait(<SearchInput searching={true} clearButtonAriaLabel="Clear" />)
-      )
-        .find('input')
-        .getDOMNode();
-
-      expect(element.getAttribute('role')).toBe('searchbox');
     });
 
     it('should pass label to the label', async () => {
