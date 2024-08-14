@@ -42,6 +42,11 @@ export interface Props<T> extends AriaMenuProps<T> {
    * @default false
    */
   isGroupRole?: boolean;
+  
+  /**
+   * aria-labelledby attribute for the AriaGroup
+   */
+  ariaLabelledby?: string;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {

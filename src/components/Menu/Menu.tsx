@@ -34,6 +34,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
     isGroupRole,
+    ariaLabelledby,
   } = props;
   const contextProps = useMenuContext();
 
@@ -77,7 +78,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   // label it by the triggerComponent's id, and that doesn't really make
   // sense especially when there are multiple menus inside.
   delete menuProps['aria-labelledby'];
-
+  
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
   return (
@@ -90,6 +91,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           ref={ref}
           {...menuProps}
           role={isGroupRole ? GROUP : menuProps.role}
+          aria-labelledby={ariaLabelledby}
         >
           {Array.from(state.collection.getKeys()).map((key) => {
             const item = state.collection.getItem(key) as Node<T>;

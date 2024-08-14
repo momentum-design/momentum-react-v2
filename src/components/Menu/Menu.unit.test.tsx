@@ -137,6 +137,28 @@ describe('<Menu />', () => {
       expect(element.getAttribute('role')).toBe('menu');
     });
 
+    it('should have aria-labelledby prop when ariaLabelledby is provided', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'menu-label';
+
+      const element = mount(<Menu {...defaultProps} aria-labelledby={ariaLabelledby}/>)
+        .find(Menu);
+
+      expect(element.prop('aria-labelledby')).toBe(ariaLabelledby);
+    });
+
+    it('should have aria-labelledby prop when ariaLabelledby is undefined', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'undefined';
+
+      const element = mount(<Menu {...defaultProps} aria-labelledby={ariaLabelledby}/>)
+        .find(Menu);
+
+      expect(element.prop('aria-labelledby')).toBe(ariaLabelledby);
+    });
+
     it('should have provided style when style is provided', () => {
       expect.assertions(1);
 
