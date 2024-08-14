@@ -361,7 +361,7 @@ class Lightbox extends React.Component {
           >
             <IconNext
               name="arrow-left"
-              color="var(--mds-color-theme-common-text-white)"
+              color="var(--mds-color-theme-common-text-primary-normal)"
               scale={16}
             />
           </ButtonSimple>
@@ -382,7 +382,7 @@ class Lightbox extends React.Component {
           >
             <IconNext
               name="arrow-right"
-              color="var(--mds-color-theme-common-text-white)"
+              color="var(--mds-color-theme-common-text-primary-normal)"
               scale={16}
             />
           </ButtonSimple>
@@ -407,7 +407,7 @@ class Lightbox extends React.Component {
               ) : (
                 <IconNext
                   name="download"
-                  color="var(--mds-color-theme-common-text-white)"
+                  color="var(--mds-color-theme-common-text-primary-normal)"
                   scale={20}
                   weight="light"
                 />
@@ -438,7 +438,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="arrow-left"
-                    color="var(--mds-color-theme-common-text-white)"
+                    color="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -458,7 +458,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="arrow-right"
-                    color="var(--mds-color-theme-common-text-white)"
+                    color="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -493,7 +493,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="zoom-out"
-                    color="var(--mds-color-theme-common-text-white)"
+                    color="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -516,7 +516,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="zoom-in"
-                    color="var(--mds-color-theme-common-text-white)"
+                    color="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -568,7 +568,7 @@ class Lightbox extends React.Component {
                   >
                     <IconNext
                       name="cancel"
-                      color="var(--mds-color-theme-common-text-white)"
+                      color="var(--mds-color-theme-common-text-primary-normal)"
                       scale={20}
                       weight="light"
                     />

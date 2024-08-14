@@ -47,7 +47,7 @@
   &:hover {
     // when it is not a button
     .md-avatar-icon-on-hover-wrapper {
-      background-color: var(--mds-color-theme-common-overlay-secondary-normal);
+      background-color: var(--mds-color-theme-common-overlays-secondary-normal);
 
       .md-avatar-icon-wrapper {
         svg {
@@ -59,7 +59,7 @@
 
   span {
     font-weight: 550;
-    color: var(--mds-color-theme-common-text-white);
+    color: var(--mds-color-theme-common-text-primary-normal);
   }
 
   img {
@@ -75,7 +75,7 @@
 
   .md-avatar-icon-wrapper {
     svg {
-      fill: var(--mds-color-theme-common-text-white);
+      fill: var(--mds-color-theme-common-text-primary-normal);
     }
   }
 
@@ -274,7 +274,7 @@
   &:focus {
     // when it is a button
     .md-avatar-icon-on-hover-wrapper {
-      background-color: var(--mds-color-theme-common-overlay-secondary-normal);
+      background-color: var(--mds-color-theme-common-overlays-secondary-normal);
 
       .md-avatar-icon-wrapper {
         svg {
@@ -288,7 +288,7 @@
 .md-avatar-animation-wrapper {
   width: 100%;
   height: 100%;
-  background: var(--mds-color-theme-common-overlay-secondary-normal);
+  background: var(--mds-color-theme-common-overlays-secondary-normal);
   position: absolute;
   display: flex;
   justify-content: center;

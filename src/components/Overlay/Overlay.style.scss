@@ -19,10 +19,10 @@
   }
 
   &[data-color='primary'] {
-    background-color: var(--mds-color-theme-common-overlay-primary-normal);
+    background-color: var(--mds-color-theme-common-overlays-primary-normal);
   }
 
   &[data-color='secondary'] {
-    background-color: var(--mds-color-theme-common-overlay-secondary-normal);
+    background-color: var(--mds-color-theme-common-overlays-secondary-normal);
   }
 }

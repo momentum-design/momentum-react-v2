@@ -62,8 +62,8 @@ const checkTokens = function (source, tokenType) {
     switch (tokenType) {
       case 'mds':
         //match[0] gives you the entire match string.
-        //Example: In 'background-color: var(--mds-color-theme-common-overlay-primary-normal);'
-        //match[0] gives you '--mds-color-theme-common-overlay-primary-normal)'
+        //Example: In 'background-color: var(--mds-color-theme-common-overlays-primary-normal);'
+        //match[0] gives you '--mds-color-theme-common-overlays-primary-normal)'
         //With slice(0,-1), we cut the last char from that string to remove the final ')'
         matcher = /--mds(.*?)[,;)]/g;
         sliceFrom = 0;

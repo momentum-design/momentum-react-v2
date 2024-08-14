@@ -13,13 +13,13 @@ const getTokensFromSource = function (sourcePath, sourceType) {
       switch (sourceType) {
         case 'mds-css-stable':
           // To get a string that is parseable to json from @momentum-design/tokens/dist/css/theme/webex/light-stable.css
-          // 1. We want to replace ';' with '"'. From '--mds-color-theme-common-text-white: #fffffff2;' we get '--mds-color-theme-common-text-white: #fffffff2"'
-          // 2. We want to replace ': ' with '": ". From '--mds-color-theme-common-text-white: #fffffff2"' we get '--mds-color-theme-common-text-white": "#fffffff2"'
-          // 3. We want to replace '--' with '"--'. From '--mds-color-theme-common-text-white": "#fffffff2"' we get '"--mds-color-theme-common-text-white": "#fffffff2"'
+          // 1. We want to replace ';' with '"'. From '--mds-color-theme-common-text-primary-normal: #fffffff2;' we get '--mds-color-theme-common-text-primary-normal: #fffffff2"'
+          // 2. We want to replace ': ' with '": ". From '--mds-color-theme-common-text-primary-normal: #fffffff2"' we get '--mds-color-theme-common-text-primary-normal": "#fffffff2"'
+          // 3. We want to replace '--' with '"--'. From '--mds-color-theme-common-text-primary-normal": "#fffffff2"' we get '"--mds-color-theme-common-text-primary-normal": "#fffffff2"'
           // 4. We want to put a ,\n at the end of each line, and join them to return a big string that looks like this:
           //
-          // "--mds-color-theme-common-text-white": "#fffffff2",
-          // "--mds-color-theme-common-text-white": "#fffffff2",
+          // "--mds-color-theme-common-text-primary-normal": "#fffffff2",
+          // "--mds-color-theme-common-text-primary-normal": "#fffffff2",
           // ...
           return data
             .map((line) => line.replace(';', '"').replace(': ', '": "').replace('--', '"--'))

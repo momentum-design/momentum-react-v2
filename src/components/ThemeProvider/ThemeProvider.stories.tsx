@@ -36,7 +36,7 @@ Example.args = {
         style={{
           alignItems: 'center',
           backgroundColor: 'var(--mds-color-theme-button-primary-normal)',
-          color: 'var(--mds-color-theme-text-inverted-normal)',
+          color: 'var(--mds-color-theme-inverted-text-primary-normal)',
           display: 'flex',
           height: '4rem',
           justifyContent: 'center',

@@ -48,7 +48,7 @@
   }
 
   &[data-outline='true'] {
-    --local-border-color: var(--mds-color-theme-outline-disabled-normal);
+    --local-border-color: var(--mds-color-theme-outline-primary-disabled);
   }
 
   box-shadow: inset 0 0 0 0.125rem var(--local-border-color);
