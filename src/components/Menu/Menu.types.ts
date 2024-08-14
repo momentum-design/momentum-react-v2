@@ -44,7 +44,7 @@ export interface Props<T> extends AriaMenuProps<T> {
   isGroupRole?: boolean;
   
   /**
-   * aria-labelledby attribute for the AriaGroup
+   * aria-labelledby attribute to associate with the menu items
    */
   ariaLabelledby?: string;
 }
