@@ -8,8 +8,7 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
   getContext: () => {
     listSize: number;
     currentFocus: number;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    setContext: (newFocus: any) => void;
+    setContext: (newFocus: number) => void;
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
   }

@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState, useCallback } from 'react';
+import React, { FC, useRef } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './List.constants';
