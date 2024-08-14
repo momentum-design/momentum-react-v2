@@ -14,6 +14,7 @@
   margin-right: 0.5rem;
   transition: background $transition-time;
   background-color: var(--mds-color-theme-control-inactive-normal);
+  border: 1px solid var(--mds-color-theme-outline-input-normal);
 
   &:before {
     content: '';
@@ -32,9 +33,10 @@
 
   &:checked {
     background-color: var(--mds-color-theme-control-active-normal);
+    border: none;
 
     &:before {
-      background-color: var(--mds-color-theme-text-inverted-normal);
+      background-color: var(--mds-color-theme-common-inverted-text-primary-normal);
       transform: translateX($switch-width - $switch-height);
     }
   }
@@ -56,7 +58,7 @@
       background-color: var(--mds-color-theme-control-active-hover);
 
       &:before {
-        background-color: var(--mds-color-theme-text-inverted-normal);
+        background-color: var(--mds-color-theme-common-inverted-text-primary-normal);
         transform: translateX($switch-width - $switch-height);
       }
     }
@@ -74,7 +76,7 @@
       background-color: var(--mds-color-theme-control-active-pressed);
 
       &:before {
-        background-color: var(--mds-color-theme-text-inverted-normal);
+        background-color: var(--mds-color-theme-common-inverted-text-primary-normal);
         transform: translateX($switch-width - $switch-height);
       }
     }
@@ -92,7 +94,7 @@
       background-color: var(--mds-color-theme-control-active-disabled);
 
       &:before {
-        background-color: var(--mds-color-theme-text-inverted-disabled);
+        background-color: var(--mds-color-theme-inverted-text-primary-disabled);
         transform: translateX($switch-width - $switch-height);
       }
     }

@@ -33,7 +33,7 @@ Example.argTypes = { ...argTypes };
 const LinkContainer = (props) => {
   if (props.inverted) {
     return (
-      <div style={{ backgroundColor: 'var(--mds-color-theme-teaching-background-normal)' }}>
+      <div style={{ backgroundColor: 'var(--mds-color-theme-inverted-background-normal)' }}>
         <Link {...props} />
       </div>
     );
