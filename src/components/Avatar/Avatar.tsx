@@ -68,9 +68,9 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
   const containerAriaLabel = rest['aria-label'] || avatarLabels.join(', ');
   delete rest['aria-label'];
 
-  const hasPresence = !!presenceIcon;
+  const shouldBeGroup = !!presenceIcon || !!src;
   // If there is a case where the child element needs to be read by the SR, group role is used, otherwise img role is used
-  const containerRole = hasPresence ? 'group' : 'img';
+  const containerRole = shouldBeGroup ? 'group' : 'img';
   
   const content = (
     <div
@@ -78,7 +78,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
       data-size={size}
       data-color={color}
       aria-label={onPress ? undefined : containerAriaLabel}
-      role={containerRole}
+      role={onPress ? undefined : containerRole}
       {...(!onPress && { ...rest })}
     >
       {!imageLoaded && !icon && initialsText && (
@@ -88,7 +88,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
       {src && (
         <img
           src={src}
-          alt=''
+          alt={mainLabel}
           onLoad={handleOnLoad}
           onError={handleOnError}
           className={classnames(STYLE.wrapperChildren, { [STYLE.imageHidden]: !imageLoaded })}

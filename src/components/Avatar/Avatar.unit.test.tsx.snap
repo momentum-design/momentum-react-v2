@@ -321,7 +321,6 @@ exports[`Avatar snapshot should match snapshot with mainLabel 1`] = `
             className="md-avatar-wrapper"
             data-color="default"
             data-size={24}
-            role="img"
           />
         </button>
       </FocusRing>
@@ -368,7 +367,6 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
             className="md-avatar-wrapper"
             data-color="default"
             data-size={24}
-            role="img"
           >
             <Initials
               className="md-avatar-wrapper-children"
@@ -1396,7 +1394,7 @@ exports[`Avatar snapshot should match snapshot with src & title 1`] = `
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="img"
+    role="group"
   >
     <Initials
       className="md-avatar-wrapper-children"
