@@ -114,4 +114,15 @@ export default {
       },
     },
   },
+  'aria-labelledby': {
+    description:
+      'The ariaLabelledBy is used to provide an aria-labelledby for the nested menu items inside menu',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: 'menu-label',
+    },
+  },
 };
