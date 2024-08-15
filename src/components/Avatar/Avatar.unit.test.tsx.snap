@@ -5,6 +5,7 @@ exports[`Avatar snapshot should match snapshot 1`] = `
   title="Cisco Webex"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
@@ -32,6 +33,7 @@ exports[`Avatar snapshot should match snapshot with aria-label 1`] = `
   aria-label="ariaLabel"
 >
   <div
+    aria-hidden="false"
     aria-label="ariaLabel"
     className="md-avatar-wrapper"
     data-color="default"
@@ -47,11 +49,12 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
   title="Cisco Webex"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -66,7 +69,6 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
       </span>
     </Initials>
     <Presence
-      ariaLabel=""
       isCircularWrapper={true}
       presenceColor="var(--mds-color-theme-indicator-attention)"
       presenceIcon="warning"
@@ -77,7 +79,6 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
         data-shape={true}
       >
         <Icon
-          ariaLabel=""
           fillColor="var(--mds-color-theme-indicator-attention)"
           name="warning"
           scale={14}
@@ -118,6 +119,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
   icon="check"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
@@ -158,6 +160,7 @@ exports[`Avatar snapshot should match snapshot with iconOnHover 1`] = `
   iconOnHover="check"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
@@ -202,6 +205,7 @@ exports[`Avatar snapshot should match snapshot with initials 1`] = `
   initials="CW"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
@@ -231,6 +235,7 @@ exports[`Avatar snapshot should match snapshot with isTyping and typingLabel 1`]
   typingLabel="isTyping"
 >
   <div
+    aria-hidden="false"
     aria-label="isTyping"
     className="md-avatar-wrapper"
     data-color="default"
@@ -318,6 +323,7 @@ exports[`Avatar snapshot should match snapshot with mainLabel 1`] = `
           type="button"
         >
           <div
+            aria-hidden="true"
             className="md-avatar-wrapper"
             data-color="default"
             data-size={24}
@@ -364,6 +370,7 @@ exports[`Avatar snapshot should match snapshot with onPress 1`] = `
           type="button"
         >
           <div
+            aria-hidden="true"
             className="md-avatar-wrapper"
             data-color="default"
             data-size={24}
@@ -397,6 +404,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="default"
       className="md-avatar-wrapper"
       data-color="default"
@@ -424,11 +432,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="active"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -443,7 +452,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="active"
         isCircularWrapper={true}
         presenceColor="var(--mds-color-theme-indicator-stable)"
         presenceIcon="unread"
@@ -454,7 +462,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={true}
         >
           <Icon
-            ariaLabel="active"
             fillColor="var(--mds-color-theme-indicator-stable)"
             name="unread"
             scale={14}
@@ -462,8 +469,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="active"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -496,11 +502,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="meet"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -515,7 +522,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="meet"
         isCircularWrapper={false}
         presenceColor="var(--mds-color-theme-indicator-unstable)"
         presenceIcon="camera-presence"
@@ -526,7 +532,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={false}
         >
           <Icon
-            ariaLabel="meet"
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="camera-presence"
             scale={14}
@@ -534,8 +539,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="meet"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -568,11 +572,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="schedule"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -587,7 +592,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="schedule"
         isCircularWrapper={false}
         presenceColor="var(--mds-color-theme-indicator-unstable)"
         presenceIcon="meetings-presence"
@@ -598,7 +602,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={false}
         >
           <Icon
-            ariaLabel="schedule"
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="meetings-presence"
             scale={14}
@@ -606,8 +609,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="schedule"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -640,11 +642,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="call"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -659,7 +662,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="call"
         isCircularWrapper={false}
         presenceColor="var(--mds-color-theme-indicator-unstable)"
         presenceIcon="handset"
@@ -670,7 +672,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={false}
         >
           <Icon
-            ariaLabel="call"
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="handset"
             scale={14}
@@ -678,8 +679,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="call"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -712,11 +712,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="DND"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -731,7 +732,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="DND"
         isCircularWrapper={true}
         presenceColor="var(--mds-color-theme-indicator-attention)"
         presenceIcon="dnd-presence"
@@ -742,7 +742,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={true}
         >
           <Icon
-            ariaLabel="DND"
             fillColor="var(--mds-color-theme-indicator-attention)"
             name="dnd-presence"
             scale={14}
@@ -750,8 +749,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="DND"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -784,11 +782,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="presenting"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -803,7 +802,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="presenting"
         isCircularWrapper={false}
         presenceColor="var(--mds-color-theme-indicator-attention)"
         presenceIcon="share-screen"
@@ -814,7 +812,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={false}
         >
           <Icon
-            ariaLabel="presenting"
             fillColor="var(--mds-color-theme-indicator-attention)"
             name="share-screen"
             scale={14}
@@ -822,8 +819,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="presenting"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -856,11 +852,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="quietHours"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -875,7 +872,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="quietHours"
         isCircularWrapper={true}
         presenceColor="var(--mds-color-theme-indicator-locked)"
         presenceIcon="quiet-hours-presence"
@@ -886,7 +882,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={true}
         >
           <Icon
-            ariaLabel="quietHours"
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="quiet-hours-presence"
             scale={14}
@@ -894,8 +889,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="quietHours"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -928,11 +922,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="away"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -947,7 +942,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="away"
         isCircularWrapper={true}
         presenceColor="var(--mds-color-theme-indicator-locked)"
         presenceIcon="recents-presence"
@@ -958,7 +952,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={true}
         >
           <Icon
-            ariaLabel="away"
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="recents-presence"
             scale={14}
@@ -966,8 +959,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="away"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -1000,11 +992,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="OOO"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1019,7 +1012,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="OOO"
         isCircularWrapper={true}
         presenceColor="var(--mds-color-theme-indicator-locked)"
         presenceIcon="pto-presence"
@@ -1030,7 +1022,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={true}
         >
           <Icon
-            ariaLabel="OOO"
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="pto-presence"
             scale={14}
@@ -1038,8 +1029,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="OOO"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -1072,11 +1062,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="busy"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1091,7 +1082,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="busy"
         isCircularWrapper={true}
         presenceColor="var(--mds-color-theme-indicator-unstable)"
         presenceIcon="busy-presence"
@@ -1102,7 +1092,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={true}
         >
           <Icon
-            ariaLabel="busy"
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="busy-presence"
             scale={14}
@@ -1110,8 +1099,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="bold"
           >
             <div
-              aria-hidden="false"
-              aria-label="busy"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -1144,11 +1132,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="onMobile"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1163,7 +1152,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="onMobile"
         isCircularWrapper={false}
         presenceColor="var(--mds-color-theme-indicator-locked)"
         presenceIcon="phone"
@@ -1174,7 +1162,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={false}
         >
           <Icon
-            ariaLabel="onMobile"
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="phone"
             scale={14}
@@ -1182,8 +1169,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="onMobile"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -1216,11 +1202,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="onDevice"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1235,7 +1222,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="onDevice"
         isCircularWrapper={false}
         presenceColor="var(--mds-color-theme-indicator-locked)"
         presenceIcon="generic-device-video"
@@ -1246,7 +1232,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={false}
         >
           <Icon
-            ariaLabel="onDevice"
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="generic-device-video"
             scale={14}
@@ -1254,8 +1239,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="onDevice"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -1288,11 +1272,12 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
     title="Cisco Webex"
   >
     <div
+      aria-hidden="false"
       aria-label="onHold"
       className="md-avatar-wrapper"
       data-color="default"
       data-size={24}
-      role="group"
+      role="img"
     >
       <Initials
         className="md-avatar-wrapper-children"
@@ -1307,7 +1292,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
         </span>
       </Initials>
       <Presence
-        ariaLabel="onHold"
         isCircularWrapper={false}
         presenceColor="var(--mds-color-theme-indicator-locked)"
         presenceIcon="pause"
@@ -1318,7 +1302,6 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           data-shape={false}
         >
           <Icon
-            ariaLabel="onHold"
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="pause"
             scale={14}
@@ -1326,8 +1309,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             weight="filled"
           >
             <div
-              aria-hidden="false"
-              aria-label="onHold"
+              aria-hidden="true"
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               role="img"
             >
@@ -1362,6 +1344,7 @@ exports[`Avatar snapshot should match snapshot with size 1`] = `
   title="CW"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
@@ -1390,11 +1373,12 @@ exports[`Avatar snapshot should match snapshot with src & title 1`] = `
   title="title"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"
     data-size={24}
-    role="group"
+    role="img"
   >
     <Initials
       className="md-avatar-wrapper-children"
@@ -1425,6 +1409,7 @@ exports[`Avatar snapshot should match snapshot with type 1`] = `
   type="space"
 >
   <div
+    aria-hidden="false"
     aria-label=""
     className="md-avatar-wrapper"
     data-color="default"

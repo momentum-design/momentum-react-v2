@@ -49,36 +49,33 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
 
   const avatarLabels = [];
 
-  if(mainLabel){
+  if (mainLabel) {
     avatarLabels.push(mainLabel);
   }
 
-  if(presence && presenceLabel){
+  if (presence && presenceLabel) {
     avatarLabels.push(presenceLabel);
   }
 
-  if(isTyping && typingLabel){
+  if (isTyping && typingLabel) {
     avatarLabels.push(typingLabel);
   }
 
-  if(extraLabel){
+  if (extraLabel) {
     avatarLabels.push(extraLabel);
   }
 
   const containerAriaLabel = rest['aria-label'] || avatarLabels.join(', ');
   delete rest['aria-label'];
 
-  const shouldBeGroup = !!presenceIcon || !!src;
-  // If there is a case where the child element needs to be read by the SR, group role is used, otherwise img role is used
-  const containerRole = shouldBeGroup ? 'group' : 'img';
-  
   const content = (
     <div
       className={classnames(STYLE.wrapper, className)}
       data-size={size}
       data-color={color}
       aria-label={onPress ? undefined : containerAriaLabel}
-      role={onPress ? undefined : containerRole}
+      role={onPress ? undefined : 'img'}
+      aria-hidden={onPress ? 'true' : 'false'}
       {...(!onPress && { ...rest })}
     >
       {!imageLoaded && !icon && initialsText && (
@@ -88,7 +85,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
       {src && (
         <img
           src={src}
-          alt={mainLabel}
+          alt=""
           onLoad={handleOnLoad}
           onError={handleOnError}
           className={classnames(STYLE.wrapperChildren, { [STYLE.imageHidden]: !imageLoaded })}
@@ -116,7 +113,10 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
       )}
       {/* //TODO: Temporary fix for typing animation. This should be re-implemented */}
       {isTyping && (
-        <span className={classnames(STYLE.wrapperChildren, STYLE.animationWrapper)} aria-hidden='true'>
+        <span
+          className={classnames(STYLE.wrapperChildren, STYLE.animationWrapper)}
+          aria-hidden="true"
+        >
           <div style={{ transform: 'scale(0.4)' }}>
             <Loading />
           </div>
@@ -129,7 +129,6 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
           presenceIcon={presenceIcon}
           isCircularWrapper={isCircularWrapper}
           size={size}
-          ariaLabel={presenceLabel}
         />
       )}
     </div>

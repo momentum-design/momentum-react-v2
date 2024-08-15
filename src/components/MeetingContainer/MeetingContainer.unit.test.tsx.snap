@@ -156,6 +156,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                   size={32}
                 >
                   <div
+                    aria-hidden="false"
                     aria-label=""
                     className="md-avatar-wrapper"
                     data-color="default"
