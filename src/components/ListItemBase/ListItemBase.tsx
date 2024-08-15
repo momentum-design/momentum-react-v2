@@ -139,9 +139,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         pressProps.onKeyDown(event);
       }
 
-      if (closeOnSelect && (event.key === KEYS.SPACE_KEY || event.key === KEYS.ENTER_KEY)) {
-
-        onClose();
+      if (event.key === KEYS.SPACE_KEY) {
+        ref.current.click();
       }
     },
   };
