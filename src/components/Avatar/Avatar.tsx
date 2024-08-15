@@ -83,9 +83,10 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
       )}
 
       {src && (
+        // eslint-disable-next-line jsx-a11y/alt-text
         <img
           src={src}
-          alt=""
+          aria-hidden="true"
           onLoad={handleOnLoad}
           onError={handleOnError}
           className={classnames(STYLE.wrapperChildren, { [STYLE.imageHidden]: !imageLoaded })}

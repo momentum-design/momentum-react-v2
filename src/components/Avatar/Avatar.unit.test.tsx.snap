@@ -1393,7 +1393,7 @@ exports[`Avatar snapshot should match snapshot with src & title 1`] = `
       </span>
     </Initials>
     <img
-      alt=""
+      aria-hidden="true"
       className="md-avatar-wrapper-children md-avatar-image-hidden"
       onError={[Function]}
       onLoad={[Function]}
