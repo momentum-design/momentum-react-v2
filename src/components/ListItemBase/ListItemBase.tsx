@@ -29,7 +29,6 @@ import {
 } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
-import { useMenuContext } from '../Menu/Menu';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -56,7 +55,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
   const listContext = useListContext();
-  const { onClose, closeOnSelect } = useMenuContext();
 
   const internalRef = useRef<HTMLLIElement>();
 
@@ -148,7 +146,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   /**
    * Focus management
    */
-  const focus = listContext?.currentFocus === itemIndex;
+  const focus = listContext?.cßurrentFocus === itemIndex;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
