@@ -218,6 +218,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -241,6 +242,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -2412,6 +2414,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -2435,6 +2438,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -4606,6 +4610,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -4629,6 +4634,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -6801,6 +6807,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -6824,6 +6831,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -8998,6 +9006,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -9021,6 +9030,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -11192,6 +11202,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -11215,6 +11226,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -13461,6 +13473,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -13484,6 +13497,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -15666,6 +15680,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -15689,6 +15704,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}
@@ -17864,6 +17880,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
               data-disabled={false}
               data-ghost={false}
               data-grown={false}
+              data-has-action={true}
               data-inverted={false}
               data-outline={false}
               data-shallow-disabled={false}
@@ -17887,6 +17904,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     data-disabled={false}
                     data-ghost={false}
                     data-grown={false}
+                    data-has-action={true}
                     data-inverted={false}
                     data-outline={false}
                     data-shallow-disabled={false}

@@ -17,6 +17,7 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
     outline,
     inverted,
     size,
+    hasAction = DEFAULTS.HAS_ACTION,
     ...otherProps
   } = props;
 
@@ -38,6 +39,7 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
       data-inverted={inverted || DEFAULTS.INVERTED}
       data-disabled={disabled || DEFAULTS.DISABLED}
       data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
+      data-has-action={hasAction}
       aria-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
       isDisabled={disabled}
       {...otherProps}

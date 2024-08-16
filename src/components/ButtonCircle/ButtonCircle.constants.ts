@@ -10,6 +10,7 @@ const DEFAULTS = {
   OUTLINE: false,
   SIZE: 40,
   INVERTED: false,
+  HAS_ACTION: true,
 };
 
 const COLORS = {

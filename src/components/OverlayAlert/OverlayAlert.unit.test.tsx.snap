@@ -116,6 +116,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-has-action={true}
                   data-inverted={false}
                   data-outline={false}
                   data-shallow-disabled={false}
@@ -132,6 +133,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                         data-disabled={false}
                         data-ghost={false}
                         data-grown={false}
+                        data-has-action={true}
                         data-inverted={false}
                         data-outline={false}
                         data-shallow-disabled={false}
@@ -667,6 +669,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-has-action={true}
                   data-inverted={false}
                   data-outline={false}
                   data-shallow-disabled={false}
@@ -683,6 +686,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                         data-disabled={false}
                         data-ghost={false}
                         data-grown={false}
+                        data-has-action={true}
                         data-inverted={false}
                         data-outline={false}
                         data-shallow-disabled={false}
@@ -722,6 +726,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-has-action={true}
                   data-inverted={false}
                   data-outline={false}
                   data-shallow-disabled={false}
@@ -738,6 +743,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                         data-disabled={false}
                         data-ghost={false}
                         data-grown={false}
+                        data-has-action={true}
                         data-inverted={false}
                         data-outline={false}
                         data-shallow-disabled={false}
@@ -777,6 +783,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-has-action={true}
                   data-inverted={false}
                   data-outline={false}
                   data-shallow-disabled={false}
@@ -793,6 +800,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                         data-disabled={false}
                         data-ghost={false}
                         data-grown={false}
+                        data-has-action={true}
                         data-inverted={false}
                         data-outline={false}
                         data-shallow-disabled={false}

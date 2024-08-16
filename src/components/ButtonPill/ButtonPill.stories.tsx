@@ -7,10 +7,14 @@ import {
   MultiTemplateWithPseudoStates,
   Template,
 } from '../../storybook/helper.stories.templates';
+import { Story } from '@storybook/react';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
 import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
+import Tooltip from '../Tooltip';
+import Flex from '../Flex';
+import Text from '../Text';
 
 import ButtonPill, { ButtonPillProps } from './';
 import argTypes from './ButtonPill.stories.args';
@@ -371,6 +375,44 @@ NotGhostOutlineInverted.parameters = {
   ],
 };
 
+const WithoutAction: Story = () => {
+  return (
+    <div>
+      <div style={{ marginBottom: '2rem' }}>
+        For accessibility reasons, additional explanation to text in the UI should be placed
+        next/below to the text or using a Tooltip. If a tooltip is used, the Icon needs to wrapper
+        in a ButtonCircle ghost = true and hasAction = false to get no change in color on hover and
+        pressed
+      </div>
+
+      <Flex direction="column" ygap="1.5rem">
+        <div>
+          <b>A. Text with additional explanation next to it</b>
+          <Flex ygap="0.25rem" direction="column">
+            <Text>Some text</Text>
+            <Text type="body-secondary">Additional explanation of that text</Text>
+          </Flex>
+        </div>
+        <div>
+          <b>B. Text with additional explanation on a tooltip</b>
+          <Tooltip
+            type="description"
+            triggerComponent={
+              <ButtonPill hasAction={false} ghost>
+                Some text
+              </ButtonPill>
+            }
+          >
+            Additional explanation of that text
+          </Tooltip>
+        </div>
+      </Flex>
+    </div>
+  );
+};
+
+WithoutAction.argTypes = {};
+
 const Common = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -410,5 +452,6 @@ export {
   NotGhostNotOutlineInverted,
   GhostOutlineNotInverted,
   NotGhostOutlineInverted,
+  WithoutAction,
   Common,
 };

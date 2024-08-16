@@ -506,6 +506,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={true}
+                  data-has-action={true}
                   data-inverted={false}
                   data-multiple-children={false}
                   data-outline={false}
@@ -522,6 +523,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
+                        data-has-action={true}
                         data-inverted={false}
                         data-multiple-children={false}
                         data-outline={false}
@@ -701,6 +703,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={true}
+                  data-has-action={true}
                   data-inverted={false}
                   data-multiple-children={false}
                   data-outline={false}
@@ -717,6 +720,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
+                        data-has-action={true}
                         data-inverted={false}
                         data-multiple-children={false}
                         data-outline={false}
@@ -901,6 +905,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-color="primary"
                   data-disabled={false}
                   data-ghost={true}
+                  data-has-action={true}
                   data-inverted={false}
                   data-multiple-children={false}
                   data-outline={false}
@@ -917,6 +922,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-color="primary"
                         data-disabled={false}
                         data-ghost={true}
+                        data-has-action={true}
                         data-inverted={false}
                         data-multiple-children={false}
                         data-outline={false}

@@ -46,4 +46,9 @@ export interface Props extends ButtonSimpleProps {
    * Size index of this ButtonPill.
    */
   size?: number;
+
+  /**
+   * Whether or not this ButtonPill has an action or not, like when it only triggers a Tooltip.
+   */
+  hasAction?: boolean;
 }

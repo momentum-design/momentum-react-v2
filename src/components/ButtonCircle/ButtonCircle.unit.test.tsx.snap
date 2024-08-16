@@ -8,6 +8,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -24,6 +25,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -61,6 +63,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={true}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -77,6 +80,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={true}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -119,6 +123,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
     data-color="primary"
     data-disabled={true}
     data-ghost={true}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -139,6 +144,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
           data-color="primary"
           data-disabled={true}
           data-ghost={true}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -181,6 +187,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={true}
@@ -197,6 +204,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={true}
@@ -239,6 +247,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={true}
     data-multiple-children={false}
     data-outline={true}
@@ -255,6 +264,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={true}
           data-multiple-children={false}
           data-outline={true}
@@ -292,6 +302,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
     data-color="primary"
     data-disabled={true}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -312,12 +323,72 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
           data-color="primary"
           data-disabled={true}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
           data-shallow-disabled={false}
           data-size={40}
           disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <span>
+            X
+          </span>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</ButtonCircle>
+`;
+
+exports[`<ButtonCircle /> snapshot should match snapshot when has no action is true 1`] = `
+<ButtonCircle
+  hasAction={false}
+>
+  <ButtonSimple
+    aria-disabled={false}
+    className="md-button-circle-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-ghost={false}
+    data-has-action={false}
+    data-inverted={false}
+    data-multiple-children={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-button-circle-wrapper md-button-simple-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-has-action={false}
+          data-inverted={false}
+          data-multiple-children={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -354,6 +425,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -371,6 +443,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -412,6 +485,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -428,6 +502,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -465,6 +540,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
     data-color="message"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -481,6 +557,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
           data-color="message"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -522,6 +599,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -539,6 +617,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -575,6 +654,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={true}
     data-outline={false}
@@ -591,6 +671,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={true}
           data-outline={false}
@@ -635,6 +716,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -651,6 +733,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -696,6 +779,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -717,6 +801,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}
@@ -759,6 +844,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
     data-color="primary"
     data-disabled={false}
     data-ghost={false}
+    data-has-action={true}
     data-inverted={false}
     data-multiple-children={false}
     data-outline={false}
@@ -776,6 +862,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
           data-color="primary"
           data-disabled={false}
           data-ghost={false}
+          data-has-action={true}
           data-inverted={false}
           data-multiple-children={false}
           data-outline={false}

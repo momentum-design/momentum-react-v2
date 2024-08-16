@@ -128,4 +128,18 @@ export default {
       },
     },
   },
+  hasAction: {
+    description:
+      'Whether or not this ButtonPill has an action or not, like when it only triggers a Tooltip.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.HAS_ACTION,
+      },
+    },
+  },
 };

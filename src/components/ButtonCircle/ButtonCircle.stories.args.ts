@@ -115,6 +115,20 @@ const buttonCircleArgTypes = {
       },
     },
   },
+  hasAction: {
+    description:
+      'Whether or not this ButtonCircle has an action or not, like when it only triggers a Tooltip.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.HAS_ACTION,
+      },
+    },
+  },
 };
 
 export { buttonCircleArgTypes };

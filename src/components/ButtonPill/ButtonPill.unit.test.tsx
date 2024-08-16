@@ -98,6 +98,16 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when has no action is true', () => {
+      expect.assertions(1);
+
+      const hasAction = !DEFAULTS.HAS_ACTION;
+
+      const container = mount(<ButtonPill hasAction={hasAction}>Example Text</ButtonPill>);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot when a ghost and disabled', () => {
       expect.assertions(1);
 
@@ -242,6 +252,18 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-ghost')).toBe(`${ghost}`);
+    });
+
+    it('should pass hasAction prop', () => {
+      expect.assertions(1);
+
+      const hasAction = !DEFAULTS.HAS_ACTION;
+
+      const element = mount(<ButtonPill hasAction={hasAction} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-has-action')).toBe(`${hasAction}`);
     });
 
     it('should pass outline prop', () => {

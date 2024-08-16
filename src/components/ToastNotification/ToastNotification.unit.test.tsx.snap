@@ -147,6 +147,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-shallow-disabled={false}
@@ -163,6 +164,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-has-action={true}
                   data-inverted={false}
                   data-outline={false}
                   data-shallow-disabled={false}
@@ -202,6 +204,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={true}
             data-shallow-disabled={false}
@@ -218,6 +221,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-disabled={false}
                   data-ghost={false}
                   data-grown={false}
+                  data-has-action={true}
                   data-inverted={false}
                   data-outline={true}
                   data-shallow-disabled={false}
@@ -503,6 +507,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
               data-color="primary"
               data-disabled={false}
               data-ghost={true}
+              data-has-action={true}
               data-inverted={false}
               data-multiple-children={false}
               data-outline={false}
@@ -521,6 +526,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
                     data-color="primary"
                     data-disabled={false}
                     data-ghost={true}
+                    data-has-action={true}
                     data-inverted={false}
                     data-multiple-children={false}
                     data-outline={false}

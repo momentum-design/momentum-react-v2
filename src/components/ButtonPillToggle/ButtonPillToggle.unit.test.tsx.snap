@@ -19,6 +19,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={false}
@@ -42,6 +43,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={false}
@@ -94,6 +96,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={false}
@@ -118,6 +121,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={false}
@@ -170,6 +174,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={true}
@@ -194,6 +199,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={true}
@@ -244,6 +250,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being fa
       data-disabled={false}
       data-ghost={false}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={false}
@@ -267,6 +274,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being fa
             data-disabled={false}
             data-ghost={false}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={false}
@@ -317,6 +325,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being tr
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={false}
@@ -340,6 +349,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being tr
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={false}
@@ -391,6 +401,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={false}
@@ -415,6 +426,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={false}
@@ -466,6 +478,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={true}
@@ -490,6 +503,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={true}
@@ -541,6 +555,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={false}
       data-selected={false}
@@ -564,6 +579,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={false}
             data-selected={false}
@@ -615,6 +631,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
       data-disabled={false}
       data-ghost={true}
       data-grown={false}
+      data-has-action={true}
       data-inverted={false}
       data-outline={true}
       data-selected={false}
@@ -638,6 +655,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             data-disabled={false}
             data-ghost={true}
             data-grown={false}
+            data-has-action={true}
             data-inverted={false}
             data-outline={true}
             data-selected={false}
