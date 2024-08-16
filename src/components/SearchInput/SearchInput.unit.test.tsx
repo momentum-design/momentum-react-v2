@@ -128,7 +128,7 @@ describe('<SearchInput />', () => {
       expect.assertions(1);
 
       const container = await mountComponent(
-        <SearchInput isCombobox={true} isExpanded={false} clearButtonAriaLabel="Clear" />
+        <SearchInput isCombobox={true} isComboboxExpanded={false} clearButtonAriaLabel="Clear" />
       );
 
       expect(container).toMatchSnapshot();
@@ -234,14 +234,14 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-label')).toBe('search');
     });
-    it('should have the aria-controls attribute when isComboxbox=true and controls is provided', async () => {
+    it('should have the aria-controls attribute when isComboxbox=true and ariaControls is provided', async () => {
       expect.assertions(1);
 
       const element = (
         await mountAndWait(
           <SearchInput
+            ariaControls="list-element"
             isCombobox={true}
-            controls="list-element"
             searching={true}
             clearButtonAriaLabel="Clear"
           />
@@ -252,14 +252,14 @@ describe('<SearchInput />', () => {
 
       expect(element.getAttribute('aria-controls')).toBe('list-element');
     });
-    it('should have the aria-expanded attribute when isComboxbox=true and isExpanded is provided', async () => {
+    it('should have the aria-expanded attribute when isComboxbox=true and isComboboxExpanded is provided', async () => {
       expect.assertions(1);
 
       const element = (
         await mountAndWait(
           <SearchInput
             isCombobox={true}
-            isExpanded={false}
+            isComboboxExpanded={false}
             searching={true}
             clearButtonAriaLabel="Clear"
           />
@@ -276,8 +276,8 @@ describe('<SearchInput />', () => {
       const element = (
         await mountAndWait(
           <SearchInput
-            controls="list-element"
-            isExpanded={false}
+            ariaControls="list-element"
+            isComboboxExpanded={false}
             searching={true}
             clearButtonAriaLabel="Clear"
           />
@@ -286,8 +286,8 @@ describe('<SearchInput />', () => {
         .find('input')
         .getDOMNode();
 
-      expect(element.getAttribute('controls')).toBeNull();
-      expect(element.getAttribute('isExpanded')).toBeNull();
+      expect(element.getAttribute('aria-controls')).toBeNull();
+      expect(element.getAttribute('aria-expanded')).toBeNull();
     });
     it('should have no aria-controls or aria-expanded attributes when isCombobox=false', async () => {
       expect.assertions(2);
@@ -295,9 +295,9 @@ describe('<SearchInput />', () => {
       const element = (
         await mountAndWait(
           <SearchInput
+            ariaControls="list-element"
             isCombobox={false}
-            controls="list-element"
-            isExpanded={false}
+            isComboboxExpanded={false}
             searching={true}
             clearButtonAriaLabel="Clear"
           />
@@ -306,10 +306,10 @@ describe('<SearchInput />', () => {
         .find('input')
         .getDOMNode();
 
-      expect(element.getAttribute('controls')).toBeNull();
-      expect(element.getAttribute('isExpanded')).toBeNull();
+      expect(element.getAttribute('aria-controls')).toBeNull();
+      expect(element.getAttribute('aria-expanded')).toBeNull();
     });
-    it('should console warn when isCombobox is provided without isExpanded', async () => {
+    it('should console warn when isCombobox is provided without isComboboxExpanded', async () => {
       expect.assertions(1);
       const logSpy = jest.spyOn(global.console, 'warn');
 
@@ -321,14 +321,14 @@ describe('<SearchInput />', () => {
 
       logSpy.mockRestore();
     });
-    it('should console warn when controls is provided without isCombobox', async () => {
+    it('should console warn when ariaControls is provided without isCombobox', async () => {
       expect.assertions(1);
       const logSpy = jest.spyOn(global.console, 'warn');
 
       await mountAndWait(
         <SearchInput
-          isExpanded={false}
-          controls={'list-element'}
+          ariaControls="list-element"
+          isComboboxExpanded={false}
           searching={true}
           clearButtonAriaLabel="Clear"
         />
@@ -338,14 +338,14 @@ describe('<SearchInput />', () => {
 
       logSpy.mockRestore();
     });
-    it('should console warn when isExpanded is provided without isCombobox', async () => {
+    it('should console warn when isComboboxExpanded is provided without isCombobox', async () => {
       expect.assertions(1);
       const logSpy = jest.spyOn(global.console, 'warn');
 
       await mountAndWait(
         <SearchInput
-          isExpanded={false}
-          controls={'list-element'}
+          ariaControls="list-element"
+          isComboboxExpanded={false}
           searching={true}
           clearButtonAriaLabel="Clear"
         />
@@ -362,7 +362,7 @@ describe('<SearchInput />', () => {
         await mountAndWait(
           <SearchInput
             isCombobox={true}
-            isExpanded={false}
+            isComboboxExpanded={false}
             searching={true}
             clearButtonAriaLabel="Clear"
           />

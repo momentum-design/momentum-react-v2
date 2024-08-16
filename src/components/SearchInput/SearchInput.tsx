@@ -34,18 +34,18 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
     label,
     isDisabled,
     height = DEFAULTS.HEIGHT,
-    controls,
+    ariaControls,
     isCombobox = DEFAULTS.ISCOMBOBOX,
-    isExpanded,
+    isComboboxExpanded,
   } = props;
 
-  if (isCombobox && isExpanded === undefined) {
+  if (isCombobox && isComboboxExpanded === undefined) {
     console.warn(WARNINGS.ISCOMBOBOX_1_ISEXPANDED_0);
   }
-  if (!isCombobox && !!controls) {
+  if (!isCombobox && !!ariaControls) {
     console.warn(WARNINGS.ISCOMBOBOX_0_CONTROLS_1);
   }
-  if (!isCombobox && typeof isExpanded === 'boolean') {
+  if (!isCombobox && typeof isComboboxExpanded === 'boolean') {
     console.warn(WARNINGS.ISCOMBOBOX_0_ISEXPANDED_1);
   }
 
@@ -87,8 +87,8 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
 
   const inputElement = isCombobox ? (
     <input
-      aria-controls={controls}
-      aria-expanded={isExpanded}
+      aria-controls={ariaControls}
+      aria-expanded={isComboboxExpanded}
       role={ARIA_ROLES.COMBOBOX}
       {...inputProps}
       {...focusProps}
