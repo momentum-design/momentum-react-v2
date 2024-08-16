@@ -113,6 +113,18 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when onlyTriggersTooltip', () => {
+      expect.assertions(1);
+
+      const onlyTriggersTooltip = !DEFAULTS.ONLY_TRIGGERS_TOOLTIP;
+
+      const container = mount(
+        <ButtonPill onlyTriggersTooltip={onlyTriggersTooltip}>Example Text</ButtonPill>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot when color is outlined', () => {
       expect.assertions(1);
 
@@ -242,6 +254,18 @@ describe('<ButtonPill />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-ghost')).toBe(`${ghost}`);
+    });
+
+    it('should pass onlyTriggersTooltip prop', () => {
+      expect.assertions(1);
+
+      const onlyTriggersTooltip = !DEFAULTS.ONLY_TRIGGERS_TOOLTIP;
+
+      const element = mount(<ButtonPill onlyTriggersTooltip={onlyTriggersTooltip} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-only-triggers-tooltip')).toBe(`${onlyTriggersTooltip}`);
     });
 
     it('should pass outline prop', () => {
