@@ -146,7 +146,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   /**
    * Focus management
    */
-  const focus = listContext?.cßurrentFocus === itemIndex;
+  const focus = listContext?.currentFocus === itemIndex;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
