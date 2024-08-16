@@ -12,7 +12,7 @@ import Icon from '../Icon';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction } = props;
+  const { item, state, onAction, itemIndex } = props;
 
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
@@ -74,6 +74,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     <ListItemBase
       size={itemSize}
       shape={itemShape}
+      itemIndex={itemIndex}
       className={STYLE.wrapper}
       ref={ref}
       isDisabled={isDisabled}
