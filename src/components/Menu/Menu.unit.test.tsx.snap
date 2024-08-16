@@ -40,6 +40,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={0}
       key="one"
       state={
         Object {
@@ -178,6 +179,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         data-key="one"
         isDisabled={false}
         isPadded={true}
+        itemIndex={0}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -270,6 +272,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={1}
       key="two"
       state={
         Object {
@@ -408,6 +411,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         data-key="two"
         isDisabled={false}
         isPadded={true}
+        itemIndex={1}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -520,6 +524,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={0}
       key="one"
       state={
         Object {
@@ -658,6 +663,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         data-key="one"
         isDisabled={false}
         isPadded={true}
+        itemIndex={0}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -750,6 +756,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={1}
       key="two"
       state={
         Object {
@@ -888,6 +895,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         data-key="two"
         isDisabled={false}
         isPadded={true}
+        itemIndex={1}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -1001,6 +1009,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={0}
       key="one"
       state={
         Object {
@@ -1139,6 +1148,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         data-key="one"
         isDisabled={false}
         isPadded={true}
+        itemIndex={0}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -1231,6 +1241,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={1}
       key="two"
       state={
         Object {
@@ -1369,6 +1380,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         data-key="two"
         isDisabled={false}
         isPadded={true}
+        itemIndex={1}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -1482,6 +1494,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={0}
       key="one"
       state={
         Object {
@@ -1620,6 +1633,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         data-key="one"
         isDisabled={false}
         isPadded={true}
+        itemIndex={0}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -1712,6 +1726,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={1}
       key="two"
       state={
         Object {
@@ -1850,6 +1865,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         data-key="two"
         isDisabled={false}
         isPadded={true}
+        itemIndex={1}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -1962,6 +1978,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={0}
       key="one"
       state={
         Object {
@@ -2100,6 +2117,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         data-key="one"
         isDisabled={false}
         isPadded={true}
+        itemIndex={0}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -2192,6 +2210,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={1}
       key="two"
       state={
         Object {
@@ -2330,6 +2349,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         data-key="two"
         isDisabled={false}
         isPadded={true}
+        itemIndex={1}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -2451,6 +2471,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={0}
       key="one"
       state={
         Object {
@@ -2589,6 +2610,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         data-key="one"
         isDisabled={false}
         isPadded={true}
+        itemIndex={0}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}
@@ -2681,6 +2703,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
           "wrapper": undefined,
         }
       }
+      itemIndex={1}
       key="two"
       state={
         Object {
@@ -2819,6 +2842,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         data-key="two"
         isDisabled={false}
         isPadded={true}
+        itemIndex={1}
         onClick={[Function]}
         onDragStart={[Function]}
         onFocus={[Function]}

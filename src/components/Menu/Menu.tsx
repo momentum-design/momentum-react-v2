@@ -13,6 +13,7 @@ import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import { ListContext } from '../List/List.utils';
 import { DEFAULTS as LIST_DEFAULTS } from '../List/List.constants';
+import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
 
 
 export const MenuContext = React.createContext<MenuContextValue>({});
@@ -52,9 +53,13 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   const ref = providedRef || internalRef;
 
   const { menuProps } = useMenu(_props, state, ref);
+  const itemArray = Array.from(state.collection.getKeys());
+  const listSize = itemArray.length;
+
+  const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation});
 
   const renderItem = useCallback(
-    <T extends object>(item: Node<T>, state: TreeState<T>) => {
+    <T extends object>(item: Node<T>, state: TreeState<T>, index: number) => {
       if (item.type === 'section') {
         return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} orientation={orientation} />;
       } else {
@@ -65,7 +70,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
         }
 
         let menuItem = (
-          <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
+          <MenuItem itemIndex={index} key={item.key} item={item} state={state} onAction={_props.onAction} />
         );
 
         if (item.wrapper) {
@@ -87,7 +92,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   // for example when Menu is inside a list row
   return (
     <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
-      <ListContext.Provider value={{}}>
+      <ListContext.Provider value={getContext()}>
         <ul
           className={classnames(className, STYLE.wrapper)}
           id={id}
@@ -96,10 +101,11 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           {...menuProps}
           role={isGroupRole ? GROUP : menuProps.role}
           aria-labelledby={ariaLabelledby}
+          {...keyboardProps}
         >
-          {Array.from(state.collection.getKeys()).map((key) => {
+          {itemArray.map((key, index) => {
             const item = state.collection.getItem(key) as Node<T>;
-            return renderItem(item, state);
+            return renderItem(item, state, index);
           })}
         </ul>
       </ListContext.Provider>
