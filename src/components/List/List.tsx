@@ -4,8 +4,8 @@ import classnames from 'classnames';
 import { DEFAULTS, STYLE } from './List.constants';
 import { Props } from './List.types';
 import './List.style.scss';
-import { ListContext, setNextFocus } from './List.utils';
-import { useKeyboard } from '@react-aria/interactions';
+import { ListContext } from './List.utils';
+import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
 
 const List: FC<Props> = (props: Props) => {
   const {
@@ -22,44 +22,7 @@ const List: FC<Props> = (props: Props) => {
     ...rest
   } = props;
 
-  const [currentFocus, setCurrentFocus] = useState<number>(0);
-
-  const setContext = useCallback(
-    (newFocus) => {
-      setCurrentFocus(newFocus);
-    },
-    [currentFocus, setCurrentFocus, listSize]
-  );
-
-  const getContext = useCallback(
-    () => ({ listSize, shouldFocusOnPress, shouldItemFocusBeInset, currentFocus, setContext }),
-    [currentFocus, setCurrentFocus, listSize]
-  );
-
-  const { keyboardProps } = useKeyboard({
-    onKeyDown: (evt) => {
-      const forwardKey = orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown';
-      const backwardKey = orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp';
-
-      switch (evt.key) {
-        case 'Escape':
-          evt.continuePropagation();
-          break;
-        case backwardKey:
-          evt.preventDefault();
-          setNextFocus(true, listSize, currentFocus, noLoop, setCurrentFocus);
-          break;
-
-        case forwardKey:
-          evt.preventDefault();
-          setNextFocus(false, listSize, currentFocus, noLoop, setCurrentFocus);
-          break;
-
-        default:
-          break;
-      }
-    },
-  });
+  const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation, noLoop, contextProps: {shouldFocusOnPress, shouldItemFocusBeInset}});
 
   const ref = useRef<HTMLUListElement>();
 
