@@ -254,7 +254,7 @@ exports[`<SearchInput /> snapshot should match snapshot when isCombobox is true 
   <SearchInput
     clearButtonAriaLabel="Clear"
     isCombobox={true}
-    isExpanded={false}
+    isComboboxExpanded={false}
   >
     <div
       className="md-search-input-wrapper"

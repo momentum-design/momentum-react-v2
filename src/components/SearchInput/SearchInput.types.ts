@@ -95,7 +95,7 @@ export interface Props extends AriaSearchFieldProps {
    * While isCombobox=true, the HTML ID of the element that this SearchInput relates to,
    * used for the aria-controls attribute
    */
-  controls?: string;
+  ariaControls?: string;
 
   /**
    * Whether SearchInput is being used with a role of combobox or not
@@ -106,5 +106,5 @@ export interface Props extends AriaSearchFieldProps {
    * While isCombobox=true, whether the combobox is expanded/collapsed,
    * used for the aria-expanded attribute
    */
-  isExpanded?: boolean;
+  isComboboxExpanded?: boolean;
 }
