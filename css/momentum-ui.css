@@ -20831,7 +20831,7 @@ nav span {
     background-color: #00A0D1;
     background-color: var(--mds-color-theme-control-active-normal, #00A0D1);
     border: none;
-    color: var(--mds-color-theme-text-inverted-normal); }
+    color: var(--mds-color-theme-common-inverted-text-primary-normal); }
   .md-checkbox .md-checkbox__input:checked + .md-checkbox__label:hover:before, .md-checkbox .md-checkbox__input:checked + .md-checkbox__label.hover:before, .md-checkbox .md-checkbox__input:indeterminate + .md-checkbox__label:hover:before, .md-checkbox .md-checkbox__input:indeterminate + .md-checkbox__label.hover:before, .md-checkbox .md-checkbox__input.indeterminate + .md-checkbox__label:hover:before, .md-checkbox .md-checkbox__input.indeterminate + .md-checkbox__label.hover:before {
     background-color: #007AA3;
     background-color: var(--mds-color-theme-control-active-hover, #007AA3); }
@@ -20860,12 +20860,12 @@ nav span {
   border: 0; }
   .md-checkbox .md-checkbox__input:checked + .md-checkbox__label:before, .md-checkbox .md-checkbox__input:indeterminate + .md-checkbox__label:before, .md-checkbox .md-checkbox__input.indeterminate + .md-checkbox__label:before {
     color: #FFFFFF;
-    color: var(--mds-color-theme-text-inverted-normal);
+    color: var(--mds-color-theme-common-inverted-text-primary-normal);
     cursor: pointer; }
   .md-checkbox .md-checkbox__input:checked:disabled + .md-checkbox__label, .md-checkbox .md-checkbox__input:indeterminate:disabled + .md-checkbox__label, .md-checkbox .md-checkbox__input.indeterminate:disabled + .md-checkbox__label {
     color: var(--mds-color-theme-text-primary-disabled); }
     .md-checkbox .md-checkbox__input:checked:disabled + .md-checkbox__label:before, .md-checkbox .md-checkbox__input:indeterminate:disabled + .md-checkbox__label:before, .md-checkbox .md-checkbox__input.indeterminate:disabled + .md-checkbox__label:before {
-      color: var(--mds-color-theme-text-inverted-normal); }
+      color: var(--mds-color-theme-common-inverted-text-primary-normal); }
   .md-checkbox .md-checkbox__input:disabled + .md-checkbox__label, .md-checkbox .md-checkbox__input.disabled + .md-checkbox__label {
     cursor: default;
     color: var(--mds-color-theme-text-primary-disabled) !important; }
@@ -21991,7 +21991,7 @@ button.md-close {
       .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input:checked + .md-checkbox__label:before, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input:indeterminate + .md-checkbox__label:before, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input.indeterminate + .md-checkbox__label:before {
         background-color: var(--null);
         border: none;
-        color: var(--mds-color-theme-text-inverted-normal); }
+        color: var(--mds-color-theme-common-inverted-text-primary-normal); }
       .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input:checked + .md-checkbox__label:hover:before, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input:checked + .md-checkbox__label.hover:before, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input:indeterminate + .md-checkbox__label:hover:before, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input:indeterminate + .md-checkbox__label.hover:before, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input.indeterminate + .md-checkbox__label:hover:before, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input.indeterminate + .md-checkbox__label.hover:before {
         background-color: var(--null); }
       .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input:disabled, .md--dark .md-event-overlay__children .md-checkbox .md-checkbox__input.disabled {

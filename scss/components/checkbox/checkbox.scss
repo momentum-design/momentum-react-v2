@@ -43,7 +43,7 @@
         + .#{$checkbox__class}__label {
           &:before {
             color: $form-control__content;
-            color: var(--mds-color-theme-text-inverted-normal);
+            color: var(--mds-color-theme-common-inverted-text-primary-normal);
             cursor: pointer;
           }
         }

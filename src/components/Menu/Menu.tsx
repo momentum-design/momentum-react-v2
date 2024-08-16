@@ -12,6 +12,9 @@ import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import { ListContext } from '../List/List.utils';
+import { DEFAULTS as LIST_DEFAULTS } from '../List/List.constants';
+import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
+
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -34,7 +37,10 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
     isGroupRole,
+    ariaLabelledby,
+    orientation = LIST_DEFAULTS.ORIENTATION,
   } = props;
+
   const contextProps = useMenuContext();
 
   const _props = {
@@ -47,11 +53,15 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   const ref = providedRef || internalRef;
 
   const { menuProps } = useMenu(_props, state, ref);
+  const itemArray = Array.from(state.collection.getKeys());
+  const listSize = itemArray.length;
+
+  const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation});
 
   const renderItem = useCallback(
-    <T extends object>(item: Node<T>, state: TreeState<T>) => {
+    <T extends object>(item: Node<T>, state: TreeState<T>, index: number) => {
       if (item.type === 'section') {
-        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
+        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} orientation={orientation} />;
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
         // and we don't want to render items twice
@@ -60,7 +70,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
         }
 
         let menuItem = (
-          <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
+          <MenuItem itemIndex={index} key={item.key} item={item} state={state} onAction={_props.onAction} />
         );
 
         if (item.wrapper) {
@@ -77,12 +87,12 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   // label it by the triggerComponent's id, and that doesn't really make
   // sense especially when there are multiple menus inside.
   delete menuProps['aria-labelledby'];
-
+  
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
   return (
     <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
-      <ListContext.Provider value={{}}>
+      <ListContext.Provider value={getContext()}>
         <ul
           className={classnames(className, STYLE.wrapper)}
           id={id}
@@ -90,10 +100,12 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           ref={ref}
           {...menuProps}
           role={isGroupRole ? GROUP : menuProps.role}
+          aria-labelledby={ariaLabelledby}
+          {...keyboardProps}
         >
-          {Array.from(state.collection.getKeys()).map((key) => {
+          {itemArray.map((key, index) => {
             const item = state.collection.getItem(key) as Node<T>;
-            return renderItem(item, state);
+            return renderItem(item, state, index);
           })}
         </ul>
       </ListContext.Provider>

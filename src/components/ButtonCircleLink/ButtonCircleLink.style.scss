@@ -2,7 +2,6 @@
   display: flex;
   width: fit-content;
   text-decoration: none;
-
   border: var(--md-globals-border-clear);
   border-width: 0.0625rem;
   cursor: pointer;
@@ -13,23 +12,23 @@
   // A. GHOST = FALSE | OUTLINE = FALSE | INVERTED = FALSE
   // A.1 Color = undefined
   background-color: var(--mds-color-theme-button-primary-normal);
-  color: var(--mds-color-theme-text-inverted-normal);
+  color: var(--mds-color-theme-inverted-text-primary-normal);
 
   &:focus,
   &.focus {
-    color: var(--mds-color-theme-text-inverted-normal);
+    color: var(--mds-color-theme-inverted-text-primary-normal);
   }
 
   &:hover,
   &.hover {
     background-color: var(--mds-color-theme-button-primary-hover);
-    color: var(--mds-color-theme-text-inverted-normal);
+    color: var(--mds-color-theme-inverted-text-primary-normal);
   }
 
   &:active,
   &.active {
     background-color: var(--mds-color-theme-button-primary-pressed);
-    color: var(--mds-color-theme-text-inverted-normal);
+    color: var(--mds-color-theme-inverted-text-primary-normal);
   }
 
   &[data-shallow-disabled='true'],
@@ -43,18 +42,18 @@
   // A.2 Color = join
   &[data-color='join'] {
     background-color: var(--mds-color-theme-button-join-normal);
-    color: var(--mds-color-theme-common-text-white);
+    color: var(--mds-color-theme-common-text-primary-normal);
 
     &:hover,
     &.hover {
       background-color: var(--mds-color-theme-button-join-hover);
-      color: var(--mds-color-theme-common-text-white);
+      color: var(--mds-color-theme-common-text-primary-normal);
     }
 
     &:active,
     &.active {
       background-color: var(--mds-color-theme-button-join-pressed);
-      color: var(--mds-color-theme-common-text-white);
+      color: var(--mds-color-theme-common-text-primary-normal);
     }
 
     &[data-shallow-disabled='true'],
@@ -69,18 +68,18 @@
   // A.3 Color = cancel
   &[data-color='cancel'] {
     background-color: var(--mds-color-theme-button-cancel-normal);
-    color: var(--mds-color-theme-common-text-white);
+    color: var(--mds-color-theme-common-text-primary-normal);
 
     &:hover,
     &.hover {
       background-color: var(--mds-color-theme-button-cancel-hover);
-      color: var(--mds-color-theme-common-text-white);
+      color: var(--mds-color-theme-common-text-primary-normal);
     }
 
     &:active,
     &.active {
       background-color: var(--mds-color-theme-button-cancel-pressed);
-      color: var(--mds-color-theme-common-text-white);
+      color: var(--mds-color-theme-common-text-primary-normal);
     }
 
     &[data-shallow-disabled='true'],
@@ -95,18 +94,18 @@
   // A.4 Color = message
   &[data-color='message'] {
     background-color: var(--mds-color-theme-button-accent-normal);
-    color: var(--mds-color-theme-common-text-white);
+    color: var(--mds-color-theme-common-text-primary-normal);
 
     &:hover,
     &.hover {
       background-color: var(--mds-color-theme-button-accent-hover);
-      color: var(--mds-color-theme-common-text-white);
+      color: var(--mds-color-theme-common-text-primary-normal);
     }
 
     &:active,
     &.active {
       background-color: var(--mds-color-theme-button-accent-pressed);
-      color: var(--mds-color-theme-common-text-white);
+      color: var(--mds-color-theme-common-text-primary-normal);
     }
 
     &[data-shallow-disabled='true'],
@@ -231,7 +230,7 @@
     &[data-disabled='true'],
     &.disable,
     &[data-shallow-disabled='true'] {
-      border-color: var(--mds-color-theme-outline-disabled-normal);
+      border-color: var(--mds-color-theme-outline-primary-disabled);
       cursor: auto;
     }
 
@@ -242,7 +241,7 @@
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
@@ -254,7 +253,7 @@
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
@@ -266,7 +265,7 @@
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
@@ -275,50 +274,50 @@
   // D. GHOST = FALSE | OUTLINE = FALSE | INVERTED = TRUE
   &[data-ghost='false'][data-outline='false'][data-inverted='true'] {
     // D.1 color = undefined
-    background-color: var(--mds-color-theme-button-inverted-normal);
+    background-color: var(--mds-color-theme-inverted-button-primary-normal);
     color: var(--mds-color-theme-text-primary-normal);
 
     &:hover,
     &.hover {
-      background-color: var(--mds-color-theme-button-inverted-hover);
+      background-color: var(--mds-color-theme-inverted-button-primary-hover);
       color: var(--mds-color-theme-text-primary-normal);
     }
 
     &:active,
     &.active {
-      background-color: var(--mds-color-theme-button-inverted-pressed);
+      background-color: var(--mds-color-theme-inverted-button-primary-pressed);
       color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-disabled='true'],
     &.disable,
     &[data-shallow-disabled='true'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-primary-disabled);
       cursor: auto;
     }
 
     // D.2 color = join
     &[data-color='join'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-success-normal);
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-inverted-hover);
+        background-color: var(--mds-color-theme-inverted-button-primary-hover);
         color: var(--mds-color-theme-text-success-normal);
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-inverted-pressed);
+        background-color: var(--mds-color-theme-inverted-button-primary-pressed);
         color: var(--mds-color-theme-text-success-normal);
       }
 
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
+        background-color: var(--mds-color-theme-inverted-button-primary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
         cursor: auto;
       }
@@ -326,25 +325,25 @@
 
     // D.3 color = cancel
     &[data-color='cancel'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-error-normal);
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-inverted-hover);
+        background-color: var(--mds-color-theme-inverted-button-primary-hover);
         color: var(--mds-color-theme-text-error-normal);
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-inverted-pressed);
+        background-color: var(--mds-color-theme-inverted-button-primary-pressed);
         color: var(--mds-color-theme-text-error-normal);
       }
 
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
+        background-color: var(--mds-color-theme-inverted-button-primary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
         cursor: auto;
       }
@@ -352,25 +351,25 @@
 
     // D.4 color = message
     &[data-color='message'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-accent-normal);
 
       &:hover,
       &.hover {
-        background-color: var(--mds-color-theme-button-inverted-hover);
+        background-color: var(--mds-color-theme-inverted-button-primary-hover);
         color: var(--mds-color-theme-text-accent-normal);
       }
 
       &:active,
       &.active {
-        background-color: var(--mds-color-theme-button-inverted-pressed);
+        background-color: var(--mds-color-theme-inverted-button-primary-pressed);
         color: var(--mds-color-theme-text-accent-normal);
       }
 
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
+        background-color: var(--mds-color-theme-inverted-button-primary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
         cursor: auto;
       }
@@ -403,7 +402,7 @@
     &[data-shallow-disabled='true'] {
       background-color: var(--mds-color-theme-button-secondary-normal);
       color: var(--mds-color-theme-text-primary-disabled);
-      border-color: var(--mds-color-theme-outline-disabled-normal);
+      border-color: var(--mds-color-theme-outline-primary-disabled);
       cursor: auto;
     }
 
@@ -416,14 +415,14 @@
       &:hover,
       &.hover {
         background-color: var(--mds-color-theme-button-join-hover);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-join-pressed);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
@@ -432,7 +431,7 @@
       &[data-shallow-disabled='true'] {
         background-color: var(--mds-color-theme-button-secondary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
@@ -446,14 +445,14 @@
       &:hover,
       &.hover {
         background-color: var(--mds-color-theme-button-cancel-hover);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-cancel-pressed);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
@@ -462,7 +461,7 @@
       &[data-shallow-disabled='true'] {
         background-color: var(--mds-color-theme-button-secondary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
@@ -476,14 +475,14 @@
       &:hover,
       &.hover {
         background-color: var(--mds-color-theme-button-accent-hover);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-accent-pressed);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
@@ -492,7 +491,7 @@
       &[data-shallow-disabled='true'] {
         background-color: var(--mds-color-theme-button-secondary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
@@ -501,20 +500,20 @@
   // F. GHOST = FALSE | OUTLINE = TRUE | INVERTED = TRUE
   &[data-ghost='false'][data-outline='true'][data-inverted='true'] {
     // F.1 color = undefined
-    background-color: var(--mds-color-theme-button-inverted-normal);
+    background-color: var(--mds-color-theme-inverted-button-primary-normal);
     color: var(--mds-color-theme-text-primary-normal);
     border-color: var(--mds-color-theme-outline-button-normal);
 
     &:hover,
     &.hover {
-      background-color: var(--mds-color-theme-button-inverted-hover);
+      background-color: var(--mds-color-theme-inverted-button-primary-hover);
       border-color: var(--mds-color-theme-outline-button-normal);
       color: var(--mds-color-theme-text-primary-normal);
     }
 
     &:active,
     &.active {
-      background-color: var(--mds-color-theme-button-inverted-pressed);
+      background-color: var(--mds-color-theme-inverted-button-primary-pressed);
       border-color: var(--mds-color-theme-outline-button-normal);
       color: var(--mds-color-theme-text-primary-normal);
     }
@@ -522,98 +521,98 @@
     &[data-disabled='true'],
     &.disable,
     &[data-shallow-disabled='true'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-primary-disabled);
-      border-color: var(--mds-color-theme-outline-disabled-normal);
+      border-color: var(--mds-color-theme-outline-primary-disabled);
       cursor: auto;
     }
 
     // F.2 color = join
     &[data-color='join'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-success-normal);
       border-color: var(--mds-color-theme-outline-join-normal);
 
       &:hover,
       &.hover {
         background-color: var(--mds-color-theme-button-join-hover);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-join-pressed);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
+        background-color: var(--mds-color-theme-inverted-button-primary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
 
     // F.3 color = cancel
     &[data-color='cancel'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-error-normal);
       border-color: var(--mds-color-theme-outline-cancel-normal);
 
       &:hover,
       &.hover {
         background-color: var(--mds-color-theme-button-cancel-hover);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-cancel-pressed);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
+        background-color: var(--mds-color-theme-inverted-button-primary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }
 
     // F.4 color = message
     &[data-color='message'] {
-      background-color: var(--mds-color-theme-button-inverted-normal);
+      background-color: var(--mds-color-theme-inverted-button-primary-normal);
       color: var(--mds-color-theme-text-accent-normal);
       border-color: var(--mds-color-theme-outline-theme-normal);
 
       &:hover,
       &.hover {
         background-color: var(--mds-color-theme-button-accent-hover);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &:active,
       &.active {
         background-color: var(--mds-color-theme-button-accent-pressed);
-        color: var(--mds-color-theme-common-text-white);
+        color: var(--mds-color-theme-common-text-primary-normal);
         border-color: transparent;
       }
 
       &[data-disabled='true'],
       &.disable,
       &[data-shallow-disabled='true'] {
-        background-color: var(--mds-color-theme-button-inverted-normal);
+        background-color: var(--mds-color-theme-inverted-button-primary-normal);
         color: var(--mds-color-theme-text-primary-disabled);
-        border-color: var(--mds-color-theme-outline-disabled-normal);
+        border-color: var(--mds-color-theme-outline-primary-disabled);
         cursor: auto;
       }
     }

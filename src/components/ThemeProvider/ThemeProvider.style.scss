@@ -54,8 +54,8 @@
   --md-globals-border-style-solid: solid;
 
   // Gradient backgrounds
-  --md-globals-gradient-primary: var(--mds-color-theme-background-gradient-primary);
-  --md-globals-gradient-secondary: var(--mds-color-theme-background-gradient-secondary);
+  --md-globals-gradient-primary: var(--mds-color-theme-background-gradient-primary-normal);
+  --md-globals-gradient-secondary: var(--mds-color-theme-background-gradient-secondary-normal);
 
   &.md-theme-lightWebex {
     --md-globals-focus-ring-box-shadow: 0 0 0 0.25rem rgba(17, 112, 207, 0.3),

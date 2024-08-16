@@ -17,4 +17,9 @@ export interface Props<T> {
    * Handler to be called when this element is selected
    */
   onAction?: (key: Key) => void;
+  
+  /**
+   * Index for handling keyboard list navigation
+   */
+  itemIndex?: number;
 }

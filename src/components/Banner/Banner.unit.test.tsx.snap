@@ -58,6 +58,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
         size={88}
       >
         <div
+          aria-hidden="false"
           aria-label=""
           className="md-avatar-wrapper"
           data-color="default"
@@ -782,6 +783,7 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
         initials="CW"
       >
         <div
+          aria-hidden="false"
           aria-label=""
           className="md-avatar-wrapper"
           data-color="default"

@@ -93,11 +93,11 @@
   }
 
   &[data-format='overlay'] {
-    --local-background-normal: var(--mds-color-theme-background-common-normal);
-    --local-background-hover: var(--mds-color-theme-background-common-normal);
-    --local-background-active: var(--mds-color-theme-background-common-normal);
+    --local-background-normal: var(--mds-color-theme-common-background-solid-light);
+    --local-background-hover: var(--mds-color-theme-common-background-solid-light);
+    --local-background-active: var(--mds-color-theme-common-background-solid-light);
     --local-border-color: var(--mds-color-theme-common-control-share-content-inactive);
-    --local-text-color: var(--mds-color-theme-common-text-black);
+    --local-text-color: var(--mds-color-theme-common-inverted-text-primary-normal);
   }
 
   &[data-format='static'] {

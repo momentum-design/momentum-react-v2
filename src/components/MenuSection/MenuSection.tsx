@@ -7,18 +7,24 @@ import { Props } from './MenuSection.types';
 import './MenuSection.style.scss';
 import MenuItem from '../MenuItem';
 import { useMenuSection } from '@react-aria/menu';
+import { ListContext } from '../List/List.utils';
+import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
 
 const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction } = props;
+  const { item, state, onAction, orientation } = props;
 
   const { itemProps, headingProps, groupProps } = useMenuSection({
     heading: item.rendered,
     'aria-label': item['aria-label'],
   });
+  const childItems = Array.from(item.childNodes);
+  const listSize = childItems.length;
+
+  const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation});
 
   const renderItems = useCallback(() => {
-    return Array.from(item.childNodes).map((node) => (
-      <MenuItem key={node.key} item={node} state={state} onAction={onAction} />
+    return Array.from(item.childNodes).map((node, index) => (
+      <MenuItem itemIndex={index} key={node.key} item={node} state={state} onAction={onAction} />
     ));
   }, [state]);
 
@@ -31,9 +37,11 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
       ) : (
         item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
       )}
-      <ul {...groupProps} className={STYLE.wrapper}>
-        {renderItems()}
-      </ul>
+      <ListContext.Provider value={getContext()}>
+        <ul {...groupProps} {...keyboardProps} className={STYLE.wrapper}>
+          {renderItems()}
+        </ul>
+      </ListContext.Provider>
     </ul>
   );
 };

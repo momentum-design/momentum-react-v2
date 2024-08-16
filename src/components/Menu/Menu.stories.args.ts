@@ -114,4 +114,15 @@ export default {
       },
     },
   },
+  'ariaLabelledby': {
+    description:
+      'The aria-labelledby for the menu wrapper',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: 'undefined',
+    },
+  },
 };

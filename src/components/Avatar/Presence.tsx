@@ -9,14 +9,13 @@ interface PresenceProps {
   presenceIcon: string;
   isCircularWrapper: boolean;
   size: AvatarSize;
-  ariaLabel :string;
 }
 
 /**
  * The Presence component.
  */
 const Presence: FC<PresenceProps> = (props: PresenceProps) => {
-  const { presenceColor, presenceIcon, isCircularWrapper, size, ariaLabel } = props;
+  const { presenceColor, presenceIcon, isCircularWrapper, size } = props;
 
   return (
     <div className={STYLE.presenceIconWrapper} data-shape={isCircularWrapper}>
@@ -26,7 +25,6 @@ const Presence: FC<PresenceProps> = (props: PresenceProps) => {
         fillColor={presenceColor}
         strokeColor="none"
         scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
-        ariaLabel={ariaLabel}
       />
     </div>
   );

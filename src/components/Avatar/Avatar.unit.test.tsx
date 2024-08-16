@@ -7,7 +7,6 @@ import { mountAndWait } from '../../../test/utils';
 import Icon from '../Icon';
 
 describe('Avatar', () => {
-
   const sampleProps = {
     type: 'person',
     title: 'Name',
@@ -18,7 +17,7 @@ describe('Avatar', () => {
     icon: 'Accessibility',
     typingLabel: 'is typing',
   };
-  
+
   const checkAvatarAccessibility = ({
     withOnPress,
     withPresence,
@@ -30,10 +29,10 @@ describe('Avatar', () => {
   }) => {
     const onPress = withOnPress
       ? () => {
-        return 'hi';
-      }
+          return 'hi';
+        }
       : null;
-  
+
     const mockAvatar = mount(
       <Avatar
         mainLabel={sampleProps.mainLabel}
@@ -46,41 +45,27 @@ describe('Avatar', () => {
         presenceLabel={withPresence ? sampleProps.presenceLabel : ''}
         isTyping={isTyping}
         typingLabel={sampleProps.typingLabel}
-      />,
+      />
     );
-  
-    let assertCount = 2;
 
-    if (withPresence) {
-      assertCount += 1;
-    }
+    expect.assertions(2);
 
-    expect.assertions(assertCount);
-  
     const container = mockAvatar.find('.md-avatar-wrapper');
-
     expect(container.props().role).toEqual(expectedRole);
-  
+
     if (withOnPress) {
       const button = mockAvatar.find('button');
       expect(button.props()['aria-label']).toEqual(expectedLabel);
     } else {
       expect(container.props()['aria-label']).toEqual(expectedLabel);
     }
-
-    if (withPresence) {
-      const status = mockAvatar.find(Icon).at(avatarType === 'icon' ? 1 : 0);
-      expect(status.props().ariaLabel).toEqual(sampleProps.presenceLabel);
-    }
   };
-  
 
   describe('snapshot', () => {
-
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<Avatar  title="Cisco Webex" />);
+      const container = mount(<Avatar title="Cisco Webex" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -88,7 +73,7 @@ describe('Avatar', () => {
     it('should match snapshot with initials', () => {
       expect.assertions(1);
 
-      const container = mount(<Avatar  initials="CW" />);
+      const container = mount(<Avatar initials="CW" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -98,7 +83,7 @@ describe('Avatar', () => {
 
       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
-      const container = mount(<Avatar  title="CW" size={size} />);
+      const container = mount(<Avatar title="CW" size={size} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -107,7 +92,9 @@ describe('Avatar', () => {
       expect.assertions(1);
 
       const avatars = Object.values(PresenceType).map((presence, index) => {
-        return <Avatar  key={index} title="Cisco Webex" presence={presence} presenceLabel={presence}/>;
+        return (
+          <Avatar key={index} title="Cisco Webex" presence={presence} presenceLabel={presence} />
+        );
       });
 
       const container = await mountAndWait(<div>{avatars}</div>);
@@ -126,7 +113,7 @@ describe('Avatar', () => {
     it('should match snapshot with type', () => {
       expect.assertions(1);
 
-      const container = mount(<Avatar  title="Cisco Webex" type="space" />);
+      const container = mount(<Avatar title="Cisco Webex" type="space" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -134,7 +121,7 @@ describe('Avatar', () => {
     it('should match snapshot with icon', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<Avatar  icon="check" />);
+      const container = await mountAndWait(<Avatar icon="check" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -142,7 +129,7 @@ describe('Avatar', () => {
     it('should match snapshot with iconOnHover', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<Avatar  iconOnHover="check" />);
+      const container = await mountAndWait(<Avatar iconOnHover="check" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -154,7 +141,7 @@ describe('Avatar', () => {
         return 'hi';
       };
 
-      const container = await mountAndWait(<Avatar  onPress={onPress} title="Cisco Webex" />);
+      const container = await mountAndWait(<Avatar onPress={onPress} title="Cisco Webex" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -165,7 +152,7 @@ describe('Avatar', () => {
       const failureBadge = true;
 
       const container = await mountAndWait(
-        <Avatar  failureBadge={failureBadge} title="Cisco Webex" />
+        <Avatar failureBadge={failureBadge} title="Cisco Webex" />
       );
 
       expect(container).toMatchSnapshot();
@@ -176,9 +163,7 @@ describe('Avatar', () => {
 
       const mainLabel = 'mainLabel';
 
-      const container = await mountAndWait(
-        <Avatar  mainLabel={mainLabel} onPress={jest.fn()}/>
-      );
+      const container = await mountAndWait(<Avatar mainLabel={mainLabel} onPress={jest.fn()} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -188,9 +173,7 @@ describe('Avatar', () => {
 
       const ariaLabel = 'ariaLabel';
 
-      const container = await mountAndWait(
-        <Avatar  aria-label={ariaLabel}/>
-      );
+      const container = await mountAndWait(<Avatar aria-label={ariaLabel} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -201,18 +184,19 @@ describe('Avatar', () => {
       const isTyping = true;
       const typingLabel = 'isTyping';
 
-      const container = await mountAndWait(<Avatar  isTyping={isTyping} typingLabel={typingLabel} title="Cisco Webex" />);
+      const container = await mountAndWait(
+        <Avatar isTyping={isTyping} typingLabel={typingLabel} title="Cisco Webex" />
+      );
 
       expect(container).toMatchSnapshot();
     });
-
   });
 
   describe('attributes', () => {
     it('should have its main class', () => {
       expect.assertions(1);
 
-      const element = mount(<Avatar  initials="CW" />)
+      const element = mount(<Avatar initials="CW" />)
         .find(Avatar)
         .getDOMNode();
 
@@ -224,7 +208,7 @@ describe('Avatar', () => {
 
       const size = SIZES[2] as AvatarSize;
 
-      const element = mount(<Avatar  initials="CW" size={size} />)
+      const element = mount(<Avatar initials="CW" size={size} />)
         .find(`div.${STYLE.wrapper}`)
         .getDOMNode();
 
@@ -236,7 +220,7 @@ describe('Avatar', () => {
 
       const presence = PresenceType.Away;
 
-      const container = await mountAndWait(<Avatar  initials="CW" presence={presence} />);
+      const container = await mountAndWait(<Avatar initials="CW" presence={presence} />);
       const element = container.find('svg').getDOMNode();
 
       expect(element).toBeDefined();
@@ -247,7 +231,7 @@ describe('Avatar', () => {
 
       const initials = 'CW';
 
-      const element = mount(<Avatar  initials={initials} />)
+      const element = mount(<Avatar initials={initials} />)
         .find('span')
         .getDOMNode();
 
@@ -260,7 +244,7 @@ describe('Avatar', () => {
       const title = 'Cisco Webex';
       const initials = 'CW';
 
-      const element = mount(<Avatar  title={title} />)
+      const element = mount(<Avatar title={title} />)
         .find('span')
         .getDOMNode();
 
@@ -272,8 +256,7 @@ describe('Avatar', () => {
 
       const ariaLabel = 'aria-label';
 
-      const element = mount(<Avatar  aria-label={ariaLabel} />)
-        .find('.md-avatar-wrapper');
+      const element = mount(<Avatar aria-label={ariaLabel} />).find('.md-avatar-wrapper');
 
       expect(element.props()['aria-label']).toBe(`${ariaLabel}`);
     });
@@ -283,7 +266,7 @@ describe('Avatar', () => {
 
       const color = AVATAR_COLORS.cyan as AvatarColor;
 
-      const element = mount(<Avatar  initials="CW" color={color} />)
+      const element = mount(<Avatar initials="CW" color={color} />)
         .find(`div.${STYLE.wrapper}`)
         .getDOMNode();
 
@@ -297,7 +280,7 @@ describe('Avatar', () => {
       const type = 'space';
       const initials = 'C';
 
-      const element = mount(<Avatar  title="Cisco Webex" type={type} />)
+      const element = mount(<Avatar title="Cisco Webex" type={type} />)
         .find('span')
         .getDOMNode();
 
@@ -311,12 +294,11 @@ describe('Avatar', () => {
       // space type only generates 1 initial
       const icon = 'check';
 
-      const container = await mountAndWait(<Avatar  title="Cisco Webex" icon={icon} />);
+      const container = await mountAndWait(<Avatar title="Cisco Webex" icon={icon} />);
       const element = container.find('svg').getDOMNode();
 
       expect(element).toBeDefined();
     });
-
 
     it('should pass the iconOnHover prop', async () => {
       expect.assertions(1);
@@ -324,7 +306,9 @@ describe('Avatar', () => {
       // space type only generates 1 initial
       const iconOnHover = 'check';
 
-      const container = await mountAndWait(<Avatar  title="Cisco Webex" iconOnHover={iconOnHover} />);
+      const container = await mountAndWait(
+        <Avatar title="Cisco Webex" iconOnHover={iconOnHover} />
+      );
       const element = container.find('svg').getDOMNode();
 
       expect(element).toBeDefined();
@@ -355,7 +339,7 @@ describe('Avatar', () => {
       const failureBadge = true;
 
       const container = await mountAndWait(
-        <Avatar  failureBadge={failureBadge} title="Cisco Webex" />
+        <Avatar failureBadge={failureBadge} title="Cisco Webex" />
       );
 
       const element = container.find('svg[data-test="warning"]').getDOMNode();
@@ -367,7 +351,7 @@ describe('Avatar', () => {
 
       const isTyping = true;
 
-      const container = await mountAndWait(<Avatar  isTyping={isTyping} title="Cisco Webex" />);
+      const container = await mountAndWait(<Avatar isTyping={isTyping} title="Cisco Webex" />);
       const element = container.find('.md-loading');
       expect(element).toBeDefined();
     });
@@ -378,8 +362,7 @@ describe('Avatar', () => {
       const mainLabel = 'avatar of Bob';
       const onPress = () => 'h1';
 
-      const element = mount(<Avatar mainLabel={mainLabel} onPress={onPress}/>)
-        .find('button');
+      const element = mount(<Avatar mainLabel={mainLabel} onPress={onPress} />).find('button');
 
       expect(element.props()['aria-label']).toEqual(mainLabel);
     });
@@ -389,8 +372,9 @@ describe('Avatar', () => {
 
       const typingLabel = 'typing';
 
-      const element = mount(<Avatar isTyping={true} typingLabel={typingLabel} />)
-        .find('.md-avatar-wrapper');
+      const element = mount(<Avatar isTyping={true} typingLabel={typingLabel} />).find(
+        '.md-avatar-wrapper'
+      );
 
       expect(element.props()['aria-label']).toEqual(typingLabel);
     });
@@ -400,8 +384,9 @@ describe('Avatar', () => {
 
       const extraLabel = 'extraLabel';
 
-      const element = mount(<Avatar isTyping={true} extraLabel={extraLabel} />)
-        .find('.md-avatar-wrapper');
+      const element = mount(<Avatar isTyping={true} extraLabel={extraLabel} />).find(
+        '.md-avatar-wrapper'
+      );
 
       expect(element.props()['aria-label']).toEqual(extraLabel);
     });
@@ -412,8 +397,9 @@ describe('Avatar', () => {
       const ariaLabel = 'aria-label';
       const mainLabel = 'mainLabel';
 
-      const element = mount(<Avatar  aria-label={ariaLabel} mainLabel={mainLabel} />)
-        .find('.md-avatar-wrapper');
+      const element = mount(<Avatar aria-label={ariaLabel} mainLabel={mainLabel} />).find(
+        '.md-avatar-wrapper'
+      );
 
       expect(element.props()['aria-label']).toBe(ariaLabel);
     });
@@ -424,75 +410,90 @@ describe('Avatar', () => {
       const ariaLabel = '';
       const mainLabel = 'mainLabel';
 
-      const element = mount(<Avatar  aria-label={ariaLabel} mainLabel={mainLabel} />)
-        .find('.md-avatar-wrapper');
+      const element = mount(<Avatar aria-label={ariaLabel} mainLabel={mainLabel} />).find(
+        '.md-avatar-wrapper'
+      );
 
       expect(element.props()['aria-label']).toBe(mainLabel);
     });
 
-
-      it.each`
-      withOnPress | withPresence  | isPerson    | avatarType   | isTyping  | expectedRole  | expectedLabel
-      ${true}     | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${true}     | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${true}       | ${false}    | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${true}     | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${true}     | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${true}     | ${false}      | ${false}    | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${false}    | ${true}       | ${true}     | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${'src'}     | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${true}     | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${true}       | ${false}    | ${null}      | ${true}   | ${'group'}    | ${'Avatar of Name, Active, is typing'}
-      ${false}    | ${false}      | ${true}     | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${'src'}     | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${false}    | ${false}      | ${false}    | ${null}      | ${true}   | ${'img'}      | ${'Avatar of Name, is typing'}
-      ${true}     | ${true}       | ${true}     | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${true}     | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${true}     | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${true}     | ${true}       | ${false}    | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${true}     | ${false}      | ${true}     | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${false}    | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${true}     | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${false}    | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${true}     | ${false}      | ${false}    | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${true}       | ${true}     | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${'src'}     | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${true}     | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${'icon'}    | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${true}     | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${false}    | ${true}       | ${false}    | ${null}      | ${false}  | ${'group'}    | ${'Avatar of Name, Active'}
-      ${false}    | ${false}      | ${true}     | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${'src'}     | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${true}     | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${'icon'}    | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${true}     | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
-      ${false}    | ${false}      | ${false}    | ${null}      | ${false}  | ${'img'}      | ${'Avatar of Name'}
+    it.each`
+      withOnPress | withPresence | isPerson | avatarType | isTyping | expectedRole | expectedLabel
+      ${true}     | ${true}      | ${true}  | ${'src'}   | ${true}  | ${undefined} | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}      | ${false} | ${'src'}   | ${true}  | ${undefined} | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}      | ${true}  | ${'icon'}  | ${true}  | ${undefined} | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}      | ${false} | ${'icon'}  | ${true}  | ${undefined} | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}      | ${true}  | ${null}    | ${true}  | ${undefined} | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${true}      | ${false} | ${null}    | ${true}  | ${undefined} | ${'Avatar of Name, Active, is typing'}
+      ${true}     | ${false}     | ${true}  | ${'src'}   | ${true}  | ${undefined} | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}     | ${false} | ${'src'}   | ${true}  | ${undefined} | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}     | ${true}  | ${'icon'}  | ${true}  | ${undefined} | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}     | ${false} | ${'icon'}  | ${true}  | ${undefined} | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}     | ${true}  | ${null}    | ${true}  | ${undefined} | ${'Avatar of Name, is typing'}
+      ${true}     | ${false}     | ${false} | ${null}    | ${true}  | ${undefined} | ${'Avatar of Name, is typing'}
+      ${false}    | ${true}      | ${true}  | ${'src'}   | ${true}  | ${'img'}     | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}      | ${false} | ${'src'}   | ${true}  | ${'img'}     | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}      | ${true}  | ${'icon'}  | ${true}  | ${'img'}     | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}      | ${false} | ${'icon'}  | ${true}  | ${'img'}     | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}      | ${true}  | ${null}    | ${true}  | ${'img'}     | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${true}      | ${false} | ${null}    | ${true}  | ${'img'}     | ${'Avatar of Name, Active, is typing'}
+      ${false}    | ${false}     | ${true}  | ${'src'}   | ${true}  | ${'img'}     | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}     | ${false} | ${'src'}   | ${true}  | ${'img'}     | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}     | ${true}  | ${'icon'}  | ${true}  | ${'img'}     | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}     | ${false} | ${'icon'}  | ${true}  | ${'img'}     | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}     | ${true}  | ${null}    | ${true}  | ${'img'}     | ${'Avatar of Name, is typing'}
+      ${false}    | ${false}     | ${false} | ${null}    | ${true}  | ${'img'}     | ${'Avatar of Name, is typing'}
+      ${true}     | ${true}      | ${true}  | ${'src'}   | ${false} | ${undefined} | ${'Avatar of Name, Active'}
+      ${true}     | ${true}      | ${false} | ${'src'}   | ${false} | ${undefined} | ${'Avatar of Name, Active'}
+      ${true}     | ${true}      | ${true}  | ${'icon'}  | ${false} | ${undefined} | ${'Avatar of Name, Active'}
+      ${true}     | ${true}      | ${false} | ${'icon'}  | ${false} | ${undefined} | ${'Avatar of Name, Active'}
+      ${true}     | ${true}      | ${true}  | ${null}    | ${false} | ${undefined} | ${'Avatar of Name, Active'}
+      ${true}     | ${true}      | ${false} | ${null}    | ${false} | ${undefined} | ${'Avatar of Name, Active'}
+      ${true}     | ${false}     | ${true}  | ${'src'}   | ${false} | ${undefined} | ${'Avatar of Name'}
+      ${true}     | ${false}     | ${false} | ${'src'}   | ${false} | ${undefined} | ${'Avatar of Name'}
+      ${true}     | ${false}     | ${true}  | ${'icon'}  | ${false} | ${undefined} | ${'Avatar of Name'}
+      ${true}     | ${false}     | ${false} | ${'icon'}  | ${false} | ${undefined} | ${'Avatar of Name'}
+      ${true}     | ${false}     | ${true}  | ${null}    | ${false} | ${undefined} | ${'Avatar of Name'}
+      ${true}     | ${false}     | ${false} | ${null}    | ${false} | ${undefined} | ${'Avatar of Name'}
+      ${false}    | ${true}      | ${true}  | ${'src'}   | ${false} | ${'img'}     | ${'Avatar of Name, Active'}
+      ${false}    | ${true}      | ${false} | ${'src'}   | ${false} | ${'img'}     | ${'Avatar of Name, Active'}
+      ${false}    | ${true}      | ${true}  | ${'icon'}  | ${false} | ${'img'}     | ${'Avatar of Name, Active'}
+      ${false}    | ${true}      | ${false} | ${'icon'}  | ${false} | ${'img'}     | ${'Avatar of Name, Active'}
+      ${false}    | ${true}      | ${true}  | ${null}    | ${false} | ${'img'}     | ${'Avatar of Name, Active'}
+      ${false}    | ${true}      | ${false} | ${null}    | ${false} | ${'img'}     | ${'Avatar of Name, Active'}
+      ${false}    | ${false}     | ${true}  | ${'src'}   | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${false} | ${'src'}   | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${true}  | ${'icon'}  | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${false} | ${'icon'}  | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${true}  | ${null}    | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${false} | ${'src'}   | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${true}  | ${'icon'}  | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${false} | ${'icon'}  | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${true}  | ${null}    | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${true}  | ${null}    | ${false} | ${'img'}     | ${'Avatar of Name'}
+      ${false}    | ${false}     | ${false} | ${null}    | ${false} | ${'img'}     | ${'Avatar of Name'}
     `(
       `Test accessibility of Avatar when onPress is passed ? $withOnPress, presence is passed ? $withPresence, is person ? $isPerson,
       avatar is $avatarType type, is typing ? $isTyping,containerRole should be $expectedRole , contaierLabel should be $expectedLabel`,
-      ({withOnPress, withPresence, isPerson, avatarType, isTyping,expectedRole ,expectedLabel}) => {
-        checkAvatarAccessibility({withOnPress,withPresence,isPerson,avatarType,isTyping,expectedRole,expectedLabel});
+      ({
+        withOnPress,
+        withPresence,
+        isPerson,
+        avatarType,
+        isTyping,
+        expectedRole,
+        expectedLabel,
+      }) => {
+        checkAvatarAccessibility({
+          withOnPress,
+          withPresence,
+          isPerson,
+          avatarType,
+          isTyping,
+          expectedRole,
+          expectedLabel,
+        });
       }
     );
   });
 });
-

@@ -520,6 +520,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -703,6 +704,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -796,6 +798,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -979,6 +982,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1072,6 +1076,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -1255,6 +1260,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1373,6 +1379,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -1556,6 +1563,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1649,6 +1657,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -1832,6 +1841,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1925,6 +1935,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -2108,6 +2119,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -2714,6 +2726,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -2897,6 +2910,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -2990,6 +3004,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -3173,6 +3188,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -3266,6 +3282,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -3449,6 +3466,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -3567,6 +3585,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -3750,6 +3769,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -3843,6 +3863,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -4026,6 +4047,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -4119,6 +4141,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -4302,6 +4325,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -4908,6 +4932,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -5091,6 +5116,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -5184,6 +5210,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -5367,6 +5394,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -5460,6 +5488,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -5643,6 +5672,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -5761,6 +5791,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -5944,6 +5975,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -6037,6 +6069,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -6220,6 +6253,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -6313,6 +6347,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -6496,6 +6531,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -7106,6 +7142,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -7289,6 +7326,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -7382,6 +7420,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -7565,6 +7604,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -7658,6 +7698,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -7841,6 +7882,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -7959,6 +8001,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -8142,6 +8185,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -8235,6 +8279,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -8418,6 +8463,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -8511,6 +8557,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -8694,6 +8741,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -9300,6 +9348,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -9483,6 +9532,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -9576,6 +9626,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -9759,6 +9810,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -9852,6 +9904,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -10035,6 +10088,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -10153,6 +10207,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -10336,6 +10391,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -10429,6 +10485,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -10612,6 +10669,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -10705,6 +10763,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -10888,6 +10947,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -11525,6 +11585,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -11708,6 +11769,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -11801,6 +11863,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -11984,6 +12047,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -12077,6 +12141,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -12260,6 +12325,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -12378,6 +12444,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -12561,6 +12628,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -12654,6 +12722,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -12837,6 +12906,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -12930,6 +13000,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -13113,6 +13184,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -13774,6 +13846,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -13957,6 +14030,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -14050,6 +14124,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -14233,6 +14308,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -14326,6 +14402,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -14509,6 +14586,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -14627,6 +14705,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -14810,6 +14889,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -14903,6 +14983,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -15086,6 +15167,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -15179,6 +15261,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -15362,6 +15445,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -15968,6 +16052,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -16151,6 +16236,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -16244,6 +16330,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -16427,6 +16514,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -16520,6 +16608,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -16703,6 +16792,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -16821,6 +16911,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -17004,6 +17095,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -17097,6 +17189,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -17280,6 +17373,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -17373,6 +17467,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -17556,6 +17651,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -18166,6 +18262,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -18349,6 +18446,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -18442,6 +18540,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -18625,6 +18724,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -18718,6 +18818,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -18901,6 +19002,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -19019,6 +19121,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -19202,6 +19305,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -19295,6 +19399,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -19478,6 +19583,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -19571,6 +19677,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
+                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -19754,6 +19861,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
+                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
