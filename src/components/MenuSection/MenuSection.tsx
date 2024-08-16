@@ -23,10 +23,9 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation});
 
   const renderItems = useCallback(() => {
-    const retArray = Array.from(item.childNodes).map((node, index) => (
+    return Array.from(item.childNodes).map((node, index) => (
       <MenuItem itemIndex={index} key={node.key} item={node} state={state} onAction={onAction} />
     ));
-    return retArray;
   }, [state]);
 
   return (
