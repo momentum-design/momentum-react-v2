@@ -510,6 +510,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-ghost={true}
                   data-inverted={false}
                   data-multiple-children={false}
+                  data-only-triggers-tooltip={false}
                   data-outline={false}
                   data-shallow-disabled={false}
                   data-size={28}
@@ -526,6 +527,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-ghost={true}
                         data-inverted={false}
                         data-multiple-children={false}
+                        data-only-triggers-tooltip={false}
                         data-outline={false}
                         data-shallow-disabled={false}
                         data-size={28}
@@ -706,6 +708,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-ghost={true}
                   data-inverted={false}
                   data-multiple-children={false}
+                  data-only-triggers-tooltip={false}
                   data-outline={false}
                   data-shallow-disabled={false}
                   data-size={28}
@@ -722,6 +725,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-ghost={true}
                         data-inverted={false}
                         data-multiple-children={false}
+                        data-only-triggers-tooltip={false}
                         data-outline={false}
                         data-shallow-disabled={false}
                         data-size={28}
@@ -907,6 +911,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                   data-ghost={true}
                   data-inverted={false}
                   data-multiple-children={false}
+                  data-only-triggers-tooltip={false}
                   data-outline={false}
                   data-shallow-disabled={false}
                   data-size={28}
@@ -923,6 +928,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                         data-ghost={true}
                         data-inverted={false}
                         data-multiple-children={false}
+                        data-only-triggers-tooltip={false}
                         data-outline={false}
                         data-shallow-disabled={false}
                         data-size={28}

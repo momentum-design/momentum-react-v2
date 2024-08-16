@@ -17,11 +17,18 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
     outline,
     size,
     inverted,
+    onlyTriggersTooltip,
     ...otherProps
   } = props;
 
   if (ghost && inverted) {
     console.warn('MRV2: Momentum does not support a ghost inverted ButtonPill.');
+  }
+
+  if (onlyTriggersTooltip && (outline || inverted || color || disabled || shallowDisabled)) {
+    console.warn(
+      'MRV2: Momentum does not support a button that onlyTriggersTooltip and is outline, inverted, has color, or is disabled'
+    );
   }
 
   return (
@@ -32,11 +39,12 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<HTMLButtonEl
       data-disabled={disabled || DEFAULTS.DISABLED}
       data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
       aria-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
-      data-ghost={ghost || DEFAULTS.GHOST}
+      data-ghost={ghost || onlyTriggersTooltip || DEFAULTS.GHOST}
       data-grown={grown || DEFAULTS.GROWN}
       data-outline={outline || DEFAULTS.OUTLINE}
       data-size={size || DEFAULTS.SIZE}
       data-inverted={inverted || DEFAULTS.INVERTED}
+      data-only-triggers-tooltip={onlyTriggersTooltip || DEFAULTS.ONLY_TRIGGERS_TOOLTIP}
       isDisabled={disabled}
       {...otherProps}
     />

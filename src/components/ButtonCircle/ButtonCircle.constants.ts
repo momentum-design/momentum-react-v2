@@ -10,6 +10,7 @@ const DEFAULTS = {
   OUTLINE: false,
   SIZE: 40,
   INVERTED: false,
+  ONLY_TRIGGERS_TOOLTIP: false,
 };
 
 const COLORS = {

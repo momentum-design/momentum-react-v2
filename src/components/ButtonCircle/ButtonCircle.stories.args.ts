@@ -115,6 +115,20 @@ const buttonCircleArgTypes = {
       },
     },
   },
+  onlyTriggersTooltip: {
+    description:
+      'Whether the ButtonCircle is only a tooltip trigger and, thus, triggers no action on click/press',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.ONLY_TRIGGERS_TOOLTIP,
+      },
+    },
+  },
 };
 
 export { buttonCircleArgTypes };
