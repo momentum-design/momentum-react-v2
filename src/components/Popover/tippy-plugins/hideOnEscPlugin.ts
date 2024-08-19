@@ -24,7 +24,7 @@ const addInstance = (instance: TippyInstance) => {
   }
 
   if (openedTippyInstances.length === 0) {
-    window.addEventListener('keydown', onKeyDown);
+    document.addEventListener('keydown', onKeyDown);
   }
 
   openedTippyInstances.push(instance);
@@ -41,7 +41,7 @@ const removeInstance = (instance: TippyInstance) => {
   openedTippyInstances.splice(openedTippyInstances.indexOf(instance), 1);
 
   if (openedTippyInstances.length === 0) {
-    window.removeEventListener('keydown', onKeyDown);
+    document.removeEventListener('keydown', onKeyDown);
   }
   // Send custom event that tippy instance is no longer shown on screen. This event is listened for in instances of OverlayAlert to allow it to close once there are no tippy instances
   // still shown on screen that were opened after the render of the OverlayAlert.

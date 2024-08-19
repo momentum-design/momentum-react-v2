@@ -29,7 +29,7 @@ describe('hideOnEscPlugin', () => {
   it('should add and remove esc key listener correctly', async () => {
     const { hideOnEscPlugin } = await import('./hideOnEscPlugin');
     const { addEventListenerSpy, removeEventListenerSpy, eventHandlers } = sypOnEventListener(
-      window,
+      document,
       ['keydown']
     );
 
@@ -90,7 +90,7 @@ describe('hideOnEscPlugin', () => {
 
   it('should trigger hide when user press esc', async () => {
     const { hideOnEscPlugin } = await import('./hideOnEscPlugin');
-    const { eventHandlers } = sypOnEventListener(window, ['keydown']);
+    const { eventHandlers } = sypOnEventListener(document, ['keydown']);
 
     const tippy = createTippyInstance() as any;
     const plugin = hideOnEscPlugin.fn(tippy);
@@ -105,7 +105,7 @@ describe('hideOnEscPlugin', () => {
     jest.resetModules();
 
     const { hideOnEscPlugin } = await import('./hideOnEscPlugin');
-    const { eventHandlers } = sypOnEventListener(window, ['keydown']);
+    const { eventHandlers } = sypOnEventListener(document, ['keydown']);
 
     const tippy1 = createTippyInstance() as any;
     const plugin1 = hideOnEscPlugin.fn(tippy1);
