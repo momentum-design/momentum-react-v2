@@ -15,13 +15,16 @@
   transition: background $transition-time;
   background-color: var(--mds-color-theme-control-inactive-normal);
   border: 1px solid var(--mds-color-theme-outline-input-normal);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   &:before {
     content: '';
     width: $thumb-size;
     height: $thumb-size;
     border-radius: math.div($thumb-size, 2);
-    margin: $thumb-margin;
+    margin-left: $thumb-margin;
     display: block;
     transition: transform $transition-time;
     background-color: var(--mds-color-theme-text-primary-normal);
@@ -36,14 +39,19 @@
     border: none;
 
     &:before {
-      background-color: var(--mds-color-theme-common-inverted-text-primary-normal);
+      background-color: var(--mds-color-theme-inverted-text-primary-normal);
       transform: translateX($switch-width - $switch-height);
     }
   }
 
   // Focused
   &:focus {
+    border: 1px solid var(--mds-color-theme-outline-input-normal);
     box-shadow: var(--md-globals-focus-ring-box-shadow);
+
+    &:checked {
+      border: none;
+    }
   }
 
   // Hovered
@@ -58,7 +66,7 @@
       background-color: var(--mds-color-theme-control-active-hover);
 
       &:before {
-        background-color: var(--mds-color-theme-common-inverted-text-primary-normal);
+        background-color: var(--mds-color-theme-inverted-text-primary-normal);
         transform: translateX($switch-width - $switch-height);
       }
     }
@@ -69,14 +77,14 @@
     background-color: var(--mds-color-theme-control-inactive-pressed);
 
     &:before {
-      background-color: var(--mds-color-theme-text-primary-normal);
+      background-color: var(--mds-color-theme-inverted-text-primary-normal);
     }
 
     &:checked {
       background-color: var(--mds-color-theme-control-active-pressed);
 
       &:before {
-        background-color: var(--mds-color-theme-common-inverted-text-primary-normal);
+        background-color: var(--mds-color-theme-inverted-text-primary-normal);
         transform: translateX($switch-width - $switch-height);
       }
     }

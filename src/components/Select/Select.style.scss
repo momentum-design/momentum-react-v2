@@ -44,6 +44,10 @@
     white-space: nowrap;
   }
 
+  &:focus {
+    border: 1px solid var(--mds-color-theme-outline-input-normal);
+  }
+
   &:hover {
     background-color: var(--mds-color-theme-background-primary-hover);
     color: var(--mds-color-theme-text-primary-normal);
@@ -65,7 +69,8 @@
     color: var(--mds-color-theme-text-primary-disabled);
   }
 
-  &:disabled, &[data-shallow-disabled="true"] {
+  &:disabled,
+  &[data-shallow-disabled='true'] {
     background-color: var(--mds-color-theme-background-primary-disabled);
     color: var(--mds-color-theme-text-primary-disabled);
     border-color: var(--mds-color-theme-background-primary-ghost);

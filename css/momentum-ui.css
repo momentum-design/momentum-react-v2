@@ -11964,8 +11964,6 @@ select {
   border-color: transparent;
   outline: none;
   box-shadow: var(--md-globals-focus-ring-box-shadow); }
-  *:focus:not(:focus-visible) {
-    box-shadow: none; }
 
 /** @component typography */
 * {

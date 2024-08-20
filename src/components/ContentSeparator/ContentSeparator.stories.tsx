@@ -51,4 +51,11 @@ Example.args = {
   children: 'Some separator text',
 };
 
-export { Example };
+const Gradient = Template.bind({});
+
+Gradient.args = {
+  gradient: true,
+  children: 'Some separator with gradient',
+};
+
+export { Example, Gradient };
