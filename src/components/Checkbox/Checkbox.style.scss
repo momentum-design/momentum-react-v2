@@ -19,7 +19,7 @@
   &[data-disabled='false'] {
     .md-checkbox-icon {
       svg {
-        fill: var(--mds-color-theme-common-inverted-text-primary-normal);
+        fill: var(--mds-color-theme-inverted-text-primary-normal);
       }
     }
 
@@ -79,7 +79,7 @@
   &.disable {
     .md-checkbox-icon {
       svg {
-        fill: var(--mds-color-theme-control-inactive-hover);
+        fill: var(--mds-color-theme-text-primary-disabled);
       }
     }
 

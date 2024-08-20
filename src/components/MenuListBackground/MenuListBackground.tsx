@@ -8,6 +8,7 @@ import FocusRing from '../FocusRing';
 
 /**
  * Menu List Background used in Menu Lists and Select dropdown
+ * @deprecated, use ModalContainer instead
  */
 
 //TODO: Implement Notch
