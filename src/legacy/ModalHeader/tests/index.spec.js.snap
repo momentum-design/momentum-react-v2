@@ -20,10 +20,12 @@ exports[`tests for <ModalHeader /> should match SnapShot 1`] = `
       className="md-modal__close-container"
     >
       <CloseIcon
+        aria-label="Close modal"
         className="md-modal__close"
         onClick={[Function]}
       >
         <button
+          aria-label="Close modal"
           className="md-close md-modal__close"
           onClick={[Function]}
         />

@@ -27,7 +27,7 @@ class ModalHeader extends React.PureComponent {
       <div className={'md-modal__header' + `${(className && ` ${className}`) || ''}`} {...props}>
         {showCloseButton && (
           <div className="md-modal__close-container">
-            <CloseIcon className="md-modal__close" onClick={handleClose} {...closeBtnProps} />
+            <CloseIcon className="md-modal__close" onClick={handleClose} aria-label={`Close ${headerLabel || ariaLabel || 'modal'}`} {...closeBtnProps} />
           </div>
         )}
         {children
