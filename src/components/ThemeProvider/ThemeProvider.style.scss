@@ -25,8 +25,8 @@
   // Firefox fix for scrollbar
   // On macOS, you need to set the General > Show scroll bars
   // setting in System Preferences to "Always" for this property to have any effect.
-  scrollbar-color: var(--mds-color-theme-scrollbar-background-secondary-normal)
-    var(--mds-color-theme-scrollbar-button-normal);
+  scrollbar-color: var(--mds-color-theme-scrollbar-button-normal)
+    var(--mds-color-theme-scrollbar-background-secondary-normal);
 }
 
 /* Global variables not available as tokens. */
@@ -73,6 +73,7 @@
 /* Track */
 ::-webkit-scrollbar-track {
   border-radius: 100vh;
+  background: var(--mds-color-theme-scrollbar-background-secondary-normal);
 }
 
 /* Handle */
