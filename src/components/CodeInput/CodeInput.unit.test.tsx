@@ -160,5 +160,39 @@ describe('CodeInput', () => {
       testInput('6', false);
       testInput('789', true);
     });
+
+    it('wont wipe the data when refocused when clearComplete is false', async () => {
+      const codeInput = mount(<CodeInput numDigits={2} clearComplete={false}/>);
+      codeInput.simulate('click');
+
+      const testInput = async (value) => {
+        codeInput.find('input').hostNodes().simulate('change', { target: { value } });
+        expect(codeInput.find('input').props().value).toEqual(value);
+      };
+
+      await testInput('22');
+      await act(async () => {
+        codeInput.find('input').hostNodes().simulate('focus');
+      });
+      await waitForAsync(codeInput);
+      expect(codeInput.find('input').props().value).toEqual('22');
+    });
+
+    it('will wipe the data when refocused when clearComplete is true (default)', async () => {
+      const codeInput = mount(<CodeInput numDigits={2} />);
+      codeInput.simulate('click');
+
+      const testInput = async (value) => {
+        codeInput.find('input').hostNodes().simulate('change', { target: { value } });
+        expect(codeInput.find('input').props().value).toEqual(value);
+      };
+
+      await testInput('22');
+      await act(async () => {
+        codeInput.find('input').hostNodes().simulate('focus');
+      });
+      await waitForAsync(codeInput);
+      expect(codeInput.find('input').props().value).toEqual('');
+    });
   });
 });

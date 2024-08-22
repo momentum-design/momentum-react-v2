@@ -10,6 +10,7 @@ import { STYLE } from './CodeInput.constants';
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const {
     numDigits,
+    clearComplete = true,
     onChange = () => {
       /* Optional */
     },
@@ -60,7 +61,7 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
         length={numDigits}
         onChange={setValue}
         onFocus={() => {
-          if (isComplete) {
+          if (isComplete && !!clearComplete) {
             // When completed, refocusing the input will clear the code and any messages
             setComplete(false);
             setValue('');
