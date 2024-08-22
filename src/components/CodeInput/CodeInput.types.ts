@@ -38,4 +38,8 @@ export interface Props {
    * ariaDescribedby: the aria-describedby attribute to be passed to the input
    */
   ariaDescribedby?: string;
+  /**
+   * clearComplete: whether to clear the input when the code is complete if navigated back to it
+   */
+  clearComplete?: boolean;
 }

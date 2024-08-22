@@ -33,6 +33,10 @@ export default {
       description: 'Number of boxes',
       control: { type: 'number' },
     },
+    clearComplete: {
+      description: 'Clear all the boxes when the code is complete if navigated back to',
+      control: { type: 'boolean' },
+    },
     messageArr: {
       description: 'The list of messages to be passed in',
       options: Object.keys(messageArrOptions),
@@ -63,7 +67,7 @@ interface StoryProps extends CodeInputProps {
 }
 
 const Template: Story<StoryProps> = (args) => {
-  const { onComplete, onChange } = args;
+  const { onComplete, onChange, clearComplete } = args;
   const [messageArrInt, setMessageArr] = useState<Message[]>(args.messageArr);
   const [isDisabled, setDisabled] = useState(args.disabled);
 
@@ -72,6 +76,7 @@ const Template: Story<StoryProps> = (args) => {
       numDigits={args.numDigits}
       messageArr={messageArrInt}
       disabled={isDisabled}
+      clearComplete={clearComplete}
       onComplete={(code) => {
         switch (onComplete) {
           case 'show error':
@@ -100,6 +105,7 @@ Example.args = {
   messageArr: 'empty',
   disabled: false,
   onCompleteChoice: 'show error',
+  clearComplete: true,
 };
 
 export { Example };
