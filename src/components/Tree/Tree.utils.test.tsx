@@ -451,11 +451,11 @@ describe('Tree utils', () => {
         expect(result).toEqual(activeNode);
       });
 
-      it('should toggle open/close on non-leaf nodes', () => {
+      it('should do nothing on non-leaf nodes', () => {
         const activeNode = '4';
         const result = getNextActiveNode(tree, activeNode, 'Enter', true, toggleTreeNode);
 
-        expect(toggleTreeNode).toHaveBeenCalledWith(activeNode);
+        expect(toggleTreeNode).not.toHaveBeenCalled();
         expect(result).toEqual(activeNode);
       });
     });

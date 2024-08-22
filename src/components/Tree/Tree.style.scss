@@ -1,0 +1,13 @@
+/**
+ * Force overwrite the cloned virtual tree node style
+ * To make sure it appear as it should be
+ */
+.md-tree-cloned-virtual-tree-node {
+  // Note: position most be sticky, otherwise VO automatically scroll the node into the view
+  // which means the user can not scroll away.
+  position: sticky !important;
+  top: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0;
+}

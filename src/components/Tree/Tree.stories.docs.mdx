@@ -131,3 +131,25 @@ Flat tree structure is more flexible and can be used with virtualized trees. It 
     </li>
 </ul>
 ```
+
+## Virtual tree usage
+
+This component provide a generic API to connect with virtual tree implementations.
+But work with best with [react-vtree](https://github.com/Lodin/react-vtree/tree/version/2) v2 and v3.
+
+```jsx
+<AutoSizer style={{height: '100%', width: '100%'}}>
+  <Tree
+      isRenderedFlat
+      excludeTreeRoot
+      style={{height, width}}
+      treeStructure={getTreeWithDefaultOpenState()}
+      shouldNodeFocusBeInset={shouldNodeFocusBeInset}
+      virtualTreeConnector={virtualTreeConnector}
+    >
+      <VariableSizeTree useIsScrolling height={height} width={width} treeWalker={treeWalker}>
+        {nodeComponent}
+      </VariableSizeTree>
+    </Tree>
+</AutoSizer>
+```

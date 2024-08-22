@@ -13,14 +13,14 @@ const FOCUSABLE_AND_TABBABLE_ONLY_ELEMENT_SELECTORS =
 export function getKeyboardFocusableElements<T extends HTMLElement>(
   root: T,
   includeTabbableOnly = true
-): Element[] {
+): Array<HTMLElement> {
   const focusableNodes = includeTabbableOnly
     ? FOCUSABLE_AND_TABBABLE_ONLY_ELEMENT_SELECTORS
     : FOCUSABLE_ELEMENT_SELECTORS;
 
   return Array.from(root.querySelectorAll(focusableNodes)).filter(
     (el) => !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true'
-  );
+  ) as Array<HTMLElement>;
 }
 
 /**

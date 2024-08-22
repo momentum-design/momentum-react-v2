@@ -1,8 +1,9 @@
-import React, { FC, useState, useCallback, HTMLAttributes } from 'react';
+import React, { FC, useRef, useState, useCallback, HTMLAttributes } from 'react';
 import classnames from 'classnames';
 
-import { STYLE, DEFAULTS } from './Tree.constants';
-import { TreeIdNodeMap, Props, TreeContextValue, TreeNodeId } from './Tree.types';
+import { STYLE, DEFAULTS, TREE_NAVIGATION_KEYS } from './Tree.constants';
+import { TreeIdNodeMap, Props, TreeContextValue, TreeNavKeyCodes, TreeNodeId } from './Tree.types';
+import './Tree.style.scss';
 import {
   convertNestedTree2MappedTree,
   getNextActiveNode,
@@ -10,7 +11,7 @@ import {
   TreeContext,
 } from './Tree.utils';
 import { useKeyboard } from '@react-aria/interactions';
-import { isFocusableNode } from '../../utils/navigation';
+import { useVirtualTreeNavigation } from './Tree.hooks';
 
 const Tree: FC<Props> = (props: Props) => {
   const {
@@ -22,7 +23,7 @@ const Tree: FC<Props> = (props: Props) => {
     treeStructure,
     isRenderedFlat = DEFAULTS.IS_RENDERED_FLAT,
     excludeTreeRoot = DEFAULTS.EXCLUDE_TREE_ROOT,
-    setVirtualTreeNodeOpenState,
+    virtualTreeConnector,
     ...rest
   } = props;
 
@@ -30,18 +31,31 @@ const Tree: FC<Props> = (props: Props) => {
     throw new Error('Tree must have at least one child when excludeTreeRoot is true');
   }
 
+  const ref = useRef<HTMLDivElement>();
+
   const [tree, setTree] = useState<TreeIdNodeMap>(convertNestedTree2MappedTree(treeStructure));
   const [activeNodeId, setActiveNodeId] = useState<TreeNodeId>(
     excludeTreeRoot ? treeStructure.children[0].id : treeStructure.id
   );
 
+  const isVirtualTree = virtualTreeConnector !== undefined;
+
+  // Handle DOM changes for virtual tree
+  useVirtualTreeNavigation({ virtualTreeConnector, treeRef: ref, activeNodeId });
+
   const toggleTreeNode = useCallback(
-    (id: TreeNodeId, isOpen?: boolean) => {
+    async (id: TreeNodeId, isOpen?: boolean): Promise<void> => {
       const newOpenState = isOpen !== undefined ? isOpen : !tree.get(id).isOpen;
-      setVirtualTreeNodeOpenState?.(id, newOpenState);
+
+      if (isVirtualTree) {
+        await virtualTreeConnector.setNodeOpen?.(id, newOpenState);
+        // Call scroll to every time so it scrolls to parent when the user presses left arrow in vtree
+        virtualTreeConnector.scrollToNode?.(id);
+      }
+
       setTree((prevTree) => toggleTreeNodeRecord(id, prevTree, newOpenState));
     },
-    [tree]
+    [tree, isVirtualTree]
   );
 
   const getNodeDetails = useCallback((id: TreeNodeId) => tree.get(id), [tree]);
@@ -60,8 +74,8 @@ const Tree: FC<Props> = (props: Props) => {
         'aria-posinset': node.index + 1,
         role: 'treeitem',
       };
-      if (node.isOpen !== undefined) {
-        props['aria-expanded'] = node.isOpen.toString();
+      if (!node.isLeaf) {
+        props['aria-expanded'] = (!!node.isOpen).toString();
       }
       return props;
     },
@@ -104,25 +118,19 @@ const Tree: FC<Props> = (props: Props) => {
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {
-      const target = evt.target as HTMLElement;
-      switch (evt.key) {
-        case 'Escape':
-          evt.continuePropagation();
-          break;
-        case 'ArrowUp':
-        case 'ArrowDown':
-        case 'ArrowRight':
-        case 'ArrowLeft':
-        case 'Enter': {
-          // Ignore event when the target is an interactable element inside the tree node
-          if (target.getAttribute('role') === 'treeitem' || !isFocusableNode(target)) {
-            evt.preventDefault();
-            setActiveNodeId(
-              getNextActiveNode(tree, activeNodeId, evt.key, excludeTreeRoot, toggleTreeNode)
-            );
-          }
-          break;
-        }
+      const key = evt.key as TreeNavKeyCodes;
+      if (TREE_NAVIGATION_KEYS.includes(key)) {
+        evt.preventDefault();
+        const nextActiveNode = getNextActiveNode(
+          tree,
+          activeNodeId,
+          key,
+          excludeTreeRoot,
+          toggleTreeNode
+        );
+        setActiveNodeId(nextActiveNode);
+      } else {
+        evt.continuePropagation();
       }
     },
   });
@@ -131,6 +139,7 @@ const Tree: FC<Props> = (props: Props) => {
     <TreeContext.Provider value={getContext()}>
       <div
         className={classnames(className, STYLE.wrapper)}
+        ref={ref}
         style={style}
         id={id}
         role="tree"
