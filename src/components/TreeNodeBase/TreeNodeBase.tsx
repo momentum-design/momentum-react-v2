@@ -17,7 +17,14 @@ import { useTreeContext } from '../Tree';
 import FocusRing from '../FocusRing';
 import Text from '../Text';
 
-import { DEFAULTS, KEYS, SHAPES, SIZES, STYLE } from './TreeNodeBase.constants';
+import {
+  DEFAULTS,
+  KEYS,
+  NODE_ID_ATTRIBUTE_NAME,
+  SHAPES,
+  SIZES,
+  STYLE,
+} from './TreeNodeBase.constants';
 import { Props, TreeNodeBaseRefOrCallbackRef } from './TreeNodeBase.types';
 import './TreeNodeBase.style.scss';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
@@ -95,7 +102,6 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   }
 
   // The keyboard press events are not propagated
-  // To make popovers work with click, we manually call the click event
   const internalOnPress = useCallback((event) => {
     if (event.pointerType === 'keyboard') {
       ref.current.click();
@@ -177,12 +183,12 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         style={style}
         ref={ref}
         aria-selected={isSelected}
-        data-nodeid={nodeId}
         data-size={size}
         data-padded={isPadded}
         data-shape={shape}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         lang={lang}
+        {...{ [NODE_ID_ATTRIBUTE_NAME]: nodeId }}
         {...treeNodePressProps}
         {...treeContext.getNodeProps(nodeId)}
         {...rest}

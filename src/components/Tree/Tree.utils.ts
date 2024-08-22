@@ -267,10 +267,7 @@ export const getNextActiveNode = (
       return openNextNode(tree, activeNodeId, toggleTreeNode);
     case 'ArrowLeft':
       return closeNextNode(tree, activeNodeId, excludeRoot, toggleTreeNode);
-    case 'Enter':
-      if (!tree.get(activeNodeId).isLeaf) {
-        toggleTreeNode(activeNodeId);
-      }
+    default:
       return activeNodeId;
   }
 };

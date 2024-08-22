@@ -1,4 +1,10 @@
-import { CSSProperties, DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import {
+  CSSProperties,
+  DetailedHTMLProps,
+  HTMLAttributes,
+  MutableRefObject,
+  ReactNode,
+} from 'react';
 
 /**
  * The key codes used to navigate the tree.
@@ -140,9 +146,30 @@ export interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
   excludeTreeRoot?: boolean;
 
   /**
-   * Toggle open/close state of the tree node.
+   * Set of functions to communicate with virtualized tree and sync states.
    */
-  setVirtualTreeNodeOpenState?: (id: TreeNodeId, isOpen: boolean) => void;
+  virtualTreeConnector?: {
+    /**
+     * External function to scroll to a node.
+     * This is used when the tree is rendered in a virtualized tree.
+     *
+     * @param id
+     */
+    scrollToNode: (id: TreeNodeId) => void;
+
+    /**
+     * Toggle open/close state of the tree node.
+     *
+     * @param id
+     * @param isOpen
+     */
+    setNodeOpen?: (id: TreeNodeId, isOpen: boolean) => void | Promise<void>;
+  };
+}
+
+export interface UseVirtualTreeNavigationProps extends Pick<Props, 'virtualTreeConnector'> {
+  activeNodeId: TreeNodeId;
+  treeRef: MutableRefObject<HTMLDivElement>;
 }
 
 /**
@@ -177,5 +204,5 @@ export interface TreeContextValue extends Pick<Props, 'shouldNodeFocusBeInset' |
    * Toggle the isOpen state of the tree node.
    * @param id unique identifier of the tree node
    */
-  toggleTreeNode: ToggleTreeNode;
+  toggleTreeNode: (id: TreeNodeId) => Promise<void>;
 }
