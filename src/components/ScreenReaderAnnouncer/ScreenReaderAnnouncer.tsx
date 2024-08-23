@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback, ReactElement, FC } from 'react';
+import React, { useEffect, useState, useRef, useCallback, FC } from 'react';
 
 import { STYLE, DEFAULTS } from './ScreenReaderAnnouncer.constants';
 import {
