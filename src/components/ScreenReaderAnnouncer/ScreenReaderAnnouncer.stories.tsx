@@ -3,8 +3,7 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import { Story } from '@storybook/react';
 
-import ScreenReaderAnnouncer, { announce } from './';
-import { AnnounceOptions } from './ScreenReaderAnnouncer.types';
+import ScreenReaderAnnouncer, { ScreenReaderAnnounceOptions } from './';
 import argTypes from './ScreenReaderAnnouncer.stories.args';
 import Documentation from './ScreenReaderAnnouncer.stories.docs.mdx';
 import ButtonPill from '../ButtonPill';
@@ -24,12 +23,12 @@ export default {
 const buttonid1 = 'id-1';
 const buttonid2 = 'id-2';
 
-const Example: Story = (props: AnnounceOptions) => {
+const Example: Story = (props: ScreenReaderAnnounceOptions) => {
   const message1 = props.body || 'This is message 1';
   const message2 = props.body || 'This is message 2';
 
   const onPressHandler = (id: string) => {
-    announce({ ...props, body: id === buttonid1 ? message1 : message2 }, id);
+    ScreenReaderAnnouncer.announce({ ...props, body: id === buttonid1 ? message1 : message2 }, id);
   };
 
   return (

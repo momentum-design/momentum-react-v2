@@ -186,7 +186,6 @@ export {
   RadioSimple,
   RadioSimpleGroup,
   ScreenReaderAnnouncer,
-  announce,
   Tooltip as TooltipNext,
   TooltipPopoverCombo,
   Toggletip,

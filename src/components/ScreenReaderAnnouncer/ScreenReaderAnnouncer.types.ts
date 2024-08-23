@@ -2,6 +2,10 @@ import { ReactNode } from 'react';
 
 type Level = 'assertive' | 'polite';
 type Body = string | ReactNode;
+export interface CompoundProps {
+  announce: ScreenReaderAnnouncerAnnounce;
+}
+
 type AnnounceOptions = {
   /**
    * A message to announce with a screen reader
@@ -25,6 +29,7 @@ type AnnounceOptions = {
    */
   timeout?: number;
 };
+type ScreenReaderAnnouncerAnnounce = (options: AnnounceOptions, announcerIdentity?: string) => void;
 type Announce = (options: AnnounceOptions) => void;
 type Clear = (options: { messageIdentity: string }) => void;
 type Message = {
@@ -44,4 +49,13 @@ type AnnouncementProps = {
 };
 type AnnouncerProps = { identity?: string };
 
-export type { Level, AnnounceOptions, Announce, Clear, Message, AnnouncementProps, AnnouncerProps };
+export type {
+  ScreenReaderAnnouncerAnnounce,
+  Level,
+  AnnounceOptions,
+  Announce,
+  Clear,
+  Message,
+  AnnouncementProps,
+  AnnouncerProps,
+};
