@@ -57,6 +57,10 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
           id: inputId,
           name: inputId,
           disabled,
+          className: classnames(STYLE.input),
+        }}
+        containerProps={{
+          className: classnames(STYLE.container),
         }}
         length={numDigits}
         onChange={setValue}
@@ -69,11 +73,9 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
           }
         }}
         value={value}
-        removeDefaultStyles={true}
         validChars="0-9"
         placeholder=""
         classNames={{
-          container: STYLE.container,
           character: STYLE.character,
           characterInactive: STYLE.characterInactive,
           characterSelected: STYLE.characterSelected,

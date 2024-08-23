@@ -1,5 +1,18 @@
 .md-code-input-wrapper {
+  &:focus {
+    box-shadow: none;
+  }
   .md-code-input-container {
+    height: 100%;
+    width: 100%;
+    &:focus {
+      box-shadow: none;
+    }
+    .md-code-input-input {
+      &:focus {
+        box-shadow: none
+      }
+    }
     .md-code-input-character {
       flex: auto;
       cursor: text;

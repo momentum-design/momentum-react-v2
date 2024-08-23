@@ -2609,7 +2609,7 @@ __metadata:
     react-test-renderer: ^16.8.0
     react-toastify: ^9.0.8
     react-uid: ^2.2.0
-    react-verification-input: ^2.0.1
+    react-verification-input: ^4.1.2
     react-virtualized: ^9.21.0
     react-virtualized-auto-sizer: ^1.0.2
     react-window: ^1.8.1
@@ -23793,13 +23793,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-verification-input@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "react-verification-input@npm:2.0.1"
+"react-verification-input@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "react-verification-input@npm:4.1.2"
   peerDependencies:
-    react: 16.8.0 - 17.x.x
-    react-dom: 16.8.0 - 17.x.x
-  checksum: 1d9caef7567b230b90d21657fe592c20954b6219a5e2acdd3ffee184a5a2a6c0f6bec04a924e5e4d326d6efe1418a1e18820810aec9f5bebd3856e1d44346986
+    react: 16.8.0 - 18.x.x
+    react-dom: 16.8.0 - 18.x.x
+  checksum: 269abcb05bf74dbfcb0cb2428d0f29343063f90ba9eea81679ab52c64982230be7af20ff3cce5e60454d895ce900432baf0ae843a723a59fabc76cfe0e0462bb
   languageName: node
   linkType: hard
 
