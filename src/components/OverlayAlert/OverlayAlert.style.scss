@@ -10,6 +10,10 @@
         display: flex;
         justify-content: end;
       }
+
+      .md-button-control-wrapper:last-child {
+        border-top-right-radius: calc(0.75rem - 1px); // 0.75rem: overlay border radius, 1px: overlay border width
+      }
     }
 
     > .md-overlay-alert-title {
