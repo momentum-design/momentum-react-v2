@@ -12,7 +12,7 @@
       }
 
       .md-button-control-wrapper:last-child {
-        border-top-right-radius: 0.75rem;
+        border-top-right-radius: calc(0.75rem - 1px); // 0.75rem: overlay border radius, 1px: overlay border width
       }
     }
 
