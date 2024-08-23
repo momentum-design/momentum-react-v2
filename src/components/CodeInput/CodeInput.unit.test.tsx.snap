@@ -15,14 +15,18 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
           "character": "md-code-input-character",
           "characterInactive": "md-code-input-character--inactive",
           "characterSelected": "md-code-input-character--selected",
-          "container": "md-code-input-container",
         }
       }
-      debug={false}
+      containerProps={
+        Object {
+          "className": "md-code-input-container",
+        }
+      }
       inputProps={
         Object {
           "aria-describedby": undefined,
           "aria-label": undefined,
+          "className": "md-code-input-input",
           "disabled": false,
           "id": undefined,
           "name": undefined,
@@ -32,145 +36,137 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       placeholder=""
-      removeDefaultStyles={true}
       validChars="0-9"
       value=""
     >
       <div
-        className="vi__wrapper"
+        className="vi__container md-code-input-container"
+        data-testid="container"
+        onClick={[Function]}
       >
         <input
-          className="vi"
+          className="vi md-code-input-input"
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
+          onSelect={[Function]}
+          spellCheck={false}
           value=""
         />
         <div
-          className="vi__container md-code-input-container"
-          data-testid="container"
+          className="vi__character md-code-input-character"
+          data-testid="character-0"
+          id="field-0"
+          key="0"
           onClick={[Function]}
-        >
-          <div
-            className="vi__character md-code-input-character"
-            data-testid="character-0"
-            id="field-0"
-            key="0"
-            onClick={[Function]}
-          />
-          <div
-            className="vi__character md-code-input-character md-code-input-character--inactive"
-            data-testid="character-1"
-            id="field-1"
-            key="1"
-            onClick={[Function]}
-          />
-          <div
-            className="vi__character md-code-input-character md-code-input-character--inactive"
-            data-testid="character-2"
-            id="field-2"
-            key="2"
-            onClick={[Function]}
-          />
-          <div
-            className="vi__character md-code-input-character md-code-input-character--inactive"
-            data-testid="character-3"
-            id="field-3"
-            key="3"
-            onClick={[Function]}
-          />
-          <div
-            className="vi__character md-code-input-character md-code-input-character--inactive"
-            data-testid="character-4"
-            id="field-4"
-            key="4"
-            onClick={[Function]}
-          />
-          <div
-            className="vi__character md-code-input-character md-code-input-character--inactive"
-            data-testid="character-5"
-            id="field-5"
-            key="5"
-            onClick={[Function]}
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": Array [
-                Array [
-                  28,
-                  ".vi__wrapper {
-  position: relative;
-}
-
-.vi {
-  height: 100%;
+        />
+        <div
+          className="vi__character md-code-input-character vi__character--inactive md-code-input-character--inactive"
+          data-testid="character-1"
+          id="field-1"
+          key="1"
+          onClick={[Function]}
+        />
+        <div
+          className="vi__character md-code-input-character vi__character--inactive md-code-input-character--inactive"
+          data-testid="character-2"
+          id="field-2"
+          key="2"
+          onClick={[Function]}
+        />
+        <div
+          className="vi__character md-code-input-character vi__character--inactive md-code-input-character--inactive"
+          data-testid="character-3"
+          id="field-3"
+          key="3"
+          onClick={[Function]}
+        />
+        <div
+          className="vi__character md-code-input-character vi__character--inactive md-code-input-character--inactive"
+          data-testid="character-4"
+          id="field-4"
+          key="4"
+          onClick={[Function]}
+        />
+        <div
+          className="vi__character md-code-input-character vi__character--inactive md-code-input-character--inactive"
+          data-testid="character-5"
+          id="field-5"
+          key="5"
+          onClick={[Function]}
+        />
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Array [
+              Array [
+                28,
+                ".vi {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   box-sizing: border-box;
   position: absolute;
-  left: -2000px;
-  opacity: 0;
-  transform: scale(0);
+  color: transparent;
+  background: transparent;
+  caret-color: transparent;
+  outline: none;
+  border: 0 none transparent;
 }
 
-.vi--debug {
-  left: 0;
-  bottom: -70px;
-  opacity: 1;
-  transform: scale(1);
+.vi::-ms-reveal,
+.vi::-ms-clear {
+  display: none;
 }
 
-.vi__container {
+.vi::selection {
+  background: transparent;
+}
+
+/* :where() gives the styles specificity 0, which makes them overridable */
+:where(.vi__container) {
+  position: relative;
   display: flex;
-}
-
-.vi__container--default {
+  gap: 8px;
   height: 50px;
   width: 300px;
 }
 
-.vi__character {
+:where(.vi__character) {
   height: 100%;
   flex-grow: 1;
   flex-basis: 0;
   text-align: center;
-}
-
-.vi__character--default {
   font-size: 36px;
   line-height: 50px;
   color: black;
   background-color: white;
-  margin-left: 8px;
   border: 1px solid black;
   cursor: default;
   user-select: none;
   box-sizing: border-box;
 }
 
-.vi__character--default:first-child {
-  margin-left: 0;
-}
-
-.vi__character--inactive--default {
+:where(.vi__character--inactive) {
   color: dimgray;
   background-color: lightgray;
 }
 
-.vi__character--selected--default {
+:where(.vi__character--selected) {
   outline: 2px solid cornflowerblue;
   color: cornflowerblue;
 }
 ",
-                  "",
-                ],
+                "",
               ],
-            }
+            ],
           }
-        />
-      </div>
+        }
+      />
     </VerificationInput>
     <div
       className="md-code-input__messages"
